@@ -26,25 +26,18 @@
 .method public constructor <init>(Lcom/netflix/falkor/CachedModelProxy;Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;)V
     .locals 1
 
-    .prologue
-    .line 2040
     iput-object p1, p0, Lcom/netflix/falkor/CachedModelProxy$FetchScenePositionTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
-    .line 2041
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p5, v0}, Lcom/netflix/falkor/CachedModelProxy$CmpTask;-><init>(Lcom/netflix/falkor/CachedModelProxy;Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/falkor/CachedModelProxy$1;)V
 
-    .line 2042
     iput-object p2, p0, Lcom/netflix/falkor/CachedModelProxy$FetchScenePositionTask;->videoType:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
-    .line 2043
     iput-object p3, p0, Lcom/netflix/falkor/CachedModelProxy$FetchScenePositionTask;->playableId:Ljava/lang/String;
 
-    .line 2044
     iput-object p4, p0, Lcom/netflix/falkor/CachedModelProxy$FetchScenePositionTask;->scene:Ljava/lang/String;
 
-    .line 2045
     return-void
 .end method
 
@@ -62,8 +55,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 2049
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$FetchScenePositionTask;->videoType:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->getValue()Ljava/lang/String;
@@ -80,30 +71,24 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2050
     return-void
 .end method
 
 .method protected callbackForFailure(Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 1
 
-    .prologue
-    .line 2063
     const/4 v0, -0x1
 
     invoke-interface {p1, v0, p2}, Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;->onScenePositionFetched(ILcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 2064
     return-void
 .end method
 
 .method protected fetchResultsAndCallbackForSuccess(Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/falkor/CachedModelProxy$GetResult;)V
     .locals 6
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 2054
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$FetchScenePositionTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
     iget-object v1, p0, Lcom/netflix/falkor/CachedModelProxy$FetchScenePositionTask;->videoType:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
@@ -126,12 +111,10 @@
 
     check-cast v0, Lcom/netflix/model/branches/FalkorScene;
 
-    .line 2056
     if-nez v0, :cond_0
 
     move v1, v2
 
-    .line 2057
     :goto_0
     const-string/jumbo v3, "CachedModelProxy"
 
@@ -149,15 +132,12 @@
 
     invoke-static {v3, v0}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2058
     sget-object v0, Lcom/netflix/mediaclient/android/app/CommonStatus;->OK:Lcom/netflix/mediaclient/android/app/NetflixImmutableStatus;
 
     invoke-interface {p1, v1, v0}, Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;->onScenePositionFetched(ILcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 2059
     return-void
 
-    .line 2056
     :cond_0
     invoke-virtual {v0}, Lcom/netflix/model/branches/FalkorScene;->getScenePosition()I
 

@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/settings/SettingsActivity$StorageIndicatorViewHolder;)V
     .locals 0
 
-    .prologue
-    .line 107
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/settings/SettingsActivity$StorageIndicatorViewHolder$1;->this$1:Lcom/netflix/mediaclient/ui/settings/SettingsActivity$StorageIndicatorViewHolder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .prologue
-    .line 110
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/settings/SettingsActivity$StorageIndicatorViewHolder$1;->this$1:Lcom/netflix/mediaclient/ui/settings/SettingsActivity$StorageIndicatorViewHolder;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/settings/SettingsActivity$StorageIndicatorViewHolder;->this$0:Lcom/netflix/mediaclient/ui/settings/SettingsActivity;
@@ -40,7 +36,6 @@
 
     if-nez v0, :cond_0
 
-    .line 111
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/settings/SettingsActivity$StorageIndicatorViewHolder$1;->this$1:Lcom/netflix/mediaclient/ui/settings/SettingsActivity$StorageIndicatorViewHolder;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/settings/SettingsActivity$StorageIndicatorViewHolder;->this$0:Lcom/netflix/mediaclient/ui/settings/SettingsActivity;
@@ -55,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 112
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/settings/SettingsActivity$StorageIndicatorViewHolder$1;->this$1:Lcom/netflix/mediaclient/ui/settings/SettingsActivity$StorageIndicatorViewHolder;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/settings/SettingsActivity$StorageIndicatorViewHolder;->this$0:Lcom/netflix/mediaclient/ui/settings/SettingsActivity;
@@ -70,7 +64,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/settings/SettingsActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 115
     :cond_0
     return-void
 .end method

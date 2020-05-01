@@ -26,8 +26,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 101
     sget-boolean v0, Lcom/android/volley/VolleyLog;->DEBUG:Z
 
     sput-boolean v0, Lcom/android/volley/VolleyLog$MarkerLog;->ENABLED:Z
@@ -38,18 +36,14 @@
 .method constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 100
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 118
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/volley/VolleyLog$MarkerLog;->mMarkers:Ljava/util/List;
 
-    .line 119
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/volley/VolleyLog$MarkerLog;->mFinished:Z
@@ -60,8 +54,6 @@
 .method private getTotalDuration()J
     .locals 4
 
-    .prologue
-    .line 164
     iget-object v0, p0, Lcom/android/volley/VolleyLog$MarkerLog;->mMarkers:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -70,14 +62,11 @@
 
     if-nez v0, :cond_0
 
-    .line 165
     const-wide/16 v0, 0x0
 
-    .line 170
     :goto_0
     return-wide v0
 
-    .line 168
     :cond_0
     iget-object v0, p0, Lcom/android/volley/VolleyLog$MarkerLog;->mMarkers:Ljava/util/List;
 
@@ -91,7 +80,6 @@
 
     iget-wide v2, v0, Lcom/android/volley/VolleyLog$MarkerLog$Marker;->time:J
 
-    .line 169
     iget-object v0, p0, Lcom/android/volley/VolleyLog$MarkerLog;->mMarkers:Ljava/util/List;
 
     iget-object v1, p0, Lcom/android/volley/VolleyLog$MarkerLog;->mMarkers:Ljava/util/List;
@@ -110,7 +98,6 @@
 
     iget-wide v0, v0, Lcom/android/volley/VolleyLog$MarkerLog$Marker;->time:J
 
-    .line 170
     sub-long/2addr v0, v2
 
     goto :goto_0
@@ -121,8 +108,6 @@
 .method public declared-synchronized add(Ljava/lang/String;J)V
     .locals 8
 
-    .prologue
-    .line 123
     monitor-enter p0
 
     :try_start_0
@@ -130,7 +115,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 124
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "Marker added to finished log"
@@ -141,7 +125,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 123
     :catchall_0
     move-exception v0
 
@@ -149,7 +132,6 @@
 
     throw v0
 
-    .line 127
     :cond_0
     :try_start_1
     iget-object v6, p0, Lcom/android/volley/VolleyLog$MarkerLog;->mMarkers:Ljava/util/List;
@@ -170,7 +152,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 128
     monitor-exit p0
 
     return-void
@@ -179,18 +160,14 @@
 .method protected finalize()V
     .locals 2
 
-    .prologue
-    .line 156
     iget-boolean v0, p0, Lcom/android/volley/VolleyLog$MarkerLog;->mFinished:Z
 
     if-nez v0, :cond_0
 
-    .line 157
     const-string/jumbo v0, "Request on the loose"
 
     invoke-virtual {p0, v0}, Lcom/android/volley/VolleyLog$MarkerLog;->finish(Ljava/lang/String;)V
 
-    .line 158
     const-string/jumbo v0, "Marker log finalized without finish() - uncaught exit point for request"
 
     const/4 v1, 0x0
@@ -199,7 +176,6 @@
 
     invoke-static {v0, v1}, Lcom/android/volley/VolleyLog;->e(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 160
     :cond_0
     return-void
 .end method
@@ -207,8 +183,6 @@
 .method public declared-synchronized finish(Ljava/lang/String;)V
     .locals 10
 
-    .prologue
-    .line 136
     monitor-enter p0
 
     const/4 v0, 0x1
@@ -216,27 +190,23 @@
     :try_start_0
     iput-boolean v0, p0, Lcom/android/volley/VolleyLog$MarkerLog;->mFinished:Z
 
-    .line 138
     invoke-direct {p0}, Lcom/android/volley/VolleyLog$MarkerLog;->getTotalDuration()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v2
 
-    .line 139
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
 
     if-gtz v0, :cond_1
 
-    .line 150
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 143
     :cond_1
     :try_start_1
     iget-object v0, p0, Lcom/android/volley/VolleyLog$MarkerLog;->mMarkers:Ljava/util/List;
@@ -251,7 +221,6 @@
 
     iget-wide v0, v0, Lcom/android/volley/VolleyLog$MarkerLog$Marker;->time:J
 
-    .line 144
     const-string/jumbo v4, "(%-4d ms) %s"
 
     const/4 v5, 0x2
@@ -272,7 +241,6 @@
 
     invoke-static {v4, v5}, Lcom/android/volley/VolleyLog;->d(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 145
     iget-object v2, p0, Lcom/android/volley/VolleyLog$MarkerLog;->mMarkers:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -294,10 +262,8 @@
 
     check-cast v0, Lcom/android/volley/VolleyLog$MarkerLog$Marker;
 
-    .line 146
     iget-wide v4, v0, Lcom/android/volley/VolleyLog$MarkerLog$Marker;->time:J
 
-    .line 147
     const-string/jumbo v1, "(+%-4d) [%2d] %s"
 
     const/4 v7, 0x3
@@ -336,10 +302,8 @@
 
     move-wide v2, v4
 
-    .line 149
     goto :goto_0
 
-    .line 136
     :catchall_0
     move-exception v0
 

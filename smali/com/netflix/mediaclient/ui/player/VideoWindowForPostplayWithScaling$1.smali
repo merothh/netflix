@@ -20,8 +20,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/VideoWindowForPostplayWithScaling;IIF)V
     .locals 0
 
-    .prologue
-    .line 75
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/VideoWindowForPostplayWithScaling$1;->this$0:Lcom/netflix/mediaclient/ui/player/VideoWindowForPostplayWithScaling;
 
     iput p2, p0, Lcom/netflix/mediaclient/ui/player/VideoWindowForPostplayWithScaling$1;->val$leftMargin:I
@@ -40,8 +38,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 78
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/VideoWindowForPostplayWithScaling$1;->this$0:Lcom/netflix/mediaclient/ui/player/VideoWindowForPostplayWithScaling;
 
     iget v1, p0, Lcom/netflix/mediaclient/ui/player/VideoWindowForPostplayWithScaling$1;->val$leftMargin:I
@@ -52,7 +48,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/netflix/mediaclient/ui/player/VideoWindowForPostplayWithScaling;->resizeSurfaceView(IIF)V
 
-    .line 79
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/VideoWindowForPostplayWithScaling$1;->this$0:Lcom/netflix/mediaclient/ui/player/VideoWindowForPostplayWithScaling;
 
     iget v1, p0, Lcom/netflix/mediaclient/ui/player/VideoWindowForPostplayWithScaling$1;->val$leftMargin:I
@@ -61,6 +56,5 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/mediaclient/ui/player/VideoWindowForPostplayWithScaling;->resizeTextureView(II)V
 
-    .line 80
     return-void
 .end method

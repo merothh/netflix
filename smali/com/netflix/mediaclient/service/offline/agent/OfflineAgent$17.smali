@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;J)V
     .locals 0
 
-    .prologue
-    .line 1488
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$17;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
     iput-wide p2, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$17;->val$movieId:J
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 1491
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$17;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;->access$3900(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;)Ljava/util/Map;
@@ -48,6 +44,5 @@
 
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1492
     return-void
 .end method

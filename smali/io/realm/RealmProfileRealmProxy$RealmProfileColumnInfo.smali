@@ -20,18 +20,14 @@
 .method constructor <init>(Ljava/lang/String;Lio/realm/internal/Table;)V
     .locals 4
 
-    .prologue
-    .line 43
     invoke-direct {p0}, Lio/realm/internal/ColumnInfo;-><init>()V
 
-    .line 44
     new-instance v0, Ljava/util/HashMap;
 
     const/4 v1, 0x4
 
     invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
 
-    .line 45
     const-string/jumbo v1, "RealmProfile"
 
     const-string/jumbo v2, "id"
@@ -42,7 +38,6 @@
 
     iput-wide v2, p0, Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;->idIndex:J
 
-    .line 46
     const-string/jumbo v1, "id"
 
     iget-wide v2, p0, Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;->idIndex:J
@@ -53,7 +48,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 47
     const-string/jumbo v1, "RealmProfile"
 
     const-string/jumbo v2, "name"
@@ -64,7 +58,6 @@
 
     iput-wide v2, p0, Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;->nameIndex:J
 
-    .line 48
     const-string/jumbo v1, "name"
 
     iget-wide v2, p0, Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;->nameIndex:J
@@ -75,7 +68,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 49
     const-string/jumbo v1, "RealmProfile"
 
     const-string/jumbo v2, "kids"
@@ -86,7 +78,6 @@
 
     iput-wide v2, p0, Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;->kidsIndex:J
 
-    .line 50
     const-string/jumbo v1, "kids"
 
     iget-wide v2, p0, Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;->kidsIndex:J
@@ -97,7 +88,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 51
     const-string/jumbo v1, "RealmProfile"
 
     const-string/jumbo v2, "iconUrl"
@@ -108,7 +98,6 @@
 
     iput-wide v2, p0, Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;->iconUrlIndex:J
 
-    .line 52
     const-string/jumbo v1, "iconUrl"
 
     iget-wide v2, p0, Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;->iconUrlIndex:J
@@ -119,10 +108,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 54
     invoke-virtual {p0, v0}, Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;->setIndicesMap(Ljava/util/Map;)V
 
-    .line 55
     return-void
 .end method
 
@@ -131,8 +118,6 @@
 .method public final clone()Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;
     .locals 1
 
-    .prologue
-    .line 70
     invoke-super {p0}, Lio/realm/internal/ColumnInfo;->clone()Lio/realm/internal/ColumnInfo;
 
     move-result-object v0
@@ -145,8 +130,6 @@
 .method public bridge synthetic clone()Lio/realm/internal/ColumnInfo;
     .locals 1
 
-    .prologue
-    .line 35
     invoke-virtual {p0}, Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;->clone()Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;
 
     move-result-object v0
@@ -157,8 +140,6 @@
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 35
     invoke-virtual {p0}, Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;->clone()Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;
 
     move-result-object v0
@@ -169,37 +150,29 @@
 .method public final copyColumnInfoFrom(Lio/realm/internal/ColumnInfo;)V
     .locals 2
 
-    .prologue
-    .line 59
     check-cast p1, Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;
 
-    .line 60
     iget-wide v0, p1, Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;->idIndex:J
 
     iput-wide v0, p0, Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;->idIndex:J
 
-    .line 61
     iget-wide v0, p1, Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;->nameIndex:J
 
     iput-wide v0, p0, Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;->nameIndex:J
 
-    .line 62
     iget-wide v0, p1, Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;->kidsIndex:J
 
     iput-wide v0, p0, Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;->kidsIndex:J
 
-    .line 63
     iget-wide v0, p1, Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;->iconUrlIndex:J
 
     iput-wide v0, p0, Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;->iconUrlIndex:J
 
-    .line 65
     invoke-virtual {p1}, Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;->getIndicesMap()Ljava/util/Map;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lio/realm/RealmProfileRealmProxy$RealmProfileColumnInfo;->setIndicesMap(Ljava/util/Map;)V
 
-    .line 66
     return-void
 .end method

@@ -13,8 +13,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,8 +35,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 110
     if-eqz p0, :cond_0
 
     invoke-interface {p0}, Ljava/util/Map;->size()I
@@ -47,11 +43,9 @@
 
     if-gtz v0, :cond_1
 
-    .line 121
     :cond_0
     return-void
 
-    .line 112
     :cond_1
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -71,7 +65,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable;
 
-    .line 113
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable;->getPlayableId()Ljava/lang/String;
 
     move-result-object v1
@@ -82,17 +75,14 @@
 
     check-cast v1, Ljava/lang/Boolean;
 
-    .line 114
     if-eqz v1, :cond_2
 
-    .line 115
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
-    .line 116
     const-string/jumbo v3, "nf_offlineAgent"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -129,7 +119,6 @@
 
     invoke-static {v3, v4}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
     :cond_3
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable;->getOfflineViewablePersistentData()Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData;
 
@@ -167,11 +156,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 54
     const-wide/32 v0, 0x2faf080
 
-    .line 55
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -191,7 +177,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable;
 
-    .line 56
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable;->getDownloadState()Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
     move-result-object v1
@@ -200,12 +185,10 @@
 
     if-eq v1, v5, :cond_2
 
-    .line 57
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable;->getTotalEstimatedSpace()J
 
     move-result-wide v6
 
-    .line 58
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable;->getCurrentEstimatedSpace()J
 
     move-result-wide v0
@@ -217,10 +200,8 @@
     :goto_1
     move-wide v2, v0
 
-    .line 60
     goto :goto_0
 
-    .line 61
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -230,12 +211,10 @@
 
     move-result-wide v0
 
-    .line 62
     cmp-long v4, v2, v0
 
     if-lez v4, :cond_1
 
-    .line 63
     const-string/jumbo v4, "nf_offlineAgent"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -268,10 +247,8 @@
 
     invoke-static {v4, v0}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
     const/4 v0, 0x0
 
-    .line 67
     :goto_2
     return v0
 
@@ -299,8 +276,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 161
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -318,7 +293,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable;
 
-    .line 162
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable;->getDownloadState()Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
     move-result-object v2
@@ -327,7 +301,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 166
     :goto_0
     return-object v0
 
@@ -353,13 +326,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 42
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 43
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -378,7 +348,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable;
 
-    .line 44
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable;->getDownloadState()Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
     move-result-object v3
@@ -387,7 +356,6 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 45
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable;->getPlayableId()Ljava/lang/String;
 
     move-result-object v0
@@ -396,7 +364,6 @@
 
     goto :goto_0
 
-    .line 48
     :cond_1
     return-object v1
 .end method
@@ -404,8 +371,6 @@
 .method static getLastMaintenanceJobStartTime(Landroid/content/Context;)J
     .locals 4
 
-    .prologue
-    .line 170
     const-string/jumbo v0, "pref_offline_maintenance_job_start_time"
 
     const-wide/16 v2, -0x1
@@ -431,19 +396,15 @@
         }
     .end annotation
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 73
     if-nez p0, :cond_0
 
     move-object v0, v1
 
-    .line 81
     :goto_0
     return-object v0
 
-    .line 76
     :cond_0
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -462,7 +423,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable;
 
-    .line 77
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable;->getPlayableId()Ljava/lang/String;
 
     move-result-object v3
@@ -478,35 +438,28 @@
     :cond_2
     move-object v0, v1
 
-    .line 81
     goto :goto_0
 .end method
 
 .method static hasPrimaryProfileGuidChanged(Lcom/netflix/mediaclient/service/user/UserAgent;Lcom/netflix/mediaclient/service/offline/registry/OfflineRegistry;)Z
     .locals 6
 
-    .prologue
-    .line 86
     const/4 v0, 0x0
 
-    .line 87
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/user/UserAgent;->getPrimaryProfileGuid()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 88
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/offline/registry/OfflineRegistry;->getPrimaryProfileGuid()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 89
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 90
     const-string/jumbo v3, "nf_offlineAgent"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -539,7 +492,6 @@
 
     invoke-static {v3, v4}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 94
     :cond_0
     invoke-static {v1}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
 
@@ -553,33 +505,28 @@
 
     if-eqz v3, :cond_1
 
-    .line 95
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 96
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 97
     const-string/jumbo v1, "nf_offlineAgent"
 
     const-string/jumbo v2, "primaryProfileGuid match"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
     :cond_1
     :goto_0
     return v0
 
-    .line 100
     :cond_2
     const-string/jumbo v0, "nf_offlineAgent"
 
@@ -587,7 +534,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
     const/4 v0, 0x1
 
     goto :goto_0
@@ -596,25 +542,19 @@
 .method static sendOfflineNotAvailableLogblob(Lcom/netflix/mediaclient/service/NrdController;Lcom/netflix/mediaclient/service/offline/agent/OfflineUnavailableReason;)V
     .locals 7
 
-    .prologue
-    .line 178
     if-nez p0, :cond_1
 
-    .line 187
     :cond_0
     :goto_0
     return-void
 
-    .line 181
     :cond_1
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/NrdController;->getNrdp()Lcom/netflix/mediaclient/javabridge/ui/Nrdp;
 
     move-result-object v0
 
-    .line 182
     if-eqz v0, :cond_0
 
-    .line 183
     new-instance v1, Lcom/netflix/mediaclient/javabridge/ui/LogArguments;
 
     sget-object v2, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;->INFO:Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
@@ -651,7 +591,6 @@
 
     invoke-direct {v1, v2, v3, v4, v5}, Lcom/netflix/mediaclient/javabridge/ui/LogArguments;-><init>(Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 184
     const-string/jumbo v2, "nf_offlineAgent"
 
     const-string/jumbo v3, "sending offline not available logblob=%s"
@@ -670,7 +609,6 @@
 
     invoke-static {v2, v3, v4}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 185
     invoke-interface {v0}, Lcom/netflix/mediaclient/javabridge/ui/Nrdp;->getLog()Lcom/netflix/mediaclient/javabridge/ui/Log;
 
     move-result-object v0
@@ -683,53 +621,41 @@
 .method static setLastMaintenanceJobStartTime(Landroid/content/Context;J)V
     .locals 1
 
-    .prologue
-    .line 174
     const-string/jumbo v0, "pref_offline_maintenance_job_start_time"
 
     invoke-static {p0, v0, p1, p2}, Lcom/netflix/mediaclient/util/PreferenceUtils;->putLongPref(Landroid/content/Context;Ljava/lang/String;J)Z
 
-    .line 175
     return-void
 .end method
 
 .method static updateBookmarkIfNewer(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;Ljava/lang/String;)V
     .locals 8
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 135
     if-nez p1, :cond_1
 
-    .line 158
     :cond_0
     :goto_0
     return-void
 
-    .line 136
     :cond_1
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;->getPlayable()Lcom/netflix/mediaclient/servicemgr/interface_/Playable;
 
     move-result-object v1
 
-    .line 137
     if-eqz v1, :cond_0
 
-    .line 139
     invoke-interface {v1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->getPlayableBookmarkPosition()I
 
     move-result v2
 
-    .line 140
     invoke-interface {v1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->getPlayableBookmarkUpdateTime()J
 
     move-result-wide v4
 
-    .line 141
     const/4 v1, 0x0
 
-    .line 143
     invoke-static {}, Lcom/netflix/mediaclient/media/BookmarkStore;->getInstance()Lcom/netflix/mediaclient/media/BookmarkStore;
 
     move-result-object v3
@@ -738,28 +664,23 @@
 
     move-result-object v3
 
-    .line 144
     if-nez v3, :cond_2
 
-    .line 145
     const-string/jumbo v1, "nf_offlineAgent"
 
     const-string/jumbo v3, "updateBookmarkIfNewer bookmarkStore has no bookmark"
 
     invoke-static {v1, v3}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 153
     :goto_1
     if-eqz v0, :cond_0
 
-    .line 154
     const-string/jumbo v0, "nf_offlineAgent"
 
     const-string/jumbo v1, "updateBookmarkIfNewer calling BookmarkStore.setBookmark"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 155
     invoke-static {}, Lcom/netflix/mediaclient/media/BookmarkStore;->getInstance()Lcom/netflix/mediaclient/media/BookmarkStore;
 
     move-result-object v0
@@ -772,7 +693,6 @@
 
     goto :goto_0
 
-    .line 147
     :cond_2
     iget-wide v6, v3, Lcom/netflix/mediaclient/servicemgr/interface_/PlaybackBookmark;->mBookmarkUpdateTimeInUTCMs:J
 
@@ -780,7 +700,6 @@
 
     if-gez v3, :cond_3
 
-    .line 148
     const-string/jumbo v1, "nf_offlineAgent"
 
     const-string/jumbo v3, "updateBookmarkIfNewer bookmarkStore is older"
@@ -789,7 +708,6 @@
 
     goto :goto_1
 
-    .line 151
     :cond_3
     const-string/jumbo v0, "nf_offlineAgent"
 

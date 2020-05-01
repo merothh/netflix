@@ -18,8 +18,6 @@
 .method constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;)V
     .locals 0
 
-    .prologue
-    .line 225
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper$9;->val$context:Landroid/content/Context;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper$9;->val$playableId:Ljava/lang/String;
@@ -36,8 +34,6 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
 
-    .prologue
-    .line 228
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper$9;->val$context:Landroid/content/Context;
 
     check-cast v0, Landroid/app/Activity;
@@ -46,14 +42,12 @@
 
     move-result-object v1
 
-    .line 229
     const-string/jumbo v0, "playableId"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper$9;->val$playableId:Ljava/lang/String;
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 231
     const-string/jumbo v0, "videoTYpe"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper$9;->val$videoType:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
@@ -64,7 +58,6 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 232
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper$9;->val$context:Landroid/content/Context;
 
     check-cast v0, Landroid/app/Activity;
@@ -73,9 +66,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 233
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 234
     return-void
 .end method

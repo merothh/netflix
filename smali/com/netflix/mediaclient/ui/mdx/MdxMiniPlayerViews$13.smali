@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;)V
     .locals 0
 
-    .prologue
-    .line 1044
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews$13;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onGlobalLayout()V
     .locals 4
 
-    .prologue
-    .line 1047
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews$13;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;->access$600(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;)Lcom/netflix/mediaclient/android/widget/SnappableSeekBar;
@@ -42,11 +38,9 @@
 
     if-gtz v0, :cond_0
 
-    .line 1058
     :goto_0
     return-void
 
-    .line 1052
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews$13;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
 
@@ -62,7 +56,6 @@
 
     move-result-object v0
 
-    .line 1053
     iget v1, v0, Landroid/graphics/Rect;->right:I
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
@@ -71,7 +64,6 @@
 
     div-int/lit8 v0, v0, 0x2
 
-    .line 1054
     const-string/jumbo v1, "MdxMiniPlayerViews"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -94,7 +86,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1055
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews$13;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;->access$600(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;)Lcom/netflix/mediaclient/android/widget/SnappableSeekBar;
@@ -103,7 +94,6 @@
 
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/android/widget/SnappableSeekBar;->setThumbOffset(I)V
 
-    .line 1057
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews$13;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;->access$600(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;)Lcom/netflix/mediaclient/android/widget/SnappableSeekBar;

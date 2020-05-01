@@ -7,8 +7,6 @@
 .method constructor <init>(I)V
     .locals 2
 
-    .prologue
-    .line 214
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -29,6 +27,5 @@
 
     invoke-direct {p0, v0}, Lorg/xbill/DNS/DNSSEC$DNSSECException;-><init>(Ljava/lang/String;)V
 
-    .line 215
     return-void
 .end method

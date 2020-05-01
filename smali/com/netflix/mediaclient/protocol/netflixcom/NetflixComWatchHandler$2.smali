@@ -21,8 +21,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler;Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;Lcom/netflix/mediaclient/servicemgr/interface_/Playable;Lcom/netflix/mediaclient/android/activity/NetflixActivity;Ljava/lang/String;Lcom/netflix/mediaclient/ui/common/PlayContext;)V
     .locals 0
 
-    .prologue
-    .line 156
     iput-object p1, p0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler$2;->this$0:Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler$2;->val$videoType:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
@@ -45,8 +43,6 @@
 .method public onScenePositionFetched(ILcom/netflix/mediaclient/android/app/Status;)V
     .locals 5
 
-    .prologue
-    .line 159
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
 
     move-result v0
@@ -55,14 +51,12 @@
 
     if-ltz p1, :cond_0
 
-    .line 160
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 161
     const-string/jumbo v0, "NetflixComWatchHandler"
 
     const-string/jumbo v1, "%s:%s scene: %s, position: %d"
@@ -111,12 +105,10 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 162
     iget-object v0, p0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler$2;->this$0:Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler;->access$102(Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler;I)I
 
-    .line 165
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler$2;->this$0:Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler;
 
@@ -130,6 +122,5 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler;->play(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/Playable;Ljava/lang/String;Lcom/netflix/mediaclient/ui/common/PlayContext;)V
 
-    .line 166
     return-void
 .end method

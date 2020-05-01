@@ -35,14 +35,10 @@
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 2
 
-    .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     if-nez p1, :cond_0
 
-    .line 50
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "JSON is null!"
@@ -51,19 +47,15 @@
 
     throw v0
 
-    .line 52
     :cond_0
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/javabridge/StreamInfo;->populate(Lorg/json/JSONObject;)V
 
-    .line 53
     return-void
 .end method
 
 .method private populate(Lorg/json/JSONObject;)V
     .locals 1
 
-    .prologue
-    .line 62
     const-string/jumbo v0, "streamType"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -72,7 +64,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 63
     const-string/jumbo v0, "streamType"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
@@ -81,7 +72,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/javabridge/StreamInfo;->streamType:I
 
-    .line 66
     :cond_0
     const-string/jumbo v0, "bitsPerSecond"
 
@@ -91,7 +81,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 67
     const-string/jumbo v0, "bitsPerSecond"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
@@ -100,7 +89,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/javabridge/StreamInfo;->bitsPerSecond:I
 
-    .line 70
     :cond_1
     const-string/jumbo v0, "isHighDefinition"
 
@@ -110,7 +98,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 71
     const-string/jumbo v0, "isHighDefinition"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
@@ -119,7 +106,6 @@
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/javabridge/StreamInfo;->isHighDefinition:Z
 
-    .line 74
     :cond_2
     const-string/jumbo v0, "isSuperHighDefinition"
 
@@ -129,7 +115,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 75
     const-string/jumbo v0, "isSuperHighDefinition"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
@@ -138,7 +123,6 @@
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/javabridge/StreamInfo;->isSuperHighDefinition:Z
 
-    .line 78
     :cond_3
     const-string/jumbo v0, "frameWidth"
 
@@ -148,7 +132,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 79
     const-string/jumbo v0, "frameWidth"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
@@ -157,7 +140,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/javabridge/StreamInfo;->frameWidth:I
 
-    .line 82
     :cond_4
     const-string/jumbo v0, "frameHeight"
 
@@ -167,7 +149,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 83
     const-string/jumbo v0, "frameHeight"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
@@ -176,7 +157,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/javabridge/StreamInfo;->frameHeight:I
 
-    .line 86
     :cond_5
     const-string/jumbo v0, "displayAspectRatioX"
 
@@ -186,7 +166,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 87
     const-string/jumbo v0, "displayAspectRatioX"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
@@ -195,7 +174,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/javabridge/StreamInfo;->displayAspectRatioX:I
 
-    .line 90
     :cond_6
     const-string/jumbo v0, "displayAspectRatioY"
 
@@ -205,7 +183,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 91
     const-string/jumbo v0, "displayAspectRatioY"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
@@ -214,7 +191,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/javabridge/StreamInfo;->displayAspectRatioY:I
 
-    .line 93
     :cond_7
     return-void
 .end method
@@ -224,8 +200,6 @@
 .method public getBitsPerSecond()I
     .locals 1
 
-    .prologue
-    .line 110
     iget v0, p0, Lcom/netflix/mediaclient/javabridge/StreamInfo;->bitsPerSecond:I
 
     return v0
@@ -234,8 +208,6 @@
 .method public getDisplayAspectRatioX()I
     .locals 1
 
-    .prologue
-    .line 146
     iget v0, p0, Lcom/netflix/mediaclient/javabridge/StreamInfo;->displayAspectRatioX:I
 
     return v0
@@ -244,8 +216,6 @@
 .method public getDisplayAspectRatioY()I
     .locals 1
 
-    .prologue
-    .line 155
     iget v0, p0, Lcom/netflix/mediaclient/javabridge/StreamInfo;->displayAspectRatioY:I
 
     return v0
@@ -254,8 +224,6 @@
 .method public getFrameHeight()I
     .locals 1
 
-    .prologue
-    .line 137
     iget v0, p0, Lcom/netflix/mediaclient/javabridge/StreamInfo;->frameHeight:I
 
     return v0
@@ -264,8 +232,6 @@
 .method public getFrameWidth()I
     .locals 1
 
-    .prologue
-    .line 128
     iget v0, p0, Lcom/netflix/mediaclient/javabridge/StreamInfo;->frameWidth:I
 
     return v0
@@ -274,8 +240,6 @@
 .method public getStreamType()I
     .locals 1
 
-    .prologue
-    .line 101
     iget v0, p0, Lcom/netflix/mediaclient/javabridge/StreamInfo;->streamType:I
 
     return v0
@@ -284,8 +248,6 @@
 .method public isHighDefinition()Z
     .locals 1
 
-    .prologue
-    .line 119
     iget-boolean v0, p0, Lcom/netflix/mediaclient/javabridge/StreamInfo;->isHighDefinition:Z
 
     return v0
@@ -294,8 +256,6 @@
 .method public isSuperHighDefinition()Z
     .locals 1
 
-    .prologue
-    .line 164
     iget-boolean v0, p0, Lcom/netflix/mediaclient/javabridge/StreamInfo;->isSuperHighDefinition:Z
 
     return v0
@@ -304,8 +264,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 171
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

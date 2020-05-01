@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/launch/LaunchActivity;)V
     .locals 0
 
-    .prologue
-    .line 464
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/launch/LaunchActivity$2;->this$0:Lcom/netflix/mediaclient/ui/launch/LaunchActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 468
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/launch/LaunchActivity$2;->this$0:Lcom/netflix/mediaclient/ui/launch/LaunchActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/launch/LaunchActivity;->access$400(Lcom/netflix/mediaclient/ui/launch/LaunchActivity;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -42,18 +38,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 469
     const-string/jumbo v0, "LaunchActivity"
 
     const-string/jumbo v1, "Callback already returned, login workflow in progress, do nothing"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 475
     :goto_0
     return-void
 
-    .line 473
     :cond_0
     const-string/jumbo v0, "LaunchActivity"
 
@@ -61,7 +54,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 474
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/launch/LaunchActivity$2;->this$0:Lcom/netflix/mediaclient/ui/launch/LaunchActivity;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/launch/LaunchActivity$2;->this$0:Lcom/netflix/mediaclient/ui/launch/LaunchActivity;

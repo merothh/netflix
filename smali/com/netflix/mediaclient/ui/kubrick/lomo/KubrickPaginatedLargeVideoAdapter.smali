@@ -7,11 +7,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedLoMoAdapter;-><init>(Landroid/content/Context;)V
 
-    .line 18
     return-void
 .end method
 
@@ -20,8 +17,6 @@
 .method protected computeNumItemsPerPage()I
     .locals 1
 
-    .prologue
-    .line 33
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedLargeVideoAdapter;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/DeviceUtils;->isLandscape(Landroid/content/Context;)Z
@@ -57,8 +52,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 22
     const-class v0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickLargeVideoViewGroup;
 
     invoke-virtual {p1, v0}, Lcom/netflix/mediaclient/android/widget/ObjectRecycler$ViewRecycler;->pop(Ljava/lang/Class;)Ljava/lang/Object;
@@ -67,10 +60,8 @@
 
     check-cast v0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickLargeVideoViewGroup;
 
-    .line 23
     if-nez v0, :cond_0
 
-    .line 24
     new-instance v0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickLargeVideoViewGroup;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedLargeVideoAdapter;->getActivity()Landroid/app/Activity;
@@ -79,10 +70,8 @@
 
     invoke-direct {v0, v1}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickLargeVideoViewGroup;-><init>(Landroid/content/Context;)V
 
-    .line 25
     invoke-virtual {v0, p3}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickLoMoViewGroup;->init(I)V
 
-    .line 27
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedLargeVideoAdapter;->getListViewPos()I
 
@@ -98,6 +87,5 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickLoMoViewGroup;->updateDataThenViews(Ljava/util/List;IIILcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;)V
 
-    .line 28
     return-object v0
 .end method

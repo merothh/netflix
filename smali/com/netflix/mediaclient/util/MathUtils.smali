@@ -7,8 +7,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,8 +15,6 @@
 .method public static ceiling(II)I
     .locals 1
 
-    .prologue
-    .line 10
     add-int v0, p0, p1
 
     add-int/lit8 v0, v0, -0x1
@@ -31,35 +27,27 @@
 .method public static constrain(III)I
     .locals 0
 
-    .prologue
-    .line 50
     if-ge p0, p1, :cond_0
 
-    .line 56
     :goto_0
     return p1
 
-    .line 53
     :cond_0
     if-le p0, p2, :cond_1
 
     move p1, p2
 
-    .line 54
     goto :goto_0
 
     :cond_1
     move p1, p0
 
-    .line 56
     goto :goto_0
 .end method
 
 .method public static divideIntsWithRounding(II)I
     .locals 2
 
-    .prologue
-    .line 14
     int-to-float v0, p0
 
     int-to-float v1, p1
@@ -78,8 +66,6 @@
 .method public static isEven(I)Z
     .locals 1
 
-    .prologue
-    .line 46
     and-int/lit8 v0, p0, 0x1
 
     if-nez v0, :cond_0
@@ -98,8 +84,6 @@
 .method public static randomInRange(JII)I
     .locals 2
 
-    .prologue
-    .line 63
     new-instance v0, Ljava/util/Random;
 
     invoke-direct {v0, p0, p1}, Ljava/util/Random;-><init>(J)V

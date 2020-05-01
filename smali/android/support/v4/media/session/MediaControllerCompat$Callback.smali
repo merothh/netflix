@@ -18,23 +18,18 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 350
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 348
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->mRegistered:Z
 
-    .line 351
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 352
     new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$StubApi21;
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/session/MediaControllerCompat$Callback$StubApi21;-><init>(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)V
@@ -45,11 +40,9 @@
 
     iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->mCallbackObj:Ljava/lang/Object;
 
-    .line 356
     :goto_0
     return-void
 
-    .line 354
     :cond_0
     new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$StubCompat;
 
@@ -63,8 +56,6 @@
 .method static synthetic access$000(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 344
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->mCallbackObj:Ljava/lang/Object;
 
     return-object v0
@@ -73,8 +64,6 @@
 .method static synthetic access$100(Landroid/support/v4/media/session/MediaControllerCompat$Callback;Landroid/os/Handler;)V
     .locals 0
 
-    .prologue
-    .line 344
     invoke-direct {p0, p1}, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->setHandler(Landroid/os/Handler;)V
 
     return-void
@@ -83,8 +72,6 @@
 .method private setHandler(Landroid/os/Handler;)V
     .locals 2
 
-    .prologue
-    .line 440
     new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;
 
     invoke-virtual {p1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -95,7 +82,6 @@
 
     iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->mHandler:Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;
 
-    .line 441
     return-void
 .end method
 
@@ -104,43 +90,32 @@
 .method public binderDied()V
     .locals 0
 
-    .prologue
-    .line 433
     invoke-virtual {p0}, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->onSessionDestroyed()V
 
-    .line 434
     return-void
 .end method
 
 .method public onAudioInfoChanged(Landroid/support/v4/media/session/MediaControllerCompat$PlaybackInfo;)V
     .locals 0
 
-    .prologue
-    .line 429
     return-void
 .end method
 
 .method public onExtrasChanged(Landroid/os/Bundle;)V
     .locals 0
 
-    .prologue
-    .line 421
     return-void
 .end method
 
 .method public onMetadataChanged(Landroid/support/v4/media/MediaMetadataCompat;)V
     .locals 0
 
-    .prologue
-    .line 391
     return-void
 .end method
 
 .method public onPlaybackStateChanged(Landroid/support/v4/media/session/PlaybackStateCompat;)V
     .locals 0
 
-    .prologue
-    .line 382
     return-void
 .end method
 
@@ -156,31 +131,23 @@
         }
     .end annotation
 
-    .prologue
-    .line 402
     return-void
 .end method
 
 .method public onQueueTitleChanged(Ljava/lang/CharSequence;)V
     .locals 0
 
-    .prologue
-    .line 412
     return-void
 .end method
 
 .method public onSessionDestroyed()V
     .locals 0
 
-    .prologue
-    .line 363
     return-void
 .end method
 
 .method public onSessionEvent(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 0
 
-    .prologue
-    .line 374
     return-void
 .end method

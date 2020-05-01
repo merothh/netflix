@@ -7,8 +7,6 @@
 .method protected constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 513
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,8 +17,6 @@
 .method public build(Landroid/support/v4/app/NotificationCompat$Builder;Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;)Landroid/app/Notification;
     .locals 1
 
-    .prologue
-    .line 515
     invoke-interface {p2}, Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;->build()Landroid/app/Notification;
 
     move-result-object v0

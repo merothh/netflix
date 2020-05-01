@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;)V
     .locals 0
 
-    .prologue
-    .line 639
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public languageChanged(Lcom/netflix/mediaclient/media/Language;Z)V
     .locals 3
 
-    .prologue
-    .line 642
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -52,7 +48,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;->access$400(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;Ljava/lang/String;)V
 
-    .line 643
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;->access$1000(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;)Lcom/netflix/mediaclient/ui/mdx/RemotePlayer;
@@ -61,7 +56,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 644
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;->access$1000(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;)Lcom/netflix/mediaclient/ui/mdx/RemotePlayer;
@@ -70,7 +64,6 @@
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/ui/mdx/RemotePlayer;->changeLanguage(Lcom/netflix/mediaclient/media/Language;)V
 
-    .line 645
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;->getActivity()Landroid/app/Activity;
@@ -79,7 +72,6 @@
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/util/l10n/LanguageUtils;->saveUserChoice(Landroid/content/Context;Lcom/netflix/mediaclient/media/Language;)V
 
-    .line 646
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;->access$1000(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;)Lcom/netflix/mediaclient/ui/mdx/RemotePlayer;
@@ -88,28 +80,23 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/mdx/RemotePlayer;->requestAudioAndSubtitleData()V
 
-    .line 648
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;->access$1100(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;)V
 
-    .line 649
     return-void
 .end method
 
 .method public updateDialog(Landroid/app/Dialog;)V
     .locals 2
 
-    .prologue
-    .line 653
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;
 
     const-string/jumbo v1, "Updating dialog"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;->access$400(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;Ljava/lang/String;)V
 
-    .line 654
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;->access$200(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;)Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -118,30 +105,24 @@
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->updateVisibleDialog(Landroid/app/Dialog;)V
 
-    .line 655
     return-void
 .end method
 
 .method public userCanceled()V
     .locals 2
 
-    .prologue
-    .line 659
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;
 
     const-string/jumbo v1, "User canceled selection"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;->access$400(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;Ljava/lang/String;)V
 
-    .line 660
     return-void
 .end method
 
 .method public wasPlaying()Z
     .locals 1
 
-    .prologue
-    .line 664
     const/4 v0, 0x0
 
     return v0

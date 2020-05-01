@@ -31,26 +31,20 @@
         }
     .end annotation
 
-    .prologue
-    .line 586
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$GenresListAdapter;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 
-    .line 587
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 584
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$GenresListAdapter;->genres:Ljava/util/List;
 
-    .line 588
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$GenresListAdapter;->genres:Ljava/util/List;
 
     invoke-interface {v0, p2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 589
     return-void
 .end method
 
@@ -59,8 +53,6 @@
 .method public getCount()I
     .locals 1
 
-    .prologue
-    .line 593
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$GenresListAdapter;->genres:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -73,8 +65,6 @@
 .method public getItem(I)Lcom/netflix/mediaclient/servicemgr/interface_/genre/GenreList;
     .locals 1
 
-    .prologue
-    .line 598
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$GenresListAdapter;->genres:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -89,8 +79,6 @@
 .method public bridge synthetic getItem(I)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 582
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$GenresListAdapter;->getItem(I)Lcom/netflix/mediaclient/servicemgr/interface_/genre/GenreList;
 
     move-result-object v0
@@ -101,8 +89,6 @@
 .method public getItemId(I)J
     .locals 2
 
-    .prologue
-    .line 603
     int-to-long v0, p1
 
     return-wide v0
@@ -111,11 +97,8 @@
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 4
 
-    .prologue
-    .line 608
     if-nez p2, :cond_0
 
-    .line 609
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$GenresListAdapter;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -132,12 +115,10 @@
 
     move-result-object p2
 
-    .line 610
     new-instance v1, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$GenreRowHolder;
 
     const v0, 0x7f0f025a
 
-    .line 611
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -146,17 +127,14 @@
 
     const v2, 0x7f0f025b
 
-    .line 612
     invoke-virtual {p2, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     invoke-direct {v1, v0, v2}, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$GenreRowHolder;-><init>(Landroid/widget/TextView;Landroid/view/View;)V
 
-    .line 610
     invoke-virtual {p2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 615
     :cond_0
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -164,12 +142,10 @@
 
     check-cast v0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$GenreRowHolder;
 
-    .line 616
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$GenresListAdapter;->getItem(I)Lcom/netflix/mediaclient/servicemgr/interface_/genre/GenreList;
 
     move-result-object v1
 
-    .line 617
     iget-object v2, v0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$GenreRowHolder;->tv:Landroid/widget/TextView;
 
     invoke-interface {v1}, Lcom/netflix/mediaclient/servicemgr/interface_/genre/GenreList;->getTitle()Ljava/lang/String;
@@ -178,7 +154,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 619
     invoke-interface {v1}, Lcom/netflix/mediaclient/servicemgr/interface_/genre/GenreList;->getId()Ljava/lang/String;
 
     move-result-object v2
@@ -211,16 +186,13 @@
 
     const/4 v1, 0x1
 
-    .line 620
     :goto_0
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$GenresListAdapter;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 
     invoke-virtual {v2, v0, v1}, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;->updateAdapterViews(Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$GenreRowHolder;Z)V
 
-    .line 621
     return-object p2
 
-    .line 619
     :cond_1
     const/4 v1, 0x0
 

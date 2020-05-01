@@ -23,48 +23,34 @@
 .method public constructor <init>(III[I[Ljava/lang/String;II)V
     .locals 0
 
-    .prologue
-    .line 1237
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1238
     iput p1, p0, Lcom/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer$TableInfo;->size:I
 
-    .line 1239
     iput p2, p0, Lcom/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer$TableInfo;->count:I
 
-    .line 1240
     iput p3, p0, Lcom/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer$TableInfo;->tertiaryShift:I
 
-    .line 1241
     iput-object p4, p0, Lcom/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer$TableInfo;->mainHash:[I
 
-    .line 1242
     iput-object p5, p0, Lcom/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer$TableInfo;->names:[Ljava/lang/String;
 
-    .line 1243
     iput p6, p0, Lcom/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer$TableInfo;->spilloverEnd:I
 
-    .line 1244
     iput p7, p0, Lcom/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer$TableInfo;->longNameOffset:I
 
-    .line 1245
     return-void
 .end method
 
 .method public static createInitial(I)Lcom/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer$TableInfo;
     .locals 8
 
-    .prologue
-    .line 1259
     shl-int/lit8 v7, p0, 0x3
 
-    .line 1260
     invoke-static {p0}, Lcom/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer;->_calcTertiaryShift(I)I
 
     move-result v3
 
-    .line 1262
     new-instance v0, Lcom/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer$TableInfo;
 
     const/4 v2, 0x0

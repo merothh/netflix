@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/mdx/MdxImageLoader;)V
     .locals 0
 
-    .prologue
-    .line 54
     iput-object p1, p0, Lcom/netflix/mediaclient/service/mdx/MdxImageLoader$1;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxImageLoader;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onErrorResponse(Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 70
     const-string/jumbo v0, "nf_mdxImageLoader"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -52,15 +48,12 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     return-void
 .end method
 
 .method public onResponse(Landroid/graphics/Bitmap;Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 58
     if-eqz p1, :cond_1
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->isRecycled()Z
@@ -69,7 +62,6 @@
 
     if-nez v0, :cond_1
 
-    .line 59
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxImageLoader$1;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxImageLoader;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
@@ -86,7 +78,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/mdx/MdxImageLoader;->access$002(Lcom/netflix/mediaclient/service/mdx/MdxImageLoader;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    .line 63
     :goto_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -94,7 +85,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 64
     const-string/jumbo v0, "nf_mdxImageLoader"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -117,7 +107,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxImageLoader$1;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxImageLoader;
 
@@ -133,10 +122,8 @@
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/service/mdx/MdxImageLoader$MdxImageLoaderInterface;->onBitmapReady(Landroid/graphics/Bitmap;)V
 
-    .line 67
     return-void
 
-    .line 61
     :cond_1
     const-string/jumbo v0, "nf_mdxImageLoader"
 

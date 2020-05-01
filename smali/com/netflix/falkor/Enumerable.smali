@@ -41,14 +41,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 11
     iput-object p1, p0, Lcom/netflix/falkor/Enumerable;->iterable:Ljava/lang/Iterable;
 
-    .line 12
     return-void
 .end method
 
@@ -64,8 +60,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 15
     new-instance v0, Lcom/netflix/falkor/Enumerable;
 
     new-instance v1, Lcom/netflix/falkor/Enumerable$1;
@@ -91,8 +85,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 67
     new-instance v0, Lcom/netflix/falkor/Enumerable;
 
     new-instance v1, Lcom/netflix/falkor/Enumerable$2;
@@ -116,8 +108,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 103
     iget-object v0, p0, Lcom/netflix/falkor/Enumerable;->iterable:Ljava/lang/Iterable;
 
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -137,13 +127,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 95
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 96
     invoke-virtual {p0}, Lcom/netflix/falkor/Enumerable;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -159,12 +146,10 @@
 
     move-result-object v2
 
-    .line 97
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 99
     :cond_0
     return-object v0
 .end method

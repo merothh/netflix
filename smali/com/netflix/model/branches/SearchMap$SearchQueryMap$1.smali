@@ -22,8 +22,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 405
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,8 +32,6 @@
 .method public call()Lcom/netflix/model/branches/SearchMap$SearchProfileType;
     .locals 1
 
-    .prologue
-    .line 408
     new-instance v0, Lcom/netflix/model/branches/SearchMap$SearchProfileType;
 
     invoke-direct {v0}, Lcom/netflix/model/branches/SearchMap$SearchProfileType;-><init>()V
@@ -46,8 +42,6 @@
 .method public bridge synthetic call()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 405
     invoke-virtual {p0}, Lcom/netflix/model/branches/SearchMap$SearchQueryMap$1;->call()Lcom/netflix/model/branches/SearchMap$SearchProfileType;
 
     move-result-object v0

@@ -46,42 +46,30 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 46
     invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
-    .line 47
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->init()V
 
-    .line 48
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .prologue
-    .line 51
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 52
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->init()V
 
-    .line 53
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .prologue
-    .line 56
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 57
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->init()V
 
-    .line 58
     return-void
 .end method
 
@@ -90,8 +78,6 @@
 .method public getImageUrl(Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;Z)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 94
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -110,8 +96,6 @@
 .method public bridge synthetic getImageUrl(Ljava/lang/Object;Z)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 30
     check-cast p1, Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;
 
     invoke-virtual {p0, p1, p2}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->getImageUrl(Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;Z)Ljava/lang/String;
@@ -124,8 +108,6 @@
 .method protected getLayoutId()I
     .locals 1
 
-    .prologue
-    .line 82
     const v0, 0x7f030076
 
     return v0
@@ -134,8 +116,6 @@
 .method public getPlayContext()Lcom/netflix/mediaclient/ui/common/PlayContext;
     .locals 1
 
-    .prologue
-    .line 165
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->playContext:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
     return-object v0
@@ -144,8 +124,6 @@
 .method protected getPressableStateHandler()Lcom/netflix/mediaclient/android/widget/PressedStateHandler;
     .locals 1
 
-    .prologue
-    .line 160
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->img:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/widget/AdvancedImageView;->getPressedStateHandler()Lcom/netflix/mediaclient/android/widget/PressedStateHandler;
@@ -158,8 +136,6 @@
 .method protected getPressableView()Landroid/view/View;
     .locals 1
 
-    .prologue
-    .line 151
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->playView:Landroid/view/View;
 
     return-object v0
@@ -168,8 +144,6 @@
 .method public hide()V
     .locals 2
 
-    .prologue
-    .line 87
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -182,61 +156,50 @@
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/util/gfx/ImageLoader;->clear(Lcom/netflix/mediaclient/android/widget/AdvancedImageView;)V
 
-    .line 88
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->setVisibility(I)V
 
-    .line 89
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->clicker:Lcom/netflix/mediaclient/android/widget/VideoDetailsClickListener;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->infoViewGroup:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/VideoDetailsClickListener;->remove(Landroid/view/View;)V
 
-    .line 90
     return-void
 .end method
 
 .method protected init()V
     .locals 3
 
-    .prologue
-    .line 61
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->setFocusable(Z)V
 
-    .line 62
     const v0, 0x7f0201e6
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->setBackgroundResource(I)V
 
-    .line 64
     sget-object v0, Lcom/netflix/mediaclient/ui/common/PlayContext;->EMPTY_CONTEXT:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->playContext:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
-    .line 65
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     check-cast v0, Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
-    .line 66
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v1
 
-    .line 67
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->getLayoutId()I
 
     move-result v2
 
     invoke-virtual {v1, v2, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    .line 69
     const v1, 0x7f0f0192
 
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->findViewById(I)Landroid/view/View;
@@ -245,7 +208,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->playView:Landroid/view/View;
 
-    .line 70
     const v1, 0x7f0f01b2
 
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->findViewById(I)Landroid/view/View;
@@ -254,7 +216,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->infoViewGroup:Landroid/view/View;
 
-    .line 72
     const v1, 0x7f0f0115
 
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->findViewById(I)Landroid/view/View;
@@ -265,7 +226,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->title:Landroid/widget/TextView;
 
-    .line 73
     const v1, 0x7f0f01b3
 
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->findViewById(I)Landroid/view/View;
@@ -276,7 +236,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->subtitle:Landroid/widget/TextView;
 
-    .line 74
     const v1, 0x7f0f0112
 
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->findViewById(I)Landroid/view/View;
@@ -287,7 +246,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->img:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
-    .line 75
     const v1, 0x7f0f0114
 
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->findViewById(I)Landroid/view/View;
@@ -298,7 +256,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->progress:Landroid/widget/ProgressBar;
 
-    .line 76
     const v1, 0x7f0f0116
 
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->findViewById(I)Landroid/view/View;
@@ -307,46 +264,38 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->infoIcon:Landroid/view/View;
 
-    .line 78
     new-instance v1, Lcom/netflix/mediaclient/android/widget/VideoDetailsClickListener;
 
     invoke-direct {v1, v0, p0}, Lcom/netflix/mediaclient/android/widget/VideoDetailsClickListener;-><init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/ui/common/PlayContextProvider;)V
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->clicker:Lcom/netflix/mediaclient/android/widget/VideoDetailsClickListener;
 
-    .line 79
     return-void
 .end method
 
 .method public setInfoViewId(I)V
     .locals 1
 
-    .prologue
-    .line 98
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->infoIcon:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setId(I)V
 
-    .line 99
     return-void
 .end method
 
 .method public update(Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;IZZ)V
     .locals 9
 
-    .prologue
     const/4 v6, 0x1
 
     const/4 v8, 0x0
 
-    .line 103
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 104
     const-string/jumbo v0, "KubrickHighDensityCwView"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -373,7 +322,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
     :cond_0
     new-instance v0, Lcom/netflix/mediaclient/ui/common/PlayContextImp;
 
@@ -381,10 +329,8 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->playContext:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
-    .line 108
     invoke-virtual {p0, v8}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->setVisibility(I)V
 
-    .line 109
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -407,12 +353,10 @@
 
     move-result-object v4
 
-    .line 110
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->playView:Landroid/view/View;
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 112
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->title:Landroid/widget/TextView;
 
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;->getTitle()Ljava/lang/String;
@@ -421,7 +365,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 113
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->SHOW:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;->getType()Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
@@ -434,7 +377,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 114
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->subtitle:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->getContext()Landroid/content/Context;
@@ -447,14 +389,12 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    .line 115
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;->getSeasonAbbrSeqLabel()Ljava/lang/String;
 
     move-result-object v5
 
     aput-object v5, v3, v8
 
-    .line 116
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;->getEpisodeNumber()I
 
     move-result v5
@@ -467,27 +407,23 @@
 
     const/4 v5, 0x2
 
-    .line 117
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;->getCurrentEpisodeTitle()Ljava/lang/String;
 
     move-result-object v7
 
     aput-object v7, v3, v5
 
-    .line 114
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 125
     :goto_0
     invoke-virtual {p0, p1, p5}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->getImageUrl(Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;Z)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 126
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -509,14 +445,12 @@
     :goto_1
     invoke-interface/range {v0 .. v7}, Lcom/netflix/mediaclient/util/gfx/ImageLoader;->showImg(Lcom/netflix/mediaclient/android/widget/AdvancedImageView;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;Ljava/lang/String;Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;ZI)V
 
-    .line 130
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;->getRuntime()I
 
     move-result v0
 
     if-lez v0, :cond_3
 
-    .line 131
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;->getPlayableBookmarkPosition()I
 
     move-result v0
@@ -529,20 +463,17 @@
 
     div-int/2addr v0, v1
 
-    .line 132
     :goto_2
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->progress:Landroid/widget/ProgressBar;
 
     invoke-virtual {v1, v0}, Landroid/widget/ProgressBar;->setProgress(I)V
 
-    .line 134
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->getPressableView()Landroid/view/View;
 
     move-result-object v0
 
     new-instance v1, Lcom/netflix/mediaclient/android/widget/PressedStateHandler$DelayedOnClickListener;
 
-    .line 135
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->getPressableStateHandler()Lcom/netflix/mediaclient/android/widget/PressedStateHandler;
 
     move-result-object v2
@@ -553,10 +484,8 @@
 
     invoke-direct {v1, v2, v3}, Lcom/netflix/mediaclient/android/widget/PressedStateHandler$DelayedOnClickListener;-><init>(Lcom/netflix/mediaclient/android/widget/PressedStateHandler;Landroid/view/View$OnClickListener;)V
 
-    .line 134
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 142
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->infoViewGroup:Landroid/view/View;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->getResources()Landroid/content/res/Resources;
@@ -583,7 +512,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 143
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->clicker:Lcom/netflix/mediaclient/android/widget/VideoDetailsClickListener;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->infoViewGroup:Landroid/view/View;
@@ -596,10 +524,8 @@
 
     invoke-virtual {v0, v1, p1, v2}, Lcom/netflix/mediaclient/android/widget/VideoDetailsClickListener;->update(Landroid/view/View;Lcom/netflix/mediaclient/servicemgr/interface_/Video;Lcom/netflix/mediaclient/android/widget/PressedStateHandler;)V
 
-    .line 144
     return-void
 
-    .line 120
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->subtitle:Landroid/widget/TextView;
 
@@ -611,7 +537,6 @@
 
     new-array v3, v6, [Ljava/lang/Object;
 
-    .line 122
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;->getRuntime()I
 
     move-result v5
@@ -626,7 +551,6 @@
 
     aput-object v5, v3, v8
 
-    .line 120
     invoke-virtual {v1, v2, v3}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -638,21 +562,17 @@
     :cond_2
     move v7, v8
 
-    .line 126
     goto :goto_1
 
     :cond_3
     move v0, v8
 
-    .line 131
     goto :goto_2
 .end method
 
 .method public bridge synthetic update(Ljava/lang/Object;Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;IZZ)V
     .locals 6
 
-    .prologue
-    .line 30
     move-object v1, p1
 
     check-cast v1, Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;

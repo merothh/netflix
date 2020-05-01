@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/offline/OfflineTutorialContentBinder;Lcom/netflix/mediaclient/ui/offline/OfflineTutorialDialogFrag;)V
     .locals 0
 
-    .prologue
-    .line 66
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineTutorialContentBinder$2;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineTutorialContentBinder;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/offline/OfflineTutorialContentBinder$2;->val$dialog:Lcom/netflix/mediaclient/ui/offline/OfflineTutorialDialogFrag;
@@ -32,12 +30,9 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .prologue
-    .line 69
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineTutorialContentBinder$2;->val$dialog:Lcom/netflix/mediaclient/ui/offline/OfflineTutorialDialogFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/offline/OfflineTutorialDialogFrag;->dismiss()V
 
-    .line 70
     return-void
 .end method

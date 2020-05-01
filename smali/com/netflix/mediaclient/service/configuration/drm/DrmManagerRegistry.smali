@@ -27,49 +27,38 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     return-void
 .end method
 
 .method private static clearKeys(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 281
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->getWidevineDrmManager()Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;->clearKeys(Ljava/lang/String;)V
 
-    .line 282
     return-void
 .end method
 
 .method private static clearLicense([B)V
     .locals 1
 
-    .prologue
-    .line 320
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->getWidevineMediaDrmEngine()Lcom/netflix/mediaclient/service/configuration/drm/WidevineMediaDrmEngine;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/service/configuration/drm/WidevineMediaDrmEngine;->clearLicense([B)V
 
-    .line 321
     return-void
 .end method
 
 .method public static declared-synchronized createDrmManager(Landroid/content/Context;Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;Lcom/netflix/mediaclient/service/ServiceAgent$UserAgentInterface;Lcom/netflix/mediaclient/servicemgr/ErrorLogging;Lcom/netflix/mediaclient/servicemgr/IErrorHandler;Lcom/netflix/mediaclient/service/configuration/drm/DrmManager$DrmReadyCallback;)Lcom/netflix/mediaclient/service/configuration/drm/DrmManager;
     .locals 9
 
-    .prologue
-    .line 70
     const-class v7, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;
 
     monitor-enter v7
@@ -77,27 +66,23 @@
     :try_start_0
     invoke-static {p0}, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->setPreviousDrm(Landroid/content/Context;)V
 
-    .line 71
     invoke-static {p0, p1}, Lcom/netflix/mediaclient/util/MediaDrmUtils;->getCryptoProvider(Landroid/content/Context;Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;)Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v8
 
-    .line 75
     :try_start_1
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;->WIDEVINE_L1:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;
 
     if-ne v8, v0, :cond_1
 
-    .line 77
     const-string/jumbo v0, "nf_drm"
 
     const-string/jumbo v1, "WidevineDrmManager L1 created"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     new-instance v0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineL1DrmManager;
 
     move-object v1, p0
@@ -119,14 +104,12 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 101
     :goto_0
     :try_start_2
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;->LEGACY:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;
 
     if-ne v8, v0, :cond_5
 
-    .line 102
     invoke-static {}, Lcom/netflix/mediaclient/util/AndroidUtils;->getAndroidVersion()I
 
     move-result v0
@@ -140,14 +123,12 @@
     :goto_1
     sput-object v0, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->currentDrmSystem:Ljava/lang/String;
 
-    .line 103
     const-string/jumbo v0, "nf_drm_system_id"
 
     sget-object v1, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->currentDrmSystem:Ljava/lang/String;
 
     invoke-static {p0, v0, v1}, Lcom/netflix/mediaclient/util/PreferenceUtils;->putStringPref(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 104
     const-string/jumbo v0, "nf_drm_crypto_provider"
 
     sget-object v1, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;->LEGACY:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;
@@ -158,7 +139,6 @@
 
     invoke-static {p0, v0, v1}, Lcom/netflix/mediaclient/util/PreferenceUtils;->putStringPref(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 110
     :goto_2
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -166,7 +146,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 111
     const-string/jumbo v0, "nf_drm"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -203,7 +182,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 112
     const-string/jumbo v0, "nf_drm"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -244,7 +222,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 115
     :cond_0
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->instance:Lcom/netflix/mediaclient/service/configuration/drm/DrmManager;
     :try_end_2
@@ -254,21 +231,18 @@
 
     return-object v0
 
-    .line 80
     :cond_1
     :try_start_3
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;->WIDEVINE_L3:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;
 
     if-ne v8, v0, :cond_2
 
-    .line 82
     const-string/jumbo v0, "nf_drm"
 
     const-string/jumbo v1, "WidevineDrmManager L3 created"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 83
     new-instance v0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineL3DrmManager;
 
     move-object v1, p0
@@ -292,11 +266,9 @@
 
     goto/16 :goto_0
 
-    .line 93
     :catch_0
     move-exception v0
 
-    .line 94
     :try_start_4
     const-string/jumbo v1, "nf_drm"
 
@@ -304,10 +276,8 @@
 
     invoke-static {v1, v2, v0}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 97
     invoke-static {}, Lcom/netflix/mediaclient/util/MediaDrmUtils;->updateCryptoProvideToLegacy()V
 
-    .line 98
     new-instance v0, Lcom/netflix/mediaclient/service/configuration/drm/LegacyDrmManager;
 
     invoke-direct {v0, p5}, Lcom/netflix/mediaclient/service/configuration/drm/LegacyDrmManager;-><init>(Lcom/netflix/mediaclient/service/configuration/drm/DrmManager$DrmReadyCallback;)V
@@ -318,7 +288,6 @@
 
     goto/16 :goto_0
 
-    .line 70
     :catchall_0
     move-exception v0
 
@@ -326,7 +295,6 @@
 
     throw v0
 
-    .line 87
     :cond_2
     :try_start_5
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
@@ -335,7 +303,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 88
     const-string/jumbo v0, "nf_drm"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -362,7 +329,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 90
     :cond_3
     new-instance v0, Lcom/netflix/mediaclient/service/configuration/drm/LegacyDrmManager;
 
@@ -375,14 +341,12 @@
 
     goto/16 :goto_0
 
-    .line 102
     :cond_4
     :try_start_6
     const-string/jumbo v0, "LEGACY"
 
     goto/16 :goto_1
 
-    .line 106
     :cond_5
     const-string/jumbo v0, "nf_drm_system_id"
 
@@ -402,8 +366,6 @@
 .method private static createWidevineMediaDrmEngine()V
     .locals 3
 
-    .prologue
-    .line 302
     new-instance v1, Lcom/netflix/mediaclient/service/configuration/drm/WidevineMediaDrmEngine;
 
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->instance:Lcom/netflix/mediaclient/service/configuration/drm/DrmManager;
@@ -423,10 +385,8 @@
 
     sput-object v1, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->mWidevineMediaDrmEngine:Lcom/netflix/mediaclient/service/configuration/drm/WidevineMediaDrmEngine;
 
-    .line 303
     return-void
 
-    .line 302
     :cond_0
     const/4 v0, 0x0
 
@@ -436,8 +396,6 @@
 .method private static decrypt([B[B)[B
     .locals 1
 
-    .prologue
-    .line 211
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->getWidevineDrmManager()Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;
 
     move-result-object v0
@@ -452,8 +410,6 @@
 .method public static drmSupportsHd()Z
     .locals 1
 
-    .prologue
-    .line 345
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->isCurrentDrmWidevine()Z
 
     move-result v0
@@ -480,8 +436,6 @@
 .method private static encrypt([B[B)[B
     .locals 1
 
-    .prologue
-    .line 223
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->getWidevineDrmManager()Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;
 
     move-result-object v0
@@ -496,8 +450,6 @@
 .method private static getChallenge([B)[B
     .locals 1
 
-    .prologue
-    .line 312
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->getWidevineMediaDrmEngine()Lcom/netflix/mediaclient/service/configuration/drm/WidevineMediaDrmEngine;
 
     move-result-object v0
@@ -512,20 +464,15 @@
 .method public static getDrmInfo()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 352
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->instance:Lcom/netflix/mediaclient/service/configuration/drm/DrmManager;
 
     if-nez v0, :cond_0
 
-    .line 353
     const-string/jumbo v0, ""
 
-    .line 361
     :goto_0
     return-object v0
 
-    .line 354
     :cond_0
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->instance:Lcom/netflix/mediaclient/service/configuration/drm/DrmManager;
 
@@ -537,12 +484,10 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 355
     const-string/jumbo v0, "WVL3"
 
     goto :goto_0
 
-    .line 356
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->instance:Lcom/netflix/mediaclient/service/configuration/drm/DrmManager;
 
@@ -554,12 +499,10 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 357
     const-string/jumbo v0, "WVL1"
 
     goto :goto_0
 
-    .line 358
     :cond_2
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->instance:Lcom/netflix/mediaclient/service/configuration/drm/DrmManager;
 
@@ -571,12 +514,10 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 359
     const-string/jumbo v0, "MGK"
 
     goto :goto_0
 
-    .line 361
     :cond_3
     const-string/jumbo v0, "X"
 
@@ -586,8 +527,6 @@
 .method private static getNccpSessionKeyRequest()[B
     .locals 1
 
-    .prologue
-    .line 263
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->getWidevineDrmManager()Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;
 
     move-result-object v0
@@ -602,8 +541,6 @@
 .method private static getSecureStops()[[B
     .locals 1
 
-    .prologue
-    .line 324
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->getWidevineMediaDrmEngine()Lcom/netflix/mediaclient/service/configuration/drm/WidevineMediaDrmEngine;
 
     move-result-object v0
@@ -612,7 +549,6 @@
 
     move-result-object v0
 
-    .line 325
     invoke-interface {v0}, Ljava/util/List;->toArray()[Ljava/lang/Object;
 
     move-result-object v0
@@ -627,22 +563,18 @@
 .method private static getWidevineDrmManager()Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;
     .locals 2
 
-    .prologue
-    .line 195
     invoke-static {}, Lcom/netflix/mediaclient/util/MediaDrmUtils;->isWidevineDrmAllowed()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 196
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->instance:Lcom/netflix/mediaclient/service/configuration/drm/DrmManager;
 
     check-cast v0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;
 
     return-object v0
 
-    .line 198
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -656,23 +588,18 @@
 .method public static getWidevineMediaDrmEngine()Lcom/netflix/mediaclient/service/configuration/drm/WidevineMediaDrmEngine;
     .locals 1
 
-    .prologue
-    .line 293
     invoke-static {}, Lcom/netflix/mediaclient/util/MediaDrmUtils;->isWidevineDrmAllowed()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 294
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->mWidevineMediaDrmEngine:Lcom/netflix/mediaclient/service/configuration/drm/WidevineMediaDrmEngine;
 
     if-nez v0, :cond_0
 
-    .line 295
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->createWidevineMediaDrmEngine()V
 
-    .line 298
     :cond_0
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->mWidevineMediaDrmEngine:Lcom/netflix/mediaclient/service/configuration/drm/WidevineMediaDrmEngine;
 
@@ -682,14 +609,12 @@
 .method public static hasEsnChanged()Z
     .locals 7
 
-    .prologue
     const/4 v6, 0x2
 
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 145
     const-string/jumbo v2, "nf_drm"
 
     const-string/jumbo v3, "currentDrmSystem: %s, previousDrmSystem: %s"
@@ -706,7 +631,6 @@
 
     invoke-static {v2, v3, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 147
     sget-object v2, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->currentDrmSystem:Ljava/lang/String;
 
     invoke-static {v2}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
@@ -715,19 +639,16 @@
 
     if-eqz v2, :cond_1
 
-    .line 148
     const-string/jumbo v1, "nf_drm"
 
     const-string/jumbo v2, "DrmManager instance is not created"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 173
     :cond_0
     :goto_0
     return v0
 
-    .line 152
     :cond_1
     sget-object v2, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->previousDrmSystem:Ljava/lang/String;
 
@@ -737,7 +658,6 @@
 
     if-nez v2, :cond_0
 
-    .line 156
     sget-object v2, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->currentDrmSystem:Ljava/lang/String;
 
     invoke-static {v2}, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->isLegacyDrmSystem(Ljava/lang/String;)Z
@@ -756,11 +676,9 @@
 
     move v2, v1
 
-    .line 157
     :goto_1
     if-eqz v2, :cond_3
 
-    .line 158
     const-string/jumbo v1, "nf_drm"
 
     const-string/jumbo v2, "Both previous and current DEM is legacy, ESN is NOT changed"
@@ -772,10 +690,8 @@
     :cond_2
     move v2, v0
 
-    .line 156
     goto :goto_1
 
-    .line 162
     :cond_3
     sget-object v2, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->currentDrmSystem:Ljava/lang/String;
 
@@ -787,7 +703,6 @@
 
     if-nez v2, :cond_4
 
-    .line 163
     const-string/jumbo v0, "nf_drm"
 
     const-string/jumbo v2, "Widevine System ID changed, ESN is changed"
@@ -796,10 +711,8 @@
 
     move v0, v1
 
-    .line 164
     goto :goto_0
 
-    .line 166
     :cond_4
     const-string/jumbo v2, "nf_drm"
 
@@ -807,7 +720,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     sget-object v2, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->instance:Lcom/netflix/mediaclient/service/configuration/drm/DrmManager;
 
     invoke-interface {v2}, Lcom/netflix/mediaclient/service/configuration/drm/DrmManager;->getCryptoProvider()Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;
@@ -818,7 +730,6 @@
 
     if-ne v2, v3, :cond_5
 
-    .line 169
     const-string/jumbo v2, "nf_drm"
 
     const-string/jumbo v3, "Same crypto provider %s. No change!"
@@ -833,7 +744,6 @@
 
     goto :goto_0
 
-    .line 172
     :cond_5
     const-string/jumbo v2, "nf_drm"
 
@@ -861,22 +771,18 @@
 
     move v0, v1
 
-    .line 173
     goto :goto_0
 .end method
 
 .method public static isCurrentDrmWidevine()Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 369
     sget-object v1, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->instance:Lcom/netflix/mediaclient/service/configuration/drm/DrmManager;
 
     if-eqz v1, :cond_0
 
-    .line 370
     sget-object v1, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->instance:Lcom/netflix/mediaclient/service/configuration/drm/DrmManager;
 
     invoke-interface {v1}, Lcom/netflix/mediaclient/service/configuration/drm/DrmManager;->getCryptoProvider()Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;
@@ -889,7 +795,6 @@
 
     const/4 v0, 0x1
 
-    .line 372
     :cond_0
     return v0
 .end method
@@ -897,8 +802,6 @@
 .method public static isLegacyDrmSystem(Ljava/lang/String;)Z
     .locals 1
 
-    .prologue
-    .line 183
     invoke-static {p0}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v0
@@ -944,8 +847,6 @@
 .method private static isPlatformDrmSupported()Z
     .locals 1
 
-    .prologue
-    .line 337
     invoke-static {}, Lcom/netflix/mediaclient/util/MediaDrmUtils;->isWidevineDrmAllowed()Z
 
     move-result v0
@@ -956,23 +857,18 @@
 .method private static releaseSecureStops([B)V
     .locals 1
 
-    .prologue
-    .line 329
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->getWidevineMediaDrmEngine()Lcom/netflix/mediaclient/service/configuration/drm/WidevineMediaDrmEngine;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/service/configuration/drm/WidevineMediaDrmEngine;->releaseSecureStops([B)V
 
-    .line 330
     return-void
 .end method
 
 .method private static restoreKeys(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 1
 
-    .prologue
-    .line 272
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->getWidevineDrmManager()Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;
 
     move-result-object v0
@@ -987,10 +883,8 @@
 .method private static setPreviousDrm(Landroid/content/Context;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 120
     const-string/jumbo v0, "nf_drm_system_id"
 
     invoke-static {p0, v0, v1}, Lcom/netflix/mediaclient/util/PreferenceUtils;->getStringPref(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -999,7 +893,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->previousDrmSystem:Ljava/lang/String;
 
-    .line 121
     const-string/jumbo v0, "nf_drm_crypto_provider"
 
     invoke-static {p0, v0, v1}, Lcom/netflix/mediaclient/util/PreferenceUtils;->getStringPref(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1012,7 +905,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->previousCryptoProvider:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;
 
-    .line 122
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->previousDrmSystem:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
@@ -1025,7 +917,6 @@
 
     if-nez v0, :cond_0
 
-    .line 124
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->previousDrmSystem:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->isLegacyDrmSystem(Ljava/lang/String;)Z
@@ -1034,24 +925,20 @@
 
     if-eqz v0, :cond_1
 
-    .line 125
     const-string/jumbo v0, "nf_drm"
 
     const-string/jumbo v1, "Previous crypto provider was legacy..."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 126
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;->LEGACY:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;
 
     sput-object v0, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->previousCryptoProvider:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;
 
-    .line 132
     :cond_0
     :goto_0
     return-void
 
-    .line 128
     :cond_1
     const-string/jumbo v0, "nf_drm"
 
@@ -1059,7 +946,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;->WIDEVINE_L1:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;
 
     sput-object v0, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->previousCryptoProvider:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;
@@ -1070,8 +956,6 @@
 .method private static sign([B)[B
     .locals 1
 
-    .prologue
-    .line 234
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->getWidevineDrmManager()Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;
 
     move-result-object v0
@@ -1086,8 +970,6 @@
 .method private static storeLicense([B)[B
     .locals 1
 
-    .prologue
-    .line 316
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->getWidevineMediaDrmEngine()Lcom/netflix/mediaclient/service/configuration/drm/WidevineMediaDrmEngine;
 
     move-result-object v0
@@ -1102,8 +984,6 @@
 .method private static updateKeyResponse([B[B[BLjava/lang/String;)Z
     .locals 1
 
-    .prologue
-    .line 253
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->getWidevineDrmManager()Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;
 
     move-result-object v0
@@ -1118,8 +998,6 @@
 .method private static verify([B[B)Z
     .locals 1
 
-    .prologue
-    .line 245
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/drm/DrmManagerRegistry;->getWidevineDrmManager()Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;
 
     move-result-object v0

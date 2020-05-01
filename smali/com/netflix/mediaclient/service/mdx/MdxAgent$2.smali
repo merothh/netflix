@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/mdx/MdxAgent;)V
     .locals 0
 
-    .prologue
-    .line 610
     iput-object p1, p0, Lcom/netflix/mediaclient/service/mdx/MdxAgent$2;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxAgent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 614
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxAgent$2;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/mdx/MdxAgent;->access$100(Lcom/netflix/mediaclient/service/mdx/MdxAgent;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -42,14 +38,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 615
     const-string/jumbo v0, "nf_mdx_MdxAgent"
 
     const-string/jumbo v1, "notifyIsUserLogin: login, init native"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 616
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxAgent$2;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxAgent;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/mdx/MdxAgent;->getMainHandler()Landroid/os/Handler;
@@ -64,7 +58,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 617
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxAgent$2;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/mdx/MdxAgent;->access$300(Lcom/netflix/mediaclient/service/mdx/MdxAgent;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -75,17 +68,14 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 618
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxAgent$2;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/mdx/MdxAgent;->access$400(Lcom/netflix/mediaclient/service/mdx/MdxAgent;)V
 
-    .line 619
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxAgent$2;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/mdx/MdxAgent;->access$500(Lcom/netflix/mediaclient/service/mdx/MdxAgent;)V
 
-    .line 620
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxAgent$2;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxAgent;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/mdx/MdxAgent$2;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxAgent;
@@ -96,7 +86,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/mdx/MdxAgent;->access$700(Lcom/netflix/mediaclient/service/mdx/MdxAgent;Lcom/netflix/mediaclient/javabridge/ui/EventListener;)V
 
-    .line 621
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxAgent$2;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxAgent;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/mdx/MdxAgent$2;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxAgent;
@@ -107,7 +96,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/mdx/MdxAgent;->access$800(Lcom/netflix/mediaclient/service/mdx/MdxAgent;Lcom/netflix/mediaclient/javabridge/ui/EventListener;)V
 
-    .line 622
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxAgent$2;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/mdx/MdxAgent;->access$1100(Lcom/netflix/mediaclient/service/mdx/MdxAgent;)Lcom/netflix/mediaclient/javabridge/ui/mdxcontroller/MdxController;
@@ -120,7 +108,6 @@
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/mdx/MdxAgent$2;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxAgent;
 
-    .line 623
     invoke-static {v2}, Lcom/netflix/mediaclient/service/mdx/MdxAgent;->access$900(Lcom/netflix/mediaclient/service/mdx/MdxAgent;)Z
 
     move-result v2
@@ -143,10 +130,8 @@
 
     move-result-object v3
 
-    .line 622
     invoke-interface {v0, v1, v2, v3}, Lcom/netflix/mediaclient/javabridge/ui/mdxcontroller/MdxController;->init(Ljava/util/Map;ZLorg/json/JSONArray;)V
 
-    .line 624
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxAgent$2;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/mdx/MdxAgent;->access$1200(Lcom/netflix/mediaclient/service/mdx/MdxAgent;)Ljava/util/ArrayList;
@@ -155,7 +140,6 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 625
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxAgent$2;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/mdx/MdxAgent;->access$1300(Lcom/netflix/mediaclient/service/mdx/MdxAgent;)Ljava/util/ArrayList;
@@ -164,11 +148,9 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 630
     :goto_0
     return-void
 
-    .line 627
     :cond_0
     const-string/jumbo v0, "nf_mdx_MdxAgent"
 
@@ -176,7 +158,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 628
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxAgent$2;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxAgent;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/mdx/MdxAgent;->getMainHandler()Landroid/os/Handler;

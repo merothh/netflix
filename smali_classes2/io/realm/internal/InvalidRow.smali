@@ -28,10 +28,8 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 29
     new-instance v0, Lio/realm/internal/InvalidRow;
 
     const-string/jumbo v1, "INSTANCE"
@@ -40,7 +38,6 @@
 
     sput-object v0, Lio/realm/internal/InvalidRow;->INSTANCE:Lio/realm/internal/InvalidRow;
 
-    .line 28
     const/4 v0, 0x1
 
     new-array v0, v0, [Lio/realm/internal/InvalidRow;
@@ -62,8 +59,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 28
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -72,8 +67,6 @@
 .method private getStubException()Ljava/lang/RuntimeException;
     .locals 2
 
-    .prologue
-    .line 177
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "Object is no longer managed by Realm. Has it been deleted?"
@@ -86,8 +79,6 @@
 .method public static valueOf(Ljava/lang/String;)Lio/realm/internal/InvalidRow;
     .locals 1
 
-    .prologue
-    .line 28
     const-class v0, Lio/realm/internal/InvalidRow;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -102,8 +93,6 @@
 .method public static values()[Lio/realm/internal/InvalidRow;
     .locals 1
 
-    .prologue
-    .line 28
     sget-object v0, Lio/realm/internal/InvalidRow;->$VALUES:[Lio/realm/internal/InvalidRow;
 
     invoke-virtual {v0}, [Lio/realm/internal/InvalidRow;->clone()Ljava/lang/Object;
@@ -120,8 +109,6 @@
 .method public getBinaryByteArray(J)[B
     .locals 1
 
-    .prologue
-    .line 93
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -132,8 +119,6 @@
 .method public getBoolean(J)Z
     .locals 1
 
-    .prologue
-    .line 68
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -144,8 +129,6 @@
 .method public getColumnCount()J
     .locals 1
 
-    .prologue
-    .line 33
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -156,8 +139,6 @@
 .method public getColumnIndex(Ljava/lang/String;)J
     .locals 1
 
-    .prologue
-    .line 43
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -168,8 +149,6 @@
 .method public getColumnName(J)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 38
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -180,8 +159,6 @@
 .method public getColumnType(J)Lio/realm/RealmFieldType;
     .locals 1
 
-    .prologue
-    .line 48
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -192,8 +169,6 @@
 .method public getDate(J)Ljava/util/Date;
     .locals 1
 
-    .prologue
-    .line 83
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -204,8 +179,6 @@
 .method public getDouble(J)D
     .locals 1
 
-    .prologue
-    .line 78
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -216,8 +189,6 @@
 .method public getFloat(J)F
     .locals 1
 
-    .prologue
-    .line 73
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -228,8 +199,6 @@
 .method public getIndex()J
     .locals 1
 
-    .prologue
-    .line 58
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -240,8 +209,6 @@
 .method public getLink(J)J
     .locals 1
 
-    .prologue
-    .line 98
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -252,8 +219,6 @@
 .method public getLinkList(J)Lio/realm/internal/LinkView;
     .locals 1
 
-    .prologue
-    .line 108
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -264,8 +229,6 @@
 .method public getLong(J)J
     .locals 1
 
-    .prologue
-    .line 63
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -276,8 +239,6 @@
 .method public getString(J)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 88
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -288,8 +249,6 @@
 .method public getTable()Lio/realm/internal/Table;
     .locals 1
 
-    .prologue
-    .line 53
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -300,8 +259,6 @@
 .method public isAttached()Z
     .locals 1
 
-    .prologue
-    .line 168
     const/4 v0, 0x0
 
     return v0
@@ -310,8 +267,6 @@
 .method public isNull(J)Z
     .locals 1
 
-    .prologue
-    .line 158
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -322,8 +277,6 @@
 .method public isNullLink(J)Z
     .locals 1
 
-    .prologue
-    .line 103
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -334,8 +287,6 @@
 .method public nullifyLink(J)V
     .locals 1
 
-    .prologue
-    .line 153
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -346,8 +297,6 @@
 .method public setBoolean(JZ)V
     .locals 1
 
-    .prologue
-    .line 118
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -358,8 +307,6 @@
 .method public setFloat(JF)V
     .locals 1
 
-    .prologue
-    .line 123
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -370,8 +317,6 @@
 .method public setLink(JJ)V
     .locals 1
 
-    .prologue
-    .line 148
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -382,8 +327,6 @@
 .method public setLong(JJ)V
     .locals 1
 
-    .prologue
-    .line 113
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -394,8 +337,6 @@
 .method public setNull(J)V
     .locals 1
 
-    .prologue
-    .line 163
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -406,8 +347,6 @@
 .method public setString(JLjava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 138
     invoke-direct {p0}, Lio/realm/internal/InvalidRow;->getStubException()Ljava/lang/RuntimeException;
 
     move-result-object v0

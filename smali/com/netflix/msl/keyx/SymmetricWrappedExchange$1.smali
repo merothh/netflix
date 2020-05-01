@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 304
     invoke-static {}, Lcom/netflix/msl/keyx/SymmetricWrappedExchange$KeyId;->values()[Lcom/netflix/msl/keyx/SymmetricWrappedExchange$KeyId;
 
     move-result-object v0

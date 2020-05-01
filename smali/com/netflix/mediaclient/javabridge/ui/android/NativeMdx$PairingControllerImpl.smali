@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx;)V
     .locals 0
 
-    .prologue
-    .line 285
     iput-object p1, p0, Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx$PairingControllerImpl;->this$0:Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public deletePairing(Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 287
     iget-object v0, p0, Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx$PairingControllerImpl;->this$0:Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx;
 
     new-instance v1, Lcom/netflix/mediaclient/javabridge/invoke/mdx/pair/DeletePairing;
@@ -38,15 +34,12 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx;->access$000(Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx;Lcom/netflix/mediaclient/javabridge/invoke/Invoke;)V
 
-    .line 289
     return-void
 .end method
 
 .method public pairingRequest(Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 292
     iget-object v0, p0, Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx$PairingControllerImpl;->this$0:Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx;
 
     new-instance v1, Lcom/netflix/mediaclient/javabridge/invoke/mdx/pair/PairingRequest;
@@ -55,15 +48,12 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx;->access$000(Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx;Lcom/netflix/mediaclient/javabridge/invoke/Invoke;)V
 
-    .line 293
     return-void
 .end method
 
 .method public registrationPairingRequest(Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 296
     iget-object v0, p0, Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx$PairingControllerImpl;->this$0:Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx;
 
     new-instance v1, Lcom/netflix/mediaclient/javabridge/invoke/mdx/pair/RegistrationPairingRequest;
@@ -74,15 +64,12 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx;->access$000(Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx;Lcom/netflix/mediaclient/javabridge/invoke/Invoke;)V
 
-    .line 297
     return-void
 .end method
 
 .method public registrationPairingRequest(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 300
     iget-object v0, p0, Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx$PairingControllerImpl;->this$0:Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx;
 
     new-instance v1, Lcom/netflix/mediaclient/javabridge/invoke/mdx/pair/RegistrationPairingRequest;
@@ -91,6 +78,5 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx;->access$000(Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx;Lcom/netflix/mediaclient/javabridge/invoke/Invoke;)V
 
-    .line 301
     return-void
 .end method

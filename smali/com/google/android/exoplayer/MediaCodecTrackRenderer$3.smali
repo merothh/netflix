@@ -20,8 +20,6 @@
 .method constructor <init>(Lcom/google/android/exoplayer/MediaCodecTrackRenderer;Ljava/lang/String;JJ)V
     .locals 1
 
-    .prologue
-    .line 1042
     iput-object p1, p0, Lcom/google/android/exoplayer/MediaCodecTrackRenderer$3;->this$0:Lcom/google/android/exoplayer/MediaCodecTrackRenderer;
 
     iput-object p2, p0, Lcom/google/android/exoplayer/MediaCodecTrackRenderer$3;->val$decoderName:Ljava/lang/String;
@@ -40,8 +38,6 @@
 .method public run()V
     .locals 6
 
-    .prologue
-    .line 1045
     iget-object v0, p0, Lcom/google/android/exoplayer/MediaCodecTrackRenderer$3;->this$0:Lcom/google/android/exoplayer/MediaCodecTrackRenderer;
 
     invoke-static {v0}, Lcom/google/android/exoplayer/MediaCodecTrackRenderer;->access$000(Lcom/google/android/exoplayer/MediaCodecTrackRenderer;)Lcom/google/android/exoplayer/MediaCodecTrackRenderer$EventListener;
@@ -56,6 +52,5 @@
 
     invoke-interface/range {v0 .. v5}, Lcom/google/android/exoplayer/MediaCodecTrackRenderer$EventListener;->onDecoderInitialized(Ljava/lang/String;JJ)V
 
-    .line 1047
     return-void
 .end method

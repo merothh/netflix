@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 731
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$4;->this$0:Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$4;->val$deliveryRequestId:Ljava/lang/String;
@@ -32,14 +30,11 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 734
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$4;->this$0:Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$4;->val$deliveryRequestId:Ljava/lang/String;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;->access$500(Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;Ljava/lang/String;)V
 
-    .line 735
     return-void
 .end method

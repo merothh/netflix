@@ -28,19 +28,14 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;Landroid/content/Context;)V
     .locals 3
 
-    .prologue
-    .line 232
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$MementoRelatedView;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
-    .line 233
     invoke-direct {p0, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
-    .line 230
     sget-object v0, Lcom/netflix/mediaclient/ui/common/PlayContext;->EMPTY_CONTEXT:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$MementoRelatedView;->playContext:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
-    .line 234
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$MementoRelatedView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -55,15 +50,12 @@
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 235
     return-void
 .end method
 
 .method private adjustDimensions()V
     .locals 2
 
-    .prologue
-    .line 264
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$MementoRelatedView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
@@ -76,7 +68,6 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 265
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$MementoRelatedView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
@@ -89,7 +80,6 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 266
     return-void
 .end method
 
@@ -98,8 +88,6 @@
 .method public getImageUrl(Lcom/netflix/mediaclient/servicemgr/interface_/Video;Z)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 273
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Video;->getBoxshotUrl()Ljava/lang/String;
 
     move-result-object v0
@@ -110,8 +98,6 @@
 .method public bridge synthetic getImageUrl(Ljava/lang/Object;Z)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 228
     check-cast p1, Lcom/netflix/mediaclient/servicemgr/interface_/Video;
 
     invoke-virtual {p0, p1, p2}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$MementoRelatedView;->getImageUrl(Lcom/netflix/mediaclient/servicemgr/interface_/Video;Z)Ljava/lang/String;
@@ -124,8 +110,6 @@
 .method public getPlayContext()Lcom/netflix/mediaclient/ui/common/PlayContext;
     .locals 1
 
-    .prologue
-    .line 278
     sget-object v0, Lcom/netflix/mediaclient/ui/common/PlayContext;->NFLX_MDX_CONTEXT:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
     return-object v0
@@ -134,28 +118,22 @@
 .method public hide()V
     .locals 0
 
-    .prologue
-    .line 269
     return-void
 .end method
 
 .method public update(Lcom/netflix/mediaclient/servicemgr/interface_/Video;Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;IZZ)V
     .locals 8
 
-    .prologue
     const/4 v6, 0x1
 
-    .line 239
     if-eqz p2, :cond_0
 
-    .line 240
     new-instance v0, Lcom/netflix/mediaclient/ui/common/PlayContextImp;
 
     invoke-direct {v0, p2, p3}, Lcom/netflix/mediaclient/ui/common/PlayContextImp;-><init>(Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;I)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$MementoRelatedView;->playContext:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
-    .line 243
     :cond_0
     const v0, 0x7f0f021d
 
@@ -165,15 +143,12 @@
 
     check-cast v1, Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
-    .line 244
     if-eqz v1, :cond_1
 
-    .line 245
     invoke-virtual {p0, p1, p5}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$MementoRelatedView;->getImageUrl(Lcom/netflix/mediaclient/servicemgr/interface_/Video;Z)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 246
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$MementoRelatedView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -184,7 +159,6 @@
 
     sget-object v3, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;->boxArt:Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
-    .line 249
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Video;->getTitle()Ljava/lang/String;
 
     move-result-object v4
@@ -197,25 +171,20 @@
 
     move v7, v6
 
-    .line 246
     :goto_0
     invoke-interface/range {v0 .. v7}, Lcom/netflix/mediaclient/util/gfx/ImageLoader;->showImg(Lcom/netflix/mediaclient/android/widget/AdvancedImageView;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;Ljava/lang/String;Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;ZI)V
 
-    .line 252
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$MementoRelatedView;->adjustDimensions()V
 
-    .line 254
     new-instance v0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$MementoRelatedView$1;
 
     invoke-direct {v0, p0, p1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$MementoRelatedView$1;-><init>(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$MementoRelatedView;Lcom/netflix/mediaclient/servicemgr/interface_/Video;)V
 
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/android/widget/AdvancedImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 261
     :cond_1
     return-void
 
-    .line 249
     :cond_2
     const/4 v7, 0x0
 
@@ -225,8 +194,6 @@
 .method public bridge synthetic update(Ljava/lang/Object;Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;IZZ)V
     .locals 6
 
-    .prologue
-    .line 228
     move-object v1, p1
 
     check-cast v1, Lcom/netflix/mediaclient/servicemgr/interface_/Video;

@@ -14,8 +14,6 @@
 .method constructor <init>(Lio/realm/Realm$2;)V
     .locals 0
 
-    .prologue
-    .line 1380
     iput-object p1, p0, Lio/realm/Realm$2$1;->this$1:Lio/realm/Realm$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 1383
     iget-object v0, p0, Lio/realm/Realm$2$1;->this$1:Lio/realm/Realm$2;
 
     iget-object v0, v0, Lio/realm/Realm$2;->this$0:Lio/realm/Realm;
@@ -49,10 +45,8 @@
     :goto_0
     invoke-virtual {v1, v0}, Lio/realm/HandlerController;->handleAsyncTransactionCompleted(Ljava/lang/Runnable;)V
 
-    .line 1389
     return-void
 
-    .line 1383
     :cond_0
     const/4 v0, 0x0
 

@@ -14,14 +14,10 @@
 .method public constructor <init>(Landroid/app/Activity;)V
     .locals 0
 
-    .prologue
-    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/home/DataSaverNotifier$AppSettingsClickListener;->activity:Landroid/app/Activity;
 
-    .line 62
     return-void
 .end method
 
@@ -30,8 +26,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .prologue
-    .line 66
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/DataSaverNotifier$AppSettingsClickListener;->activity:Landroid/app/Activity;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/home/DataSaverNotifier$AppSettingsClickListener;->activity:Landroid/app/Activity;
@@ -42,6 +36,5 @@
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 67
     return-void
 .end method

@@ -13,8 +13,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardLayout;)V
     .locals 0
 
-    .prologue
-    .line 613
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$3;->this$0:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$3;->val$v:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardLayout;
@@ -29,25 +27,20 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .prologue
-    .line 616
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    .line 617
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 618
     const-string/jumbo v0, "WPMomentScreen"
 
     const-string/jumbo v1, "zoomInCard onAnimationEnd"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 620
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$3;->this$0:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
@@ -57,11 +50,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 625
     :goto_0
     return-void
 
-    .line 624
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$3;->val$v:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardLayout;
 

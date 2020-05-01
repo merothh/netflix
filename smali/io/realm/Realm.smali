@@ -11,11 +11,8 @@
 .method constructor <init>(Lio/realm/RealmConfiguration;)V
     .locals 0
 
-    .prologue
-    .line 139
     invoke-direct {p0, p1}, Lio/realm/BaseRealm;-><init>(Lio/realm/RealmConfiguration;)V
 
-    .line 140
     return-void
 .end method
 
@@ -31,8 +28,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 1470
     iget-object v0, p0, Lio/realm/Realm;->schema:Lio/realm/RealmSchema;
 
     invoke-virtual {v0, p1}, Lio/realm/RealmSchema;->getTable(Ljava/lang/Class;)Lio/realm/internal/Table;
@@ -45,7 +40,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1471
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -74,7 +68,6 @@
 
     throw v0
 
-    .line 1473
     :cond_0
     return-void
 .end method
@@ -89,11 +82,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 1464
     if-nez p1, :cond_0
 
-    .line 1465
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Null objects cannot be copied into Realm."
@@ -102,7 +92,6 @@
 
     throw v0
 
-    .line 1467
     :cond_0
     return-void
 .end method
@@ -122,11 +111,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 1454
     invoke-virtual {p0}, Lio/realm/Realm;->checkIfValid()V
 
-    .line 1455
     iget-object v0, p0, Lio/realm/Realm;->configuration:Lio/realm/RealmConfiguration;
 
     invoke-virtual {v0}, Lio/realm/RealmConfiguration;->getSchemaMediator()Lio/realm/internal/RealmProxyMediator;
@@ -143,7 +129,6 @@
 .method static createAndValidate(Lio/realm/RealmConfiguration;[Lio/realm/internal/ColumnIndices;)Lio/realm/Realm;
     .locals 12
 
-    .prologue
     const-wide/16 v10, -0x1
 
     const/4 v7, 0x2
@@ -152,27 +137,22 @@
 
     const/4 v8, 0x0
 
-    .line 284
     new-instance v0, Lio/realm/Realm;
 
     invoke-direct {v0, p0}, Lio/realm/Realm;-><init>(Lio/realm/RealmConfiguration;)V
 
-    .line 285
     invoke-virtual {v0}, Lio/realm/Realm;->getVersion()J
 
     move-result-wide v2
 
-    .line 286
     invoke-virtual {p0}, Lio/realm/RealmConfiguration;->getSchemaVersion()J
 
     move-result-wide v4
 
-    .line 287
     invoke-static {p1, v4, v5}, Lio/realm/RealmCache;->findColumnIndices([Lio/realm/internal/ColumnIndices;J)Lio/realm/internal/ColumnIndices;
 
     move-result-object v1
 
-    .line 288
     cmp-long v6, v2, v10
 
     if-eqz v6, :cond_0
@@ -183,10 +163,8 @@
 
     if-nez v1, :cond_0
 
-    .line 289
     invoke-virtual {v0}, Lio/realm/Realm;->doClose()V
 
-    .line 290
     new-instance v0, Lio/realm/exceptions/RealmMigrationNeededException;
 
     invoke-virtual {p0}, Lio/realm/RealmConfiguration;->getPath()Ljava/lang/String;
@@ -217,7 +195,6 @@
 
     throw v0
 
-    .line 292
     :cond_0
     cmp-long v6, v2, v10
 
@@ -229,10 +206,8 @@
 
     if-nez v1, :cond_1
 
-    .line 293
     invoke-virtual {v0}, Lio/realm/Realm;->doClose()V
 
-    .line 294
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Realm on disk is newer than the one specified: v%s vs. v%s"
@@ -259,31 +234,24 @@
 
     throw v0
 
-    .line 298
     :cond_1
     if-nez v1, :cond_2
 
-    .line 300
     :try_start_0
     invoke-static {v0}, Lio/realm/Realm;->initializeRealm(Lio/realm/Realm;)V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 310
     :goto_0
     return-object v0
 
-    .line 301
     :catch_0
     move-exception v1
 
-    .line 302
     invoke-virtual {v0}, Lio/realm/Realm;->doClose()V
 
-    .line 303
     throw v1
 
-    .line 307
     :cond_2
     iget-object v2, v0, Lio/realm/Realm;->schema:Lio/realm/RealmSchema;
 
@@ -299,8 +267,6 @@
 .method static createInstance(Lio/realm/RealmConfiguration;[Lio/realm/internal/ColumnIndices;)Lio/realm/Realm;
     .locals 3
 
-    .prologue
-    .line 265
     :try_start_0
     invoke-static {p0, p1}, Lio/realm/Realm;->createAndValidate(Lio/realm/RealmConfiguration;[Lio/realm/internal/ColumnIndices;)Lio/realm/Realm;
     :try_end_0
@@ -308,25 +274,20 @@
 
     move-result-object v0
 
-    .line 279
     :goto_0
     return-object v0
 
-    .line 267
     :catch_0
     move-exception v0
 
-    .line 268
     invoke-virtual {p0}, Lio/realm/RealmConfiguration;->shouldDeleteRealmIfMigrationNeeded()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 269
     invoke-static {p0}, Lio/realm/Realm;->deleteRealm(Lio/realm/RealmConfiguration;)Z
 
-    .line 279
     :goto_1
     invoke-static {p0, p1}, Lio/realm/Realm;->createAndValidate(Lio/realm/RealmConfiguration;[Lio/realm/internal/ColumnIndices;)Lio/realm/Realm;
 
@@ -334,7 +295,6 @@
 
     goto :goto_0
 
-    .line 272
     :cond_0
     :try_start_1
     invoke-static {p0, v0}, Lio/realm/Realm;->migrateRealm(Lio/realm/RealmConfiguration;Lio/realm/exceptions/RealmMigrationNeededException;)V
@@ -343,11 +303,9 @@
 
     goto :goto_1
 
-    .line 273
     :catch_1
     move-exception v0
 
-    .line 275
     new-instance v1, Lio/realm/exceptions/RealmFileException;
 
     sget-object v2, Lio/realm/exceptions/RealmFileException$Kind;->NOT_FOUND:Lio/realm/exceptions/RealmFileException$Kind;
@@ -360,8 +318,6 @@
 .method public static deleteRealm(Lio/realm/RealmConfiguration;)Z
     .locals 1
 
-    .prologue
-    .line 1545
     invoke-static {p0}, Lio/realm/BaseRealm;->deleteRealm(Lio/realm/RealmConfiguration;)Z
 
     move-result v0
@@ -372,17 +328,13 @@
 .method public static getDefaultModule()Ljava/lang/Object;
     .locals 5
 
-    .prologue
-    .line 1618
     const-string/jumbo v1, "io.realm.DefaultRealmModule"
 
-    .line 1622
     :try_start_0
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 1623
     invoke-virtual {v0}, Ljava/lang/Class;->getDeclaredConstructors()[Ljava/lang/reflect/Constructor;
 
     move-result-object v0
@@ -391,12 +343,10 @@
 
     aget-object v0, v0, v2
 
-    .line 1624
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
 
-    .line 1625
     const/4 v2, 0x0
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -410,24 +360,19 @@
 
     move-result-object v0
 
-    .line 1627
     :goto_0
     return-object v0
 
-    .line 1626
     :catch_0
     move-exception v0
 
-    .line 1627
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 1628
     :catch_1
     move-exception v0
 
-    .line 1629
     new-instance v2, Lio/realm/exceptions/RealmException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -452,11 +397,9 @@
 
     throw v2
 
-    .line 1630
     :catch_2
     move-exception v0
 
-    .line 1631
     new-instance v2, Lio/realm/exceptions/RealmException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -481,11 +424,9 @@
 
     throw v2
 
-    .line 1632
     :catch_3
     move-exception v0
 
-    .line 1633
     new-instance v2, Lio/realm/exceptions/RealmException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -514,11 +455,8 @@
 .method public static getInstance(Lio/realm/RealmConfiguration;)Lio/realm/Realm;
     .locals 2
 
-    .prologue
-    .line 225
     if-nez p0, :cond_0
 
-    .line 226
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "A non-null RealmConfiguration must be provided"
@@ -527,7 +465,6 @@
 
     throw v0
 
-    .line 228
     :cond_0
     const-class v0, Lio/realm/Realm;
 
@@ -543,8 +480,6 @@
 .method public static declared-synchronized init(Landroid/content/Context;)V
     .locals 3
 
-    .prologue
-    .line 184
     const-class v1, Lio/realm/Realm;
 
     monitor-enter v1
@@ -554,10 +489,8 @@
 
     if-nez v0, :cond_1
 
-    .line 185
     if-nez p0, :cond_0
 
-    .line 186
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v2, "Non-null context required."
@@ -568,7 +501,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 184
     :catchall_0
     move-exception v0
 
@@ -576,12 +508,10 @@
 
     throw v0
 
-    .line 188
     :cond_0
     :try_start_1
     invoke-static {p0}, Lio/realm/internal/RealmCore;->loadLibrary(Landroid/content/Context;)V
 
-    .line 189
     new-instance v0, Lio/realm/log/AndroidLogger;
 
     const/4 v2, 0x5
@@ -590,7 +520,6 @@
 
     invoke-static {v0}, Lio/realm/log/RealmLog;->add(Lio/realm/log/Logger;)V
 
-    .line 190
     new-instance v0, Lio/realm/RealmConfiguration$Builder;
 
     invoke-direct {v0, p0}, Lio/realm/RealmConfiguration$Builder;-><init>(Landroid/content/Context;)V
@@ -601,14 +530,12 @@
 
     sput-object v0, Lio/realm/Realm;->defaultConfiguration:Lio/realm/RealmConfiguration;
 
-    .line 191
     invoke-static {}, Lio/realm/internal/ObjectServerFacade;->getSyncFacadeIfPossible()Lio/realm/internal/ObjectServerFacade;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lio/realm/internal/ObjectServerFacade;->init(Landroid/content/Context;)V
 
-    .line 192
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -617,7 +544,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 194
     :cond_1
     monitor-exit v1
 
@@ -627,40 +553,31 @@
 .method private static initializeRealm(Lio/realm/Realm;)V
     .locals 14
 
-    .prologue
-    .line 315
     invoke-virtual {p0}, Lio/realm/Realm;->getVersion()J
 
     move-result-wide v4
 
-    .line 316
     const/4 v1, 0x0
 
-    .line 317
     iget-object v0, p0, Lio/realm/Realm;->configuration:Lio/realm/RealmConfiguration;
 
     invoke-virtual {v0}, Lio/realm/RealmConfiguration;->isSyncConfiguration()Z
 
     move-result v6
 
-    .line 320
     if-nez v6, :cond_0
 
-    .line 321
     :try_start_0
     invoke-virtual {p0}, Lio/realm/Realm;->beginTransaction()V
 
-    .line 322
     const-wide/16 v2, -0x1
 
     cmp-long v0, v4, v2
 
     if-nez v0, :cond_0
 
-    .line 323
     const/4 v1, 0x1
 
-    .line 324
     iget-object v0, p0, Lio/realm/Realm;->configuration:Lio/realm/RealmConfiguration;
 
     invoke-virtual {v0}, Lio/realm/RealmConfiguration;->getSchemaVersion()J
@@ -669,7 +586,6 @@
 
     invoke-virtual {p0, v2, v3}, Lio/realm/Realm;->setVersion(J)V
 
-    .line 328
     :cond_0
     iget-object v0, p0, Lio/realm/Realm;->configuration:Lio/realm/RealmConfiguration;
 
@@ -677,12 +593,10 @@
 
     move-result-object v2
 
-    .line 329
     invoke-virtual {v2}, Lio/realm/internal/RealmProxyMediator;->getModelClasses()Ljava/util/Set;
 
     move-result-object v3
 
-    .line 331
     new-instance v7, Ljava/util/HashMap;
 
     invoke-interface {v3}, Ljava/util/Set;->size()I
@@ -691,17 +605,14 @@
 
     invoke-direct {v7, v0}, Ljava/util/HashMap;-><init>(I)V
 
-    .line 332
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 333
     new-instance v9, Lio/realm/RealmSchema;
 
     invoke-direct {v9}, Lio/realm/RealmSchema;-><init>()V
 
-    .line 334
     invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v10
@@ -719,7 +630,6 @@
 
     check-cast v0, Ljava/lang/Class;
 
-    .line 336
     const-wide/16 v12, -0x1
 
     cmp-long v11, v4, v12
@@ -728,47 +638,38 @@
 
     if-nez v6, :cond_1
 
-    .line 337
     iget-object v11, p0, Lio/realm/Realm;->sharedRealm:Lio/realm/internal/SharedRealm;
 
     invoke-virtual {v2, v0, v11}, Lio/realm/internal/RealmProxyMediator;->createTable(Ljava/lang/Class;Lio/realm/internal/SharedRealm;)Lio/realm/internal/Table;
 
-    .line 339
     :cond_1
     if-eqz v6, :cond_3
 
-    .line 340
     invoke-virtual {v2, v0, v9}, Lio/realm/internal/RealmProxyMediator;->createRealmObjectSchema(Ljava/lang/Class;Lio/realm/RealmSchema;)Lio/realm/RealmObjectSchema;
 
     move-result-object v0
 
-    .line 341
     invoke-virtual {v8, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    .line 376
     :catchall_0
     move-exception v0
 
     if-nez v6, :cond_2
 
-    .line 377
     if-eqz v1, :cond_b
 
-    .line 378
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1}, Lio/realm/Realm;->commitTransaction(Z)V
 
-    .line 380
     :cond_2
     :goto_1
     throw v0
 
-    .line 343
     :cond_3
     :try_start_1
     iget-object v11, p0, Lio/realm/Realm;->sharedRealm:Lio/realm/internal/SharedRealm;
@@ -783,21 +684,17 @@
 
     goto :goto_0
 
-    .line 346
     :cond_4
     if-eqz v6, :cond_5
 
-    .line 347
     new-instance v0, Lio/realm/RealmSchema;
 
     invoke-direct {v0, v8}, Lio/realm/RealmSchema;-><init>(Ljava/util/ArrayList;)V
 
-    .line 349
     iget-object v8, p0, Lio/realm/Realm;->sharedRealm:Lio/realm/internal/SharedRealm;
 
     invoke-virtual {v8, v0, v4, v5}, Lio/realm/internal/SharedRealm;->updateSchema(Lio/realm/RealmSchema;J)V
 
-    .line 350
     invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -815,7 +712,6 @@
 
     check-cast v0, Ljava/lang/Class;
 
-    .line 351
     iget-object v8, p0, Lio/realm/Realm;->sharedRealm:Lio/realm/internal/SharedRealm;
 
     const/4 v9, 0x0
@@ -828,7 +724,6 @@
 
     goto :goto_2
 
-    .line 354
     :cond_5
     iget-object v0, p0, Lio/realm/Realm;->schema:Lio/realm/RealmSchema;
 
@@ -842,7 +737,6 @@
 
     iget-object v2, p0, Lio/realm/Realm;->configuration:Lio/realm/RealmConfiguration;
 
-    .line 355
     invoke-virtual {v2}, Lio/realm/RealmConfiguration;->getSchemaVersion()J
 
     move-result-wide v2
@@ -852,14 +746,12 @@
 
     iput-object v8, v0, Lio/realm/RealmSchema;->columnIndices:Lio/realm/internal/ColumnIndices;
 
-    .line 358
     const-wide/16 v2, -0x1
 
     cmp-long v0, v4, v2
 
     if-nez v0, :cond_6
 
-    .line 359
     invoke-virtual {p0}, Lio/realm/Realm;->getConfiguration()Lio/realm/RealmConfiguration;
 
     move-result-object v0
@@ -868,16 +760,12 @@
 
     move-result-object v0
 
-    .line 360
     if-eqz v0, :cond_6
 
-    .line 361
     if-eqz v6, :cond_9
 
-    .line 362
     invoke-virtual {p0, v0}, Lio/realm/Realm;->executeTransaction(Lio/realm/Realm$Transaction;)V
 
-    .line 363
     new-instance v0, Lio/realm/Realm$1;
 
     invoke-direct {v0}, Lio/realm/Realm$1;-><init>()V
@@ -886,20 +774,16 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 376
     :cond_6
     :goto_4
     if-nez v6, :cond_7
 
-    .line 377
     if-eqz v1, :cond_a
 
-    .line 378
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lio/realm/Realm;->commitTransaction(Z)V
 
-    .line 384
     :cond_7
     :goto_5
     return-void
@@ -907,10 +791,8 @@
     :cond_8
     move-wide v2, v4
 
-    .line 355
     goto :goto_3
 
-    .line 370
     :cond_9
     :try_start_2
     invoke-interface {v0, p0}, Lio/realm/Realm$Transaction;->execute(Lio/realm/Realm;)V
@@ -919,7 +801,6 @@
 
     goto :goto_4
 
-    .line 380
     :cond_a
     invoke-virtual {p0}, Lio/realm/Realm;->cancelTransaction()V
 
@@ -934,8 +815,6 @@
 .method private static migrateRealm(Lio/realm/RealmConfiguration;Lio/realm/exceptions/RealmMigrationNeededException;)V
     .locals 2
 
-    .prologue
-    .line 1513
     const/4 v0, 0x0
 
     new-instance v1, Lio/realm/Realm$3;
@@ -944,7 +823,6 @@
 
     invoke-static {p0, v0, v1, p1}, Lio/realm/BaseRealm;->migrateRealm(Lio/realm/RealmConfiguration;Lio/realm/RealmMigration;Lio/realm/BaseRealm$MigrationCallback;Lio/realm/exceptions/RealmMigrationNeededException;)V
 
-    .line 1518
     return-void
 .end method
 
@@ -953,8 +831,6 @@
 .method public bridge synthetic beginTransaction()V
     .locals 0
 
-    .prologue
-    .line 126
     invoke-super {p0}, Lio/realm/BaseRealm;->beginTransaction()V
 
     return-void
@@ -963,8 +839,6 @@
 .method public bridge synthetic cancelTransaction()V
     .locals 0
 
-    .prologue
-    .line 126
     invoke-super {p0}, Lio/realm/BaseRealm;->cancelTransaction()V
 
     return-void
@@ -973,8 +847,6 @@
 .method public bridge synthetic close()V
     .locals 0
 
-    .prologue
-    .line 126
     invoke-super {p0}, Lio/realm/BaseRealm;->close()V
 
     return-void
@@ -983,8 +855,6 @@
 .method public bridge synthetic commitTransaction()V
     .locals 0
 
-    .prologue
-    .line 126
     invoke-super {p0}, Lio/realm/BaseRealm;->commitTransaction()V
 
     return-void
@@ -1000,11 +870,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 883
     invoke-direct {p0, p1}, Lio/realm/Realm;->checkNotNullObject(Lio/realm/RealmModel;)V
 
-    .line 884
     const/4 v0, 0x0
 
     new-instance v1, Ljava/util/HashMap;
@@ -1028,18 +895,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 902
     invoke-direct {p0, p1}, Lio/realm/Realm;->checkNotNullObject(Lio/realm/RealmModel;)V
 
-    .line 903
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lio/realm/Realm;->checkHasPrimaryKey(Ljava/lang/Class;)V
 
-    .line 904
     const/4 v0, 0x1
 
     new-instance v1, Ljava/util/HashMap;
@@ -1067,11 +930,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 844
     invoke-virtual {p0}, Lio/realm/Realm;->checkIfValid()V
 
-    .line 845
     const/4 v0, 0x1
 
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
@@ -1103,15 +963,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 864
     iget-object v0, p0, Lio/realm/Realm;->schema:Lio/realm/RealmSchema;
 
     invoke-virtual {v0, p1}, Lio/realm/RealmSchema;->getTable(Ljava/lang/Class;)Lio/realm/internal/Table;
 
     move-result-object v0
 
-    .line 865
     invoke-virtual {v0, p2}, Lio/realm/internal/Table;->addEmptyRowWithPrimaryKey(Ljava/lang/Object;)J
 
     move-result-wide v2
@@ -1124,7 +981,6 @@
 
     move-object v5, p4
 
-    .line 866
     invoke-virtual/range {v0 .. v5}, Lio/realm/Realm;->get(Ljava/lang/Class;JZLjava/util/List;)Lio/realm/RealmModel;
 
     move-result-object v0
@@ -1148,22 +1004,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 818
     iget-object v0, p0, Lio/realm/Realm;->schema:Lio/realm/RealmSchema;
 
     invoke-virtual {v0, p1}, Lio/realm/RealmSchema;->getTable(Ljava/lang/Class;)Lio/realm/internal/Table;
 
     move-result-object v0
 
-    .line 820
     invoke-virtual {v0}, Lio/realm/internal/Table;->hasPrimaryKey()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 821
     new-instance v1, Lio/realm/exceptions/RealmException;
 
     const-string/jumbo v2, "\'%s\' has a primary key, use \'createObject(Class<E>, Object)\' instead."
@@ -1174,7 +1026,6 @@
 
     const/4 v4, 0x0
 
-    .line 822
     invoke-virtual {v0}, Lio/realm/internal/Table;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -1185,7 +1036,6 @@
 
     aput-object v0, v3, v4
 
-    .line 821
     invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -1194,7 +1044,6 @@
 
     throw v1
 
-    .line 824
     :cond_0
     invoke-virtual {v0}, Lio/realm/internal/Table;->addEmptyRow()J
 
@@ -1208,7 +1057,6 @@
 
     move-object v5, p3
 
-    .line 825
     invoke-virtual/range {v0 .. v5}, Lio/realm/Realm;->get(Ljava/lang/Class;JZLjava/util/List;)Lio/realm/RealmModel;
 
     move-result-object v0
@@ -1219,8 +1067,6 @@
 .method public bridge synthetic deleteAll()V
     .locals 0
 
-    .prologue
-    .line 126
     invoke-super {p0}, Lio/realm/BaseRealm;->deleteAll()V
 
     return-void
@@ -1229,11 +1075,8 @@
 .method public executeTransaction(Lio/realm/Realm$Transaction;)V
     .locals 3
 
-    .prologue
-    .line 1248
     if-nez p1, :cond_0
 
-    .line 1249
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Transaction should not be null"
@@ -1242,41 +1085,32 @@
 
     throw v0
 
-    .line 1252
     :cond_0
     invoke-virtual {p0}, Lio/realm/Realm;->beginTransaction()V
 
-    .line 1254
     :try_start_0
     invoke-interface {p1, p0}, Lio/realm/Realm$Transaction;->execute(Lio/realm/Realm;)V
 
-    .line 1255
     invoke-virtual {p0}, Lio/realm/Realm;->commitTransaction()V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1264
     return-void
 
-    .line 1256
     :catch_0
     move-exception v0
 
-    .line 1257
     invoke-virtual {p0}, Lio/realm/Realm;->isInTransaction()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 1258
     invoke-virtual {p0}, Lio/realm/Realm;->cancelTransaction()V
 
-    .line 1262
     :goto_0
     throw v0
 
-    .line 1260
     :cond_1
     const-string/jumbo v1, "Could not cancel transaction, not currently in a transaction."
 
@@ -1292,10 +1126,8 @@
 .method public executeTransactionAsync(Lio/realm/Realm$Transaction;)Lio/realm/RealmAsyncTask;
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 1275
     invoke-virtual {p0, p1, v0, v0}, Lio/realm/Realm;->executeTransactionAsync(Lio/realm/Realm$Transaction;Lio/realm/Realm$Transaction$OnSuccess;Lio/realm/Realm$Transaction$OnError;)Lio/realm/RealmAsyncTask;
 
     move-result-object v0
@@ -1306,14 +1138,10 @@
 .method public executeTransactionAsync(Lio/realm/Realm$Transaction;Lio/realm/Realm$Transaction$OnSuccess;Lio/realm/Realm$Transaction$OnError;)Lio/realm/RealmAsyncTask;
     .locals 7
 
-    .prologue
-    .line 1323
     invoke-virtual {p0}, Lio/realm/Realm;->checkIfValid()V
 
-    .line 1325
     if-nez p1, :cond_0
 
-    .line 1326
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Transaction should not be null"
@@ -1322,7 +1150,6 @@
 
     throw v0
 
-    .line 1331
     :cond_0
     if-nez p2, :cond_1
 
@@ -1335,7 +1162,6 @@
 
     if-nez v0, :cond_2
 
-    .line 1332
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "Your Realm is opened from a thread without a Looper and you provided a callback, we need a Handler to invoke your callback"
@@ -1344,13 +1170,11 @@
 
     throw v0
 
-    .line 1338
     :cond_2
     invoke-virtual {p0}, Lio/realm/Realm;->getConfiguration()Lio/realm/RealmConfiguration;
 
     move-result-object v2
 
-    .line 1340
     sget-object v6, Lio/realm/Realm;->asyncTaskExecutor:Lio/realm/internal/async/RealmThreadPoolExecutor;
 
     new-instance v0, Lio/realm/Realm$2;
@@ -1369,7 +1193,6 @@
 
     move-result-object v0
 
-    .line 1437
     new-instance v1, Lio/realm/internal/async/RealmAsyncTaskImpl;
 
     sget-object v2, Lio/realm/Realm;->asyncTaskExecutor:Lio/realm/internal/async/RealmThreadPoolExecutor;
@@ -1382,8 +1205,6 @@
 .method public bridge synthetic getConfiguration()Lio/realm/RealmConfiguration;
     .locals 1
 
-    .prologue
-    .line 126
     invoke-super {p0}, Lio/realm/BaseRealm;->getConfiguration()Lio/realm/RealmConfiguration;
 
     move-result-object v0
@@ -1394,8 +1215,6 @@
 .method public bridge synthetic getPath()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 126
     invoke-super {p0}, Lio/realm/BaseRealm;->getPath()Ljava/lang/String;
 
     move-result-object v0
@@ -1416,8 +1235,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 1567
     iget-object v0, p0, Lio/realm/Realm;->schema:Lio/realm/RealmSchema;
 
     invoke-virtual {v0, p1}, Lio/realm/RealmSchema;->getTable(Ljava/lang/Class;)Lio/realm/internal/Table;
@@ -1430,8 +1247,6 @@
 .method public bridge synthetic getVersion()J
     .locals 2
 
-    .prologue
-    .line 126
     invoke-super {p0}, Lio/realm/BaseRealm;->getVersion()J
 
     move-result-wide v0
@@ -1442,8 +1257,6 @@
 .method public bridge synthetic isClosed()Z
     .locals 1
 
-    .prologue
-    .line 126
     invoke-super {p0}, Lio/realm/BaseRealm;->isClosed()Z
 
     move-result v0
@@ -1454,8 +1267,6 @@
 .method public bridge synthetic isInTransaction()Z
     .locals 1
 
-    .prologue
-    .line 126
     invoke-super {p0}, Lio/realm/BaseRealm;->isInTransaction()Z
 
     move-result v0
@@ -1466,8 +1277,6 @@
 .method public bridge synthetic setAutoRefresh(Z)V
     .locals 0
 
-    .prologue
-    .line 126
     invoke-super {p0, p1}, Lio/realm/BaseRealm;->setAutoRefresh(Z)V
 
     return-void
@@ -1476,17 +1285,14 @@
 .method updateSchemaCache([Lio/realm/internal/ColumnIndices;)Lio/realm/internal/ColumnIndices;
     .locals 8
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1579
     iget-object v0, p0, Lio/realm/Realm;->sharedRealm:Lio/realm/internal/SharedRealm;
 
     invoke-virtual {v0}, Lio/realm/internal/SharedRealm;->getSchemaVersion()J
 
     move-result-wide v2
 
-    .line 1580
     iget-object v0, p0, Lio/realm/Realm;->schema:Lio/realm/RealmSchema;
 
     iget-object v0, v0, Lio/realm/RealmSchema;->columnIndices:Lio/realm/internal/ColumnIndices;
@@ -1495,16 +1301,13 @@
 
     move-result-wide v4
 
-    .line 1581
     cmp-long v0, v2, v4
 
     if-nez v0, :cond_0
 
-    .line 1606
     :goto_0
     return-object v1
 
-    .line 1586
     :cond_0
     invoke-virtual {p0}, Lio/realm/Realm;->getConfiguration()Lio/realm/RealmConfiguration;
 
@@ -1514,20 +1317,16 @@
 
     move-result-object v4
 
-    .line 1587
     invoke-static {p1, v2, v3}, Lio/realm/RealmCache;->findColumnIndices([Lio/realm/internal/ColumnIndices;J)Lio/realm/internal/ColumnIndices;
 
     move-result-object v0
 
-    .line 1589
     if-nez v0, :cond_2
 
-    .line 1591
     invoke-virtual {v4}, Lio/realm/internal/RealmProxyMediator;->getModelClasses()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 1593
     new-instance v1, Ljava/util/HashMap;
 
     invoke-interface {v0}, Ljava/util/Set;->size()I
@@ -1536,7 +1335,6 @@
 
     invoke-direct {v1, v5}, Ljava/util/HashMap;-><init>(I)V
 
-    .line 1595
     :try_start_0
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -1555,7 +1353,6 @@
 
     check-cast v0, Ljava/lang/Class;
 
-    .line 1596
     iget-object v6, p0, Lio/realm/Realm;->sharedRealm:Lio/realm/internal/SharedRealm;
 
     const/4 v7, 0x1
@@ -1564,21 +1361,17 @@
 
     move-result-object v6
 
-    .line 1597
     invoke-interface {v1, v0, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Lio/realm/exceptions/RealmMigrationNeededException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_1
 
-    .line 1599
     :catch_0
     move-exception v0
 
-    .line 1600
     throw v0
 
-    .line 1603
     :cond_1
     new-instance v0, Lio/realm/internal/ColumnIndices;
 
@@ -1586,7 +1379,6 @@
 
     move-object v1, v0
 
-    .line 1605
     :cond_2
     iget-object v2, p0, Lio/realm/Realm;->schema:Lio/realm/RealmSchema;
 
@@ -1611,11 +1403,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 1213
     invoke-virtual {p0}, Lio/realm/Realm;->checkIfValid()V
 
-    .line 1214
     invoke-static {p0, p1}, Lio/realm/RealmQuery;->createQuery(Lio/realm/Realm;Ljava/lang/Class;)Lio/realm/RealmQuery;
 
     move-result-object v0

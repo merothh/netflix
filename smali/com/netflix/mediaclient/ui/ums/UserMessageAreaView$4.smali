@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;)V
     .locals 0
 
-    .prologue
-    .line 131
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$4;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 6
 
-    .prologue
-    .line 134
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$4;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;->isAttachedToWindow()Z
@@ -38,7 +34,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 137
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$4;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;->access$000(Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;)Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaAlert;
@@ -57,7 +52,6 @@
 
     move-result-object v0
 
-    .line 138
     :goto_0
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
@@ -69,7 +63,6 @@
 
     if-nez v1, :cond_2
 
-    .line 139
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$4;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;->access$300(Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;)Landroid/widget/ListView;
@@ -78,7 +71,6 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/ListView;->removeHeaderView(Landroid/view/View;)Z
 
-    .line 140
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$4;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;->access$000(Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;)Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaAlert;
@@ -91,7 +83,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 142
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$4;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;->getParent()Landroid/view/ViewParent;
@@ -104,18 +95,15 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 151
     :cond_0
     :goto_1
     return-void
 
-    .line 137
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$4;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     goto :goto_0
 
-    .line 145
     :cond_2
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -123,7 +111,6 @@
 
     const/4 v2, 0x1
 
-    .line 147
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v3
@@ -146,14 +133,12 @@
 
     float-to-int v3, v3
 
-    .line 145
     invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
 
     move-result v2
 
     iput v2, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 148
     invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
     goto :goto_1

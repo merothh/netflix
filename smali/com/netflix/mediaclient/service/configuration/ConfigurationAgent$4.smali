@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;)V
     .locals 0
 
-    .prologue
-    .line 1109
     iput-object p1, p0, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent$4;->this$0:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public getCastWhiteList()Lorg/json/JSONArray;
     .locals 1
 
-    .prologue
-    .line 1128
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent$4;->this$0:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;->access$1300(Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;)Lcom/netflix/mediaclient/service/configuration/AccountConfiguration;
@@ -46,8 +42,6 @@
 .method public getMdxBlackListTargets()Lorg/json/JSONArray;
     .locals 1
 
-    .prologue
-    .line 1143
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent$4;->this$0:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;->access$1300(Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;)Lcom/netflix/mediaclient/service/configuration/AccountConfiguration;
@@ -64,8 +58,6 @@
 .method public isDisableMdx()Z
     .locals 1
 
-    .prologue
-    .line 1138
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent$4;->this$0:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;->access$1200(Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;)Lcom/netflix/mediaclient/service/configuration/DeviceConfiguration;
@@ -82,8 +74,6 @@
 .method public isDisableWebsocket()Z
     .locals 1
 
-    .prologue
-    .line 1133
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent$4;->this$0:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;->access$1200(Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;)Lcom/netflix/mediaclient/service/configuration/DeviceConfiguration;
@@ -100,8 +90,6 @@
 .method public isEnableCast()Z
     .locals 1
 
-    .prologue
-    .line 1123
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent$4;->this$0:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;->access$1300(Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;)Lcom/netflix/mediaclient/service/configuration/AccountConfiguration;
@@ -118,8 +106,6 @@
 .method public isRemoteControlLockScreenEnabled()Z
     .locals 1
 
-    .prologue
-    .line 1118
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent$4;->this$0:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;->access$1200(Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;)Lcom/netflix/mediaclient/service/configuration/DeviceConfiguration;
@@ -136,8 +122,6 @@
 .method public isRemoteControlNotificationEnabled()Z
     .locals 1
 
-    .prologue
-    .line 1113
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent$4;->this$0:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;->access$1200(Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;)Lcom/netflix/mediaclient/service/configuration/DeviceConfiguration;

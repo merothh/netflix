@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/lomo/BillboardView;)V
     .locals 0
 
-    .prologue
-    .line 802
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView$4;->this$0:Lcom/netflix/mediaclient/ui/lomo/BillboardView;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/servicemgr/SimpleManagerCallback;-><init>()V
@@ -25,25 +23,20 @@
 .method public onResourceCached(Ljava/lang/String;Ljava/lang/String;JJLcom/netflix/mediaclient/android/app/Status;)V
     .locals 7
 
-    .prologue
-    .line 805
     invoke-super/range {p0 .. p7}, Lcom/netflix/mediaclient/servicemgr/SimpleManagerCallback;->onResourceCached(Ljava/lang/String;Ljava/lang/String;JJLcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 806
     invoke-interface {p7}, Lcom/netflix/mediaclient/android/app/Status;->isError()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 807
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 808
     const-string/jumbo v0, "BillboardView"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -66,12 +59,10 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 819
     :cond_0
     :goto_0
     return-void
 
-    .line 811
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView$4;->this$0:Lcom/netflix/mediaclient/ui/lomo/BillboardView;
 
@@ -87,14 +78,12 @@
 
     if-nez v0, :cond_0
 
-    .line 812
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 813
     const-string/jumbo v0, "BillboardView"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -117,7 +106,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 815
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView$4;->this$0:Lcom/netflix/mediaclient/ui/lomo/BillboardView;
 
@@ -133,7 +121,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->setDataSource(Ljava/lang/String;JJ)V
 
-    .line 816
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView$4;->this$0:Lcom/netflix/mediaclient/ui/lomo/BillboardView;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->access$500(Lcom/netflix/mediaclient/ui/lomo/BillboardView;)V

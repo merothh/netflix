@@ -56,7 +56,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -67,7 +66,6 @@
 
     const/4 v4, 0x0
 
-    .line 9
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
     const-string/jumbo v1, "Unknown"
@@ -76,7 +74,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->Unknown:Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
-    .line 10
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
     const-string/jumbo v1, "WaitingToBeStarted"
@@ -85,7 +82,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->WaitingToBeStarted:Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
-    .line 11
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
     const-string/jumbo v1, "NetworkError"
@@ -94,7 +90,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->NetworkError:Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
-    .line 12
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
     const-string/jumbo v1, "StorageError"
@@ -103,7 +98,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->StorageError:Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
-    .line 13
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
     const-string/jumbo v1, "NotEnoughSpace"
@@ -112,7 +106,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->NotEnoughSpace:Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
-    .line 14
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
     const-string/jumbo v1, "StoppedFromAgentAPI"
@@ -125,7 +118,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->StoppedFromAgentAPI:Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
-    .line 15
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
     const-string/jumbo v1, "NotAllowedOnCurrentNetwork"
@@ -138,7 +130,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->NotAllowedOnCurrentNetwork:Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
-    .line 16
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
     const-string/jumbo v1, "NoNetworkConnectivity"
@@ -151,7 +142,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->NoNetworkConnectivity:Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
-    .line 18
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
     const-string/jumbo v1, "PlayerStreaming"
@@ -164,7 +154,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->PlayerStreaming:Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
-    .line 19
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
     const-string/jumbo v1, "AccountInActive"
@@ -177,7 +166,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->AccountInActive:Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
-    .line 22
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
     const-string/jumbo v1, "EncodesAreNotAvailableAnyMore"
@@ -190,7 +178,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->EncodesAreNotAvailableAnyMore:Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
-    .line 23
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
     const-string/jumbo v1, "ManifestError"
@@ -203,7 +190,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->ManifestError:Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
-    .line 24
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
     const-string/jumbo v1, "GeoCheckError"
@@ -216,7 +202,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->GeoCheckError:Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
-    .line 25
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
     const-string/jumbo v1, "DownloadLimitRequiresManualResume"
@@ -229,7 +214,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->DownloadLimitRequiresManualResume:Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
-    .line 7
     const/16 v0, 0xe
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
@@ -321,25 +305,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 48
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 49
     iput p3, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->mValue:I
 
-    .line 50
     iput-boolean p4, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->mShowBangIconErrorInUi:Z
 
-    .line 51
     return-void
 .end method
 
 .method public static getStopReasonByValue(I)Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
     .locals 5
 
-    .prologue
-    .line 59
     invoke-static {}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->values()[Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
     move-result-object v2
@@ -355,18 +332,15 @@
 
     aget-object v0, v2, v1
 
-    .line 60
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->getIntValue()I
 
     move-result v4
 
     if-ne v4, p0, :cond_0
 
-    .line 64
     :goto_1
     return-object v0
 
-    .line 59
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -374,7 +348,6 @@
 
     goto :goto_0
 
-    .line 64
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->Unknown:Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
@@ -384,8 +357,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
     .locals 1
 
-    .prologue
-    .line 7
     const-class v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -400,8 +371,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
     .locals 1
 
-    .prologue
-    .line 7
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->clone()Ljava/lang/Object;
@@ -418,8 +387,6 @@
 .method public canResumeWithoutUserAction()Z
     .locals 2
 
-    .prologue
-    .line 68
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->getIntValue()I
 
     move-result v0
@@ -442,8 +409,6 @@
 .method public getIntValue()I
     .locals 1
 
-    .prologue
-    .line 54
     iget v0, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->mValue:I
 
     return v0
@@ -452,8 +417,6 @@
 .method public showBangIconErrorInUi()Z
     .locals 1
 
-    .prologue
-    .line 43
     iget-boolean v0, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->mShowBangIconErrorInUi:Z
 
     return v0

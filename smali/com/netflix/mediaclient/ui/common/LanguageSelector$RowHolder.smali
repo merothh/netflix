@@ -13,11 +13,8 @@
 .method constructor <init>(Landroid/view/View;)V
     .locals 1
 
-    .prologue
-    .line 426
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 427
     const v0, 0x7f0f01bd
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -28,7 +25,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelector$RowHolder;->name:Landroid/widget/TextView;
 
-    .line 428
     const v0, 0x7f0f01be
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -39,6 +35,5 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelector$RowHolder;->choice:Landroid/widget/RadioButton;
 
-    .line 429
     return-void
 .end method

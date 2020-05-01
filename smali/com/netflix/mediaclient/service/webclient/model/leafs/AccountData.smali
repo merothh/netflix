@@ -31,14 +31,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     iput-object p1, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountData;->userProfiles:Ljava/util/List;
 
-    .line 14
     return-void
 .end method
 
@@ -47,8 +43,6 @@
 .method public getUser()Lcom/netflix/mediaclient/service/webclient/model/leafs/User;
     .locals 1
 
-    .prologue
-    .line 17
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountData;->user:Lcom/netflix/mediaclient/service/webclient/model/leafs/User;
 
     return-object v0
@@ -66,8 +60,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 23
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountData;->userProfiles:Ljava/util/List;
 
     return-object v0
@@ -76,10 +68,7 @@
 .method public setUser(Lcom/netflix/mediaclient/service/webclient/model/leafs/User;)V
     .locals 0
 
-    .prologue
-    .line 20
     iput-object p1, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountData;->user:Lcom/netflix/mediaclient/service/webclient/model/leafs/User;
 
-    .line 21
     return-void
 .end method

@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/settings/SettingsFragment;)V
     .locals 0
 
-    .prologue
-    .line 401
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$7;->this$0:Lcom/netflix/mediaclient/ui/settings/SettingsFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,10 +26,8 @@
 .method public onPreferenceClick(Landroid/preference/Preference;)Z
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
-    .line 404
     const-string/jumbo v0, "SettingsFragment"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -54,7 +50,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 406
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$7;->this$0:Lcom/netflix/mediaclient/ui/settings/SettingsFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/settings/SettingsFragment;->access$300(Lcom/netflix/mediaclient/ui/settings/SettingsFragment;)Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -69,10 +64,8 @@
 
     move-result-object v0
 
-    .line 407
     if-nez v0, :cond_0
 
-    .line 410
     :cond_0
     return v3
 .end method

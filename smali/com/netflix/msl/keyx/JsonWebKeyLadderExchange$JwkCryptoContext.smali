@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 427
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public decrypt([B)[B
     .locals 2
 
-    .prologue
-    .line 441
     new-instance v0, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->DECRYPT_NOT_SUPPORTED:Lcom/netflix/msl/MslError;
@@ -36,8 +32,6 @@
 .method public encrypt([B)[B
     .locals 2
 
-    .prologue
-    .line 433
     new-instance v0, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->ENCRYPT_NOT_SUPPORTED:Lcom/netflix/msl/MslError;
@@ -50,8 +44,6 @@
 .method public sign([B)[B
     .locals 2
 
-    .prologue
-    .line 449
     new-instance v0, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->SIGN_NOT_SUPPORTED:Lcom/netflix/msl/MslError;
@@ -64,8 +56,6 @@
 .method public verify([B[B)Z
     .locals 2
 
-    .prologue
-    .line 457
     new-instance v0, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->VERIFY_NOT_SUPPORTED:Lcom/netflix/msl/MslError;

@@ -27,8 +27,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,8 +37,6 @@
 .method public build()Lcom/netflix/msl/client/ClientRequestMessageContext;
     .locals 11
 
-    .prologue
-    .line 61
     new-instance v0, Lcom/netflix/msl/client/ClientRequestMessageContext;
 
     iget-object v1, p0, Lcom/netflix/msl/client/ClientRequestMessageContext$ClientRequestMessageContextBuilder;->encrypted:Ljava/lang/Boolean;
@@ -71,8 +67,6 @@
 .method public debugContext(Lcom/netflix/msl/msg/MessageDebugContext;)Lcom/netflix/msl/client/ClientRequestMessageContext$ClientRequestMessageContextBuilder;
     .locals 0
 
-    .prologue
-    .line 61
     iput-object p1, p0, Lcom/netflix/msl/client/ClientRequestMessageContext$ClientRequestMessageContextBuilder;->debugContext:Lcom/netflix/msl/msg/MessageDebugContext;
 
     return-object p0
@@ -81,8 +75,6 @@
 .method public encrypted(Ljava/lang/Boolean;)Lcom/netflix/msl/client/ClientRequestMessageContext$ClientRequestMessageContextBuilder;
     .locals 0
 
-    .prologue
-    .line 61
     iput-object p1, p0, Lcom/netflix/msl/client/ClientRequestMessageContext$ClientRequestMessageContextBuilder;->encrypted:Ljava/lang/Boolean;
 
     return-object p0
@@ -91,8 +83,6 @@
 .method public integrityProtected(Ljava/lang/Boolean;)Lcom/netflix/msl/client/ClientRequestMessageContext$ClientRequestMessageContextBuilder;
     .locals 0
 
-    .prologue
-    .line 61
     iput-object p1, p0, Lcom/netflix/msl/client/ClientRequestMessageContext$ClientRequestMessageContextBuilder;->integrityProtected:Ljava/lang/Boolean;
 
     return-object p0
@@ -101,8 +91,6 @@
 .method public keyRequestDataProvider(Lcom/netflix/msl/client/KeyRequestDataProvider;)Lcom/netflix/msl/client/ClientRequestMessageContext$ClientRequestMessageContextBuilder;
     .locals 0
 
-    .prologue
-    .line 61
     iput-object p1, p0, Lcom/netflix/msl/client/ClientRequestMessageContext$ClientRequestMessageContextBuilder;->keyRequestDataProvider:Lcom/netflix/msl/client/KeyRequestDataProvider;
 
     return-object p0
@@ -111,8 +99,6 @@
 .method public nonReplayable(Ljava/lang/Boolean;)Lcom/netflix/msl/client/ClientRequestMessageContext$ClientRequestMessageContextBuilder;
     .locals 0
 
-    .prologue
-    .line 61
     iput-object p1, p0, Lcom/netflix/msl/client/ClientRequestMessageContext$ClientRequestMessageContextBuilder;->nonReplayable:Ljava/lang/Boolean;
 
     return-object p0
@@ -121,8 +107,6 @@
 .method public payload([B)Lcom/netflix/msl/client/ClientRequestMessageContext$ClientRequestMessageContextBuilder;
     .locals 0
 
-    .prologue
-    .line 61
     iput-object p1, p0, Lcom/netflix/msl/client/ClientRequestMessageContext$ClientRequestMessageContextBuilder;->payload:[B
 
     return-object p0
@@ -131,8 +115,6 @@
 .method public recipient(Ljava/lang/String;)Lcom/netflix/msl/client/ClientRequestMessageContext$ClientRequestMessageContextBuilder;
     .locals 0
 
-    .prologue
-    .line 61
     iput-object p1, p0, Lcom/netflix/msl/client/ClientRequestMessageContext$ClientRequestMessageContextBuilder;->recipient:Ljava/lang/String;
 
     return-object p0
@@ -141,8 +123,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 61
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -275,8 +255,6 @@
 .method public userAuthData(Lcom/netflix/msl/userauth/UserAuthenticationData;)Lcom/netflix/msl/client/ClientRequestMessageContext$ClientRequestMessageContextBuilder;
     .locals 0
 
-    .prologue
-    .line 61
     iput-object p1, p0, Lcom/netflix/msl/client/ClientRequestMessageContext$ClientRequestMessageContextBuilder;->userAuthData:Lcom/netflix/msl/userauth/UserAuthenticationData;
 
     return-object p0
@@ -285,8 +263,6 @@
 .method public userId(Ljava/lang/String;)Lcom/netflix/msl/client/ClientRequestMessageContext$ClientRequestMessageContextBuilder;
     .locals 0
 
-    .prologue
-    .line 61
     iput-object p1, p0, Lcom/netflix/msl/client/ClientRequestMessageContext$ClientRequestMessageContextBuilder;->userId:Ljava/lang/String;
 
     return-object p0

@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/PostPlayCallToAction;)V
     .locals 0
 
-    .prologue
-    .line 185
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCallToAction$3;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlayCallToAction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,12 +26,9 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .prologue
-    .line 188
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCallToAction$3;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlayCallToAction;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PostPlayCallToAction;->displayPageAction()V
 
-    .line 189
     return-void
 .end method

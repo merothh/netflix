@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment;)V
     .locals 0
 
-    .prologue
-    .line 472
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment$7;->this$0:Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/servicemgr/SimpleManagerCallback;-><init>()V
@@ -25,8 +23,6 @@
 .method public onLoginComplete(Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 475
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment$7;->this$0:Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment;->getActivity()Landroid/app/Activity;
@@ -39,11 +35,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 484
     :goto_0
     return-void
 
-    .line 478
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment$7;->this$0:Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment;
 

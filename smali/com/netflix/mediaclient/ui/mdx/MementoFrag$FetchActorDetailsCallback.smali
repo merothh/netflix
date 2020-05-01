@@ -13,19 +13,14 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;J)V
     .locals 2
 
-    .prologue
-    .line 374
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$FetchActorDetailsCallback;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
-    .line 375
     const-string/jumbo v0, "MementoFrag"
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/servicemgr/LoggingManagerCallback;-><init>(Ljava/lang/String;)V
 
-    .line 376
     iput-wide p2, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$FetchActorDetailsCallback;->requestId:J
 
-    .line 377
     return-void
 .end method
 
@@ -52,15 +47,12 @@
         }
     .end annotation
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 381
     invoke-super {p0, p1, p2, p3, p4}, Lcom/netflix/mediaclient/servicemgr/LoggingManagerCallback;->onActorDetailsAndRelatedFetched(Ljava/util/List;Ljava/util/List;Lcom/netflix/mediaclient/android/app/Status;Ljava/util/List;)V
 
-    .line 383
     iget-wide v2, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$FetchActorDetailsCallback;->requestId:J
 
     iget-object v4, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$FetchActorDetailsCallback;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
@@ -81,7 +73,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 384
     :cond_0
     const-string/jumbo v0, "MementoFrag"
 
@@ -89,32 +80,27 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 415
     :cond_1
     :goto_0
     return-void
 
-    .line 388
     :cond_2
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$FetchActorDetailsCallback;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
     invoke-static {v2, v1}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->access$702(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;Z)Z
 
-    .line 389
     invoke-interface {p3}, Lcom/netflix/mediaclient/android/app/Status;->isError()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 390
     const-string/jumbo v0, "MementoFrag"
 
     const-string/jumbo v2, "Invalid status code"
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 391
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$FetchActorDetailsCallback;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->access$800(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;)Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;
@@ -125,42 +111,34 @@
 
     goto :goto_0
 
-    .line 397
     :cond_3
     if-eqz p1, :cond_4
 
-    .line 398
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$FetchActorDetailsCallback;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
     invoke-static {v1, p1}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->access$302(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;Ljava/util/List;)Ljava/util/List;
 
     move v1, v0
 
-    .line 402
     :cond_4
     if-eqz p2, :cond_5
 
-    .line 403
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$FetchActorDetailsCallback;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
     invoke-static {v1, p2}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->access$402(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;Ljava/util/List;)Ljava/util/List;
 
     move v1, v0
 
-    .line 407
     :cond_5
     if-eqz p4, :cond_6
 
-    .line 408
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$FetchActorDetailsCallback;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
     invoke-static {v1, p4}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->access$902(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;Ljava/util/List;)Ljava/util/List;
 
-    .line 412
     :goto_1
     if-eqz v0, :cond_1
 
-    .line 413
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$FetchActorDetailsCallback;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->access$1000(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;)V

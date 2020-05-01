@@ -26,11 +26,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 30
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;-><init>(Landroid/content/Context;)V
 
-    .line 31
     return-void
 .end method
 
@@ -39,8 +36,6 @@
 .method protected computeNumItemsPerPage()I
     .locals 1
 
-    .prologue
-    .line 90
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedGalleryAdapter;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/DeviceUtils;->isLandscape(Landroid/content/Context;)Z
@@ -63,8 +58,6 @@
 .method protected computeNumPages()I
     .locals 2
 
-    .prologue
-    .line 85
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedGalleryAdapter;->data:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -85,8 +78,6 @@
 .method protected computeNumVideosToFetchPerBatch(I)I
     .locals 4
 
-    .prologue
-    .line 96
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedGalleryAdapter;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     sget-object v1, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->STANDARD:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
@@ -95,20 +86,16 @@
 
     move-result v0
 
-    .line 97
     if-nez p1, :cond_0
 
-    .line 98
     add-int/lit8 v0, v0, -0x3
 
-    .line 99
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 100
     const-string/jumbo v1, "KubrickPaginatedGalleryAdapter"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -131,7 +118,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
     :cond_0
     return v0
 .end method
@@ -148,36 +134,28 @@
         }
     .end annotation
 
-    .prologue
     const/4 v8, 0x3
 
-    .line 55
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedGalleryAdapter;->computeNumPages()I
 
     move-result v0
 
     if-lt p1, v0, :cond_0
 
-    .line 56
     const/4 v0, 0x0
 
-    .line 70
     :goto_0
     return-object v0
 
-    .line 59
     :cond_0
     iget v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedGalleryAdapter;->numItemsPerPage:I
 
     mul-int/2addr v0, p1
 
-    .line 60
     if-lt v0, v8, :cond_1
 
-    .line 61
     add-int/lit8 v0, v0, -0x3
 
-    .line 63
     :cond_1
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedGalleryAdapter;->data:Ljava/util/List;
 
@@ -189,7 +167,6 @@
 
     move-result v0
 
-    .line 64
     iget v1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedGalleryAdapter;->numItemsPerPage:I
 
     add-int/2addr v1, v0
@@ -204,14 +181,12 @@
 
     move-result v1
 
-    .line 66
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 68
     const-string/jumbo v2, "KubrickPaginatedGalleryAdapter"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -282,7 +257,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     :cond_2
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedGalleryAdapter;->data:Ljava/util/List;
 
@@ -296,8 +270,6 @@
 .method public getRowHeightInPx()I
     .locals 4
 
-    .prologue
-    .line 35
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedGalleryAdapter;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     const/4 v1, 0x1
@@ -318,17 +290,14 @@
 
     float-to-int v0, v0
 
-    .line 41
     mul-int/lit8 v0, v0, 0x4
 
-    .line 43
     invoke-static {}, Lcom/netflix/mediaclient/ui/experience/BrowseExperience;->showKidsExperience()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 44
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedGalleryAdapter;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getResources()Landroid/content/res/Resources;
@@ -343,7 +312,6 @@
 
     add-int/2addr v0, v1
 
-    .line 47
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -351,7 +319,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 48
     const-string/jumbo v1, "KubrickPaginatedGalleryAdapter"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -380,7 +347,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
     :cond_1
     return v0
 .end method
@@ -401,8 +367,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 75
     const-class v0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickGalleryViewGroup;
 
     invoke-virtual {p1, v0}, Lcom/netflix/mediaclient/android/widget/ObjectRecycler$ViewRecycler;->pop(Ljava/lang/Class;)Ljava/lang/Object;
@@ -411,10 +375,8 @@
 
     check-cast v0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickGalleryViewGroup;
 
-    .line 76
     if-nez v0, :cond_0
 
-    .line 77
     new-instance v0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickGalleryViewGroup;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedGalleryAdapter;->getActivity()Landroid/app/Activity;
@@ -423,7 +385,6 @@
 
     invoke-direct {v0, v1, p3}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickGalleryViewGroup;-><init>(Landroid/content/Context;I)V
 
-    .line 79
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedGalleryAdapter;->getListViewPos()I
 
@@ -439,6 +400,5 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickGalleryViewGroup;->updateDataThenViews(Ljava/util/List;IIILcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;)V
 
-    .line 80
     return-object v0
 .end method

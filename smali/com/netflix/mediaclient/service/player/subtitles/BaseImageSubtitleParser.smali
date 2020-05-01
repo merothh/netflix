@@ -15,8 +15,6 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/servicemgr/IPlayer;Lcom/netflix/mediaclient/media/SubtitleUrl;JLcom/netflix/mediaclient/service/player/subtitles/SubtitleParser$DownloadFailedCallback;J)V
     .locals 6
 
-    .prologue
-    .line 29
     move-object v0, p0
 
     move-object v1, p1
@@ -29,15 +27,12 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/netflix/mediaclient/service/player/subtitles/BaseSubtitleParser;-><init>(Lcom/netflix/mediaclient/servicemgr/IPlayer;Lcom/netflix/mediaclient/media/SubtitleUrl;Lcom/netflix/mediaclient/service/player/subtitles/SubtitleParser$DownloadFailedCallback;J)V
 
-    .line 25
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/BaseImageSubtitleParser;->mUseCache:Z
 
-    .line 30
     iput-wide p3, p0, Lcom/netflix/mediaclient/service/player/subtitles/BaseImageSubtitleParser;->mLastKnownPosition:J
 
-    .line 31
     return-void
 .end method
 
@@ -46,16 +41,12 @@
 .method protected downloadNextRange(I)V
     .locals 1
 
-    .prologue
-    .line 49
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/player/subtitles/BaseImageSubtitleParser;->downloadSegment(I)V
 
-    .line 50
     add-int/lit8 v0, p1, 0x1
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/player/subtitles/BaseImageSubtitleParser;->downloadSegment(I)V
 
-    .line 51
     return-void
 .end method
 
@@ -68,15 +59,12 @@
 .method protected saveFileSafelyToCache(Ljava/lang/String;[B)V
     .locals 4
 
-    .prologue
-    .line 62
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 63
     const-string/jumbo v0, "nf_subtitles"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -105,7 +93,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/BaseImageSubtitleParser;->mPlayer:Lcom/netflix/mediaclient/servicemgr/IPlayer;
@@ -118,14 +105,12 @@
 
     invoke-interface {v0, v1, p1, p2}, Lcom/netflix/mediaclient/servicemgr/IPlayerFileCache;->saveFile(Ljava/lang/String;Ljava/lang/String;[B)Ljava/lang/String;
 
-    .line 67
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 68
     const-string/jumbo v0, "nf_subtitles"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -156,16 +141,13 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 73
     :cond_1
     :goto_0
     return-void
 
-    .line 70
     :catch_0
     move-exception v0
 
-    .line 71
     const-string/jumbo v1, "nf_subtitles"
 
     new-instance v2, Ljava/lang/StringBuilder;

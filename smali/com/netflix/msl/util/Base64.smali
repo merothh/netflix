@@ -15,8 +15,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 30
     const-string/jumbo v0, "^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{4}|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)?$"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -25,7 +23,6 @@
 
     sput-object v0, Lcom/netflix/msl/util/Base64;->BASE64_PATTERN:Ljava/util/regex/Pattern;
 
-    .line 107
     new-instance v0, Lcom/netflix/msl/util/Base64Jaxb;
 
     invoke-direct {v0}, Lcom/netflix/msl/util/Base64Jaxb;-><init>()V
@@ -38,8 +35,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,8 +43,6 @@
 .method public static decode(Ljava/lang/String;)[B
     .locals 1
 
-    .prologue
-    .line 103
     sget-object v0, Lcom/netflix/msl/util/Base64;->impl:Lcom/netflix/msl/util/Base64$Base64Impl;
 
     invoke-interface {v0, p0}, Lcom/netflix/msl/util/Base64$Base64Impl;->decode(Ljava/lang/String;)[B
@@ -62,8 +55,6 @@
 .method public static encode([B)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 90
     sget-object v0, Lcom/netflix/msl/util/Base64;->impl:Lcom/netflix/msl/util/Base64$Base64Impl;
 
     invoke-interface {v0, p0}, Lcom/netflix/msl/util/Base64$Base64Impl;->encode([B)Ljava/lang/String;
@@ -76,8 +67,6 @@
 .method public static isValidBase64(Ljava/lang/String;)Z
     .locals 2
 
-    .prologue
-    .line 42
     const-string/jumbo v0, "\\s"
 
     const-string/jumbo v1, ""
@@ -86,7 +75,6 @@
 
     move-result-object v0
 
-    .line 43
     sget-object v1, Lcom/netflix/msl/util/Base64;->BASE64_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v1, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -103,11 +91,8 @@
 .method public static setImpl(Lcom/netflix/msl/util/Base64$Base64Impl;)V
     .locals 2
 
-    .prologue
-    .line 78
     if-nez p0, :cond_0
 
-    .line 79
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string/jumbo v1, "Base64 implementation cannot be null."
@@ -116,10 +101,8 @@
 
     throw v0
 
-    .line 80
     :cond_0
     sput-object p0, Lcom/netflix/msl/util/Base64;->impl:Lcom/netflix/msl/util/Base64$Base64Impl;
 
-    .line 81
     return-void
 .end method

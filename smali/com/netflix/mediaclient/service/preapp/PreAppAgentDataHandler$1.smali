@@ -17,8 +17,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;Lcom/netflix/mediaclient/service/pservice/PDiskData;Ljava/util/Set;Lcom/netflix/mediaclient/service/preapp/PreAppAgentEventType;)V
     .locals 0
 
-    .prologue
-    .line 67
     iput-object p1, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$1;->this$0:Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$1;->val$newData:Lcom/netflix/mediaclient/service/pservice/PDiskData;
@@ -48,8 +46,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 70
     const-string/jumbo v0, "nf_preappagentdatahandler"
 
     const-string/jumbo v1, "BB fetched videos:%s"
@@ -68,21 +64,18 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     iget-object v0, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$1;->this$0:Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$1;->val$newData:Lcom/netflix/mediaclient/service/pservice/PDiskData;
 
     invoke-static {v0, v1, p1}, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;->access$000(Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;Lcom/netflix/mediaclient/service/pservice/PDiskData;Ljava/util/List;)V
 
-    .line 72
     iget-object v0, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$1;->val$fetchCallbacksList:Ljava/util/Set;
 
     sget-object v1, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;->BILLBOARD:Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
     invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 74
     iget-object v0, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$1;->this$0:Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$1;->val$fetchCallbacksList:Ljava/util/Set;
@@ -93,7 +86,6 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;->access$100(Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;Ljava/util/Set;Lcom/netflix/mediaclient/service/pservice/PDiskData;Lcom/netflix/mediaclient/service/preapp/PreAppAgentEventType;)V
 
-    .line 75
     return-void
 .end method
 
@@ -111,8 +103,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 79
     const-string/jumbo v0, "nf_preappagentdatahandler"
 
     const-string/jumbo v1, "IQ fetched videos:%s"
@@ -131,21 +121,18 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
     iget-object v0, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$1;->this$0:Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$1;->val$newData:Lcom/netflix/mediaclient/service/pservice/PDiskData;
 
     invoke-static {v0, v1, p1}, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;->access$200(Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;Lcom/netflix/mediaclient/service/pservice/PDiskData;Ljava/util/List;)V
 
-    .line 81
     iget-object v0, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$1;->val$fetchCallbacksList:Ljava/util/Set;
 
     sget-object v1, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;->CW:Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
     invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 83
     iget-object v0, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$1;->this$0:Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$1;->val$fetchCallbacksList:Ljava/util/Set;
@@ -156,6 +143,5 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;->access$100(Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;Ljava/util/Set;Lcom/netflix/mediaclient/service/pservice/PDiskData;Lcom/netflix/mediaclient/service/preapp/PreAppAgentEventType;)V
 
-    .line 84
     return-void
 .end method

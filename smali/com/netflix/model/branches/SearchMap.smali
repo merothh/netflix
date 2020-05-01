@@ -22,11 +22,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 338
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 339
     return-void
 .end method
 
@@ -35,8 +32,6 @@
 .method public get(Ljava/lang/String;)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 343
     const/4 v0, -0x1
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -49,7 +44,6 @@
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 348
     const-string/jumbo v0, "SearchMap"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -72,13 +66,11 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 349
     const/4 v0, 0x0
 
     :goto_1
     return-object v0
 
-    .line 343
     :sswitch_0
     const-string/jumbo v1, "videos"
 
@@ -118,25 +110,21 @@
 
     goto :goto_0
 
-    .line 344
     :pswitch_0
     iget-object v0, p0, Lcom/netflix/model/branches/SearchMap;->videos:Lcom/netflix/model/branches/SearchMap$SearchQueryMap;
 
     goto :goto_1
 
-    .line 345
     :pswitch_1
     iget-object v0, p0, Lcom/netflix/model/branches/SearchMap;->people:Lcom/netflix/model/branches/SearchMap$SearchQueryMap;
 
     goto :goto_1
 
-    .line 346
     :pswitch_2
     iget-object v0, p0, Lcom/netflix/model/branches/SearchMap;->suggestions:Lcom/netflix/model/branches/SearchMap$SearchQueryMap;
 
     goto :goto_1
 
-    .line 343
     nop
 
     :sswitch_data_0
@@ -166,45 +154,36 @@
         }
     .end annotation
 
-    .prologue
-    .line 370
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 371
     iget-object v1, p0, Lcom/netflix/model/branches/SearchMap;->videos:Lcom/netflix/model/branches/SearchMap$SearchQueryMap;
 
     if-eqz v1, :cond_0
 
-    .line 372
     const-string/jumbo v1, "videos"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 374
     :cond_0
     iget-object v1, p0, Lcom/netflix/model/branches/SearchMap;->people:Lcom/netflix/model/branches/SearchMap$SearchQueryMap;
 
     if-eqz v1, :cond_1
 
-    .line 375
     const-string/jumbo v1, "people"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 377
     :cond_1
     iget-object v1, p0, Lcom/netflix/model/branches/SearchMap;->suggestions:Lcom/netflix/model/branches/SearchMap$SearchQueryMap;
 
     if-eqz v1, :cond_2
 
-    .line 378
     const-string/jumbo v1, "suggestions"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 380
     :cond_2
     return-object v0
 .end method
@@ -212,20 +191,15 @@
 .method public getOrCreate(Ljava/lang/String;)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 355
     invoke-virtual {p0, p1}, Lcom/netflix/model/branches/SearchMap;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 356
     if-eqz v0, :cond_0
 
-    .line 363
     :goto_0
     return-object v0
 
-    .line 360
     :cond_0
     const/4 v0, -0x1
 
@@ -239,7 +213,6 @@
     :goto_1
     packed-switch v0, :pswitch_data_0
 
-    .line 364
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -264,7 +237,6 @@
 
     throw v0
 
-    .line 360
     :sswitch_0
     const-string/jumbo v1, "videos"
 
@@ -304,7 +276,6 @@
 
     goto :goto_1
 
-    .line 361
     :pswitch_0
     new-instance v0, Lcom/netflix/model/branches/SearchMap$SearchQueryMap;
 
@@ -314,7 +285,6 @@
 
     goto :goto_0
 
-    .line 362
     :pswitch_1
     new-instance v0, Lcom/netflix/model/branches/SearchMap$SearchQueryMap;
 
@@ -324,7 +294,6 @@
 
     goto :goto_0
 
-    .line 363
     :pswitch_2
     new-instance v0, Lcom/netflix/model/branches/SearchMap$SearchQueryMap;
 
@@ -334,7 +303,6 @@
 
     goto :goto_0
 
-    .line 360
     nop
 
     :sswitch_data_0
@@ -355,21 +323,16 @@
 .method public remove(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 396
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/netflix/model/branches/SearchMap;->set(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 397
     return-void
 .end method
 
 .method public set(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 3
 
-    .prologue
-    .line 385
     const/4 v0, -0x1
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -382,7 +345,6 @@
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 390
     const-string/jumbo v0, "SearchMap"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -405,11 +367,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 392
     :goto_1
     return-void
 
-    .line 385
     :sswitch_0
     const-string/jumbo v1, "videos"
 
@@ -449,7 +409,6 @@
 
     goto :goto_0
 
-    .line 386
     :pswitch_0
     check-cast p2, Lcom/netflix/model/branches/SearchMap$SearchQueryMap;
 
@@ -457,7 +416,6 @@
 
     goto :goto_1
 
-    .line 387
     :pswitch_1
     check-cast p2, Lcom/netflix/model/branches/SearchMap$SearchQueryMap;
 
@@ -465,7 +423,6 @@
 
     goto :goto_1
 
-    .line 388
     :pswitch_2
     check-cast p2, Lcom/netflix/model/branches/SearchMap$SearchQueryMap;
 
@@ -473,7 +430,6 @@
 
     goto :goto_1
 
-    .line 385
     :sswitch_data_0
     .sparse-switch
         -0x5aea8911 -> :sswitch_2

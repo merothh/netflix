@@ -27,8 +27,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,8 +37,6 @@
 .method public declared-synchronized ensureUpdated()V
     .locals 0
 
-    .prologue
-    .line 45
     monitor-enter p0
 
     monitor-exit p0

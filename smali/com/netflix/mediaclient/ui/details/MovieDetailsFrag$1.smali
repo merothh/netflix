@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;)V
     .locals 0
 
-    .prologue
-    .line 85
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$1;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 88
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$1;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;->recyclerView:Landroid/support/v7/widget/RecyclerView;
@@ -38,6 +34,5 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/RecyclerView;->scrollToPosition(I)V
 
-    .line 89
     return-void
 .end method

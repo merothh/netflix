@@ -23,39 +23,28 @@
 .method private constructor <init>(Lcom/netflix/mediaclient/ui/mdx/RemotePlayer;ZZIIIZ)V
     .locals 0
 
-    .prologue
-    .line 695
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/RemotePlayer$RemoteTargetState;->this$0:Lcom/netflix/mediaclient/ui/mdx/RemotePlayer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 696
     iput-boolean p2, p0, Lcom/netflix/mediaclient/ui/mdx/RemotePlayer$RemoteTargetState;->paused:Z
 
-    .line 697
     iput-boolean p3, p0, Lcom/netflix/mediaclient/ui/mdx/RemotePlayer$RemoteTargetState;->buffering:Z
 
-    .line 698
     iput p4, p0, Lcom/netflix/mediaclient/ui/mdx/RemotePlayer$RemoteTargetState;->positionInSeconds:I
 
-    .line 699
     iput p5, p0, Lcom/netflix/mediaclient/ui/mdx/RemotePlayer$RemoteTargetState;->duration:I
 
-    .line 700
     iput p6, p0, Lcom/netflix/mediaclient/ui/mdx/RemotePlayer$RemoteTargetState;->volume:I
 
-    .line 701
     iput-boolean p7, p0, Lcom/netflix/mediaclient/ui/mdx/RemotePlayer$RemoteTargetState;->showMiniPlayer:Z
 
-    .line 702
     return-void
 .end method
 
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/ui/mdx/RemotePlayer;ZZIIIZLcom/netflix/mediaclient/ui/mdx/RemotePlayer$1;)V
     .locals 0
 
-    .prologue
-    .line 665
     invoke-direct/range {p0 .. p7}, Lcom/netflix/mediaclient/ui/mdx/RemotePlayer$RemoteTargetState;-><init>(Lcom/netflix/mediaclient/ui/mdx/RemotePlayer;ZZIIIZ)V
 
     return-void
@@ -66,8 +55,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 706
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

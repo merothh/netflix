@@ -11,16 +11,12 @@
 .method public constructor <init>(Lcom/netflix/msl/util/AuthenticationUtils;)V
     .locals 1
 
-    .prologue
-    .line 42
     sget-object v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->MT_PROTECTED:Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
     invoke-direct {p0, v0}, Lcom/netflix/msl/entityauth/EntityAuthenticationFactory;-><init>(Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;)V
 
-    .line 43
     iput-object p1, p0, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationFactory;->authutils:Lcom/netflix/msl/util/AuthenticationUtils;
 
-    .line 44
     return-void
 .end method
 
@@ -29,8 +25,6 @@
 .method public createData(Lcom/netflix/msl/util/MslContext;Lcom/netflix/android/org/json/JSONObject;)Lcom/netflix/msl/entityauth/EntityAuthenticationData;
     .locals 1
 
-    .prologue
-    .line 51
     new-instance v0, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;
 
     invoke-direct {v0, p1, p2}, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;-><init>(Lcom/netflix/msl/util/MslContext;Lcom/netflix/android/org/json/JSONObject;)V
@@ -41,13 +35,10 @@
 .method public getCryptoContext(Lcom/netflix/msl/util/MslContext;Lcom/netflix/msl/entityauth/EntityAuthenticationData;)Lcom/netflix/msl/crypto/ICryptoContext;
     .locals 5
 
-    .prologue
-    .line 60
     instance-of v0, p2, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;
 
     if-nez v0, :cond_0
 
-    .line 61
     new-instance v0, Lcom/netflix/msl/MslInternalException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -86,16 +77,13 @@
 
     throw v0
 
-    .line 62
     :cond_0
     check-cast p2, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;
 
-    .line 65
     invoke-virtual {p2}, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;->getIdentity()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 66
     iget-object v1, p0, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationFactory;->authutils:Lcom/netflix/msl/util/AuthenticationUtils;
 
     invoke-interface {v1, v0}, Lcom/netflix/msl/util/AuthenticationUtils;->isEntityRevoked(Ljava/lang/String;)Z
@@ -104,7 +92,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 67
     new-instance v1, Lcom/netflix/msl/MslEntityAuthException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->ENTITY_REVOKED:Lcom/netflix/msl/MslError;
@@ -135,7 +122,6 @@
 
     throw v0
 
-    .line 70
     :cond_1
     iget-object v1, p0, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationFactory;->authutils:Lcom/netflix/msl/util/AuthenticationUtils;
 
@@ -149,7 +135,6 @@
 
     if-nez v1, :cond_2
 
-    .line 71
     new-instance v1, Lcom/netflix/msl/MslEntityAuthException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->INCORRECT_ENTITYAUTH_DATA:Lcom/netflix/msl/MslError;
@@ -194,26 +179,21 @@
 
     throw v0
 
-    .line 74
     :cond_2
     invoke-virtual {p2}, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;->getEncapsulatedAuthdata()Lcom/netflix/msl/entityauth/EntityAuthenticationData;
 
     move-result-object v0
 
-    .line 75
     invoke-virtual {v0}, Lcom/netflix/msl/entityauth/EntityAuthenticationData;->getScheme()Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
     move-result-object v1
 
-    .line 76
     invoke-virtual {p1, v1}, Lcom/netflix/msl/util/MslContext;->getEntityAuthenticationFactory(Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;)Lcom/netflix/msl/entityauth/EntityAuthenticationFactory;
 
     move-result-object v2
 
-    .line 77
     if-nez v2, :cond_3
 
-    .line 78
     new-instance v0, Lcom/netflix/msl/MslEntityAuthException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->ENTITYAUTH_FACTORY_NOT_FOUND:Lcom/netflix/msl/MslError;
@@ -230,7 +210,6 @@
 
     throw v0
 
-    .line 79
     :cond_3
     invoke-virtual {v2, p1, v0}, Lcom/netflix/msl/entityauth/EntityAuthenticationFactory;->getCryptoContext(Lcom/netflix/msl/util/MslContext;Lcom/netflix/msl/entityauth/EntityAuthenticationData;)Lcom/netflix/msl/crypto/ICryptoContext;
 

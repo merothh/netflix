@@ -11,14 +11,10 @@
 .method protected constructor <init>(Lcom/netflix/msl/userauth/UserAuthenticationScheme;)V
     .locals 0
 
-    .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     iput-object p1, p0, Lcom/netflix/msl/userauth/UserAuthenticationFactory;->scheme:Lcom/netflix/msl/userauth/UserAuthenticationScheme;
 
-    .line 43
     return-void
 .end method
 
@@ -33,8 +29,6 @@
 .method public getScheme()Lcom/netflix/msl/userauth/UserAuthenticationScheme;
     .locals 1
 
-    .prologue
-    .line 49
     iget-object v0, p0, Lcom/netflix/msl/userauth/UserAuthenticationFactory;->scheme:Lcom/netflix/msl/userauth/UserAuthenticationScheme;
 
     return-object v0

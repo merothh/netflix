@@ -86,11 +86,8 @@
 .method public constructor <init>(Lcom/google/gson/Gson;)V
     .locals 1
 
-    .prologue
-    .line 25
     invoke-direct {p0}, Lcom/google/gson/TypeAdapter;-><init>()V
 
-    .line 26
     const-class v0, Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lcom/google/gson/Gson;->getAdapter(Ljava/lang/Class;)Lcom/google/gson/TypeAdapter;
@@ -99,7 +96,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaCta$GsonTypeAdapter;->textAdapter:Lcom/google/gson/TypeAdapter;
 
-    .line 27
     const-class v0, Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lcom/google/gson/Gson;->getAdapter(Ljava/lang/Class;)Lcom/google/gson/TypeAdapter;
@@ -108,7 +104,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaCta$GsonTypeAdapter;->actionAdapter:Lcom/google/gson/TypeAdapter;
 
-    .line 28
     const-class v0, Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lcom/google/gson/Gson;->getAdapter(Ljava/lang/Class;)Lcom/google/gson/TypeAdapter;
@@ -117,7 +112,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaCta$GsonTypeAdapter;->actionTypeAdapter:Lcom/google/gson/TypeAdapter;
 
-    .line 29
     const-class v0, Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lcom/google/gson/Gson;->getAdapter(Ljava/lang/Class;)Lcom/google/gson/TypeAdapter;
@@ -126,7 +120,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaCta$GsonTypeAdapter;->callbackAdapter:Lcom/google/gson/TypeAdapter;
 
-    .line 30
     const-class v0, Ljava/lang/Boolean;
 
     invoke-virtual {p1, v0}, Lcom/google/gson/Gson;->getAdapter(Ljava/lang/Class;)Lcom/google/gson/TypeAdapter;
@@ -135,7 +128,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaCta$GsonTypeAdapter;->selectedAdapter:Lcom/google/gson/TypeAdapter;
 
-    .line 31
     const-class v0, Ljava/lang/Boolean;
 
     invoke-virtual {p1, v0}, Lcom/google/gson/Gson;->getAdapter(Ljava/lang/Class;)Lcom/google/gson/TypeAdapter;
@@ -144,7 +136,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaCta$GsonTypeAdapter;->autoLoginAdapter:Lcom/google/gson/TypeAdapter;
 
-    .line 32
     return-void
 .end method
 
@@ -153,12 +144,10 @@
 .method public read(Lcom/google/gson/stream/JsonReader;)Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaCta;
     .locals 10
 
-    .prologue
     const/4 v7, 0x0
 
     const/4 v4, 0x0
 
-    .line 60
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->beginObject()V
 
     move v6, v7
@@ -171,7 +160,6 @@
 
     move-object v1, v4
 
-    .line 67
     :goto_0
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->hasNext()Z
 
@@ -179,12 +167,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 68
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 69
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->peek()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v0
@@ -193,12 +179,10 @@
 
     if-ne v0, v9, :cond_0
 
-    .line 70
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->skipValue()V
 
     goto :goto_0
 
-    .line 73
     :cond_0
     const/4 v0, -0x1
 
@@ -212,12 +196,10 @@
     :goto_1
     packed-switch v0, :pswitch_data_0
 
-    .line 99
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->skipValue()V
 
     goto :goto_0
 
-    .line 73
     :sswitch_0
     const-string/jumbo v9, "text"
 
@@ -296,7 +278,6 @@
 
     goto :goto_1
 
-    .line 75
     :pswitch_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaCta$GsonTypeAdapter;->textAdapter:Lcom/google/gson/TypeAdapter;
 
@@ -308,10 +289,8 @@
 
     move-object v1, v0
 
-    .line 76
     goto :goto_0
 
-    .line 79
     :pswitch_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaCta$GsonTypeAdapter;->actionAdapter:Lcom/google/gson/TypeAdapter;
 
@@ -323,10 +302,8 @@
 
     move-object v2, v0
 
-    .line 80
     goto :goto_0
 
-    .line 83
     :pswitch_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaCta$GsonTypeAdapter;->actionTypeAdapter:Lcom/google/gson/TypeAdapter;
 
@@ -338,10 +315,8 @@
 
     move-object v3, v0
 
-    .line 84
     goto/16 :goto_0
 
-    .line 87
     :pswitch_3
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaCta$GsonTypeAdapter;->callbackAdapter:Lcom/google/gson/TypeAdapter;
 
@@ -353,10 +328,8 @@
 
     move-object v4, v0
 
-    .line 88
     goto/16 :goto_0
 
-    .line 91
     :pswitch_4
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaCta$GsonTypeAdapter;->selectedAdapter:Lcom/google/gson/TypeAdapter;
 
@@ -372,7 +345,6 @@
 
     goto/16 :goto_0
 
-    .line 95
     :pswitch_5
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaCta$GsonTypeAdapter;->autoLoginAdapter:Lcom/google/gson/TypeAdapter;
 
@@ -388,18 +360,15 @@
 
     goto/16 :goto_0
 
-    .line 103
     :cond_2
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->endObject()V
 
-    .line 104
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AutoValue_UmaCta;
 
     invoke-direct/range {v0 .. v6}, Lcom/netflix/mediaclient/service/webclient/model/leafs/AutoValue_UmaCta;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
 
     return-object v0
 
-    .line 73
     :sswitch_data_0
     .sparse-switch
         -0x54d081ca -> :sswitch_1
@@ -424,8 +393,6 @@
 .method public bridge synthetic read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 18
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaCta$GsonTypeAdapter;->read(Lcom/google/gson/stream/JsonReader;)Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaCta;
 
     move-result-object v0
@@ -436,23 +403,18 @@
 .method public write(Lcom/google/gson/stream/JsonWriter;Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaCta;)V
     .locals 2
 
-    .prologue
-    .line 35
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->beginObject()Lcom/google/gson/stream/JsonWriter;
 
-    .line 36
     invoke-virtual {p2}, Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaCta;->text()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 37
     const-string/jumbo v0, "text"
 
     invoke-virtual {p1, v0}, Lcom/google/gson/stream/JsonWriter;->name(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;
 
-    .line 38
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaCta$GsonTypeAdapter;->textAdapter:Lcom/google/gson/TypeAdapter;
 
     invoke-virtual {p2}, Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaCta;->text()Ljava/lang/String;
@@ -461,7 +423,6 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/google/gson/TypeAdapter;->write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
 
-    .line 40
     :cond_0
     invoke-virtual {p2}, Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaCta;->action()Ljava/lang/String;
 
@@ -469,12 +430,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 41
     const-string/jumbo v0, "action"
 
     invoke-virtual {p1, v0}, Lcom/google/gson/stream/JsonWriter;->name(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;
 
-    .line 42
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaCta$GsonTypeAdapter;->actionAdapter:Lcom/google/gson/TypeAdapter;
 
     invoke-virtual {p2}, Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaCta;->action()Ljava/lang/String;
@@ -483,7 +442,6 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/google/gson/TypeAdapter;->write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
 
-    .line 44
     :cond_1
     invoke-virtual {p2}, Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaCta;->actionType()Ljava/lang/String;
 
@@ -491,12 +449,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 45
     const-string/jumbo v0, "actionType"
 
     invoke-virtual {p1, v0}, Lcom/google/gson/stream/JsonWriter;->name(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;
 
-    .line 46
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaCta$GsonTypeAdapter;->actionTypeAdapter:Lcom/google/gson/TypeAdapter;
 
     invoke-virtual {p2}, Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaCta;->actionType()Ljava/lang/String;
@@ -505,7 +461,6 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/google/gson/TypeAdapter;->write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
 
-    .line 48
     :cond_2
     invoke-virtual {p2}, Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaCta;->callback()Ljava/lang/String;
 
@@ -513,12 +468,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 49
     const-string/jumbo v0, "callback"
 
     invoke-virtual {p1, v0}, Lcom/google/gson/stream/JsonWriter;->name(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;
 
-    .line 50
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaCta$GsonTypeAdapter;->callbackAdapter:Lcom/google/gson/TypeAdapter;
 
     invoke-virtual {p2}, Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaCta;->callback()Ljava/lang/String;
@@ -527,13 +480,11 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/google/gson/TypeAdapter;->write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
 
-    .line 52
     :cond_3
     const-string/jumbo v0, "selected"
 
     invoke-virtual {p1, v0}, Lcom/google/gson/stream/JsonWriter;->name(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;
 
-    .line 53
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaCta$GsonTypeAdapter;->selectedAdapter:Lcom/google/gson/TypeAdapter;
 
     invoke-virtual {p2}, Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaCta;->selected()Z
@@ -546,12 +497,10 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/google/gson/TypeAdapter;->write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
 
-    .line 54
     const-string/jumbo v0, "autoLogin"
 
     invoke-virtual {p1, v0}, Lcom/google/gson/stream/JsonWriter;->name(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;
 
-    .line 55
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaCta$GsonTypeAdapter;->autoLoginAdapter:Lcom/google/gson/TypeAdapter;
 
     invoke-virtual {p2}, Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaCta;->autoLogin()Z
@@ -564,18 +513,14 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/google/gson/TypeAdapter;->write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
 
-    .line 56
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->endObject()Lcom/google/gson/stream/JsonWriter;
 
-    .line 57
     return-void
 .end method
 
 .method public bridge synthetic write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 18
     check-cast p2, Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaCta;
 
     invoke-virtual {p0, p1, p2}, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaCta$GsonTypeAdapter;->write(Lcom/google/gson/stream/JsonWriter;Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaCta;)V

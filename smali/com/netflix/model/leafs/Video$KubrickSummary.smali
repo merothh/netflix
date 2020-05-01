@@ -39,8 +39,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1022
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,20 +49,16 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 5
 
-    .prologue
-    .line 1052
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 1053
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 1054
     const-string/jumbo v1, "KubrickSummary"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -87,7 +81,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1056
     :cond_0
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -110,14 +103,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 1057
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/gson/JsonElement;
 
-    .line 1058
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -140,7 +131,6 @@
 
     goto :goto_0
 
-    .line 1059
     :pswitch_0
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsInt()I
 
@@ -150,7 +140,6 @@
 
     goto :goto_0
 
-    .line 1058
     :sswitch_0
     const-string/jumbo v4, "year"
 
@@ -294,7 +283,6 @@
 
     goto/16 :goto_1
 
-    .line 1060
     :pswitch_1
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -304,7 +292,6 @@
 
     goto/16 :goto_0
 
-    .line 1061
     :pswitch_2
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -314,7 +301,6 @@
 
     goto/16 :goto_0
 
-    .line 1062
     :pswitch_3
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsInt()I
 
@@ -324,7 +310,6 @@
 
     goto/16 :goto_0
 
-    .line 1063
     :pswitch_4
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsInt()I
 
@@ -334,7 +319,6 @@
 
     goto/16 :goto_0
 
-    .line 1064
     :pswitch_5
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -344,7 +328,6 @@
 
     goto/16 :goto_0
 
-    .line 1065
     :pswitch_6
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -354,7 +337,6 @@
 
     goto/16 :goto_0
 
-    .line 1066
     :pswitch_7
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -364,7 +346,6 @@
 
     goto/16 :goto_0
 
-    .line 1067
     :pswitch_8
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsFloat()F
 
@@ -374,7 +355,6 @@
 
     goto/16 :goto_0
 
-    .line 1068
     :pswitch_9
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -384,7 +364,6 @@
 
     goto/16 :goto_0
 
-    .line 1069
     :pswitch_a
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -394,11 +373,9 @@
 
     goto/16 :goto_0
 
-    .line 1072
     :cond_2
     return-void
 
-    .line 1058
     :sswitch_data_0
     .sparse-switch
         -0x6f761409 -> :sswitch_9
@@ -433,19 +410,16 @@
 .method public set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 1076
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 1077
     const-string/jumbo v2, "KubrickSummary"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -468,7 +442,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1079
     :cond_0
     const/4 v2, -0x1
 
@@ -482,11 +455,9 @@
     :goto_0
     packed-switch v2, :pswitch_data_0
 
-    .line 1116
     :goto_1
     return v0
 
-    .line 1079
     :sswitch_0
     const-string/jumbo v3, "year"
 
@@ -630,7 +601,6 @@
 
     goto :goto_0
 
-    .line 1081
     :pswitch_0
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsInt()I
 
@@ -641,10 +611,8 @@
     :goto_2
     move v0, v1
 
-    .line 1116
     goto/16 :goto_1
 
-    .line 1084
     :pswitch_1
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -654,7 +622,6 @@
 
     goto :goto_2
 
-    .line 1087
     :pswitch_2
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -664,7 +631,6 @@
 
     goto :goto_2
 
-    .line 1090
     :pswitch_3
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsInt()I
 
@@ -674,7 +640,6 @@
 
     goto :goto_2
 
-    .line 1093
     :pswitch_4
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsInt()I
 
@@ -684,7 +649,6 @@
 
     goto :goto_2
 
-    .line 1096
     :pswitch_5
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -694,7 +658,6 @@
 
     goto :goto_2
 
-    .line 1099
     :pswitch_6
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -704,7 +667,6 @@
 
     goto :goto_2
 
-    .line 1102
     :pswitch_7
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -714,7 +676,6 @@
 
     goto :goto_2
 
-    .line 1105
     :pswitch_8
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsDouble()D
 
@@ -726,7 +687,6 @@
 
     goto :goto_2
 
-    .line 1108
     :pswitch_9
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -736,7 +696,6 @@
 
     goto :goto_2
 
-    .line 1111
     :pswitch_a
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -746,7 +705,6 @@
 
     goto :goto_2
 
-    .line 1079
     :sswitch_data_0
     .sparse-switch
         -0x6f761409 -> :sswitch_9

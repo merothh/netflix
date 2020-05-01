@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,8 +29,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 16
     const/4 v0, 0x1
 
     return v0
@@ -54,31 +50,25 @@
         }
     .end annotation
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 30
     const/4 v0, 0x0
 
-    .line 32
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v1
 
     if-le v1, v2, :cond_0
 
-    .line 33
     invoke-interface {p2, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 36
     :cond_0
     invoke-static {p1, v0}, Lcom/netflix/mediaclient/ui/search/SearchActivity;->search(Landroid/app/Activity;Ljava/lang/String;)V
 
-    .line 37
     sget-object v0, Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;->HANDLING:Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;
 
     return-object v0

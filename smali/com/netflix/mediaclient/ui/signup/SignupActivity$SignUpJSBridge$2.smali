@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;)V
     .locals 0
 
-    .prologue
-    .line 657
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge$2;->this$1:Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 660
     const-string/jumbo v0, "SignupActivity"
 
     const-string/jumbo v1, "Disabling webview visibility"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 661
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge$2;->this$1:Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
@@ -45,6 +40,5 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->webViewVisibility(Z)V
 
-    .line 662
     return-void
 .end method

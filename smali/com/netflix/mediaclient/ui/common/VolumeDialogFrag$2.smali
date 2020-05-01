@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/common/VolumeDialogFrag;)V
     .locals 0
 
-    .prologue
-    .line 80
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/common/VolumeDialogFrag$2;->this$0:Lcom/netflix/mediaclient/ui/common/VolumeDialogFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
     .locals 1
 
-    .prologue
-    .line 83
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/VolumeDialogFrag$2;->this$0:Lcom/netflix/mediaclient/ui/common/VolumeDialogFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/common/VolumeDialogFrag;->getActivity()Landroid/app/Activity;
@@ -38,7 +34,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 84
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/VolumeDialogFrag$2;->this$0:Lcom/netflix/mediaclient/ui/common/VolumeDialogFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/common/VolumeDialogFrag;->getActivity()Landroid/app/Activity;
@@ -51,7 +46,6 @@
 
     move-result v0
 
-    .line 86
     :goto_0
     return v0
 

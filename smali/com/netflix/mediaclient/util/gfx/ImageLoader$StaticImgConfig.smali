@@ -38,7 +38,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x2
 
     const/4 v5, 0x1
@@ -49,7 +48,6 @@
 
     const/4 v3, 0x0
 
-    .line 82
     new-instance v0, Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;
 
     const-string/jumbo v1, "DARK_NO_PLACEHOLDER"
@@ -58,7 +56,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;->DARK_NO_PLACEHOLDER:Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;
 
-    .line 83
     new-instance v0, Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;
 
     const-string/jumbo v1, "LIGHT_NO_PLACEHOLDER"
@@ -67,7 +64,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;->LIGHT_NO_PLACEHOLDER:Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;
 
-    .line 84
     new-instance v0, Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;
 
     const-string/jumbo v1, "DARK"
@@ -76,7 +72,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;->DARK:Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;
 
-    .line 85
     new-instance v0, Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;
 
     const-string/jumbo v1, "LIGHT"
@@ -87,7 +82,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;->LIGHT:Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;
 
-    .line 81
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;
@@ -123,25 +117,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 92
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 93
     iput p3, p0, Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;->placeholderResId:I
 
-    .line 94
     iput p4, p0, Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;->onFailResId:I
 
-    .line 95
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;
     .locals 1
 
-    .prologue
-    .line 81
     const-class v0, Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -156,8 +143,6 @@
 .method public static values()[Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;
     .locals 1
 
-    .prologue
-    .line 81
     sget-object v0, Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;->$VALUES:[Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;->clone()Ljava/lang/Object;
@@ -174,8 +159,6 @@
 .method public getOnFailResId()I
     .locals 1
 
-    .prologue
-    .line 106
     iget v0, p0, Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;->onFailResId:I
 
     return v0
@@ -184,8 +167,6 @@
 .method public getPlaceholderResId()I
     .locals 1
 
-    .prologue
-    .line 102
     iget v0, p0, Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;->placeholderResId:I
 
     return v0
@@ -194,8 +175,6 @@
 .method public shouldShowPlaceholder()Z
     .locals 1
 
-    .prologue
-    .line 98
     iget v0, p0, Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;->placeholderResId:I
 
     if-eqz v0, :cond_0

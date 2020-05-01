@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment;)V
     .locals 0
 
-    .prologue
-    .line 164
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment$2;->this$0:Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,8 +24,6 @@
 .method private isLoginId(I)Z
     .locals 1
 
-    .prologue
-    .line 179
     const v0, 0x7f0c0011
 
     if-eq p1, v0, :cond_0
@@ -55,15 +51,12 @@
 .method public onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
     .locals 3
 
-    .prologue
-    .line 168
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 169
     const-string/jumbo v0, "LoginBaseFragment"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -96,7 +89,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 171
     :cond_0
     invoke-direct {p0, p2}, Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment$2;->isLoginId(I)Z
 
@@ -104,15 +96,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 172
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment$2;->this$0:Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment;->access$100(Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment;)V
 
-    .line 173
     const/4 v0, 0x1
 
-    .line 175
     :goto_0
     return v0
 

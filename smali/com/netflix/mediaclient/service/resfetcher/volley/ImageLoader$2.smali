@@ -32,8 +32,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 585
     iput-object p1, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$2;->this$0:Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$2;->val$requestUrl:Ljava/lang/String;
@@ -52,8 +50,6 @@
 .method public onResponse(Landroid/graphics/Bitmap;)V
     .locals 4
 
-    .prologue
-    .line 588
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$2;->val$requestUrl:Ljava/lang/String;
 
     sget-object v1, Lcom/netflix/mediaclient/StatusCode;->OK:Lcom/netflix/mediaclient/StatusCode;
@@ -66,7 +62,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/util/log/ApmLogUtils;->reportAssetRequestResult(Ljava/lang/String;Lcom/netflix/mediaclient/StatusCode;Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging;)V
 
-    .line 589
     invoke-static {}, Lcom/netflix/mediaclient/service/logging/perf/PerformanceProfiler;->getInstance()Lcom/netflix/mediaclient/service/logging/perf/PerformanceProfiler;
 
     move-result-object v0
@@ -79,22 +74,18 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/netflix/mediaclient/service/logging/perf/PerformanceProfiler;->endSession(Lcom/netflix/mediaclient/service/logging/perf/Sessions;Ljava/util/Map;Ljava/lang/String;)V
 
-    .line 590
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$2;->this$0:Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$2;->val$cacheKey:Ljava/lang/String;
 
     invoke-static {v0, v1, p1}, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;->access$400(Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;Ljava/lang/String;Landroid/graphics/Bitmap;)V
 
-    .line 591
     return-void
 .end method
 
 .method public bridge synthetic onResponse(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 585
     check-cast p1, Landroid/graphics/Bitmap;
 
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$2;->onResponse(Landroid/graphics/Bitmap;)V

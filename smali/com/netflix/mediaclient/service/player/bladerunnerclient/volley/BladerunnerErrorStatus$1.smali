@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 119
     invoke-static {}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->values()[Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     move-result-object v0

@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1544
     invoke-direct {p0}, Landroid/support/v4/view/ViewCompat$JbMr1ViewCompatImpl;-><init>()V
 
     return-void
@@ -19,8 +17,6 @@
 .method public getClipBounds(Landroid/view/View;)Landroid/graphics/Rect;
     .locals 1
 
-    .prologue
-    .line 1552
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatJellybeanMr2;->getClipBounds(Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v0
@@ -31,8 +27,6 @@
 .method public isInLayout(Landroid/view/View;)Z
     .locals 1
 
-    .prologue
-    .line 1557
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatJellybeanMr2;->isInLayout(Landroid/view/View;)Z
 
     move-result v0
@@ -43,10 +37,7 @@
 .method public setClipBounds(Landroid/view/View;Landroid/graphics/Rect;)V
     .locals 0
 
-    .prologue
-    .line 1547
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatJellybeanMr2;->setClipBounds(Landroid/view/View;Landroid/graphics/Rect;)V
 
-    .line 1548
     return-void
 .end method

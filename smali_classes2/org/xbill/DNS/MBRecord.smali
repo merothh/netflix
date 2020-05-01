@@ -11,8 +11,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 15
     invoke-direct {p0}, Lorg/xbill/DNS/SingleNameBase;-><init>()V
 
     return-void
@@ -21,8 +19,6 @@
 .method public constructor <init>(Lorg/xbill/DNS/Name;IJLorg/xbill/DNS/Name;)V
     .locals 9
 
-    .prologue
-    .line 28
     const/4 v2, 0x7
 
     const-string/jumbo v7, "mailbox"
@@ -39,7 +35,6 @@
 
     invoke-direct/range {v0 .. v7}, Lorg/xbill/DNS/SingleNameBase;-><init>(Lorg/xbill/DNS/Name;IIJLorg/xbill/DNS/Name;Ljava/lang/String;)V
 
-    .line 29
     return-void
 .end method
 
@@ -48,8 +43,6 @@
 .method public getAdditionalName()Lorg/xbill/DNS/Name;
     .locals 1
 
-    .prologue
-    .line 39
     invoke-virtual {p0}, Lorg/xbill/DNS/MBRecord;->getSingleName()Lorg/xbill/DNS/Name;
 
     move-result-object v0
@@ -60,8 +53,6 @@
 .method public getMailbox()Lorg/xbill/DNS/Name;
     .locals 1
 
-    .prologue
-    .line 34
     invoke-virtual {p0}, Lorg/xbill/DNS/MBRecord;->getSingleName()Lorg/xbill/DNS/Name;
 
     move-result-object v0
@@ -72,8 +63,6 @@
 .method getObject()Lorg/xbill/DNS/Record;
     .locals 1
 
-    .prologue
-    .line 19
     new-instance v0, Lorg/xbill/DNS/MBRecord;
 
     invoke-direct {v0}, Lorg/xbill/DNS/MBRecord;-><init>()V

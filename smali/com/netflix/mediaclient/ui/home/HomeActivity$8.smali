@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/home/HomeActivity;)V
     .locals 0
 
-    .prologue
-    .line 747
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/home/HomeActivity$8;->this$0:Lcom/netflix/mediaclient/ui/home/HomeActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,22 +23,18 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .prologue
-    .line 750
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 751
     const-string/jumbo v0, "HomeActivity"
 
     const-string/jumbo v1, "notificationsListUpdateReceiver, onReceive"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 753
     :cond_0
     const-string/jumbo v0, "HomeActivity"
 
@@ -48,7 +42,6 @@
 
     move-result-object v0
 
-    .line 754
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/home/HomeActivity$8;->this$0:Lcom/netflix/mediaclient/ui/home/HomeActivity;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/home/HomeActivity;->access$100(Lcom/netflix/mediaclient/ui/home/HomeActivity;)Lcom/netflix/mediaclient/util/IrisUtils$NotificationsListStatus;
@@ -57,19 +50,16 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 755
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/home/HomeActivity$8;->this$0:Lcom/netflix/mediaclient/ui/home/HomeActivity;
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/ui/home/HomeActivity;->access$102(Lcom/netflix/mediaclient/ui/home/HomeActivity;Lcom/netflix/mediaclient/util/IrisUtils$NotificationsListStatus;)Lcom/netflix/mediaclient/util/IrisUtils$NotificationsListStatus;
 
-    .line 756
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 757
     const-string/jumbo v1, "HomeActivity"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -92,7 +82,6 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 760
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/HomeActivity$8;->this$0:Lcom/netflix/mediaclient/ui/home/HomeActivity;
 
@@ -115,11 +104,9 @@
     :goto_0
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/android/widget/NetflixActionBar;->setSandwichIcon(Z)V
 
-    .line 762
     :cond_2
     return-void
 
-    .line 760
     :cond_3
     const/4 v0, 0x0
 

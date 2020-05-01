@@ -22,8 +22,6 @@
 .method constructor <init>(Lcom/netflix/android/widgetry/buffet/BuffetBar;)V
     .locals 0
 
-    .prologue
-    .line 902
     iput-object p1, p0, Lcom/netflix/android/widgetry/buffet/BuffetBar$Behavior;->this$0:Lcom/netflix/android/widgetry/buffet/BuffetBar;
 
     invoke-direct {p0}, Landroid/support/design/widget/SwipeDismissBehavior;-><init>()V
@@ -36,8 +34,6 @@
 .method public canSwipeDismissView(Landroid/view/View;)Z
     .locals 1
 
-    .prologue
-    .line 905
     instance-of v0, p1, Lcom/netflix/android/widgetry/buffet/BuffetBar$BuffetLayout;
 
     return v0
@@ -46,8 +42,6 @@
 .method public bridge synthetic onInterceptTouchEvent(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .prologue
-    .line 902
     check-cast p2, Lcom/netflix/android/widgetry/buffet/BuffetBar$BuffetLayout;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/netflix/android/widgetry/buffet/BuffetBar$Behavior;->onInterceptTouchEvent(Landroid/support/design/widget/CoordinatorLayout;Lcom/netflix/android/widgetry/buffet/BuffetBar$BuffetLayout;Landroid/view/MotionEvent;)Z
@@ -60,8 +54,6 @@
 .method public onInterceptTouchEvent(Landroid/support/design/widget/CoordinatorLayout;Lcom/netflix/android/widgetry/buffet/BuffetBar$BuffetLayout;Landroid/view/MotionEvent;)Z
     .locals 2
 
-    .prologue
-    .line 913
     invoke-virtual {p3}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
@@ -80,14 +72,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 914
     invoke-virtual {p3}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 925
     :cond_0
     :goto_0
     :pswitch_0
@@ -97,7 +87,6 @@
 
     return v0
 
-    .line 916
     :pswitch_1
     invoke-static {}, Lcom/netflix/android/widgetry/buffet/BuffetManager;->getInstance()Lcom/netflix/android/widgetry/buffet/BuffetManager;
 
@@ -111,7 +100,6 @@
 
     goto :goto_0
 
-    .line 920
     :pswitch_2
     invoke-static {}, Lcom/netflix/android/widgetry/buffet/BuffetManager;->getInstance()Lcom/netflix/android/widgetry/buffet/BuffetManager;
 
@@ -125,7 +113,6 @@
 
     goto :goto_0
 
-    .line 914
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

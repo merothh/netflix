@@ -20,8 +20,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;Ljava/lang/Long;Lcom/netflix/mediaclient/service/player/manifest/NfManifest;Lcom/netflix/mediaclient/service/player/manifest/NfManifestCachePlaybackInterface$ManifestCacheCallback;)V
     .locals 0
 
-    .prologue
-    .line 323
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$9;->this$0:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$9;->val$movieId:Ljava/lang/Long;
@@ -40,8 +38,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 326
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$9;->this$0:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;->access$000(Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;)Ljava/util/List;
@@ -56,14 +52,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 327
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 328
     invoke-static {}, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;->access$400()Ljava/lang/String;
 
     move-result-object v0
@@ -90,7 +84,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 330
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$9;->this$0:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;
 
@@ -102,24 +95,20 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 341
     :goto_0
     return-void
 
-    .line 333
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$9;->val$manifest:Lcom/netflix/mediaclient/service/player/manifest/NfManifest;
 
     if-nez v0, :cond_3
 
-    .line 334
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 335
     invoke-static {}, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;->access$400()Ljava/lang/String;
 
     move-result-object v0
@@ -146,7 +135,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 337
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$9;->val$cb:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCachePlaybackInterface$ManifestCacheCallback;
 
@@ -156,7 +144,6 @@
 
     goto :goto_0
 
-    .line 339
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$9;->val$cb:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCachePlaybackInterface$ManifestCacheCallback;
 

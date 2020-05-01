@@ -6,13 +6,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 663
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/crittercism/internal/bv$g;-><init>(I)V
 
-    .line 664
     return-void
 .end method
 
@@ -21,8 +18,6 @@
 .method public final a()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 667
     const-string/jumbo v0, "mobile_network"
 
     return-object v0
@@ -31,8 +26,6 @@
 .method public final bridge synthetic c()Lorg/json/JSONObject;
     .locals 1
 
-    .prologue
-    .line 661
     invoke-super {p0}, Lcom/crittercism/internal/bv$g;->c()Lorg/json/JSONObject;
 
     move-result-object v0

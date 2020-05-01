@@ -11,11 +11,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 13
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/logging/client/BaseLoggingSession;-><init>()V
 
-    .line 14
     return-void
 .end method
 
@@ -24,8 +21,6 @@
 .method public getCategory()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 21
     const-string/jumbo v0, "signIn"
 
     return-object v0

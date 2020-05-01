@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/settings/SettingsFragment$12;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 783
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$12$1;->this$1:Lcom/netflix/mediaclient/ui/settings/SettingsFragment$12;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$12$1;->val$newAppId:Ljava/lang/String;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 786
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$12$1;->this$1:Lcom/netflix/mediaclient/ui/settings/SettingsFragment$12;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$12;->this$0:Lcom/netflix/mediaclient/ui/settings/SettingsFragment;
@@ -46,6 +42,5 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/configuration/SettingsConfiguration;->setNewCastApplicationId(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 787
     return-void
 .end method

@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;)V
     .locals 0
 
-    .prologue
-    .line 997
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$keyboardHider;->this$0:Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,13 +31,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 1001
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$keyboardHider;->this$0:Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;->access$900(Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;)V
 
-    .line 1002
     const/4 v0, 0x0
 
     return v0

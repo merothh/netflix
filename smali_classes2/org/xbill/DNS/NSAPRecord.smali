@@ -15,8 +15,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 20
     invoke-direct {p0}, Lorg/xbill/DNS/Record;-><init>()V
 
     return-void
@@ -25,8 +23,6 @@
 .method public constructor <init>(Lorg/xbill/DNS/Name;IJLjava/lang/String;)V
     .locals 7
 
-    .prologue
-    .line 67
     const/16 v2, 0x16
 
     move-object v0, p0
@@ -39,19 +35,16 @@
 
     invoke-direct/range {v0 .. v5}, Lorg/xbill/DNS/Record;-><init>(Lorg/xbill/DNS/Name;IIJ)V
 
-    .line 68
     invoke-static {p5}, Lorg/xbill/DNS/NSAPRecord;->checkAndConvertAddress(Ljava/lang/String;)[B
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/xbill/DNS/NSAPRecord;->address:[B
 
-    .line 69
     iget-object v0, p0, Lorg/xbill/DNS/NSAPRecord;->address:[B
 
     if-nez v0, :cond_0
 
-    .line 70
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -76,7 +69,6 @@
 
     throw v0
 
-    .line 73
     :cond_0
     return-void
 .end method
@@ -84,14 +76,12 @@
 .method private static final checkAndConvertAddress(Ljava/lang/String;)[B
     .locals 8
 
-    .prologue
     const/4 v0, 0x2
 
     const/4 v4, 0x0
 
     const/4 v2, 0x0
 
-    .line 29
     invoke-virtual {p0, v2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
@@ -106,11 +96,9 @@
 
     move-object v0, v4
 
-    .line 57
     :goto_0
     return-object v0
 
-    .line 32
     :cond_0
     new-instance v5, Ljava/io/ByteArrayOutputStream;
 
@@ -120,7 +108,6 @@
 
     move v3, v2
 
-    .line 35
     :goto_1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -128,23 +115,19 @@
 
     if-ge v0, v6, :cond_4
 
-    .line 36
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v6
 
-    .line 37
     const/16 v7, 0x2e
 
     if-ne v6, v7, :cond_1
 
-    .line 35
     :goto_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 40
     :cond_1
     const/16 v7, 0x10
 
@@ -152,50 +135,39 @@
 
     move-result v6
 
-    .line 41
     const/4 v7, -0x1
 
     if-ne v6, v7, :cond_2
 
     move-object v0, v4
 
-    .line 42
     goto :goto_0
 
-    .line 44
     :cond_2
     if-eqz v3, :cond_3
 
-    .line 45
     add-int/2addr v1, v6
 
-    .line 46
     invoke-virtual {v5, v1}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
     move v3, v2
 
-    .line 47
     goto :goto_2
 
-    .line 49
     :cond_3
     shl-int/lit8 v1, v6, 0x4
 
-    .line 50
     const/4 v3, 0x1
 
     goto :goto_2
 
-    .line 54
     :cond_4
     if-eqz v3, :cond_5
 
     move-object v0, v4
 
-    .line 55
     goto :goto_0
 
-    .line 57
     :cond_5
     invoke-virtual {v5}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
@@ -209,8 +181,6 @@
 .method public getAddress()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 93
     iget-object v0, p0, Lorg/xbill/DNS/NSAPRecord;->address:[B
 
     const/4 v1, 0x0
@@ -225,8 +195,6 @@
 .method getObject()Lorg/xbill/DNS/Record;
     .locals 1
 
-    .prologue
-    .line 24
     new-instance v0, Lorg/xbill/DNS/NSAPRecord;
 
     invoke-direct {v0}, Lorg/xbill/DNS/NSAPRecord;-><init>()V
@@ -237,25 +205,20 @@
 .method rdataFromString(Lorg/xbill/DNS/Tokenizer;Lorg/xbill/DNS/Name;)V
     .locals 3
 
-    .prologue
-    .line 82
     invoke-virtual {p1}, Lorg/xbill/DNS/Tokenizer;->getString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 83
     invoke-static {v0}, Lorg/xbill/DNS/NSAPRecord;->checkAndConvertAddress(Ljava/lang/String;)[B
 
     move-result-object v1
 
     iput-object v1, p0, Lorg/xbill/DNS/NSAPRecord;->address:[B
 
-    .line 84
     iget-object v1, p0, Lorg/xbill/DNS/NSAPRecord;->address:[B
 
     if-nez v1, :cond_0
 
-    .line 85
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -280,7 +243,6 @@
 
     throw v0
 
-    .line 86
     :cond_0
     return-void
 .end method
@@ -288,23 +250,18 @@
 .method rrFromWire(Lorg/xbill/DNS/DNSInput;)V
     .locals 1
 
-    .prologue
-    .line 77
     invoke-virtual {p1}, Lorg/xbill/DNS/DNSInput;->readByteArray()[B
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/xbill/DNS/NSAPRecord;->address:[B
 
-    .line 78
     return-void
 .end method
 
 .method rrToString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 103
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -335,12 +292,9 @@
 .method rrToWire(Lorg/xbill/DNS/DNSOutput;Lorg/xbill/DNS/Compression;Z)V
     .locals 1
 
-    .prologue
-    .line 98
     iget-object v0, p0, Lorg/xbill/DNS/NSAPRecord;->address:[B
 
     invoke-virtual {p1, v0}, Lorg/xbill/DNS/DNSOutput;->writeByteArray([B)V
 
-    .line 99
     return-void
 .end method

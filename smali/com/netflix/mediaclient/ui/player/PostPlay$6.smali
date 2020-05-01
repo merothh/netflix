@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/PostPlay;)V
     .locals 0
 
-    .prologue
-    .line 425
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$6;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 428
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$6;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$6;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
@@ -42,6 +38,5 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/player/PostPlay;->onTick(I)V
 
-    .line 429
     return-void
 .end method

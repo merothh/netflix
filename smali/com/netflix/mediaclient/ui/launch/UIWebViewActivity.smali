@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 18
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/launch/LaunchActivity;-><init>()V
 
     return-void

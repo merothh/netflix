@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/search/SearchActivity;)V
     .locals 0
 
-    .prologue
-    .line 487
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$6;->this$0:Lcom/netflix/mediaclient/ui/search/SearchActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,10 +26,8 @@
 .method public run()V
     .locals 6
 
-    .prologue
     const/4 v4, 0x1
 
-    .line 490
     const-string/jumbo v0, "SearchActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -76,7 +72,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 491
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$6;->this$0:Lcom/netflix/mediaclient/ui/search/SearchActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/search/SearchActivity;->access$400(Lcom/netflix/mediaclient/ui/search/SearchActivity;)Ljava/lang/String;
@@ -89,37 +84,31 @@
 
     if-eqz v0, :cond_1
 
-    .line 492
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 493
     const-string/jumbo v0, "SearchActivity"
 
     const-string/jumbo v1, "Returning handleQueryUpdateRunnable because of null or empty query"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 502
     :cond_0
     :goto_0
     return-void
 
-    .line 497
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$6;->this$0:Lcom/netflix/mediaclient/ui/search/SearchActivity;
 
     invoke-static {v0, v4}, Lcom/netflix/mediaclient/ui/search/SearchActivity;->access$902(Lcom/netflix/mediaclient/ui/search/SearchActivity;Z)Z
 
-    .line 499
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$6;->this$0:Lcom/netflix/mediaclient/ui/search/SearchActivity;
 
     invoke-static {v0, v4}, Lcom/netflix/mediaclient/ui/search/SearchActivity;->access$1000(Lcom/netflix/mediaclient/ui/search/SearchActivity;Z)V
 
-    .line 500
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$6;->this$0:Lcom/netflix/mediaclient/ui/search/SearchActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/search/SearchActivity;->access$300(Lcom/netflix/mediaclient/ui/search/SearchActivity;)J
@@ -144,7 +133,6 @@
 
     invoke-static/range {v0 .. v5}, Lcom/netflix/mediaclient/util/log/UserActionLogUtils;->reportSearchActionStarted(JLandroid/content/Context;Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;Ljava/lang/String;)V
 
-    .line 501
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$6;->this$0:Lcom/netflix/mediaclient/ui/search/SearchActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/search/SearchActivity;->access$600(Lcom/netflix/mediaclient/ui/search/SearchActivity;)Lcom/netflix/mediaclient/servicemgr/ServiceManager;

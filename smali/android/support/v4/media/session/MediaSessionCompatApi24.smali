@@ -11,19 +11,14 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     return-void
 .end method
 
 .method public static createCallback(Landroid/support/v4/media/session/MediaSessionCompatApi24$Callback;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 31
     new-instance v0, Landroid/support/v4/media/session/MediaSessionCompatApi24$CallbackProxy;
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/session/MediaSessionCompatApi24$CallbackProxy;-><init>(Landroid/support/v4/media/session/MediaSessionCompatApi24$Callback;)V
@@ -34,11 +29,8 @@
 .method public static getCallingPackage(Ljava/lang/Object;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 35
     check-cast p0, Landroid/media/session/MediaSession;
 
-    .line 37
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -54,7 +46,6 @@
 
     move-result-object v0
 
-    .line 38
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -69,15 +60,12 @@
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 42
     :goto_0
     return-object v0
 
-    .line 39
     :catch_0
     move-exception v0
 
-    .line 40
     :goto_1
     const-string/jumbo v1, "MediaSessionCompatApi24"
 
@@ -85,12 +73,10 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 42
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 39
     :catch_1
     move-exception v0
 

@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;)V
     .locals 0
 
-    .prologue
-    .line 177
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator$3;->this$0:Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,23 +26,17 @@
 .method public onErrorResponse(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 180
     return-void
 .end method
 
 .method public onResponse(Landroid/graphics/Bitmap;Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 185
     if-nez p1, :cond_0
 
-    .line 189
     :goto_0
     return-void
 
-    .line 188
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator$3;->this$0:Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;
 

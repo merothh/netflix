@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl$2;)V
     .locals 0
 
-    .prologue
-    .line 140
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl$2$1;->this$1:Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl$2;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/SimpleBladeRunnerWebCallback;-><init>()V
@@ -25,8 +23,6 @@
 .method public onManifestsFetched(Lorg/json/JSONObject;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 144
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl$2$1;->this$1:Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl$2;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl$2;->this$0:Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl;
@@ -41,6 +37,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 150
     return-void
 .end method

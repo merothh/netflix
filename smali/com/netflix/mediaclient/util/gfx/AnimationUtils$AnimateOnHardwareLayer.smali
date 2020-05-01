@@ -14,14 +14,10 @@
 .method public varargs constructor <init>([Landroid/view/View;)V
     .locals 0
 
-    .prologue
-    .line 137
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 138
     iput-object p1, p0, Lcom/netflix/mediaclient/util/gfx/AnimationUtils$AnimateOnHardwareLayer;->views:[Landroid/view/View;
 
-    .line 139
     return-void
 .end method
 
@@ -30,21 +26,16 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
 
-    .prologue
-    .line 159
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/util/gfx/AnimationUtils$AnimateOnHardwareLayer;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    .line 160
     return-void
 .end method
 
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 5
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 152
     iget-object v2, p0, Lcom/netflix/mediaclient/util/gfx/AnimationUtils$AnimateOnHardwareLayer;->views:[Landroid/view/View;
 
     array-length v3, v2
@@ -56,15 +47,12 @@
 
     aget-object v4, v2, v0
 
-    .line 153
     invoke-static {v4, v1}, Lcom/netflix/mediaclient/util/ViewUtils;->setLayerType(Landroid/view/View;I)V
 
-    .line 152
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 155
     :cond_0
     return-void
 .end method
@@ -72,16 +60,12 @@
 .method public onAnimationRepeat(Landroid/animation/Animator;)V
     .locals 0
 
-    .prologue
-    .line 164
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 5
 
-    .prologue
-    .line 144
     iget-object v1, p0, Lcom/netflix/mediaclient/util/gfx/AnimationUtils$AnimateOnHardwareLayer;->views:[Landroid/view/View;
 
     array-length v2, v1
@@ -93,17 +77,14 @@
 
     aget-object v3, v1, v0
 
-    .line 145
     const/4 v4, 0x2
 
     invoke-static {v3, v4}, Lcom/netflix/mediaclient/util/ViewUtils;->setLayerType(Landroid/view/View;I)V
 
-    .line 144
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 147
     :cond_0
     return-void
 .end method

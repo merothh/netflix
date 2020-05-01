@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/mdx/TargetContext;)V
     .locals 0
 
-    .prologue
-    .line 319
     iput-object p1, p0, Lcom/netflix/mediaclient/service/mdx/TargetContext$DoRegPair;->this$0:Lcom/netflix/mediaclient/service/mdx/TargetContext;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 322
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/TargetContext$DoRegPair;->this$0:Lcom/netflix/mediaclient/service/mdx/TargetContext;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/mdx/TargetContext;->access$200(Lcom/netflix/mediaclient/service/mdx/TargetContext;)I
@@ -40,7 +36,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 323
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/TargetContext$DoRegPair;->this$0:Lcom/netflix/mediaclient/service/mdx/TargetContext;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/mdx/TargetContext;->access$700(Lcom/netflix/mediaclient/service/mdx/TargetContext;)Lcom/netflix/mediaclient/javabridge/ui/mdxcontroller/MdxController;
@@ -59,12 +54,10 @@
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/javabridge/ui/mdxcontroller/PairingController;->registrationPairingRequest(Ljava/lang/String;)V
 
-    .line 327
     :cond_0
     :goto_0
     return-void
 
-    .line 324
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/TargetContext$DoRegPair;->this$0:Lcom/netflix/mediaclient/service/mdx/TargetContext;
 
@@ -76,7 +69,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 325
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/TargetContext$DoRegPair;->this$0:Lcom/netflix/mediaclient/service/mdx/TargetContext;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/mdx/TargetContext;->access$700(Lcom/netflix/mediaclient/service/mdx/TargetContext;)Lcom/netflix/mediaclient/javabridge/ui/mdxcontroller/MdxController;

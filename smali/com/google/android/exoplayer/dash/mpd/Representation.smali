@@ -24,43 +24,33 @@
 .method private constructor <init>(Ljava/lang/String;JLcom/google/android/exoplayer/chunk/Format;Lcom/google/android/exoplayer/dash/mpd/SegmentBase;Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 98
     iput-object p1, p0, Lcom/google/android/exoplayer/dash/mpd/Representation;->contentId:Ljava/lang/String;
 
-    .line 99
     iput-wide p2, p0, Lcom/google/android/exoplayer/dash/mpd/Representation;->revisionId:J
 
-    .line 100
     iput-object p4, p0, Lcom/google/android/exoplayer/dash/mpd/Representation;->format:Lcom/google/android/exoplayer/chunk/Format;
 
-    .line 101
     if-eqz p6, :cond_0
 
     :goto_0
     iput-object p6, p0, Lcom/google/android/exoplayer/dash/mpd/Representation;->cacheKey:Ljava/lang/String;
 
-    .line 103
     invoke-virtual {p5, p0}, Lcom/google/android/exoplayer/dash/mpd/SegmentBase;->getInitialization(Lcom/google/android/exoplayer/dash/mpd/Representation;)Lcom/google/android/exoplayer/dash/mpd/RangedUri;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/Representation;->initializationUri:Lcom/google/android/exoplayer/dash/mpd/RangedUri;
 
-    .line 104
     invoke-virtual {p5}, Lcom/google/android/exoplayer/dash/mpd/SegmentBase;->getPresentationTimeOffsetUs()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/google/android/exoplayer/dash/mpd/Representation;->presentationTimeOffsetUs:J
 
-    .line 105
     return-void
 
-    .line 101
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -102,8 +92,6 @@
 .method synthetic constructor <init>(Ljava/lang/String;JLcom/google/android/exoplayer/chunk/Format;Lcom/google/android/exoplayer/dash/mpd/SegmentBase;Ljava/lang/String;Lcom/google/android/exoplayer/dash/mpd/Representation$1;)V
     .locals 0
 
-    .prologue
-    .line 28
     invoke-direct/range {p0 .. p6}, Lcom/google/android/exoplayer/dash/mpd/Representation;-><init>(Ljava/lang/String;JLcom/google/android/exoplayer/chunk/Format;Lcom/google/android/exoplayer/dash/mpd/SegmentBase;Ljava/lang/String;)V
 
     return-void
@@ -112,8 +100,6 @@
 .method public static newInstance(Ljava/lang/String;JLcom/google/android/exoplayer/chunk/Format;Lcom/google/android/exoplayer/dash/mpd/SegmentBase;)Lcom/google/android/exoplayer/dash/mpd/Representation;
     .locals 7
 
-    .prologue
-    .line 69
     const/4 v6, 0x0
 
     move-object v1, p0
@@ -134,13 +120,10 @@
 .method public static newInstance(Ljava/lang/String;JLcom/google/android/exoplayer/chunk/Format;Lcom/google/android/exoplayer/dash/mpd/SegmentBase;Ljava/lang/String;)Lcom/google/android/exoplayer/dash/mpd/Representation;
     .locals 9
 
-    .prologue
-    .line 84
     instance-of v0, p4, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SingleSegmentBase;
 
     if-eqz v0, :cond_0
 
-    .line 85
     new-instance v0, Lcom/google/android/exoplayer/dash/mpd/Representation$SingleSegmentRepresentation;
 
     move-object v5, p4
@@ -159,17 +142,14 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/google/android/exoplayer/dash/mpd/Representation$SingleSegmentRepresentation;-><init>(Ljava/lang/String;JLcom/google/android/exoplayer/chunk/Format;Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SingleSegmentBase;Ljava/lang/String;J)V
 
-    .line 88
     :goto_0
     return-object v0
 
-    .line 87
     :cond_0
     instance-of v0, p4, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$MultiSegmentBase;
 
     if-eqz v0, :cond_1
 
-    .line 88
     new-instance v0, Lcom/google/android/exoplayer/dash/mpd/Representation$MultiSegmentRepresentation;
 
     move-object v5, p4
@@ -188,7 +168,6 @@
 
     goto :goto_0
 
-    .line 91
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -204,8 +183,6 @@
 .method public getCacheKey()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 145
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/Representation;->cacheKey:Ljava/lang/String;
 
     return-object v0
@@ -214,8 +191,6 @@
 .method public getFormat()Lcom/google/android/exoplayer/chunk/Format;
     .locals 1
 
-    .prologue
-    .line 109
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/Representation;->format:Lcom/google/android/exoplayer/chunk/Format;
 
     return-object v0
@@ -230,8 +205,6 @@
 .method public getInitializationUri()Lcom/google/android/exoplayer/dash/mpd/RangedUri;
     .locals 1
 
-    .prologue
-    .line 119
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/Representation;->initializationUri:Lcom/google/android/exoplayer/dash/mpd/RangedUri;
 
     return-object v0

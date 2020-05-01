@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/browse/DataDumper;)V
     .locals 0
 
-    .prologue
-    .line 55
     iput-object p1, p0, Lcom/netflix/mediaclient/service/browse/DataDumper$1;->this$0:Lcom/netflix/mediaclient/service/browse/DataDumper;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/servicemgr/SimpleManagerCallback;-><init>()V
@@ -36,13 +34,10 @@
         }
     .end annotation
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 58
     invoke-super {p0, p1, p2}, Lcom/netflix/mediaclient/servicemgr/SimpleManagerCallback;->onLoMosFetched(Ljava/util/List;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 60
     const-string/jumbo v0, "DataDumper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -69,12 +64,10 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 61
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 62
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v9
@@ -92,7 +85,6 @@
 
     check-cast v1, Lcom/netflix/mediaclient/servicemgr/interface_/LoMo;
 
-    .line 63
     const-string/jumbo v0, "DataDumper"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -119,7 +111,6 @@
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     iget-object v0, p0, Lcom/netflix/mediaclient/service/browse/DataDumper$1;->this$0:Lcom/netflix/mediaclient/service/browse/DataDumper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/browse/DataDumper;->access$000(Lcom/netflix/mediaclient/service/browse/DataDumper;)Ljava/util/LinkedHashMap;
@@ -130,7 +121,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 65
     iget-object v0, p0, Lcom/netflix/mediaclient/service/browse/DataDumper$1;->this$0:Lcom/netflix/mediaclient/service/browse/DataDumper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/browse/DataDumper;->access$100(Lcom/netflix/mediaclient/service/browse/DataDumper;)Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
@@ -155,7 +145,6 @@
 
     goto :goto_0
 
-    .line 67
     :cond_0
     return-void
 .end method

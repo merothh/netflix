@@ -95,8 +95,6 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData;)V
     .locals 0
 
-    .prologue
-    .line 147
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData$LicenseData;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

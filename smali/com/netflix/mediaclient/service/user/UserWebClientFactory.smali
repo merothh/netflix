@@ -7,19 +7,14 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
     return-void
 .end method
 
 .method public static final create(Lcom/netflix/mediaclient/service/NetflixService;Lcom/netflix/mediaclient/service/webclient/WebClient;)Lcom/netflix/mediaclient/service/user/UserWebClient;
     .locals 1
 
-    .prologue
-    .line 20
     new-instance v0, Lcom/netflix/mediaclient/service/user/volley/UserVolleyWebClient;
 
     check-cast p1, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClient;

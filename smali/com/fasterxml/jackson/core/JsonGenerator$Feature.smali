@@ -48,7 +48,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -59,7 +58,6 @@
 
     const/4 v3, 0x0
 
-    .line 49
     new-instance v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
     const-string/jumbo v1, "AUTO_CLOSE_TARGET"
@@ -68,7 +66,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->AUTO_CLOSE_TARGET:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
-    .line 61
     new-instance v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
     const-string/jumbo v1, "AUTO_CLOSE_JSON_CONTENT"
@@ -77,7 +74,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->AUTO_CLOSE_JSON_CONTENT:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
-    .line 74
     new-instance v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
     const-string/jumbo v1, "FLUSH_PASSED_TO_STREAM"
@@ -86,7 +82,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->FLUSH_PASSED_TO_STREAM:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
-    .line 87
     new-instance v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
     const-string/jumbo v1, "QUOTE_FIELD_NAMES"
@@ -95,7 +90,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->QUOTE_FIELD_NAMES:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
-    .line 101
     new-instance v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
     const-string/jumbo v1, "QUOTE_NON_NUMERIC_NUMBERS"
@@ -104,7 +98,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->QUOTE_NON_NUMERIC_NUMBERS:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
-    .line 118
     new-instance v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
     const-string/jumbo v1, "WRITE_NUMBERS_AS_STRINGS"
@@ -115,7 +108,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->WRITE_NUMBERS_AS_STRINGS:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
-    .line 130
     new-instance v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
     const-string/jumbo v1, "WRITE_BIGDECIMAL_AS_PLAIN"
@@ -126,7 +118,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->WRITE_BIGDECIMAL_AS_PLAIN:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
-    .line 147
     new-instance v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
     const-string/jumbo v1, "ESCAPE_NON_ASCII"
@@ -137,7 +128,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->ESCAPE_NON_ASCII:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
-    .line 190
     new-instance v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
     const-string/jumbo v1, "STRICT_DUPLICATE_DETECTION"
@@ -148,7 +138,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->STRICT_DUPLICATE_DETECTION:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
-    .line 212
     new-instance v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
     const-string/jumbo v1, "IGNORE_UNKNOWN"
@@ -159,7 +148,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->IGNORE_UNKNOWN:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
-    .line 33
     const/16 v0, 0xa
 
     new-array v0, v0, [Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
@@ -227,14 +215,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 233
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 234
     iput-boolean p3, p0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->_defaultState:Z
 
-    .line 235
     const/4 v0, 0x1
 
     invoke-virtual {p0}, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->ordinal()I
@@ -245,17 +229,14 @@
 
     iput v0, p0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->_mask:I
 
-    .line 236
     return-void
 .end method
 
 .method public static collectDefaults()I
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 225
     invoke-static {}, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->values()[Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
     move-result-object v2
@@ -269,27 +250,23 @@
 
     aget-object v4, v2, v1
 
-    .line 226
     invoke-virtual {v4}, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->enabledByDefault()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 227
     invoke-virtual {v4}, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->getMask()I
 
     move-result v4
 
     or-int/2addr v0, v4
 
-    .line 225
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 230
     :cond_1
     return v0
 .end method
@@ -297,8 +274,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
     .locals 1
 
-    .prologue
-    .line 33
     const-class v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -313,8 +288,6 @@
 .method public static values()[Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
     .locals 1
 
-    .prologue
-    .line 33
     sget-object v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->$VALUES:[Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
     invoke-virtual {v0}, [Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->clone()Ljava/lang/Object;
@@ -331,8 +304,6 @@
 .method public enabledByDefault()Z
     .locals 1
 
-    .prologue
-    .line 238
     iget-boolean v0, p0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->_defaultState:Z
 
     return v0
@@ -341,8 +312,6 @@
 .method public getMask()I
     .locals 1
 
-    .prologue
-    .line 245
     iget v0, p0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->_mask:I
 
     return v0

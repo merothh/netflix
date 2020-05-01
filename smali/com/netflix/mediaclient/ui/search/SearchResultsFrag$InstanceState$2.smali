@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$InstanceState;Lcom/netflix/mediaclient/android/widget/StaticGridView;I)V
     .locals 0
 
-    .prologue
-    .line 1128
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$InstanceState$2;->this$1:Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$InstanceState;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$InstanceState$2;->val$gridView:Lcom/netflix/mediaclient/android/widget/StaticGridView;
@@ -36,15 +34,12 @@
 .method public run()V
     .locals 6
 
-    .prologue
-    .line 1131
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$InstanceState$2;->val$gridView:Lcom/netflix/mediaclient/android/widget/StaticGridView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$InstanceState$2;->val$gridView:Lcom/netflix/mediaclient/android/widget/StaticGridView;
 
     iget v2, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$InstanceState$2;->val$selectedPosition:I
 
-    .line 1132
     invoke-virtual {v1, v2}, Lcom/netflix/mediaclient/android/widget/StaticGridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
@@ -53,7 +48,6 @@
 
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$InstanceState$2;->val$gridView:Lcom/netflix/mediaclient/android/widget/StaticGridView;
 
-    .line 1134
     invoke-virtual {v3}, Lcom/netflix/mediaclient/android/widget/StaticGridView;->getAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v3
@@ -64,9 +58,7 @@
 
     move-result-wide v4
 
-    .line 1131
     invoke-virtual {v0, v1, v2, v4, v5}, Lcom/netflix/mediaclient/android/widget/StaticGridView;->performItemClick(Landroid/view/View;IJ)Z
 
-    .line 1137
     return-void
 .end method

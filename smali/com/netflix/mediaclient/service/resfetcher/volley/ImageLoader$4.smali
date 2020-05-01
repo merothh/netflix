@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;)V
     .locals 0
 
-    .prologue
-    .line 675
     iput-object p1, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$4;->this$0:Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public run()V
     .locals 6
 
-    .prologue
-    .line 678
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$4;->this$0:Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;->access$700(Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;)Ljava/util/HashMap;
@@ -57,7 +53,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$BatchedImageRequest;
 
-    .line 679
     invoke-static {v0}, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$BatchedImageRequest;->access$800(Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$BatchedImageRequest;)Ljava/util/LinkedList;
 
     move-result-object v1
@@ -80,28 +75,24 @@
 
     check-cast v1, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageContainer;
 
-    .line 683
     invoke-static {v1}, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageContainer;->access$900(Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageContainer;)Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageListener;
 
     move-result-object v4
 
     if-eqz v4, :cond_1
 
-    .line 686
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$BatchedImageRequest;->getError()Lcom/android/volley/VolleyError;
 
     move-result-object v4
 
     if-nez v4, :cond_2
 
-    .line 687
     invoke-static {v0}, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$BatchedImageRequest;->access$600(Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$BatchedImageRequest;)Landroid/graphics/Bitmap;
 
     move-result-object v4
 
     invoke-static {v1, v4}, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageContainer;->access$1002(Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageContainer;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    .line 688
     invoke-static {v1}, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageContainer;->access$900(Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageContainer;)Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageListener;
 
     move-result-object v4
@@ -112,7 +103,6 @@
 
     goto :goto_0
 
-    .line 690
     :cond_2
     invoke-static {v1}, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageContainer;->access$900(Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageContainer;)Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageListener;
 
@@ -126,7 +116,6 @@
 
     goto :goto_0
 
-    .line 694
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$4;->this$0:Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;
 
@@ -136,13 +125,11 @@
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 695
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$4;->this$0:Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;->access$1102(Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 696
     return-void
 .end method

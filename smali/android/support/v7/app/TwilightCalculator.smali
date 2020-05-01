@@ -19,8 +19,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,20 +27,16 @@
 .method static getInstance()Landroid/support/v7/app/TwilightCalculator;
     .locals 1
 
-    .prologue
-    .line 31
     sget-object v0, Landroid/support/v7/app/TwilightCalculator;->sInstance:Landroid/support/v7/app/TwilightCalculator;
 
     if-nez v0, :cond_0
 
-    .line 32
     new-instance v0, Landroid/support/v7/app/TwilightCalculator;
 
     invoke-direct {v0}, Landroid/support/v7/app/TwilightCalculator;-><init>()V
 
     sput-object v0, Landroid/support/v7/app/TwilightCalculator;->sInstance:Landroid/support/v7/app/TwilightCalculator;
 
-    .line 34
     :cond_0
     sget-object v0, Landroid/support/v7/app/TwilightCalculator;->sInstance:Landroid/support/v7/app/TwilightCalculator;
 
@@ -54,8 +48,6 @@
 .method public calculateTwilight(JDD)V
     .locals 15
 
-    .prologue
-    .line 86
     const-wide v2, 0xdc6d62da00L
 
     sub-long v2, p1, v2
@@ -66,7 +58,6 @@
 
     div-float/2addr v2, v3
 
-    .line 89
     const v3, 0x40c7ae92
 
     const v4, 0x3c8ceb25
@@ -75,7 +66,6 @@
 
     add-float/2addr v3, v4
 
-    .line 92
     float-to-double v4, v3
 
     const-wide v6, 0x3fa11c5fc0000000L    # 0.03341960161924362
@@ -98,7 +88,6 @@
 
     float-to-double v8, v8
 
-    .line 93
     invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v8
@@ -123,7 +112,6 @@
 
     add-double/2addr v4, v6
 
-    .line 96
     const-wide v6, 0x3ffcbed85e1ce332L    # 1.796593063
 
     add-double/2addr v4, v6
@@ -132,7 +120,6 @@
 
     add-double/2addr v4, v6
 
-    .line 99
     move-wide/from16 v0, p5
 
     neg-double v6, v0
@@ -141,7 +128,6 @@
 
     div-double/2addr v6, v8
 
-    .line 100
     const v8, 0x3a6bedfa    # 9.0E-4f
 
     sub-float/2addr v2, v8
@@ -156,7 +142,6 @@
 
     long-to-float v2, v8
 
-    .line 101
     const v8, 0x3a6bedfa    # 9.0E-4f
 
     add-float/2addr v2, v8
@@ -183,7 +168,6 @@
 
     mul-double/2addr v8, v4
 
-    .line 102
     invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v8
@@ -192,7 +176,6 @@
 
     add-double/2addr v2, v6
 
-    .line 105
     invoke-static {v4, v5}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v4
@@ -209,12 +192,10 @@
 
     move-result-wide v4
 
-    .line 107
     const-wide v6, 0x3f91df46a0000000L    # 0.01745329238474369
 
     mul-double v6, v6, p3
 
-    .line 109
     const-wide v8, -0x4045311600000000L    # -0.10471975803375244
 
     invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
@@ -225,7 +206,6 @@
 
     move-result-wide v10
 
-    .line 110
     invoke-static {v4, v5}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v12
@@ -246,33 +226,27 @@
 
     div-double v4, v8, v4
 
-    .line 113
     const-wide/high16 v6, 0x3ff0000000000000L    # 1.0
 
     cmpl-double v6, v4, v6
 
     if-ltz v6, :cond_0
 
-    .line 114
     const/4 v2, 0x1
 
     iput v2, p0, Landroid/support/v7/app/TwilightCalculator;->state:I
 
-    .line 115
     const-wide/16 v2, -0x1
 
     iput-wide v2, p0, Landroid/support/v7/app/TwilightCalculator;->sunset:J
 
-    .line 116
     const-wide/16 v2, -0x1
 
     iput-wide v2, p0, Landroid/support/v7/app/TwilightCalculator;->sunrise:J
 
-    .line 135
     :goto_0
     return-void
 
-    .line 118
     :cond_0
     const-wide/high16 v6, -0x4010000000000000L    # -1.0
 
@@ -280,24 +254,20 @@
 
     if-gtz v6, :cond_1
 
-    .line 119
     const/4 v2, 0x0
 
     iput v2, p0, Landroid/support/v7/app/TwilightCalculator;->state:I
 
-    .line 120
     const-wide/16 v2, -0x1
 
     iput-wide v2, p0, Landroid/support/v7/app/TwilightCalculator;->sunset:J
 
-    .line 121
     const-wide/16 v2, -0x1
 
     iput-wide v2, p0, Landroid/support/v7/app/TwilightCalculator;->sunrise:J
 
     goto :goto_0
 
-    .line 125
     :cond_1
     invoke-static {v4, v5}, Ljava/lang/Math;->acos(D)D
 
@@ -309,7 +279,6 @@
 
     double-to-float v4, v4
 
-    .line 127
     float-to-double v6, v4
 
     add-double/2addr v6, v2
@@ -328,7 +297,6 @@
 
     iput-wide v6, p0, Landroid/support/v7/app/TwilightCalculator;->sunset:J
 
-    .line 128
     float-to-double v4, v4
 
     sub-double/2addr v2, v4
@@ -347,7 +315,6 @@
 
     iput-wide v2, p0, Landroid/support/v7/app/TwilightCalculator;->sunrise:J
 
-    .line 130
     iget-wide v2, p0, Landroid/support/v7/app/TwilightCalculator;->sunrise:J
 
     cmp-long v2, v2, p1
@@ -360,14 +327,12 @@
 
     if-lez v2, :cond_2
 
-    .line 131
     const/4 v2, 0x0
 
     iput v2, p0, Landroid/support/v7/app/TwilightCalculator;->state:I
 
     goto :goto_0
 
-    .line 133
     :cond_2
     const/4 v2, 0x1
 

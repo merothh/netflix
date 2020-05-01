@@ -13,8 +13,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 637
     invoke-static {}, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;->values()[Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
     move-result-object v0
@@ -120,7 +118,6 @@
     :try_end_5
     .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_4
 
-    .line 227
     :goto_5
     invoke-static {}, Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;->values()[Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;
 
@@ -218,7 +215,6 @@
 
     goto :goto_6
 
-    .line 637
     :catch_4
     move-exception v0
 

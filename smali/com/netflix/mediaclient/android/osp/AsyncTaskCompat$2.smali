@@ -20,8 +20,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat;)V
     .locals 1
 
-    .prologue
-    .line 112
     iput-object p1, p0, Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat$2;->this$0:Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat;
 
     const/4 v0, 0x0
@@ -41,8 +39,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 115
     iget-object v0, p0, Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat$2;->this$0:Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat;->access$200(Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -53,12 +49,10 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 117
     const/16 v0, 0xa
 
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 119
     iget-object v0, p0, Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat$2;->this$0:Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat$2;->this$0:Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat;

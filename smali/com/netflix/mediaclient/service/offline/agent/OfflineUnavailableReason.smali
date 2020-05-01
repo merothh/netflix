@@ -32,7 +32,6 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x3
 
     const/4 v4, 0x0
@@ -41,7 +40,6 @@
 
     const/4 v2, 0x1
 
-    .line 10
     new-instance v0, Lcom/netflix/mediaclient/service/offline/agent/OfflineUnavailableReason;
 
     const-string/jumbo v1, "NA_OFFLINE_STORAGE_NOT_AVAILABLE"
@@ -50,7 +48,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/offline/agent/OfflineUnavailableReason;->NA_OFFLINE_STORAGE_NOT_AVAILABLE:Lcom/netflix/mediaclient/service/offline/agent/OfflineUnavailableReason;
 
-    .line 11
     new-instance v0, Lcom/netflix/mediaclient/service/offline/agent/OfflineUnavailableReason;
 
     const-string/jumbo v1, "NA_MSL_CLIENT_DISABLED"
@@ -59,7 +56,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/offline/agent/OfflineUnavailableReason;->NA_MSL_CLIENT_DISABLED:Lcom/netflix/mediaclient/service/offline/agent/OfflineUnavailableReason;
 
-    .line 12
     new-instance v0, Lcom/netflix/mediaclient/service/offline/agent/OfflineUnavailableReason;
 
     const-string/jumbo v1, "NA_DISABLED_FROM_END_POINT"
@@ -68,7 +64,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/offline/agent/OfflineUnavailableReason;->NA_DISABLED_FROM_END_POINT:Lcom/netflix/mediaclient/service/offline/agent/OfflineUnavailableReason;
 
-    .line 8
     new-array v0, v5, [Lcom/netflix/mediaclient/service/offline/agent/OfflineUnavailableReason;
 
     sget-object v1, Lcom/netflix/mediaclient/service/offline/agent/OfflineUnavailableReason;->NA_OFFLINE_STORAGE_NOT_AVAILABLE:Lcom/netflix/mediaclient/service/offline/agent/OfflineUnavailableReason;
@@ -96,22 +91,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 16
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 17
     iput p3, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineUnavailableReason;->mValue:I
 
-    .line 18
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/offline/agent/OfflineUnavailableReason;
     .locals 1
 
-    .prologue
-    .line 8
     const-class v0, Lcom/netflix/mediaclient/service/offline/agent/OfflineUnavailableReason;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -126,8 +115,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/offline/agent/OfflineUnavailableReason;
     .locals 1
 
-    .prologue
-    .line 8
     sget-object v0, Lcom/netflix/mediaclient/service/offline/agent/OfflineUnavailableReason;->$VALUES:[Lcom/netflix/mediaclient/service/offline/agent/OfflineUnavailableReason;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/offline/agent/OfflineUnavailableReason;->clone()Ljava/lang/Object;
@@ -144,8 +131,6 @@
 .method public getCodeForLogblob()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 21
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

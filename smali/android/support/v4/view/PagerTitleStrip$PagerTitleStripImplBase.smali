@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,10 +20,7 @@
 .method public setSingleLineAllCaps(Landroid/widget/TextView;)V
     .locals 0
 
-    .prologue
-    .line 92
     invoke-virtual {p1}, Landroid/widget/TextView;->setSingleLine()V
 
-    .line 93
     return-void
 .end method

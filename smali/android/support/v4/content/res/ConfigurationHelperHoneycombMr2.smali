@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,8 +15,6 @@
 .method static getScreenHeightDp(Landroid/content/res/Resources;)I
     .locals 1
 
-    .prologue
-    .line 26
     invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v0
@@ -31,8 +27,6 @@
 .method static getScreenWidthDp(Landroid/content/res/Resources;)I
     .locals 1
 
-    .prologue
-    .line 30
     invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v0
@@ -45,8 +39,6 @@
 .method static getSmallestScreenWidthDp(Landroid/content/res/Resources;)I
     .locals 1
 
-    .prologue
-    .line 34
     invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v0

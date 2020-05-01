@@ -17,8 +17,6 @@
 .method constructor <init>(Landroid/support/design/widget/FloatingActionButtonIcs;ZLandroid/support/design/widget/FloatingActionButtonImpl$InternalVisibilityChangedListener;)V
     .locals 0
 
-    .prologue
-    .line 68
     iput-object p1, p0, Landroid/support/design/widget/FloatingActionButtonIcs$1;->this$0:Landroid/support/design/widget/FloatingActionButtonIcs;
 
     iput-boolean p2, p0, Landroid/support/design/widget/FloatingActionButtonIcs$1;->val$fromUser:Z
@@ -35,33 +33,26 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 1
 
-    .prologue
-    .line 79
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/design/widget/FloatingActionButtonIcs$1;->mCancelled:Z
 
-    .line 80
     return-void
 .end method
 
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 3
 
-    .prologue
-    .line 84
     iget-object v0, p0, Landroid/support/design/widget/FloatingActionButtonIcs$1;->this$0:Landroid/support/design/widget/FloatingActionButtonIcs;
 
     const/4 v1, 0x0
 
     iput v1, v0, Landroid/support/design/widget/FloatingActionButtonIcs;->mAnimState:I
 
-    .line 86
     iget-boolean v0, p0, Landroid/support/design/widget/FloatingActionButtonIcs$1;->mCancelled:Z
 
     if-nez v0, :cond_0
 
-    .line 87
     iget-object v0, p0, Landroid/support/design/widget/FloatingActionButtonIcs$1;->this$0:Landroid/support/design/widget/FloatingActionButtonIcs;
 
     iget-object v0, v0, Landroid/support/design/widget/FloatingActionButtonIcs;->mView:Landroid/support/design/widget/VisibilityAwareImageButton;
@@ -72,17 +63,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/support/design/widget/VisibilityAwareImageButton;->internalSetVisibility(IZ)V
 
-    .line 88
     iget-object v0, p0, Landroid/support/design/widget/FloatingActionButtonIcs$1;->val$listener:Landroid/support/design/widget/FloatingActionButtonImpl$InternalVisibilityChangedListener;
 
     if-eqz v0, :cond_0
 
-    .line 89
     iget-object v0, p0, Landroid/support/design/widget/FloatingActionButtonIcs$1;->val$listener:Landroid/support/design/widget/FloatingActionButtonImpl$InternalVisibilityChangedListener;
 
     invoke-interface {v0}, Landroid/support/design/widget/FloatingActionButtonImpl$InternalVisibilityChangedListener;->onHidden()V
 
-    .line 92
     :cond_0
     return-void
 .end method
@@ -90,10 +78,8 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 73
     iget-object v0, p0, Landroid/support/design/widget/FloatingActionButtonIcs$1;->this$0:Landroid/support/design/widget/FloatingActionButtonIcs;
 
     iget-object v0, v0, Landroid/support/design/widget/FloatingActionButtonIcs;->mView:Landroid/support/design/widget/VisibilityAwareImageButton;
@@ -102,9 +88,7 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/support/design/widget/VisibilityAwareImageButton;->internalSetVisibility(IZ)V
 
-    .line 74
     iput-boolean v2, p0, Landroid/support/design/widget/FloatingActionButtonIcs$1;->mCancelled:Z
 
-    .line 75
     return-void
 .end method

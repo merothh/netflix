@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;)V
     .locals 0
 
-    .prologue
-    .line 378
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$3;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onOfflineManifestResponse(Lcom/netflix/mediaclient/service/player/manifest/NfManifest;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 1
 
-    .prologue
-    .line 381
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isError()Z
 
     move-result v0
@@ -44,24 +40,20 @@
 
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$3;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;
 
-    .line 382
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;->access$300(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 383
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$3;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;->access$400(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;)V
 
-    .line 387
     :goto_0
     return-void
 
-    .line 385
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$3;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;
 

@@ -20,8 +20,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/lomo/BillboardView;Lcom/netflix/mediaclient/servicemgr/ServiceManager;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/interface_/Playable;)V
     .locals 0
 
-    .prologue
-    .line 662
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView$2;->this$0:Lcom/netflix/mediaclient/ui/lomo/BillboardView;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView$2;->val$serviceMan:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -40,8 +38,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 4
 
-    .prologue
-    .line 665
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView$2;->val$serviceMan:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     if-eqz v0, :cond_0
@@ -54,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 666
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView$2;->val$serviceMan:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getBrowse()Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
@@ -77,7 +72,6 @@
 
     invoke-interface {v0, v1, v2, v3}, Lcom/netflix/mediaclient/servicemgr/IBrowseManager;->logBillboardActivity(Lcom/netflix/mediaclient/servicemgr/interface_/Video;Lcom/netflix/mediaclient/servicemgr/BillboardInteractionType;Ljava/util/Map;)V
 
-    .line 668
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView$2;->val$bookmarkPosition:Ljava/lang/String;
 
@@ -91,7 +85,6 @@
 
     move v1, v0
 
-    .line 669
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView$2;->this$0:Lcom/netflix/mediaclient/ui/lomo/BillboardView;
 
@@ -111,10 +104,8 @@
 
     invoke-static {v0, v2, v3, v1}, Lcom/netflix/mediaclient/ui/common/PlaybackLauncher;->startPlaybackAfterPIN(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/Playable;Lcom/netflix/mediaclient/ui/common/PlayContext;I)V
 
-    .line 670
     return-void
 
-    .line 668
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView$2;->val$bookmarkPosition:Ljava/lang/String;
 

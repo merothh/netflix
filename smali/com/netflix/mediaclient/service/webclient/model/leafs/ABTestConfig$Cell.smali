@@ -56,7 +56,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x5
 
     const/4 v7, 0x4
@@ -67,7 +66,6 @@
 
     const/4 v4, 0x1
 
-    .line 17
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     const-string/jumbo v1, "CELL_ONE"
@@ -78,7 +76,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->CELL_ONE:Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
-    .line 18
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     const-string/jumbo v1, "CELL_TWO"
@@ -87,7 +84,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->CELL_TWO:Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
-    .line 19
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     const-string/jumbo v1, "CELL_THREE"
@@ -96,7 +92,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->CELL_THREE:Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
-    .line 20
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     const-string/jumbo v1, "CELL_FOUR"
@@ -105,7 +100,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->CELL_FOUR:Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
-    .line 21
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     const-string/jumbo v1, "CELL_FIVE"
@@ -114,7 +108,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->CELL_FIVE:Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
-    .line 22
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     const-string/jumbo v1, "CELL_SIX"
@@ -125,7 +118,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->CELL_SIX:Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
-    .line 23
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     const-string/jumbo v1, "CELL_SEVEN"
@@ -138,7 +130,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->CELL_SEVEN:Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
-    .line 24
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     const-string/jumbo v1, "CELL_EIGHT"
@@ -151,7 +142,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->CELL_EIGHT:Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
-    .line 25
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     const-string/jumbo v1, "CELL_NINE"
@@ -164,7 +154,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->CELL_NINE:Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
-    .line 26
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     const-string/jumbo v1, "CELL_TEN"
@@ -177,7 +166,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->CELL_TEN:Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
-    .line 27
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     const-string/jumbo v1, "CELL_ELEVEN"
@@ -190,7 +178,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->CELL_ELEVEN:Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
-    .line 28
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     const-string/jumbo v1, "CELL_TWELVE"
@@ -203,7 +190,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->CELL_TWELVE:Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
-    .line 29
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     const-string/jumbo v1, "CELL_THIRTEEN"
@@ -216,7 +202,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->CELL_THIRTEEN:Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
-    .line 30
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     const-string/jumbo v1, "CELL_FORTEEN"
@@ -229,7 +214,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->CELL_FORTEEN:Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
-    .line 31
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     const-string/jumbo v1, "CELL_FIFTEEN"
@@ -242,7 +226,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->CELL_FIFTEEN:Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
-    .line 16
     const/16 v0, 0xf
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
@@ -340,22 +323,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 39
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 40
     iput p3, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->cellId:I
 
-    .line 41
     return-void
 .end method
 
 .method public static fromInt(I)Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
     .locals 5
 
-    .prologue
-    .line 44
     invoke-static {}, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->values()[Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     move-result-object v2
@@ -371,16 +348,13 @@
 
     aget-object v0, v2, v1
 
-    .line 45
     iget v4, v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->cellId:I
 
     if-ne v4, p0, :cond_0
 
-    .line 49
     :goto_1
     return-object v0
 
-    .line 44
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -388,7 +362,6 @@
 
     goto :goto_0
 
-    .line 49
     :cond_1
     const/4 v0, 0x0
 
@@ -398,8 +371,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
     .locals 1
 
-    .prologue
-    .line 16
     const-class v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -414,8 +385,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
     .locals 1
 
-    .prologue
-    .line 16
     sget-object v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->$VALUES:[Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->clone()Ljava/lang/Object;
@@ -432,8 +401,6 @@
 .method public getCellId()I
     .locals 1
 
-    .prologue
-    .line 34
     iget v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->cellId:I
 
     return v0

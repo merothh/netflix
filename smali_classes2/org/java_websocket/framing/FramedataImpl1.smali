@@ -24,8 +24,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 11
     const/4 v0, 0x0
 
     new-array v0, v0, [B
@@ -38,25 +36,18 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
     return-void
 .end method
 
 .method public constructor <init>(Lorg/java_websocket/framing/Framedata$Opcode;)V
     .locals 1
 
-    .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
     iput-object p1, p0, Lorg/java_websocket/framing/FramedataImpl1;->optcode:Lorg/java_websocket/framing/Framedata$Opcode;
 
-    .line 22
     sget-object v0, Lorg/java_websocket/framing/FramedataImpl1;->emptyarray:[B
 
     invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
@@ -65,46 +56,38 @@
 
     iput-object v0, p0, Lorg/java_websocket/framing/FramedataImpl1;->unmaskedpayload:Ljava/nio/ByteBuffer;
 
-    .line 23
     return-void
 .end method
 
 .method public constructor <init>(Lorg/java_websocket/framing/Framedata;)V
     .locals 1
 
-    .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     invoke-interface {p1}, Lorg/java_websocket/framing/Framedata;->isFin()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lorg/java_websocket/framing/FramedataImpl1;->fin:Z
 
-    .line 31
     invoke-interface {p1}, Lorg/java_websocket/framing/Framedata;->getOpcode()Lorg/java_websocket/framing/Framedata$Opcode;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/java_websocket/framing/FramedataImpl1;->optcode:Lorg/java_websocket/framing/Framedata$Opcode;
 
-    .line 32
     invoke-interface {p1}, Lorg/java_websocket/framing/Framedata;->getPayloadData()Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/java_websocket/framing/FramedataImpl1;->unmaskedpayload:Ljava/nio/ByteBuffer;
 
-    .line 33
     invoke-interface {p1}, Lorg/java_websocket/framing/Framedata;->getTransfereMasked()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lorg/java_websocket/framing/FramedataImpl1;->transferemasked:Z
 
-    .line 34
     return-void
 .end method
 
@@ -113,8 +96,6 @@
 .method public getOpcode()Lorg/java_websocket/framing/Framedata$Opcode;
     .locals 1
 
-    .prologue
-    .line 43
     iget-object v0, p0, Lorg/java_websocket/framing/FramedataImpl1;->optcode:Lorg/java_websocket/framing/Framedata$Opcode;
 
     return-object v0
@@ -123,8 +104,6 @@
 .method public getPayloadData()Ljava/nio/ByteBuffer;
     .locals 1
 
-    .prologue
-    .line 53
     iget-object v0, p0, Lorg/java_websocket/framing/FramedataImpl1;->unmaskedpayload:Ljava/nio/ByteBuffer;
 
     return-object v0
@@ -133,8 +112,6 @@
 .method public getTransfereMasked()Z
     .locals 1
 
-    .prologue
-    .line 48
     iget-boolean v0, p0, Lorg/java_websocket/framing/FramedataImpl1;->transferemasked:Z
 
     return v0
@@ -143,8 +120,6 @@
 .method public isFin()Z
     .locals 1
 
-    .prologue
-    .line 38
     iget-boolean v0, p0, Lorg/java_websocket/framing/FramedataImpl1;->fin:Z
 
     return v0
@@ -153,52 +128,38 @@
 .method public setFin(Z)V
     .locals 0
 
-    .prologue
-    .line 58
     iput-boolean p1, p0, Lorg/java_websocket/framing/FramedataImpl1;->fin:Z
 
-    .line 59
     return-void
 .end method
 
 .method public setOptcode(Lorg/java_websocket/framing/Framedata$Opcode;)V
     .locals 0
 
-    .prologue
-    .line 63
     iput-object p1, p0, Lorg/java_websocket/framing/FramedataImpl1;->optcode:Lorg/java_websocket/framing/Framedata$Opcode;
 
-    .line 64
     return-void
 .end method
 
 .method public setPayload(Ljava/nio/ByteBuffer;)V
     .locals 0
 
-    .prologue
-    .line 68
     iput-object p1, p0, Lorg/java_websocket/framing/FramedataImpl1;->unmaskedpayload:Ljava/nio/ByteBuffer;
 
-    .line 69
     return-void
 .end method
 
 .method public setTransferemasked(Z)V
     .locals 0
 
-    .prologue
-    .line 73
     iput-boolean p1, p0, Lorg/java_websocket/framing/FramedataImpl1;->transferemasked:Z
 
-    .line 74
     return-void
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 107
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

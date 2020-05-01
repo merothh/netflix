@@ -22,13 +22,10 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;I)V
     .locals 8
 
-    .prologue
     const/4 v6, 0x1
 
-    .line 138
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$PresentationTrackingEventQueue;->this$0:Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;
 
-    .line 139
     const-string/jumbo v2, "nf_pt_queue"
 
     const-wide/32 v4, 0x493e0
@@ -41,7 +38,6 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/netflix/mediaclient/util/EventQueue;-><init>(Ljava/lang/String;IJZZ)V
 
-    .line 140
     return-void
 .end method
 
@@ -59,12 +55,9 @@
         }
     .end annotation
 
-    .prologue
-    .line 144
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$PresentationTrackingEventQueue;->this$0:Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;
 
     invoke-static {v0, p1, p2}, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;->access$100(Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;Ljava/util/List;Z)V
 
-    .line 145
     return-void
 .end method

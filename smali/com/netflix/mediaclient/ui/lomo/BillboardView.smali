@@ -110,110 +110,84 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .prologue
-    .line 144
     invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
-    .line 97
     sget-object v0, Lcom/netflix/mediaclient/ui/common/PlayContext;->EMPTY_CONTEXT:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->playContext:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
-    .line 100
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->isTablet:Z
 
-    .line 101
     sget-object v0, Lcom/netflix/mediaclient/util/log/UIViewLogUtils;->MISSING_GUID:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->mGUID:Ljava/lang/String;
 
-    .line 114
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->motionBillboardsEnabled:Z
 
-    .line 145
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->init()V
 
-    .line 146
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .prologue
-    .line 149
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 97
     sget-object v0, Lcom/netflix/mediaclient/ui/common/PlayContext;->EMPTY_CONTEXT:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->playContext:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
-    .line 100
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->isTablet:Z
 
-    .line 101
     sget-object v0, Lcom/netflix/mediaclient/util/log/UIViewLogUtils;->MISSING_GUID:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->mGUID:Ljava/lang/String;
 
-    .line 114
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->motionBillboardsEnabled:Z
 
-    .line 150
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->init()V
 
-    .line 151
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
 
-    .prologue
-    .line 154
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 97
     sget-object v0, Lcom/netflix/mediaclient/ui/common/PlayContext;->EMPTY_CONTEXT:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->playContext:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
-    .line 100
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->isTablet:Z
 
-    .line 101
     sget-object v0, Lcom/netflix/mediaclient/util/log/UIViewLogUtils;->MISSING_GUID:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->mGUID:Ljava/lang/String;
 
-    .line 114
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->motionBillboardsEnabled:Z
 
-    .line 155
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->init()V
 
-    .line 156
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/netflix/mediaclient/ui/lomo/BillboardView;)Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;
     .locals 1
 
-    .prologue
-    .line 72
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->video:Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;
 
     return-object v0
@@ -222,8 +196,6 @@
 .method static synthetic access$100(Lcom/netflix/mediaclient/ui/lomo/BillboardView;)Ljava/util/Map;
     .locals 1
 
-    .prologue
-    .line 72
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->impressionParams:Ljava/util/Map;
 
     return-object v0
@@ -232,8 +204,6 @@
 .method static synthetic access$200(Lcom/netflix/mediaclient/ui/lomo/BillboardView;)Lcom/netflix/mediaclient/ui/common/PlayContext;
     .locals 1
 
-    .prologue
-    .line 72
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->playContext:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
     return-object v0
@@ -242,8 +212,6 @@
 .method static synthetic access$300(Lcom/netflix/mediaclient/ui/lomo/BillboardView;)V
     .locals 0
 
-    .prologue
-    .line 72
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->hideMotionBB()V
 
     return-void
@@ -252,8 +220,6 @@
 .method static synthetic access$400(Lcom/netflix/mediaclient/ui/lomo/BillboardView;)Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;
     .locals 1
 
-    .prologue
-    .line 72
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->mediaPlayerWrapper:Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;
 
     return-object v0
@@ -262,8 +228,6 @@
 .method static synthetic access$500(Lcom/netflix/mediaclient/ui/lomo/BillboardView;)V
     .locals 0
 
-    .prologue
-    .line 72
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->showMotionBB()V
 
     return-void
@@ -272,8 +236,6 @@
 .method static synthetic access$600(Lcom/netflix/mediaclient/ui/lomo/BillboardView;)V
     .locals 0
 
-    .prologue
-    .line 72
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->updateMuteButton()V
 
     return-void
@@ -282,8 +244,6 @@
 .method static synthetic access$700(Lcom/netflix/mediaclient/ui/lomo/BillboardView;)Landroid/widget/Button;
     .locals 1
 
-    .prologue
-    .line 72
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->myListButton:Landroid/widget/Button;
 
     return-object v0
@@ -292,8 +252,6 @@
 .method static synthetic access$800(Lcom/netflix/mediaclient/ui/lomo/BillboardView;)V
     .locals 0
 
-    .prologue
-    .line 72
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->updateMyListState()V
 
     return-void
@@ -302,15 +260,12 @@
 .method private downloadVideo(Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 799
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 800
     const-string/jumbo v0, "BillboardView"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -333,7 +288,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 802
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getContext()Landroid/content/Context;
 
@@ -353,21 +307,18 @@
 
     invoke-virtual {v0, p1, v1, v2}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->fetchAndCacheResource(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;Lcom/netflix/mediaclient/servicemgr/ManagerCallback;)Z
 
-    .line 821
     return-void
 .end method
 
 .method private generateCallsToAction(Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;)V
     .locals 12
 
-    .prologue
     const/4 v11, 0x1
 
     const/4 v10, 0x0
 
     const/16 v9, 0x8
 
-    .line 428
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -378,7 +329,6 @@
 
     move-result-object v0
 
-    .line 429
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->isReady()Z
@@ -387,7 +337,6 @@
 
     if-nez v0, :cond_1
 
-    .line 430
     :cond_0
     const-string/jumbo v0, "BillboardView"
 
@@ -395,11 +344,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 460
     :goto_0
     return-void
 
-    .line 434
     :cond_1
     if-eqz p1, :cond_2
 
@@ -419,13 +366,11 @@
 
     if-nez v0, :cond_3
 
-    .line 436
     :cond_2
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 437
     new-instance v0, Lcom/netflix/model/leafs/originals/BillboardCTA;
 
     const-string/jumbo v1, ""
@@ -456,13 +401,11 @@
 
     move-object v1, v8
 
-    .line 441
     :goto_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoButton:Landroid/widget/Button;
 
     invoke-virtual {v0, v9}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 447
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -471,7 +414,6 @@
 
     if-lt v0, v2, :cond_4
 
-    .line 448
     invoke-interface {v1, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -482,12 +424,10 @@
 
     invoke-direct {p0, v0, v2}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->setupCTAButton(Lcom/netflix/model/leafs/originals/BillboardCTA;Landroid/widget/Button;)V
 
-    .line 449
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->myListButton:Landroid/widget/Button;
 
     invoke-virtual {v0, v9}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 455
     :goto_2
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -495,7 +435,6 @@
 
     if-lt v0, v11, :cond_5
 
-    .line 456
     invoke-interface {v1, v10}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -508,7 +447,6 @@
 
     goto :goto_0
 
-    .line 439
     :cond_3
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;->getBillboardSummary()Lcom/netflix/model/leafs/originals/BillboardSummary;
 
@@ -522,7 +460,6 @@
 
     goto :goto_1
 
-    .line 451
     :cond_4
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->video:Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;
 
@@ -538,17 +475,14 @@
 
     invoke-direct {p0, v0, v2}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->showMyListButton(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;)V
 
-    .line 452
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->updateMyListState()V
 
-    .line 453
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->cta2Button:Landroid/widget/Button;
 
     invoke-virtual {v0, v9}, Landroid/widget/Button;->setVisibility(I)V
 
     goto :goto_2
 
-    .line 458
     :cond_5
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->cta1Button:Landroid/widget/Button;
 
@@ -560,8 +494,6 @@
 .method private generateDetailsClickListener()Landroid/view/View$OnClickListener;
     .locals 2
 
-    .prologue
-    .line 504
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -572,7 +504,6 @@
 
     move-result-object v0
 
-    .line 506
     new-instance v1, Lcom/netflix/mediaclient/ui/lomo/BillboardView$1;
 
     invoke-direct {v1, p0, v0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView$1;-><init>(Lcom/netflix/mediaclient/ui/lomo/BillboardView;Lcom/netflix/mediaclient/servicemgr/ServiceManager;)V
@@ -583,17 +514,14 @@
 .method private getInfoText(Lcom/netflix/model/leafs/originals/BillboardSummary;)Ljava/lang/String;
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
-    .line 404
     invoke-virtual {p1}, Lcom/netflix/model/leafs/originals/BillboardSummary;->getSupplementalMessage()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoText:Ljava/lang/String;
 
-    .line 405
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -604,7 +532,6 @@
 
     move-result-object v1
 
-    .line 407
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->isNSREEpisodic(Lcom/netflix/model/leafs/originals/BillboardSummary;)Z
 
     move-result v0
@@ -615,7 +542,6 @@
 
     if-nez v0, :cond_0
 
-    .line 408
     invoke-virtual {p1}, Lcom/netflix/model/leafs/originals/BillboardSummary;->getTitle()Ljava/lang/String;
 
     move-result-object v0
@@ -649,7 +575,6 @@
     :goto_0
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoText:Ljava/lang/String;
 
-    .line 410
     :cond_0
     invoke-virtual {p1}, Lcom/netflix/model/leafs/originals/BillboardSummary;->getBadgeKeys()Ljava/util/List;
 
@@ -659,7 +584,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/ui/lomo/LoMoUtils;->toggleEpisodeBadge(Ljava/util/List;Landroid/widget/TextView;)V
 
-    .line 412
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->isNSREShow(Lcom/netflix/model/leafs/originals/BillboardSummary;)Z
 
     move-result v0
@@ -670,10 +594,8 @@
 
     if-eqz v0, :cond_1
 
-    .line 413
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoText:Ljava/lang/String;
 
-    .line 416
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoText:Ljava/lang/String;
 
@@ -683,7 +605,6 @@
 
     if-nez v0, :cond_4
 
-    .line 417
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->info:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->info:Landroid/widget/TextView;
@@ -694,26 +615,22 @@
 
     invoke-virtual {v0, v1, v6}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
 
-    .line 424
     :cond_2
     :goto_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoText:Ljava/lang/String;
 
     return-object v0
 
-    .line 408
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoText:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 419
     :cond_4
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->showArtworkOnly:Z
 
     if-eqz v0, :cond_2
 
-    .line 420
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoText:Ljava/lang/String;
 
     goto :goto_1
@@ -722,80 +639,66 @@
 .method private hideMotionBB()V
     .locals 3
 
-    .prologue
     const/16 v2, 0x8
 
-    .line 832
     const-string/jumbo v0, "BillboardView"
 
     const-string/jumbo v1, "Hiding motion BB"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 833
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->storyArt:Lcom/netflix/mediaclient/android/widget/TopCropImageView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/TopCropImageView;->setVisibility(I)V
 
-    .line 834
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->motionStoryArt:Landroid/view/TextureView;
 
     invoke-virtual {v0, v2}, Landroid/view/TextureView;->setVisibility(I)V
 
-    .line 835
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->muteButton:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 836
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->muteButton:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 837
     return-void
 .end method
 
 .method private init()V
     .locals 6
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 159
     invoke-virtual {p0, v3}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->setFocusable(Z)V
 
-    .line 161
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     check-cast v0, Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
-    .line 162
     new-instance v1, Lcom/netflix/mediaclient/android/widget/VideoDetailsClickListener;
 
     invoke-direct {v1, v0, p0}, Lcom/netflix/mediaclient/android/widget/VideoDetailsClickListener;-><init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/ui/common/PlayContextProvider;)V
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->detailsListener:Lcom/netflix/mediaclient/android/widget/VideoDetailsClickListener;
 
-    .line 163
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v1
 
-    .line 164
     const v4, 0x7f030027
 
     invoke-virtual {v1, v4, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    .line 166
     const v1, 0x7f0f00c9
 
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->findViewById(I)Landroid/view/View;
@@ -804,7 +707,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoViewGroup:Landroid/view/View;
 
-    .line 167
     const v1, 0x7f0f00cb
 
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->findViewById(I)Landroid/view/View;
@@ -813,7 +715,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoViewMargin:Landroid/view/View;
 
-    .line 168
     const v1, 0x7f0f00cf
 
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->findViewById(I)Landroid/view/View;
@@ -824,7 +725,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->info:Landroid/widget/TextView;
 
-    .line 169
     const v1, 0x7f0f00c6
 
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->findViewById(I)Landroid/view/View;
@@ -835,7 +735,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoPhone:Landroid/widget/TextView;
 
-    .line 170
     const v1, 0x7f0f00cd
 
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->findViewById(I)Landroid/view/View;
@@ -844,7 +743,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoWrapper:Landroid/view/View;
 
-    .line 171
     const v1, 0x7f0f00ce
 
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->findViewById(I)Landroid/view/View;
@@ -855,7 +753,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->episodeBadge:Landroid/widget/TextView;
 
-    .line 172
     const v1, 0x7f0f00d0
 
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->findViewById(I)Landroid/view/View;
@@ -866,7 +763,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->dateBadge:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
-    .line 173
     const v1, 0x7f0f00ca
 
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->findViewById(I)Landroid/view/View;
@@ -877,7 +773,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->awardsHeadline:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
-    .line 174
     const v1, 0x7f0f00d1
 
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->findViewById(I)Landroid/view/View;
@@ -888,7 +783,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->synopsis:Landroid/widget/TextView;
 
-    .line 175
     const v1, 0x7f0f00cc
 
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->findViewById(I)Landroid/view/View;
@@ -899,7 +793,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->tvCard:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
-    .line 176
     const v1, 0x7f0f00c3
 
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->findViewById(I)Landroid/view/View;
@@ -910,7 +803,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->storyArtFrame:Landroid/widget/FrameLayout;
 
-    .line 177
     const v1, 0x7f0f00c4
 
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->findViewById(I)Landroid/view/View;
@@ -921,7 +813,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->storyArt:Lcom/netflix/mediaclient/android/widget/TopCropImageView;
 
-    .line 178
     const v1, 0x7f0f00c5
 
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->findViewById(I)Landroid/view/View;
@@ -932,7 +823,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->motionStoryArt:Landroid/view/TextureView;
 
-    .line 179
     const v1, 0x7f0f00d7
 
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->findViewById(I)Landroid/view/View;
@@ -943,14 +833,12 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->muteButton:Landroid/widget/TextView;
 
-    .line 181
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 182
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v1
@@ -961,7 +849,6 @@
 
     iput-boolean v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->isTablet:Z
 
-    .line 184
     :cond_0
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->shouldShowArtworkOnly(Lcom/netflix/mediaclient/android/activity/NetflixActivity;)Z
 
@@ -969,14 +856,12 @@
 
     iput-boolean v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->showArtworkOnly:Z
 
-    .line 185
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 186
     const-string/jumbo v1, "BillboardView"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1013,7 +898,6 @@
 
     invoke-static {v1, v4}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 191
     :cond_1
     iget-boolean v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->showArtworkOnly:Z
 
@@ -1021,13 +905,11 @@
 
     move v1, v2
 
-    .line 192
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->storyArtFrame:Landroid/widget/FrameLayout;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/ViewUtils;->setPaddingStart(Landroid/view/View;I)V
 
-    .line 194
     const v0, 0x7f0f00c7
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->findViewById(I)Landroid/view/View;
@@ -1036,7 +918,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->shadowOverlay:Landroid/view/View;
 
-    .line 195
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->shadowOverlay:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -1045,10 +926,8 @@
 
     check-cast v0, Landroid/widget/RelativeLayout$LayoutParams;
 
-    .line 196
     iput v1, v0, Landroid/widget/RelativeLayout$LayoutParams;->width:I
 
-    .line 198
     const v0, 0x7f0f00c8
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->findViewById(I)Landroid/view/View;
@@ -1057,7 +936,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->shadowOverlayGradient:Landroid/view/View;
 
-    .line 199
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->shadowOverlayGradient:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -1066,10 +944,8 @@
 
     check-cast v0, Landroid/widget/RelativeLayout$LayoutParams;
 
-    .line 200
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->setMarginStart(I)V
 
-    .line 202
     const v0, 0x7f0f00d3
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->findViewById(I)Landroid/view/View;
@@ -1080,7 +956,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->cta1Button:Landroid/widget/Button;
 
-    .line 203
     const v0, 0x7f0f00d4
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->findViewById(I)Landroid/view/View;
@@ -1091,7 +966,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->cta2Button:Landroid/widget/Button;
 
-    .line 204
     const v0, 0x7f0f00d5
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->findViewById(I)Landroid/view/View;
@@ -1102,7 +976,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->myListButton:Landroid/widget/Button;
 
-    .line 205
     const v0, 0x7f0f00d6
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->findViewById(I)Landroid/view/View;
@@ -1113,10 +986,8 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoButton:Landroid/widget/Button;
 
-    .line 206
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->updateViewVisibility()V
 
-    .line 207
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1142,10 +1013,8 @@
     :cond_2
     iput-boolean v2, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->motionBillboardsEnabled:Z
 
-    .line 208
     return-void
 
-    .line 191
     :cond_3
     invoke-static {v0}, Lcom/netflix/mediaclient/util/DeviceUtils;->getScreenWidthInPixels(Landroid/content/Context;)I
 
@@ -1161,8 +1030,6 @@
 .method private isBillboardType(Lcom/netflix/model/leafs/originals/BillboardSummary;Lcom/netflix/mediaclient/ui/lomo/BillboardView$BillboardType;)Z
     .locals 2
 
-    .prologue
-    .line 140
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Lcom/netflix/model/leafs/originals/BillboardSummary;->getBillboardType()Ljava/lang/String;
@@ -1199,8 +1066,6 @@
 .method private isNSREEpisodic(Lcom/netflix/model/leafs/originals/BillboardSummary;)Z
     .locals 1
 
-    .prologue
-    .line 136
     sget-object v0, Lcom/netflix/mediaclient/ui/lomo/BillboardView$BillboardType;->NSRE_EPISODIC:Lcom/netflix/mediaclient/ui/lomo/BillboardView$BillboardType;
 
     invoke-direct {p0, p1, v0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->isBillboardType(Lcom/netflix/model/leafs/originals/BillboardSummary;Lcom/netflix/mediaclient/ui/lomo/BillboardView$BillboardType;)Z
@@ -1213,8 +1078,6 @@
 .method private isNSREShow(Lcom/netflix/model/leafs/originals/BillboardSummary;)Z
     .locals 1
 
-    .prologue
-    .line 132
     sget-object v0, Lcom/netflix/mediaclient/ui/lomo/BillboardView$BillboardType;->NSRE_SHOW:Lcom/netflix/mediaclient/ui/lomo/BillboardView$BillboardType;
 
     invoke-direct {p0, p1, v0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->isBillboardType(Lcom/netflix/model/leafs/originals/BillboardSummary;Lcom/netflix/mediaclient/ui/lomo/BillboardView$BillboardType;)Z
@@ -1227,7 +1090,6 @@
 .method private setTonedBackground(Lcom/netflix/model/leafs/originals/BillboardBackground;)V
     .locals 8
 
-    .prologue
     const v7, 0x7f0e00e2
 
     const/4 v6, 0x0
@@ -1238,17 +1100,14 @@
 
     const/4 v3, 0x0
 
-    .line 734
     if-eqz p1, :cond_0
 
-    .line 735
     invoke-virtual {p1}, Lcom/netflix/model/leafs/originals/BillboardBackground;->getUrl()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->storyArtUrl:Ljava/lang/String;
 
-    .line 736
     invoke-virtual {p1}, Lcom/netflix/model/leafs/originals/BillboardBackground;->getTone()Ljava/lang/String;
 
     move-result-object v0
@@ -1261,7 +1120,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 738
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->synopsis:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getResources()Landroid/content/res/Resources;
@@ -1276,7 +1134,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 739
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->info:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getResources()Landroid/content/res/Resources;
@@ -1291,22 +1148,18 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 741
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->info:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3, v3, v3, v6}, Landroid/widget/TextView;->setShadowLayer(FFFI)V
 
-    .line 742
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->synopsis:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3, v3, v3, v6}, Landroid/widget/TextView;->setShadowLayer(FFFI)V
 
-    .line 750
     :cond_0
     :goto_0
     return-void
 
-    .line 744
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->synopsis:Landroid/widget/TextView;
 
@@ -1322,7 +1175,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 745
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->synopsis:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getResources()Landroid/content/res/Resources;
@@ -1335,7 +1187,6 @@
 
     invoke-virtual {v0, v5, v3, v4, v1}, Landroid/widget/TextView;->setShadowLayer(FFFI)V
 
-    .line 746
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->info:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getResources()Landroid/content/res/Resources;
@@ -1350,7 +1201,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 747
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->info:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getResources()Landroid/content/res/Resources;
@@ -1369,8 +1219,6 @@
 .method private setUpMotionBillboard(Ljava/lang/String;Z)V
     .locals 7
 
-    .prologue
-    .line 753
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->isTablet:Z
 
     if-eqz v0, :cond_3
@@ -1393,7 +1241,6 @@
 
     if-nez v0, :cond_3
 
-    .line 754
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -1401,7 +1248,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 755
     const-string/jumbo v0, "BillboardView"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1424,7 +1270,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 757
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->storyArt:Lcom/netflix/mediaclient/android/widget/TopCropImageView;
 
@@ -1432,12 +1277,10 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/TopCropImageView;->setVisibility(I)V
 
-    .line 758
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->mediaPlayerWrapper:Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;
 
     if-nez v0, :cond_2
 
-    .line 759
     new-instance v0, Lcom/netflix/mediaclient/ui/lomo/MotionBillboardMediaPlayerWrapper;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->motionStoryArt:Landroid/view/TextureView;
@@ -1458,7 +1301,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->mediaPlayerWrapper:Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;
 
-    .line 789
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -1481,17 +1323,14 @@
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->downloadVideo(Ljava/lang/String;)V
 
-    .line 796
     :goto_0
     return-void
 
-    .line 791
     :cond_2
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->showMotionBB()V
 
     goto :goto_0
 
-    .line 794
     :cond_3
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->hideMotionBB()V
 
@@ -1501,7 +1340,6 @@
 .method private setupCTAButton(Lcom/netflix/model/leafs/originals/BillboardCTA;Landroid/widget/Button;)V
     .locals 7
 
-    .prologue
     const/4 v4, 0x1
 
     const/16 v6, 0x8
@@ -1510,7 +1348,6 @@
 
     const/4 v3, 0x0
 
-    .line 525
     invoke-virtual {p1}, Lcom/netflix/model/leafs/originals/BillboardCTA;->getType()Ljava/lang/String;
 
     move-result-object v1
@@ -1527,14 +1364,11 @@
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 567
     invoke-virtual {p2, v6}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 570
     :goto_1
     return-void
 
-    .line 525
     :sswitch_0
     const-string/jumbo v2, "mdp"
 
@@ -1587,20 +1421,16 @@
 
     goto :goto_0
 
-    .line 527
     :pswitch_0
     invoke-virtual {p2, v6}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 528
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->showMDPButton()V
 
     goto :goto_1
 
-    .line 531
     :pswitch_1
     invoke-virtual {p2, v6}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 532
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->video:Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;->getId()Ljava/lang/String;
@@ -1617,20 +1447,16 @@
 
     goto :goto_1
 
-    .line 535
     :pswitch_2
     invoke-virtual {p2, v6}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 536
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->showListEpisodesButton(Lcom/netflix/model/leafs/originals/BillboardCTA;)V
 
     goto :goto_1
 
-    .line 539
     :pswitch_3
     invoke-virtual {p2, v3}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 540
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1649,7 +1475,6 @@
 
     invoke-virtual {p2, v0}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 541
     invoke-virtual {p1}, Lcom/netflix/model/leafs/originals/BillboardCTA;->ignoreBookmark()Z
 
     move-result v0
@@ -1660,7 +1485,6 @@
 
     move-object v6, v0
 
-    .line 542
     :goto_2
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getContext()Landroid/content/Context;
 
@@ -1672,7 +1496,6 @@
 
     move-result-object v0
 
-    .line 543
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->video:Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;
 
     invoke-interface {v1}, Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;->getId()Ljava/lang/String;
@@ -1689,14 +1512,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 544
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->video:Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;
 
     invoke-virtual {p0, v0, p2, v6}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->addPlayableToCTA(Lcom/netflix/mediaclient/servicemgr/interface_/Playable;Landroid/widget/Button;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
-    .line 541
     :cond_1
     invoke-virtual {p1}, Lcom/netflix/model/leafs/originals/BillboardCTA;->getBookmarkPosition()Ljava/lang/String;
 
@@ -1706,7 +1527,6 @@
 
     goto :goto_2
 
-    .line 546
     :cond_2
     invoke-virtual {p1}, Lcom/netflix/model/leafs/originals/BillboardCTA;->getName()Ljava/lang/String;
 
@@ -1740,7 +1560,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 547
     :cond_3
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getBrowse()Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
 
@@ -1758,7 +1577,6 @@
 
     goto/16 :goto_1
 
-    .line 548
     :cond_4
     invoke-virtual {p1}, Lcom/netflix/model/leafs/originals/BillboardCTA;->getName()Ljava/lang/String;
 
@@ -1776,7 +1594,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 549
     invoke-virtual {p1}, Lcom/netflix/model/leafs/originals/BillboardCTA;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -1791,10 +1608,8 @@
 
     move-result v1
 
-    .line 550
     if-eqz v1, :cond_5
 
-    .line 551
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getBrowse()Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
 
     move-result-object v0
@@ -1813,7 +1628,6 @@
 
     goto/16 :goto_1
 
-    .line 553
     :cond_5
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getBrowse()Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
 
@@ -1833,7 +1647,6 @@
 
     goto/16 :goto_1
 
-    .line 555
     :cond_6
     invoke-virtual {p1}, Lcom/netflix/model/leafs/originals/BillboardCTA;->getName()Ljava/lang/String;
 
@@ -1867,7 +1680,6 @@
 
     if-eqz v1, :cond_8
 
-    .line 556
     :cond_7
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getBrowse()Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
 
@@ -1885,7 +1697,6 @@
 
     goto/16 :goto_1
 
-    .line 558
     :cond_8
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->video:Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;
 
@@ -1897,7 +1708,6 @@
 
     if-ne v1, v2, :cond_9
 
-    .line 559
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getBrowse()Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
 
     move-result-object v0
@@ -1914,7 +1724,6 @@
 
     goto/16 :goto_1
 
-    .line 561
     :cond_9
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getBrowse()Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
 
@@ -1932,7 +1741,6 @@
 
     goto/16 :goto_1
 
-    .line 525
     :sswitch_data_0
     .sparse-switch
         0x1a5b9 -> :sswitch_0
@@ -1953,18 +1761,14 @@
 .method public static shouldShowArtworkOnly(Lcom/netflix/mediaclient/android/activity/NetflixActivity;)Z
     .locals 2
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 211
-    .line 212
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    .line 213
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v1
@@ -1973,7 +1777,6 @@
 
     move-result v1
 
-    .line 215
     :goto_0
     if-nez v1, :cond_0
 
@@ -2000,11 +1803,8 @@
 .method private showListEpisodesButton(Lcom/netflix/model/leafs/originals/BillboardCTA;)V
     .locals 4
 
-    .prologue
-    .line 520
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->showMDPButton()V
 
-    .line 521
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoButton:Landroid/widget/Button;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getContext()Landroid/content/Context;
@@ -2025,22 +1825,18 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 522
     return-void
 .end method
 
 .method private showMDPButton()V
     .locals 2
 
-    .prologue
-    .line 499
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoButton:Landroid/widget/Button;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 500
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoButton:Landroid/widget/Button;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->generateDetailsClickListener()Landroid/view/View$OnClickListener;
@@ -2049,59 +1845,48 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 501
     return-void
 .end method
 
 .method private showMotionBB()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 824
     const-string/jumbo v0, "BillboardView"
 
     const-string/jumbo v1, "Showing motion BB"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 825
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->storyArt:Lcom/netflix/mediaclient/android/widget/TopCropImageView;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/TopCropImageView;->setVisibility(I)V
 
-    .line 826
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->motionStoryArt:Landroid/view/TextureView;
 
     invoke-virtual {v0, v2}, Landroid/view/TextureView;->setVisibility(I)V
 
-    .line 827
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->muteButton:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 828
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->updateMuteButton()V
 
-    .line 829
     return-void
 .end method
 
 .method private showMyListButton(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;)V
     .locals 7
 
-    .prologue
     const/4 v6, 0x0
 
-    .line 463
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->myListButton:Landroid/widget/Button;
 
     invoke-virtual {v0, v6}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 464
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -2112,24 +1897,20 @@
 
     move-result-object v0
 
-    .line 465
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->addToListWrapper:Lcom/netflix/mediaclient/servicemgr/AddToListData$StateListener;
 
     if-eqz v1, :cond_0
 
     if-eqz v0, :cond_0
 
-    .line 466
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->addToListWrapper:Lcom/netflix/mediaclient/servicemgr/AddToListData$StateListener;
 
     invoke-virtual {v0, p1, v1}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->unregisterAddToMyListListener(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/AddToListData$StateListener;)V
 
-    .line 467
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->addToListWrapper:Lcom/netflix/mediaclient/servicemgr/AddToListData$StateListener;
 
-    .line 469
     :cond_0
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->myListButton:Landroid/widget/Button;
 
@@ -2137,7 +1918,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 470
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -2146,7 +1926,6 @@
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->myListButton:Landroid/widget/Button;
 
-    .line 471
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getTrackId()I
 
     move-result v5
@@ -2155,19 +1934,16 @@
 
     move-object v4, p2
 
-    .line 470
     invoke-virtual/range {v0 .. v6}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->createAddToMyListWrapper(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Landroid/widget/TextView;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;IZ)Lcom/netflix/mediaclient/servicemgr/AddToListData$StateListener;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->addToListWrapper:Lcom/netflix/mediaclient/servicemgr/AddToListData$StateListener;
 
-    .line 472
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->addToListWrapper:Lcom/netflix/mediaclient/servicemgr/AddToListData$StateListener;
 
     invoke-virtual {v0, p1, v1}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->registerAddToMyListListener(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/AddToListData$StateListener;)V
 
-    .line 474
     :cond_1
     return-void
 .end method
@@ -2175,17 +1951,14 @@
 .method private updateAwardsHeadline(Lcom/netflix/model/leafs/originals/BillboardSummary;)V
     .locals 8
 
-    .prologue
     const/4 v6, 0x1
 
-    .line 719
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Lcom/netflix/model/leafs/originals/BillboardSummary;->getAwardsHeadline()Lcom/netflix/model/leafs/originals/BillboardAwardsHeadline;
 
     move-result-object v0
 
-    .line 720
     :goto_0
     if-eqz v0, :cond_1
 
@@ -2193,7 +1966,6 @@
 
     move-result-object v2
 
-    .line 722
     :goto_1
     invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
 
@@ -2205,7 +1977,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 723
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -2226,30 +1997,25 @@
 
     invoke-interface/range {v0 .. v7}, Lcom/netflix/mediaclient/util/gfx/ImageLoader;->showImg(Lcom/netflix/mediaclient/android/widget/AdvancedImageView;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;Ljava/lang/String;Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;ZI)V
 
-    .line 727
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->awardsHeadline:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/AdvancedImageView;->setVisibility(I)V
 
-    .line 731
     :goto_2
     return-void
 
-    .line 719
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 720
     :cond_1
     const-string/jumbo v2, ""
 
     goto :goto_1
 
-    .line 729
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->awardsHeadline:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
@@ -2263,19 +2029,16 @@
 .method private updateDateBadge(Lcom/netflix/model/leafs/originals/BillboardSummary;)V
     .locals 9
 
-    .prologue
     const/4 v6, 0x1
 
     const/4 v8, 0x0
 
-    .line 703
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Lcom/netflix/model/leafs/originals/BillboardSummary;->getDateBadge()Lcom/netflix/model/leafs/originals/BillboardDateBadge;
 
     move-result-object v0
 
-    .line 704
     :goto_0
     if-eqz v0, :cond_1
 
@@ -2283,7 +2046,6 @@
 
     move-result-object v2
 
-    .line 706
     :goto_1
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->isNSREShow(Lcom/netflix/model/leafs/originals/BillboardSummary;)Z
 
@@ -2297,7 +2059,6 @@
 
     if-nez v0, :cond_2
 
-    .line 707
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -2318,35 +2079,29 @@
 
     invoke-interface/range {v0 .. v7}, Lcom/netflix/mediaclient/util/gfx/ImageLoader;->showImg(Lcom/netflix/mediaclient/android/widget/AdvancedImageView;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;Ljava/lang/String;Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;ZI)V
 
-    .line 710
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->dateBadge:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
     invoke-virtual {v0, v8}, Lcom/netflix/mediaclient/android/widget/AdvancedImageView;->setVisibility(I)V
 
-    .line 711
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoWrapper:Landroid/view/View;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 716
     :goto_2
     return-void
 
-    .line 703
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 704
     :cond_1
     const-string/jumbo v2, ""
 
     goto :goto_1
 
-    .line 713
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->info:Landroid/widget/TextView;
 
@@ -2354,7 +2109,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 714
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoWrapper:Landroid/view/View;
 
     invoke-virtual {v0, v8}, Landroid/view/View;->setVisibility(I)V
@@ -2365,8 +2119,6 @@
 .method private updateLogoSize(Lcom/netflix/model/leafs/originals/BillboardSummary;)V
     .locals 6
 
-    .prologue
-    .line 682
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -2377,7 +2129,6 @@
 
     move-result v1
 
-    .line 683
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -2388,7 +2139,6 @@
 
     move-result v0
 
-    .line 684
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -2397,7 +2147,6 @@
 
     move-result v2
 
-    .line 686
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Lcom/netflix/model/leafs/originals/BillboardSummary;->isOriginal()Ljava/lang/Boolean;
@@ -2410,10 +2159,8 @@
 
     if-eqz v3, :cond_0
 
-    .line 689
     div-int/lit8 v0, v2, 0x3
 
-    .line 691
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -2424,12 +2171,10 @@
 
     move-result v1
 
-    .line 689
     invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
 
     move-result v0
 
-    .line 693
     int-to-double v2, v0
 
     const-wide v4, 0x3fd999999999999aL    # 0.4
@@ -2438,7 +2183,6 @@
 
     double-to-int v1, v2
 
-    .line 696
     :cond_0
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->tvCard:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
@@ -2446,31 +2190,24 @@
 
     move-result-object v2
 
-    .line 697
     iput v0, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 698
     iput v1, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 699
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->tvCard:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
     invoke-virtual {v0, v2}, Lcom/netflix/mediaclient/android/widget/AdvancedImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 700
     return-void
 .end method
 
 .method private updateMuteButton()V
     .locals 3
 
-    .prologue
-    .line 840
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->mediaPlayerWrapper:Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 841
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->muteButton:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getResources()Landroid/content/res/Resources;
@@ -2494,7 +2231,6 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 842
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->muteButton:Landroid/widget/TextView;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/lomo/BillboardView$5;
@@ -2503,11 +2239,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 852
     :cond_0
     return-void
 
-    .line 841
     :cond_1
     const v0, 0x7f0802f6
 
@@ -2517,10 +2251,8 @@
 .method private updateMyListState()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 477
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -2531,10 +2263,8 @@
 
     move-result-object v0
 
-    .line 478
     if-eqz v0, :cond_0
 
-    .line 479
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->video:Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;
 
     invoke-interface {v1}, Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;->getType()Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
@@ -2545,7 +2275,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 480
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getBrowse()Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
 
     move-result-object v0
@@ -2562,12 +2291,10 @@
 
     invoke-interface {v0, v1, v4, v2}, Lcom/netflix/mediaclient/servicemgr/IBrowseManager;->fetchMovieDetails(Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/ManagerCallback;)Z
 
-    .line 485
     :cond_0
     :goto_0
     return-void
 
-    .line 482
     :cond_1
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getBrowse()Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
 
@@ -2593,12 +2320,10 @@
 .method private updateViewVisibility()V
     .locals 4
 
-    .prologue
     const/16 v1, 0x8
 
     const/4 v2, 0x0
 
-    .line 219
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoViewGroup:Landroid/view/View;
 
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->showArtworkOnly:Z
@@ -2610,7 +2335,6 @@
     :goto_0
     invoke-virtual {v3, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 220
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->shadowOverlay:Landroid/view/View;
 
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->showArtworkOnly:Z
@@ -2622,7 +2346,6 @@
     :goto_1
     invoke-virtual {v3, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 221
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->shadowOverlayGradient:Landroid/view/View;
 
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->showArtworkOnly:Z
@@ -2634,17 +2357,14 @@
     :goto_2
     invoke-virtual {v3, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 222
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->storyArt:Lcom/netflix/mediaclient/android/widget/TopCropImageView;
 
     invoke-virtual {v0, v2}, Lcom/netflix/mediaclient/android/widget/TopCropImageView;->setVisibility(I)V
 
-    .line 223
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->storyArtFrame:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 226
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->synopsis:Landroid/widget/TextView;
 
     iget-boolean v3, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->isTablet:Z
@@ -2654,31 +2374,26 @@
     :goto_3
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 227
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 219
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 220
     goto :goto_1
 
     :cond_2
     move v0, v2
 
-    .line 221
     goto :goto_2
 
     :cond_3
     move v2, v1
 
-    .line 226
     goto :goto_3
 .end method
 
@@ -2687,8 +2402,6 @@
 .method addPlayableToCTA(Lcom/netflix/mediaclient/servicemgr/interface_/Playable;Landroid/widget/Button;Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 660
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -2699,54 +2412,44 @@
 
     move-result-object v0
 
-    .line 661
     invoke-virtual {p2}, Landroid/widget/Button;->requestFocus()Z
 
-    .line 662
     new-instance v1, Lcom/netflix/mediaclient/ui/lomo/BillboardView$2;
 
     invoke-direct {v1, p0, v0, p3, p1}, Lcom/netflix/mediaclient/ui/lomo/BillboardView$2;-><init>(Lcom/netflix/mediaclient/ui/lomo/BillboardView;Lcom/netflix/mediaclient/servicemgr/ServiceManager;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/interface_/Playable;)V
 
     invoke-virtual {p2, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 672
     return-void
 .end method
 
 .method addPlayableToCTA(Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;Landroid/widget/Button;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 656
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;->getPlayable()Lcom/netflix/mediaclient/servicemgr/interface_/Playable;
 
     move-result-object v0
 
     invoke-virtual {p0, v0, p2, p3}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->addPlayableToCTA(Lcom/netflix/mediaclient/servicemgr/interface_/Playable;Landroid/widget/Button;Ljava/lang/String;)V
 
-    .line 657
     return-void
 .end method
 
 .method public getGUID()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 675
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->mGUID:Ljava/lang/String;
 
     sget-object v1, Lcom/netflix/mediaclient/util/log/UIViewLogUtils;->MISSING_GUID:Ljava/lang/String;
 
     if-ne v0, v1, :cond_0
 
-    .line 676
     invoke-static {}, Lcom/netflix/mediaclient/util/log/ConsolidatedLoggingUtils;->createGUID()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->mGUID:Ljava/lang/String;
 
-    .line 678
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->mGUID:Ljava/lang/String;
 
@@ -2756,21 +2459,16 @@
 .method public getImageUrl(Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;Z)Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 254
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->storyArtUrl:Ljava/lang/String;
 
-    .line 255
     iget-boolean v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->showArtworkOnly:Z
 
     if-eqz v1, :cond_1
 
-    .line 256
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;->getBillboardSummary()Lcom/netflix/model/leafs/originals/BillboardSummary;
 
     move-result-object v1
 
-    .line 257
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Lcom/netflix/model/leafs/originals/BillboardSummary;->getLogo()Lcom/netflix/model/leafs/originals/BillboardLogo;
@@ -2791,7 +2489,6 @@
 
     if-nez v2, :cond_2
 
-    .line 258
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -2799,19 +2496,16 @@
 
     if-eqz v1, :cond_1
 
-    .line 259
     const-string/jumbo v1, "BillboardView"
 
     const-string/jumbo v2, "Data missing when trying to render billboard image"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 268
     :cond_1
     :goto_0
     return-object v0
 
-    .line 262
     :cond_2
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -2819,7 +2513,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 263
     const-string/jumbo v2, "BillboardView"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2842,7 +2535,6 @@
 
     invoke-static {v2, v0}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 265
     :cond_3
     invoke-virtual {v1}, Lcom/netflix/model/leafs/originals/BillboardSummary;->getBackgroundPortrait()Lcom/netflix/model/leafs/originals/BillboardBackgroundPortrait;
 
@@ -2858,8 +2550,6 @@
 .method public bridge synthetic getImageUrl(Ljava/lang/Object;Z)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 72
     check-cast p1, Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;
 
     invoke-virtual {p0, p1, p2}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getImageUrl(Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;Z)Ljava/lang/String;
@@ -2872,8 +2562,6 @@
 .method public getPlayContext()Lcom/netflix/mediaclient/ui/common/PlayContext;
     .locals 1
 
-    .prologue
-    .line 231
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->playContext:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
     return-object v0
@@ -2882,34 +2570,27 @@
 .method public getTrackId()I
     .locals 3
 
-    .prologue
-    .line 488
     const/4 v0, -0x1
 
-    .line 489
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->playContext:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
     if-eqz v1, :cond_0
 
-    .line 490
     const-string/jumbo v0, "BillboardView"
 
     const-string/jumbo v1, "TrackId found in PlayContextImpl"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 491
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->playContext:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/ui/common/PlayContext;->getTrackId()I
 
     move-result v0
 
-    .line 495
     :goto_0
     return v0
 
-    .line 493
     :cond_0
     const-string/jumbo v1, "BillboardView"
 
@@ -2923,8 +2604,6 @@
 .method public hide()V
     .locals 3
 
-    .prologue
-    .line 236
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -2937,7 +2616,6 @@
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/util/gfx/ImageLoader;->clear(Lcom/netflix/mediaclient/android/widget/AdvancedImageView;)V
 
-    .line 237
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -2950,29 +2628,24 @@
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/util/gfx/ImageLoader;->clear(Lcom/netflix/mediaclient/android/widget/AdvancedImageView;)V
 
-    .line 238
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->setVisibility(I)V
 
-    .line 239
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->detailsListener:Lcom/netflix/mediaclient/android/widget/VideoDetailsClickListener;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->storyArt:Lcom/netflix/mediaclient/android/widget/TopCropImageView;
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/VideoDetailsClickListener;->remove(Landroid/view/View;)V
 
-    .line 241
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->mediaPlayerWrapper:Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 242
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->mediaPlayerWrapper:Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->releaseResources()V
 
-    .line 246
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getContext()Landroid/content/Context;
 
@@ -2984,14 +2657,12 @@
 
     move-result-object v0
 
-    .line 247
     if-eqz v0, :cond_1
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->addToListWrapper:Lcom/netflix/mediaclient/servicemgr/AddToListData$StateListener;
 
     if-eqz v1, :cond_1
 
-    .line 248
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->video:Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;
 
     invoke-interface {v1}, Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;->getId()Ljava/lang/String;
@@ -3002,7 +2673,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->unregisterAddToMyListListener(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/AddToListData$StateListener;)V
 
-    .line 250
     :cond_1
     return-void
 .end method
@@ -3010,18 +2680,14 @@
 .method public onWindowFocusChanged(Z)V
     .locals 4
 
-    .prologue
-    .line 856
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->motionBillboardsEnabled:Z
 
     if-nez v0, :cond_1
 
-    .line 898
     :cond_0
     :goto_0
     return-void
 
-    .line 860
     :cond_1
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getContext()Landroid/content/Context;
 
@@ -3029,7 +2695,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
-    .line 861
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->isFinishing()Z
@@ -3038,14 +2703,12 @@
 
     if-nez v1, :cond_0
 
-    .line 865
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 866
     const-string/jumbo v1, "BillboardView"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3068,7 +2731,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 868
     :cond_2
     new-instance v1, Lcom/netflix/mediaclient/ui/lomo/BillboardView$6;
 
@@ -3082,15 +2744,12 @@
 .method protected recordImpression(Lcom/netflix/model/leafs/originals/BillboardSummary;)V
     .locals 3
 
-    .prologue
-    .line 362
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->impressionParams:Ljava/util/Map;
 
-    .line 363
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->impressionParams:Ljava/util/Map;
 
     const-string/jumbo v1, "awardCampaign"
@@ -3101,7 +2760,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 364
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->impressionParams:Ljava/util/Map;
 
     const-string/jumbo v1, "billboardTheme"
@@ -3112,7 +2770,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 365
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->impressionParams:Ljava/util/Map;
 
     const-string/jumbo v1, "billboardType"
@@ -3123,19 +2780,16 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 366
     return-void
 .end method
 
 .method public update(Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;IZZ)V
     .locals 10
 
-    .prologue
     const/4 v6, 0x1
 
     const/4 v3, 0x0
 
-    .line 273
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -3146,12 +2800,10 @@
 
     move-result-object v8
 
-    .line 274
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;->getBillboardSummary()Lcom/netflix/model/leafs/originals/BillboardSummary;
 
     move-result-object v9
 
-    .line 276
     if-eqz v9, :cond_0
 
     invoke-virtual {v9}, Lcom/netflix/model/leafs/originals/BillboardSummary;->getLogo()Lcom/netflix/model/leafs/originals/BillboardLogo;
@@ -3172,7 +2824,6 @@
 
     if-nez v0, :cond_2
 
-    .line 277
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -3180,25 +2831,20 @@
 
     if-eqz v0, :cond_1
 
-    .line 278
     const-string/jumbo v0, "BillboardView"
 
     const-string/jumbo v1, "Data missing when trying to render billboard"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 355
     :cond_1
     :goto_0
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->updateViewVisibility()V
 
-    .line 356
     invoke-virtual {p0, v9}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->updateOriginalsLayout(Lcom/netflix/model/leafs/originals/BillboardSummary;)V
 
-    .line 357
     return-void
 
-    .line 282
     :cond_2
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -3206,7 +2852,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 283
     const-string/jumbo v0, "BillboardView"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3247,7 +2892,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 286
     :cond_3
     new-instance v0, Lcom/netflix/mediaclient/ui/common/PlayContextImp;
 
@@ -3255,13 +2899,10 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->playContext:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
-    .line 287
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->video:Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;
 
-    .line 289
     invoke-virtual {p0, v3}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->setVisibility(I)V
 
-    .line 290
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -3284,13 +2925,10 @@
 
     move-result-object v4
 
-    .line 291
     invoke-virtual {p0, v4}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 292
     invoke-virtual {p0, v9}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->recordImpression(Lcom/netflix/model/leafs/originals/BillboardSummary;)V
 
-    .line 295
     invoke-virtual {v9}, Lcom/netflix/model/leafs/originals/BillboardSummary;->getBackground()Lcom/netflix/model/leafs/originals/BillboardBackground;
 
     move-result-object v0
@@ -3301,7 +2939,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->storyArtUrl:Ljava/lang/String;
 
-    .line 296
     invoke-virtual {v9}, Lcom/netflix/model/leafs/originals/BillboardSummary;->getLogo()Lcom/netflix/model/leafs/originals/BillboardLogo;
 
     move-result-object v0
@@ -3312,27 +2949,22 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->tvCardUrl:Ljava/lang/String;
 
-    .line 297
     invoke-virtual {v9}, Lcom/netflix/model/leafs/originals/BillboardSummary;->getSynopsis()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->synopsisText:Ljava/lang/String;
 
-    .line 298
     invoke-direct {p0, v9}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getInfoText(Lcom/netflix/model/leafs/originals/BillboardSummary;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoText:Ljava/lang/String;
 
-    .line 300
     invoke-direct {p0, v9}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->updateDateBadge(Lcom/netflix/model/leafs/originals/BillboardSummary;)V
 
-    .line 301
     invoke-direct {p0, v9}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->updateAwardsHeadline(Lcom/netflix/model/leafs/originals/BillboardSummary;)V
 
-    .line 302
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->motionBillboardsEnabled:Z
 
     if-eqz v0, :cond_4
@@ -3343,7 +2975,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 303
     invoke-virtual {v9}, Lcom/netflix/model/leafs/originals/BillboardSummary;->getMotionUrl()Ljava/lang/String;
 
     move-result-object v0
@@ -3358,13 +2989,11 @@
 
     invoke-direct {p0, v0, v1}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->setUpMotionBillboard(Ljava/lang/String;Z)V
 
-    .line 307
     :cond_4
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->playContext:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
     invoke-static {v8, p1, v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManagerUtils;->castPrefetchAndCacheManifestIfEnabled(Lcom/netflix/mediaclient/servicemgr/ServiceManager;Lcom/netflix/mediaclient/servicemgr/interface_/Playable;Lcom/netflix/mediaclient/ui/common/PlayContext;)V
 
-    .line 309
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->detailsListener:Lcom/netflix/mediaclient/android/widget/VideoDetailsClickListener;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->storyArt:Lcom/netflix/mediaclient/android/widget/TopCropImageView;
@@ -3377,7 +3006,6 @@
 
     invoke-virtual {v0, v1, p1, v2}, Lcom/netflix/mediaclient/android/widget/VideoDetailsClickListener;->update(Landroid/view/View;Lcom/netflix/mediaclient/servicemgr/interface_/Video;Lcom/netflix/mediaclient/android/widget/PressedStateHandler;)V
 
-    .line 310
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoPhone:Landroid/widget/TextView;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->generateDetailsClickListener()Landroid/view/View$OnClickListener;
@@ -3386,17 +3014,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 312
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->showArtworkOnly:Z
 
     if-eqz v0, :cond_6
 
-    .line 313
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->storyArt:Lcom/netflix/mediaclient/android/widget/TopCropImageView;
 
     invoke-virtual {v0, v6}, Lcom/netflix/mediaclient/android/widget/TopCropImageView;->setPressedStateHandlerEnabled(Z)V
 
-    .line 315
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoText:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
@@ -3405,19 +3030,16 @@
 
     if-nez v0, :cond_5
 
-    .line 316
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoPhone:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoText:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 317
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoPhone:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 319
     :cond_5
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->storyArt:Lcom/netflix/mediaclient/android/widget/TopCropImageView;
 
@@ -3437,13 +3059,11 @@
 
     invoke-virtual {v0, v3, v3, v3, v1}, Lcom/netflix/mediaclient/android/widget/TopCropImageView;->setPadding(IIII)V
 
-    .line 344
     :goto_1
     invoke-virtual {p0, p1, p5}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getImageUrl(Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;Z)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 345
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -3462,7 +3082,6 @@
 
     invoke-interface/range {v0 .. v7}, Lcom/netflix/mediaclient/util/gfx/ImageLoader;->showImg(Lcom/netflix/mediaclient/android/widget/AdvancedImageView;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;Ljava/lang/String;Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;ZI)V
 
-    .line 348
     if-eqz v8, :cond_1
 
     invoke-virtual {v8}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->isReady()Z
@@ -3471,7 +3090,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 351
     const-string/jumbo v0, "BillboardView"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3498,7 +3116,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 352
     invoke-virtual {v8}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getBrowse()Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
 
     move-result-object v0
@@ -3511,7 +3128,6 @@
 
     goto/16 :goto_0
 
-    .line 322
     :cond_6
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoPhone:Landroid/widget/TextView;
 
@@ -3519,7 +3135,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 325
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->storyArt:Lcom/netflix/mediaclient/android/widget/TopCropImageView;
 
     invoke-virtual {v9}, Lcom/netflix/model/leafs/originals/BillboardSummary;->isOriginal()Ljava/lang/Boolean;
@@ -3532,26 +3147,22 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/TopCropImageView;->setCutomCroppingEnabled(Z)V
 
-    .line 326
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->storyArt:Lcom/netflix/mediaclient/android/widget/TopCropImageView;
 
     invoke-virtual {v0, v3, v3, v3, v3}, Lcom/netflix/mediaclient/android/widget/TopCropImageView;->setPadding(IIII)V
 
-    .line 327
     invoke-virtual {v9}, Lcom/netflix/model/leafs/originals/BillboardSummary;->getBackground()Lcom/netflix/model/leafs/originals/BillboardBackground;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->setTonedBackground(Lcom/netflix/model/leafs/originals/BillboardBackground;)V
 
-    .line 329
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
-    .line 330
     const-string/jumbo v0, "BillboardView"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3576,11 +3187,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 333
     :cond_7
     invoke-direct {p0, v9}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->updateLogoSize(Lcom/netflix/model/leafs/originals/BillboardSummary;)V
 
-    .line 334
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -3601,21 +3210,18 @@
 
     invoke-interface/range {v0 .. v7}, Lcom/netflix/mediaclient/util/gfx/ImageLoader;->showImg(Lcom/netflix/mediaclient/android/widget/AdvancedImageView;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;Ljava/lang/String;Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;ZI)V
 
-    .line 338
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->info:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoText:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 339
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->synopsis:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->synopsisText:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 341
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->generateCallsToAction(Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;)V
 
     goto/16 :goto_1
@@ -3624,8 +3230,6 @@
 .method public bridge synthetic update(Ljava/lang/Object;Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;IZZ)V
     .locals 6
 
-    .prologue
-    .line 72
     move-object v1, p1
 
     check-cast v1, Lcom/netflix/mediaclient/servicemgr/interface_/Billboard;
@@ -3648,22 +3252,18 @@
 .method protected updateOriginalsLayout(Lcom/netflix/model/leafs/originals/BillboardSummary;)V
     .locals 5
 
-    .prologue
     const/4 v2, -0x1
 
     const/16 v4, 0x8
 
     const/4 v3, 0x0
 
-    .line 369
     if-nez p1, :cond_1
 
-    .line 401
     :cond_0
     :goto_0
     return-void
 
-    .line 372
     :cond_1
     invoke-virtual {p1}, Lcom/netflix/model/leafs/originals/BillboardSummary;->isOriginal()Ljava/lang/Boolean;
 
@@ -3687,22 +3287,18 @@
 
     if-nez v0, :cond_3
 
-    .line 377
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->storyArtFrame:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, v3, v3, v3, v3}, Landroid/widget/FrameLayout;->setPadding(IIII)V
 
-    .line 378
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->shadowOverlay:Landroid/view/View;
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 379
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->shadowOverlayGradient:Landroid/view/View;
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 382
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->isTablet:Z
 
     if-eqz v0, :cond_2
@@ -3717,7 +3313,6 @@
 
     if-nez v0, :cond_2
 
-    .line 383
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->infoViewMargin:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -3726,7 +3321,6 @@
 
     check-cast v0, Landroid/widget/RelativeLayout$LayoutParams;
 
-    .line 384
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -3741,7 +3335,6 @@
 
     move-result v1
 
-    .line 385
     const/high16 v2, 0x40000000    # 2.0f
 
     mul-float/2addr v1, v2
@@ -3752,7 +3345,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->setMarginStart(I)V
 
-    .line 395
     :cond_2
     :goto_1
     invoke-virtual {p1}, Lcom/netflix/model/leafs/originals/BillboardSummary;->getBillboardType()Ljava/lang/String;
@@ -3767,14 +3359,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 396
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->synopsis:Landroid/widget/TextView;
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 388
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->storyArt:Lcom/netflix/mediaclient/android/widget/TopCropImageView;
 
@@ -3786,13 +3376,11 @@
 
     goto :goto_1
 
-    .line 398
     :cond_4
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->isTablet:Z
 
     if-eqz v0, :cond_0
 
-    .line 399
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->synopsis:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V

@@ -30,8 +30,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 138
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,8 +40,6 @@
 .method public getBorn()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 219
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorPerson$PersonDetail;->born:Ljava/lang/String;
 
     return-object v0
@@ -52,8 +48,6 @@
 .method public getHeadshotImageUrl()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 234
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorPerson$PersonDetail;->imgUrl:Ljava/lang/String;
 
     return-object v0
@@ -62,8 +56,6 @@
 .method public getId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 239
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorPerson$PersonDetail;->id:Ljava/lang/String;
 
     return-object v0
@@ -72,8 +64,6 @@
 .method public getKnownFor()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 214
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorPerson$PersonDetail;->knownFor:Ljava/lang/String;
 
     return-object v0
@@ -82,8 +72,6 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 229
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorPerson$PersonDetail;->name:Ljava/lang/String;
 
     return-object v0
@@ -92,8 +80,6 @@
 .method public getSpouse()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 224
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorPerson$PersonDetail;->spouse:Ljava/lang/String;
 
     return-object v0
@@ -102,20 +88,16 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 5
 
-    .prologue
-    .line 150
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 152
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 153
     const-string/jumbo v1, "PersonDetail.Detail"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -138,7 +120,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
     :cond_0
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -161,14 +142,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 157
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/gson/JsonElement;
 
-    .line 158
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -191,7 +170,6 @@
 
     goto :goto_0
 
-    .line 160
     :pswitch_0
     invoke-static {v1}, Lcom/netflix/mediaclient/util/JsonUtils;->getAsStringSafe(Lcom/google/gson/JsonElement;)Ljava/lang/String;
 
@@ -201,7 +179,6 @@
 
     goto :goto_0
 
-    .line 158
     :sswitch_0
     const-string/jumbo v4, "spouse"
 
@@ -280,7 +257,6 @@
 
     goto :goto_1
 
-    .line 163
     :pswitch_1
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -290,7 +266,6 @@
 
     goto :goto_0
 
-    .line 166
     :pswitch_2
     invoke-static {v1}, Lcom/netflix/mediaclient/util/JsonUtils;->getAsStringSafe(Lcom/google/gson/JsonElement;)Ljava/lang/String;
 
@@ -300,7 +275,6 @@
 
     goto :goto_0
 
-    .line 169
     :pswitch_3
     invoke-static {v1}, Lcom/netflix/mediaclient/util/JsonUtils;->getAsStringSafe(Lcom/google/gson/JsonElement;)Ljava/lang/String;
 
@@ -310,7 +284,6 @@
 
     goto/16 :goto_0
 
-    .line 172
     :pswitch_4
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -320,7 +293,6 @@
 
     goto/16 :goto_0
 
-    .line 175
     :pswitch_5
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -330,11 +302,9 @@
 
     goto/16 :goto_0
 
-    .line 179
     :cond_2
     return-void
 
-    .line 158
     nop
 
     :sswitch_data_0
@@ -361,19 +331,16 @@
 .method public set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 184
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 185
     const-string/jumbo v2, "PersonDetail.Detail"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -396,7 +363,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 188
     :cond_0
     const/4 v2, -0x1
 
@@ -410,11 +376,9 @@
     :goto_0
     packed-switch v2, :pswitch_data_0
 
-    .line 209
     :goto_1
     return v0
 
-    .line 188
     :sswitch_0
     const-string/jumbo v3, "spouse"
 
@@ -493,7 +457,6 @@
 
     goto :goto_0
 
-    .line 190
     :pswitch_0
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -504,16 +467,13 @@
     :goto_2
     move v0, v1
 
-    .line 209
     goto :goto_1
 
-    .line 193
     :pswitch_1
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
     goto :goto_2
 
-    .line 196
     :pswitch_2
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -523,7 +483,6 @@
 
     goto :goto_2
 
-    .line 199
     :pswitch_3
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -533,7 +492,6 @@
 
     goto :goto_2
 
-    .line 202
     :pswitch_4
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -541,7 +499,6 @@
 
     iput-object v0, p0, Lcom/netflix/model/branches/FalkorPerson$PersonDetail;->id:Ljava/lang/String;
 
-    .line 204
     :pswitch_5
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -551,7 +508,6 @@
 
     goto :goto_2
 
-    .line 188
     nop
 
     :sswitch_data_0

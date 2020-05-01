@@ -88,8 +88,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 88
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/message/MdxMessage$1;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/mdx/message/MdxMessage$1;-><init>()V
@@ -102,29 +100,22 @@
 .method protected constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/MdxMessage;->mJson:Lorg/json/JSONObject;
 
-    .line 67
     iput-object p1, p0, Lcom/netflix/mediaclient/service/mdx/message/MdxMessage;->mName:Ljava/lang/String;
 
-    .line 68
     return-void
 .end method
 
 .method public static isUserCommand(Ljava/lang/String;)Z
     .locals 1
 
-    .prologue
-    .line 104
     sget-object v0, Lcom/netflix/mediaclient/service/mdx/message/MdxMessage;->MESSAGE_IS_USER_COMMAND:Ljava/util/Set;
 
     invoke-interface {v0, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -139,8 +130,6 @@
 .method public messageName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 75
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/MdxMessage;->mName:Ljava/lang/String;
 
     return-object v0
@@ -149,8 +138,6 @@
 .method public messageObject()Lorg/json/JSONObject;
     .locals 1
 
-    .prologue
-    .line 84
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/MdxMessage;->mJson:Lorg/json/JSONObject;
 
     return-object v0

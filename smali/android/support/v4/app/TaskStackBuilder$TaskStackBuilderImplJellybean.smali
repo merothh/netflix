@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 101
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,10 +20,8 @@
 .method public getPendingIntent(Landroid/content/Context;[Landroid/content/Intent;IILandroid/os/Bundle;)Landroid/app/PendingIntent;
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 104
     new-instance v0, Landroid/content/Intent;
 
     aget-object v1, p2, v2
@@ -40,7 +36,6 @@
 
     aput-object v0, p2, v2
 
-    .line 107
     invoke-static {p1, p3, p2, p4, p5}, Landroid/support/v4/app/TaskStackBuilderJellybean;->getActivitiesPendingIntent(Landroid/content/Context;I[Landroid/content/Intent;ILandroid/os/Bundle;)Landroid/app/PendingIntent;
 
     move-result-object v0

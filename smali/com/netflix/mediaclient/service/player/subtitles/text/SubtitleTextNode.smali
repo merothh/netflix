@@ -15,20 +15,14 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/player/subtitles/text/TextStyle;Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/SubtitleTextNode;->mStyle:Lcom/netflix/mediaclient/service/player/subtitles/text/TextStyle;
 
-    .line 38
     iput-object p2, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/SubtitleTextNode;->mText:Ljava/lang/String;
 
-    .line 39
     iput p3, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/SubtitleTextNode;->mLineBreaks:I
 
-    .line 40
     return-void
 .end method
 
@@ -37,8 +31,6 @@
 .method public getLineBreaks()I
     .locals 1
 
-    .prologue
-    .line 66
     iget v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/SubtitleTextNode;->mLineBreaks:I
 
     return v0
@@ -47,8 +39,6 @@
 .method public getStyle()Lcom/netflix/mediaclient/service/player/subtitles/text/TextStyle;
     .locals 1
 
-    .prologue
-    .line 48
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/SubtitleTextNode;->mStyle:Lcom/netflix/mediaclient/service/player/subtitles/text/TextStyle;
 
     return-object v0
@@ -57,8 +47,6 @@
 .method public getText()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 57
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/SubtitleTextNode;->mText:Ljava/lang/String;
 
     return-object v0
@@ -67,8 +55,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 74
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

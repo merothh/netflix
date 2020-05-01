@@ -14,8 +14,6 @@
 .method constructor <init>(Landroid/support/design/widget/Snackbar$5;)V
     .locals 0
 
-    .prologue
-    .line 497
     iput-object p1, p0, Landroid/support/design/widget/Snackbar$5$1;->this$1:Landroid/support/design/widget/Snackbar$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 500
     iget-object v0, p0, Landroid/support/design/widget/Snackbar$5$1;->this$1:Landroid/support/design/widget/Snackbar$5;
 
     iget-object v0, v0, Landroid/support/design/widget/Snackbar$5;->this$0:Landroid/support/design/widget/Snackbar;
@@ -38,6 +34,5 @@
 
     invoke-virtual {v0, v1}, Landroid/support/design/widget/Snackbar;->onViewHidden(I)V
 
-    .line 501
     return-void
 .end method

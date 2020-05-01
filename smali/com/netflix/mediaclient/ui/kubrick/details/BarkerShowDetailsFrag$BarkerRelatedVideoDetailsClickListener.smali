@@ -11,22 +11,16 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/ui/common/PlayContextProvider;)V
     .locals 0
 
-    .prologue
-    .line 637
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$BarkerRelatedVideoDetailsClickListener;->this$0:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;
 
-    .line 638
     invoke-direct {p0, p2, p3}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerVideoDetailsClickListener;-><init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/ui/common/PlayContextProvider;)V
 
-    .line 639
     return-void
 .end method
 
 .method private saveCurrentTitleState()V
     .locals 7
 
-    .prologue
-    .line 663
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$BarkerRelatedVideoDetailsClickListener;->this$0:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;->access$1900(Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;)Ljava/util/Stack;
@@ -57,7 +51,6 @@
 
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$BarkerRelatedVideoDetailsClickListener;->this$0:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;
 
-    .line 664
     invoke-static {v3}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;->access$1800(Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;)I
 
     move-result v3
@@ -86,10 +79,8 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/netflix/mediaclient/ui/kubrick/details/RelatedTitleState;-><init>(Ljava/lang/String;Landroid/os/Parcelable;IILcom/netflix/mediaclient/ui/common/PlayContext;)V
 
-    .line 663
     invoke-virtual {v6, v0}, Ljava/util/Stack;->push(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 665
     return-void
 .end method
 
@@ -98,10 +89,8 @@
 .method protected launchDetailsActivity(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/Video;Lcom/netflix/mediaclient/ui/common/PlayContext;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 644
     invoke-interface {p2}, Lcom/netflix/mediaclient/servicemgr/interface_/Video;->getType()Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     move-result-object v0
@@ -110,7 +99,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 645
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$BarkerRelatedVideoDetailsClickListener;->this$0:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;->access$1000(Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;)Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;
@@ -121,17 +109,14 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;->showLoadingView(Z)V
 
-    .line 646
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$BarkerRelatedVideoDetailsClickListener;->saveCurrentTitleState()V
 
-    .line 648
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$BarkerRelatedVideoDetailsClickListener;->this$0:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;->heroSlideshow:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$HeroSlideshow;
 
     invoke-virtual {v0, v2}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$HeroSlideshow;->stop(Z)V
 
-    .line 649
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$BarkerRelatedVideoDetailsClickListener;->this$0:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;->access$1100(Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;)Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;
@@ -142,7 +127,6 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerVideoDetailsViewGroup;->clearHeroImages()V
 
-    .line 652
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$BarkerRelatedVideoDetailsClickListener;->this$0:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;
 
     invoke-interface {p2}, Lcom/netflix/mediaclient/servicemgr/interface_/Video;->getId()Ljava/lang/String;
@@ -151,28 +135,23 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;->access$1202(Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 653
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$BarkerRelatedVideoDetailsClickListener;->this$0:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;
 
     const/4 v1, -0x1
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;->access$1302(Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;I)I
 
-    .line 654
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$BarkerRelatedVideoDetailsClickListener;->this$0:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;->access$1400(Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;)V
 
-    .line 659
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$BarkerRelatedVideoDetailsClickListener;->this$0:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;->access$1502(Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;Z)Z
 
-    .line 660
     return-void
 
-    .line 656
     :cond_0
     invoke-super {p0, p1, p2, p3}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerVideoDetailsClickListener;->launchDetailsActivity(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/Video;Lcom/netflix/mediaclient/ui/common/PlayContext;)V
 

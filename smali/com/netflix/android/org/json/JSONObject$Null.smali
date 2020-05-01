@@ -7,8 +7,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 101
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,8 +15,6 @@
 .method synthetic constructor <init>(Lcom/netflix/android/org/json/JSONObject$1;)V
     .locals 0
 
-    .prologue
-    .line 101
     invoke-direct {p0}, Lcom/netflix/android/org/json/JSONObject$Null;-><init>()V
 
     return-void
@@ -29,16 +25,12 @@
 .method protected final clone()Ljava/lang/Object;
     .locals 0
 
-    .prologue
-    .line 110
     return-object p0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 122
     if-eqz p1, :cond_0
 
     if-ne p1, p0, :cond_1
@@ -58,8 +50,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 131
     const-string/jumbo v0, "null"
 
     return-object v0

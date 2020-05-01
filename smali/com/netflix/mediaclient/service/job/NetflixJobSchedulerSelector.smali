@@ -11,8 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,8 +19,6 @@
 .method public static createNetflixJobScheduler(Landroid/content/Context;)Lcom/netflix/mediaclient/service/job/NetflixJobScheduler;
     .locals 6
 
-    .prologue
-    .line 20
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
@@ -31,7 +27,6 @@
 
     const/4 v0, 0x1
 
-    .line 22
     :goto_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -43,7 +38,6 @@
 
     move-result v1
 
-    .line 23
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -54,14 +48,12 @@
 
     move-result v2
 
-    .line 24
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 25
     const-string/jumbo v3, "nf_job_scheduler_select"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -94,30 +86,24 @@
 
     invoke-static {v3, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 36
     :cond_0
     if-eqz v0, :cond_2
 
-    .line 37
     new-instance v0, Lcom/netflix/mediaclient/service/job/NetflixJobSchedulerPreL;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/job/NetflixJobSchedulerPreL;-><init>(Landroid/content/Context;)V
 
-    .line 40
     :goto_1
     return-object v0
 
-    .line 20
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 39
     :cond_2
     invoke-static {p0}, Lcom/netflix/mediaclient/service/job/NetflixJobSchedulerPreL;->cancelAllJobs(Landroid/content/Context;)V
 
-    .line 40
     new-instance v0, Lcom/netflix/mediaclient/service/job/NetflixJobSchedulerImpl;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/job/NetflixJobSchedulerImpl;-><init>(Landroid/content/Context;)V

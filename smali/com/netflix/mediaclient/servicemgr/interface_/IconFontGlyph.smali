@@ -40,7 +40,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -51,7 +50,6 @@
 
     const/4 v4, 0x0
 
-    .line 7
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;
 
     const-string/jumbo v1, "NETFLIX_LOGO"
@@ -66,7 +64,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;->NETFLIX_LOGO:Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;
 
-    .line 8
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;
 
     const-string/jumbo v1, "PLAY_W_RING"
@@ -81,7 +78,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;->PLAY_W_RING:Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;
 
-    .line 10
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;
 
     const-string/jumbo v1, "EVIDENCE_AWARDS"
@@ -96,7 +92,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;->EVIDENCE_AWARDS:Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;
 
-    .line 11
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;
 
     const-string/jumbo v1, "EVIDENCE_BOX_OFFICE"
@@ -111,7 +106,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;->EVIDENCE_BOX_OFFICE:Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;
 
-    .line 12
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;
 
     const-string/jumbo v1, "EVIDENCE_TALENT"
@@ -126,7 +120,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;->EVIDENCE_TALENT:Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;
 
-    .line 13
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;
 
     const-string/jumbo v1, "EVIDENCE_TV_RATINGS"
@@ -143,7 +136,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;->EVIDENCE_TV_RATINGS:Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;
 
-    .line 14
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;
 
     const-string/jumbo v1, "EVIDENCE_GENERIC"
@@ -160,7 +152,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;->EVIDENCE_GENERIC:Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;
 
-    .line 6
     const/4 v0, 0x7
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;
@@ -212,22 +203,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 18
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 19
     iput-object p3, p0, Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;->unicodeChar:Ljava/lang/Character;
 
-    .line 20
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;
     .locals 1
 
-    .prologue
-    .line 6
     const-class v0, Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -242,8 +227,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;
     .locals 1
 
-    .prologue
-    .line 6
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;->clone()Ljava/lang/Object;
@@ -260,8 +243,6 @@
 .method public getUnicodeChar()Ljava/lang/Character;
     .locals 1
 
-    .prologue
-    .line 23
     iget-object v0, p0, Lcom/netflix/mediaclient/servicemgr/interface_/IconFontGlyph;->unicodeChar:Ljava/lang/Character;
 
     return-object v0

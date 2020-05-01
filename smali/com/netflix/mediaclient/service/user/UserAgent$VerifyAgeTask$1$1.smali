@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask$1;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 0
 
-    .prologue
-    .line 1841
     iput-object p1, p0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask$1$1;->this$2:Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask$1;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask$1$1;->val$res:Lcom/netflix/mediaclient/android/app/Status;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 1847
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask$1$1;->this$2:Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask$1;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask$1;->this$1:Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask;
@@ -60,6 +56,5 @@
 
     invoke-interface {v0, v1, v2}, Lcom/netflix/mediaclient/service/user/UserAgent$UserAgentCallback;->onVerified(ZLcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 1848
     return-void
 .end method

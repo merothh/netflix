@@ -20,18 +20,14 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 5
 
-    .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     const-string/jumbo v0, "nf_user_error"
 
     const-string/jumbo v1, "actionID 1 15003, Widevine blacklisted..."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 35
     const v0, 0x7f08009f
 
     const/4 v1, 0x1
@@ -52,12 +48,10 @@
 
     move-result-object v0
 
-    .line 37
     new-instance v1, Lcom/netflix/mediaclient/service/user/BlacklistedWidevinePluginErrorDescriptor$1;
 
     invoke-direct {v1, p0, p1}, Lcom/netflix/mediaclient/service/user/BlacklistedWidevinePluginErrorDescriptor$1;-><init>(Lcom/netflix/mediaclient/service/user/BlacklistedWidevinePluginErrorDescriptor;Landroid/content/Context;)V
 
-    .line 46
     new-instance v2, Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$AlertDialogDescriptor;
 
     const-string/jumbo v3, ""
@@ -68,17 +62,14 @@
 
     iput-object v2, p0, Lcom/netflix/mediaclient/service/user/BlacklistedWidevinePluginErrorDescriptor;->mMetadata:Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$AlertDialogDescriptor;
 
-    .line 54
     return-void
 .end method
 
 .method static canHandle(Lcom/netflix/mediaclient/event/nrdp/registration/ActivateEvent;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 78
     invoke-virtual {p0}, Lcom/netflix/mediaclient/event/nrdp/registration/ActivateEvent;->getActionID()I
 
     move-result v1
@@ -107,8 +98,6 @@
 .method public getBackgroundTask()Ljava/lang/Runnable;
     .locals 1
 
-    .prologue
-    .line 68
     const/4 v0, 0x0
 
     return-object v0
@@ -117,8 +106,6 @@
 .method public getData()Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$AlertDialogDescriptor;
     .locals 1
 
-    .prologue
-    .line 73
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/BlacklistedWidevinePluginErrorDescriptor;->mMetadata:Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$AlertDialogDescriptor;
 
     return-object v0
@@ -127,8 +114,6 @@
 .method public getPriority()I
     .locals 1
 
-    .prologue
-    .line 58
     const v0, 0x7fffffff
 
     return v0
@@ -137,8 +122,6 @@
 .method public shouldReportToUserAsDialog(Landroid/app/Activity;)Z
     .locals 1
 
-    .prologue
-    .line 63
     const/4 v0, 0x1
 
     return v0

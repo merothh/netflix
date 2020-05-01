@@ -41,14 +41,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12
     iput-object p1, p0, Lcom/netflix/falkor/IterableBuilder;->iterable:Ljava/lang/Iterable;
 
-    .line 13
     return-void
 .end method
 
@@ -68,8 +64,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 68
     new-instance v0, Lcom/netflix/falkor/IterableBuilder;
 
     new-instance v1, Lcom/netflix/falkor/IterableBuilder$3;
@@ -93,8 +87,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 16
     new-instance v0, Lcom/netflix/falkor/IterableBuilder;
 
     new-instance v1, Lcom/netflix/falkor/IterableBuilder$1;
@@ -120,8 +112,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 142
     new-instance v0, Lcom/netflix/falkor/IterableBuilder;
 
     new-instance v1, Lcom/netflix/falkor/IterableBuilder$6;
@@ -147,9 +137,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 106
-    .line 107
     new-instance v0, Lcom/netflix/falkor/IterableBuilder;
 
     new-instance v1, Lcom/netflix/falkor/IterableBuilder$5;
@@ -173,9 +160,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 44
-    .line 45
     new-instance v0, Lcom/netflix/falkor/IterableBuilder;
 
     new-instance v1, Lcom/netflix/falkor/IterableBuilder$2;
@@ -201,9 +185,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 76
-    .line 77
     new-instance v0, Lcom/netflix/falkor/IterableBuilder;
 
     new-instance v1, Lcom/netflix/falkor/IterableBuilder$4;
@@ -229,8 +210,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 237
     new-instance v0, Lcom/netflix/falkor/IterableBuilder;
 
     new-instance v1, Lcom/netflix/falkor/IterableBuilder$9;
@@ -252,8 +231,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 272
     iget-object v0, p0, Lcom/netflix/falkor/IterableBuilder;->iterable:Ljava/lang/Iterable;
 
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -277,8 +254,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 170
     new-instance v0, Lcom/netflix/falkor/IterableBuilder;
 
     new-instance v1, Lcom/netflix/falkor/IterableBuilder$7;
@@ -306,9 +281,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 192
-    .line 193
     new-instance v0, Lcom/netflix/falkor/IterableBuilder;
 
     new-instance v1, Lcom/netflix/falkor/IterableBuilder$8;
@@ -330,13 +302,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 263
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 264
     invoke-virtual {p0}, Lcom/netflix/falkor/IterableBuilder;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -352,12 +321,10 @@
 
     move-result-object v2
 
-    .line 265
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 268
     :cond_0
     return-object v0
 .end method

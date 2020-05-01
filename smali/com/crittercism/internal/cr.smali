@@ -14,8 +14,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 105
     const/16 v0, 0x40
 
     new-array v0, v0, [B
@@ -24,7 +22,6 @@
 
     sput-object v0, Lcom/crittercism/internal/cr;->b:[B
 
-    .line 125
     :try_start_0
     const-string/jumbo v0, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
 
@@ -36,11 +33,9 @@
 
     move-result-object v0
 
-    .line 131
     :goto_0
     sput-object v0, Lcom/crittercism/internal/cr;->a:[B
 
-    .line 139
     const/16 v0, 0x7f
 
     new-array v0, v0, [B
@@ -51,7 +46,6 @@
 
     return-void
 
-    .line 129
     :catch_0
     move-exception v0
 
@@ -59,7 +53,6 @@
 
     goto :goto_0
 
-    .line 105
     nop
 
     :array_0
@@ -130,7 +123,6 @@
         0x2ft
     .end array-data
 
-    .line 139
     :array_1
     .array-data 1
         -0x9t
@@ -266,8 +258,6 @@
 .method public static a([B)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 386
     array-length v0, p0
 
     invoke-static {p0, v0}, Lcom/crittercism/internal/cr;->a([BI)Ljava/lang/String;
@@ -280,15 +270,12 @@
 .method private static a([BI)Ljava/lang/String;
     .locals 8
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 508
     mul-int/lit8 v0, p1, 0x4
 
     div-int/lit8 v2, v0, 0x3
 
-    .line 509
     rem-int/lit8 v0, p1, 0x3
 
     if-lez v0, :cond_1
@@ -304,7 +291,6 @@
 
     new-array v4, v0, [B
 
-    .line 514
     add-int/lit8 v5, p1, -0x2
 
     move v0, v1
@@ -313,40 +299,33 @@
 
     move v3, v1
 
-    .line 516
     :goto_1
     if-ge v3, v5, :cond_2
 
-    .line 518
     add-int/lit8 v6, v3, 0x0
 
     const/4 v7, 0x3
 
     invoke-static {p0, v6, v7, v4, v2}, Lcom/crittercism/internal/cr;->a([BII[BI)[B
 
-    .line 520
     add-int/lit8 v0, v0, 0x4
 
-    .line 521
     const/16 v6, 0x4c
 
     if-ne v0, v6, :cond_0
 
-    .line 523
     add-int/lit8 v0, v2, 0x4
 
     const/16 v6, 0xa
 
     aput-byte v6, v4, v0
 
-    .line 524
     add-int/lit8 v0, v2, 0x1
 
     move v2, v0
 
     move v0, v1
 
-    .line 516
     :cond_0
     add-int/lit8 v3, v3, 0x3
 
@@ -357,24 +336,19 @@
     :cond_1
     move v0, v1
 
-    .line 509
     goto :goto_0
 
-    .line 529
     :cond_2
     if-ge v3, p1, :cond_3
 
-    .line 531
     add-int/lit8 v0, v3, 0x0
 
     sub-int v3, p1, v3
 
     invoke-static {p0, v0, v3, v4, v2}, Lcom/crittercism/internal/cr;->a([BII[BI)[B
 
-    .line 532
     add-int/lit8 v2, v2, 0x4
 
-    .line 539
     :cond_3
     :try_start_0
     new-instance v0, Ljava/lang/String;
@@ -387,7 +361,6 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 543
     :goto_2
     return-object v0
 
@@ -404,12 +377,10 @@
 .method private static a([BII[BI)[B
     .locals 5
 
-    .prologue
     const/16 v4, 0x3d
 
     const/4 v0, 0x0
 
-    .line 246
     if-lez p2, :cond_1
 
     aget-byte v1, p0, p1
@@ -451,17 +422,14 @@
     :cond_0
     or-int/2addr v0, v1
 
-    .line 250
     packed-switch p2, :pswitch_data_0
 
-    .line 274
     :goto_2
     return-object p3
 
     :cond_1
     move v2, v0
 
-    .line 246
     goto :goto_0
 
     :cond_2
@@ -469,7 +437,6 @@
 
     goto :goto_1
 
-    .line 253
     :pswitch_0
     sget-object v1, Lcom/crittercism/internal/cr;->a:[B
 
@@ -479,7 +446,6 @@
 
     aput-byte v1, p3, p4
 
-    .line 254
     add-int/lit8 v1, p4, 0x1
 
     sget-object v2, Lcom/crittercism/internal/cr;->a:[B
@@ -492,7 +458,6 @@
 
     aput-byte v2, p3, v1
 
-    .line 255
     add-int/lit8 v1, p4, 0x2
 
     sget-object v2, Lcom/crittercism/internal/cr;->a:[B
@@ -505,7 +470,6 @@
 
     aput-byte v2, p3, v1
 
-    .line 256
     add-int/lit8 v1, p4, 0x3
 
     sget-object v2, Lcom/crittercism/internal/cr;->a:[B
@@ -518,7 +482,6 @@
 
     goto :goto_2
 
-    .line 260
     :pswitch_1
     sget-object v1, Lcom/crittercism/internal/cr;->a:[B
 
@@ -528,7 +491,6 @@
 
     aput-byte v1, p3, p4
 
-    .line 261
     add-int/lit8 v1, p4, 0x1
 
     sget-object v2, Lcom/crittercism/internal/cr;->a:[B
@@ -541,7 +503,6 @@
 
     aput-byte v2, p3, v1
 
-    .line 262
     add-int/lit8 v1, p4, 0x2
 
     sget-object v2, Lcom/crittercism/internal/cr;->a:[B
@@ -554,14 +515,12 @@
 
     aput-byte v0, p3, v1
 
-    .line 263
     add-int/lit8 v0, p4, 0x3
 
     aput-byte v4, p3, v0
 
     goto :goto_2
 
-    .line 267
     :pswitch_2
     sget-object v1, Lcom/crittercism/internal/cr;->a:[B
 
@@ -571,7 +530,6 @@
 
     aput-byte v1, p3, p4
 
-    .line 268
     add-int/lit8 v1, p4, 0x1
 
     sget-object v2, Lcom/crittercism/internal/cr;->a:[B
@@ -584,19 +542,16 @@
 
     aput-byte v0, p3, v1
 
-    .line 269
     add-int/lit8 v0, p4, 0x2
 
     aput-byte v4, p3, v0
 
-    .line 270
     add-int/lit8 v0, p4, 0x3
 
     aput-byte v4, p3, v0
 
     goto :goto_2
 
-    .line 250
     nop
 
     :pswitch_data_0

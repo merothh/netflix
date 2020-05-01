@@ -32,7 +32,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x4
 
     const/4 v5, 0x3
@@ -43,7 +42,6 @@
 
     const/4 v2, 0x0
 
-    .line 1135
     new-instance v0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;
 
     const-string/jumbo v1, "NOT_STARTED"
@@ -52,7 +50,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;->NOT_STARTED:Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;
 
-    .line 1136
     new-instance v0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;
 
     const-string/jumbo v1, "STARTING"
@@ -61,7 +58,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;->STARTING:Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;
 
-    .line 1137
     new-instance v0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;
 
     const-string/jumbo v1, "STARTED"
@@ -70,7 +66,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;->STARTED:Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;
 
-    .line 1138
     new-instance v0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;
 
     const-string/jumbo v1, "STOPPING"
@@ -79,7 +74,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;->STOPPING:Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;
 
-    .line 1139
     new-instance v0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;
 
     const-string/jumbo v1, "STOPPED"
@@ -88,7 +82,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;->STOPPED:Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;
 
-    .line 1134
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;
@@ -126,8 +119,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 1134
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -136,8 +127,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;
     .locals 1
 
-    .prologue
-    .line 1134
     const-class v0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -152,8 +141,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;
     .locals 1
 
-    .prologue
-    .line 1134
     sget-object v0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;->$VALUES:[Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;->clone()Ljava/lang/Object;

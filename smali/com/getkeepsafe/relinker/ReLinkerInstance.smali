@@ -30,8 +30,6 @@
 .method protected constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 43
     new-instance v0, Lcom/getkeepsafe/relinker/SystemLibraryLoader;
 
     invoke-direct {v0}, Lcom/getkeepsafe/relinker/SystemLibraryLoader;-><init>()V
@@ -42,28 +40,22 @@
 
     invoke-direct {p0, v0, v1}, Lcom/getkeepsafe/relinker/ReLinkerInstance;-><init>(Lcom/getkeepsafe/relinker/ReLinker$LibraryLoader;Lcom/getkeepsafe/relinker/ReLinker$LibraryInstaller;)V
 
-    .line 44
     return-void
 .end method
 
 .method protected constructor <init>(Lcom/getkeepsafe/relinker/ReLinker$LibraryLoader;Lcom/getkeepsafe/relinker/ReLinker$LibraryInstaller;)V
     .locals 2
 
-    .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/getkeepsafe/relinker/ReLinkerInstance;->loadedLibraries:Ljava/util/Set;
 
-    .line 48
     if-nez p1, :cond_0
 
-    .line 49
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Cannot pass null library loader"
@@ -72,11 +64,9 @@
 
     throw v0
 
-    .line 52
     :cond_0
     if-nez p2, :cond_1
 
-    .line 53
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Cannot pass null library installer"
@@ -85,22 +75,17 @@
 
     throw v0
 
-    .line 56
     :cond_1
     iput-object p1, p0, Lcom/getkeepsafe/relinker/ReLinkerInstance;->libraryLoader:Lcom/getkeepsafe/relinker/ReLinker$LibraryLoader;
 
-    .line 57
     iput-object p2, p0, Lcom/getkeepsafe/relinker/ReLinkerInstance;->libraryInstaller:Lcom/getkeepsafe/relinker/ReLinker$LibraryInstaller;
 
-    .line 58
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/getkeepsafe/relinker/ReLinkerInstance;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 31
     invoke-direct {p0, p1, p2, p3}, Lcom/getkeepsafe/relinker/ReLinkerInstance;->loadLibraryInternal(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -109,14 +94,12 @@
 .method private loadLibraryInternal(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 9
 
-    .prologue
     const/4 v8, 0x2
 
     const/4 v7, 0x1
 
     const/4 v6, 0x0
 
-    .line 157
     iget-object v0, p0, Lcom/getkeepsafe/relinker/ReLinkerInstance;->loadedLibraries:Ljava/util/Set;
 
     invoke-interface {v0, p2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -129,7 +112,6 @@
 
     if-nez v0, :cond_0
 
-    .line 158
     const-string/jumbo v0, "%s already loaded previously!"
 
     new-array v1, v7, [Ljava/lang/Object;
@@ -138,23 +120,19 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/getkeepsafe/relinker/ReLinkerInstance;->log(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 201
     :goto_0
     return-void
 
-    .line 163
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/getkeepsafe/relinker/ReLinkerInstance;->libraryLoader:Lcom/getkeepsafe/relinker/ReLinker$LibraryLoader;
 
     invoke-interface {v0, p2}, Lcom/getkeepsafe/relinker/ReLinker$LibraryLoader;->loadLibrary(Ljava/lang/String;)V
 
-    .line 164
     iget-object v0, p0, Lcom/getkeepsafe/relinker/ReLinkerInstance;->loadedLibraries:Ljava/util/Set;
 
     invoke-interface {v0, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 165
     const-string/jumbo v0, "%s (%s) was loaded normally!"
 
     const/4 v1, 0x2
@@ -175,11 +153,9 @@
 
     goto :goto_0
 
-    .line 167
     :catch_0
     move-exception v0
 
-    .line 169
     const-string/jumbo v1, "Loading the library normally failed: %s"
 
     new-array v2, v7, [Ljava/lang/Object;
@@ -192,7 +168,6 @@
 
     invoke-virtual {p0, v1, v2}, Lcom/getkeepsafe/relinker/ReLinkerInstance;->log(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 172
     const-string/jumbo v0, "%s (%s) was not loaded normally, re-linking..."
 
     new-array v1, v8, [Ljava/lang/Object;
@@ -203,12 +178,10 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/getkeepsafe/relinker/ReLinkerInstance;->log(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 173
     invoke-virtual {p0, p1, p2, p3}, Lcom/getkeepsafe/relinker/ReLinkerInstance;->getWorkaroundLibFile(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v4
 
-    .line 174
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -219,13 +192,11 @@
 
     if-eqz v0, :cond_3
 
-    .line 175
     :cond_1
     iget-boolean v0, p0, Lcom/getkeepsafe/relinker/ReLinkerInstance;->force:Z
 
     if-eqz v0, :cond_2
 
-    .line 176
     const-string/jumbo v0, "Forcing a re-link of %s (%s)..."
 
     new-array v1, v8, [Ljava/lang/Object;
@@ -236,11 +207,9 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/getkeepsafe/relinker/ReLinkerInstance;->log(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 179
     :cond_2
     invoke-virtual {p0, p1, p2, p3}, Lcom/getkeepsafe/relinker/ReLinkerInstance;->cleanupOldLibFiles(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 180
     iget-object v0, p0, Lcom/getkeepsafe/relinker/ReLinkerInstance;->libraryInstaller:Lcom/getkeepsafe/relinker/ReLinker$LibraryInstaller;
 
     iget-object v1, p0, Lcom/getkeepsafe/relinker/ReLinkerInstance;->libraryLoader:Lcom/getkeepsafe/relinker/ReLinker$LibraryLoader;
@@ -251,7 +220,6 @@
 
     iget-object v1, p0, Lcom/getkeepsafe/relinker/ReLinkerInstance;->libraryLoader:Lcom/getkeepsafe/relinker/ReLinker$LibraryLoader;
 
-    .line 181
     invoke-interface {v1, p2}, Lcom/getkeepsafe/relinker/ReLinker$LibraryLoader;->mapLibraryName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -260,27 +228,22 @@
 
     move-object v5, p0
 
-    .line 180
     invoke-interface/range {v0 .. v5}, Lcom/getkeepsafe/relinker/ReLinker$LibraryInstaller;->installLibrary(Landroid/content/Context;[Ljava/lang/String;Ljava/lang/String;Ljava/io/File;Lcom/getkeepsafe/relinker/ReLinkerInstance;)V
 
-    .line 185
     :cond_3
     :try_start_1
     iget-boolean v0, p0, Lcom/getkeepsafe/relinker/ReLinkerInstance;->recursive:Z
 
     if-eqz v0, :cond_4
 
-    .line 186
     new-instance v0, Lcom/getkeepsafe/relinker/elf/ElfParser;
 
     invoke-direct {v0, v4}, Lcom/getkeepsafe/relinker/elf/ElfParser;-><init>(Ljava/io/File;)V
 
-    .line 187
     invoke-virtual {v0}, Lcom/getkeepsafe/relinker/elf/ElfParser;->parseNeededDependencies()Ljava/util/List;
 
     move-result-object v0
 
-    .line 188
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -298,7 +261,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 189
     iget-object v2, p0, Lcom/getkeepsafe/relinker/ReLinkerInstance;->libraryLoader:Lcom/getkeepsafe/relinker/ReLinker$LibraryLoader;
 
     invoke-interface {v2, v0}, Lcom/getkeepsafe/relinker/ReLinker$LibraryLoader;->unmapLibraryName(Ljava/lang/String;)Ljava/lang/String;
@@ -311,11 +273,9 @@
 
     goto :goto_1
 
-    .line 192
     :catch_1
     move-exception v0
 
-    .line 198
     :cond_4
     iget-object v0, p0, Lcom/getkeepsafe/relinker/ReLinkerInstance;->libraryLoader:Lcom/getkeepsafe/relinker/ReLinker$LibraryLoader;
 
@@ -325,12 +285,10 @@
 
     invoke-interface {v0, v1}, Lcom/getkeepsafe/relinker/ReLinker$LibraryLoader;->loadPath(Ljava/lang/String;)V
 
-    .line 199
     iget-object v0, p0, Lcom/getkeepsafe/relinker/ReLinkerInstance;->loadedLibraries:Ljava/util/Set;
 
     invoke-interface {v0, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 200
     const-string/jumbo v0, "%s (%s) was re-linked!"
 
     new-array v1, v8, [Ljava/lang/Object;
@@ -349,25 +307,20 @@
 .method protected cleanupOldLibFiles(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 7
 
-    .prologue
-    .line 242
     invoke-virtual {p0, p1}, Lcom/getkeepsafe/relinker/ReLinkerInstance;->getWorkaroundLibDir(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 243
     invoke-virtual {p0, p1, p2, p3}, Lcom/getkeepsafe/relinker/ReLinkerInstance;->getWorkaroundLibFile(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v1
 
-    .line 244
     iget-object v2, p0, Lcom/getkeepsafe/relinker/ReLinkerInstance;->libraryLoader:Lcom/getkeepsafe/relinker/ReLinker$LibraryLoader;
 
     invoke-interface {v2, p2}, Lcom/getkeepsafe/relinker/ReLinker$LibraryLoader;->mapLibraryName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 245
     new-instance v3, Lcom/getkeepsafe/relinker/ReLinkerInstance$2;
 
     invoke-direct {v3, p0, v2}, Lcom/getkeepsafe/relinker/ReLinkerInstance$2;-><init>(Lcom/getkeepsafe/relinker/ReLinkerInstance;Ljava/lang/String;)V
@@ -376,14 +329,11 @@
 
     move-result-object v2
 
-    .line 252
     if-nez v2, :cond_1
 
-    .line 259
     :cond_0
     return-void
 
-    .line 254
     :cond_1
     array-length v3, v2
 
@@ -394,7 +344,6 @@
 
     aget-object v4, v2, v0
 
-    .line 255
     iget-boolean v5, p0, Lcom/getkeepsafe/relinker/ReLinkerInstance;->force:Z
 
     if-nez v5, :cond_2
@@ -413,11 +362,9 @@
 
     if-nez v5, :cond_3
 
-    .line 256
     :cond_2
     invoke-virtual {v4}, Ljava/io/File;->delete()Z
 
-    .line 254
     :cond_3
     add-int/lit8 v0, v0, 0x1
 
@@ -427,8 +374,6 @@
 .method protected getWorkaroundLibDir(Landroid/content/Context;)Ljava/io/File;
     .locals 2
 
-    .prologue
-    .line 209
     const-string/jumbo v0, "lib"
 
     const/4 v1, 0x0
@@ -443,22 +388,18 @@
 .method protected getWorkaroundLibFile(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
     .locals 4
 
-    .prologue
-    .line 221
     iget-object v0, p0, Lcom/getkeepsafe/relinker/ReLinkerInstance;->libraryLoader:Lcom/getkeepsafe/relinker/ReLinker$LibraryLoader;
 
     invoke-interface {v0, p2}, Lcom/getkeepsafe/relinker/ReLinker$LibraryLoader;->mapLibraryName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 223
     invoke-static {p3}, Lcom/getkeepsafe/relinker/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 224
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0, p1}, Lcom/getkeepsafe/relinker/ReLinkerInstance;->getWorkaroundLibDir(Landroid/content/Context;)Ljava/io/File;
@@ -467,7 +408,6 @@
 
     invoke-direct {v0, v2, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 227
     :goto_0
     return-object v0
 
@@ -508,24 +448,18 @@
 .method public loadLibrary(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 92
     invoke-virtual {p0, p1, p2, v0, v0}, Lcom/getkeepsafe/relinker/ReLinkerInstance;->loadLibrary(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/getkeepsafe/relinker/ReLinker$LoadListener;)V
 
-    .line 93
     return-void
 .end method
 
 .method public loadLibrary(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/getkeepsafe/relinker/ReLinker$LoadListener;)V
     .locals 7
 
-    .prologue
-    .line 126
     if-nez p1, :cond_0
 
-    .line 127
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Given context is null"
@@ -534,7 +468,6 @@
 
     throw v0
 
-    .line 130
     :cond_0
     invoke-static {p2}, Lcom/getkeepsafe/relinker/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -542,7 +475,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 131
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Given library is either null or empty"
@@ -551,7 +483,6 @@
 
     throw v0
 
-    .line 134
     :cond_1
     const-string/jumbo v0, "Beginning load of %s..."
 
@@ -565,17 +496,13 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/getkeepsafe/relinker/ReLinkerInstance;->log(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 135
     if-nez p4, :cond_2
 
-    .line 136
     invoke-direct {p0, p1, p2, p3}, Lcom/getkeepsafe/relinker/ReLinkerInstance;->loadLibraryInternal(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 152
     :goto_0
     return-void
 
-    .line 138
     :cond_2
     new-instance v6, Ljava/lang/Thread;
 
@@ -595,7 +522,6 @@
 
     invoke-direct {v6, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 150
     invoke-virtual {v6}, Ljava/lang/Thread;->start()V
 
     goto :goto_0
@@ -604,18 +530,14 @@
 .method public log(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 266
     iget-object v0, p0, Lcom/getkeepsafe/relinker/ReLinkerInstance;->logger:Lcom/getkeepsafe/relinker/ReLinker$Logger;
 
     if-eqz v0, :cond_0
 
-    .line 267
     iget-object v0, p0, Lcom/getkeepsafe/relinker/ReLinkerInstance;->logger:Lcom/getkeepsafe/relinker/ReLinker$Logger;
 
     invoke-interface {v0, p1}, Lcom/getkeepsafe/relinker/ReLinker$Logger;->log(Ljava/lang/String;)V
 
-    .line 269
     :cond_0
     return-void
 .end method
@@ -623,8 +545,6 @@
 .method public varargs log(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .prologue
-    .line 262
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-static {v0, p1, p2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
@@ -633,6 +553,5 @@
 
     invoke-virtual {p0, v0}, Lcom/getkeepsafe/relinker/ReLinkerInstance;->log(Ljava/lang/String;)V
 
-    .line 263
     return-void
 .end method

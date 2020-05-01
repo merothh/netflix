@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/license/OfflineLicenseRequest;)V
     .locals 0
 
-    .prologue
-    .line 94
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/license/OfflineLicenseRequest$1;->this$0:Lcom/netflix/mediaclient/service/offline/license/OfflineLicenseRequest;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/SimpleBladeRunnerWebCallback;-><init>()V
@@ -25,8 +23,6 @@
 .method public onOfflineLicenseFetched(Lcom/netflix/mediaclient/service/player/bladerunnerclient/OfflineLicenseResponse;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 3
 
-    .prologue
-    .line 97
     const-string/jumbo v0, "nf_offlineLicenseMgr"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -53,7 +49,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 98
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/license/OfflineLicenseRequest$1;->this$0:Lcom/netflix/mediaclient/service/offline/license/OfflineLicenseRequest;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/offline/license/OfflineLicenseRequest;->mWorkHandler:Landroid/os/Handler;
@@ -64,6 +59,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 104
     return-void
 .end method

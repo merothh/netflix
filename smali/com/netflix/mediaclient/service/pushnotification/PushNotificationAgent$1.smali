@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/pushnotification/PushNotificationAgent;Ljava/util/Map;)V
     .locals 0
 
-    .prologue
-    .line 330
     iput-object p1, p0, Lcom/netflix/mediaclient/service/pushnotification/PushNotificationAgent$1;->this$0:Lcom/netflix/mediaclient/service/pushnotification/PushNotificationAgent;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/pushnotification/PushNotificationAgent$1;->val$settings:Ljava/util/Map;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 333
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/PushNotificationAgent$1;->this$0:Lcom/netflix/mediaclient/service/pushnotification/PushNotificationAgent;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/pushnotification/PushNotificationAgent;->getContext()Landroid/content/Context;
@@ -44,6 +40,5 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/pushnotification/NotificationUserSettings;->saveSettings(Landroid/content/Context;Ljava/util/Map;)V
 
-    .line 334
     return-void
 .end method

@@ -135,37 +135,30 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 59
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;-><init>()V
 
-    .line 67
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentsDisplayTimeList:Ljava/util/List;
 
-    .line 96
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->handler:Landroid/os/Handler;
 
-    .line 105
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isPugAutoOptIn:Z
 
-    .line 165
     new-instance v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager$1;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager$1;-><init>(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->playPauseListener:Lcom/netflix/mediaclient/ui/player/PlayPauseListener;
 
-    .line 1247
     new-instance v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager$12;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager$12;-><init>(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;)V
@@ -178,8 +171,6 @@
 .method static synthetic access$000(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;ZI)V
     .locals 0
 
-    .prologue
-    .line 59
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->handlePlaybackPaused(ZI)V
 
     return-void
@@ -188,8 +179,6 @@
 .method static synthetic access$100(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;)Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 59
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->interactiveMoments:Ljava/util/List;
 
     return-object v0
@@ -198,8 +187,6 @@
 .method static synthetic access$1000(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;Z)V
     .locals 0
 
-    .prologue
-    .line 59
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->revealCompleted(Z)V
 
     return-void
@@ -208,8 +195,6 @@
 .method static synthetic access$1100(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;)Z
     .locals 1
 
-    .prologue
-    .line 59
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->bottomPanelVisible:Z
 
     return v0
@@ -218,8 +203,6 @@
 .method static synthetic access$1200(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;)Z
     .locals 1
 
-    .prologue
-    .line 59
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isActivityInvalid()Z
 
     move-result v0
@@ -230,8 +213,6 @@
 .method static synthetic access$1300(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;)Lcom/netflix/mediaclient/ui/player/PlayerFragment;
     .locals 1
 
-    .prologue
-    .line 59
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     return-object v0
@@ -240,8 +221,6 @@
 .method static synthetic access$1400(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;)Lcom/netflix/mediaclient/ui/player/PlayerFragment;
     .locals 1
 
-    .prologue
-    .line 59
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     return-object v0
@@ -250,8 +229,6 @@
 .method static synthetic access$1500(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;)Lcom/netflix/mediaclient/ui/player/PlayerFragment;
     .locals 1
 
-    .prologue
-    .line 59
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     return-object v0
@@ -260,8 +237,6 @@
 .method static synthetic access$1600(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;)Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;
     .locals 1
 
-    .prologue
-    .line 59
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->currentInteractiveMoment:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;
 
     return-object v0
@@ -270,8 +245,6 @@
 .method static synthetic access$1700(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;)Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
     .locals 1
 
-    .prologue
-    .line 59
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentScreen:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     return-object v0
@@ -280,8 +253,6 @@
 .method static synthetic access$1800(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;)V
     .locals 0
 
-    .prologue
-    .line 59
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->handlePugClicked()V
 
     return-void
@@ -290,8 +261,6 @@
 .method static synthetic access$1900(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;)Lcom/netflix/mediaclient/ui/player/PlayerFragment;
     .locals 1
 
-    .prologue
-    .line 59
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     return-object v0
@@ -300,8 +269,6 @@
 .method static synthetic access$2000(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;)Lcom/netflix/mediaclient/ui/player/PlayerFragment;
     .locals 1
 
-    .prologue
-    .line 59
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     return-object v0
@@ -310,8 +277,6 @@
 .method static synthetic access$202(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
     .locals 0
 
-    .prologue
-    .line 59
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugBitmap:Landroid/graphics/Bitmap;
 
     return-object p1
@@ -320,8 +285,6 @@
 .method static synthetic access$302(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
     .locals 0
 
-    .prologue
-    .line 59
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugSelectedBitmap:Landroid/graphics/Bitmap;
 
     return-object p1
@@ -330,8 +293,6 @@
 .method static synthetic access$400(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;)V
     .locals 0
 
-    .prologue
-    .line 59
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->loadSoundPoolResources()V
 
     return-void
@@ -340,8 +301,6 @@
 .method static synthetic access$500(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;I)V
     .locals 0
 
-    .prologue
-    .line 59
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->startPugIntroAnimation(I)V
 
     return-void
@@ -350,8 +309,6 @@
 .method static synthetic access$600(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;Z)V
     .locals 0
 
-    .prologue
-    .line 59
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->animateReveal(Z)V
 
     return-void
@@ -360,8 +317,6 @@
 .method static synthetic access$700(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;)I
     .locals 1
 
-    .prologue
-    .line 59
     iget v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentTransitionInSoundId:I
 
     return v0
@@ -370,8 +325,6 @@
 .method static synthetic access$800(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;IF)V
     .locals 0
 
-    .prologue
-    .line 59
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->playSoundPoolId(IF)V
 
     return-void
@@ -380,8 +333,6 @@
 .method static synthetic access$900(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;)Z
     .locals 1
 
-    .prologue
-    .line 59
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isShowingInteractiveMoment:Z
 
     return v0
@@ -390,20 +341,16 @@
 .method private adjustPugLayout(Z)V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 784
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isShowingInteractiveMoment:Z
 
     if-nez v0, :cond_1
 
-    .line 804
     :cond_0
     :goto_0
     return-void
 
-    .line 787
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -411,7 +358,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 788
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -434,7 +380,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 790
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugContainer:Landroid/widget/FrameLayout;
 
@@ -442,10 +387,8 @@
 
     move-result-object v0
 
-    .line 791
     if-eqz p1, :cond_4
 
-    .line 792
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugContainer:Landroid/widget/FrameLayout;
 
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->getTranslationY()F
@@ -462,7 +405,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 793
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getNetflixActivity()Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -475,7 +417,6 @@
 
     if-nez v1, :cond_3
 
-    .line 794
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -492,7 +433,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
 
-    .line 796
     :cond_3
     iget v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->bottomPanelHeight:I
 
@@ -508,7 +448,6 @@
 
     goto :goto_0
 
-    .line 799
     :cond_4
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugContainer:Landroid/widget/FrameLayout;
 
@@ -520,7 +459,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 800
     invoke-virtual {v0, v3}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
@@ -529,7 +467,6 @@
 
     move-result-object v0
 
-    .line 801
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
     goto :goto_0
@@ -538,19 +475,16 @@
 .method private animateReveal(Z)V
     .locals 6
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 922
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 923
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -573,7 +507,6 @@
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 926
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isActivityInvalid()Z
 
@@ -581,32 +514,27 @@
 
     if-eqz v0, :cond_2
 
-    .line 927
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 928
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "Fragment is either null or activity is invalid "
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 961
     :cond_1
     :goto_0
     return-void
 
-    .line 934
     :cond_2
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isPugAutoOptIn:Z
 
     if-nez v0, :cond_8
 
-    .line 935
     if-eqz p1, :cond_5
 
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugSelected:Z
@@ -615,7 +543,6 @@
 
     move v0, v1
 
-    .line 937
     :goto_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -623,7 +550,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 938
     const-string/jumbo v3, "WPInteractiveMomentsManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -660,36 +586,29 @@
 
     invoke-static {v3, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 941
     :cond_3
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->playPauseVideo(Z)V
 
-    .line 942
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->closeButton:Lcom/netflix/mediaclient/android/widget/IconFontTextView;
 
     invoke-static {v3, v0}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibleOrGone(Landroid/view/View;Z)V
 
-    .line 943
     if-eqz v0, :cond_6
 
-    .line 944
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->progressBar:Landroid/widget/ProgressBar;
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibleOrGone(Landroid/view/View;Z)V
 
-    .line 945
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugImageView:Landroid/widget/ImageView;
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibleOrGone(Landroid/view/View;Z)V
 
-    .line 946
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->wpContainer:Landroid/widget/RelativeLayout;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->onTapHijackListener:Landroid/view/View$OnTouchListener;
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 960
     :cond_4
     :goto_2
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->startRevealScaleAnimation(Z)V
@@ -699,49 +618,40 @@
     :cond_5
     move v0, v2
 
-    .line 935
     goto :goto_1
 
-    .line 948
     :cond_6
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugRevealView:Landroid/view/View;
 
     invoke-static {v2, v1}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibleOrGone(Landroid/view/View;Z)V
 
-    .line 949
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentScreen:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;->hideScreen()V
 
-    .line 950
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->wpContainer:Landroid/widget/RelativeLayout;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 951
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugProgressAnimatorSet:Landroid/animation/AnimatorSet;
 
     if-eqz v1, :cond_7
 
-    .line 952
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugProgressAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v1}, Landroid/animation/AnimatorSet;->removeAllListeners()V
 
-    .line 953
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugProgressAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v1}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 955
     :cond_7
     iget-boolean v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentStarted:Z
 
     if-eqz v1, :cond_4
 
-    .line 956
     iget v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentTransitionOutSoundId:I
 
     const/high16 v2, 0x3f800000    # 1.0f
@@ -759,22 +669,18 @@
 .method private cleanUpResources()V
     .locals 3
 
-    .prologue
-    .line 1183
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1184
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "cleanUpResources: release bitmaps and audio resources"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1186
     :cond_0
     const/4 v0, 0x2
 
@@ -794,28 +700,22 @@
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->releaseBitmaps([Landroid/graphics/Bitmap;)V
 
-    .line 1187
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->releaseResources()V
 
-    .line 1188
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->releaseSoundPool()V
 
-    .line 1189
     return-void
 .end method
 
 .method private clearPanel(I)V
     .locals 4
 
-    .prologue
-    .line 1068
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1069
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -838,7 +738,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1072
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isActivityInvalid()Z
 
@@ -846,26 +745,22 @@
 
     if-eqz v0, :cond_2
 
-    .line 1073
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 1074
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "Fragment is either null or activity is invalid "
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1096
     :cond_1
     :goto_0
     return-void
 
-    .line 1079
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->handler:Landroid/os/Handler;
 
@@ -883,30 +778,24 @@
 .method private findAndConfigureViews(Landroid/view/View;)V
     .locals 2
 
-    .prologue
-    .line 1205
     if-nez p1, :cond_1
 
-    .line 1206
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1207
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "findAndConfigureViews: playerview is null"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1241
     :cond_0
     :goto_0
     return-void
 
-    .line 1212
     :cond_1
     const v0, 0x7f0f0298
 
@@ -916,7 +805,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->bottomPanel:Landroid/view/View;
 
-    .line 1213
     const v0, 0x7f0f03ac
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -927,7 +815,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->loadingProgressBar:Landroid/widget/ProgressBar;
 
-    .line 1214
     const v0, 0x7f0f0399
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -938,7 +825,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugContainer:Landroid/widget/FrameLayout;
 
-    .line 1215
     const v0, 0x7f0f0398
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -949,7 +835,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->wpContainer:Landroid/widget/RelativeLayout;
 
-    .line 1216
     const v0, 0x7f0f039c
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -960,7 +845,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugImageView:Landroid/widget/ImageView;
 
-    .line 1217
     const v0, 0x7f0f039a
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -969,7 +853,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugRevealView:Landroid/view/View;
 
-    .line 1218
     const v0, 0x7f0f039b
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -980,7 +863,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->progressBar:Landroid/widget/ProgressBar;
 
-    .line 1219
     const v0, 0x7f0f0259
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -991,7 +873,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->closeButton:Lcom/netflix/mediaclient/android/widget/IconFontTextView;
 
-    .line 1220
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->closeButton:Lcom/netflix/mediaclient/android/widget/IconFontTextView;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager$10;
@@ -1000,7 +881,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/IconFontTextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 1232
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->progressBar:Landroid/widget/ProgressBar;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager$11;
@@ -1009,14 +889,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 1238
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->wpContainer:Landroid/widget/RelativeLayout;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 1240
     new-instance v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;-><init>(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;)V
@@ -1029,15 +907,12 @@
 .method private handlePlaybackPaused(ZI)V
     .locals 3
 
-    .prologue
-    .line 1330
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1331
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1070,11 +945,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1333
     :cond_0
     iput-boolean p1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->playbackPaused:Z
 
-    .line 1334
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isShowingInteractiveMoment:Z
 
     if-eqz v0, :cond_1
@@ -1083,19 +956,15 @@
 
     if-nez v0, :cond_2
 
-    .line 1352
     :cond_1
     :goto_0
     return-void
 
-    .line 1337
     :cond_2
     if-eqz p1, :cond_3
 
-    .line 1338
     iput p2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pausePosition:I
 
-    .line 1339
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugProgressAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->isRunning()Z
@@ -1104,14 +973,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 1340
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugProgressAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->pause()V
 
     goto :goto_0
 
-    .line 1343
     :cond_3
     iget v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pausePosition:I
 
@@ -1125,11 +992,9 @@
 
     if-le p2, v0, :cond_5
 
-    .line 1346
     :cond_4
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->hide()V
 
-    .line 1348
     :cond_5
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugProgressAnimatorSet:Landroid/animation/AnimatorSet;
 
@@ -1139,7 +1004,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1349
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugProgressAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->resume()V
@@ -1150,61 +1014,50 @@
 .method private handlePugClicked()V
     .locals 2
 
-    .prologue
-    .line 769
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 770
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "handlePugClicked: true"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 772
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugSelected:Z
 
-    .line 773
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->select:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->reportCommandEvent(Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;)V
 
-    .line 774
     iget v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugSelectedSoundId:I
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-direct {p0, v0, v1}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->playSoundPoolId(IF)V
 
-    .line 775
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugSelectedBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_1
 
-    .line 776
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugImageView:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugSelectedBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 780
     :goto_0
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugPulsateAnimation(Z)V
 
-    .line 781
     return-void
 
-    .line 778
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugImageView:Landroid/widget/ImageView;
 
@@ -1218,30 +1071,24 @@
 .method private hideNavBar()V
     .locals 1
 
-    .prologue
-    .line 1045
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isActivityInvalid()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1052
     :goto_0
     return-void
 
-    .line 1049
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->startScreenUpdateTask()V
 
-    .line 1050
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->clearPanel()V
 
-    .line 1051
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->hideNavigationBar()V
@@ -1252,77 +1099,61 @@
 .method private hidePug()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x1
 
     const/4 v1, 0x0
 
-    .line 534
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugRevealView:Landroid/view/View;
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibleOrGone(Landroid/view/View;Z)V
 
-    .line 535
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugProgressAnimatorSet:Landroid/animation/AnimatorSet;
 
     if-eqz v0, :cond_0
 
-    .line 536
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugProgressAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->removeAllListeners()V
 
-    .line 537
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugProgressAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 539
     :cond_0
     invoke-direct {p0, v1}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugPulsateAnimation(Z)V
 
-    .line 540
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->ikoContainer:Landroid/widget/RelativeLayout;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/gfx/AnimationUtils;->startViewAppearanceAnimation(Landroid/view/View;Z)Landroid/view/ViewPropertyAnimator;
 
-    .line 541
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->progressBar:Landroid/widget/ProgressBar;
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/util/gfx/AnimationUtils;->startViewAppearanceAnimation(Landroid/view/View;Z)Landroid/view/ViewPropertyAnimator;
 
-    .line 542
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugImageView:Landroid/widget/ImageView;
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/util/gfx/AnimationUtils;->startViewAppearanceAnimation(Landroid/view/View;Z)Landroid/view/ViewPropertyAnimator;
 
-    .line 543
     iput-boolean v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isShowingInteractiveMoment:Z
 
-    .line 544
     iput-boolean v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugSelected:Z
 
-    .line 545
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->currentInteractiveMoment:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;
 
-    .line 546
     return-void
 .end method
 
 .method private isBottomPanelVisible()Z
     .locals 2
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 1198
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->bottomPanel:Landroid/view/View;
 
     if-eqz v1, :cond_0
 
-    .line 1199
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->bottomPanel:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
@@ -1333,7 +1164,6 @@
 
     const/4 v0, 0x1
 
-    .line 1201
     :cond_0
     return v0
 .end method
@@ -1341,15 +1171,12 @@
 .method private loadMomentScreenResources()V
     .locals 3
 
-    .prologue
-    .line 1153
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1154
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1374,32 +1201,27 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1156
     :cond_0
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->cachingResourcesComplete:Z
 
     if-nez v0, :cond_2
 
-    .line 1157
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 1158
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "loadMomentScreenResources: resources not in cache yet. Ignore loading resources."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1180
     :cond_1
     :goto_0
     return-void
 
-    .line 1163
     :cond_2
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -1407,14 +1229,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 1164
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "loadMomentScreenResources: start background thread to load resources"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1166
     :cond_3
     new-instance v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager$9;
 
@@ -1428,22 +1248,18 @@
 .method private loadPugResourcesBg()V
     .locals 2
 
-    .prologue
-    .line 608
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 609
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "loadPugResourcesBg: request to load pug resources in background thread"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 611
     :cond_0
     new-instance v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager$3;
 
@@ -1451,57 +1267,47 @@
 
     invoke-static {v0}, Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat;->execute(Ljava/lang/Runnable;)V
 
-    .line 626
     return-void
 .end method
 
 .method private loadSoundPoolResources()V
     .locals 2
 
-    .prologue
-    .line 1282
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertNotOnMain()Z
 
-    .line 1284
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1285
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "loadSoundPoolResources: loading sound resources for moment"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1288
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->data:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;
 
     if-nez v0, :cond_2
 
-    .line 1289
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 1290
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "loadSoundPoolResources: data is null"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1303
     :cond_1
     :goto_0
     return-void
 
-    .line 1294
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->data:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;
 
@@ -1515,7 +1321,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->itemWiggleSoundId:I
 
-    .line 1295
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->data:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;->getPugNotificationAudio()Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPAudio;
@@ -1528,7 +1333,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugNotificationSoundId:I
 
-    .line 1296
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->data:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;->getMomentTransitionInAudio()Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPAudio;
@@ -1541,7 +1345,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentTransitionInSoundId:I
 
-    .line 1297
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->data:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;->getMomentTransitionOutAudio()Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPAudio;
@@ -1554,7 +1357,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentTransitionOutSoundId:I
 
-    .line 1298
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->data:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;->getVictoryAudio()Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPAudio;
@@ -1567,7 +1369,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->victorySoundId:I
 
-    .line 1299
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->data:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;->getPugSelectedAudio()Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPAudio;
@@ -1580,7 +1381,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugSelectedSoundId:I
 
-    .line 1300
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->data:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;->getItemSelectAudio()Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPAudio;
@@ -1593,7 +1393,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->itemSelectSoundId:I
 
-    .line 1301
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->data:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;->getTutorialBoingAudio()Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPAudio;
@@ -1606,7 +1405,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->tutorialBoingSoundId:I
 
-    .line 1302
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->data:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;->getPanelShuffleAudio()Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPAudio;
@@ -1625,22 +1423,18 @@
 .method private loadSoundPoolResourcesBg()V
     .locals 2
 
-    .prologue
-    .line 632
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 633
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "loadSoundPoolResourcesBg: start loading in background thread"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 635
     :cond_0
     new-instance v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager$4;
 
@@ -1648,20 +1442,16 @@
 
     invoke-static {v0}, Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat;->execute(Ljava/lang/Runnable;)V
 
-    .line 641
     return-void
 .end method
 
 .method private loadSoundPoolVo(Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPAudio;)I
     .locals 3
 
-    .prologue
     const/4 v0, -0x1
 
-    .line 1306
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertNotOnMain()Z
 
-    .line 1307
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->soundPoolManager:Lcom/netflix/mediaclient/ui/iko/SoundPoolManager;
 
     if-eqz v1, :cond_0
@@ -1678,7 +1468,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1308
     :cond_0
     const-string/jumbo v1, "WPInteractiveMomentsManager"
 
@@ -1686,11 +1475,9 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1320
     :goto_0
     return v0
 
-    .line 1312
     :cond_1
     if-eqz p1, :cond_2
 
@@ -1704,7 +1491,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 1313
     :cond_2
     const-string/jumbo v1, "WPInteractiveMomentsManager"
 
@@ -1714,7 +1500,6 @@
 
     goto :goto_0
 
-    .line 1317
     :cond_3
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -1722,7 +1507,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 1318
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1749,7 +1533,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1320
     :cond_4
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->soundPoolManager:Lcom/netflix/mediaclient/ui/iko/SoundPoolManager;
 
@@ -1771,17 +1554,14 @@
 .method private playPauseVideo(Z)V
     .locals 4
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1004
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1005
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1816,7 +1596,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1008
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isActivityInvalid()Z
 
@@ -1824,32 +1603,27 @@
 
     if-eqz v0, :cond_2
 
-    .line 1009
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 1010
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "Fragment is either null or activity is invalid "
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1042
     :cond_1
     :goto_0
     return-void
 
-    .line 1015
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->setPauseOnPlayerBackgrounded(Z)V
 
-    .line 1016
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     if-nez p1, :cond_3
@@ -1859,15 +1633,12 @@
     :goto_1
     invoke-virtual {v2, v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->setSubtitleVisiblity(Z)V
 
-    .line 1017
     if-eqz p1, :cond_5
 
-    .line 1018
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->doPause()V
 
-    .line 1019
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getPlayer()Lcom/netflix/mediaclient/servicemgr/IPlayer;
@@ -1876,7 +1647,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 1020
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getPlayer()Lcom/netflix/mediaclient/servicemgr/IPlayer;
@@ -1889,7 +1659,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentEntryProgress:I
 
-    .line 1024
     :goto_2
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->showNavBar()V
 
@@ -1898,10 +1667,8 @@
     :cond_3
     move v0, v1
 
-    .line 1016
     goto :goto_1
 
-    .line 1022
     :cond_4
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->currentInteractiveMoment:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;
 
@@ -1917,13 +1684,11 @@
 
     goto :goto_2
 
-    .line 1026
     :cond_5
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentStarted:Z
 
     if-eqz v0, :cond_6
 
-    .line 1027
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->activeExit:Z
 
     if-eqz v0, :cond_7
@@ -1936,7 +1701,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 1028
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->currentInteractiveMoment:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;->getVideoReturnOffsetMS()Ljava/lang/Integer;
@@ -1949,42 +1713,35 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentEntryProgress:I
 
-    .line 1029
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     iget v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentEntryProgress:I
 
     invoke-virtual {v0, v2}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->doSeek(I)V
 
-    .line 1039
     :cond_6
     :goto_3
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->hideNavBar()V
 
-    .line 1040
     iput-boolean v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->activeExit:Z
 
     goto :goto_0
 
-    .line 1031
     :cond_7
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->playerBackgrounded:Z
 
     if-eqz v0, :cond_8
 
-    .line 1032
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     iget v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentEntryProgress:I
 
     invoke-virtual {v0, v2}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->doSeek(I)V
 
-    .line 1033
     iput-boolean v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->playerBackgrounded:Z
 
     goto :goto_3
 
-    .line 1035
     :cond_8
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
@@ -1996,19 +1753,16 @@
 .method private playPugIntro(I)V
     .locals 6
 
-    .prologue
     const/4 v5, 0x1
 
     const/4 v3, 0x2
 
-    .line 813
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 814
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2031,16 +1785,13 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 816
     :cond_0
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugIntroStartValues()V
 
-    .line 817
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->ikoContainer:Landroid/widget/RelativeLayout;
 
     invoke-static {v0, v5}, Lcom/netflix/mediaclient/util/gfx/AnimationUtils;->startViewAppearanceAnimation(Landroid/view/View;Z)Landroid/view/ViewPropertyAnimator;
 
-    .line 819
     sget-object v0, Landroid/view/View;->SCALE_X:Landroid/util/Property;
 
     new-array v1, v3, [F
@@ -2051,7 +1802,6 @@
 
     move-result-object v0
 
-    .line 820
     sget-object v1, Landroid/view/View;->SCALE_Y:Landroid/util/Property;
 
     new-array v2, v3, [F
@@ -2062,7 +1812,6 @@
 
     move-result-object v1
 
-    .line 822
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugContainer:Landroid/widget/FrameLayout;
 
     new-array v3, v3, [Landroid/animation/PropertyValuesHolder;
@@ -2077,44 +1826,36 @@
 
     move-result-object v0
 
-    .line 824
     const-wide/16 v2, 0x3e8
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 825
     new-instance v1, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager$5;
 
     invoke-direct {v1, p0, p1}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager$5;-><init>(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;I)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 835
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->quitOutInterpolator:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 836
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 838
     iget v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugNotificationSoundId:I
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-direct {p0, v0, v1}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->playSoundPoolId(IF)V
 
-    .line 839
     return-void
 
-    .line 819
     :array_0
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 820
     :array_1
     .array-data 4
         0x0
@@ -2125,18 +1866,14 @@
 .method private playSoundPoolId(IF)V
     .locals 1
 
-    .prologue
-    .line 1147
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->soundPoolManager:Lcom/netflix/mediaclient/ui/iko/SoundPoolManager;
 
     if-eqz v0, :cond_0
 
-    .line 1148
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->soundPoolManager:Lcom/netflix/mediaclient/ui/iko/SoundPoolManager;
 
     invoke-virtual {v0, p1, p2}, Lcom/netflix/mediaclient/ui/iko/SoundPoolManager;->playSoundPoolId(IF)V
 
-    .line 1150
     :cond_0
     return-void
 .end method
@@ -2144,45 +1881,37 @@
 .method private preparePugView(Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;)Z
     .locals 7
 
-    .prologue
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
-    .line 722
     if-nez p1, :cond_1
 
-    .line 723
     const-string/jumbo v1, "WPInteractiveMomentsManager"
 
     const-string/jumbo v2, "WPMoment object is null. Ignoring request to preparePugView()"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 765
     :cond_0
     :goto_0
     return v0
 
-    .line 726
     :cond_1
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->progressBar:Landroid/widget/ProgressBar;
 
     invoke-static {v2, v1}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibleOrGone(Landroid/view/View;Z)V
 
-    .line 727
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugImageView:Landroid/widget/ImageView;
 
     invoke-static {v2, v1}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibleOrGone(Landroid/view/View;Z)V
 
-    .line 728
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;->getBackgroundColor()Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPColor;
 
     move-result-object v2
 
     if-eqz v2, :cond_5
 
-    .line 729
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;->getBackgroundColor()Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPColor;
 
     move-result-object v2
@@ -2191,21 +1920,18 @@
 
     move-result-object v3
 
-    .line 730
     invoke-static {v3}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 731
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 732
     const-string/jumbo v1, "WPInteractiveMomentsManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2218,7 +1944,6 @@
 
     move-result-object v2
 
-    .line 733
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;->getSceneType()Ljava/lang/String;
 
     move-result-object v3
@@ -2231,16 +1956,13 @@
 
     move-result-object v2
 
-    .line 732
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 737
     :cond_2
     const v2, -0xff0100
 
-    .line 739
     :try_start_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -2248,7 +1970,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 740
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2271,7 +1992,6 @@
 
     invoke-static {v0, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 742
     :cond_3
     invoke-static {v3}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
     :try_end_0
@@ -2279,13 +1999,11 @@
 
     move-result v0
 
-    .line 743
     :try_start_1
     iput v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentThemeColor:I
     :try_end_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 750
     :cond_4
     :goto_1
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->progressBar:Landroid/widget/ProgressBar;
@@ -2298,10 +2016,8 @@
 
     sget-object v4, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
-    .line 751
     invoke-virtual {v2, v3, v4}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 752
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->progressBar:Landroid/widget/ProgressBar;
 
     invoke-virtual {v2}, Landroid/widget/ProgressBar;->getBackground()Landroid/graphics/drawable/Drawable;
@@ -2312,7 +2028,6 @@
 
     invoke-virtual {v2, v0, v3}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 753
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugRevealView:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
@@ -2323,27 +2038,23 @@
 
     invoke-virtual {v2, v0, v3}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 756
     :cond_5
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugBitmap:Landroid/graphics/Bitmap;
 
     if-nez v0, :cond_7
 
-    .line 757
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    .line 758
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v2, "preparePugView: pugBitmap is null"
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 760
     :cond_6
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugImageView:Landroid/widget/ImageView;
 
@@ -2354,10 +2065,8 @@
     :goto_2
     move v0, v1
 
-    .line 765
     goto/16 :goto_0
 
-    .line 744
     :catch_0
     move-exception v0
 
@@ -2367,7 +2076,6 @@
 
     move-object v2, v6
 
-    .line 745
     :goto_3
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -2375,7 +2083,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 746
     const-string/jumbo v3, "WPInteractiveMomentsManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2404,7 +2111,6 @@
 
     goto :goto_1
 
-    .line 762
     :cond_7
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugImageView:Landroid/widget/ImageView;
 
@@ -2414,7 +2120,6 @@
 
     goto :goto_2
 
-    .line 744
     :catch_1
     move-exception v2
 
@@ -2424,58 +2129,48 @@
 .method private pugIntroStartValues()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 1133
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->progressBar:Landroid/widget/ProgressBar;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setProgress(I)V
 
-    .line 1134
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugRevealView:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setScaleX(F)V
 
-    .line 1135
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugRevealView:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setScaleY(F)V
 
-    .line 1136
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugContainer:Landroid/widget/FrameLayout;
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibleOrGone(Landroid/view/View;Z)V
 
-    .line 1137
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->progressBar:Landroid/widget/ProgressBar;
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibleOrGone(Landroid/view/View;Z)V
 
-    .line 1138
     return-void
 .end method
 
 .method private pugPulsateAnimation(Z)V
     .locals 6
 
-    .prologue
     const/high16 v3, 0x3f800000    # 1.0f
 
     const/4 v5, 0x2
 
-    .line 886
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 887
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2498,36 +2193,29 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 889
     :cond_0
     if-nez p1, :cond_2
 
-    .line 890
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->progressBar:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0, v3}, Landroid/widget/ProgressBar;->setScaleX(F)V
 
-    .line 891
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->progressBar:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0, v3}, Landroid/widget/ProgressBar;->setScaleY(F)V
 
-    .line 892
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugScaleAnimator:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_1
 
-    .line 893
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugScaleAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 914
     :cond_1
     :goto_0
     return-void
 
-    .line 898
     :cond_2
     sget-object v0, Landroid/view/View;->SCALE_X:Landroid/util/Property;
 
@@ -2539,7 +2227,6 @@
 
     move-result-object v0
 
-    .line 900
     sget-object v1, Landroid/view/View;->SCALE_Y:Landroid/util/Property;
 
     new-array v2, v5, [F
@@ -2550,12 +2237,10 @@
 
     move-result-object v1
 
-    .line 903
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugScaleAnimator:Landroid/animation/ObjectAnimator;
 
     if-nez v2, :cond_3
 
-    .line 904
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->progressBar:Landroid/widget/ProgressBar;
 
     new-array v3, v5, [Landroid/animation/PropertyValuesHolder;
@@ -2574,26 +2259,22 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugScaleAnimator:Landroid/animation/ObjectAnimator;
 
-    .line 906
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugScaleAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0, v5}, Landroid/animation/ObjectAnimator;->setRepeatMode(I)V
 
-    .line 907
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugScaleAnimator:Landroid/animation/ObjectAnimator;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setRepeatCount(I)V
 
-    .line 908
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugScaleAnimator:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v2, 0x534
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 912
     :goto_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugScaleAnimator:Landroid/animation/ObjectAnimator;
 
@@ -2601,14 +2282,12 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 913
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugScaleAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
     goto :goto_0
 
-    .line 910
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugScaleAnimator:Landroid/animation/ObjectAnimator;
 
@@ -2616,14 +2295,12 @@
 
     goto :goto_1
 
-    .line 898
     :array_0
     .array-data 4
         0x3f800000    # 1.0f
         0x3f8ccccd    # 1.1f
     .end array-data
 
-    .line 900
     :array_1
     .array-data 4
         0x3f800000    # 1.0f
@@ -2634,23 +2311,18 @@
 .method private reportMomentStarted()V
     .locals 3
 
-    .prologue
-    .line 308
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 309
     if-eqz v0, :cond_0
 
-    .line 310
     const/4 v1, 0x0
 
     sget-object v2, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->ikoMoment:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/util/log/IkoLogUtils;->reportIkoMomentStarted(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;)V
 
-    .line 312
     :cond_0
     return-void
 .end method
@@ -2658,13 +2330,10 @@
 .method private reportPugImpressionStarted(I)V
     .locals 3
 
-    .prologue
-    .line 709
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    .line 711
     :try_start_0
     const-string/jumbo v1, "notificationId"
 
@@ -2676,7 +2345,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 712
     const-string/jumbo v1, "expectedVideoOffset"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->currentInteractiveMoment:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;
@@ -2687,14 +2355,12 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 713
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 714
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -2703,16 +2369,13 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 719
     :cond_0
     :goto_0
     return-void
 
-    .line 716
     :catch_0
     move-exception v0
 
-    .line 717
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
     goto :goto_0
@@ -2721,19 +2384,16 @@
 .method private revealCompleted(Z)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
     const/4 v1, 0x0
 
-    .line 1099
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1100
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2756,11 +2416,9 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1102
     :cond_0
     if-eqz p1, :cond_2
 
-    .line 1104
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -2769,14 +2427,12 @@
 
     move-result v2
 
-    .line 1105
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isNavigationBarBelowContent()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 1106
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -2785,50 +2441,40 @@
 
     move-result v0
 
-    .line 1108
     :goto_0
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->closeButton:Lcom/netflix/mediaclient/android/widget/IconFontTextView;
 
     invoke-virtual {v3, v1, v2, v0, v1}, Lcom/netflix/mediaclient/android/widget/IconFontTextView;->setPadding(IIII)V
 
-    .line 1110
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentScreen:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;->prepareAndStart()Z
 
     move-result v0
 
-    .line 1111
     if-nez v0, :cond_1
 
-    .line 1112
     invoke-virtual {p0, v4}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->showHideLoadingProgress(Z)V
 
-    .line 1120
     :cond_1
     :goto_1
     iput-boolean p1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentStarted:Z
 
-    .line 1121
     return-void
 
-    .line 1115
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->ikoContainer:Landroid/widget/RelativeLayout;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/gfx/AnimationUtils;->startViewAppearanceAnimation(Landroid/view/View;Z)Landroid/view/ViewPropertyAnimator;
 
-    .line 1116
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->progressBar:Landroid/widget/ProgressBar;
 
     invoke-static {v0, v4}, Lcom/netflix/mediaclient/util/gfx/AnimationUtils;->startViewAppearanceAnimation(Landroid/view/View;Z)Landroid/view/ViewPropertyAnimator;
 
-    .line 1117
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugImageView:Landroid/widget/ImageView;
 
     invoke-static {v0, v4}, Lcom/netflix/mediaclient/util/gfx/AnimationUtils;->startViewAppearanceAnimation(Landroid/view/View;Z)Landroid/view/ViewPropertyAnimator;
 
-    .line 1118
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->currentInteractiveMoment:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;
@@ -2844,25 +2490,20 @@
 .method private showNavBar()V
     .locals 1
 
-    .prologue
-    .line 1055
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isActivityInvalid()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1060
     :goto_0
     return-void
 
-    .line 1058
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->showNavigationBar()V
 
-    .line 1059
     const/16 v0, 0x12c
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->clearPanel(I)V
@@ -2873,23 +2514,18 @@
 .method private showPug(Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;I)V
     .locals 5
 
-    .prologue
-    .line 644
     if-nez p1, :cond_1
 
-    .line 645
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "Request to showPug unlocking animation on an null collection item."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 706
     :cond_0
     :goto_0
     return-void
 
-    .line 649
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -2897,7 +2533,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 650
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2934,7 +2569,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 653
     :cond_2
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isManagerReady()Z
 
@@ -2942,14 +2576,12 @@
 
     if-nez v0, :cond_3
 
-    .line 654
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "Resources not available to showPug moment. Skipping for now..."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 657
     :cond_3
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isBottomPanelVisible()Z
 
@@ -2957,7 +2589,6 @@
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->adjustPugLayout(Z)V
 
-    .line 659
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->currentInteractiveMoment:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;
 
     if-eqz v0, :cond_4
@@ -2966,23 +2597,19 @@
 
     if-eq v0, p1, :cond_4
 
-    .line 660
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->hide()V
 
-    .line 663
     :cond_4
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentBackgrounded:Z
 
     if-eqz v0, :cond_5
 
-    .line 664
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 665
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "showPug: momentBackgrounded = true"
@@ -2991,13 +2618,11 @@
 
     goto :goto_0
 
-    .line 670
     :cond_5
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isShowingInteractiveMoment:Z
 
     if-eqz v0, :cond_6
 
-    .line 671
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "Already showing interactive moment. Ignore request."
@@ -3006,7 +2631,6 @@
 
     goto :goto_0
 
-    .line 675
     :cond_6
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;->getSceneTriggerStartMS()Ljava/lang/Integer;
 
@@ -3020,14 +2644,12 @@
 
     add-int/lit16 v0, v0, -0x29a
 
-    .line 677
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_7
 
-    .line 678
     const-string/jumbo v1, "WPInteractiveMomentsManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3050,31 +2672,26 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 680
     :cond_7
     const/16 v1, 0x7d0
 
     if-gt v0, v1, :cond_8
 
-    .line 681
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->hide()V
 
     goto/16 :goto_0
 
-    .line 685
     :cond_8
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->preparePugView(Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;)Z
 
     move-result v1
 
-    .line 686
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_9
 
-    .line 687
     const-string/jumbo v2, "WPInteractiveMomentsManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3097,16 +2714,13 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 689
     :cond_9
     if-eqz v1, :cond_a
 
-    .line 690
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isShowingInteractiveMoment:Z
 
-    .line 691
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;->isPugAutoOptIn()Ljava/lang/Boolean;
 
     move-result-object v1
@@ -3117,48 +2731,38 @@
 
     iput-boolean v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isPugAutoOptIn:Z
 
-    .line 692
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->currentInteractiveMoment:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;
 
-    .line 694
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getView()Landroid/view/View;
 
     move-result-object v1
 
-    .line 695
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentScreen:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->currentInteractiveMoment:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;
 
     invoke-virtual {v2, v3, v1}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;->setInteractiveMomentAndFindViewsForMoment(Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;Landroid/view/View;)V
 
-    .line 697
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->wpContainer:Landroid/widget/RelativeLayout;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 698
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->showNavBar()V
 
-    .line 699
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->playPugIntro(I)V
 
-    .line 700
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->loadMomentScreenResources()V
 
-    .line 701
     invoke-direct {p0, p2}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->reportPugImpressionStarted(I)V
 
-    .line 702
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->reportMomentStarted()V
 
     goto/16 :goto_0
 
-    .line 704
     :cond_a
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->hide()V
 
@@ -3168,46 +2772,38 @@
 .method private startCachingResources()V
     .locals 2
 
-    .prologue
-    .line 1259
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1260
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "startCachingResources for interactive moments"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1263
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->data:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;
 
     if-nez v0, :cond_2
 
-    .line 1264
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 1265
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "loadSoundPoolResources: data is null"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1279
     :cond_1
     return-void
 
-    .line 1270
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->data:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;
 
@@ -3215,7 +2811,6 @@
 
     move-result-object v0
 
-    .line 1271
     if-eqz v0, :cond_1
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -3224,19 +2819,16 @@
 
     if-lez v1, :cond_1
 
-    .line 1274
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->cachingResourcesComplete:Z
 
-    .line 1275
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
 
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->resetCounters(I)V
 
-    .line 1276
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -3254,7 +2846,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 1277
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->cacheResources(Ljava/lang/String;)V
 
     goto :goto_0
@@ -3263,21 +2854,18 @@
 .method private startPugIntroAnimation(I)V
     .locals 7
 
-    .prologue
     const/16 v1, 0x1f4
 
     const/4 v6, 0x1
 
     const/4 v2, 0x0
 
-    .line 847
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 848
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3300,11 +2888,9 @@
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 850
     :cond_0
     invoke-direct {p0, v6}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugPulsateAnimation(Z)V
 
-    .line 852
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->progressBar:Landroid/widget/ProgressBar;
 
     const-string/jumbo v4, "progress"
@@ -3328,26 +2914,22 @@
 
     move-result-object v0
 
-    .line 856
     new-instance v1, Landroid/animation/AnimatorSet;
 
     invoke-direct {v1}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugProgressAnimatorSet:Landroid/animation/AnimatorSet;
 
-    .line 857
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugProgressAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v1, v0}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 858
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugProgressAnimatorSet:Landroid/animation/AnimatorSet;
 
     int-to-long v2, p1
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 859
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugProgressAnimatorSet:Landroid/animation/AnimatorSet;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager$6;
@@ -3356,48 +2938,40 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 871
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugProgressAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 872
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->playbackPaused:Z
 
     if-eqz v0, :cond_1
 
-    .line 873
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugProgressAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->pause()V
 
-    .line 876
     :cond_1
     return-void
 
     :cond_2
     move v0, v2
 
-    .line 852
     goto :goto_0
 .end method
 
 .method private startRevealScaleAnimation(Z)V
     .locals 6
 
-    .prologue
     const/4 v5, 0x1
 
     const/4 v4, 0x0
 
-    .line 964
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 965
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3420,13 +2994,11 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 967
     :cond_0
     if-eqz p1, :cond_2
 
     iget v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugRevealScale:F
 
-    .line 968
     :goto_0
     sget-object v1, Landroid/view/View;->SCALE_X:Landroid/util/Property;
 
@@ -3438,7 +3010,6 @@
 
     move-result-object v1
 
-    .line 970
     sget-object v2, Landroid/view/View;->SCALE_Y:Landroid/util/Property;
 
     new-array v3, v5, [F
@@ -3449,7 +3020,6 @@
 
     move-result-object v0
 
-    .line 973
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->revealAnimator:Landroid/animation/ObjectAnimator;
 
     if-eqz v2, :cond_1
@@ -3462,17 +3032,14 @@
 
     if-eqz v2, :cond_1
 
-    .line 974
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->revealAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v2}, Landroid/animation/ObjectAnimator;->removeAllListeners()V
 
-    .line 975
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->revealAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v2}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 978
     :cond_1
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugRevealView:Landroid/view/View;
 
@@ -3490,7 +3057,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->revealAnimator:Landroid/animation/ObjectAnimator;
 
-    .line 981
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->revealAnimator:Landroid/animation/ObjectAnimator;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager$7;
@@ -3499,29 +3065,24 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 993
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->revealAnimator:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v2, 0x29a
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 994
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->revealAnimator:Landroid/animation/ObjectAnimator;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->quitOutInterpolator:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 995
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->revealAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 996
     return-void
 
-    .line 967
     :cond_2
     const/high16 v0, 0x3f800000    # 1.0f
 
@@ -3533,41 +3094,33 @@
 .method protected cachingResourcesComplete()V
     .locals 3
 
-    .prologue
-    .line 587
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 588
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "cachingResourcesComplete: callback received for caching resources completion"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 592
     :cond_0
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->loadSoundPoolResourcesBg()V
 
-    .line 593
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->loadPugResourcesBg()V
 
-    .line 594
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->cachingResourcesComplete:Z
 
-    .line 595
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 596
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3592,16 +3145,13 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 598
     :cond_1
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isShowingInteractiveMoment:Z
 
     if-eqz v0, :cond_2
 
-    .line 599
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->loadMomentScreenResources()V
 
-    .line 602
     :cond_2
     return-void
 .end method
@@ -3609,11 +3159,8 @@
 .method public getBitmapFromCache(Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPImage;Z)Landroid/graphics/Bitmap;
     .locals 2
 
-    .prologue
-    .line 337
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertNotOnMain()Z
 
-    .line 339
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPImage;->getUrl()Ljava/lang/String;
@@ -3626,7 +3173,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 340
     :cond_0
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
@@ -3634,10 +3180,8 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 341
     const/4 v0, 0x0
 
-    .line 344
     :goto_0
     return-object v0
 
@@ -3656,19 +3200,15 @@
 .method public hide()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 265
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isShowingInteractiveMoment:Z
 
     if-nez v0, :cond_0
 
-    .line 276
     :goto_0
     return-void
 
-    .line 268
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -3676,27 +3216,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 269
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "hide: request to close moment"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 271
     :cond_1
     iput-boolean v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isShowingInteractiveMoment:Z
 
-    .line 272
     iput-boolean v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugSelected:Z
 
-    .line 273
     invoke-virtual {p0, v2}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->showHideLoadingProgress(Z)V
 
-    .line 274
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->releaseResources()V
 
-    .line 275
     invoke-direct {p0, v2}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->animateReveal(Z)V
 
     goto :goto_0
@@ -3705,33 +3239,26 @@
 .method public init(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)V
     .locals 6
 
-    .prologue
     const/4 v5, 0x0
 
-    .line 116
     if-nez p1, :cond_0
 
-    .line 117
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "Player fragment is null. This should not happen"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 163
     :goto_0
     return-void
 
-    .line 120
     :cond_0
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
-    .line 121
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getView()Landroid/view/View;
 
     move-result-object v1
 
-    .line 123
     const v0, 0x7f0f018b
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -3742,12 +3269,10 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->ikoContainer:Landroid/widget/RelativeLayout;
 
-    .line 124
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->ikoContainer:Landroid/widget/RelativeLayout;
 
     if-nez v0, :cond_1
 
-    .line 125
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "No interactive moments view container. Exiting the decorator."
@@ -3756,7 +3281,6 @@
 
     goto :goto_0
 
-    .line 129
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->ikoContainer:Landroid/widget/RelativeLayout;
 
@@ -3766,31 +3290,26 @@
 
     if-lez v0, :cond_3
 
-    .line 130
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 131
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v2, "init: word party container already present, removing all views."
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 133
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->ikoContainer:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0}, Landroid/widget/RelativeLayout;->removeAllViews()V
 
-    .line 136
     :cond_3
     iput-boolean v5, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->hasInteractiveMoments:Z
 
-    .line 137
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getNetflixActivity()Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     move-result-object v0
@@ -3807,10 +3326,8 @@
 
     invoke-virtual {v0, v2, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 140
     invoke-direct {p0, v1}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->findAndConfigureViews(Landroid/view/View;)V
 
-    .line 142
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -3821,7 +3338,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 143
     iget v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->bottomPanelHeight:I
 
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getActivity()Landroid/app/Activity;
@@ -3836,7 +3352,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->bottomPanelHeight:I
 
-    .line 145
     :cond_4
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getResources()Landroid/content/res/Resources;
 
@@ -3848,7 +3363,6 @@
 
     move-result v0
 
-    .line 147
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -3859,7 +3373,6 @@
 
     iput v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->deviceWidth:I
 
-    .line 149
     iget v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->deviceWidth:I
 
     div-int v0, v1, v0
@@ -3872,14 +3385,12 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->pugRevealScale:F
 
-    .line 151
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    .line 152
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3904,7 +3415,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 155
     :cond_5
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getNetflixActivity()Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
@@ -3916,33 +3426,28 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->svcManager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
-    .line 156
     new-instance v0, Lcom/netflix/mediaclient/ui/iko/SoundPoolManager;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/ui/iko/SoundPoolManager;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->soundPoolManager:Lcom/netflix/mediaclient/ui/iko/SoundPoolManager;
 
-    .line 157
     invoke-static {}, Lcom/netflix/mediaclient/ui/iko/wordparty/WPConstants;->getQuintOutInterpolator()Landroid/view/animation/Interpolator;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->quitOutInterpolator:Landroid/view/animation/Interpolator;
 
-    .line 158
     new-instance v0, Landroid/view/animation/AccelerateDecelerateInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->interpolator:Landroid/view/animation/Interpolator;
 
-    .line 160
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->playPauseListener:Lcom/netflix/mediaclient/ui/player/PlayPauseListener;
 
     invoke-virtual {p1, v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->addPlayPauseListener(Lcom/netflix/mediaclient/ui/player/PlayPauseListener;)V
 
-    .line 162
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -3955,8 +3460,6 @@
 .method public isManagerReady()Z
     .locals 1
 
-    .prologue
-    .line 260
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->areResourcesCached()Z
 
     move-result v0
@@ -3967,11 +3470,8 @@
 .method public isNavigationBarBelowContent()Z
     .locals 2
 
-    .prologue
-    .line 1124
     const/4 v0, 0x1
 
-    .line 1125
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     if-eqz v1, :cond_0
@@ -3984,10 +3484,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 1126
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
-    .line 1127
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getNetflixActivity()Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     move-result-object v0
@@ -3996,7 +3494,6 @@
 
     move-result v0
 
-    .line 1129
     :cond_0
     return v0
 .end method
@@ -4004,57 +3501,47 @@
 .method public onDestroy()V
     .locals 3
 
-    .prologue
-    .line 566
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 567
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "onDestroy() called for fragment"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 570
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     if-eqz v0, :cond_1
 
-    .line 571
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->playPauseListener:Lcom/netflix/mediaclient/ui/player/PlayPauseListener;
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->removePlayPauseListener(Lcom/netflix/mediaclient/ui/player/PlayPauseListener;)V
 
-    .line 574
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentScreen:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     if-eqz v0, :cond_2
 
-    .line 575
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentScreen:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;->onDestroy()V
 
-    .line 578
     :cond_2
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->cleanUpResources()V
 
-    .line 579
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    .line 580
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -4065,7 +3552,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/util/log/IkoLogUtils;->reportIkoModeEnded(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;Lcom/netflix/mediaclient/service/logging/client/model/UIError;)V
 
-    .line 583
     :cond_3
     return-void
 .end method
@@ -4073,21 +3559,16 @@
 .method public onMomentsFetched(Lcom/netflix/model/leafs/InteractivePlaybackMoments;)V
     .locals 4
 
-    .prologue
-    .line 179
     if-eqz p1, :cond_0
 
-    .line 180
     invoke-virtual {p1}, Lcom/netflix/model/leafs/InteractivePlaybackMoments;->getData()Lcom/netflix/mediaclient/ui/iko/model/InteractiveMomentsModel;
 
     move-result-object v0
 
-    .line 181
     if-eqz v0, :cond_1
 
     const-string/jumbo v1, "wordparty"
 
-    .line 182
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/model/InteractiveMomentsModel;->getType()Ljava/lang/String;
 
     move-result-object v2
@@ -4098,19 +3579,16 @@
 
     if-nez v1, :cond_1
 
-    .line 183
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "Interactive data is null or of wrong type."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 222
     :cond_0
     :goto_0
     return-void
 
-    .line 187
     :cond_1
     if-eqz v0, :cond_2
 
@@ -4118,7 +3596,6 @@
 
     if-nez v1, :cond_3
 
-    .line 189
     :cond_2
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
@@ -4128,7 +3605,6 @@
 
     goto :goto_0
 
-    .line 193
     :cond_3
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->getContext()Landroid/content/Context;
 
@@ -4136,7 +3612,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 194
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -4147,13 +3622,11 @@
 
     invoke-static {v1, v2, v3}, Lcom/netflix/mediaclient/util/log/IkoLogUtils;->reportIkoModeStarted(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;)V
 
-    .line 196
     :cond_4
     check-cast v0, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->data:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;
 
-    .line 198
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->data:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;->getMoments()Ljava/util/List;
@@ -4162,7 +3635,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->interactiveMoments:Ljava/util/List;
 
-    .line 199
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->interactiveMoments:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -4175,12 +3647,10 @@
 
     if-nez v0, :cond_0
 
-    .line 200
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->hasInteractiveMoments:Z
 
-    .line 201
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->interactiveMoments:Ljava/util/List;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager$2;
@@ -4189,7 +3659,6 @@
 
     invoke-static {v0, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 212
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->interactiveMoments:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -4210,10 +3679,8 @@
 
     check-cast v0, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;
 
-    .line 213
     if-eqz v0, :cond_5
 
-    .line 214
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentsDisplayTimeList:Ljava/util/List;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;->getPugStartTimeMS()Ljava/lang/Integer;
@@ -4222,7 +3689,6 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 215
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentsDisplayTimeList:Ljava/util/List;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;->getSceneTriggerEndMS()Ljava/lang/Integer;
@@ -4233,7 +3699,6 @@
 
     goto :goto_1
 
-    .line 218
     :cond_6
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->startCachingResources()V
 
@@ -4243,22 +3708,18 @@
 .method public onPause()V
     .locals 2
 
-    .prologue
-    .line 462
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 463
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "onPause() called for fragment"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 465
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->urlToMediaPlayerMap:Ljava/util/HashMap;
 
@@ -4272,7 +3733,6 @@
 
     if-nez v0, :cond_2
 
-    .line 466
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->urlToMediaPlayerMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -4297,26 +3757,21 @@
 
     check-cast v0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;
 
-    .line 467
     if-eqz v0, :cond_1
 
-    .line 468
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->pausePlayback()V
 
     goto :goto_0
 
-    .line 473
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->soundPoolManager:Lcom/netflix/mediaclient/ui/iko/SoundPoolManager;
 
     if-eqz v0, :cond_3
 
-    .line 474
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->soundPoolManager:Lcom/netflix/mediaclient/ui/iko/SoundPoolManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/SoundPoolManager;->autoPause()V
 
-    .line 477
     :cond_3
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentStarted:Z
 
@@ -4326,23 +3781,19 @@
 
     if-eqz v0, :cond_4
 
-    .line 478
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentScreen:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;->onPause()V
 
-    .line 481
     :cond_4
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isShowingInteractiveMoment:Z
 
     if-eqz v0, :cond_5
 
-    .line 482
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;->canceled:Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->reportMomentEnded(Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;)V
 
-    .line 484
     :cond_5
     return-void
 .end method
@@ -4350,31 +3801,25 @@
 .method public onResume()V
     .locals 2
 
-    .prologue
-    .line 488
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 489
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "onResume() called for fragment"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 492
     :cond_0
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isShowingInteractiveMoment:Z
 
     if-eqz v0, :cond_1
 
-    .line 493
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->reportMomentStarted()V
 
-    .line 496
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->urlToMediaPlayerMap:Ljava/util/HashMap;
 
@@ -4388,7 +3833,6 @@
 
     if-nez v0, :cond_3
 
-    .line 497
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->urlToMediaPlayerMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -4413,26 +3857,21 @@
 
     check-cast v0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;
 
-    .line 498
     if-eqz v0, :cond_2
 
-    .line 499
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->resumePlayback()Z
 
     goto :goto_0
 
-    .line 504
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->soundPoolManager:Lcom/netflix/mediaclient/ui/iko/SoundPoolManager;
 
     if-eqz v0, :cond_4
 
-    .line 505
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->soundPoolManager:Lcom/netflix/mediaclient/ui/iko/SoundPoolManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/SoundPoolManager;->autoResume()V
 
-    .line 508
     :cond_4
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentStarted:Z
 
@@ -4442,12 +3881,10 @@
 
     if-eqz v0, :cond_5
 
-    .line 509
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentScreen:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;->onResume()V
 
-    .line 511
     :cond_5
     return-void
 .end method
@@ -4455,54 +3892,44 @@
 .method public onStart()V
     .locals 2
 
-    .prologue
-    .line 550
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 551
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "onStart() called for fragment"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 553
     :cond_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentBackgrounded:Z
 
-    .line 554
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->soundPoolManager:Lcom/netflix/mediaclient/ui/iko/SoundPoolManager;
 
     if-nez v0, :cond_1
 
-    .line 555
     new-instance v0, Lcom/netflix/mediaclient/ui/iko/SoundPoolManager;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/ui/iko/SoundPoolManager;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->soundPoolManager:Lcom/netflix/mediaclient/ui/iko/SoundPoolManager;
 
-    .line 556
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->loadSoundPoolResourcesBg()V
 
-    .line 559
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentScreen:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     if-eqz v0, :cond_2
 
-    .line 560
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentScreen:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;->onStart()V
 
-    .line 562
     :cond_2
     return-void
 .end method
@@ -4510,31 +3937,25 @@
 .method public onStop()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 515
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 516
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "onStop() called for fragment"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 518
     :cond_0
     iput-boolean v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentBackgrounded:Z
 
-    .line 519
     iput-boolean v2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->playerBackgrounded:Z
 
-    .line 521
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentStarted:Z
 
     if-eqz v0, :cond_1
@@ -4543,12 +3964,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 522
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentScreen:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;->onStop()V
 
-    .line 525
     :cond_1
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isShowingInteractiveMoment:Z
 
@@ -4558,45 +3977,35 @@
 
     if-nez v0, :cond_2
 
-    .line 526
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->hidePug()V
 
-    .line 529
     :cond_2
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->releaseResources()V
 
-    .line 530
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->releaseSoundPool()V
 
-    .line 531
     return-void
 .end method
 
 .method public onVideoDetailsFetched(Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;)V
     .locals 0
 
-    .prologue
-    .line 175
     return-void
 .end method
 
 .method public playAudio(Ljava/lang/String;FZLcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager$PlaybackCompleteListener;)V
     .locals 3
 
-    .prologue
-    .line 387
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentBackgrounded:Z
 
     if-eqz v0, :cond_1
 
-    .line 388
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 389
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4619,12 +4028,10 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 394
     :cond_0
     :goto_0
     return-void
 
-    .line 393
     :cond_1
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->playMediaPlayerAudio(Ljava/lang/String;FZLcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager$PlaybackCompleteListener;)V
 
@@ -4634,51 +4041,41 @@
 .method public playBgAudio()V
     .locals 4
 
-    .prologue
-    .line 351
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->currentInteractiveMoment:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;
 
     if-nez v0, :cond_1
 
-    .line 352
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 353
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "playBgAudio: cannot play audio - currentInteractiveMoment is null"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 373
     :cond_0
     :goto_0
     return-void
 
-    .line 357
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->currentInteractiveMoment:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;
 
-    .line 358
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;->getBackgroundAudio()Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPAudio;
 
     move-result-object v0
 
-    .line 359
     if-nez v0, :cond_2
 
-    .line 360
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 361
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "playBgAudio: moment getBackgroundAudio returned null"
@@ -4687,27 +4084,23 @@
 
     goto :goto_0
 
-    .line 365
     :cond_2
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPAudio;->getUrl()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 366
     invoke-static {v1}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 367
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 368
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "playBgAudio: moment background audio url is empty or null"
@@ -4716,7 +4109,6 @@
 
     goto :goto_0
 
-    .line 372
     :cond_3
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPAudio;->getVolume()F
 
@@ -4734,90 +4126,72 @@
 .method public playBoingSound()V
     .locals 2
 
-    .prologue
-    .line 407
     iget v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->tutorialBoingSoundId:I
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-direct {p0, v0, v1}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->playSoundPoolId(IF)V
 
-    .line 408
     return-void
 .end method
 
 .method public playItemSelectSound()V
     .locals 2
 
-    .prologue
-    .line 414
     iget v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->itemSelectSoundId:I
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-direct {p0, v0, v1}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->playSoundPoolId(IF)V
 
-    .line 415
     return-void
 .end method
 
 .method public playPanelShuffleSound()V
     .locals 2
 
-    .prologue
-    .line 400
     iget v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->panelShuffleSoundId:I
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-direct {p0, v0, v1}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->playSoundPoolId(IF)V
 
-    .line 401
     return-void
 .end method
 
 .method public playVictorySound()V
     .locals 2
 
-    .prologue
-    .line 421
     iget v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->victorySoundId:I
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-direct {p0, v0, v1}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->playSoundPoolId(IF)V
 
-    .line 422
     return-void
 .end method
 
 .method public playWiggleSound()V
     .locals 2
 
-    .prologue
-    .line 428
     iget v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->itemWiggleSoundId:I
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-direct {p0, v0, v1}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->playSoundPoolId(IF)V
 
-    .line 429
     return-void
 .end method
 
 .method public playerOverlayVisibility(Z)V
     .locals 3
 
-    .prologue
-    .line 248
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 249
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4840,55 +4214,45 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 251
     :cond_0
     iput-boolean p1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->bottomPanelVisible:Z
 
-    .line 252
     if-eqz p1, :cond_1
 
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isShowingInteractiveMoment:Z
 
     if-eqz v0, :cond_1
 
-    .line 253
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->startScreenUpdateTask()V
 
-    .line 255
     :cond_1
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->adjustPugLayout(Z)V
 
-    .line 256
     return-void
 .end method
 
 .method public releaseResources()V
     .locals 2
 
-    .prologue
-    .line 435
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 436
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "releaseResources: all MediaPlayerWrapper instances"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 438
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->urlToMediaPlayerMap:Ljava/util/HashMap;
 
     if-eqz v0, :cond_2
 
-    .line 439
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->urlToMediaPlayerMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -4913,15 +4277,12 @@
 
     check-cast v0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;
 
-    .line 440
     if-eqz v0, :cond_1
 
-    .line 441
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->releaseMediaPlayer()V
 
     goto :goto_0
 
-    .line 445
     :cond_2
     return-void
 .end method
@@ -4929,38 +4290,31 @@
 .method public releaseSoundPool()V
     .locals 2
 
-    .prologue
-    .line 451
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 452
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "releaseSoundPool: SoundPool resources"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 454
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->soundPoolManager:Lcom/netflix/mediaclient/ui/iko/SoundPoolManager;
 
     if-eqz v0, :cond_1
 
-    .line 455
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->soundPoolManager:Lcom/netflix/mediaclient/ui/iko/SoundPoolManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/SoundPoolManager;->release()V
 
-    .line 456
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->soundPoolManager:Lcom/netflix/mediaclient/ui/iko/SoundPoolManager;
 
-    .line 458
     :cond_1
     return-void
 .end method
@@ -4968,8 +4322,6 @@
 .method public reportCommandEvent(Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;)V
     .locals 3
 
-    .prologue
-    .line 315
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     if-eqz v0, :cond_0
@@ -4982,7 +4334,6 @@
 
     if-nez v0, :cond_2
 
-    .line 316
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -4990,19 +4341,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 317
     const-string/jumbo v0, "WPInteractiveMomentsManager"
 
     const-string/jumbo v1, "reportCommanEvent: Fragment is either null or invalid."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 323
     :cond_1
     :goto_0
     return-void
 
-    .line 321
     :cond_2
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->getContext()Landroid/content/Context;
 
@@ -5036,19 +4384,14 @@
 .method public reportIkoNotificationImpressionEnded()V
     .locals 1
 
-    .prologue
-    .line 879
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 880
     if-eqz v0, :cond_0
 
-    .line 881
     invoke-static {v0}, Lcom/netflix/mediaclient/util/log/UIViewLogUtils;->reportIkoNotificationImpressionEnded(Landroid/content/Context;)V
 
-    .line 883
     :cond_0
     return-void
 .end method
@@ -5056,54 +4399,43 @@
 .method public reportMomentEnded(Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;)V
     .locals 7
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 284
-    .line 286
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentScreen:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     if-eqz v0, :cond_2
 
-    .line 287
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentScreen:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;->getCurrentStateNameForLogging()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 290
     :goto_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 292
     if-eqz v0, :cond_0
 
-    .line 295
     const/4 v5, -0x1
 
-    .line 297
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->currentInteractiveMoment:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;
 
     if-eqz v1, :cond_1
 
-    .line 298
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->currentInteractiveMoment:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;->getMomentId()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 299
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->currentInteractiveMoment:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;->getSceneType()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 300
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->currentInteractiveMoment:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;->getMomentExpectedVideoOffset()I
@@ -5113,10 +4445,8 @@
     :goto_1
     move-object v1, p1
 
-    .line 303
     invoke-static/range {v0 .. v6}, Lcom/netflix/mediaclient/util/log/IkoLogUtils;->reportIkoMomentEnded(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;Lcom/netflix/mediaclient/service/logging/client/model/UIError;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 305
     :cond_0
     return-void
 
@@ -5136,26 +4466,20 @@
 .method public setActiveExit(Z)V
     .locals 0
 
-    .prologue
-    .line 326
     iput-boolean p1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->activeExit:Z
 
-    .line 327
     return-void
 .end method
 
 .method public setTimelineProgress(IZ)V
     .locals 2
 
-    .prologue
-    .line 226
     if-eqz p2, :cond_3
 
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->hasInteractiveMoments:Z
 
     if-eqz v0, :cond_3
 
-    .line 227
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->momentsDisplayTimeList:Ljava/util/List;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5166,10 +4490,8 @@
 
     move-result v0
 
-    .line 228
     if-ltz v0, :cond_1
 
-    .line 229
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->interactiveMoments:Ljava/util/List;
 
     div-int/lit8 v0, v0, 0x2
@@ -5182,26 +4504,21 @@
 
     invoke-direct {p0, v0, p1}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->showPug(Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;I)V
 
-    .line 243
     :cond_0
     :goto_0
     iput-boolean p2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isSeeking:Z
 
-    .line 244
     return-void
 
-    .line 231
     :cond_1
     mul-int/lit8 v0, v0, -0x1
 
     add-int/lit8 v0, v0, -0x1
 
-    .line 232
     rem-int/lit8 v1, v0, 0x2
 
     if-eqz v1, :cond_2
 
-    .line 233
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->interactiveMoments:Ljava/util/List;
 
     div-int/lit8 v0, v0, 0x2
@@ -5216,19 +4533,16 @@
 
     goto :goto_0
 
-    .line 235
     :cond_2
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->hide()V
 
     goto :goto_0
 
-    .line 239
     :cond_3
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->isSeeking:Z
 
     if-eq v0, p2, :cond_0
 
-    .line 240
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->hidePug()V
 
     goto :goto_0
@@ -5237,12 +4551,9 @@
 .method public showHideLoadingProgress(Z)V
     .locals 1
 
-    .prologue
-    .line 1360
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->loadingProgressBar:Landroid/widget/ProgressBar;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibleOrGone(Landroid/view/View;Z)V
 
-    .line 1361
     return-void
 .end method

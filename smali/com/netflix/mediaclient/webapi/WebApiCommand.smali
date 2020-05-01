@@ -85,14 +85,10 @@
 .method protected constructor <init>(Ljava/lang/String;Lcom/netflix/mediaclient/webapi/AuthorizationCredentials;Lcom/netflix/mediaclient/webapi/CommonRequestParameters;)V
     .locals 2
 
-    .prologue
-    .line 122
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 124
     if-nez p2, :cond_0
 
-    .line 125
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Netflix id or secure netflix id is null!"
@@ -101,14 +97,11 @@
 
     throw v0
 
-    .line 127
     :cond_0
     iput-object p2, p0, Lcom/netflix/mediaclient/webapi/WebApiCommand;->credentials:Lcom/netflix/mediaclient/webapi/AuthorizationCredentials;
 
-    .line 128
     iput-object p3, p0, Lcom/netflix/mediaclient/webapi/WebApiCommand;->commonRequestParameters:Lcom/netflix/mediaclient/webapi/CommonRequestParameters;
 
-    .line 129
     return-void
 .end method
 
@@ -124,26 +117,21 @@
         }
     .end annotation
 
-    .prologue
-    .line 312
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 313
     const-string/jumbo v0, "nf_rest"
 
     const-string/jumbo v1, "No cookies in response"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 329
     :cond_0
     return-void
 
-    .line 315
     :cond_1
     const/4 v0, 0x0
 
@@ -156,14 +144,12 @@
 
     if-ge v1, v0, :cond_0
 
-    .line 316
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 317
     const-string/jumbo v0, "nf_rest"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -190,7 +176,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 320
     :cond_2
     const-string/jumbo v2, "NetflixId"
 
@@ -210,7 +195,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 321
     iget-object v2, p0, Lcom/netflix/mediaclient/webapi/WebApiCommand;->credentials:Lcom/netflix/mediaclient/webapi/AuthorizationCredentials;
 
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -229,7 +213,6 @@
 
     iput-object v0, v2, Lcom/netflix/mediaclient/webapi/AuthorizationCredentials;->netflixId:Ljava/lang/String;
 
-    .line 324
     :cond_3
     const-string/jumbo v2, "SecureNetflixId"
 
@@ -249,7 +232,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 325
     iget-object v2, p0, Lcom/netflix/mediaclient/webapi/WebApiCommand;->credentials:Lcom/netflix/mediaclient/webapi/AuthorizationCredentials;
 
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -268,7 +250,6 @@
 
     iput-object v0, v2, Lcom/netflix/mediaclient/webapi/AuthorizationCredentials;->secureNetflixId:Ljava/lang/String;
 
-    .line 315
     :cond_4
     add-int/lit8 v0, v1, 0x1
 
@@ -280,29 +261,24 @@
 .method private dumpCookies(Lorg/apache/http/HttpResponse;)V
     .locals 8
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 338
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 341
     invoke-interface {p1}, Lorg/apache/http/HttpResponse;->getAllHeaders()[Lorg/apache/http/Header;
 
     move-result-object v2
 
-    .line 342
     if-eqz v2, :cond_1
 
     array-length v1, v2
 
     if-lez v1, :cond_1
 
-    .line 343
     const-string/jumbo v1, "nf_rest"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -327,7 +303,6 @@
 
     invoke-static {v1, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 344
     array-length v3, v2
 
     move v1, v0
@@ -337,7 +312,6 @@
 
     aget-object v4, v2, v1
 
-    .line 345
     const-string/jumbo v5, "nf_rest"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -360,7 +334,6 @@
 
     invoke-static {v5, v6}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 346
     if-eqz v4, :cond_0
 
     invoke-interface {v4}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
@@ -375,16 +348,13 @@
 
     if-eqz v4, :cond_0
 
-    .line 347
     add-int/lit8 v0, v0, 0x1
 
-    .line 344
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 351
     :cond_1
     const-string/jumbo v1, "nf_rest"
 
@@ -392,7 +362,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 354
     :cond_2
     const-string/jumbo v1, "nf_rest"
 
@@ -416,14 +385,12 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 355
     const-string/jumbo v0, "nf_rest"
 
     const-string/jumbo v1, "----------------------------------------"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 356
     const-string/jumbo v0, "nf_rest"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -450,15 +417,12 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 358
     invoke-interface {p1}, Lorg/apache/http/HttpResponse;->getEntity()Lorg/apache/http/HttpEntity;
 
     move-result-object v0
 
-    .line 359
     if-eqz v0, :cond_3
 
-    .line 360
     const-string/jumbo v1, "nf_rest"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -485,7 +449,6 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 363
     :cond_3
     return-void
 .end method
@@ -493,8 +456,6 @@
 .method public static getNetflixIdName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 598
     const-string/jumbo v0, "NetflixId"
 
     return-object v0
@@ -503,8 +464,6 @@
 .method public static getSecureNetflixIdName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 606
     const-string/jumbo v0, "SecureNetflixId"
 
     return-object v0
@@ -513,18 +472,14 @@
 .method private updateProperty(Lorg/apache/http/cookie/Cookie;Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 158
     invoke-interface {p1}, Lorg/apache/http/cookie/Cookie;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 159
     invoke-interface {p1}, Lorg/apache/http/cookie/Cookie;->getValue()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 160
     if-eqz p2, :cond_0
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -533,7 +488,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 161
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -541,7 +495,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 162
     const-string/jumbo v0, "nf_rest"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -564,12 +517,10 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 170
     :cond_1
     :goto_0
     return-object p2
 
-    .line 166
     :cond_2
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -577,7 +528,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 167
     const-string/jumbo v2, "nf_rest"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -604,7 +554,6 @@
 
     invoke-static {v2, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 169
     :cond_3
     const/4 v1, 0x1
 
@@ -612,7 +561,6 @@
 
     move-object p2, v0
 
-    .line 170
     goto :goto_0
 .end method
 
@@ -621,11 +569,8 @@
 .method protected addIfNotNull(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Boolean;)V
     .locals 2
 
-    .prologue
-    .line 589
     if-eqz p3, :cond_0
 
-    .line 590
     const/16 v0, 0x26
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -644,7 +589,6 @@
 
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 592
     :cond_0
     return-void
 .end method
@@ -652,11 +596,8 @@
 .method protected addIfNotNull(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 570
     if-eqz p3, :cond_0
 
-    .line 573
     const/16 v0, 0x26
 
     :try_start_0
@@ -684,16 +625,13 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 579
     :cond_0
     :goto_0
     return-void
 
-    .line 575
     :catch_0
     move-exception v0
 
-    .line 576
     const-string/jumbo v1, "nf_rest"
 
     const-string/jumbo v2, "Failed with encoding"
@@ -706,43 +644,36 @@
 .method protected checkStatus(ILjava/lang/String;)Z
     .locals 4
 
-    .prologue
     const/16 v2, 0xc8
 
     const/4 v0, 0x0
 
-    .line 278
     const/16 v1, 0x19a
 
     if-ne p1, v1, :cond_2
 
-    .line 279
     const-string/jumbo v0, "nf_rest"
 
     const-string/jumbo v1, "Received 410: Redirecting... "
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 280
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0, p2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 281
     const-string/jumbo v1, "host"
 
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 283
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 284
     const-string/jumbo v1, "nf_rest"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -765,23 +696,18 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 287
     :cond_0
     invoke-static {v0}, Lcom/netflix/mediaclient/webapi/HttpClientFactory;->setWebApiEndPoint(Ljava/lang/String;)V
 
-    .line 288
     const/4 v0, 0x1
 
-    .line 296
     :cond_1
     :goto_0
     return v0
 
-    .line 289
     :cond_2
     if-ne p1, v2, :cond_3
 
-    .line 290
     const-string/jumbo v1, "nf_rest"
 
     const-string/jumbo v2, "Response 200. All good"
@@ -790,7 +716,6 @@
 
     goto :goto_0
 
-    .line 292
     :cond_3
     if-le p1, v2, :cond_4
 
@@ -798,14 +723,12 @@
 
     if-gt p1, v1, :cond_4
 
-    .line 293
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 294
     const-string/jumbo v1, "nf_rest"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -830,7 +753,6 @@
 
     goto :goto_0
 
-    .line 298
     :cond_4
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -838,7 +760,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 299
     const-string/jumbo v0, "nf_rest"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -861,7 +782,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 301
     :cond_5
     new-instance v0, Lorg/apache/http/HttpException;
 
@@ -891,11 +811,8 @@
 .method protected doExecute()Ljava/lang/String;
     .locals 10
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 195
-    .line 200
     :try_start_0
     iget-object v0, p0, Lcom/netflix/mediaclient/webapi/WebApiCommand;->credentials:Lcom/netflix/mediaclient/webapi/AuthorizationCredentials;
 
@@ -911,16 +828,13 @@
 
     move-result-object v4
 
-    .line 201
     const/4 v2, 0x1
 
     move-object v3, v1
 
-    .line 202
     :goto_0
     if-eqz v2, :cond_a
 
-    .line 204
     :try_start_1
     iget v0, p0, Lcom/netflix/mediaclient/webapi/WebApiCommand;->count:I
 
@@ -928,7 +842,6 @@
 
     if-le v0, v1, :cond_0
 
-    .line 205
     new-instance v0, Lorg/apache/http/HttpException;
 
     const-string/jumbo v1, "Too many retries!"
@@ -939,7 +852,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 261
     :catchall_0
     move-exception v0
 
@@ -954,7 +866,6 @@
 
     throw v0
 
-    .line 207
     :cond_0
     :try_start_2
     iget v0, p0, Lcom/netflix/mediaclient/webapi/WebApiCommand;->count:I
@@ -963,24 +874,20 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/webapi/WebApiCommand;->count:I
 
-    .line 209
     invoke-virtual {p0}, Lcom/netflix/mediaclient/webapi/WebApiCommand;->getHttpMethod()Lorg/apache/http/client/methods/HttpUriRequest;
 
     move-result-object v6
 
-    .line 211
     invoke-virtual {p0}, Lcom/netflix/mediaclient/webapi/WebApiCommand;->getHeaders()[Landroid/util/Pair;
 
     move-result-object v7
 
-    .line 212
     if-eqz v7, :cond_4
 
     array-length v0, v7
 
     if-lez v0, :cond_4
 
-    .line 214
     const/4 v0, 0x0
 
     move v5, v0
@@ -990,14 +897,12 @@
 
     if-ge v5, v0, :cond_5
 
-    .line 215
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 216
     const-string/jumbo v1, "nf_rest"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1042,7 +947,6 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 218
     :cond_1
     aget-object v0, v7, v5
 
@@ -1056,7 +960,6 @@
 
     if-nez v0, :cond_3
 
-    .line 214
     :cond_2
     :goto_3
     add-int/lit8 v0, v5, 0x1
@@ -1065,7 +968,6 @@
 
     goto :goto_2
 
-    .line 221
     :cond_3
     aget-object v0, v7, v5
 
@@ -1083,7 +985,6 @@
 
     goto :goto_3
 
-    .line 225
     :cond_4
     const-string/jumbo v0, "nf_rest"
 
@@ -1091,7 +992,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 228
     :cond_5
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -1099,7 +999,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 229
     const-string/jumbo v0, "nf_rest"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1138,33 +1037,27 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 232
     :cond_6
     invoke-virtual {v4, v6}, Lorg/apache/http/impl/client/DefaultHttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
 
     move-result-object v0
 
-    .line 233
     invoke-interface {v0}, Lorg/apache/http/HttpResponse;->getEntity()Lorg/apache/http/HttpEntity;
 
     move-result-object v5
 
-    .line 234
     invoke-interface {v0}, Lorg/apache/http/HttpResponse;->getStatusLine()Lorg/apache/http/StatusLine;
 
     move-result-object v1
 
-    .line 236
     if-nez v1, :cond_7
 
-    .line 237
     const-string/jumbo v0, "nf_rest"
 
     const-string/jumbo v1, "Status is NULL. It should NOT happen!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string/jumbo v1, "Status is NULL. It should NOT happen!"
@@ -1173,20 +1066,17 @@
 
     throw v0
 
-    .line 240
     :cond_7
     invoke-interface {v1}, Lorg/apache/http/StatusLine;->getStatusCode()I
 
     move-result v6
 
-    .line 241
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v7
 
     if-eqz v7, :cond_8
 
-    .line 242
     const-string/jumbo v7, "nf_rest"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1237,10 +1127,8 @@
 
     invoke-static {v7, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 243
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/webapi/WebApiCommand;->dumpCookies(Lorg/apache/http/HttpResponse;)V
 
-    .line 246
     :cond_8
     invoke-virtual {v4}, Lorg/apache/http/impl/client/DefaultHttpClient;->getCookieStore()Lorg/apache/http/client/CookieStore;
 
@@ -1252,27 +1140,22 @@
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/webapi/WebApiCommand;->checkForCredentialUpdate(Ljava/util/List;)V
 
-    .line 248
     if-eqz v5, :cond_b
 
-    .line 249
     invoke-interface {v5}, Lorg/apache/http/HttpEntity;->getContent()Ljava/io/InputStream;
 
     move-result-object v0
 
-    .line 250
     invoke-static {v0}, Lcom/android/volley/toolbox/InputStreamUtil;->convertStreamToString(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 251
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_9
 
-    .line 252
     const-string/jumbo v0, "nf_rest"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1295,11 +1178,9 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 255
     :cond_9
     invoke-interface {v5}, Lorg/apache/http/HttpEntity;->consumeContent()V
 
-    .line 256
     invoke-virtual {p0, v6, v1}, Lcom/netflix/mediaclient/webapi/WebApiCommand;->checkStatus(ILjava/lang/String;)Z
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -1311,10 +1192,8 @@
 
     move-object v3, v1
 
-    .line 258
     goto/16 :goto_0
 
-    .line 261
     :cond_a
     invoke-virtual {v4}, Lorg/apache/http/impl/client/DefaultHttpClient;->getConnectionManager()Lorg/apache/http/conn/ClientConnectionManager;
 
@@ -1322,10 +1201,8 @@
 
     invoke-interface {v0}, Lorg/apache/http/conn/ClientConnectionManager;->shutdown()V
 
-    .line 264
     return-object v3
 
-    .line 261
     :catchall_1
     move-exception v0
 
@@ -1342,25 +1219,20 @@
 .method protected getBaseCmsBeaconUrl()Ljava/lang/StringBuilder;
     .locals 3
 
-    .prologue
-    .line 468
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 470
     invoke-virtual {p0}, Lcom/netflix/mediaclient/webapi/WebApiCommand;->isSecure()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 471
     const-string/jumbo v1, "https://"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 477
     :goto_0
     invoke-static {}, Lcom/netflix/mediaclient/webapi/HttpClientFactory;->getCmsBeaconApiEndPoint()Ljava/lang/String;
 
@@ -1368,29 +1240,23 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 479
     invoke-virtual {p0}, Lcom/netflix/mediaclient/webapi/WebApiCommand;->getCommandPath()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 480
     if-nez v1, :cond_1
 
-    .line 481
     const-string/jumbo v0, "nf_rest"
 
     const-string/jumbo v1, "Path is NULL!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 482
     const/4 v0, 0x0
 
-    .line 492
     :goto_1
     return-object v0
 
-    .line 473
     :cond_0
     const-string/jumbo v1, "http://"
 
@@ -1398,13 +1264,11 @@
 
     goto :goto_0
 
-    .line 485
     :cond_1
     invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 486
     const-string/jumbo v2, "/"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -1413,12 +1277,10 @@
 
     if-nez v2, :cond_2
 
-    .line 487
     const/16 v2, 0x2f
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 490
     :cond_2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1428,25 +1290,20 @@
 .method protected getBaseCustomerEventBeaconUrl()Ljava/lang/StringBuilder;
     .locals 3
 
-    .prologue
-    .line 504
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 506
     invoke-virtual {p0}, Lcom/netflix/mediaclient/webapi/WebApiCommand;->isSecure()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 507
     const-string/jumbo v1, "https://"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 513
     :goto_0
     invoke-static {}, Lcom/netflix/mediaclient/webapi/HttpClientFactory;->getCustomerEventBeaconApiEndPoint()Ljava/lang/String;
 
@@ -1454,29 +1311,23 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 515
     invoke-virtual {p0}, Lcom/netflix/mediaclient/webapi/WebApiCommand;->getCommandPath()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 516
     if-nez v1, :cond_1
 
-    .line 517
     const-string/jumbo v0, "nf_rest"
 
     const-string/jumbo v1, "Path is NULL!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 518
     const/4 v0, 0x0
 
-    .line 528
     :goto_1
     return-object v0
 
-    .line 509
     :cond_0
     const-string/jumbo v1, "http://"
 
@@ -1484,13 +1335,11 @@
 
     goto :goto_0
 
-    .line 521
     :cond_1
     invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 522
     const-string/jumbo v2, "/"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -1499,12 +1348,10 @@
 
     if-nez v2, :cond_2
 
-    .line 523
     const/16 v2, 0x2f
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 526
     :cond_2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1514,25 +1361,20 @@
 .method protected getBaseWebAPiUrl()Ljava/lang/StringBuilder;
     .locals 3
 
-    .prologue
-    .line 432
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 434
     invoke-virtual {p0}, Lcom/netflix/mediaclient/webapi/WebApiCommand;->isSecure()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 435
     const-string/jumbo v1, "https://"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 441
     :goto_0
     invoke-static {}, Lcom/netflix/mediaclient/webapi/HttpClientFactory;->getWebApiEndPoint()Ljava/lang/String;
 
@@ -1540,29 +1382,23 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 443
     invoke-virtual {p0}, Lcom/netflix/mediaclient/webapi/WebApiCommand;->getCommandPath()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 444
     if-nez v1, :cond_1
 
-    .line 445
     const-string/jumbo v0, "nf_rest"
 
     const-string/jumbo v1, "Path is NULL!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 446
     const/4 v0, 0x0
 
-    .line 456
     :goto_1
     return-object v0
 
-    .line 437
     :cond_0
     const-string/jumbo v1, "http://"
 
@@ -1570,13 +1406,11 @@
 
     goto :goto_0
 
-    .line 449
     :cond_1
     invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 450
     const-string/jumbo v2, "/"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -1585,12 +1419,10 @@
 
     if-nez v2, :cond_2
 
-    .line 451
     const/16 v2, 0x2f
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 454
     :cond_2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1603,8 +1435,6 @@
 .method public getCommonRequestParameters()Lcom/netflix/mediaclient/webapi/CommonRequestParameters;
     .locals 1
 
-    .prologue
-    .line 537
     iget-object v0, p0, Lcom/netflix/mediaclient/webapi/WebApiCommand;->commonRequestParameters:Lcom/netflix/mediaclient/webapi/CommonRequestParameters;
 
     return-object v0
@@ -1613,8 +1443,6 @@
 .method public getCredentials()Lcom/netflix/mediaclient/webapi/AuthorizationCredentials;
     .locals 1
 
-    .prologue
-    .line 546
     iget-object v0, p0, Lcom/netflix/mediaclient/webapi/WebApiCommand;->credentials:Lcom/netflix/mediaclient/webapi/AuthorizationCredentials;
 
     return-object v0
@@ -1633,8 +1461,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 181
     const/4 v0, 0x0
 
     new-array v0, v0, [Landroid/util/Pair;
@@ -1648,8 +1474,6 @@
 .method public getOuput()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 379
     const-string/jumbo v0, "json"
 
     return-object v0
@@ -1658,8 +1482,6 @@
 .method public getRouting()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 400
     const-string/jumbo v0, "reject"
 
     return-object v0
@@ -1668,8 +1490,6 @@
 .method protected getUrl()Ljava/lang/StringBuilder;
     .locals 1
 
-    .prologue
-    .line 420
     invoke-virtual {p0}, Lcom/netflix/mediaclient/webapi/WebApiCommand;->getBaseWebAPiUrl()Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -1680,8 +1500,6 @@
 .method public getVersion()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 388
     const-string/jumbo v0, "2.0"
 
     return-object v0
@@ -1690,8 +1508,6 @@
 .method public isSecure()Z
     .locals 1
 
-    .prologue
-    .line 137
     const/4 v0, 0x1
 
     return v0
@@ -1700,8 +1516,6 @@
 .method public isUpdated()Z
     .locals 1
 
-    .prologue
-    .line 146
     iget-boolean v0, p0, Lcom/netflix/mediaclient/webapi/WebApiCommand;->updated:Z
 
     return v0
@@ -1710,11 +1524,8 @@
 .method protected verifyNotNull(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 556
     if-nez p1, :cond_0
 
-    .line 557
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1739,7 +1550,6 @@
 
     throw v0
 
-    .line 560
     :cond_0
     return-void
 .end method

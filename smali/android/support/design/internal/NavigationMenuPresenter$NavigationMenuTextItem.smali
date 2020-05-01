@@ -16,14 +16,10 @@
 .method constructor <init>(Landroid/support/v7/view/menu/MenuItemImpl;)V
     .locals 0
 
-    .prologue
-    .line 615
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 616
     iput-object p1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;->mMenuItem:Landroid/support/v7/view/menu/MenuItemImpl;
 
-    .line 617
     return-void
 .end method
 
@@ -32,8 +28,6 @@
 .method public getMenuItem()Landroid/support/v7/view/menu/MenuItemImpl;
     .locals 1
 
-    .prologue
-    .line 620
     iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;->mMenuItem:Landroid/support/v7/view/menu/MenuItemImpl;
 
     return-object v0

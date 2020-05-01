@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl$1;)V
     .locals 0
 
-    .prologue
-    .line 117
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl$1$1;->this$1:Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public onLoaded([Lcom/netflix/mediaclient/util/data/DataRepository$Entry;)V
     .locals 2
 
-    .prologue
-    .line 121
     if-eqz p1, :cond_0
 
     array-length v0, p1
 
     if-lez v0, :cond_0
 
-    .line 122
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl$1$1;->this$1:Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl$1;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl$1;->this$0:Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl;
@@ -45,11 +40,9 @@
 
     invoke-static {v0, p1, v1}, Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl;->access$000(Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl;[Lcom/netflix/mediaclient/util/data/DataRepository$Entry;Z)V
 
-    .line 126
     :goto_0
     return-void
 
-    .line 124
     :cond_0
     const-string/jumbo v0, "nf_pds_logs"
 

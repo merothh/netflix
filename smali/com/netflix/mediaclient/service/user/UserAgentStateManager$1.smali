@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 517
     invoke-static {}, Lcom/netflix/mediaclient/service/user/UserAgentStateManager$STATES;->values()[Lcom/netflix/mediaclient/service/user/UserAgentStateManager$STATES;
 
     move-result-object v0

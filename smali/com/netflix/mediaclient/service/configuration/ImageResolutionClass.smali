@@ -32,14 +32,12 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x2
 
     const/4 v4, 0x1
 
     const/4 v3, 0x0
 
-    .line 4
     new-instance v0, Lcom/netflix/mediaclient/service/configuration/ImageResolutionClass;
 
     const-string/jumbo v1, "LOW"
@@ -50,7 +48,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/configuration/ImageResolutionClass;->LOW:Lcom/netflix/mediaclient/service/configuration/ImageResolutionClass;
 
-    .line 5
     new-instance v0, Lcom/netflix/mediaclient/service/configuration/ImageResolutionClass;
 
     const-string/jumbo v1, "MEDIUM"
@@ -61,7 +58,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/configuration/ImageResolutionClass;->MEDIUM:Lcom/netflix/mediaclient/service/configuration/ImageResolutionClass;
 
-    .line 6
     new-instance v0, Lcom/netflix/mediaclient/service/configuration/ImageResolutionClass;
 
     const-string/jumbo v1, "HIGH"
@@ -72,7 +68,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/configuration/ImageResolutionClass;->HIGH:Lcom/netflix/mediaclient/service/configuration/ImageResolutionClass;
 
-    .line 3
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/configuration/ImageResolutionClass;
@@ -104,22 +99,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 10
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 11
     iput-object p3, p0, Lcom/netflix/mediaclient/service/configuration/ImageResolutionClass;->urlParamValue:Ljava/lang/String;
 
-    .line 12
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/configuration/ImageResolutionClass;
     .locals 1
 
-    .prologue
-    .line 3
     const-class v0, Lcom/netflix/mediaclient/service/configuration/ImageResolutionClass;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -134,8 +123,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/configuration/ImageResolutionClass;
     .locals 1
 
-    .prologue
-    .line 3
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/ImageResolutionClass;->$VALUES:[Lcom/netflix/mediaclient/service/configuration/ImageResolutionClass;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/configuration/ImageResolutionClass;->clone()Ljava/lang/Object;

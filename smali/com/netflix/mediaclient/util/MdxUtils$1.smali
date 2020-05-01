@@ -20,8 +20,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/ServiceManager;Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelection;Lcom/netflix/mediaclient/util/MdxUtils$MdxTargetSelectionDialogInterface;)V
     .locals 0
 
-    .prologue
-    .line 307
     iput-object p1, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$serviceManager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -49,14 +47,12 @@
         }
     .end annotation
 
-    .prologue
     const/4 v4, 0x0
 
     const/4 v6, 0x1
 
     const/4 v0, 0x0
 
-    .line 311
     const-string/jumbo v1, "MdxUtils"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -89,12 +85,10 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 312
     iget-object v1, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->removeVisibleDialog()V
 
-    .line 314
     iget-object v1, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$serviceManager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     if-eqz v1, :cond_0
@@ -107,7 +101,6 @@
 
     if-nez v1, :cond_1
 
-    .line 315
     :cond_0
     const-string/jumbo v0, "MdxUtils"
 
@@ -115,48 +108,40 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 375
     :goto_0
     return-void
 
-    .line 319
     :cond_1
     iget-object v1, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$mdxTargetSelector:Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelection;
 
     invoke-virtual {v1, p3}, Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelection;->setTarget(I)Lcom/netflix/mediaclient/ui/mdx/MdxTarget;
 
-    .line 320
     iget-object v1, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$mdxTargetSelector:Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelection;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelection;->getSelectedTarget()Lcom/netflix/mediaclient/ui/mdx/MdxTarget;
 
     move-result-object v1
 
-    .line 322
     if-nez v1, :cond_3
 
-    .line 323
     const-string/jumbo v0, "MdxUtils"
 
     const-string/jumbo v1, "Target is NULL, this should NOT happen!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 373
     :cond_2
     :goto_1
     iget-object v0, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-virtual {v0, v6}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->setConnectingToTarget(Z)V
 
-    .line 374
     iget-object v0, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->invalidateOptionsMenu()V
 
     goto :goto_0
 
-    .line 324
     :cond_3
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/mdx/MdxTarget;->getUUID()Ljava/lang/String;
 
@@ -184,14 +169,12 @@
 
     if-eqz v2, :cond_4
 
-    .line 325
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 326
     const-string/jumbo v0, "MdxUtils"
 
     const-string/jumbo v1, "Same MDX target selected. Do nothing and dismiss dialog"
@@ -200,7 +183,6 @@
 
     goto :goto_1
 
-    .line 328
     :cond_4
     iget-object v2, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
@@ -218,14 +200,12 @@
 
     if-eqz v2, :cond_5
 
-    .line 329
     const-string/jumbo v0, "MdxUtils"
 
     const-string/jumbo v2, "For Coppola - delegating MDX target icon click to PlayerFragment"
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 330
     iget-object v0, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$serviceManager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getMdx()Lcom/netflix/mediaclient/servicemgr/IMdx;
@@ -238,7 +218,6 @@
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/servicemgr/IMdx;->setCurrentTarget(Ljava/lang/String;)V
 
-    .line 331
     iget-object v0, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     check-cast v0, Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity;
@@ -247,7 +226,6 @@
 
     goto :goto_1
 
-    .line 332
     :cond_5
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/mdx/MdxTarget;->isLocal()Z
 
@@ -255,7 +233,6 @@
 
     if-eqz v2, :cond_7
 
-    .line 333
     iget-object v1, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$callbacks:Lcom/netflix/mediaclient/util/MdxUtils$MdxTargetSelectionDialogInterface;
 
     invoke-interface {v1}, Lcom/netflix/mediaclient/util/MdxUtils$MdxTargetSelectionDialogInterface;->isPlayingRemotely()Z
@@ -264,14 +241,12 @@
 
     if-eqz v1, :cond_6
 
-    .line 334
     const-string/jumbo v1, "MdxUtils"
 
     const-string/jumbo v2, "We were playing remotely - switching to playback locally"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 335
     iget-object v1, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$serviceManager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getMdx()Lcom/netflix/mediaclient/servicemgr/IMdx;
@@ -280,7 +255,6 @@
 
     invoke-interface {v1, v4, v0}, Lcom/netflix/mediaclient/servicemgr/IMdx;->switchPlaybackFromTarget(Ljava/lang/String;I)V
 
-    .line 336
     iget-object v0, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$callbacks:Lcom/netflix/mediaclient/util/MdxUtils$MdxTargetSelectionDialogInterface;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/util/MdxUtils$MdxTargetSelectionDialogInterface;->getPlayable()Lcom/netflix/mediaclient/servicemgr/interface_/Playable;
@@ -297,7 +271,6 @@
 
     move-result-object v0
 
-    .line 337
     iget-object v1, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$callbacks:Lcom/netflix/mediaclient/util/MdxUtils$MdxTargetSelectionDialogInterface;
 
     invoke-interface {v1}, Lcom/netflix/mediaclient/util/MdxUtils$MdxTargetSelectionDialogInterface;->getCurrentPositionMs()J
@@ -312,21 +285,18 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/servicemgr/Asset;->setPlaybackBookmark(I)V
 
-    .line 338
     iget-object v1, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     const/4 v2, -0x1
 
     invoke-static {v1, v0, v2}, Lcom/netflix/mediaclient/ui/common/PlaybackLauncher;->startPlaybackForceLocal(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/Asset;I)V
 
-    .line 339
     iget-object v0, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$callbacks:Lcom/netflix/mediaclient/util/MdxUtils$MdxTargetSelectionDialogInterface;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/util/MdxUtils$MdxTargetSelectionDialogInterface;->notifyPlayingBackLocal()V
 
     goto/16 :goto_1
 
-    .line 341
     :cond_6
     const-string/jumbo v0, "MdxUtils"
 
@@ -334,7 +304,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 342
     iget-object v0, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$serviceManager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getMdx()Lcom/netflix/mediaclient/servicemgr/IMdx;
@@ -345,7 +314,6 @@
 
     goto/16 :goto_1
 
-    .line 345
     :cond_7
     iget-object v2, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$serviceManager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
@@ -359,7 +327,6 @@
 
     if-eqz v2, :cond_e
 
-    .line 346
     iget-object v2, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$callbacks:Lcom/netflix/mediaclient/util/MdxUtils$MdxTargetSelectionDialogInterface;
 
     invoke-interface {v2}, Lcom/netflix/mediaclient/util/MdxUtils$MdxTargetSelectionDialogInterface;->isPlayingLocally()Z
@@ -376,7 +343,6 @@
 
     if-eqz v2, :cond_c
 
-    .line 347
     :cond_8
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -384,7 +350,6 @@
 
     if-eqz v2, :cond_9
 
-    .line 348
     const-string/jumbo v2, "MdxUtils"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -411,7 +376,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 350
     :cond_9
     iget-object v2, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$callbacks:Lcom/netflix/mediaclient/util/MdxUtils$MdxTargetSelectionDialogInterface;
 
@@ -419,22 +383,18 @@
 
     move-result-object v2
 
-    .line 352
     if-eqz v2, :cond_b
 
-    .line 353
     invoke-virtual {v2}, Lcom/netflix/mediaclient/ui/mdx/RemotePlayer;->getPositionInSeconds()I
 
     move-result v0
 
-    .line 354
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_a
 
-    .line 355
     const-string/jumbo v2, "MdxUtils"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -457,7 +417,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 360
     :cond_a
     :goto_2
     iget-object v2, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$serviceManager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -472,14 +431,12 @@
 
     invoke-interface {v2, v1, v0}, Lcom/netflix/mediaclient/servicemgr/IMdx;->switchPlaybackFromTarget(Ljava/lang/String;I)V
 
-    .line 361
     iget-object v0, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$callbacks:Lcom/netflix/mediaclient/util/MdxUtils$MdxTargetSelectionDialogInterface;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/util/MdxUtils$MdxTargetSelectionDialogInterface;->notifyPlayingBackRemote()V
 
     goto/16 :goto_1
 
-    .line 358
     :cond_b
     const-string/jumbo v2, "MdxUtils"
 
@@ -489,7 +446,6 @@
 
     goto :goto_2
 
-    .line 363
     :cond_c
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -497,7 +453,6 @@
 
     if-eqz v0, :cond_d
 
-    .line 364
     const-string/jumbo v0, "MdxUtils"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -524,7 +479,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 366
     :cond_d
     iget-object v0, p0, Lcom/netflix/mediaclient/util/MdxUtils$1;->val$serviceManager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
@@ -540,7 +494,6 @@
 
     goto/16 :goto_1
 
-    .line 370
     :cond_e
     const-string/jumbo v0, "MdxUtils"
 

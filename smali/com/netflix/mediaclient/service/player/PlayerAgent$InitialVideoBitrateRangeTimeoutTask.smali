@@ -11,8 +11,6 @@
 .method private constructor <init>(Lcom/netflix/mediaclient/service/player/PlayerAgent;)V
     .locals 0
 
-    .prologue
-    .line 2103
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$InitialVideoBitrateRangeTimeoutTask;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
@@ -23,8 +21,6 @@
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/service/player/PlayerAgent;Lcom/netflix/mediaclient/service/player/PlayerAgent$1;)V
     .locals 0
 
-    .prologue
-    .line 2103
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/player/PlayerAgent$InitialVideoBitrateRangeTimeoutTask;-><init>(Lcom/netflix/mediaclient/service/player/PlayerAgent;)V
 
     return-void
@@ -35,8 +31,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 2107
     invoke-static {}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$1600()Ljava/lang/String;
 
     move-result-object v0
@@ -45,7 +39,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2108
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$InitialVideoBitrateRangeTimeoutTask;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$100(Lcom/netflix/mediaclient/service/player/PlayerAgent;)Lcom/netflix/mediaclient/javabridge/ui/IMedia;
@@ -60,6 +53,5 @@
 
     invoke-interface {v0, v1, v2}, Lcom/netflix/mediaclient/javabridge/ui/IMedia;->setVideoBitrateRange(II)V
 
-    .line 2109
     return-void
 .end method

@@ -26,8 +26,6 @@
 .method constructor <init>(Lcom/netflix/falkor/ModelProxy;)V
     .locals 0
 
-    .prologue
-    .line 218
     iput-object p1, p0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$14;->val$proxy:Lcom/netflix/falkor/ModelProxy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,8 +38,6 @@
 .method public call()Lcom/netflix/model/branches/FalkorEpisode;
     .locals 2
 
-    .prologue
-    .line 221
     new-instance v0, Lcom/netflix/model/branches/FalkorEpisode;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$14;->val$proxy:Lcom/netflix/falkor/ModelProxy;
@@ -54,8 +50,6 @@
 .method public bridge synthetic call()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 218
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$14;->call()Lcom/netflix/model/branches/FalkorEpisode;
 
     move-result-object v0

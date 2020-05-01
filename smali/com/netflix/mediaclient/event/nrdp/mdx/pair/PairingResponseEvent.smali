@@ -33,8 +33,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 28
     sget-object v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->mdx_pair_pairingresponse:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     sput-object v0, Lcom/netflix/mediaclient/event/nrdp/mdx/pair/PairingResponseEvent;->TYPE:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
@@ -45,8 +43,6 @@
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 1
 
-    .prologue
-    .line 50
     sget-object v0, Lcom/netflix/mediaclient/event/nrdp/mdx/pair/PairingResponseEvent;->TYPE:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->getName()Ljava/lang/String;
@@ -55,7 +51,6 @@
 
     invoke-direct {p0, v0, p1}, Lcom/netflix/mediaclient/event/nrdp/JsonBaseNccpEvent;-><init>(Ljava/lang/String;Lorg/json/JSONObject;)V
 
-    .line 51
     return-void
 .end method
 
@@ -64,8 +59,6 @@
 .method public getErrorCode()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 71
     iget-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/pair/PairingResponseEvent;->errorCode:Ljava/lang/String;
 
     return-object v0
@@ -74,8 +67,6 @@
 .method public getErrorDesc()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 80
     iget-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/pair/PairingResponseEvent;->errorDesc:Ljava/lang/String;
 
     return-object v0
@@ -84,8 +75,6 @@
 .method public getObject()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 117
     const-string/jumbo v0, "nrdp.mdx"
 
     return-object v0
@@ -94,8 +83,6 @@
 .method public getPairingContext()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 107
     iget-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/pair/PairingResponseEvent;->pairingContext:Ljava/lang/String;
 
     return-object v0
@@ -104,8 +91,6 @@
 .method public getRemoteDevice()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 89
     iget-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/pair/PairingResponseEvent;->remoteDevice:Ljava/lang/String;
 
     return-object v0
@@ -114,8 +99,6 @@
 .method public isMatch()Z
     .locals 1
 
-    .prologue
-    .line 98
     iget v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/pair/PairingResponseEvent;->match:I
 
     if-lez v0, :cond_0
@@ -134,10 +117,8 @@
 .method protected populate(Lorg/json/JSONObject;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 58
     const-string/jumbo v0, "errorCode"
 
     invoke-static {p1, v0, v2}, Lcom/netflix/mediaclient/event/nrdp/mdx/pair/PairingResponseEvent;->getString(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -146,7 +127,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/pair/PairingResponseEvent;->errorCode:Ljava/lang/String;
 
-    .line 59
     const-string/jumbo v0, "errorMessage"
 
     invoke-static {p1, v0, v2}, Lcom/netflix/mediaclient/event/nrdp/mdx/pair/PairingResponseEvent;->getString(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -155,7 +135,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/pair/PairingResponseEvent;->errorDesc:Ljava/lang/String;
 
-    .line 60
     const-string/jumbo v0, "match"
 
     const/4 v1, 0x0
@@ -166,7 +145,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/pair/PairingResponseEvent;->match:I
 
-    .line 61
     const-string/jumbo v0, "pairingContext"
 
     invoke-static {p1, v0, v2}, Lcom/netflix/mediaclient/event/nrdp/mdx/pair/PairingResponseEvent;->getUrlDecodedString(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -175,7 +153,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/pair/PairingResponseEvent;->pairingContext:Ljava/lang/String;
 
-    .line 62
     const-string/jumbo v0, "remoteDevice"
 
     invoke-static {p1, v0, v2}, Lcom/netflix/mediaclient/event/nrdp/mdx/pair/PairingResponseEvent;->getUrlDecodedString(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -184,6 +161,5 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/pair/PairingResponseEvent;->remoteDevice:Ljava/lang/String;
 
-    .line 63
     return-void
 .end method

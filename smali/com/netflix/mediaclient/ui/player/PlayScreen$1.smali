@@ -13,8 +13,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/PlayScreen;Lcom/netflix/mediaclient/servicemgr/Asset;)V
     .locals 0
 
-    .prologue
-    .line 243
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/PlayScreen$1;->this$0:Lcom/netflix/mediaclient/ui/player/PlayScreen;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/player/PlayScreen$1;->val$asset:Lcom/netflix/mediaclient/servicemgr/Asset;
@@ -40,21 +38,17 @@
         }
     .end annotation
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 246
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isError()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 279
     :cond_0
     return-void
 
-    .line 250
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayScreen$1;->this$0:Lcom/netflix/mediaclient/ui/player/PlayScreen;
 
@@ -64,7 +58,6 @@
 
     move-result-object v3
 
-    .line 251
     if-eqz v3, :cond_0
 
     invoke-virtual {v3}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->isFinishing()Z
@@ -73,7 +66,6 @@
 
     if-nez v0, :cond_0
 
-    .line 255
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/player/PlayScreen$1;->this$0:Lcom/netflix/mediaclient/ui/player/PlayScreen;
 
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayScreen$1;->val$asset:Lcom/netflix/mediaclient/servicemgr/Asset;
@@ -98,7 +90,6 @@
 
     move v2, v1
 
-    .line 257
     :goto_1
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -106,19 +97,16 @@
 
     if-ge v2, v0, :cond_0
 
-    .line 258
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/netflix/model/leafs/advisory/Advisory;
 
-    .line 259
     invoke-static {v3, v0}, Lcom/netflix/mediaclient/android/widget/advisor/Advisor;->make(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/model/leafs/advisory/Advisory;)Lcom/netflix/mediaclient/android/widget/advisor/Advisor;
 
     move-result-object v1
 
-    .line 262
     invoke-virtual {v0}, Lcom/netflix/model/leafs/advisory/Advisory;->getType()Lcom/netflix/model/leafs/advisory/Advisory$Type;
 
     move-result-object v0
@@ -129,7 +117,6 @@
 
     move-object v0, v1
 
-    .line 263
     check-cast v0, Lcom/netflix/mediaclient/android/widget/advisor/ExpiringContentAdvisor;
 
     iget-object v4, p0, Lcom/netflix/mediaclient/ui/player/PlayScreen$1;->this$0:Lcom/netflix/mediaclient/ui/player/PlayScreen;
@@ -138,7 +125,6 @@
 
     invoke-virtual {v0, v4}, Lcom/netflix/mediaclient/android/widget/advisor/ExpiringContentAdvisor;->setController(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)V
 
-    .line 266
     :cond_3
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -148,18 +134,15 @@
 
     if-ne v2, v0, :cond_4
 
-    .line 267
     new-instance v0, Lcom/netflix/mediaclient/ui/player/PlayScreen$1$1;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/player/PlayScreen$1$1;-><init>(Lcom/netflix/mediaclient/ui/player/PlayScreen$1;)V
 
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/android/widget/advisor/Advisor;->withDismissListener(Landroid/widget/PopupWindow$OnDismissListener;)Lcom/netflix/mediaclient/android/widget/advisor/Advisor;
 
-    .line 277
     :cond_4
     invoke-virtual {v1}, Lcom/netflix/mediaclient/android/widget/advisor/Advisor;->queue()V
 
-    .line 257
     add-int/lit8 v1, v2, 0x1
 
     move v2, v1
@@ -169,6 +152,5 @@
     :cond_5
     move v0, v1
 
-    .line 255
     goto :goto_0
 .end method

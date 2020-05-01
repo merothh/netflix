@@ -19,8 +19,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler;Lcom/netflix/mediaclient/android/activity/NetflixActivity;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 78
     iput-object p1, p0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler$1;->this$0:Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler$1;->val$activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -41,8 +39,6 @@
 .method public onVideoSummaryFetched(Lcom/netflix/model/leafs/Video$Summary;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 6
 
-    .prologue
-    .line 81
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
 
     move-result v0
@@ -51,7 +47,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 82
     iget-object v0, p0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler$1;->this$0:Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler$1;->val$activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -68,11 +63,9 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler;->playVideo(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 87
     :goto_0
     return-void
 
-    .line 84
     :cond_0
     new-instance v0, Ljava/lang/Throwable;
 
@@ -100,7 +93,6 @@
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/logging/error/ErrorLoggingManager;->logHandledException(Ljava/lang/Throwable;)V
 
-    .line 85
     iget-object v0, p0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler$1;->val$activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/NflxProtocolUtils;->reportDelayedResponseHandled(Landroid/app/Activity;)V

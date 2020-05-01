@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/error/ConcurentStreamUpgradeErrorDescriptor$2;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 206
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/error/ConcurentStreamUpgradeErrorDescriptor$2$1;->this$0:Lcom/netflix/mediaclient/ui/player/error/ConcurentStreamUpgradeErrorDescriptor$2;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/player/error/ConcurentStreamUpgradeErrorDescriptor$2$1;->val$urlLink:Ljava/lang/String;
@@ -32,15 +30,12 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 210
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 211
     const-string/jumbo v0, "nf_play_error"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -65,7 +60,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 214
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/error/ConcurentStreamUpgradeErrorDescriptor$2$1;->this$0:Lcom/netflix/mediaclient/ui/player/error/ConcurentStreamUpgradeErrorDescriptor$2;
 
@@ -85,20 +79,17 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->startActivity(Landroid/content/Intent;)V
 
-    .line 216
     const-string/jumbo v0, "nf_play_error"
 
     const-string/jumbo v1, "Exit from playback after browser is started"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 217
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/error/ConcurentStreamUpgradeErrorDescriptor$2$1;->this$0:Lcom/netflix/mediaclient/ui/player/error/ConcurentStreamUpgradeErrorDescriptor$2;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/player/error/ConcurentStreamUpgradeErrorDescriptor$2;->val$fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->finish()V
 
-    .line 219
     return-void
 .end method

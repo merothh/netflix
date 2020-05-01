@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)V
     .locals 0
 
-    .prologue
-    .line 911
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$8;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public onManagerReady(Lcom/netflix/mediaclient/servicemgr/ServiceManager;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 3
 
-    .prologue
-    .line 923
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 924
     const-string/jumbo v0, "SignupActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -63,7 +58,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 926
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->isSignupDisabledDevice()Z
 
@@ -71,11 +65,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 937
     :goto_0
     return-void
 
-    .line 930
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$8;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
@@ -85,10 +77,8 @@
 
     if-eqz v0, :cond_2
 
-    .line 931
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertOnMain()Z
 
-    .line 932
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$8;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$8;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
@@ -105,7 +95,6 @@
 
     goto :goto_0
 
-    .line 934
     :cond_2
     const-string/jumbo v0, "SignupActivity"
 
@@ -119,14 +108,11 @@
 .method public onManagerUnavailable(Lcom/netflix/mediaclient/servicemgr/ServiceManager;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 945
     const-string/jumbo v0, "SignupActivity"
 
     const-string/jumbo v1, "NetflixService is NOT available!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 946
     return-void
 .end method

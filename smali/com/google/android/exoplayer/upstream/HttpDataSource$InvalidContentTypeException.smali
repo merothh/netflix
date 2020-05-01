@@ -11,8 +11,6 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/google/android/exoplayer/upstream/DataSpec;)V
     .locals 2
 
-    .prologue
-    .line 95
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -35,9 +33,7 @@
 
     invoke-direct {p0, v0, p2, v1}, Lcom/google/android/exoplayer/upstream/HttpDataSource$HttpDataSourceException;-><init>(Ljava/lang/String;Lcom/google/android/exoplayer/upstream/DataSpec;I)V
 
-    .line 96
     iput-object p1, p0, Lcom/google/android/exoplayer/upstream/HttpDataSource$InvalidContentTypeException;->contentType:Ljava/lang/String;
 
-    .line 97
     return-void
 .end method

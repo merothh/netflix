@@ -32,7 +32,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x4
 
     const/4 v5, 0x3
@@ -43,7 +42,6 @@
 
     const/4 v2, 0x0
 
-    .line 139
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;
 
     const-string/jumbo v1, "url"
@@ -52,7 +50,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;->url:Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;
 
-    .line 140
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;
 
     const-string/jumbo v1, "dial"
@@ -61,7 +58,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;->dial:Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;
 
-    .line 141
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;
 
     const-string/jumbo v1, "back"
@@ -70,7 +66,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;->back:Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;
 
-    .line 142
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;
 
     const-string/jumbo v1, "home"
@@ -79,7 +74,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;->home:Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;
 
-    .line 143
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;
 
     const-string/jumbo v1, "up"
@@ -88,7 +82,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;->up:Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;
 
-    .line 138
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;
@@ -126,8 +119,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 138
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -136,8 +127,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;
     .locals 1
 
-    .prologue
-    .line 138
     const-class v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -152,8 +141,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;
     .locals 1
 
-    .prologue
-    .line 138
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;->clone()Ljava/lang/Object;

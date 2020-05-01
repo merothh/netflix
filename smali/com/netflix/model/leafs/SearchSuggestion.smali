@@ -20,8 +20,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,8 +30,6 @@
 .method public getTitle()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 54
     iget-object v0, p0, Lcom/netflix/model/leafs/SearchSuggestion;->title:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->capitalizeFirstLetter(Ljava/lang/String;)Ljava/lang/String;
@@ -46,18 +42,14 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 5
 
-    .prologue
-    .line 25
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 26
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 27
     const-string/jumbo v1, "SearchSuggestion"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -80,7 +72,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 29
     :cond_0
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -103,14 +94,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 30
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/gson/JsonElement;
 
-    .line 31
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -133,7 +122,6 @@
 
     goto :goto_0
 
-    .line 32
     :pswitch_0
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -143,7 +131,6 @@
 
     goto :goto_0
 
-    .line 31
     :pswitch_1
     const-string/jumbo v4, "title"
 
@@ -157,11 +144,9 @@
 
     goto :goto_1
 
-    .line 35
     :cond_2
     return-void
 
-    .line 31
     :pswitch_data_0
     .packed-switch 0x6942258
         :pswitch_1
@@ -176,15 +161,12 @@
 .method public set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 39
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 40
     const-string/jumbo v1, "SearchSuggestion"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -207,7 +189,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 42
     :cond_0
     const/4 v1, -0x1
 
@@ -221,11 +202,9 @@
     :goto_0
     packed-switch v1, :pswitch_data_1
 
-    .line 49
     :goto_1
     return v0
 
-    .line 42
     :pswitch_0
     const-string/jumbo v2, "title"
 
@@ -239,7 +218,6 @@
 
     goto :goto_0
 
-    .line 44
     :pswitch_1
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -247,12 +225,10 @@
 
     iput-object v0, p0, Lcom/netflix/model/leafs/SearchSuggestion;->title:Ljava/lang/String;
 
-    .line 49
     const/4 v0, 0x1
 
     goto :goto_1
 
-    .line 42
     :pswitch_data_0
     .packed-switch 0x6942258
         :pswitch_0
@@ -267,8 +243,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 59
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

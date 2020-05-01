@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;)V
     .locals 0
 
-    .prologue
-    .line 160
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$3;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,12 +26,9 @@
 .method public onNotificationsListUpdated(Z)V
     .locals 1
 
-    .prologue
-    .line 163
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$3;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;->access$200(Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;Z)V
 
-    .line 164
     return-void
 .end method

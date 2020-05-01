@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,8 +18,6 @@
 .method public static create()Lcom/google/gson/TypeAdapterFactory;
     .locals 1
 
-    .prologue
-    .line 20
     new-instance v0, Lcom/netflix/mediaclient/AutoValueGson_AutoValueAdapterFactory;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/AutoValueGson_AutoValueAdapterFactory;-><init>()V

@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$OfflineViewHolderData;)V
     .locals 0
 
-    .prologue
-    .line 260
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$OfflineViewHolderData$2;->this$1:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$OfflineViewHolderData;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,20 +26,16 @@
 .method public onClick(Landroid/view/View;)V
     .locals 5
 
-    .prologue
-    .line 263
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$OfflineViewHolderData$2;->this$1:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$OfflineViewHolderData;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$OfflineViewHolderData;->getAdapterPosition()I
 
     move-result v0
 
-    .line 264
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 265
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$OfflineViewHolderData$2;->this$1:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$OfflineViewHolderData;
 
     iget-object v1, v1, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$OfflineViewHolderData;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;
@@ -56,11 +50,9 @@
 
     invoke-virtual {v1, v0, v2}, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;->toggleChecked(ILjava/lang/String;)V
 
-    .line 269
     :goto_0
     return-void
 
-    .line 267
     :cond_0
     const-string/jumbo v1, "OfflineBaseAdapter"
 

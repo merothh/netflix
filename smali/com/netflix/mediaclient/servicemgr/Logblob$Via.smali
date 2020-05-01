@@ -26,12 +26,10 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 75
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/Logblob$Via;
 
     const-string/jumbo v1, "br"
@@ -40,7 +38,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/Logblob$Via;->br:Lcom/netflix/mediaclient/servicemgr/Logblob$Via;
 
-    .line 76
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/Logblob$Via;
 
     const-string/jumbo v1, "nccp"
@@ -49,7 +46,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/Logblob$Via;->nccp:Lcom/netflix/mediaclient/servicemgr/Logblob$Via;
 
-    .line 74
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/Logblob$Via;
@@ -75,8 +71,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 74
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -85,8 +79,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/Logblob$Via;
     .locals 1
 
-    .prologue
-    .line 74
     const-class v0, Lcom/netflix/mediaclient/servicemgr/Logblob$Via;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -101,8 +93,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/Logblob$Via;
     .locals 1
 
-    .prologue
-    .line 74
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/Logblob$Via;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/Logblob$Via;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/Logblob$Via;->clone()Ljava/lang/Object;

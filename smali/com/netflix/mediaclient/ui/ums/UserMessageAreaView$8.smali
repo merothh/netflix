@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaCta;)V
     .locals 0
 
-    .prologue
-    .line 310
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$8;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$8;->val$umaCta:Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaCta;
@@ -32,8 +30,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 4
 
-    .prologue
-    .line 313
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -46,7 +42,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
-    .line 314
     if-eqz v0, :cond_1
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/AndroidUtils;->isActivityFinishedOrDestroyed(Landroid/content/Context;)Z
@@ -55,7 +50,6 @@
 
     if-nez v1, :cond_1
 
-    .line 316
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v1
@@ -78,25 +72,21 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->recordUserMessageImpression(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 318
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->consumeUmaAlert()V
 
-    .line 319
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$8;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;->dismiss(Z)V
 
-    .line 323
     :cond_0
     return-void
 
-    .line 320
     :cond_1
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -104,7 +94,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 321
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;

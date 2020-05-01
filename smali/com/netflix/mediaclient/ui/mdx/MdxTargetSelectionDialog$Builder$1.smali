@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelectionDialog$Builder;Landroid/widget/AdapterView$OnItemClickListener;)V
     .locals 0
 
-    .prologue
-    .line 83
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelectionDialog$Builder$1;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelectionDialog$Builder;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelectionDialog$Builder$1;->val$listener:Landroid/widget/AdapterView$OnItemClickListener;
@@ -41,8 +39,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 87
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelectionDialog$Builder$1;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelectionDialog$Builder;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelectionDialog$Builder;->access$000(Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelectionDialog$Builder;)Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelectionDialog$TargetsAdapter;
@@ -51,7 +47,6 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelectionDialog$TargetsAdapter;->notifyDataSetChanged()V
 
-    .line 88
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelectionDialog$Builder$1;->val$listener:Landroid/widget/AdapterView$OnItemClickListener;
 
     move-object v1, p1
@@ -64,6 +59,5 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/widget/AdapterView$OnItemClickListener;->onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
 
-    .line 89
     return-void
 .end method

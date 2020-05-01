@@ -22,16 +22,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 37
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0, p3, p4}, Lcom/android/volley/NetworkResponse;-><init>(I[BLjava/util/Map;Z)V
 
-    .line 38
     iput-object p2, p0, Lcom/android/volley/toolbox/ProgressiveNetworkResponse;->mHttpEntity:Lorg/apache/http/HttpEntity;
 
-    .line 39
     return-void
 .end method
 
@@ -40,8 +36,6 @@
 .method public getHttpEntity()Lorg/apache/http/HttpEntity;
     .locals 1
 
-    .prologue
-    .line 30
     iget-object v0, p0, Lcom/android/volley/toolbox/ProgressiveNetworkResponse;->mHttpEntity:Lorg/apache/http/HttpEntity;
 
     return-object v0

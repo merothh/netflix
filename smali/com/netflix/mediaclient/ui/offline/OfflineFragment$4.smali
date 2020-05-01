@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/offline/OfflineFragment;Z)V
     .locals 0
 
-    .prologue
-    .line 406
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineFragment$4;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineFragment;
 
     iput-boolean p2, p0, Lcom/netflix/mediaclient/ui/offline/OfflineFragment$4;->val$isEpisodeFrag:Z
@@ -32,8 +30,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 6
 
-    .prologue
-    .line 409
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineFragment$4;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/offline/OfflineFragment;->isActivityValid()Z
@@ -42,12 +38,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 410
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineFragment$4;->val$isEpisodeFrag:Z
 
     if-eqz v0, :cond_1
 
-    .line 411
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineFragment$4;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/offline/OfflineFragment;->getNetflixActivity()Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -70,12 +64,10 @@
 
     invoke-static/range {v0 .. v5}, Lcom/netflix/mediaclient/ui/details/DetailsActivityLauncher;->show(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/ui/common/PlayContext;Ljava/lang/String;)V
 
-    .line 417
     :cond_0
     :goto_0
     return-void
 
-    .line 414
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineFragment$4;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineFragment;
 

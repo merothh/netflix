@@ -16,8 +16,6 @@
 .method constructor <init>(Lio/realm/Realm$2;Ljava/lang/Throwable;)V
     .locals 0
 
-    .prologue
-    .line 1403
     iput-object p1, p0, Lio/realm/Realm$2$3;->this$1:Lio/realm/Realm$2;
 
     iput-object p2, p0, Lio/realm/Realm$2$3;->val$backgroundException:Ljava/lang/Throwable;
@@ -32,22 +30,18 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 1406
     iget-object v0, p0, Lio/realm/Realm$2$3;->val$backgroundException:Ljava/lang/Throwable;
 
     instance-of v0, v0, Ljava/lang/RuntimeException;
 
     if-eqz v0, :cond_0
 
-    .line 1407
     iget-object v0, p0, Lio/realm/Realm$2$3;->val$backgroundException:Ljava/lang/Throwable;
 
     check-cast v0, Ljava/lang/RuntimeException;
 
     throw v0
 
-    .line 1408
     :cond_0
     iget-object v0, p0, Lio/realm/Realm$2$3;->val$backgroundException:Ljava/lang/Throwable;
 
@@ -55,7 +49,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1409
     new-instance v0, Lio/realm/exceptions/RealmException;
 
     const-string/jumbo v1, "Async transaction failed"
@@ -66,7 +59,6 @@
 
     throw v0
 
-    .line 1410
     :cond_1
     iget-object v0, p0, Lio/realm/Realm$2$3;->val$backgroundException:Ljava/lang/Throwable;
 
@@ -74,14 +66,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 1411
     iget-object v0, p0, Lio/realm/Realm$2$3;->val$backgroundException:Ljava/lang/Throwable;
 
     check-cast v0, Ljava/lang/Error;
 
     throw v0
 
-    .line 1413
     :cond_2
     return-void
 .end method

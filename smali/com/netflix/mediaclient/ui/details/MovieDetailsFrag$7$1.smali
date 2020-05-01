@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$7;)V
     .locals 0
 
-    .prologue
-    .line 448
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$7$1;->this$1:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 452
     const-string/jumbo v0, "MovieDetailsFrag"
 
     const-string/jumbo v1, "Resetting parallax views"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 453
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$7$1;->this$1:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$7;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
@@ -45,6 +40,5 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener;->setToolbarColor()V
 
-    .line 454
     return-void
 .end method

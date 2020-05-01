@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;)V
     .locals 0
 
-    .prologue
-    .line 1170
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager$9;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,27 +26,22 @@
 .method public run()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 1173
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager$9;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;->access$1802(Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;Z)Z
 
-    .line 1174
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager$9;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;->access$302(Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;I)I
 
-    .line 1175
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager$9;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;->access$202(Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;I)I
 
-    .line 1176
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager$9;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;->access$500(Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;)Ljava/util/List;
@@ -63,7 +56,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1177
     const-string/jumbo v0, "KongInteractivePostPlayManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -96,7 +88,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1179
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager$9;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;
 
@@ -121,14 +112,12 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 1180
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager$9;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;
 
     invoke-virtual {v2, v0}, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;->cacheResource(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 1182
     :cond_1
     return-void
 .end method

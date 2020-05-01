@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/error/PlaybackErrorDescriptor$LinkTag;Lcom/netflix/mediaclient/ui/player/PlayerFragment;)V
     .locals 0
 
-    .prologue
-    .line 193
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/error/ConcurentStreamUpgradeErrorDescriptor$2;->val$link:Lcom/netflix/mediaclient/ui/player/error/PlaybackErrorDescriptor$LinkTag;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/player/error/ConcurentStreamUpgradeErrorDescriptor$2;->val$fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
@@ -32,11 +30,8 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 197
     const-string/jumbo v0, "http://www.netflix.com"
 
-    .line 198
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/error/ConcurentStreamUpgradeErrorDescriptor$2;->val$link:Lcom/netflix/mediaclient/ui/player/error/PlaybackErrorDescriptor$LinkTag;
 
     iget-object v1, v1, Lcom/netflix/mediaclient/ui/player/error/PlaybackErrorDescriptor$LinkTag;->href:Ljava/lang/String;
@@ -61,12 +56,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 199
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/error/ConcurentStreamUpgradeErrorDescriptor$2;->val$link:Lcom/netflix/mediaclient/ui/player/error/PlaybackErrorDescriptor$LinkTag;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/player/error/PlaybackErrorDescriptor$LinkTag;->href:Ljava/lang/String;
 
-    .line 205
     :goto_0
     const-string/jumbo v1, "nf_play_error"
 
@@ -74,7 +67,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 206
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/error/ConcurentStreamUpgradeErrorDescriptor$2;->val$fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     new-instance v2, Lcom/netflix/mediaclient/ui/player/error/ConcurentStreamUpgradeErrorDescriptor$2$1;
@@ -83,10 +75,8 @@
 
     invoke-virtual {v1, v2}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 221
     return-void
 
-    .line 201
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 

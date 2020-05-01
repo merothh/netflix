@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/mdx/MementoFrag$ActorDetailsView;Lcom/netflix/model/branches/FalkorPerson;)V
     .locals 0
 
-    .prologue
-    .line 615
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$ActorDetailsView$1;->this$1:Lcom/netflix/mediaclient/ui/mdx/MementoFrag$ActorDetailsView;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$ActorDetailsView$1;->val$actor:Lcom/netflix/model/branches/FalkorPerson;
@@ -32,8 +30,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 4
 
-    .prologue
-    .line 618
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$ActorDetailsView$1;->this$1:Lcom/netflix/mediaclient/ui/mdx/MementoFrag$ActorDetailsView;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$ActorDetailsView;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
@@ -48,7 +44,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->access$1500(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;Ljava/lang/String;)V
 
-    .line 621
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$ActorDetailsView$1;->this$1:Lcom/netflix/mediaclient/ui/mdx/MementoFrag$ActorDetailsView;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$ActorDetailsView;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
@@ -59,7 +54,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 622
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$ActorDetailsView$1;->this$1:Lcom/netflix/mediaclient/ui/mdx/MementoFrag$ActorDetailsView;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$ActorDetailsView;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
@@ -86,7 +80,6 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/netflix/mediaclient/util/log/UIViewLogUtils;->reportUIViewCommand(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;Lcom/netflix/mediaclient/service/logging/client/model/DataContext;)V
 
-    .line 624
     :cond_0
     return-void
 .end method

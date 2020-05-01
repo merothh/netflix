@@ -37,48 +37,34 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     iput v0, p0, Lcom/netflix/mediaclient/service/pservice/logging/PreAppWidgetSize;->minWidth:I
 
-    .line 25
     iput v0, p0, Lcom/netflix/mediaclient/service/pservice/logging/PreAppWidgetSize;->maxWidth:I
 
-    .line 26
     iput v0, p0, Lcom/netflix/mediaclient/service/pservice/logging/PreAppWidgetSize;->minHeight:I
 
-    .line 27
     iput v0, p0, Lcom/netflix/mediaclient/service/pservice/logging/PreAppWidgetSize;->maxHeight:I
 
-    .line 28
     return-void
 .end method
 
 .method public constructor <init>(IIII)V
     .locals 0
 
-    .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     iput p1, p0, Lcom/netflix/mediaclient/service/pservice/logging/PreAppWidgetSize;->minWidth:I
 
-    .line 32
     iput p2, p0, Lcom/netflix/mediaclient/service/pservice/logging/PreAppWidgetSize;->maxWidth:I
 
-    .line 33
     iput p3, p0, Lcom/netflix/mediaclient/service/pservice/logging/PreAppWidgetSize;->minHeight:I
 
-    .line 34
     iput p4, p0, Lcom/netflix/mediaclient/service/pservice/logging/PreAppWidgetSize;->maxHeight:I
 
-    .line 35
     return-void
 .end method
 
@@ -87,8 +73,6 @@
 .method public toJsonString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 38
     invoke-static {}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorParseUtils;->getGson()Lcom/google/gson/Gson;
 
     move-result-object v0
@@ -97,14 +81,12 @@
 
     move-result-object v0
 
-    .line 39
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 40
     const-string/jumbo v1, "nf_preapp_widgetsize"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -127,7 +109,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 42
     :cond_0
     return-object v0
 .end method

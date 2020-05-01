@@ -16,8 +16,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,8 +26,6 @@
 .method public decode(Ljava/lang/String;)[B
     .locals 1
 
-    .prologue
-    .line 20
     const/4 v0, 0x2
 
     invoke-static {p1, v0}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
@@ -42,8 +38,6 @@
 .method public encode([B)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 15
     const/4 v0, 0x2
 
     invoke-static {p1, v0}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;

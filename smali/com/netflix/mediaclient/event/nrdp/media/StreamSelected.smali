@@ -25,13 +25,10 @@
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 1
 
-    .prologue
-    .line 38
     const-string/jumbo v0, "streamSelected"
 
     invoke-direct {p0, v0, p1}, Lcom/netflix/mediaclient/event/nrdp/media/BaseMediaEvent;-><init>(Ljava/lang/String;Lorg/json/JSONObject;)V
 
-    .line 39
     return-void
 .end method
 
@@ -40,8 +37,6 @@
 .method public getRebuffer()I
     .locals 1
 
-    .prologue
-    .line 60
     iget v0, p0, Lcom/netflix/mediaclient/event/nrdp/media/StreamSelected;->rebuffer:I
 
     return v0
@@ -50,8 +45,6 @@
 .method public getStartPts()I
     .locals 1
 
-    .prologue
-    .line 69
     iget v0, p0, Lcom/netflix/mediaclient/event/nrdp/media/StreamSelected;->startPts:I
 
     return v0
@@ -60,8 +53,6 @@
 .method public getStreamInfo()Lcom/netflix/mediaclient/javabridge/StreamInfo;
     .locals 1
 
-    .prologue
-    .line 78
     iget-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/media/StreamSelected;->streamInfo:Lcom/netflix/mediaclient/javabridge/StreamInfo;
 
     return-object v0
@@ -70,10 +61,8 @@
 .method protected populate(Lorg/json/JSONObject;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 46
     const-string/jumbo v0, "startPts"
 
     invoke-static {p1, v0, v1}, Lcom/netflix/mediaclient/event/nrdp/media/StreamSelected;->getInt(Lorg/json/JSONObject;Ljava/lang/String;I)I
@@ -82,7 +71,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/event/nrdp/media/StreamSelected;->startPts:I
 
-    .line 47
     const-string/jumbo v0, "rebuffer"
 
     invoke-static {p1, v0, v1}, Lcom/netflix/mediaclient/event/nrdp/media/StreamSelected;->getInt(Lorg/json/JSONObject;Ljava/lang/String;I)I
@@ -91,7 +79,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/event/nrdp/media/StreamSelected;->rebuffer:I
 
-    .line 49
     const-string/jumbo v0, "streamInfo"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -100,7 +87,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 50
     new-instance v0, Lcom/netflix/mediaclient/javabridge/StreamInfo;
 
     const-string/jumbo v1, "streamInfo"
@@ -113,7 +99,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/media/StreamSelected;->streamInfo:Lcom/netflix/mediaclient/javabridge/StreamInfo;
 
-    .line 52
     :cond_0
     return-void
 .end method

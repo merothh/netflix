@@ -16,17 +16,12 @@
 .method public constructor <init>(JJ)V
     .locals 1
 
-    .prologue
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     iput-wide p1, p0, Lcom/google/android/exoplayer/TimeRange$StaticTimeRange;->startTimeUs:J
 
-    .line 66
     iput-wide p3, p0, Lcom/google/android/exoplayer/TimeRange$StaticTimeRange;->endTimeUs:J
 
-    .line 67
     return-void
 .end method
 
@@ -35,20 +30,16 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 102
     if-ne p1, p0, :cond_1
 
-    .line 109
     :cond_0
     :goto_0
     return v0
 
-    .line 105
     :cond_1
     if-eqz p1, :cond_2
 
@@ -65,14 +56,11 @@
     :cond_2
     move v0, v1
 
-    .line 106
     goto :goto_0
 
-    .line 108
     :cond_3
     check-cast p1, Lcom/google/android/exoplayer/TimeRange$StaticTimeRange;
 
-    .line 109
     iget-wide v2, p1, Lcom/google/android/exoplayer/TimeRange$StaticTimeRange;->startTimeUs:J
 
     iget-wide v4, p0, Lcom/google/android/exoplayer/TimeRange$StaticTimeRange;->startTimeUs:J
@@ -98,21 +86,17 @@
 .method public getCurrentBoundsUs([J)[J
     .locals 4
 
-    .prologue
     const/4 v1, 0x2
 
-    .line 84
     if-eqz p1, :cond_0
 
     array-length v0, p1
 
     if-ge v0, v1, :cond_1
 
-    .line 85
     :cond_0
     new-array p1, v1, [J
 
-    .line 87
     :cond_1
     const/4 v0, 0x0
 
@@ -120,30 +104,24 @@
 
     aput-wide v2, p1, v0
 
-    .line 88
     const/4 v0, 0x1
 
     iget-wide v2, p0, Lcom/google/android/exoplayer/TimeRange$StaticTimeRange;->endTimeUs:J
 
     aput-wide v2, p1, v0
 
-    .line 89
     return-object p1
 .end method
 
 .method public hashCode()I
     .locals 4
 
-    .prologue
-    .line 94
-    .line 95
     iget-wide v0, p0, Lcom/google/android/exoplayer/TimeRange$StaticTimeRange;->startTimeUs:J
 
     long-to-int v0, v0
 
     add-int/lit16 v0, v0, 0x20f
 
-    .line 96
     mul-int/lit8 v0, v0, 0x1f
 
     iget-wide v2, p0, Lcom/google/android/exoplayer/TimeRange$StaticTimeRange;->endTimeUs:J
@@ -152,6 +130,5 @@
 
     add-int/2addr v0, v1
 
-    .line 97
     return v0
 .end method

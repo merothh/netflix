@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/signup/WebViewAccountActivity;)V
     .locals 0
 
-    .prologue
-    .line 216
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/signup/WebViewAccountActivity$4;->this$0:Lcom/netflix/mediaclient/ui/signup/WebViewAccountActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,10 +26,8 @@
 .method public run()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 219
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/WebViewAccountActivity$4;->this$0:Lcom/netflix/mediaclient/ui/signup/WebViewAccountActivity;
 
     const v1, 0x7f08021d
@@ -40,7 +36,6 @@
 
     move-result-object v0
 
-    .line 220
     new-instance v1, Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$AlertDialogDescriptor;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/signup/WebViewAccountActivity$4;->this$0:Lcom/netflix/mediaclient/ui/signup/WebViewAccountActivity;
@@ -53,7 +48,6 @@
 
     invoke-direct {v1, v4, v0, v2, v4}, Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$AlertDialogDescriptor;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;)V
 
-    .line 221
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/WebViewAccountActivity$4;->this$0:Lcom/netflix/mediaclient/ui/signup/WebViewAccountActivity;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/signup/WebViewAccountActivity$4;->this$0:Lcom/netflix/mediaclient/ui/signup/WebViewAccountActivity;
@@ -66,11 +60,9 @@
 
     move-result-object v0
 
-    .line 222
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/signup/WebViewAccountActivity$4;->this$0:Lcom/netflix/mediaclient/ui/signup/WebViewAccountActivity;
 
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/ui/signup/WebViewAccountActivity;->displayDialog(Lcom/netflix/mediaclient/android/widget/UpdateDialog$Builder;)Landroid/app/Dialog;
 
-    .line 223
     return-void
 .end method

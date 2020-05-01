@@ -17,17 +17,12 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 27
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/logging/apm/BaseApmSession;-><init>()V
 
-    .line 28
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/apm/UIDataRequestSession;->mUrl:Ljava/lang/String;
 
-    .line 29
     iput-object p2, p0, Lcom/netflix/mediaclient/service/logging/apm/UIDataRequestSession;->mRequestId:Ljava/lang/String;
 
-    .line 30
     return-void
 .end method
 
@@ -36,8 +31,6 @@
 .method public createEndedEvent(Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;Lcom/netflix/mediaclient/service/logging/client/model/HttpResponse;Lcom/netflix/mediaclient/service/logging/client/model/Error;)Lcom/netflix/mediaclient/service/logging/apm/model/UIDataRequestSessionEndedEvent;
     .locals 4
 
-    .prologue
-    .line 42
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -46,56 +39,44 @@
 
     sub-long/2addr v0, v2
 
-    .line 43
     new-instance v2, Lcom/netflix/mediaclient/service/logging/apm/model/UIDataRequestSessionEndedEvent;
 
     invoke-direct {v2, v0, v1}, Lcom/netflix/mediaclient/service/logging/apm/model/UIDataRequestSessionEndedEvent;-><init>(J)V
 
-    .line 44
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/logging/apm/UIDataRequestSession;->getCategory()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v2, v0}, Lcom/netflix/mediaclient/service/logging/apm/model/UIDataRequestSessionEndedEvent;->setCategory(Ljava/lang/String;)V
 
-    .line 45
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/UIDataRequestSession;->mId:Lcom/netflix/mediaclient/service/logging/client/model/DeviceUniqueId;
 
     invoke-virtual {v2, v0}, Lcom/netflix/mediaclient/service/logging/apm/model/UIDataRequestSessionEndedEvent;->setSessionId(Lcom/netflix/mediaclient/service/logging/client/model/DeviceUniqueId;)V
 
-    .line 46
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/UIDataRequestSession;->mUrl:Ljava/lang/String;
 
     invoke-virtual {v2, v0}, Lcom/netflix/mediaclient/service/logging/apm/model/UIDataRequestSessionEndedEvent;->setUrl(Ljava/lang/String;)V
 
-    .line 47
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/UIDataRequestSession;->mRequestId:Ljava/lang/String;
 
     invoke-virtual {v2, v0}, Lcom/netflix/mediaclient/service/logging/apm/model/UIDataRequestSessionEndedEvent;->setRequestId(Ljava/lang/String;)V
 
-    .line 48
     invoke-virtual {v2, p3}, Lcom/netflix/mediaclient/service/logging/apm/model/UIDataRequestSessionEndedEvent;->setError(Lcom/netflix/mediaclient/service/logging/client/model/Error;)V
 
-    .line 49
     invoke-virtual {v2, p1}, Lcom/netflix/mediaclient/service/logging/apm/model/UIDataRequestSessionEndedEvent;->setReason(Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;)V
 
-    .line 50
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/UIDataRequestSession;->mRequestId:Ljava/lang/String;
 
     invoke-virtual {v2, v0}, Lcom/netflix/mediaclient/service/logging/apm/model/UIDataRequestSessionEndedEvent;->setRequestId(Ljava/lang/String;)V
 
-    .line 51
     invoke-virtual {v2, p2}, Lcom/netflix/mediaclient/service/logging/apm/model/UIDataRequestSessionEndedEvent;->setResponse(Lcom/netflix/mediaclient/service/logging/client/model/HttpResponse;)V
 
-    .line 52
     return-object v2
 .end method
 
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 37
     const-string/jumbo v0, "uiDataRequest"
 
     return-object v0

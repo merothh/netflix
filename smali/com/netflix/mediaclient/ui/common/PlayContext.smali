@@ -27,19 +27,16 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
     const/4 v2, 0x0
 
-    .line 9
     new-instance v0, Lcom/netflix/mediaclient/ui/common/PlayContextImp;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/ui/common/PlayContextImp;-><init>()V
 
     sput-object v0, Lcom/netflix/mediaclient/ui/common/PlayContext;->EMPTY_CONTEXT:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
-    .line 13
     new-instance v0, Lcom/netflix/mediaclient/ui/common/PlayContextImp;
 
     const v1, 0xd1c419
@@ -48,7 +45,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/common/PlayContext;->NFLX_MDX_CONTEXT:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
-    .line 14
     new-instance v0, Lcom/netflix/mediaclient/ui/common/PlayContextImp;
 
     const v1, 0xd2a38f
@@ -57,7 +53,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/common/PlayContext;->DFLT_MDX_CONTEXT:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
-    .line 15
     new-instance v0, Lcom/netflix/mediaclient/ui/common/PlayContextImp;
 
     const v1, 0xe8703b
@@ -66,7 +61,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/common/PlayContext;->OFFLINE_MY_DOWNLOADS_CONTEXT:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
-    .line 16
     new-instance v0, Lcom/netflix/mediaclient/ui/common/PlayContextImp;
 
     const v1, 0xe8b38b

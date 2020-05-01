@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 8
     invoke-direct {p0}, Lcom/netflix/mediaclient/android/fragment/NetflixFrag;-><init>()V
 
     return-void
@@ -19,8 +17,6 @@
 .method public isLoadingData()Z
     .locals 1
 
-    .prologue
-    .line 17
     const/4 v0, 0x0
 
     return v0
@@ -29,8 +25,6 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 2
 
-    .prologue
-    .line 12
     new-instance v0, Lcom/netflix/mediaclient/android/fragment/LoadingView;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/fragment/LoadingFrag;->getActivity()Landroid/app/Activity;

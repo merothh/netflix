@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/player/PlayerAgent;)V
     .locals 0
 
-    .prologue
-    .line 812
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$3;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,13 +26,10 @@
 .method public run()V
     .locals 7
 
-    .prologue
-    .line 815
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$3;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     monitor-enter v1
 
-    .line 816
     :try_start_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$3;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
@@ -46,42 +41,36 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$202(Lcom/netflix/mediaclient/service/player/PlayerAgent;I)I
 
-    .line 817
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$3;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     const/4 v2, 0x0
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$302(Lcom/netflix/mediaclient/service/player/PlayerAgent;Z)Z
 
-    .line 818
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$3;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     const/4 v2, 0x1
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$2802(Lcom/netflix/mediaclient/service/player/PlayerAgent;Z)Z
 
-    .line 819
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$3;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     const/4 v2, 0x0
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$402(Lcom/netflix/mediaclient/service/player/PlayerAgent;Z)Z
 
-    .line 821
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$3;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->getDuration()I
 
     move-result v2
 
-    .line 822
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$3;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$900(Lcom/netflix/mediaclient/service/player/PlayerAgent;)I
 
     move-result v0
 
-    .line 823
     iget-object v3, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$3;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     invoke-static {v3}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$900(Lcom/netflix/mediaclient/service/player/PlayerAgent;)I
@@ -94,7 +83,6 @@
 
     if-lez v2, :cond_1
 
-    .line 824
     invoke-static {}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$1600()Ljava/lang/String;
 
     move-result-object v0
@@ -103,10 +91,8 @@
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 825
     add-int/lit16 v0, v2, -0x2710
 
-    .line 831
     :cond_0
     :goto_0
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$3;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
@@ -117,7 +103,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 832
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$3;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     invoke-static {v2}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$100(Lcom/netflix/mediaclient/service/player/PlayerAgent;)Lcom/netflix/mediaclient/javabridge/ui/IMedia;
@@ -142,26 +127,21 @@
 
     invoke-interface {v2, v3, v4, v5, v6}, Lcom/netflix/mediaclient/javabridge/ui/IMedia;->swim(IZIZ)V
 
-    .line 836
     :goto_1
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$3;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     invoke-static {v2, v0}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$902(Lcom/netflix/mediaclient/service/player/PlayerAgent;I)I
 
-    .line 837
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$3;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     const/4 v2, 0x0
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$1102(Lcom/netflix/mediaclient/service/player/PlayerAgent;Z)Z
 
-    .line 838
     monitor-exit v1
 
-    .line 839
     return-void
 
-    .line 827
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -169,7 +149,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 828
     invoke-static {}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$1600()Ljava/lang/String;
 
     move-result-object v3
@@ -212,7 +191,6 @@
 
     goto :goto_0
 
-    .line 838
     :catchall_0
     move-exception v0
 
@@ -222,7 +200,6 @@
 
     throw v0
 
-    .line 834
     :cond_2
     :try_start_1
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$3;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;

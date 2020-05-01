@@ -23,8 +23,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1242
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,8 +33,6 @@
 .method public getHeroTrackId()I
     .locals 2
 
-    .prologue
-    .line 1307
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string/jumbo v1, "Should not be needed"
@@ -49,8 +45,6 @@
 .method public getListPos()I
     .locals 1
 
-    .prologue
-    .line 1302
     const/4 v0, 0x0
 
     return v0
@@ -59,8 +53,6 @@
 .method public getRequestId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 1297
     iget-object v0, p0, Lcom/netflix/model/leafs/Video$PostPlayContext;->requestId:Ljava/lang/String;
 
     return-object v0
@@ -69,8 +61,6 @@
 .method public getTrackId()I
     .locals 1
 
-    .prologue
-    .line 1292
     iget v0, p0, Lcom/netflix/model/leafs/Video$PostPlayContext;->trackId:I
 
     return v0
@@ -79,8 +69,6 @@
 .method public isHero()Z
     .locals 1
 
-    .prologue
-    .line 1312
     const/4 v0, 0x0
 
     return v0
@@ -89,18 +77,14 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 5
 
-    .prologue
-    .line 1251
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 1252
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 1253
     const-string/jumbo v1, "PostPlayContext"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -123,7 +107,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1255
     :cond_0
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -146,7 +129,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 1256
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -169,7 +151,6 @@
 
     goto :goto_0
 
-    .line 1258
     :pswitch_0
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -185,7 +166,6 @@
 
     goto :goto_0
 
-    .line 1256
     :sswitch_0
     const-string/jumbo v4, "trackId"
 
@@ -212,7 +192,6 @@
 
     goto :goto_1
 
-    .line 1261
     :pswitch_1
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -228,11 +207,9 @@
 
     goto :goto_0
 
-    .line 1265
     :cond_2
     return-void
 
-    .line 1256
     :sswitch_data_0
     .sparse-switch
         -0x3f9f2c3a -> :sswitch_0
@@ -249,17 +226,14 @@
 .method public set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 1269
     sget-boolean v2, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v2, :cond_0
 
-    .line 1270
     const-string/jumbo v2, "PostPlayContext"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -282,7 +256,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1272
     :cond_0
     const/4 v2, -0x1
 
@@ -296,11 +269,9 @@
     :goto_0
     packed-switch v2, :pswitch_data_0
 
-    .line 1282
     :goto_1
     return v0
 
-    .line 1272
     :sswitch_0
     const-string/jumbo v3, "trackId"
 
@@ -327,7 +298,6 @@
 
     goto :goto_0
 
-    .line 1274
     :pswitch_0
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsInt()I
 
@@ -338,10 +308,8 @@
     :goto_2
     move v0, v1
 
-    .line 1282
     goto :goto_1
 
-    .line 1277
     :pswitch_1
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -351,7 +319,6 @@
 
     goto :goto_2
 
-    .line 1272
     nop
 
     :sswitch_data_0
@@ -370,8 +337,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 1287
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

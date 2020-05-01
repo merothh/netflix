@@ -452,15 +452,12 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
-    .line 35
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Lcom/netflix/msl/MslError;->internalCodes:Ljava/util/Set;
 
-    .line 38
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/4 v1, 0x0
@@ -473,7 +470,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->JSON_PARSE_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 39
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/4 v1, 0x1
@@ -486,7 +482,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->JSON_ENCODE_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 40
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/4 v1, 0x2
@@ -499,7 +494,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->ENVELOPE_HASH_MISMATCH:Lcom/netflix/msl/MslError;
 
-    .line 41
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/4 v1, 0x3
@@ -512,7 +506,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->INVALID_PUBLIC_KEY:Lcom/netflix/msl/MslError;
 
-    .line 42
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/4 v1, 0x4
@@ -525,7 +518,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->INVALID_PRIVATE_KEY:Lcom/netflix/msl/MslError;
 
-    .line 43
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/4 v1, 0x5
@@ -538,7 +530,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->PLAINTEXT_ILLEGAL_BLOCK_SIZE:Lcom/netflix/msl/MslError;
 
-    .line 44
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/4 v1, 0x6
@@ -551,7 +542,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->PLAINTEXT_BAD_PADDING:Lcom/netflix/msl/MslError;
 
-    .line 45
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/4 v1, 0x7
@@ -564,7 +554,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->CIPHERTEXT_ILLEGAL_BLOCK_SIZE:Lcom/netflix/msl/MslError;
 
-    .line 46
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x8
@@ -577,7 +566,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->CIPHERTEXT_BAD_PADDING:Lcom/netflix/msl/MslError;
 
-    .line 47
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x9
@@ -590,7 +578,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->ENCRYPT_NOT_SUPPORTED:Lcom/netflix/msl/MslError;
 
-    .line 48
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xa
@@ -603,7 +590,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->DECRYPT_NOT_SUPPORTED:Lcom/netflix/msl/MslError;
 
-    .line 49
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xb
@@ -616,7 +602,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->ENVELOPE_KEY_ID_MISMATCH:Lcom/netflix/msl/MslError;
 
-    .line 50
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xc
@@ -629,7 +614,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->CIPHERTEXT_ENVELOPE_PARSE_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 51
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xd
@@ -642,7 +626,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->CIPHERTEXT_ENVELOPE_ENCODE_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 52
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xe
@@ -655,7 +638,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->SIGN_NOT_SUPPORTED:Lcom/netflix/msl/MslError;
 
-    .line 53
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xf
@@ -668,7 +650,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->VERIFY_NOT_SUPPORTED:Lcom/netflix/msl/MslError;
 
-    .line 54
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x10
@@ -681,7 +662,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->SIGNATURE_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 55
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x11
@@ -694,7 +674,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->HMAC_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 56
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x12
@@ -707,7 +686,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->ENCRYPT_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 57
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x13
@@ -720,7 +698,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->DECRYPT_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 58
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x14
@@ -733,7 +710,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->INSUFFICIENT_CIPHERTEXT:Lcom/netflix/msl/MslError;
 
-    .line 59
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x15
@@ -746,7 +722,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->SESSION_KEY_CREATION_FAILURE:Lcom/netflix/msl/MslError;
 
-    .line 60
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x18
@@ -759,7 +734,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->INVALID_SYMMETRIC_KEY:Lcom/netflix/msl/MslError;
 
-    .line 61
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x19
@@ -772,7 +746,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->INVALID_ENCRYPTION_KEY:Lcom/netflix/msl/MslError;
 
-    .line 62
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1a
@@ -785,7 +758,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->INVALID_HMAC_KEY:Lcom/netflix/msl/MslError;
 
-    .line 63
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b
@@ -798,7 +770,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->WRAP_NOT_SUPPORTED:Lcom/netflix/msl/MslError;
 
-    .line 64
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1c
@@ -811,7 +782,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNWRAP_NOT_SUPPORTED:Lcom/netflix/msl/MslError;
 
-    .line 65
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1d
@@ -824,7 +794,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNIDENTIFIED_JWK_TYPE:Lcom/netflix/msl/MslError;
 
-    .line 66
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1e
@@ -837,7 +806,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNIDENTIFIED_JWK_USAGE:Lcom/netflix/msl/MslError;
 
-    .line 67
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1f
@@ -850,7 +818,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNIDENTIFIED_JWK_ALGORITHM:Lcom/netflix/msl/MslError;
 
-    .line 68
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x20
@@ -863,7 +830,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->WRAP_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 69
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x21
@@ -876,7 +842,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNWRAP_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 70
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x22
@@ -889,7 +854,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->INVALID_JWK:Lcom/netflix/msl/MslError;
 
-    .line 71
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x23
@@ -902,7 +866,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->INVALID_JWK_KEYDATA:Lcom/netflix/msl/MslError;
 
-    .line 72
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x24
@@ -915,7 +878,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNSUPPORTED_JWK_ALGORITHM:Lcom/netflix/msl/MslError;
 
-    .line 73
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x25
@@ -928,7 +890,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->WRAP_KEY_CREATION_FAILURE:Lcom/netflix/msl/MslError;
 
-    .line 74
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x26
@@ -941,7 +902,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->INVALID_WRAP_CIPHERTEXT:Lcom/netflix/msl/MslError;
 
-    .line 75
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x27
@@ -954,7 +914,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNSUPPORTED_JWE_ALGORITHM:Lcom/netflix/msl/MslError;
 
-    .line 76
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x28
@@ -967,7 +926,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->JWE_ENCODE_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 77
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x29
@@ -980,7 +938,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->JWE_PARSE_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 78
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x2a
@@ -993,7 +950,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->INVALID_ALGORITHM_PARAMS:Lcom/netflix/msl/MslError;
 
-    .line 79
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x2b
@@ -1006,7 +962,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->JWE_ALGORITHM_MISMATCH:Lcom/netflix/msl/MslError;
 
-    .line 80
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x2c
@@ -1019,7 +974,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->KEY_IMPORT_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 81
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x2d
@@ -1032,7 +986,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->KEY_EXPORT_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 82
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x2e
@@ -1045,7 +998,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->DIGEST_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 83
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x2f
@@ -1058,7 +1010,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNSUPPORTED_KEY:Lcom/netflix/msl/MslError;
 
-    .line 84
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x30
@@ -1071,7 +1022,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNSUPPORTED_JWE_SERIALIZATION:Lcom/netflix/msl/MslError;
 
-    .line 85
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x33
@@ -1084,7 +1034,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->INVALID_WRAPPING_KEY:Lcom/netflix/msl/MslError;
 
-    .line 86
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x34
@@ -1097,7 +1046,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNIDENTIFIED_CIPHERTEXT_ENVELOPE:Lcom/netflix/msl/MslError;
 
-    .line 87
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x35
@@ -1110,7 +1058,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNIDENTIFIED_SIGNATURE_ENVELOPE:Lcom/netflix/msl/MslError;
 
-    .line 88
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x36
@@ -1123,7 +1070,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNSUPPORTED_CIPHERTEXT_ENVELOPE:Lcom/netflix/msl/MslError;
 
-    .line 89
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x37
@@ -1136,7 +1082,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNSUPPORTED_SIGNATURE_ENVELOPE:Lcom/netflix/msl/MslError;
 
-    .line 90
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x38
@@ -1149,7 +1094,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNIDENTIFIED_CIPHERSPEC:Lcom/netflix/msl/MslError;
 
-    .line 91
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x39
@@ -1162,7 +1106,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNIDENTIFIED_ALGORITHM:Lcom/netflix/msl/MslError;
 
-    .line 92
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x3a
@@ -1175,7 +1118,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->SIGNATURE_ENVELOPE_PARSE_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 93
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x3b
@@ -1188,7 +1130,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->SIGNATURE_ENVELOPE_ENCODE_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 94
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x3c
@@ -1201,7 +1142,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->INVALID_SIGNATURE:Lcom/netflix/msl/MslError;
 
-    .line 95
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x3d
@@ -1214,7 +1154,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->DERIVEKEY_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 96
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x3e
@@ -1227,7 +1166,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNIDENTIFIED_JWK_KEYOP:Lcom/netflix/msl/MslError;
 
-    .line 97
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x3f
@@ -1240,7 +1178,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->GENERATEKEY_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 98
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x40
@@ -1253,7 +1190,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->INVALID_IV:Lcom/netflix/msl/MslError;
 
-    .line 99
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x41
@@ -1266,7 +1202,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->INVALID_CIPHERTEXT:Lcom/netflix/msl/MslError;
 
-    .line 102
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x3e8
@@ -1279,7 +1214,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MASTERTOKEN_UNTRUSTED:Lcom/netflix/msl/MslError;
 
-    .line 103
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x3e9
@@ -1292,7 +1226,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MASTERTOKEN_KEY_CREATION_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 104
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x3ea
@@ -1305,7 +1238,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MASTERTOKEN_EXPIRES_BEFORE_RENEWAL:Lcom/netflix/msl/MslError;
 
-    .line 105
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x3eb
@@ -1318,7 +1250,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MASTERTOKEN_SESSIONDATA_MISSING:Lcom/netflix/msl/MslError;
 
-    .line 106
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x3ec
@@ -1331,7 +1262,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MASTERTOKEN_SEQUENCE_NUMBER_OUT_OF_RANGE:Lcom/netflix/msl/MslError;
 
-    .line 107
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x3ed
@@ -1344,7 +1274,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MASTERTOKEN_SERIAL_NUMBER_OUT_OF_RANGE:Lcom/netflix/msl/MslError;
 
-    .line 108
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x3ee
@@ -1357,7 +1286,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MASTERTOKEN_TOKENDATA_INVALID:Lcom/netflix/msl/MslError;
 
-    .line 109
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x3ef
@@ -1370,7 +1298,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MASTERTOKEN_SIGNATURE_INVALID:Lcom/netflix/msl/MslError;
 
-    .line 110
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x3f0
@@ -1383,7 +1310,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MASTERTOKEN_SESSIONDATA_INVALID:Lcom/netflix/msl/MslError;
 
-    .line 111
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x3f1
@@ -1396,7 +1322,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MASTERTOKEN_SEQUENCE_NUMBER_OUT_OF_SYNC:Lcom/netflix/msl/MslError;
 
-    .line 112
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x3f2
@@ -1409,7 +1334,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MASTERTOKEN_TOKENDATA_MISSING:Lcom/netflix/msl/MslError;
 
-    .line 113
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x3f3
@@ -1422,7 +1346,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MASTERTOKEN_TOKENDATA_PARSE_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 114
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x3f4
@@ -1435,7 +1358,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MASTERTOKEN_SESSIONDATA_PARSE_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 115
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x3f5
@@ -1448,7 +1370,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MASTERTOKEN_IDENTITY_REVOKED:Lcom/netflix/msl/MslError;
 
-    .line 116
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x3f6
@@ -1461,7 +1382,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MASTERTOKEN_REJECTED_BY_APP:Lcom/netflix/msl/MslError;
 
-    .line 119
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x7d0
@@ -1474,7 +1394,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERIDTOKEN_MASTERTOKEN_MISMATCH:Lcom/netflix/msl/MslError;
 
-    .line 120
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x7d1
@@ -1487,7 +1406,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERIDTOKEN_NOT_DECRYPTED:Lcom/netflix/msl/MslError;
 
-    .line 121
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x7d2
@@ -1500,7 +1418,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERIDTOKEN_MASTERTOKEN_NULL:Lcom/netflix/msl/MslError;
 
-    .line 122
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x7d3
@@ -1513,7 +1430,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERIDTOKEN_EXPIRES_BEFORE_RENEWAL:Lcom/netflix/msl/MslError;
 
-    .line 123
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x7d4
@@ -1526,7 +1442,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERIDTOKEN_USERDATA_MISSING:Lcom/netflix/msl/MslError;
 
-    .line 124
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x7d5
@@ -1539,7 +1454,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERIDTOKEN_MASTERTOKEN_NOT_FOUND:Lcom/netflix/msl/MslError;
 
-    .line 125
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x7d6
@@ -1552,7 +1466,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERIDTOKEN_MASTERTOKEN_SERIAL_NUMBER_OUT_OF_RANGE:Lcom/netflix/msl/MslError;
 
-    .line 126
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x7d7
@@ -1565,7 +1478,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERIDTOKEN_SERIAL_NUMBER_OUT_OF_RANGE:Lcom/netflix/msl/MslError;
 
-    .line 127
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x7d8
@@ -1578,7 +1490,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERIDTOKEN_TOKENDATA_INVALID:Lcom/netflix/msl/MslError;
 
-    .line 128
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x7d9
@@ -1591,7 +1502,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERIDTOKEN_SIGNATURE_INVALID:Lcom/netflix/msl/MslError;
 
-    .line 129
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x7da
@@ -1604,7 +1514,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERIDTOKEN_USERDATA_INVALID:Lcom/netflix/msl/MslError;
 
-    .line 130
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x7db
@@ -1617,7 +1526,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERIDTOKEN_IDENTITY_INVALID:Lcom/netflix/msl/MslError;
 
-    .line 131
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x7dc
@@ -1630,7 +1538,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->RESERVED_2012:Lcom/netflix/msl/MslError;
 
-    .line 132
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x7df
@@ -1643,7 +1550,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERIDTOKEN_USERAUTH_DATA_MISMATCH:Lcom/netflix/msl/MslError;
 
-    .line 133
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x7e0
@@ -1656,7 +1562,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERIDTOKEN_TOKENDATA_MISSING:Lcom/netflix/msl/MslError;
 
-    .line 134
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x7e1
@@ -1669,7 +1574,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERIDTOKEN_TOKENDATA_PARSE_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 135
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x7e2
@@ -1682,7 +1586,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERIDTOKEN_USERDATA_PARSE_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 136
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x7e3
@@ -1695,7 +1598,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERIDTOKEN_REVOKED:Lcom/netflix/msl/MslError;
 
-    .line 137
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x7e4
@@ -1708,7 +1610,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERIDTOKEN_REJECTED_BY_APP:Lcom/netflix/msl/MslError;
 
-    .line 140
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xbb8
@@ -1721,7 +1622,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->SERVICETOKEN_MASTERTOKEN_MISMATCH:Lcom/netflix/msl/MslError;
 
-    .line 141
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xbb9
@@ -1734,7 +1634,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->SERVICETOKEN_USERIDTOKEN_MISMATCH:Lcom/netflix/msl/MslError;
 
-    .line 142
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xbba
@@ -1747,7 +1646,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->SERVICETOKEN_SERVICEDATA_INVALID:Lcom/netflix/msl/MslError;
 
-    .line 143
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xbbb
@@ -1760,7 +1658,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->SERVICETOKEN_MASTERTOKEN_NOT_FOUND:Lcom/netflix/msl/MslError;
 
-    .line 144
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xbbc
@@ -1773,7 +1670,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->SERVICETOKEN_USERIDTOKEN_NOT_FOUND:Lcom/netflix/msl/MslError;
 
-    .line 145
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xbbd
@@ -1786,7 +1682,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->SERVICETOKEN_MASTERTOKEN_SERIAL_NUMBER_OUT_OF_RANGE:Lcom/netflix/msl/MslError;
 
-    .line 146
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xbbe
@@ -1799,7 +1694,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->SERVICETOKEN_USERIDTOKEN_SERIAL_NUMBER_OUT_OF_RANGE:Lcom/netflix/msl/MslError;
 
-    .line 147
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xbbf
@@ -1812,7 +1706,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->SERVICETOKEN_TOKENDATA_INVALID:Lcom/netflix/msl/MslError;
 
-    .line 148
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xbc0
@@ -1825,7 +1718,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->SERVICETOKEN_SIGNATURE_INVALID:Lcom/netflix/msl/MslError;
 
-    .line 149
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xbc1
@@ -1838,7 +1730,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->SERVICETOKEN_TOKENDATA_MISSING:Lcom/netflix/msl/MslError;
 
-    .line 152
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xfa0
@@ -1851,7 +1742,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNIDENTIFIED_ENTITYAUTH_SCHEME:Lcom/netflix/msl/MslError;
 
-    .line 153
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xfa1
@@ -1864,7 +1754,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->ENTITYAUTH_FACTORY_NOT_FOUND:Lcom/netflix/msl/MslError;
 
-    .line 154
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xfa2
@@ -1877,7 +1766,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->X509CERT_PARSE_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 155
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xfa3
@@ -1890,7 +1778,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->X509CERT_ENCODE_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 156
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xfa4
@@ -1903,7 +1790,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->X509CERT_VERIFICATION_FAILED:Lcom/netflix/msl/MslError;
 
-    .line 157
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xfa5
@@ -1916,7 +1802,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->ENTITY_NOT_FOUND:Lcom/netflix/msl/MslError;
 
-    .line 158
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xfa6
@@ -1929,7 +1814,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->INCORRECT_ENTITYAUTH_DATA:Lcom/netflix/msl/MslError;
 
-    .line 159
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xfa7
@@ -1942,7 +1826,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->RSA_PUBLICKEY_NOT_FOUND:Lcom/netflix/msl/MslError;
 
-    .line 160
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xfb7
@@ -1955,7 +1838,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNSUPPORTED_ENTITYAUTH_DATA:Lcom/netflix/msl/MslError;
 
-    .line 161
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xfb9
@@ -1968,7 +1850,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->ENTITY_REVOKED:Lcom/netflix/msl/MslError;
 
-    .line 162
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xfba
@@ -1981,7 +1862,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->ENTITY_REJECTED_BY_APP:Lcom/netflix/msl/MslError;
 
-    .line 163
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xfbc
@@ -1994,7 +1874,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->X509CERT_EXPIRED:Lcom/netflix/msl/MslError;
 
-    .line 164
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xfbd
@@ -2007,7 +1886,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->X509CERT_NOT_YET_VALID:Lcom/netflix/msl/MslError;
 
-    .line 165
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xfbe
@@ -2020,7 +1898,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->X509CERT_INVALID:Lcom/netflix/msl/MslError;
 
-    .line 166
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xfbf
@@ -2033,7 +1910,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->RSA_PRIVATEKEY_NOT_FOUND:Lcom/netflix/msl/MslError;
 
-    .line 167
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xfc0
@@ -2046,7 +1922,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->ENTITYAUTH_MASTERTOKEN_NOT_DECRYPTED:Lcom/netflix/msl/MslError;
 
-    .line 168
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xfc1
@@ -2059,7 +1934,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->ENTITYAUTH_SIGNATURE_INVALID:Lcom/netflix/msl/MslError;
 
-    .line 169
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xfc2
@@ -2072,7 +1946,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->ENTITYAUTH_CIPHERTEXT_INVALID:Lcom/netflix/msl/MslError;
 
-    .line 170
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xfc3
@@ -2085,7 +1958,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->ENTITYAUTH_VERIFICATION_FAILED:Lcom/netflix/msl/MslError;
 
-    .line 171
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0xfc4
@@ -2098,7 +1970,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->ENTITYAUTH_MASTERTOKEN_INVALID:Lcom/netflix/msl/MslError;
 
-    .line 174
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x138b
@@ -2111,7 +1982,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNIDENTIFIED_USERAUTH_SCHEME:Lcom/netflix/msl/MslError;
 
-    .line 175
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x138c
@@ -2124,7 +1994,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERAUTH_FACTORY_NOT_FOUND:Lcom/netflix/msl/MslError;
 
-    .line 176
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x138d
@@ -2137,7 +2006,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->EMAILPASSWORD_BLANK:Lcom/netflix/msl/MslError;
 
-    .line 177
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x138f
@@ -2150,7 +2018,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->EMAILPASSWORD_INCORRECT:Lcom/netflix/msl/MslError;
 
-    .line 178
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1390
@@ -2163,7 +2030,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNSUPPORTED_USERAUTH_DATA:Lcom/netflix/msl/MslError;
 
-    .line 179
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1393
@@ -2176,7 +2042,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERAUTH_USERIDTOKEN_INVALID:Lcom/netflix/msl/MslError;
 
-    .line 180
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1395
@@ -2189,7 +2054,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNIDENTIFIED_USERAUTH_MECHANISM:Lcom/netflix/msl/MslError;
 
-    .line 181
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1396
@@ -2202,7 +2066,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNSUPPORTED_USERAUTH_MECHANISM:Lcom/netflix/msl/MslError;
 
-    .line 182
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1398
@@ -2215,7 +2078,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERAUTH_MASTERTOKEN_MISSING:Lcom/netflix/msl/MslError;
 
-    .line 183
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x139d
@@ -2228,7 +2090,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERAUTH_USERIDTOKEN_NOT_DECRYPTED:Lcom/netflix/msl/MslError;
 
-    .line 184
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x13a0
@@ -2241,7 +2102,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERAUTH_MASTERTOKEN_INVALID:Lcom/netflix/msl/MslError;
 
-    .line 185
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x13a1
@@ -2254,7 +2114,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERAUTH_MASTERTOKEN_NOT_DECRYPTED:Lcom/netflix/msl/MslError;
 
-    .line 186
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x13a6
@@ -2267,7 +2126,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERAUTH_USERIDTOKEN_MISSING:Lcom/netflix/msl/MslError;
 
-    .line 187
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x13a8
@@ -2280,7 +2138,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERAUTH_ENTITY_MISMATCH:Lcom/netflix/msl/MslError;
 
-    .line 188
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x13a9
@@ -2293,7 +2150,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERAUTH_ENTITY_INCORRECT_DATA:Lcom/netflix/msl/MslError;
 
-    .line 189
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x13ad
@@ -2306,7 +2162,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USER_REJECTED_BY_APP:Lcom/netflix/msl/MslError;
 
-    .line 190
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x13b0
@@ -2319,7 +2174,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERIDTOKEN_IDENTITY_NOT_ASSOCIATED_WITH_ENTITY:Lcom/netflix/msl/MslError;
 
-    .line 191
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x13b1
@@ -2332,7 +2186,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->USERAUTH_ENTITYUSER_INCORRECT_DATA:Lcom/netflix/msl/MslError;
 
-    .line 194
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1770
@@ -2345,7 +2198,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNSUPPORTED_COMPRESSION:Lcom/netflix/msl/MslError;
 
-    .line 195
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1771
@@ -2358,7 +2210,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->COMPRESSION_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 196
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1772
@@ -2371,7 +2222,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNCOMPRESSION_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 197
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1773
@@ -2384,7 +2234,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MESSAGE_ENTITY_NOT_FOUND:Lcom/netflix/msl/MslError;
 
-    .line 198
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1774
@@ -2397,7 +2246,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->PAYLOAD_MESSAGE_ID_MISMATCH:Lcom/netflix/msl/MslError;
 
-    .line 199
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1775
@@ -2410,7 +2258,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->PAYLOAD_SEQUENCE_NUMBER_MISMATCH:Lcom/netflix/msl/MslError;
 
-    .line 200
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1776
@@ -2423,7 +2270,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->PAYLOAD_VERIFICATION_FAILED:Lcom/netflix/msl/MslError;
 
-    .line 201
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1777
@@ -2436,7 +2282,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MESSAGE_DATA_MISSING:Lcom/netflix/msl/MslError;
 
-    .line 202
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1778
@@ -2449,7 +2294,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MESSAGE_FORMAT_ERROR:Lcom/netflix/msl/MslError;
 
-    .line 203
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1779
@@ -2462,7 +2306,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MESSAGE_VERIFICATION_FAILED:Lcom/netflix/msl/MslError;
 
-    .line 204
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x177a
@@ -2475,7 +2318,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->HEADER_DATA_MISSING:Lcom/netflix/msl/MslError;
 
-    .line 205
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x177b
@@ -2488,7 +2330,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->PAYLOAD_DATA_MISSING:Lcom/netflix/msl/MslError;
 
-    .line 206
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x177c
@@ -2501,7 +2342,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->PAYLOAD_DATA_CORRUPT:Lcom/netflix/msl/MslError;
 
-    .line 207
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x177d
@@ -2514,7 +2354,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNIDENTIFIED_COMPRESSION:Lcom/netflix/msl/MslError;
 
-    .line 208
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x177e
@@ -2527,7 +2366,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MESSAGE_EXPIRED:Lcom/netflix/msl/MslError;
 
-    .line 209
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x177f
@@ -2540,7 +2378,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MESSAGE_ID_OUT_OF_RANGE:Lcom/netflix/msl/MslError;
 
-    .line 210
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1780
@@ -2553,7 +2390,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->INTERNAL_CODE_NEGATIVE:Lcom/netflix/msl/MslError;
 
-    .line 211
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1781
@@ -2566,7 +2402,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNEXPECTED_RESPONSE_MESSAGE_ID:Lcom/netflix/msl/MslError;
 
-    .line 212
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1782
@@ -2579,7 +2414,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->RESPONSE_REQUIRES_ENCRYPTION:Lcom/netflix/msl/MslError;
 
-    .line 213
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1783
@@ -2592,7 +2426,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->PAYLOAD_SEQUENCE_NUMBER_OUT_OF_RANGE:Lcom/netflix/msl/MslError;
 
-    .line 214
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1784
@@ -2605,7 +2438,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->PAYLOAD_MESSAGE_ID_OUT_OF_RANGE:Lcom/netflix/msl/MslError;
 
-    .line 215
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1785
@@ -2618,7 +2450,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MESSAGE_REPLAYED:Lcom/netflix/msl/MslError;
 
-    .line 216
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1786
@@ -2631,7 +2462,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->INCOMPLETE_NONREPLAYABLE_MESSAGE:Lcom/netflix/msl/MslError;
 
-    .line 217
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1787
@@ -2644,7 +2474,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->HEADER_SIGNATURE_INVALID:Lcom/netflix/msl/MslError;
 
-    .line 218
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1788
@@ -2657,7 +2486,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->HEADER_DATA_INVALID:Lcom/netflix/msl/MslError;
 
-    .line 219
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1789
@@ -2670,7 +2498,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->PAYLOAD_INVALID:Lcom/netflix/msl/MslError;
 
-    .line 220
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x178a
@@ -2683,7 +2510,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->PAYLOAD_SIGNATURE_INVALID:Lcom/netflix/msl/MslError;
 
-    .line 221
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x178b
@@ -2696,7 +2522,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->RESPONSE_REQUIRES_MASTERTOKEN:Lcom/netflix/msl/MslError;
 
-    .line 222
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x178c
@@ -2709,7 +2534,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->RESPONSE_REQUIRES_USERIDTOKEN:Lcom/netflix/msl/MslError;
 
-    .line 223
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x178d
@@ -2722,7 +2546,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->REQUEST_REQUIRES_USERAUTHDATA:Lcom/netflix/msl/MslError;
 
-    .line 224
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x178e
@@ -2735,7 +2558,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNEXPECTED_MESSAGE_SENDER:Lcom/netflix/msl/MslError;
 
-    .line 225
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x178f
@@ -2748,7 +2570,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->NONREPLAYABLE_MESSAGE_REQUIRES_MASTERTOKEN:Lcom/netflix/msl/MslError;
 
-    .line 226
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1790
@@ -2761,7 +2582,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->NONREPLAYABLE_ID_OUT_OF_RANGE:Lcom/netflix/msl/MslError;
 
-    .line 227
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1791
@@ -2774,7 +2594,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MESSAGE_SERVICETOKEN_MISMATCH:Lcom/netflix/msl/MslError;
 
-    .line 228
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1792
@@ -2787,7 +2606,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MESSAGE_PEER_SERVICETOKEN_MISMATCH:Lcom/netflix/msl/MslError;
 
-    .line 229
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1793
@@ -2800,7 +2618,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->RESPONSE_REQUIRES_INTEGRITY_PROTECTION:Lcom/netflix/msl/MslError;
 
-    .line 230
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1794
@@ -2813,7 +2630,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->HANDSHAKE_DATA_MISSING:Lcom/netflix/msl/MslError;
 
-    .line 231
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1795
@@ -2826,7 +2642,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MESSAGE_RECIPIENT_MISMATCH:Lcom/netflix/msl/MslError;
 
-    .line 232
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1796
@@ -2839,7 +2654,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MESSAGE_ENTITYDATABASED_VERIFICATION_FAILED:Lcom/netflix/msl/MslError;
 
-    .line 233
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1797
@@ -2852,7 +2666,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MESSAGE_MASTERTOKENBASED_VERIFICATION_FAILED:Lcom/netflix/msl/MslError;
 
-    .line 234
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1798
@@ -2865,7 +2678,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MESSAGE_REPLAYED_UNRECOVERABLE:Lcom/netflix/msl/MslError;
 
-    .line 237
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b58
@@ -2878,7 +2690,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNIDENTIFIED_KEYX_SCHEME:Lcom/netflix/msl/MslError;
 
-    .line 238
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b59
@@ -2891,7 +2702,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->KEYX_FACTORY_NOT_FOUND:Lcom/netflix/msl/MslError;
 
-    .line 239
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b5a
@@ -2904,7 +2714,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->KEYX_REQUEST_NOT_FOUND:Lcom/netflix/msl/MslError;
 
-    .line 240
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b5b
@@ -2917,7 +2726,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNIDENTIFIED_KEYX_KEY_ID:Lcom/netflix/msl/MslError;
 
-    .line 241
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b5c
@@ -2930,7 +2738,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNSUPPORTED_KEYX_KEY_ID:Lcom/netflix/msl/MslError;
 
-    .line 242
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b5d
@@ -2943,7 +2750,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNIDENTIFIED_KEYX_MECHANISM:Lcom/netflix/msl/MslError;
 
-    .line 243
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b5e
@@ -2956,7 +2762,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNSUPPORTED_KEYX_MECHANISM:Lcom/netflix/msl/MslError;
 
-    .line 244
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b5f
@@ -2969,7 +2774,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->KEYX_RESPONSE_REQUEST_MISMATCH:Lcom/netflix/msl/MslError;
 
-    .line 245
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b60
@@ -2982,7 +2786,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->KEYX_PRIVATE_KEY_MISSING:Lcom/netflix/msl/MslError;
 
-    .line 246
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b61
@@ -2995,7 +2798,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNKNOWN_KEYX_PARAMETERS_ID:Lcom/netflix/msl/MslError;
 
-    .line 247
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b62
@@ -3008,7 +2810,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->KEYX_MASTER_TOKEN_MISSING:Lcom/netflix/msl/MslError;
 
-    .line 248
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b63
@@ -3021,7 +2822,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->KEYX_INVALID_PUBLIC_KEY:Lcom/netflix/msl/MslError;
 
-    .line 249
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b64
@@ -3034,7 +2834,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->KEYX_PUBLIC_KEY_MISSING:Lcom/netflix/msl/MslError;
 
-    .line 250
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b65
@@ -3047,7 +2846,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->KEYX_WRAPPING_KEY_MISSING:Lcom/netflix/msl/MslError;
 
-    .line 251
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b66
@@ -3060,7 +2858,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->KEYX_WRAPPING_KEY_ID_MISSING:Lcom/netflix/msl/MslError;
 
-    .line 252
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b67
@@ -3073,7 +2870,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->KEYX_INVALID_WRAPPING_KEY:Lcom/netflix/msl/MslError;
 
-    .line 253
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b68
@@ -3086,7 +2882,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->KEYX_INCORRECT_DATA:Lcom/netflix/msl/MslError;
 
-    .line 254
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b69
@@ -3099,7 +2894,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->KEYX_INCORRECT_MECHANISM:Lcom/netflix/msl/MslError;
 
-    .line 255
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b6a
@@ -3112,7 +2906,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->KEYX_DERIVATION_KEY_MISSING:Lcom/netflix/msl/MslError;
 
-    .line 256
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b6b
@@ -3125,7 +2918,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->KEYX_INVALID_ENCRYPTION_KEY:Lcom/netflix/msl/MslError;
 
-    .line 257
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b6c
@@ -3138,7 +2930,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->KEYX_INVALID_HMAC_KEY:Lcom/netflix/msl/MslError;
 
-    .line 258
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b6d
@@ -3151,7 +2942,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->KEYX_INVALID_WRAPDATA:Lcom/netflix/msl/MslError;
 
-    .line 259
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x1b6e
@@ -3164,7 +2954,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->UNSUPPORTED_KEYX_SCHEME:Lcom/netflix/msl/MslError;
 
-    .line 262
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x2328
@@ -3177,7 +2966,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->INTERNAL_EXCEPTION:Lcom/netflix/msl/MslError;
 
-    .line 263
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x2329
@@ -3190,7 +2978,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslError;->MSL_COMMS_FAILURE:Lcom/netflix/msl/MslError;
 
-    .line 264
     new-instance v0, Lcom/netflix/msl/MslError;
 
     const/16 v1, 0x270f
@@ -3209,16 +2996,12 @@
 .method protected constructor <init>(ILcom/netflix/msl/MslConstants$ResponseCode;Ljava/lang/String;)V
     .locals 4
 
-    .prologue
-    .line 277
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 279
     sget-object v1, Lcom/netflix/msl/MslError;->internalCodes:Ljava/util/Set;
 
     monitor-enter v1
 
-    .line 280
     :try_start_0
     sget-object v0, Lcom/netflix/msl/MslError;->internalCodes:Ljava/util/Set;
 
@@ -3232,7 +3015,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 281
     new-instance v0, Lcom/netflix/msl/MslInternalException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3263,7 +3045,6 @@
 
     throw v0
 
-    .line 283
     :catchall_0
     move-exception v0
 
@@ -3273,7 +3054,6 @@
 
     throw v0
 
-    .line 282
     :cond_0
     :try_start_1
     sget-object v0, Lcom/netflix/msl/MslError;->internalCodes:Ljava/util/Set;
@@ -3284,25 +3064,20 @@
 
     invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 283
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 285
     const v0, 0x186a0
 
     add-int/2addr v0, p1
 
     iput v0, p0, Lcom/netflix/msl/MslError;->internalCode:I
 
-    .line 286
     iput-object p2, p0, Lcom/netflix/msl/MslError;->responseCode:Lcom/netflix/msl/MslConstants$ResponseCode;
 
-    .line 287
     iput-object p3, p0, Lcom/netflix/msl/MslError;->msg:Ljava/lang/String;
 
-    .line 288
     return-void
 .end method
 
@@ -3311,20 +3086,16 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 318
     if-ne p1, p0, :cond_1
 
-    .line 321
     :cond_0
     :goto_0
     return v0
 
-    .line 319
     :cond_1
     instance-of v2, p1, Lcom/netflix/msl/MslError;
 
@@ -3334,11 +3105,9 @@
 
     goto :goto_0
 
-    .line 320
     :cond_2
     check-cast p1, Lcom/netflix/msl/MslError;
 
-    .line 321
     iget v2, p0, Lcom/netflix/msl/MslError;->internalCode:I
 
     iget v3, p1, Lcom/netflix/msl/MslError;->internalCode:I
@@ -3360,8 +3129,6 @@
 .method public getInternalCode()I
     .locals 1
 
-    .prologue
-    .line 294
     iget v0, p0, Lcom/netflix/msl/MslError;->internalCode:I
 
     return v0
@@ -3370,8 +3137,6 @@
 .method public getMessage()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 308
     iget-object v0, p0, Lcom/netflix/msl/MslError;->msg:Ljava/lang/String;
 
     return-object v0
@@ -3380,8 +3145,6 @@
 .method public getResponseCode()Lcom/netflix/msl/MslConstants$ResponseCode;
     .locals 1
 
-    .prologue
-    .line 301
     iget-object v0, p0, Lcom/netflix/msl/MslError;->responseCode:Lcom/netflix/msl/MslConstants$ResponseCode;
 
     return-object v0
@@ -3390,8 +3153,6 @@
 .method public hashCode()I
     .locals 2
 
-    .prologue
-    .line 330
     iget v0, p0, Lcom/netflix/msl/MslError;->internalCode:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

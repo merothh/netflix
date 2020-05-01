@@ -22,8 +22,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,8 +32,6 @@
 .method public compare(Lcom/google/android/exoplayer/chunk/Format;Lcom/google/android/exoplayer/chunk/Format;)I
     .locals 2
 
-    .prologue
-    .line 33
     iget v0, p2, Lcom/google/android/exoplayer/chunk/Format;->bitrate:I
 
     iget v1, p1, Lcom/google/android/exoplayer/chunk/Format;->bitrate:I
@@ -48,8 +44,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 29
     check-cast p1, Lcom/google/android/exoplayer/chunk/Format;
 
     check-cast p2, Lcom/google/android/exoplayer/chunk/Format;

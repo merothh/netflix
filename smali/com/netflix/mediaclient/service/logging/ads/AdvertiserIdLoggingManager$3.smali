@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;)V
     .locals 0
 
-    .prologue
-    .line 217
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager$3;->this$0:Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,15 +23,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .prologue
-    .line 221
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 222
     const-string/jumbo v0, "nf_adv_id"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -56,13 +51,11 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 225
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 226
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.PUSH_ONLOGIN"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -71,24 +64,20 @@
 
     if-eqz v1, :cond_2
 
-    .line 227
     const-string/jumbo v0, "nf_adv_id"
 
     const-string/jumbo v1, "onLogin"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 228
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager$3;->this$0:Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;->access$600(Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;)V
 
-    .line 241
     :cond_1
     :goto_0
     return-void
 
-    .line 229
     :cond_2
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.PUSH_ONLOGOUT"
 
@@ -98,21 +87,18 @@
 
     if-eqz v1, :cond_3
 
-    .line 230
     const-string/jumbo v0, "nf_adv_id"
 
     const-string/jumbo v1, "onLogout"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 231
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager$3;->this$0:Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;->access$700(Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;)V
 
     goto :goto_0
 
-    .line 232
     :cond_3
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.ONSIGNUP"
 
@@ -122,14 +108,12 @@
 
     if-eqz v1, :cond_4
 
-    .line 233
     const-string/jumbo v0, "nf_adv_id"
 
     const-string/jumbo v1, "onSignUp"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 234
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager$3;->this$0:Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;
 
     sget-object v1, Lcom/netflix/mediaclient/servicemgr/AdvertiserIdLogging$EventType;->sign_up:Lcom/netflix/mediaclient/servicemgr/AdvertiserIdLogging$EventType;
@@ -138,7 +122,6 @@
 
     goto :goto_0
 
-    .line 236
     :cond_4
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -146,7 +129,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 237
     const-string/jumbo v1, "nf_adv_id"
 
     new-instance v2, Ljava/lang/StringBuilder;

@@ -13,17 +13,12 @@
 .method constructor <init>(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;Landroid/os/Handler;)V
     .locals 0
 
-    .prologue
-    .line 1778
     invoke-direct {p0, p3}, Landroid/support/v4/os/ResultReceiver;-><init>(Landroid/os/Handler;)V
 
-    .line 1779
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;->mMediaId:Ljava/lang/String;
 
-    .line 1780
     iput-object p2, p0, Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;->mCallback:Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;
 
-    .line 1781
     return-void
 .end method
 
@@ -32,8 +27,6 @@
 .method protected onReceiveResult(ILandroid/os/Bundle;)V
     .locals 2
 
-    .prologue
-    .line 1785
     const-class v0, Landroid/support/v4/media/MediaBrowserCompat;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -42,21 +35,18 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->setClassLoader(Ljava/lang/ClassLoader;)V
 
-    .line 1786
     if-nez p1, :cond_0
 
     if-eqz p2, :cond_0
 
     const-string/jumbo v0, "media_item"
 
-    .line 1787
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 1788
     :cond_0
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;->mCallback:Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;
 
@@ -64,11 +54,9 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;->onError(Ljava/lang/String;)V
 
-    .line 1797
     :goto_0
     return-void
 
-    .line 1791
     :cond_1
     const-string/jumbo v0, "media_item"
 
@@ -76,14 +64,12 @@
 
     move-result-object v0
 
-    .line 1792
     if-eqz v0, :cond_2
 
     instance-of v1, v0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
 
     if-eqz v1, :cond_3
 
-    .line 1793
     :cond_2
     iget-object v1, p0, Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;->mCallback:Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;
 
@@ -93,7 +79,6 @@
 
     goto :goto_0
 
-    .line 1795
     :cond_3
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;->mCallback:Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;
 

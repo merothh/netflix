@@ -28,30 +28,24 @@
 .method constructor <init>(Lio/realm/RealmResults;)V
     .locals 2
 
-    .prologue
-    .line 718
     iput-object p1, p0, Lio/realm/RealmResults$RealmResultsIterator;->this$0:Lio/realm/RealmResults;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 715
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lio/realm/RealmResults$RealmResultsIterator;->tableViewVersion:J
 
-    .line 716
     const/4 v0, -0x1
 
     iput v0, p0, Lio/realm/RealmResults$RealmResultsIterator;->pos:I
 
-    .line 719
     invoke-static {p1}, Lio/realm/RealmResults;->access$000(Lio/realm/RealmResults;)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lio/realm/RealmResults$RealmResultsIterator;->tableViewVersion:J
 
-    .line 720
     return-void
 .end method
 
@@ -60,8 +54,6 @@
 .method protected checkRealmIsStable()V
     .locals 6
 
-    .prologue
-    .line 753
     iget-object v0, p0, Lio/realm/RealmResults$RealmResultsIterator;->this$0:Lio/realm/RealmResults;
 
     invoke-static {v0}, Lio/realm/RealmResults;->access$100(Lio/realm/RealmResults;)Lio/realm/internal/TableOrView;
@@ -72,7 +64,6 @@
 
     move-result-wide v0
 
-    .line 759
     iget-object v2, p0, Lio/realm/RealmResults$RealmResultsIterator;->this$0:Lio/realm/RealmResults;
 
     iget-object v2, v2, Lio/realm/RealmResults;->realm:Lio/realm/BaseRealm;
@@ -97,7 +88,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 760
     new-instance v0, Ljava/util/ConcurrentModificationException;
 
     const-string/jumbo v1, "No outside changes to a Realm is allowed while iterating a RealmResults. Don\'t call Realm.refresh() while iterating."
@@ -106,19 +96,15 @@
 
     throw v0
 
-    .line 762
     :cond_0
     iput-wide v0, p0, Lio/realm/RealmResults$RealmResultsIterator;->tableViewVersion:J
 
-    .line 763
     return-void
 .end method
 
 .method public hasNext()Z
     .locals 2
 
-    .prologue
-    .line 726
     iget v0, p0, Lio/realm/RealmResults$RealmResultsIterator;->pos:I
 
     add-int/lit8 v0, v0, 0x1
@@ -150,25 +136,20 @@
         }
     .end annotation
 
-    .prologue
-    .line 733
     iget-object v0, p0, Lio/realm/RealmResults$RealmResultsIterator;->this$0:Lio/realm/RealmResults;
 
     iget-object v0, v0, Lio/realm/RealmResults;->realm:Lio/realm/BaseRealm;
 
     invoke-virtual {v0}, Lio/realm/BaseRealm;->checkIfValid()V
 
-    .line 734
     invoke-virtual {p0}, Lio/realm/RealmResults$RealmResultsIterator;->checkRealmIsStable()V
 
-    .line 735
     iget v0, p0, Lio/realm/RealmResults$RealmResultsIterator;->pos:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lio/realm/RealmResults$RealmResultsIterator;->pos:I
 
-    .line 736
     iget v0, p0, Lio/realm/RealmResults$RealmResultsIterator;->pos:I
 
     iget-object v1, p0, Lio/realm/RealmResults$RealmResultsIterator;->this$0:Lio/realm/RealmResults;
@@ -179,7 +160,6 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 737
     new-instance v0, Ljava/util/NoSuchElementException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -228,7 +208,6 @@
 
     throw v0
 
-    .line 739
     :cond_0
     iget-object v0, p0, Lio/realm/RealmResults$RealmResultsIterator;->this$0:Lio/realm/RealmResults;
 
@@ -244,8 +223,6 @@
 .method public bridge synthetic next()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 714
     invoke-virtual {p0}, Lio/realm/RealmResults$RealmResultsIterator;->next()Lio/realm/RealmModel;
 
     move-result-object v0
@@ -258,8 +235,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 749
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string/jumbo v1, "remove() is not supported by RealmResults iterators."

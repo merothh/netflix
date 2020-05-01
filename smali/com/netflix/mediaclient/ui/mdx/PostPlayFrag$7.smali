@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;)V
     .locals 0
 
-    .prologue
-    .line 421
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,23 +23,18 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .prologue
-    .line 424
     if-nez p2, :cond_1
 
-    .line 425
     const-string/jumbo v0, "PostPlayFrag"
 
     const-string/jumbo v1, "Received null intent - ignoring"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 437
     :cond_0
     :goto_0
     return-void
 
-    .line 429
     :cond_1
     const-string/jumbo v0, "extra_video_id"
 
@@ -49,7 +42,6 @@
 
     move-result-object v0
 
-    .line 430
     const-string/jumbo v1, "extra_user_rating"
 
     const/high16 v2, -0x40800000    # -1.0f
@@ -58,7 +50,6 @@
 
     move-result v1
 
-    .line 432
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;
 
     invoke-static {v2}, Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;->access$100(Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;)Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;
@@ -83,7 +74,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 433
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;->access$900(Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;)Lcom/netflix/mediaclient/ui/details/NetflixRatingBar;
@@ -92,7 +82,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 434
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;->access$900(Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;)Lcom/netflix/mediaclient/ui/details/NetflixRatingBar;

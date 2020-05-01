@@ -56,7 +56,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -67,7 +66,6 @@
 
     const/4 v4, 0x0
 
-    .line 33
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     const-string/jumbo v1, "mdx_init"
@@ -78,7 +76,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->mdx_init:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
-    .line 39
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     const-string/jumbo v1, "mdx_mdxstate"
@@ -89,7 +86,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->mdx_mdxstate:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
-    .line 45
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     const-string/jumbo v1, "mdx_initerror"
@@ -100,7 +96,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->mdx_initerror:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
-    .line 51
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     const-string/jumbo v1, "mdx_discovery_devicelost"
@@ -111,7 +106,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->mdx_discovery_devicelost:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
-    .line 57
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     const-string/jumbo v1, "mdx_discovery_remoteDeviceReady"
@@ -122,7 +116,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->mdx_discovery_remoteDeviceReady:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
-    .line 63
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     const-string/jumbo v1, "mdx_discovery_devicefound"
@@ -135,7 +128,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->mdx_discovery_devicefound:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
-    .line 69
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     const-string/jumbo v1, "mdx_pair_pairingresponse"
@@ -148,7 +140,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->mdx_pair_pairingresponse:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
-    .line 75
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     const-string/jumbo v1, "mdx_pair_regpairresponse"
@@ -161,7 +152,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->mdx_pair_regpairresponse:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
-    .line 81
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     const-string/jumbo v1, "mdx_pair_pairingdeleted"
@@ -174,7 +164,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->mdx_pair_pairingdeleted:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
-    .line 83
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     const-string/jumbo v1, "mdx_session_message"
@@ -187,7 +176,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->mdx_session_message:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
-    .line 89
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     const-string/jumbo v1, "mdx_session_startSessionResponse"
@@ -200,7 +188,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->mdx_session_startSessionResponse:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
-    .line 95
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     const-string/jumbo v1, "mdx_session_messagedelivered"
@@ -213,7 +200,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->mdx_session_messagedelivered:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
-    .line 101
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     const-string/jumbo v1, "mdx_session_messagingerror"
@@ -226,7 +212,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->mdx_session_messagingerror:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
-    .line 107
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     const-string/jumbo v1, "mdx_session_sessionended"
@@ -239,7 +224,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->mdx_session_sessionended:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
-    .line 112
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     const-string/jumbo v1, "mdx_targetrestarting"
@@ -252,7 +236,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->mdx_targetrestarting:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
-    .line 28
     const/16 v0, 0xf
 
     new-array v0, v0, [Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
@@ -352,22 +335,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 119
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 120
     iput-object p3, p0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->name:Ljava/lang/String;
 
-    .line 121
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
     .locals 1
 
-    .prologue
-    .line 28
     const-class v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -382,8 +359,6 @@
 .method public static values()[Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
     .locals 1
 
-    .prologue
-    .line 28
     sget-object v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->$VALUES:[Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->clone()Ljava/lang/Object;
@@ -400,8 +375,6 @@
 .method public final getName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 134
     iget-object v0, p0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->name:Ljava/lang/String;
 
     return-object v0

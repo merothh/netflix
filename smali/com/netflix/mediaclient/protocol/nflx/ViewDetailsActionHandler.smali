@@ -18,11 +18,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 31
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler;-><init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Ljava/util/Map;)V
 
-    .line 32
     return-void
 .end method
 
@@ -31,8 +28,6 @@
 .method protected getAction()Lcom/netflix/mediaclient/ui/details/DetailsActivity$Action;
     .locals 1
 
-    .prologue
-    .line 99
     const/4 v0, 0x0
 
     return-object v0
@@ -41,8 +36,6 @@
 .method protected getActionToken()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 110
     const/4 v0, 0x0
 
     return-object v0
@@ -51,37 +44,29 @@
 .method public handle()Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;
     .locals 14
 
-    .prologue
-    .line 39
     const-string/jumbo v0, "NflxHandler"
 
     const-string/jumbo v1, "handleViewDetailsAction starts..."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 40
     invoke-virtual {p0}, Lcom/netflix/mediaclient/protocol/nflx/ViewDetailsActionHandler;->getVideoInfo()Lcom/netflix/mediaclient/util/NflxProtocolUtils$VideoInfo;
 
     move-result-object v1
 
-    .line 42
     if-nez v1, :cond_0
 
-    .line 43
     const-string/jumbo v0, "NflxHandler"
 
     const-string/jumbo v1, "handleViewDetailsAction fails, no video info found!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 44
     sget-object v0, Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;->NOT_HANDLING:Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;
 
-    .line 73
     :goto_0
     return-object v0
 
-    .line 45
     :cond_0
     invoke-virtual {v1}, Lcom/netflix/mediaclient/util/NflxProtocolUtils$VideoInfo;->handleWithDelay()Z
 
@@ -89,54 +74,45 @@
 
     if-eqz v0, :cond_1
 
-    .line 46
     const-string/jumbo v0, "NflxHandler"
 
     const-string/jumbo v1, "handleViewDetailsAction ends, handling with delay."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 47
     sget-object v0, Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;->HANDLING_WITH_DELAY:Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;
 
     goto :goto_0
 
-    .line 50
     :cond_1
     invoke-virtual {v1}, Lcom/netflix/mediaclient/util/NflxProtocolUtils$VideoInfo;->getVideoType()Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     move-result-object v7
 
-    .line 51
     invoke-virtual {v1}, Lcom/netflix/mediaclient/util/NflxProtocolUtils$VideoInfo;->getCatalogId()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 52
     iget-object v0, p0, Lcom/netflix/mediaclient/protocol/nflx/ViewDetailsActionHandler;->mParamsMap:Ljava/util/Map;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/NflxProtocolUtils;->getTrackId(Ljava/util/Map;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 53
     invoke-virtual {p0}, Lcom/netflix/mediaclient/protocol/nflx/ViewDetailsActionHandler;->getAction()Lcom/netflix/mediaclient/ui/details/DetailsActivity$Action;
 
     move-result-object v4
 
-    .line 54
     invoke-virtual {p0}, Lcom/netflix/mediaclient/protocol/nflx/ViewDetailsActionHandler;->getActionToken()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 55
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 56
     const-string/jumbo v0, "NflxHandler"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -169,20 +145,17 @@
 
     invoke-static {v0, v6}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 59
     :cond_2
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->EPISODE:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     if-ne v7, v0, :cond_4
 
-    .line 60
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 61
     const-string/jumbo v0, "NflxHandler"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -229,7 +202,6 @@
 
     invoke-static {v0, v6}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 63
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/protocol/nflx/ViewDetailsActionHandler;->mActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
@@ -243,13 +215,11 @@
 
     invoke-static/range {v0 .. v5}, Lcom/netflix/mediaclient/ui/details/DetailsActivityLauncher;->showEpisodeDetails(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/ui/common/PlayContext;Lcom/netflix/mediaclient/ui/details/DetailsActivity$Action;Ljava/lang/String;)V
 
-    .line 73
     :goto_1
     sget-object v0, Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;->HANDLING:Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;
 
     goto/16 :goto_0
 
-    .line 65
     :cond_4
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -257,7 +227,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 66
     const-string/jumbo v0, "NflxHandler"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -290,13 +259,11 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 68
     :cond_5
     iget-object v6, p0, Lcom/netflix/mediaclient/protocol/nflx/ViewDetailsActionHandler;->mActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     const-string/jumbo v9, ""
 
-    .line 70
     invoke-static {v3}, Lcom/netflix/mediaclient/util/NflxProtocolUtils;->getPlayContext(Ljava/lang/String;)Lcom/netflix/mediaclient/ui/common/PlayContext;
 
     move-result-object v10
@@ -305,7 +272,6 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 71
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -334,7 +300,6 @@
 
     move-object v12, v5
 
-    .line 68
     invoke-static/range {v6 .. v13}, Lcom/netflix/mediaclient/ui/details/DetailsActivityLauncher;->show(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/ui/common/PlayContext;Lcom/netflix/mediaclient/ui/details/DetailsActivity$Action;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
@@ -343,15 +308,12 @@
 .method protected handleEpisodeFromTinyUrl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;
     .locals 8
 
-    .prologue
-    .line 86
     iget-object v0, p0, Lcom/netflix/mediaclient/protocol/nflx/ViewDetailsActionHandler;->mActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     sget-object v1, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->SHOW:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     const-string/jumbo v3, ""
 
-    .line 87
     invoke-static {p3}, Lcom/netflix/mediaclient/util/NflxProtocolUtils;->getPlayContext(Ljava/lang/String;)Lcom/netflix/mediaclient/ui/common/PlayContext;
 
     move-result-object v4
@@ -392,10 +354,8 @@
 
     move-object v2, p1
 
-    .line 86
     invoke-static/range {v0 .. v7}, Lcom/netflix/mediaclient/ui/details/DetailsActivityLauncher;->show(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/ui/common/PlayContext;Lcom/netflix/mediaclient/ui/details/DetailsActivity$Action;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 88
     sget-object v0, Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;->HANDLING:Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;
 
     return-object v0
@@ -404,15 +364,12 @@
 .method protected handleMovieFromTinyUrl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;
     .locals 8
 
-    .prologue
-    .line 79
     iget-object v0, p0, Lcom/netflix/mediaclient/protocol/nflx/ViewDetailsActionHandler;->mActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     sget-object v1, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->MOVIE:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     const-string/jumbo v3, ""
 
-    .line 80
     invoke-static {p3}, Lcom/netflix/mediaclient/util/NflxProtocolUtils;->getPlayContext(Ljava/lang/String;)Lcom/netflix/mediaclient/ui/common/PlayContext;
 
     move-result-object v4
@@ -453,10 +410,8 @@
 
     move-object v2, p1
 
-    .line 79
     invoke-static/range {v0 .. v7}, Lcom/netflix/mediaclient/ui/details/DetailsActivityLauncher;->show(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/ui/common/PlayContext;Lcom/netflix/mediaclient/ui/details/DetailsActivity$Action;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 81
     sget-object v0, Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;->HANDLING:Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;
 
     return-object v0

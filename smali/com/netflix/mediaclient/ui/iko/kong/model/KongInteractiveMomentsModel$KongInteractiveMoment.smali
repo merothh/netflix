@@ -21,8 +21,6 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel;)V
     .locals 0
 
-    .prologue
-    .line 19
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,8 +33,6 @@
 .method public getDurationMS()Ljava/lang/Integer;
     .locals 2
 
-    .prologue
-    .line 84
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->getMomentEndTimeMS()Ljava/lang/Integer;
 
     move-result-object v0
@@ -65,8 +61,6 @@
 .method public getImageBackgroundBitmap()Landroid/graphics/Bitmap;
     .locals 1
 
-    .prologue
-    .line 43
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->imageBackgroundBitmap:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -75,8 +69,6 @@
 .method public getImageBitmap()Landroid/graphics/Bitmap;
     .locals 1
 
-    .prologue
-    .line 35
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->imageBitmap:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -85,8 +77,6 @@
 .method public getMomentAnimationImageUrl()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 116
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->notification:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;
 
     if-eqz v0, :cond_0
@@ -115,7 +105,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 118
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->notification:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;->states:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongUnlockState;
@@ -128,7 +117,6 @@
 
     move-result-object v0
 
-    .line 120
     :goto_0
     return-object v0
 
@@ -141,13 +129,10 @@
 .method public getMomentEndTimeMS()Ljava/lang/Integer;
     .locals 1
 
-    .prologue
-    .line 77
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->notification:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;
 
     if-eqz v0, :cond_0
 
-    .line 78
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->notification:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;
 
     iget v0, v0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;->endTimeMS:I
@@ -156,7 +141,6 @@
 
     move-result-object v0
 
-    .line 80
     :goto_0
     return-object v0
 
@@ -169,8 +153,6 @@
 .method public getMomentImageUrl()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 108
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->notification:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;
 
     if-eqz v0, :cond_0
@@ -199,7 +181,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 110
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->notification:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;->states:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongUnlockState;
@@ -210,7 +191,6 @@
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongImage;->url:Ljava/lang/String;
 
-    .line 112
     :goto_0
     return-object v0
 
@@ -223,13 +203,10 @@
 .method public getMomentStartTimeMS()Ljava/lang/Integer;
     .locals 1
 
-    .prologue
-    .line 70
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->notification:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;
 
     if-eqz v0, :cond_0
 
-    .line 71
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->notification:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;
 
     iget v0, v0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;->startTimeMS:I
@@ -238,7 +215,6 @@
 
     move-result-object v0
 
-    .line 73
     :goto_0
     return-object v0
 
@@ -251,8 +227,6 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 59
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->notification:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;
 
     if-eqz v0, :cond_0
@@ -263,14 +237,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 60
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->notification:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;->strings:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongUnlockedString;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongUnlockedString;->unlocked:Ljava/lang/String;
 
-    .line 62
     :goto_0
     return-object v0
 
@@ -283,8 +255,6 @@
 .method public getNotification()Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;
     .locals 1
 
-    .prologue
-    .line 66
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->notification:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;
 
     return-object v0
@@ -293,8 +263,6 @@
 .method public getSfxSoundPoolId()I
     .locals 1
 
-    .prologue
-    .line 27
     iget v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->sfxSoundPoolId:I
 
     return v0
@@ -303,8 +271,6 @@
 .method public getUnlockSfxSoundUrl()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 88
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->notification:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;
 
     if-eqz v0, :cond_0
@@ -323,7 +289,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 89
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->notification:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;->audio:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongUnlockedAudio;
@@ -336,7 +301,6 @@
 
     if-lez v0, :cond_0
 
-    .line 90
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->notification:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;->audio:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongUnlockedAudio;
@@ -353,7 +317,6 @@
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongSound;->url:Ljava/lang/String;
 
-    .line 94
     :goto_0
     return-object v0
 
@@ -366,8 +329,6 @@
 .method public getUnlockSfxSoundVolume()F
     .locals 2
 
-    .prologue
-    .line 98
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->notification:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;
 
     if-eqz v0, :cond_0
@@ -386,7 +347,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 99
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->notification:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;->audio:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongUnlockedAudio;
@@ -399,7 +359,6 @@
 
     if-lez v0, :cond_0
 
-    .line 100
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->notification:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongNotification;->audio:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongUnlockedAudio;
@@ -418,7 +377,6 @@
 
     move-result v0
 
-    .line 104
     :goto_0
     return v0
 
@@ -431,41 +389,30 @@
 .method public setImageBackgroundBitmap(Landroid/graphics/Bitmap;)V
     .locals 0
 
-    .prologue
-    .line 47
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->imageBackgroundBitmap:Landroid/graphics/Bitmap;
 
-    .line 48
     return-void
 .end method
 
 .method public setImageBitmap(Landroid/graphics/Bitmap;)V
     .locals 0
 
-    .prologue
-    .line 39
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->imageBitmap:Landroid/graphics/Bitmap;
 
-    .line 40
     return-void
 .end method
 
 .method public setSfxSoundPoolId(I)V
     .locals 0
 
-    .prologue
-    .line 31
     iput p1, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->sfxSoundPoolId:I
 
-    .line 32
     return-void
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 52
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -19,13 +19,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .prologue
-    .line 13
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Lcom/netflix/mediaclient/ui/lomo/VideoViewGroup;-><init>(Landroid/content/Context;Z)V
 
-    .line 14
     return-void
 .end method
 
@@ -34,8 +31,6 @@
 .method protected bridge synthetic createChildView(Landroid/content/Context;)Landroid/view/View;
     .locals 1
 
-    .prologue
-    .line 10
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/ui/lomo/CwViewGroup;->createChildView(Landroid/content/Context;)Lcom/netflix/mediaclient/ui/lomo/CwView;
 
     move-result-object v0
@@ -46,8 +41,6 @@
 .method protected createChildView(Landroid/content/Context;)Lcom/netflix/mediaclient/ui/lomo/CwView;
     .locals 1
 
-    .prologue
-    .line 18
     invoke-static {p1}, Lcom/netflix/mediaclient/util/CWTestUtil;->createCWViewForTest(Landroid/content/Context;)Lcom/netflix/mediaclient/ui/lomo/CwView;
 
     move-result-object v0
@@ -58,8 +51,6 @@
 .method protected shouldApplyPaddingToChildren()Z
     .locals 1
 
-    .prologue
-    .line 36
     const/4 v0, 0x1
 
     return v0
@@ -68,8 +59,6 @@
 .method protected bridge synthetic updateViewIds(Landroid/view/View;III)V
     .locals 0
 
-    .prologue
-    .line 10
     check-cast p1, Lcom/netflix/mediaclient/ui/lomo/CwView;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/netflix/mediaclient/ui/lomo/CwViewGroup;->updateViewIds(Lcom/netflix/mediaclient/ui/lomo/CwView;III)V
@@ -80,8 +69,6 @@
 .method protected updateViewIds(Lcom/netflix/mediaclient/ui/lomo/CwView;III)V
     .locals 4
 
-    .prologue
-    .line 25
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/CwViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -94,7 +81,6 @@
 
     const/4 v0, 0x1
 
-    .line 26
     :goto_0
     add-int v1, p3, p4
 
@@ -104,14 +90,12 @@
 
     move-result v0
 
-    .line 27
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 28
     const-string/jumbo v1, "VideoViewGroup"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -134,19 +118,15 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 30
     :cond_0
     invoke-virtual {p1, v0}, Lcom/netflix/mediaclient/ui/lomo/CwView;->setId(I)V
 
-    .line 31
     add-int/lit8 v0, v0, 0x1
 
     invoke-virtual {p1, v0}, Lcom/netflix/mediaclient/ui/lomo/CwView;->setInfoViewId(I)V
 
-    .line 32
     return-void
 
-    .line 25
     :cond_1
     const/4 v0, 0x2
 

@@ -22,13 +22,10 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;)V
     .locals 8
 
-    .prologue
     const/4 v6, 0x1
 
-    .line 624
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$ClientLoggingEventQueue;->this$0:Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;
 
-    .line 625
     const-string/jumbo v2, "nf_icl_queue"
 
     const/16 v3, 0x1e
@@ -41,7 +38,6 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/netflix/mediaclient/util/EventQueue;-><init>(Ljava/lang/String;IJZZ)V
 
-    .line 626
     return-void
 .end method
 
@@ -59,17 +55,13 @@
         }
     .end annotation
 
-    .prologue
-    .line 630
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$ClientLoggingEventQueue;->this$0:Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;->access$300(Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;Ljava/util/List;)V
 
-    .line 631
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$ClientLoggingEventQueue;->this$0:Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;
 
     invoke-static {v0, p1, p2}, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;->access$400(Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;Ljava/util/List;Z)V
 
-    .line 632
     return-void
 .end method

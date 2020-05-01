@@ -7,10 +7,8 @@
 .method public static isValidRemoteMessenger(Landroid/os/Messenger;)Z
     .locals 2
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 202
     if-eqz p0, :cond_0
 
     :try_start_0
@@ -24,12 +22,10 @@
 
     const/4 v0, 0x1
 
-    .line 206
     :cond_0
     :goto_0
     return v0
 
-    .line 203
     :catch_0
     move-exception v1
 

@@ -11,8 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 15
     invoke-direct {p0}, Lcom/netflix/mediaclient/android/activity/FragmentHostActivity;-><init>()V
 
     return-void
@@ -21,8 +19,6 @@
 .method public static createStartIntent(Landroid/app/Activity;)Landroid/content/Intent;
     .locals 2
 
-    .prologue
-    .line 20
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/netflix/mediaclient/ui/settings/AboutActivity;
@@ -37,8 +33,6 @@
 .method protected createManagerStatusListener()Lcom/netflix/mediaclient/servicemgr/ManagerStatusListener;
     .locals 1
 
-    .prologue
-    .line 60
     new-instance v0, Lcom/netflix/mediaclient/ui/settings/AboutActivity$1;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/settings/AboutActivity$1;-><init>(Lcom/netflix/mediaclient/ui/settings/AboutActivity;)V
@@ -49,8 +43,6 @@
 .method protected createPrimaryFrag()Landroid/app/Fragment;
     .locals 1
 
-    .prologue
-    .line 25
     invoke-static {}, Lcom/netflix/mediaclient/ui/settings/AboutFragment;->create()Landroid/app/Fragment;
 
     move-result-object v0
@@ -61,8 +53,6 @@
 .method protected getContentLayoutId()I
     .locals 1
 
-    .prologue
-    .line 30
     const v0, 0x7f030060
 
     return v0
@@ -71,8 +61,6 @@
 .method public getUiScreen()Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
     .locals 1
 
-    .prologue
-    .line 80
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->settings:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     return-object v0
@@ -81,8 +69,6 @@
 .method protected hasUpAction()Z
     .locals 1
 
-    .prologue
-    .line 50
     const/4 v0, 0x0
 
     return v0
@@ -91,8 +77,6 @@
 .method public showAboutInMenu()Z
     .locals 1
 
-    .prologue
-    .line 40
     const/4 v0, 0x0
 
     return v0
@@ -101,8 +85,6 @@
 .method protected showMdxInMenu()Z
     .locals 1
 
-    .prologue
-    .line 45
     const/4 v0, 0x0
 
     return v0
@@ -111,8 +93,6 @@
 .method public showSettingsInMenu()Z
     .locals 1
 
-    .prologue
-    .line 35
     const/4 v0, 0x0
 
     return v0
@@ -121,8 +101,6 @@
 .method public showSignOutInMenu()Z
     .locals 1
 
-    .prologue
-    .line 55
     const/4 v0, 0x0
 
     return v0

@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 746
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$5;->this$0:Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$5;->val$deliveryRequestId:Ljava/lang/String;
@@ -32,8 +30,6 @@
 .method public onDataLoaded(Ljava/lang/String;[BJ)V
     .locals 5
 
-    .prologue
-    .line 750
     if-eqz p2, :cond_0
 
     array-length v0, p2
@@ -42,7 +38,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 751
     :cond_0
     const-string/jumbo v0, "nf_log"
 
@@ -50,18 +45,15 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 752
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$5;->this$0:Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$5;->val$deliveryRequestId:Ljava/lang/String;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;->access$600(Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;Ljava/lang/String;)V
 
-    .line 762
     :goto_0
     return-void
 
-    .line 755
     :cond_1
     :try_start_0
     new-instance v0, Ljava/lang/String;
@@ -70,7 +62,6 @@
 
     invoke-direct {v0, p2, v1}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
 
-    .line 756
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$5;->this$0:Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;->access$700(Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;)Lcom/netflix/mediaclient/service/logging/client/ClientLoggingWebClient;
@@ -91,18 +82,15 @@
 
     goto :goto_0
 
-    .line 757
     :catch_0
     move-exception v0
 
-    .line 758
     const-string/jumbo v1, "nf_log"
 
     const-string/jumbo v2, "Failed to send events. Try to delete it."
 
     invoke-static {v1, v2, v0}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 759
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$5;->this$0:Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$5;->val$deliveryRequestId:Ljava/lang/String;

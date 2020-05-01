@@ -34,13 +34,10 @@
 .method constructor <init>(Lcom/netflix/falkor/IterableBuilder$9;)V
     .locals 1
 
-    .prologue
-    .line 240
     iput-object p1, p0, Lcom/netflix/falkor/IterableBuilder$9$1;->this$1:Lcom/netflix/falkor/IterableBuilder$9;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 241
     iget-object v0, p0, Lcom/netflix/falkor/IterableBuilder$9$1;->this$1:Lcom/netflix/falkor/IterableBuilder$9;
 
     iget-object v0, v0, Lcom/netflix/falkor/IterableBuilder$9;->this$0:Lcom/netflix/falkor/IterableBuilder;
@@ -61,8 +58,6 @@
 .method public hasNext()Z
     .locals 3
 
-    .prologue
-    .line 245
     :cond_0
     iget-object v0, p0, Lcom/netflix/falkor/IterableBuilder$9$1;->iterator:Ljava/util/Iterator;
 
@@ -96,7 +91,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 247
     :cond_1
     return v1
 .end method
@@ -109,8 +103,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 251
     iget-object v0, p0, Lcom/netflix/falkor/IterableBuilder$9$1;->value:Ljava/lang/Object;
 
     return-object v0
@@ -119,8 +111,6 @@
 .method public remove()V
     .locals 1
 
-    .prologue
-    .line 255
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

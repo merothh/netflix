@@ -7,11 +7,8 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/ui/common/LanguageSelector$LanguageSelectorCallback;)V
     .locals 0
 
-    .prologue
-    .line 31
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/ui/common/LanguageSelectorTablet;-><init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/ui/common/LanguageSelector$LanguageSelectorCallback;)V
 
-    .line 32
     return-void
 .end method
 
@@ -20,13 +17,10 @@
 .method public declared-synchronized display(Lcom/netflix/mediaclient/media/Language;)V
     .locals 4
 
-    .prologue
-    .line 36
     monitor-enter p0
 
     if-nez p1, :cond_0
 
-    .line 37
     :try_start_0
     const-string/jumbo v0, "nf_language_selector"
 
@@ -36,13 +30,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 69
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 42
     :cond_0
     :try_start_1
     invoke-virtual {p1}, Lcom/netflix/mediaclient/media/Language;->toJsonString()Ljava/lang/String;
@@ -58,7 +50,6 @@
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 48
     :try_start_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelectorKubrick;->language:Lcom/netflix/mediaclient/media/Language;
 
@@ -70,7 +61,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/media/Language;->setSelectedAudio(Lcom/netflix/mediaclient/media/AudioSource;)Lcom/netflix/mediaclient/media/AudioSource;
 
-    .line 49
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelectorKubrick;->language:Lcom/netflix/mediaclient/media/Language;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelectorKubrick;->language:Lcom/netflix/mediaclient/media/Language;
@@ -81,14 +71,12 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/media/Language;->setSelectedSubtitle(Lcom/netflix/mediaclient/media/Subtitle;)Lcom/netflix/mediaclient/media/Subtitle;
 
-    .line 52
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelectorKubrick;->mController:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    .line 53
     const v1, 0x7f03007d
 
     const/4 v2, 0x0
@@ -97,19 +85,16 @@
 
     move-result-object v0
 
-    .line 54
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelectorKubrick;->language:Lcom/netflix/mediaclient/media/Language;
 
     invoke-virtual {p0, v0, v1}, Lcom/netflix/mediaclient/ui/common/LanguageSelectorKubrick;->initLists(Landroid/view/View;Lcom/netflix/mediaclient/media/Language;)V
 
-    .line 56
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelectorKubrick;->mCallback:Lcom/netflix/mediaclient/ui/common/LanguageSelector$LanguageSelectorCallback;
 
     invoke-interface {v1}, Lcom/netflix/mediaclient/ui/common/LanguageSelector$LanguageSelectorCallback;->wasPlaying()Z
 
     move-result v1
 
-    .line 57
     const v2, 0x7f0f01bc
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -122,24 +107,20 @@
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 65
     new-instance v1, Lcom/netflix/mediaclient/ui/common/LanguageSelectorKubrick$AudioSubtitlesDlg;
 
     invoke-direct {v1}, Lcom/netflix/mediaclient/ui/common/LanguageSelectorKubrick$AudioSubtitlesDlg;-><init>()V
 
-    .line 66
     const/4 v2, 0x1
 
     const v3, 0x7f0b010f
 
     invoke-virtual {v1, v2, v3}, Lcom/netflix/mediaclient/ui/common/LanguageSelectorKubrick$AudioSubtitlesDlg;->setStyle(II)V
 
-    .line 67
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelectorKubrick;->mCallback:Lcom/netflix/mediaclient/ui/common/LanguageSelector$LanguageSelectorCallback;
 
     invoke-virtual {v1, v0, v2}, Lcom/netflix/mediaclient/ui/common/LanguageSelectorKubrick$AudioSubtitlesDlg;->setViewAndCallback(Landroid/view/View;Lcom/netflix/mediaclient/ui/common/LanguageSelector$LanguageSelectorCallback;)V
 
-    .line 68
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelectorKubrick;->mController:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->showDialog(Landroid/app/DialogFragment;)Z
@@ -148,7 +129,6 @@
 
     goto :goto_0
 
-    .line 36
     :catchall_0
     move-exception v0
 
@@ -156,11 +136,9 @@
 
     throw v0
 
-    .line 43
     :catch_0
     move-exception v0
 
-    .line 44
     :try_start_3
     const-string/jumbo v1, "nf_language_selector"
 

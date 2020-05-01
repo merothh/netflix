@@ -24,10 +24,8 @@
 .method public constructor <init>(Lcom/google/android/exoplayer/upstream/BandwidthMeter;)V
     .locals 7
 
-    .prologue
     const/16 v4, 0x61a8
 
-    .line 175
     const v2, 0xc3500
 
     const/16 v3, 0x2710
@@ -42,58 +40,46 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/google/android/exoplayer/chunk/FormatEvaluator$AdaptiveEvaluator;-><init>(Lcom/google/android/exoplayer/upstream/BandwidthMeter;IIIIF)V
 
-    .line 179
     return-void
 .end method
 
 .method public constructor <init>(Lcom/google/android/exoplayer/upstream/BandwidthMeter;IIIIF)V
     .locals 4
 
-    .prologue
     const-wide/16 v2, 0x3e8
 
-    .line 202
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 203
     iput-object p1, p0, Lcom/google/android/exoplayer/chunk/FormatEvaluator$AdaptiveEvaluator;->bandwidthMeter:Lcom/google/android/exoplayer/upstream/BandwidthMeter;
 
-    .line 204
     iput p2, p0, Lcom/google/android/exoplayer/chunk/FormatEvaluator$AdaptiveEvaluator;->maxInitialBitrate:I
 
-    .line 205
     int-to-long v0, p3
 
     mul-long/2addr v0, v2
 
     iput-wide v0, p0, Lcom/google/android/exoplayer/chunk/FormatEvaluator$AdaptiveEvaluator;->minDurationForQualityIncreaseUs:J
 
-    .line 206
     int-to-long v0, p4
 
     mul-long/2addr v0, v2
 
     iput-wide v0, p0, Lcom/google/android/exoplayer/chunk/FormatEvaluator$AdaptiveEvaluator;->maxDurationForQualityDecreaseUs:J
 
-    .line 207
     int-to-long v0, p5
 
     mul-long/2addr v0, v2
 
     iput-wide v0, p0, Lcom/google/android/exoplayer/chunk/FormatEvaluator$AdaptiveEvaluator;->minDurationToRetainAfterDiscardUs:J
 
-    .line 208
     iput p6, p0, Lcom/google/android/exoplayer/chunk/FormatEvaluator$AdaptiveEvaluator;->bandwidthFraction:F
 
-    .line 209
     return-void
 .end method
 
 .method private determineIdealFormat([Lcom/google/android/exoplayer/chunk/Format;J)Lcom/google/android/exoplayer/chunk/Format;
     .locals 6
 
-    .prologue
-    .line 269
     const-wide/16 v0, -0x1
 
     cmp-long v0, p2, v0
@@ -104,7 +90,6 @@
 
     int-to-long v0, v0
 
-    .line 271
     :goto_0
     const/4 v2, 0x0
 
@@ -113,10 +98,8 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 272
     aget-object v3, p1, v2
 
-    .line 273
     iget v4, v3, Lcom/google/android/exoplayer/chunk/Format;->bitrate:I
 
     int-to-long v4, v4
@@ -127,11 +110,9 @@
 
     move-object v0, v3
 
-    .line 278
     :goto_2
     return-object v0
 
-    .line 269
     :cond_0
     long-to-float v0, p2
 
@@ -143,13 +124,11 @@
 
     goto :goto_0
 
-    .line 271
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 278
     :cond_2
     array-length v0, p1
 
@@ -165,16 +144,12 @@
 .method public disable()V
     .locals 0
 
-    .prologue
-    .line 219
     return-void
 .end method
 
 .method public enable()V
     .locals 0
 
-    .prologue
-    .line 214
     return-void
 .end method
 
@@ -193,12 +168,10 @@
         }
     .end annotation
 
-    .prologue
     const/4 v5, 0x0
 
     const/4 v2, 0x1
 
-    .line 224
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -207,11 +180,9 @@
 
     const-wide/16 v0, 0x0
 
-    .line 226
     :goto_0
     iget-object v3, p5, Lcom/google/android/exoplayer/chunk/FormatEvaluator$Evaluation;->format:Lcom/google/android/exoplayer/chunk/Format;
 
-    .line 227
     iget-object v4, p0, Lcom/google/android/exoplayer/chunk/FormatEvaluator$AdaptiveEvaluator;->bandwidthMeter:Lcom/google/android/exoplayer/upstream/BandwidthMeter;
 
     invoke-interface {v4}, Lcom/google/android/exoplayer/upstream/BandwidthMeter;->getBitrateEstimate()J
@@ -222,7 +193,6 @@
 
     move-result-object v4
 
-    .line 228
     if-eqz v4, :cond_3
 
     if-eqz v3, :cond_3
@@ -235,7 +205,6 @@
 
     move v6, v2
 
-    .line 229
     :goto_1
     if-eqz v4, :cond_0
 
@@ -249,11 +218,9 @@
 
     move v5, v2
 
-    .line 230
     :cond_0
     if-eqz v6, :cond_7
 
-    .line 231
     iget-wide v6, p0, Lcom/google/android/exoplayer/chunk/FormatEvaluator$AdaptiveEvaluator;->minDurationForQualityIncreaseUs:J
 
     cmp-long v5, v0, v6
@@ -262,25 +229,20 @@
 
     move-object v0, v3
 
-    .line 259
     :goto_2
     if-eqz v3, :cond_1
 
     if-eq v0, v3, :cond_1
 
-    .line 260
     const/4 v1, 0x3
 
     iput v1, p5, Lcom/google/android/exoplayer/chunk/FormatEvaluator$Evaluation;->trigger:I
 
-    .line 262
     :cond_1
     iput-object v0, p5, Lcom/google/android/exoplayer/chunk/FormatEvaluator$Evaluation;->format:Lcom/google/android/exoplayer/chunk/Format;
 
-    .line 263
     return-void
 
-    .line 225
     :cond_2
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -303,10 +265,8 @@
     :cond_3
     move v6, v5
 
-    .line 228
     goto :goto_1
 
-    .line 235
     :cond_4
     iget-wide v6, p0, Lcom/google/android/exoplayer/chunk/FormatEvaluator$AdaptiveEvaluator;->minDurationToRetainAfterDiscardUs:J
 
@@ -316,7 +276,6 @@
 
     move v1, v2
 
-    .line 239
     :goto_3
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -324,19 +283,16 @@
 
     if-ge v1, v0, :cond_5
 
-    .line 240
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/exoplayer/chunk/MediaChunk;
 
-    .line 241
     iget-wide v6, v0, Lcom/google/android/exoplayer/chunk/MediaChunk;->startTimeUs:J
 
     sub-long/2addr v6, p2
 
-    .line 242
     iget-wide v8, p0, Lcom/google/android/exoplayer/chunk/FormatEvaluator$AdaptiveEvaluator;->minDurationToRetainAfterDiscardUs:J
 
     cmp-long v2, v6, v8
@@ -375,13 +331,11 @@
 
     if-ge v0, v2, :cond_6
 
-    .line 248
     iput v1, p5, Lcom/google/android/exoplayer/chunk/FormatEvaluator$Evaluation;->queueSize:I
 
     :cond_5
     move-object v0, v4
 
-    .line 239
     goto :goto_2
 
     :cond_6
@@ -391,7 +345,6 @@
 
     goto :goto_3
 
-    .line 253
     :cond_7
     if-eqz v5, :cond_8
 
@@ -405,7 +358,6 @@
 
     move-object v0, v3
 
-    .line 257
     goto :goto_2
 
     :cond_8

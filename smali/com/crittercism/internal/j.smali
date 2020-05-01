@@ -6,28 +6,21 @@
 .method public static a(Ljava/lang/reflect/Field;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 30
-    .line 32
     if-nez p0, :cond_1
 
-    .line 49
     :cond_0
     :goto_0
     return-object v0
 
-    .line 37
     :cond_1
     if-eqz p0, :cond_0
 
-    .line 38
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 41
     :try_start_0
     invoke-virtual {p0, p1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
@@ -38,17 +31,14 @@
 
     goto :goto_0
 
-    .line 43
     :catch_0
     move-exception v0
 
     throw v0
 
-    .line 44
     :catch_1
     move-exception v0
 
-    .line 45
     new-instance v1, Lcom/crittercism/internal/cj;
 
     const-string/jumbo v2, "Unable to get value of field"
@@ -61,16 +51,12 @@
 .method public static a(Ljava/lang/Class;Ljava/lang/Class;Z)Ljava/lang/reflect/Field;
     .locals 7
 
-    .prologue
-    .line 87
     invoke-virtual {p0}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object v2
 
-    .line 88
     const/4 v1, 0x0
 
-    .line 90
     const/4 v0, 0x0
 
     move v6, v0
@@ -84,7 +70,6 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 91
     aget-object v3, v2, v1
 
     invoke-virtual {v3}, Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;
@@ -97,10 +82,8 @@
 
     if-eqz v3, :cond_1
 
-    .line 92
     if-eqz v0, :cond_0
 
-    .line 93
     new-instance v3, Lcom/crittercism/internal/cj;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -141,24 +124,19 @@
 
     throw v3
 
-    .line 96
     :cond_0
     aget-object v0, v2, v1
 
-    .line 90
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 100
     :cond_2
     if-nez v0, :cond_3
 
-    .line 101
     if-eqz p2, :cond_4
 
-    .line 103
     new-instance v0, Lcom/crittercism/internal/cj;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -183,13 +161,11 @@
 
     throw v0
 
-    .line 107
     :cond_3
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 110
     :cond_4
     return-object v0
 .end method

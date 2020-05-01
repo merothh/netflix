@@ -9,8 +9,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,12 +19,8 @@
 .method public final synthetic a(Ljava/lang/String;)Lcom/crittercism/internal/dl;
     .locals 2
 
-    .prologue
-    .line 31
-    .line 1033
     if-nez p1, :cond_0
 
-    .line 1034
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string/jumbo v1, "packageName cannot be null"
@@ -35,7 +29,6 @@
 
     throw v0
 
-    .line 1036
     :cond_0
     new-instance v0, Lcom/crittercism/internal/dn$b;
 
@@ -43,6 +36,5 @@
 
     invoke-direct {v0, p1, v1}, Lcom/crittercism/internal/dn$b;-><init>(Ljava/lang/String;B)V
 
-    .line 31
     return-object v0
 .end method

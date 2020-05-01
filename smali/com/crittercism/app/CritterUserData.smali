@@ -12,17 +12,12 @@
 .method constructor <init>(Ljava/util/Map;Z)V
     .locals 0
 
-    .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     iput-object p1, p0, Lcom/crittercism/app/CritterUserData;->a:Ljava/util/Map;
 
-    .line 14
     iput-boolean p2, p0, Lcom/crittercism/app/CritterUserData;->b:Z
 
-    .line 15
     return-void
 .end method
 
@@ -31,8 +26,6 @@
 .method public crashedOnLastLoad()Z
     .locals 2
 
-    .prologue
-    .line 104
     iget-object v0, p0, Lcom/crittercism/app/CritterUserData;->a:Ljava/util/Map;
 
     const-string/jumbo v1, "crashedOnLastLoad"
@@ -43,25 +36,20 @@
 
     if-nez v0, :cond_1
 
-    .line 105
     iget-boolean v0, p0, Lcom/crittercism/app/CritterUserData;->b:Z
 
     if-eqz v0, :cond_0
 
-    .line 106
     const-string/jumbo v0, "User has opted out of Crittercism.  Returning false."
 
     invoke-static {v0}, Lcom/crittercism/internal/dw;->b(Ljava/lang/String;)V
 
-    .line 110
     :goto_0
     const/4 v0, 0x0
 
-    .line 112
     :goto_1
     return v0
 
-    .line 108
     :cond_0
     const-string/jumbo v0, "CritterUserData instance has no value for crashedOnLastLoad().  Defaulting to false."
 
@@ -69,7 +57,6 @@
 
     goto :goto_0
 
-    .line 112
     :cond_1
     iget-object v0, p0, Lcom/crittercism/app/CritterUserData;->a:Ljava/util/Map;
 
@@ -91,8 +78,6 @@
 .method public getRateMyAppMessage()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 72
     iget-object v0, p0, Lcom/crittercism/app/CritterUserData;->a:Ljava/util/Map;
 
     const-string/jumbo v1, "message"
@@ -103,17 +88,14 @@
 
     if-nez v0, :cond_0
 
-    .line 73
     iget-boolean v0, p0, Lcom/crittercism/app/CritterUserData;->b:Z
 
     if-eqz v0, :cond_1
 
-    .line 74
     const-string/jumbo v0, "User has opted out of Crittercism.  Returning null."
 
     invoke-static {v0}, Lcom/crittercism/internal/dw;->b(Ljava/lang/String;)V
 
-    .line 79
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/crittercism/app/CritterUserData;->a:Ljava/util/Map;
@@ -128,7 +110,6 @@
 
     return-object v0
 
-    .line 76
     :cond_1
     const-string/jumbo v0, "CritterUserData instance has no value for getRateMyAppMessage().  Returning null."
 
@@ -140,8 +121,6 @@
 .method public getRateMyAppTitle()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 51
     iget-object v0, p0, Lcom/crittercism/app/CritterUserData;->a:Ljava/util/Map;
 
     const-string/jumbo v1, "title"
@@ -152,17 +131,14 @@
 
     if-nez v0, :cond_0
 
-    .line 52
     iget-boolean v0, p0, Lcom/crittercism/app/CritterUserData;->b:Z
 
     if-eqz v0, :cond_1
 
-    .line 53
     const-string/jumbo v0, "User has opted out of Crittercism.  Returning null."
 
     invoke-static {v0}, Lcom/crittercism/internal/dw;->b(Ljava/lang/String;)V
 
-    .line 58
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/crittercism/app/CritterUserData;->a:Ljava/util/Map;
@@ -177,7 +153,6 @@
 
     return-object v0
 
-    .line 55
     :cond_1
     const-string/jumbo v0, "CritterUserData instance has no value for getRateMyAppTitle().  Returning null."
 
@@ -189,8 +164,6 @@
 .method public getUserUUID()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 122
     iget-object v0, p0, Lcom/crittercism/app/CritterUserData;->a:Ljava/util/Map;
 
     const-string/jumbo v1, "userUUID"
@@ -201,17 +174,14 @@
 
     if-nez v0, :cond_0
 
-    .line 123
     iget-boolean v0, p0, Lcom/crittercism/app/CritterUserData;->b:Z
 
     if-eqz v0, :cond_1
 
-    .line 124
     const-string/jumbo v0, "User has opted out of Crittercism.  Returning null."
 
     invoke-static {v0}, Lcom/crittercism/internal/dw;->b(Ljava/lang/String;)V
 
-    .line 129
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/crittercism/app/CritterUserData;->a:Ljava/util/Map;
@@ -226,7 +196,6 @@
 
     return-object v0
 
-    .line 126
     :cond_1
     const-string/jumbo v0, "CritterUserData instance has no value for getUserUUID().  Returning null."
 
@@ -238,8 +207,6 @@
 .method public isOptedOut()Z
     .locals 2
 
-    .prologue
-    .line 88
     iget-object v0, p0, Lcom/crittercism/app/CritterUserData;->a:Ljava/util/Map;
 
     const-string/jumbo v1, "optOutStatus"
@@ -250,10 +217,8 @@
 
     if-nez v0, :cond_0
 
-    .line 90
     iget-boolean v0, p0, Lcom/crittercism/app/CritterUserData;->b:Z
 
-    .line 92
     :goto_0
     return v0
 
@@ -278,8 +243,6 @@
 .method public shouldShowRateMyAppAlert()Z
     .locals 2
 
-    .prologue
-    .line 29
     iget-object v0, p0, Lcom/crittercism/app/CritterUserData;->a:Ljava/util/Map;
 
     const-string/jumbo v1, "shouldShowRateAppAlert"
@@ -290,25 +253,20 @@
 
     if-nez v0, :cond_1
 
-    .line 30
     iget-boolean v0, p0, Lcom/crittercism/app/CritterUserData;->b:Z
 
     if-eqz v0, :cond_0
 
-    .line 31
     const-string/jumbo v0, "User has opted out of Crittercism.  Returning false."
 
     invoke-static {v0}, Lcom/crittercism/internal/dw;->b(Ljava/lang/String;)V
 
-    .line 35
     :goto_0
     const/4 v0, 0x0
 
-    .line 37
     :goto_1
     return v0
 
-    .line 33
     :cond_0
     const-string/jumbo v0, "CritterUserData instance has no value for shouldShowMyRateAppAlert().  Defaulting to false."
 
@@ -316,7 +274,6 @@
 
     goto :goto_0
 
-    .line 37
     :cond_1
     iget-object v0, p0, Lcom/crittercism/app/CritterUserData;->a:Ljava/util/Map;
 

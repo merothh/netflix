@@ -36,28 +36,22 @@
 .method public constructor <init>(Lcom/netflix/android/org/json/JSONObject;)V
     .locals 1
 
-    .prologue
-    .line 180
     invoke-static {p1}, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->getVersion(Lcom/netflix/android/org/json/JSONObject;)Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
 
     move-result-object v0
 
     invoke-direct {p0, p1, v0}, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;-><init>(Lcom/netflix/android/org/json/JSONObject;Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;)V
 
-    .line 181
     return-void
 .end method
 
 .method public constructor <init>(Lcom/netflix/android/org/json/JSONObject;Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;)V
     .locals 5
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 193
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 195
     sget-object v1, Lcom/netflix/msl/crypto/MslCiphertextEnvelope$1;->$SwitchMap$com$netflix$msl$crypto$MslCiphertextEnvelope$Version:[I
 
     invoke-virtual {p2}, Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;->ordinal()I
@@ -68,7 +62,6 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 241
     new-instance v0, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->UNSUPPORTED_CIPHERTEXT_ENVELOPE:Lcom/netflix/msl/MslError;
@@ -95,14 +88,12 @@
 
     throw v0
 
-    .line 198
     :pswitch_0
     :try_start_0
     sget-object v1, Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;->V1:Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
 
     iput-object v1, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->version:Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
 
-    .line 199
     const-string/jumbo v1, "keyid"
 
     invoke-virtual {p1, v1}, Lcom/netflix/android/org/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -111,14 +102,12 @@
 
     iput-object v1, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->keyId:Ljava/lang/String;
 
-    .line 200
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->cipherSpec:Lcom/netflix/msl/MslConstants$CipherSpec;
     :try_end_0
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 202
     :try_start_1
     const-string/jumbo v1, "iv"
 
@@ -144,7 +133,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 207
     :try_start_2
     const-string/jumbo v0, "ciphertext"
 
@@ -161,21 +149,17 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_2
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 211
     :try_start_3
     const-string/jumbo v0, "sha256"
 
     invoke-virtual {p1, v0}, Lcom/netflix/android/org/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 243
     :goto_0
     return-void
 
-    .line 203
     :catch_0
     move-exception v0
 
-    .line 204
     new-instance v1, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->INVALID_IV:Lcom/netflix/msl/MslError;
@@ -208,11 +192,9 @@
     :try_end_3
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 212
     :catch_1
     move-exception v0
 
-    .line 213
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_PARSE_ERROR:Lcom/netflix/msl/MslError;
@@ -243,11 +225,9 @@
 
     throw v1
 
-    .line 208
     :catch_2
     move-exception v0
 
-    .line 209
     :try_start_4
     new-instance v1, Lcom/netflix/msl/MslCryptoException;
 
@@ -281,7 +261,6 @@
     :try_end_4
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 218
     :pswitch_1
     :try_start_5
     const-string/jumbo v1, "version"
@@ -290,14 +269,12 @@
 
     move-result v1
 
-    .line 219
     invoke-static {v1}, Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;->valueOf(I)Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->version:Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
 
-    .line 220
     sget-object v1, Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;->V2:Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
 
     iget-object v2, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->version:Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
@@ -308,7 +285,6 @@
 
     if-nez v1, :cond_1
 
-    .line 221
     new-instance v0, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->UNIDENTIFIED_CIPHERTEXT_ENVELOPE:Lcom/netflix/msl/MslError;
@@ -342,11 +318,9 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_5 .. :try_end_5} :catch_3
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_5 .. :try_end_5} :catch_5
 
-    .line 234
     :catch_3
     move-exception v0
 
-    .line 235
     new-instance v1, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->UNIDENTIFIED_CIPHERSPEC:Lcom/netflix/msl/MslError;
@@ -377,14 +351,12 @@
 
     throw v1
 
-    .line 222
     :cond_1
     const/4 v1, 0x0
 
     :try_start_6
     iput-object v1, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->keyId:Ljava/lang/String;
 
-    .line 223
     const-string/jumbo v1, "cipherspec"
 
     invoke-virtual {p1, v1}, Lcom/netflix/android/org/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -400,7 +372,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_6 .. :try_end_6} :catch_3
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_6 .. :try_end_6} :catch_5
 
-    .line 225
     :try_start_7
     const-string/jumbo v1, "iv"
 
@@ -426,7 +397,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_7 .. :try_end_7} :catch_6
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_7 .. :try_end_7} :catch_5
 
-    .line 230
     :try_start_8
     const-string/jumbo v0, "ciphertext"
 
@@ -445,11 +415,9 @@
 
     goto/16 :goto_0
 
-    .line 231
     :catch_4
     move-exception v0
 
-    .line 232
     :try_start_9
     new-instance v1, Lcom/netflix/msl/MslCryptoException;
 
@@ -484,11 +452,9 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_9 .. :try_end_9} :catch_3
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_9 .. :try_end_9} :catch_5
 
-    .line 236
     :catch_5
     move-exception v0
 
-    .line 237
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_PARSE_ERROR:Lcom/netflix/msl/MslError;
@@ -519,11 +485,9 @@
 
     throw v1
 
-    .line 226
     :catch_6
     move-exception v0
 
-    .line 227
     :try_start_a
     new-instance v1, Lcom/netflix/msl/MslCryptoException;
 
@@ -558,7 +522,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_a .. :try_end_a} :catch_3
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_a .. :try_end_a} :catch_5
 
-    .line 195
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -569,68 +532,50 @@
 .method public constructor <init>(Lcom/netflix/msl/MslConstants$CipherSpec;[B[B)V
     .locals 1
 
-    .prologue
-    .line 163
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 164
     sget-object v0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;->V2:Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
 
     iput-object v0, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->version:Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
 
-    .line 165
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->keyId:Ljava/lang/String;
 
-    .line 166
     iput-object p1, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->cipherSpec:Lcom/netflix/msl/MslConstants$CipherSpec;
 
-    .line 167
     iput-object p2, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->iv:[B
 
-    .line 168
     iput-object p3, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->ciphertext:[B
 
-    .line 169
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;[B[B)V
     .locals 1
 
-    .prologue
-    .line 148
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 149
     sget-object v0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;->V1:Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
 
     iput-object v0, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->version:Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
 
-    .line 150
     iput-object p1, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->keyId:Ljava/lang/String;
 
-    .line 151
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->cipherSpec:Lcom/netflix/msl/MslConstants$CipherSpec;
 
-    .line 152
     iput-object p2, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->iv:[B
 
-    .line 153
     iput-object p3, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->ciphertext:[B
 
-    .line 154
     return-void
 .end method
 
 .method private static getVersion(Lcom/netflix/android/org/json/JSONObject;)Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
     .locals 5
 
-    .prologue
-    .line 131
     :try_start_0
     const-string/jumbo v0, "version"
 
@@ -638,7 +583,6 @@
 
     move-result v0
 
-    .line 132
     invoke-static {v0}, Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;->valueOf(I)Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
     :try_end_0
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
@@ -646,24 +590,19 @@
 
     move-result-object v0
 
-    .line 135
     :goto_0
     return-object v0
 
-    .line 133
     :catch_0
     move-exception v0
 
-    .line 135
     sget-object v0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;->V1:Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
 
     goto :goto_0
 
-    .line 136
     :catch_1
     move-exception v0
 
-    .line 137
     new-instance v1, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->UNIDENTIFIED_CIPHERTEXT_ENVELOPE:Lcom/netflix/msl/MslError;
@@ -700,8 +639,6 @@
 .method public getCipherSpec()Lcom/netflix/msl/MslConstants$CipherSpec;
     .locals 1
 
-    .prologue
-    .line 256
     iget-object v0, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->cipherSpec:Lcom/netflix/msl/MslConstants$CipherSpec;
 
     return-object v0
@@ -710,8 +647,6 @@
 .method public getCiphertext()[B
     .locals 1
 
-    .prologue
-    .line 270
     iget-object v0, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->ciphertext:[B
 
     return-object v0
@@ -720,8 +655,6 @@
 .method public getIv()[B
     .locals 1
 
-    .prologue
-    .line 263
     iget-object v0, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->iv:[B
 
     return-object v0
@@ -730,8 +663,6 @@
 .method public getKeyId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 249
     iget-object v0, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->keyId:Ljava/lang/String;
 
     return-object v0
@@ -740,14 +671,11 @@
 .method public toJSONString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 290
     :try_start_0
     new-instance v0, Lcom/netflix/android/org/json/JSONObject;
 
     invoke-direct {v0}, Lcom/netflix/android/org/json/JSONObject;-><init>()V
 
-    .line 291
     sget-object v1, Lcom/netflix/msl/crypto/MslCiphertextEnvelope$1;->$SwitchMap$com$netflix$msl$crypto$MslCiphertextEnvelope$Version:[I
 
     iget-object v2, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->version:Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
@@ -760,7 +688,6 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 305
     new-instance v0, Lcom/netflix/msl/MslInternalException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -795,11 +722,9 @@
     :try_end_0
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 308
     :catch_0
     move-exception v0
 
-    .line 309
     new-instance v1, Lcom/netflix/msl/MslInternalException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -838,7 +763,6 @@
 
     throw v1
 
-    .line 293
     :pswitch_0
     :try_start_1
     const-string/jumbo v1, "keyid"
@@ -847,7 +771,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 294
     iget-object v1, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->iv:[B
 
     if-eqz v1, :cond_0
@@ -862,7 +785,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 295
     :cond_0
     const-string/jumbo v1, "ciphertext"
 
@@ -874,14 +796,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 296
     const-string/jumbo v1, "sha256"
 
     const-string/jumbo v2, "AA=="
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 307
     :goto_0
     invoke-virtual {v0}, Lcom/netflix/android/org/json/JSONObject;->toString()Ljava/lang/String;
 
@@ -889,7 +809,6 @@
 
     return-object v0
 
-    .line 299
     :pswitch_1
     const-string/jumbo v1, "version"
 
@@ -901,7 +820,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;I)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 300
     const-string/jumbo v1, "cipherspec"
 
     iget-object v2, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->cipherSpec:Lcom/netflix/msl/MslConstants$CipherSpec;
@@ -912,7 +830,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 301
     iget-object v1, p0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->iv:[B
 
     if-eqz v1, :cond_1
@@ -927,7 +844,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 302
     :cond_1
     const-string/jumbo v1, "ciphertext"
 
@@ -943,7 +859,6 @@
 
     goto :goto_0
 
-    .line 291
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

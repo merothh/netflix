@@ -11,26 +11,20 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
     return-void
 .end method
 
 .method public static createParser(Lcom/netflix/mediaclient/servicemgr/IPlayer;Lcom/netflix/mediaclient/ui/offline/OfflineSubtitle;Lcom/netflix/mediaclient/service/player/subtitles/text/TextStyle;Lcom/netflix/mediaclient/service/player/subtitles/text/TextStyle;FJ)Lcom/netflix/mediaclient/service/offline/subtitles/OfflineSubtitleParser;
     .locals 9
 
-    .prologue
     const-wide/16 v7, 0x0
 
     const/4 v6, 0x0
 
-    .line 32
     if-nez p1, :cond_0
 
-    .line 33
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v2, "Metadata object is null!"
@@ -39,18 +33,15 @@
 
     throw v1
 
-    .line 36
     :cond_0
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/offline/OfflineSubtitle;->getProfile()Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
     move-result-object v1
 
-    .line 37
     sget-object v2, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->IMAGE:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
     if-ne v1, v2, :cond_1
 
-    .line 38
     new-instance v1, Lcom/netflix/mediaclient/service/offline/subtitles/OfflineImageSubtitleParser;
 
     move-object v3, p1
@@ -63,11 +54,9 @@
 
     invoke-direct/range {v1 .. v8}, Lcom/netflix/mediaclient/service/offline/subtitles/OfflineImageSubtitleParser;-><init>(Lcom/netflix/mediaclient/servicemgr/IPlayer;Lcom/netflix/mediaclient/ui/offline/OfflineImageSubtitle;JLcom/netflix/mediaclient/service/player/subtitles/SubtitleParser$DownloadFailedCallback;J)V
 
-    .line 44
     :goto_0
     return-object v1
 
-    .line 39
     :cond_1
     sget-object v2, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->ENHANCED_ENC:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
@@ -77,7 +66,6 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 40
     :cond_2
     new-instance v1, Lcom/netflix/mediaclient/service/offline/subtitles/OfflineEncryptedTextSubtitleParser;
 
@@ -95,7 +83,6 @@
 
     goto :goto_0
 
-    .line 41
     :cond_3
     sget-object v2, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->ENHANCED:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
@@ -105,7 +92,6 @@
 
     if-ne v1, v2, :cond_5
 
-    .line 42
     :cond_4
     new-instance v1, Lcom/netflix/mediaclient/service/offline/subtitles/OfflineTextSubtitleParser;
 
@@ -123,13 +109,11 @@
 
     goto :goto_0
 
-    .line 43
     :cond_5
     sget-object v2, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->IMAGE_ENC:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
     if-ne v1, v2, :cond_6
 
-    .line 44
     new-instance v1, Lcom/netflix/mediaclient/service/offline/subtitles/OfflineImageV2SubtitleParser;
 
     move-object v3, p1
@@ -144,7 +128,6 @@
 
     goto :goto_0
 
-    .line 46
     :cond_6
     new-instance v2, Ljava/lang/IllegalArgumentException;
 

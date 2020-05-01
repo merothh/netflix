@@ -135,8 +135,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 358
     new-instance v0, Lcom/netflix/model/leafs/social/IrisNotificationSummary$1;
 
     invoke-direct {v0}, Lcom/netflix/model/leafs/social/IrisNotificationSummary$1;-><init>()V
@@ -149,32 +147,24 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 226
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 227
     return-void
 .end method
 
 .method protected constructor <init>(Landroid/os/Parcel;)V
     .locals 8
 
-    .prologue
     const/16 v7, 0x14
 
-    .line 324
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 325
     const/16 v0, 0x18
 
     new-array v6, v0, [Ljava/lang/String;
 
-    .line 326
     invoke-virtual {p1, v6}, Landroid/os/Parcel;->readStringArray([Ljava/lang/String;)V
 
-    .line 327
     const/4 v0, 0x0
 
     aget-object v0, v6, v0
@@ -189,7 +179,6 @@
 
     iput-boolean v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->bWasRead:Z
 
-    .line 328
     const/4 v0, 0x1
 
     aget-object v0, v6, v0
@@ -204,27 +193,22 @@
 
     iput-boolean v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->bWasThanked:Z
 
-    .line 330
     const/4 v0, 0x2
 
     aget-object v1, v6, v0
 
-    .line 331
     const/4 v0, 0x3
 
     aget-object v2, v6, v0
 
-    .line 332
     const/4 v0, 0x4
 
     aget-object v3, v6, v0
 
-    .line 333
     const/4 v0, 0x5
 
     aget-object v4, v6, v0
 
-    .line 334
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
 
     move-object v5, v4
@@ -233,21 +217,18 @@
 
     iput-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->friendProfile:Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
 
-    .line 336
     const/4 v0, 0x6
 
     aget-object v0, v6, v0
 
     iput-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->id:Ljava/lang/String;
 
-    .line 337
     const/4 v0, 0x7
 
     aget-object v0, v6, v0
 
     iput-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->storyId:Ljava/lang/String;
 
-    .line 338
     const/16 v0, 0x8
 
     aget-object v0, v6, v0
@@ -258,14 +239,12 @@
 
     iput-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->type:Lcom/netflix/model/leafs/social/IrisNotificationSummary$NotificationTypes;
 
-    .line 339
     const/16 v0, 0x9
 
     aget-object v0, v6, v0
 
     iput-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->messageString:Ljava/lang/String;
 
-    .line 340
     const/16 v0, 0xa
 
     aget-object v0, v6, v0
@@ -280,14 +259,12 @@
 
     iput-wide v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->timestamp:J
 
-    .line 341
     const/16 v0, 0xb
 
     aget-object v0, v6, v0
 
     iput-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->imageAltText:Ljava/lang/String;
 
-    .line 342
     const/16 v0, 0xc
 
     aget-object v0, v6, v0
@@ -302,28 +279,24 @@
 
     iput-boolean v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->showTimestamp:Z
 
-    .line 343
     const/16 v0, 0xd
 
     aget-object v0, v6, v0
 
     iput-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->headerText:Ljava/lang/String;
 
-    .line 344
     const/16 v0, 0xe
 
     aget-object v0, v6, v0
 
     iput-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->imageUrl:Ljava/lang/String;
 
-    .line 345
     const/16 v0, 0xf
 
     aget-object v0, v6, v0
 
     iput-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->videoId:Ljava/lang/String;
 
-    .line 346
     const/16 v0, 0x10
 
     aget-object v0, v6, v0
@@ -334,21 +307,18 @@
 
     iput-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->videoType:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
-    .line 347
     const/16 v0, 0x11
 
     aget-object v0, v6, v0
 
     iput-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->videoTitle:Ljava/lang/String;
 
-    .line 348
     const/16 v0, 0x12
 
     aget-object v0, v6, v0
 
     iput-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->tvCardUrl:Ljava/lang/String;
 
-    .line 349
     const/16 v0, 0x13
 
     aget-object v0, v6, v0
@@ -363,7 +333,6 @@
 
     iput-boolean v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->inQueue:Z
 
-    .line 350
     aget-object v0, v6, v7
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
@@ -372,7 +341,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 351
     aget-object v0, v6, v7
 
     invoke-static {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
@@ -381,7 +349,6 @@
 
     iput-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->showType:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
-    .line 353
     :cond_0
     const/16 v0, 0x15
 
@@ -389,46 +356,36 @@
 
     iput-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->bodyText:Ljava/lang/String;
 
-    .line 354
     const/16 v0, 0x16
 
     aget-object v0, v6, v0
 
     iput-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->imageTarget:Ljava/lang/String;
 
-    .line 355
     const/16 v0, 0x17
 
     aget-object v0, v6, v0
 
     iput-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->textTarget:Ljava/lang/String;
 
-    .line 356
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 229
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 230
     iput-object p1, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->id:Ljava/lang/String;
 
-    .line 231
     iput-object p2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->storyId:Ljava/lang/String;
 
-    .line 232
     return-void
 .end method
 
 .method public static getNotificationType(Ljava/lang/String;)Lcom/netflix/model/leafs/social/IrisNotificationSummary$NotificationTypes;
     .locals 1
 
-    .prologue
-    .line 93
     sget-object v0, Lcom/netflix/model/leafs/social/IrisNotificationSummary$NotificationTypes;->NEW_SEASON_ALERT:Lcom/netflix/model/leafs/social/IrisNotificationSummary$NotificationTypes;
 
     return-object v0
@@ -439,8 +396,6 @@
 .method public describeContents()I
     .locals 1
 
-    .prologue
-    .line 407
     const/4 v0, 0x0
 
     return v0
@@ -449,29 +404,23 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 417
     if-ne p0, p1, :cond_1
 
-    .line 453
     :cond_0
     :goto_0
     return v0
 
-    .line 420
     :cond_1
     if-nez p1, :cond_2
 
     move v0, v1
 
-    .line 421
     goto :goto_0
 
-    .line 423
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -485,29 +434,23 @@
 
     move v0, v1
 
-    .line 424
     goto :goto_0
 
-    .line 427
     :cond_3
     check-cast p1, Lcom/netflix/model/leafs/social/IrisNotificationSummary;
 
-    .line 429
     iget-object v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->id:Ljava/lang/String;
 
     if-nez v2, :cond_4
 
-    .line 430
     iget-object v2, p1, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->id:Ljava/lang/String;
 
     if-eqz v2, :cond_5
 
     move v0, v1
 
-    .line 431
     goto :goto_0
 
-    .line 433
     :cond_4
     iget-object v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->id:Ljava/lang/String;
 
@@ -521,10 +464,8 @@
 
     move v0, v1
 
-    .line 434
     goto :goto_0
 
-    .line 437
     :cond_5
     iget-boolean v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->bWasRead:Z
 
@@ -534,10 +475,8 @@
 
     move v0, v1
 
-    .line 438
     goto :goto_0
 
-    .line 441
     :cond_6
     iget-boolean v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->bWasThanked:Z
 
@@ -547,10 +486,8 @@
 
     move v0, v1
 
-    .line 442
     goto :goto_0
 
-    .line 445
     :cond_7
     iget-object v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->videoId:Ljava/lang/String;
 
@@ -564,10 +501,8 @@
 
     move v0, v1
 
-    .line 446
     goto :goto_0
 
-    .line 449
     :cond_8
     iget-boolean v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->inQueue:Z
 
@@ -577,15 +512,12 @@
 
     move v0, v1
 
-    .line 450
     goto :goto_0
 .end method
 
 .method public fillVideoDetails(Lcom/netflix/model/branches/FalkorVideo;)V
     .locals 2
 
-    .prologue
-    .line 235
     const-string/jumbo v0, "summary"
 
     invoke-virtual {p1, v0}, Lcom/netflix/model/branches/FalkorVideo;->get(Ljava/lang/String;)Ljava/lang/Object;
@@ -594,35 +526,30 @@
 
     check-cast v0, Lcom/netflix/model/leafs/Video$Summary;
 
-    .line 236
     invoke-virtual {v0}, Lcom/netflix/model/leafs/Video$Summary;->getId()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->videoId:Ljava/lang/String;
 
-    .line 237
     invoke-virtual {v0}, Lcom/netflix/model/leafs/Video$Summary;->getType()Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->videoType:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
-    .line 238
     invoke-virtual {v0}, Lcom/netflix/model/leafs/Video$Summary;->getTitle()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->videoTitle:Ljava/lang/String;
 
-    .line 239
     invoke-virtual {v0}, Lcom/netflix/model/leafs/Video$Summary;->getTvCardUrl()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->tvCardUrl:Ljava/lang/String;
 
-    .line 240
     const-string/jumbo v0, "inQueue"
 
     invoke-virtual {p1, v0}, Lcom/netflix/model/branches/FalkorVideo;->get(Ljava/lang/String;)Ljava/lang/Object;
@@ -635,15 +562,12 @@
 
     iput-boolean v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->inQueue:Z
 
-    .line 241
     return-void
 .end method
 
 .method public getBodyText()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 280
     iget-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->bodyText:Ljava/lang/String;
 
     return-object v0
@@ -652,8 +576,6 @@
 .method public getFriendProfile()Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
     .locals 1
 
-    .prologue
-    .line 260
     iget-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->friendProfile:Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
 
     return-object v0
@@ -662,8 +584,6 @@
 .method public getHeaderText()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 276
     iget-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->headerText:Ljava/lang/String;
 
     return-object v0
@@ -672,8 +592,6 @@
 .method public getId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 244
     iget-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->id:Ljava/lang/String;
 
     return-object v0
@@ -682,8 +600,6 @@
 .method public getImageAltText()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 268
     iget-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->imageAltText:Ljava/lang/String;
 
     return-object v0
@@ -692,8 +608,6 @@
 .method public getImageTarget()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 284
     iget-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->imageTarget:Ljava/lang/String;
 
     return-object v0
@@ -702,8 +616,6 @@
 .method public getInQueueValue()Z
     .locals 1
 
-    .prologue
-    .line 311
     iget-boolean v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->inQueue:Z
 
     return v0
@@ -712,8 +624,6 @@
 .method public getMessageString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 252
     iget-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->messageString:Ljava/lang/String;
 
     return-object v0
@@ -722,8 +632,6 @@
 .method public getShowTimestamp()Z
     .locals 1
 
-    .prologue
-    .line 272
     iget-boolean v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->showTimestamp:Z
 
     return v0
@@ -732,8 +640,6 @@
 .method public getShowType()Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
     .locals 1
 
-    .prologue
-    .line 314
     iget-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->showType:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     return-object v0
@@ -742,8 +648,6 @@
 .method public getStoryId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 248
     iget-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->storyId:Ljava/lang/String;
 
     return-object v0
@@ -752,8 +656,6 @@
 .method public getTVCardUrl()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 297
     iget-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->tvCardUrl:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
@@ -776,8 +678,6 @@
 .method public getTextTarget()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 288
     iget-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->textTarget:Ljava/lang/String;
 
     return-object v0
@@ -786,8 +686,6 @@
 .method public getTimestamp()J
     .locals 2
 
-    .prologue
-    .line 264
     iget-wide v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->timestamp:J
 
     return-wide v0
@@ -796,8 +694,6 @@
 .method public getType()Lcom/netflix/model/leafs/social/IrisNotificationSummary$NotificationTypes;
     .locals 1
 
-    .prologue
-    .line 256
     iget-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->type:Lcom/netflix/model/leafs/social/IrisNotificationSummary$NotificationTypes;
 
     return-object v0
@@ -806,8 +702,6 @@
 .method public getVideoId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 293
     iget-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->videoId:Ljava/lang/String;
 
     return-object v0
@@ -816,8 +710,6 @@
 .method public getVideoTitle()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 295
     iget-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->videoTitle:Ljava/lang/String;
 
     return-object v0
@@ -826,8 +718,6 @@
 .method public getVideoType()Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
     .locals 1
 
-    .prologue
-    .line 291
     iget-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->videoType:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     return-object v0
@@ -836,8 +726,6 @@
 .method public getWasRead()Z
     .locals 1
 
-    .prologue
-    .line 300
     iget-boolean v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->bWasRead:Z
 
     return v0
@@ -846,8 +734,6 @@
 .method public getWasThanked()Z
     .locals 1
 
-    .prologue
-    .line 307
     iget-boolean v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->bWasThanked:Z
 
     return v0
@@ -856,8 +742,6 @@
 .method public hashCode()I
     .locals 1
 
-    .prologue
-    .line 412
     invoke-virtual {p0}, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->getId()Ljava/lang/String;
 
     move-result-object v0
@@ -872,18 +756,14 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 5
 
-    .prologue
-    .line 98
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 99
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 100
     const-string/jumbo v1, "SocialNotificationSummary"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -906,7 +786,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 102
     :cond_0
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -930,28 +809,24 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 103
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/gson/JsonElement;
 
-    .line 105
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->isJsonNull()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 106
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 107
     const-string/jumbo v1, "SocialNotificationSummary"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -982,7 +857,6 @@
 
     goto :goto_0
 
-    .line 111
     :cond_2
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -1006,7 +880,6 @@
 
     goto :goto_0
 
-    .line 113
     :pswitch_0
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -1016,7 +889,6 @@
 
     goto :goto_0
 
-    .line 111
     :sswitch_0
     const-string/jumbo v4, "id"
 
@@ -1225,7 +1097,6 @@
 
     goto/16 :goto_1
 
-    .line 116
     :pswitch_1
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -1235,7 +1106,6 @@
 
     goto/16 :goto_0
 
-    .line 119
     :pswitch_2
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -1249,7 +1119,6 @@
 
     goto/16 :goto_0
 
-    .line 122
     :pswitch_3
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -1259,7 +1128,6 @@
 
     goto/16 :goto_0
 
-    .line 125
     :pswitch_4
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
 
@@ -1267,7 +1135,6 @@
 
     iput-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->friendProfile:Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
 
-    .line 126
     iget-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->friendProfile:Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
 
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
@@ -1278,7 +1145,6 @@
 
     goto/16 :goto_0
 
-    .line 129
     :pswitch_5
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsLong()J
 
@@ -1288,7 +1154,6 @@
 
     goto/16 :goto_0
 
-    .line 132
     :pswitch_6
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -1298,7 +1163,6 @@
 
     goto/16 :goto_0
 
-    .line 135
     :pswitch_7
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -1308,7 +1172,6 @@
 
     goto/16 :goto_0
 
-    .line 138
     :pswitch_8
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -1318,7 +1181,6 @@
 
     goto/16 :goto_0
 
-    .line 141
     :pswitch_9
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -1328,7 +1190,6 @@
 
     goto/16 :goto_0
 
-    .line 144
     :pswitch_a
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -1338,7 +1199,6 @@
 
     goto/16 :goto_0
 
-    .line 147
     :pswitch_b
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -1348,7 +1208,6 @@
 
     goto/16 :goto_0
 
-    .line 150
     :pswitch_c
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -1358,7 +1217,6 @@
 
     goto/16 :goto_0
 
-    .line 153
     :pswitch_d
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -1368,7 +1226,6 @@
 
     goto/16 :goto_0
 
-    .line 156
     :pswitch_e
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -1378,7 +1235,6 @@
 
     goto/16 :goto_0
 
-    .line 159
     :pswitch_f
     const-string/jumbo v0, "movie"
 
@@ -1404,11 +1260,9 @@
 
     goto :goto_2
 
-    .line 163
     :cond_5
     return-void
 
-    .line 111
     :sswitch_data_0
     .sparse-switch
         -0x7dada934 -> :sswitch_7
@@ -1453,17 +1307,14 @@
 .method public set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 167
     sget-boolean v2, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v2, :cond_0
 
-    .line 168
     const-string/jumbo v2, "SocialNotificationSummary"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1486,7 +1337,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 170
     :cond_0
     const/4 v2, -0x1
 
@@ -1500,11 +1350,9 @@
     :goto_0
     packed-switch v2, :pswitch_data_0
 
-    .line 223
     :goto_1
     return v0
 
-    .line 170
     :sswitch_0
     const-string/jumbo v3, "id"
 
@@ -1713,7 +1561,6 @@
 
     goto/16 :goto_0
 
-    .line 172
     :pswitch_0
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -1724,10 +1571,8 @@
     :goto_2
     move v0, v1
 
-    .line 223
     goto/16 :goto_1
 
-    .line 175
     :pswitch_1
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -1737,7 +1582,6 @@
 
     goto :goto_2
 
-    .line 178
     :pswitch_2
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -1751,7 +1595,6 @@
 
     goto :goto_2
 
-    .line 181
     :pswitch_3
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -1761,7 +1604,6 @@
 
     goto :goto_2
 
-    .line 184
     :pswitch_4
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
 
@@ -1769,14 +1611,12 @@
 
     iput-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->friendProfile:Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
 
-    .line 185
     iget-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->friendProfile:Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
 
     invoke-virtual {v0, p1, p2}, Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;->set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
 
     goto :goto_2
 
-    .line 188
     :pswitch_5
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsLong()J
 
@@ -1786,7 +1626,6 @@
 
     goto :goto_2
 
-    .line 191
     :pswitch_6
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -1796,7 +1635,6 @@
 
     goto :goto_2
 
-    .line 194
     :pswitch_7
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -1806,7 +1644,6 @@
 
     goto :goto_2
 
-    .line 197
     :pswitch_8
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -1816,7 +1653,6 @@
 
     goto :goto_2
 
-    .line 200
     :pswitch_9
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -1826,7 +1662,6 @@
 
     goto :goto_2
 
-    .line 203
     :pswitch_a
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -1836,7 +1671,6 @@
 
     goto :goto_2
 
-    .line 206
     :pswitch_b
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -1846,7 +1680,6 @@
 
     goto :goto_2
 
-    .line 209
     :pswitch_c
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -1856,7 +1689,6 @@
 
     goto :goto_2
 
-    .line 212
     :pswitch_d
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -1866,7 +1698,6 @@
 
     goto :goto_2
 
-    .line 215
     :pswitch_e
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -1876,7 +1707,6 @@
 
     goto :goto_2
 
-    .line 218
     :pswitch_f
     const-string/jumbo v0, "movie"
 
@@ -1902,7 +1732,6 @@
 
     goto :goto_3
 
-    .line 170
     nop
 
     :sswitch_data_0
@@ -1949,19 +1778,14 @@
 .method public setWasRead(Z)V
     .locals 0
 
-    .prologue
-    .line 304
     iput-boolean p1, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->bWasRead:Z
 
-    .line 305
     return-void
 .end method
 
 .method public setWasThanked(Z)V
     .locals 0
 
-    .prologue
-    .line 309
     iput-boolean p1, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->bWasThanked:Z
 
     return-void
@@ -1970,8 +1794,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 319
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2088,13 +1910,10 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 4
 
-    .prologue
-    .line 372
     const/16 v0, 0x18
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 373
     const/4 v1, 0x0
 
     iget-boolean v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->bWasRead:Z
@@ -2105,7 +1924,6 @@
 
     aput-object v2, v0, v1
 
-    .line 374
     const/4 v1, 0x1
 
     iget-boolean v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->bWasThanked:Z
@@ -2116,12 +1934,10 @@
 
     aput-object v2, v0, v1
 
-    .line 376
     iget-object v1, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->friendProfile:Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
 
     if-eqz v1, :cond_0
 
-    .line 377
     const/4 v1, 0x2
 
     iget-object v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->friendProfile:Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
@@ -2132,7 +1948,6 @@
 
     aput-object v2, v0, v1
 
-    .line 378
     const/4 v1, 0x3
 
     iget-object v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->friendProfile:Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
@@ -2143,7 +1958,6 @@
 
     aput-object v2, v0, v1
 
-    .line 379
     const/4 v1, 0x4
 
     iget-object v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->friendProfile:Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
@@ -2154,7 +1968,6 @@
 
     aput-object v2, v0, v1
 
-    .line 380
     const/4 v1, 0x5
 
     iget-object v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->friendProfile:Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
@@ -2165,7 +1978,6 @@
 
     aput-object v2, v0, v1
 
-    .line 382
     :cond_0
     const/4 v1, 0x6
 
@@ -2173,21 +1985,18 @@
 
     aput-object v2, v0, v1
 
-    .line 383
     const/4 v1, 0x7
 
     iget-object v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->storyId:Ljava/lang/String;
 
     aput-object v2, v0, v1
 
-    .line 384
     const/16 v1, 0x9
 
     iget-object v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->messageString:Ljava/lang/String;
 
     aput-object v2, v0, v1
 
-    .line 385
     const/16 v1, 0x8
 
     iget-object v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->type:Lcom/netflix/model/leafs/social/IrisNotificationSummary$NotificationTypes;
@@ -2198,7 +2007,6 @@
 
     aput-object v2, v0, v1
 
-    .line 386
     const/16 v1, 0xa
 
     iget-wide v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->timestamp:J
@@ -2209,14 +2017,12 @@
 
     aput-object v2, v0, v1
 
-    .line 387
     const/16 v1, 0xb
 
     iget-object v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->imageAltText:Ljava/lang/String;
 
     aput-object v2, v0, v1
 
-    .line 388
     const/16 v1, 0xc
 
     iget-boolean v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->showTimestamp:Z
@@ -2227,28 +2033,24 @@
 
     aput-object v2, v0, v1
 
-    .line 389
     const/16 v1, 0xd
 
     iget-object v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->headerText:Ljava/lang/String;
 
     aput-object v2, v0, v1
 
-    .line 390
     const/16 v1, 0xe
 
     iget-object v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->imageUrl:Ljava/lang/String;
 
     aput-object v2, v0, v1
 
-    .line 391
     const/16 v1, 0xf
 
     iget-object v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->videoId:Ljava/lang/String;
 
     aput-object v2, v0, v1
 
-    .line 392
     const/16 v1, 0x10
 
     iget-object v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->videoType:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
@@ -2259,21 +2061,18 @@
 
     aput-object v2, v0, v1
 
-    .line 393
     const/16 v1, 0x11
 
     iget-object v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->videoTitle:Ljava/lang/String;
 
     aput-object v2, v0, v1
 
-    .line 394
     const/16 v1, 0x12
 
     iget-object v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->tvCardUrl:Ljava/lang/String;
 
     aput-object v2, v0, v1
 
-    .line 395
     const/16 v1, 0x13
 
     iget-boolean v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->inQueue:Z
@@ -2284,12 +2083,10 @@
 
     aput-object v2, v0, v1
 
-    .line 396
     iget-object v1, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->showType:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     if-eqz v1, :cond_1
 
-    .line 397
     const/16 v1, 0x14
 
     iget-object v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->showType:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
@@ -2300,7 +2097,6 @@
 
     aput-object v2, v0, v1
 
-    .line 399
     :cond_1
     const/16 v1, 0x15
 
@@ -2308,23 +2104,19 @@
 
     aput-object v2, v0, v1
 
-    .line 400
     const/16 v1, 0x16
 
     iget-object v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->imageTarget:Ljava/lang/String;
 
     aput-object v2, v0, v1
 
-    .line 401
     const/16 v1, 0x17
 
     iget-object v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->textTarget:Ljava/lang/String;
 
     aput-object v2, v0, v1
 
-    .line 402
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 403
     return-void
 .end method

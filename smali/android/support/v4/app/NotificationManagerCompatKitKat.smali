@@ -13,8 +13,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,12 +21,10 @@
 .method public static areNotificationsEnabled(Landroid/content/Context;)Z
     .locals 10
 
-    .prologue
     const/4 v3, 0x0
 
     const/4 v2, 0x1
 
-    .line 31
     const-string/jumbo v0, "appops"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -37,12 +33,10 @@
 
     check-cast v0, Landroid/app/AppOpsManager;
 
-    .line 32
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v1
 
-    .line 33
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v4
@@ -51,10 +45,8 @@
 
     move-result-object v4
 
-    .line 34
     iget v5, v1, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    .line 36
     :try_start_0
     const-class v1, Landroid/app/AppOpsManager;
 
@@ -66,7 +58,6 @@
 
     move-result-object v1
 
-    .line 37
     const-string/jumbo v6, "checkOpNoThrow"
 
     const/4 v7, 0x3
@@ -95,14 +86,12 @@
 
     move-result-object v6
 
-    .line 39
     const-string/jumbo v7, "OP_POST_NOTIFICATION"
 
     invoke-virtual {v1, v7}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v1
 
-    .line 40
     const-class v7, Ljava/lang/Integer;
 
     invoke-virtual {v1, v7}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -115,7 +104,6 @@
 
     move-result v1
 
-    .line 41
     const/4 v7, 0x3
 
     new-array v7, v7, [Ljava/lang/Object;
@@ -161,27 +149,22 @@
 
     move v0, v2
 
-    .line 45
     :goto_0
     return v0
 
     :cond_0
     move v0, v3
 
-    .line 41
     goto :goto_0
 
-    .line 43
     :catch_0
     move-exception v0
 
     :goto_1
     move v0, v2
 
-    .line 45
     goto :goto_0
 
-    .line 43
     :catch_1
     move-exception v0
 

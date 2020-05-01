@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/android/tooltips/TooltipLayout;)V
     .locals 0
 
-    .prologue
-    .line 208
     iput-object p1, p0, Lcom/netflix/android/tooltips/TooltipLayout$3;->this$0:Lcom/netflix/android/tooltips/TooltipLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .prologue
-    .line 211
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$3;->this$0:Lcom/netflix/android/tooltips/TooltipLayout;
 
     invoke-static {v0}, Lcom/netflix/android/tooltips/TooltipLayout;->access$400(Lcom/netflix/android/tooltips/TooltipLayout;)Landroid/view/View$OnClickListener;
@@ -38,7 +34,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 212
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$3;->this$0:Lcom/netflix/android/tooltips/TooltipLayout;
 
     invoke-static {v0}, Lcom/netflix/android/tooltips/TooltipLayout;->access$400(Lcom/netflix/android/tooltips/TooltipLayout;)Landroid/view/View$OnClickListener;
@@ -47,7 +42,6 @@
 
     invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
-    .line 214
     :cond_0
     return-void
 .end method

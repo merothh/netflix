@@ -17,8 +17,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 24
     sget-object v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->mdx_pair_pairingdeleted:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     sput-object v0, Lcom/netflix/mediaclient/event/nrdp/mdx/pair/PairingDeletedEvent;->TYPE:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
@@ -29,8 +27,6 @@
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 1
 
-    .prologue
-    .line 37
     sget-object v0, Lcom/netflix/mediaclient/event/nrdp/mdx/pair/PairingDeletedEvent;->TYPE:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->getName()Ljava/lang/String;
@@ -39,7 +35,6 @@
 
     invoke-direct {p0, v0, p1}, Lcom/netflix/mediaclient/event/nrdp/JsonBaseNccpEvent;-><init>(Ljava/lang/String;Lorg/json/JSONObject;)V
 
-    .line 38
     return-void
 .end method
 
@@ -48,8 +43,6 @@
 .method public getObject()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 63
     const-string/jumbo v0, "nrdp.mdx"
 
     return-object v0
@@ -58,8 +51,6 @@
 .method public getPairingContext()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 53
     iget-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/pair/PairingDeletedEvent;->pairingContext:Ljava/lang/String;
 
     return-object v0
@@ -68,8 +59,6 @@
 .method protected populate(Lorg/json/JSONObject;)V
     .locals 2
 
-    .prologue
-    .line 44
     const-string/jumbo v0, "pairingContext"
 
     const/4 v1, 0x0
@@ -80,6 +69,5 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/pair/PairingDeletedEvent;->pairingContext:Ljava/lang/String;
 
-    .line 45
     return-void
 .end method

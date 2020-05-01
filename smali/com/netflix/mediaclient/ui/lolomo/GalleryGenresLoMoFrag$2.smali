@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;)V
     .locals 0
 
-    .prologue
-    .line 134
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag$2;->this$0:Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,8 +24,6 @@
 .method private getImageWidth()I
     .locals 3
 
-    .prologue
-    .line 150
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag$2;->this$0:Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;->getActivity()Landroid/app/Activity;
@@ -44,7 +40,6 @@
 
     move-result v0
 
-    .line 151
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag$2;->this$0:Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;->getActivity()Landroid/app/Activity;
@@ -63,12 +58,10 @@
 
     int-to-float v1, v1
 
-    .line 152
     mul-int/lit8 v0, v0, 0x2
 
     int-to-float v0, v0
 
-    .line 153
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag$2;->this$0:Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;
 
     invoke-static {v2}, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;->access$000(Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;)I
@@ -79,7 +72,6 @@
 
     mul-float/2addr v1, v2
 
-    .line 155
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag$2;->this$0:Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;
 
     iget-object v2, v2, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;->recyclerView:Landroid/support/v7/widget/RecyclerView;
@@ -114,10 +106,8 @@
 .method public createItemView()Landroid/view/View;
     .locals 5
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 138
     new-instance v1, Lcom/netflix/mediaclient/android/widget/VideoView;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag$2;->this$0:Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;
@@ -130,15 +120,12 @@
 
     invoke-direct {v1, v2}, Lcom/netflix/mediaclient/android/widget/VideoView;-><init>(Landroid/content/Context;)V
 
-    .line 140
     sget-object v2, Landroid/widget/ImageView$ScaleType;->FIT_CENTER:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v1, v2}, Lcom/netflix/mediaclient/android/widget/VideoView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 141
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/android/widget/VideoView;->setAdjustViewBounds(Z)V
 
-    .line 143
     new-instance v2, Landroid/widget/AbsListView$LayoutParams;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag$2;->getImageWidth()I
@@ -149,10 +136,8 @@
 
     invoke-direct {v2, v3, v4}, Landroid/widget/AbsListView$LayoutParams;-><init>(II)V
 
-    .line 144
     invoke-virtual {v1, v2}, Lcom/netflix/mediaclient/android/widget/VideoView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 145
     invoke-static {}, Lcom/netflix/mediaclient/ui/experience/BrowseExperience;->useLolomoBoxArt()Z
 
     move-result v2
@@ -162,10 +147,8 @@
     :goto_0
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/android/widget/VideoView;->setIsHorizontal(Z)V
 
-    .line 146
     return-object v1
 
-    .line 145
     :cond_0
     const/4 v0, 0x0
 

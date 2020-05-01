@@ -13,8 +13,6 @@
 .method protected constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,8 +23,6 @@
 .method public final getCurrentIndex()I
     .locals 1
 
-    .prologue
-    .line 98
     iget v0, p0, Lcom/fasterxml/jackson/core/JsonStreamContext;->_index:I
 
     if-gez v0, :cond_0
@@ -45,37 +41,30 @@
 .method public final getTypeDesc()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 82
     iget v0, p0, Lcom/fasterxml/jackson/core/JsonStreamContext;->_type:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 87
     const-string/jumbo v0, "?"
 
     :goto_0
     return-object v0
 
-    .line 83
     :pswitch_0
     const-string/jumbo v0, "ROOT"
 
     goto :goto_0
 
-    .line 84
     :pswitch_1
     const-string/jumbo v0, "ARRAY"
 
     goto :goto_0
 
-    .line 85
     :pswitch_2
     const-string/jumbo v0, "OBJECT"
 
     goto :goto_0
 
-    .line 82
     nop
 
     :pswitch_data_0
@@ -89,10 +78,8 @@
 .method public final inArray()Z
     .locals 2
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 61
     iget v1, p0, Lcom/fasterxml/jackson/core/JsonStreamContext;->_type:I
 
     if-ne v1, v0, :cond_0
@@ -109,8 +96,6 @@
 .method public final inObject()Z
     .locals 2
 
-    .prologue
-    .line 74
     iget v0, p0, Lcom/fasterxml/jackson/core/JsonStreamContext;->_type:I
 
     const/4 v1, 0x2
@@ -131,8 +116,6 @@
 .method public final inRoot()Z
     .locals 1
 
-    .prologue
-    .line 68
     iget v0, p0, Lcom/fasterxml/jackson/core/JsonStreamContext;->_type:I
 
     if-nez v0, :cond_0

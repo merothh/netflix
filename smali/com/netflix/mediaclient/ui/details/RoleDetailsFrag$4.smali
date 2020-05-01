@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;)V
     .locals 0
 
-    .prologue
-    .line 253
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$4;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public createItemView()Landroid/view/View;
     .locals 3
 
-    .prologue
-    .line 256
     new-instance v0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorRelatedView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$4;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;

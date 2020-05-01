@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 29
     new-instance v0, Lcom/google/android/exoplayer/MediaCodecSelector$1;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer/MediaCodecSelector$1;-><init>()V

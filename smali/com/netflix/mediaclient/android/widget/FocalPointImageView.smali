@@ -17,57 +17,42 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 16
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/android/widget/TopCropImageView;-><init>(Landroid/content/Context;)V
 
-    .line 12
     iput v0, p0, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->cropPointXOffsetPercent:F
 
-    .line 13
     iput v0, p0, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->cropPointYOffsetPercent:F
 
-    .line 17
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 20
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/android/widget/TopCropImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 12
     iput v0, p0, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->cropPointXOffsetPercent:F
 
-    .line 13
     iput v0, p0, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->cropPointYOffsetPercent:F
 
-    .line 21
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 24
     invoke-direct {p0, p1, p2, p3}, Lcom/netflix/mediaclient/android/widget/TopCropImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 12
     iput v0, p0, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->cropPointXOffsetPercent:F
 
-    .line 13
     iput v0, p0, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->cropPointYOffsetPercent:F
 
-    .line 25
     return-void
 .end method
 
@@ -76,10 +61,8 @@
 .method public recomputeImgMatrix()V
     .locals 9
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 39
     new-instance v3, Landroid/graphics/Matrix;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->getImageMatrix()Landroid/graphics/Matrix;
@@ -88,7 +71,6 @@
 
     invoke-direct {v3, v0}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
 
-    .line 42
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->getWidth()I
 
     move-result v0
@@ -105,7 +87,6 @@
 
     sub-int v4, v0, v2
 
-    .line 43
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->getHeight()I
 
     move-result v0
@@ -122,7 +103,6 @@
 
     sub-int v5, v0, v2
 
-    .line 45
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -131,7 +111,6 @@
 
     move v0, v1
 
-    .line 46
     :goto_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
@@ -141,7 +120,6 @@
 
     move v2, v1
 
-    .line 49
     :goto_1
     mul-int v1, v0, v5
 
@@ -149,14 +127,12 @@
 
     if-le v1, v6, :cond_2
 
-    .line 50
     int-to-float v1, v5
 
     int-to-float v4, v2
 
     div-float/2addr v1, v4
 
-    .line 56
     :goto_2
     int-to-float v4, v0
 
@@ -168,7 +144,6 @@
 
     iget v5, p0, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->cropPointXOffsetPercent:F
 
-    .line 57
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->getWidth()I
 
     move-result v6
@@ -185,7 +160,6 @@
 
     add-float/2addr v4, v5
 
-    .line 59
     int-to-float v5, v2
 
     mul-float/2addr v5, v1
@@ -196,7 +170,6 @@
 
     iget v6, p0, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->cropPointXOffsetPercent:F
 
-    .line 60
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->getHeight()I
 
     move-result v7
@@ -213,10 +186,8 @@
 
     add-float/2addr v5, v6
 
-    .line 62
     invoke-virtual {v3}, Landroid/graphics/Matrix;->reset()V
 
-    .line 63
     neg-int v0, v0
 
     int-to-float v0, v0
@@ -235,19 +206,14 @@
 
     invoke-virtual {v3, v0, v2}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 65
     invoke-virtual {v3, v1, v1}, Landroid/graphics/Matrix;->postScale(FF)Z
 
-    .line 66
     invoke-virtual {v3, v4, v5}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 67
     invoke-virtual {p0, v3}, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
 
-    .line 68
     return-void
 
-    .line 45
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
@@ -259,7 +225,6 @@
 
     goto :goto_0
 
-    .line 46
     :cond_1
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
@@ -273,7 +238,6 @@
 
     goto :goto_1
 
-    .line 52
     :cond_2
     int-to-float v1, v4
 
@@ -287,27 +251,19 @@
 .method public setCropPointXOffsetPercent(F)V
     .locals 0
 
-    .prologue
-    .line 28
     iput p1, p0, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->cropPointXOffsetPercent:F
 
-    .line 29
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->recomputeImgMatrix()V
 
-    .line 30
     return-void
 .end method
 
 .method public setCropPointYOffsetPercent(F)V
     .locals 0
 
-    .prologue
-    .line 33
     iput p1, p0, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->cropPointYOffsetPercent:F
 
-    .line 34
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->recomputeImgMatrix()V
 
-    .line 35
     return-void
 .end method

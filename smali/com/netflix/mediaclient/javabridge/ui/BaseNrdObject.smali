@@ -32,14 +32,10 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/javabridge/Bridge;)V
     .locals 2
 
-    .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     if-nez p1, :cond_0
 
-    .line 45
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "bridge is null!"
@@ -48,11 +44,9 @@
 
     throw v0
 
-    .line 47
     :cond_0
     iput-object p1, p0, Lcom/netflix/mediaclient/javabridge/ui/BaseNrdObject;->bridge:Lcom/netflix/mediaclient/javabridge/Bridge;
 
-    .line 48
     return-void
 .end method
 
@@ -61,8 +55,6 @@
 .method protected getBoolean(Lorg/json/JSONObject;Ljava/lang/String;Z)Z
     .locals 1
 
-    .prologue
-    .line 143
     invoke-static {p1, p2, p3}, Lcom/netflix/mediaclient/util/JsonUtils;->getBoolean(Lorg/json/JSONObject;Ljava/lang/String;Z)Z
 
     move-result v0
@@ -73,8 +65,6 @@
 .method protected getInt(Lorg/json/JSONObject;Ljava/lang/String;I)I
     .locals 1
 
-    .prologue
-    .line 111
     invoke-static {p1, p2, p3}, Lcom/netflix/mediaclient/util/JsonUtils;->getInt(Lorg/json/JSONObject;Ljava/lang/String;I)I
 
     move-result v0
@@ -85,8 +75,6 @@
 .method protected getJSONArray(Lorg/json/JSONObject;Ljava/lang/String;)Lorg/json/JSONArray;
     .locals 1
 
-    .prologue
-    .line 79
     invoke-static {p1, p2}, Lcom/netflix/mediaclient/util/JsonUtils;->getJSONArray(Lorg/json/JSONObject;Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v0
@@ -97,8 +85,6 @@
 .method protected getJSONObject(Lorg/json/JSONObject;Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
     .locals 1
 
-    .prologue
-    .line 63
     invoke-static {p1, p2, p3}, Lcom/netflix/mediaclient/util/JsonUtils;->getJSONObject(Lorg/json/JSONObject;Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object v0
@@ -109,8 +95,6 @@
 .method protected getLong(Lorg/json/JSONObject;Ljava/lang/String;J)J
     .locals 3
 
-    .prologue
-    .line 127
     invoke-static {p1, p2, p3, p4}, Lcom/netflix/mediaclient/util/JsonUtils;->getLong(Lorg/json/JSONObject;Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -121,8 +105,6 @@
 .method protected getString(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 95
     invoke-static {p1, p2, p3}, Lcom/netflix/mediaclient/util/JsonUtils;->getString(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0

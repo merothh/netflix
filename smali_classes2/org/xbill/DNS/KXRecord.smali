@@ -11,8 +11,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 15
     invoke-direct {p0}, Lorg/xbill/DNS/U16NameBase;-><init>()V
 
     return-void
@@ -21,8 +19,6 @@
 .method public constructor <init>(Lorg/xbill/DNS/Name;IJILorg/xbill/DNS/Name;)V
     .locals 11
 
-    .prologue
-    .line 30
     const/16 v2, 0x24
 
     const-string/jumbo v7, "preference"
@@ -43,7 +39,6 @@
 
     invoke-direct/range {v0 .. v9}, Lorg/xbill/DNS/U16NameBase;-><init>(Lorg/xbill/DNS/Name;IIJILjava/lang/String;Lorg/xbill/DNS/Name;Ljava/lang/String;)V
 
-    .line 32
     return-void
 .end method
 
@@ -52,8 +47,6 @@
 .method public getAdditionalName()Lorg/xbill/DNS/Name;
     .locals 1
 
-    .prologue
-    .line 48
     invoke-virtual {p0}, Lorg/xbill/DNS/KXRecord;->getNameField()Lorg/xbill/DNS/Name;
 
     move-result-object v0
@@ -64,8 +57,6 @@
 .method getObject()Lorg/xbill/DNS/Record;
     .locals 1
 
-    .prologue
-    .line 19
     new-instance v0, Lorg/xbill/DNS/KXRecord;
 
     invoke-direct {v0}, Lorg/xbill/DNS/KXRecord;-><init>()V
@@ -76,8 +67,6 @@
 .method public getPreference()I
     .locals 1
 
-    .prologue
-    .line 43
     invoke-virtual {p0}, Lorg/xbill/DNS/KXRecord;->getU16Field()I
 
     move-result v0
@@ -88,8 +77,6 @@
 .method public getTarget()Lorg/xbill/DNS/Name;
     .locals 1
 
-    .prologue
-    .line 37
     invoke-virtual {p0}, Lorg/xbill/DNS/KXRecord;->getNameField()Lorg/xbill/DNS/Name;
 
     move-result-object v0

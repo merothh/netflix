@@ -27,8 +27,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,48 +35,38 @@
 .method private static createDefault()Lcom/netflix/mediaclient/service/webclient/model/leafs/OfflineConfig;
     .locals 2
 
-    .prologue
-    .line 41
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/OfflineConfig;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/OfflineConfig;-><init>()V
 
-    .line 42
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/OfflineConfig;->disableOfflineFeature:Z
 
-    .line 43
     const/16 v1, 0x30
 
     iput v1, v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/OfflineConfig;->maintenanceJobPeriodInHrs:I
 
-    .line 44
     return-object v0
 .end method
 
 .method public static loadFromPreferences(Landroid/content/Context;)Lcom/netflix/mediaclient/service/webclient/model/leafs/OfflineConfig;
     .locals 5
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 60
-    .line 61
     const-string/jumbo v0, "offline_config"
 
     invoke-static {p0, v0, v1}, Lcom/netflix/mediaclient/util/PreferenceUtils;->getStringPref(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 62
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 63
     const-string/jumbo v0, "nf_log"
 
     const-string/jumbo v2, "loadFromPreferences offlineConfig not found in file system"
@@ -87,20 +75,16 @@
 
     move-object v0, v1
 
-    .line 74
     :goto_0
     if-nez v0, :cond_0
 
-    .line 75
     invoke-static {}, Lcom/netflix/mediaclient/service/webclient/model/leafs/OfflineConfig;->createDefault()Lcom/netflix/mediaclient/service/webclient/model/leafs/OfflineConfig;
 
     move-result-object v0
 
-    .line 78
     :cond_0
     return-object v0
 
-    .line 66
     :cond_1
     :try_start_0
     invoke-static {}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorParseUtils;->getGson()Lcom/google/gson/Gson;
@@ -117,7 +101,6 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 67
     :try_start_1
     const-string/jumbo v1, "nf_log"
 
@@ -129,7 +112,6 @@
 
     goto :goto_0
 
-    .line 69
     :catch_0
     move-exception v1
 
@@ -139,7 +121,6 @@
 
     move-object v0, v4
 
-    .line 70
     :goto_1
     const-string/jumbo v2, "nf_log"
 
@@ -151,7 +132,6 @@
 
     goto :goto_0
 
-    .line 69
     :catch_1
     move-exception v0
 
@@ -161,38 +141,30 @@
 .method public static saveToPreferences(Lcom/netflix/mediaclient/util/NetflixPreference;Lcom/netflix/mediaclient/service/webclient/model/leafs/OfflineConfig;)Lcom/netflix/mediaclient/service/webclient/model/leafs/OfflineConfig;
     .locals 2
 
-    .prologue
-    .line 48
     if-nez p1, :cond_0
 
-    .line 49
     const-string/jumbo v0, "offline_config"
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/util/NetflixPreference;->removePref(Ljava/lang/String;)Z
 
-    .line 50
     const-string/jumbo v0, "nf_log"
 
     const-string/jumbo v1, "Subtitle retry policy not found, return default"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     invoke-static {}, Lcom/netflix/mediaclient/service/webclient/model/leafs/OfflineConfig;->createDefault()Lcom/netflix/mediaclient/service/webclient/model/leafs/OfflineConfig;
 
     move-result-object p1
 
-    .line 55
     :goto_0
     return-object p1
 
-    .line 53
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorParseUtils;->getGson()Lcom/google/gson/Gson;
 
     move-result-object v0
 
-    .line 54
     const-string/jumbo v1, "offline_config"
 
     invoke-virtual {v0, p1}, Lcom/google/gson/Gson;->toJson(Ljava/lang/Object;)Ljava/lang/String;
@@ -209,8 +181,6 @@
 .method public getMaintenanceJobPeriodInHrs()I
     .locals 1
 
-    .prologue
-    .line 35
     iget v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/OfflineConfig;->maintenanceJobPeriodInHrs:I
 
     return v0
@@ -219,8 +189,6 @@
 .method public isOfflineFeatureDisabled()Z
     .locals 1
 
-    .prologue
-    .line 29
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/OfflineConfig;->disableOfflineFeature:Z
 
     return v0

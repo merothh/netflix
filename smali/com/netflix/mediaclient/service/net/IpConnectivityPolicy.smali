@@ -34,7 +34,6 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x3
 
     const/4 v4, 0x2
@@ -43,7 +42,6 @@
 
     const/4 v2, 0x0
 
-    .line 19
     new-instance v0, Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;
 
     const-string/jumbo v1, "IP_V4_ONLY"
@@ -52,7 +50,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;->IP_V4_ONLY:Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;
 
-    .line 20
     new-instance v0, Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;
 
     const-string/jumbo v1, "IP_V6_ONLY"
@@ -61,7 +58,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;->IP_V6_ONLY:Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;
 
-    .line 21
     new-instance v0, Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;
 
     const-string/jumbo v1, "IP_V4_V6"
@@ -70,7 +66,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;->IP_V4_V6:Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;
 
-    .line 22
     new-instance v0, Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;
 
     const-string/jumbo v1, "IP_V6_V4"
@@ -79,7 +74,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;->IP_V6_V4:Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;
 
-    .line 17
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;
@@ -113,55 +107,43 @@
         }
     .end annotation
 
-    .prologue
-    .line 28
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 29
     iput p3, p0, Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;->mValue:I
 
-    .line 30
     return-void
 .end method
 
 .method public static from(I)Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;
     .locals 1
 
-    .prologue
-    .line 48
     packed-switch p0, :pswitch_data_0
 
-    .line 59
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 50
     :pswitch_0
     sget-object v0, Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;->IP_V4_ONLY:Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;
 
     goto :goto_0
 
-    .line 52
     :pswitch_1
     sget-object v0, Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;->IP_V6_ONLY:Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;
 
     goto :goto_0
 
-    .line 54
     :pswitch_2
     sget-object v0, Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;->IP_V4_V6:Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;
 
     goto :goto_0
 
-    .line 56
     :pswitch_3
     sget-object v0, Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;->IP_V6_V4:Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;
 
     goto :goto_0
 
-    .line 48
     nop
 
     :pswitch_data_0
@@ -176,8 +158,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;
     .locals 1
 
-    .prologue
-    .line 17
     const-class v0, Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -192,8 +172,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;
     .locals 1
 
-    .prologue
-    .line 17
     sget-object v0, Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;->$VALUES:[Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;->clone()Ljava/lang/Object;
@@ -210,8 +188,6 @@
 .method public getValue()I
     .locals 1
 
-    .prologue
-    .line 43
     iget v0, p0, Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;->mValue:I
 
     return v0

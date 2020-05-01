@@ -26,32 +26,24 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/user/UserAgent;Ljava/lang/String;Lcom/netflix/mediaclient/service/user/UserAgent$UserAgentCallback;)V
     .locals 1
 
-    .prologue
-    .line 1701
     iput-object p1, p0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyPinTask;->this$0:Lcom/netflix/mediaclient/service/user/UserAgent;
 
-    .line 1702
     invoke-direct {p0, p3}, Lcom/netflix/mediaclient/service/user/UserAgent$FetchTask;-><init>(Lcom/netflix/mediaclient/service/user/UserAgent$UserAgentCallback;)V
 
-    .line 1726
     new-instance v0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyPinTask$1;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyPinTask$1;-><init>(Lcom/netflix/mediaclient/service/user/UserAgent$VerifyPinTask;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyPinTask;->webClientCallback:Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;
 
-    .line 1703
     iput-object p2, p0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyPinTask;->enteredPin:Ljava/lang/String;
 
-    .line 1704
     return-void
 .end method
 
 .method private userEnteredPinMatchesStoredPin()Z
     .locals 3
 
-    .prologue
-    .line 1722
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyPinTask;->this$0:Lcom/netflix/mediaclient/service/user/UserAgent;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/user/UserAgent;->getContext()Landroid/content/Context;
@@ -66,7 +58,6 @@
 
     move-result-object v0
 
-    .line 1723
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
@@ -97,8 +88,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 1710
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyPinTask;->this$0:Lcom/netflix/mediaclient/service/user/UserAgent;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/user/UserAgent;->getContext()Landroid/content/Context;
@@ -111,7 +100,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1711
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyPinTask;->this$0:Lcom/netflix/mediaclient/service/user/UserAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/user/UserAgent;->access$1200(Lcom/netflix/mediaclient/service/user/UserAgent;)Lcom/netflix/mediaclient/service/user/UserWebClient;
@@ -124,11 +112,9 @@
 
     invoke-interface {v0, v1, v2}, Lcom/netflix/mediaclient/service/user/UserWebClient;->verifyPin(Ljava/lang/String;Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;)V
 
-    .line 1719
     :goto_0
     return-void
 
-    .line 1713
     :cond_0
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyPinTask;->userEnteredPinMatchesStoredPin()Z
 
@@ -136,7 +122,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1714
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyPinTask;->webClientCallback:Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;
 
     const/4 v1, 0x1
@@ -147,7 +132,6 @@
 
     goto :goto_0
 
-    .line 1716
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyPinTask;->webClientCallback:Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;
 

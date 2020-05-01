@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/servicemgr/TextViewWrapper;)V
     .locals 0
 
-    .prologue
-    .line 49
     iput-object p1, p0, Lcom/netflix/mediaclient/servicemgr/TextViewWrapper$1;->this$0:Lcom/netflix/mediaclient/servicemgr/TextViewWrapper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public onClick(Landroid/view/View;)V
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 52
     iget-object v1, p0, Lcom/netflix/mediaclient/servicemgr/TextViewWrapper$1;->this$0:Lcom/netflix/mediaclient/servicemgr/TextViewWrapper;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/servicemgr/TextViewWrapper;->setAsNotInList()V
 
-    .line 53
     iget-object v1, p0, Lcom/netflix/mediaclient/servicemgr/TextViewWrapper$1;->this$0:Lcom/netflix/mediaclient/servicemgr/TextViewWrapper;
 
     iget-object v1, v1, Lcom/netflix/mediaclient/servicemgr/TextViewWrapper;->textView:Landroid/widget/TextView;
@@ -67,7 +62,6 @@
 
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
-    .line 55
     iget-object v1, p0, Lcom/netflix/mediaclient/servicemgr/TextViewWrapper$1;->this$0:Lcom/netflix/mediaclient/servicemgr/TextViewWrapper;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/servicemgr/TextViewWrapper;->access$000(Lcom/netflix/mediaclient/servicemgr/TextViewWrapper;)Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -86,7 +80,6 @@
 
     invoke-static {v1, v0, v2}, Lcom/netflix/mediaclient/util/log/UserActionLogUtils;->reportRemoveFromQueueActionStarted(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;)V
 
-    .line 57
     iget-object v1, p0, Lcom/netflix/mediaclient/servicemgr/TextViewWrapper$1;->this$0:Lcom/netflix/mediaclient/servicemgr/TextViewWrapper;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/servicemgr/TextViewWrapper;->access$000(Lcom/netflix/mediaclient/servicemgr/TextViewWrapper;)Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -97,7 +90,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 58
     iget-object v0, p0, Lcom/netflix/mediaclient/servicemgr/TextViewWrapper$1;->this$0:Lcom/netflix/mediaclient/servicemgr/TextViewWrapper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/servicemgr/TextViewWrapper;->access$000(Lcom/netflix/mediaclient/servicemgr/TextViewWrapper;)Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -110,7 +102,6 @@
 
     move-result-object v0
 
-    .line 60
     :cond_0
     iget-object v1, p0, Lcom/netflix/mediaclient/servicemgr/TextViewWrapper$1;->this$0:Lcom/netflix/mediaclient/servicemgr/TextViewWrapper;
 
@@ -132,6 +123,5 @@
 
     invoke-virtual {v1, v2, v3, v0}, Lcom/netflix/mediaclient/servicemgr/AddToMyListWrapper;->removeVideoFromMyList(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;Ljava/lang/String;)V
 
-    .line 61
     return-void
 .end method

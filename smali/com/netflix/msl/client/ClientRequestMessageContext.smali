@@ -34,15 +34,12 @@
 .method private constructor <init>(Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/String;Lcom/netflix/msl/msg/MessageDebugContext;Lcom/netflix/msl/userauth/UserAuthenticationData;[BLjava/lang/String;Lcom/netflix/msl/client/KeyRequestDataProvider;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x1
 
     const/4 v1, 0x0
 
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -57,7 +54,6 @@
     :goto_0
     iput-boolean v0, p0, Lcom/netflix/msl/client/ClientRequestMessageContext;->encrypted:Z
 
-    .line 64
     if-eqz p2, :cond_1
 
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
@@ -72,7 +68,6 @@
     :goto_1
     iput-boolean v0, p0, Lcom/netflix/msl/client/ClientRequestMessageContext;->integrityProtected:Z
 
-    .line 65
     if-eqz p3, :cond_2
 
     invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
@@ -87,43 +82,33 @@
     :cond_3
     iput-boolean v1, p0, Lcom/netflix/msl/client/ClientRequestMessageContext;->nonReplayable:Z
 
-    .line 66
     iput-object p4, p0, Lcom/netflix/msl/client/ClientRequestMessageContext;->userId:Ljava/lang/String;
 
-    .line 67
     iput-object p5, p0, Lcom/netflix/msl/client/ClientRequestMessageContext;->debugContext:Lcom/netflix/msl/msg/MessageDebugContext;
 
-    .line 68
     iput-object p6, p0, Lcom/netflix/msl/client/ClientRequestMessageContext;->userAuthData:Lcom/netflix/msl/userauth/UserAuthenticationData;
 
-    .line 69
     iput-object p7, p0, Lcom/netflix/msl/client/ClientRequestMessageContext;->payload:[B
 
-    .line 70
     iput-object p8, p0, Lcom/netflix/msl/client/ClientRequestMessageContext;->recipient:Ljava/lang/String;
 
-    .line 71
     if-eqz p9, :cond_6
 
     :goto_2
     iput-object p9, p0, Lcom/netflix/msl/client/ClientRequestMessageContext;->keyRequestDataProvider:Lcom/netflix/msl/client/KeyRequestDataProvider;
 
-    .line 72
     return-void
 
     :cond_4
     move v0, v1
 
-    .line 63
     goto :goto_0
 
     :cond_5
     move v0, v1
 
-    .line 64
     goto :goto_1
 
-    .line 71
     :cond_6
     new-instance p9, Lcom/netflix/msl/client/AsymmetricWrappedKeyRequestProvider;
 
@@ -135,8 +120,6 @@
 .method synthetic constructor <init>(Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/String;Lcom/netflix/msl/msg/MessageDebugContext;Lcom/netflix/msl/userauth/UserAuthenticationData;[BLjava/lang/String;Lcom/netflix/msl/client/KeyRequestDataProvider;Lcom/netflix/msl/client/ClientRequestMessageContext$1;)V
     .locals 0
 
-    .prologue
-    .line 30
     invoke-direct/range {p0 .. p9}, Lcom/netflix/msl/client/ClientRequestMessageContext;-><init>(Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/String;Lcom/netflix/msl/msg/MessageDebugContext;Lcom/netflix/msl/userauth/UserAuthenticationData;[BLjava/lang/String;Lcom/netflix/msl/client/KeyRequestDataProvider;)V
 
     return-void
@@ -145,8 +128,6 @@
 .method public static builder()Lcom/netflix/msl/client/ClientRequestMessageContext$ClientRequestMessageContextBuilder;
     .locals 1
 
-    .prologue
-    .line 61
     new-instance v0, Lcom/netflix/msl/client/ClientRequestMessageContext$ClientRequestMessageContextBuilder;
 
     invoke-direct {v0}, Lcom/netflix/msl/client/ClientRequestMessageContext$ClientRequestMessageContextBuilder;-><init>()V
@@ -159,12 +140,10 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 29
     if-ne p1, p0, :cond_1
 
     :cond_0
@@ -387,8 +366,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 77
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object v0
@@ -399,8 +376,6 @@
 .method public getDebugContext()Lcom/netflix/msl/msg/MessageDebugContext;
     .locals 1
 
-    .prologue
-    .line 49
     iget-object v0, p0, Lcom/netflix/msl/client/ClientRequestMessageContext;->debugContext:Lcom/netflix/msl/msg/MessageDebugContext;
 
     return-object v0
@@ -418,15 +393,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 109
     iget-object v0, p0, Lcom/netflix/msl/client/ClientRequestMessageContext;->keyRequestDataProvider:Lcom/netflix/msl/client/KeyRequestDataProvider;
 
     invoke-interface {v0}, Lcom/netflix/msl/client/KeyRequestDataProvider;->get()Lcom/netflix/msl/keyx/KeyRequestData;
 
     move-result-object v0
 
-    .line 110
     new-instance v1, Ljava/util/HashSet;
 
     const/4 v2, 0x1
@@ -449,8 +421,6 @@
 .method public getKeyRequestDataProvider()Lcom/netflix/msl/client/KeyRequestDataProvider;
     .locals 1
 
-    .prologue
-    .line 59
     iget-object v0, p0, Lcom/netflix/msl/client/ClientRequestMessageContext;->keyRequestDataProvider:Lcom/netflix/msl/client/KeyRequestDataProvider;
 
     return-object v0
@@ -459,8 +429,6 @@
 .method public getPayload()[B
     .locals 1
 
-    .prologue
-    .line 57
     iget-object v0, p0, Lcom/netflix/msl/client/ClientRequestMessageContext;->payload:[B
 
     return-object v0
@@ -469,8 +437,6 @@
 .method public getRecipient()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 82
     const/4 v0, 0x0
 
     return-object v0
@@ -479,8 +445,6 @@
 .method public getUser()Lcom/netflix/msl/tokens/MslUser;
     .locals 1
 
-    .prologue
-    .line 101
     const/4 v0, 0x0
 
     return-object v0
@@ -489,8 +453,6 @@
 .method public getUserAuthData()Lcom/netflix/msl/userauth/UserAuthenticationData;
     .locals 1
 
-    .prologue
-    .line 55
     iget-object v0, p0, Lcom/netflix/msl/client/ClientRequestMessageContext;->userAuthData:Lcom/netflix/msl/userauth/UserAuthenticationData;
 
     return-object v0
@@ -499,16 +461,12 @@
 .method public getUserAuthData(Lcom/netflix/msl/msg/MessageContext$ReauthCode;ZZ)Lcom/netflix/msl/userauth/UserAuthenticationData;
     .locals 1
 
-    .prologue
-    .line 92
     if-nez p1, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 93
     iget-object v0, p0, Lcom/netflix/msl/client/ClientRequestMessageContext;->userAuthData:Lcom/netflix/msl/userauth/UserAuthenticationData;
 
-    .line 95
     :goto_0
     return-object v0
 
@@ -521,8 +479,6 @@
 .method public getUserId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 52
     iget-object v0, p0, Lcom/netflix/msl/client/ClientRequestMessageContext;->userId:Ljava/lang/String;
 
     return-object v0
@@ -531,14 +487,12 @@
 .method public hashCode()I
     .locals 5
 
-    .prologue
     const/16 v2, 0x61
 
     const/16 v1, 0x4f
 
     const/16 v3, 0x2b
 
-    .line 29
     invoke-virtual {p0}, Lcom/netflix/msl/client/ClientRequestMessageContext;->isEncrypted()Z
 
     move-result v0
@@ -705,8 +659,6 @@
 .method public isEncrypted()Z
     .locals 1
 
-    .prologue
-    .line 35
     iget-boolean v0, p0, Lcom/netflix/msl/client/ClientRequestMessageContext;->encrypted:Z
 
     return v0
@@ -715,8 +667,6 @@
 .method public isIntegrityProtected()Z
     .locals 1
 
-    .prologue
-    .line 38
     iget-boolean v0, p0, Lcom/netflix/msl/client/ClientRequestMessageContext;->integrityProtected:Z
 
     return v0
@@ -725,8 +675,6 @@
 .method public isNonReplayable()Z
     .locals 1
 
-    .prologue
-    .line 41
     iget-boolean v0, p0, Lcom/netflix/msl/client/ClientRequestMessageContext;->nonReplayable:Z
 
     return v0
@@ -735,8 +683,6 @@
 .method public isRequestingTokens()Z
     .locals 1
 
-    .prologue
-    .line 87
     const/4 v0, 0x0
 
     return v0
@@ -745,8 +691,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 29
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -897,32 +841,24 @@
 .method public updateServiceTokens(Lcom/netflix/msl/msg/MessageServiceTokenBuilder;Z)V
     .locals 0
 
-    .prologue
-    .line 116
     return-void
 .end method
 
 .method public write(Lcom/netflix/msl/msg/MessageOutputStream;)V
     .locals 1
 
-    .prologue
-    .line 120
     iget-object v0, p0, Lcom/netflix/msl/client/ClientRequestMessageContext;->payload:[B
 
     if-eqz v0, :cond_0
 
-    .line 121
     iget-object v0, p0, Lcom/netflix/msl/client/ClientRequestMessageContext;->payload:[B
 
     invoke-virtual {p1, v0}, Lcom/netflix/msl/msg/MessageOutputStream;->write([B)V
 
-    .line 122
     invoke-virtual {p1}, Lcom/netflix/msl/msg/MessageOutputStream;->flush()V
 
-    .line 123
     invoke-virtual {p1}, Lcom/netflix/msl/msg/MessageOutputStream;->close()V
 
-    .line 125
     :cond_0
     return-void
 .end method

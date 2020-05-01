@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/details/EpisodesFrag;)V
     .locals 0
 
-    .prologue
-    .line 786
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$5;->this$0:Lcom/netflix/mediaclient/ui/details/EpisodesFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,12 +26,9 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 789
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$5;->this$0:Lcom/netflix/mediaclient/ui/details/EpisodesFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/EpisodesFrag;->setSpinnerSelection()V
 
-    .line 790
     return-void
 .end method

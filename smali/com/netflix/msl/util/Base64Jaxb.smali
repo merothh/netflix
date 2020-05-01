@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,15 +20,12 @@
 .method public decode(Ljava/lang/String;)[B
     .locals 3
 
-    .prologue
-    .line 41
     invoke-static {p1}, Lcom/netflix/msl/util/Base64;->isValidBase64(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 42
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -55,7 +50,6 @@
 
     throw v0
 
-    .line 43
     :cond_0
     invoke-static {p1}, Ljavax/xml/bind/DatatypeConverter;->parseBase64Binary(Ljava/lang/String;)[B
 
@@ -67,8 +61,6 @@
 .method public encode([B)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 33
     invoke-static {p1}, Ljavax/xml/bind/DatatypeConverter;->printBase64Binary([B)Ljava/lang/String;
 
     move-result-object v0

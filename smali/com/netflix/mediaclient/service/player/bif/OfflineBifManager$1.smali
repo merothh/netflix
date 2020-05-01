@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 21
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager$1;->this$0:Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager$1;->val$fileUrl:Ljava/lang/String;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 25
     :try_start_0
     new-instance v0, Ljava/io/FileInputStream;
 
@@ -41,7 +37,6 @@
 
     invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
-    .line 26
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager$1;->this$0:Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;
 
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;->parseIndexFromInputStream(Ljava/io/InputStream;)Z
@@ -50,7 +45,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 27
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager$1;->this$0:Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;
 
     new-instance v1, Ljava/io/RandomAccessFile;
@@ -63,7 +57,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;->access$002(Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;Ljava/io/RandomAccessFile;)Ljava/io/RandomAccessFile;
 
-    .line 28
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager$1;->this$0:Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;->access$100(Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -76,23 +69,19 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 35
     :cond_0
     :goto_0
     return-void
 
-    .line 30
     :catch_0
     move-exception v0
 
-    .line 31
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 32
     const-string/jumbo v1, "OfflineBifManager"
 
     new-instance v2, Ljava/lang/StringBuilder;

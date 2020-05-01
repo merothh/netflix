@@ -13,8 +13,6 @@
 .method constructor <init>(Landroid/support/design/widget/TabLayout$SlidingTabStrip;I)V
     .locals 0
 
-    .prologue
-    .line 2017
     iput-object p1, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip$2;->this$1:Landroid/support/design/widget/TabLayout$SlidingTabStrip;
 
     iput p2, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip$2;->val$position:I
@@ -29,21 +27,17 @@
 .method public onAnimationEnd(Landroid/support/design/widget/ValueAnimatorCompat;)V
     .locals 2
 
-    .prologue
-    .line 2020
     iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip$2;->this$1:Landroid/support/design/widget/TabLayout$SlidingTabStrip;
 
     iget v1, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip$2;->val$position:I
 
     iput v1, v0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->mSelectedPosition:I
 
-    .line 2021
     iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip$2;->this$1:Landroid/support/design/widget/TabLayout$SlidingTabStrip;
 
     const/4 v1, 0x0
 
     iput v1, v0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->mSelectionOffset:F
 
-    .line 2022
     return-void
 .end method

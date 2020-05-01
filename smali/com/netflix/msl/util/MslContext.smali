@@ -17,16 +17,12 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 289
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/netflix/msl/util/MslContext;->synced:Z
 
-    .line 291
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/netflix/msl/util/MslContext;->offset:J
@@ -78,21 +74,17 @@
 .method public final getRemoteTime()Ljava/util/Date;
     .locals 6
 
-    .prologue
     const-wide/16 v4, 0x3e8
 
-    .line 282
     iget-boolean v0, p0, Lcom/netflix/msl/util/MslContext;->synced:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 285
     :goto_0
     return-object v0
 
-    .line 283
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/msl/util/MslContext;->getTime()J
 
@@ -100,12 +92,10 @@
 
     div-long/2addr v0, v4
 
-    .line 284
     iget-wide v2, p0, Lcom/netflix/msl/util/MslContext;->offset:J
 
     add-long/2addr v2, v0
 
-    .line 285
     new-instance v0, Ljava/util/Date;
 
     mul-long/2addr v2, v4
@@ -133,33 +123,27 @@
 .method public final updateRemoteTime(Ljava/util/Date;)V
     .locals 6
 
-    .prologue
     const-wide/16 v4, 0x3e8
 
-    .line 266
     invoke-virtual {p0}, Lcom/netflix/msl/util/MslContext;->getTime()J
 
     move-result-wide v0
 
     div-long/2addr v0, v4
 
-    .line 267
     invoke-virtual {p1}, Ljava/util/Date;->getTime()J
 
     move-result-wide v2
 
     div-long/2addr v2, v4
 
-    .line 268
     sub-long v0, v2, v0
 
     iput-wide v0, p0, Lcom/netflix/msl/util/MslContext;->offset:J
 
-    .line 269
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/msl/util/MslContext;->synced:Z
 
-    .line 270
     return-void
 .end method

@@ -84,8 +84,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 44
     const-class v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -94,7 +92,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
-    .line 306
     const-wide/16 v0, 0x0
 
     sput-wide v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->sManifestLifeFromConfig:J
@@ -105,20 +102,16 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 8
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 68
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->manifest:Lorg/json/JSONObject;
 
-    .line 69
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->manifest:Lorg/json/JSONObject;
 
     const-string/jumbo v2, "timestamp"
@@ -133,7 +126,6 @@
 
     iput-wide v2, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->mManifestFetchedTimeInMs:J
 
-    .line 70
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->manifest:Lorg/json/JSONObject;
 
     const-string/jumbo v2, "movieId"
@@ -144,7 +136,6 @@
 
     iput-wide v2, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->movieId:J
 
-    .line 71
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->manifest:Lorg/json/JSONObject;
 
     const-string/jumbo v2, "playbackContextId"
@@ -155,7 +146,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->playbackContextId:Ljava/lang/String;
 
-    .line 72
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->manifest:Lorg/json/JSONObject;
 
     const-string/jumbo v2, "drmContextId"
@@ -166,7 +156,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->drmContextId:Ljava/lang/String;
 
-    .line 74
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->manifest:Lorg/json/JSONObject;
 
     const-string/jumbo v2, "duration"
@@ -177,7 +166,6 @@
 
     iput-wide v2, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->duration:J
 
-    .line 77
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->manifest:Lorg/json/JSONObject;
 
     const-string/jumbo v2, "expiration"
@@ -190,7 +178,6 @@
 
     iput-wide v2, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->expiryTimeInEndPointTime:J
 
-    .line 78
     iget-wide v2, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->expiryTimeInEndPointTime:J
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -201,7 +188,6 @@
 
     if-gez v0, :cond_0
 
-    .line 79
     sget-object v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -226,7 +212,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->manifest:Lorg/json/JSONObject;
 
@@ -236,45 +221,38 @@
 
     move-result-object v0
 
-    .line 83
     invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
 
     move-result v2
 
     iput v2, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->mNumVideoTracks:I
 
-    .line 84
     invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
 
     move-result v2
 
     if-lez v2, :cond_3
 
-    .line 85
     invoke-virtual {v0, v1}, Lorg/json/JSONArray;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lorg/json/JSONObject;
 
-    .line 86
     const-string/jumbo v2, "drmHeader"
 
     invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object v2
 
-    .line 87
     if-eqz v2, :cond_2
 
-    .line 88
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 89
     sget-object v3, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -303,7 +281,6 @@
 
     invoke-static {v3, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 90
     sget-object v3, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -332,7 +309,6 @@
 
     invoke-static {v3, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 91
     sget-object v3, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -361,7 +337,6 @@
 
     invoke-static {v3, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
     :cond_1
     const-string/jumbo v3, "bytes"
 
@@ -375,12 +350,10 @@
 
     iput-object v2, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->drmHeader:[B
 
-    .line 94
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->hasDrmProfile:Z
 
-    .line 96
     :cond_2
     const-string/jumbo v2, "maxWidth"
 
@@ -388,28 +361,24 @@
 
     move-result v2
 
-    .line 97
     const-string/jumbo v3, "maxHeight"
 
     invoke-virtual {v0, v3, v1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
 
     move-result v3
 
-    .line 98
     const-string/jumbo v4, "pixelAspectX"
 
     invoke-virtual {v0, v4, v1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 99
     const-string/jumbo v5, "pixelAspectY"
 
     invoke-virtual {v0, v5, v1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 100
     if-lez v2, :cond_4
 
     if-lez v3, :cond_4
@@ -418,17 +387,14 @@
 
     if-lez v0, :cond_4
 
-    .line 101
     mul-int/2addr v0, v3
 
     iput v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->aspectRatioHeight:I
 
-    .line 102
     mul-int v0, v2, v4
 
     iput v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->aspectRatioWidth:I
 
-    .line 110
     :cond_3
     :goto_0
     sget-object v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
@@ -437,7 +403,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 111
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->manifest:Lorg/json/JSONObject;
 
     const-string/jumbo v2, "defaultTrackOrderList"
@@ -446,7 +411,6 @@
 
     move-result-object v2
 
-    .line 112
     if-eqz v2, :cond_6
 
     invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
@@ -455,7 +419,6 @@
 
     if-lez v0, :cond_6
 
-    .line 113
     invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
 
     move-result v0
@@ -466,7 +429,6 @@
 
     move v0, v1
 
-    .line 114
     :goto_1
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->mDefaultTrackOrderList:[Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;
 
@@ -474,7 +436,6 @@
 
     if-ge v0, v1, :cond_5
 
-    .line 115
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->mDefaultTrackOrderList:[Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;
 
     new-instance v3, Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;
@@ -489,25 +450,21 @@
 
     aput-object v3, v1, v0
 
-    .line 114
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 104
     :cond_4
     const/16 v0, 0x9
 
     iput v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->aspectRatioHeight:I
 
-    .line 105
     const/16 v0, 0x10
 
     iput v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->aspectRatioWidth:I
 
     goto :goto_0
 
-    .line 117
     :cond_5
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -515,7 +472,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 118
     sget-object v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -542,7 +498,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 122
     :cond_6
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->hasDrmProfile:Z
 
@@ -553,34 +508,28 @@
     :goto_2
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->defaultLifeMs:J
 
-    .line 123
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->birthTimeMs:J
 
-    .line 125
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->mPdsDownloadIds:Ljava/util/Map;
 
-    .line 126
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->buildPdsDownloadIdList()V
 
-    .line 127
     sget-object v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "parsing manifest end."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 128
     return-void
 
-    .line 122
     :cond_7
     const-wide/32 v0, 0x6ddd00
 
@@ -590,13 +539,10 @@
 .method private addToPdsDownloadIdList(Lorg/json/JSONArray;I)V
     .locals 8
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 368
     if-nez p1, :cond_1
 
-    .line 387
     :cond_0
     :goto_0
     return-void
@@ -604,7 +550,6 @@
     :cond_1
     move v3, v2
 
-    .line 374
     :goto_1
     :try_start_0
     invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
@@ -613,44 +558,37 @@
 
     if-ge v3, v0, :cond_0
 
-    .line 375
     invoke-virtual {p1, v3}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v0
 
-    .line 376
     const-string/jumbo v1, "streams"
 
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v4
 
-    .line 377
     invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
 
     move-result v5
 
     move v1, v2
 
-    .line 378
     :goto_2
     if-ge v1, v5, :cond_2
 
-    .line 379
     invoke-virtual {v4, v1}, Lorg/json/JSONArray;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lorg/json/JSONObject;
 
-    .line 380
     const-string/jumbo v6, "downloadable_id"
 
     invoke-virtual {v0, v6}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 381
     iget-object v6, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->mPdsDownloadIds:Ljava/util/Map;
 
     add-int v7, p2, v3
@@ -667,14 +605,12 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 378
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_2
 
-    .line 374
     :cond_2
     add-int/lit8 v0, v3, 0x1
 
@@ -682,11 +618,9 @@
 
     goto :goto_1
 
-    .line 384
     :catch_0
     move-exception v0
 
-    .line 385
     sget-object v1, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "error add tracks to downloadIdList"
@@ -699,8 +633,6 @@
 .method private buildPdsDownloadIdList()V
     .locals 3
 
-    .prologue
-    .line 357
     :try_start_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->manifest:Lorg/json/JSONObject;
 
@@ -710,7 +642,6 @@
 
     move-result-object v0
 
-    .line 358
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->manifest:Lorg/json/JSONObject;
 
     const-string/jumbo v2, "audio_tracks"
@@ -719,12 +650,10 @@
 
     move-result-object v1
 
-    .line 360
     const/4 v2, 0x0
 
     invoke-direct {p0, v0, v2}, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->addToPdsDownloadIdList(Lorg/json/JSONArray;I)V
 
-    .line 361
     invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
 
     move-result v0
@@ -733,15 +662,12 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 365
     :goto_0
     return-void
 
-    .line 362
     :catch_0
     move-exception v0
 
-    .line 363
     sget-object v1, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "unable to get tracks"
@@ -754,19 +680,14 @@
 .method static configureManifestLife(J)V
     .locals 0
 
-    .prologue
-    .line 308
     sput-wide p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->sManifestLifeFromConfig:J
 
-    .line 309
     return-void
 .end method
 
 .method private getPdsDownloadIdIndex(II)I
     .locals 1
 
-    .prologue
-    .line 399
     mul-int/lit8 v0, p1, 0x1e
 
     add-int/2addr v0, p2
@@ -788,26 +709,21 @@
         }
     .end annotation
 
-    .prologue
-    .line 312
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 313
     sget-object v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "parsing manifest response start ..."
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 316
     :try_start_0
     invoke-virtual {p0}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
 
     move-result-object v2
 
-    .line 317
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -815,14 +731,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 318
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 322
     const-string/jumbo v3, "timestamp"
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/util/StringUtils;->safeEquals(Ljava/lang/String;Ljava/lang/String;)Z
@@ -831,7 +745,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 323
     sget-object v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     const-string/jumbo v3, "skip bad entry to break manifest fetch loop"
@@ -842,14 +755,11 @@
 
     goto :goto_0
 
-    .line 338
     :catch_0
     move-exception v0
 
-    .line 339
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
-    .line 341
     :cond_0
     sget-object v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
@@ -857,10 +767,8 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 342
     return-object v1
 
-    .line 327
     :cond_1
     :try_start_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
@@ -869,7 +777,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 328
     sget-object v3, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -892,7 +799,6 @@
 
     invoke-static {v3, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 330
     :cond_2
     invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
     :try_end_1
@@ -900,7 +806,6 @@
 
     move-result-object v0
 
-    .line 332
     :try_start_2
     new-instance v3, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;
 
@@ -912,11 +817,9 @@
 
     goto :goto_0
 
-    .line 333
     :catch_1
     move-exception v0
 
-    .line 334
     :try_start_3
     sget-object v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
@@ -934,12 +837,10 @@
 .method public compareTo(Lcom/netflix/mediaclient/service/player/manifest/NfManifest;)I
     .locals 6
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, -0x1
 
-    .line 292
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->getRemainLife()J
 
     move-result-wide v2
@@ -952,12 +853,10 @@
 
     if-lez v2, :cond_1
 
-    .line 301
     :cond_0
     :goto_0
     return v0
 
-    .line 294
     :cond_1
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->getRemainLife()J
 
@@ -973,10 +872,8 @@
 
     move v0, v1
 
-    .line 295
     goto :goto_0
 
-    .line 296
     :cond_2
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->getPriority()I
 
@@ -990,10 +887,8 @@
 
     move v0, v1
 
-    .line 297
     goto :goto_0
 
-    .line 298
     :cond_3
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->getPriority()I
 
@@ -1005,7 +900,6 @@
 
     if-lt v1, v2, :cond_0
 
-    .line 301
     const/4 v0, 0x0
 
     goto :goto_0
@@ -1014,8 +908,6 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 32
     check-cast p1, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;
 
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->compareTo(Lcom/netflix/mediaclient/service/player/manifest/NfManifest;)I
@@ -1038,8 +930,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 152
     iget v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->aspectRatioWidth:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1062,8 +952,6 @@
 .method public getAudioSubtitleDefaultOrderInfo()[Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;
     .locals 1
 
-    .prologue
-    .line 155
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->mDefaultTrackOrderList:[Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;
 
     return-object v0
@@ -1072,17 +960,14 @@
 .method public getAudioTrackList()[Lcom/netflix/mediaclient/media/AudioSource;
     .locals 5
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 244
     sget-object v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "parsing audio_tracks"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 245
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->manifest:Lorg/json/JSONObject;
 
     const-string/jumbo v1, "audio_tracks"
@@ -1091,7 +976,6 @@
 
     move-result-object v3
 
-    .line 246
     if-eqz v3, :cond_2
 
     invoke-virtual {v3}, Lorg/json/JSONArray;->length()I
@@ -1100,7 +984,6 @@
 
     if-lez v0, :cond_2
 
-    .line 248
     :try_start_0
     invoke-virtual {v3}, Lorg/json/JSONArray;->length()I
 
@@ -1110,13 +993,11 @@
 
     move v1, v2
 
-    .line 249
     :goto_0
     array-length v4, v0
 
     if-ge v1, v4, :cond_0
 
-    .line 250
     invoke-virtual {v3, v1}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v4
@@ -1127,12 +1008,10 @@
 
     aput-object v4, v0, v1
 
-    .line 249
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 253
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -1140,7 +1019,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 254
     sget-object v1, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1167,23 +1045,19 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 261
     :cond_1
     :goto_1
     return-object v0
 
-    .line 257
     :catch_0
     move-exception v0
 
-    .line 258
     sget-object v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, " exception when parsing audio_tracks"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 261
     :cond_2
     new-array v0, v2, [Lcom/netflix/mediaclient/media/AudioSource;
 
@@ -1193,8 +1067,6 @@
 .method public getDownloadId(II)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 349
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->mPdsDownloadIds:Ljava/util/Map;
 
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->getPdsDownloadIdIndex(II)I
@@ -1217,8 +1089,6 @@
 .method public getDrmContextId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 143
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->drmContextId:Ljava/lang/String;
 
     return-object v0
@@ -1227,8 +1097,6 @@
 .method public getDrmHeader()[B
     .locals 1
 
-    .prologue
-    .line 137
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->drmHeader:[B
 
     return-object v0
@@ -1237,8 +1105,6 @@
 .method public getDuration()J
     .locals 2
 
-    .prologue
-    .line 149
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->duration:J
 
     return-wide v0
@@ -1247,8 +1113,6 @@
 .method public getJSONObject()Lorg/json/JSONObject;
     .locals 1
 
-    .prologue
-    .line 131
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->manifest:Lorg/json/JSONObject;
 
     return-object v0
@@ -1257,13 +1121,10 @@
 .method public getLicenseLinkJson()Lorg/json/JSONObject;
     .locals 2
 
-    .prologue
-    .line 390
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->getLinks()Lorg/json/JSONObject;
 
     move-result-object v0
 
-    .line 391
     if-eqz v0, :cond_0
 
     const-string/jumbo v1, "license"
@@ -1284,8 +1145,6 @@
 .method public getLinks()Lorg/json/JSONObject;
     .locals 2
 
-    .prologue
-    .line 395
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->manifest:Lorg/json/JSONObject;
 
     const-string/jumbo v1, "links"
@@ -1300,8 +1159,6 @@
 .method public getManifestExpiryInEndPointTime()J
     .locals 2
 
-    .prologue
-    .line 287
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->expiryTimeInEndPointTime:J
 
     return-wide v0
@@ -1310,8 +1167,6 @@
 .method public getManifestFetchedTimeInMs()J
     .locals 2
 
-    .prologue
-    .line 412
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->mManifestFetchedTimeInMs:J
 
     return-wide v0
@@ -1320,8 +1175,6 @@
 .method public getMovieId()Ljava/lang/Long;
     .locals 2
 
-    .prologue
-    .line 134
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->movieId:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1334,8 +1187,6 @@
 .method public getNumVideoTracks()I
     .locals 1
 
-    .prologue
-    .line 403
     iget v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->mNumVideoTracks:I
 
     return v0
@@ -1344,8 +1195,6 @@
 .method public getPlaybackContextId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 140
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->playbackContextId:Ljava/lang/String;
 
     return-object v0
@@ -1354,8 +1203,6 @@
 .method getPriority()I
     .locals 1
 
-    .prologue
-    .line 265
     iget v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->priority:I
 
     return v0
@@ -1364,8 +1211,6 @@
 .method public getRemainLife()J
     .locals 6
 
-    .prologue
-    .line 272
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -1374,7 +1219,6 @@
 
     sub-long/2addr v0, v2
 
-    .line 274
     sget-wide v2, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->sManifestLifeFromConfig:J
 
     const-wide/16 v4, 0x0
@@ -1383,16 +1227,13 @@
 
     if-lez v2, :cond_0
 
-    .line 275
     sget-wide v2, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->sManifestLifeFromConfig:J
 
     sub-long v0, v2, v0
 
-    .line 279
     :goto_0
     return-wide v0
 
-    .line 277
     :cond_0
     iget-wide v2, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->defaultLifeMs:J
 
@@ -1404,17 +1245,14 @@
 .method public getSubtitleTrackList()[Lcom/netflix/mediaclient/media/Subtitle;
     .locals 5
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 184
     sget-object v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "parsing timedtexttracks"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 185
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->manifest:Lorg/json/JSONObject;
 
     const-string/jumbo v1, "timedtexttracks"
@@ -1423,7 +1261,6 @@
 
     move-result-object v3
 
-    .line 186
     if-eqz v3, :cond_2
 
     invoke-virtual {v3}, Lorg/json/JSONArray;->length()I
@@ -1432,7 +1269,6 @@
 
     if-lez v0, :cond_2
 
-    .line 188
     :try_start_0
     invoke-virtual {v3}, Lorg/json/JSONArray;->length()I
 
@@ -1442,13 +1278,11 @@
 
     move v1, v2
 
-    .line 189
     :goto_0
     array-length v4, v0
 
     if-ge v1, v4, :cond_0
 
-    .line 190
     invoke-virtual {v3, v1}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v4
@@ -1459,12 +1293,10 @@
 
     aput-object v4, v0, v1
 
-    .line 189
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 192
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -1472,7 +1304,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 193
     sget-object v1, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1499,23 +1330,19 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 200
     :cond_1
     :goto_1
     return-object v0
 
-    .line 196
     :catch_0
     move-exception v0
 
-    .line 197
     sget-object v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "exception when parsing timedtexttracks"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
     :cond_2
     new-array v0, v2, [Lcom/netflix/mediaclient/media/Subtitle;
 
@@ -1534,15 +1361,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 203
     sget-object v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "parsing timedtexttracks"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 204
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->manifest:Lorg/json/JSONObject;
 
     const-string/jumbo v1, "timedtexttracks"
@@ -1551,7 +1375,6 @@
 
     move-result-object v2
 
-    .line 205
     if-eqz v2, :cond_2
 
     invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
@@ -1560,13 +1383,11 @@
 
     if-lez v0, :cond_2
 
-    .line 207
     :try_start_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 208
     const/4 v1, 0x0
 
     :goto_0
@@ -1576,7 +1397,6 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 209
     new-instance v3, Lcom/netflix/mediaclient/media/SubtitleTrackData;
 
     invoke-virtual {v2, v1}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
@@ -1587,12 +1407,10 @@
 
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 208
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 211
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -1600,7 +1418,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 212
     sget-object v1, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1629,16 +1446,13 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 219
     :cond_1
     :goto_1
     return-object v0
 
-    .line 215
     :catch_0
     move-exception v0
 
-    .line 216
     sget-object v1, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1661,7 +1475,6 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 219
     :cond_2
     const/4 v0, 0x0
 
@@ -1671,17 +1484,14 @@
 .method public getTrickplayUrls()[Lcom/netflix/mediaclient/media/TrickplayUrl;
     .locals 6
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 222
     sget-object v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "parsing trickplays"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->manifest:Lorg/json/JSONObject;
 
     const-string/jumbo v1, "trickplays"
@@ -1690,7 +1500,6 @@
 
     move-result-object v3
 
-    .line 224
     if-eqz v3, :cond_2
 
     invoke-virtual {v3}, Lorg/json/JSONArray;->length()I
@@ -1699,7 +1508,6 @@
 
     if-lez v0, :cond_2
 
-    .line 226
     :try_start_0
     invoke-virtual {v3}, Lorg/json/JSONArray;->length()I
 
@@ -1709,13 +1517,11 @@
 
     move v1, v2
 
-    .line 227
     :goto_0
     array-length v4, v0
 
     if-ge v1, v4, :cond_0
 
-    .line 228
     new-instance v4, Lcom/netflix/mediaclient/media/TrickplayUrl;
 
     invoke-virtual {v3, v1}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
@@ -1726,12 +1532,10 @@
 
     aput-object v4, v0, v1
 
-    .line 227
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 230
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -1739,7 +1543,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 231
     sget-object v1, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1766,23 +1569,19 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 238
     :cond_1
     :goto_1
     return-object v0
 
-    .line 234
     :catch_0
     move-exception v0
 
-    .line 235
     sget-object v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, " exception when parsing trickplays"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
     :cond_2
     new-array v0, v2, [Lcom/netflix/mediaclient/media/TrickplayUrl;
 
@@ -1801,15 +1600,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 179
     sget-object v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "getVideoTracks"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 180
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->parseVideoTracks()Ljava/util/List;
 
     move-result-object v0
@@ -1820,8 +1616,6 @@
 .method public hasDrm()Z
     .locals 1
 
-    .prologue
-    .line 146
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->hasDrmProfile:Z
 
     return v0
@@ -1839,23 +1633,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 159
     sget-object v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "parseVideoTracks"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 160
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 161
     const/4 v0, 0x0
 
-    .line 163
     :try_start_0
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->manifest:Lorg/json/JSONObject;
 
@@ -1869,11 +1658,9 @@
 
     move-object v2, v0
 
-    .line 167
     :goto_0
     if-eqz v2, :cond_1
 
-    .line 168
     const/4 v0, 0x0
 
     move v1, v0
@@ -1885,7 +1672,6 @@
 
     if-ge v1, v0, :cond_1
 
-    .line 169
     invoke-virtual {v2, v1}, Lorg/json/JSONArray;->opt(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -1896,13 +1682,10 @@
 
     move-result-object v0
 
-    .line 170
     if-eqz v0, :cond_0
 
-    .line 171
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 168
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -1910,11 +1693,9 @@
 
     goto :goto_1
 
-    .line 164
     :catch_0
     move-exception v1
 
-    .line 165
     sget-object v1, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "no video_tracks"
@@ -1925,7 +1706,6 @@
 
     goto :goto_0
 
-    .line 175
     :cond_1
     return-object v3
 .end method
@@ -1933,10 +1713,7 @@
 .method setPriority(I)V
     .locals 0
 
-    .prologue
-    .line 269
     iput p1, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->priority:I
 
-    .line 270
     return-void
 .end method

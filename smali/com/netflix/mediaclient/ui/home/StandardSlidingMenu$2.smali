@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;)V
     .locals 0
 
-    .prologue
-    .line 117
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$2;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,17 +23,13 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .prologue
-    .line 121
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$2;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;->access$100(Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;)V
 
-    .line 124
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$2;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;->updateSwitchProfileButton()V
 
-    .line 125
     return-void
 .end method

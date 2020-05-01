@@ -22,27 +22,20 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 50
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer/upstream/FileDataSource;-><init>(Lcom/google/android/exoplayer/upstream/TransferListener;)V
 
-    .line 51
     return-void
 .end method
 
 .method public constructor <init>(Lcom/google/android/exoplayer/upstream/TransferListener;)V
     .locals 0
 
-    .prologue
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     iput-object p1, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->listener:Lcom/google/android/exoplayer/upstream/TransferListener;
 
-    .line 60
     return-void
 .end method
 
@@ -51,20 +44,16 @@
 .method public close()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
     const/4 v2, 0x0
 
-    .line 115
     iput-object v2, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->uriString:Ljava/lang/String;
 
-    .line 116
     iget-object v0, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->file:Ljava/io/RandomAccessFile;
 
     if-eqz v0, :cond_0
 
-    .line 118
     :try_start_0
     iget-object v0, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->file:Ljava/io/RandomAccessFile;
 
@@ -73,36 +62,28 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 122
     iput-object v2, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->file:Ljava/io/RandomAccessFile;
 
-    .line 123
     iget-boolean v0, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->opened:Z
 
     if-eqz v0, :cond_0
 
-    .line 124
     iput-boolean v3, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->opened:Z
 
-    .line 125
     iget-object v0, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->listener:Lcom/google/android/exoplayer/upstream/TransferListener;
 
     if-eqz v0, :cond_0
 
-    .line 126
     iget-object v0, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->listener:Lcom/google/android/exoplayer/upstream/TransferListener;
 
     invoke-interface {v0}, Lcom/google/android/exoplayer/upstream/TransferListener;->onTransferEnd()V
 
-    .line 131
     :cond_0
     return-void
 
-    .line 119
     :catch_0
     move-exception v0
 
-    .line 120
     :try_start_1
     new-instance v1, Lcom/google/android/exoplayer/upstream/FileDataSource$FileDataSourceException;
 
@@ -112,26 +93,21 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 122
     :catchall_0
     move-exception v0
 
     iput-object v2, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->file:Ljava/io/RandomAccessFile;
 
-    .line 123
     iget-boolean v1, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->opened:Z
 
     if-eqz v1, :cond_1
 
-    .line 124
     iput-boolean v3, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->opened:Z
 
-    .line 125
     iget-object v1, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->listener:Lcom/google/android/exoplayer/upstream/TransferListener;
 
     if-eqz v1, :cond_1
 
-    .line 126
     iget-object v1, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->listener:Lcom/google/android/exoplayer/upstream/TransferListener;
 
     invoke-interface {v1}, Lcom/google/android/exoplayer/upstream/TransferListener;->onTransferEnd()V
@@ -143,8 +119,6 @@
 .method public getUri()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 110
     iget-object v0, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->uriString:Ljava/lang/String;
 
     return-object v0
@@ -153,8 +127,6 @@
 .method public open(Lcom/google/android/exoplayer/upstream/DataSpec;)J
     .locals 4
 
-    .prologue
-    .line 65
     :try_start_0
     iget-object v0, p1, Lcom/google/android/exoplayer/upstream/DataSpec;->uri:Landroid/net/Uri;
 
@@ -164,7 +136,6 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->uriString:Ljava/lang/String;
 
-    .line 66
     new-instance v0, Ljava/io/RandomAccessFile;
 
     iget-object v1, p1, Lcom/google/android/exoplayer/upstream/DataSpec;->uri:Landroid/net/Uri;
@@ -179,14 +150,12 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->file:Ljava/io/RandomAccessFile;
 
-    .line 67
     iget-object v0, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->file:Ljava/io/RandomAccessFile;
 
     iget-wide v2, p1, Lcom/google/android/exoplayer/upstream/DataSpec;->position:J
 
     invoke-virtual {v0, v2, v3}, Ljava/io/RandomAccessFile;->seek(J)V
 
-    .line 68
     iget-wide v0, p1, Lcom/google/android/exoplayer/upstream/DataSpec;->length:J
 
     const-wide/16 v2, -0x1
@@ -208,7 +177,6 @@
     :goto_0
     iput-wide v0, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->bytesRemaining:J
 
-    .line 70
     iget-wide v0, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->bytesRemaining:J
 
     const-wide/16 v2, 0x0
@@ -217,7 +185,6 @@
 
     if-gez v0, :cond_1
 
-    .line 71
     new-instance v0, Ljava/io/EOFException;
 
     invoke-direct {v0}, Ljava/io/EOFException;-><init>()V
@@ -226,18 +193,15 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 73
     :catch_0
     move-exception v0
 
-    .line 74
     new-instance v1, Lcom/google/android/exoplayer/upstream/FileDataSource$FileDataSourceException;
 
     invoke-direct {v1, v0}, Lcom/google/android/exoplayer/upstream/FileDataSource$FileDataSourceException;-><init>(Ljava/io/IOException;)V
 
     throw v1
 
-    .line 68
     :cond_0
     :try_start_1
     iget-wide v0, p1, Lcom/google/android/exoplayer/upstream/DataSpec;->length:J
@@ -246,23 +210,19 @@
 
     goto :goto_0
 
-    .line 77
     :cond_1
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->opened:Z
 
-    .line 78
     iget-object v0, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->listener:Lcom/google/android/exoplayer/upstream/TransferListener;
 
     if-eqz v0, :cond_2
 
-    .line 79
     iget-object v0, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->listener:Lcom/google/android/exoplayer/upstream/TransferListener;
 
     invoke-interface {v0}, Lcom/google/android/exoplayer/upstream/TransferListener;->onTransferStart()V
 
-    .line 82
     :cond_2
     iget-wide v0, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->bytesRemaining:J
 
@@ -272,8 +232,6 @@
 .method public read([BII)I
     .locals 6
 
-    .prologue
-    .line 87
     iget-wide v0, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->bytesRemaining:J
 
     const-wide/16 v2, 0x0
@@ -282,15 +240,12 @@
 
     if-nez v0, :cond_1
 
-    .line 88
     const/4 v0, -0x1
 
-    .line 104
     :cond_0
     :goto_0
     return v0
 
-    .line 92
     :cond_1
     :try_start_0
     iget-object v0, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->file:Ljava/io/RandomAccessFile;
@@ -311,10 +266,8 @@
 
     move-result v0
 
-    .line 97
     if-lez v0, :cond_0
 
-    .line 98
     iget-wide v2, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->bytesRemaining:J
 
     int-to-long v4, v0
@@ -323,23 +276,19 @@
 
     iput-wide v2, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->bytesRemaining:J
 
-    .line 99
     iget-object v1, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->listener:Lcom/google/android/exoplayer/upstream/TransferListener;
 
     if-eqz v1, :cond_0
 
-    .line 100
     iget-object v1, p0, Lcom/google/android/exoplayer/upstream/FileDataSource;->listener:Lcom/google/android/exoplayer/upstream/TransferListener;
 
     invoke-interface {v1, v0}, Lcom/google/android/exoplayer/upstream/TransferListener;->onBytesTransferred(I)V
 
     goto :goto_0
 
-    .line 93
     :catch_0
     move-exception v0
 
-    .line 94
     new-instance v1, Lcom/google/android/exoplayer/upstream/FileDataSource$FileDataSourceException;
 
     invoke-direct {v1, v0}, Lcom/google/android/exoplayer/upstream/FileDataSource$FileDataSourceException;-><init>(Ljava/io/IOException;)V

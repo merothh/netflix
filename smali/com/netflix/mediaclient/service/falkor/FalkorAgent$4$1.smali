@@ -13,8 +13,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/falkor/FalkorAgent$4;I)V
     .locals 0
 
-    .prologue
-    .line 684
     iput-object p1, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$4$1;->this$1:Lcom/netflix/mediaclient/service/falkor/FalkorAgent$4;
 
     iput p2, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$4$1;->val$episodeNumber:I
@@ -29,18 +27,14 @@
 .method public onEpisodeDetailsFetched(Lcom/netflix/mediaclient/servicemgr/interface_/details/EpisodeDetails;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 6
 
-    .prologue
-    .line 690
     if-nez p1, :cond_1
 
-    .line 691
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 692
     const-string/jumbo v0, "FalkorAgent"
 
     const-string/jumbo v1, "fetchEpisodesForSeason - onEpisodeDetailsFetched res %d"
@@ -71,30 +65,25 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 712
     :cond_0
     :goto_0
     return-void
 
-    .line 697
     :cond_1
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/details/EpisodeDetails;->getSeasonId()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 699
     iget v0, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$4$1;->val$episodeNumber:I
 
     div-int/lit8 v0, v0, 0x28
 
     mul-int/lit8 v3, v0, 0x28
 
-    .line 700
     add-int/lit8 v0, v3, 0x28
 
     add-int/lit8 v4, v0, -0x1
 
-    .line 703
     iget-object v0, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$4$1;->this$1:Lcom/netflix/mediaclient/service/falkor/FalkorAgent$4;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$4;->this$0:Lcom/netflix/mediaclient/service/falkor/FalkorAgent;

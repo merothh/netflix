@@ -25,8 +25,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 25
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -41,8 +39,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 24
     invoke-direct {p0}, Ljava/util/IdentityHashMap;-><init>()V
 
     return-void
@@ -58,12 +54,9 @@
         }
     .end annotation
 
-    .prologue
-    .line 28
     sget-object v0, Lio/realm/internal/IdentitySet;->PLACE_HOLDER:Ljava/lang/Integer;
 
     invoke-virtual {p0, p1, v0}, Lio/realm/internal/IdentitySet;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 29
     return-void
 .end method

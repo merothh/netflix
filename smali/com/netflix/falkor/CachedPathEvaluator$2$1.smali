@@ -34,8 +34,6 @@
 .method constructor <init>(Lcom/netflix/falkor/CachedPathEvaluator$2;Ljava/util/List;Lcom/netflix/falkor/PathMap;Ljava/util/Set;)V
     .locals 0
 
-    .prologue
-    .line 113
     iput-object p1, p0, Lcom/netflix/falkor/CachedPathEvaluator$2$1;->this$1:Lcom/netflix/falkor/CachedPathEvaluator$2;
 
     iput-object p2, p0, Lcom/netflix/falkor/CachedPathEvaluator$2$1;->val$collapsedPQLs:Ljava/util/List;
@@ -63,8 +61,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 115
     new-instance v0, Lcom/netflix/falkor/IterableBuilder;
 
     new-instance v1, Lcom/netflix/falkor/IterableBuilder;
@@ -85,7 +81,6 @@
 
     iget-object v5, p0, Lcom/netflix/falkor/CachedPathEvaluator$2$1;->val$collapsedPQLs:Ljava/util/List;
 
-    .line 123
     invoke-virtual {v4, v5}, Lcom/netflix/falkor/AbstractPathEvaluator;->getAbsolute(Ljava/lang/Iterable;)Ljava/lang/Iterable;
 
     move-result-object v4
@@ -96,7 +91,6 @@
 
     invoke-direct {v4, p0}, Lcom/netflix/falkor/CachedPathEvaluator$2$1$2;-><init>(Lcom/netflix/falkor/CachedPathEvaluator$2$1;)V
 
-    .line 124
     invoke-virtual {v3, v4}, Lcom/netflix/falkor/IterableBuilder;->doAction(Lcom/netflix/falkor/Action1;)Lcom/netflix/falkor/IterableBuilder;
 
     move-result-object v3
@@ -105,7 +99,6 @@
 
     invoke-direct {v4, p0}, Lcom/netflix/falkor/CachedPathEvaluator$2$1$1;-><init>(Lcom/netflix/falkor/CachedPathEvaluator$2$1;)V
 
-    .line 137
     invoke-static {v4}, Lcom/netflix/falkor/IterableBuilder;->defer(Lcom/netflix/falkor/Func;)Lcom/netflix/falkor/IterableBuilder;
 
     move-result-object v4
@@ -114,7 +107,6 @@
 
     move-result-object v3
 
-    .line 122
     invoke-virtual {v2, v3}, Lcom/netflix/falkor/AbstractPathEvaluator;->setAbsolute(Ljava/lang/Iterable;)Ljava/lang/Iterable;
 
     move-result-object v2
@@ -123,7 +115,6 @@
 
     invoke-direct {v0, v1}, Lcom/netflix/falkor/IterableBuilder;-><init>(Ljava/lang/Iterable;)V
 
-    .line 147
     invoke-static {}, Lcom/netflix/falkor/CachedPathEvaluator;->access$000()Lcom/netflix/falkor/Func1;
 
     move-result-object v1
@@ -132,15 +123,12 @@
 
     move-result-object v0
 
-    .line 115
     return-object v0
 .end method
 
 .method public bridge synthetic call()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 113
     invoke-virtual {p0}, Lcom/netflix/falkor/CachedPathEvaluator$2$1;->call()Ljava/lang/Iterable;
 
     move-result-object v0

@@ -37,18 +37,14 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/player/PlayScreen;)V
     .locals 1
 
-    .prologue
-    .line 68
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/player/PlayScreenDecorator;-><init>(Lcom/netflix/mediaclient/ui/player/PlayScreen;)V
 
-    .line 55
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->handler:Landroid/os/Handler;
 
-    .line 69
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     move-result-object v0
@@ -61,25 +57,20 @@
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->updateUI(Landroid/view/ViewGroup;)V
 
-    .line 70
     return-void
 .end method
 
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/player/PlayScreenDecorator;)V
     .locals 1
 
-    .prologue
-    .line 63
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/player/PlayScreenDecorator;-><init>(Lcom/netflix/mediaclient/ui/player/PlayScreenDecorator;)V
 
-    .line 55
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->handler:Landroid/os/Handler;
 
-    .line 64
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     move-result-object v0
@@ -92,15 +83,12 @@
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->updateUI(Landroid/view/ViewGroup;)V
 
-    .line 65
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;)V
     .locals 0
 
-    .prologue
-    .line 43
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->hideLaunchButtons()V
 
     return-void
@@ -109,8 +97,6 @@
 .method static synthetic access$100(Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;Z)V
     .locals 0
 
-    .prologue
-    .line 43
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->animateUI(Z)V
 
     return-void
@@ -119,8 +105,6 @@
 .method static synthetic access$200(Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;)Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
     .locals 1
 
-    .prologue
-    .line 43
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->horzDispImg:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
     return-object v0
@@ -129,8 +113,6 @@
 .method static synthetic access$300(Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;)V
     .locals 0
 
-    .prologue
-    .line 43
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->animateProgressBar()V
 
     return-void
@@ -139,8 +121,6 @@
 .method static synthetic access$400(Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;)Landroid/view/View;
     .locals 1
 
-    .prologue
-    .line 43
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->loadingIndicator:Landroid/view/View;
 
     return-object v0
@@ -149,8 +129,6 @@
 .method static synthetic access$500(Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;)Landroid/widget/TextView;
     .locals 1
 
-    .prologue
-    .line 43
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->loadingTextIndicator:Landroid/widget/TextView;
 
     return-object v0
@@ -159,8 +137,6 @@
 .method static synthetic access$600(Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;)Landroid/view/View;
     .locals 1
 
-    .prologue
-    .line 43
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->gradient:Landroid/view/View;
 
     return-object v0
@@ -169,8 +145,6 @@
 .method static synthetic access$700(Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;)V
     .locals 0
 
-    .prologue
-    .line 43
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->launchPlayback()V
 
     return-void
@@ -179,8 +153,6 @@
 .method static synthetic access$800(Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;)Landroid/view/View;
     .locals 1
 
-    .prologue
-    .line 43
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->blackBackground:Landroid/view/View;
 
     return-object v0
@@ -189,8 +161,6 @@
 .method static synthetic access$900(Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;Ljava/lang/String;ZLjava/lang/String;IZ)V
     .locals 0
 
-    .prologue
-    .line 43
     invoke-direct/range {p0 .. p5}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->updateLoadingText(Ljava/lang/String;ZLjava/lang/String;IZ)V
 
     return-void
@@ -199,17 +169,14 @@
 .method private animateProgressBar()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x1
 
-    .line 360
     const-string/jumbo v0, "CoppolaLoadingDecorator"
 
     const-string/jumbo v1, "animateProgressBar()"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 362
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     move-result-object v0
@@ -226,7 +193,6 @@
 
     float-to-int v0, v0
 
-    .line 363
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->loadingIndicator:Landroid/view/View;
 
     const-string/jumbo v2, "translationX"
@@ -251,22 +217,18 @@
 
     move-result-object v0
 
-    .line 364
     const-wide/16 v2, 0x2bc
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 365
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x12
 
     if-lt v1, v2, :cond_0
 
-    .line 366
     invoke-virtual {v0, v5}, Landroid/animation/ObjectAnimator;->setAutoCancel(Z)V
 
-    .line 368
     :cond_0
     new-instance v1, Landroid/view/animation/LinearInterpolator;
 
@@ -274,103 +236,82 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 369
     invoke-virtual {v0, v5}, Landroid/animation/ObjectAnimator;->setRepeatMode(I)V
 
-    .line 370
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setRepeatCount(I)V
 
-    .line 371
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 372
     return-void
 .end method
 
 .method private animateUI(Z)V
     .locals 3
 
-    .prologue
     const/16 v2, 0xc8
 
-    .line 286
     const-string/jumbo v0, "CoppolaLoadingDecorator"
 
     const-string/jumbo v1, "animateUI()"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 288
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->horzDispImg:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
     invoke-static {v0, p1, v2}, Lcom/netflix/mediaclient/util/gfx/AnimationUtils;->startViewAppearanceAnimation(Landroid/view/View;ZI)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
-    .line 290
     if-nez p1, :cond_0
 
-    .line 291
     new-instance v1, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator$4;
 
     invoke-direct {v1, p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator$4;-><init>(Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
-    .line 307
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 308
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->animateProgressBar()V
 
-    .line 310
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->loadingIndicator:Landroid/view/View;
 
     invoke-static {v0, p1, v2}, Lcom/netflix/mediaclient/util/gfx/AnimationUtils;->startViewAppearanceAnimation(Landroid/view/View;ZI)Landroid/view/ViewPropertyAnimator;
 
-    .line 311
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->loadingTextIndicator:Landroid/widget/TextView;
 
     invoke-static {v0, p1, v2}, Lcom/netflix/mediaclient/util/gfx/AnimationUtils;->startViewAppearanceAnimation(Landroid/view/View;ZI)Landroid/view/ViewPropertyAnimator;
 
-    .line 312
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->gradient:Landroid/view/View;
 
     invoke-static {v0, p1, v2}, Lcom/netflix/mediaclient/util/gfx/AnimationUtils;->startViewAppearanceAnimation(Landroid/view/View;ZI)Landroid/view/ViewPropertyAnimator;
 
-    .line 313
     return-void
 .end method
 
 .method private hideLaunchButtons()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 347
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->launchButton:Landroid/view/View;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibleOrGone(Landroid/view/View;Z)V
 
-    .line 348
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->oldLaunchButton:Landroid/view/View;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibleOrGone(Landroid/view/View;Z)V
 
-    .line 349
     return-void
 .end method
 
 .method private isDelayedAutoplay()Z
     .locals 1
 
-    .prologue
-    .line 224
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     move-result-object v0
@@ -414,24 +355,20 @@
 .method private launchPlayback()V
     .locals 4
 
-    .prologue
     const/16 v3, 0xc8
 
     const/4 v2, 0x1
 
-    .line 316
     const-string/jumbo v0, "CoppolaLoadingDecorator"
 
     const-string/jumbo v1, "launchPlayback()"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 317
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->finishTime:J
 
-    .line 319
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     move-result-object v0
@@ -442,14 +379,12 @@
 
     if-nez v0, :cond_1
 
-    .line 321
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->launchButton:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibleOrGone(Landroid/view/View;Z)V
 
-    .line 323
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     move-result-object v0
@@ -464,7 +399,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 325
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     move-result-object v0
@@ -475,7 +409,6 @@
 
     if-nez v0, :cond_2
 
-    .line 327
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->loadingTextIndicator:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -488,14 +421,12 @@
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    .line 328
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->loadingTextIndicator:Landroid/widget/TextView;
 
     const-string/jumbo v1, ""
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 330
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->loadingIndicator:Landroid/view/View;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/ViewUtils;->isVisible(Landroid/view/View;)Z
@@ -512,21 +443,17 @@
 
     if-nez v0, :cond_1
 
-    .line 331
     :cond_0
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->animateProgressBar()V
 
-    .line 332
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->loadingIndicator:Landroid/view/View;
 
     invoke-static {v0, v2, v3}, Lcom/netflix/mediaclient/util/gfx/AnimationUtils;->startViewAppearanceAnimation(Landroid/view/View;ZI)Landroid/view/ViewPropertyAnimator;
 
-    .line 333
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->loadingTextIndicator:Landroid/widget/TextView;
 
     invoke-static {v0, v2, v3}, Lcom/netflix/mediaclient/util/gfx/AnimationUtils;->startViewAppearanceAnimation(Landroid/view/View;ZI)Landroid/view/ViewPropertyAnimator;
 
-    .line 343
     :cond_1
     :goto_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
@@ -535,10 +462,8 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->launchPlayback()V
 
-    .line 344
     return-void
 
-    .line 337
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->loadingTextIndicator:Landroid/widget/TextView;
 
@@ -552,8 +477,6 @@
 .method private updateLoadingText(Ljava/lang/String;ZLjava/lang/String;IZ)V
     .locals 7
 
-    .prologue
-    .line 228
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     move-result-object v0
@@ -564,11 +487,9 @@
 
     if-nez v0, :cond_0
 
-    .line 275
     :goto_0
     return-void
 
-    .line 232
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -576,7 +497,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 233
     const-string/jumbo v0, "CoppolaLoadingDecorator"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -599,7 +519,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 236
     :cond_1
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
@@ -613,12 +532,10 @@
 
     move-result-object v1
 
-    .line 237
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 239
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     move-result-object v0
@@ -633,14 +550,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 241
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->showProgressAndTextIndicator(Z)V
 
     goto :goto_0
 
-    .line 242
     :cond_2
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
@@ -680,7 +595,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 244
     iget-wide v4, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->finishTime:J
 
     sub-long v2, v4, v2
@@ -691,7 +605,6 @@
 
     long-to-int v2, v2
 
-    .line 245
     const/16 v0, 0x9
 
     if-le v2, v0, :cond_3
@@ -700,7 +613,6 @@
 
     move-result-object v0
 
-    .line 246
     :goto_1
     if-eqz p2, :cond_4
 
@@ -726,7 +638,6 @@
 
     move-result-object v0
 
-    .line 247
     :goto_2
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->loadingTextIndicator:Landroid/widget/TextView;
 
@@ -736,7 +647,6 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 248
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->loadingTextIndicator:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -749,22 +659,18 @@
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    .line 249
     if-nez v2, :cond_5
 
-    .line 250
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->loadingTextIndicator:Landroid/widget/TextView;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 252
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->launchPlayback()V
 
     goto/16 :goto_0
 
-    .line 245
     :cond_3
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -786,7 +692,6 @@
 
     goto :goto_1
 
-    .line 246
     :cond_4
     const v3, 0x7f08019e
 
@@ -804,20 +709,17 @@
 
     goto :goto_2
 
-    .line 254
     :cond_5
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->updateLoadingTextRunnable:Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator$UpdateLoadingTextRunnable;
 
     if-eqz v0, :cond_6
 
-    .line 256
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->handler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->updateLoadingTextRunnable:Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator$UpdateLoadingTextRunnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 258
     :cond_6
     new-instance v0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator$UpdateLoadingTextRunnable;
 
@@ -837,7 +739,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->updateLoadingTextRunnable:Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator$UpdateLoadingTextRunnable;
 
-    .line 261
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->handler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->updateLoadingTextRunnable:Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator$UpdateLoadingTextRunnable;
@@ -848,11 +749,9 @@
 
     goto/16 :goto_0
 
-    .line 265
     :cond_7
     if-eqz p2, :cond_9
 
-    .line 266
     const v0, 0x7f080172
 
     const/4 v2, 0x3
@@ -879,10 +778,8 @@
 
     move-result-object v0
 
-    .line 267
     if-eqz p5, :cond_8
 
-    .line 268
     const v0, 0x7f080171
 
     const/4 v2, 0x1
@@ -897,7 +794,6 @@
 
     move-result-object v0
 
-    .line 270
     :cond_8
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->loadingTextIndicator:Landroid/widget/TextView;
 
@@ -905,7 +801,6 @@
 
     goto/16 :goto_0
 
-    .line 272
     :cond_9
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->loadingTextIndicator:Landroid/widget/TextView;
 
@@ -919,19 +814,16 @@
 .method private updateUI(Landroid/view/ViewGroup;)V
     .locals 5
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v1, 0x0
 
-    .line 73
     const-string/jumbo v0, "CoppolaLoadingDecorator"
 
     const-string/jumbo v2, "Updating UI..."
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     move-result-object v0
@@ -942,7 +834,6 @@
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/util/gfx/AnimationUtils;->startViewAppearanceAnimation(Landroid/view/View;Z)Landroid/view/ViewPropertyAnimator;
 
-    .line 78
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     move-result-object v0
@@ -959,7 +850,6 @@
 
     invoke-virtual {v0, v2, p1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    .line 80
     const v0, 0x7f0f027e
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -970,7 +860,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->horzDispImg:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
-    .line 81
     const v0, 0x7f0f0284
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -979,7 +868,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->loadingIndicator:Landroid/view/View;
 
-    .line 82
     const v0, 0x7f0f0281
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -990,7 +878,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->loadingTextIndicator:Landroid/widget/TextView;
 
-    .line 83
     const v0, 0x7f0f027f
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -999,7 +886,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->gradient:Landroid/view/View;
 
-    .line 84
     const v0, 0x7f0f027d
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -1008,10 +894,8 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->blackBackground:Landroid/view/View;
 
-    .line 86
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->animateProgressBar()V
 
-    .line 89
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->playerScreen:Lcom/netflix/mediaclient/ui/player/PlayScreen;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayScreen;->getController()Landroid/app/Activity;
@@ -1022,7 +906,6 @@
 
     move-result v0
 
-    .line 90
     if-eqz v0, :cond_3
 
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->playerScreen:Lcom/netflix/mediaclient/ui/player/PlayScreen;
@@ -1043,14 +926,11 @@
 
     move v2, v3
 
-    .line 91
     :goto_0
     if-eqz v2, :cond_0
 
-    .line 92
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->showProgressAndTextIndicator(Z)V
 
-    .line 95
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
@@ -1062,7 +942,6 @@
 
     invoke-virtual {v0, v4}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->setOnStartedPlaybackListener(Lcom/netflix/mediaclient/ui/player/PlayerFragment$OnPlaybackStateListener;)V
 
-    .line 131
     const v0, 0x7f0f0282
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -1071,7 +950,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->launchButton:Landroid/view/View;
 
-    .line 132
     iget-object v4, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->launchButton:Landroid/view/View;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
@@ -1111,7 +989,6 @@
     :goto_1
     invoke-virtual {v4, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 133
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     move-result-object v0
@@ -1126,10 +1003,8 @@
 
     if-nez v0, :cond_5
 
-    .line 135
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->showProgressAndTextIndicator(Z)V
 
-    .line 158
     :cond_1
     :goto_2
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
@@ -1142,7 +1017,6 @@
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->updateViewMargins(Z)V
 
-    .line 161
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     move-result-object v0
@@ -1171,7 +1045,6 @@
 
     if-nez v0, :cond_2
 
-    .line 162
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     move-result-object v0
@@ -1182,7 +1055,6 @@
 
     invoke-virtual {v0, v3}, Landroid/app/Activity;->setRequestedOrientation(I)V
 
-    .line 163
     const v0, 0x7f0f0283
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -1191,12 +1063,10 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->oldLaunchButton:Landroid/view/View;
 
-    .line 164
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->oldLaunchButton:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 165
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->oldLaunchButton:Landroid/view/View;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator$3;
@@ -1205,23 +1075,19 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 172
     :cond_2
     return-void
 
     :cond_3
     move v2, v1
 
-    .line 90
     goto/16 :goto_0
 
-    .line 132
     :cond_4
     const/16 v0, 0x8
 
     goto :goto_1
 
-    .line 136
     :cond_5
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->isDelayedAutoplay()Z
 
@@ -1231,7 +1097,6 @@
 
     if-nez v2, :cond_1
 
-    .line 137
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     move-result-object v0
@@ -1242,7 +1107,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 138
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->launchButton:Landroid/view/View;
 
     new-instance v2, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator$2;
@@ -1251,7 +1115,6 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 145
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     move-result-object v0
@@ -1266,12 +1129,10 @@
 
     if-nez v0, :cond_6
 
-    .line 147
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->showProgressAndTextIndicator(Z)V
 
     goto :goto_2
 
-    .line 150
     :cond_6
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->loadingIndicator:Landroid/view/View;
 
@@ -1279,7 +1140,6 @@
 
     goto/16 :goto_2
 
-    .line 152
     :cond_7
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
@@ -1295,7 +1155,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 154
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     move-result-object v0
@@ -1308,8 +1167,6 @@
 .method private updateViewMargins(Z)V
     .locals 2
 
-    .prologue
-    .line 212
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->loadingTextIndicator:Landroid/widget/TextView;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/ViewUtils;->isVisible(Landroid/view/View;)Z
@@ -1318,7 +1175,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 213
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     move-result-object v0
@@ -1327,7 +1183,6 @@
 
     move-result-object v0
 
-    .line 214
     if-eqz p1, :cond_1
 
     const v1, 0x7f0a0122
@@ -1340,7 +1195,6 @@
 
     move v1, v0
 
-    .line 215
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->loadingTextIndicator:Landroid/widget/TextView;
 
@@ -1352,11 +1206,9 @@
 
     iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    .line 217
     :cond_0
     return-void
 
-    .line 214
     :cond_1
     const v1, 0x7f0a0166
 
@@ -1376,18 +1228,14 @@
 .method public onAssetUpdated(Lcom/netflix/mediaclient/servicemgr/Asset;)V
     .locals 6
 
-    .prologue
-    .line 192
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/ui/player/PlayScreenDecorator;->onAssetUpdated(Lcom/netflix/mediaclient/servicemgr/Asset;)V
 
-    .line 193
     const-string/jumbo v0, "CoppolaLoadingDecorator"
 
     const-string/jumbo v1, "onAssetUpdated()"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 194
     invoke-virtual {p1}, Lcom/netflix/mediaclient/servicemgr/Asset;->getTitle()Ljava/lang/String;
 
     move-result-object v1
@@ -1412,27 +1260,22 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->updateLoadingText(Ljava/lang/String;ZLjava/lang/String;IZ)V
 
-    .line 195
     return-void
 .end method
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 3
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 199
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/ui/player/PlayScreenDecorator;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 200
     const-string/jumbo v1, "CoppolaLoadingDecorator"
 
     const-string/jumbo v2, "onConfigurationChanged()"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 203
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->launchButton:Landroid/view/View;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/util/ViewUtils;->isVisible(Landroid/view/View;)Z
@@ -1467,10 +1310,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 204
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->launchPlayback()V
 
-    .line 207
     :cond_0
     iget v1, p1, Landroid/content/res/Configuration;->orientation:I
 
@@ -1479,10 +1320,8 @@
     :goto_0
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->updateViewMargins(Z)V
 
-    .line 208
     return-void
 
-    .line 207
     :cond_1
     const/4 v0, 0x0
 
@@ -1492,20 +1331,16 @@
 .method public onVideoDetailsFetched(Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;)V
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
-    .line 176
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/ui/player/PlayScreenDecorator;->onVideoDetailsFetched(Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;)V
 
-    .line 177
     const-string/jumbo v0, "CoppolaLoadingDecorator"
 
     const-string/jumbo v1, "onVideoDetailsFetched()"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 179
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     move-result-object v0
@@ -1514,7 +1349,6 @@
 
     move-result-object v0
 
-    .line 181
     invoke-static {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getImageLoader(Landroid/content/Context;)Lcom/netflix/mediaclient/util/gfx/ImageLoader;
 
     move-result-object v0
@@ -1529,15 +1363,12 @@
 
     const-string/jumbo v4, "boxart"
 
-    .line 182
     invoke-static {}, Lcom/netflix/mediaclient/ui/experience/BrowseExperience;->getImageLoaderConfig()Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;
 
     move-result-object v5
 
-    .line 181
     invoke-interface/range {v0 .. v6}, Lcom/netflix/mediaclient/util/gfx/ImageLoader;->showImg(Lcom/netflix/mediaclient/android/widget/AdvancedImageView;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;Ljava/lang/String;Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;Z)V
 
-    .line 184
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     move-result-object v0
@@ -1552,7 +1383,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 185
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -1563,7 +1393,6 @@
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->finishTime:J
 
-    .line 187
     :cond_0
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;->getPlayable()Lcom/netflix/mediaclient/servicemgr/interface_/Playable;
 
@@ -1608,10 +1437,8 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->updateLoadingText(Ljava/lang/String;ZLjava/lang/String;IZ)V
 
-    .line 188
     return-void
 
-    .line 187
     :cond_1
     const/4 v2, 0x0
 
@@ -1621,44 +1448,34 @@
 .method public showLaunchButtons()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 352
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->launchButton:Landroid/view/View;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibleOrGone(Landroid/view/View;Z)V
 
-    .line 353
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->oldLaunchButton:Landroid/view/View;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibleOrGone(Landroid/view/View;Z)V
 
-    .line 354
     return-void
 .end method
 
 .method public showProgressAndTextIndicator(Z)V
     .locals 1
 
-    .prologue
-    .line 278
     if-eqz p1, :cond_0
 
-    .line 279
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->animateProgressBar()V
 
-    .line 281
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->loadingIndicator:Landroid/view/View;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibleOrGone(Landroid/view/View;Z)V
 
-    .line 282
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->loadingTextIndicator:Landroid/widget/TextView;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibleOrGone(Landroid/view/View;Z)V
 
-    .line 283
     return-void
 .end method

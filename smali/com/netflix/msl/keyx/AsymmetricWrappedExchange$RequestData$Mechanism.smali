@@ -34,7 +34,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -45,7 +44,6 @@
 
     const/4 v3, 0x0
 
-    .line 232
     new-instance v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
 
     const-string/jumbo v1, "RSA"
@@ -54,7 +52,6 @@
 
     sput-object v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;->RSA:Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
 
-    .line 234
     new-instance v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
 
     const-string/jumbo v1, "ECC"
@@ -63,7 +60,6 @@
 
     sput-object v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;->ECC:Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
 
-    .line 236
     new-instance v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
 
     const-string/jumbo v1, "JWE_RSA"
@@ -72,7 +68,6 @@
 
     sput-object v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;->JWE_RSA:Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
 
-    .line 238
     new-instance v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
 
     const-string/jumbo v1, "JWEJS_RSA"
@@ -81,7 +76,6 @@
 
     sput-object v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;->JWEJS_RSA:Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
 
-    .line 240
     new-instance v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
 
     const-string/jumbo v1, "JWK_RSA"
@@ -90,7 +84,6 @@
 
     sput-object v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;->JWK_RSA:Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
 
-    .line 242
     new-instance v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
 
     const-string/jumbo v1, "JWK_RSAES"
@@ -101,7 +94,6 @@
 
     sput-object v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;->JWK_RSAES:Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
 
-    .line 230
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
@@ -145,8 +137,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 230
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -155,8 +145,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
     .locals 1
 
-    .prologue
-    .line 230
     const-class v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -171,8 +159,6 @@
 .method public static values()[Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
     .locals 1
 
-    .prologue
-    .line 230
     sget-object v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;->$VALUES:[Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
 
     invoke-virtual {v0}, [Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;->clone()Ljava/lang/Object;

@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;Lcom/netflix/mediaclient/android/widget/StaticGridView;)V
     .locals 0
 
-    .prologue
-    .line 503
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$3;->this$0:Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$3;->val$gridView:Lcom/netflix/mediaclient/android/widget/StaticGridView;
@@ -32,17 +30,13 @@
 .method public onGlobalLayout()V
     .locals 1
 
-    .prologue
-    .line 506
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$3;->this$0:Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;->fireImpressionEvents()V
 
-    .line 507
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$3;->val$gridView:Lcom/netflix/mediaclient/android/widget/StaticGridView;
 
     invoke-static {v0, p0}, Lcom/netflix/mediaclient/util/ViewUtils;->removeGlobalLayoutListener(Landroid/view/View;Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 508
     return-void
 .end method

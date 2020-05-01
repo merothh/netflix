@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 44
     invoke-static {}, Lcom/netflix/mediaclient/servicemgr/AddToListData$AddToListState;->values()[Lcom/netflix/mediaclient/servicemgr/AddToListData$AddToListState;
 
     move-result-object v0

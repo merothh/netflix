@@ -63,19 +63,14 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 127
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 128
     return-void
 .end method
 
 .method public static getBootloaderParameterCertificationVersion()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 167
     const-string/jumbo v0, "certification_version"
 
     return-object v0
@@ -84,8 +79,6 @@
 .method public static getBootloaderParameterDeviceCategory()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 203
     const-string/jumbo v0, "device_cat"
 
     return-object v0
@@ -94,8 +87,6 @@
 .method public static getBootloaderParameterDeviceType()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 163
     const-string/jumbo v0, "device_type"
 
     return-object v0
@@ -104,8 +95,6 @@
 .method public static getBootloaderParameterFullEsn()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 159
     const-string/jumbo v0, "e"
 
     return-object v0
@@ -114,8 +103,6 @@
 .method public static getBootloaderParameterOs()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 199
     const-string/jumbo v0, "os"
 
     return-object v0
@@ -124,8 +111,6 @@
 .method public static getBootloaderParameterSdkVersion()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 175
     const-string/jumbo v0, "sdk_version"
 
     return-object v0
@@ -134,8 +119,6 @@
 .method public static getBootloaderParameterSoftwareVersion()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 171
     const-string/jumbo v0, "sw_version"
 
     return-object v0
@@ -144,8 +127,6 @@
 .method public static getBootloaderParameterWebApiVersion()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 151
     const-string/jumbo v0, "v"
 
     return-object v0
@@ -154,8 +135,6 @@
 .method public static getBootloaderUrl()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 147
     const-string/jumbo v0, "https://www.netflix.com"
 
     return-object v0
@@ -164,8 +143,6 @@
 .method public static getBootloaderWebApiVersion()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 155
     const-string/jumbo v0, "2.0"
 
     return-object v0
@@ -174,8 +151,6 @@
 .method public static getCrittercismAppId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 207
     sget-object v0, Lcom/netflix/mediaclient/repository/SecurityRepository;->crittercismAppId:Ljava/lang/String;
 
     return-object v0
@@ -184,10 +159,8 @@
 .method public static getDefaultTokens(Landroid/content/Context;)Lcom/netflix/mediaclient/servicemgr/IVoip$AuthorizationTokens;
     .locals 10
 
-    .prologue
     const/4 v6, 0x0
 
-    .line 218
     invoke-virtual {p0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
 
     move-result-object v0
@@ -196,7 +169,6 @@
 
     move-result-object v0
 
-    .line 219
     const-string/jumbo v1, "/"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -205,7 +177,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 220
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -224,7 +195,6 @@
 
     move-result-object v0
 
-    .line 225
     :goto_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -232,7 +202,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 226
     const-string/jumbo v1, "SEC"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -255,20 +224,17 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 228
     :cond_0
     invoke-static {v0}, Lcom/netflix/mediaclient/repository/SecurityRepository;->native_loadVoipTokens(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 229
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 230
     const-string/jumbo v1, "SEC"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -291,28 +257,24 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 235
     :cond_1
     :try_start_0
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-direct {v2, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 236
     const-string/jumbo v0, "userToken"
 
     invoke-virtual {v2, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 237
     const-string/jumbo v0, "encToken"
 
     invoke-virtual {v2, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 239
     invoke-static {v1}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v0
@@ -325,7 +287,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 240
     :cond_2
     const-string/jumbo v0, "SEC"
 
@@ -337,12 +298,10 @@
 
     move-object v0, v6
 
-    .line 253
     :cond_3
     :goto_1
     return-object v0
 
-    .line 222
     :cond_4
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -364,7 +323,6 @@
 
     goto/16 :goto_0
 
-    .line 244
     :cond_5
     :try_start_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -375,21 +333,18 @@
 
     add-long/2addr v4, v8
 
-    .line 245
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IVoip$AuthorizationTokens;
 
     sget-object v3, Lcom/netflix/mediaclient/servicemgr/IVoip$UserType;->CS_DEFAULT:Lcom/netflix/mediaclient/servicemgr/IVoip$UserType;
 
     invoke-direct/range {v0 .. v5}, Lcom/netflix/mediaclient/servicemgr/IVoip$AuthorizationTokens;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IVoip$UserType;J)V
 
-    .line 246
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 247
     const-string/jumbo v1, "SEC"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -416,11 +371,9 @@
 
     goto :goto_1
 
-    .line 251
     :catch_0
     move-exception v0
 
-    .line 252
     const-string/jumbo v1, "SEC"
 
     const-string/jumbo v2, "Failed to load default tokens"
@@ -429,15 +382,12 @@
 
     move-object v0, v6
 
-    .line 253
     goto :goto_1
 .end method
 
 .method public static getDeviceIdToken()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 131
     sget-object v0, Lcom/netflix/mediaclient/repository/SecurityRepository;->deviceIdToken:Ljava/lang/String;
 
     return-object v0
@@ -446,8 +396,6 @@
 .method public static getEsnDelim()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 139
     const-string/jumbo v0, "-"
 
     return-object v0
@@ -456,8 +404,6 @@
 .method public static getEsnPrefix()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 135
     sget-object v0, Lcom/netflix/mediaclient/repository/SecurityRepository;->esnPrefix:Ljava/lang/String;
 
     return-object v0
@@ -466,8 +412,6 @@
 .method public static final getLibraryVersion()I
     .locals 1
 
-    .prologue
-    .line 310
     invoke-static {}, Lcom/netflix/mediaclient/repository/SecurityRepository;->native_getLibraryVersion()I
 
     move-result v0
@@ -478,8 +422,6 @@
 .method public static getMdxJsVersion()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 191
     const-string/jumbo v0, "1.1.6-android"
 
     return-object v0
@@ -488,8 +430,6 @@
 .method public static getMdxLibVersion()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 187
     const-string/jumbo v0, "2013.3"
 
     return-object v0
@@ -498,8 +438,6 @@
 .method public static getModelDelim()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 143
     const-string/jumbo v0, "_"
 
     return-object v0
@@ -508,8 +446,6 @@
 .method public static getNrdAppVersion()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 183
     const-string/jumbo v0, "2013.2"
 
     return-object v0
@@ -518,8 +454,6 @@
 .method public static getNrdLibVersion()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 179
     const-string/jumbo v0, "2013.2"
 
     return-object v0
@@ -528,8 +462,6 @@
 .method public static getNrdSdkVersion()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 195
     const-string/jumbo v0, "4.0.4"
 
     return-object v0
@@ -538,8 +470,6 @@
 .method public static getSystemPropety(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 349
     invoke-static {p0}, Lcom/netflix/mediaclient/repository/SecurityRepository;->native_getSystemProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -550,8 +480,6 @@
 .method public static isLoaded()Z
     .locals 1
 
-    .prologue
-    .line 300
     sget-boolean v0, Lcom/netflix/mediaclient/repository/SecurityRepository;->sLoaded:Z
 
     return v0
@@ -560,10 +488,8 @@
 .method public static declared-synchronized loadLibraries(Landroid/content/Context;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 321
     const-class v1, Lcom/netflix/mediaclient/repository/SecurityRepository;
 
     monitor-enter v1
@@ -573,7 +499,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 322
     const-string/jumbo v2, "SEC"
 
     const-string/jumbo v3, "We already loaded native libraries!"
@@ -582,13 +507,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 335
     :goto_0
     monitor-exit v1
 
     return v0
 
-    .line 326
     :cond_0
     :try_start_1
     const-string/jumbo v0, "cs.dat"
@@ -599,14 +522,12 @@
 
     invoke-static {p0, v0, v2, v3}, Lcom/netflix/mediaclient/util/FileUtils;->copyFileFromAssetToFS(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Z)Z
 
-    .line 327
     const-string/jumbo v0, "SEC"
 
     const-string/jumbo v2, "We copied cs.dat"
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 329
     const-string/jumbo v0, "netflixmp_jni"
 
     invoke-static {p0, v0}, Lcom/netflix/mediaclient/util/DeviceUtils;->loadNativeLibrary(Landroid/content/Context;Ljava/lang/String;)Z
@@ -615,19 +536,16 @@
 
     sput-boolean v0, Lcom/netflix/mediaclient/repository/SecurityRepository;->sLoaded:Z
 
-    .line 330
     sget-boolean v0, Lcom/netflix/mediaclient/repository/SecurityRepository;->sLoaded:Z
 
     if-eqz v0, :cond_1
 
-    .line 331
     const/4 v0, 0x0
 
     new-array v0, v0, [B
 
     invoke-static {v0}, Lcom/netflix/mediaclient/repository/SecurityRepository;->native_init([B)V
 
-    .line 332
     const/4 v0, 0x1
 
     invoke-static {v0}, Lcom/netflix/mediaclient/repository/SecurityRepository;->native_getConstant(I)Ljava/lang/String;
@@ -636,7 +554,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/repository/SecurityRepository;->deviceIdToken:Ljava/lang/String;
 
-    .line 333
     const/4 v0, 0x2
 
     invoke-static {v0}, Lcom/netflix/mediaclient/repository/SecurityRepository;->native_getConstant(I)Ljava/lang/String;
@@ -645,7 +562,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/repository/SecurityRepository;->crittercismAppId:Ljava/lang/String;
 
-    .line 335
     :cond_1
     sget-boolean v0, Lcom/netflix/mediaclient/repository/SecurityRepository;->sLoaded:Z
     :try_end_1
@@ -653,7 +569,6 @@
 
     goto :goto_0
 
-    .line 321
     :catchall_0
     move-exception v0
 

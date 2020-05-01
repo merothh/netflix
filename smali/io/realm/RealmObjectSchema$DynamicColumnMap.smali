@@ -27,14 +27,10 @@
 .method public constructor <init>(Lio/realm/internal/Table;)V
     .locals 0
 
-    .prologue
-    .line 791
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 792
     iput-object p1, p0, Lio/realm/RealmObjectSchema$DynamicColumnMap;->table:Lio/realm/internal/Table;
 
-    .line 793
     return-void
 .end method
 
@@ -43,8 +39,6 @@
 .method public clear()V
     .locals 1
 
-    .prologue
-    .line 803
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -55,8 +49,6 @@
 .method public containsKey(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 808
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -67,8 +59,6 @@
 .method public containsValue(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 813
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -91,8 +81,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 818
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -103,8 +91,6 @@
 .method public get(Ljava/lang/Object;)Ljava/lang/Long;
     .locals 4
 
-    .prologue
-    .line 797
     iget-object v0, p0, Lio/realm/RealmObjectSchema$DynamicColumnMap;->table:Lio/realm/internal/Table;
 
     check-cast p1, Ljava/lang/String;
@@ -113,7 +99,6 @@
 
     move-result-wide v0
 
-    .line 798
     const-wide/16 v2, 0x0
 
     cmp-long v2, v0, v2
@@ -136,8 +121,6 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 788
     invoke-virtual {p0, p1}, Lio/realm/RealmObjectSchema$DynamicColumnMap;->get(Ljava/lang/Object;)Ljava/lang/Long;
 
     move-result-object v0
@@ -148,8 +131,6 @@
 .method public isEmpty()Z
     .locals 1
 
-    .prologue
-    .line 823
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -169,8 +150,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 828
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -181,8 +160,6 @@
 .method public put(Ljava/lang/String;Ljava/lang/Long;)Ljava/lang/Long;
     .locals 1
 
-    .prologue
-    .line 833
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -193,8 +170,6 @@
 .method public bridge synthetic put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 788
     check-cast p1, Ljava/lang/String;
 
     check-cast p2, Ljava/lang/Long;
@@ -220,8 +195,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 838
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -232,8 +205,6 @@
 .method public remove(Ljava/lang/Object;)Ljava/lang/Long;
     .locals 1
 
-    .prologue
-    .line 843
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -244,8 +215,6 @@
 .method public bridge synthetic remove(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 788
     invoke-virtual {p0, p1}, Lio/realm/RealmObjectSchema$DynamicColumnMap;->remove(Ljava/lang/Object;)Ljava/lang/Long;
 
     move-result-object v0
@@ -256,8 +225,6 @@
 .method public size()I
     .locals 1
 
-    .prologue
-    .line 848
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -277,8 +244,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 853
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

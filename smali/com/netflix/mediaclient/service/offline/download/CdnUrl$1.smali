@@ -22,8 +22,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,8 +32,6 @@
 .method public compare(Lcom/netflix/mediaclient/service/offline/download/CdnUrl;Lcom/netflix/mediaclient/service/offline/download/CdnUrl;)I
     .locals 2
 
-    .prologue
-    .line 37
     iget v0, p1, Lcom/netflix/mediaclient/service/offline/download/CdnUrl;->mRank:I
 
     iget v1, p2, Lcom/netflix/mediaclient/service/offline/download/CdnUrl;->mRank:I
@@ -48,8 +44,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 34
     check-cast p1, Lcom/netflix/mediaclient/service/offline/download/CdnUrl;
 
     check-cast p2, Lcom/netflix/mediaclient/service/offline/download/CdnUrl;

@@ -22,8 +22,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,8 +32,6 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;
     .locals 1
 
-    .prologue
-    .line 78
     new-instance v0, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;
 
     invoke-direct {v0, p1}, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;-><init>(Landroid/os/Parcel;)V
@@ -46,8 +42,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 76
     invoke-virtual {p0, p1}, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary$1;->createFromParcel(Landroid/os/Parcel;)Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;
 
     move-result-object v0
@@ -58,8 +52,6 @@
 .method public newArray(I)[Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;
     .locals 1
 
-    .prologue
-    .line 83
     new-array v0, p1, [Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;
 
     return-object v0
@@ -68,8 +60,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 76
     invoke-virtual {p0, p1}, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary$1;->newArray(I)[Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;
 
     move-result-object v0

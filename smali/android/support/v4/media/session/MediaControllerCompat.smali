@@ -17,14 +17,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat$Token;)V
     .locals 2
 
-    .prologue
-    .line 90
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 91
     if-nez p2, :cond_0
 
-    .line 92
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "sessionToken must not be null"
@@ -33,29 +29,24 @@
 
     throw v0
 
-    .line 94
     :cond_0
     iput-object p2, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mToken:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    .line 96
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x18
 
     if-lt v0, v1, :cond_1
 
-    .line 97
     new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi24;
 
     invoke-direct {v0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi24;-><init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat$Token;)V
 
     iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
-    .line 105
     :goto_0
     return-void
 
-    .line 98
     :cond_1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -63,7 +54,6 @@
 
     if-lt v0, v1, :cond_2
 
-    .line 99
     new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi23;
 
     invoke-direct {v0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi23;-><init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat$Token;)V
@@ -72,7 +62,6 @@
 
     goto :goto_0
 
-    .line 100
     :cond_2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -80,7 +69,6 @@
 
     if-lt v0, v1, :cond_3
 
-    .line 101
     new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;
 
     invoke-direct {v0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;-><init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat$Token;)V
@@ -89,7 +77,6 @@
 
     goto :goto_0
 
-    .line 103
     :cond_3
     new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplBase;
 
@@ -105,14 +92,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;)V
     .locals 2
 
-    .prologue
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 66
     if-nez p2, :cond_0
 
-    .line 67
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "session must not be null"
@@ -121,7 +104,6 @@
 
     throw v0
 
-    .line 69
     :cond_0
     invoke-virtual {p2}, Landroid/support/v4/media/session/MediaSessionCompat;->getSessionToken()Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
@@ -129,25 +111,21 @@
 
     iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mToken:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    .line 71
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x18
 
     if-lt v0, v1, :cond_1
 
-    .line 72
     new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi24;
 
     invoke-direct {v0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi24;-><init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;)V
 
     iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
-    .line 80
     :goto_0
     return-void
 
-    .line 73
     :cond_1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -155,7 +133,6 @@
 
     if-lt v0, v1, :cond_2
 
-    .line 74
     new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi23;
 
     invoke-direct {v0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi23;-><init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;)V
@@ -164,7 +141,6 @@
 
     goto :goto_0
 
-    .line 75
     :cond_2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -172,7 +148,6 @@
 
     if-lt v0, v1, :cond_3
 
-    .line 76
     new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;
 
     invoke-direct {v0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;-><init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;)V
@@ -181,7 +156,6 @@
 
     goto :goto_0
 
-    .line 78
     :cond_3
     new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplBase;
 
@@ -199,24 +173,18 @@
 .method public adjustVolume(II)V
     .locals 1
 
-    .prologue
-    .line 257
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
     invoke-interface {v0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->adjustVolume(II)V
 
-    .line 258
     return-void
 .end method
 
 .method public dispatchMediaButtonEvent(Landroid/view/KeyEvent;)Z
     .locals 2
 
-    .prologue
-    .line 124
     if-nez p1, :cond_0
 
-    .line 125
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "KeyEvent may not be null"
@@ -225,7 +193,6 @@
 
     throw v0
 
-    .line 127
     :cond_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
@@ -239,8 +206,6 @@
 .method public getExtras()Landroid/os/Bundle;
     .locals 1
 
-    .prologue
-    .line 169
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
     invoke-interface {v0}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getExtras()Landroid/os/Bundle;
@@ -253,8 +218,6 @@
 .method public getFlags()J
     .locals 2
 
-    .prologue
-    .line 197
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
     invoke-interface {v0}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getFlags()J
@@ -267,8 +230,6 @@
 .method public getMediaController()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 337
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
     invoke-interface {v0}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getMediaController()Ljava/lang/Object;
@@ -281,8 +242,6 @@
 .method public getMetadata()Landroid/support/v4/media/MediaMetadataCompat;
     .locals 1
 
-    .prologue
-    .line 145
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
     invoke-interface {v0}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getMetadata()Landroid/support/v4/media/MediaMetadataCompat;
@@ -295,8 +254,6 @@
 .method public getPackageName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 323
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
     invoke-interface {v0}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getPackageName()Ljava/lang/String;
@@ -309,8 +266,6 @@
 .method public getPlaybackInfo()Landroid/support/v4/media/session/MediaControllerCompat$PlaybackInfo;
     .locals 1
 
-    .prologue
-    .line 206
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
     invoke-interface {v0}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getPlaybackInfo()Landroid/support/v4/media/session/MediaControllerCompat$PlaybackInfo;
@@ -323,8 +278,6 @@
 .method public getPlaybackState()Landroid/support/v4/media/session/PlaybackStateCompat;
     .locals 1
 
-    .prologue
-    .line 136
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
     invoke-interface {v0}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getPlaybackState()Landroid/support/v4/media/session/PlaybackStateCompat;
@@ -346,8 +299,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 155
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
     invoke-interface {v0}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getQueue()Ljava/util/List;
@@ -360,8 +311,6 @@
 .method public getQueueTitle()Ljava/lang/CharSequence;
     .locals 1
 
-    .prologue
-    .line 162
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
     invoke-interface {v0}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getQueueTitle()Ljava/lang/CharSequence;
@@ -374,8 +323,6 @@
 .method public getRatingType()I
     .locals 1
 
-    .prologue
-    .line 187
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
     invoke-interface {v0}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getRatingType()I
@@ -388,8 +335,6 @@
 .method public getSessionActivity()Landroid/app/PendingIntent;
     .locals 1
 
-    .prologue
-    .line 216
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
     invoke-interface {v0}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getSessionActivity()Landroid/app/PendingIntent;
@@ -402,8 +347,6 @@
 .method public getSessionToken()Landroid/support/v4/media/session/MediaSessionCompat$Token;
     .locals 1
 
-    .prologue
-    .line 225
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mToken:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
     return-object v0
@@ -412,8 +355,6 @@
 .method public getTransportControls()Landroid/support/v4/media/session/MediaControllerCompat$TransportControls;
     .locals 1
 
-    .prologue
-    .line 113
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
     invoke-interface {v0}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getTransportControls()Landroid/support/v4/media/session/MediaControllerCompat$TransportControls;
@@ -426,24 +367,18 @@
 .method public registerCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)V
     .locals 1
 
-    .prologue
-    .line 267
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/support/v4/media/session/MediaControllerCompat;->registerCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;Landroid/os/Handler;)V
 
-    .line 268
     return-void
 .end method
 
 .method public registerCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;Landroid/os/Handler;)V
     .locals 2
 
-    .prologue
-    .line 279
     if-nez p1, :cond_0
 
-    .line 280
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "callback cannot be null"
@@ -452,37 +387,30 @@
 
     throw v0
 
-    .line 282
     :cond_0
     if-nez p2, :cond_1
 
-    .line 283
     new-instance p2, Landroid/os/Handler;
 
     invoke-direct {p2}, Landroid/os/Handler;-><init>()V
 
-    .line 285
     :cond_1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
     invoke-interface {v0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->registerCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;Landroid/os/Handler;)V
 
-    .line 286
     return-void
 .end method
 
 .method public sendCommand(Ljava/lang/String;Landroid/os/Bundle;Landroid/os/ResultReceiver;)V
     .locals 2
 
-    .prologue
-    .line 311
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 312
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "command cannot be null or empty"
@@ -491,37 +419,29 @@
 
     throw v0
 
-    .line 314
     :cond_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
     invoke-interface {v0, p1, p2, p3}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->sendCommand(Ljava/lang/String;Landroid/os/Bundle;Landroid/os/ResultReceiver;)V
 
-    .line 315
     return-void
 .end method
 
 .method public setVolumeTo(II)V
     .locals 1
 
-    .prologue
-    .line 240
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
     invoke-interface {v0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->setVolumeTo(II)V
 
-    .line 241
     return-void
 .end method
 
 .method public unregisterCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)V
     .locals 2
 
-    .prologue
-    .line 295
     if-nez p1, :cond_0
 
-    .line 296
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "callback cannot be null"
@@ -530,12 +450,10 @@
 
     throw v0
 
-    .line 298
     :cond_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
     invoke-interface {v0, p1}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->unregisterCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)V
 
-    .line 299
     return-void
 .end method

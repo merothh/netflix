@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
-    .line 22
     sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v2, 0x1
@@ -29,8 +27,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 20
     invoke-direct {p0}, Landroid/support/v4/app/Fragment;-><init>()V
 
     return-void
@@ -41,11 +37,8 @@
 .method public onAttach(Landroid/content/Context;)V
     .locals 4
 
-    .prologue
-    .line 31
     invoke-super {p0, p1}, Landroid/support/v4/app/Fragment;->onAttach(Landroid/content/Context;)V
 
-    .line 34
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
@@ -58,15 +51,12 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 44
     return-void
 .end method
 
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 2
 
-    .prologue
-    .line 26
     const v0, 0x7f030064
 
     const/4 v1, 0x0

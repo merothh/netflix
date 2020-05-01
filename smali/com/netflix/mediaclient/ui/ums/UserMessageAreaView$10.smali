@@ -17,8 +17,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;Ljava/lang/Runnable;Lcom/netflix/mediaclient/ui/home/AccountHandler;Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaCta;)V
     .locals 0
 
-    .prologue
-    .line 341
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$10;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$10;->val$timeout:Ljava/lang/Runnable;
@@ -37,8 +35,6 @@
 .method public onAutoLoginTokenCreated(Ljava/lang/String;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 344
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$10;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;->getContext()Landroid/content/Context;
@@ -53,7 +49,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
-    .line 345
     if-eqz v0, :cond_0
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/AndroidUtils;->isActivityFinishedOrDestroyed(Landroid/content/Context;)Z
@@ -62,7 +57,6 @@
 
     if-nez v1, :cond_0
 
-    .line 346
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -71,7 +65,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 347
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$10;->val$handler:Lcom/netflix/mediaclient/ui/home/AccountHandler;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$10;->val$umaCta:Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaCta;
@@ -82,7 +75,6 @@
 
     invoke-virtual {v0, p1, p2, v1}, Lcom/netflix/mediaclient/ui/home/AccountHandler;->handle(Ljava/lang/String;Lcom/netflix/mediaclient/android/app/Status;Ljava/lang/String;)V
 
-    .line 349
     :cond_0
     return-void
 .end method

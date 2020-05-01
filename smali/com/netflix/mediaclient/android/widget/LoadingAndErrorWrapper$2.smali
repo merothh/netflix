@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;)V
     .locals 0
 
-    .prologue
-    .line 93
     iput-object p1, p0, Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper$2;->this$0:Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,11 +26,8 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 96
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertOnMain()Z
 
-    .line 97
     iget-object v0, p0, Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper$2;->this$0:Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;->access$000(Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;)Landroid/view/View;
@@ -45,11 +40,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 102
     :goto_0
     return-void
 
-    .line 100
     :cond_0
     const-string/jumbo v0, "LoadingAndErrorWrapper"
 
@@ -57,7 +50,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
     iget-object v0, p0, Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper$2;->this$0:Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;->access$000(Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;)Landroid/view/View;

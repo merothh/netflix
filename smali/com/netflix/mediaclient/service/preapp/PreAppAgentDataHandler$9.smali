@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;Ljava/lang/String;Lcom/netflix/mediaclient/service/resfetcher/LoggingResourceFetcherCallback;)V
     .locals 0
 
-    .prologue
-    .line 275
     iput-object p1, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$9;->this$0:Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$9;->val$remoteUrl:Ljava/lang/String;
@@ -36,8 +34,6 @@
 .method public run()V
     .locals 5
 
-    .prologue
-    .line 278
     invoke-static {}, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;->access$1000()Lcom/netflix/mediaclient/service/ServiceAgent;
 
     move-result-object v0
@@ -56,6 +52,5 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher;->fetchResource(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;Lcom/android/volley/Request$Priority;Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;)V
 
-    .line 279
     return-void
 .end method

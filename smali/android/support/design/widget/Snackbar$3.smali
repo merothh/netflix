@@ -14,8 +14,6 @@
 .method constructor <init>(Landroid/support/design/widget/Snackbar;)V
     .locals 0
 
-    .prologue
-    .line 432
     iput-object p1, p0, Landroid/support/design/widget/Snackbar$3;->this$0:Landroid/support/design/widget/Snackbar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public dismiss(I)V
     .locals 5
 
-    .prologue
-    .line 440
     sget-object v0, Landroid/support/design/widget/Snackbar;->sHandler:Landroid/os/Handler;
 
     sget-object v1, Landroid/support/design/widget/Snackbar;->sHandler:Landroid/os/Handler;
@@ -46,15 +42,12 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 441
     return-void
 .end method
 
 .method public show()V
     .locals 4
 
-    .prologue
-    .line 435
     sget-object v0, Landroid/support/design/widget/Snackbar;->sHandler:Landroid/os/Handler;
 
     sget-object v1, Landroid/support/design/widget/Snackbar;->sHandler:Landroid/os/Handler;
@@ -69,6 +62,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 436
     return-void
 .end method

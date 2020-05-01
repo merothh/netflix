@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper;ZLcom/netflix/mediaclient/android/app/Status;)V
     .locals 0
 
-    .prologue
-    .line 380
     iput-object p1, p0, Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper$32;->this$0:Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper;
 
     iput-boolean p2, p0, Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper$32;->val$success:Z
@@ -36,8 +34,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 383
     iget-object v0, p0, Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper$32;->this$0:Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper;->access$000(Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper;)Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;
@@ -50,6 +46,5 @@
 
     invoke-interface {v0, v1, v2}, Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;->onPostPlayImpressionLogged(ZLcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 384
     return-void
 .end method

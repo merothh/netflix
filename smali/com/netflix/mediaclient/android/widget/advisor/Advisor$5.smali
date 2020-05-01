@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 226
     invoke-static {}, Lcom/netflix/model/leafs/advisory/Advisory$Type;->values()[Lcom/netflix/model/leafs/advisory/Advisory$Type;
 
     move-result-object v0

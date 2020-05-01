@@ -11,16 +11,12 @@
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 2
 
-    .prologue
-    .line 27
     const-string/jumbo v0, "nrdp-webapi-nccpreasoncode"
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/event/nrdp/device/BaseDeviceEvent;-><init>(Ljava/lang/String;)V
 
-    .line 28
     iput-object p1, p0, Lcom/netflix/mediaclient/event/nrdp/device/ReasonCode;->json:Lorg/json/JSONObject;
 
-    .line 31
     :try_start_0
     const-string/jumbo v0, "type"
 
@@ -32,11 +28,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 34
     :goto_0
     return-void
 
-    .line 32
     :catch_0
     move-exception v0
 

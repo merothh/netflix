@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 6
     invoke-direct {p0}, Landroid/app/ListActivity;-><init>()V
 
     return-void
@@ -19,8 +17,6 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 2
 
-    .prologue
-    .line 9
     new-instance v0, Ljava/lang/IllegalAccessError;
 
     const-string/jumbo v1, "GKB: Don\'t use ListActivities - they kill our ability to maintain a single activity hierarchy (e.g. NetflixActivity)"

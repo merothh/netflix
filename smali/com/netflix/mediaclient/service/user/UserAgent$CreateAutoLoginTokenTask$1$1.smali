@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/user/UserAgent$CreateAutoLoginTokenTask$1;Ljava/lang/String;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 0
 
-    .prologue
-    .line 1990
     iput-object p1, p0, Lcom/netflix/mediaclient/service/user/UserAgent$CreateAutoLoginTokenTask$1$1;->this$2:Lcom/netflix/mediaclient/service/user/UserAgent$CreateAutoLoginTokenTask$1;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/user/UserAgent$CreateAutoLoginTokenTask$1$1;->val$token:Ljava/lang/String;
@@ -36,8 +34,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 1993
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$CreateAutoLoginTokenTask$1$1;->this$2:Lcom/netflix/mediaclient/service/user/UserAgent$CreateAutoLoginTokenTask$1;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/user/UserAgent$CreateAutoLoginTokenTask$1;->this$1:Lcom/netflix/mediaclient/service/user/UserAgent$CreateAutoLoginTokenTask;
@@ -52,6 +48,5 @@
 
     invoke-interface {v0, v1, v2}, Lcom/netflix/mediaclient/service/user/UserAgent$UserAgentCallback;->onAutoLoginTokenCreated(Ljava/lang/String;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 1994
     return-void
 .end method

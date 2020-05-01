@@ -23,8 +23,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 28
     new-instance v0, Lcom/fasterxml/jackson/core/io/SerializedString;
 
     const-string/jumbo v1, " "

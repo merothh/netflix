@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$MementoRelatedView;Lcom/netflix/mediaclient/servicemgr/interface_/Video;)V
     .locals 0
 
-    .prologue
-    .line 254
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$MementoRelatedView$1;->this$1:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$MementoRelatedView;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$MementoRelatedView$1;->val$video:Lcom/netflix/mediaclient/servicemgr/interface_/Video;
@@ -32,8 +30,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 5
 
-    .prologue
-    .line 257
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$MementoRelatedView$1;->this$1:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$MementoRelatedView;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$MementoRelatedView;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
@@ -64,6 +60,5 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Lcom/netflix/mediaclient/ui/details/DetailsActivityLauncher;->showMemento(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/ui/common/PlayContext;)V
 
-    .line 258
     return-void
 .end method

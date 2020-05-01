@@ -7,19 +7,14 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 21
     invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    .line 22
     return-void
 .end method
 
 .method public constructor <init>(Lorg/xbill/DNS/Name;)V
     .locals 2
 
-    .prologue
-    .line 16
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -46,6 +41,5 @@
 
     invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    .line 17
     return-void
 .end method

@@ -36,7 +36,6 @@
 .method static constructor <clinit>()V
     .locals 15
 
-    .prologue
     const/16 v4, 0x10
 
     const/4 v13, 0x3
@@ -47,7 +46,6 @@
 
     const/4 v2, 0x0
 
-    .line 179
     new-instance v0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;
 
     const-string/jumbo v1, "SHORT"
@@ -60,7 +58,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;->SHORT:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;
 
-    .line 180
     new-instance v5, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;
 
     const-string/jumbo v6, "REGULAR"
@@ -75,7 +72,6 @@
 
     sput-object v5, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;->REGULAR:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;
 
-    .line 181
     new-instance v8, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;
 
     const-string/jumbo v9, "TALL"
@@ -90,7 +86,6 @@
 
     sput-object v8, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;->TALL:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;
 
-    .line 178
     new-array v0, v13, [Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;
 
     sget-object v1, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;->SHORT:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;
@@ -118,36 +113,26 @@
         }
     .end annotation
 
-    .prologue
-    .line 196
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 197
     iput p4, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;->mWRatio:I
 
-    .line 198
     iput p5, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;->mHRatio:I
 
-    .line 199
     iput p3, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;->mStartRangeDp:I
 
-    .line 200
     return-void
 .end method
 
 .method public static getFormatForDevice(Landroid/content/Context;)Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;
     .locals 8
 
-    .prologue
-    .line 218
     invoke-static {p0}, Lcom/netflix/mediaclient/util/DeviceUtils;->getScreenHeightInPixels(Landroid/content/Context;)I
 
     move-result v3
 
-    .line 220
     const/4 v1, 0x0
 
-    .line 222
     invoke-static {}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;->values()[Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;
 
     move-result-object v4
@@ -167,12 +152,10 @@
 
     aget-object v2, v4, v1
 
-    .line 223
     iget v6, v2, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;->mStartRangeDp:I
 
     if-le v3, v6, :cond_0
 
-    .line 222
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
@@ -181,7 +164,6 @@
 
     goto :goto_0
 
-    .line 229
     :cond_0
     return-object v0
 .end method
@@ -189,8 +171,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;
     .locals 1
 
-    .prologue
-    .line 178
     const-class v0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -205,8 +185,6 @@
 .method public static values()[Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;
     .locals 1
 
-    .prologue
-    .line 178
     sget-object v0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;->$VALUES:[Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;->clone()Ljava/lang/Object;
@@ -223,8 +201,6 @@
 .method public getHeightRatio()I
     .locals 1
 
-    .prologue
-    .line 207
     iget v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;->mHRatio:I
 
     return v0
@@ -233,8 +209,6 @@
 .method public getRatio()I
     .locals 2
 
-    .prologue
-    .line 211
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;->getWidthRatio()I
 
     move-result v0
@@ -251,8 +225,6 @@
 .method public getWidthRatio()I
     .locals 1
 
-    .prologue
-    .line 203
     iget v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;->mWRatio:I
 
     return v0

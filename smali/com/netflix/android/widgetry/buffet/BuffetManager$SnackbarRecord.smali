@@ -24,24 +24,18 @@
 .method constructor <init>(IZLcom/netflix/android/widgetry/buffet/BuffetManager$Callback;)V
     .locals 1
 
-    .prologue
-    .line 165
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 166
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p3}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/netflix/android/widgetry/buffet/BuffetManager$SnackbarRecord;->callback:Ljava/lang/ref/WeakReference;
 
-    .line 167
     iput p1, p0, Lcom/netflix/android/widgetry/buffet/BuffetManager$SnackbarRecord;->duration:I
 
-    .line 168
     iput-boolean p2, p0, Lcom/netflix/android/widgetry/buffet/BuffetManager$SnackbarRecord;->animated:Z
 
-    .line 169
     return-void
 .end method
 
@@ -50,8 +44,6 @@
 .method isSnackbar(Lcom/netflix/android/widgetry/buffet/BuffetManager$Callback;)Z
     .locals 1
 
-    .prologue
-    .line 172
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/netflix/android/widgetry/buffet/BuffetManager$SnackbarRecord;->callback:Ljava/lang/ref/WeakReference;

@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/vailsys/whistleengine/WhistleEngine;Z)V
     .locals 0
 
-    .prologue
-    .line 391
     iput-object p1, p0, Lcom/vailsys/whistleengine/WhistleEngine$8;->this$0:Lcom/vailsys/whistleengine/WhistleEngine;
 
     iput-boolean p2, p0, Lcom/vailsys/whistleengine/WhistleEngine$8;->val$registrationAuth:Z
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 394
     iget-object v0, p0, Lcom/vailsys/whistleengine/WhistleEngine$8;->this$0:Lcom/vailsys/whistleengine/WhistleEngine;
 
     invoke-static {v0}, Lcom/vailsys/whistleengine/WhistleEngine;->access$000(Lcom/vailsys/whistleengine/WhistleEngine;)Lcom/vailsys/whistleengine/WhistleEngineDelegate;
@@ -42,7 +38,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 395
     iget-object v0, p0, Lcom/vailsys/whistleengine/WhistleEngine$8;->this$0:Lcom/vailsys/whistleengine/WhistleEngine;
 
     invoke-static {v0}, Lcom/vailsys/whistleengine/WhistleEngine;->access$000(Lcom/vailsys/whistleengine/WhistleEngine;)Lcom/vailsys/whistleengine/WhistleEngineDelegate;
@@ -53,7 +48,6 @@
 
     invoke-interface {v0, v1}, Lcom/vailsys/whistleengine/WhistleEngineDelegate;->authenticationNeeded(Z)V
 
-    .line 396
     :cond_0
     return-void
 .end method

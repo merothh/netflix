@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$OfflineRefreshInvoke;Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface$PlayableRefreshLicenseCallBack;)V
     .locals 0
 
-    .prologue
-    .line 1299
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$9;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$9;->val$invokedFrom:Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$OfflineRefreshInvoke;
@@ -36,15 +34,12 @@
 .method public onOfflineManifestResponse(Lcom/netflix/mediaclient/service/player/manifest/NfManifest;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 3
 
-    .prologue
-    .line 1303
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 1304
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$9;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$9;->val$invokedFrom:Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$OfflineRefreshInvoke;
@@ -53,18 +48,15 @@
 
     invoke-static {v0, v1, p1, v2}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;->access$1800(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$OfflineRefreshInvoke;Lcom/netflix/mediaclient/service/player/manifest/NfManifest;Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface$PlayableRefreshLicenseCallBack;)V
 
-    .line 1310
     :cond_0
     :goto_0
     return-void
 
-    .line 1306
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$9;->val$callback:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface$PlayableRefreshLicenseCallBack;
 
     if-eqz v0, :cond_0
 
-    .line 1307
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$9;->val$callback:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface$PlayableRefreshLicenseCallBack;
 
     invoke-virtual {v0, p2}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface$PlayableRefreshLicenseCallBack;->onLicenseRefreshDone(Lcom/netflix/mediaclient/android/app/Status;)V

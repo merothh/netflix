@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 403
     invoke-static {}, Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat$Status;->values()[Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat$Status;
 
     move-result-object v0

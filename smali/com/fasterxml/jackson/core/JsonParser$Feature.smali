@@ -50,7 +50,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -61,7 +60,6 @@
 
     const/4 v3, 0x0
 
-    .line 59
     new-instance v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
     const-string/jumbo v1, "AUTO_CLOSE_SOURCE"
@@ -70,7 +68,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;->AUTO_CLOSE_SOURCE:Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
-    .line 75
     new-instance v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
     const-string/jumbo v1, "ALLOW_COMMENTS"
@@ -79,7 +76,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;->ALLOW_COMMENTS:Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
-    .line 89
     new-instance v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
     const-string/jumbo v1, "ALLOW_YAML_COMMENTS"
@@ -88,7 +84,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;->ALLOW_YAML_COMMENTS:Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
-    .line 100
     new-instance v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
     const-string/jumbo v1, "ALLOW_UNQUOTED_FIELD_NAMES"
@@ -97,7 +92,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;->ALLOW_UNQUOTED_FIELD_NAMES:Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
-    .line 113
     new-instance v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
     const-string/jumbo v1, "ALLOW_SINGLE_QUOTES"
@@ -106,7 +100,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;->ALLOW_SINGLE_QUOTES:Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
-    .line 126
     new-instance v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
     const-string/jumbo v1, "ALLOW_UNQUOTED_CONTROL_CHARS"
@@ -117,7 +110,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;->ALLOW_UNQUOTED_CONTROL_CHARS:Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
-    .line 137
     new-instance v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
     const-string/jumbo v1, "ALLOW_BACKSLASH_ESCAPING_ANY_CHARACTER"
@@ -128,7 +120,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;->ALLOW_BACKSLASH_ESCAPING_ANY_CHARACTER:Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
-    .line 149
     new-instance v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
     const-string/jumbo v1, "ALLOW_NUMERIC_LEADING_ZEROS"
@@ -139,7 +130,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;->ALLOW_NUMERIC_LEADING_ZEROS:Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
-    .line 169
     new-instance v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
     const-string/jumbo v1, "ALLOW_NON_NUMERIC_NUMBERS"
@@ -150,7 +140,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;->ALLOW_NON_NUMERIC_NUMBERS:Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
-    .line 187
     new-instance v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
     const-string/jumbo v1, "STRICT_DUPLICATE_DETECTION"
@@ -161,7 +150,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;->STRICT_DUPLICATE_DETECTION:Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
-    .line 211
     new-instance v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
     const-string/jumbo v1, "IGNORE_UNDEFINED"
@@ -172,7 +160,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;->IGNORE_UNDEFINED:Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
-    .line 43
     const/16 v0, 0xb
 
     new-array v0, v0, [Lcom/fasterxml/jackson/core/JsonParser$Feature;
@@ -246,11 +233,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 236
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 237
     const/4 v0, 0x1
 
     invoke-virtual {p0}, Lcom/fasterxml/jackson/core/JsonParser$Feature;->ordinal()I
@@ -261,20 +245,16 @@
 
     iput v0, p0, Lcom/fasterxml/jackson/core/JsonParser$Feature;->_mask:I
 
-    .line 238
     iput-boolean p3, p0, Lcom/fasterxml/jackson/core/JsonParser$Feature;->_defaultState:Z
 
-    .line 239
     return-void
 .end method
 
 .method public static collectDefaults()I
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 228
     invoke-static {}, Lcom/fasterxml/jackson/core/JsonParser$Feature;->values()[Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
     move-result-object v2
@@ -288,27 +268,23 @@
 
     aget-object v4, v2, v1
 
-    .line 229
     invoke-virtual {v4}, Lcom/fasterxml/jackson/core/JsonParser$Feature;->enabledByDefault()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 230
     invoke-virtual {v4}, Lcom/fasterxml/jackson/core/JsonParser$Feature;->getMask()I
 
     move-result v4
 
     or-int/2addr v0, v4
 
-    .line 228
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 233
     :cond_1
     return v0
 .end method
@@ -316,8 +292,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/fasterxml/jackson/core/JsonParser$Feature;
     .locals 1
 
-    .prologue
-    .line 43
     const-class v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -332,8 +306,6 @@
 .method public static values()[Lcom/fasterxml/jackson/core/JsonParser$Feature;
     .locals 1
 
-    .prologue
-    .line 43
     sget-object v0, Lcom/fasterxml/jackson/core/JsonParser$Feature;->$VALUES:[Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
     invoke-virtual {v0}, [Lcom/fasterxml/jackson/core/JsonParser$Feature;->clone()Ljava/lang/Object;
@@ -350,8 +322,6 @@
 .method public enabledByDefault()Z
     .locals 1
 
-    .prologue
-    .line 241
     iget-boolean v0, p0, Lcom/fasterxml/jackson/core/JsonParser$Feature;->_defaultState:Z
 
     return v0
@@ -360,8 +330,6 @@
 .method public enabledIn(I)Z
     .locals 1
 
-    .prologue
-    .line 246
     iget v0, p0, Lcom/fasterxml/jackson/core/JsonParser$Feature;->_mask:I
 
     and-int/2addr v0, p1
@@ -382,8 +350,6 @@
 .method public getMask()I
     .locals 1
 
-    .prologue
-    .line 248
     iget v0, p0, Lcom/fasterxml/jackson/core/JsonParser$Feature;->_mask:I
 
     return v0

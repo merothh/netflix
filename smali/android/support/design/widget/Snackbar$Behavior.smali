@@ -22,8 +22,6 @@
 .method constructor <init>(Landroid/support/design/widget/Snackbar;)V
     .locals 0
 
-    .prologue
-    .line 856
     iput-object p1, p0, Landroid/support/design/widget/Snackbar$Behavior;->this$0:Landroid/support/design/widget/Snackbar;
 
     invoke-direct {p0}, Landroid/support/design/widget/SwipeDismissBehavior;-><init>()V
@@ -36,8 +34,6 @@
 .method public canSwipeDismissView(Landroid/view/View;)Z
     .locals 1
 
-    .prologue
-    .line 859
     instance-of v0, p1, Landroid/support/design/widget/Snackbar$SnackbarLayout;
 
     return v0
@@ -46,8 +42,6 @@
 .method public onInterceptTouchEvent(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/Snackbar$SnackbarLayout;Landroid/view/MotionEvent;)Z
     .locals 2
 
-    .prologue
-    .line 867
     invoke-virtual {p3}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
@@ -66,14 +60,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 868
     invoke-virtual {p3}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 879
     :cond_0
     :goto_0
     :pswitch_0
@@ -83,7 +75,6 @@
 
     return v0
 
-    .line 870
     :pswitch_1
     invoke-static {}, Landroid/support/design/widget/SnackbarManager;->getInstance()Landroid/support/design/widget/SnackbarManager;
 
@@ -97,7 +88,6 @@
 
     goto :goto_0
 
-    .line 874
     :pswitch_2
     invoke-static {}, Landroid/support/design/widget/SnackbarManager;->getInstance()Landroid/support/design/widget/SnackbarManager;
 
@@ -111,7 +101,6 @@
 
     goto :goto_0
 
-    .line 868
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -124,8 +113,6 @@
 .method public bridge synthetic onInterceptTouchEvent(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .prologue
-    .line 856
     check-cast p2, Landroid/support/design/widget/Snackbar$SnackbarLayout;
 
     invoke-virtual {p0, p1, p2, p3}, Landroid/support/design/widget/Snackbar$Behavior;->onInterceptTouchEvent(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/Snackbar$SnackbarLayout;Landroid/view/MotionEvent;)Z

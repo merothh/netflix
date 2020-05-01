@@ -50,7 +50,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -61,7 +60,6 @@
 
     const/4 v4, 0x0
 
-    .line 4
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
     const-string/jumbo v1, "CONTINUE_WATCHING"
@@ -72,7 +70,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->CONTINUE_WATCHING:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
-    .line 5
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
     const-string/jumbo v1, "INSTANT_QUEUE"
@@ -83,7 +80,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->INSTANT_QUEUE:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
-    .line 6
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
     const-string/jumbo v1, "SOCIAL_GROUP"
@@ -94,7 +90,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->SOCIAL_GROUP:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
-    .line 7
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
     const-string/jumbo v1, "SOCIAL_FRIEND"
@@ -105,7 +100,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->SOCIAL_FRIEND:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
-    .line 8
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
     const-string/jumbo v1, "SOCIAL_POPULAR"
@@ -116,7 +110,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->SOCIAL_POPULAR:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
-    .line 9
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
     const-string/jumbo v1, "BILLBOARD"
@@ -129,7 +122,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->BILLBOARD:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
-    .line 10
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
     const-string/jumbo v1, "DISCOVERY_ROW"
@@ -142,7 +134,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->DISCOVERY_ROW:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
-    .line 11
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
     const-string/jumbo v1, "CHARACTERS"
@@ -155,7 +146,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->CHARACTERS:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
-    .line 12
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
     const-string/jumbo v1, "FLAT_GENRE"
@@ -168,7 +158,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->FLAT_GENRE:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
-    .line 13
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
     const-string/jumbo v1, "POPULAR_TITLES"
@@ -181,7 +170,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->POPULAR_TITLES:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
-    .line 14
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
     const-string/jumbo v1, "TOP_TEN"
@@ -194,7 +182,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->TOP_TEN:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
-    .line 15
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
     const-string/jumbo v1, "STANDARD"
@@ -207,7 +194,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->STANDARD:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
-    .line 3
     const/16 v0, 0xc
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
@@ -289,22 +275,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 19
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 20
     iput-object p3, p0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->value:Ljava/lang/String;
 
-    .line 21
     return-void
 .end method
 
 .method public static create(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
     .locals 5
 
-    .prologue
-    .line 24
     invoke-static {}, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->values()[Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
     move-result-object v2
@@ -320,7 +300,6 @@
 
     aget-object v0, v2, v1
 
-    .line 25
     iget-object v4, v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->value:Ljava/lang/String;
 
     invoke-virtual {v4, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -329,11 +308,9 @@
 
     if-eqz v4, :cond_0
 
-    .line 29
     :goto_1
     return-object v0
 
-    .line 24
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -341,7 +318,6 @@
 
     goto :goto_0
 
-    .line 29
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->STANDARD:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
@@ -351,8 +327,6 @@
 .method public static isRegularLomoForPreApp(Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;)Z
     .locals 1
 
-    .prologue
-    .line 33
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->STANDARD:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->equals(Ljava/lang/Object;)Z
@@ -363,7 +337,6 @@
 
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->FLAT_GENRE:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
-    .line 34
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -372,7 +345,6 @@
 
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->POPULAR_TITLES:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
-    .line 35
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -381,7 +353,6 @@
 
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->TOP_TEN:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
-    .line 36
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -391,11 +362,9 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 33
     :goto_0
     return v0
 
-    .line 36
     :cond_1
     const/4 v0, 0x0
 
@@ -405,8 +374,6 @@
 .method public static usesVerticalBoxArtType(Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;)Z
     .locals 1
 
-    .prologue
-    .line 40
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->CONTINUE_WATCHING:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->equals(Ljava/lang/Object;)Z
@@ -417,7 +384,6 @@
 
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->BILLBOARD:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
-    .line 41
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -426,7 +392,6 @@
 
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->DISCOVERY_ROW:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
-    .line 42
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -435,11 +400,9 @@
 
     const/4 v0, 0x1
 
-    .line 40
     :goto_0
     return v0
 
-    .line 42
     :cond_0
     const/4 v0, 0x0
 
@@ -449,8 +412,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
     .locals 1
 
-    .prologue
-    .line 3
     const-class v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -465,8 +426,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
     .locals 1
 
-    .prologue
-    .line 3
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->clone()Ljava/lang/Object;

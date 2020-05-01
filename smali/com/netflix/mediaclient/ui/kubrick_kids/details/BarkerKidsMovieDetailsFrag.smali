@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 25
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerMovieDetailsFrag;-><init>()V
 
     return-void
@@ -17,8 +15,6 @@
 .method static synthetic access$000(Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;)Landroid/support/v7/widget/RecyclerView;
     .locals 1
 
-    .prologue
-    .line 25
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;->recyclerView:Landroid/support/v7/widget/RecyclerView;
 
     return-object v0
@@ -27,8 +23,6 @@
 .method static synthetic access$100(Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;)I
     .locals 1
 
-    .prologue
-    .line 25
     iget v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;->numColumns:I
 
     return v0
@@ -37,8 +31,6 @@
 .method static synthetic access$200(Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;)I
     .locals 1
 
-    .prologue
-    .line 25
     iget v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;->numColumns:I
 
     return v0
@@ -47,26 +39,20 @@
 .method public static create(Ljava/lang/String;)Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;
     .locals 3
 
-    .prologue
-    .line 27
     new-instance v0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;-><init>()V
 
-    .line 29
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 30
     const-string/jumbo v2, "video_id"
 
     invoke-virtual {v1, v2, p0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 31
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;->setArguments(Landroid/os/Bundle;)V
 
-    .line 32
     return-object v0
 .end method
 
@@ -75,8 +61,6 @@
 .method protected getBackgroundResource()I
     .locals 1
 
-    .prologue
-    .line 100
     const v0, 0x7f0e00ec
 
     return v0
@@ -85,8 +69,6 @@
 .method protected getLayoutId()I
     .locals 1
 
-    .prologue
-    .line 95
     const v0, 0x7f03007a
 
     return v0
@@ -95,8 +77,6 @@
 .method protected getNumColumns()I
     .locals 2
 
-    .prologue
-    .line 73
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -117,8 +97,6 @@
 .method protected getRecyclerViewShadowWidth()I
     .locals 3
 
-    .prologue
-    .line 90
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -149,8 +127,6 @@
 .method protected initDetailsViewGroup(Landroid/view/View;)V
     .locals 2
 
-    .prologue
-    .line 37
     new-instance v0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag$KubrickKidsMovieDetailsViewGroup;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;->getActivity()Landroid/app/Activity;
@@ -161,34 +137,28 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;->detailsViewGroup:Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;
 
-    .line 38
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;->detailsViewGroup:Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;->removeActionBarDummyView()V
 
-    .line 39
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;->detailsViewGroup:Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;->showRelatedTitle()V
 
-    .line 40
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;->detailsViewGroup:Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;
 
     check-cast v0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerVideoDetailsViewGroup;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerVideoDetailsViewGroup;->hideDataSelector()V
 
-    .line 41
     return-void
 .end method
 
 .method protected setupDetailsPageParallaxScrollListener()V
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 105
     new-instance v0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/KidsParallax;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;->recyclerView:Landroid/support/v7/widget/RecyclerView;
@@ -213,7 +183,6 @@
 
     check-cast v4, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerVideoDetailsViewGroup;
 
-    .line 106
     invoke-virtual {v4}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerVideoDetailsViewGroup;->getHeroImage2()Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
     move-result-object v4
@@ -228,37 +197,30 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;->parallaxScroller:Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener;
 
-    .line 108
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;->recyclerView:Landroid/support/v7/widget/RecyclerView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;->parallaxScroller:Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener;
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/RecyclerView;->setOnScrollListener(Landroid/support/v7/widget/RecyclerView$OnScrollListener;)V
 
-    .line 109
     return-void
 .end method
 
 .method protected setupRecyclerView()V
     .locals 2
 
-    .prologue
-    .line 78
     invoke-super {p0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerMovieDetailsFrag;->setupRecyclerView()V
 
-    .line 79
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;->recyclerView:Landroid/support/v7/widget/RecyclerView;
 
     if-eqz v0, :cond_0
 
-    .line 80
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;->recyclerView:Landroid/support/v7/widget/RecyclerView;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/RecyclerView;->setBackgroundColor(I)V
 
-    .line 82
     :cond_0
     return-void
 .end method
@@ -266,11 +228,8 @@
 .method protected setupRecyclerViewAdapter()V
     .locals 2
 
-    .prologue
-    .line 45
     invoke-super {p0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerMovieDetailsFrag;->setupRecyclerViewAdapter()V
 
-    .line 46
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;->adapter:Lcom/netflix/mediaclient/android/widget/RecyclerViewHeaderAdapter;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag$1;
@@ -279,20 +238,16 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/RecyclerViewHeaderAdapter;->setViewCreator(Lcom/netflix/mediaclient/android/widget/RecyclerViewHeaderAdapter$IViewCreator;)V
 
-    .line 69
     return-void
 .end method
 
 .method protected setupRecyclerViewItemDecoration()V
     .locals 5
 
-    .prologue
-    .line 116
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;->recyclerView:Landroid/support/v7/widget/RecyclerView;
 
     new-instance v1, Lcom/netflix/mediaclient/util/ItemDecorationEdgePadding;
 
-    .line 117
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
@@ -313,21 +268,16 @@
 
     invoke-direct {v1, v2, v3, v4}, Lcom/netflix/mediaclient/util/ItemDecorationEdgePadding;-><init>(III)V
 
-    .line 116
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/RecyclerView;->addItemDecoration(Landroid/support/v7/widget/RecyclerView$ItemDecoration;)V
 
-    .line 119
     return-void
 .end method
 
 .method protected setupRecyclerViewLayoutManager()V
     .locals 2
 
-    .prologue
-    .line 85
     invoke-super {p0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerMovieDetailsFrag;->setupRecyclerViewLayoutManager()V
 
-    .line 86
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;->recyclerView:Landroid/support/v7/widget/RecyclerView;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -344,6 +294,5 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 87
     return-void
 .end method

@@ -20,25 +20,18 @@
 .method public constructor <init>(ILjava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     iput p1, p0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler;->startTimeSeconds:I
 
-    .line 38
     iput-object p2, p0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler;->scene:Ljava/lang/String;
 
-    .line 39
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 30
     iget-object v0, p0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler;->scene:Ljava/lang/String;
 
     return-object v0
@@ -47,8 +40,6 @@
 .method static synthetic access$102(Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler;I)I
     .locals 0
 
-    .prologue
-    .line 30
     iput p1, p0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler;->startTimeSeconds:I
 
     return p1
@@ -57,8 +48,6 @@
 .method private handle(Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/android/activity/NetflixActivity;Ljava/lang/String;)Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;
     .locals 7
 
-    .prologue
-    .line 78
     invoke-virtual {p3}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v0
@@ -83,7 +72,6 @@
 
     invoke-interface {v6, p1, v0}, Lcom/netflix/mediaclient/servicemgr/IBrowseManager;->fetchVideoSummary(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/ManagerCallback;)Z
 
-    .line 90
     sget-object v0, Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;->HANDLING_WITH_DELAY:Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;
 
     return-object v0
@@ -103,10 +91,8 @@
         }
     .end annotation
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 43
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v1
@@ -125,24 +111,20 @@
 .method protected play(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/Playable;Ljava/lang/String;Lcom/netflix/mediaclient/ui/common/PlayContext;)V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 182
     invoke-static {p3}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 183
     const-string/jumbo v0, "NetflixComWatchHandler"
 
     const-string/jumbo v1, "Starting local playback"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 184
     invoke-static {p2, p4, v3}, Lcom/netflix/mediaclient/servicemgr/Asset;->create(Lcom/netflix/mediaclient/servicemgr/interface_/Playable;Lcom/netflix/mediaclient/ui/common/PlayContext;Z)Lcom/netflix/mediaclient/servicemgr/Asset;
 
     move-result-object v0
@@ -151,11 +133,9 @@
 
     invoke-static {p1, v0, v1}, Lcom/netflix/mediaclient/ui/common/PlaybackLauncher;->startPlaybackForceLocal(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/Asset;I)V
 
-    .line 208
     :goto_0
     return-void
 
-    .line 187
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -163,7 +143,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 188
     const-string/jumbo v0, "NetflixComWatchHandler"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -186,7 +165,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 191
     :cond_1
     invoke-virtual {p1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
@@ -196,17 +174,14 @@
 
     move-result-object v0
 
-    .line 192
     if-nez v0, :cond_2
 
-    .line 193
     const-string/jumbo v0, "NetflixComWatchHandler"
 
     const-string/jumbo v1, "MDX is null, go local playback"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 206
     :goto_1
     invoke-static {p2, p4, v3}, Lcom/netflix/mediaclient/servicemgr/Asset;->create(Lcom/netflix/mediaclient/servicemgr/interface_/Playable;Lcom/netflix/mediaclient/ui/common/PlayContext;Z)Lcom/netflix/mediaclient/servicemgr/Asset;
 
@@ -218,7 +193,6 @@
 
     goto :goto_0
 
-    .line 196
     :cond_2
     const-string/jumbo v1, "NetflixComWatchHandler"
 
@@ -226,17 +200,14 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 197
     invoke-interface {v0, p3}, Lcom/netflix/mediaclient/servicemgr/IMdx;->setDialUuidAsCurrentTarget(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 198
     invoke-static {p1}, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComUtils;->startHomeActivity(Lcom/netflix/mediaclient/android/activity/NetflixActivity;)V
 
-    .line 199
     invoke-static {p2, p4, v3}, Lcom/netflix/mediaclient/servicemgr/Asset;->create(Lcom/netflix/mediaclient/servicemgr/interface_/Playable;Lcom/netflix/mediaclient/ui/common/PlayContext;Z)Lcom/netflix/mediaclient/servicemgr/Asset;
 
     move-result-object v0
@@ -245,7 +216,6 @@
 
     goto :goto_0
 
-    .line 202
     :cond_3
     const-string/jumbo v0, "NetflixComWatchHandler"
 
@@ -259,15 +229,12 @@
 .method protected playVideo(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 9
 
-    .prologue
-    .line 105
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 106
     const-string/jumbo v0, "NetflixComWatchHandler"
 
     const-string/jumbo v1, "Playing video: %s, videoType: %s"
@@ -290,7 +257,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 142
     :cond_0
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->MOVIE:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
@@ -300,7 +266,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 143
     invoke-virtual {p1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v0
@@ -327,12 +292,10 @@
 
     invoke-interface {v6, p3, v7, v0}, Lcom/netflix/mediaclient/servicemgr/IBrowseManager;->fetchMovieDetails(Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/ManagerCallback;)Z
 
-    .line 150
     :cond_1
     :goto_0
     return-void
 
-    .line 144
     :cond_2
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->EPISODE:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
@@ -342,7 +305,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 145
     invoke-virtual {p1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v0
@@ -371,7 +333,6 @@
 
     goto :goto_0
 
-    .line 146
     :cond_3
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->SHOW:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
@@ -381,7 +342,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 147
     invoke-virtual {p1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v0
@@ -392,7 +352,6 @@
 
     const/4 v7, 0x0
 
-    .line 148
     invoke-static {}, Lcom/netflix/mediaclient/ui/experience/BrowseExperience;->shouldLoadKubrickLeavesInDetails()Z
 
     move-result v8
@@ -419,8 +378,6 @@
 .method protected resolveSceneAndPlay(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;Lcom/netflix/mediaclient/servicemgr/interface_/Playable;Ljava/lang/String;Lcom/netflix/mediaclient/ui/common/PlayContext;)V
     .locals 10
 
-    .prologue
-    .line 155
     iget-object v0, p0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler;->scene:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
@@ -429,7 +386,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 156
     invoke-virtual {p1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v0
@@ -462,11 +418,9 @@
 
     invoke-interface {v7, p2, v8, v9, v0}, Lcom/netflix/mediaclient/servicemgr/IBrowseManager;->fetchScenePosition(Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/ManagerCallback;)Z
 
-    .line 171
     :goto_0
     return-void
 
-    .line 169
     :cond_0
     invoke-virtual {p0, p1, p3, p4, p5}, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler;->play(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/Playable;Ljava/lang/String;Lcom/netflix/mediaclient/ui/common/PlayContext;)V
 
@@ -489,10 +443,8 @@
         }
     .end annotation
 
-    .prologue
     const/4 v3, 0x3
 
-    .line 57
     const/4 v0, 0x1
 
     invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -501,28 +453,23 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 58
     const/4 v1, 0x0
 
-    .line 61
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v2
 
     if-le v2, v3, :cond_0
 
-    .line 62
     invoke-interface {p2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
-    .line 65
     :cond_0
     invoke-direct {p0, v0, v1, p1, p3}, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler;->handle(Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/android/activity/NetflixActivity;Ljava/lang/String;)Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;
 
-    .line 66
     sget-object v0, Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;->HANDLING_WITH_DELAY:Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;
 
     return-object v0

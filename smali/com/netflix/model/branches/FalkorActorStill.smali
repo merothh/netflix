@@ -23,11 +23,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 26
     invoke-direct {p0, p1}, Lcom/netflix/model/BaseFalkorObject;-><init>(Lcom/netflix/falkor/ModelProxy;)V
 
-    .line 27
     return-void
 .end method
 
@@ -36,8 +33,6 @@
 .method public get(Ljava/lang/String;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 31
     const/4 v0, -0x1
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -50,13 +45,11 @@
     :goto_0
     packed-switch v0, :pswitch_data_1
 
-    .line 39
     const/4 v0, 0x0
 
     :goto_1
     return-object v0
 
-    .line 31
     :pswitch_0
     const-string/jumbo v1, "summary"
 
@@ -70,13 +63,11 @@
 
     goto :goto_0
 
-    .line 34
     :pswitch_1
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorActorStill;->summary:Lcom/netflix/model/branches/FalkorActorStill$Summary;
 
     goto :goto_1
 
-    .line 31
     nop
 
     :pswitch_data_0
@@ -102,23 +93,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 77
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 78
     iget-object v1, p0, Lcom/netflix/model/branches/FalkorActorStill;->summary:Lcom/netflix/model/branches/FalkorActorStill$Summary;
 
     if-eqz v1, :cond_0
 
-    .line 79
     const-string/jumbo v1, "summary"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 81
     :cond_0
     return-object v0
 .end method
@@ -126,20 +112,15 @@
 .method public getOrCreate(Ljava/lang/String;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 45
     invoke-virtual {p0, p1}, Lcom/netflix/model/branches/FalkorActorStill;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 46
     if-eqz v0, :cond_0
 
-    .line 57
     :goto_0
     return-object v0
 
-    .line 50
     :cond_0
     const/4 v0, -0x1
 
@@ -153,12 +134,10 @@
     :goto_1
     packed-switch v0, :pswitch_data_1
 
-    .line 57
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 50
     :pswitch_0
     const-string/jumbo v1, "summary"
 
@@ -172,7 +151,6 @@
 
     goto :goto_1
 
-    .line 52
     :pswitch_1
     new-instance v0, Lcom/netflix/model/branches/FalkorActorStill$Summary;
 
@@ -182,7 +160,6 @@
 
     goto :goto_0
 
-    .line 50
     nop
 
     :pswitch_data_0
@@ -199,8 +176,6 @@
 .method public getStillUrl()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 86
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorActorStill;->summary:Lcom/netflix/model/branches/FalkorActorStill$Summary;
 
     if-nez v0, :cond_0
@@ -221,8 +196,6 @@
 .method public getStillXFocus()F
     .locals 1
 
-    .prologue
-    .line 90
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorActorStill;->summary:Lcom/netflix/model/branches/FalkorActorStill$Summary;
 
     if-nez v0, :cond_0
@@ -251,8 +224,6 @@
 .method public getStillYFocus()F
     .locals 1
 
-    .prologue
-    .line 94
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorActorStill;->summary:Lcom/netflix/model/branches/FalkorActorStill$Summary;
 
     if-nez v0, :cond_0
@@ -281,21 +252,16 @@
 .method public remove(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 72
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/netflix/model/branches/FalkorActorStill;->set(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 73
     return-void
 .end method
 
 .method public set(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 3
 
-    .prologue
-    .line 63
     const-string/jumbo v0, "summary"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -304,15 +270,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 64
     check-cast p2, Lcom/netflix/model/branches/FalkorActorStill$Summary;
 
     iput-object p2, p0, Lcom/netflix/model/branches/FalkorActorStill;->summary:Lcom/netflix/model/branches/FalkorActorStill$Summary;
 
-    .line 68
     return-void
 
-    .line 66
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 

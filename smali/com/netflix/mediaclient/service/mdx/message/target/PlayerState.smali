@@ -65,22 +65,16 @@
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 2
 
-    .prologue
     const/4 v1, -0x1
 
-    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     iput v1, p0, Lcom/netflix/mediaclient/service/mdx/message/target/PlayerState;->mTime:I
 
-    .line 54
     iput v1, p0, Lcom/netflix/mediaclient/service/mdx/message/target/PlayerState;->mVolume:I
 
-    .line 55
     iput v1, p0, Lcom/netflix/mediaclient/service/mdx/message/target/PlayerState;->mDuration:I
 
-    .line 74
     const-string/jumbo v0, "xid"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
@@ -89,7 +83,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/PlayerState;->mXid:Ljava/lang/String;
 
-    .line 75
     const-string/jumbo v0, "catalogId"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
@@ -98,7 +91,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/PlayerState;->mCatalogId:Ljava/lang/String;
 
-    .line 77
     const-string/jumbo v0, "duration"
 
     invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
@@ -107,7 +99,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/PlayerState;->mDuration:I
 
-    .line 78
     const-string/jumbo v0, "time"
 
     invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
@@ -116,7 +107,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/PlayerState;->mTime:I
 
-    .line 79
     const-string/jumbo v0, "volume"
 
     invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
@@ -125,7 +115,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/PlayerState;->mVolume:I
 
-    .line 81
     const-string/jumbo v0, "currentState"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
@@ -134,7 +123,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/PlayerState;->mCurrentState:Ljava/lang/String;
 
-    .line 82
     const-string/jumbo v0, "episodeId"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
@@ -143,7 +131,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/PlayerState;->mEpisodeId:Ljava/lang/String;
 
-    .line 84
     const-string/jumbo v0, "autoAdvanceIncrement"
 
     const-string/jumbo v1, "0"
@@ -154,7 +141,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/PlayerState;->mAutoAdvanceIncrement:Ljava/lang/String;
 
-    .line 86
     const-string/jumbo v0, "postplayState"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
@@ -163,7 +149,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/PlayerState;->mPostplayStateBlob:Ljava/lang/String;
 
-    .line 87
     return-void
 .end method
 
@@ -172,8 +157,6 @@
 .method public getAutoAdvanceIncrement()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 143
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/PlayerState;->mAutoAdvanceIncrement:Ljava/lang/String;
 
     return-object v0
@@ -182,8 +165,6 @@
 .method public getCatalogId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 115
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/PlayerState;->mCatalogId:Ljava/lang/String;
 
     return-object v0
@@ -192,8 +173,6 @@
 .method public getCurrentState()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 96
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/PlayerState;->mCurrentState:Ljava/lang/String;
 
     return-object v0
@@ -202,8 +181,6 @@
 .method public getDuration()I
     .locals 1
 
-    .prologue
-    .line 150
     iget v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/PlayerState;->mDuration:I
 
     return v0
@@ -212,8 +189,6 @@
 .method public getEpisodeId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 125
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/PlayerState;->mEpisodeId:Ljava/lang/String;
 
     return-object v0
@@ -222,8 +197,6 @@
 .method public getPostplayState()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 156
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/PlayerState;->mPostplayStateBlob:Ljava/lang/String;
 
     return-object v0
@@ -232,8 +205,6 @@
 .method public getTime()I
     .locals 1
 
-    .prologue
-    .line 147
     iget v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/PlayerState;->mTime:I
 
     return v0
@@ -242,8 +213,6 @@
 .method public getVolume()I
     .locals 1
 
-    .prologue
-    .line 153
     iget v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/PlayerState;->mVolume:I
 
     return v0
@@ -252,8 +221,6 @@
 .method public getXid()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 106
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/PlayerState;->mXid:Ljava/lang/String;
 
     return-object v0
@@ -262,8 +229,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 132
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -30,13 +30,10 @@
 .method private constructor <init>(Lcom/netflix/mediaclient/media/BookmarkStore;)V
     .locals 1
 
-    .prologue
-    .line 226
     iput-object p1, p0, Lcom/netflix/mediaclient/media/BookmarkStore$BookmarkData;->this$0:Lcom/netflix/mediaclient/media/BookmarkStore;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 227
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -49,8 +46,6 @@
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/media/BookmarkStore;Lcom/netflix/mediaclient/media/BookmarkStore$1;)V
     .locals 0
 
-    .prologue
-    .line 226
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/media/BookmarkStore$BookmarkData;-><init>(Lcom/netflix/mediaclient/media/BookmarkStore;)V
 
     return-void

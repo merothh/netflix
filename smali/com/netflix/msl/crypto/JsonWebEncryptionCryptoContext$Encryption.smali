@@ -26,12 +26,10 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 405
     new-instance v0, Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$Encryption;
 
     const-string/jumbo v1, "A128GCM"
@@ -40,7 +38,6 @@
 
     sput-object v0, Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$Encryption;->A128GCM:Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$Encryption;
 
-    .line 407
     new-instance v0, Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$Encryption;
 
     const-string/jumbo v1, "A256GCM"
@@ -49,7 +46,6 @@
 
     sput-object v0, Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$Encryption;->A256GCM:Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$Encryption;
 
-    .line 403
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$Encryption;
@@ -75,8 +71,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 403
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -85,8 +79,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$Encryption;
     .locals 1
 
-    .prologue
-    .line 403
     const-class v0, Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$Encryption;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -101,8 +93,6 @@
 .method public static values()[Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$Encryption;
     .locals 1
 
-    .prologue
-    .line 403
     sget-object v0, Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$Encryption;->$VALUES:[Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$Encryption;
 
     invoke-virtual {v0}, [Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$Encryption;->clone()Ljava/lang/Object;

@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 28
     const-string/jumbo v0, "[-_./;:]"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -27,8 +25,6 @@
 .method public static final throwInternal()V
     .locals 2
 
-    .prologue
-    .line 179
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string/jumbo v1, "Internal error: this code path should never get executed"

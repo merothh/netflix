@@ -18,11 +18,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;-><init>(Landroid/content/Context;)V
 
-    .line 18
     return-void
 .end method
 
@@ -31,8 +28,6 @@
 .method protected computeNumItemsPerPage()I
     .locals 2
 
-    .prologue
-    .line 33
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/PaginatedLoMoAdapter;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     const/4 v1, 0x0
@@ -47,8 +42,6 @@
 .method protected computeNumVideosToFetchPerBatch(I)I
     .locals 2
 
-    .prologue
-    .line 38
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/PaginatedLoMoAdapter;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     sget-object v1, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->STANDARD:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
@@ -76,8 +69,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 22
     const-class v0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewGroup;
 
     invoke-virtual {p1, v0}, Lcom/netflix/mediaclient/android/widget/ObjectRecycler$ViewRecycler;->pop(Ljava/lang/Class;)Ljava/lang/Object;
@@ -86,10 +77,8 @@
 
     check-cast v0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewGroup;
 
-    .line 23
     if-nez v0, :cond_0
 
-    .line 24
     new-instance v0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewGroup;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/PaginatedLoMoAdapter;->getActivity()Landroid/app/Activity;
@@ -98,10 +87,8 @@
 
     invoke-direct {v0, v1}, Lcom/netflix/mediaclient/ui/lomo/LoMoViewGroup;-><init>(Landroid/content/Context;)V
 
-    .line 25
     invoke-virtual {v0, p3}, Lcom/netflix/mediaclient/ui/lomo/LoMoViewGroup;->init(I)V
 
-    .line 27
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/PaginatedLoMoAdapter;->getListViewPos()I
 
@@ -117,6 +104,5 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/netflix/mediaclient/ui/lomo/LoMoViewGroup;->updateDataThenViews(Ljava/util/List;IIILcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;)V
 
-    .line 28
     return-object v0
 .end method

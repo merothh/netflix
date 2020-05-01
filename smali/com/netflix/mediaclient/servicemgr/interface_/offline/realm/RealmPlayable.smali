@@ -68,8 +68,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -78,186 +76,158 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/servicemgr/interface_/Playable;)V
     .locals 2
 
-    .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->getPlayableId()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$playableId(Ljava/lang/String;)V
 
-    .line 52
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->getParentId()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$parentId(Ljava/lang/String;)V
 
-    .line 53
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->isNSRE()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$isNSRE(Z)V
 
-    .line 54
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->isPlayableEpisode()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$isEpisode(Z)V
 
-    .line 55
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->getPlayableTitle()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$title(Ljava/lang/String;)V
 
-    .line 56
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->getParentTitle()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$parentTitle(Ljava/lang/String;)V
 
-    .line 57
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->getPlayableBookmarkUpdateTime()J
 
     move-result-wide v0
 
     invoke-virtual {p0, v0, v1}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$watchedTime(J)V
 
-    .line 58
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->getPlayableBookmarkPosition()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$bookmark(I)V
 
-    .line 59
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->getSeasonNumber()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$seasonNumber(I)V
 
-    .line 60
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->getEpisodeNumber()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$episodeNumber(I)V
 
-    .line 61
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->getRuntime()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$duration(I)V
 
-    .line 62
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->getEndtime()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$endtime(I)V
 
-    .line 63
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->getLogicalStart()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$logicalStart(I)V
 
-    .line 64
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->isAutoPlayEnabled()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$isAutoPlay(Z)V
 
-    .line 65
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->isNextPlayableEpisode()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$isNextPlayableEpisode(Z)V
 
-    .line 66
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->isAgeProtected()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$isAgeProtected(Z)V
 
-    .line 67
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->isPinProtected()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$isPinProtected(Z)V
 
-    .line 68
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->getExpirationTime()J
 
     move-result-wide v0
 
     invoke-virtual {p0, v0, v1}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$expTime(J)V
 
-    .line 69
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->isAdvisoryDisabled()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$isAdvisoryDisabled(Z)V
 
-    .line 70
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->getSeasonAbbrSeqLabel()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$seasonLabel(Ljava/lang/String;)V
 
-    .line 71
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->getAutoPlayMaxCount()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$maxAutoplay(I)V
 
-    .line 72
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->isExemptFromInterrupterLimit()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$isExemptFromLimit(Z)V
 
-    .line 73
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->isAvailableToStream()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$isAvailableToStream(Z)V
 
-    .line 74
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->isSupplementalVideo()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$isSupplementalVideo(Z)V
 
-    .line 75
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Playable;->getAdvisories()Ljava/util/List;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 76
     new-instance v0, Lcom/google/gson/Gson;
 
     invoke-direct {v0}, Lcom/google/gson/Gson;-><init>()V
@@ -272,7 +242,6 @@
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmSet$advisoriesString(Ljava/lang/String;)V
 
-    .line 78
     :cond_0
     return-void
 .end method
@@ -291,8 +260,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 182
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$advisoriesString()Ljava/lang/String;
 
     move-result-object v0
@@ -335,8 +302,6 @@
 .method public getAutoPlayMaxCount()I
     .locals 1
 
-    .prologue
-    .line 157
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$maxAutoplay()I
 
     move-result v0
@@ -347,8 +312,6 @@
 .method public getEndtime()I
     .locals 1
 
-    .prologue
-    .line 127
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$endtime()I
 
     move-result v0
@@ -359,8 +322,6 @@
 .method public getEpisodeNumber()I
     .locals 1
 
-    .prologue
-    .line 137
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$episodeNumber()I
 
     move-result v0
@@ -371,8 +332,6 @@
 .method public getExpirationTime()J
     .locals 2
 
-    .prologue
-    .line 177
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$expTime()J
 
     move-result-wide v0
@@ -383,8 +342,6 @@
 .method public getLogicalStart()I
     .locals 1
 
-    .prologue
-    .line 132
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$logicalStart()I
 
     move-result v0
@@ -395,8 +352,6 @@
 .method public getParentId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 117
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$parentId()Ljava/lang/String;
 
     move-result-object v0
@@ -407,8 +362,6 @@
 .method public getParentTitle()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 112
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$parentTitle()Ljava/lang/String;
 
     move-result-object v0
@@ -419,8 +372,6 @@
 .method public getPlayableBookmarkPosition()I
     .locals 1
 
-    .prologue
-    .line 107
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$bookmark()I
 
     move-result v0
@@ -431,8 +382,6 @@
 .method public getPlayableBookmarkUpdateTime()J
     .locals 2
 
-    .prologue
-    .line 102
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$watchedTime()J
 
     move-result-wide v0
@@ -443,8 +392,6 @@
 .method public getPlayableId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 87
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$playableId()Ljava/lang/String;
 
     move-result-object v0
@@ -455,8 +402,6 @@
 .method public getPlayableTitle()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 92
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$title()Ljava/lang/String;
 
     move-result-object v0
@@ -467,8 +412,6 @@
 .method public getRuntime()I
     .locals 1
 
-    .prologue
-    .line 122
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$duration()I
 
     move-result v0
@@ -479,8 +422,6 @@
 .method public getSeasonAbbrSeqLabel()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 192
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$seasonLabel()Ljava/lang/String;
 
     move-result-object v0
@@ -491,8 +432,6 @@
 .method public getSeasonNumber()I
     .locals 1
 
-    .prologue
-    .line 142
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$seasonNumber()I
 
     move-result v0
@@ -503,8 +442,6 @@
 .method public isAdvisoryDisabled()Z
     .locals 1
 
-    .prologue
-    .line 187
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$isAdvisoryDisabled()Z
 
     move-result v0
@@ -515,8 +452,6 @@
 .method public isAgeProtected()Z
     .locals 1
 
-    .prologue
-    .line 167
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$isAgeProtected()Z
 
     move-result v0
@@ -527,8 +462,6 @@
 .method public isAutoPlayEnabled()Z
     .locals 1
 
-    .prologue
-    .line 147
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$isAutoPlay()Z
 
     move-result v0
@@ -539,8 +472,6 @@
 .method public isAvailableOffline()Z
     .locals 1
 
-    .prologue
-    .line 82
     const/4 v0, 0x1
 
     return v0
@@ -549,8 +480,6 @@
 .method public isAvailableToStream()Z
     .locals 1
 
-    .prologue
-    .line 197
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$isAvailableToStream()Z
 
     move-result v0
@@ -561,8 +490,6 @@
 .method public isExemptFromInterrupterLimit()Z
     .locals 1
 
-    .prologue
-    .line 152
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$isExemptFromLimit()Z
 
     move-result v0
@@ -573,8 +500,6 @@
 .method public isNSRE()Z
     .locals 1
 
-    .prologue
-    .line 202
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$isNSRE()Z
 
     move-result v0
@@ -585,8 +510,6 @@
 .method public isNextPlayableEpisode()Z
     .locals 1
 
-    .prologue
-    .line 162
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$isNextPlayableEpisode()Z
 
     move-result v0
@@ -597,8 +520,6 @@
 .method public isPinProtected()Z
     .locals 1
 
-    .prologue
-    .line 172
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$isPinProtected()Z
 
     move-result v0
@@ -609,8 +530,6 @@
 .method public isPlayableEpisode()Z
     .locals 1
 
-    .prologue
-    .line 97
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$isEpisode()Z
 
     move-result v0
@@ -621,8 +540,6 @@
 .method public isSupplementalVideo()Z
     .locals 1
 
-    .prologue
-    .line 207
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;->realmGet$isSupplementalVideo()Z
 
     move-result v0
@@ -1033,10 +950,8 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
     const/16 v2, 0x27
 
-    .line 212
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

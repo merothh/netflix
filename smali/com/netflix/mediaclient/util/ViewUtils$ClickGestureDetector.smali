@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 985
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
 
     return-void
@@ -19,8 +17,6 @@
 .method public onSingleTapUp(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .prologue
-    .line 988
     const/4 v0, 0x1
 
     return v0

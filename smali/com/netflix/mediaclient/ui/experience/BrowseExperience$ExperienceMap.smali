@@ -19,8 +19,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 747
     invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
     return-void
@@ -29,8 +27,6 @@
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/ui/experience/BrowseExperience$1;)V
     .locals 0
 
-    .prologue
-    .line 747
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/experience/BrowseExperience$ExperienceMap;-><init>()V
 
     return-void

@@ -40,7 +40,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x5
 
     const/4 v7, 0x4
@@ -51,7 +50,6 @@
 
     const/4 v4, 0x1
 
-    .line 17
     new-instance v0, Lcom/netflix/mediaclient/partner/PartnerRequestType;
 
     const-string/jumbo v1, "getExternalSsoService"
@@ -64,7 +62,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/partner/PartnerRequestType;->getExternalSsoService:Lcom/netflix/mediaclient/partner/PartnerRequestType;
 
-    .line 18
     new-instance v0, Lcom/netflix/mediaclient/partner/PartnerRequestType;
 
     const-string/jumbo v1, "getExternalUserToken"
@@ -75,7 +72,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/partner/PartnerRequestType;->getExternalUserToken:Lcom/netflix/mediaclient/partner/PartnerRequestType;
 
-    .line 19
     new-instance v0, Lcom/netflix/mediaclient/partner/PartnerRequestType;
 
     const-string/jumbo v1, "requestExternalUserAuth"
@@ -86,7 +82,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/partner/PartnerRequestType;->requestExternalUserAuth:Lcom/netflix/mediaclient/partner/PartnerRequestType;
 
-    .line 20
     new-instance v0, Lcom/netflix/mediaclient/partner/PartnerRequestType;
 
     const-string/jumbo v1, "getExternalSignUpService"
@@ -97,7 +92,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/partner/PartnerRequestType;->getExternalSignUpService:Lcom/netflix/mediaclient/partner/PartnerRequestType;
 
-    .line 21
     new-instance v0, Lcom/netflix/mediaclient/partner/PartnerRequestType;
 
     const-string/jumbo v1, "getExternalUserData"
@@ -108,7 +102,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/partner/PartnerRequestType;->getExternalUserData:Lcom/netflix/mediaclient/partner/PartnerRequestType;
 
-    .line 22
     new-instance v0, Lcom/netflix/mediaclient/partner/PartnerRequestType;
 
     const-string/jumbo v1, "requestExternalUserConfirmation"
@@ -121,7 +114,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/partner/PartnerRequestType;->requestExternalUserConfirmation:Lcom/netflix/mediaclient/partner/PartnerRequestType;
 
-    .line 15
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/netflix/mediaclient/partner/PartnerRequestType;
@@ -167,25 +159,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 30
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 31
     iput p3, p0, Lcom/netflix/mediaclient/partner/PartnerRequestType;->requestCode:I
 
-    .line 32
     iput-object p4, p0, Lcom/netflix/mediaclient/partner/PartnerRequestType;->intentName:Ljava/lang/String;
 
-    .line 33
     return-void
 .end method
 
 .method public static iSignup(Lcom/netflix/mediaclient/partner/PartnerRequestType;)Z
     .locals 1
 
-    .prologue
-    .line 78
     sget-object v0, Lcom/netflix/mediaclient/partner/PartnerRequestType;->getExternalSignUpService:Lcom/netflix/mediaclient/partner/PartnerRequestType;
 
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/partner/PartnerRequestType;->equals(Ljava/lang/Object;)Z
@@ -196,7 +181,6 @@
 
     sget-object v0, Lcom/netflix/mediaclient/partner/PartnerRequestType;->getExternalUserData:Lcom/netflix/mediaclient/partner/PartnerRequestType;
 
-    .line 79
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/partner/PartnerRequestType;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -205,7 +189,6 @@
 
     sget-object v0, Lcom/netflix/mediaclient/partner/PartnerRequestType;->requestExternalUserConfirmation:Lcom/netflix/mediaclient/partner/PartnerRequestType;
 
-    .line 80
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/partner/PartnerRequestType;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -215,11 +198,9 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 78
     :goto_0
     return v0
 
-    .line 80
     :cond_1
     const/4 v0, 0x0
 
@@ -229,8 +210,6 @@
 .method public static iSso(Lcom/netflix/mediaclient/partner/PartnerRequestType;)Z
     .locals 1
 
-    .prologue
-    .line 65
     sget-object v0, Lcom/netflix/mediaclient/partner/PartnerRequestType;->getExternalSsoService:Lcom/netflix/mediaclient/partner/PartnerRequestType;
 
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/partner/PartnerRequestType;->equals(Ljava/lang/Object;)Z
@@ -241,7 +220,6 @@
 
     sget-object v0, Lcom/netflix/mediaclient/partner/PartnerRequestType;->getExternalUserToken:Lcom/netflix/mediaclient/partner/PartnerRequestType;
 
-    .line 66
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/partner/PartnerRequestType;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -250,7 +228,6 @@
 
     sget-object v0, Lcom/netflix/mediaclient/partner/PartnerRequestType;->requestExternalUserAuth:Lcom/netflix/mediaclient/partner/PartnerRequestType;
 
-    .line 67
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/partner/PartnerRequestType;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -260,11 +237,9 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 65
     :goto_0
     return v0
 
-    .line 67
     :cond_1
     const/4 v0, 0x0
 
@@ -274,8 +249,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/partner/PartnerRequestType;
     .locals 1
 
-    .prologue
-    .line 15
     const-class v0, Lcom/netflix/mediaclient/partner/PartnerRequestType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -290,8 +263,6 @@
 .method public static values()[Lcom/netflix/mediaclient/partner/PartnerRequestType;
     .locals 1
 
-    .prologue
-    .line 15
     sget-object v0, Lcom/netflix/mediaclient/partner/PartnerRequestType;->$VALUES:[Lcom/netflix/mediaclient/partner/PartnerRequestType;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/partner/PartnerRequestType;->clone()Ljava/lang/Object;
@@ -308,8 +279,6 @@
 .method public getIntentName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 54
     iget-object v0, p0, Lcom/netflix/mediaclient/partner/PartnerRequestType;->intentName:Ljava/lang/String;
 
     return-object v0
@@ -318,8 +287,6 @@
 .method public getRequestCode()I
     .locals 1
 
-    .prologue
-    .line 45
     iget v0, p0, Lcom/netflix/mediaclient/partner/PartnerRequestType;->requestCode:I
 
     return v0

@@ -13,19 +13,14 @@
 .method public constructor <init>(Lcom/netflix/msl/entityauth/PresharedKeyStore;Lcom/netflix/msl/util/AuthenticationUtils;)V
     .locals 1
 
-    .prologue
-    .line 43
     sget-object v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->PSK_PROFILE:Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
     invoke-direct {p0, v0}, Lcom/netflix/msl/entityauth/EntityAuthenticationFactory;-><init>(Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;)V
 
-    .line 44
     iput-object p1, p0, Lcom/netflix/msl/entityauth/PresharedProfileAuthenticationFactory;->store:Lcom/netflix/msl/entityauth/PresharedKeyStore;
 
-    .line 45
     iput-object p2, p0, Lcom/netflix/msl/entityauth/PresharedProfileAuthenticationFactory;->authutils:Lcom/netflix/msl/util/AuthenticationUtils;
 
-    .line 46
     return-void
 .end method
 
@@ -34,8 +29,6 @@
 .method public createData(Lcom/netflix/msl/util/MslContext;Lcom/netflix/android/org/json/JSONObject;)Lcom/netflix/msl/entityauth/EntityAuthenticationData;
     .locals 1
 
-    .prologue
-    .line 53
     new-instance v0, Lcom/netflix/msl/entityauth/PresharedProfileAuthenticationData;
 
     invoke-direct {v0, p2}, Lcom/netflix/msl/entityauth/PresharedProfileAuthenticationData;-><init>(Lcom/netflix/android/org/json/JSONObject;)V
@@ -46,13 +39,10 @@
 .method public getCryptoContext(Lcom/netflix/msl/util/MslContext;Lcom/netflix/msl/entityauth/EntityAuthenticationData;)Lcom/netflix/msl/crypto/ICryptoContext;
     .locals 6
 
-    .prologue
-    .line 62
     instance-of v0, p2, Lcom/netflix/msl/entityauth/PresharedProfileAuthenticationData;
 
     if-nez v0, :cond_0
 
-    .line 63
     new-instance v0, Lcom/netflix/msl/MslInternalException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -91,16 +81,13 @@
 
     throw v0
 
-    .line 64
     :cond_0
     check-cast p2, Lcom/netflix/msl/entityauth/PresharedProfileAuthenticationData;
 
-    .line 67
     invoke-virtual {p2}, Lcom/netflix/msl/entityauth/PresharedProfileAuthenticationData;->getPresharedKeysId()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 68
     iget-object v1, p0, Lcom/netflix/msl/entityauth/PresharedProfileAuthenticationFactory;->authutils:Lcom/netflix/msl/util/AuthenticationUtils;
 
     invoke-interface {v1, v0}, Lcom/netflix/msl/util/AuthenticationUtils;->isEntityRevoked(Ljava/lang/String;)Z
@@ -109,7 +96,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 69
     new-instance v1, Lcom/netflix/msl/MslEntityAuthException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->ENTITY_REVOKED:Lcom/netflix/msl/MslError;
@@ -140,7 +126,6 @@
 
     throw v0
 
-    .line 72
     :cond_1
     iget-object v1, p0, Lcom/netflix/msl/entityauth/PresharedProfileAuthenticationFactory;->authutils:Lcom/netflix/msl/util/AuthenticationUtils;
 
@@ -154,7 +139,6 @@
 
     if-nez v1, :cond_2
 
-    .line 73
     new-instance v1, Lcom/netflix/msl/MslEntityAuthException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->INCORRECT_ENTITYAUTH_DATA:Lcom/netflix/msl/MslError;
@@ -199,7 +183,6 @@
 
     throw v0
 
-    .line 76
     :cond_2
     iget-object v1, p0, Lcom/netflix/msl/entityauth/PresharedProfileAuthenticationFactory;->store:Lcom/netflix/msl/entityauth/PresharedKeyStore;
 
@@ -207,10 +190,8 @@
 
     move-result-object v1
 
-    .line 77
     if-nez v1, :cond_3
 
-    .line 78
     new-instance v1, Lcom/netflix/msl/MslEntityAuthException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->ENTITY_NOT_FOUND:Lcom/netflix/msl/MslError;
@@ -241,13 +222,11 @@
 
     throw v0
 
-    .line 81
     :cond_3
     invoke-virtual {p2}, Lcom/netflix/msl/entityauth/PresharedProfileAuthenticationData;->getIdentity()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 82
     new-instance v0, Lcom/netflix/msl/crypto/SymmetricCryptoContext;
 
     iget-object v3, v1, Lcom/netflix/msl/entityauth/PresharedKeyStore$KeySet;->encryptionKey:Ljavax/crypto/SecretKey;

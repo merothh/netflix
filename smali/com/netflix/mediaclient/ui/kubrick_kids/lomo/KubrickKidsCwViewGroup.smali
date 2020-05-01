@@ -7,11 +7,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 12
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwViewGroup;-><init>(Landroid/content/Context;)V
 
-    .line 13
     return-void
 .end method
 
@@ -20,8 +17,6 @@
 .method protected bridge synthetic createChildView(Landroid/content/Context;)Landroid/view/View;
     .locals 1
 
-    .prologue
-    .line 9
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/ui/kubrick_kids/lomo/KubrickKidsCwViewGroup;->createChildView(Landroid/content/Context;)Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;
 
     move-result-object v0
@@ -32,8 +27,6 @@
 .method protected createChildView(Landroid/content/Context;)Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;
     .locals 1
 
-    .prologue
-    .line 17
     invoke-static {p1}, Lcom/netflix/mediaclient/util/CWTestUtil;->isInTest(Landroid/content/Context;)Z
 
     move-result v0

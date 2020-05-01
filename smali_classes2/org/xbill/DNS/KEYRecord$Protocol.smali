@@ -23,14 +23,12 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/16 v5, 0xff
 
     const/4 v4, 0x2
 
     const/4 v3, 0x1
 
-    .line 46
     new-instance v0, Lorg/xbill/DNS/Mnemonic;
 
     const-string/jumbo v1, "KEY protocol"
@@ -39,17 +37,14 @@
 
     sput-object v0, Lorg/xbill/DNS/KEYRecord$Protocol;->protocols:Lorg/xbill/DNS/Mnemonic;
 
-    .line 50
     sget-object v0, Lorg/xbill/DNS/KEYRecord$Protocol;->protocols:Lorg/xbill/DNS/Mnemonic;
 
     invoke-virtual {v0, v5}, Lorg/xbill/DNS/Mnemonic;->setMaximum(I)V
 
-    .line 51
     sget-object v0, Lorg/xbill/DNS/KEYRecord$Protocol;->protocols:Lorg/xbill/DNS/Mnemonic;
 
     invoke-virtual {v0, v3}, Lorg/xbill/DNS/Mnemonic;->setNumericAllowed(Z)V
 
-    .line 53
     sget-object v0, Lorg/xbill/DNS/KEYRecord$Protocol;->protocols:Lorg/xbill/DNS/Mnemonic;
 
     const/4 v1, 0x0
@@ -58,21 +53,18 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 54
     sget-object v0, Lorg/xbill/DNS/KEYRecord$Protocol;->protocols:Lorg/xbill/DNS/Mnemonic;
 
     const-string/jumbo v1, "TLS"
 
     invoke-virtual {v0, v3, v1}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 55
     sget-object v0, Lorg/xbill/DNS/KEYRecord$Protocol;->protocols:Lorg/xbill/DNS/Mnemonic;
 
     const-string/jumbo v1, "EMAIL"
 
     invoke-virtual {v0, v4, v1}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 56
     sget-object v0, Lorg/xbill/DNS/KEYRecord$Protocol;->protocols:Lorg/xbill/DNS/Mnemonic;
 
     const/4 v1, 0x3
@@ -81,7 +73,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 57
     sget-object v0, Lorg/xbill/DNS/KEYRecord$Protocol;->protocols:Lorg/xbill/DNS/Mnemonic;
 
     const/4 v1, 0x4
@@ -90,22 +81,18 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 58
     sget-object v0, Lorg/xbill/DNS/KEYRecord$Protocol;->protocols:Lorg/xbill/DNS/Mnemonic;
 
     const-string/jumbo v1, "ANY"
 
     invoke-virtual {v0, v5, v1}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 59
     return-void
 .end method
 
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -114,8 +101,6 @@
 .method public static string(I)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 66
     sget-object v0, Lorg/xbill/DNS/KEYRecord$Protocol;->protocols:Lorg/xbill/DNS/Mnemonic;
 
     invoke-virtual {v0, p0}, Lorg/xbill/DNS/Mnemonic;->getText(I)Ljava/lang/String;
@@ -128,8 +113,6 @@
 .method public static value(Ljava/lang/String;)I
     .locals 1
 
-    .prologue
-    .line 77
     sget-object v0, Lorg/xbill/DNS/KEYRecord$Protocol;->protocols:Lorg/xbill/DNS/Mnemonic;
 
     invoke-virtual {v0, p0}, Lorg/xbill/DNS/Mnemonic;->getValue(Ljava/lang/String;)I

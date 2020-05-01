@@ -11,14 +11,10 @@
 .method protected constructor <init>(Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;)V
     .locals 0
 
-    .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     iput-object p1, p0, Lcom/netflix/msl/entityauth/EntityAuthenticationFactory;->scheme:Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
-    .line 40
     return-void
 .end method
 
@@ -33,8 +29,6 @@
 .method public getScheme()Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
     .locals 1
 
-    .prologue
-    .line 46
     iget-object v0, p0, Lcom/netflix/msl/entityauth/EntityAuthenticationFactory;->scheme:Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
     return-object v0

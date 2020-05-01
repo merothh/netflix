@@ -13,16 +13,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 256
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 254
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/crittercism/internal/bv$k;->a:Ljava/lang/String;
 
-    .line 258
     invoke-static {}, Lcom/crittercism/internal/bv;->b()Landroid/content/Context;
 
     move-result-object v0
@@ -43,7 +39,6 @@
 
     iput-object v0, p0, Lcom/crittercism/internal/bv$k;->a:Ljava/lang/String;
 
-    .line 259
     iget-object v0, p0, Lcom/crittercism/internal/bv$k;->a:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -56,13 +51,11 @@
 
     if-nez v0, :cond_1
 
-    .line 260
     :cond_0
     const-string/jumbo v0, "en"
 
     iput-object v0, p0, Lcom/crittercism/internal/bv$k;->a:Ljava/lang/String;
 
-    .line 262
     :cond_1
     return-void
 .end method
@@ -72,8 +65,6 @@
 .method public final a()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 265
     const-string/jumbo v0, "locale"
 
     return-object v0
@@ -82,11 +73,7 @@
 .method public final bridge synthetic b()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 253
-    .line 1269
     iget-object v0, p0, Lcom/crittercism/internal/bv$k;->a:Ljava/lang/String;
 
-    .line 253
     return-object v0
 .end method

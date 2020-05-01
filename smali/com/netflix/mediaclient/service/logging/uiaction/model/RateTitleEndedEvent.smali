@@ -21,8 +21,6 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/logging/client/model/DeviceUniqueId;JLcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;Lcom/netflix/mediaclient/service/logging/client/model/UIError;Ljava/lang/Integer;I)V
     .locals 12
 
-    .prologue
-    .line 52
     const-string/jumbo v4, "rateTitle"
 
     move-object v3, p0
@@ -41,28 +39,22 @@
 
     invoke-direct/range {v3 .. v11}, Lcom/netflix/mediaclient/service/logging/uiaction/model/BaseUIActionSessionEndedEvent;-><init>(Ljava/lang/String;Lcom/netflix/mediaclient/service/logging/client/model/DeviceUniqueId;JLcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;Lcom/netflix/mediaclient/service/logging/client/model/UIError;)V
 
-    .line 53
     move/from16 v0, p9
 
     iput v0, p0, Lcom/netflix/mediaclient/service/logging/uiaction/model/RateTitleEndedEvent;->mRating:I
 
-    .line 54
     move-object/from16 v0, p8
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/logging/uiaction/model/RateTitleEndedEvent;->mRankTitle:Ljava/lang/Integer;
 
-    .line 55
     return-void
 .end method
 
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 2
 
-    .prologue
-    .line 46
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/logging/uiaction/model/BaseUIActionSessionEndedEvent;-><init>(Lorg/json/JSONObject;)V
 
-    .line 47
     const-string/jumbo v0, " rankTitle"
 
     const/4 v1, 0x0
@@ -73,7 +65,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/logging/uiaction/model/RateTitleEndedEvent;->mRankTitle:Ljava/lang/Integer;
 
-    .line 48
     const-string/jumbo v0, " rating"
 
     const/4 v1, 0x0
@@ -84,7 +75,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/service/logging/uiaction/model/RateTitleEndedEvent;->mRating:I
 
-    .line 49
     return-void
 .end method
 
@@ -93,18 +83,14 @@
 .method protected getData()Lorg/json/JSONObject;
     .locals 3
 
-    .prologue
-    .line 64
     invoke-super {p0}, Lcom/netflix/mediaclient/service/logging/uiaction/model/BaseUIActionSessionEndedEvent;->getData()Lorg/json/JSONObject;
 
     move-result-object v0
 
-    .line 65
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/uiaction/model/RateTitleEndedEvent;->mRankTitle:Ljava/lang/Integer;
 
     if-eqz v1, :cond_0
 
-    .line 66
     const-string/jumbo v1, " rankTitle"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/logging/uiaction/model/RateTitleEndedEvent;->mRankTitle:Ljava/lang/Integer;
@@ -115,7 +101,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 68
     :cond_0
     const-string/jumbo v1, " rating"
 
@@ -123,15 +108,12 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 69
     return-object v0
 .end method
 
 .method public isMemberEvent()Z
     .locals 1
 
-    .prologue
-    .line 78
     const/4 v0, 0x1
 
     return v0

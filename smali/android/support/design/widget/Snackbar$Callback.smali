@@ -19,11 +19,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 79
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 92
     return-void
 .end method
 
@@ -32,15 +29,11 @@
 .method public onDismissed(Landroid/support/design/widget/Snackbar;I)V
     .locals 0
 
-    .prologue
-    .line 111
     return-void
 .end method
 
 .method public onShown(Landroid/support/design/widget/Snackbar;)V
     .locals 0
 
-    .prologue
-    .line 121
     return-void
 .end method

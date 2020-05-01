@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;)V
     .locals 0
 
-    .prologue
-    .line 527
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$7;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .prologue
-    .line 530
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$7;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -38,23 +34,19 @@
 
     move-result-object v0
 
-    .line 531
     const/high16 v1, 0x4000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 532
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$7;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 
     iget-object v1, v1, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 533
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$7;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;->closeDrawersWithDelay()V
 
-    .line 534
     return-void
 .end method

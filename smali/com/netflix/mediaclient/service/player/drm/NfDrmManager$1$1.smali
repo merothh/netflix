@@ -13,8 +13,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$1;Ljava/lang/Long;)V
     .locals 0
 
-    .prologue
-    .line 97
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$1$1;->this$1:Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$1;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$1$1;->val$sessionId:Ljava/lang/Long;
@@ -29,15 +27,12 @@
 .method public onLicenseFetched(Lorg/json/JSONObject;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 3
 
-    .prologue
-    .line 100
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 101
     const-string/jumbo v0, "NfPlayerDrmManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -72,7 +67,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
     :cond_0
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
 
@@ -82,7 +76,6 @@
 
     if-nez p1, :cond_2
 
-    .line 104
     :cond_1
     const-string/jumbo v0, "NfPlayerDrmManager"
 
@@ -90,11 +83,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
     :goto_0
     return-void
 
-    .line 107
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$1$1;->this$1:Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$1;
 

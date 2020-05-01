@@ -13,8 +13,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/offline/OfflineFragment;Lcom/netflix/mediaclient/android/activity/NetflixActivity;)V
     .locals 0
 
-    .prologue
-    .line 182
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineFragment$1;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineFragment;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/offline/OfflineFragment$1;->val$netflixActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -29,8 +27,6 @@
 .method public run(Lcom/netflix/mediaclient/servicemgr/ServiceManager;)V
     .locals 1
 
-    .prologue
-    .line 185
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineFragment$1;->val$netflixActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/AndroidUtils;->isActivityFinishedOrDestroyed(Landroid/content/Context;)Z
@@ -39,17 +35,14 @@
 
     if-nez v0, :cond_0
 
-    .line 186
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineFragment$1;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/offline/OfflineFragment;->access$000(Lcom/netflix/mediaclient/ui/offline/OfflineFragment;)V
 
-    .line 187
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineFragment$1;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/offline/OfflineFragment;->access$100(Lcom/netflix/mediaclient/ui/offline/OfflineFragment;)V
 
-    .line 189
     :cond_0
     return-void
 .end method

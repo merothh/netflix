@@ -22,19 +22,14 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/lolomo/LoLoMoFrag;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/ui/lolomo/BaseLoLoMoAdapter;-><init>(Lcom/netflix/mediaclient/ui/lolomo/LoLoMoFrag;Ljava/lang/String;)V
 
-    .line 18
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/netflix/mediaclient/ui/lolomo/GenreLoLoMoAdapter;)V
     .locals 0
 
-    .prologue
-    .line 13
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lolomo/GenreLoLoMoAdapter;->handlePrefetchComplete()V
 
     return-void
@@ -43,11 +38,8 @@
 .method private handlePrefetchComplete()V
     .locals 0
 
-    .prologue
-    .line 55
     invoke-super {p0}, Lcom/netflix/mediaclient/ui/lolomo/BaseLoLoMoAdapter;->refreshData()V
 
-    .line 56
     return-void
 .end method
 
@@ -56,8 +48,6 @@
 .method protected isGenreList()Z
     .locals 1
 
-    .prologue
-    .line 51
     const/4 v0, 0x1
 
     return v0
@@ -66,8 +56,6 @@
 .method protected makeFetchRequest(Ljava/lang/String;IILcom/netflix/mediaclient/servicemgr/ManagerCallback;)V
     .locals 1
 
-    .prologue
-    .line 46
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lolomo/GenreLoLoMoAdapter;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v0
@@ -78,36 +66,29 @@
 
     invoke-interface {v0, p1, p2, p3, p4}, Lcom/netflix/mediaclient/servicemgr/IBrowseManager;->fetchGenres(Ljava/lang/String;IILcom/netflix/mediaclient/servicemgr/ManagerCallback;)Z
 
-    .line 47
     return-void
 .end method
 
 .method public refreshData()V
     .locals 9
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 22
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lolomo/GenreLoLoMoAdapter;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v0
 
-    .line 23
     if-nez v0, :cond_0
 
-    .line 24
     const-string/jumbo v0, "GenreLoLoMoAdapter"
 
     const-string/jumbo v1, "Service man is null"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 42
     :goto_0
     return-void
 
-    .line 28
     :cond_0
     const-string/jumbo v1, "GenreLoLoMoAdapter"
 
@@ -115,12 +96,10 @@
 
     invoke-static {v1, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 29
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getBrowse()Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
 
     move-result-object v0
 
-    .line 30
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lolomo/GenreLoLoMoAdapter;->getGenreId()Ljava/lang/String;
 
     move-result-object v1
@@ -131,14 +110,12 @@
 
     sget-object v5, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->STANDARD:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
-    .line 32
     invoke-static {v4, v5}, Lcom/netflix/mediaclient/ui/lomo/LomoConfig;->computeNumVideosToFetchPerBatch(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;)I
 
     move-result v4
 
     add-int/lit8 v5, v4, -0x1
 
-    .line 33
     invoke-static {}, Lcom/netflix/mediaclient/ui/experience/BrowseExperience;->shouldLoadKubrickLeavesInLolomo()Z
 
     move-result v6
@@ -153,7 +130,6 @@
 
     move v7, v2
 
-    .line 29
     invoke-interface/range {v0 .. v8}, Lcom/netflix/mediaclient/servicemgr/IBrowseManager;->prefetchGenreLoLoMo(Ljava/lang/String;IIIIZZLcom/netflix/mediaclient/servicemgr/ManagerCallback;)Z
 
     goto :goto_0

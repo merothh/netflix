@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorRelatedView;Lcom/netflix/model/branches/FalkorVideo;)V
     .locals 0
 
-    .prologue
-    .line 737
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorRelatedView$2;->this$1:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorRelatedView;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorRelatedView$2;->val$video:Lcom/netflix/model/branches/FalkorVideo;
@@ -32,8 +30,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 5
 
-    .prologue
-    .line 740
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorRelatedView$2;->this$1:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorRelatedView;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorRelatedView;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
@@ -64,7 +60,6 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Lcom/netflix/mediaclient/ui/details/DetailsActivityLauncher;->showMemento(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/ui/common/PlayContext;)V
 
-    .line 743
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorRelatedView$2;->this$1:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorRelatedView;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorRelatedView;->getContext()Landroid/content/Context;
@@ -89,6 +84,5 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/netflix/mediaclient/util/log/UIViewLogUtils;->reportUIViewCommand(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;Lcom/netflix/mediaclient/service/logging/client/model/DataContext;)V
 
-    .line 744
     return-void
 .end method

@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;)V
     .locals 0
 
-    .prologue
-    .line 500
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$4;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,36 +23,29 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .prologue
-    .line 503
     if-nez p2, :cond_1
 
-    .line 504
     const-string/jumbo v0, "LoMoViewPagerAdapter"
 
     const-string/jumbo v1, "Received null intent"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 540
     :cond_0
     :goto_0
     return-void
 
-    .line 508
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 509
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 510
     const-string/jumbo v1, "LoMoViewPagerAdapter"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -77,7 +68,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 513
     :cond_2
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.BA_CW_REFRESH"
 
@@ -87,7 +77,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 514
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$4;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;->access$500(Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;)Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;
@@ -96,7 +85,6 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;->invalidateCwCache()V
 
-    .line 515
     sget-object v0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$Type;->CW:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$Type;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$4;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;
@@ -111,14 +99,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 516
     const-string/jumbo v0, "LoMoViewPagerAdapter"
 
     const-string/jumbo v1, "Reloading cw row"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 517
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$4;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$4;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;
@@ -137,7 +123,6 @@
 
     goto :goto_0
 
-    .line 520
     :cond_3
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.BA_IQ_REFRESH"
 
@@ -147,7 +132,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 521
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$4;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;->access$500(Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;)Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;
@@ -156,7 +140,6 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;->invalidateIqCache()V
 
-    .line 523
     sget-object v0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$Type;->IQ:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$Type;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$4;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;
@@ -171,14 +154,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 524
     const-string/jumbo v0, "LoMoViewPagerAdapter"
 
     const-string/jumbo v1, "Reloading iq row"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 525
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$4;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$4;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;
@@ -197,7 +178,6 @@
 
     goto/16 :goto_0
 
-    .line 527
     :cond_4
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$4;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;
 
@@ -225,14 +205,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 529
     const-string/jumbo v0, "LoMoViewPagerAdapter"
 
     const-string/jumbo v1, "Reloading iq row because lomo types match"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 530
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$4;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$4;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;
@@ -251,7 +229,6 @@
 
     goto/16 :goto_0
 
-    .line 533
     :cond_5
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.BA_POPULAR_TITLES_REFRESH"
 
@@ -261,7 +238,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 534
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$4;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;->access$500(Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;)Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;
@@ -270,7 +246,6 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;->invalidatePopularTitlesCache()V
 
-    .line 535
     sget-object v0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$Type;->KUBRICK_KIDS_POPULAR:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$Type;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$4;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;
@@ -285,14 +260,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 536
     const-string/jumbo v0, "LoMoViewPagerAdapter"
 
     const-string/jumbo v1, "Reloading popular titles row"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 537
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$4;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$4;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;

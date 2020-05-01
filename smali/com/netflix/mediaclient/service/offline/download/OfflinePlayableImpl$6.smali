@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;)V
     .locals 0
 
-    .prologue
-    .line 556
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$6;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 559
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$6;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;->access$700(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;)Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableListener;
@@ -38,6 +34,5 @@
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableListener;->requestSaveToRegistry()V
 
-    .line 560
     return-void
 .end method

@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/offline/OfflineErrorDialog$6;Lcom/netflix/mediaclient/android/activity/NetflixActivity;)V
     .locals 0
 
-    .prologue
-    .line 167
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineErrorDialog$6$1;->this$1:Lcom/netflix/mediaclient/ui/offline/OfflineErrorDialog$6;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/offline/OfflineErrorDialog$6$1;->val$netflixActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 170
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineErrorDialog$6$1;->val$netflixActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/AndroidUtils;->isActivityFinishedOrDestroyed(Landroid/content/Context;)Z
@@ -50,7 +46,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 171
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineErrorDialog$6$1;->val$netflixActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     new-instance v1, Landroid/content/Intent;
@@ -71,7 +66,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 173
     :cond_0
     return-void
 .end method

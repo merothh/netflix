@@ -44,11 +44,8 @@
 .method protected constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
     return-void
 .end method
 
@@ -57,8 +54,6 @@
 .method public canDeviceRender()Z
     .locals 1
 
-    .prologue
-    .line 116
     iget-boolean v0, p0, Lcom/netflix/mediaclient/media/BaseSubtitle;->canDeviceRender:Z
 
     return v0
@@ -67,36 +62,29 @@
 .method public compareTo(Lcom/netflix/mediaclient/media/Subtitle;)I
     .locals 3
 
-    .prologue
     const/4 v0, -0x1
 
-    .line 136
     if-nez p1, :cond_1
 
-    .line 154
     :cond_0
     :goto_0
     return v0
 
-    .line 141
     :cond_1
     iget-object v1, p0, Lcom/netflix/mediaclient/media/BaseSubtitle;->languageDescription:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 145
     invoke-interface {p1}, Lcom/netflix/mediaclient/media/Subtitle;->getLanguageDescription()Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_2
 
-    .line 146
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 149
     :cond_2
     sget-object v0, Ljava/lang/String;->CASE_INSENSITIVE_ORDER:Ljava/util/Comparator;
 
@@ -110,10 +98,8 @@
 
     move-result v0
 
-    .line 150
     if-nez v0, :cond_0
 
-    .line 151
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BaseSubtitle;->languageDescription:Ljava/lang/String;
 
     invoke-interface {p1}, Lcom/netflix/mediaclient/media/Subtitle;->getLanguageDescription()Ljava/lang/String;
@@ -130,8 +116,6 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 11
     check-cast p1, Lcom/netflix/mediaclient/media/Subtitle;
 
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/media/BaseSubtitle;->compareTo(Lcom/netflix/mediaclient/media/Subtitle;)I
@@ -144,29 +128,23 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 204
     if-ne p0, p1, :cond_1
 
-    .line 214
     :cond_0
     :goto_0
     return v0
 
-    .line 207
     :cond_1
     if-nez p1, :cond_2
 
     move v0, v1
 
-    .line 208
     goto :goto_0
 
-    .line 210
     :cond_2
     instance-of v2, p1, Lcom/netflix/mediaclient/media/Subtitle;
 
@@ -174,14 +152,11 @@
 
     move v0, v1
 
-    .line 211
     goto :goto_0
 
-    .line 213
     :cond_3
     check-cast p1, Lcom/netflix/mediaclient/media/Subtitle;
 
-    .line 214
     iget v2, p0, Lcom/netflix/mediaclient/media/BaseSubtitle;->nccpOrderNumber:I
 
     invoke-interface {p1}, Lcom/netflix/mediaclient/media/Subtitle;->getNccpOrderNumber()I
@@ -198,8 +173,6 @@
 .method public getId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 164
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BaseSubtitle;->id:Ljava/lang/String;
 
     return-object v0
@@ -208,8 +181,6 @@
 .method public getLanguageCodeIso639_1()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 76
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BaseSubtitle;->languageCodeIso639_1:Ljava/lang/String;
 
     return-object v0
@@ -218,8 +189,6 @@
 .method public getLanguageCodeIso639_2()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 86
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BaseSubtitle;->languageCodeIso639_2:Ljava/lang/String;
 
     return-object v0
@@ -228,8 +197,6 @@
 .method public getLanguageDescription()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 96
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BaseSubtitle;->languageDescription:Ljava/lang/String;
 
     return-object v0
@@ -238,8 +205,6 @@
 .method public getNccpOrderNumber()I
     .locals 1
 
-    .prologue
-    .line 126
     iget v0, p0, Lcom/netflix/mediaclient/media/BaseSubtitle;->nccpOrderNumber:I
 
     return v0
@@ -248,8 +213,6 @@
 .method public getTrackType()I
     .locals 1
 
-    .prologue
-    .line 106
     iget v0, p0, Lcom/netflix/mediaclient/media/BaseSubtitle;->trackType:I
 
     return v0
@@ -258,22 +221,16 @@
 .method public hashCode()I
     .locals 1
 
-    .prologue
-    .line 190
-    .line 192
     iget v0, p0, Lcom/netflix/mediaclient/media/BaseSubtitle;->nccpOrderNumber:I
 
     add-int/lit8 v0, v0, 0x1f
 
-    .line 193
     return v0
 .end method
 
 .method public isCC()Z
     .locals 2
 
-    .prologue
-    .line 169
     iget v0, p0, Lcom/netflix/mediaclient/media/BaseSubtitle;->trackType:I
 
     const/4 v1, 0x2
@@ -294,8 +251,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 177
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

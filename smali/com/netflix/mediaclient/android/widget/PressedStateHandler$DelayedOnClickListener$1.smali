@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/android/widget/PressedStateHandler$DelayedOnClickListener;Landroid/view/View;)V
     .locals 0
 
-    .prologue
-    .line 119
     iput-object p1, p0, Lcom/netflix/mediaclient/android/widget/PressedStateHandler$DelayedOnClickListener$1;->this$0:Lcom/netflix/mediaclient/android/widget/PressedStateHandler$DelayedOnClickListener;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/android/widget/PressedStateHandler$DelayedOnClickListener$1;->val$v:Landroid/view/View;
@@ -32,8 +30,6 @@
 .method public onPressedAnimationComplete()V
     .locals 2
 
-    .prologue
-    .line 123
     iget-object v0, p0, Lcom/netflix/mediaclient/android/widget/PressedStateHandler$DelayedOnClickListener$1;->this$0:Lcom/netflix/mediaclient/android/widget/PressedStateHandler$DelayedOnClickListener;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/android/widget/PressedStateHandler$DelayedOnClickListener;->access$000(Lcom/netflix/mediaclient/android/widget/PressedStateHandler$DelayedOnClickListener;)Lcom/netflix/mediaclient/android/widget/PressedStateHandler;
@@ -44,7 +40,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/android/widget/PressedStateHandler;->access$102(Lcom/netflix/mediaclient/android/widget/PressedStateHandler;Lcom/netflix/mediaclient/android/widget/PressedStateHandler$Listener;)Lcom/netflix/mediaclient/android/widget/PressedStateHandler$Listener;
 
-    .line 125
     iget-object v0, p0, Lcom/netflix/mediaclient/android/widget/PressedStateHandler$DelayedOnClickListener$1;->val$v:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -57,18 +52,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 126
     const-string/jumbo v0, "PressedStateHandler"
 
     const-string/jumbo v1, "Activity is dead - skipping onClick callback"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
     :goto_0
     return-void
 
-    .line 130
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -76,14 +68,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 131
     const-string/jumbo v0, "PressedStateHandler"
 
     const-string/jumbo v1, "Pressed animation complete - calling onClick callback"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 133
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/android/widget/PressedStateHandler$DelayedOnClickListener$1;->this$0:Lcom/netflix/mediaclient/android/widget/PressedStateHandler$DelayedOnClickListener;
 

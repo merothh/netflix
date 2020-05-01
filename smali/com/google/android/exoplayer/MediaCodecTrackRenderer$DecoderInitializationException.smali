@@ -17,8 +17,6 @@
 .method public constructor <init>(Lcom/google/android/exoplayer/MediaFormat;Ljava/lang/Throwable;ZI)V
     .locals 2
 
-    .prologue
-    .line 106
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -49,35 +47,28 @@
 
     invoke-direct {p0, v0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 107
     iget-object v0, p1, Lcom/google/android/exoplayer/MediaFormat;->mimeType:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/google/android/exoplayer/MediaCodecTrackRenderer$DecoderInitializationException;->mimeType:Ljava/lang/String;
 
-    .line 108
     iput-boolean p3, p0, Lcom/google/android/exoplayer/MediaCodecTrackRenderer$DecoderInitializationException;->secureDecoderRequired:Z
 
-    .line 109
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/exoplayer/MediaCodecTrackRenderer$DecoderInitializationException;->decoderName:Ljava/lang/String;
 
-    .line 110
     invoke-static {p4}, Lcom/google/android/exoplayer/MediaCodecTrackRenderer$DecoderInitializationException;->buildCustomDiagnosticInfo(I)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/exoplayer/MediaCodecTrackRenderer$DecoderInitializationException;->diagnosticInfo:Ljava/lang/String;
 
-    .line 111
     return-void
 .end method
 
 .method public constructor <init>(Lcom/google/android/exoplayer/MediaFormat;Ljava/lang/Throwable;ZLjava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 115
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -108,18 +99,14 @@
 
     invoke-direct {p0, v0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 116
     iget-object v0, p1, Lcom/google/android/exoplayer/MediaFormat;->mimeType:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/google/android/exoplayer/MediaCodecTrackRenderer$DecoderInitializationException;->mimeType:Ljava/lang/String;
 
-    .line 117
     iput-boolean p3, p0, Lcom/google/android/exoplayer/MediaCodecTrackRenderer$DecoderInitializationException;->secureDecoderRequired:Z
 
-    .line 118
     iput-object p4, p0, Lcom/google/android/exoplayer/MediaCodecTrackRenderer$DecoderInitializationException;->decoderName:Ljava/lang/String;
 
-    .line 119
     sget v0, Lcom/google/android/exoplayer/util/Util;->SDK_INT:I
 
     const/16 v1, 0x15
@@ -133,10 +120,8 @@
     :goto_0
     iput-object v0, p0, Lcom/google/android/exoplayer/MediaCodecTrackRenderer$DecoderInitializationException;->diagnosticInfo:Ljava/lang/String;
 
-    .line 120
     return-void
 
-    .line 119
     :cond_0
     const/4 v0, 0x0
 
@@ -146,13 +131,10 @@
 .method private static buildCustomDiagnosticInfo(I)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 131
     if-gez p0, :cond_0
 
     const-string/jumbo v0, "neg_"
 
-    .line 132
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -182,7 +164,6 @@
 
     return-object v0
 
-    .line 131
     :cond_0
     const-string/jumbo v0, ""
 
@@ -195,20 +176,16 @@
         value = 0x15
     .end annotation
 
-    .prologue
-    .line 124
     instance-of v0, p0, Landroid/media/MediaCodec$CodecException;
 
     if-eqz v0, :cond_0
 
-    .line 125
     check-cast p0, Landroid/media/MediaCodec$CodecException;
 
     invoke-virtual {p0}, Landroid/media/MediaCodec$CodecException;->getDiagnosticInfo()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 127
     :goto_0
     return-object v0
 

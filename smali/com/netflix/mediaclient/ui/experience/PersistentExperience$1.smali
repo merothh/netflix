@@ -13,8 +13,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 94
     invoke-static {}, Lcom/netflix/mediaclient/service/webclient/model/leafs/KubrickConfigData$KubrickCell;->values()[Lcom/netflix/mediaclient/service/webclient/model/leafs/KubrickConfigData$KubrickCell;
 
     move-result-object v0
@@ -56,7 +54,6 @@
     :try_end_1
     .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_4
 
-    .line 72
     :goto_1
     invoke-static {}, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->values()[Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
@@ -154,7 +151,6 @@
 
     goto :goto_2
 
-    .line 94
     :catch_4
     move-exception v0
 

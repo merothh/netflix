@@ -30,22 +30,16 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;Lcom/android/volley/Response$ErrorListener;ILcom/android/volley/Request$Priority;)V
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 32
     invoke-direct {p0, v0, p1, p3}, Lcom/android/volley/Request;-><init>(ILjava/lang/String;Lcom/android/volley/Response$ErrorListener;)V
 
-    .line 33
     iput-object p2, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/RawFileDownloadRequest;->mCallback:Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;
 
-    .line 34
     iput-object p5, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/RawFileDownloadRequest;->mPriority:Lcom/android/volley/Request$Priority;
 
-    .line 35
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/resfetcher/volley/RawFileDownloadRequest;->setShouldCache(Z)V
 
-    .line 36
     new-instance v0, Lcom/android/volley/DefaultRetryPolicy;
 
     const/4 v1, 0x2
@@ -56,7 +50,6 @@
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/resfetcher/volley/RawFileDownloadRequest;->setRetryPolicy(Lcom/android/volley/RetryPolicy;)V
 
-    .line 37
     return-void
 .end method
 
@@ -65,8 +58,6 @@
 .method protected bridge synthetic deliverResponse(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 14
     check-cast p1, [B
 
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/resfetcher/volley/RawFileDownloadRequest;->deliverResponse([B)V
@@ -77,13 +68,10 @@
 .method protected deliverResponse([B)V
     .locals 3
 
-    .prologue
-    .line 58
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/RawFileDownloadRequest;->mCallback:Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;
 
     if-eqz v0, :cond_0
 
-    .line 59
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/RawFileDownloadRequest;->mCallback:Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/resfetcher/volley/RawFileDownloadRequest;->getUrl()Ljava/lang/String;
@@ -94,7 +82,6 @@
 
     invoke-interface {v0, v1, p1, v2}, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;->onResourceRawFetched(Ljava/lang/String;[BLcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 61
     :cond_0
     return-void
 .end method
@@ -102,8 +89,6 @@
 .method public getPriority()Lcom/android/volley/Request$Priority;
     .locals 1
 
-    .prologue
-    .line 42
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/RawFileDownloadRequest;->mPriority:Lcom/android/volley/Request$Priority;
 
     return-object v0
@@ -121,20 +106,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 48
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/resfetcher/volley/RawFileDownloadRequest;->getUrl()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 49
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 50
     const-string/jumbo v1, "nf_service_rawfiledownloadrequest"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -157,7 +138,6 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 53
     :cond_0
     iget-object v0, p1, Lcom/android/volley/NetworkResponse;->data:[B
 

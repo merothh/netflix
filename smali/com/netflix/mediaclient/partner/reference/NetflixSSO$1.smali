@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/partner/reference/NetflixSSO;)V
     .locals 0
 
-    .prologue
-    .line 55
     iput-object p1, p0, Lcom/netflix/mediaclient/partner/reference/NetflixSSO$1;->this$0:Lcom/netflix/mediaclient/partner/reference/NetflixSSO;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,27 +26,21 @@
 .method public onResponseReceived(Lcom/netflix/mediaclient/partner/Response;)V
     .locals 4
 
-    .prologue
-    .line 58
     invoke-interface {p1}, Lcom/netflix/mediaclient/partner/Response;->getResponder()Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 59
     if-nez v0, :cond_0
 
-    .line 60
     const-string/jumbo v0, "nf_partner"
 
     const-string/jumbo v1, "getExternalSsoService did not set component name!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     :goto_0
     return-void
 
-    .line 62
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -56,7 +48,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 63
     const-string/jumbo v1, "nf_partner"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -79,7 +70,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
     :cond_1
     iget-object v1, p0, Lcom/netflix/mediaclient/partner/reference/NetflixSSO$1;->this$0:Lcom/netflix/mediaclient/partner/reference/NetflixSSO;
 

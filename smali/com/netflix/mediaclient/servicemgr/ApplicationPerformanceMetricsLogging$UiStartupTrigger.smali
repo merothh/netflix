@@ -74,7 +74,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -85,7 +84,6 @@
 
     const/16 v4, 0x16
 
-    .line 495
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "remoteButton"
@@ -96,7 +94,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->remoteButton:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 496
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "dedicatedOnScreenIcon"
@@ -105,7 +102,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->dedicatedOnScreenIcon:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 497
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "itemInApplicationList"
@@ -114,7 +110,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->itemInApplicationList:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 498
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "searchResult"
@@ -123,7 +118,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->searchResult:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 499
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "searchContinuation"
@@ -134,7 +128,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->searchContinuation:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 500
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "webBrowser"
@@ -147,7 +140,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->webBrowser:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 501
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "liveFolder"
@@ -160,7 +152,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->liveFolder:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 502
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "externalApp"
@@ -173,7 +164,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->externalApp:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 503
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "bannerAd"
@@ -186,7 +176,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->bannerAd:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 504
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "externalControlProtocol"
@@ -199,7 +188,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->externalControlProtocol:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 505
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "metaDiscovery"
@@ -212,7 +200,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->metaDiscovery:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 506
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "dial"
@@ -225,7 +212,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->dial:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 507
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "voiceControl"
@@ -238,7 +224,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->voiceControl:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 508
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "visualGesture"
@@ -251,7 +236,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->visualGesture:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 509
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "touchGesture"
@@ -264,7 +248,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->touchGesture:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 510
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "virtualRemote"
@@ -277,7 +260,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->virtualRemote:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 511
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "epgGrid"
@@ -290,7 +272,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->epgGrid:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 512
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "channelNumber"
@@ -303,7 +284,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->channelNumber:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 513
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "powerOnFromNetflixButton"
@@ -316,7 +296,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->powerOnFromNetflixButton:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 515
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "titleRecommend"
@@ -329,7 +308,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->titleRecommend:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 516
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "suspendAtPowerOn"
@@ -340,7 +318,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->suspendAtPowerOn:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 517
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "suspendAfterAppRestart"
@@ -351,7 +328,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->suspendAfterAppRestart:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 518
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "appSwitch"
@@ -362,7 +338,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->appSwitch:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 519
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     const-string/jumbo v1, "testing"
@@ -375,7 +350,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->testing:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 494
     const/16 v0, 0x18
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
@@ -527,22 +501,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 528
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 529
     iput p3, p0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->sourceType:I
 
-    .line 530
     return-void
 .end method
 
 .method public static lookup(I)Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
     .locals 5
 
-    .prologue
-    .line 534
     invoke-static {}, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->values()[Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     move-result-object v2
@@ -558,18 +526,15 @@
 
     aget-object v0, v2, v1
 
-    .line 535
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->getSourceType()I
 
     move-result v4
 
     if-ne v4, p0, :cond_0
 
-    .line 540
     :goto_1
     return-object v0
 
-    .line 534
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -577,7 +542,6 @@
 
     goto :goto_0
 
-    .line 540
     :cond_1
     const/4 v0, 0x0
 
@@ -587,8 +551,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
     .locals 1
 
-    .prologue
-    .line 494
     const-class v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -603,8 +565,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
     .locals 1
 
-    .prologue
-    .line 494
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->clone()Ljava/lang/Object;
@@ -621,8 +581,6 @@
 .method public getSourceType()I
     .locals 1
 
-    .prologue
-    .line 523
     iget v0, p0, Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;->sourceType:I
 
     return v0

@@ -37,8 +37,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 21
     invoke-direct {p0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;-><init>()V
 
     return-void
@@ -47,8 +45,6 @@
 .method static synthetic access$000(Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;Lcom/netflix/mediaclient/servicemgr/ServiceManager;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 0
 
-    .prologue
-    .line 21
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->init(Lcom/netflix/mediaclient/servicemgr/ServiceManager;Lcom/netflix/mediaclient/android/app/Status;)V
 
     return-void
@@ -57,10 +53,8 @@
 .method private addViewsToFlipper()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 244
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getApplicationContext()Landroid/content/Context;
 
     const-string/jumbo v0, "layout_inflater"
@@ -71,7 +65,6 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    .line 246
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getLandingPageLayoutToUse()I
 
     move-result v1
@@ -80,12 +73,10 @@
 
     move-result-object v1
 
-    .line 247
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mFlipper:Landroid/widget/ViewFlipper;
 
     invoke-virtual {v2, v1}, Landroid/widget/ViewFlipper;->addView(Landroid/view/View;)V
 
-    .line 248
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getPlanPageLayoutToUse()I
 
     move-result v1
@@ -94,20 +85,16 @@
 
     move-result-object v0
 
-    .line 249
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mFlipper:Landroid/widget/ViewFlipper;
 
     invoke-virtual {v1, v0}, Landroid/widget/ViewFlipper;->addView(Landroid/view/View;)V
 
-    .line 250
     return-void
 .end method
 
 .method public static createStartIntent(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Z)Landroid/content/Intent;
     .locals 3
 
-    .prologue
-    .line 53
     new-instance v0, Landroid/content/Intent;
 
     invoke-static {}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getEndOfGrandfatheringActivityClass()Ljava/lang/Class;
@@ -118,27 +105,22 @@
 
     const/high16 v1, 0x10000000
 
-    .line 54
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 55
     if-eqz p1, :cond_0
 
-    .line 56
     const-string/jumbo v1, "eog"
 
     const-string/jumbo v2, "adding clear_task flag"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 57
     const v1, 0x8000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 59
     :cond_0
     return-object v0
 .end method
@@ -146,15 +128,12 @@
 .method private getCurrentPlanIndexOfUser()I
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 292
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getEogAlert()Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
 
     move-result-object v1
 
-    .line 293
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->currentPlanId()Ljava/lang/String;
@@ -167,12 +146,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 307
     :cond_0
     :goto_0
     return v0
 
-    .line 297
     :cond_1
     invoke-virtual {v1}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->currentPlanId()Ljava/lang/String;
 
@@ -188,7 +165,6 @@
 
     if-nez v2, :cond_0
 
-    .line 300
     invoke-virtual {v1}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->currentPlanId()Ljava/lang/String;
 
     move-result-object v2
@@ -203,12 +179,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 301
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 303
     :cond_2
     invoke-virtual {v1}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->currentPlanId()Ljava/lang/String;
 
@@ -224,7 +198,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 304
     const/4 v0, 0x2
 
     goto :goto_0
@@ -240,8 +213,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 63
     const-class v0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;
 
     return-object v0
@@ -250,10 +221,8 @@
 .method private getLandingPageLayoutToUse()I
     .locals 3
 
-    .prologue
     const v0, 0x7f030053
 
-    .line 213
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getEogAlert()Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
 
     move-result-object v1
@@ -264,7 +233,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 214
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
@@ -275,7 +243,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 215
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
@@ -296,19 +263,16 @@
 
     if-eqz v1, :cond_1
 
-    .line 216
     const-string/jumbo v1, "eog"
 
     const-string/jumbo v2, "returning phone layout for cell5 tablet bcoz size too small"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 225
     :cond_0
     :goto_0
     return v0
 
-    .line 219
     :cond_1
     const-string/jumbo v0, "eog"
 
@@ -316,12 +280,10 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 220
     const v0, 0x7f030057
 
     goto :goto_0
 
-    .line 225
     :cond_2
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getApplicationContext()Landroid/content/Context;
 
@@ -346,8 +308,6 @@
 .method private getPlanPageLayoutToUse()I
     .locals 2
 
-    .prologue
-    .line 230
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -358,7 +318,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 231
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -379,14 +338,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 232
     const v0, 0x7f030059
 
-    .line 238
     :goto_0
     return v0
 
-    .line 234
     :cond_0
     const-string/jumbo v0, "eog"
 
@@ -394,12 +350,10 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 235
     const v0, 0x7f030058
 
     goto :goto_0
 
-    .line 238
     :cond_1
     const v0, 0x7f030055
 
@@ -409,11 +363,8 @@
 .method private init(Lcom/netflix/mediaclient/servicemgr/ServiceManager;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 1
 
-    .prologue
-    .line 182
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mServiceManager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
-    .line 183
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mServiceManager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getEndOfGrandfatheringAlert()Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
@@ -422,18 +373,14 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mEogAlert:Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
 
-    .line 184
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->initUi()V
 
-    .line 185
     return-void
 .end method
 
 .method private initUi()V
     .locals 2
 
-    .prologue
-    .line 188
     iget v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mCurrentPlanIndex:I
 
     const/4 v1, -0x1
@@ -445,12 +392,10 @@
     :goto_0
     iput v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mCurrentPlanIndex:I
 
-    .line 189
     const v0, 0x7f03004f
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->setContentView(I)V
 
-    .line 191
     const v0, 0x7f0f014a
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->findViewById(I)Landroid/view/View;
@@ -461,34 +406,28 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mFlipper:Landroid/widget/ViewFlipper;
 
-    .line 192
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->addViewsToFlipper()V
 
-    .line 194
     new-instance v0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;-><init>(Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mLandingPage:Lcom/netflix/mediaclient/ui/ums/EogLandingPage;
 
-    .line 195
     new-instance v0, Lcom/netflix/mediaclient/ui/ums/EogPlanPage;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/ums/EogPlanPage;-><init>(Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mPlanPage:Lcom/netflix/mediaclient/ui/ums/EogPlanPage;
 
-    .line 197
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mLandingPage:Lcom/netflix/mediaclient/ui/ums/EogLandingPage;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->initUi()V
 
-    .line 198
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mPlanPage:Lcom/netflix/mediaclient/ui/ums/EogPlanPage;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/ums/EogPlanPage;->initUi()V
 
-    .line 200
     iget v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mCurrentPageIndex:I
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getEogAlert()Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
@@ -501,10 +440,8 @@
 
     if-eqz v0, :cond_2
 
-    .line 201
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->goToPlanPage()V
 
-    .line 206
     :goto_1
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getEogAlert()Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
 
@@ -520,14 +457,11 @@
 
     if-nez v0, :cond_0
 
-    .line 207
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->markEogAlertAsDirty()V
 
-    .line 209
     :cond_0
     return-void
 
-    .line 188
     :cond_1
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getCurrentPlanIndexOfUser()I
 
@@ -535,7 +469,6 @@
 
     goto :goto_0
 
-    .line 203
     :cond_2
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->eogPrompt:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
@@ -547,33 +480,26 @@
 .method private markEogAlertAsDirty()V
     .locals 2
 
-    .prologue
-    .line 311
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getEogAlert()Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
 
     move-result-object v0
 
-    .line 312
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->isDirty:Z
 
-    .line 313
     const-string/jumbo v0, "eog"
 
     const-string/jumbo v1, "eogAlert marked dirty; can\'t use same data again"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 314
     return-void
 .end method
 
 .method public static shouldBlockUser(Z)Z
     .locals 0
 
-    .prologue
-    .line 129
     return p0
 .end method
 
@@ -582,25 +508,20 @@
 .method protected backPressed()V
     .locals 2
 
-    .prologue
-    .line 122
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->handleBackPressed()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 123
     const-string/jumbo v0, "eog"
 
     const-string/jumbo v1, "finish"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->finish()V
 
-    .line 126
     :cond_0
     return-void
 .end method
@@ -608,8 +529,6 @@
 .method public canProceed()Z
     .locals 3
 
-    .prologue
-    .line 284
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v0
@@ -624,22 +543,18 @@
 
     const/4 v0, 0x1
 
-    .line 285
     :goto_0
     if-nez v0, :cond_0
 
-    .line 286
     const-string/jumbo v1, "eog"
 
     const-string/jumbo v2, "fields are null - can\'t proceed"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 288
     :cond_0
     return v0
 
-    .line 284
     :cond_1
     const/4 v0, 0x0
 
@@ -649,8 +564,6 @@
 .method protected createManagerStatusListener()Lcom/netflix/mediaclient/servicemgr/ManagerStatusListener;
     .locals 1
 
-    .prologue
-    .line 134
     new-instance v0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity$1;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity$1;-><init>(Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;)V
@@ -661,8 +574,6 @@
 .method public getCurrentPlanIndex()I
     .locals 1
 
-    .prologue
-    .line 41
     iget v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mCurrentPlanIndex:I
 
     return v0
@@ -671,26 +582,20 @@
 .method public getEogAlert()Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
     .locals 1
 
-    .prologue
-    .line 253
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mEogAlert:Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
 
     if-eqz v0, :cond_0
 
-    .line 254
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mEogAlert:Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
 
-    .line 259
     :goto_0
     return-object v0
 
-    .line 256
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mServiceManager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     if-eqz v0, :cond_1
 
-    .line 257
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mServiceManager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getEndOfGrandfatheringAlert()Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
@@ -699,7 +604,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mEogAlert:Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
 
-    .line 259
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mEogAlert:Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
 
@@ -709,8 +613,6 @@
 .method public getUiScreen()Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
     .locals 1
 
-    .prologue
-    .line 274
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->eogPrompt:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     return-object v0
@@ -719,53 +621,42 @@
 .method public goToLandingPage()V
     .locals 1
 
-    .prologue
-    .line 268
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->eogPrompt:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->reportUiViewChanged(Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;)V
 
-    .line 269
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mFlipper:Landroid/widget/ViewFlipper;
 
     invoke-virtual {v0}, Landroid/widget/ViewFlipper;->showPrevious()V
 
-    .line 270
     return-void
 .end method
 
 .method public goToPlanPage()V
     .locals 1
 
-    .prologue
-    .line 263
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->eogPlanSelector:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->reportUiViewChanged(Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;)V
 
-    .line 264
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mFlipper:Landroid/widget/ViewFlipper;
 
     invoke-virtual {v0}, Landroid/widget/ViewFlipper;->showNext()V
 
-    .line 265
     return-void
 .end method
 
 .method protected handleBackPressed()Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 105
     const-string/jumbo v1, "eog"
 
     const-string/jumbo v2, "handleBackPressed"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mFlipper:Landroid/widget/ViewFlipper;
 
     invoke-virtual {v1}, Landroid/widget/ViewFlipper;->getDisplayedChild()I
@@ -782,14 +673,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 107
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->goToLandingPage()V
 
-    .line 118
     :goto_0
     return v0
 
-    .line 111
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getEogAlert()Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
 
@@ -805,23 +693,19 @@
 
     if-eqz v1, :cond_1
 
-    .line 112
     const-string/jumbo v1, "eog"
 
     const-string/jumbo v2, "finishing"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 113
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->finish()V
 
     goto :goto_0
 
-    .line 117
     :cond_1
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->recordUmsImpression()V
 
-    .line 118
     invoke-super {p0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->handleBackPressed()Z
 
     move-result v0
@@ -832,8 +716,6 @@
 .method public isLoadingData()Z
     .locals 1
 
-    .prologue
-    .line 279
     const/4 v0, 0x0
 
     return v0
@@ -842,14 +724,10 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 1
 
-    .prologue
-    .line 69
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 70
     if-eqz p1, :cond_0
 
-    .line 71
     const-string/jumbo v0, "com.netflix.mediaclient.ui.ums.eog.pageIndex"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -858,7 +736,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mCurrentPageIndex:I
 
-    .line 72
     const-string/jumbo v0, "com.netflix.mediaclient.ui.ums.eog.planIndex"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -867,17 +744,14 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mCurrentPlanIndex:I
 
-    .line 77
     :goto_0
     return-void
 
-    .line 74
     :cond_0
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mCurrentPageIndex:I
 
-    .line 75
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mCurrentPlanIndex:I
@@ -888,18 +762,14 @@
 .method protected onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 2
 
-    .prologue
-    .line 81
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 82
     const-string/jumbo v0, "eog"
 
     const-string/jumbo v1, "Saving eog state..."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 83
     const-string/jumbo v1, "com.netflix.mediaclient.ui.ums.eog.pageIndex"
 
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mFlipper:Landroid/widget/ViewFlipper;
@@ -915,7 +785,6 @@
     :goto_0
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 84
     const-string/jumbo v0, "com.netflix.mediaclient.ui.ums.eog.planIndex"
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getCurrentPlanIndex()I
@@ -924,10 +793,8 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 85
     return-void
 
-    .line 83
     :cond_0
     const/4 v0, 0x0
 
@@ -937,8 +804,6 @@
 .method public performAction(Landroid/view/View;)V
     .locals 5
 
-    .prologue
-    .line 155
     const-string/jumbo v0, "eog"
 
     const-string/jumbo v1, "performAction currentChildIndex: %d"
@@ -967,7 +832,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mLandingPage:Lcom/netflix/mediaclient/ui/ums/EogLandingPage;
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->performAction(Landroid/view/View;)Z
@@ -976,18 +840,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 158
     const-string/jumbo v0, "eog"
 
     const-string/jumbo v1, "Handled by landing page"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 164
     :goto_0
     return-void
 
-    .line 159
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mPlanPage:Lcom/netflix/mediaclient/ui/ums/EogPlanPage;
 
@@ -997,7 +858,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 160
     const-string/jumbo v0, "eog"
 
     const-string/jumbo v1, "Handled by plan page"
@@ -1006,7 +866,6 @@
 
     goto :goto_0
 
-    .line 162
     :cond_1
     const-string/jumbo v0, "eog"
 
@@ -1020,8 +879,6 @@
 .method public performPlanSelection(Landroid/view/View;)V
     .locals 5
 
-    .prologue
-    .line 172
     const-string/jumbo v0, "eog"
 
     const-string/jumbo v1, "performPlanSelection currentChildIndex: %d"
@@ -1050,7 +907,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 174
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mPlanPage:Lcom/netflix/mediaclient/ui/ums/EogPlanPage;
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/ui/ums/EogPlanPage;->performPlanSelection(Landroid/view/View;)Z
@@ -1059,18 +915,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 175
     const-string/jumbo v0, "eog"
 
     const-string/jumbo v1, "Handled by plan page"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 179
     :goto_0
     return-void
 
-    .line 177
     :cond_0
     const-string/jumbo v0, "eog"
 
@@ -1084,8 +937,6 @@
 .method public performUpAction()V
     .locals 2
 
-    .prologue
-    .line 90
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getEogAlert()Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
 
     move-result-object v0
@@ -1100,7 +951,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 91
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mFlipper:Landroid/widget/ViewFlipper;
 
     invoke-virtual {v0}, Landroid/widget/ViewFlipper;->getDisplayedChild()I
@@ -1117,14 +967,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 92
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->goToLandingPage()V
 
-    .line 102
     :goto_0
     return-void
 
-    .line 94
     :cond_0
     const-string/jumbo v0, "eog"
 
@@ -1132,16 +979,13 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 95
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->finish()V
 
     goto :goto_0
 
-    .line 100
     :cond_1
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->recordUmsImpression()V
 
-    .line 101
     invoke-super {p0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->performUpAction()V
 
     goto :goto_0
@@ -1150,20 +994,16 @@
 .method public recordPlanSelection()V
     .locals 7
 
-    .prologue
     const/4 v0, 0x0
 
     const/4 v6, 0x1
 
     const/4 v5, 0x0
 
-    .line 317
-    .line 318
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getEogAlert()Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
 
     move-result-object v2
 
-    .line 321
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v1
@@ -1172,7 +1012,6 @@
 
     if-nez v2, :cond_2
 
-    .line 322
     :cond_0
     const-string/jumbo v0, "eog"
 
@@ -1180,25 +1019,21 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 353
     :cond_1
     :goto_0
     return-void
 
-    .line 326
     :cond_2
     iget v1, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mCurrentPlanIndex:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 340
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 341
     const-string/jumbo v1, "eog"
 
     const-string/jumbo v2, "unkown planId :%d - skipping recording"
@@ -1216,7 +1051,6 @@
     :cond_3
     move-object v1, v0
 
-    .line 346
     :goto_1
     invoke-static {v1}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
 
@@ -1230,14 +1064,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 347
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
-    .line 348
     const-string/jumbo v2, "eog"
 
     const-string/jumbo v3, "record planSelection planId:%s, priceTier:%s"
@@ -1256,11 +1088,9 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 350
     :cond_4
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->markEogAlertAsDirty()V
 
-    .line 351
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v2
@@ -1269,46 +1099,39 @@
 
     goto :goto_0
 
-    .line 328
     :pswitch_0
     invoke-virtual {v2}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->sdPlanPlanId()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 329
     invoke-virtual {v2}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->sdPlanPlanTier()Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_1
 
-    .line 332
     :pswitch_1
     invoke-virtual {v2}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->hdPlanPlanId()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 333
     invoke-virtual {v2}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->hdPlanPlanTier()Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_1
 
-    .line 336
     :pswitch_2
     invoke-virtual {v2}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->uhdPlanPlanId()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 337
     invoke-virtual {v2}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->uhdPlanPlanTier()Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_1
 
-    .line 326
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -1320,8 +1143,6 @@
 .method public recordUmsImpression()V
     .locals 5
 
-    .prologue
-    .line 356
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v0
@@ -1334,7 +1155,6 @@
 
     if-nez v0, :cond_1
 
-    .line 357
     :cond_0
     const-string/jumbo v0, "eog"
 
@@ -1342,11 +1162,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 365
     :goto_0
     return-void
 
-    .line 361
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -1354,7 +1172,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 362
     const-string/jumbo v0, "eog"
 
     const-string/jumbo v1, "recordUserMessageImpression msgName:%s, impressionType:%s, curPageIndex:%d"
@@ -1403,7 +1220,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 364
     :cond_2
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
@@ -1433,10 +1249,7 @@
 .method public setCurrentPlanIndex(I)V
     .locals 0
 
-    .prologue
-    .line 44
     iput p1, p0, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->mCurrentPlanIndex:I
 
-    .line 45
     return-void
 .end method

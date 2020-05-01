@@ -22,8 +22,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1230
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,8 +32,6 @@
 .method public createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Lcom/viewpagerindicator/android/osp/ViewPager$SavedState;
     .locals 1
 
-    .prologue
-    .line 1233
     new-instance v0, Lcom/viewpagerindicator/android/osp/ViewPager$SavedState;
 
     invoke-direct {v0, p1, p2}, Lcom/viewpagerindicator/android/osp/ViewPager$SavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
@@ -46,8 +42,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1230
     invoke-virtual {p0, p1, p2}, Lcom/viewpagerindicator/android/osp/ViewPager$SavedState$1;->createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Lcom/viewpagerindicator/android/osp/ViewPager$SavedState;
 
     move-result-object v0
@@ -58,8 +52,6 @@
 .method public newArray(I)[Lcom/viewpagerindicator/android/osp/ViewPager$SavedState;
     .locals 1
 
-    .prologue
-    .line 1237
     new-array v0, p1, [Lcom/viewpagerindicator/android/osp/ViewPager$SavedState;
 
     return-object v0
@@ -68,8 +60,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1230
     invoke-virtual {p0, p1}, Lcom/viewpagerindicator/android/osp/ViewPager$SavedState$1;->newArray(I)[Lcom/viewpagerindicator/android/osp/ViewPager$SavedState;
 
     move-result-object v0

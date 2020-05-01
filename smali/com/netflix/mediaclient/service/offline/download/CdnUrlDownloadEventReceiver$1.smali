@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/download/CdnUrlDownloadEventReceiver;Lcom/netflix/mediaclient/service/offline/download/CdnUrlDownloadEventReceiver$CdnDownloadLogBlob;)V
     .locals 0
 
-    .prologue
-    .line 108
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/download/CdnUrlDownloadEventReceiver$1;->this$0:Lcom/netflix/mediaclient/service/offline/download/CdnUrlDownloadEventReceiver;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/download/CdnUrlDownloadEventReceiver$1;->val$cdnDownloadLogBlob:Lcom/netflix/mediaclient/service/offline/download/CdnUrlDownloadEventReceiver$CdnDownloadLogBlob;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 111
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/CdnUrlDownloadEventReceiver$1;->this$0:Lcom/netflix/mediaclient/service/offline/download/CdnUrlDownloadEventReceiver;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/download/CdnUrlDownloadEventReceiver;->access$000(Lcom/netflix/mediaclient/service/offline/download/CdnUrlDownloadEventReceiver;)Lcom/netflix/mediaclient/servicemgr/LogblobLogging;
@@ -44,6 +40,5 @@
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/servicemgr/LogblobLogging;->sendLogblob(Lcom/netflix/mediaclient/servicemgr/Logblob;)V
 
-    .line 112
     return-void
 .end method

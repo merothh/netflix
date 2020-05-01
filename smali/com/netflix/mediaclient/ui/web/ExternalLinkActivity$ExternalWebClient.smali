@@ -11,8 +11,6 @@
 .method private constructor <init>(Lcom/netflix/mediaclient/ui/web/ExternalLinkActivity;)V
     .locals 0
 
-    .prologue
-    .line 214
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/web/ExternalLinkActivity$ExternalWebClient;->this$0:Lcom/netflix/mediaclient/ui/web/ExternalLinkActivity;
 
     invoke-direct {p0}, Landroid/webkit/WebChromeClient;-><init>()V
@@ -23,8 +21,6 @@
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/ui/web/ExternalLinkActivity;Lcom/netflix/mediaclient/ui/web/ExternalLinkActivity$1;)V
     .locals 0
 
-    .prologue
-    .line 214
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/web/ExternalLinkActivity$ExternalWebClient;-><init>(Lcom/netflix/mediaclient/ui/web/ExternalLinkActivity;)V
 
     return-void
@@ -35,15 +31,12 @@
 .method public onConsoleMessage(Landroid/webkit/ConsoleMessage;)Z
     .locals 3
 
-    .prologue
-    .line 218
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 219
     const-string/jumbo v0, "ExternalLinkActivity_js"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -92,7 +85,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 221
     :cond_0
     const/4 v0, 0x1
 

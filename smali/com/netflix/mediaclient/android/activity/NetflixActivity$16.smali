@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;)V
     .locals 0
 
-    .prologue
-    .line 2730
     iput-object p1, p0, Lcom/netflix/mediaclient/android/activity/NetflixActivity$16;->this$0:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,20 +23,15 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .prologue
-    .line 2734
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2735
     if-nez v1, :cond_0
 
-    .line 2751
     :goto_0
     return-void
 
-    .line 2739
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -46,7 +39,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2740
     const-string/jumbo v0, "NetflixActivity"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -69,7 +61,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2743
     :cond_1
     const/4 v0, -0x1
 
@@ -85,7 +76,6 @@
 
     goto :goto_0
 
-    .line 2745
     :pswitch_0
     iget-object v0, p0, Lcom/netflix/mediaclient/android/activity/NetflixActivity$16;->this$0:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
@@ -93,7 +83,6 @@
 
     goto :goto_0
 
-    .line 2743
     :sswitch_0
     const-string/jumbo v2, "com.netflix.mediaclient.ui.error.ACTION_DISPLAY_ERROR"
 
@@ -120,7 +109,6 @@
 
     goto :goto_1
 
-    .line 2748
     :pswitch_1
     iget-object v0, p0, Lcom/netflix/mediaclient/android/activity/NetflixActivity$16;->this$0:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
@@ -128,7 +116,6 @@
 
     goto :goto_0
 
-    .line 2743
     nop
 
     :sswitch_data_0

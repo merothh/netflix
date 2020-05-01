@@ -20,22 +20,16 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/search/SearchResultView;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 284
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/search/SearchResultView$PersonClickListener;->this$0:Lcom/netflix/mediaclient/ui/search/SearchResultView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 285
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/search/SearchResultView$PersonClickListener;->id:Ljava/lang/String;
 
-    .line 286
     iput-object p3, p0, Lcom/netflix/mediaclient/ui/search/SearchResultView$PersonClickListener;->name:Ljava/lang/String;
 
-    .line 287
     iput-object p4, p0, Lcom/netflix/mediaclient/ui/search/SearchResultView$PersonClickListener;->query:Ljava/lang/String;
 
-    .line 288
     return-void
 .end method
 
@@ -44,8 +38,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 7
 
-    .prologue
-    .line 292
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchResultView$PersonClickListener;->this$0:Lcom/netflix/mediaclient/ui/search/SearchResultView;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/search/SearchResultView;->getContext()Landroid/content/Context;
@@ -70,14 +62,11 @@
 
     iget-object v6, p0, Lcom/netflix/mediaclient/ui/search/SearchResultView$PersonClickListener;->this$0:Lcom/netflix/mediaclient/ui/search/SearchResultView;
 
-    .line 293
     invoke-static {v6}, Lcom/netflix/mediaclient/ui/search/SearchResultView;->access$100(Lcom/netflix/mediaclient/ui/search/SearchResultView;)Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     move-result-object v6
 
-    .line 292
     invoke-static/range {v0 .. v6}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->show(Landroid/app/Activity;Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$SearchQueryDetailsType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;)V
 
-    .line 294
     return-void
 .end method

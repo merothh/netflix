@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 233
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,19 +20,14 @@
 .method public addResultsToIntent([Landroid/support/v4/app/RemoteInput;Landroid/content/Intent;Landroid/os/Bundle;)V
     .locals 0
 
-    .prologue
-    .line 241
     invoke-static {p1, p2, p3}, Landroid/support/v4/app/RemoteInputCompatJellybean;->addResultsToIntent([Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;Landroid/content/Intent;Landroid/os/Bundle;)V
 
-    .line 242
     return-void
 .end method
 
 .method public getResultsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;
     .locals 1
 
-    .prologue
-    .line 236
     invoke-static {p1}, Landroid/support/v4/app/RemoteInputCompatJellybean;->getResultsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;
 
     move-result-object v0

@@ -7,12 +7,10 @@
 .method public constructor <init>()V
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    .line 109
     move-object v0, p0
 
     move-object v3, v1
@@ -23,6 +21,5 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/netflix/mediaclient/media/Language;-><init>([Lcom/netflix/mediaclient/media/AudioSource;I[Lcom/netflix/mediaclient/media/Subtitle;IZ)V
 
-    .line 110
     return-void
 .end method

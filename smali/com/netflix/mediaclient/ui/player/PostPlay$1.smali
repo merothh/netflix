@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/PostPlay;)V
     .locals 0
 
-    .prologue
-    .line 238
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$1;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,15 +31,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 242
     const-string/jumbo v0, "nf_postplay"
 
     const-string/jumbo v1, "Hijacking tap, do nothing"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 243
     const/4 v0, 0x1
 
     return v0

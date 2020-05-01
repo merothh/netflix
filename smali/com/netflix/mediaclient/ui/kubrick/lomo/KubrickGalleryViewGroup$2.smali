@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickGalleryViewGroup;)V
     .locals 0
 
-    .prologue
-    .line 54
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickGalleryViewGroup$2;->this$0:Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickGalleryViewGroup;
 
     invoke-direct {p0}, Landroid/support/v7/widget/GridLayoutManager$SpanSizeLookup;-><init>()V
@@ -25,8 +23,6 @@
 .method public getSpanSize(I)I
     .locals 1
 
-    .prologue
-    .line 57
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickGalleryViewGroup$2;->this$0:Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickGalleryViewGroup;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickGalleryViewGroup;->access$000(Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickGalleryViewGroup;)I

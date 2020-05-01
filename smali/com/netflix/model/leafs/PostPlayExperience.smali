@@ -90,13 +90,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 28
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/netflix/model/leafs/PostPlayExperience;-><init>(Lcom/netflix/falkor/ModelProxy;)V
 
-    .line 29
     return-void
 .end method
 
@@ -112,13 +109,10 @@
         }
     .end annotation
 
-    .prologue
     const/4 v2, 0x5
 
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x1
@@ -127,24 +121,20 @@
 
     iput-object v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->experienceTitle:Ljava/util/List;
 
-    .line 51
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(I)V
 
     iput-object v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->actions:Ljava/util/List;
 
-    .line 54
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(I)V
 
     iput-object v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->items:Ljava/util/List;
 
-    .line 31
     iput-object p1, p0, Lcom/netflix/model/leafs/PostPlayExperience;->proxy:Lcom/netflix/falkor/ModelProxy;
 
-    .line 32
     return-void
 .end method
 
@@ -161,23 +151,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 120
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->isJsonNull()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 121
     invoke-interface {p2}, Ljava/util/List;->clear()V
 
-    .line 122
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonArray()Lcom/google/gson/JsonArray;
 
     move-result-object v1
 
-    .line 123
     const/4 v0, 0x0
 
     :goto_0
@@ -187,7 +172,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 124
     new-instance v2, Lcom/netflix/model/leafs/PostPlayAction;
 
     invoke-virtual {v1, v0}, Lcom/google/gson/JsonArray;->get(I)Lcom/google/gson/JsonElement;
@@ -200,12 +184,10 @@
 
     invoke-interface {p2, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 123
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 127
     :cond_0
     return-void
 .end method
@@ -224,8 +206,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 222
     iget-object v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->actions:Ljava/util/List;
 
     return-object v0
@@ -234,8 +214,6 @@
 .method public getActionsInitialIndex()Ljava/lang/Integer;
     .locals 1
 
-    .prologue
-    .line 214
     iget-object v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->actionsInitialIndex:Ljava/lang/Integer;
 
     return-object v0
@@ -244,8 +222,6 @@
 .method public getAutoplay()Z
     .locals 1
 
-    .prologue
-    .line 154
     iget-boolean v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->autoplay:Z
 
     return v0
@@ -254,8 +230,6 @@
 .method public getAutoplaySeconds()I
     .locals 1
 
-    .prologue
-    .line 162
     iget v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->autoplaySeconds:I
 
     return v0
@@ -264,8 +238,6 @@
 .method public getBackgroundAsset()Lcom/netflix/model/leafs/PostPlayAsset;
     .locals 1
 
-    .prologue
-    .line 194
     iget-object v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->backgroundAsset:Lcom/netflix/model/leafs/PostPlayAsset;
 
     return-object v0
@@ -283,8 +255,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 210
     iget-object v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->experienceTitle:Ljava/util/List;
 
     return-object v0
@@ -302,8 +272,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 234
     iget-object v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->items:Ljava/util/List;
 
     return-object v0
@@ -312,8 +280,6 @@
 .method public getItemsInitialIndex()Ljava/lang/Integer;
     .locals 1
 
-    .prologue
-    .line 226
     iget-object v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->itemsInitialIndex:Ljava/lang/Integer;
 
     return-object v0
@@ -322,8 +288,6 @@
 .method public getLogoAsset()Lcom/netflix/model/leafs/PostPlayAsset;
     .locals 1
 
-    .prologue
-    .line 202
     iget-object v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->logoAsset:Lcom/netflix/model/leafs/PostPlayAsset;
 
     return-object v0
@@ -332,8 +296,6 @@
 .method public getPromotedSupplementalMessage()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 186
     iget-object v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->promotedSupplementalMessage:Ljava/lang/String;
 
     return-object v0
@@ -342,8 +304,6 @@
 .method public getPromotedTitle()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 178
     iget-object v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->promotedTitle:Ljava/lang/String;
 
     return-object v0
@@ -352,8 +312,6 @@
 .method public getPromotedVideoId()Ljava/lang/Integer;
     .locals 1
 
-    .prologue
-    .line 170
     iget-object v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->promotedVideoId:Ljava/lang/Integer;
 
     return-object v0
@@ -362,8 +320,6 @@
 .method public getRequestId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 130
     iget-object v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->requestId:Ljava/lang/String;
 
     return-object v0
@@ -372,8 +328,6 @@
 .method public getSeamlessCountdownSeconds()I
     .locals 1
 
-    .prologue
-    .line 238
     iget v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->seamlessCountdownSeconds:I
 
     return v0
@@ -382,8 +336,6 @@
 .method public getSeamlessEnd()I
     .locals 1
 
-    .prologue
-    .line 246
     iget v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->seamlessEnd:I
 
     return v0
@@ -392,8 +344,6 @@
 .method public getTheme()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 146
     iget-object v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->theme:Ljava/lang/String;
 
     return-object v0
@@ -402,8 +352,6 @@
 .method public getType()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 138
     iget-object v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->type:Ljava/lang/String;
 
     return-object v0
@@ -412,24 +360,20 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 10
 
-    .prologue
     const/4 v4, 0x1
 
     const/4 v3, -0x1
 
     const/4 v2, 0x0
 
-    .line 66
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 67
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 68
     const-string/jumbo v1, "PostPlayExperience"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -452,7 +396,6 @@
 
     invoke-static {v1, v5}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     :cond_0
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -476,19 +419,16 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 71
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/gson/JsonElement;
 
-    .line 72
     instance-of v6, v1, Lcom/google/gson/JsonNull;
 
     if-nez v6, :cond_1
 
-    .line 73
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -509,7 +449,6 @@
 
     goto :goto_0
 
-    .line 74
     :pswitch_0
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -519,7 +458,6 @@
 
     goto :goto_0
 
-    .line 73
     :sswitch_0
     const-string/jumbo v6, "requestId"
 
@@ -715,7 +653,6 @@
 
     goto/16 :goto_1
 
-    .line 75
     :pswitch_1
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -725,7 +662,6 @@
 
     goto/16 :goto_0
 
-    .line 76
     :pswitch_2
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -735,7 +671,6 @@
 
     goto/16 :goto_0
 
-    .line 77
     :pswitch_3
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -745,7 +680,6 @@
 
     goto/16 :goto_0
 
-    .line 78
     :pswitch_4
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsInt()I
 
@@ -755,7 +689,6 @@
 
     goto/16 :goto_0
 
-    .line 79
     :pswitch_5
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsInt()I
 
@@ -769,7 +702,6 @@
 
     goto/16 :goto_0
 
-    .line 80
     :pswitch_6
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -779,7 +711,6 @@
 
     goto/16 :goto_0
 
-    .line 81
     :pswitch_7
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -789,7 +720,6 @@
 
     goto/16 :goto_0
 
-    .line 83
     :pswitch_8
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->isJsonNull()Z
 
@@ -797,12 +727,10 @@
 
     if-nez v0, :cond_1
 
-    .line 84
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 85
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
     move-result-object v0
@@ -824,7 +752,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 86
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -845,7 +772,6 @@
 
     goto :goto_2
 
-    .line 87
     :pswitch_9
     new-instance v1, Lcom/netflix/model/leafs/PostPlayAsset;
 
@@ -863,7 +789,6 @@
 
     goto :goto_2
 
-    .line 86
     :sswitch_f
     const-string/jumbo v7, "background"
 
@@ -890,7 +815,6 @@
 
     goto :goto_3
 
-    .line 88
     :pswitch_a
     new-instance v1, Lcom/netflix/model/leafs/PostPlayAsset;
 
@@ -908,7 +832,6 @@
 
     goto :goto_2
 
-    .line 93
     :pswitch_b
     iget-object v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->experienceTitle:Ljava/util/List;
 
@@ -916,7 +839,6 @@
 
     goto/16 :goto_0
 
-    .line 94
     :pswitch_c
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsInt()I
 
@@ -930,7 +852,6 @@
 
     goto/16 :goto_0
 
-    .line 95
     :pswitch_d
     iget-object v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->actions:Ljava/util/List;
 
@@ -938,7 +859,6 @@
 
     goto/16 :goto_0
 
-    .line 96
     :pswitch_e
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsInt()I
 
@@ -952,7 +872,6 @@
 
     goto/16 :goto_0
 
-    .line 98
     :pswitch_f
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->isJsonNull()Z
 
@@ -960,19 +879,16 @@
 
     if-nez v0, :cond_1
 
-    .line 99
     iget-object v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->items:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 100
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsJsonArray()Lcom/google/gson/JsonArray;
 
     move-result-object v1
 
     move v0, v2
 
-    .line 101
     :goto_4
     invoke-virtual {v1}, Lcom/google/gson/JsonArray;->size()I
 
@@ -980,7 +896,6 @@
 
     if-ge v0, v6, :cond_1
 
-    .line 102
     iget-object v6, p0, Lcom/netflix/model/leafs/PostPlayExperience;->items:Ljava/util/List;
 
     new-instance v7, Lcom/netflix/model/leafs/PostPlayItem;
@@ -995,12 +910,10 @@
 
     invoke-interface {v6, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 101
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_4
 
-    .line 107
     :pswitch_10
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
@@ -1014,7 +927,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 108
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
@@ -1031,7 +943,6 @@
 
     iput v0, p0, Lcom/netflix/model/leafs/PostPlayExperience;->seamlessEnd:I
 
-    .line 110
     :cond_4
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
@@ -1045,7 +956,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 111
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
@@ -1064,11 +974,9 @@
 
     goto/16 :goto_0
 
-    .line 117
     :cond_5
     return-void
 
-    .line 73
     nop
 
     :sswitch_data_0
@@ -1109,7 +1017,6 @@
         :pswitch_10
     .end packed-switch
 
-    .line 86
     :sswitch_data_1
     .sparse-switch
         -0x4f67aad2 -> :sswitch_f
@@ -1126,8 +1033,6 @@
 .method public set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
     .locals 1
 
-    .prologue
-    .line 61
     const/4 v0, 0x0
 
     return v0
@@ -1136,153 +1041,111 @@
 .method public setActionsInitialIndex(Ljava/lang/Integer;)V
     .locals 0
 
-    .prologue
-    .line 218
     iput-object p1, p0, Lcom/netflix/model/leafs/PostPlayExperience;->actionsInitialIndex:Ljava/lang/Integer;
 
-    .line 219
     return-void
 .end method
 
 .method public setAutoplay(Z)V
     .locals 0
 
-    .prologue
-    .line 158
     iput-boolean p1, p0, Lcom/netflix/model/leafs/PostPlayExperience;->autoplay:Z
 
-    .line 159
     return-void
 .end method
 
 .method public setAutoplaySeconds(I)V
     .locals 0
 
-    .prologue
-    .line 166
     iput p1, p0, Lcom/netflix/model/leafs/PostPlayExperience;->autoplaySeconds:I
 
-    .line 167
     return-void
 .end method
 
 .method public setBackgroundAsset(Lcom/netflix/model/leafs/PostPlayAsset;)V
     .locals 0
 
-    .prologue
-    .line 198
     iput-object p1, p0, Lcom/netflix/model/leafs/PostPlayExperience;->backgroundAsset:Lcom/netflix/model/leafs/PostPlayAsset;
 
-    .line 199
     return-void
 .end method
 
 .method public setItemsInitialIndex(Ljava/lang/Integer;)V
     .locals 0
 
-    .prologue
-    .line 230
     iput-object p1, p0, Lcom/netflix/model/leafs/PostPlayExperience;->itemsInitialIndex:Ljava/lang/Integer;
 
-    .line 231
     return-void
 .end method
 
 .method public setLogoAsset(Lcom/netflix/model/leafs/PostPlayAsset;)V
     .locals 0
 
-    .prologue
-    .line 206
     iput-object p1, p0, Lcom/netflix/model/leafs/PostPlayExperience;->logoAsset:Lcom/netflix/model/leafs/PostPlayAsset;
 
-    .line 207
     return-void
 .end method
 
 .method public setPromotedSupplementalMessage(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 190
     iput-object p1, p0, Lcom/netflix/model/leafs/PostPlayExperience;->promotedSupplementalMessage:Ljava/lang/String;
 
-    .line 191
     return-void
 .end method
 
 .method public setPromotedTitle(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 182
     iput-object p1, p0, Lcom/netflix/model/leafs/PostPlayExperience;->promotedTitle:Ljava/lang/String;
 
-    .line 183
     return-void
 .end method
 
 .method public setPromotedVideoId(Ljava/lang/Integer;)V
     .locals 0
 
-    .prologue
-    .line 174
     iput-object p1, p0, Lcom/netflix/model/leafs/PostPlayExperience;->promotedVideoId:Ljava/lang/Integer;
 
-    .line 175
     return-void
 .end method
 
 .method public setRequestId(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 134
     iput-object p1, p0, Lcom/netflix/model/leafs/PostPlayExperience;->requestId:Ljava/lang/String;
 
-    .line 135
     return-void
 .end method
 
 .method public setSeamlessCountdownSeconds(I)V
     .locals 0
 
-    .prologue
-    .line 242
     iput p1, p0, Lcom/netflix/model/leafs/PostPlayExperience;->seamlessCountdownSeconds:I
 
-    .line 243
     return-void
 .end method
 
 .method public setSeamlessEnd(I)V
     .locals 0
 
-    .prologue
-    .line 250
     iput p1, p0, Lcom/netflix/model/leafs/PostPlayExperience;->seamlessEnd:I
 
-    .line 251
     return-void
 .end method
 
 .method public setTheme(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 150
     iput-object p1, p0, Lcom/netflix/model/leafs/PostPlayExperience;->theme:Ljava/lang/String;
 
-    .line 151
     return-void
 .end method
 
 .method public setType(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 142
     iput-object p1, p0, Lcom/netflix/model/leafs/PostPlayExperience;->type:Ljava/lang/String;
 
-    .line 143
     return-void
 .end method

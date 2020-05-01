@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/mdx/cast/CastManager;Lcom/google/android/gms/cast/CastDevice;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 450
     iput-object p1, p0, Lcom/netflix/mediaclient/service/mdx/cast/CastManager$11;->this$0:Lcom/netflix/mediaclient/service/mdx/cast/CastManager;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/mdx/cast/CastManager$11;->val$castDevice:Lcom/google/android/gms/cast/CastDevice;
@@ -36,8 +34,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 453
     invoke-static {}, Lcom/netflix/mediaclient/service/mdx/cast/CastManager;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -76,7 +72,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 454
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/cast/CastManager$11;->val$castDevice:Lcom/google/android/gms/cast/CastDevice;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/mdx/cast/CastManager$11;->val$msg:Ljava/lang/String;
@@ -85,7 +80,6 @@
 
     move-result v0
 
-    .line 455
     invoke-static {}, Lcom/netflix/mediaclient/service/mdx/cast/CastManager;->access$100()Ljava/lang/String;
 
     move-result-object v1
@@ -110,6 +104,5 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 456
     return-void
 .end method

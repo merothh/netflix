@@ -13,8 +13,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 2892
     invoke-static {}, Lcom/netflix/msl/msg/MslControl$ApplicationError;->values()[Lcom/netflix/msl/msg/MslControl$ApplicationError;
 
     move-result-object v0
@@ -56,7 +54,6 @@
     :try_end_1
     .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_8
 
-    .line 1176
     :goto_1
     invoke-static {}, Lcom/netflix/msl/MslConstants$ResponseCode;->values()[Lcom/netflix/msl/MslConstants$ResponseCode;
 
@@ -238,7 +235,6 @@
 
     goto :goto_2
 
-    .line 2892
     :catch_8
     move-exception v0
 

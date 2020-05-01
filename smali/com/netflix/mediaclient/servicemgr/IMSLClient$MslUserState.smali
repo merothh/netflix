@@ -30,7 +30,6 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x3
 
     const/4 v4, 0x2
@@ -39,7 +38,6 @@
 
     const/4 v2, 0x0
 
-    .line 59
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IMSLClient$MslUserState;
 
     const-string/jumbo v1, "masterTokenMissing"
@@ -48,7 +46,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IMSLClient$MslUserState;->masterTokenMissing:Lcom/netflix/mediaclient/servicemgr/IMSLClient$MslUserState;
 
-    .line 60
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IMSLClient$MslUserState;
 
     const-string/jumbo v1, "userMissing"
@@ -57,7 +54,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IMSLClient$MslUserState;->userMissing:Lcom/netflix/mediaclient/servicemgr/IMSLClient$MslUserState;
 
-    .line 61
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IMSLClient$MslUserState;
 
     const-string/jumbo v1, "recoveryUserDataAvailable"
@@ -66,7 +62,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IMSLClient$MslUserState;->recoveryUserDataAvailable:Lcom/netflix/mediaclient/servicemgr/IMSLClient$MslUserState;
 
-    .line 62
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IMSLClient$MslUserState;
 
     const-string/jumbo v1, "userExist"
@@ -75,7 +70,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IMSLClient$MslUserState;->userExist:Lcom/netflix/mediaclient/servicemgr/IMSLClient$MslUserState;
 
-    .line 58
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/IMSLClient$MslUserState;
@@ -109,8 +103,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 58
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -119,8 +111,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/IMSLClient$MslUserState;
     .locals 1
 
-    .prologue
-    .line 58
     const-class v0, Lcom/netflix/mediaclient/servicemgr/IMSLClient$MslUserState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -135,8 +125,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/IMSLClient$MslUserState;
     .locals 1
 
-    .prologue
-    .line 58
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/IMSLClient$MslUserState;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/IMSLClient$MslUserState;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/IMSLClient$MslUserState;->clone()Ljava/lang/Object;

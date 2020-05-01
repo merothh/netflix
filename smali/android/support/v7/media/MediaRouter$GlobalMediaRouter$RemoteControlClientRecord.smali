@@ -18,13 +18,10 @@
 .method public constructor <init>(Landroid/support/v7/media/MediaRouter$GlobalMediaRouter;Ljava/lang/Object;)V
     .locals 1
 
-    .prologue
-    .line 2342
     iput-object p1, p0, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter$RemoteControlClientRecord;->this$0:Landroid/support/v7/media/MediaRouter$GlobalMediaRouter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2343
     invoke-static {p1}, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter;->access$1100(Landroid/support/v7/media/MediaRouter$GlobalMediaRouter;)Landroid/content/Context;
 
     move-result-object v0
@@ -35,15 +32,12 @@
 
     iput-object v0, p0, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter$RemoteControlClientRecord;->mRccCompat:Landroid/support/v7/media/RemoteControlClientCompat;
 
-    .line 2344
     iget-object v0, p0, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter$RemoteControlClientRecord;->mRccCompat:Landroid/support/v7/media/RemoteControlClientCompat;
 
     invoke-virtual {v0, p0}, Landroid/support/v7/media/RemoteControlClientCompat;->setVolumeCallback(Landroid/support/v7/media/RemoteControlClientCompat$VolumeCallback;)V
 
-    .line 2345
     invoke-virtual {p0}, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter$RemoteControlClientRecord;->updatePlaybackInfo()V
 
-    .line 2346
     return-void
 .end method
 
@@ -52,28 +46,22 @@
 .method public disconnect()V
     .locals 2
 
-    .prologue
-    .line 2353
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter$RemoteControlClientRecord;->mDisconnected:Z
 
-    .line 2354
     iget-object v0, p0, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter$RemoteControlClientRecord;->mRccCompat:Landroid/support/v7/media/RemoteControlClientCompat;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/support/v7/media/RemoteControlClientCompat;->setVolumeCallback(Landroid/support/v7/media/RemoteControlClientCompat$VolumeCallback;)V
 
-    .line 2355
     return-void
 .end method
 
 .method public getRemoteControlClient()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 2349
     iget-object v0, p0, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter$RemoteControlClientRecord;->mRccCompat:Landroid/support/v7/media/RemoteControlClientCompat;
 
     invoke-virtual {v0}, Landroid/support/v7/media/RemoteControlClientCompat;->getRemoteControlClient()Ljava/lang/Object;
@@ -86,8 +74,6 @@
 .method public onVolumeSetRequest(I)V
     .locals 1
 
-    .prologue
-    .line 2363
     iget-boolean v0, p0, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter$RemoteControlClientRecord;->mDisconnected:Z
 
     if-nez v0, :cond_0
@@ -100,7 +86,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2364
     iget-object v0, p0, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter$RemoteControlClientRecord;->this$0:Landroid/support/v7/media/MediaRouter$GlobalMediaRouter;
 
     invoke-static {v0}, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter;->access$1200(Landroid/support/v7/media/MediaRouter$GlobalMediaRouter;)Landroid/support/v7/media/MediaRouter$RouteInfo;
@@ -109,7 +94,6 @@
 
     invoke-virtual {v0, p1}, Landroid/support/v7/media/MediaRouter$RouteInfo;->requestSetVolume(I)V
 
-    .line 2366
     :cond_0
     return-void
 .end method
@@ -117,8 +101,6 @@
 .method public onVolumeUpdateRequest(I)V
     .locals 1
 
-    .prologue
-    .line 2370
     iget-boolean v0, p0, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter$RemoteControlClientRecord;->mDisconnected:Z
 
     if-nez v0, :cond_0
@@ -131,7 +113,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2371
     iget-object v0, p0, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter$RemoteControlClientRecord;->this$0:Landroid/support/v7/media/MediaRouter$GlobalMediaRouter;
 
     invoke-static {v0}, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter;->access$1200(Landroid/support/v7/media/MediaRouter$GlobalMediaRouter;)Landroid/support/v7/media/MediaRouter$RouteInfo;
@@ -140,7 +121,6 @@
 
     invoke-virtual {v0, p1}, Landroid/support/v7/media/MediaRouter$RouteInfo;->requestUpdateVolume(I)V
 
-    .line 2373
     :cond_0
     return-void
 .end method
@@ -148,8 +128,6 @@
 .method public updatePlaybackInfo()V
     .locals 2
 
-    .prologue
-    .line 2358
     iget-object v0, p0, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter$RemoteControlClientRecord;->mRccCompat:Landroid/support/v7/media/RemoteControlClientCompat;
 
     iget-object v1, p0, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter$RemoteControlClientRecord;->this$0:Landroid/support/v7/media/MediaRouter$GlobalMediaRouter;
@@ -160,6 +138,5 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v7/media/RemoteControlClientCompat;->setPlaybackInfo(Landroid/support/v7/media/RemoteControlClientCompat$PlaybackInfo;)V
 
-    .line 2359
     return-void
 .end method

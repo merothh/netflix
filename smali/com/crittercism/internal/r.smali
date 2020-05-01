@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 23
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/crittercism/internal/r;->a:Z
@@ -34,35 +32,26 @@
 .method public constructor <init>(Ljavax/net/ssl/SSLSocketFactory;Lcom/crittercism/internal/e;Lcom/crittercism/internal/d;)V
     .locals 1
 
-    .prologue
-    .line 89
     invoke-direct {p0}, Lcom/crittercism/internal/p;-><init>()V
 
-    .line 91
     iput-object p1, p0, Lcom/crittercism/internal/r;->delegate:Ljavax/net/ssl/SSLSocketFactory;
 
-    .line 92
     iput-object p2, p0, Lcom/crittercism/internal/r;->d:Lcom/crittercism/internal/e;
 
-    .line 93
     iput-object p3, p0, Lcom/crittercism/internal/r;->e:Lcom/crittercism/internal/d;
 
-    .line 94
     invoke-static {p1}, Lcom/crittercism/internal/r;->a(Ljavax/net/ssl/SSLSocketFactory;)Lcom/android/org/conscrypt/SSLParametersImpl;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/crittercism/internal/r;->c:Lcom/android/org/conscrypt/SSLParametersImpl;
 
-    .line 95
     return-void
 .end method
 
 .method private static a(Lcom/android/org/conscrypt/SSLParametersImpl;)Lcom/android/org/conscrypt/SSLParametersImpl;
     .locals 1
 
-    .prologue
-    .line 159
     :try_start_0
     invoke-static {p0}, Lcom/crittercism/internal/r;->b(Lcom/android/org/conscrypt/SSLParametersImpl;)Lcom/android/org/conscrypt/SSLParametersImpl;
     :try_end_0
@@ -70,7 +59,6 @@
 
     move-result-object v0
 
-    .line 161
     :goto_0
     return-object v0
 
@@ -85,11 +73,8 @@
 .method private static a(Ljavax/net/ssl/SSLSocketFactory;)Lcom/android/org/conscrypt/SSLParametersImpl;
     .locals 4
 
-    .prologue
-    .line 144
     const/4 v1, 0x0
 
-    .line 147
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -103,7 +88,6 @@
 
     move-result-object v0
 
-    .line 148
     invoke-static {v0, p0}, Lcom/crittercism/internal/j;->a(Ljava/lang/reflect/Field;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -112,7 +96,6 @@
     :try_end_0
     .catch Lcom/crittercism/internal/cj; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 154
     :goto_0
     invoke-static {v0}, Lcom/crittercism/internal/r;->a(Lcom/android/org/conscrypt/SSLParametersImpl;)Lcom/android/org/conscrypt/SSLParametersImpl;
 
@@ -120,7 +103,6 @@
 
     return-object v0
 
-    .line 151
     :catch_0
     move-exception v0
 
@@ -134,34 +116,27 @@
 .method public static a(Lcom/crittercism/internal/e;Lcom/crittercism/internal/d;)Z
     .locals 7
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 38
     sget-boolean v1, Lcom/crittercism/internal/r;->a:Z
 
     if-eqz v1, :cond_0
 
-    .line 39
     sget-boolean v0, Lcom/crittercism/internal/r;->a:Z
 
-    .line 68
     :goto_0
     return v0
 
-    .line 43
     :cond_0
     invoke-static {}, Ljavax/net/ssl/HttpsURLConnection;->getDefaultSSLSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v1
 
-    .line 47
     :try_start_0
     new-instance v2, Lcom/crittercism/internal/r;
 
     invoke-direct {v2, v1, p0, p1}, Lcom/crittercism/internal/r;-><init>(Ljavax/net/ssl/SSLSocketFactory;Lcom/crittercism/internal/e;Lcom/crittercism/internal/d;)V
 
-    .line 50
     invoke-virtual {v2}, Ljavax/net/ssl/SSLSocketFactory;->createSocket()Ljava/net/Socket;
     :try_end_0
     .catch Ljava/lang/ThreadDeath; {:try_start_0 .. :try_end_0} :catch_0
@@ -169,7 +144,6 @@
 
     move-result-object v3
 
-    .line 52
     :try_start_1
     const-string/jumbo v4, "localhost"
 
@@ -183,34 +157,27 @@
     .catch Ljava/lang/ThreadDeath; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 65
     :goto_1
     invoke-static {v2}, Ljavax/net/ssl/HttpsURLConnection;->setDefaultSSLSocketFactory(Ljavax/net/ssl/SSLSocketFactory;)V
 
-    .line 66
     sput-object v1, Lcom/crittercism/internal/r;->b:Ljavax/net/ssl/SSLSocketFactory;
 
-    .line 67
     sput-boolean v0, Lcom/crittercism/internal/r;->a:Z
 
     goto :goto_0
 
-    .line 59
     :catch_0
     move-exception v0
 
     throw v0
 
-    .line 60
     :catch_1
     move-exception v0
 
-    .line 61
     const-string/jumbo v1, "Unable to instrument https connections."
 
     invoke-static {v1, v0}, Lcom/crittercism/internal/dw;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 62
     const/4 v0, 0x0
 
     goto :goto_0
@@ -224,8 +191,6 @@
 .method private static b(Lcom/android/org/conscrypt/SSLParametersImpl;)Lcom/android/org/conscrypt/SSLParametersImpl;
     .locals 3
 
-    .prologue
-    .line 167
     :try_start_0
     const-class v0, Lcom/android/org/conscrypt/SSLParametersImpl;
 
@@ -239,12 +204,10 @@
 
     move-result-object v0
 
-    .line 168
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 169
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -262,44 +225,36 @@
 
     return-object v0
 
-    .line 170
     :catch_0
     move-exception v0
 
-    .line 171
     new-instance v1, Lcom/crittercism/internal/cj;
 
     invoke-direct {v1, v0}, Lcom/crittercism/internal/cj;-><init>(Ljava/lang/Throwable;)V
 
     throw v1
 
-    .line 172
     :catch_1
     move-exception v0
 
-    .line 173
     new-instance v1, Lcom/crittercism/internal/cj;
 
     invoke-direct {v1, v0}, Lcom/crittercism/internal/cj;-><init>(Ljava/lang/Throwable;)V
 
     throw v1
 
-    .line 174
     :catch_2
     move-exception v0
 
-    .line 175
     new-instance v1, Lcom/crittercism/internal/cj;
 
     invoke-direct {v1, v0}, Lcom/crittercism/internal/cj;-><init>(Ljava/lang/Throwable;)V
 
     throw v1
 
-    .line 176
     :catch_3
     move-exception v0
 
-    .line 177
     new-instance v1, Lcom/crittercism/internal/cj;
 
     invoke-direct {v1, v0}, Lcom/crittercism/internal/cj;-><init>(Ljava/lang/Throwable;)V
@@ -312,8 +267,6 @@
 .method public final a()Ljavax/net/ssl/SSLSocketFactory;
     .locals 1
 
-    .prologue
-    .line 195
     iget-object v0, p0, Lcom/crittercism/internal/r;->delegate:Ljavax/net/ssl/SSLSocketFactory;
 
     return-object v0
@@ -322,8 +275,6 @@
 .method public final createSocket()Ljava/net/Socket;
     .locals 4
 
-    .prologue
-    .line 139
     new-instance v0, Lcom/crittercism/internal/t;
 
     iget-object v1, p0, Lcom/crittercism/internal/r;->d:Lcom/crittercism/internal/e;
@@ -344,8 +295,6 @@
 .method public final createSocket(Ljava/lang/String;I)Ljava/net/Socket;
     .locals 6
 
-    .prologue
-    .line 119
     new-instance v0, Lcom/crittercism/internal/t;
 
     iget-object v1, p0, Lcom/crittercism/internal/r;->d:Lcom/crittercism/internal/e;
@@ -370,8 +319,6 @@
 .method public final createSocket(Ljava/lang/String;ILjava/net/InetAddress;I)Ljava/net/Socket;
     .locals 8
 
-    .prologue
-    .line 124
     new-instance v0, Lcom/crittercism/internal/t;
 
     iget-object v1, p0, Lcom/crittercism/internal/r;->d:Lcom/crittercism/internal/e;
@@ -400,8 +347,6 @@
 .method public final createSocket(Ljava/net/InetAddress;I)Ljava/net/Socket;
     .locals 6
 
-    .prologue
-    .line 129
     new-instance v0, Lcom/crittercism/internal/t;
 
     iget-object v1, p0, Lcom/crittercism/internal/r;->d:Lcom/crittercism/internal/e;
@@ -426,8 +371,6 @@
 .method public final createSocket(Ljava/net/InetAddress;ILjava/net/InetAddress;I)Ljava/net/Socket;
     .locals 8
 
-    .prologue
-    .line 134
     new-instance v0, Lcom/crittercism/internal/t;
 
     iget-object v1, p0, Lcom/crittercism/internal/r;->d:Lcom/crittercism/internal/e;
@@ -456,15 +399,12 @@
 .method public final createSocket(Ljava/net/Socket;Ljava/lang/String;IZ)Ljava/net/Socket;
     .locals 8
 
-    .prologue
-    .line 111
     iget-object v0, p0, Lcom/crittercism/internal/r;->c:Lcom/android/org/conscrypt/SSLParametersImpl;
 
     invoke-static {v0}, Lcom/crittercism/internal/r;->a(Lcom/android/org/conscrypt/SSLParametersImpl;)Lcom/android/org/conscrypt/SSLParametersImpl;
 
     move-result-object v7
 
-    .line 112
     new-instance v0, Lcom/crittercism/internal/v;
 
     iget-object v1, p0, Lcom/crittercism/internal/r;->d:Lcom/crittercism/internal/e;
@@ -487,8 +427,6 @@
 .method public final getDefaultCipherSuites()[Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 99
     iget-object v0, p0, Lcom/crittercism/internal/r;->delegate:Ljavax/net/ssl/SSLSocketFactory;
 
     invoke-virtual {v0}, Ljavax/net/ssl/SSLSocketFactory;->getDefaultCipherSuites()[Ljava/lang/String;
@@ -501,8 +439,6 @@
 .method public final getSupportedCipherSuites()[Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 104
     iget-object v0, p0, Lcom/crittercism/internal/r;->delegate:Ljavax/net/ssl/SSLSocketFactory;
 
     invoke-virtual {v0}, Ljavax/net/ssl/SSLSocketFactory;->getSupportedCipherSuites()[Ljava/lang/String;

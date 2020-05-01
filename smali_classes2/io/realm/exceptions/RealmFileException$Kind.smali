@@ -34,7 +34,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -45,7 +44,6 @@
 
     const/4 v3, 0x0
 
-    .line 33
     new-instance v0, Lio/realm/exceptions/RealmFileException$Kind;
 
     const-string/jumbo v1, "ACCESS_ERROR"
@@ -54,7 +52,6 @@
 
     sput-object v0, Lio/realm/exceptions/RealmFileException$Kind;->ACCESS_ERROR:Lio/realm/exceptions/RealmFileException$Kind;
 
-    .line 38
     new-instance v0, Lio/realm/exceptions/RealmFileException$Kind;
 
     const-string/jumbo v1, "PERMISSION_DENIED"
@@ -63,7 +60,6 @@
 
     sput-object v0, Lio/realm/exceptions/RealmFileException$Kind;->PERMISSION_DENIED:Lio/realm/exceptions/RealmFileException$Kind;
 
-    .line 42
     new-instance v0, Lio/realm/exceptions/RealmFileException$Kind;
 
     const-string/jumbo v1, "EXISTS"
@@ -72,7 +68,6 @@
 
     sput-object v0, Lio/realm/exceptions/RealmFileException$Kind;->EXISTS:Lio/realm/exceptions/RealmFileException$Kind;
 
-    .line 46
     new-instance v0, Lio/realm/exceptions/RealmFileException$Kind;
 
     const-string/jumbo v1, "NOT_FOUND"
@@ -81,7 +76,6 @@
 
     sput-object v0, Lio/realm/exceptions/RealmFileException$Kind;->NOT_FOUND:Lio/realm/exceptions/RealmFileException$Kind;
 
-    .line 51
     new-instance v0, Lio/realm/exceptions/RealmFileException$Kind;
 
     const-string/jumbo v1, "INCOMPATIBLE_LOCK_FILE"
@@ -90,7 +84,6 @@
 
     sput-object v0, Lio/realm/exceptions/RealmFileException$Kind;->INCOMPATIBLE_LOCK_FILE:Lio/realm/exceptions/RealmFileException$Kind;
 
-    .line 55
     new-instance v0, Lio/realm/exceptions/RealmFileException$Kind;
 
     const-string/jumbo v1, "FORMAT_UPGRADE_REQUIRED"
@@ -101,7 +94,6 @@
 
     sput-object v0, Lio/realm/exceptions/RealmFileException$Kind;->FORMAT_UPGRADE_REQUIRED:Lio/realm/exceptions/RealmFileException$Kind;
 
-    .line 29
     const/4 v0, 0x6
 
     new-array v0, v0, [Lio/realm/exceptions/RealmFileException$Kind;
@@ -145,8 +137,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 29
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -155,11 +145,8 @@
 .method static getKind(B)Lio/realm/exceptions/RealmFileException$Kind;
     .locals 2
 
-    .prologue
-    .line 59
     packed-switch p0, :pswitch_data_0
 
-    .line 73
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string/jumbo v1, "Unknown value for RealmFileException kind."
@@ -168,45 +155,37 @@
 
     throw v0
 
-    .line 61
     :pswitch_0
     sget-object v0, Lio/realm/exceptions/RealmFileException$Kind;->ACCESS_ERROR:Lio/realm/exceptions/RealmFileException$Kind;
 
-    .line 71
     :goto_0
     return-object v0
 
-    .line 63
     :pswitch_1
     sget-object v0, Lio/realm/exceptions/RealmFileException$Kind;->PERMISSION_DENIED:Lio/realm/exceptions/RealmFileException$Kind;
 
     goto :goto_0
 
-    .line 65
     :pswitch_2
     sget-object v0, Lio/realm/exceptions/RealmFileException$Kind;->EXISTS:Lio/realm/exceptions/RealmFileException$Kind;
 
     goto :goto_0
 
-    .line 67
     :pswitch_3
     sget-object v0, Lio/realm/exceptions/RealmFileException$Kind;->NOT_FOUND:Lio/realm/exceptions/RealmFileException$Kind;
 
     goto :goto_0
 
-    .line 69
     :pswitch_4
     sget-object v0, Lio/realm/exceptions/RealmFileException$Kind;->INCOMPATIBLE_LOCK_FILE:Lio/realm/exceptions/RealmFileException$Kind;
 
     goto :goto_0
 
-    .line 71
     :pswitch_5
     sget-object v0, Lio/realm/exceptions/RealmFileException$Kind;->FORMAT_UPGRADE_REQUIRED:Lio/realm/exceptions/RealmFileException$Kind;
 
     goto :goto_0
 
-    .line 59
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -221,8 +200,6 @@
 .method public static valueOf(Ljava/lang/String;)Lio/realm/exceptions/RealmFileException$Kind;
     .locals 1
 
-    .prologue
-    .line 29
     const-class v0, Lio/realm/exceptions/RealmFileException$Kind;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -237,8 +214,6 @@
 .method public static values()[Lio/realm/exceptions/RealmFileException$Kind;
     .locals 1
 
-    .prologue
-    .line 29
     sget-object v0, Lio/realm/exceptions/RealmFileException$Kind;->$VALUES:[Lio/realm/exceptions/RealmFileException$Kind;
 
     invoke-virtual {v0}, [Lio/realm/exceptions/RealmFileException$Kind;->clone()Ljava/lang/Object;

@@ -22,11 +22,8 @@
 .method public constructor <init>(Z)V
     .locals 1
 
-    .prologue
-    .line 418
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 419
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
@@ -34,10 +31,8 @@
     :goto_0
     iput v0, p0, Lcom/google/android/exoplayer/MediaCodecUtil$MediaCodecListCompatV21;->codecKind:I
 
-    .line 420
     return-void
 
-    .line 419
     :cond_0
     const/4 v0, 0x0
 
@@ -47,13 +42,10 @@
 .method private ensureMediaCodecInfosInitialized()V
     .locals 2
 
-    .prologue
-    .line 445
     iget-object v0, p0, Lcom/google/android/exoplayer/MediaCodecUtil$MediaCodecListCompatV21;->mediaCodecInfos:[Landroid/media/MediaCodecInfo;
 
     if-nez v0, :cond_0
 
-    .line 446
     new-instance v0, Landroid/media/MediaCodecList;
 
     iget v1, p0, Lcom/google/android/exoplayer/MediaCodecUtil$MediaCodecListCompatV21;->codecKind:I
@@ -66,7 +58,6 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer/MediaCodecUtil$MediaCodecListCompatV21;->mediaCodecInfos:[Landroid/media/MediaCodecInfo;
 
-    .line 448
     :cond_0
     return-void
 .end method
@@ -76,11 +67,8 @@
 .method public getCodecCount()I
     .locals 1
 
-    .prologue
-    .line 424
     invoke-direct {p0}, Lcom/google/android/exoplayer/MediaCodecUtil$MediaCodecListCompatV21;->ensureMediaCodecInfosInitialized()V
 
-    .line 425
     iget-object v0, p0, Lcom/google/android/exoplayer/MediaCodecUtil$MediaCodecListCompatV21;->mediaCodecInfos:[Landroid/media/MediaCodecInfo;
 
     array-length v0, v0
@@ -91,11 +79,8 @@
 .method public getCodecInfoAt(I)Landroid/media/MediaCodecInfo;
     .locals 1
 
-    .prologue
-    .line 430
     invoke-direct {p0}, Lcom/google/android/exoplayer/MediaCodecUtil$MediaCodecListCompatV21;->ensureMediaCodecInfosInitialized()V
 
-    .line 431
     iget-object v0, p0, Lcom/google/android/exoplayer/MediaCodecUtil$MediaCodecListCompatV21;->mediaCodecInfos:[Landroid/media/MediaCodecInfo;
 
     aget-object v0, v0, p1
@@ -106,8 +91,6 @@
 .method public isSecurePlaybackSupported(Ljava/lang/String;Landroid/media/MediaCodecInfo$CodecCapabilities;)Z
     .locals 1
 
-    .prologue
-    .line 441
     const-string/jumbo v0, "secure-playback"
 
     invoke-virtual {p2, v0}, Landroid/media/MediaCodecInfo$CodecCapabilities;->isFeatureSupported(Ljava/lang/String;)Z
@@ -120,8 +103,6 @@
 .method public secureDecodersExplicit()Z
     .locals 1
 
-    .prologue
-    .line 436
     const/4 v0, 0x1
 
     return v0

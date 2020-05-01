@@ -22,16 +22,12 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/user/UserAgent;)V
     .locals 1
 
-    .prologue
-    .line 1806
     iput-object p1, p0, Lcom/netflix/mediaclient/service/user/UserAgent$MarkSurveysAsReadTask;->this$0:Lcom/netflix/mediaclient/service/user/UserAgent;
 
-    .line 1807
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/user/UserAgent$FetchTask;-><init>(Lcom/netflix/mediaclient/service/user/UserAgent$UserAgentCallback;)V
 
-    .line 1808
     return-void
 .end method
 
@@ -40,8 +36,6 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 1812
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$MarkSurveysAsReadTask;->this$0:Lcom/netflix/mediaclient/service/user/UserAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/user/UserAgent;->access$1200(Lcom/netflix/mediaclient/service/user/UserAgent;)Lcom/netflix/mediaclient/service/user/UserWebClient;
@@ -50,6 +44,5 @@
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/user/UserWebClient;->markSurveysAsRead()V
 
-    .line 1813
     return-void
 .end method

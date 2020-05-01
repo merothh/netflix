@@ -14,8 +14,6 @@
 .method constructor <init>(Landroid/support/v7/widget/Toolbar;)V
     .locals 0
 
-    .prologue
-    .line 199
     iput-object p1, p0, Landroid/support/v7/widget/Toolbar$1;->this$0:Landroid/support/v7/widget/Toolbar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 1
 
-    .prologue
-    .line 202
     iget-object v0, p0, Landroid/support/v7/widget/Toolbar$1;->this$0:Landroid/support/v7/widget/Toolbar;
 
     iget-object v0, v0, Landroid/support/v7/widget/Toolbar;->mOnMenuItemClickListener:Landroid/support/v7/widget/Toolbar$OnMenuItemClickListener;
 
     if-eqz v0, :cond_0
 
-    .line 203
     iget-object v0, p0, Landroid/support/v7/widget/Toolbar$1;->this$0:Landroid/support/v7/widget/Toolbar;
 
     iget-object v0, v0, Landroid/support/v7/widget/Toolbar;->mOnMenuItemClickListener:Landroid/support/v7/widget/Toolbar$OnMenuItemClickListener;
@@ -45,7 +40,6 @@
 
     move-result v0
 
-    .line 205
     :goto_0
     return v0
 

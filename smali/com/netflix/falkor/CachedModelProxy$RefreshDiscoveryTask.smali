@@ -21,14 +21,10 @@
 .method public constructor <init>(Lcom/netflix/falkor/CachedModelProxy;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 3670
     iput-object p1, p0, Lcom/netflix/falkor/CachedModelProxy$RefreshDiscoveryTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
-    .line 3671
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/netflix/falkor/CachedModelProxy$RefreshLomoTask;-><init>(Lcom/netflix/falkor/CachedModelProxy;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3672
     return-void
 .end method
 
@@ -46,7 +42,6 @@
         }
     .end annotation
 
-    .prologue
     const/4 v7, 0x3
 
     const/4 v10, 0x2
@@ -55,14 +50,12 @@
 
     const/4 v8, 0x0
 
-    .line 3678
     new-instance v0, Ljava/util/ArrayList;
 
     const/16 v1, 0x8
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 3680
     const-string/jumbo v1, "\'%s\'"
 
     new-array v2, v9, [Ljava/lang/Object;
@@ -75,7 +68,6 @@
 
     move-result-object v1
 
-    .line 3681
     new-instance v2, Lcom/netflix/mediaclient/util/DataUtil$StringPair;
 
     const-string/jumbo v3, "param"
@@ -88,7 +80,6 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3682
     new-instance v1, Lcom/netflix/mediaclient/util/DataUtil$StringPair;
 
     const-string/jumbo v2, "param"
@@ -103,7 +94,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3683
     new-instance v1, Lcom/netflix/mediaclient/util/DataUtil$StringPair;
 
     const-string/jumbo v2, "param"
@@ -118,14 +108,12 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3685
     const/4 v1, 0x6
 
     invoke-static {v8, v1}, Lcom/netflix/falkor/PQL;->range(II)Ljava/util/Map;
 
     move-result-object v1
 
-    .line 3686
     new-array v2, v7, [Ljava/lang/Object;
 
     const-string/jumbo v3, "discoveryEvidence"
@@ -154,7 +142,6 @@
 
     move-result-object v2
 
-    .line 3687
     new-array v3, v10, [Ljava/lang/Object;
 
     const-string/jumbo v4, "videoEvidence"
@@ -213,7 +200,6 @@
 
     move-result-object v3
 
-    .line 3688
     new-array v4, v10, [Ljava/lang/Object;
 
     const-string/jumbo v5, "videoEvidence"
@@ -238,7 +224,6 @@
 
     move-result-object v1
 
-    .line 3690
     new-instance v4, Lcom/netflix/mediaclient/util/DataUtil$StringPair;
 
     const-string/jumbo v5, "pathSuffix"
@@ -251,7 +236,6 @@
 
     invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3691
     new-instance v3, Lcom/netflix/mediaclient/util/DataUtil$StringPair;
 
     const-string/jumbo v4, "pathSuffix"
@@ -264,7 +248,6 @@
 
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3692
     new-instance v1, Lcom/netflix/mediaclient/util/DataUtil$StringPair;
 
     const-string/jumbo v3, "pathSuffix"
@@ -277,7 +260,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3693
     new-instance v1, Lcom/netflix/mediaclient/util/DataUtil$StringPair;
 
     const-string/jumbo v2, "pathSuffix"
@@ -292,22 +274,18 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3695
     return-object v0
 .end method
 
 .method protected notifyOfRefresh()V
     .locals 3
 
-    .prologue
-    .line 3700
     const-string/jumbo v0, "CachedModelProxy"
 
     const-string/jumbo v1, "RefreshDiscoveryTask was finished. DISCOVERY_LIST_UPDATED broadcast sent"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3701
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$RefreshDiscoveryTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
     invoke-virtual {v0}, Lcom/netflix/falkor/CachedModelProxy;->getService()Lcom/netflix/mediaclient/service/NetflixService;
@@ -326,6 +304,5 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v4/content/LocalBroadcastManager;->sendBroadcast(Landroid/content/Intent;)Z
 
-    .line 3702
     return-void
 .end method

@@ -13,8 +13,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;I)V
     .locals 0
 
-    .prologue
-    .line 358
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$2;->this$0:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;
 
     iput p2, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$2;->val$numColumns:I
@@ -29,8 +27,6 @@
 .method public getSpanSize(I)I
     .locals 1
 
-    .prologue
-    .line 362
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$2;->this$0:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;->access$100(Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;)Lcom/netflix/mediaclient/android/widget/RecyclerViewHeaderAdapter;
@@ -43,10 +39,8 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 363
     iget v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$2;->val$numColumns:I
 
-    .line 365
     :goto_0
     return v0
 

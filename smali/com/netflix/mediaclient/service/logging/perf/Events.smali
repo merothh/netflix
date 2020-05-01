@@ -32,7 +32,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x4
 
     const/4 v5, 0x3
@@ -43,7 +42,6 @@
 
     const/4 v2, 0x0
 
-    .line 14
     new-instance v0, Lcom/netflix/mediaclient/service/logging/perf/Events;
 
     const-string/jumbo v1, "HOME_ACTIVITY_CREATED"
@@ -52,7 +50,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/logging/perf/Events;->HOME_ACTIVITY_CREATED:Lcom/netflix/mediaclient/service/logging/perf/Events;
 
-    .line 18
     new-instance v0, Lcom/netflix/mediaclient/service/logging/perf/Events;
 
     const-string/jumbo v1, "NETFLIX_SERVICE_STARTED_COMMAND"
@@ -61,7 +58,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/logging/perf/Events;->NETFLIX_SERVICE_STARTED_COMMAND:Lcom/netflix/mediaclient/service/logging/perf/Events;
 
-    .line 22
     new-instance v0, Lcom/netflix/mediaclient/service/logging/perf/Events;
 
     const-string/jumbo v1, "LOLOMO_METADATA_FETCHED_EVENT"
@@ -70,7 +66,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/logging/perf/Events;->LOLOMO_METADATA_FETCHED_EVENT:Lcom/netflix/mediaclient/service/logging/perf/Events;
 
-    .line 26
     new-instance v0, Lcom/netflix/mediaclient/service/logging/perf/Events;
 
     const-string/jumbo v1, "DP_METADATA_FETCHED_EVENT"
@@ -79,7 +74,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/logging/perf/Events;->DP_METADATA_FETCHED_EVENT:Lcom/netflix/mediaclient/service/logging/perf/Events;
 
-    .line 30
     new-instance v0, Lcom/netflix/mediaclient/service/logging/perf/Events;
 
     const-string/jumbo v1, "DP_PREFETCH_REQUEST_IN_FLIGHT_EVENT"
@@ -88,7 +82,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/logging/perf/Events;->DP_PREFETCH_REQUEST_IN_FLIGHT_EVENT:Lcom/netflix/mediaclient/service/logging/perf/Events;
 
-    .line 10
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/logging/perf/Events;
@@ -126,8 +119,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 10
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -136,8 +127,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/logging/perf/Events;
     .locals 1
 
-    .prologue
-    .line 10
     const-class v0, Lcom/netflix/mediaclient/service/logging/perf/Events;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -152,8 +141,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/logging/perf/Events;
     .locals 1
 
-    .prologue
-    .line 10
     sget-object v0, Lcom/netflix/mediaclient/service/logging/perf/Events;->$VALUES:[Lcom/netflix/mediaclient/service/logging/perf/Events;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/logging/perf/Events;->clone()Ljava/lang/Object;

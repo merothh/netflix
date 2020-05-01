@@ -26,12 +26,10 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 60
     new-instance v0, Lio/realm/RealmCache$RealmCacheType;
 
     const-string/jumbo v1, "TYPED_REALM"
@@ -40,7 +38,6 @@
 
     sput-object v0, Lio/realm/RealmCache$RealmCacheType;->TYPED_REALM:Lio/realm/RealmCache$RealmCacheType;
 
-    .line 61
     new-instance v0, Lio/realm/RealmCache$RealmCacheType;
 
     const-string/jumbo v1, "DYNAMIC_REALM"
@@ -49,7 +46,6 @@
 
     sput-object v0, Lio/realm/RealmCache$RealmCacheType;->DYNAMIC_REALM:Lio/realm/RealmCache$RealmCacheType;
 
-    .line 59
     const/4 v0, 0x2
 
     new-array v0, v0, [Lio/realm/RealmCache$RealmCacheType;
@@ -75,8 +71,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 59
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -95,31 +89,24 @@
         }
     .end annotation
 
-    .prologue
-    .line 64
     const-class v0, Lio/realm/Realm;
 
     if-ne p0, v0, :cond_0
 
-    .line 65
     sget-object v0, Lio/realm/RealmCache$RealmCacheType;->TYPED_REALM:Lio/realm/RealmCache$RealmCacheType;
 
-    .line 67
     :goto_0
     return-object v0
 
-    .line 66
     :cond_0
     const-class v0, Lio/realm/DynamicRealm;
 
     if-ne p0, v0, :cond_1
 
-    .line 67
     sget-object v0, Lio/realm/RealmCache$RealmCacheType;->DYNAMIC_REALM:Lio/realm/RealmCache$RealmCacheType;
 
     goto :goto_0
 
-    .line 70
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -133,8 +120,6 @@
 .method public static valueOf(Ljava/lang/String;)Lio/realm/RealmCache$RealmCacheType;
     .locals 1
 
-    .prologue
-    .line 59
     const-class v0, Lio/realm/RealmCache$RealmCacheType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -149,8 +134,6 @@
 .method public static values()[Lio/realm/RealmCache$RealmCacheType;
     .locals 1
 
-    .prologue
-    .line 59
     sget-object v0, Lio/realm/RealmCache$RealmCacheType;->$VALUES:[Lio/realm/RealmCache$RealmCacheType;
 
     invoke-virtual {v0}, [Lio/realm/RealmCache$RealmCacheType;->clone()Ljava/lang/Object;

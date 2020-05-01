@@ -19,16 +19,12 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 25
     sput-boolean v0, Lio/realm/Property;->PRIMARY_KEY:Z
 
-    .line 26
     sput-boolean v0, Lio/realm/Property;->REQUIRED:Z
 
-    .line 27
     sput-boolean v0, Lio/realm/Property;->INDEXED:Z
 
     return-void
@@ -37,30 +33,22 @@
 .method protected constructor <init>(J)V
     .locals 1
 
-    .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     iput-wide p1, p0, Lio/realm/Property;->nativePtr:J
 
-    .line 42
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;Lio/realm/RealmFieldType;Lio/realm/RealmObjectSchema;)V
     .locals 2
 
-    .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     invoke-virtual {p3}, Lio/realm/RealmObjectSchema;->getClassName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 37
     invoke-virtual {p2}, Lio/realm/RealmFieldType;->getNativeValue()I
 
     move-result v1
@@ -71,18 +59,14 @@
 
     iput-wide v0, p0, Lio/realm/Property;->nativePtr:J
 
-    .line 38
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;Lio/realm/RealmFieldType;ZZZ)V
     .locals 2
 
-    .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     invoke-virtual {p2}, Lio/realm/RealmFieldType;->getNativeValue()I
 
     move-result v1
@@ -98,10 +82,8 @@
 
     iput-wide v0, p0, Lio/realm/Property;->nativePtr:J
 
-    .line 33
     return-void
 
-    .line 32
     :cond_0
     const/4 v0, 0x0
 
@@ -122,8 +104,6 @@
 .method public close()V
     .locals 4
 
-    .prologue
-    .line 49
     iget-wide v0, p0, Lio/realm/Property;->nativePtr:J
 
     const-wide/16 v2, 0x0
@@ -132,12 +112,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 50
     iget-wide v0, p0, Lio/realm/Property;->nativePtr:J
 
     invoke-static {v0, v1}, Lio/realm/Property;->nativeClose(J)V
 
-    .line 52
     :cond_0
     return-void
 .end method
@@ -145,8 +123,6 @@
 .method protected getNativePtr()J
     .locals 2
 
-    .prologue
-    .line 45
     iget-wide v0, p0, Lio/realm/Property;->nativePtr:J
 
     return-wide v0

@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/android/widgetry/buffet/BuffetBar;)V
     .locals 0
 
-    .prologue
-    .line 502
     iput-object p1, p0, Lcom/netflix/android/widgetry/buffet/BuffetBar$4;->this$0:Lcom/netflix/android/widgetry/buffet/BuffetBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,35 +26,27 @@
 .method public onDismiss(Landroid/view/View;)V
     .locals 2
 
-    .prologue
-    .line 505
     const/16 v0, 0x8
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 506
     iget-object v0, p0, Lcom/netflix/android/widgetry/buffet/BuffetBar$4;->this$0:Lcom/netflix/android/widgetry/buffet/BuffetBar;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/netflix/android/widgetry/buffet/BuffetBar;->dispatchDismiss(I)V
 
-    .line 507
     return-void
 .end method
 
 .method public onDragStateChanged(I)V
     .locals 2
 
-    .prologue
-    .line 511
     packed-switch p1, :pswitch_data_0
 
-    .line 522
     :goto_0
     return-void
 
-    .line 515
     :pswitch_0
     invoke-static {}, Lcom/netflix/android/widgetry/buffet/BuffetManager;->getInstance()Lcom/netflix/android/widgetry/buffet/BuffetManager;
 
@@ -70,7 +60,6 @@
 
     goto :goto_0
 
-    .line 519
     :pswitch_1
     invoke-static {}, Lcom/netflix/android/widgetry/buffet/BuffetManager;->getInstance()Lcom/netflix/android/widgetry/buffet/BuffetManager;
 
@@ -84,7 +73,6 @@
 
     goto :goto_0
 
-    .line 511
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

@@ -40,7 +40,6 @@
 .method static constructor <clinit>()V
     .locals 10
 
-    .prologue
     const/4 v9, 0x4
 
     const/4 v8, 0x3
@@ -51,7 +50,6 @@
 
     const/4 v5, 0x0
 
-    .line 4
     new-instance v0, Lcom/crittercism/internal/cq;
 
     const-string/jumbo v1, "APP_LOADS_FILES"
@@ -64,7 +62,6 @@
 
     sput-object v0, Lcom/crittercism/internal/cq;->a:Lcom/crittercism/internal/cq;
 
-    .line 5
     new-instance v0, Lcom/crittercism/internal/cq;
 
     const-string/jumbo v1, "HANDLED_EXCEPTION_FILES"
@@ -77,7 +74,6 @@
 
     sput-object v0, Lcom/crittercism/internal/cq;->b:Lcom/crittercism/internal/cq;
 
-    .line 6
     new-instance v0, Lcom/crittercism/internal/cq;
 
     const-string/jumbo v1, "SDK_CRASHES_FILES"
@@ -90,7 +86,6 @@
 
     sput-object v0, Lcom/crittercism/internal/cq;->c:Lcom/crittercism/internal/cq;
 
-    .line 7
     new-instance v0, Lcom/crittercism/internal/cq;
 
     const-string/jumbo v1, "NDK_CRASHES_FILES"
@@ -103,7 +98,6 @@
 
     sput-object v0, Lcom/crittercism/internal/cq;->d:Lcom/crittercism/internal/cq;
 
-    .line 8
     new-instance v0, Lcom/crittercism/internal/cq;
 
     const-string/jumbo v1, "CURRENT_BREADCRUMBS_FILES"
@@ -116,7 +110,6 @@
 
     sput-object v0, Lcom/crittercism/internal/cq;->e:Lcom/crittercism/internal/cq;
 
-    .line 9
     new-instance v0, Lcom/crittercism/internal/cq;
 
     const-string/jumbo v1, "PREVIOUS_BREADCRUMBS_FILES"
@@ -131,7 +124,6 @@
 
     sput-object v0, Lcom/crittercism/internal/cq;->f:Lcom/crittercism/internal/cq;
 
-    .line 10
     new-instance v0, Lcom/crittercism/internal/cq;
 
     const-string/jumbo v1, "NETWORK_BREADCRUMBS_FILES"
@@ -146,7 +138,6 @@
 
     sput-object v0, Lcom/crittercism/internal/cq;->g:Lcom/crittercism/internal/cq;
 
-    .line 11
     new-instance v0, Lcom/crittercism/internal/cq;
 
     const-string/jumbo v1, "CRASHED_ON_LAST_LOAD_SETTING"
@@ -161,7 +152,6 @@
 
     sput-object v0, Lcom/crittercism/internal/cq;->h:Lcom/crittercism/internal/cq;
 
-    .line 12
     new-instance v0, Lcom/crittercism/internal/cq;
 
     const-string/jumbo v1, "OPT_OUT_STATUS_SETTING"
@@ -176,7 +166,6 @@
 
     sput-object v0, Lcom/crittercism/internal/cq;->i:Lcom/crittercism/internal/cq;
 
-    .line 13
     new-instance v0, Lcom/crittercism/internal/cq;
 
     const-string/jumbo v1, "SESSION_ID_SETTING"
@@ -191,7 +180,6 @@
 
     sput-object v0, Lcom/crittercism/internal/cq;->j:Lcom/crittercism/internal/cq;
 
-    .line 14
     new-instance v0, Lcom/crittercism/internal/cq;
 
     const-string/jumbo v1, "OLD_SESSION_ID_SETTING"
@@ -206,7 +194,6 @@
 
     sput-object v0, Lcom/crittercism/internal/cq;->k:Lcom/crittercism/internal/cq;
 
-    .line 15
     new-instance v0, Lcom/crittercism/internal/cq;
 
     const-string/jumbo v1, "OLD_OPT_OUT_STATUS_SETTING"
@@ -221,7 +208,6 @@
 
     sput-object v0, Lcom/crittercism/internal/cq;->l:Lcom/crittercism/internal/cq;
 
-    .line 3
     const/16 v0, 0xc
 
     new-array v0, v0, [Lcom/crittercism/internal/cq;
@@ -296,25 +282,18 @@
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 20
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 21
     iput-object p3, p0, Lcom/crittercism/internal/cq;->m:Ljava/lang/String;
 
-    .line 22
     iput-object p4, p0, Lcom/crittercism/internal/cq;->n:Ljava/lang/String;
 
-    .line 23
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/crittercism/internal/cq;
     .locals 1
 
-    .prologue
-    .line 3
     const-class v0, Lcom/crittercism/internal/cq;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -329,8 +308,6 @@
 .method public static values()[Lcom/crittercism/internal/cq;
     .locals 1
 
-    .prologue
-    .line 3
     sget-object v0, Lcom/crittercism/internal/cq;->o:[Lcom/crittercism/internal/cq;
 
     invoke-virtual {v0}, [Lcom/crittercism/internal/cq;->clone()Ljava/lang/Object;

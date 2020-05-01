@@ -15,8 +15,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/falkor/FalkorAgent;JLjava/util/concurrent/CountDownLatch;)V
     .locals 0
 
-    .prologue
-    .line 1040
     iput-object p1, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$12;->this$0:Lcom/netflix/mediaclient/service/falkor/FalkorAgent;
 
     iput-wide p2, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$12;->val$requestIdClone:J
@@ -33,14 +31,10 @@
 .method public onLoLoMoPrefetched(Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 4
 
-    .prologue
-    .line 1043
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/service/browse/SimpleBrowseAgentCallback;->onLoLoMoPrefetched(Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 1044
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertOnMain()Z
 
-    .line 1046
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$12;->val$requestIdClone:J
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$12;->this$0:Lcom/netflix/mediaclient/service/falkor/FalkorAgent;
@@ -53,18 +47,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 1047
     const-string/jumbo v0, "FalkorAgent"
 
     const-string/jumbo v1, "Request IDs do not match - skipping prefetch callback"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1052
     :goto_0
     return-void
 
-    .line 1050
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$12;->this$0:Lcom/netflix/mediaclient/service/falkor/FalkorAgent;
 
@@ -72,7 +63,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/service/falkor/FalkorAgent;->serializeFalkorMetadataAsync(Ljava/util/concurrent/CountDownLatch;)V
 
-    .line 1051
     iget-object v0, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$12;->this$0:Lcom/netflix/mediaclient/service/falkor/FalkorAgent;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$12;->val$jobSchedulerCountdown:Ljava/util/concurrent/CountDownLatch;

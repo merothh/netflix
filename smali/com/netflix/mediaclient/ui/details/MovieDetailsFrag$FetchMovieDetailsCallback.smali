@@ -13,19 +13,14 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;J)V
     .locals 2
 
-    .prologue
-    .line 474
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$FetchMovieDetailsCallback;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
-    .line 475
     const-string/jumbo v0, "MovieDetailsFrag"
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/servicemgr/LoggingManagerCallback;-><init>(Ljava/lang/String;)V
 
-    .line 476
     iput-wide p2, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$FetchMovieDetailsCallback;->requestId:J
 
-    .line 477
     return-void
 .end method
 
@@ -34,11 +29,8 @@
 .method public onMovieDetailsFetched(Lcom/netflix/mediaclient/servicemgr/interface_/details/MovieDetails;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 4
 
-    .prologue
-    .line 481
     invoke-super {p0, p1, p2}, Lcom/netflix/mediaclient/servicemgr/LoggingManagerCallback;->onMovieDetailsFetched(Lcom/netflix/mediaclient/servicemgr/interface_/details/MovieDetails;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 483
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$FetchMovieDetailsCallback;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;->getNetflixActivity()Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -51,18 +43,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 484
     const-string/jumbo v0, "MovieDetailsFrag"
 
     const-string/jumbo v1, "Activity state is invalid"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 517
     :goto_0
     return-void
 
-    .line 493
     :cond_0
     iget-wide v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$FetchMovieDetailsCallback;->requestId:J
 
@@ -82,7 +71,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 494
     :cond_1
     const-string/jumbo v0, "MovieDetailsFrag"
 
@@ -92,7 +80,6 @@
 
     goto :goto_0
 
-    .line 498
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$FetchMovieDetailsCallback;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
@@ -100,46 +87,39 @@
 
     iput-boolean v1, v0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;->isLoading:Z
 
-    .line 499
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isError()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 500
     const-string/jumbo v0, "MovieDetailsFrag"
 
     const-string/jumbo v1, "Invalid status code"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 501
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$FetchMovieDetailsCallback;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;->showErrorView()V
 
     goto :goto_0
 
-    .line 505
     :cond_3
     if-nez p1, :cond_4
 
-    .line 506
     const-string/jumbo v0, "MovieDetailsFrag"
 
     const-string/jumbo v1, "No details in response"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 507
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$FetchMovieDetailsCallback;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;->showErrorView()V
 
     goto :goto_0
 
-    .line 511
     :cond_4
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -147,7 +127,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 512
     const-string/jumbo v0, "MovieDetailsFrag"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -188,13 +167,11 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 514
     :cond_5
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$FetchMovieDetailsCallback;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;->showDetailsView(Lcom/netflix/mediaclient/servicemgr/interface_/details/MovieDetails;)V
 
-    .line 515
     invoke-static {p2}, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils;->reportDPMetadataFetchedEvent(Lcom/netflix/mediaclient/android/app/Status;)V
 
     goto/16 :goto_0

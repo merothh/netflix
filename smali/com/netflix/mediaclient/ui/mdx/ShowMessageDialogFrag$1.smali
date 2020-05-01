@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag;[Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 93
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag$1;->this$0:Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag$1;->val$codes:[Ljava/lang/String;
@@ -32,8 +30,6 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
 
-    .prologue
-    .line 98
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag$1;->this$0:Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag;->access$000(Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -42,7 +38,6 @@
 
     monitor-enter v1
 
-    .line 99
     :try_start_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag$1;->this$0:Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag;
 
@@ -56,22 +51,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 100
     const-string/jumbo v0, "mdxui"
 
     const-string/jumbo v2, "Already clicked!"
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
     monitor-exit v1
 
-    .line 113
     :cond_0
     :goto_0
     return-void
 
-    .line 103
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag$1;->this$0:Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag;
 
@@ -83,17 +74,14 @@
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 105
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 107
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag$1;->this$0:Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag;->dismissAllowingStateLoss()V
 
-    .line 108
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag$1;->this$0:Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag;->getFragmentManager()Landroid/app/FragmentManager;
@@ -112,19 +100,16 @@
 
     invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commit()I
 
-    .line 109
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag$1;->this$0:Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 110
     instance-of v1, v0, Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag$MessageResponseProvider;
 
     if-eqz v1, :cond_0
 
-    .line 111
     check-cast v0, Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag$MessageResponseProvider;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag$1;->val$codes:[Ljava/lang/String;
@@ -137,7 +122,6 @@
 
     goto :goto_0
 
-    .line 105
     :catchall_0
     move-exception v0
 

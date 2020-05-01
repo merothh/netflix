@@ -45,19 +45,16 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 32
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->schemes:Ljava/util/Map;
 
-    .line 35
     new-instance v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
     const-string/jumbo v1, "PSK"
@@ -66,7 +63,6 @@
 
     sput-object v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->PSK:Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
-    .line 37
     new-instance v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
     const-string/jumbo v1, "PSK_PROFILE"
@@ -75,7 +71,6 @@
 
     sput-object v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->PSK_PROFILE:Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
-    .line 39
     new-instance v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
     const-string/jumbo v1, "X509"
@@ -84,7 +79,6 @@
 
     sput-object v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->X509:Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
-    .line 41
     new-instance v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
     const-string/jumbo v1, "RSA"
@@ -93,7 +87,6 @@
 
     sput-object v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->RSA:Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
-    .line 43
     new-instance v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
     const-string/jumbo v1, "NONE"
@@ -102,7 +95,6 @@
 
     sput-object v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->NONE:Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
-    .line 45
     new-instance v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
     const-string/jumbo v1, "NONE_SUFFIXED"
@@ -111,7 +103,6 @@
 
     sput-object v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->NONE_SUFFIXED:Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
-    .line 47
     new-instance v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
     const-string/jumbo v1, "MT_PROTECTED"
@@ -120,7 +111,6 @@
 
     sput-object v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->MT_PROTECTED:Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
-    .line 49
     new-instance v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
     const-string/jumbo v1, "PROVISIONED"
@@ -135,37 +125,27 @@
 .method protected constructor <init>(Ljava/lang/String;ZZ)V
     .locals 2
 
-    .prologue
-    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 60
     iput-object p1, p0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->name:Ljava/lang/String;
 
-    .line 61
     iput-boolean p2, p0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->encrypts:Z
 
-    .line 62
     iput-boolean p3, p0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->protects:Z
 
-    .line 65
     sget-object v1, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->schemes:Ljava/util/Map;
 
     monitor-enter v1
 
-    .line 66
     :try_start_0
     sget-object v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->schemes:Ljava/util/Map;
 
     invoke-interface {v0, p1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 67
     monitor-exit v1
 
-    .line 68
     return-void
 
-    .line 67
     :catchall_0
     move-exception v0
 
@@ -179,8 +159,6 @@
 .method public static getScheme(Ljava/lang/String;)Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
     .locals 1
 
-    .prologue
-    .line 76
     sget-object v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->schemes:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -204,8 +182,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 83
     sget-object v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->schemes:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -220,8 +196,6 @@
 .method public encrypts()Z
     .locals 1
 
-    .prologue
-    .line 97
     iget-boolean v0, p0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->encrypts:Z
 
     return v0
@@ -230,17 +204,13 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 128
     if-ne p1, p0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 131
     :goto_0
     return v0
 
-    .line 129
     :cond_0
     instance-of v0, p1, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
@@ -250,11 +220,9 @@
 
     goto :goto_0
 
-    .line 130
     :cond_1
     check-cast p1, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
-    .line 131
     iget-object v0, p0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->name:Ljava/lang/String;
 
     iget-object v1, p1, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->name:Ljava/lang/String;
@@ -269,8 +237,6 @@
 .method public hashCode()I
     .locals 1
 
-    .prologue
-    .line 120
     iget-object v0, p0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->name:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -283,8 +249,6 @@
 .method public name()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 90
     iget-object v0, p0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->name:Ljava/lang/String;
 
     return-object v0
@@ -293,8 +257,6 @@
 .method public protectsIntegrity()Z
     .locals 1
 
-    .prologue
-    .line 104
     iget-boolean v0, p0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->protects:Z
 
     return v0
@@ -303,8 +265,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 112
     invoke-virtual {p0}, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->name()Ljava/lang/String;
 
     move-result-object v0

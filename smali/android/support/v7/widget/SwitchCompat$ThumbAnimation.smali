@@ -17,24 +17,18 @@
 .method constructor <init>(Landroid/support/v7/widget/SwitchCompat;FF)V
     .locals 1
 
-    .prologue
-    .line 1427
     iput-object p1, p0, Landroid/support/v7/widget/SwitchCompat$ThumbAnimation;->this$0:Landroid/support/v7/widget/SwitchCompat;
 
     invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
 
-    .line 1428
     iput p2, p0, Landroid/support/v7/widget/SwitchCompat$ThumbAnimation;->mStartPosition:F
 
-    .line 1429
     iput p3, p0, Landroid/support/v7/widget/SwitchCompat$ThumbAnimation;->mEndPosition:F
 
-    .line 1430
     sub-float v0, p3, p2
 
     iput v0, p0, Landroid/support/v7/widget/SwitchCompat$ThumbAnimation;->mDiff:F
 
-    .line 1431
     return-void
 .end method
 
@@ -43,8 +37,6 @@
 .method protected applyTransformation(FLandroid/view/animation/Transformation;)V
     .locals 3
 
-    .prologue
-    .line 1435
     iget-object v0, p0, Landroid/support/v7/widget/SwitchCompat$ThumbAnimation;->this$0:Landroid/support/v7/widget/SwitchCompat;
 
     iget v1, p0, Landroid/support/v7/widget/SwitchCompat$ThumbAnimation;->mStartPosition:F
@@ -57,6 +49,5 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/SwitchCompat;->setThumbPosition(F)V
 
-    .line 1436
     return-void
 .end method

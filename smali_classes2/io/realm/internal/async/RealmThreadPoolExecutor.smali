@@ -19,8 +19,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 37
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v0
@@ -41,8 +39,6 @@
 .method private constructor <init>(II)V
     .locals 8
 
-    .prologue
-    .line 59
     const-wide/16 v4, 0x0
 
     sget-object v6, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
@@ -61,14 +57,12 @@
 
     invoke-direct/range {v1 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;)V
 
-    .line 41
     new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
     iput-object v0, p0, Lio/realm/internal/async/RealmThreadPoolExecutor;->pauseLock:Ljava/util/concurrent/locks/ReentrantLock;
 
-    .line 42
     iget-object v0, p0, Lio/realm/internal/async/RealmThreadPoolExecutor;->pauseLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->newCondition()Ljava/util/concurrent/locks/Condition;
@@ -77,15 +71,12 @@
 
     iput-object v0, p0, Lio/realm/internal/async/RealmThreadPoolExecutor;->unpaused:Ljava/util/concurrent/locks/Condition;
 
-    .line 62
     return-void
 .end method
 
 .method public static newDefaultExecutor()Lio/realm/internal/async/RealmThreadPoolExecutor;
     .locals 3
 
-    .prologue
-    .line 48
     new-instance v0, Lio/realm/internal/async/RealmThreadPoolExecutor;
 
     sget v1, Lio/realm/internal/async/RealmThreadPoolExecutor;->CORE_POOL_SIZE:I
@@ -102,16 +93,12 @@
 .method protected beforeExecute(Ljava/lang/Thread;Ljava/lang/Runnable;)V
     .locals 2
 
-    .prologue
-    .line 113
     invoke-super {p0, p1, p2}, Ljava/util/concurrent/ThreadPoolExecutor;->beforeExecute(Ljava/lang/Thread;Ljava/lang/Runnable;)V
 
-    .line 114
     iget-object v0, p0, Lio/realm/internal/async/RealmThreadPoolExecutor;->pauseLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    .line 116
     :goto_0
     :try_start_0
     iget-boolean v0, p0, Lio/realm/internal/async/RealmThreadPoolExecutor;->isPaused:Z
@@ -127,26 +114,21 @@
 
     goto :goto_0
 
-    .line 117
     :catch_0
     move-exception v0
 
-    .line 118
     :try_start_1
     invoke-virtual {p1}, Ljava/lang/Thread;->interrupt()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 120
     iget-object v0, p0, Lio/realm/internal/async/RealmThreadPoolExecutor;->pauseLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 122
     :goto_1
     return-void
 
-    .line 120
     :cond_0
     iget-object v0, p0, Lio/realm/internal/async/RealmThreadPoolExecutor;->pauseLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -176,8 +158,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 82
     new-instance v0, Lio/realm/internal/async/BgPriorityRunnable;
 
     invoke-direct {v0, p1}, Lio/realm/internal/async/BgPriorityRunnable;-><init>(Ljava/lang/Runnable;)V
@@ -201,8 +181,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 71
     new-instance v0, Lio/realm/internal/async/BgPriorityRunnable;
 
     invoke-direct {v0, p1}, Lio/realm/internal/async/BgPriorityRunnable;-><init>(Ljava/lang/Runnable;)V
@@ -211,6 +189,5 @@
 
     move-result-object v0
 
-    .line 72
     return-object v0
 .end method

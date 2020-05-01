@@ -17,23 +17,18 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 123
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 124
     const/16 v1, 0x11
 
     if-lt v0, v1, :cond_0
 
-    .line 125
     new-instance v0, Landroid/support/v4/text/TextUtilsCompat$TextUtilsCompatJellybeanMr1Impl;
 
     invoke-direct {v0}, Landroid/support/v4/text/TextUtilsCompat$TextUtilsCompatJellybeanMr1Impl;-><init>()V
 
     sput-object v0, Landroid/support/v4/text/TextUtilsCompat;->IMPL:Landroid/support/v4/text/TextUtilsCompat$TextUtilsCompatImpl;
 
-    .line 155
     :goto_0
     new-instance v0, Ljava/util/Locale;
 
@@ -45,19 +40,16 @@
 
     sput-object v0, Landroid/support/v4/text/TextUtilsCompat;->ROOT:Ljava/util/Locale;
 
-    .line 157
     const-string/jumbo v0, "Arab"
 
     sput-object v0, Landroid/support/v4/text/TextUtilsCompat;->ARAB_SCRIPT_SUBTAG:Ljava/lang/String;
 
-    .line 158
     const-string/jumbo v0, "Hebr"
 
     sput-object v0, Landroid/support/v4/text/TextUtilsCompat;->HEBR_SCRIPT_SUBTAG:Ljava/lang/String;
 
     return-void
 
-    .line 127
     :cond_0
     new-instance v0, Landroid/support/v4/text/TextUtilsCompat$TextUtilsCompatImpl;
 
@@ -71,8 +63,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 160
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -81,8 +71,6 @@
 .method public static getLayoutDirectionFromLocale(Ljava/util/Locale;)I
     .locals 1
 
-    .prologue
-    .line 152
     sget-object v0, Landroid/support/v4/text/TextUtilsCompat;->IMPL:Landroid/support/v4/text/TextUtilsCompat$TextUtilsCompatImpl;
 
     invoke-virtual {v0, p0}, Landroid/support/v4/text/TextUtilsCompat$TextUtilsCompatImpl;->getLayoutDirectionFromLocale(Ljava/util/Locale;)I
@@ -95,8 +83,6 @@
 .method public static htmlEncode(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 138
     sget-object v0, Landroid/support/v4/text/TextUtilsCompat;->IMPL:Landroid/support/v4/text/TextUtilsCompat$TextUtilsCompatImpl;
 
     invoke-virtual {v0, p0}, Landroid/support/v4/text/TextUtilsCompat$TextUtilsCompatImpl;->htmlEncode(Ljava/lang/String;)Ljava/lang/String;

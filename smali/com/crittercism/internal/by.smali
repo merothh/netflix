@@ -6,19 +6,14 @@
 .method private constructor <init>(Ljava/io/File;)V
     .locals 0
 
-    .prologue
-    .line 20
     invoke-direct {p0, p1}, Lcom/crittercism/internal/bo;-><init>(Ljava/io/File;)V
 
-    .line 21
     return-void
 .end method
 
 .method synthetic constructor <init>(Ljava/io/File;B)V
     .locals 0
 
-    .prologue
-    .line 11
     invoke-direct {p0, p1}, Lcom/crittercism/internal/by;-><init>(Ljava/io/File;)V
 
     return-void
@@ -29,11 +24,8 @@
 .method public final a()Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 24
     const/4 v2, 0x0
 
-    .line 27
     :try_start_0
     new-instance v1, Lorg/json/JSONObject;
 
@@ -49,7 +41,6 @@
 
     move-object v0, v1
 
-    .line 32
     :goto_0
     return-object v0
 

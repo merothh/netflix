@@ -13,19 +13,14 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;ZILcom/netflix/mediaclient/android/widget/RecyclerViewHeaderAdapter$IViewCreator;)V
     .locals 1
 
-    .prologue
-    .line 218
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag$ProgressiveAdapter;->this$0:Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;
 
-    .line 219
     invoke-direct {p0, p2, p3, p4}, Lcom/netflix/mediaclient/ui/common/SimilarItemsGridViewAdapter;-><init>(ZILcom/netflix/mediaclient/android/widget/RecyclerViewHeaderAdapter$IViewCreator;)V
 
-    .line 216
     const/16 v0, 0x28
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag$ProgressiveAdapter;->BATCH:I
 
-    .line 220
     return-void
 .end method
 
@@ -34,18 +29,14 @@
 .method public fetchData()V
     .locals 9
 
-    .prologue
-    .line 234
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag$ProgressiveAdapter;->this$0:Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v0
 
-    .line 235
     if-eqz v0, :cond_1
 
-    .line 236
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag$ProgressiveAdapter;->this$0:Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;->access$300(Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;)I
@@ -54,14 +45,12 @@
 
     add-int/lit8 v3, v1, 0x27
 
-    .line 237
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 238
     const-string/jumbo v1, "GalleryGenresLoMoFrag"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -100,7 +89,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 240
     :cond_0
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getBrowse()Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
 
@@ -138,7 +126,6 @@
 
     invoke-interface/range {v0 .. v5}, Lcom/netflix/mediaclient/servicemgr/IBrowseManager;->fetchGenreVideos(Lcom/netflix/mediaclient/servicemgr/interface_/LoMo;IIZLcom/netflix/mediaclient/servicemgr/ManagerCallback;)Z
 
-    .line 242
     :cond_1
     return-void
 .end method
@@ -146,11 +133,8 @@
 .method protected onPostItemViewBind(I)V
     .locals 3
 
-    .prologue
-    .line 224
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/ui/common/SimilarItemsGridViewAdapter;->onPostItemViewBind(I)V
 
-    .line 225
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag$ProgressiveAdapter;->this$0:Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;->access$100(Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;)Z
@@ -167,14 +151,12 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 226
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 227
     const-string/jumbo v0, "GalleryGenresLoMoFrag"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -197,11 +179,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 229
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag$ProgressiveAdapter;->fetchData()V
 
-    .line 231
     :cond_1
     return-void
 .end method

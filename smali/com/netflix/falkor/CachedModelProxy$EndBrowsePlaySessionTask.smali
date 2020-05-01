@@ -30,28 +30,20 @@
 .method public constructor <init>(Lcom/netflix/falkor/CachedModelProxy;JIIILcom/netflix/mediaclient/service/browse/BrowseAgentCallback;)V
     .locals 2
 
-    .prologue
-    .line 2926
     iput-object p1, p0, Lcom/netflix/falkor/CachedModelProxy$EndBrowsePlaySessionTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
-    .line 2927
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p7, v0}, Lcom/netflix/falkor/CachedModelProxy$CmpTask;-><init>(Lcom/netflix/falkor/CachedModelProxy;Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/falkor/CachedModelProxy$1;)V
 
-    .line 2928
     iput-wide p2, p0, Lcom/netflix/falkor/CachedModelProxy$EndBrowsePlaySessionTask;->xId:J
 
-    .line 2929
     iput p4, p0, Lcom/netflix/falkor/CachedModelProxy$EndBrowsePlaySessionTask;->videoId:I
 
-    .line 2930
     iput p5, p0, Lcom/netflix/falkor/CachedModelProxy$EndBrowsePlaySessionTask;->duration:I
 
-    .line 2931
     iput p6, p0, Lcom/netflix/falkor/CachedModelProxy$EndBrowsePlaySessionTask;->position:I
 
-    .line 2932
     return-void
 .end method
 
@@ -69,8 +61,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 2936
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -97,33 +87,26 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2937
     return-void
 .end method
 
 .method protected callbackForFailure(Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 1
 
-    .prologue
-    .line 2982
     const/4 v0, 0x0
 
     invoke-interface {p1, v0, p2}, Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;->onBrowsePlaySessionEnd(ZLcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 2983
     return-void
 .end method
 
 .method protected customHandleResponse(Lcom/google/gson/JsonObject;)V
     .locals 3
 
-    .prologue
-    .line 2960
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/netflix/falkor/CachedModelProxy$EndBrowsePlaySessionTask;->bResult:Z
 
-    .line 2963
     :try_start_0
     const-string/jumbo v0, "value"
 
@@ -131,7 +114,6 @@
 
     move-result-object v0
 
-    .line 2964
     const-string/jumbo v1, "browsePlayEnd"
 
     invoke-virtual {v0, v1}, Lcom/google/gson/JsonObject;->getAsJsonObject(Ljava/lang/String;)Lcom/google/gson/JsonObject;
@@ -154,14 +136,12 @@
 
     iput-boolean v0, p0, Lcom/netflix/falkor/CachedModelProxy$EndBrowsePlaySessionTask;->bResult:Z
 
-    .line 2965
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2966
     const-string/jumbo v0, "CachedModelProxy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -198,16 +178,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2973
     :cond_0
     :goto_0
     return-void
 
-    .line 2968
     :catch_0
     move-exception v0
 
-    .line 2969
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -226,12 +203,10 @@
 
     move-result-object v0
 
-    .line 2970
     const-string/jumbo v1, "CachedModelProxy"
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2971
     invoke-static {v0}, Lcom/netflix/mediaclient/service/logging/error/ErrorLoggingManager;->logHandledException(Ljava/lang/String;)V
 
     goto :goto_0
@@ -240,8 +215,6 @@
 .method protected fetchResultsAndCallbackForSuccess(Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/falkor/CachedModelProxy$GetResult;)V
     .locals 3
 
-    .prologue
-    .line 2977
     iget-boolean v0, p0, Lcom/netflix/falkor/CachedModelProxy$EndBrowsePlaySessionTask;->bResult:Z
 
     new-instance v1, Lcom/netflix/mediaclient/android/app/NetflixStatus;
@@ -252,7 +225,6 @@
 
     invoke-interface {p1, v0, v1}, Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;->onBrowsePlaySessionEnd(ZLcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 2978
     return-void
 .end method
 
@@ -268,15 +240,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 2941
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x3
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 2942
     new-instance v1, Lcom/netflix/mediaclient/util/DataUtil$StringPair;
 
     const-string/jumbo v2, "param"
@@ -291,7 +260,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2943
     new-instance v1, Lcom/netflix/mediaclient/util/DataUtil$StringPair;
 
     const-string/jumbo v2, "param"
@@ -306,7 +274,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2944
     new-instance v1, Lcom/netflix/mediaclient/util/DataUtil$StringPair;
 
     const-string/jumbo v2, "param"
@@ -321,15 +288,12 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2945
     return-object v0
 .end method
 
 .method protected shouldCustomHandleResponse()Z
     .locals 1
 
-    .prologue
-    .line 2955
     const/4 v0, 0x1
 
     return v0
@@ -338,8 +302,6 @@
 .method protected shouldUseCallMethod()Z
     .locals 1
 
-    .prologue
-    .line 2950
     const/4 v0, 0x1
 
     return v0

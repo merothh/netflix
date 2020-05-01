@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 353
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,7 +15,6 @@
 .method public static getUserRating(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/ServiceManager;Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;)Lcom/netflix/mediaclient/servicemgr/interface_/UserRating;
     .locals 6
 
-    .prologue
     const/4 v5, 0x3
 
     const/4 v4, 0x2
@@ -26,7 +23,6 @@
 
     const/4 v2, 0x0
 
-    .line 355
     invoke-interface {p2}, Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;->getType()Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     move-result-object v0
@@ -41,7 +37,6 @@
 
     aput-object v1, v0, v2
 
-    .line 356
     invoke-interface {p2}, Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;->getPlayable()Lcom/netflix/mediaclient/servicemgr/interface_/Playable;
 
     move-result-object v1
@@ -60,7 +55,6 @@
 
     move-result-object v0
 
-    .line 358
     :goto_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -68,7 +62,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 359
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -89,7 +82,6 @@
 
     invoke-static {p0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 361
     :cond_0
     invoke-virtual {p1}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getBrowse()Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
 
@@ -107,7 +99,6 @@
 
     return-object v0
 
-    .line 356
     :cond_1
     new-array v0, v5, [Ljava/lang/Object;
 
@@ -115,7 +106,6 @@
 
     aput-object v1, v0, v2
 
-    .line 357
     invoke-interface {p2}, Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;->getId()Ljava/lang/String;
 
     move-result-object v1

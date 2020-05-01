@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,8 +15,6 @@
 .method public static consumeSystemWindowInsets(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 23
     check-cast p0, Landroid/view/WindowInsets;
 
     invoke-virtual {p0}, Landroid/view/WindowInsets;->consumeSystemWindowInsets()Landroid/view/WindowInsets;
@@ -31,8 +27,6 @@
 .method public static getSourceWindowInsets(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 60
     new-instance v0, Landroid/view/WindowInsets;
 
     check-cast p0, Landroid/view/WindowInsets;
@@ -45,8 +39,6 @@
 .method public static getSystemWindowInsetBottom(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 27
     check-cast p0, Landroid/view/WindowInsets;
 
     invoke-virtual {p0}, Landroid/view/WindowInsets;->getSystemWindowInsetBottom()I
@@ -59,8 +51,6 @@
 .method public static getSystemWindowInsetLeft(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 31
     check-cast p0, Landroid/view/WindowInsets;
 
     invoke-virtual {p0}, Landroid/view/WindowInsets;->getSystemWindowInsetLeft()I
@@ -73,8 +63,6 @@
 .method public static getSystemWindowInsetRight(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 35
     check-cast p0, Landroid/view/WindowInsets;
 
     invoke-virtual {p0}, Landroid/view/WindowInsets;->getSystemWindowInsetRight()I
@@ -87,8 +75,6 @@
 .method public static getSystemWindowInsetTop(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 39
     check-cast p0, Landroid/view/WindowInsets;
 
     invoke-virtual {p0}, Landroid/view/WindowInsets;->getSystemWindowInsetTop()I
@@ -101,8 +87,6 @@
 .method public static hasInsets(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 43
     check-cast p0, Landroid/view/WindowInsets;
 
     invoke-virtual {p0}, Landroid/view/WindowInsets;->hasInsets()Z
@@ -115,8 +99,6 @@
 .method public static hasSystemWindowInsets(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 47
     check-cast p0, Landroid/view/WindowInsets;
 
     invoke-virtual {p0}, Landroid/view/WindowInsets;->hasSystemWindowInsets()Z
@@ -129,8 +111,6 @@
 .method public static isRound(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 51
     check-cast p0, Landroid/view/WindowInsets;
 
     invoke-virtual {p0}, Landroid/view/WindowInsets;->isRound()Z
@@ -143,8 +123,6 @@
 .method public static replaceSystemWindowInsets(Ljava/lang/Object;IIII)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 56
     check-cast p0, Landroid/view/WindowInsets;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/view/WindowInsets;->replaceSystemWindowInsets(IIII)Landroid/view/WindowInsets;

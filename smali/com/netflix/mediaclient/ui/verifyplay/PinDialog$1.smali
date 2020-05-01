@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/verifyplay/PinDialog;)V
     .locals 0
 
-    .prologue
-    .line 105
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/verifyplay/PinDialog$1;->this$0:Lcom/netflix/mediaclient/ui/verifyplay/PinDialog;
 
     invoke-direct {p0}, Landroid/text/method/LinkMovementMethod;-><init>()V
@@ -25,8 +23,6 @@
 .method public onTouchEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
     .locals 3
 
-    .prologue
-    .line 109
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/verifyplay/PinDialog$1;->this$0:Lcom/netflix/mediaclient/ui/verifyplay/PinDialog;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/verifyplay/PinDialog;->access$200(Lcom/netflix/mediaclient/ui/verifyplay/PinDialog;)Landroid/widget/TextView;
@@ -47,7 +43,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLinkTextColor(I)V
 
-    .line 110
     invoke-super {p0, p1, p2, p3}, Landroid/text/method/LinkMovementMethod;->onTouchEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
 
     move-result v0

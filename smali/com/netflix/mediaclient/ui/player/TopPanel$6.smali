@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/TopPanel;)V
     .locals 0
 
-    .prologue
-    .line 300
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/TopPanel$6;->this$0:Lcom/netflix/mediaclient/ui/player/TopPanel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 2
 
-    .prologue
-    .line 303
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel$6;->this$0:Lcom/netflix/mediaclient/ui/player/TopPanel;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/TopPanel;->access$400(Lcom/netflix/mediaclient/ui/player/TopPanel;)Lcom/netflix/mediaclient/ui/player/PlayScreen$Listeners;
@@ -42,7 +38,6 @@
 
     invoke-interface {v0, v1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
-    .line 304
     const/4 v0, 0x1
 
     return v0

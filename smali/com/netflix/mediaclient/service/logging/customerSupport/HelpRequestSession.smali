@@ -15,14 +15,10 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;)V
     .locals 0
 
-    .prologue
-    .line 22
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/logging/customerSupport/BaseCustomerSupportSession;-><init>()V
 
-    .line 23
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/customerSupport/HelpRequestSession;->mEntry:Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;
 
-    .line 24
     return-void
 .end method
 
@@ -31,8 +27,6 @@
 .method public createHelpRequestSessionEndedEvent(Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;Lcom/netflix/mediaclient/service/logging/client/model/Error;)Lcom/netflix/mediaclient/service/logging/customerSupport/model/HelpRequestSessionEndedEvent;
     .locals 7
 
-    .prologue
-    .line 36
     new-instance v0, Lcom/netflix/mediaclient/service/logging/customerSupport/model/HelpRequestSessionEndedEvent;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/logging/customerSupport/HelpRequestSession;->mEntry:Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;
@@ -55,8 +49,6 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 32
     const-string/jumbo v0, "helpRequest"
 
     return-object v0

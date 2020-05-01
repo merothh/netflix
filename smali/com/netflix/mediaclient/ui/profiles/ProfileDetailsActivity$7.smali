@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)V
     .locals 0
 
-    .prologue
-    .line 300
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,19 +26,16 @@
 .method public onClick(Landroid/view/View;)V
     .locals 7
 
-    .prologue
     const/4 v4, 0x0
 
     const/4 v6, 0x1
 
-    .line 303
     const-string/jumbo v0, "ProfileDetailsActivity"
 
     const-string/jumbo v1, "Save button was triggered"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 305
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$1500(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)Z
@@ -49,7 +44,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 307
     sget-object v0, Lcom/netflix/mediaclient/android/app/CommonStatus;->INTERNAL_ERROR:Lcom/netflix/mediaclient/android/app/NetflixImmutableStatus;
 
     const-string/jumbo v1, ""
@@ -60,7 +54,6 @@
 
     move-result-object v0
 
-    .line 308
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$300(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)Z
@@ -69,7 +62,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 309
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     sget-object v2, Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;->failed:Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;
@@ -88,7 +80,6 @@
 
     invoke-static {v1, v2, v3, v0, v5}, Lcom/netflix/mediaclient/util/log/UserActionLogUtils;->reportAddProfileActionEnded(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;Lcom/netflix/mediaclient/service/logging/client/model/UIError;Lcom/netflix/mediaclient/servicemgr/UserActionLogging$Profile;)V
 
-    .line 310
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
@@ -99,11 +90,9 @@
 
     invoke-static {v0, v4, v1}, Lcom/netflix/mediaclient/util/log/UserActionLogUtils;->reportAddProfileActionStarted(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;)V
 
-    .line 346
     :goto_0
     return-void
 
-    .line 312
     :cond_0
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
@@ -123,7 +112,6 @@
 
     invoke-static {v1, v2, v3, v0, v5}, Lcom/netflix/mediaclient/util/log/UserActionLogUtils;->reportEditProfileActionEnded(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;Lcom/netflix/mediaclient/service/logging/client/model/UIError;Lcom/netflix/mediaclient/servicemgr/UserActionLogging$Profile;)V
 
-    .line 313
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
@@ -136,13 +124,11 @@
 
     goto :goto_0
 
-    .line 318
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$1300(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)V
 
-    .line 321
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$1600(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)Landroid/widget/EditText;
@@ -161,7 +147,6 @@
 
     move-result-object v2
 
-    .line 323
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$300(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)Z
@@ -170,7 +155,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 325
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$000(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -205,12 +189,10 @@
 
     invoke-virtual {v0, v2, v1, v3, v4}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->addProfile(Ljava/lang/String;ZLjava/lang/String;Lcom/netflix/mediaclient/servicemgr/ManagerCallback;)V
 
-    .line 326
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-static {v0, v6}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$1802(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;Z)Z
 
-    .line 345
     :goto_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
@@ -218,7 +200,6 @@
 
     goto :goto_0
 
-    .line 327
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
@@ -228,7 +209,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 329
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$600(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;
@@ -255,7 +235,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 331
     :goto_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
@@ -285,22 +264,18 @@
 
     iget-object v5, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
-    .line 332
     invoke-static {v5}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$1700(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)Lcom/netflix/mediaclient/servicemgr/ManagerCallback;
 
     move-result-object v5
 
-    .line 331
     invoke-virtual/range {v0 .. v5}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->editProfile(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Lcom/netflix/mediaclient/servicemgr/ManagerCallback;)V
 
-    .line 333
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-static {v0, v6}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$1802(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;Z)Z
 
     goto :goto_1
 
-    .line 329
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
@@ -314,7 +289,6 @@
 
     goto :goto_2
 
-    .line 335
     :cond_4
     const-string/jumbo v0, "ProfileDetailsActivity"
 
@@ -322,7 +296,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 337
     sget-object v0, Lcom/netflix/mediaclient/android/app/CommonStatus;->INTERNAL_ERROR:Lcom/netflix/mediaclient/android/app/NetflixImmutableStatus;
 
     const-string/jumbo v1, ""
@@ -333,7 +306,6 @@
 
     move-result-object v0
 
-    .line 338
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$300(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)Z
@@ -342,7 +314,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 339
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     sget-object v2, Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;->failed:Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;
@@ -361,7 +332,6 @@
 
     invoke-static {v1, v2, v3, v0, v4}, Lcom/netflix/mediaclient/util/log/UserActionLogUtils;->reportAddProfileActionEnded(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;Lcom/netflix/mediaclient/service/logging/client/model/UIError;Lcom/netflix/mediaclient/servicemgr/UserActionLogging$Profile;)V
 
-    .line 343
     :goto_3
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
@@ -369,7 +339,6 @@
 
     goto/16 :goto_1
 
-    .line 341
     :cond_5
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$7;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 

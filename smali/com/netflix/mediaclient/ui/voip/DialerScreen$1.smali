@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)V
     .locals 0
 
-    .prologue
-    .line 229
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen$1;->this$0:Lcom/netflix/mediaclient/ui/voip/DialerScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,21 +26,17 @@
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 233
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 242
     :goto_0
     return v2
 
-    .line 235
     :pswitch_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen$1;->this$0:Lcom/netflix/mediaclient/ui/voip/DialerScreen;
 
@@ -52,7 +46,6 @@
 
     goto :goto_0
 
-    .line 238
     :pswitch_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen$1;->this$0:Lcom/netflix/mediaclient/ui/voip/DialerScreen;
 
@@ -60,7 +53,6 @@
 
     goto :goto_0
 
-    .line 233
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

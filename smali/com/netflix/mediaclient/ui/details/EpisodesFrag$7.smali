@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/details/EpisodesFrag;)V
     .locals 0
 
-    .prologue
-    .line 873
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$7;->this$0:Lcom/netflix/mediaclient/ui/details/EpisodesFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,29 +26,23 @@
 .method public onRetryRequested()V
     .locals 3
 
-    .prologue
-    .line 876
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$7;->this$0:Lcom/netflix/mediaclient/ui/details/EpisodesFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/EpisodesFrag;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 877
     instance-of v1, v0, Lcom/netflix/mediaclient/android/widget/ErrorWrapper$Callback;
 
     if-eqz v1, :cond_0
 
-    .line 879
     check-cast v0, Lcom/netflix/mediaclient/android/widget/ErrorWrapper$Callback;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/android/widget/ErrorWrapper$Callback;->onRetryRequested()V
 
-    .line 884
     :goto_0
     return-void
 
-    .line 882
     :cond_0
     const-string/jumbo v0, "EpisodesFrag"
 

@@ -13,8 +13,6 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
-    .line 34
     :try_start_0
     const-string/jumbo v0, "libcore.icu.ICU"
 
@@ -22,7 +20,6 @@
 
     move-result-object v0
 
-    .line 35
     const-string/jumbo v1, "addLikelySubtags"
 
     const/4 v2, 0x1
@@ -43,14 +40,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 40
     return-void
 
-    .line 37
     :catch_0
     move-exception v0
 
-    .line 38
     new-instance v1, Ljava/lang/IllegalStateException;
 
     invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -61,8 +55,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -71,8 +63,6 @@
 .method public static maximizeAndGetScript(Ljava/util/Locale;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 45
     const/4 v0, 0x1
 
     :try_start_0
@@ -82,7 +72,6 @@
 
     aput-object p0, v0, v1
 
-    .line 46
     sget-object v1, Landroid/support/v4/text/ICUCompatApi23;->sAddLikelySubtagsMethod:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
@@ -100,20 +89,16 @@
 
     move-result-object v0
 
-    .line 53
     :goto_0
     return-object v0
 
-    .line 47
     :catch_0
     move-exception v0
 
-    .line 48
     const-string/jumbo v1, "ICUCompatIcs"
 
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 53
     :goto_1
     invoke-virtual {p0}, Ljava/util/Locale;->getScript()Ljava/lang/String;
 
@@ -121,11 +106,9 @@
 
     goto :goto_0
 
-    .line 49
     :catch_1
     move-exception v0
 
-    .line 50
     const-string/jumbo v1, "ICUCompatIcs"
 
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I

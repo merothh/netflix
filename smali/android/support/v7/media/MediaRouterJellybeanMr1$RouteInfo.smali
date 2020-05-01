@@ -7,8 +7,6 @@
 .method public static getPresentationDisplay(Ljava/lang/Object;)Landroid/view/Display;
     .locals 1
 
-    .prologue
-    .line 43
     check-cast p0, Landroid/media/MediaRouter$RouteInfo;
 
     invoke-virtual {p0}, Landroid/media/MediaRouter$RouteInfo;->getPresentationDisplay()Landroid/view/Display;
@@ -21,8 +19,6 @@
 .method public static isEnabled(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 39
     check-cast p0, Landroid/media/MediaRouter$RouteInfo;
 
     invoke-virtual {p0}, Landroid/media/MediaRouter$RouteInfo;->isEnabled()Z

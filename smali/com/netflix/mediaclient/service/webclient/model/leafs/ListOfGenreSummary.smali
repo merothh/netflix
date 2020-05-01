@@ -42,8 +42,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 95
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary$1;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary$1;-><init>()V
@@ -56,51 +54,38 @@
 .method public constructor <init>(IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 32
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/netflix/mediaclient/service/webclient/model/leafs/TrackableListSummary;-><init>(IIILjava/lang/String;)V
 
-    .line 33
     iput-object p5, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->genreName:Ljava/lang/String;
 
-    .line 34
     iput-object p6, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->genreId:Ljava/lang/String;
 
-    .line 35
     iput-object p7, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->genreType:Ljava/lang/String;
 
-    .line 36
     iput-boolean p8, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->isKidsGenre:Z
 
-    .line 37
     iput-object p9, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->genreExperience:Ljava/lang/String;
 
-    .line 38
     return-void
 .end method
 
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
-    .prologue
-    .line 77
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/webclient/model/leafs/TrackableListSummary;-><init>(Landroid/os/Parcel;)V
 
-    .line 78
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->genreName:Ljava/lang/String;
 
-    .line 79
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->genreId:Ljava/lang/String;
 
-    .line 80
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
@@ -112,24 +97,20 @@
     :goto_0
     iput-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->isKidsGenre:Z
 
-    .line 81
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->genreExperience:Ljava/lang/String;
 
-    .line 82
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->genreType:Ljava/lang/String;
 
-    .line 83
     return-void
 
-    .line 80
     :cond_0
     const/4 v0, 0x0
 
@@ -141,8 +122,6 @@
 .method public describeContents()I
     .locals 1
 
-    .prologue
-    .line 109
     const/4 v0, 0x0
 
     return v0
@@ -151,16 +130,12 @@
 .method public getGenreType()Lcom/netflix/mediaclient/servicemgr/interface_/genre/GenreList$GenreType;
     .locals 2
 
-    .prologue
-    .line 70
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->genreType:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 71
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/genre/GenreList$GenreType;->UNKNOWN:Lcom/netflix/mediaclient/servicemgr/interface_/genre/GenreList$GenreType;
 
-    .line 73
     :goto_0
     return-object v0
 
@@ -183,8 +158,6 @@
 .method public getId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 42
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->genreId:Ljava/lang/String;
 
     return-object v0
@@ -193,8 +166,6 @@
 .method public getNumVideos()I
     .locals 1
 
-    .prologue
-    .line 65
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->getLength()I
 
     move-result v0
@@ -205,8 +176,6 @@
 .method public getTitle()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 47
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->genreName:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->decodeHtmlEntities(Ljava/lang/String;)Ljava/lang/String;
@@ -219,13 +188,10 @@
 .method public getType()Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
     .locals 1
 
-    .prologue
-    .line 52
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->enumType:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
     if-nez v0, :cond_0
 
-    .line 53
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->genreExperience:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->create(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
@@ -234,7 +200,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->enumType:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
-    .line 55
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->enumType:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
@@ -244,8 +209,6 @@
 .method public isKidsGenre()Z
     .locals 1
 
-    .prologue
-    .line 60
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->isKidsGenre:Z
 
     return v0
@@ -254,8 +217,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 114
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -348,21 +309,16 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    .prologue
-    .line 87
     invoke-super {p0, p1, p2}, Lcom/netflix/mediaclient/service/webclient/model/leafs/TrackableListSummary;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 88
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->genreName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 89
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->genreId:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 90
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->isKidsGenre:Z
 
     if-eqz v0, :cond_0
@@ -374,20 +330,16 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 91
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->genreExperience:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 92
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;->genreType:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 93
     return-void
 
-    .line 90
     :cond_0
     const/4 v0, 0x0
 

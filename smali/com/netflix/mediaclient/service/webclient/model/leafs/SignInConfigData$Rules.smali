@@ -29,8 +29,6 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInConfigData;)V
     .locals 0
 
-    .prologue
-    .line 36
     iput-object p1, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInConfigData$Rules;->this$0:Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInConfigData;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

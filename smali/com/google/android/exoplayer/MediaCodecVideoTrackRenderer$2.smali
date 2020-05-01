@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer;Landroid/view/Surface;)V
     .locals 0
 
-    .prologue
-    .line 582
     iput-object p1, p0, Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer$2;->this$0:Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer;
 
     iput-object p2, p0, Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer$2;->val$surface:Landroid/view/Surface;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 585
     iget-object v0, p0, Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer$2;->this$0:Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer;
 
     invoke-static {v0}, Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer;->access$000(Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer;)Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer$EventListener;
@@ -44,6 +40,5 @@
 
     invoke-interface {v0, v1}, Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer$EventListener;->onDrawnToSurface(Landroid/view/Surface;)V
 
-    .line 586
     return-void
 .end method

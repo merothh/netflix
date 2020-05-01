@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;Lcom/netflix/mediaclient/servicemgr/interface_/details/MovieDetails;)V
     .locals 0
 
-    .prologue
-    .line 359
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$6;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$6;->val$details:Lcom/netflix/mediaclient/servicemgr/interface_/details/MovieDetails;
@@ -32,8 +30,6 @@
 .method public getBasicInfoString()Ljava/lang/CharSequence;
     .locals 2
 
-    .prologue
-    .line 362
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$6;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;->getActivity()Landroid/app/Activity;
@@ -52,8 +48,6 @@
 .method public getCreatorsText()Ljava/lang/CharSequence;
     .locals 3
 
-    .prologue
-    .line 367
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$6;->val$details:Lcom/netflix/mediaclient/servicemgr/interface_/details/MovieDetails;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/details/MovieDetails;->getDirectors()Ljava/lang/String;
@@ -66,14 +60,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 368
     const/4 v0, 0x0
 
-    .line 372
     :goto_0
     return-object v0
 
-    .line 370
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$6;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
@@ -89,17 +80,14 @@
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$6;->val$details:Lcom/netflix/mediaclient/servicemgr/interface_/details/MovieDetails;
 
-    .line 371
     invoke-interface {v2}, Lcom/netflix/mediaclient/servicemgr/interface_/details/MovieDetails;->getNumDirectors()I
 
     move-result v2
 
-    .line 370
     invoke-virtual {v0, v1, v2}, Landroid/content/res/Resources;->getQuantityString(II)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 372
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$6;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;->getActivity()Landroid/app/Activity;
@@ -122,8 +110,6 @@
 .method public getGenresText()Ljava/lang/CharSequence;
     .locals 3
 
-    .prologue
-    .line 382
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$6;->val$details:Lcom/netflix/mediaclient/servicemgr/interface_/details/MovieDetails;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/details/MovieDetails;->getGenres()Ljava/lang/String;
@@ -136,10 +122,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 383
     const/4 v0, 0x0
 
-    .line 385
     :goto_0
     return-object v0
 
@@ -168,8 +152,6 @@
 .method public getStarringText()Ljava/lang/CharSequence;
     .locals 3
 
-    .prologue
-    .line 377
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$6;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;->getActivity()Landroid/app/Activity;

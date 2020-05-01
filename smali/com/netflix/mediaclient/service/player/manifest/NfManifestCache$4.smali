@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;Ljava/util/List;)V
     .locals 0
 
-    .prologue
-    .line 142
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$4;->this$0:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$4;->val$prefetchHints:Ljava/util/List;
@@ -32,14 +30,11 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 145
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$4;->this$0:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$4;->val$prefetchHints:Ljava/util/List;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;->access$600(Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;Ljava/util/List;)V
 
-    .line 146
     return-void
 .end method

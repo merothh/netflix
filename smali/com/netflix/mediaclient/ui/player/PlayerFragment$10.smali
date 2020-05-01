@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)V
     .locals 0
 
-    .prologue
-    .line 2747
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$10;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,8 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .prologue
-    .line 2750
     const-string/jumbo v0, "PlayerFragment"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -53,7 +49,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2751
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -64,7 +59,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2752
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$10;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$2600(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/ui/player/PlayerSuspendNotification;
@@ -73,7 +67,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2753
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$10;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$2600(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/ui/player/PlayerSuspendNotification;
@@ -82,13 +75,11 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerSuspendNotification;->cancelNotification()V
 
-    .line 2755
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$10;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->cleanupAndExit()V
 
-    .line 2757
     :cond_1
     return-void
 .end method

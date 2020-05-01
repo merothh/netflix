@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;)V
     .locals 0
 
-    .prologue
-    .line 544
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$9;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,8 +35,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 547
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$9;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;->access$600(Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;)Z
@@ -47,7 +43,6 @@
 
     if-nez v0, :cond_0
 
-    .line 548
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$9;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;->genresList:Lcom/netflix/mediaclient/android/widget/StaticListView;
@@ -56,7 +51,6 @@
 
     move-result v0
 
-    .line 549
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$9;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 
     iget-object v1, v1, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -75,12 +69,10 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/ui/home/HomeActivity;->showGenreList(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/genre/GenreList;)V
 
-    .line 550
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$9;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;->closeDrawersWithDelay()V
 
-    .line 552
     :cond_0
     return-void
 .end method

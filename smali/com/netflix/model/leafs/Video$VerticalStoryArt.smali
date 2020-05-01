@@ -19,8 +19,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1203
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,18 +29,14 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 4
 
-    .prologue
-    .line 1210
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 1211
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 1212
     const-string/jumbo v1, "VerticalStoryArt"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -65,28 +59,23 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1215
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 1216
     const-string/jumbo v1, "vertStoryArt"
 
     invoke-virtual {v0, v1}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;
 
     move-result-object v0
 
-    .line 1217
     if-eqz v0, :cond_1
 
-    .line 1218
     invoke-virtual {v0}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/model/leafs/Video$VerticalStoryArt;->url:Ljava/lang/String;
 
-    .line 1221
     :cond_1
     return-void
 .end method
@@ -94,13 +83,10 @@
 .method public set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
     .locals 3
 
-    .prologue
-    .line 1225
     sget-boolean v0, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v0, :cond_0
 
-    .line 1226
     const-string/jumbo v0, "VerticalStoryArt"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -123,7 +109,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1229
     :cond_0
     if-eqz p2, :cond_1
 
@@ -135,17 +120,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 1230
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/model/leafs/Video$VerticalStoryArt;->url:Ljava/lang/String;
 
-    .line 1231
     const/4 v0, 0x1
 
-    .line 1233
     :goto_0
     return v0
 
@@ -158,8 +140,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 1238
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

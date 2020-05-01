@@ -19,20 +19,16 @@
 .method public constructor <init>(Lcom/netflix/msl/tokens/MasterToken;Lcom/netflix/msl/tokens/UserIdToken;)V
     .locals 2
 
-    .prologue
-    .line 60
     sget-object v0, Lcom/netflix/msl/userauth/UserAuthenticationScheme;->USER_ID_TOKEN:Lcom/netflix/msl/userauth/UserAuthenticationScheme;
 
     invoke-direct {p0, v0}, Lcom/netflix/msl/userauth/UserAuthenticationData;-><init>(Lcom/netflix/msl/userauth/UserAuthenticationScheme;)V
 
-    .line 61
     invoke-virtual {p2, p1}, Lcom/netflix/msl/tokens/UserIdToken;->isBoundTo(Lcom/netflix/msl/tokens/MasterToken;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 62
     new-instance v0, Lcom/netflix/msl/MslInternalException;
 
     const-string/jumbo v1, "User ID token must be bound to master token."
@@ -41,27 +37,21 @@
 
     throw v0
 
-    .line 63
     :cond_0
     iput-object p1, p0, Lcom/netflix/msl/userauth/UserIdTokenAuthenticationData;->masterToken:Lcom/netflix/msl/tokens/MasterToken;
 
-    .line 64
     iput-object p2, p0, Lcom/netflix/msl/userauth/UserIdTokenAuthenticationData;->userIdToken:Lcom/netflix/msl/tokens/UserIdToken;
 
-    .line 65
     return-void
 .end method
 
 .method public constructor <init>(Lcom/netflix/msl/util/MslContext;Lcom/netflix/android/org/json/JSONObject;)V
     .locals 5
 
-    .prologue
-    .line 78
     sget-object v0, Lcom/netflix/msl/userauth/UserAuthenticationScheme;->USER_ID_TOKEN:Lcom/netflix/msl/userauth/UserAuthenticationScheme;
 
     invoke-direct {p0, v0}, Lcom/netflix/msl/userauth/UserAuthenticationData;-><init>(Lcom/netflix/msl/userauth/UserAuthenticationScheme;)V
 
-    .line 83
     :try_start_0
     new-instance v0, Lcom/netflix/msl/tokens/MasterToken;
 
@@ -78,7 +68,6 @@
     .catch Lcom/netflix/msl/MslException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 90
     :try_start_1
     new-instance v0, Lcom/netflix/msl/tokens/UserIdToken;
 
@@ -97,14 +86,11 @@
     .catch Lcom/netflix/msl/MslException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_1 .. :try_end_1} :catch_3
 
-    .line 96
     return-void
 
-    .line 84
     :catch_0
     move-exception v0
 
-    .line 85
     new-instance v1, Lcom/netflix/msl/MslUserAuthException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->USERAUTH_MASTERTOKEN_INVALID:Lcom/netflix/msl/MslError;
@@ -135,11 +121,9 @@
 
     throw v1
 
-    .line 86
     :catch_1
     move-exception v0
 
-    .line 87
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_PARSE_ERROR:Lcom/netflix/msl/MslError;
@@ -170,11 +154,9 @@
 
     throw v1
 
-    .line 91
     :catch_2
     move-exception v0
 
-    .line 92
     new-instance v1, Lcom/netflix/msl/MslUserAuthException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->USERAUTH_USERIDTOKEN_INVALID:Lcom/netflix/msl/MslError;
@@ -205,11 +187,9 @@
 
     throw v1
 
-    .line 93
     :catch_3
     move-exception v0
 
-    .line 94
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_PARSE_ERROR:Lcom/netflix/msl/MslError;
@@ -246,19 +226,15 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 132
     if-ne p1, p0, :cond_0
 
-    .line 135
     :goto_0
     return v1
 
-    .line 133
     :cond_0
     instance-of v0, p1, Lcom/netflix/msl/userauth/UserIdTokenAuthenticationData;
 
@@ -271,10 +247,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 134
     check-cast v0, Lcom/netflix/msl/userauth/UserIdTokenAuthenticationData;
 
-    .line 135
     invoke-super {p0, p1}, Lcom/netflix/msl/userauth/UserAuthenticationData;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -317,14 +291,11 @@
 .method public getAuthData()Lcom/netflix/android/org/json/JSONObject;
     .locals 4
 
-    .prologue
-    .line 118
     :try_start_0
     new-instance v0, Lcom/netflix/android/org/json/JSONObject;
 
     invoke-direct {v0}, Lcom/netflix/android/org/json/JSONObject;-><init>()V
 
-    .line 119
     const-string/jumbo v1, "mastertoken"
 
     new-instance v2, Lcom/netflix/android/org/json/JSONObject;
@@ -339,7 +310,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 120
     const-string/jumbo v1, "useridtoken"
 
     new-instance v2, Lcom/netflix/android/org/json/JSONObject;
@@ -356,14 +326,11 @@
     :try_end_0
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 121
     return-object v0
 
-    .line 122
     :catch_0
     move-exception v0
 
-    .line 123
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_ENCODE_ERROR:Lcom/netflix/msl/MslError;
@@ -378,8 +345,6 @@
 .method public getMasterToken()Lcom/netflix/msl/tokens/MasterToken;
     .locals 1
 
-    .prologue
-    .line 102
     iget-object v0, p0, Lcom/netflix/msl/userauth/UserIdTokenAuthenticationData;->masterToken:Lcom/netflix/msl/tokens/MasterToken;
 
     return-object v0
@@ -388,8 +353,6 @@
 .method public getUserIdToken()Lcom/netflix/msl/tokens/UserIdToken;
     .locals 1
 
-    .prologue
-    .line 109
     iget-object v0, p0, Lcom/netflix/msl/userauth/UserIdTokenAuthenticationData;->userIdToken:Lcom/netflix/msl/tokens/UserIdToken;
 
     return-object v0
@@ -398,8 +361,6 @@
 .method public hashCode()I
     .locals 2
 
-    .prologue
-    .line 143
     invoke-super {p0}, Lcom/netflix/msl/userauth/UserAuthenticationData;->hashCode()I
 
     move-result v0

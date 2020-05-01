@@ -64,8 +64,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
-    .line 49
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
     const-string/jumbo v1, "StateNotLaunched"
@@ -86,7 +84,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->StateNotLaunched:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
-    .line 50
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
     const-string/jumbo v1, "StateNeedLaunched"
@@ -107,7 +104,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->StateNeedLaunched:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
-    .line 51
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
     const-string/jumbo v1, "StateLaunched"
@@ -128,7 +124,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->StateLaunched:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
-    .line 52
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
     const-string/jumbo v1, "StateHasPair"
@@ -149,7 +144,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->StateHasPair:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
-    .line 53
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
     const-string/jumbo v1, "StateBadPair"
@@ -170,7 +164,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->StateBadPair:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
-    .line 54
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
     const-string/jumbo v1, "StateNoPair"
@@ -191,7 +184,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->StateNoPair:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
-    .line 55
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
     const-string/jumbo v1, "StateNoPairNeedRegPair"
@@ -212,7 +204,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->StateNoPairNeedRegPair:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
-    .line 56
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
     const-string/jumbo v1, "StateNeedRegPair"
@@ -233,7 +224,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->StateNeedRegPair:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
-    .line 57
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
     const-string/jumbo v1, "StateNeedHandShake"
@@ -254,7 +244,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->StateNeedHandShake:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
-    .line 58
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
     const-string/jumbo v1, "StateSessionReady"
@@ -275,7 +264,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->StateSessionReady:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
-    .line 59
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
     const-string/jumbo v1, "StateSendingMessage"
@@ -296,7 +284,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->StateSendingMessage:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
-    .line 60
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
     const-string/jumbo v1, "StateSessionEnd"
@@ -317,7 +304,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->StateSessionEnd:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
-    .line 61
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
     const-string/jumbo v1, "StateRetryExhausted"
@@ -338,7 +324,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->StateRetryExhausted:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
-    .line 62
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
     const-string/jumbo v1, "StateTimeout"
@@ -359,7 +344,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->StateTimeout:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
-    .line 63
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
     const-string/jumbo v1, "StateHasError"
@@ -380,7 +364,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->StateHasError:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
-    .line 48
     const/16 v0, 0xf
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
@@ -491,42 +474,30 @@
         }
     .end annotation
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 64
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 73
     iput v0, p0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->mRetry:I
 
-    .line 76
     iput v0, p0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->mBaseRetryIntreval:I
 
-    .line 65
     iput-object p4, p0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->mName:Ljava/lang/String;
 
-    .line 66
     iput p5, p0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->mRetry:I
 
-    .line 67
     iput-object p3, p0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->mId:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$StateId;
 
-    .line 68
     iput p6, p0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->mTimeOut:I
 
-    .line 69
     iput p7, p0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->mBaseRetryIntreval:I
 
-    .line 70
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 48
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->mName:Ljava/lang/String;
 
     return-object v0
@@ -535,8 +506,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
     .locals 1
 
-    .prologue
-    .line 48
     const-class v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -551,8 +520,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
     .locals 1
 
-    .prologue
-    .line 48
     sget-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->$VALUES:[Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->clone()Ljava/lang/Object;
@@ -569,8 +536,6 @@
 .method public getId()Lcom/netflix/mediaclient/service/mdx/TargetStateManager$StateId;
     .locals 1
 
-    .prologue
-    .line 84
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->mId:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$StateId;
 
     return-object v0
@@ -579,8 +544,6 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 78
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->mName:Ljava/lang/String;
 
     return-object v0
@@ -589,8 +552,6 @@
 .method public getRetry()I
     .locals 1
 
-    .prologue
-    .line 81
     iget v0, p0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->mRetry:I
 
     return v0
@@ -599,8 +560,6 @@
 .method public getRetryInterval()I
     .locals 1
 
-    .prologue
-    .line 90
     iget v0, p0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->mBaseRetryIntreval:I
 
     return v0
@@ -609,8 +568,6 @@
 .method public getTimeOut()I
     .locals 1
 
-    .prologue
-    .line 87
     iget v0, p0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetState;->mTimeOut:I
 
     return v0

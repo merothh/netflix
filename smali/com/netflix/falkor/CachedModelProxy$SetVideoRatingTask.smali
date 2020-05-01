@@ -28,51 +28,38 @@
 .method public constructor <init>(Lcom/netflix/falkor/CachedModelProxy;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;IILcom/netflix/mediaclient/service/browse/BrowseAgentCallback;)V
     .locals 1
 
-    .prologue
-    .line 2993
     iput-object p1, p0, Lcom/netflix/falkor/CachedModelProxy$SetVideoRatingTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
-    .line 2994
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p6, v0}, Lcom/netflix/falkor/CachedModelProxy$CmpTask;-><init>(Lcom/netflix/falkor/CachedModelProxy;Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/falkor/CachedModelProxy$1;)V
 
-    .line 2996
     iput-object p2, p0, Lcom/netflix/falkor/CachedModelProxy$SetVideoRatingTask;->id:Ljava/lang/String;
 
-    .line 2997
     iput-object p3, p0, Lcom/netflix/falkor/CachedModelProxy$SetVideoRatingTask;->type:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
-    .line 2998
     iput p4, p0, Lcom/netflix/falkor/CachedModelProxy$SetVideoRatingTask;->newRating:I
 
-    .line 2999
     iput p5, p0, Lcom/netflix/falkor/CachedModelProxy$SetVideoRatingTask;->trackId:I
 
-    .line 3000
     return-void
 .end method
 
 .method private notifyUserRatingChanged(Lcom/netflix/mediaclient/servicemgr/interface_/UserRating;)V
     .locals 4
 
-    .prologue
-    .line 3031
     if-nez p1, :cond_1
 
-    .line 3032
     const-string/jumbo v0, "CachedModelProxy"
 
     const-string/jumbo v1, "null user rating - can\'t notify listeners"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3050
     :cond_0
     :goto_0
     return-void
 
-    .line 3036
     :cond_1
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$SetVideoRatingTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
@@ -80,10 +67,8 @@
 
     move-result-object v0
 
-    .line 3037
     if-nez v0, :cond_2
 
-    .line 3038
     const-string/jumbo v0, "CachedModelProxy"
 
     const-string/jumbo v1, "null service - can\'t notify listeners"
@@ -92,7 +77,6 @@
 
     goto :goto_0
 
-    .line 3042
     :cond_2
     new-instance v1, Landroid/content/Intent;
 
@@ -104,14 +88,12 @@
 
     iget-object v3, p0, Lcom/netflix/falkor/CachedModelProxy$SetVideoRatingTask;->id:Ljava/lang/String;
 
-    .line 3043
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v1
 
     const-string/jumbo v2, "extra_user_rating"
 
-    .line 3044
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/UserRating;->getUserRating()F
 
     move-result v3
@@ -120,21 +102,18 @@
 
     move-result-object v1
 
-    .line 3045
     invoke-static {v0}, Landroid/support/v4/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroid/support/v4/content/LocalBroadcastManager;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Landroid/support/v4/content/LocalBroadcastManager;->sendBroadcast(Landroid/content/Intent;)Z
 
-    .line 3047
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3048
     const-string/jumbo v0, "CachedModelProxy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -190,8 +169,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 3004
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -224,28 +201,22 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3005
     return-void
 .end method
 
 .method protected callbackForFailure(Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 1
 
-    .prologue
-    .line 3054
     const/4 v0, 0x0
 
     invoke-interface {p1, v0, p2}, Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;->onVideoRatingSet(Lcom/netflix/mediaclient/servicemgr/interface_/UserRating;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 3055
     return-void
 .end method
 
 .method protected fetchResultsAndCallbackForSuccess(Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/falkor/CachedModelProxy$GetResult;)V
     .locals 4
 
-    .prologue
-    .line 3024
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$SetVideoRatingTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
     const/4 v1, 0x3
@@ -284,15 +255,12 @@
 
     check-cast v0, Lcom/netflix/mediaclient/servicemgr/interface_/UserRating;
 
-    .line 3025
     sget-object v1, Lcom/netflix/mediaclient/android/app/CommonStatus;->OK:Lcom/netflix/mediaclient/android/app/NetflixImmutableStatus;
 
     invoke-interface {p1, v0, v1}, Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;->onVideoRatingSet(Lcom/netflix/mediaclient/servicemgr/interface_/UserRating;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 3027
     invoke-direct {p0, v0}, Lcom/netflix/falkor/CachedModelProxy$SetVideoRatingTask;->notifyUserRatingChanged(Lcom/netflix/mediaclient/servicemgr/interface_/UserRating;)V
 
-    .line 3028
     return-void
 .end method
 
@@ -308,15 +276,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 3016
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x2
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 3017
     new-instance v1, Lcom/netflix/mediaclient/util/DataUtil$StringPair;
 
     const-string/jumbo v2, "param"
@@ -331,7 +296,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3018
     new-instance v1, Lcom/netflix/mediaclient/util/DataUtil$StringPair;
 
     const-string/jumbo v2, "param"
@@ -346,15 +310,12 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3019
     return-object v0
 .end method
 
 .method protected shouldUseCallMethod()Z
     .locals 1
 
-    .prologue
-    .line 3009
     const/4 v0, 0x1
 
     return v0

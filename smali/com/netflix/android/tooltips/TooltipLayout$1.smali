@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/android/tooltips/TooltipLayout;)V
     .locals 0
 
-    .prologue
-    .line 161
     iput-object p1, p0, Lcom/netflix/android/tooltips/TooltipLayout$1;->this$0:Lcom/netflix/android/tooltips/TooltipLayout;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -25,15 +23,12 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 164
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$1;->this$0:Lcom/netflix/android/tooltips/TooltipLayout;
 
     invoke-static {v0, v1}, Lcom/netflix/android/tooltips/TooltipLayout;->access$202(Lcom/netflix/android/tooltips/TooltipLayout;Landroid/view/ViewPropertyAnimator;)Landroid/view/ViewPropertyAnimator;
 
-    .line 165
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$1;->this$0:Lcom/netflix/android/tooltips/TooltipLayout;
 
     invoke-static {v0}, Lcom/netflix/android/tooltips/TooltipLayout;->access$300(Lcom/netflix/android/tooltips/TooltipLayout;)Lcom/netflix/android/tooltips/Tooltip$Callback;
@@ -42,7 +37,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 166
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$1;->this$0:Lcom/netflix/android/tooltips/TooltipLayout;
 
     invoke-static {v0}, Lcom/netflix/android/tooltips/TooltipLayout;->access$300(Lcom/netflix/android/tooltips/TooltipLayout;)Lcom/netflix/android/tooltips/Tooltip$Callback;
@@ -51,7 +45,6 @@
 
     invoke-interface {v0, v1}, Lcom/netflix/android/tooltips/Tooltip$Callback;->onShown(Lcom/netflix/android/tooltips/Tooltip;)V
 
-    .line 168
     :cond_0
     return-void
 .end method

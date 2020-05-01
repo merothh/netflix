@@ -16,8 +16,6 @@
 .method constructor <init>(Landroid/view/ViewGroup$MarginLayoutParams;Landroid/view/View;)V
     .locals 0
 
-    .prologue
-    .line 301
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/BottomPanel$2;->val$params:Landroid/view/ViewGroup$MarginLayoutParams;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/player/BottomPanel$2;->val$extraSeekbarHandler:Landroid/view/View;
@@ -32,8 +30,6 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 2
 
-    .prologue
-    .line 304
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/BottomPanel$2;->val$params:Landroid/view/ViewGroup$MarginLayoutParams;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
@@ -48,11 +44,9 @@
 
     iput v0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    .line 305
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/BottomPanel$2;->val$extraSeekbarHandler:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
-    .line 306
     return-void
 .end method

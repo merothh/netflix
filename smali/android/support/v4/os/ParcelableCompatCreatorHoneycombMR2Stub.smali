@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,8 +26,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 24
     new-instance v0, Landroid/support/v4/os/ParcelableCompatCreatorHoneycombMR2;
 
     invoke-direct {v0, p0}, Landroid/support/v4/os/ParcelableCompatCreatorHoneycombMR2;-><init>(Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;)V

@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator$4;Landroid/graphics/Bitmap;)V
     .locals 0
 
-    .prologue
-    .line 216
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator$4$1;->this$1:Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator$4;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator$4$1;->val$delayedBlurredBmp:Landroid/graphics/Bitmap;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 219
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator$4$1;->this$1:Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator$4;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator$4;->this$0:Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;
@@ -50,7 +46,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 220
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator$4$1;->this$1:Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator$4;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator$4;->val$view:Landroid/widget/ImageView;
@@ -59,7 +54,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 221
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator$4$1;->this$1:Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator$4;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator$4;->this$0:Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;
@@ -74,7 +68,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->access$700(Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;I)V
 
-    .line 222
     const-string/jumbo v0, "DiscoveryBackgroundAnimator"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -113,6 +106,5 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
     return-void
 .end method

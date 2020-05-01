@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 322
     invoke-static {}, Lcom/netflix/mediaclient/service/preapp/PreAppAgentEventType;->values()[Lcom/netflix/mediaclient/service/preapp/PreAppAgentEventType;
 
     move-result-object v0

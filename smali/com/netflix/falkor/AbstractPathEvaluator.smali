@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,8 +28,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 192
     new-instance v0, Lcom/netflix/falkor/AbstractPathEvaluator$5;
 
     invoke-direct {v0, p0}, Lcom/netflix/falkor/AbstractPathEvaluator$5;-><init>(Ljava/lang/Iterable;)V
@@ -51,8 +47,6 @@
 .method public cache(Lcom/netflix/falkor/AbstractPathEvaluator;)Lcom/netflix/falkor/AbstractPathEvaluator;
     .locals 3
 
-    .prologue
-    .line 128
     sget-object v0, Lcom/netflix/falkor/PQL;->EMPTY:Lcom/netflix/falkor/PQL;
 
     invoke-virtual {p0}, Lcom/netflix/falkor/AbstractPathEvaluator;->getPath()Lcom/netflix/falkor/PQL;
@@ -65,12 +59,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 129
     new-instance v0, Lcom/netflix/falkor/CachedPathEvaluator;
 
     invoke-direct {v0, p0, p1}, Lcom/netflix/falkor/CachedPathEvaluator;-><init>(Lcom/netflix/falkor/AbstractPathEvaluator;Lcom/netflix/falkor/AbstractPathEvaluator;)V
 
-    .line 132
     :goto_0
     return-object v0
 
@@ -112,11 +104,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 177
     new-instance v0, Lcom/netflix/falkor/IterableBuilder;
 
-    .line 178
     invoke-static {p1}, Lcom/netflix/falkor/IterableBuilder;->fromArray([Ljava/lang/Object;)Lcom/netflix/falkor/IterableBuilder;
 
     move-result-object v1
@@ -131,12 +120,10 @@
 
     invoke-direct {v1, p0}, Lcom/netflix/falkor/AbstractPathEvaluator$4;-><init>(Lcom/netflix/falkor/AbstractPathEvaluator;)V
 
-    .line 179
     invoke-virtual {v0, v1}, Lcom/netflix/falkor/IterableBuilder;->filter(Lcom/netflix/falkor/Func1;)Lcom/netflix/falkor/IterableBuilder;
 
     move-result-object v0
 
-    .line 177
     return-object v0
 .end method
 
@@ -172,8 +159,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 162
     invoke-virtual {p0, p1}, Lcom/netflix/falkor/AbstractPathEvaluator;->deleteAbsolute(Ljava/lang/Iterable;)Ljava/lang/Iterable;
 
     move-result-object v0
@@ -199,11 +184,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 103
     new-instance v0, Lcom/netflix/falkor/IterableBuilder;
 
-    .line 104
     invoke-static {p1}, Lcom/netflix/falkor/IterableBuilder;->fromArray([Ljava/lang/Object;)Lcom/netflix/falkor/IterableBuilder;
 
     move-result-object v1
@@ -218,12 +200,10 @@
 
     invoke-direct {v1, p0}, Lcom/netflix/falkor/AbstractPathEvaluator$3;-><init>(Lcom/netflix/falkor/AbstractPathEvaluator;)V
 
-    .line 105
     invoke-virtual {v0, v1}, Lcom/netflix/falkor/IterableBuilder;->filter(Lcom/netflix/falkor/Func1;)Lcom/netflix/falkor/IterableBuilder;
 
     move-result-object v0
 
-    .line 103
     return-object v0
 .end method
 
@@ -262,8 +242,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 145
     invoke-virtual {p0, p1}, Lcom/netflix/falkor/AbstractPathEvaluator;->getAbsolute(Ljava/lang/Iterable;)Ljava/lang/Iterable;
 
     move-result-object v0
@@ -281,15 +259,12 @@
 .method public getValue(Lcom/netflix/falkor/PQL;)Lcom/netflix/falkor/Option;
     .locals 2
 
-    .prologue
-    .line 70
     new-instance v0, Lcom/netflix/falkor/IterableBuilder;
 
     new-instance v1, Lcom/netflix/falkor/Option;
 
     invoke-direct {v1, p1}, Lcom/netflix/falkor/Option;-><init>(Ljava/lang/Object;)V
 
-    .line 71
     invoke-virtual {p0, v1}, Lcom/netflix/falkor/AbstractPathEvaluator;->getRelative(Ljava/lang/Iterable;)Ljava/lang/Iterable;
 
     move-result-object v1
@@ -300,7 +275,6 @@
 
     invoke-direct {v1, p0}, Lcom/netflix/falkor/AbstractPathEvaluator$2;-><init>(Lcom/netflix/falkor/AbstractPathEvaluator;)V
 
-    .line 72
     invoke-virtual {v0, v1}, Lcom/netflix/falkor/IterableBuilder;->filter(Lcom/netflix/falkor/Func1;)Lcom/netflix/falkor/IterableBuilder;
 
     move-result-object v0
@@ -309,24 +283,20 @@
 
     invoke-direct {v1, p0}, Lcom/netflix/falkor/AbstractPathEvaluator$1;-><init>(Lcom/netflix/falkor/AbstractPathEvaluator;)V
 
-    .line 77
     invoke-virtual {v0, v1}, Lcom/netflix/falkor/IterableBuilder;->map(Lcom/netflix/falkor/Func1;)Lcom/netflix/falkor/IterableBuilder;
 
     move-result-object v0
 
-    .line 82
     invoke-virtual {v0}, Lcom/netflix/falkor/IterableBuilder;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 84
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 85
     new-instance v0, Lcom/netflix/falkor/Option;
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -335,7 +305,6 @@
 
     invoke-direct {v0, v1}, Lcom/netflix/falkor/Option;-><init>(Ljava/lang/Object;)V
 
-    .line 88
     :goto_0
     return-object v0
 

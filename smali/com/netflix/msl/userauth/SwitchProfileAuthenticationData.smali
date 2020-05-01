@@ -19,35 +19,26 @@
 .method public constructor <init>(Lcom/netflix/msl/tokens/UserIdToken;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 49
     sget-object v0, Lcom/netflix/msl/userauth/NetflixUserAuthenticationScheme;->SWITCH_PROFILE:Lcom/netflix/msl/userauth/UserAuthenticationScheme;
 
     invoke-direct {p0, v0}, Lcom/netflix/msl/userauth/UserAuthenticationData;-><init>(Lcom/netflix/msl/userauth/UserAuthenticationScheme;)V
 
-    .line 50
     iput-object p1, p0, Lcom/netflix/msl/userauth/SwitchProfileAuthenticationData;->userIdToken:Lcom/netflix/msl/tokens/UserIdToken;
 
-    .line 51
     iput-object p2, p0, Lcom/netflix/msl/userauth/SwitchProfileAuthenticationData;->profileGuid:Ljava/lang/String;
 
-    .line 52
     return-void
 .end method
 
 .method public constructor <init>(Lcom/netflix/msl/util/MslContext;Lcom/netflix/msl/tokens/MasterToken;Lcom/netflix/android/org/json/JSONObject;)V
     .locals 5
 
-    .prologue
-    .line 67
     sget-object v0, Lcom/netflix/msl/userauth/NetflixUserAuthenticationScheme;->SWITCH_PROFILE:Lcom/netflix/msl/userauth/UserAuthenticationScheme;
 
     invoke-direct {p0, v0}, Lcom/netflix/msl/userauth/UserAuthenticationData;-><init>(Lcom/netflix/msl/userauth/UserAuthenticationScheme;)V
 
-    .line 71
     if-nez p2, :cond_0
 
-    .line 72
     new-instance v0, Lcom/netflix/msl/MslUserAuthException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->USERAUTH_MASTERTOKEN_MISSING:Lcom/netflix/msl/MslError;
@@ -78,7 +69,6 @@
 
     throw v0
 
-    .line 76
     :cond_0
     :try_start_0
     new-instance v0, Lcom/netflix/msl/tokens/UserIdToken;
@@ -93,7 +83,6 @@
 
     iput-object v0, p0, Lcom/netflix/msl/userauth/SwitchProfileAuthenticationData;->userIdToken:Lcom/netflix/msl/tokens/UserIdToken;
 
-    .line 77
     const-string/jumbo v0, "profileguid"
 
     invoke-virtual {p3, v0}, Lcom/netflix/android/org/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -105,7 +94,6 @@
     .catch Lcom/netflix/msl/MslException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 85
     iget-object v0, p0, Lcom/netflix/msl/userauth/SwitchProfileAuthenticationData;->userIdToken:Lcom/netflix/msl/tokens/UserIdToken;
 
     invoke-virtual {v0}, Lcom/netflix/msl/tokens/UserIdToken;->isDecrypted()Z
@@ -114,7 +102,6 @@
 
     if-nez v0, :cond_1
 
-    .line 86
     new-instance v0, Lcom/netflix/msl/MslUserAuthException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->USERAUTH_USERIDTOKEN_NOT_DECRYPTED:Lcom/netflix/msl/MslError;
@@ -145,11 +132,9 @@
 
     throw v0
 
-    .line 78
     :catch_0
     move-exception v0
 
-    .line 79
     new-instance v1, Lcom/netflix/msl/MslUserAuthException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->USERAUTH_USERIDTOKEN_INVALID:Lcom/netflix/msl/MslError;
@@ -180,11 +165,9 @@
 
     throw v1
 
-    .line 80
     :catch_1
     move-exception v0
 
-    .line 81
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_PARSE_ERROR:Lcom/netflix/msl/MslError;
@@ -215,7 +198,6 @@
 
     throw v1
 
-    .line 88
     :cond_1
     return-void
 .end method
@@ -225,19 +207,15 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 124
     if-ne p1, p0, :cond_0
 
-    .line 127
     :goto_0
     return v1
 
-    .line 125
     :cond_0
     instance-of v0, p1, Lcom/netflix/msl/userauth/SwitchProfileAuthenticationData;
 
@@ -250,10 +228,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 126
     check-cast v0, Lcom/netflix/msl/userauth/SwitchProfileAuthenticationData;
 
-    .line 127
     invoke-super {p0, p1}, Lcom/netflix/msl/userauth/UserAuthenticationData;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -296,14 +272,11 @@
 .method public getAuthData()Lcom/netflix/android/org/json/JSONObject;
     .locals 4
 
-    .prologue
-    .line 110
     :try_start_0
     new-instance v0, Lcom/netflix/android/org/json/JSONObject;
 
     invoke-direct {v0}, Lcom/netflix/android/org/json/JSONObject;-><init>()V
 
-    .line 111
     const-string/jumbo v1, "useridtoken"
 
     new-instance v2, Lcom/netflix/android/org/json/JSONObject;
@@ -318,7 +291,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 112
     const-string/jumbo v1, "profileguid"
 
     iget-object v2, p0, Lcom/netflix/msl/userauth/SwitchProfileAuthenticationData;->profileGuid:Ljava/lang/String;
@@ -327,14 +299,11 @@
     :try_end_0
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 113
     return-object v0
 
-    .line 114
     :catch_0
     move-exception v0
 
-    .line 115
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_ENCODE_ERROR:Lcom/netflix/msl/MslError;
@@ -349,8 +318,6 @@
 .method public getProfileGuid()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 101
     iget-object v0, p0, Lcom/netflix/msl/userauth/SwitchProfileAuthenticationData;->profileGuid:Ljava/lang/String;
 
     return-object v0
@@ -359,8 +326,6 @@
 .method public getUserIdToken()Lcom/netflix/msl/tokens/UserIdToken;
     .locals 1
 
-    .prologue
-    .line 94
     iget-object v0, p0, Lcom/netflix/msl/userauth/SwitchProfileAuthenticationData;->userIdToken:Lcom/netflix/msl/tokens/UserIdToken;
 
     return-object v0
@@ -369,8 +334,6 @@
 .method public hashCode()I
     .locals 2
 
-    .prologue
-    .line 135
     invoke-super {p0}, Lcom/netflix/msl/userauth/UserAuthenticationData;->hashCode()I
 
     move-result v0

@@ -21,45 +21,34 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     const-wide/16 v0, 0xfa
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/util/LastKeyEvent;->expirationTimeout:J
 
-    .line 33
     const/high16 v0, -0x80000000
 
     iput v0, p0, Lcom/netflix/mediaclient/util/LastKeyEvent;->lastKey:I
 
-    .line 45
     return-void
 .end method
 
 .method public constructor <init>(J)V
     .locals 3
 
-    .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     const-wide/16 v0, 0xfa
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/util/LastKeyEvent;->expirationTimeout:J
 
-    .line 33
     const/high16 v0, -0x80000000
 
     iput v0, p0, Lcom/netflix/mediaclient/util/LastKeyEvent;->lastKey:I
 
-    .line 53
     iput-wide p1, p0, Lcom/netflix/mediaclient/util/LastKeyEvent;->expirationTimeout:J
 
-    .line 54
     return-void
 .end method
 
@@ -68,13 +57,10 @@
 .method public shouldIgnore(Landroid/view/KeyEvent;)Z
     .locals 8
 
-    .prologue
-    .line 64
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 65
     iget-wide v2, p0, Lcom/netflix/mediaclient/util/LastKeyEvent;->ts:J
 
     iget-wide v4, p0, Lcom/netflix/mediaclient/util/LastKeyEvent;->expirationTimeout:J
@@ -83,7 +69,6 @@
 
     sub-long/2addr v2, v0
 
-    .line 67
     iget v4, p0, Lcom/netflix/mediaclient/util/LastKeyEvent;->lastKey:I
 
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
@@ -92,21 +77,18 @@
 
     if-ne v4, v5, :cond_2
 
-    .line 68
     const-wide/16 v4, 0x0
 
     cmp-long v4, v2, v4
 
     if-lez v4, :cond_1
 
-    .line 69
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 70
     const-string/jumbo v0, "nf_key"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -153,15 +135,12 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 72
     :cond_0
     const/4 v0, 0x1
 
-    .line 83
     :goto_0
     return v0
 
-    .line 75
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -169,7 +148,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 76
     const-string/jumbo v4, "nf_key"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -216,7 +194,6 @@
 
     invoke-static {v4, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 81
     :cond_2
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
@@ -224,10 +201,8 @@
 
     iput v2, p0, Lcom/netflix/mediaclient/util/LastKeyEvent;->lastKey:I
 
-    .line 82
     iput-wide v0, p0, Lcom/netflix/mediaclient/util/LastKeyEvent;->ts:J
 
-    .line 83
     const/4 v0, 0x0
 
     goto :goto_0

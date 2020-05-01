@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper;ILcom/netflix/mediaclient/android/app/Status;)V
     .locals 0
 
-    .prologue
-    .line 178
     iput-object p1, p0, Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper$13;->this$0:Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper;
 
     iput p2, p0, Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper$13;->val$position:I
@@ -36,11 +34,8 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 181
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertOnMain()Z
 
-    .line 182
     iget-object v0, p0, Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper$13;->this$0:Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper;->access$000(Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper;)Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;
@@ -53,6 +48,5 @@
 
     invoke-interface {v0, v1, v2}, Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;->onScenePositionFetched(ILcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 183
     return-void
 .end method

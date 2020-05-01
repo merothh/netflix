@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$16;)V
     .locals 0
 
-    .prologue
-    .line 1450
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$16$1;->this$1:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$16;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public onPlayableManifestReady(Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$OfflineManifest;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 7
 
-    .prologue
-    .line 1453
     const-string/jumbo v0, "nf_offlineAgent"
 
     const-string/jumbo v1, "onPlayableManifestReady"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1454
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$16$1;->this$1:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$16;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$16;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
@@ -59,10 +54,8 @@
 
     check-cast v3, Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$ManifestCallback;
 
-    .line 1455
     if-eqz v3, :cond_0
 
-    .line 1456
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$16$1;->this$1:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$16;
 
     iget-object v1, v0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$16;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
@@ -77,11 +70,9 @@
 
     invoke-static/range {v1 .. v6}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;->access$4000(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$OfflineManifest;Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$ManifestCallback;JLcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 1460
     :goto_0
     return-void
 
-    .line 1458
     :cond_0
     const-string/jumbo v0, "nf_offlineAgent"
 

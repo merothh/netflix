@@ -21,18 +21,14 @@
 .method public constructor <init>()V
     .locals 3
 
-    .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/events/MdxEventHandlerFactory;->handlers:Ljava/util/Map;
 
-    .line 28
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/events/MdxEventHandlerFactory;->handlers:Ljava/util/Map;
 
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.MDXUPDATE_AUDIOSUB"
@@ -43,7 +39,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 29
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/events/MdxEventHandlerFactory;->handlers:Ljava/util/Map;
 
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.MDXUPDATE_CAPABILITY"
@@ -54,7 +49,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 30
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/events/MdxEventHandlerFactory;->handlers:Ljava/util/Map;
 
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.MDXUPDATE_STATE"
@@ -65,7 +59,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 31
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/events/MdxEventHandlerFactory;->handlers:Ljava/util/Map;
 
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.MDXUPDATE_DIALOGCANCEL"
@@ -76,7 +69,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 32
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/events/MdxEventHandlerFactory;->handlers:Ljava/util/Map;
 
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.MDXUPDATE_DIALOGSHOW"
@@ -87,7 +79,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 33
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/events/MdxEventHandlerFactory;->handlers:Ljava/util/Map;
 
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.MDXUPDATE_ERROR"
@@ -98,7 +89,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 34
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/events/MdxEventHandlerFactory;->handlers:Ljava/util/Map;
 
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.MDXUPDATE_MOVIEMETADATA_AVAILABLE"
@@ -109,7 +99,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 35
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/events/MdxEventHandlerFactory;->handlers:Ljava/util/Map;
 
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.MDXUPDATE_MOVIEMETADA"
@@ -120,7 +109,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 36
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/events/MdxEventHandlerFactory;->handlers:Ljava/util/Map;
 
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.MDXUPDATE_NOTREADY"
@@ -131,7 +119,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 37
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/events/MdxEventHandlerFactory;->handlers:Ljava/util/Map;
 
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.MDXUPDATE_READY"
@@ -142,7 +129,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 38
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/events/MdxEventHandlerFactory;->handlers:Ljava/util/Map;
 
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.MDXUPDATE_TARGETLIST"
@@ -153,7 +139,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 39
     return-void
 .end method
 
@@ -162,8 +147,6 @@
 .method public getHandler(Ljava/lang/String;)Lcom/netflix/mediaclient/ui/mdx/events/MdxEventHandler;
     .locals 1
 
-    .prologue
-    .line 48
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/events/MdxEventHandlerFactory;->handlers:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;

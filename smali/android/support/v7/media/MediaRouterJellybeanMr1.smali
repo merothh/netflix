@@ -7,8 +7,6 @@
 .method public static createCallback(Landroid/support/v7/media/MediaRouterJellybeanMr1$Callback;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 34
     new-instance v0, Landroid/support/v7/media/MediaRouterJellybeanMr1$CallbackProxy;
 
     invoke-direct {v0, p0}, Landroid/support/v7/media/MediaRouterJellybeanMr1$CallbackProxy;-><init>(Landroid/support/v7/media/MediaRouterJellybeanMr1$Callback;)V

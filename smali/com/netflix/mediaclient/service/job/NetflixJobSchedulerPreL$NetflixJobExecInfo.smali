@@ -29,8 +29,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/job/NetflixJobSchedulerPreL;)V
     .locals 0
 
-    .prologue
-    .line 31
     iput-object p1, p0, Lcom/netflix/mediaclient/service/job/NetflixJobSchedulerPreL$NetflixJobExecInfo;->this$0:Lcom/netflix/mediaclient/service/job/NetflixJobSchedulerPreL;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

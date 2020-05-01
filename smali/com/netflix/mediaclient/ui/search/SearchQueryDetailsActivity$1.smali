@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;)V
     .locals 0
 
-    .prologue
-    .line 129
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$1;->this$0:Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,13 +26,10 @@
 .method public onGlobalLayout()V
     .locals 1
 
-    .prologue
-    .line 132
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$1;->this$0:Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->fireImpressionEvents()V
 
-    .line 133
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$1;->this$0:Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->access$000(Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;)Lcom/netflix/mediaclient/android/widget/StaticGridView;
@@ -47,7 +42,6 @@
 
     if-lez v0, :cond_0
 
-    .line 134
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$1;->this$0:Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->access$000(Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;)Lcom/netflix/mediaclient/android/widget/StaticGridView;
@@ -56,7 +50,6 @@
 
     invoke-static {v0, p0}, Lcom/netflix/mediaclient/util/ViewUtils;->removeGlobalLayoutListener(Landroid/view/View;Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 136
     :cond_0
     return-void
 .end method

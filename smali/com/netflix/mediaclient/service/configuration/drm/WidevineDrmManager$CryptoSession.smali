@@ -17,8 +17,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 848
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,8 +25,6 @@
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager$1;)V
     .locals 0
 
-    .prologue
-    .line 848
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager$CryptoSession;-><init>()V
 
     return-void
@@ -39,10 +35,8 @@
 .method public declared-synchronized activatePendingSessionId()[B
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 887
     monitor-enter p0
 
     :try_start_0
@@ -50,7 +44,6 @@
 
     if-nez v1, :cond_0
 
-    .line 888
     sget-object v1, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "Pending session does NOT exist! Do nothing!"
@@ -59,13 +52,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 895
     :goto_0
     monitor-exit p0
 
     return-object v0
 
-    .line 891
     :cond_0
     :try_start_1
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;->TAG:Ljava/lang/String;
@@ -74,15 +65,12 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 892
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager$CryptoSession;->sessionId:[B
 
-    .line 893
     iget-object v1, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager$CryptoSession;->pendingSessionId:[B
 
     iput-object v1, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager$CryptoSession;->sessionId:[B
 
-    .line 894
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager$CryptoSession;->pendingSessionId:[B
@@ -91,7 +79,6 @@
 
     goto :goto_0
 
-    .line 887
     :catchall_0
     move-exception v0
 
@@ -103,8 +90,6 @@
 .method public declared-synchronized reset()V
     .locals 1
 
-    .prologue
-    .line 903
     monitor-enter p0
 
     const/4 v0, 0x0
@@ -112,29 +97,24 @@
     :try_start_0
     iput-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager$CryptoSession;->pendingSessionId:[B
 
-    .line 904
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager$CryptoSession;->sessionId:[B
 
-    .line 905
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager$CryptoSession;->kceKeyId:[B
 
-    .line 906
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager$CryptoSession;->kchKeyId:[B
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 907
     monitor-exit p0
 
     return-void
 
-    .line 903
     :catchall_0
     move-exception v0
 

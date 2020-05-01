@@ -7,7 +7,5 @@
 .method public static beginDelayedTransition(Landroid/view/ViewGroup;)V
     .locals 0
 
-    .prologue
-    .line 54
     return-void
 .end method

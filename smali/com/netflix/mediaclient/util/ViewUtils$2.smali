@@ -14,8 +14,6 @@
 .method constructor <init>(Landroid/app/Activity;)V
     .locals 0
 
-    .prologue
-    .line 142
     iput-object p1, p0, Lcom/netflix/mediaclient/util/ViewUtils$2;->val$activity:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 3
 
-    .prologue
-    .line 145
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "Clicked on: "
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 146
     invoke-interface {p1}, Landroid/view/MenuItem;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v1
@@ -47,14 +42,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 147
     invoke-interface {p1}, Landroid/view/MenuItem;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 152
     :goto_0
     iget-object v1, p0, Lcom/netflix/mediaclient/util/ViewUtils$2;->val$activity:Landroid/app/Activity;
 
@@ -70,12 +63,10 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 153
     const/4 v0, 0x1
 
     return v0
 
-    .line 150
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 

@@ -15,28 +15,20 @@
 .method public constructor <init>(IJLjava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
     iput p1, p0, Lcom/netflix/mediaclient/servicemgr/interface_/PlaybackBookmark;->mBookmarkInSecond:I
 
-    .line 19
     iput-wide p2, p0, Lcom/netflix/mediaclient/servicemgr/interface_/PlaybackBookmark;->mBookmarkUpdateTimeInUTCMs:J
 
-    .line 20
     iput-object p4, p0, Lcom/netflix/mediaclient/servicemgr/interface_/PlaybackBookmark;->mVideoId:Ljava/lang/String;
 
-    .line 21
     return-void
 .end method
 
 .method public static fromAsset(Lcom/netflix/mediaclient/servicemgr/Asset;)Lcom/netflix/mediaclient/servicemgr/interface_/PlaybackBookmark;
     .locals 5
 
-    .prologue
-    .line 29
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/PlaybackBookmark;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/Asset;->getPlaybackBookmark()I

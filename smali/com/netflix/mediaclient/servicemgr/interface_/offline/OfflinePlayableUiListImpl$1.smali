@@ -26,8 +26,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflinePlayableUiListImpl;)V
     .locals 0
 
-    .prologue
-    .line 353
     iput-object p1, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflinePlayableUiListImpl$1;->this$0:Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflinePlayableUiListImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,8 +38,6 @@
 .method public compare(Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;)I
     .locals 2
 
-    .prologue
-    .line 358
     invoke-virtual {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;->getPlayable()Lcom/netflix/mediaclient/servicemgr/interface_/Playable;
 
     move-result-object v0
@@ -60,7 +56,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 360
     invoke-virtual {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;->getPlayable()Lcom/netflix/mediaclient/servicemgr/interface_/Playable;
 
     move-result-object v0
@@ -79,7 +74,6 @@
 
     sub-int/2addr v0, v1
 
-    .line 363
     :goto_0
     return v0
 
@@ -108,8 +102,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 353
     check-cast p1, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;
 
     check-cast p2, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;

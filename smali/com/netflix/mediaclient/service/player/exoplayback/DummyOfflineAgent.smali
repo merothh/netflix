@@ -20,22 +20,16 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/exoplayback/DummyOfflineAgent;->mContext:Landroid/content/Context;
 
-    .line 78
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/netflix/mediaclient/service/player/exoplayback/DummyOfflineAgent;)Landroid/content/Context;
     .locals 1
 
-    .prologue
-    .line 34
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/DummyOfflineAgent;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -44,8 +38,6 @@
 .method static synthetic access$100(Lcom/netflix/mediaclient/service/player/exoplayback/DummyOfflineAgent;Landroid/content/Context;Ljava/lang/String;)Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;
     .locals 1
 
-    .prologue
-    .line 34
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/service/player/exoplayback/DummyOfflineAgent;->buildMpdfromUrl(Landroid/content/Context;Ljava/lang/String;)Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;
 
     move-result-object v0
@@ -56,68 +48,56 @@
 .method private buildMpdfromUrl(Landroid/content/Context;Ljava/lang/String;)Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;
     .locals 5
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 145
     const-string/jumbo v1, "dummy_offline_agent"
 
     const-string/jumbo v2, "generateMPD"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 146
     const-string/jumbo v1, "dummy_offline_agent"
 
     invoke-static {p1, v1}, Lcom/google/android/exoplayer/util/Util;->getUserAgent(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 147
     new-instance v2, Lcom/google/android/exoplayer/upstream/DefaultUriDataSource;
 
     invoke-direct {v2, p1, v1}, Lcom/google/android/exoplayer/upstream/DefaultUriDataSource;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 148
     new-instance v1, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescriptionParser;
 
     invoke-direct {v1}, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescriptionParser;-><init>()V
 
-    .line 149
     new-instance v3, Lcom/google/android/exoplayer/upstream/UriLoadable;
 
     invoke-direct {v3, p2, v2, v1}, Lcom/google/android/exoplayer/upstream/UriLoadable;-><init>(Ljava/lang/String;Lcom/google/android/exoplayer/upstream/UriDataSource;Lcom/google/android/exoplayer/upstream/UriLoadable$Parser;)V
 
-    .line 153
     :try_start_0
     invoke-virtual {v3}, Lcom/google/android/exoplayer/upstream/UriLoadable;->load()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 161
     invoke-virtual {v3}, Lcom/google/android/exoplayer/upstream/UriLoadable;->getResult()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;
 
-    .line 162
     const-string/jumbo v1, "dummy_offline_agent"
 
     const-string/jumbo v2, "generateMPD done"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 163
     :goto_0
     return-object v0
 
-    .line 154
     :catch_0
     move-exception v1
 
-    .line 155
     const-string/jumbo v2, "dummy_offline_agent"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -142,11 +122,9 @@
 
     goto :goto_0
 
-    .line 157
     :catch_1
     move-exception v1
 
-    .line 158
     const-string/jumbo v2, "dummy_offline_agent"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -177,56 +155,42 @@
 .method public abortManifestRequest(J)V
     .locals 0
 
-    .prologue
-    .line 175
     return-void
 .end method
 
 .method public notifyPause(J)V
     .locals 0
 
-    .prologue
-    .line 185
     return-void
 .end method
 
 .method public notifyPlay(J)V
     .locals 0
 
-    .prologue
-    .line 180
     return-void
 .end method
 
 .method public notifyPlayError(J)V
     .locals 0
 
-    .prologue
-    .line 200
     return-void
 .end method
 
 .method public notifyPlayProgress(JJ)V
     .locals 0
 
-    .prologue
-    .line 195
     return-void
 .end method
 
 .method public notifyStop(J)V
     .locals 0
 
-    .prologue
-    .line 190
     return-void
 .end method
 
 .method public requestOfflineManifest(JLcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$ManifestCallback;)V
     .locals 3
 
-    .prologue
-    .line 169
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/DummyOfflineAgent$DummyOfflineManifest;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/player/exoplayback/DummyOfflineAgent$DummyOfflineManifest;-><init>(Lcom/netflix/mediaclient/service/player/exoplayback/DummyOfflineAgent;)V
@@ -235,6 +199,5 @@
 
     invoke-interface {p3, p1, p2, v0, v1}, Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$ManifestCallback;->onManifestResponse(JLcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$OfflineManifest;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 170
     return-void
 .end method

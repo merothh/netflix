@@ -21,13 +21,10 @@
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 1
 
-    .prologue
-    .line 47
     const-string/jumbo v0, "subtitledata"
 
     invoke-direct {p0, v0, p1}, Lcom/netflix/mediaclient/event/nrdp/media/BaseMediaEvent;-><init>(Ljava/lang/String;Lorg/json/JSONObject;)V
 
-    .line 48
     return-void
 .end method
 
@@ -36,8 +33,6 @@
 .method public pop()Lcom/netflix/mediaclient/media/SubtitleUrl;
     .locals 3
 
-    .prologue
-    .line 82
     iget v0, p0, Lcom/netflix/mediaclient/event/nrdp/media/SubtitleData;->mPosition:I
 
     iget-object v1, p0, Lcom/netflix/mediaclient/event/nrdp/media/SubtitleData;->mSubtitleUrls:[Lcom/netflix/mediaclient/media/SubtitleUrl;
@@ -46,14 +41,12 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 83
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 84
     const-string/jumbo v0, "nf_subtitleData"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -78,7 +71,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 86
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/media/SubtitleData;->mSubtitleUrls:[Lcom/netflix/mediaclient/media/SubtitleUrl;
 
@@ -90,11 +82,9 @@
 
     aget-object v0, v0, v1
 
-    .line 91
     :goto_0
     return-object v0
 
-    .line 88
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -102,7 +92,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 89
     const-string/jumbo v0, "nf_subtitleData"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -141,7 +130,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 91
     :cond_2
     const/4 v0, 0x0
 
@@ -151,18 +139,14 @@
 .method protected populate(Lorg/json/JSONObject;)V
     .locals 5
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 56
     if-nez p1, :cond_1
 
-    .line 73
     :cond_0
     :goto_0
     return-void
 
-    .line 60
     :cond_1
     const-string/jumbo v1, "urls"
 
@@ -172,21 +156,18 @@
 
     if-eqz v1, :cond_3
 
-    .line 61
     const-string/jumbo v1, "urls"
 
     invoke-virtual {p1, v1}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v1
 
-    .line 62
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 63
     const-string/jumbo v2, "nf_subtitleData"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -213,7 +194,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
     :cond_2
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
@@ -223,7 +203,6 @@
 
     iput-object v2, p0, Lcom/netflix/mediaclient/event/nrdp/media/SubtitleData;->mSubtitleUrls:[Lcom/netflix/mediaclient/media/SubtitleUrl;
 
-    .line 66
     :goto_1
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
@@ -231,7 +210,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 67
     iget-object v2, p0, Lcom/netflix/mediaclient/event/nrdp/media/SubtitleData;->mSubtitleUrls:[Lcom/netflix/mediaclient/media/SubtitleUrl;
 
     new-instance v3, Lcom/netflix/mediaclient/media/SubtitleUrl;
@@ -244,12 +222,10 @@
 
     aput-object v3, v2, v0
 
-    .line 66
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 70
     :cond_3
     const-string/jumbo v1, "nf_subtitleData"
 
@@ -257,7 +233,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     new-array v0, v0, [Lcom/netflix/mediaclient/media/SubtitleUrl;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/media/SubtitleData;->mSubtitleUrls:[Lcom/netflix/mediaclient/media/SubtitleUrl;
@@ -268,33 +243,26 @@
 .method public reset()V
     .locals 1
 
-    .prologue
-    .line 99
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/netflix/mediaclient/event/nrdp/media/SubtitleData;->mPosition:I
 
-    .line 100
     return-void
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 8
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 104
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string/jumbo v0, "SubtitleData [\n"
 
     invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 105
     const/4 v0, 0x1
 
-    .line 106
     iget-object v4, p0, Lcom/netflix/mediaclient/event/nrdp/media/SubtitleData;->mSubtitleUrls:[Lcom/netflix/mediaclient/media/SubtitleUrl;
 
     array-length v5, v4
@@ -306,21 +274,17 @@
 
     aget-object v6, v4, v2
 
-    .line 107
     if-eqz v0, :cond_0
 
     move v0, v1
 
-    .line 112
     :goto_1
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 106
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 110
     :cond_0
     const-string/jumbo v7, ",\n"
 
@@ -328,13 +292,11 @@
 
     goto :goto_1
 
-    .line 114
     :cond_1
     const-string/jumbo v0, "\n]"
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 116
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

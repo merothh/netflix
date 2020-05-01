@@ -266,8 +266,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -278,13 +276,10 @@
 .method public flush()V
     .locals 5
 
-    .prologue
-    .line 277
     invoke-virtual {p0}, Lcom/netflix/model/Root;->getKeys()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 278
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -302,14 +297,12 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 279
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 280
     const-string/jumbo v2, "Root"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -332,13 +325,11 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 282
     :cond_0
     invoke-virtual {p0, v0}, Lcom/netflix/model/Root;->remove(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 284
     :cond_1
     return-void
 .end method
@@ -346,8 +337,6 @@
 .method public get(Ljava/lang/String;)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 72
     const/4 v0, -0x1
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -360,7 +349,6 @@
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 96
     const-string/jumbo v0, "Root"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -383,13 +371,11 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 97
     const/4 v0, 0x0
 
     :goto_1
     return-object v0
 
-    .line 72
     :sswitch_0
     const-string/jumbo v1, "lolomos"
 
@@ -676,139 +662,116 @@
 
     goto/16 :goto_0
 
-    .line 73
     :pswitch_0
     iget-object v0, p0, Lcom/netflix/model/Root;->lolomos:Lcom/netflix/falkor/BranchMap;
 
     goto/16 :goto_1
 
-    .line 74
     :pswitch_1
     iget-object v0, p0, Lcom/netflix/model/Root;->lolomo:Lcom/netflix/falkor/Ref;
 
     goto/16 :goto_1
 
-    .line 75
     :pswitch_2
     iget-object v0, p0, Lcom/netflix/model/Root;->lists:Lcom/netflix/falkor/BranchMap;
 
     goto/16 :goto_1
 
-    .line 76
     :pswitch_3
     iget-object v0, p0, Lcom/netflix/model/Root;->flatGenres:Lcom/netflix/falkor/BranchMap;
 
     goto/16 :goto_1
 
-    .line 77
     :pswitch_4
     iget-object v0, p0, Lcom/netflix/model/Root;->evidenceLists:Lcom/netflix/falkor/BranchMap;
 
     goto/16 :goto_1
 
-    .line 78
     :pswitch_5
     iget-object v0, p0, Lcom/netflix/model/Root;->genreList:Lcom/netflix/falkor/Sentinel;
 
     goto/16 :goto_1
 
-    .line 79
     :pswitch_6
     iget-object v0, p0, Lcom/netflix/model/Root;->topGenres:Lcom/netflix/falkor/BranchMap;
 
     goto/16 :goto_1
 
-    .line 80
     :pswitch_7
     iget-object v0, p0, Lcom/netflix/model/Root;->videos:Lcom/netflix/falkor/BranchMap;
 
     goto/16 :goto_1
 
-    .line 81
     :pswitch_8
     iget-object v0, p0, Lcom/netflix/model/Root;->shows:Lcom/netflix/falkor/BranchMap;
 
     goto/16 :goto_1
 
-    .line 82
     :pswitch_9
     iget-object v0, p0, Lcom/netflix/model/Root;->movies:Lcom/netflix/falkor/BranchMap;
 
     goto/16 :goto_1
 
-    .line 83
     :pswitch_a
     iget-object v0, p0, Lcom/netflix/model/Root;->episodes:Lcom/netflix/falkor/BranchMap;
 
     goto/16 :goto_1
 
-    .line 84
     :pswitch_b
     iget-object v0, p0, Lcom/netflix/model/Root;->seasons:Lcom/netflix/falkor/BranchMap;
 
     goto/16 :goto_1
 
-    .line 85
     :pswitch_c
     iget-object v0, p0, Lcom/netflix/model/Root;->postPlayExperiences:Lcom/netflix/falkor/BranchMap;
 
     goto/16 :goto_1
 
-    .line 86
     :pswitch_d
     iget-object v0, p0, Lcom/netflix/model/Root;->search:Lcom/netflix/model/branches/SearchMap;
 
     goto/16 :goto_1
 
-    .line 87
     :pswitch_e
     iget-object v0, p0, Lcom/netflix/model/Root;->people:Lcom/netflix/falkor/BranchMap;
 
     goto/16 :goto_1
 
-    .line 88
     :pswitch_f
     iget-object v0, p0, Lcom/netflix/model/Root;->actorVideoStills:Lcom/netflix/falkor/BranchMap;
 
     goto/16 :goto_1
 
-    .line 89
     :pswitch_10
     iget-object v0, p0, Lcom/netflix/model/Root;->suggestions:Lcom/netflix/falkor/BranchMap;
 
     goto/16 :goto_1
 
-    .line 90
     :pswitch_11
     iget-object v0, p0, Lcom/netflix/model/Root;->characters:Lcom/netflix/falkor/BranchMap;
 
     goto/16 :goto_1
 
-    .line 91
     :pswitch_12
     iget-object v0, p0, Lcom/netflix/model/Root;->notifications:Lcom/netflix/falkor/BranchMap;
 
     goto/16 :goto_1
 
-    .line 92
     :pswitch_13
     iget-object v0, p0, Lcom/netflix/model/Root;->notificationsList:Lcom/netflix/model/branches/SummarizedList;
 
     goto/16 :goto_1
 
-    .line 93
     :pswitch_14
     iget-object v0, p0, Lcom/netflix/model/Root;->nonMemberVideos:Lcom/netflix/falkor/BranchMap;
 
     goto/16 :goto_1
 
-    .line 94
     :pswitch_15
     iget-object v0, p0, Lcom/netflix/model/Root;->turboCollection:Lcom/netflix/falkor/BranchMap;
 
     goto/16 :goto_1
 
-    .line 72
     nop
 
     :sswitch_data_0
@@ -876,254 +839,207 @@
         }
     .end annotation
 
-    .prologue
-    .line 139
     new-instance v0, Ljava/util/LinkedHashSet;
 
     invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    .line 140
     iget-object v1, p0, Lcom/netflix/model/Root;->lolomo:Lcom/netflix/falkor/Ref;
 
     if-eqz v1, :cond_0
 
-    .line 141
     const-string/jumbo v1, "lolomo"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 143
     :cond_0
     iget-object v1, p0, Lcom/netflix/model/Root;->lolomos:Lcom/netflix/falkor/BranchMap;
 
     if-eqz v1, :cond_1
 
-    .line 144
     const-string/jumbo v1, "lolomos"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 146
     :cond_1
     iget-object v1, p0, Lcom/netflix/model/Root;->lists:Lcom/netflix/falkor/BranchMap;
 
     if-eqz v1, :cond_2
 
-    .line 147
     const-string/jumbo v1, "lists"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 149
     :cond_2
     iget-object v1, p0, Lcom/netflix/model/Root;->flatGenres:Lcom/netflix/falkor/BranchMap;
 
     if-eqz v1, :cond_3
 
-    .line 150
     const-string/jumbo v1, "flatGenre"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 152
     :cond_3
     iget-object v1, p0, Lcom/netflix/model/Root;->evidenceLists:Lcom/netflix/falkor/BranchMap;
 
     if-eqz v1, :cond_4
 
-    .line 153
     const-string/jumbo v1, "evidenceLists"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 155
     :cond_4
     iget-object v1, p0, Lcom/netflix/model/Root;->genreList:Lcom/netflix/falkor/Sentinel;
 
     if-eqz v1, :cond_5
 
-    .line 156
     const-string/jumbo v1, "genreList"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 158
     :cond_5
     iget-object v1, p0, Lcom/netflix/model/Root;->topGenres:Lcom/netflix/falkor/BranchMap;
 
     if-eqz v1, :cond_6
 
-    .line 159
     const-string/jumbo v1, "topGenres"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 161
     :cond_6
     iget-object v1, p0, Lcom/netflix/model/Root;->videos:Lcom/netflix/falkor/BranchMap;
 
     if-eqz v1, :cond_7
 
-    .line 162
     const-string/jumbo v1, "videos"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 164
     :cond_7
     iget-object v1, p0, Lcom/netflix/model/Root;->movies:Lcom/netflix/falkor/BranchMap;
 
     if-eqz v1, :cond_8
 
-    .line 165
     const-string/jumbo v1, "movies"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 167
     :cond_8
     iget-object v1, p0, Lcom/netflix/model/Root;->shows:Lcom/netflix/falkor/BranchMap;
 
     if-eqz v1, :cond_9
 
-    .line 168
     const-string/jumbo v1, "shows"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 170
     :cond_9
     iget-object v1, p0, Lcom/netflix/model/Root;->episodes:Lcom/netflix/falkor/BranchMap;
 
     if-eqz v1, :cond_a
 
-    .line 171
     const-string/jumbo v1, "episodes"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 173
     :cond_a
     iget-object v1, p0, Lcom/netflix/model/Root;->seasons:Lcom/netflix/falkor/BranchMap;
 
     if-eqz v1, :cond_b
 
-    .line 174
     const-string/jumbo v1, "seasons"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 176
     :cond_b
     iget-object v1, p0, Lcom/netflix/model/Root;->postPlayExperiences:Lcom/netflix/falkor/BranchMap;
 
     if-eqz v1, :cond_c
 
-    .line 177
     const-string/jumbo v1, "postPlayExperiences"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 179
     :cond_c
     iget-object v1, p0, Lcom/netflix/model/Root;->search:Lcom/netflix/model/branches/SearchMap;
 
     if-eqz v1, :cond_d
 
-    .line 180
     const-string/jumbo v1, "search"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 182
     :cond_d
     iget-object v1, p0, Lcom/netflix/model/Root;->people:Lcom/netflix/falkor/BranchMap;
 
     if-eqz v1, :cond_e
 
-    .line 183
     const-string/jumbo v1, "people"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 185
     :cond_e
     iget-object v1, p0, Lcom/netflix/model/Root;->actorVideoStills:Lcom/netflix/falkor/BranchMap;
 
     if-eqz v1, :cond_f
 
-    .line 186
     const-string/jumbo v1, "videoCastStills"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 188
     :cond_f
     iget-object v1, p0, Lcom/netflix/model/Root;->suggestions:Lcom/netflix/falkor/BranchMap;
 
     if-eqz v1, :cond_10
 
-    .line 189
     const-string/jumbo v1, "suggestions"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 191
     :cond_10
     iget-object v1, p0, Lcom/netflix/model/Root;->characters:Lcom/netflix/falkor/BranchMap;
 
     if-eqz v1, :cond_11
 
-    .line 192
     const-string/jumbo v1, "characters"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 194
     :cond_11
     iget-object v1, p0, Lcom/netflix/model/Root;->notifications:Lcom/netflix/falkor/BranchMap;
 
     if-eqz v1, :cond_12
 
-    .line 195
     const-string/jumbo v1, "notifications"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 197
     :cond_12
     iget-object v1, p0, Lcom/netflix/model/Root;->notificationsList:Lcom/netflix/model/branches/SummarizedList;
 
     if-eqz v1, :cond_13
 
-    .line 198
     const-string/jumbo v1, "notificationsList"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 200
     :cond_13
     iget-object v1, p0, Lcom/netflix/model/Root;->nonMemberVideos:Lcom/netflix/falkor/BranchMap;
 
     if-eqz v1, :cond_14
 
-    .line 201
     const-string/jumbo v1, "nonMemberVideos"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 203
     :cond_14
     iget-object v1, p0, Lcom/netflix/model/Root;->turboCollection:Lcom/netflix/falkor/BranchMap;
 
     if-eqz v1, :cond_15
 
-    .line 204
     const-string/jumbo v1, "turboCollection"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 207
     :cond_15
     return-object v0
 .end method
@@ -1131,20 +1047,15 @@
 .method public getOrCreate(Ljava/lang/String;)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 213
     invoke-virtual {p0, p1}, Lcom/netflix/model/Root;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 214
     if-eqz v0, :cond_0
 
-    .line 241
     :goto_0
     return-object v0
 
-    .line 219
     :cond_0
     const/4 v0, -0x1
 
@@ -1158,7 +1069,6 @@
     :goto_1
     packed-switch v0, :pswitch_data_0
 
-    .line 242
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1183,7 +1093,6 @@
 
     throw v0
 
-    .line 219
     :sswitch_0
     const-string/jumbo v1, "lolomo"
 
@@ -1470,7 +1379,6 @@
 
     goto/16 :goto_1
 
-    .line 220
     :pswitch_0
     new-instance v0, Lcom/netflix/falkor/Ref;
 
@@ -1480,7 +1388,6 @@
 
     goto/16 :goto_0
 
-    .line 221
     :pswitch_1
     new-instance v0, Lcom/netflix/falkor/BranchMap;
 
@@ -1492,7 +1399,6 @@
 
     goto/16 :goto_0
 
-    .line 222
     :pswitch_2
     new-instance v0, Lcom/netflix/falkor/BranchMap;
 
@@ -1504,7 +1410,6 @@
 
     goto/16 :goto_0
 
-    .line 223
     :pswitch_3
     new-instance v0, Lcom/netflix/falkor/BranchMap;
 
@@ -1516,7 +1421,6 @@
 
     goto/16 :goto_0
 
-    .line 224
     :pswitch_4
     new-instance v0, Lcom/netflix/falkor/BranchMap;
 
@@ -1532,7 +1436,6 @@
 
     goto/16 :goto_0
 
-    .line 225
     :pswitch_5
     new-instance v0, Lcom/netflix/falkor/Sentinel;
 
@@ -1546,7 +1449,6 @@
 
     goto/16 :goto_0
 
-    .line 226
     :pswitch_6
     new-instance v0, Lcom/netflix/falkor/BranchMap;
 
@@ -1558,7 +1460,6 @@
 
     goto/16 :goto_0
 
-    .line 227
     :pswitch_7
     new-instance v0, Lcom/netflix/falkor/BranchMap;
 
@@ -1570,7 +1471,6 @@
 
     goto/16 :goto_0
 
-    .line 228
     :pswitch_8
     new-instance v0, Lcom/netflix/falkor/BranchMap;
 
@@ -1586,7 +1486,6 @@
 
     goto/16 :goto_0
 
-    .line 229
     :pswitch_9
     new-instance v0, Lcom/netflix/falkor/BranchMap;
 
@@ -1602,7 +1501,6 @@
 
     goto/16 :goto_0
 
-    .line 230
     :pswitch_a
     new-instance v0, Lcom/netflix/falkor/BranchMap;
 
@@ -1618,7 +1516,6 @@
 
     goto/16 :goto_0
 
-    .line 231
     :pswitch_b
     new-instance v0, Lcom/netflix/falkor/BranchMap;
 
@@ -1634,7 +1531,6 @@
 
     goto/16 :goto_0
 
-    .line 232
     :pswitch_c
     new-instance v0, Lcom/netflix/falkor/BranchMap;
 
@@ -1650,7 +1546,6 @@
 
     goto/16 :goto_0
 
-    .line 233
     :pswitch_d
     new-instance v0, Lcom/netflix/falkor/BranchMap;
 
@@ -1666,7 +1561,6 @@
 
     goto/16 :goto_0
 
-    .line 234
     :pswitch_e
     new-instance v0, Lcom/netflix/falkor/BranchMap;
 
@@ -1682,7 +1576,6 @@
 
     goto/16 :goto_0
 
-    .line 235
     :pswitch_f
     new-instance v0, Lcom/netflix/falkor/BranchMap;
 
@@ -1698,7 +1591,6 @@
 
     goto/16 :goto_0
 
-    .line 236
     :pswitch_10
     new-instance v0, Lcom/netflix/model/branches/SearchMap;
 
@@ -1708,7 +1600,6 @@
 
     goto/16 :goto_0
 
-    .line 237
     :pswitch_11
     new-instance v0, Lcom/netflix/falkor/BranchMap;
 
@@ -1724,7 +1615,6 @@
 
     goto/16 :goto_0
 
-    .line 238
     :pswitch_12
     new-instance v0, Lcom/netflix/falkor/BranchMap;
 
@@ -1740,7 +1630,6 @@
 
     goto/16 :goto_0
 
-    .line 239
     :pswitch_13
     iget-object v0, p0, Lcom/netflix/model/Root;->proxy:Lcom/netflix/falkor/ModelProxy;
 
@@ -1752,7 +1641,6 @@
 
     goto/16 :goto_0
 
-    .line 240
     :pswitch_14
     new-instance v0, Lcom/netflix/falkor/BranchMap;
 
@@ -1764,7 +1652,6 @@
 
     goto/16 :goto_0
 
-    .line 241
     :pswitch_15
     new-instance v0, Lcom/netflix/falkor/BranchMap;
 
@@ -1780,7 +1667,6 @@
 
     goto/16 :goto_0
 
-    .line 219
     nop
 
     :sswitch_data_0
@@ -1839,21 +1725,16 @@
 .method public remove(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 134
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/netflix/model/Root;->set(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 135
     return-void
 .end method
 
 .method public set(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 3
 
-    .prologue
-    .line 103
     const/4 v0, -0x1
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -1866,7 +1747,6 @@
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 128
     const-string/jumbo v0, "Root"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1889,11 +1769,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
     :goto_1
     return-void
 
-    .line 103
     :sswitch_0
     const-string/jumbo v1, "lolomos"
 
@@ -2180,7 +2058,6 @@
 
     goto/16 :goto_0
 
-    .line 104
     :pswitch_0
     check-cast p2, Lcom/netflix/falkor/BranchMap;
 
@@ -2188,7 +2065,6 @@
 
     goto/16 :goto_1
 
-    .line 105
     :pswitch_1
     check-cast p2, Lcom/netflix/falkor/Ref;
 
@@ -2196,7 +2072,6 @@
 
     goto/16 :goto_1
 
-    .line 106
     :pswitch_2
     check-cast p2, Lcom/netflix/falkor/BranchMap;
 
@@ -2204,7 +2079,6 @@
 
     goto/16 :goto_1
 
-    .line 107
     :pswitch_3
     check-cast p2, Lcom/netflix/falkor/BranchMap;
 
@@ -2212,7 +2086,6 @@
 
     goto/16 :goto_1
 
-    .line 108
     :pswitch_4
     check-cast p2, Lcom/netflix/falkor/BranchMap;
 
@@ -2220,7 +2093,6 @@
 
     goto/16 :goto_1
 
-    .line 109
     :pswitch_5
     check-cast p2, Lcom/netflix/falkor/Sentinel;
 
@@ -2228,7 +2100,6 @@
 
     goto/16 :goto_1
 
-    .line 110
     :pswitch_6
     check-cast p2, Lcom/netflix/falkor/BranchMap;
 
@@ -2236,7 +2107,6 @@
 
     goto/16 :goto_1
 
-    .line 111
     :pswitch_7
     check-cast p2, Lcom/netflix/falkor/BranchMap;
 
@@ -2244,7 +2114,6 @@
 
     goto/16 :goto_1
 
-    .line 112
     :pswitch_8
     check-cast p2, Lcom/netflix/falkor/BranchMap;
 
@@ -2252,7 +2121,6 @@
 
     goto/16 :goto_1
 
-    .line 113
     :pswitch_9
     check-cast p2, Lcom/netflix/falkor/BranchMap;
 
@@ -2260,7 +2128,6 @@
 
     goto/16 :goto_1
 
-    .line 114
     :pswitch_a
     check-cast p2, Lcom/netflix/falkor/BranchMap;
 
@@ -2268,7 +2135,6 @@
 
     goto/16 :goto_1
 
-    .line 115
     :pswitch_b
     check-cast p2, Lcom/netflix/falkor/BranchMap;
 
@@ -2276,7 +2142,6 @@
 
     goto/16 :goto_1
 
-    .line 116
     :pswitch_c
     check-cast p2, Lcom/netflix/falkor/BranchMap;
 
@@ -2284,7 +2149,6 @@
 
     goto/16 :goto_1
 
-    .line 117
     :pswitch_d
     check-cast p2, Lcom/netflix/model/branches/SearchMap;
 
@@ -2292,7 +2156,6 @@
 
     goto/16 :goto_1
 
-    .line 118
     :pswitch_e
     check-cast p2, Lcom/netflix/falkor/BranchMap;
 
@@ -2300,7 +2163,6 @@
 
     goto/16 :goto_1
 
-    .line 119
     :pswitch_f
     check-cast p2, Lcom/netflix/falkor/BranchMap;
 
@@ -2308,7 +2170,6 @@
 
     goto/16 :goto_1
 
-    .line 120
     :pswitch_10
     check-cast p2, Lcom/netflix/falkor/BranchMap;
 
@@ -2316,7 +2177,6 @@
 
     goto/16 :goto_1
 
-    .line 121
     :pswitch_11
     check-cast p2, Lcom/netflix/falkor/BranchMap;
 
@@ -2324,7 +2184,6 @@
 
     goto/16 :goto_1
 
-    .line 122
     :pswitch_12
     check-cast p2, Lcom/netflix/falkor/BranchMap;
 
@@ -2335,7 +2194,6 @@
     :pswitch_13
     move-object v0, p2
 
-    .line 123
     check-cast v0, Lcom/netflix/falkor/BranchMap;
 
     iput-object v0, p0, Lcom/netflix/model/Root;->notifications:Lcom/netflix/falkor/BranchMap;
@@ -2343,12 +2201,10 @@
     :pswitch_14
     move-object v0, p2
 
-    .line 124
     check-cast v0, Lcom/netflix/model/branches/SummarizedList;
 
     iput-object v0, p0, Lcom/netflix/model/Root;->notificationsList:Lcom/netflix/model/branches/SummarizedList;
 
-    .line 125
     :pswitch_15
     check-cast p2, Lcom/netflix/falkor/BranchMap;
 
@@ -2356,7 +2212,6 @@
 
     goto/16 :goto_1
 
-    .line 103
     :sswitch_data_0
     .sparse-switch
         -0x5ca9fa5a -> :sswitch_14
@@ -2422,19 +2277,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 67
     iput-object p1, p0, Lcom/netflix/model/Root;->proxy:Lcom/netflix/falkor/ModelProxy;
 
-    .line 68
     return-void
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 248
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -23,78 +23,61 @@
 .method public constructor <init>(Landroid/content/Context;[Lcom/netflix/mediaclient/media/Subtitle;[Lcom/netflix/mediaclient/media/AudioSource;[Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;Z)V
     .locals 1
 
-    .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     const/4 v0, 0x0
 
-    .line 53
     if-eqz p5, :cond_0
 
-    .line 55
     invoke-static {p1}, Lcom/netflix/mediaclient/util/l10n/LanguageUtils;->getSelectedLanguage(Landroid/content/Context;)Lcom/netflix/mediaclient/util/l10n/LanguageUtils$SelectedLanguage;
 
     move-result-object v0
 
-    .line 56
     invoke-static {v0, p2, p3, p4}, Lcom/netflix/mediaclient/util/l10n/LanguageUtils;->toLanguageChoice(Lcom/netflix/mediaclient/util/l10n/LanguageUtils$SelectedLanguage;[Lcom/netflix/mediaclient/media/Subtitle;[Lcom/netflix/mediaclient/media/AudioSource;[Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;)Lcom/netflix/mediaclient/util/LanguageChoice;
 
     move-result-object v0
 
-    .line 59
     :cond_0
     invoke-virtual {p0, p2, p3, p4, v0}, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->init([Lcom/netflix/mediaclient/media/Subtitle;[Lcom/netflix/mediaclient/media/AudioSource;[Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;Lcom/netflix/mediaclient/util/LanguageChoice;)V
 
-    .line 60
     return-void
 .end method
 
 .method public constructor <init>([Lcom/netflix/mediaclient/media/Subtitle;[Lcom/netflix/mediaclient/media/AudioSource;[Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;Lcom/netflix/mediaclient/util/LanguageChoice;)V
     .locals 0
 
-    .prologue
-    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->init([Lcom/netflix/mediaclient/media/Subtitle;[Lcom/netflix/mediaclient/media/AudioSource;[Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;Lcom/netflix/mediaclient/util/LanguageChoice;)V
 
-    .line 73
     return-void
 .end method
 
 .method private findInitialAudio()Lcom/netflix/mediaclient/media/AudioSource;
     .locals 5
 
-    .prologue
     const/4 v2, 0x1
 
     const/4 v4, 0x0
 
     const/4 v0, 0x0
 
-    .line 247
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->audioSources:[Lcom/netflix/mediaclient/media/AudioSource;
 
     array-length v1, v1
 
     if-ge v1, v2, :cond_1
 
-    .line 248
     const-string/jumbo v1, "nf-l10n"
 
     const-string/jumbo v2, "No audio source found!"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 271
     :cond_0
     :goto_0
     return-object v0
 
-    .line 252
     :cond_1
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->mDefaults:[Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;
 
@@ -102,7 +85,6 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 253
     const-string/jumbo v1, "nf-l10n"
 
     const-string/jumbo v2, "No defaults found. Return null to keep initial audio source."
@@ -111,7 +93,6 @@
 
     goto :goto_0
 
-    .line 257
     :cond_2
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->mDefaults:[Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;
 
@@ -121,10 +102,8 @@
 
     move-result-object v1
 
-    .line 258
     if-nez v1, :cond_3
 
-    .line 259
     const-string/jumbo v1, "nf-l10n"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -153,16 +132,13 @@
 
     goto :goto_0
 
-    .line 263
     :cond_3
     invoke-direct {p0, v1}, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->getAudioSourceById(Ljava/lang/String;)Lcom/netflix/mediaclient/media/AudioSource;
 
     move-result-object v0
 
-    .line 264
     if-nez v0, :cond_4
 
-    .line 265
     const-string/jumbo v2, "nf-l10n"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -193,7 +169,6 @@
 
     goto :goto_0
 
-    .line 267
     :cond_4
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -201,7 +176,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 268
     const-string/jumbo v1, "nf-l10n"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -230,26 +204,22 @@
 .method private findInitialSubtitle()Lcom/netflix/mediaclient/media/Subtitle;
     .locals 5
 
-    .prologue
     const/4 v2, 0x1
 
     const/4 v4, 0x0
 
     const/4 v0, 0x0
 
-    .line 211
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->subtitles:[Lcom/netflix/mediaclient/media/Subtitle;
 
     array-length v1, v1
 
     if-ge v1, v2, :cond_1
 
-    .line 236
     :cond_0
     :goto_0
     return-object v0
 
-    .line 215
     :cond_1
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->mDefaults:[Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;
 
@@ -257,7 +227,6 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 216
     const-string/jumbo v1, "nf-l10n"
 
     const-string/jumbo v2, "No defaults found. No subtitles."
@@ -266,7 +235,6 @@
 
     goto :goto_0
 
-    .line 220
     :cond_2
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->mDefaults:[Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;
 
@@ -276,7 +244,6 @@
 
     move-result-object v1
 
-    .line 221
     if-eqz v1, :cond_3
 
     const-string/jumbo v2, "none"
@@ -295,7 +262,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 222
     :cond_3
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -303,7 +269,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 223
     const-string/jumbo v1, "nf-l10n"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -332,16 +297,13 @@
 
     goto :goto_0
 
-    .line 228
     :cond_4
     invoke-direct {p0, v1}, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->getSubtitleById(Ljava/lang/String;)Lcom/netflix/mediaclient/media/Subtitle;
 
     move-result-object v0
 
-    .line 229
     if-nez v0, :cond_5
 
-    .line 230
     const-string/jumbo v2, "nf-l10n"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -372,7 +334,6 @@
 
     goto :goto_0
 
-    .line 232
     :cond_5
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -380,7 +341,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 233
     const-string/jumbo v1, "nf-l10n"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -409,11 +369,8 @@
 .method private getAudioSourceById(Ljava/lang/String;)Lcom/netflix/mediaclient/media/AudioSource;
     .locals 2
 
-    .prologue
-    .line 283
     if-nez p1, :cond_0
 
-    .line 284
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Audio track id can NOT be null!"
@@ -422,7 +379,6 @@
 
     throw v0
 
-    .line 287
     :cond_0
     const/4 v0, 0x0
 
@@ -433,7 +389,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 288
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->audioSources:[Lcom/netflix/mediaclient/media/AudioSource;
 
     aget-object v1, v1, v0
@@ -448,22 +403,18 @@
 
     if-eqz v1, :cond_1
 
-    .line 289
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->audioSources:[Lcom/netflix/mediaclient/media/AudioSource;
 
     aget-object v0, v1, v0
 
-    .line 293
     :goto_1
     return-object v0
 
-    .line 287
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 293
     :cond_2
     const/4 v0, 0x0
 
@@ -473,11 +424,8 @@
 .method private getSubtitleById(Ljava/lang/String;)Lcom/netflix/mediaclient/media/Subtitle;
     .locals 2
 
-    .prologue
-    .line 304
     if-nez p1, :cond_0
 
-    .line 305
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Subtitle id can NOT be null!"
@@ -486,7 +434,6 @@
 
     throw v0
 
-    .line 308
     :cond_0
     const/4 v0, 0x0
 
@@ -497,7 +444,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 309
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->subtitles:[Lcom/netflix/mediaclient/media/Subtitle;
 
     aget-object v1, v1, v0
@@ -512,22 +458,18 @@
 
     if-eqz v1, :cond_1
 
-    .line 310
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->subtitles:[Lcom/netflix/mediaclient/media/Subtitle;
 
     aget-object v0, v1, v0
 
-    .line 314
     :goto_1
     return-object v0
 
-    .line 308
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 314
     :cond_2
     const/4 v0, 0x0
 
@@ -539,35 +481,29 @@
 .method public findInitialLanguage()Lcom/netflix/mediaclient/util/LanguageChoice;
     .locals 4
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 146
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->userChoiceSubtitle:Lcom/netflix/mediaclient/media/Subtitle;
 
     if-eqz v0, :cond_0
 
-    .line 147
     const-string/jumbo v0, "nf-l10n"
 
     const-string/jumbo v1, "We found user preference for subtitle!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 150
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->userChoiceAudio:Lcom/netflix/mediaclient/media/AudioSource;
 
     if-eqz v0, :cond_5
 
-    .line 152
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 153
     const-string/jumbo v0, "nf-l10n"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -592,20 +528,17 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->userChoiceSubtitle:Lcom/netflix/mediaclient/media/Subtitle;
 
     if-eqz v0, :cond_3
 
-    .line 157
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 158
     const-string/jumbo v0, "nf-l10n"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -630,7 +563,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 164
     :cond_2
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->userChoiceAudio:Lcom/netflix/mediaclient/media/AudioSource;
@@ -643,14 +575,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 165
     const-string/jumbo v0, "nf-l10n"
 
     const-string/jumbo v1, "Using user preference for language"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 166
     new-instance v0, Lcom/netflix/mediaclient/util/LanguageChoice;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->userChoiceSubtitle:Lcom/netflix/mediaclient/media/Subtitle;
@@ -659,11 +589,9 @@
 
     invoke-direct {v0, v1, v2}, Lcom/netflix/mediaclient/util/LanguageChoice;-><init>(Lcom/netflix/mediaclient/media/Subtitle;Lcom/netflix/mediaclient/media/AudioSource;)V
 
-    .line 197
     :goto_1
     return-object v0
 
-    .line 161
     :cond_3
     const-string/jumbo v0, "nf-l10n"
 
@@ -673,7 +601,6 @@
 
     goto :goto_0
 
-    .line 168
     :cond_4
     const-string/jumbo v0, "nf-l10n"
 
@@ -681,7 +608,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 169
     new-instance v0, Lcom/netflix/mediaclient/util/LanguageChoice;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->findInitialSubtitle()Lcom/netflix/mediaclient/media/Subtitle;
@@ -696,7 +622,6 @@
 
     goto :goto_1
 
-    .line 174
     :cond_5
     const-string/jumbo v0, "nf-l10n"
 
@@ -704,42 +629,35 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 175
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->findInitialAudio()Lcom/netflix/mediaclient/media/AudioSource;
 
     move-result-object v1
 
-    .line 176
     if-nez v1, :cond_6
 
-    .line 177
     const-string/jumbo v0, "nf-l10n"
 
     const-string/jumbo v1, "Initial audio not found!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 178
     new-instance v0, Lcom/netflix/mediaclient/util/LanguageChoice;
 
     invoke-direct {v0, v2, v2}, Lcom/netflix/mediaclient/util/LanguageChoice;-><init>(Lcom/netflix/mediaclient/media/Subtitle;Lcom/netflix/mediaclient/media/AudioSource;)V
 
     goto :goto_1
 
-    .line 181
     :cond_6
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->userChoiceSubtitle:Lcom/netflix/mediaclient/media/Subtitle;
 
     if-eqz v0, :cond_9
 
-    .line 183
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
-    .line 184
     const-string/jumbo v0, "nf-l10n"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -764,7 +682,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 187
     :cond_7
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->userChoiceSubtitle:Lcom/netflix/mediaclient/media/Subtitle;
 
@@ -774,14 +691,12 @@
 
     if-eqz v0, :cond_8
 
-    .line 188
     const-string/jumbo v0, "nf-l10n"
 
     const-string/jumbo v2, "Using user preference for language"
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 189
     new-instance v0, Lcom/netflix/mediaclient/util/LanguageChoice;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->userChoiceSubtitle:Lcom/netflix/mediaclient/media/Subtitle;
@@ -790,7 +705,6 @@
 
     goto :goto_1
 
-    .line 191
     :cond_8
     const-string/jumbo v0, "nf-l10n"
 
@@ -798,7 +712,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 192
     new-instance v0, Lcom/netflix/mediaclient/util/LanguageChoice;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->findInitialSubtitle()Lcom/netflix/mediaclient/media/Subtitle;
@@ -809,7 +722,6 @@
 
     goto/16 :goto_1
 
-    .line 196
     :cond_9
     const-string/jumbo v0, "nf-l10n"
 
@@ -817,7 +729,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 197
     new-instance v0, Lcom/netflix/mediaclient/util/LanguageChoice;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->findInitialSubtitle()Lcom/netflix/mediaclient/media/Subtitle;
@@ -832,8 +743,6 @@
 .method public getAudioSources()[Lcom/netflix/mediaclient/media/AudioSource;
     .locals 1
 
-    .prologue
-    .line 323
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->audioSources:[Lcom/netflix/mediaclient/media/AudioSource;
 
     return-object v0
@@ -842,8 +751,6 @@
 .method public getSubtitles()[Lcom/netflix/mediaclient/media/Subtitle;
     .locals 1
 
-    .prologue
-    .line 332
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->subtitles:[Lcom/netflix/mediaclient/media/Subtitle;
 
     return-object v0
@@ -852,51 +759,40 @@
 .method public init([Lcom/netflix/mediaclient/media/Subtitle;[Lcom/netflix/mediaclient/media/AudioSource;[Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;Lcom/netflix/mediaclient/util/LanguageChoice;)V
     .locals 3
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 85
     const-string/jumbo v0, "nf-l10n"
 
     invoke-static {p2, v0}, Lcom/netflix/mediaclient/media/AudioSource;->dumpLog([Lcom/netflix/mediaclient/media/AudioSource;Ljava/lang/String;)V
 
-    .line 86
     const-string/jumbo v0, "nf-l10n"
 
     invoke-static {p1, v0}, Lcom/netflix/mediaclient/util/SubtitleUtils;->dumpLog([Lcom/netflix/mediaclient/media/Subtitle;Ljava/lang/String;)V
 
-    .line 87
     const-string/jumbo v0, "nf-l10n"
 
     invoke-static {p3, v0}, Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;->dumpLog([Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;Ljava/lang/String;)V
 
-    .line 89
     if-nez p1, :cond_3
 
-    .line 90
     new-array v0, v1, [Lcom/netflix/mediaclient/media/Subtitle;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->subtitles:[Lcom/netflix/mediaclient/media/Subtitle;
 
-    .line 97
     :goto_0
     if-nez p2, :cond_4
 
-    .line 98
     new-array v0, v1, [Lcom/netflix/mediaclient/media/AudioSource;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->audioSources:[Lcom/netflix/mediaclient/media/AudioSource;
 
-    .line 105
     :goto_1
     if-nez p3, :cond_5
 
-    .line 106
     new-array v0, v1, [Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->mDefaults:[Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;
 
-    .line 113
     :goto_2
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -904,7 +800,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 114
     const-string/jumbo v0, "nf-l10n"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -927,18 +822,15 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 117
     :cond_0
     if-eqz p4, :cond_8
 
-    .line 119
     invoke-virtual {p4}, Lcom/netflix/mediaclient/util/LanguageChoice;->getSubtitle()Lcom/netflix/mediaclient/media/Subtitle;
 
     move-result-object v0
 
     if-eqz v0, :cond_6
 
-    .line 120
     invoke-virtual {p4}, Lcom/netflix/mediaclient/util/LanguageChoice;->getSubtitle()Lcom/netflix/mediaclient/media/Subtitle;
 
     move-result-object v0
@@ -953,14 +845,12 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->userChoiceSubtitle:Lcom/netflix/mediaclient/media/Subtitle;
 
-    .line 121
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 122
     const-string/jumbo v0, "nf-l10n"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1003,7 +893,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 128
     :cond_1
     :goto_3
     invoke-virtual {p4}, Lcom/netflix/mediaclient/util/LanguageChoice;->getAudio()Lcom/netflix/mediaclient/media/AudioSource;
@@ -1012,7 +901,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 129
     invoke-virtual {p4}, Lcom/netflix/mediaclient/util/LanguageChoice;->getAudio()Lcom/netflix/mediaclient/media/AudioSource;
 
     move-result-object v0
@@ -1027,14 +915,12 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->userChoiceAudio:Lcom/netflix/mediaclient/media/AudioSource;
 
-    .line 130
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 131
     const-string/jumbo v0, "nf-l10n"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1077,54 +963,43 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 139
     :cond_2
     :goto_4
     return-void
 
-    .line 92
     :cond_3
     invoke-static {p1}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
 
-    .line 93
     const-string/jumbo v0, "nf-l10n"
 
     invoke-static {p1, v0}, Lcom/netflix/mediaclient/util/SubtitleUtils;->dumpLog([Lcom/netflix/mediaclient/media/Subtitle;Ljava/lang/String;)V
 
-    .line 94
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->subtitles:[Lcom/netflix/mediaclient/media/Subtitle;
 
     goto/16 :goto_0
 
-    .line 100
     :cond_4
     invoke-static {p2}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
 
-    .line 101
     const-string/jumbo v0, "nf-l10n"
 
     invoke-static {p2, v0}, Lcom/netflix/mediaclient/media/AudioSource;->dumpLog([Lcom/netflix/mediaclient/media/AudioSource;Ljava/lang/String;)V
 
-    .line 102
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->audioSources:[Lcom/netflix/mediaclient/media/AudioSource;
 
     goto/16 :goto_1
 
-    .line 108
     :cond_5
     invoke-static {p3}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
 
-    .line 109
     const-string/jumbo v0, "nf-l10n"
 
     invoke-static {p3, v0}, Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;->dumpLog([Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;Ljava/lang/String;)V
 
-    .line 110
     iput-object p3, p0, Lcom/netflix/mediaclient/ui/player/LocalizationManager;->mDefaults:[Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;
 
     goto/16 :goto_2
 
-    .line 125
     :cond_6
     const-string/jumbo v0, "nf-l10n"
 
@@ -1134,7 +1009,6 @@
 
     goto :goto_3
 
-    .line 134
     :cond_7
     const-string/jumbo v0, "nf-l10n"
 
@@ -1144,7 +1018,6 @@
 
     goto :goto_4
 
-    .line 137
     :cond_8
     const-string/jumbo v0, "nf-l10n"
 

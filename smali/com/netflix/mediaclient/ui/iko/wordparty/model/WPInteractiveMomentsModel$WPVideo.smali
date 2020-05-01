@@ -13,8 +13,6 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;)V
     .locals 0
 
-    .prologue
-    .line 438
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPVideo;->this$0:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,8 +25,6 @@
 .method public getUrl()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 442
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPVideo;->url:Ljava/lang/String;
 
     return-object v0
@@ -37,8 +33,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 447
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

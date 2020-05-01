@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/pservice/PService;)V
     .locals 0
 
-    .prologue
-    .line 303
     iput-object p1, p0, Lcom/netflix/mediaclient/service/pservice/PService$2;->this$0:Lcom/netflix/mediaclient/service/pservice/PService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public getFetchAgent()Lcom/netflix/mediaclient/service/pservice/PServiceAgent$PServiceFetchAgentInterface;
     .locals 1
 
-    .prologue
-    .line 316
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService$2;->this$0:Lcom/netflix/mediaclient/service/pservice/PService;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/pservice/PService;->access$200(Lcom/netflix/mediaclient/service/pservice/PService;)Lcom/netflix/mediaclient/service/pservice/PServiceFetchAgent;
@@ -42,8 +38,6 @@
 .method public getPartnerFetch()Lcom/netflix/mediaclient/service/pservice/PServiceAgent$PServicePartnerFetchInterface;
     .locals 1
 
-    .prologue
-    .line 311
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService$2;->this$0:Lcom/netflix/mediaclient/service/pservice/PService;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/pservice/PService;->access$200(Lcom/netflix/mediaclient/service/pservice/PService;)Lcom/netflix/mediaclient/service/pservice/PServiceFetchAgent;
@@ -56,8 +50,6 @@
 .method public getService()Lcom/netflix/mediaclient/service/pservice/PService;
     .locals 1
 
-    .prologue
-    .line 306
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService$2;->this$0:Lcom/netflix/mediaclient/service/pservice/PService;
 
     return-object v0
@@ -66,8 +58,6 @@
 .method public getWidgetAgent()Lcom/netflix/mediaclient/service/pservice/PServiceAgent$PServiceWidgetAgentInterface;
     .locals 1
 
-    .prologue
-    .line 321
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService$2;->this$0:Lcom/netflix/mediaclient/service/pservice/PService;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/pservice/PService;->access$000(Lcom/netflix/mediaclient/service/pservice/PService;)Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;

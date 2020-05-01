@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/NetflixApplication;)V
     .locals 0
 
-    .prologue
-    .line 315
     iput-object p1, p0, Lcom/netflix/mediaclient/NetflixApplication$1;->this$0:Lcom/netflix/mediaclient/NetflixApplication;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,17 +23,14 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 319
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 320
     const-string/jumbo v0, "NetflixApplication"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -58,13 +53,11 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 323
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 324
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.NETFLIX_SERVICE_DESTROYED"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -73,14 +66,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 325
     const-string/jumbo v0, "NetflixApplication"
 
     const-string/jumbo v1, "Netflix service is destroyed"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 326
     iget-object v0, p0, Lcom/netflix/mediaclient/NetflixApplication$1;->this$0:Lcom/netflix/mediaclient/NetflixApplication;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/NetflixApplication;->access$000(Lcom/netflix/mediaclient/NetflixApplication;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -89,12 +80,10 @@
 
     invoke-virtual {v0, v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 347
     :cond_1
     :goto_0
     return-void
 
-    .line 328
     :cond_2
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.NETFLIX_SERVICE_INIT_COMPLETE"
 
@@ -104,7 +93,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 330
     const-string/jumbo v0, "status_code"
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getSerializableExtra(Ljava/lang/String;)Ljava/io/Serializable;
@@ -113,14 +101,12 @@
 
     check-cast v0, Lcom/netflix/mediaclient/StatusCode;
 
-    .line 331
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 332
     const-string/jumbo v1, "NetflixApplication"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -143,7 +129,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 335
     :cond_3
     invoke-virtual {v0}, Lcom/netflix/mediaclient/StatusCode;->isSucess()Z
 
@@ -151,14 +136,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 336
     const-string/jumbo v0, "NetflixApplication"
 
     const-string/jumbo v1, " Netflix application is ready"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 337
     iget-object v0, p0, Lcom/netflix/mediaclient/NetflixApplication$1;->this$0:Lcom/netflix/mediaclient/NetflixApplication;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/NetflixApplication;->access$000(Lcom/netflix/mediaclient/NetflixApplication;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -171,7 +154,6 @@
 
     goto :goto_0
 
-    .line 339
     :cond_4
     const-string/jumbo v0, "NetflixApplication"
 
@@ -179,7 +161,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 340
     iget-object v0, p0, Lcom/netflix/mediaclient/NetflixApplication$1;->this$0:Lcom/netflix/mediaclient/NetflixApplication;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/NetflixApplication;->access$000(Lcom/netflix/mediaclient/NetflixApplication;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -190,7 +171,6 @@
 
     goto :goto_0
 
-    .line 343
     :cond_5
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -198,7 +178,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 344
     const-string/jumbo v1, "NetflixApplication"
 
     new-instance v2, Ljava/lang/StringBuilder;

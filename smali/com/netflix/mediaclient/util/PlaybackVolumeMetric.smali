@@ -19,14 +19,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     if-nez p1, :cond_0
 
-    .line 30
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Context can not be null"
@@ -35,7 +31,6 @@
 
     throw v0
 
-    .line 33
     :cond_0
     invoke-static {p1}, Lcom/netflix/mediaclient/util/PlaybackVolumeMetric;->getPlaybackVolumeMetric(Landroid/content/Context;)I
 
@@ -43,17 +38,14 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/util/PlaybackVolumeMetric;->mVolumeMetric:I
 
-    .line 34
     return-void
 .end method
 
 .method private static getPlaybackVolumeMetric(Landroid/content/Context;)I
     .locals 6
 
-    .prologue
     const/4 v2, 0x3
 
-    .line 84
     const-string/jumbo v0, "audio"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -62,29 +54,23 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 86
     if-nez v0, :cond_1
 
-    .line 87
     const/4 v0, -0x1
 
-    .line 99
     :cond_0
     :goto_0
     return v0
 
-    .line 90
     :cond_1
     invoke-virtual {v0, v2}, Landroid/media/AudioManager;->getStreamVolume(I)I
 
     move-result v1
 
-    .line 91
     invoke-virtual {v0, v2}, Landroid/media/AudioManager;->getStreamMaxVolume(I)I
 
     move-result v2
 
-    .line 93
     if-lez v2, :cond_2
 
     const v0, 0xf4240
@@ -93,7 +79,6 @@
 
     div-int/2addr v0, v2
 
-    .line 95
     :goto_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -101,7 +86,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 96
     const-string/jumbo v3, "nf_audio"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -146,7 +130,6 @@
 
     goto :goto_0
 
-    .line 93
     :cond_2
     const/4 v0, 0x0
 
@@ -156,8 +139,6 @@
 .method public static isValidPlaybackVolumeMetric(I)Z
     .locals 1
 
-    .prologue
-    .line 70
     if-ltz p0, :cond_0
 
     const v0, 0xf4240
@@ -180,20 +161,16 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 49
     if-ne p0, p1, :cond_1
 
-    .line 54
     :cond_0
     :goto_0
     return v0
 
-    .line 50
     :cond_1
     if-eqz p1, :cond_2
 
@@ -212,11 +189,9 @@
 
     goto :goto_0
 
-    .line 52
     :cond_3
     check-cast p1, Lcom/netflix/mediaclient/util/PlaybackVolumeMetric;
 
-    .line 54
     iget v2, p0, Lcom/netflix/mediaclient/util/PlaybackVolumeMetric;->mVolumeMetric:I
 
     iget v3, p1, Lcom/netflix/mediaclient/util/PlaybackVolumeMetric;->mVolumeMetric:I
@@ -231,8 +206,6 @@
 .method public getVolumeMetric()I
     .locals 1
 
-    .prologue
-    .line 37
     iget v0, p0, Lcom/netflix/mediaclient/util/PlaybackVolumeMetric;->mVolumeMetric:I
 
     return v0
@@ -241,8 +214,6 @@
 .method public hashCode()I
     .locals 1
 
-    .prologue
-    .line 60
     iget v0, p0, Lcom/netflix/mediaclient/util/PlaybackVolumeMetric;->mVolumeMetric:I
 
     return v0
@@ -251,8 +222,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 42
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

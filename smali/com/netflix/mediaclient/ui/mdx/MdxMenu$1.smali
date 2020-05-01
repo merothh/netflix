@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/mdx/MdxMenu;)V
     .locals 0
 
-    .prologue
-    .line 71
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMenu$1;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 2
 
-    .prologue
-    .line 74
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMenu$1;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMenu;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MdxMenu;->access$000(Lcom/netflix/mediaclient/ui/mdx/MdxMenu;)Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -50,10 +46,8 @@
 
     move-result-object v0
 
-    .line 75
     if-eqz v0, :cond_0
 
-    .line 76
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMenu$1;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMenu;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/mdx/MdxMenu;->access$000(Lcom/netflix/mediaclient/ui/mdx/MdxMenu;)Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -62,7 +56,6 @@
 
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->displayDialog(Landroid/app/Dialog;)V
 
-    .line 78
     :cond_0
     const/4 v0, 0x1
 

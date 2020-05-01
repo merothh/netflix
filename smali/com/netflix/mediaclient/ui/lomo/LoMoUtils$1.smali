@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 42
     invoke-static {}, Lcom/netflix/mediaclient/ui/lomo/LoMoUtils$LoMoWidthType;->values()[Lcom/netflix/mediaclient/ui/lomo/LoMoUtils$LoMoWidthType;
 
     move-result-object v0

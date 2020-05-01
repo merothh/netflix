@@ -7,8 +7,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 603
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -19,8 +17,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .prologue
-    .line 606
     const-string/jumbo v0, "SearchActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -47,12 +43,10 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 607
     const-string/jumbo v0, "SearchActivity"
 
     invoke-static {v0, p2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Landroid/content/Intent;)V
 
-    .line 608
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/search/SearchActivity$VoiceSearchSupportReceiver;->getResultCode()I
 
     move-result v0
@@ -61,11 +55,9 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 615
     :goto_0
     return-void
 
-    .line 613
     :cond_0
     const/4 v0, 0x1
 
@@ -79,7 +71,6 @@
 
     move-result-object v0
 
-    .line 614
     const-string/jumbo v1, "SearchActivity"
 
     new-instance v2, Ljava/lang/StringBuilder;

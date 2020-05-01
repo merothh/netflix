@@ -14,13 +14,10 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 316
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$PresentationWebCallbackImpl;->this$0:Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 319
     return-void
 .end method
 
@@ -29,15 +26,12 @@
 .method public onEventsDelivered(Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 348
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 349
     const-string/jumbo v0, "nf_presentation"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -60,7 +54,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 358
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$PresentationWebCallbackImpl;->this$0:Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;
 
@@ -70,27 +63,22 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/logging/LoggingAgent;->clearFailureCounter()V
 
-    .line 359
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$PresentationWebCallbackImpl;->this$0:Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;->access$500(Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;Ljava/lang/String;)V
 
-    .line 360
     return-void
 .end method
 
 .method public onEventsDeliveryFailed(Ljava/lang/String;)V
     .locals 5
 
-    .prologue
-    .line 323
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 324
     const-string/jumbo v0, "nf_presentation"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -113,7 +101,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 327
     :cond_0
     invoke-static {p1}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
@@ -121,11 +108,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 343
     :goto_0
     return-void
 
-    .line 337
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$PresentationWebCallbackImpl;->this$0:Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;
 
@@ -139,7 +124,6 @@
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$PresentationWebCallbackImpl;->this$0:Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;
 
-    .line 342
     invoke-static {v2}, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;->access$700(Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;)Lcom/netflix/mediaclient/service/logging/LoggingAgent;
 
     move-result-object v2
@@ -150,7 +134,6 @@
 
     sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 337
     invoke-interface {v0, v1, v2, v3, v4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
     goto :goto_0

@@ -24,18 +24,14 @@
 .method public constructor <init>(Lcom/fasterxml/jackson/core/JsonParser;)V
     .locals 3
 
-    .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     invoke-virtual {p0}, Lcom/netflix/model/leafs/originals/AbstractBillboardAsset;->getTag()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/model/leafs/originals/AbstractBillboardAsset;->TAG:Ljava/lang/String;
 
-    .line 38
     invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->getCurrentToken()Lcom/fasterxml/jackson/core/JsonToken;
 
     move-result-object v0
@@ -46,28 +42,22 @@
 
     invoke-static {p0, p1, v0, v1, v2}, Lcom/netflix/falkor/BranchNodeUtils;->merge(Lcom/netflix/mediaclient/servicemgr/interface_/JsonMerger;Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/core/JsonToken;ZI)Ljava/lang/Object;
 
-    .line 39
     return-void
 .end method
 
 .method public constructor <init>(Lcom/google/gson/JsonElement;)V
     .locals 1
 
-    .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     invoke-virtual {p0}, Lcom/netflix/model/leafs/originals/AbstractBillboardAsset;->getTag()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/model/leafs/originals/AbstractBillboardAsset;->TAG:Ljava/lang/String;
 
-    .line 33
     invoke-virtual {p0, p1}, Lcom/netflix/model/leafs/originals/AbstractBillboardAsset;->populate(Lcom/google/gson/JsonElement;)V
 
-    .line 34
     return-void
 .end method
 
@@ -76,8 +66,6 @@
 .method public getHeight()Ljava/lang/Integer;
     .locals 1
 
-    .prologue
-    .line 50
     iget-object v0, p0, Lcom/netflix/model/leafs/originals/AbstractBillboardAsset;->height:Ljava/lang/Integer;
 
     return-object v0
@@ -89,8 +77,6 @@
 .method public getTone()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 54
     iget-object v0, p0, Lcom/netflix/model/leafs/originals/AbstractBillboardAsset;->tone:Ljava/lang/String;
 
     return-object v0
@@ -99,8 +85,6 @@
 .method public getUrl()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 42
     iget-object v0, p0, Lcom/netflix/model/leafs/originals/AbstractBillboardAsset;->url:Ljava/lang/String;
 
     return-object v0
@@ -109,8 +93,6 @@
 .method public getWidth()Ljava/lang/Integer;
     .locals 1
 
-    .prologue
-    .line 46
     iget-object v0, p0, Lcom/netflix/model/leafs/originals/AbstractBillboardAsset;->width:Ljava/lang/Integer;
 
     return-object v0
@@ -119,18 +101,14 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 5
 
-    .prologue
-    .line 59
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 60
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 61
     iget-object v1, p0, Lcom/netflix/model/leafs/originals/AbstractBillboardAsset;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -153,7 +131,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 63
     :cond_0
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -176,14 +153,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 64
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/gson/JsonElement;
 
-    .line 65
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -206,7 +181,6 @@
 
     goto :goto_0
 
-    .line 66
     :pswitch_0
     invoke-static {v1}, Lcom/netflix/mediaclient/util/JsonUtils;->getAsStringSafe(Lcom/google/gson/JsonElement;)Ljava/lang/String;
 
@@ -216,7 +190,6 @@
 
     goto :goto_0
 
-    .line 65
     :sswitch_0
     const-string/jumbo v4, "url"
 
@@ -269,7 +242,6 @@
 
     goto :goto_1
 
-    .line 67
     :pswitch_1
     invoke-static {v1}, Lcom/netflix/mediaclient/util/JsonUtils;->getAsIntSafe(Lcom/google/gson/JsonElement;)I
 
@@ -283,7 +255,6 @@
 
     goto :goto_0
 
-    .line 68
     :pswitch_2
     invoke-static {v1}, Lcom/netflix/mediaclient/util/JsonUtils;->getAsIntSafe(Lcom/google/gson/JsonElement;)I
 
@@ -297,7 +268,6 @@
 
     goto :goto_0
 
-    .line 69
     :pswitch_3
     invoke-static {v1}, Lcom/netflix/mediaclient/util/JsonUtils;->getAsStringSafe(Lcom/google/gson/JsonElement;)Ljava/lang/String;
 
@@ -307,11 +277,9 @@
 
     goto :goto_0
 
-    .line 72
     :cond_2
     return-void
 
-    .line 65
     nop
 
     :sswitch_data_0
@@ -334,17 +302,14 @@
 .method public set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 76
     sget-boolean v2, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v2, :cond_0
 
-    .line 77
     iget-object v2, p0, Lcom/netflix/model/leafs/originals/AbstractBillboardAsset;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -367,7 +332,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 79
     :cond_0
     const/4 v2, -0x1
 
@@ -381,11 +345,9 @@
     :goto_0
     packed-switch v2, :pswitch_data_0
 
-    .line 95
     :goto_1
     return v0
 
-    .line 79
     :sswitch_0
     const-string/jumbo v3, "url"
 
@@ -438,7 +400,6 @@
 
     goto :goto_0
 
-    .line 81
     :pswitch_0
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -449,10 +410,8 @@
     :goto_2
     move v0, v1
 
-    .line 95
     goto :goto_1
 
-    .line 84
     :pswitch_1
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsInt()I
 
@@ -466,7 +425,6 @@
 
     goto :goto_2
 
-    .line 87
     :pswitch_2
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsInt()I
 
@@ -480,7 +438,6 @@
 
     goto :goto_2
 
-    .line 90
     :pswitch_3
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -490,7 +447,6 @@
 
     goto :goto_2
 
-    .line 79
     :sswitch_data_0
     .sparse-switch
         -0x48c76ed9 -> :sswitch_2

@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable$PlayableDeleteCompleteCallBack;Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData;Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableListener;)V
     .locals 0
 
-    .prologue
-    .line 1406
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$12;->val$listener:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable$PlayableDeleteCompleteCallBack;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$12;->val$playablePersistentData:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData;
@@ -36,15 +34,12 @@
 .method public onOfflineLicenseRequestDone(Ljava/lang/String;Lcom/netflix/mediaclient/service/player/bladerunnerclient/OfflineLicenseResponse;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 1410
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$12;->val$listener:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable$PlayableDeleteCompleteCallBack;
 
     if-eqz v0, :cond_4
 
     const/4 v0, 0x1
 
-    .line 1413
     :goto_0
     invoke-interface {p3}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
 
@@ -54,7 +49,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1414
     invoke-interface {p3}, Lcom/netflix/mediaclient/android/app/Status;->getStatusCode()Lcom/netflix/mediaclient/StatusCode;
 
     move-result-object v0
@@ -67,26 +61,22 @@
 
     if-nez v0, :cond_1
 
-    .line 1415
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$12;->val$playablePersistentData:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData;->setDownloadStateDeleteComplete()V
 
-    .line 1417
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$12;->val$listener:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable$PlayableDeleteCompleteCallBack;
 
     if-eqz v0, :cond_2
 
-    .line 1418
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$12;->val$listener:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable$PlayableDeleteCompleteCallBack;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$12;->val$playablePersistentData:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData;
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable$PlayableDeleteCompleteCallBack;->onDeleteCompleted(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData;)V
 
-    .line 1420
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$12;->val$offlinePlayableListener:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableListener;
 
@@ -98,18 +88,15 @@
 
     if-eqz v0, :cond_3
 
-    .line 1421
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$12;->val$offlinePlayableListener:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableListener;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$12;->val$playablePersistentData:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData;
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableListener;->onLicenseDeleteSuccessfully(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData;)V
 
-    .line 1423
     :cond_3
     return-void
 
-    .line 1410
     :cond_4
     const/4 v0, 0x0
 

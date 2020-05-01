@@ -10,8 +10,6 @@
 .method public static declared-synchronized a()Landroid/location/Location;
     .locals 2
 
-    .prologue
-    .line 16
     const-class v0, Lcom/crittercism/internal/ba;
 
     monitor-enter v0
@@ -36,8 +34,6 @@
 .method public static declared-synchronized a(Landroid/location/Location;)V
     .locals 2
 
-    .prologue
-    .line 13
     const-class v1, Lcom/crittercism/internal/ba;
 
     monitor-enter v1
@@ -50,12 +46,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 14
     monitor-exit v1
 
     return-void
 
-    .line 13
     :cond_0
     :try_start_1
     new-instance v0, Landroid/location/Location;
@@ -79,8 +73,6 @@
 .method public static declared-synchronized b()Z
     .locals 2
 
-    .prologue
-    .line 20
     const-class v1, Lcom/crittercism/internal/ba;
 
     monitor-enter v1

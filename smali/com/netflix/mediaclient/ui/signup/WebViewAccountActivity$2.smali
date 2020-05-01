@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/signup/WebViewAccountActivity;)V
     .locals 0
 
-    .prologue
-    .line 129
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/signup/WebViewAccountActivity$2;->this$0:Lcom/netflix/mediaclient/ui/signup/WebViewAccountActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,22 +31,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 133
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 141
     :cond_0
     :goto_0
     const/4 v0, 0x0
 
     return v0
 
-    .line 136
     :pswitch_0
     invoke-virtual {p1}, Landroid/view/View;->hasFocus()Z
 
@@ -56,12 +50,10 @@
 
     if-nez v0, :cond_0
 
-    .line 137
     invoke-virtual {p1}, Landroid/view/View;->requestFocus()Z
 
     goto :goto_0
 
-    .line 133
     nop
 
     :pswitch_data_0

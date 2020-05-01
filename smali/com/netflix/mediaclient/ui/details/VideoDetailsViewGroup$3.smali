@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;)V
     .locals 0
 
-    .prologue
-    .line 198
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup$3;->this$0:Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,27 +26,22 @@
 .method public onGlobalLayout()V
     .locals 3
 
-    .prologue
-    .line 201
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup$3;->this$0:Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;
 
     invoke-static {v0, p0}, Lcom/netflix/mediaclient/util/ViewUtils;->removeGlobalLayoutListener(Landroid/view/View;Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 203
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 204
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup$3;->this$0:Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;->imgGroup:Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_0
 
-    .line 205
     const-string/jumbo v0, "VideoDetailsViewGroup"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -97,12 +90,10 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 208
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup$3;->this$0:Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;->alignViews()V
 
-    .line 209
     return-void
 .end method

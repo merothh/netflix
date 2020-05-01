@@ -22,13 +22,10 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl;)V
     .locals 8
 
-    .prologue
     const/4 v6, 0x1
 
-    .line 357
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl$LogblobQueue;->this$0:Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl;
 
-    .line 358
     const-string/jumbo v2, "nf_logblob_queue"
 
     const/16 v3, 0x1e
@@ -41,7 +38,6 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/netflix/mediaclient/util/EventQueue;-><init>(Ljava/lang/String;IJZZ)V
 
-    .line 359
     return-void
 .end method
 
@@ -59,12 +55,9 @@
         }
     .end annotation
 
-    .prologue
-    .line 363
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl$LogblobQueue;->this$0:Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl;
 
     invoke-static {v0, p1, p2}, Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl;->access$600(Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl;Ljava/util/List;Z)V
 
-    .line 364
     return-void
 .end method

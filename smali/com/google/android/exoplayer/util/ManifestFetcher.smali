@@ -74,8 +74,6 @@
 .method static synthetic access$000(Lcom/google/android/exoplayer/util/ManifestFetcher;)Lcom/google/android/exoplayer/util/ManifestFetcher$EventListener;
     .locals 1
 
-    .prologue
-    .line 47
     iget-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->eventListener:Lcom/google/android/exoplayer/util/ManifestFetcher$EventListener;
 
     return-object v0
@@ -84,8 +82,6 @@
 .method private getRetryDelayMillis(J)J
     .locals 5
 
-    .prologue
-    .line 313
     const-wide/16 v0, 0x1
 
     sub-long v0, p1, v0
@@ -106,8 +102,6 @@
 .method private notifyManifestError(Ljava/io/IOException;)V
     .locals 2
 
-    .prologue
-    .line 339
     iget-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->eventHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
@@ -116,7 +110,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 340
     iget-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->eventHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/google/android/exoplayer/util/ManifestFetcher$3;
@@ -125,7 +118,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 347
     :cond_0
     return-void
 .end method
@@ -133,8 +125,6 @@
 .method private notifyManifestRefreshStarted()V
     .locals 2
 
-    .prologue
-    .line 317
     iget-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->eventHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
@@ -143,7 +133,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 318
     iget-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->eventHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/google/android/exoplayer/util/ManifestFetcher$1;
@@ -152,7 +141,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 325
     :cond_0
     return-void
 .end method
@@ -160,8 +148,6 @@
 .method private notifyManifestRefreshed()V
     .locals 2
 
-    .prologue
-    .line 328
     iget-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->eventHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
@@ -170,7 +156,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 329
     iget-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->eventHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/google/android/exoplayer/util/ManifestFetcher$2;
@@ -179,7 +164,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 336
     :cond_0
     return-void
 .end method
@@ -189,8 +173,6 @@
 .method public disable()V
     .locals 1
 
-    .prologue
-    .line 235
     iget v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->enabledCount:I
 
     add-int/lit8 v0, v0, -0x1
@@ -199,22 +181,18 @@
 
     if-nez v0, :cond_0
 
-    .line 236
     iget-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->loader:Lcom/google/android/exoplayer/upstream/Loader;
 
     if-eqz v0, :cond_0
 
-    .line 237
     iget-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->loader:Lcom/google/android/exoplayer/upstream/Loader;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer/upstream/Loader;->release()V
 
-    .line 238
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->loader:Lcom/google/android/exoplayer/upstream/Loader;
 
-    .line 241
     :cond_0
     return-void
 .end method
@@ -222,8 +200,6 @@
 .method public enable()V
     .locals 2
 
-    .prologue
-    .line 225
     iget v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->enabledCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -232,17 +208,14 @@
 
     if-nez v0, :cond_0
 
-    .line 226
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->loadExceptionCount:I
 
-    .line 227
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->loadException:Lcom/google/android/exoplayer/util/ManifestFetcher$ManifestIOException;
 
-    .line 229
     :cond_0
     return-void
 .end method
@@ -255,8 +228,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 184
     iget-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->manifest:Ljava/lang/Object;
 
     return-object v0
@@ -265,8 +236,6 @@
 .method public getManifestLoadStartTimestamp()J
     .locals 2
 
-    .prologue
-    .line 194
     iget-wide v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->manifestLoadStartTimestamp:J
 
     return-wide v0
@@ -275,8 +244,6 @@
 .method public maybeThrowError()V
     .locals 2
 
-    .prologue
-    .line 215
     iget-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->loadException:Lcom/google/android/exoplayer/util/ManifestFetcher$ManifestIOException;
 
     if-eqz v0, :cond_0
@@ -287,11 +254,9 @@
 
     if-gt v0, v1, :cond_1
 
-    .line 216
     :cond_0
     return-void
 
-    .line 218
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->loadException:Lcom/google/android/exoplayer/util/ManifestFetcher$ManifestIOException;
 
@@ -301,25 +266,19 @@
 .method public onLoadCanceled(Lcom/google/android/exoplayer/upstream/Loader$Loadable;)V
     .locals 0
 
-    .prologue
-    .line 290
     return-void
 .end method
 
 .method public onLoadCompleted(Lcom/google/android/exoplayer/upstream/Loader$Loadable;)V
     .locals 2
 
-    .prologue
-    .line 265
     iget-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->currentLoadable:Lcom/google/android/exoplayer/upstream/UriLoadable;
 
     if-eq v0, p1, :cond_0
 
-    .line 285
     :goto_0
     return-void
 
-    .line 270
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->currentLoadable:Lcom/google/android/exoplayer/upstream/UriLoadable;
 
@@ -329,56 +288,46 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->manifest:Ljava/lang/Object;
 
-    .line 271
     iget-wide v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->currentLoadStartTimestamp:J
 
     iput-wide v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->manifestLoadStartTimestamp:J
 
-    .line 272
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->manifestLoadCompleteTimestamp:J
 
-    .line 273
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->loadExceptionCount:I
 
-    .line 274
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->loadException:Lcom/google/android/exoplayer/util/ManifestFetcher$ManifestIOException;
 
-    .line 276
     iget-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->manifest:Ljava/lang/Object;
 
     instance-of v0, v0, Lcom/google/android/exoplayer/util/ManifestFetcher$RedirectingManifest;
 
     if-eqz v0, :cond_1
 
-    .line 277
     iget-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->manifest:Ljava/lang/Object;
 
     check-cast v0, Lcom/google/android/exoplayer/util/ManifestFetcher$RedirectingManifest;
 
-    .line 278
     invoke-interface {v0}, Lcom/google/android/exoplayer/util/ManifestFetcher$RedirectingManifest;->getNextManifestUri()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 279
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 280
     iput-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->manifestUri:Ljava/lang/String;
 
-    .line 284
     :cond_1
     invoke-direct {p0}, Lcom/google/android/exoplayer/util/ManifestFetcher;->notifyManifestRefreshed()V
 
@@ -388,17 +337,13 @@
 .method public onLoadError(Lcom/google/android/exoplayer/upstream/Loader$Loadable;Ljava/io/IOException;)V
     .locals 2
 
-    .prologue
-    .line 294
     iget-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->currentLoadable:Lcom/google/android/exoplayer/upstream/UriLoadable;
 
     if-eq v0, p1, :cond_0
 
-    .line 304
     :goto_0
     return-void
 
-    .line 299
     :cond_0
     iget v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->loadExceptionCount:I
 
@@ -406,21 +351,18 @@
 
     iput v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->loadExceptionCount:I
 
-    .line 300
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->loadExceptionTimestamp:J
 
-    .line 301
     new-instance v0, Lcom/google/android/exoplayer/util/ManifestFetcher$ManifestIOException;
 
     invoke-direct {v0, p2}, Lcom/google/android/exoplayer/util/ManifestFetcher$ManifestIOException;-><init>(Ljava/lang/Throwable;)V
 
     iput-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->loadException:Lcom/google/android/exoplayer/util/ManifestFetcher$ManifestIOException;
 
-    .line 303
     iget-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->loadException:Lcom/google/android/exoplayer/util/ManifestFetcher$ManifestIOException;
 
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer/util/ManifestFetcher;->notifyManifestError(Ljava/io/IOException;)V
@@ -431,8 +373,6 @@
 .method public requestRefresh()V
     .locals 6
 
-    .prologue
-    .line 247
     iget-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->loadException:Lcom/google/android/exoplayer/util/ManifestFetcher$ManifestIOException;
 
     if-eqz v0, :cond_1
@@ -447,7 +387,6 @@
 
     int-to-long v4, v4
 
-    .line 248
     invoke-direct {p0, v4, v5}, Lcom/google/android/exoplayer/util/ManifestFetcher;->getRetryDelayMillis(J)J
 
     move-result-wide v4
@@ -458,18 +397,15 @@
 
     if-gez v0, :cond_1
 
-    .line 261
     :cond_0
     :goto_0
     return-void
 
-    .line 252
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->loader:Lcom/google/android/exoplayer/upstream/Loader;
 
     if-nez v0, :cond_2
 
-    .line 253
     new-instance v0, Lcom/google/android/exoplayer/upstream/Loader;
 
     const-string/jumbo v1, "manifestLoader"
@@ -478,7 +414,6 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->loader:Lcom/google/android/exoplayer/upstream/Loader;
 
-    .line 255
     :cond_2
     iget-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->loader:Lcom/google/android/exoplayer/upstream/Loader;
 
@@ -488,7 +423,6 @@
 
     if-nez v0, :cond_0
 
-    .line 256
     new-instance v0, Lcom/google/android/exoplayer/upstream/UriLoadable;
 
     iget-object v1, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->manifestUri:Ljava/lang/String;
@@ -501,21 +435,18 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->currentLoadable:Lcom/google/android/exoplayer/upstream/UriLoadable;
 
-    .line 257
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->currentLoadStartTimestamp:J
 
-    .line 258
     iget-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->loader:Lcom/google/android/exoplayer/upstream/Loader;
 
     iget-object v1, p0, Lcom/google/android/exoplayer/util/ManifestFetcher;->currentLoadable:Lcom/google/android/exoplayer/upstream/UriLoadable;
 
     invoke-virtual {v0, v1, p0}, Lcom/google/android/exoplayer/upstream/Loader;->startLoading(Lcom/google/android/exoplayer/upstream/Loader$Loadable;Lcom/google/android/exoplayer/upstream/Loader$Callback;)V
 
-    .line 259
     invoke-direct {p0}, Lcom/google/android/exoplayer/util/ManifestFetcher;->notifyManifestRefreshStarted()V
 
     goto :goto_0

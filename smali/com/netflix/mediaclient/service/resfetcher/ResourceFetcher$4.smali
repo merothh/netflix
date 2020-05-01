@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher;Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 349
     iput-object p1, p0, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher$4;->this$0:Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher$4;->val$realCallback:Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;
@@ -36,20 +34,16 @@
 .method public onErrorResponse(Lcom/android/volley/VolleyError;)V
     .locals 4
 
-    .prologue
-    .line 352
     const-string/jumbo v0, "nf_service_resourcefetcher"
 
     const-string/jumbo v1, "FileDownloadRequest failed: "
 
     invoke-static {v0, v1, p1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 353
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher$4;->val$realCallback:Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;
 
     if-eqz v0, :cond_0
 
-    .line 354
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher$4;->val$realCallback:Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher$4;->val$resourceUrl:Ljava/lang/String;
@@ -62,7 +56,6 @@
 
     invoke-interface {v0, v1, v2, v3}, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;->onResourceRawFetched(Ljava/lang/String;[BLcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 356
     :cond_0
     return-void
 .end method

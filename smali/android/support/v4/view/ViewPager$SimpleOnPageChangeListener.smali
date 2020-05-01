@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 323
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,23 +20,17 @@
 .method public onPageScrollStateChanged(I)V
     .locals 0
 
-    .prologue
-    .line 337
     return-void
 .end method
 
 .method public onPageScrolled(IFI)V
     .locals 0
 
-    .prologue
-    .line 327
     return-void
 .end method
 
 .method public onPageSelected(I)V
     .locals 0
 
-    .prologue
-    .line 332
     return-void
 .end method

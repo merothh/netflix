@@ -13,8 +13,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 18
     const-wide/high16 v0, -0x8000000000000000L
 
     invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
@@ -29,7 +27,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/io/NumberInput;->MIN_LONG_STR_NO_SIGN:Ljava/lang/String;
 
-    .line 19
     const-wide v0, 0x7fffffffffffffffL
 
     invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
@@ -44,8 +41,6 @@
 .method private static _badBD(Ljava/lang/String;)Ljava/lang/NumberFormatException;
     .locals 3
 
-    .prologue
-    .line 305
     new-instance v0, Ljava/lang/NumberFormatException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -80,37 +75,30 @@
 .method public static inLongRange([CIIZ)Z
     .locals 7
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 148
     if-eqz p3, :cond_1
 
     sget-object v0, Lcom/fasterxml/jackson/core/io/NumberInput;->MIN_LONG_STR_NO_SIGN:Ljava/lang/String;
 
-    .line 149
     :goto_0
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v4
 
-    .line 150
     if-ge p2, v4, :cond_2
 
-    .line 159
     :cond_0
     :goto_1
     return v1
 
-    .line 148
     :cond_1
     sget-object v0, Lcom/fasterxml/jackson/core/io/NumberInput;->MAX_LONG_STR:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 151
     :cond_2
     if-le p2, v4, :cond_3
 
@@ -121,11 +109,9 @@
     :cond_3
     move v3, v2
 
-    .line 153
     :goto_2
     if-ge v3, v4, :cond_0
 
-    .line 154
     add-int v5, p1, v3
 
     aget-char v5, p0, v5
@@ -136,10 +122,8 @@
 
     sub-int/2addr v5, v6
 
-    .line 155
     if-eqz v5, :cond_5
 
-    .line 156
     if-gez v5, :cond_4
 
     move v0, v1
@@ -154,7 +138,6 @@
 
     goto :goto_3
 
-    .line 153
     :cond_5
     add-int/lit8 v3, v3, 0x1
 
@@ -164,30 +147,23 @@
 .method public static parseAsDouble(Ljava/lang/String;D)D
     .locals 3
 
-    .prologue
-    .line 265
     if-nez p0, :cond_1
 
-    .line 274
     :cond_0
     :goto_0
     return-wide p1
 
-    .line 266
     :cond_1
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 267
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    .line 268
     if-eqz v1, :cond_0
 
-    .line 272
     :try_start_0
     invoke-static {v0}, Lcom/fasterxml/jackson/core/io/NumberInput;->parseDouble(Ljava/lang/String;)D
     :try_end_0
@@ -197,7 +173,6 @@
 
     goto :goto_0
 
-    .line 273
     :catch_0
     move-exception v0
 
@@ -207,66 +182,52 @@
 .method public static parseAsInt(Ljava/lang/String;I)I
     .locals 6
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 189
     if-nez p0, :cond_1
 
-    .line 222
     :cond_0
     :goto_0
     return p1
 
-    .line 192
     :cond_1
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 193
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v2
 
-    .line 194
     if-eqz v2, :cond_0
 
-    .line 199
     if-ge v0, v2, :cond_6
 
-    .line 200
     invoke-virtual {v3, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v4
 
-    .line 201
     const/16 v5, 0x2b
 
     if-ne v4, v5, :cond_3
 
-    .line 202
     invoke-virtual {v3, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 203
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    .line 208
     :goto_1
     if-ge v0, v1, :cond_5
 
-    .line 209
     invoke-virtual {v2, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
 
-    .line 211
     const/16 v4, 0x39
 
     if-gt v3, v4, :cond_2
@@ -275,7 +236,6 @@
 
     if-ge v3, v4, :cond_4
 
-    .line 213
     :cond_2
     :try_start_0
     invoke-static {v2}, Lcom/fasterxml/jackson/core/io/NumberInput;->parseDouble(Ljava/lang/String;)D
@@ -288,7 +248,6 @@
 
     goto :goto_0
 
-    .line 204
     :cond_3
     const/16 v5, 0x2d
 
@@ -300,16 +259,13 @@
 
     move-object v2, v3
 
-    .line 205
     goto :goto_1
 
-    .line 208
     :cond_4
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 220
     :cond_5
     :try_start_1
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -320,13 +276,11 @@
 
     goto :goto_0
 
-    .line 214
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 221
     :catch_1
     move-exception v0
 
@@ -343,66 +297,52 @@
 .method public static parseAsLong(Ljava/lang/String;J)J
     .locals 7
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 227
     if-nez p0, :cond_1
 
-    .line 260
     :cond_0
     :goto_0
     return-wide p1
 
-    .line 230
     :cond_1
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 231
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v2
 
-    .line 232
     if-eqz v2, :cond_0
 
-    .line 237
     if-ge v0, v2, :cond_6
 
-    .line 238
     invoke-virtual {v3, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v4
 
-    .line 239
     const/16 v5, 0x2b
 
     if-ne v4, v5, :cond_3
 
-    .line 240
     invoke-virtual {v3, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 241
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    .line 246
     :goto_1
     if-ge v0, v1, :cond_5
 
-    .line 247
     invoke-virtual {v2, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
 
-    .line 249
     const/16 v4, 0x39
 
     if-gt v3, v4, :cond_2
@@ -411,7 +351,6 @@
 
     if-ge v3, v4, :cond_4
 
-    .line 251
     :cond_2
     :try_start_0
     invoke-static {v2}, Lcom/fasterxml/jackson/core/io/NumberInput;->parseDouble(Ljava/lang/String;)D
@@ -424,7 +363,6 @@
 
     goto :goto_0
 
-    .line 242
     :cond_3
     const/16 v5, 0x2d
 
@@ -436,16 +374,13 @@
 
     move-object v2, v3
 
-    .line 243
     goto :goto_1
 
-    .line 246
     :cond_4
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 258
     :cond_5
     :try_start_1
     invoke-static {v2}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
@@ -456,13 +391,11 @@
 
     goto :goto_0
 
-    .line 252
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 259
     :catch_1
     move-exception v0
 
@@ -479,8 +412,6 @@
 .method public static parseBigDecimal([C)Ljava/math/BigDecimal;
     .locals 2
 
-    .prologue
-    .line 295
     const/4 v0, 0x0
 
     array-length v1, p0
@@ -495,8 +426,6 @@
 .method public static parseBigDecimal([CII)Ljava/math/BigDecimal;
     .locals 1
 
-    .prologue
-    .line 299
     :try_start_0
     new-instance v0, Ljava/math/BigDecimal;
 
@@ -509,7 +438,6 @@
     :catch_0
     move-exception v0
 
-    .line 300
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0, p0, p1, p2}, Ljava/lang/String;-><init>([CII)V
@@ -524,8 +452,6 @@
 .method public static parseDouble(Ljava/lang/String;)D
     .locals 2
 
-    .prologue
-    .line 282
     const-string/jumbo v0, "2.2250738585072012e-308"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -534,10 +460,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 283
     const-wide/16 v0, 0x1
 
-    .line 285
     :goto_0
     return-wide v0
 
@@ -552,18 +476,14 @@
 .method public static parseInt([CII)I
     .locals 4
 
-    .prologue
     const/4 v3, 0x4
 
-    .line 30
     aget-char v0, p0, p1
 
     add-int/lit8 v0, v0, -0x30
 
-    .line 32
     if-le p2, v3, :cond_1
 
-    .line 33
     mul-int/lit8 v0, v0, 0xa
 
     add-int/lit8 v1, p1, 0x1
@@ -574,7 +494,6 @@
 
     add-int/2addr v0, v2
 
-    .line 34
     mul-int/lit8 v0, v0, 0xa
 
     add-int/lit8 v1, v1, 0x1
@@ -585,7 +504,6 @@
 
     add-int/2addr v0, v2
 
-    .line 35
     mul-int/lit8 v0, v0, 0xa
 
     add-int/lit8 v1, v1, 0x1
@@ -596,7 +514,6 @@
 
     add-int/2addr v0, v2
 
-    .line 36
     mul-int/lit8 v0, v0, 0xa
 
     add-int/lit8 p1, v1, 0x1
@@ -607,13 +524,10 @@
 
     add-int/2addr v0, v1
 
-    .line 37
     add-int/lit8 p2, p2, -0x4
 
-    .line 38
     if-le p2, v3, :cond_1
 
-    .line 39
     mul-int/lit8 v0, v0, 0xa
 
     add-int/lit8 v1, p1, 0x1
@@ -624,7 +538,6 @@
 
     add-int/2addr v0, v2
 
-    .line 40
     mul-int/lit8 v0, v0, 0xa
 
     add-int/lit8 v1, v1, 0x1
@@ -635,7 +548,6 @@
 
     add-int/2addr v0, v2
 
-    .line 41
     mul-int/lit8 v0, v0, 0xa
 
     add-int/lit8 v1, v1, 0x1
@@ -646,7 +558,6 @@
 
     add-int/2addr v0, v2
 
-    .line 42
     mul-int/lit8 v0, v0, 0xa
 
     add-int/lit8 v1, v1, 0x1
@@ -657,18 +568,15 @@
 
     add-int/2addr v0, v1
 
-    .line 55
     :cond_0
     :goto_0
     return v0
 
-    .line 46
     :cond_1
     const/4 v1, 0x1
 
     if-le p2, v1, :cond_0
 
-    .line 47
     mul-int/lit8 v0, v0, 0xa
 
     add-int/lit8 v1, p1, 0x1
@@ -679,12 +587,10 @@
 
     add-int/2addr v0, v2
 
-    .line 48
     const/4 v2, 0x2
 
     if-le p2, v2, :cond_0
 
-    .line 49
     mul-int/lit8 v0, v0, 0xa
 
     add-int/lit8 v1, v1, 0x1
@@ -695,12 +601,10 @@
 
     add-int/2addr v0, v2
 
-    .line 50
     const/4 v2, 0x3
 
     if-le p2, v2, :cond_0
 
-    .line 51
     mul-int/lit8 v0, v0, 0xa
 
     add-int/lit8 v1, v1, 0x1
@@ -717,11 +621,8 @@
 .method public static parseLong([CII)J
     .locals 6
 
-    .prologue
-    .line 118
     add-int/lit8 v0, p2, -0x9
 
-    .line 119
     invoke-static {p0, p1, v0}, Lcom/fasterxml/jackson/core/io/NumberInput;->parseInt([CII)I
 
     move-result v1
@@ -732,7 +633,6 @@
 
     mul-long/2addr v2, v4
 
-    .line 120
     add-int/2addr v0, p1
 
     const/16 v1, 0x9

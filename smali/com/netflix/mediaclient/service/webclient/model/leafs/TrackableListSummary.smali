@@ -25,65 +25,50 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 22
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListSummary;-><init>(I)V
 
-    .line 23
     return-void
 .end method
 
 .method protected constructor <init>(IIILjava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 26
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListSummary;-><init>(I)V
 
-    .line 27
     iput p2, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/TrackableListSummary;->trackId:I
 
-    .line 28
     iput p3, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/TrackableListSummary;->listPos:I
 
-    .line 29
     iput-object p4, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/TrackableListSummary;->requestId:Ljava/lang/String;
 
-    .line 30
     return-void
 .end method
 
 .method protected constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
-    .prologue
-    .line 33
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListSummary;-><init>(Landroid/os/Parcel;)V
 
-    .line 34
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/TrackableListSummary;->trackId:I
 
-    .line 35
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/TrackableListSummary;->listPos:I
 
-    .line 36
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/TrackableListSummary;->requestId:Ljava/lang/String;
 
-    .line 37
     return-void
 .end method
 
@@ -92,8 +77,6 @@
 .method public getHeroTrackId()I
     .locals 1
 
-    .prologue
-    .line 74
     iget v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/TrackableListSummary;->heroTrackId:I
 
     return v0
@@ -102,8 +85,6 @@
 .method public getListPos()I
     .locals 1
 
-    .prologue
-    .line 63
     iget v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/TrackableListSummary;->listPos:I
 
     return v0
@@ -112,8 +93,6 @@
 .method public getRequestId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 54
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/TrackableListSummary;->requestId:Ljava/lang/String;
 
     return-object v0
@@ -122,8 +101,6 @@
 .method public getTrackId()I
     .locals 1
 
-    .prologue
-    .line 49
     iget v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/TrackableListSummary;->trackId:I
 
     return v0
@@ -132,8 +109,6 @@
 .method public isHero()Z
     .locals 1
 
-    .prologue
-    .line 79
     const/4 v0, 0x0
 
     return v0
@@ -142,19 +117,14 @@
 .method public setListPos(I)V
     .locals 0
 
-    .prologue
-    .line 58
     iput p1, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/TrackableListSummary;->listPos:I
 
-    .line 59
     return-void
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 68
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -211,25 +181,19 @@
 .method protected writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    .prologue
-    .line 41
     invoke-super {p0, p1, p2}, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListSummary;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 42
     iget v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/TrackableListSummary;->trackId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 43
     iget v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/TrackableListSummary;->listPos:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 44
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/TrackableListSummary;->requestId:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 45
     return-void
 .end method

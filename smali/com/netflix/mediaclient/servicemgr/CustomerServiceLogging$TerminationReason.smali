@@ -32,7 +32,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x4
 
     const/4 v5, 0x3
@@ -43,7 +42,6 @@
 
     const/4 v2, 0x0
 
-    .line 161
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$TerminationReason;
 
     const-string/jumbo v1, "canceledByUserBeforeConnected"
@@ -52,7 +50,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$TerminationReason;->canceledByUserBeforeConnected:Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$TerminationReason;
 
-    .line 162
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$TerminationReason;
 
     const-string/jumbo v1, "canceledByUserAfterConnected"
@@ -61,7 +58,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$TerminationReason;->canceledByUserAfterConnected:Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$TerminationReason;
 
-    .line 163
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$TerminationReason;
 
     const-string/jumbo v1, "canceledByNetflix"
@@ -70,7 +66,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$TerminationReason;->canceledByNetflix:Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$TerminationReason;
 
-    .line 164
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$TerminationReason;
 
     const-string/jumbo v1, "failedBeforeConnected"
@@ -79,7 +74,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$TerminationReason;->failedBeforeConnected:Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$TerminationReason;
 
-    .line 165
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$TerminationReason;
 
     const-string/jumbo v1, "failedAfterConnected"
@@ -88,7 +82,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$TerminationReason;->failedAfterConnected:Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$TerminationReason;
 
-    .line 160
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$TerminationReason;
@@ -126,8 +119,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 160
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -136,8 +127,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$TerminationReason;
     .locals 1
 
-    .prologue
-    .line 160
     const-class v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$TerminationReason;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -152,8 +141,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$TerminationReason;
     .locals 1
 
-    .prologue
-    .line 160
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$TerminationReason;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$TerminationReason;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$TerminationReason;->clone()Ljava/lang/Object;

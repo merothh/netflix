@@ -16,26 +16,20 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/servicemgr/IPlayer;Lcom/netflix/mediaclient/media/SubtitleUrl;JLcom/netflix/mediaclient/service/player/subtitles/SubtitleParser$DownloadFailedCallback;J)V
     .locals 2
 
-    .prologue
-    .line 53
     invoke-direct/range {p0 .. p7}, Lcom/netflix/mediaclient/service/player/subtitles/BaseImageSubtitleParser;-><init>(Lcom/netflix/mediaclient/servicemgr/IPlayer;Lcom/netflix/mediaclient/media/SubtitleUrl;JLcom/netflix/mediaclient/service/player/subtitles/SubtitleParser$DownloadFailedCallback;J)V
 
-    .line 54
     const-string/jumbo v0, "nf_subtitles"
 
     const-string/jumbo v1, "Create image based subtitle parser"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;)V
     .locals 0
 
-    .prologue
-    .line 37
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->handleDownloadSegmentIndexes()V
 
     return-void
@@ -44,15 +38,11 @@
 .method private downloadIfNeeded(Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;)V
     .locals 2
 
-    .prologue
-    .line 521
     if-nez p1, :cond_0
 
-    .line 532
     :goto_0
     return-void
 
-    .line 525
     :cond_0
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;->shouldDownload()Z
 
@@ -60,14 +50,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 526
     const-string/jumbo v0, "nf_subtitles"
 
     const-string/jumbo v1, "Current segment is not downloaded yet, go and fetch current range (this and next segment)..."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 527
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;->getIndex()I
 
     move-result v0
@@ -76,7 +64,6 @@
 
     goto :goto_0
 
-    .line 529
     :cond_1
     const-string/jumbo v0, "nf_subtitles"
 
@@ -84,7 +71,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 530
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;->getIndex()I
 
     move-result v0
@@ -99,15 +85,12 @@
 .method private downloadSegment(Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;)V
     .locals 9
 
-    .prologue
-    .line 372
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 373
     const-string/jumbo v0, "nf_subtitles"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -136,22 +119,18 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 376
     :cond_0
     if-nez p1, :cond_1
 
-    .line 377
     const-string/jumbo v0, "nf_subtitles"
 
     const-string/jumbo v1, "Segment is null!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 409
     :goto_0
     return-void
 
-    .line 381
     :cond_1
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;->shouldDownload()Z
 
@@ -159,7 +138,6 @@
 
     if-nez v0, :cond_2
 
-    .line 382
     const-string/jumbo v0, "nf_subtitles"
 
     const-string/jumbo v1, "Segment is already downloaded"
@@ -168,7 +146,6 @@
 
     goto :goto_0
 
-    .line 386
     :cond_2
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -176,7 +153,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 387
     const-string/jumbo v0, "nf_subtitles"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -243,11 +219,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 390
     :cond_3
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;->downloadStarted()V
 
-    .line 391
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->getResourceFetcher()Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher;
 
     move-result-object v1
@@ -260,12 +234,10 @@
 
     sget-object v3, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;->imageSubtitlesSegment:Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
-    .line 393
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;->getSegmentStartPosition()J
 
     move-result-wide v4
 
-    .line 394
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;->getSegmentSize()J
 
     move-result-wide v6
@@ -274,7 +246,6 @@
 
     invoke-direct {v8, p0, p1}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser$3;-><init>(Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;)V
 
-    .line 391
     invoke-virtual/range {v1 .. v8}, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher;->fetchResource(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;JJLcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;)V
 
     goto :goto_0
@@ -283,19 +254,14 @@
 .method private getSegmentForPosition(J)Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;
     .locals 5
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 536
     iget v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mIndexOfLastSearch:I
 
-    .line 537
     if-gez v0, :cond_0
 
-    .line 538
     const/4 v0, 0x0
 
-    .line 541
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -303,7 +269,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 542
     const-string/jumbo v2, "nf_subtitles"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -326,13 +291,11 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 545
     :cond_1
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mSegmentIndexes:[Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;
 
     if-nez v2, :cond_3
 
-    .line 546
     const-string/jumbo v0, "nf_subtitles"
 
     const-string/jumbo v2, "Indexes not available yet!"
@@ -341,11 +304,9 @@
 
     move-object v0, v1
 
-    .line 561
     :goto_0
     return-object v0
 
-    .line 550
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
@@ -356,14 +317,12 @@
 
     if-ge v0, v2, :cond_5
 
-    .line 551
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
-    .line 552
     const-string/jumbo v2, "nf_subtitles"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -392,13 +351,11 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 554
     :cond_4
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mSegmentIndexes:[Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;
 
     aget-object v2, v2, v0
 
-    .line 555
     if-eqz v2, :cond_2
 
     invoke-virtual {v2, p1, p2}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;->inRange(J)Z
@@ -407,28 +364,23 @@
 
     if-eqz v3, :cond_2
 
-    .line 556
     iput v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mIndexOfLastSearch:I
 
     move-object v0, v2
 
-    .line 557
     goto :goto_0
 
     :cond_5
     move-object v0, v1
 
-    .line 561
     goto :goto_0
 .end method
 
 .method private handleDownloadMasterIndex()V
     .locals 9
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 180
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mSubtitleData:Lcom/netflix/mediaclient/media/SubtitleUrl;
 
     if-eqz v0, :cond_0
@@ -441,7 +393,6 @@
 
     if-nez v0, :cond_1
 
-    .line 181
     :cond_0
     const-string/jumbo v0, "nf_subtitles"
 
@@ -449,11 +400,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 232
     :goto_0
     return-void
 
-    .line 185
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/service/net/DnsManager;->getInstance()Lcom/netflix/mediaclient/service/net/DnsManager;
 
@@ -463,7 +412,6 @@
 
     move-result-object v0
 
-    .line 186
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mSubtitleData:Lcom/netflix/mediaclient/media/SubtitleUrl;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/media/SubtitleUrl;->getDownloadUrl()Ljava/lang/String;
@@ -476,14 +424,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 187
     const-string/jumbo v1, "nf_subtitles"
 
     const-string/jumbo v2, "Subtitle URL is empty!"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 188
     const-string/jumbo v1, ""
 
     sget-object v2, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;->badMasterIndex:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;
@@ -492,7 +438,6 @@
 
     goto :goto_0
 
-    .line 192
     :cond_2
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mSubtitleData:Lcom/netflix/mediaclient/media/SubtitleUrl;
 
@@ -502,14 +447,12 @@
 
     if-gtz v1, :cond_4
 
-    .line 193
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 194
     const-string/jumbo v1, "nf_subtitles"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -538,7 +481,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 196
     :cond_3
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mSubtitleData:Lcom/netflix/mediaclient/media/SubtitleUrl;
 
@@ -552,7 +494,6 @@
 
     goto :goto_0
 
-    .line 200
     :cond_4
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -560,7 +501,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 201
     const-string/jumbo v1, "nf_subtitles"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -585,7 +525,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 207
     :cond_5
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->getResourceFetcher()Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher;
 
@@ -601,7 +540,6 @@
 
     iget-object v4, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mSubtitleData:Lcom/netflix/mediaclient/media/SubtitleUrl;
 
-    .line 209
     invoke-virtual {v4}, Lcom/netflix/mediaclient/media/SubtitleUrl;->getMasterIndexOffset()I
 
     move-result v4
@@ -610,7 +548,6 @@
 
     iget-object v6, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mSubtitleData:Lcom/netflix/mediaclient/media/SubtitleUrl;
 
-    .line 210
     invoke-virtual {v6}, Lcom/netflix/mediaclient/media/SubtitleUrl;->getMasterIndexSize()I
 
     move-result v6
@@ -621,7 +558,6 @@
 
     invoke-direct {v8, p0, v0}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser$1;-><init>(Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;[Ljava/lang/String;)V
 
-    .line 207
     invoke-virtual/range {v1 .. v8}, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher;->fetchResource(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;JJLcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;)V
 
     goto/16 :goto_0
@@ -630,22 +566,18 @@
 .method private handleDownloadSegmentIndexes()V
     .locals 9
 
-    .prologue
-    .line 272
     const-string/jumbo v0, "nf_subtitles"
 
     const-string/jumbo v1, "Start to download segment indexes"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 274
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mMasterIndex:Lcom/netflix/mediaclient/service/player/subtitles/image/v1/MasterIndex;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/MasterIndex;->getSegmentIndexesSize()I
 
     move-result v0
 
-    .line 277
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->getResourceFetcher()Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher;
 
     move-result-object v1
@@ -660,7 +592,6 @@
 
     iget-object v4, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mMasterIndex:Lcom/netflix/mediaclient/service/player/subtitles/image/v1/MasterIndex;
 
-    .line 279
     invoke-virtual {v4}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/MasterIndex;->getStartOffset()J
 
     move-result-wide v4
@@ -671,10 +602,8 @@
 
     invoke-direct {v8, p0, v0}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser$2;-><init>(Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;I)V
 
-    .line 277
     invoke-virtual/range {v1 .. v8}, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher;->fetchResource(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;JJLcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;)V
 
-    .line 305
     return-void
 .end method
 
@@ -683,15 +612,12 @@
 .method protected downloadSegment(I)V
     .locals 3
 
-    .prologue
-    .line 310
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 311
     const-string/jumbo v0, "nf_subtitles"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -720,7 +646,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 314
     :cond_0
     if-ltz p1, :cond_1
 
@@ -734,7 +659,6 @@
 
     if-lt p1, v0, :cond_2
 
-    .line 315
     :cond_1
     const-string/jumbo v0, "nf_subtitles"
 
@@ -742,20 +666,16 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 332
     :goto_0
     return-void
 
-    .line 319
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mSegmentIndexes:[Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;
 
     aget-object v0, v0, p1
 
-    .line 320
     if-nez v0, :cond_3
 
-    .line 321
     const-string/jumbo v0, "nf_subtitles"
 
     const-string/jumbo v1, "Segment index is null, this should NOT happen!"
@@ -764,7 +684,6 @@
 
     goto :goto_0
 
-    .line 325
     :cond_3
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->importSegment(Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;)Z
 
@@ -772,7 +691,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 326
     const-string/jumbo v0, "nf_subtitles"
 
     const-string/jumbo v1, "No need to download segment images, succesfully loaded from cache"
@@ -781,7 +699,6 @@
 
     goto :goto_0
 
-    .line 328
     :cond_4
     const-string/jumbo v1, "nf_subtitles"
 
@@ -789,7 +706,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 329
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->downloadSegment(Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;)V
 
     goto :goto_0
@@ -798,22 +714,18 @@
 .method protected getCurrentSegmentIndex()I
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 571
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mSegmentIndexes:[Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;
 
     if-nez v0, :cond_1
 
-    .line 572
     const-string/jumbo v0, "nf_subtitles"
 
     const-string/jumbo v2, "Indexes not available yet!"
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 590
     :cond_0
     :goto_0
     return v1
@@ -821,7 +733,6 @@
     :cond_1
     move v0, v1
 
-    .line 576
     :goto_1
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mSegmentIndexes:[Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;
 
@@ -829,28 +740,22 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 578
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mSegmentIndexes:[Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;
 
     aget-object v2, v2, v0
 
-    .line 579
     if-nez v2, :cond_2
 
-    .line 580
     const-string/jumbo v0, "Image based subtitles: Segment index is null, this should NOT happen! It may happen only if current segment was requested BEFORE we finish parsing segment indexes."
 
-    .line 581
     invoke-static {v0}, Lcom/netflix/mediaclient/service/logging/error/ErrorLoggingManager;->logHandledException(Ljava/lang/String;)V
 
-    .line 582
     const-string/jumbo v2, "nf_subtitles"
 
     invoke-static {v2, v0}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 586
     :cond_2
     iget-wide v4, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mLastKnownPosition:J
 
@@ -862,10 +767,8 @@
 
     move v1, v0
 
-    .line 587
     goto :goto_0
 
-    .line 576
     :cond_3
     add-int/lit8 v0, v0, 0x1
 
@@ -875,8 +778,6 @@
 .method public getMasterIndex()Lcom/netflix/mediaclient/service/player/subtitles/image/v1/MasterIndex;
     .locals 1
 
-    .prologue
-    .line 594
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mMasterIndex:Lcom/netflix/mediaclient/service/player/subtitles/image/v1/MasterIndex;
 
     return-object v0
@@ -885,19 +786,15 @@
 .method public declared-synchronized getNumberOfDisplayedSubtitles()I
     .locals 7
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 642
     monitor-enter p0
 
-    .line 643
     :try_start_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 644
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mSegmentIndexes:[Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;
 
     if-eqz v0, :cond_1
@@ -906,7 +803,6 @@
 
     move v0, v1
 
-    .line 645
     :goto_0
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mSegmentIndexes:[Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;
 
@@ -914,12 +810,10 @@
 
     if-ge v3, v2, :cond_2
 
-    .line 646
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mSegmentIndexes:[Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;
 
     aget-object v2, v2, v3
 
-    .line 647
     invoke-virtual {v2}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;->getImages()[Lcom/netflix/mediaclient/service/player/subtitles/image/ImageDescriptor;
 
     move-result-object v4
@@ -935,7 +829,6 @@
 
     aget-object v6, v4, v0
 
-    .line 648
     invoke-interface {v6}, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageDescriptor;->getNumberOfDisplays()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -944,12 +837,10 @@
 
     add-int/2addr v2, v6
 
-    .line 647
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 645
     :cond_0
     add-int/lit8 v0, v3, 0x1
 
@@ -962,13 +853,11 @@
     :cond_1
     move v0, v1
 
-    .line 653
     :cond_2
     monitor-exit p0
 
     return v0
 
-    .line 642
     :catchall_0
     move-exception v0
 
@@ -980,10 +869,8 @@
 .method public declared-synchronized getNumberOfSubtitlesExpectedToBeDisplayed()I
     .locals 12
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 604
     monitor-enter p0
 
     :try_start_0
@@ -993,14 +880,12 @@
 
     if-ne v0, v2, :cond_2
 
-    .line 605
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 606
     const-string/jumbo v0, "nf_subtitles"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1025,27 +910,23 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 608
     :cond_0
     iget v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mNumberOfSubtitlesExpectedToBeDisplayed:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 636
     :cond_1
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 613
     :cond_2
     :try_start_1
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 614
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mSegmentIndexes:[Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;
 
     if-eqz v0, :cond_6
@@ -1054,7 +935,6 @@
 
     move v0, v1
 
-    .line 615
     :goto_1
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mSegmentIndexes:[Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;
 
@@ -1062,12 +942,10 @@
 
     if-ge v3, v2, :cond_5
 
-    .line 616
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mSegmentIndexes:[Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;
 
     aget-object v2, v2, v3
 
-    .line 617
     invoke-virtual {v2}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;->getImages()[Lcom/netflix/mediaclient/service/player/subtitles/image/ImageDescriptor;
 
     move-result-object v5
@@ -1081,7 +959,6 @@
 
     aget-object v7, v5, v2
 
-    .line 619
     iget-wide v8, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mStartPlayPositionInTitleInMs:J
 
     iget-wide v10, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mLastRenderedPositionInTitleInMs:J
@@ -1092,26 +969,21 @@
 
     if-eqz v8, :cond_3
 
-    .line 621
     invoke-interface {v4, v7}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v8
 
     if-nez v8, :cond_3
 
-    .line 622
     invoke-interface {v4, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 623
     add-int/lit8 v0, v0, 0x1
 
-    .line 617
     :cond_3
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 615
     :cond_4
     add-int/lit8 v2, v3, 0x1
 
@@ -1122,20 +994,17 @@
     :cond_5
     move v1, v0
 
-    .line 630
     :cond_6
     iget v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mNumberOfSubtitlesExpectedToBeDisplayed:I
 
     add-int/2addr v0, v1
 
-    .line 632
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 633
     const-string/jumbo v2, "nf_subtitles"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1190,7 +1059,6 @@
 
     goto :goto_0
 
-    .line 604
     :catchall_0
     move-exception v0
 
@@ -1202,20 +1070,16 @@
 .method public getRootContainerExtentX()S
     .locals 1
 
-    .prologue
-    .line 693
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mMasterIndex:Lcom/netflix/mediaclient/service/player/subtitles/image/v1/MasterIndex;
 
     if-eqz v0, :cond_0
 
-    .line 694
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mMasterIndex:Lcom/netflix/mediaclient/service/player/subtitles/image/v1/MasterIndex;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/MasterIndex;->getRootContainerExtentX()S
 
     move-result v0
 
-    .line 696
     :goto_0
     return v0
 
@@ -1228,20 +1092,16 @@
 .method public getRootContainerExtentY()S
     .locals 1
 
-    .prologue
-    .line 703
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mMasterIndex:Lcom/netflix/mediaclient/service/player/subtitles/image/v1/MasterIndex;
 
     if-eqz v0, :cond_0
 
-    .line 704
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mMasterIndex:Lcom/netflix/mediaclient/service/player/subtitles/image/v1/MasterIndex;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/MasterIndex;->getRootContainerExtentY()S
 
     move-result v0
 
-    .line 706
     :goto_0
     return v0
 
@@ -1254,8 +1114,6 @@
 .method public getSegmentIndexes()[Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;
     .locals 1
 
-    .prologue
-    .line 598
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mSegmentIndexes:[Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;
 
     return-object v0
@@ -1264,8 +1122,6 @@
 .method public getSubtitleProfile()Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
     .locals 1
 
-    .prologue
-    .line 63
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->IMAGE:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
     return-object v0
@@ -1274,29 +1130,22 @@
 .method public getSubtitlesForPosition(J)Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;
     .locals 9
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 501
     iput-wide p1, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mLastKnownPosition:J
 
-    .line 504
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->getSegmentForPosition(J)Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;
 
     move-result-object v0
 
-    .line 505
     if-eqz v0, :cond_0
 
-    .line 509
     invoke-virtual {v0, p1, p2}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;->getAllVisibleSubtitleBlocks(J)Ljava/util/List;
 
     move-result-object v3
 
-    .line 510
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->downloadIfNeeded(Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;)V
 
-    .line 516
     :goto_0
     new-instance v1, Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;
 
@@ -1310,7 +1159,6 @@
 
     return-object v1
 
-    .line 513
     :cond_0
     const-string/jumbo v0, "nf_subtitles"
 
@@ -1326,37 +1174,31 @@
 .method protected handleImport()Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 89
     const-string/jumbo v2, "nf_subtitles"
 
     const-string/jumbo v3, "Try to import data from existing cache!"
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 90
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->importMasterIndex()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 91
     const-string/jumbo v1, "nf_subtitles"
 
     const-string/jumbo v2, "Failed to parse master index file from cache"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 113
     :goto_0
     return v0
 
-    .line 94
     :cond_0
     const-string/jumbo v2, "nf_subtitles"
 
@@ -1364,43 +1206,36 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 97
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->importSegmentIndex()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 98
     const-string/jumbo v0, "nf_subtitles"
 
     const-string/jumbo v2, "Parsed segment index file from cache"
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 100
     const-string/jumbo v0, "nf_subtitles"
 
     const-string/jumbo v2, "Ready to serve subtitles..."
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
     iput-boolean v1, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mReady:Z
 
-    .line 103
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->getCurrentSegmentIndex()I
 
     move-result v0
 
-    .line 105
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 106
     const-string/jumbo v2, "nf_subtitles"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1429,16 +1264,13 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     :cond_1
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->downloadNextRange(I)V
 
     move v0, v1
 
-    .line 110
     goto :goto_0
 
-    .line 112
     :cond_2
     const-string/jumbo v1, "nf_subtitles"
 
@@ -1452,10 +1284,8 @@
 .method protected importMasterIndex()Z
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 149
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mPlayer:Lcom/netflix/mediaclient/servicemgr/IPlayer;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/servicemgr/IPlayer;->getPlayerFileCache()Lcom/netflix/mediaclient/servicemgr/IPlayerFileCache;
@@ -1470,7 +1300,6 @@
 
     move-result-object v2
 
-    .line 151
     if-eqz v2, :cond_0
 
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
@@ -1482,12 +1311,10 @@
     :cond_0
     move v0, v1
 
-    .line 175
     :cond_1
     :goto_0
     return v0
 
-    .line 157
     :cond_2
     :try_start_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
@@ -1496,7 +1323,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 158
     const-string/jumbo v0, "nf_subtitles"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1523,25 +1349,21 @@
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 161
     :cond_3
     invoke-static {v2}, Lcom/netflix/mediaclient/util/FileUtils;->readFileToByteArray(Ljava/io/File;)[B
 
     move-result-object v0
 
-    .line 163
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->parseMasterIndex([B)Z
 
     move-result v0
 
-    .line 165
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 166
     const-string/jumbo v3, "nf_subtitles"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1582,11 +1404,9 @@
 
     goto :goto_0
 
-    .line 171
     :catch_0
     move-exception v0
 
-    .line 172
     const-string/jumbo v2, "nf_subtitles"
 
     const-string/jumbo v3, "Failed to load and parse Master index from cache"
@@ -1595,17 +1415,14 @@
 
     move v0, v1
 
-    .line 175
     goto :goto_0
 .end method
 
 .method protected importSegment(Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;)Z
     .locals 8
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 345
     :try_start_0
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;->getImages()[Lcom/netflix/mediaclient/service/player/subtitles/image/ImageDescriptor;
 
@@ -1620,14 +1437,12 @@
 
     aget-object v4, v2, v1
 
-    .line 347
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 348
     const-string/jumbo v5, "nf_subtitles"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1660,7 +1475,6 @@
 
     invoke-static {v5, v6}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 351
     :cond_0
     iget-object v5, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mPlayer:Lcom/netflix/mediaclient/servicemgr/IPlayer;
 
@@ -1678,7 +1492,6 @@
 
     move-result-object v5
 
-    .line 352
     if-eqz v5, :cond_1
 
     invoke-virtual {v5}, Ljava/io/File;->exists()Z
@@ -1687,12 +1500,10 @@
 
     if-nez v6, :cond_2
 
-    .line 367
     :cond_1
     :goto_1
     return v0
 
-    .line 356
     :cond_2
     invoke-virtual {v5}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -1700,14 +1511,12 @@
 
     invoke-interface {v4, v5}, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageDescriptor;->setLocalImagePath(Ljava/lang/String;)V
 
-    .line 357
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v5
 
     if-eqz v5, :cond_3
 
-    .line 358
     const-string/jumbo v5, "nf_subtitles"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1732,17 +1541,14 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 345
     :cond_3
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 361
     :catch_0
     move-exception v1
 
-    .line 362
     const-string/jumbo v2, "nf_subtitles"
 
     const-string/jumbo v3, "Failed to parse segment"
@@ -1751,11 +1557,9 @@
 
     goto :goto_1
 
-    .line 366
     :cond_4
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;->downloadStarted()V
 
-    .line 367
     const/4 v0, 0x1
 
     goto :goto_1
@@ -1764,10 +1568,8 @@
 .method protected importSegmentIndex()Z
     .locals 5
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 119
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mPlayer:Lcom/netflix/mediaclient/servicemgr/IPlayer;
 
     invoke-interface {v1}, Lcom/netflix/mediaclient/servicemgr/IPlayer;->getPlayerFileCache()Lcom/netflix/mediaclient/servicemgr/IPlayerFileCache;
@@ -1782,7 +1584,6 @@
 
     move-result-object v1
 
-    .line 121
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
@@ -1791,12 +1592,10 @@
 
     if-nez v2, :cond_1
 
-    .line 144
     :cond_0
     :goto_0
     return v0
 
-    .line 127
     :cond_1
     :try_start_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
@@ -1805,7 +1604,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 128
     const-string/jumbo v2, "nf_subtitles"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1832,7 +1630,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 131
     :cond_2
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mMasterIndex:Lcom/netflix/mediaclient/service/player/subtitles/image/v1/MasterIndex;
 
@@ -1840,22 +1637,18 @@
 
     move-result v2
 
-    .line 132
     invoke-static {v1}, Lcom/netflix/mediaclient/util/FileUtils;->readFileToByteArray(Ljava/io/File;)[B
 
     move-result-object v3
 
-    .line 133
     invoke-virtual {p0, v3, v2}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->parseSegmentIndexes([BI)V
 
-    .line 135
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 136
     const-string/jumbo v2, "nf_subtitles"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1884,17 +1677,14 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 144
     :cond_3
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 139
     :catch_0
     move-exception v1
 
-    .line 140
     const-string/jumbo v2, "nf_subtitles"
 
     const-string/jumbo v3, "Failed to load and parse Master index from cache"
@@ -1907,15 +1697,12 @@
 .method protected initCache()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 68
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->getCacheName()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mKey:Ljava/lang/String;
 
-    .line 69
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mKey:Ljava/lang/String;
 
     return-object v0
@@ -1924,25 +1711,19 @@
 .method public load()V
     .locals 2
 
-    .prologue
-    .line 79
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->initCache()Ljava/lang/String;
 
-    .line 80
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->handleImport()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 81
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->handleDownloadMasterIndex()V
 
-    .line 85
     :goto_0
     return-void
 
-    .line 83
     :cond_0
     const-string/jumbo v0, "nf_subtitles"
 
@@ -1956,28 +1737,22 @@
 .method protected parseMasterIndex([B)Z
     .locals 5
 
-    .prologue
-    .line 242
     const-string/jumbo v0, "nf_subtitles"
 
     const-string/jumbo v1, "Master index received, parse it..."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 244
     const/4 v1, 0x0
 
-    .line 245
     new-instance v2, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v2, p1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 246
     new-instance v3, Ljava/io/DataInputStream;
 
     invoke-direct {v3, v2}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 248
     :try_start_0
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/MasterIndex;
 
@@ -1987,24 +1762,19 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 249
     const/4 v0, 0x1
 
-    .line 250
     :try_start_1
     invoke-virtual {v3}, Ljava/io/DataInputStream;->close()V
 
-    .line 251
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
 
-    .line 253
     const-string/jumbo v1, "master.idx"
 
     invoke-virtual {p0, v1, p1}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->saveFileSafelyToCache(Ljava/lang/String;[B)V
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 263
     :goto_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -2012,7 +1782,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 264
     const-string/jumbo v1, "nf_subtitles"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2037,11 +1806,9 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 267
     :cond_0
     return v0
 
-    .line 255
     :catch_0
     move-exception v0
 
@@ -2051,11 +1818,9 @@
 
     move-object v1, v4
 
-    .line 256
     :goto_1
     if-eqz v0, :cond_1
 
-    .line 257
     const-string/jumbo v2, "nf_subtitles"
 
     const-string/jumbo v3, "Failed to close master index input stream"
@@ -2064,7 +1829,6 @@
 
     goto :goto_0
 
-    .line 259
     :cond_1
     const-string/jumbo v2, "nf_subtitles"
 
@@ -2074,7 +1838,6 @@
 
     goto :goto_0
 
-    .line 255
     :catch_1
     move-exception v1
 
@@ -2084,23 +1847,18 @@
 .method protected parseSegment([BLcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;)V
     .locals 11
 
-    .prologue
-    .line 413
     if-nez p1, :cond_1
 
-    .line 414
     const-string/jumbo v0, "nf_subtitles"
 
     const-string/jumbo v1, "Response data for segment is NULL"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 440
     :cond_0
     :goto_0
     return-void
 
-    .line 418
     :cond_1
     const-string/jumbo v0, "nf_subtitles"
 
@@ -2108,13 +1866,11 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 421
     :try_start_0
     invoke-virtual {p2}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;->getSegmentStartPosition()J
 
     move-result-wide v2
 
-    .line 422
     invoke-virtual {p2}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;->getImages()[Lcom/netflix/mediaclient/service/player/subtitles/image/ImageDescriptor;
 
     move-result-object v1
@@ -2128,7 +1884,6 @@
 
     aget-object v5, v1, v0
 
-    .line 423
     invoke-interface {v5}, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageDescriptor;->getImageStartPosition()J
 
     move-result-wide v6
@@ -2137,21 +1892,18 @@
 
     long-to-int v6, v6
 
-    .line 424
     invoke-interface {v5}, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageDescriptor;->getSize()I
 
     move-result v7
 
     add-int/2addr v7, v6
 
-    .line 426
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v8
 
     if-eqz v8, :cond_2
 
-    .line 427
     const-string/jumbo v8, "nf_subtitles"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -2212,13 +1964,11 @@
 
     invoke-static {v8, v9}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 430
     :cond_2
     invoke-static {p1, v6, v7}, Ljava/util/Arrays;->copyOfRange([BII)[B
 
     move-result-object v6
 
-    .line 431
     iget-object v7, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mPlayer:Lcom/netflix/mediaclient/servicemgr/IPlayer;
 
     invoke-interface {v7}, Lcom/netflix/mediaclient/servicemgr/IPlayer;->getPlayerFileCache()Lcom/netflix/mediaclient/servicemgr/IPlayerFileCache;
@@ -2235,17 +1985,14 @@
 
     move-result-object v6
 
-    .line 432
     invoke-interface {v5, v6}, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageDescriptor;->setLocalImagePath(Ljava/lang/String;)V
 
-    .line 433
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v6
 
     if-eqz v6, :cond_3
 
-    .line 434
     const-string/jumbo v6, "nf_subtitles"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -2270,17 +2017,14 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 422
     :cond_3
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_1
 
-    .line 437
     :catch_0
     move-exception v0
 
-    .line 438
     const-string/jumbo v1, "nf_subtitles"
 
     const-string/jumbo v2, "Failed to parse segment"
@@ -2293,26 +2037,21 @@
 .method protected parseSegmentIndexes([BI)V
     .locals 11
 
-    .prologue
     const/4 v2, 0x1
 
     const/4 v1, 0x0
 
-    .line 444
     if-nez p1, :cond_0
 
-    .line 445
     const-string/jumbo v0, "nf_subtitles"
 
     const-string/jumbo v1, "Response data for segment indexes is NULL"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 492
     :goto_0
     return-void
 
-    .line 449
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -2320,7 +2059,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 450
     const-string/jumbo v0, "nf_subtitles"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2355,25 +2093,21 @@
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 453
     :cond_1
     array-length v0, p1
 
     if-eq v0, p2, :cond_4
 
-    .line 454
     const-string/jumbo v0, "nf_subtitles"
 
     const-string/jumbo v3, "Size mismatch!"
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 455
     array-length v0, p1
 
     if-ge v0, p2, :cond_2
 
-    .line 456
     const-string/jumbo v0, "nf_subtitles"
 
     const-string/jumbo v1, "Not enough data, abort parsing"
@@ -2382,7 +2116,6 @@
 
     goto :goto_0
 
-    .line 459
     :cond_2
     const-string/jumbo v0, "nf_subtitles"
 
@@ -2390,18 +2123,15 @@
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 466
     :goto_1
     new-instance v5, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v5, p1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 467
     new-instance v6, Ljava/io/DataInputStream;
 
     invoke-direct {v6, v5}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 468
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mMasterIndex:Lcom/netflix/mediaclient/service/player/subtitles/image/v1/MasterIndex;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/MasterIndex;->getEntryCount()S
@@ -2418,7 +2148,6 @@
 
     move v4, v2
 
-    .line 472
     :goto_2
     :try_start_0
     iget-object v7, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mMasterIndex:Lcom/netflix/mediaclient/service/player/subtitles/image/v1/MasterIndex;
@@ -2429,41 +2158,34 @@
 
     if-ge v0, v7, :cond_5
 
-    .line 473
     new-instance v7, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;
 
     invoke-direct {v7, v6, v4, v3}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;-><init>(Ljava/io/DataInputStream;II)V
 
-    .line 474
     iget-object v8, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mSegmentIndexes:[Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;
 
     aput-object v7, v8, v0
 
-    .line 475
     invoke-virtual {v7}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;->getDuration()I
 
     move-result v8
 
     add-int/2addr v4, v8
 
-    .line 476
     invoke-virtual {v7}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;->getEntryCount()S
 
     move-result v8
 
     add-int/2addr v3, v8
 
-    .line 477
     invoke-virtual {v7, v0}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;->setIndex(I)V
 
-    .line 478
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v8
 
     if-eqz v8, :cond_3
 
-    .line 479
     const-string/jumbo v8, "nf_subtitles"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -2498,13 +2220,11 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 472
     :cond_3
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 462
     :cond_4
     const-string/jumbo v0, "nf_subtitles"
 
@@ -2514,29 +2234,24 @@
 
     goto :goto_1
 
-    .line 483
     :cond_5
     :try_start_1
     invoke-virtual {v6}, Ljava/io/DataInputStream;->close()V
 
-    .line 484
     invoke-virtual {v5}, Ljava/io/InputStream;->close()V
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
     goto/16 :goto_0
 
-    .line 485
     :catch_0
     move-exception v0
 
     move v1, v2
 
-    .line 486
     :goto_3
     if-eqz v1, :cond_6
 
-    .line 487
     const-string/jumbo v1, "nf_subtitles"
 
     const-string/jumbo v2, "Failed to close segment indexes input stream"
@@ -2545,7 +2260,6 @@
 
     goto/16 :goto_0
 
-    .line 489
     :cond_6
     const-string/jumbo v1, "nf_subtitles"
 
@@ -2555,7 +2269,6 @@
 
     goto/16 :goto_0
 
-    .line 485
     :catch_1
     move-exception v0
 
@@ -2565,23 +2278,18 @@
 .method public seeked(I)V
     .locals 12
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 658
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/service/player/subtitles/BaseImageSubtitleParser;->seeked(I)V
 
-    .line 659
     int-to-long v2, p1
 
     iput-wide v2, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mLastKnownPosition:J
 
-    .line 663
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 664
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mSegmentIndexes:[Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;
 
     if-eqz v0, :cond_2
@@ -2590,7 +2298,6 @@
 
     move v2, v1
 
-    .line 665
     :goto_0
     iget-object v3, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mSegmentIndexes:[Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;
 
@@ -2598,12 +2305,10 @@
 
     if-ge v0, v3, :cond_3
 
-    .line 666
     iget-object v3, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mSegmentIndexes:[Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;
 
     aget-object v3, v3, v0
 
-    .line 667
     invoke-virtual {v3}, Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;->getImages()[Lcom/netflix/mediaclient/service/player/subtitles/image/ImageDescriptor;
 
     move-result-object v5
@@ -2617,7 +2322,6 @@
 
     aget-object v7, v5, v3
 
-    .line 668
     iget-wide v8, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mStartPlayPositionInTitleInMs:J
 
     iget-wide v10, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mLastRenderedPositionInTitleInMs:J
@@ -2628,31 +2332,25 @@
 
     if-eqz v8, :cond_0
 
-    .line 670
     invoke-interface {v4, v7}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v8
 
     if-nez v8, :cond_0
 
-    .line 671
     invoke-interface {v4, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 672
     add-int/lit8 v2, v2, 0x1
 
-    .line 673
     int-to-long v8, p1
 
     invoke-interface {v7, v8, v9}, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageDescriptor;->seeked(J)V
 
-    .line 667
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 665
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
@@ -2661,7 +2359,6 @@
     :cond_2
     move v2, v1
 
-    .line 680
     :cond_3
     iget v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mNumberOfSubtitlesExpectedToBeDisplayed:I
 
@@ -2669,19 +2366,16 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mNumberOfSubtitlesExpectedToBeDisplayed:I
 
-    .line 681
     int-to-long v0, p1
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mStartPlayPositionInTitleInMs:J
 
-    .line 683
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 684
     const-string/jumbo v0, "nf_subtitles"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2734,7 +2428,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 687
     :cond_4
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->mLastKnownPosition:J
 
@@ -2744,6 +2437,5 @@
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->downloadIfNeeded(Lcom/netflix/mediaclient/service/player/subtitles/image/v1/SegmentIndex;)V
 
-    .line 688
     return-void
 .end method

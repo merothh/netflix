@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 0
 
-    .prologue
-    .line 150
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper$8;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper$8;->val$status:Lcom/netflix/mediaclient/android/app/Status;
@@ -32,18 +30,14 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 153
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper$8;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;->access$300(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;)V
 
-    .line 154
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper$8;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;->access$000(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;)V
 
-    .line 155
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper$8;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;->access$100(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;)Ljava/util/List;
@@ -67,14 +61,12 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListener;
 
-    .line 156
     iget-object v2, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper$8;->val$status:Lcom/netflix/mediaclient/android/app/Status;
 
     invoke-interface {v0, v2}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListener;->onError(Lcom/netflix/mediaclient/android/app/Status;)V
 
     goto :goto_0
 
-    .line 158
     :cond_0
     return-void
 .end method

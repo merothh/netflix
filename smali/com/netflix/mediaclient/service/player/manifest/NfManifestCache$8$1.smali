@@ -20,8 +20,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$8;Lcom/netflix/mediaclient/android/app/Status;Lorg/json/JSONObject;Ljava/util/List;)V
     .locals 0
 
-    .prologue
-    .line 262
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$8$1;->this$1:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$8;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$8$1;->val$res:Lcom/netflix/mediaclient/android/app/Status;
@@ -40,8 +38,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 265
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$8$1;->val$res:Lcom/netflix/mediaclient/android/app/Status;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
@@ -54,7 +50,6 @@
 
     if-nez v0, :cond_1
 
-    .line 266
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$8$1;->this$1:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$8;
 
@@ -64,11 +59,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;->access$1100(Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;Ljava/util/List;)V
 
-    .line 271
     :goto_0
     return-void
 
-    .line 269
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$8$1;->this$1:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$8;
 
@@ -80,7 +73,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;->access$1200(Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;Ljava/util/List;Lorg/json/JSONObject;)V
 
-    .line 270
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$8$1;->this$1:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$8;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$8;->this$0:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;

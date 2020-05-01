@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 153
     invoke-direct {p0}, Landroid/support/v4/widget/EdgeEffectCompat$EdgeEffectIcsImpl;-><init>()V
 
     return-void
@@ -19,8 +17,6 @@
 .method public onPull(Ljava/lang/Object;FF)Z
     .locals 1
 
-    .prologue
-    .line 156
     invoke-static {p1, p2, p3}, Landroid/support/v4/widget/EdgeEffectCompatLollipop;->onPull(Ljava/lang/Object;FF)Z
 
     move-result v0

@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;)V
     .locals 0
 
-    .prologue
-    .line 282
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$5;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
     invoke-direct {p0}, Landroid/support/v7/widget/GridLayoutManager$SpanSizeLookup;-><init>()V
@@ -25,8 +23,6 @@
 .method public getSpanSize(I)I
     .locals 1
 
-    .prologue
-    .line 288
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$5;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;->recyclerView:Landroid/support/v7/widget/RecyclerView;
@@ -43,27 +39,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 289
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$5;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
     iget v0, v0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;->numColumns:I
 
-    .line 295
     :goto_0
     return v0
 
-    .line 292
     :cond_0
     if-nez p1, :cond_1
 
-    .line 293
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$5;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
     iget v0, v0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;->numColumns:I
 
     goto :goto_0
 
-    .line 295
     :cond_1
     const/4 v0, 0x1
 

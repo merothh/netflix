@@ -7,11 +7,8 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/netflix/mediaclient/webapi/AuthorizationCredentials;Lcom/netflix/mediaclient/webapi/CommonRequestParameters;)V
     .locals 0
 
-    .prologue
-    .line 30
     invoke-direct {p0, p1, p2, p3}, Lcom/netflix/mediaclient/webapi/WebApiGetCommand;-><init>(Ljava/lang/String;Lcom/netflix/mediaclient/webapi/AuthorizationCredentials;Lcom/netflix/mediaclient/webapi/CommonRequestParameters;)V
 
-    .line 31
     return-void
 .end method
 
@@ -20,8 +17,6 @@
 .method public execute()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 42
     invoke-virtual {p0}, Lcom/netflix/mediaclient/webapi/ResponseWebApiGetCommand;->doExecute()Ljava/lang/String;
 
     move-result-object v0

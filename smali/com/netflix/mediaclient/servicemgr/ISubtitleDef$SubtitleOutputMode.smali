@@ -32,7 +32,6 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x3
 
     const/4 v4, 0x0
@@ -41,7 +40,6 @@
 
     const/4 v2, 0x1
 
-    .line 29
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleOutputMode;
 
     const-string/jumbo v1, "DATA_XML"
@@ -50,7 +48,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleOutputMode;->DATA_XML:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleOutputMode;
 
-    .line 30
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleOutputMode;
 
     const-string/jumbo v1, "DATA_JSON"
@@ -59,7 +56,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleOutputMode;->DATA_JSON:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleOutputMode;
 
-    .line 31
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleOutputMode;
 
     const-string/jumbo v1, "BINARY_IMAGE"
@@ -68,7 +64,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleOutputMode;->BINARY_IMAGE:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleOutputMode;
 
-    .line 27
     new-array v0, v5, [Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleOutputMode;
 
     sget-object v1, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleOutputMode;->DATA_XML:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleOutputMode;
@@ -96,22 +91,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 38
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 39
     iput p3, p0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleOutputMode;->mValue:I
 
-    .line 40
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleOutputMode;
     .locals 1
 
-    .prologue
-    .line 27
     const-class v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleOutputMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -126,8 +115,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleOutputMode;
     .locals 1
 
-    .prologue
-    .line 27
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleOutputMode;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleOutputMode;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleOutputMode;->clone()Ljava/lang/Object;
@@ -144,8 +131,6 @@
 .method public final getValue()I
     .locals 1
 
-    .prologue
-    .line 50
     iget v0, p0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleOutputMode;->mValue:I
 
     return v0

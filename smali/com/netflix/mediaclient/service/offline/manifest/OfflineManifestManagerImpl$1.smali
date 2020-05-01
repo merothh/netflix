@@ -21,8 +21,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/service/pdslogging/DownloadContext;)V
     .locals 0
 
-    .prologue
-    .line 103
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl$1;->this$0:Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl$1;->val$playableId:Ljava/lang/String;
@@ -45,8 +43,6 @@
 .method public onManifestsFetched(Lorg/json/JSONObject;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 107
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl$1;->this$0:Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl;->access$100(Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl;)Landroid/os/Handler;
@@ -59,6 +55,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 113
     return-void
 .end method

@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/player/PlayerAgent;)V
     .locals 0
 
-    .prologue
-    .line 2160
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$6;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,15 +23,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .prologue
-    .line 2164
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2165
     invoke-static {}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$1600()Ljava/lang/String;
 
     move-result-object v0
@@ -58,13 +53,11 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2168
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2169
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.PLAYER_SUBTITLE_CONFIG_CHANGED"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -73,7 +66,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 2170
     invoke-static {}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$1600()Ljava/lang/String;
 
     move-result-object v0
@@ -82,7 +74,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2171
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$6;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     const-string/jumbo v1, "lookupType"
@@ -95,12 +86,10 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$5400(Lcom/netflix/mediaclient/service/player/PlayerAgent;I)V
 
-    .line 2178
     :cond_1
     :goto_0
     return-void
 
-    .line 2173
     :cond_2
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -108,7 +97,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 2174
     invoke-static {}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$1600()Ljava/lang/String;
 
     move-result-object v1

@@ -15,30 +15,22 @@
 .method public constructor <init>(Lcom/google/android/exoplayer/dash/mpd/RangedUri;JJLjava/lang/String;JJ)V
     .locals 0
 
-    .prologue
-    .line 90
     invoke-direct/range {p0 .. p5}, Lcom/google/android/exoplayer/dash/mpd/SegmentBase;-><init>(Lcom/google/android/exoplayer/dash/mpd/RangedUri;JJ)V
 
-    .line 91
     iput-object p6, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SingleSegmentBase;->uri:Ljava/lang/String;
 
-    .line 92
     iput-wide p7, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SingleSegmentBase;->indexStart:J
 
-    .line 93
     iput-wide p9, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SingleSegmentBase;->indexLength:J
 
-    .line 94
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 11
 
-    .prologue
     const-wide/16 v4, 0x0
 
-    .line 100
     const/4 v1, 0x0
 
     const-wide/16 v2, 0x1
@@ -53,7 +45,6 @@
 
     invoke-direct/range {v0 .. v10}, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SingleSegmentBase;-><init>(Lcom/google/android/exoplayer/dash/mpd/RangedUri;JJLjava/lang/String;JJ)V
 
-    .line 101
     return-void
 .end method
 
@@ -62,10 +53,8 @@
 .method public getIndex()Lcom/google/android/exoplayer/dash/mpd/RangedUri;
     .locals 8
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 104
     iget-wide v0, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SingleSegmentBase;->indexLength:J
 
     const-wide/16 v4, 0x0

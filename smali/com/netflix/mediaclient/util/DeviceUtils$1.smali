@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/servicemgr/ServiceManager;)V
     .locals 0
 
-    .prologue
-    .line 628
     iput-object p1, p0, Lcom/netflix/mediaclient/util/DeviceUtils$1;->val$serviceManager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public is3dSupported()Z
     .locals 1
 
-    .prologue
-    .line 641
     const/4 v0, 0x0
 
     return v0
@@ -38,8 +34,6 @@
 .method public is5dot1Supported()Z
     .locals 1
 
-    .prologue
-    .line 636
     iget-object v0, p0, Lcom/netflix/mediaclient/util/DeviceUtils$1;->val$serviceManager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     if-eqz v0, :cond_0
@@ -66,8 +60,6 @@
 .method public isDolbyVisionSupported()Z
     .locals 1
 
-    .prologue
-    .line 655
     const/4 v0, 0x0
 
     return v0
@@ -76,8 +68,6 @@
 .method public isHdSupported()Z
     .locals 1
 
-    .prologue
-    .line 631
     iget-object v0, p0, Lcom/netflix/mediaclient/util/DeviceUtils$1;->val$serviceManager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     if-eqz v0, :cond_0
@@ -104,8 +94,6 @@
 .method public isHdr10Supported()Z
     .locals 1
 
-    .prologue
-    .line 651
     const/4 v0, 0x0
 
     return v0
@@ -114,8 +102,6 @@
 .method public isUltraHdSupported()Z
     .locals 1
 
-    .prologue
-    .line 646
     const/4 v0, 0x0
 
     return v0

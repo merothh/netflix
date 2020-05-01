@@ -23,11 +23,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 23
     sget-object v0, Lcom/netflix/mediaclient/android/app/CommonStatus;->UNKNOWN:Lcom/netflix/mediaclient/android/app/NetflixImmutableStatus;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PServiceAgent;->initErrorResult:Lcom/netflix/mediaclient/android/app/Status;
@@ -38,8 +35,6 @@
 .method static synthetic access$000(Lcom/netflix/mediaclient/service/pservice/PServiceAgent;)Lcom/netflix/mediaclient/android/app/Status;
     .locals 1
 
-    .prologue
-    .line 15
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PServiceAgent;->initErrorResult:Lcom/netflix/mediaclient/android/app/Status;
 
     return-object v0
@@ -48,8 +43,6 @@
 .method static synthetic access$100(Lcom/netflix/mediaclient/service/pservice/PServiceAgent;)Lcom/netflix/mediaclient/service/pservice/PServiceAgent$InitCallback;
     .locals 1
 
-    .prologue
-    .line 15
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PServiceAgent;->initCallback:Lcom/netflix/mediaclient/service/pservice/PServiceAgent$InitCallback;
 
     return-object v0
@@ -60,8 +53,6 @@
 .method public destroy()V
     .locals 3
 
-    .prologue
-    .line 101
     const-string/jumbo v0, "nf_preapp_serviceagent"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -92,12 +83,10 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 102
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PServiceAgent;->agentContext:Lcom/netflix/mediaclient/service/pservice/PServiceAgent$AgentContext;
 
-    .line 103
     return-void
 .end method
 
@@ -107,19 +96,14 @@
 .method protected getContext()Landroid/content/Context;
     .locals 1
 
-    .prologue
-    .line 126
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PServiceAgent;->agentContext:Lcom/netflix/mediaclient/service/pservice/PServiceAgent$AgentContext;
 
-    .line 127
     if-eqz v0, :cond_0
 
-    .line 128
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/pservice/PServiceAgent$AgentContext;->getService()Lcom/netflix/mediaclient/service/pservice/PService;
 
     move-result-object v0
 
-    .line 130
     :goto_0
     return-object v0
 
@@ -132,19 +116,14 @@
 .method protected getFetchAgent()Lcom/netflix/mediaclient/service/pservice/PServiceAgent$PServiceFetchAgentInterface;
     .locals 1
 
-    .prologue
-    .line 152
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PServiceAgent;->agentContext:Lcom/netflix/mediaclient/service/pservice/PServiceAgent$AgentContext;
 
-    .line 153
     if-eqz v0, :cond_0
 
-    .line 154
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/pservice/PServiceAgent$AgentContext;->getFetchAgent()Lcom/netflix/mediaclient/service/pservice/PServiceAgent$PServiceFetchAgentInterface;
 
     move-result-object v0
 
-    .line 156
     :goto_0
     return-object v0
 
@@ -157,8 +136,6 @@
 .method public getMainHandler()Landroid/os/Handler;
     .locals 1
 
-    .prologue
-    .line 119
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PServiceAgent;->mainHandler:Landroid/os/Handler;
 
     return-object v0
@@ -167,19 +144,14 @@
 .method protected getService()Lcom/netflix/mediaclient/service/pservice/PService;
     .locals 1
 
-    .prologue
-    .line 135
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PServiceAgent;->agentContext:Lcom/netflix/mediaclient/service/pservice/PServiceAgent$AgentContext;
 
-    .line 136
     if-eqz v0, :cond_0
 
-    .line 137
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/pservice/PServiceAgent$AgentContext;->getService()Lcom/netflix/mediaclient/service/pservice/PService;
 
     move-result-object v0
 
-    .line 139
     :goto_0
     return-object v0
 
@@ -192,19 +164,14 @@
 .method protected getWidgetAgent()Lcom/netflix/mediaclient/service/pservice/PServiceAgent$PServiceWidgetAgentInterface;
     .locals 1
 
-    .prologue
-    .line 165
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PServiceAgent;->agentContext:Lcom/netflix/mediaclient/service/pservice/PServiceAgent$AgentContext;
 
-    .line 166
     if-eqz v0, :cond_0
 
-    .line 167
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/pservice/PServiceAgent$AgentContext;->getWidgetAgent()Lcom/netflix/mediaclient/service/pservice/PServiceAgent$PServiceWidgetAgentInterface;
 
     move-result-object v0
 
-    .line 169
     :goto_0
     return-object v0
 
@@ -217,14 +184,11 @@
 .method public final declared-synchronized init(Lcom/netflix/mediaclient/service/pservice/PServiceAgent$AgentContext;Lcom/netflix/mediaclient/service/pservice/PServiceAgent$InitCallback;)V
     .locals 3
 
-    .prologue
-    .line 35
     monitor-enter p0
 
     :try_start_0
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertOnMain()Z
 
-    .line 37
     const-string/jumbo v0, "nf_preapp_serviceagent"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -255,12 +219,10 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 38
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/pservice/PServiceAgent;->initCalled:Z
 
     if-eqz v0, :cond_0
 
-    .line 39
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "PServiceAgent init already called"
@@ -271,7 +233,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 35
     :catchall_0
     move-exception v0
 
@@ -279,11 +240,9 @@
 
     throw v0
 
-    .line 41
     :cond_0
     if-nez p1, :cond_1
 
-    .line 42
     :try_start_1
     new-instance v0, Ljava/lang/NullPointerException;
 
@@ -293,26 +252,21 @@
 
     throw v0
 
-    .line 44
     :cond_1
     iput-object p1, p0, Lcom/netflix/mediaclient/service/pservice/PServiceAgent;->agentContext:Lcom/netflix/mediaclient/service/pservice/PServiceAgent$AgentContext;
 
-    .line 45
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/service/pservice/PServiceAgent;->initCalled:Z
 
-    .line 46
     iput-object p2, p0, Lcom/netflix/mediaclient/service/pservice/PServiceAgent;->initCallback:Lcom/netflix/mediaclient/service/pservice/PServiceAgent$InitCallback;
 
-    .line 47
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PServiceAgent;->mainHandler:Landroid/os/Handler;
 
-    .line 49
     new-instance v0, Lcom/netflix/mediaclient/android/app/BackgroundTask;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/android/app/BackgroundTask;-><init>()V
@@ -325,7 +279,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 56
     monitor-exit p0
 
     return-void
@@ -334,21 +287,17 @@
 .method protected final declared-synchronized initCompleted(Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 3
 
-    .prologue
-    .line 64
     monitor-enter p0
 
     :try_start_0
     iput-object p1, p0, Lcom/netflix/mediaclient/service/pservice/PServiceAgent;->initErrorResult:Lcom/netflix/mediaclient/android/app/Status;
 
-    .line 65
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 66
     const-string/jumbo v0, "nf_preapp_serviceagent"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -391,13 +340,11 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 68
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PServiceAgent;->initCallback:Lcom/netflix/mediaclient/service/pservice/PServiceAgent$InitCallback;
 
     if-eqz v0, :cond_1
 
-    .line 69
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PServiceAgent;->mainHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/netflix/mediaclient/service/pservice/PServiceAgent$2;
@@ -408,13 +355,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 77
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 64
     :catchall_0
     move-exception v0
 
@@ -426,8 +371,6 @@
 .method public declared-synchronized isReady()Z
     .locals 1
 
-    .prologue
-    .line 85
     monitor-enter p0
 
     :try_start_0

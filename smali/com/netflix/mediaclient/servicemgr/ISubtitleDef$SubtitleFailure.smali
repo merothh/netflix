@@ -32,7 +32,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x4
 
     const/4 v5, 0x3
@@ -43,7 +42,6 @@
 
     const/4 v2, 0x0
 
-    .line 121
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;
 
     const-string/jumbo v1, "download"
@@ -52,7 +50,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;->download:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;
 
-    .line 122
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;
 
     const-string/jumbo v1, "dnsResolution"
@@ -61,7 +58,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;->dnsResolution:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;
 
-    .line 123
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;
 
     const-string/jumbo v1, "parsing"
@@ -70,7 +66,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;->parsing:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;
 
-    .line 124
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;
 
     const-string/jumbo v1, "parsingCachedMasterIndex"
@@ -79,7 +74,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;->parsingCachedMasterIndex:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;
 
-    .line 125
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;
 
     const-string/jumbo v1, "badMasterIndex"
@@ -88,7 +82,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;->badMasterIndex:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;
 
-    .line 120
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;
@@ -126,8 +119,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 120
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -136,8 +127,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;
     .locals 1
 
-    .prologue
-    .line 120
     const-class v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -152,8 +141,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;
     .locals 1
 
-    .prologue
-    .line 120
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;->clone()Ljava/lang/Object;

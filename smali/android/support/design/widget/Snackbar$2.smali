@@ -16,8 +16,6 @@
 .method constructor <init>(Landroid/support/design/widget/Snackbar;Landroid/view/View$OnClickListener;)V
     .locals 0
 
-    .prologue
-    .line 303
     iput-object p1, p0, Landroid/support/design/widget/Snackbar$2;->this$0:Landroid/support/design/widget/Snackbar;
 
     iput-object p2, p0, Landroid/support/design/widget/Snackbar$2;->val$listener:Landroid/view/View$OnClickListener;
@@ -32,19 +30,15 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .prologue
-    .line 306
     iget-object v0, p0, Landroid/support/design/widget/Snackbar$2;->val$listener:Landroid/view/View$OnClickListener;
 
     invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
-    .line 308
     iget-object v0, p0, Landroid/support/design/widget/Snackbar$2;->this$0:Landroid/support/design/widget/Snackbar;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/support/design/widget/Snackbar;->dispatchDismiss(I)V
 
-    .line 309
     return-void
 .end method

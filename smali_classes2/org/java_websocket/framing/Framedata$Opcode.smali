@@ -34,7 +34,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -45,7 +44,6 @@
 
     const/4 v3, 0x0
 
-    .line 9
     new-instance v0, Lorg/java_websocket/framing/Framedata$Opcode;
 
     const-string/jumbo v1, "CONTINUOUS"
@@ -96,7 +94,6 @@
 
     sput-object v0, Lorg/java_websocket/framing/Framedata$Opcode;->CLOSING:Lorg/java_websocket/framing/Framedata$Opcode;
 
-    .line 8
     const/4 v0, 0x6
 
     new-array v0, v0, [Lorg/java_websocket/framing/Framedata$Opcode;
@@ -140,8 +137,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 8
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -150,8 +145,6 @@
 .method public static valueOf(Ljava/lang/String;)Lorg/java_websocket/framing/Framedata$Opcode;
     .locals 1
 
-    .prologue
-    .line 8
     const-class v0, Lorg/java_websocket/framing/Framedata$Opcode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -166,8 +159,6 @@
 .method public static values()[Lorg/java_websocket/framing/Framedata$Opcode;
     .locals 1
 
-    .prologue
-    .line 8
     sget-object v0, Lorg/java_websocket/framing/Framedata$Opcode;->$VALUES:[Lorg/java_websocket/framing/Framedata$Opcode;
 
     invoke-virtual {v0}, [Lorg/java_websocket/framing/Framedata$Opcode;->clone()Ljava/lang/Object;

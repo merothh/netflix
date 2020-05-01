@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,11 +24,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 235
     if-nez p0, :cond_0
 
-    .line 236
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string/jumbo v1, "A class extending RealmObject must be provided"
@@ -39,7 +34,6 @@
 
     throw v0
 
-    .line 238
     :cond_0
     return-void
 .end method
@@ -57,8 +51,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 241
     new-instance v0, Lio/realm/exceptions/RealmException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -136,24 +128,18 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 222
     instance-of v0, p1, Lio/realm/internal/RealmProxyMediator;
 
     if-nez v0, :cond_0
 
-    .line 223
     const/4 v0, 0x0
 
-    .line 226
     :goto_0
     return v0
 
-    .line 225
     :cond_0
     check-cast p1, Lio/realm/internal/RealmProxyMediator;
 
-    .line 226
     invoke-virtual {p0}, Lio/realm/internal/RealmProxyMediator;->getModelClasses()Ljava/util/Set;
 
     move-result-object v0
@@ -199,8 +185,6 @@
 .method public hashCode()I
     .locals 1
 
-    .prologue
-    .line 231
     invoke-virtual {p0}, Lio/realm/internal/RealmProxyMediator;->getModelClasses()Ljava/util/Set;
 
     move-result-object v0
@@ -235,8 +219,6 @@
 .method public transformerApplied()Z
     .locals 1
 
-    .prologue
-    .line 217
     const/4 v0, 0x0
 
     return v0

@@ -36,7 +36,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -47,7 +46,6 @@
 
     const/4 v3, 0x0
 
-    .line 115
     new-instance v0, Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;
 
     const-string/jumbo v1, "HS256"
@@ -58,7 +56,6 @@
 
     sput-object v0, Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;->HS256:Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;
 
-    .line 117
     new-instance v0, Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;
 
     const-string/jumbo v1, "RSA1_5"
@@ -69,7 +66,6 @@
 
     sput-object v0, Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;->RSA1_5:Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;
 
-    .line 119
     new-instance v0, Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;
 
     const-string/jumbo v1, "RSA_OAEP"
@@ -80,7 +76,6 @@
 
     sput-object v0, Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;->RSA_OAEP:Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;
 
-    .line 121
     new-instance v0, Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;
 
     const-string/jumbo v1, "A128KW"
@@ -91,7 +86,6 @@
 
     sput-object v0, Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;->A128KW:Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;
 
-    .line 123
     new-instance v0, Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;
 
     const-string/jumbo v1, "A128CBC"
@@ -102,7 +96,6 @@
 
     sput-object v0, Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;->A128CBC:Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;
 
-    .line 113
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;
@@ -142,22 +135,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 128
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 129
     iput-object p3, p0, Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;->name:Ljava/lang/String;
 
-    .line 130
     return-void
 .end method
 
 .method public static fromString(Ljava/lang/String;)Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;
     .locals 5
 
-    .prologue
-    .line 165
     invoke-static {}, Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;->values()[Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;
 
     move-result-object v1
@@ -171,7 +158,6 @@
 
     aget-object v3, v1, v0
 
-    .line 166
     invoke-virtual {v3}, Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;->toString()Ljava/lang/String;
 
     move-result-object v4
@@ -182,16 +168,13 @@
 
     if-eqz v4, :cond_0
 
-    .line 167
     return-object v3
 
-    .line 165
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 169
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -227,8 +210,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;
     .locals 1
 
-    .prologue
-    .line 113
     const-class v0, Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -243,8 +224,6 @@
 .method public static values()[Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;
     .locals 1
 
-    .prologue
-    .line 113
     sget-object v0, Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;->$VALUES:[Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;
 
     invoke-virtual {v0}, [Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;->clone()Ljava/lang/Object;
@@ -261,8 +240,6 @@
 .method public getJcaAlgorithmName()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 137
     sget-object v0, Lcom/netflix/msl/crypto/JsonWebKey$1;->$SwitchMap$com$netflix$msl$crypto$JsonWebKey$Algorithm:[I
 
     invoke-virtual {p0}, Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;->ordinal()I
@@ -273,7 +250,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 147
     new-instance v0, Lcom/netflix/msl/MslInternalException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -304,27 +280,22 @@
 
     throw v0
 
-    .line 139
     :pswitch_0
     const-string/jumbo v0, "HmacSHA256"
 
-    .line 145
     :goto_0
     return-object v0
 
-    .line 142
     :pswitch_1
     const-string/jumbo v0, "RSA"
 
     goto :goto_0
 
-    .line 145
     :pswitch_2
     const-string/jumbo v0, "AES"
 
     goto :goto_0
 
-    .line 137
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -338,8 +309,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 156
     iget-object v0, p0, Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;->name:Ljava/lang/String;
 
     return-object v0

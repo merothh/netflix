@@ -32,14 +32,12 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x2
 
     const/4 v4, 0x1
 
     const/4 v3, 0x0
 
-    .line 41
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;
 
     const-string/jumbo v1, "STANDARD"
@@ -50,7 +48,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;->STANDARD:Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;
 
-    .line 42
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;
 
     const-string/jumbo v1, "OFFLINE"
@@ -61,7 +58,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;->OFFLINE:Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;
 
-    .line 43
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;
 
     const-string/jumbo v1, "UNKNOWN"
@@ -72,7 +68,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;->UNKNOWN:Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;
 
-    .line 40
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;
@@ -104,22 +99,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 46
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 47
     iput-object p3, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;->value:Ljava/lang/String;
 
-    .line 48
     return-void
 .end method
 
 .method public static create(Ljava/lang/String;)Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;
     .locals 5
 
-    .prologue
-    .line 51
     invoke-static {}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;->values()[Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;
 
     move-result-object v2
@@ -135,7 +124,6 @@
 
     aget-object v0, v2, v1
 
-    .line 52
     iget-object v4, v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;->value:Ljava/lang/String;
 
     invoke-virtual {v4, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -144,11 +132,9 @@
 
     if-eqz v4, :cond_0
 
-    .line 56
     :goto_1
     return-object v0
 
-    .line 51
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -156,7 +142,6 @@
 
     goto :goto_0
 
-    .line 56
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;->UNKNOWN:Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;
 
@@ -166,8 +151,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;
     .locals 1
 
-    .prologue
-    .line 40
     const-class v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -182,8 +165,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;
     .locals 1
 
-    .prologue
-    .line 40
     sget-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;->$VALUES:[Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;->clone()Ljava/lang/Object;
@@ -200,8 +181,6 @@
 .method public getValue()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 59
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$ManifestType;->value:Ljava/lang/String;
 
     return-object v0

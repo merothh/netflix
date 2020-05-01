@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/falkor/FalkorAgent;)V
     .locals 0
 
-    .prologue
-    .line 733
     iput-object p1, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$5;->this$0:Lcom/netflix/mediaclient/service/falkor/FalkorAgent;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/browse/SimpleBrowseAgentCallback;-><init>()V
@@ -25,28 +23,23 @@
 .method public onIrisNotificationsMarkedAsRead(Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
     const/4 v2, 0x0
 
-    .line 736
     invoke-interface {p1}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 738
     iget-object v0, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$5;->this$0:Lcom/netflix/mediaclient/service/falkor/FalkorAgent;
 
     invoke-virtual {v0, v2, v2, v3}, Lcom/netflix/mediaclient/service/falkor/FalkorAgent;->refreshIrisNotifications(ZZLcom/netflix/mediaclient/service/pushnotification/MessageData;)V
 
-    .line 743
     :goto_0
     return-void
 
-    .line 741
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$5;->this$0:Lcom/netflix/mediaclient/service/falkor/FalkorAgent;
 

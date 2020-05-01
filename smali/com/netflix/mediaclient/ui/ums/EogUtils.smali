@@ -21,8 +21,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,8 +29,6 @@
 .method public static isPlanOnlyCell(Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;)Z
     .locals 2
 
-    .prologue
-    .line 54
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->abTestCell()I
 
     move-result v0
@@ -55,19 +51,16 @@
 .method public static isSmallSizeTablet(Landroid/content/Context;)Z
     .locals 6
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 73
     invoke-static {p0}, Lcom/netflix/mediaclient/util/DeviceUtils;->isTabletByContext(Landroid/content/Context;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 74
     invoke-static {p0}, Lcom/netflix/mediaclient/util/DeviceUtils;->getScreenSizeCategory(Landroid/content/Context;)I
 
     move-result v2
@@ -76,14 +69,12 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 75
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 76
     const-string/jumbo v2, "eog_utils"
 
     const-string/jumbo v3, " tablet in portarit - small ? screenSize:%s"
@@ -106,7 +97,6 @@
 
     invoke-static {v2, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
     :cond_0
     :goto_0
     return v0
@@ -120,12 +110,10 @@
 .method public static shouldGoToLandingPage(ILcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;)Z
     .locals 7
 
-    .prologue
     const/4 v2, 0x0
 
     const/4 v1, 0x1
 
-    .line 30
     if-ne p0, v1, :cond_1
 
     invoke-static {p1}, Lcom/netflix/mediaclient/ui/ums/EogUtils;->isPlanOnlyCell(Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;)Z
@@ -136,7 +124,6 @@
 
     move v0, v1
 
-    .line 31
     :goto_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -144,7 +131,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 32
     const-string/jumbo v3, "eog_utils"
 
     const-string/jumbo v4, "shouldGoToLandingPage: %b, currentPage:%d, testCell:%d"
@@ -183,26 +169,22 @@
 
     invoke-static {v3, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 34
     :cond_0
     return v0
 
     :cond_1
     move v0, v2
 
-    .line 30
     goto :goto_0
 .end method
 
 .method public static shouldGoToPlanPage(ILcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;)Z
     .locals 7
 
-    .prologue
     const/4 v2, 0x1
 
     const/4 v1, 0x0
 
-    .line 38
     if-gtz p0, :cond_0
 
     invoke-static {p1}, Lcom/netflix/mediaclient/ui/ums/EogUtils;->isPlanOnlyCell(Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;)Z
@@ -214,7 +196,6 @@
     :cond_0
     move v0, v2
 
-    .line 39
     :goto_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -222,7 +203,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 40
     const-string/jumbo v3, "eog_utils"
 
     const-string/jumbo v4, "shouldGoToPlanPage: %b, currentPage:%d, testCell:%d"
@@ -261,33 +241,28 @@
 
     invoke-static {v3, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 42
     :cond_1
     return v0
 
     :cond_2
     move v0, v1
 
-    .line 38
     goto :goto_0
 .end method
 
 .method public static shouldShowEogAlert(Lcom/netflix/mediaclient/servicemgr/ServiceManager;)Z
     .locals 7
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 58
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getEndOfGrandfatheringAlert()Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 59
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getEndOfGrandfatheringAlert()Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
 
     move-result-object v0
@@ -296,7 +271,6 @@
 
     if-nez v0, :cond_1
 
-    .line 60
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getCurrentProfile()Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;
 
     move-result-object v0
@@ -309,7 +283,6 @@
 
     move v0, v1
 
-    .line 62
     :goto_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -323,7 +296,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 63
     const-string/jumbo v3, "eog_utils"
 
     const-string/jumbo v4, " shouldShow:%b - eogAlredyShown:%b, isKidsProfile:%b, "
@@ -332,14 +304,12 @@
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    .line 64
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v6
 
     aput-object v6, v5, v2
 
-    .line 65
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getEndOfGrandfatheringAlert()Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
 
     move-result-object v2
@@ -354,7 +324,6 @@
 
     const/4 v1, 0x2
 
-    .line 66
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getCurrentProfile()Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;
 
     move-result-object v2
@@ -369,29 +338,24 @@
 
     aput-object v2, v5, v1
 
-    .line 63
     invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v3, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 69
     :cond_0
     return v0
 
     :cond_1
     move v0, v2
 
-    .line 60
     goto :goto_0
 .end method
 
 .method public static shouldShowOtherPlans(Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;)Z
     .locals 1
 
-    .prologue
-    .line 46
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->seeOtherPlansText()Ljava/lang/String;
 
     move-result-object v0
@@ -406,8 +370,6 @@
 .method public static shouldUseLayoutWithImages(Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;)Z
     .locals 2
 
-    .prologue
-    .line 50
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->abTestCell()I
 
     move-result v0

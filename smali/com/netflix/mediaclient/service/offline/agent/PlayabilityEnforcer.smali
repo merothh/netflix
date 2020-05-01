@@ -19,8 +19,6 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
-    .line 32
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v2, 0x1
@@ -31,14 +29,12 @@
 
     sput-wide v0, Lcom/netflix/mediaclient/service/offline/agent/PlayabilityEnforcer;->PERSISTENT_INTERVAL:J
 
-    .line 33
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/netflix/mediaclient/service/offline/agent/PlayabilityEnforcer;->lastContactNetflixTimeLock:Ljava/lang/Object;
 
-    .line 34
     const-wide/16 v0, 0x0
 
     sput-wide v0, Lcom/netflix/mediaclient/service/offline/agent/PlayabilityEnforcer;->lastContactNetflixTimeMS:J
@@ -49,8 +45,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -59,10 +53,8 @@
 .method static forceResetPlayWindow(Landroid/content/Context;Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData;)Lcom/netflix/mediaclient/android/app/Status;
     .locals 8
 
-    .prologue
     const-wide/16 v6, 0x0
 
-    .line 170
     iget-object v0, p1, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData;->mLicenseData:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData$LicenseData;
 
     iget-boolean v0, v0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData$LicenseData;->mPwResettable:Z
@@ -83,7 +75,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 171
     iget-object v0, p1, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData;->mLicenseData:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData$LicenseData;
 
     iget-wide v2, v0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData$LicenseData;->mPlayWindowResetLimit:J
@@ -94,17 +85,13 @@
 
     iput-wide v2, v0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData$LicenseData;->mPlayWindowResetLimit:J
 
-    .line 172
     iput-wide v6, p1, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData;->mPlayStartTime:J
 
-    .line 173
     sget-object v0, Lcom/netflix/mediaclient/android/app/CommonStatus;->OK:Lcom/netflix/mediaclient/android/app/NetflixImmutableStatus;
 
-    .line 177
     :goto_0
     return-object v0
 
-    .line 175
     :cond_0
     new-instance v0, Lcom/netflix/mediaclient/android/app/NetflixStatus;
 
@@ -118,13 +105,10 @@
 .method private static getLastContactNetflix(Landroid/content/Context;)J
     .locals 6
 
-    .prologue
-    .line 63
     sget-object v1, Lcom/netflix/mediaclient/service/offline/agent/PlayabilityEnforcer;->lastContactNetflixTimeLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 64
     :try_start_0
     sget-wide v2, Lcom/netflix/mediaclient/service/offline/agent/PlayabilityEnforcer;->lastContactNetflixTimeMS:J
 
@@ -134,7 +118,6 @@
 
     if-nez v0, :cond_0
 
-    .line 66
     const-string/jumbo v0, "last_contact_netflix_ms"
 
     const-wide/16 v2, -0x1
@@ -145,7 +128,6 @@
 
     sput-wide v2, Lcom/netflix/mediaclient/service/offline/agent/PlayabilityEnforcer;->lastContactNetflixTimeMS:J
 
-    .line 69
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -153,7 +135,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 70
     const-string/jumbo v0, "nf_PlayabilityEnforcer"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -192,7 +173,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 72
     :cond_1
     sget-wide v2, Lcom/netflix/mediaclient/service/offline/agent/PlayabilityEnforcer;->lastContactNetflixTimeMS:J
 
@@ -200,7 +180,6 @@
 
     return-wide v2
 
-    .line 73
     :catchall_0
     move-exception v0
 
@@ -214,13 +193,10 @@
 .method public static hasRecentHomingAndConnectivity(Landroid/content/Context;)Z
     .locals 6
 
-    .prologue
-    .line 86
     invoke-static {p0}, Lcom/netflix/mediaclient/service/offline/agent/PlayabilityEnforcer;->getLastContactNetflix(Landroid/content/Context;)J
 
     move-result-wide v0
 
-    .line 87
     const-wide/16 v2, 0x0
 
     cmp-long v2, v0, v2
@@ -243,17 +219,14 @@
 
     if-ltz v0, :cond_0
 
-    .line 88
     invoke-static {p0}, Lcom/netflix/mediaclient/util/ConnectivityUtils;->isConnected(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 89
     const/4 v0, 0x1
 
-    .line 91
     :goto_0
     return v0
 
@@ -266,19 +239,16 @@
 .method public static isAllowedByPlayWindow(Landroid/content/Context;Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData;Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData$LicenseData;)Z
     .locals 10
 
-    .prologue
     const/4 v0, 0x1
 
     const-wide/16 v8, 0x0
 
-    .line 109
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 110
     const-string/jumbo v1, "nf_PlayabilityEnforcer"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -303,7 +273,6 @@
 
     move-result-object v2
 
-    .line 111
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -328,10 +297,8 @@
 
     move-result-object v2
 
-    .line 110
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 114
     :cond_0
     iget-boolean v1, p2, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData$LicenseData;->mShouldUsePlayWindowLimits:Z
 
@@ -343,19 +310,16 @@
 
     if-lez v1, :cond_2
 
-    .line 115
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 116
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 117
     const-string/jumbo v1, "nf_PlayabilityEnforcer"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -418,7 +382,6 @@
 
     move-result-object v4
 
-    .line 121
     invoke-static {p0}, Lcom/netflix/mediaclient/service/offline/agent/PlayabilityEnforcer;->getLastContactNetflix(Landroid/content/Context;)J
 
     move-result-wide v6
@@ -433,7 +396,6 @@
 
     move-result-object v4
 
-    .line 122
     invoke-static {p0}, Lcom/netflix/mediaclient/service/offline/agent/PlayabilityEnforcer;->getLastContactNetflix(Landroid/content/Context;)J
 
     move-result-wide v6
@@ -448,10 +410,8 @@
 
     move-result-object v4
 
-    .line 117
     invoke-static {v1, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
     :cond_1
     iget-wide v4, p1, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData;->mPlayStartTime:J
 
@@ -469,12 +429,10 @@
 
     if-ltz v1, :cond_2
 
-    .line 126
     invoke-static {p0}, Lcom/netflix/mediaclient/service/offline/agent/PlayabilityEnforcer;->getLastContactNetflix(Landroid/content/Context;)J
 
     move-result-wide v4
 
-    .line 127
     iget-boolean v1, p2, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData$LicenseData;->mPwResettable:Z
 
     if-eqz v1, :cond_3
@@ -495,7 +453,6 @@
 
     iget-wide v4, p2, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData$LicenseData;->mPlayableWindowInHour:J
 
-    .line 128
     invoke-virtual {v1, v4, v5}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
     move-result-wide v4
@@ -504,7 +461,6 @@
 
     if-gez v1, :cond_3
 
-    .line 129
     iget-wide v2, p2, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData$LicenseData;->mPlayWindowResetLimit:J
 
     const-wide/16 v4, 0x1
@@ -513,33 +469,27 @@
 
     iput-wide v2, p2, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData$LicenseData;->mPlayWindowResetLimit:J
 
-    .line 130
     monitor-enter p1
 
-    .line 131
     const-wide/16 v2, 0x0
 
     :try_start_0
     iput-wide v2, p1, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData;->mPlayStartTime:J
 
-    .line 132
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 133
     const-string/jumbo v1, "nf_PlayabilityEnforcer"
 
     const-string/jumbo v2, "reset play window"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 140
     :cond_2
     :goto_0
     return v0
 
-    .line 132
     :catchall_0
     move-exception v0
 
@@ -550,7 +500,6 @@
 
     throw v0
 
-    .line 136
     :cond_3
     const/4 v0, 0x0
 
@@ -560,8 +509,6 @@
 .method public static isAllowedByViewWindow(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData$LicenseData;)Z
     .locals 4
 
-    .prologue
-    .line 99
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData$LicenseData;->mViewingWindow:J
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -586,8 +533,6 @@
 .method public static isLicenseExpired(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData$LicenseData;)Z
     .locals 4
 
-    .prologue
-    .line 147
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData$LicenseData;->mExpirationTimeInMs:J
 
     invoke-static {}, Lcom/netflix/mediaclient/util/Time;->now()J
@@ -612,13 +557,10 @@
 .method public static shouldRefreshLicense(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData$LicenseData;)Z
     .locals 6
 
-    .prologue
-    .line 154
     invoke-static {}, Lcom/netflix/mediaclient/util/Time;->now()J
 
     move-result-wide v0
 
-    .line 155
     iget-boolean v2, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData$LicenseData;->mShouldRefreshByTimestamp:Z
 
     if-eqz v2, :cond_0
@@ -663,19 +605,15 @@
 .method public static updateLastContactNetflix(Landroid/content/Context;)V
     .locals 8
 
-    .prologue
-    .line 46
     sget-object v1, Lcom/netflix/mediaclient/service/offline/agent/PlayabilityEnforcer;->lastContactNetflixTimeLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 47
     :try_start_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 48
     sget-wide v4, Lcom/netflix/mediaclient/service/offline/agent/PlayabilityEnforcer;->lastContactNetflixTimeMS:J
 
     sget-wide v6, Lcom/netflix/mediaclient/service/offline/agent/PlayabilityEnforcer;->PERSISTENT_INTERVAL:J
@@ -686,15 +624,12 @@
 
     if-ltz v0, :cond_0
 
-    .line 49
     const-string/jumbo v0, "last_contact_netflix_ms"
 
     invoke-static {p0, v0, v2, v3}, Lcom/netflix/mediaclient/util/PreferenceUtils;->putLongPref(Landroid/content/Context;Ljava/lang/String;J)Z
 
-    .line 51
     sput-wide v2, Lcom/netflix/mediaclient/service/offline/agent/PlayabilityEnforcer;->lastContactNetflixTimeMS:J
 
-    .line 53
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -702,7 +637,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 54
     const-string/jumbo v4, "nf_PlayabilityEnforcer"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -740,20 +674,16 @@
 
     invoke-static {v4, v0}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 56
     :cond_1
     monitor-exit v1
 
-    .line 57
     return-void
 
-    .line 54
     :cond_2
     const-string/jumbo v0, ""
 
     goto :goto_0
 
-    .line 56
     :catchall_0
     move-exception v0
 

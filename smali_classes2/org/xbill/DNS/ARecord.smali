@@ -15,8 +15,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 20
     invoke-direct {p0}, Lorg/xbill/DNS/Record;-><init>()V
 
     return-void
@@ -25,10 +23,8 @@
 .method public constructor <init>(Lorg/xbill/DNS/Name;IJLjava/net/InetAddress;)V
     .locals 7
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 51
     move-object v0, p0
 
     move-object v1, p1
@@ -39,14 +35,12 @@
 
     invoke-direct/range {v0 .. v5}, Lorg/xbill/DNS/Record;-><init>(Lorg/xbill/DNS/Name;IIJ)V
 
-    .line 52
     invoke-static {p5}, Lorg/xbill/DNS/Address;->familyOf(Ljava/net/InetAddress;)I
 
     move-result v0
 
     if-eq v0, v2, :cond_0
 
-    .line 53
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "invalid IPv4 address"
@@ -55,7 +49,6 @@
 
     throw v0
 
-    .line 54
     :cond_0
     invoke-virtual {p5}, Ljava/net/InetAddress;->getAddress()[B
 
@@ -67,15 +60,12 @@
 
     iput v0, p0, Lorg/xbill/DNS/ARecord;->addr:I
 
-    .line 55
     return-void
 .end method
 
 .method private static final fromArray([B)I
     .locals 2
 
-    .prologue
-    .line 29
     const/4 v0, 0x0
 
     aget-byte v0, p0, v0
@@ -118,13 +108,10 @@
 .method private static final toArray(I)[B
     .locals 3
 
-    .prologue
-    .line 37
     const/4 v0, 0x4
 
     new-array v0, v0, [B
 
-    .line 38
     const/4 v1, 0x0
 
     ushr-int/lit8 v2, p0, 0x18
@@ -135,7 +122,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 39
     const/4 v1, 0x1
 
     ushr-int/lit8 v2, p0, 0x10
@@ -146,7 +132,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 40
     const/4 v1, 0x2
 
     ushr-int/lit8 v2, p0, 0x8
@@ -157,7 +142,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 41
     const/4 v1, 0x3
 
     and-int/lit16 v2, p0, 0xff
@@ -166,7 +150,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 42
     return-object v0
 .end method
 
@@ -175,14 +158,11 @@
 .method public getAddress()Ljava/net/InetAddress;
     .locals 2
 
-    .prologue
-    .line 77
     :try_start_0
     iget-object v0, p0, Lorg/xbill/DNS/ARecord;->name:Lorg/xbill/DNS/Name;
 
     if-nez v0, :cond_0
 
-    .line 78
     iget v0, p0, Lorg/xbill/DNS/ARecord;->addr:I
 
     invoke-static {v0}, Lorg/xbill/DNS/ARecord;->toArray(I)[B
@@ -193,11 +173,9 @@
 
     move-result-object v0
 
-    .line 83
     :goto_0
     return-object v0
 
-    .line 80
     :cond_0
     iget-object v0, p0, Lorg/xbill/DNS/ARecord;->name:Lorg/xbill/DNS/Name;
 
@@ -207,12 +185,10 @@
 
     iget v1, p0, Lorg/xbill/DNS/ARecord;->addr:I
 
-    .line 81
     invoke-static {v1}, Lorg/xbill/DNS/ARecord;->toArray(I)[B
 
     move-result-object v1
 
-    .line 80
     invoke-static {v0, v1}, Ljava/net/InetAddress;->getByAddress(Ljava/lang/String;[B)Ljava/net/InetAddress;
     :try_end_0
     .catch Ljava/net/UnknownHostException; {:try_start_0 .. :try_end_0} :catch_0
@@ -221,11 +197,9 @@
 
     goto :goto_0
 
-    .line 82
     :catch_0
     move-exception v0
 
-    .line 83
     const/4 v0, 0x0
 
     goto :goto_0
@@ -234,8 +208,6 @@
 .method getObject()Lorg/xbill/DNS/Record;
     .locals 1
 
-    .prologue
-    .line 24
     new-instance v0, Lorg/xbill/DNS/ARecord;
 
     invoke-direct {v0}, Lorg/xbill/DNS/ARecord;-><init>()V
@@ -246,8 +218,6 @@
 .method rdataFromString(Lorg/xbill/DNS/Tokenizer;Lorg/xbill/DNS/Name;)V
     .locals 1
 
-    .prologue
-    .line 64
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Lorg/xbill/DNS/Tokenizer;->getAddressBytes(I)[B
@@ -260,15 +230,12 @@
 
     iput v0, p0, Lorg/xbill/DNS/ARecord;->addr:I
 
-    .line 65
     return-void
 .end method
 
 .method rrFromWire(Lorg/xbill/DNS/DNSInput;)V
     .locals 1
 
-    .prologue
-    .line 59
     const/4 v0, 0x4
 
     invoke-virtual {p1, v0}, Lorg/xbill/DNS/DNSInput;->readByteArray(I)[B
@@ -281,15 +248,12 @@
 
     iput v0, p0, Lorg/xbill/DNS/ARecord;->addr:I
 
-    .line 60
     return-void
 .end method
 
 .method rrToString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 70
     iget v0, p0, Lorg/xbill/DNS/ARecord;->addr:I
 
     invoke-static {v0}, Lorg/xbill/DNS/ARecord;->toArray(I)[B
@@ -306,8 +270,6 @@
 .method rrToWire(Lorg/xbill/DNS/DNSOutput;Lorg/xbill/DNS/Compression;Z)V
     .locals 4
 
-    .prologue
-    .line 89
     iget v0, p0, Lorg/xbill/DNS/ARecord;->addr:I
 
     int-to-long v0, v0
@@ -318,6 +280,5 @@
 
     invoke-virtual {p1, v0, v1}, Lorg/xbill/DNS/DNSOutput;->writeU32(J)V
 
-    .line 90
     return-void
 .end method

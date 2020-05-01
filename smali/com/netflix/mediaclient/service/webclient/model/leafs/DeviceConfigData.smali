@@ -238,41 +238,32 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
     const/4 v1, -0x1
 
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->consolidated_logging_specification:Ljava/util/List;
 
-    .line 42
     iput v1, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->ip_connectivity_policy:I
 
-    .line 45
     iput v1, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->user_session_timeout_duration:I
 
-    .line 77
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->jPlayerRestartOnStreamErrors:I
 
-    .line 127
     const/16 v0, 0x19
 
     iput v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->voipConfirmationDialogAllocationPercentage:I
 
-    .line 142
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->allowHevcMobile:Z
 
-    .line 144
     sget-boolean v0, Lcom/netflix/mediaclient/util/DeviceUtils;->DEFAULT_ALLOW_VP9_MOBILE:Z
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->allowVp9Mobile:Z
@@ -285,8 +276,6 @@
 .method public disableAndroidJobScheduler()Z
     .locals 1
 
-    .prologue
-    .line 192
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->mDisableAndroidJobScheduler:Z
 
     return v0
@@ -295,8 +284,6 @@
 .method public disableAndroidJobSchedulerJobFinish()Z
     .locals 1
 
-    .prologue
-    .line 193
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->mDisableAndroidJobSchedulerJobFinish:Z
 
     return v0
@@ -305,8 +292,6 @@
 .method public getAlertMsgForLocaleSupport()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 186
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->alertMsgForLocaleSupport:Ljava/lang/String;
 
     return-object v0
@@ -315,8 +300,6 @@
 .method public getAppBootUrlSuffix()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 277
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->appBootUrlSuffix:Ljava/lang/String;
 
     return-object v0
@@ -325,8 +308,6 @@
 .method public getAppMinVresion()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 149
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->min_version:Ljava/lang/String;
 
     return-object v0
@@ -335,8 +316,6 @@
 .method public getAppRecommendedVresion()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 152
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->current_version:Ljava/lang/String;
 
     return-object v0
@@ -345,8 +324,6 @@
 .method public getAudioFormats()I
     .locals 1
 
-    .prologue
-    .line 187
     iget v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->audioFormats:I
 
     return v0
@@ -355,8 +332,6 @@
 .method public getBreadcrumbLoggingSpecification()Lcom/netflix/mediaclient/service/webclient/model/leafs/BreadcrumbLoggingSpecification;
     .locals 1
 
-    .prologue
-    .line 224
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->breadcrumb_logging_specification:Lcom/netflix/mediaclient/service/webclient/model/leafs/BreadcrumbLoggingSpecification;
 
     return-object v0
@@ -374,8 +349,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 201
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->consolidated_logging_specification:Ljava/util/List;
 
     return-object v0
@@ -384,8 +357,6 @@
 .method public getDeviceCategory()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 164
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->device_category:Ljava/lang/String;
 
     return-object v0
@@ -394,8 +365,6 @@
 .method public getDisableCastFaststart()Z
     .locals 1
 
-    .prologue
-    .line 190
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->disableCastFaststart:Z
 
     return v0
@@ -404,8 +373,6 @@
 .method public getDisableDataSaver()Z
     .locals 1
 
-    .prologue
-    .line 191
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->disableDataSaver:Z
 
     return v0
@@ -414,8 +381,6 @@
 .method public getEnableLocalPlayback()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 241
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->enableLocalPlayback:Ljava/lang/String;
 
     return-object v0
@@ -424,8 +389,6 @@
 .method public getEnableMdxRemoteControlLockScreen()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 245
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->enableMdxRemoteControlLockScreen:Ljava/lang/String;
 
     return-object v0
@@ -434,8 +397,6 @@
 .method public getEnableMdxRemoteControlNotification()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 249
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->enableMdxRemoteControlNotification:Ljava/lang/String;
 
     return-object v0
@@ -444,8 +405,6 @@
 .method public getErrorLoggingSpecification()Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;
     .locals 1
 
-    .prologue
-    .line 228
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->error_logging_specification:Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;
 
     return-object v0
@@ -454,8 +413,6 @@
 .method public getGeoCountryCode()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 273
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->geoCountryCode:Ljava/lang/String;
 
     return-object v0
@@ -464,8 +421,6 @@
 .method public getImagePref()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 167
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->image_pref:Ljava/lang/String;
 
     return-object v0
@@ -474,8 +429,6 @@
 .method public getIpConnectivityPolicy()I
     .locals 1
 
-    .prologue
-    .line 211
     iget v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->ip_connectivity_policy:I
 
     return v0
@@ -484,8 +437,6 @@
 .method public getJPlayerStreamErrorRestartCount()I
     .locals 1
 
-    .prologue
-    .line 253
     iget v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->jPlayerRestartOnStreamErrors:I
 
     return v0
@@ -494,8 +445,6 @@
 .method public getMdxDisabled()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 161
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->disable_mdx:Ljava/lang/String;
 
     return-object v0
@@ -504,8 +453,6 @@
 .method public getOfflineConfig()Lcom/netflix/mediaclient/service/webclient/model/leafs/OfflineConfig;
     .locals 1
 
-    .prologue
-    .line 261
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->offlineConfig:Lcom/netflix/mediaclient/service/webclient/model/leafs/OfflineConfig;
 
     return-object v0
@@ -514,8 +461,6 @@
 .method public getPTAggregationSize()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 179
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->pt_aggregation_size:Ljava/lang/String;
 
     return-object v0
@@ -524,8 +469,6 @@
 .method public getPlayerType()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 155
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->type:Ljava/lang/String;
 
     return-object v0
@@ -534,8 +477,6 @@
 .method public getRateLimitForGcmBrowseEvents()I
     .locals 1
 
-    .prologue
-    .line 234
     iget v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->gcmBrowseEventRateLimit:I
 
     return v0
@@ -544,8 +485,6 @@
 .method public getRateLimitForGcmNListChangeEvents()I
     .locals 1
 
-    .prologue
-    .line 237
     iget v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->gcmNListChangeEventRateLimit:I
 
     return v0
@@ -554,8 +493,6 @@
 .method public getSignUpEnabled()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 173
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->signup_enabled:Ljava/lang/String;
 
     return-object v0
@@ -564,8 +501,6 @@
 .method public getSignUpTimeout()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 176
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->signup_timeout:Ljava/lang/String;
 
     return-object v0
@@ -574,8 +509,6 @@
 .method public getSubtitleConfiguration()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 170
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->subtitle_configuration:Ljava/lang/String;
 
     return-object v0
@@ -584,8 +517,6 @@
 .method public getSubtitleDownloadRetryPolicy()Lcom/netflix/mediaclient/service/webclient/model/leafs/SubtitleDownloadRetryPolicy;
     .locals 1
 
-    .prologue
-    .line 265
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->subtitleDownloadRetryPolicy:Lcom/netflix/mediaclient/service/webclient/model/leafs/SubtitleDownloadRetryPolicy;
 
     return-object v0
@@ -594,8 +525,6 @@
 .method public getUserSessionTimeoutDuration()I
     .locals 1
 
-    .prologue
-    .line 220
     iget v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->user_session_timeout_duration:I
 
     return v0
@@ -604,8 +533,6 @@
 .method public getVideoResolutionOverride()I
     .locals 1
 
-    .prologue
-    .line 231
     iget v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->videoResolutionOverride:I
 
     return v0
@@ -614,8 +541,6 @@
 .method public getVoipConfiguration()Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;
     .locals 1
 
-    .prologue
-    .line 257
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->voipConfig:Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;
 
     return-object v0
@@ -624,8 +549,6 @@
 .method public getVoipConfirmationDialogAllocationPercentage()I
     .locals 1
 
-    .prologue
-    .line 269
     iget v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->voipConfirmationDialogAllocationPercentage:I
 
     return v0
@@ -634,8 +557,6 @@
 .method public getWebsocketDisabled()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 158
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->disable_websocket:Ljava/lang/String;
 
     return-object v0
@@ -644,8 +565,6 @@
 .method public isAllowHevcMobile()Z
     .locals 1
 
-    .prologue
-    .line 281
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->allowHevcMobile:Z
 
     return v0
@@ -654,8 +573,6 @@
 .method public isAllowVp9Mobile()Z
     .locals 1
 
-    .prologue
-    .line 285
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->allowVp9Mobile:Z
 
     return v0
@@ -664,8 +581,6 @@
 .method public isDynecomSignInEnabled()Z
     .locals 1
 
-    .prologue
-    .line 183
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->enableDynecomSignIn:Z
 
     return v0
@@ -674,8 +589,6 @@
 .method public isPlayBillingDisabled()Z
     .locals 1
 
-    .prologue
-    .line 188
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->disablePlayBilling:Z
 
     return v0
@@ -684,8 +597,6 @@
 .method public isVoipEnabledOnDevice()Z
     .locals 1
 
-    .prologue
-    .line 184
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->voipEnabledOnDevice:Z
 
     return v0
@@ -694,8 +605,6 @@
 .method public isWidevineL1Enabled()Z
     .locals 1
 
-    .prologue
-    .line 181
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->enableWidevineL1:Z
 
     return v0
@@ -704,8 +613,6 @@
 .method public shouldAlertForMissingLocale()Z
     .locals 1
 
-    .prologue
-    .line 185
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->shouldAlertForLocaleSupport:Z
 
     return v0
@@ -714,8 +621,6 @@
 .method public shouldForceLegacyCrypto()Z
     .locals 1
 
-    .prologue
-    .line 182
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->forceLegacyCrypto:Z
 
     return v0
@@ -724,8 +629,6 @@
 .method public toIgnorePrelaodForPlayBilling()Z
     .locals 1
 
-    .prologue
-    .line 189
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;->ignorePreloadForPlayBilling:Z
 
     return v0

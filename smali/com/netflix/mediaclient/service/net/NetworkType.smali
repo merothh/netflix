@@ -60,7 +60,6 @@
 .method static constructor <clinit>()V
     .locals 10
 
-    .prologue
     const/4 v9, 0x4
 
     const/4 v8, 0x3
@@ -71,7 +70,6 @@
 
     const/4 v5, 0x0
 
-    .line 21
     new-instance v0, Lcom/netflix/mediaclient/service/net/NetworkType;
 
     const-string/jumbo v1, "NONE"
@@ -84,7 +82,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->NONE:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 22
     new-instance v0, Lcom/netflix/mediaclient/service/net/NetworkType;
 
     const-string/jumbo v1, "UNKNOWN"
@@ -95,7 +92,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->UNKNOWN:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 23
     new-instance v0, Lcom/netflix/mediaclient/service/net/NetworkType;
 
     const-string/jumbo v1, "EDGE"
@@ -106,7 +102,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->EDGE:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 24
     new-instance v0, Lcom/netflix/mediaclient/service/net/NetworkType;
 
     const-string/jumbo v1, "UMTS"
@@ -117,7 +112,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->UMTS:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 25
     new-instance v0, Lcom/netflix/mediaclient/service/net/NetworkType;
 
     const-string/jumbo v1, "CDMA"
@@ -128,7 +122,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->CDMA:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 26
     new-instance v0, Lcom/netflix/mediaclient/service/net/NetworkType;
 
     const-string/jumbo v1, "EVDO_0"
@@ -143,7 +136,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->EVDO_0:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 27
     new-instance v0, Lcom/netflix/mediaclient/service/net/NetworkType;
 
     const-string/jumbo v1, "EVDO_A"
@@ -158,7 +150,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->EVDO_A:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 28
     new-instance v0, Lcom/netflix/mediaclient/service/net/NetworkType;
 
     const-string/jumbo v1, "_1xRTT"
@@ -173,7 +164,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->_1xRTT:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 29
     new-instance v0, Lcom/netflix/mediaclient/service/net/NetworkType;
 
     const-string/jumbo v1, "HSDPA"
@@ -188,7 +178,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->HSDPA:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 30
     new-instance v0, Lcom/netflix/mediaclient/service/net/NetworkType;
 
     const-string/jumbo v1, "HSUPA"
@@ -203,7 +192,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->HSUPA:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 31
     new-instance v0, Lcom/netflix/mediaclient/service/net/NetworkType;
 
     const-string/jumbo v1, "HSPA"
@@ -218,7 +206,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->HSPA:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 32
     new-instance v0, Lcom/netflix/mediaclient/service/net/NetworkType;
 
     const-string/jumbo v1, "IDEN"
@@ -233,7 +220,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->IDEN:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 33
     new-instance v0, Lcom/netflix/mediaclient/service/net/NetworkType;
 
     const-string/jumbo v1, "EVDO_B"
@@ -248,7 +234,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->EVDO_B:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 34
     new-instance v0, Lcom/netflix/mediaclient/service/net/NetworkType;
 
     const-string/jumbo v1, "LTE"
@@ -263,7 +248,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->LTE:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 35
     new-instance v0, Lcom/netflix/mediaclient/service/net/NetworkType;
 
     const-string/jumbo v1, "EHRPD"
@@ -278,7 +262,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->EHRPD:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 36
     new-instance v0, Lcom/netflix/mediaclient/service/net/NetworkType;
 
     const-string/jumbo v1, "GPRS"
@@ -291,7 +274,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->GPRS:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 19
     const/16 v0, 0x10
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/net/NetworkType;
@@ -397,25 +379,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 44
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 45
     iput p3, p0, Lcom/netflix/mediaclient/service/net/NetworkType;->type:I
 
-    .line 46
     iput-object p4, p0, Lcom/netflix/mediaclient/service/net/NetworkType;->desc:Ljava/lang/String;
 
-    .line 47
     return-void
 .end method
 
 .method public static getNetworkType(I)Lcom/netflix/mediaclient/service/net/NetworkType;
     .locals 2
 
-    .prologue
-    .line 66
     const/4 v0, 0x0
 
     :goto_0
@@ -427,7 +402,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 68
     invoke-static {}, Lcom/netflix/mediaclient/service/net/NetworkType;->values()[Lcom/netflix/mediaclient/service/net/NetworkType;
 
     move-result-object v1
@@ -438,24 +412,20 @@
 
     if-ne v1, p0, :cond_0
 
-    .line 69
     invoke-static {}, Lcom/netflix/mediaclient/service/net/NetworkType;->values()[Lcom/netflix/mediaclient/service/net/NetworkType;
 
     move-result-object v1
 
     aget-object v0, v1, v0
 
-    .line 74
     :goto_1
     return-object v0
 
-    .line 66
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 74
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->NONE:Lcom/netflix/mediaclient/service/net/NetworkType;
 
@@ -465,8 +435,6 @@
 .method public static is2G(Lcom/netflix/mediaclient/service/net/NetworkType;)Z
     .locals 1
 
-    .prologue
-    .line 124
     sget-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->EDGE:Lcom/netflix/mediaclient/service/net/NetworkType;
 
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/service/net/NetworkType;->equals(Ljava/lang/Object;)Z
@@ -477,7 +445,6 @@
 
     sget-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->IDEN:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 125
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/service/net/NetworkType;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -486,7 +453,6 @@
 
     sget-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->CDMA:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 126
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/service/net/NetworkType;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -495,7 +461,6 @@
 
     sget-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->GPRS:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 127
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/service/net/NetworkType;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -505,11 +470,9 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 124
     :goto_0
     return v0
 
-    .line 127
     :cond_1
     const/4 v0, 0x0
 
@@ -519,8 +482,6 @@
 .method public static is3G(Lcom/netflix/mediaclient/service/net/NetworkType;)Z
     .locals 1
 
-    .prologue
-    .line 104
     sget-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->UMTS:Lcom/netflix/mediaclient/service/net/NetworkType;
 
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/service/net/NetworkType;->equals(Ljava/lang/Object;)Z
@@ -531,7 +492,6 @@
 
     sget-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->HSDPA:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 105
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/service/net/NetworkType;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -540,7 +500,6 @@
 
     sget-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->HSPA:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 106
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/service/net/NetworkType;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -549,7 +508,6 @@
 
     sget-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->EVDO_0:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 107
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/service/net/NetworkType;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -558,7 +516,6 @@
 
     sget-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->EVDO_A:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 108
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/service/net/NetworkType;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -567,7 +524,6 @@
 
     sget-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->EVDO_B:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 109
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/service/net/NetworkType;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -576,7 +532,6 @@
 
     sget-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->_1xRTT:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 110
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/service/net/NetworkType;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -585,7 +540,6 @@
 
     sget-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->HSUPA:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 111
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/service/net/NetworkType;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -594,7 +548,6 @@
 
     sget-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->EHRPD:Lcom/netflix/mediaclient/service/net/NetworkType;
 
-    .line 112
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/service/net/NetworkType;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -604,11 +557,9 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 104
     :goto_0
     return v0
 
-    .line 112
     :cond_1
     const/4 v0, 0x0
 
@@ -618,8 +569,6 @@
 .method public static is4G(Lcom/netflix/mediaclient/service/net/NetworkType;)Z
     .locals 1
 
-    .prologue
-    .line 139
     sget-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->LTE:Lcom/netflix/mediaclient/service/net/NetworkType;
 
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/service/net/NetworkType;->equals(Ljava/lang/Object;)Z
@@ -632,8 +581,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/net/NetworkType;
     .locals 1
 
-    .prologue
-    .line 19
     const-class v0, Lcom/netflix/mediaclient/service/net/NetworkType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -648,8 +595,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/net/NetworkType;
     .locals 1
 
-    .prologue
-    .line 19
     sget-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->$VALUES:[Lcom/netflix/mediaclient/service/net/NetworkType;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/net/NetworkType;->clone()Ljava/lang/Object;
@@ -666,8 +611,6 @@
 .method public final getDesc()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 92
     iget-object v0, p0, Lcom/netflix/mediaclient/service/net/NetworkType;->desc:Ljava/lang/String;
 
     return-object v0
@@ -676,8 +619,6 @@
 .method public final getType()I
     .locals 1
 
-    .prologue
-    .line 83
     iget v0, p0, Lcom/netflix/mediaclient/service/net/NetworkType;->type:I
 
     return v0

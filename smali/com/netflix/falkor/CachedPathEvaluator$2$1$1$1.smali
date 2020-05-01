@@ -27,8 +27,6 @@
 .method constructor <init>(Lcom/netflix/falkor/CachedPathEvaluator$2$1$1;)V
     .locals 0
 
-    .prologue
-    .line 140
     iput-object p1, p0, Lcom/netflix/falkor/CachedPathEvaluator$2$1$1$1;->this$3:Lcom/netflix/falkor/CachedPathEvaluator$2$1$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,8 +39,6 @@
 .method public call(Lcom/netflix/falkor/PQL;)Lcom/netflix/falkor/PathBoundValue;
     .locals 5
 
-    .prologue
-    .line 142
     new-instance v0, Lcom/netflix/falkor/PathBoundValue;
 
     new-instance v1, Lcom/netflix/falkor/Option;
@@ -71,8 +67,6 @@
 .method public bridge synthetic call(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 140
     check-cast p1, Lcom/netflix/falkor/PQL;
 
     invoke-virtual {p0, p1}, Lcom/netflix/falkor/CachedPathEvaluator$2$1$1$1;->call(Lcom/netflix/falkor/PQL;)Lcom/netflix/falkor/PathBoundValue;

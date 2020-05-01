@@ -14,8 +14,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,8 +33,6 @@
 .method public getStatusCode()Lcom/netflix/mediaclient/StatusCode;
     .locals 1
 
-    .prologue
-    .line 14
     iget-object v0, p0, Lcom/netflix/mediaclient/android/app/BaseStatus;->mStatusCode:Lcom/netflix/mediaclient/StatusCode;
 
     return-object v0
@@ -45,8 +41,6 @@
 .method public isError()Z
     .locals 1
 
-    .prologue
-    .line 29
     iget-object v0, p0, Lcom/netflix/mediaclient/android/app/BaseStatus;->mStatusCode:Lcom/netflix/mediaclient/StatusCode;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/StatusCode;->isError()Z
@@ -59,8 +53,6 @@
 .method public isErrorOrWarning()Z
     .locals 1
 
-    .prologue
-    .line 34
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/app/BaseStatus;->isError()Z
 
     move-result v0
@@ -88,8 +80,6 @@
 .method public isSucces()Z
     .locals 1
 
-    .prologue
-    .line 19
     iget-object v0, p0, Lcom/netflix/mediaclient/android/app/BaseStatus;->mStatusCode:Lcom/netflix/mediaclient/StatusCode;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/StatusCode;->isSucess()Z
@@ -102,8 +92,6 @@
 .method public isWarning()Z
     .locals 1
 
-    .prologue
-    .line 24
     iget-object v0, p0, Lcom/netflix/mediaclient/android/app/BaseStatus;->mStatusCode:Lcom/netflix/mediaclient/StatusCode;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/StatusCode;->isWarning()Z

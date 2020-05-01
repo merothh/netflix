@@ -28,14 +28,12 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x2
 
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 151
     new-instance v0, Lcom/netflix/msl/MslConstants$SignatureAlgo;
 
     const-string/jumbo v1, "HmacSHA256"
@@ -44,7 +42,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslConstants$SignatureAlgo;->HmacSHA256:Lcom/netflix/msl/MslConstants$SignatureAlgo;
 
-    .line 153
     new-instance v0, Lcom/netflix/msl/MslConstants$SignatureAlgo;
 
     const-string/jumbo v1, "SHA256withRSA"
@@ -53,7 +50,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslConstants$SignatureAlgo;->SHA256withRSA:Lcom/netflix/msl/MslConstants$SignatureAlgo;
 
-    .line 155
     new-instance v0, Lcom/netflix/msl/MslConstants$SignatureAlgo;
 
     const-string/jumbo v1, "AESCmac"
@@ -62,7 +58,6 @@
 
     sput-object v0, Lcom/netflix/msl/MslConstants$SignatureAlgo;->AESCmac:Lcom/netflix/msl/MslConstants$SignatureAlgo;
 
-    .line 149
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/netflix/msl/MslConstants$SignatureAlgo;
@@ -92,8 +87,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 149
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -102,8 +95,6 @@
 .method public static fromString(Ljava/lang/String;)Lcom/netflix/msl/MslConstants$SignatureAlgo;
     .locals 1
 
-    .prologue
-    .line 164
     const-class v0, Lcom/netflix/msl/MslConstants$SignatureAlgo;
 
     invoke-static {v0, p0}, Lcom/netflix/msl/MslConstants$SignatureAlgo;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -118,8 +109,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/msl/MslConstants$SignatureAlgo;
     .locals 1
 
-    .prologue
-    .line 149
     const-class v0, Lcom/netflix/msl/MslConstants$SignatureAlgo;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -134,8 +123,6 @@
 .method public static values()[Lcom/netflix/msl/MslConstants$SignatureAlgo;
     .locals 1
 
-    .prologue
-    .line 149
     sget-object v0, Lcom/netflix/msl/MslConstants$SignatureAlgo;->$VALUES:[Lcom/netflix/msl/MslConstants$SignatureAlgo;
 
     invoke-virtual {v0}, [Lcom/netflix/msl/MslConstants$SignatureAlgo;->clone()Ljava/lang/Object;
@@ -152,8 +139,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 177
     invoke-virtual {p0}, Lcom/netflix/msl/MslConstants$SignatureAlgo;->name()Ljava/lang/String;
 
     move-result-object v0

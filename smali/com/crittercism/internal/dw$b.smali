@@ -26,7 +26,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -37,7 +36,6 @@
 
     const/4 v4, 0x0
 
-    .line 26
     new-instance v0, Lcom/crittercism/internal/dw$b;
 
     const-string/jumbo v1, "Silent"
@@ -76,7 +74,6 @@
 
     sput-object v0, Lcom/crittercism/internal/dw$b;->d:Lcom/crittercism/internal/dw$b;
 
-    .line 28
     new-instance v0, Lcom/crittercism/internal/dw$b;
 
     const-string/jumbo v1, "Debug"
@@ -99,7 +96,6 @@
 
     sput-object v0, Lcom/crittercism/internal/dw$b;->f:Lcom/crittercism/internal/dw$b;
 
-    .line 25
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/crittercism/internal/dw$b;
@@ -138,22 +134,16 @@
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .prologue
-    .line 32
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 33
     iput p3, p0, Lcom/crittercism/internal/dw$b;->g:I
 
-    .line 34
     return-void
 .end method
 
 .method public static a(Lcom/crittercism/app/Crittercism$LoggingLevel;)Lcom/crittercism/internal/dw$b;
     .locals 2
 
-    .prologue
-    .line 54
     sget-object v0, Lcom/crittercism/internal/dw$1;->b:[I
 
     invoke-virtual {p0}, Lcom/crittercism/app/Crittercism$LoggingLevel;->ordinal()I
@@ -164,37 +154,31 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 64
     sget-object v0, Lcom/crittercism/internal/dw$b;->c:Lcom/crittercism/internal/dw$b;
 
     :goto_0
     return-object v0
 
-    .line 56
     :pswitch_0
     sget-object v0, Lcom/crittercism/internal/dw$b;->a:Lcom/crittercism/internal/dw$b;
 
     goto :goto_0
 
-    .line 58
     :pswitch_1
     sget-object v0, Lcom/crittercism/internal/dw$b;->b:Lcom/crittercism/internal/dw$b;
 
     goto :goto_0
 
-    .line 60
     :pswitch_2
     sget-object v0, Lcom/crittercism/internal/dw$b;->c:Lcom/crittercism/internal/dw$b;
 
     goto :goto_0
 
-    .line 62
     :pswitch_3
     sget-object v0, Lcom/crittercism/internal/dw$b;->d:Lcom/crittercism/internal/dw$b;
 
     goto :goto_0
 
-    .line 54
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -207,8 +191,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/crittercism/internal/dw$b;
     .locals 1
 
-    .prologue
-    .line 25
     const-class v0, Lcom/crittercism/internal/dw$b;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -223,8 +205,6 @@
 .method public static values()[Lcom/crittercism/internal/dw$b;
     .locals 1
 
-    .prologue
-    .line 25
     sget-object v0, Lcom/crittercism/internal/dw$b;->h:[Lcom/crittercism/internal/dw$b;
 
     invoke-virtual {v0}, [Lcom/crittercism/internal/dw$b;->clone()Ljava/lang/Object;
@@ -241,8 +221,6 @@
 .method public final a(Lcom/crittercism/internal/dw$b;)Z
     .locals 2
 
-    .prologue
-    .line 37
     iget v0, p0, Lcom/crittercism/internal/dw$b;->g:I
 
     iget v1, p1, Lcom/crittercism/internal/dw$b;->g:I

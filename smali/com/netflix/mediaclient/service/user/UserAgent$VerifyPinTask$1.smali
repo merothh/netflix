@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/user/UserAgent$VerifyPinTask;)V
     .locals 0
 
-    .prologue
-    .line 1726
     iput-object p1, p0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyPinTask$1;->this$1:Lcom/netflix/mediaclient/service/user/UserAgent$VerifyPinTask;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/user/SimpleUserAgentWebCallback;-><init>()V
@@ -25,11 +23,8 @@
 .method public onVerified(ZLcom/netflix/mediaclient/android/app/Status;)V
     .locals 3
 
-    .prologue
-    .line 1729
     if-eqz p1, :cond_0
 
-    .line 1730
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyPinTask$1;->this$1:Lcom/netflix/mediaclient/service/user/UserAgent$VerifyPinTask;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyPinTask;->this$0:Lcom/netflix/mediaclient/service/user/UserAgent;
@@ -46,7 +41,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/util/PreferenceUtils;->putStringPref(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 1733
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyPinTask$1;->this$1:Lcom/netflix/mediaclient/service/user/UserAgent$VerifyPinTask;
 
@@ -62,6 +56,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1739
     return-void
 .end method

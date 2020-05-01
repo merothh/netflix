@@ -11,8 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,30 +19,24 @@
 .method private static generate64Id()J
     .locals 6
 
-    .prologue
-    .line 13
     invoke-static {}, Lcom/netflix/mediaclient/util/Time;->now()J
 
     move-result-wide v0
 
-    .line 14
     const-wide/16 v2, 0x3e8
 
     div-long/2addr v0, v2
 
     long-to-int v0, v0
 
-    .line 15
     new-instance v1, Lcom/netflix/mediaclient/util/PositiveRandom;
 
     invoke-direct {v1}, Lcom/netflix/mediaclient/util/PositiveRandom;-><init>()V
 
-    .line 16
     invoke-virtual {v1}, Lcom/netflix/mediaclient/util/PositiveRandom;->nextPositive()I
 
     move-result v1
 
-    .line 17
     int-to-long v2, v0
 
     const/16 v0, 0x20
@@ -59,15 +51,12 @@
 
     or-long/2addr v0, v2
 
-    .line 20
     return-wide v0
 .end method
 
 .method public static generateDxId()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 35
     invoke-static {}, Lcom/netflix/mediaclient/util/NetflixTransactionIdGenerator;->generate64Id()J
 
     move-result-wide v0
@@ -82,8 +71,6 @@
 .method public static generateOxId()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 27
     invoke-static {}, Lcom/netflix/mediaclient/util/NetflixTransactionIdGenerator;->generate64Id()J
 
     move-result-wide v0
@@ -98,8 +85,6 @@
 .method public static generateXid()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 43
     invoke-static {}, Lcom/netflix/mediaclient/util/NetflixTransactionIdGenerator;->generate64Id()J
 
     move-result-wide v0

@@ -7,8 +7,6 @@
 .method public constructor <init>(Ljava/lang/Exception;)V
     .locals 2
 
-    .prologue
-    .line 40
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -51,6 +49,5 @@
 
     invoke-direct {p0, v0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 41
     return-void
 .end method

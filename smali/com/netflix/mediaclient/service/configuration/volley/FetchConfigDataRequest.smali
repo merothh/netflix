@@ -62,12 +62,10 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
     const/4 v3, 0x0
 
-    .line 41
     const-string/jumbo v0, "[\'%s\']"
 
     new-array v1, v4, [Ljava/lang/Object;
@@ -82,7 +80,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/configuration/volley/FetchConfigDataRequest;->nrmInfoPql:Ljava/lang/String;
 
-    .line 42
     const-string/jumbo v0, "[\'%s\']"
 
     new-array v1, v4, [Ljava/lang/Object;
@@ -97,7 +94,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/configuration/volley/FetchConfigDataRequest;->signInConfigPql:Ljava/lang/String;
 
-    .line 43
     const-string/jumbo v0, "[\'%s\']"
 
     new-array v1, v4, [Ljava/lang/Object;
@@ -112,7 +108,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/configuration/volley/FetchConfigDataRequest;->deviceConfigPql:Ljava/lang/String;
 
-    .line 44
     const-string/jumbo v0, "[\'%s\']"
 
     new-array v1, v4, [Ljava/lang/Object;
@@ -127,7 +122,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/configuration/volley/FetchConfigDataRequest;->accountConfigPql:Ljava/lang/String;
 
-    .line 45
     const-string/jumbo v0, "[\'%s\']"
 
     new-array v1, v4, [Ljava/lang/Object;
@@ -142,7 +136,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/configuration/volley/FetchConfigDataRequest;->streamingQoePql:Ljava/lang/String;
 
-    .line 46
     const-string/jumbo v0, "[\'%s\']"
 
     new-array v1, v4, [Ljava/lang/Object;
@@ -157,7 +150,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/configuration/volley/FetchConfigDataRequest;->streamingQoePqlDefault:Ljava/lang/String;
 
-    .line 47
     const-string/jumbo v0, "[\'%s\']"
 
     new-array v1, v4, [Ljava/lang/Object;
@@ -172,7 +164,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/configuration/volley/FetchConfigDataRequest;->customerSupportVoipPql:Ljava/lang/String;
 
-    .line 48
     const-string/jumbo v0, "[\'%s\']"
 
     new-array v1, v4, [Ljava/lang/Object;
@@ -193,14 +184,10 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/netflix/mediaclient/service/configuration/ConfigurationAgentWebCallback;)V
     .locals 4
 
-    .prologue
-    .line 53
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;-><init>(Landroid/content/Context;)V
 
-    .line 54
     iput-object p2, p0, Lcom/netflix/mediaclient/service/configuration/volley/FetchConfigDataRequest;->responseCallback:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgentWebCallback;
 
-    .line 55
     const-string/jumbo v0, "[\'%s\', \'%s\']"
 
     const/4 v1, 0x2
@@ -227,14 +214,12 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/configuration/volley/FetchConfigDataRequest;->abTestConfigPql:Ljava/lang/String;
 
-    .line 57
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 58
     const-string/jumbo v0, "nf_config_data"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -259,7 +244,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 59
     const-string/jumbo v0, "nf_config_data"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -284,7 +268,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 60
     const-string/jumbo v0, "nf_config_data"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -309,7 +292,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 61
     const-string/jumbo v0, "nf_config_data"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -334,7 +316,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 62
     const-string/jumbo v0, "nf_config_data"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -359,7 +340,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 63
     const-string/jumbo v0, "nf_config_data"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -384,7 +364,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
     :cond_0
     return-void
 .end method
@@ -392,20 +371,16 @@
 .method public static parseConfigString(Ljava/lang/String;)Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;
     .locals 5
 
-    .prologue
-    .line 85
     new-instance v1, Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;
 
     invoke-direct {v1}, Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;-><init>()V
 
-    .line 87
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 88
     const-string/jumbo v0, "nf_config_data"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -428,7 +403,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 91
     :cond_0
     const-string/jumbo v0, "nf_config_data"
 
@@ -436,21 +410,18 @@
 
     move-result-object v2
 
-    .line 92
     invoke-static {v2}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorParseUtils;->isEmpty(Lcom/google/gson/JsonObject;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 93
     const-string/jumbo v0, "nf_config_data"
 
     const-string/jumbo v2, "No config overrides for device"
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 94
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;-><init>()V
@@ -459,11 +430,9 @@
 
     move-object v0, v1
 
-    .line 191
     :goto_0
     return-object v0
 
-    .line 99
     :cond_1
     const-string/jumbo v0, "deviceConfig"
 
@@ -473,7 +442,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 100
     const-string/jumbo v0, "deviceConfig"
 
     const-class v3, Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;
@@ -486,7 +454,6 @@
 
     iput-object v0, v1, Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;->deviceConfig:Lcom/netflix/mediaclient/service/webclient/model/leafs/DeviceConfigData;
 
-    .line 104
     :cond_2
     const-string/jumbo v0, "accountConfig"
 
@@ -496,14 +463,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 105
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 106
     const-string/jumbo v0, "nf_config_data"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -532,7 +497,6 @@
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     :cond_3
     const-string/jumbo v0, "accountConfig"
 
@@ -546,14 +510,12 @@
 
     iput-object v0, v1, Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;->accountConfig:Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;
 
-    .line 111
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 112
     const-string/jumbo v3, "nf_config_data"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -583,7 +545,6 @@
 
     invoke-static {v3, v0}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 117
     :cond_4
     const-string/jumbo v0, "abTestConfig"
 
@@ -593,14 +554,12 @@
 
     if-eqz v0, :cond_6
 
-    .line 118
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    .line 119
     const-string/jumbo v0, "nf_config_data"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -629,7 +588,6 @@
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 122
     :cond_5
     const-string/jumbo v0, "abTestConfig"
 
@@ -643,14 +601,12 @@
 
     iput-object v0, v1, Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;->abTestConfigData:Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfigData;
 
-    .line 124
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    .line 125
     const-string/jumbo v3, "nf_config_data"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -680,7 +636,6 @@
 
     invoke-static {v3, v0}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
     :cond_6
     const-string/jumbo v0, "castKey"
 
@@ -690,14 +645,12 @@
 
     if-eqz v0, :cond_8
 
-    .line 130
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
-    .line 131
     const-string/jumbo v0, "nf_config_data"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -726,7 +679,6 @@
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
     :cond_7
     const-string/jumbo v0, "castKey"
 
@@ -740,14 +692,12 @@
 
     iput-object v0, v1, Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;->castKeyData:Lcom/netflix/mediaclient/service/webclient/model/leafs/CastKeyData;
 
-    .line 136
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
-    .line 137
     const-string/jumbo v3, "nf_config_data"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -777,7 +727,6 @@
 
     invoke-static {v3, v0}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 142
     :cond_8
     const-string/jumbo v0, "streamingqoe"
 
@@ -787,24 +736,20 @@
 
     if-eqz v0, :cond_9
 
-    .line 143
     const-string/jumbo v0, "streamingqoe"
 
     invoke-virtual {v2, v0}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;
 
     move-result-object v0
 
-    .line 144
     if-eqz v0, :cond_9
 
-    .line 145
     invoke-virtual {v0}, Lcom/google/gson/JsonElement;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, v1, Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;->streamingqoeJson:Ljava/lang/String;
 
-    .line 149
     :cond_9
     const-string/jumbo v0, "streamingqoeDefault"
 
@@ -814,24 +759,20 @@
 
     if-eqz v0, :cond_a
 
-    .line 150
     const-string/jumbo v0, "streamingqoeDefault"
 
     invoke-virtual {v2, v0}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;
 
     move-result-object v0
 
-    .line 151
     if-eqz v0, :cond_a
 
-    .line 152
     invoke-virtual {v0}, Lcom/google/gson/JsonElement;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, v1, Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;->streamingqoeJson:Ljava/lang/String;
 
-    .line 157
     :cond_a
     const-string/jumbo v0, "nrmInfo"
 
@@ -841,14 +782,12 @@
 
     if-eqz v0, :cond_c
 
-    .line 158
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_b
 
-    .line 159
     const-string/jumbo v0, "nf_config_data"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -877,7 +816,6 @@
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 161
     :cond_b
     const-string/jumbo v0, "nrmInfo"
 
@@ -891,14 +829,12 @@
 
     iput-object v0, v1, Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;->nrmInfo:Lcom/netflix/mediaclient/service/webclient/model/leafs/NrmConfigData;
 
-    .line 162
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_c
 
-    .line 163
     const-string/jumbo v3, "nf_config_data"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -928,7 +864,6 @@
 
     invoke-static {v3, v0}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     :cond_c
     const-string/jumbo v0, "signInConfig"
 
@@ -938,14 +873,12 @@
 
     if-eqz v0, :cond_e
 
-    .line 169
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_d
 
-    .line 170
     const-string/jumbo v0, "nf_config_data"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -974,7 +907,6 @@
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 172
     :cond_d
     const-string/jumbo v0, "signInConfig"
 
@@ -988,14 +920,12 @@
 
     iput-object v0, v1, Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;->signInConfigData:Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInConfigData;
 
-    .line 173
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_e
 
-    .line 174
     const-string/jumbo v3, "nf_config_data"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1025,7 +955,6 @@
 
     invoke-static {v3, v0}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 179
     :cond_e
     const-string/jumbo v0, "customerSupportVoipAuthorizations"
 
@@ -1035,14 +964,12 @@
 
     if-eqz v0, :cond_10
 
-    .line 180
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_f
 
-    .line 181
     const-string/jumbo v0, "nf_config_data"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1071,7 +998,6 @@
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 184
     :cond_f
     const-string/jumbo v0, "customerSupportVoipAuthorizations"
 
@@ -1085,14 +1011,12 @@
 
     iput-object v0, v1, Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;->customerSupportVoipAuthorizations:Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipAuthorizationData;
 
-    .line 186
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_10
 
-    .line 187
     const-string/jumbo v0, "nf_config_data"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1120,10 +1044,8 @@
     :cond_10
     move-object v0, v1
 
-    .line 191
     goto/16 :goto_0
 
-    .line 112
     :cond_11
     iget-object v0, v1, Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;->accountConfig:Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;
 
@@ -1133,7 +1055,6 @@
 
     goto/16 :goto_1
 
-    .line 125
     :cond_12
     iget-object v0, v1, Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;->abTestConfigData:Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfigData;
 
@@ -1143,7 +1064,6 @@
 
     goto/16 :goto_2
 
-    .line 137
     :cond_13
     iget-object v0, v1, Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;->castKeyData:Lcom/netflix/mediaclient/service/webclient/model/leafs/CastKeyData;
 
@@ -1153,7 +1073,6 @@
 
     goto/16 :goto_3
 
-    .line 163
     :cond_14
     iget-object v0, v1, Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;->nrmInfo:Lcom/netflix/mediaclient/service/webclient/model/leafs/NrmConfigData;
 
@@ -1163,7 +1082,6 @@
 
     goto/16 :goto_4
 
-    .line 174
     :cond_15
     iget-object v0, v1, Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;->signInConfigData:Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInConfigData;
 
@@ -1188,8 +1106,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 69
     const/4 v0, 0x6
 
     new-array v0, v0, [Ljava/lang/String;
@@ -1240,20 +1156,16 @@
 .method protected onFailure(Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 203
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/volley/FetchConfigDataRequest;->responseCallback:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgentWebCallback;
 
     if-eqz v0, :cond_0
 
-    .line 204
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/volley/FetchConfigDataRequest;->responseCallback:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgentWebCallback;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, v1, p1}, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgentWebCallback;->onConfigDataFetched(Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 206
     :cond_0
     return-void
 .end method
@@ -1261,20 +1173,16 @@
 .method protected onSuccess(Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;)V
     .locals 2
 
-    .prologue
-    .line 196
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/volley/FetchConfigDataRequest;->responseCallback:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgentWebCallback;
 
     if-eqz v0, :cond_0
 
-    .line 197
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/volley/FetchConfigDataRequest;->responseCallback:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgentWebCallback;
 
     sget-object v1, Lcom/netflix/mediaclient/android/app/CommonStatus;->OK:Lcom/netflix/mediaclient/android/app/NetflixImmutableStatus;
 
     invoke-interface {v0, p1, v1}, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgentWebCallback;->onConfigDataFetched(Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 199
     :cond_0
     return-void
 .end method
@@ -1282,8 +1190,6 @@
 .method protected bridge synthetic onSuccess(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 26
     check-cast p1, Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;
 
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/configuration/volley/FetchConfigDataRequest;->onSuccess(Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;)V
@@ -1294,8 +1200,6 @@
 .method protected parseFalkorResponse(Ljava/lang/String;)Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;
     .locals 1
 
-    .prologue
-    .line 80
     invoke-static {p1}, Lcom/netflix/mediaclient/service/configuration/volley/FetchConfigDataRequest;->parseConfigString(Ljava/lang/String;)Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;
 
     move-result-object v0
@@ -1306,8 +1210,6 @@
 .method protected bridge synthetic parseFalkorResponse(Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 26
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/configuration/volley/FetchConfigDataRequest;->parseFalkorResponse(Ljava/lang/String;)Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;
 
     move-result-object v0
@@ -1318,8 +1220,6 @@
 .method protected shouldSkipProcessingOnInvalidUser()Z
     .locals 1
 
-    .prologue
-    .line 74
     const/4 v0, 0x0
 
     return v0

@@ -24,11 +24,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     return-void
 .end method
 
@@ -37,8 +34,6 @@
 .method public getEnd()J
     .locals 2
 
-    .prologue
-    .line 62
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/BaseSubtitleBlock;->mEnd:J
 
     return-wide v0
@@ -47,8 +42,6 @@
 .method public getId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 46
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/BaseSubtitleBlock;->mId:Ljava/lang/String;
 
     return-object v0
@@ -57,8 +50,6 @@
 .method public getStart()J
     .locals 2
 
-    .prologue
-    .line 54
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/BaseSubtitleBlock;->mStart:J
 
     return-wide v0
@@ -67,15 +58,12 @@
 .method public isVisible(J)Z
     .locals 5
 
-    .prologue
-    .line 93
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 94
     const-string/jumbo v0, "nf_subtitles"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -122,7 +110,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
     :cond_0
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/BaseSubtitleBlock;->mStart:J
 
@@ -150,17 +137,14 @@
 .method public isVisibleInGivenTimeRange(JJ)Z
     .locals 7
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 71
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 72
     const-string/jumbo v1, "nf_subtitles"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -217,25 +201,21 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 75
     :cond_0
     cmp-long v1, p1, p3
 
     if-lez v1, :cond_2
 
-    .line 76
     const-string/jumbo v1, "nf_subtitles"
 
     const-string/jumbo v2, "From can not be later than to!"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 84
     :cond_1
     :goto_0
     return v0
 
-    .line 80
     :cond_2
     iget-wide v2, p0, Lcom/netflix/mediaclient/service/player/subtitles/BaseSubtitleBlock;->mStart:J
 
@@ -251,7 +231,6 @@
 
     const/4 v0, 0x1
 
-    .line 81
     :cond_3
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -259,7 +238,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 82
     const-string/jumbo v1, "nf_subtitles"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -288,8 +266,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 101
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

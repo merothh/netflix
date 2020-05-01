@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/mdx/cast/CastManager;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 157
     iput-object p1, p0, Lcom/netflix/mediaclient/service/mdx/cast/CastManager$5;->this$0:Lcom/netflix/mediaclient/service/mdx/cast/CastManager;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/mdx/cast/CastManager$5;->val$id:Ljava/lang/String;
@@ -32,15 +30,12 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 160
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 161
     invoke-static {}, Lcom/netflix/mediaclient/service/mdx/cast/CastManager;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -67,7 +62,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 164
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/cast/CastManager$5;->this$0:Lcom/netflix/mediaclient/service/mdx/cast/CastManager;
 
@@ -75,7 +69,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/mdx/cast/CastManager;->access$402(Lcom/netflix/mediaclient/service/mdx/cast/CastManager;Landroid/support/v7/media/MediaRouter$RouteInfo;)Landroid/support/v7/media/MediaRouter$RouteInfo;
 
-    .line 165
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/cast/CastManager$5;->this$0:Lcom/netflix/mediaclient/service/mdx/cast/CastManager;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/mdx/cast/CastManager;->access$500(Lcom/netflix/mediaclient/service/mdx/cast/CastManager;)Ljava/util/Map;
@@ -90,22 +83,18 @@
 
     check-cast v0, Landroid/support/v7/media/MediaRouter$RouteInfo;
 
-    .line 166
     if-eqz v0, :cond_1
 
-    .line 167
     iget-object v1, p0, Lcom/netflix/mediaclient/service/mdx/cast/CastManager$5;->this$0:Lcom/netflix/mediaclient/service/mdx/cast/CastManager;
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/service/mdx/cast/CastManager;->access$402(Lcom/netflix/mediaclient/service/mdx/cast/CastManager;Landroid/support/v7/media/MediaRouter$RouteInfo;)Landroid/support/v7/media/MediaRouter$RouteInfo;
 
-    .line 168
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/cast/CastManager$5;->this$0:Lcom/netflix/mediaclient/service/mdx/cast/CastManager;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/mdx/cast/CastManager$5;->val$id:Ljava/lang/String;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/mdx/cast/CastManager;->access$602(Lcom/netflix/mediaclient/service/mdx/cast/CastManager;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 176
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/cast/CastManager$5;->this$0:Lcom/netflix/mediaclient/service/mdx/cast/CastManager;
 
@@ -115,7 +104,6 @@
 
     if-nez v0, :cond_2
 
-    .line 177
     invoke-static {}, Lcom/netflix/mediaclient/service/mdx/cast/CastManager;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -142,11 +130,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 189
     :goto_0
     return-void
 
-    .line 180
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/cast/CastManager$5;->this$0:Lcom/netflix/mediaclient/service/mdx/cast/CastManager;
 
@@ -154,7 +140,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/mdx/cast/CastManager;->access$702(Lcom/netflix/mediaclient/service/mdx/cast/CastManager;Z)Z
 
-    .line 181
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/cast/CastManager$5;->this$0:Lcom/netflix/mediaclient/service/mdx/cast/CastManager;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/mdx/cast/CastManager;->access$800(Lcom/netflix/mediaclient/service/mdx/cast/CastManager;)Landroid/support/v7/media/MediaRouter;
@@ -177,14 +162,12 @@
 
     if-nez v0, :cond_4
 
-    .line 182
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 183
     invoke-static {}, Lcom/netflix/mediaclient/service/mdx/cast/CastManager;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -193,7 +176,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 185
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/cast/CastManager$5;->this$0:Lcom/netflix/mediaclient/service/mdx/cast/CastManager;
 
@@ -211,7 +193,6 @@
 
     goto :goto_0
 
-    .line 187
     :cond_4
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/cast/CastManager$5;->this$0:Lcom/netflix/mediaclient/service/mdx/cast/CastManager;
 

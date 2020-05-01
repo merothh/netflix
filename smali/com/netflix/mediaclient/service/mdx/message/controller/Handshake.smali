@@ -13,24 +13,18 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 28
     const-string/jumbo v0, "HANDSHAKE"
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/mdx/message/MdxMessage;-><init>(Ljava/lang/String;)V
 
-    .line 29
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/mdx/message/controller/Handshake;->createObj()V
 
-    .line 30
     return-void
 .end method
 
 .method private createObj()V
     .locals 4
 
-    .prologue
-    .line 33
     :try_start_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/controller/Handshake;->mJson:Lorg/json/JSONObject;
 
@@ -42,15 +36,12 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 38
     :goto_0
     return-void
 
-    .line 35
     :catch_0
     move-exception v0
 
-    .line 36
     const-string/jumbo v1, "nf_mdx"
 
     new-instance v2, Ljava/lang/StringBuilder;

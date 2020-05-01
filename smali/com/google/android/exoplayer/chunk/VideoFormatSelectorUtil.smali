@@ -7,12 +7,10 @@
 .method private static getMaxVideoSizeInViewport(ZIIII)Landroid/graphics/Point;
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 178
     if-eqz p0, :cond_0
 
     if-le p3, p4, :cond_1
@@ -31,7 +29,6 @@
 
     move p2, v3
 
-    .line 185
     :cond_0
     mul-int v0, p3, p2
 
@@ -39,7 +36,6 @@
 
     if-lt v0, v1, :cond_3
 
-    .line 187
     new-instance v0, Landroid/graphics/Point;
 
     mul-int v1, p1, p4
@@ -50,14 +46,12 @@
 
     invoke-direct {v0, p1, v1}, Landroid/graphics/Point;-><init>(II)V
 
-    .line 190
     :goto_2
     return-object v0
 
     :cond_1
     move v2, v1
 
-    .line 178
     goto :goto_0
 
     :cond_2
@@ -65,7 +59,6 @@
 
     goto :goto_1
 
-    .line 190
     :cond_3
     new-instance v0, Landroid/graphics/Point;
 
@@ -83,27 +76,22 @@
 .method private static isFormatPlayable(Lcom/google/android/exoplayer/chunk/Format;[Ljava/lang/String;ZZ)Z
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 139
     if-eqz p1, :cond_1
 
     iget-object v1, p0, Lcom/google/android/exoplayer/chunk/Format;->mimeType:Ljava/lang/String;
 
-    .line 140
     invoke-static {p1, v1}, Lcom/google/android/exoplayer/util/Util;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 169
     :cond_0
     :goto_0
     return v0
 
-    .line 144
     :cond_1
     if-eqz p2, :cond_2
 
@@ -119,7 +107,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 148
     :cond_2
     iget v1, p0, Lcom/google/android/exoplayer/chunk/Format;->width:I
 
@@ -129,21 +116,18 @@
 
     if-lez v1, :cond_6
 
-    .line 149
     sget v1, Lcom/google/android/exoplayer/util/Util;->SDK_INT:I
 
     const/16 v2, 0x15
 
     if-lt v1, v2, :cond_5
 
-    .line 150
     iget-object v0, p0, Lcom/google/android/exoplayer/chunk/Format;->codecs:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/android/exoplayer/util/MimeTypes;->getVideoMediaMimeType(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 151
     const-string/jumbo v1, "video/x-unknown"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -152,10 +136,8 @@
 
     if-eqz v1, :cond_3
 
-    .line 153
     const-string/jumbo v0, "video/avc"
 
-    .line 155
     :cond_3
     iget v1, p0, Lcom/google/android/exoplayer/chunk/Format;->frameRate:F
 
@@ -165,7 +147,6 @@
 
     if-lez v1, :cond_4
 
-    .line 156
     iget v2, p0, Lcom/google/android/exoplayer/chunk/Format;->width:I
 
     iget v3, p0, Lcom/google/android/exoplayer/chunk/Format;->height:I
@@ -182,7 +163,6 @@
 
     goto :goto_0
 
-    .line 159
     :cond_4
     iget v1, p0, Lcom/google/android/exoplayer/chunk/Format;->width:I
 
@@ -194,7 +174,6 @@
 
     goto :goto_0
 
-    .line 164
     :cond_5
     iget v1, p0, Lcom/google/android/exoplayer/chunk/Format;->width:I
 
@@ -208,7 +187,6 @@
 
     if-gt v1, v2, :cond_0
 
-    .line 169
     :cond_6
     const/4 v0, 0x1
 
@@ -229,21 +207,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 91
     const v3, 0x7fffffff
 
-    .line 92
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 95
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v6
 
-    .line 96
     const/4 v2, 0x0
 
     move v4, v2
@@ -251,7 +224,6 @@
     :goto_0
     if-ge v4, v6, :cond_0
 
-    .line 97
     invoke-interface {p0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -262,7 +234,6 @@
 
     move-result-object v7
 
-    .line 98
     move/from16 v0, p4
 
     invoke-static {v7, p1, p2, v0}, Lcom/google/android/exoplayer/chunk/VideoFormatSelectorUtil;->isFormatPlayable(Lcom/google/android/exoplayer/chunk/Format;[Ljava/lang/String;ZZ)Z
@@ -271,14 +242,12 @@
 
     if-eqz v2, :cond_3
 
-    .line 100
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 104
     iget v2, v7, Lcom/google/android/exoplayer/chunk/Format;->width:I
 
     if-lez v2, :cond_3
@@ -291,7 +260,6 @@
 
     if-lez p6, :cond_3
 
-    .line 105
     iget v2, v7, Lcom/google/android/exoplayer/chunk/Format;->width:I
 
     iget v8, v7, Lcom/google/android/exoplayer/chunk/Format;->height:I
@@ -304,14 +272,12 @@
 
     move-result-object v8
 
-    .line 107
     iget v2, v7, Lcom/google/android/exoplayer/chunk/Format;->width:I
 
     iget v9, v7, Lcom/google/android/exoplayer/chunk/Format;->height:I
 
     mul-int/2addr v2, v9
 
-    .line 108
     iget v9, v7, Lcom/google/android/exoplayer/chunk/Format;->width:I
 
     iget v10, v8, Landroid/graphics/Point;->x:I
@@ -342,7 +308,6 @@
 
     if-ge v2, v3, :cond_3
 
-    .line 96
     :goto_1
     add-int/lit8 v3, v4, 0x1
 
@@ -352,13 +317,11 @@
 
     goto :goto_0
 
-    .line 120
     :cond_0
     const v2, 0x7fffffff
 
     if-eq v3, v2, :cond_2
 
-    .line 121
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -370,7 +333,6 @@
     :goto_2
     if-ltz v4, :cond_2
 
-    .line 122
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -391,7 +353,6 @@
 
     move-result-object v2
 
-    .line 123
     iget v6, v2, Lcom/google/android/exoplayer/chunk/Format;->width:I
 
     if-lez v6, :cond_1
@@ -408,10 +369,8 @@
 
     if-le v2, v3, :cond_1
 
-    .line 125
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 121
     :cond_1
     add-int/lit8 v2, v4, -0x1
 
@@ -419,7 +378,6 @@
 
     goto :goto_2
 
-    .line 130
     :cond_2
     invoke-static {v5}, Lcom/google/android/exoplayer/util/Util;->toArray(Ljava/util/List;)[I
 
@@ -448,13 +406,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 54
     invoke-static {p0}, Lcom/google/android/exoplayer/util/Util;->getPhysicalDisplaySize(Landroid/content/Context;)Landroid/graphics/Point;
 
     move-result-object v0
 
-    .line 55
     const/4 v3, 0x1
 
     const/4 v4, 0x0

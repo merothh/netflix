@@ -46,39 +46,30 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/falkor/Ref;->valueRef:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 17
     return-void
 .end method
 
 .method public constructor <init>(Lcom/netflix/falkor/PQL;)V
     .locals 1
 
-    .prologue
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/falkor/Ref;->valueRef:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 20
     iput-object p1, p0, Lcom/netflix/falkor/Ref;->refPath:Lcom/netflix/falkor/PQL;
 
-    .line 21
     return-void
 .end method
 
@@ -87,13 +78,10 @@
 .method public clearValue()V
     .locals 3
 
-    .prologue
-    .line 89
     sget-boolean v0, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v0, :cond_0
 
-    .line 90
     const-string/jumbo v0, "Ref"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -118,7 +106,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 92
     :cond_0
     iget-object v0, p0, Lcom/netflix/falkor/Ref;->valueRef:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -126,15 +113,12 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 93
     return-void
 .end method
 
 .method public getExpires()Ljava/util/Date;
     .locals 1
 
-    .prologue
-    .line 119
     iget-object v0, p0, Lcom/netflix/falkor/Ref;->expires:Ljava/util/Date;
 
     return-object v0
@@ -143,20 +127,16 @@
 .method public getHardValue()Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 24
     iget-object v0, p0, Lcom/netflix/falkor/Ref;->valueRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 25
     sget-boolean v0, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v0, :cond_0
 
-    .line 26
     const-string/jumbo v2, "Ref"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -196,11 +176,9 @@
 
     invoke-static {v2, v0}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 28
     :cond_0
     return-object v1
 
-    .line 26
     :cond_1
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -212,8 +190,6 @@
 .method public getPath()Lcom/netflix/falkor/PQL;
     .locals 1
 
-    .prologue
-    .line 98
     iget-object v0, p0, Lcom/netflix/falkor/Ref;->path:Lcom/netflix/falkor/PQL;
 
     return-object v0
@@ -222,8 +198,6 @@
 .method public getRefPath()Lcom/netflix/falkor/PQL;
     .locals 1
 
-    .prologue
-    .line 32
     iget-object v0, p0, Lcom/netflix/falkor/Ref;->refPath:Lcom/netflix/falkor/PQL;
 
     return-object v0
@@ -241,8 +215,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 108
     iget-object v0, p0, Lcom/netflix/falkor/Ref;->references:Lcom/netflix/falkor/LinkedList;
 
     return-object v0
@@ -259,23 +231,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 52
     iget-object v0, p0, Lcom/netflix/falkor/Ref;->valueRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 53
     if-eqz v1, :cond_1
 
-    .line 54
     sget-boolean v0, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v0, :cond_0
 
-    .line 55
     const-string/jumbo v0, "Ref"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -300,12 +267,10 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 81
     :cond_0
     :goto_0
     return-object v1
 
-    .line 60
     :cond_1
     iget-object v0, p0, Lcom/netflix/falkor/Ref;->refPath:Lcom/netflix/falkor/PQL;
 
@@ -319,26 +284,22 @@
 
     if-eqz v0, :cond_4
 
-    .line 61
     :cond_2
     sget-boolean v0, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v0, :cond_3
 
-    .line 62
     const-string/jumbo v0, "Ref"
 
     const-string/jumbo v1, "refPath is empty - getValue() returns null"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     :cond_3
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 66
     :cond_4
     iget-object v0, p0, Lcom/netflix/falkor/Ref;->refPath:Lcom/netflix/falkor/PQL;
 
@@ -346,17 +307,14 @@
 
     move-result-object v1
 
-    .line 67
     instance-of v0, v1, Lcom/netflix/falkor/ReferenceTarget;
 
     if-eqz v0, :cond_6
 
-    .line 68
     sget-boolean v0, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v0, :cond_5
 
-    .line 69
     const-string/jumbo v0, "Ref"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -384,10 +342,8 @@
     :cond_5
     move-object v0, v1
 
-    .line 71
     check-cast v0, Lcom/netflix/falkor/ReferenceTarget;
 
-    .line 72
     new-instance v2, Lcom/netflix/falkor/LinkedList;
 
     invoke-interface {v0}, Lcom/netflix/falkor/ReferenceTarget;->getReferences()Lcom/netflix/falkor/LinkedList;
@@ -398,14 +354,12 @@
 
     invoke-interface {v0, v2}, Lcom/netflix/falkor/ReferenceTarget;->setReferences(Lcom/netflix/falkor/LinkedList;)V
 
-    .line 73
     iget-object v0, p0, Lcom/netflix/falkor/Ref;->valueRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 76
     :cond_6
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -413,7 +367,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 77
     const-string/jumbo v2, "Ref"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -466,33 +419,24 @@
 .method public setExpires(Ljava/util/Date;)V
     .locals 0
 
-    .prologue
-    .line 123
     iput-object p1, p0, Lcom/netflix/falkor/Ref;->expires:Ljava/util/Date;
 
-    .line 124
     return-void
 .end method
 
 .method public setPath(Lcom/netflix/falkor/PQL;)V
     .locals 0
 
-    .prologue
-    .line 102
     iput-object p1, p0, Lcom/netflix/falkor/Ref;->path:Lcom/netflix/falkor/PQL;
 
-    .line 103
     return-void
 .end method
 
 .method public setRefPath(Lcom/netflix/falkor/PQL;)V
     .locals 3
 
-    .prologue
-    .line 36
     if-eqz p1, :cond_0
 
-    .line 37
     iget-object v0, p0, Lcom/netflix/falkor/Ref;->refPath:Lcom/netflix/falkor/PQL;
 
     invoke-virtual {p1, v0}, Lcom/netflix/falkor/PQL;->equals(Ljava/lang/Object;)Z
@@ -501,17 +445,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 48
     :goto_0
     return-void
 
-    .line 43
     :cond_0
     sget-boolean v0, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v0, :cond_1
 
-    .line 44
     const-string/jumbo v0, "Ref"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -534,11 +475,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 46
     :cond_1
     iput-object p1, p0, Lcom/netflix/falkor/Ref;->refPath:Lcom/netflix/falkor/PQL;
 
-    .line 47
     iget-object v0, p0, Lcom/netflix/falkor/Ref;->valueRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v1, 0x0
@@ -560,19 +499,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 112
     iput-object p1, p0, Lcom/netflix/falkor/Ref;->references:Lcom/netflix/falkor/LinkedList;
 
-    .line 114
     return-void
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 128
     const-string/jumbo v0, "Ref path: %s"
 
     const/4 v1, 0x1

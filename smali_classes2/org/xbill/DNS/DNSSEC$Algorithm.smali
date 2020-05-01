@@ -39,12 +39,10 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x2
 
     const/4 v2, 0x1
 
-    .line 73
     new-instance v0, Lorg/xbill/DNS/Mnemonic;
 
     const-string/jumbo v1, "DNSSEC algorithm"
@@ -53,33 +51,28 @@
 
     sput-object v0, Lorg/xbill/DNS/DNSSEC$Algorithm;->algs:Lorg/xbill/DNS/Mnemonic;
 
-    .line 77
     sget-object v0, Lorg/xbill/DNS/DNSSEC$Algorithm;->algs:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0xff
 
     invoke-virtual {v0, v1}, Lorg/xbill/DNS/Mnemonic;->setMaximum(I)V
 
-    .line 78
     sget-object v0, Lorg/xbill/DNS/DNSSEC$Algorithm;->algs:Lorg/xbill/DNS/Mnemonic;
 
     invoke-virtual {v0, v2}, Lorg/xbill/DNS/Mnemonic;->setNumericAllowed(Z)V
 
-    .line 80
     sget-object v0, Lorg/xbill/DNS/DNSSEC$Algorithm;->algs:Lorg/xbill/DNS/Mnemonic;
 
     const-string/jumbo v1, "RSAMD5"
 
     invoke-virtual {v0, v2, v1}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 81
     sget-object v0, Lorg/xbill/DNS/DNSSEC$Algorithm;->algs:Lorg/xbill/DNS/Mnemonic;
 
     const-string/jumbo v1, "DH"
 
     invoke-virtual {v0, v3, v1}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 82
     sget-object v0, Lorg/xbill/DNS/DNSSEC$Algorithm;->algs:Lorg/xbill/DNS/Mnemonic;
 
     const/4 v1, 0x3
@@ -88,7 +81,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 83
     sget-object v0, Lorg/xbill/DNS/DNSSEC$Algorithm;->algs:Lorg/xbill/DNS/Mnemonic;
 
     const/4 v1, 0x5
@@ -97,7 +89,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 84
     sget-object v0, Lorg/xbill/DNS/DNSSEC$Algorithm;->algs:Lorg/xbill/DNS/Mnemonic;
 
     const/4 v1, 0x6
@@ -106,7 +97,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 85
     sget-object v0, Lorg/xbill/DNS/DNSSEC$Algorithm;->algs:Lorg/xbill/DNS/Mnemonic;
 
     const/4 v1, 0x7
@@ -115,7 +105,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 86
     sget-object v0, Lorg/xbill/DNS/DNSSEC$Algorithm;->algs:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x8
@@ -124,7 +113,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 87
     sget-object v0, Lorg/xbill/DNS/DNSSEC$Algorithm;->algs:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0xa
@@ -133,7 +121,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 88
     sget-object v0, Lorg/xbill/DNS/DNSSEC$Algorithm;->algs:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0xc
@@ -142,7 +129,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 89
     sget-object v0, Lorg/xbill/DNS/DNSSEC$Algorithm;->algs:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0xd
@@ -151,7 +137,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 90
     sget-object v0, Lorg/xbill/DNS/DNSSEC$Algorithm;->algs:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0xe
@@ -160,7 +145,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 91
     sget-object v0, Lorg/xbill/DNS/DNSSEC$Algorithm;->algs:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0xfc
@@ -169,7 +153,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 92
     sget-object v0, Lorg/xbill/DNS/DNSSEC$Algorithm;->algs:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0xfd
@@ -178,7 +161,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 93
     sget-object v0, Lorg/xbill/DNS/DNSSEC$Algorithm;->algs:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0xfe
@@ -187,15 +169,12 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 94
     return-void
 .end method
 
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -204,8 +183,6 @@
 .method public static string(I)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 101
     sget-object v0, Lorg/xbill/DNS/DNSSEC$Algorithm;->algs:Lorg/xbill/DNS/Mnemonic;
 
     invoke-virtual {v0, p0}, Lorg/xbill/DNS/Mnemonic;->getText(I)Ljava/lang/String;
@@ -218,8 +195,6 @@
 .method public static value(Ljava/lang/String;)I
     .locals 1
 
-    .prologue
-    .line 112
     sget-object v0, Lorg/xbill/DNS/DNSSEC$Algorithm;->algs:Lorg/xbill/DNS/Mnemonic;
 
     invoke-virtual {v0, p0}, Lorg/xbill/DNS/Mnemonic;->getValue(Ljava/lang/String;)I

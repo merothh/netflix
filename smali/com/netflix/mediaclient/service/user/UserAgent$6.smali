@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/user/UserAgent;)V
     .locals 0
 
-    .prologue
-    .line 1679
     iput-object p1, p0, Lcom/netflix/mediaclient/service/user/UserAgent$6;->this$0:Lcom/netflix/mediaclient/service/user/UserAgent;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/configuration/SimpleConfigurationAgentWebCallback;-><init>()V
@@ -25,15 +23,12 @@
 .method public onConfigDataFetched(Lcom/netflix/mediaclient/service/webclient/model/leafs/ConfigData;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 5
 
-    .prologue
-    .line 1682
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1683
     const-string/jumbo v0, "nf_service_useragent"
 
     const-string/jumbo v1, "onConfigDataFetched res.isSuccess:%b, isAccountDataAvailable:%b"
@@ -74,7 +69,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1686
     :cond_0
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
 
@@ -90,7 +84,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1687
     :cond_1
     const-string/jumbo v0, "nf_service_useragent"
 
@@ -98,7 +91,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1688
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$6;->this$0:Lcom/netflix/mediaclient/service/user/UserAgent;
 
     new-instance v1, Lcom/netflix/mediaclient/service/user/UserAgent$FetchAccountDataTask;
@@ -111,11 +103,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/user/UserAgent;->access$3000(Lcom/netflix/mediaclient/service/user/UserAgent;Ljava/lang/Runnable;)V
 
-    .line 1692
     :goto_0
     return-void
 
-    .line 1690
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$6;->this$0:Lcom/netflix/mediaclient/service/user/UserAgent;
 

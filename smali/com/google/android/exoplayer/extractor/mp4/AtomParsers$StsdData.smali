@@ -15,20 +15,15 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    .prologue
-    .line 1208
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1209
     new-array v0, p1, [Lcom/google/android/exoplayer/extractor/mp4/TrackEncryptionBox;
 
     iput-object v0, p0, Lcom/google/android/exoplayer/extractor/mp4/AtomParsers$StsdData;->trackEncryptionBoxes:[Lcom/google/android/exoplayer/extractor/mp4/TrackEncryptionBox;
 
-    .line 1210
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/google/android/exoplayer/extractor/mp4/AtomParsers$StsdData;->nalUnitLengthFieldLength:I
 
-    .line 1211
     return-void
 .end method

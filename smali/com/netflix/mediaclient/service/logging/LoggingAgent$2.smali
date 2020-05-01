@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/logging/LoggingAgent;)V
     .locals 0
 
-    .prologue
-    .line 357
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/LoggingAgent$2;->this$0:Lcom/netflix/mediaclient/service/logging/LoggingAgent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 360
     const-string/jumbo v0, "nf_log"
 
     const-string/jumbo v1, "Running state check..."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 361
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/LoggingAgent$2;->this$0:Lcom/netflix/mediaclient/service/logging/LoggingAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/logging/LoggingAgent;->access$000(Lcom/netflix/mediaclient/service/logging/LoggingAgent;)Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;
@@ -45,7 +40,6 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;->checkState()V
 
-    .line 362
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/LoggingAgent$2;->this$0:Lcom/netflix/mediaclient/service/logging/LoggingAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/logging/LoggingAgent;->access$100(Lcom/netflix/mediaclient/service/logging/LoggingAgent;)Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;
@@ -54,7 +48,6 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;->checkState()V
 
-    .line 363
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/LoggingAgent$2;->this$0:Lcom/netflix/mediaclient/service/logging/LoggingAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/logging/LoggingAgent;->access$200(Lcom/netflix/mediaclient/service/logging/LoggingAgent;)Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl;
@@ -63,7 +56,6 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl;->checkState()V
 
-    .line 364
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/LoggingAgent$2;->this$0:Lcom/netflix/mediaclient/service/logging/LoggingAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/logging/LoggingAgent;->access$300(Lcom/netflix/mediaclient/service/logging/LoggingAgent;)Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl;
@@ -72,7 +64,6 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl;->checkState()V
 
-    .line 365
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/LoggingAgent$2;->this$0:Lcom/netflix/mediaclient/service/logging/LoggingAgent;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/logging/LoggingAgent;->getApplication()Lcom/netflix/mediaclient/NetflixApplication;
@@ -85,13 +76,11 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/app/UserInputManager;->checkState()V
 
-    .line 366
     const-string/jumbo v0, "nf_log"
 
     const-string/jumbo v1, "Running state check done."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 367
     return-void
 .end method

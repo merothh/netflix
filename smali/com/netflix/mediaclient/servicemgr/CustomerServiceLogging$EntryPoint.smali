@@ -36,7 +36,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -47,7 +46,6 @@
 
     const/4 v3, 0x0
 
-    .line 129
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;
 
     const-string/jumbo v1, "nonMemberLanding"
@@ -56,7 +54,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;->nonMemberLanding:Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;
 
-    .line 130
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;
 
     const-string/jumbo v1, "login"
@@ -65,7 +62,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;->login:Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;
 
-    .line 131
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;
 
     const-string/jumbo v1, "appMenu"
@@ -74,7 +70,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;->appMenu:Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;
 
-    .line 132
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;
 
     const-string/jumbo v1, "returnTo"
@@ -83,7 +78,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;->returnTo:Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;
 
-    .line 133
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;
 
     const-string/jumbo v1, "notification"
@@ -92,7 +86,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;->notification:Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;
 
-    .line 134
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;
 
     const-string/jumbo v1, "errorDialog"
@@ -103,7 +96,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;->errorDialog:Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;
 
-    .line 135
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;
 
     const-string/jumbo v1, "profileGate"
@@ -114,7 +106,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;->profileGate:Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;
 
-    .line 128
     const/4 v0, 0x7
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;
@@ -164,8 +155,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 128
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -174,8 +163,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;
     .locals 1
 
-    .prologue
-    .line 128
     const-class v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -190,8 +177,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;
     .locals 1
 
-    .prologue
-    .line 128
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;->clone()Ljava/lang/Object;

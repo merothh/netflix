@@ -13,8 +13,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 2578
     invoke-static {}, Lcom/netflix/mediaclient/StatusCode;->values()[Lcom/netflix/mediaclient/StatusCode;
 
     move-result-object v0
@@ -312,7 +310,6 @@
     :try_end_11
     .catch Ljava/lang/NoSuchFieldError; {:try_start_11 .. :try_end_11} :catch_3
 
-    .line 814
     :goto_11
     invoke-static {}, Lcom/netflix/mediaclient/android/activity/NetflixActivity$DismissingDialogConfig;->values()[Lcom/netflix/mediaclient/android/activity/NetflixActivity$DismissingDialogConfig;
 
@@ -389,7 +386,6 @@
 
     goto :goto_12
 
-    .line 2578
     :catch_3
     move-exception v0
 

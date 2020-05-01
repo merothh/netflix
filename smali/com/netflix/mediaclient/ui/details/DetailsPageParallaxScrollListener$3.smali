@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener;Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener$ItrackingViewAnimationActions;)V
     .locals 0
 
-    .prologue
-    .line 299
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener$3;->this$0:Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener$3;->val$animationActions:Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener$ItrackingViewAnimationActions;
@@ -32,23 +30,18 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
 
-    .prologue
-    .line 330
     return-void
 .end method
 
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 4
 
-    .prologue
-    .line 311
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener$3;->this$0:Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener;->access$202(Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener;Z)Z
 
-    .line 312
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener$3;->this$0:Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener;->trackingView:Landroid/view/View;
@@ -59,14 +52,12 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 313
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener$3;->this$0:Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener;
 
-    .line 314
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener;->getTrackerViewLatchFadeinDuration()I
 
     move-result v1
@@ -81,37 +72,29 @@
 
     invoke-direct {v1, p0}, Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener$3$1;-><init>(Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener$3;)V
 
-    .line 315
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
-    .line 326
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener$3;->val$animationActions:Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener$ItrackingViewAnimationActions;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener$ItrackingViewAnimationActions;->onAnimationEnd()V
 
-    .line 327
     return-void
 .end method
 
 .method public onAnimationRepeat(Landroid/animation/Animator;)V
     .locals 0
 
-    .prologue
-    .line 307
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 2
 
-    .prologue
-    .line 303
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener$3;->this$0:Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener;->access$202(Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener;Z)Z
 
-    .line 304
     return-void
 .end method

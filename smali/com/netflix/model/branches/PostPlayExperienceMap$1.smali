@@ -28,8 +28,6 @@
 .method constructor <init>(Lcom/netflix/model/branches/PostPlayExperienceMap;)V
     .locals 0
 
-    .prologue
-    .line 48
     iput-object p1, p0, Lcom/netflix/model/branches/PostPlayExperienceMap$1;->this$0:Lcom/netflix/model/branches/PostPlayExperienceMap;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,8 +49,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 51
     new-instance v0, Lcom/netflix/falkor/BranchMap;
 
     sget-object v1, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator;->Ref:Lcom/netflix/falkor/Func;
@@ -65,8 +61,6 @@
 .method public bridge synthetic call()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 48
     invoke-virtual {p0}, Lcom/netflix/model/branches/PostPlayExperienceMap$1;->call()Lcom/netflix/falkor/BranchMap;
 
     move-result-object v0

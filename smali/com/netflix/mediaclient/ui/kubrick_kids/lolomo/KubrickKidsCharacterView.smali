@@ -58,8 +58,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 93
     new-instance v0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView$1;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView$1;-><init>()V
@@ -72,23 +70,18 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    .prologue
     const/16 v2, 0x11
 
-    .line 46
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 47
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->setFocusable(Z)V
 
-    .line 49
     sget-object v0, Lcom/netflix/mediaclient/ui/common/PlayContext;->EMPTY_CONTEXT:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->playContext:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
-    .line 51
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -99,24 +92,20 @@
 
     move-result v0
 
-    .line 52
     new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-direct {v1, v0, v0, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
 
-    .line 53
     new-instance v0, Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
     invoke-direct {v0, p1}, Lcom/netflix/mediaclient/android/widget/AdvancedImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->bg:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
-    .line 54
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->bg:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
     invoke-virtual {p0, v0, v1}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 56
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -127,38 +116,32 @@
 
     move-result v0
 
-    .line 57
     new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-direct {v1, v0, v0, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
 
-    .line 58
     new-instance v2, Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
     invoke-direct {v2, p1}, Lcom/netflix/mediaclient/android/widget/AdvancedImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->img:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
-    .line 59
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->img:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
     div-int/lit8 v0, v0, 0x2
 
     invoke-virtual {v2, v0}, Lcom/netflix/mediaclient/android/widget/AdvancedImageView;->setCornerRadius(I)V
 
-    .line 60
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->img:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
     sget-object v2, Landroid/widget/ImageView$ScaleType;->CENTER_CROP:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v2}, Lcom/netflix/mediaclient/android/widget/AdvancedImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 61
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->img:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
     invoke-virtual {p0, v0, v1}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 63
     new-instance v0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView$CharacterVideoDetailsClickListener;
 
     check-cast p1, Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -167,15 +150,12 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->listener:Lcom/netflix/mediaclient/android/widget/VideoDetailsClickListener;
 
-    .line 64
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;)I
     .locals 1
 
-    .prologue
-    .line 34
     iget v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->kidsColor:I
 
     return v0
@@ -186,8 +166,6 @@
 .method public getImageUrl(Lcom/netflix/mediaclient/servicemgr/interface_/Video;Z)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 89
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -206,8 +184,6 @@
 .method public bridge synthetic getImageUrl(Ljava/lang/Object;Z)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 33
     check-cast p1, Lcom/netflix/mediaclient/servicemgr/interface_/Video;
 
     invoke-virtual {p0, p1, p2}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->getImageUrl(Lcom/netflix/mediaclient/servicemgr/interface_/Video;Z)Ljava/lang/String;
@@ -220,8 +196,6 @@
 .method public getPlayContext()Lcom/netflix/mediaclient/ui/common/PlayContext;
     .locals 1
 
-    .prologue
-    .line 131
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->playContext:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
     return-object v0
@@ -230,8 +204,6 @@
 .method public hide()V
     .locals 2
 
-    .prologue
-    .line 82
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -244,41 +216,34 @@
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/util/gfx/ImageLoader;->clear(Lcom/netflix/mediaclient/android/widget/AdvancedImageView;)V
 
-    .line 83
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->setVisibility(I)V
 
-    .line 84
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->listener:Lcom/netflix/mediaclient/android/widget/VideoDetailsClickListener;
 
     invoke-virtual {v0, p0}, Lcom/netflix/mediaclient/android/widget/VideoDetailsClickListener;->remove(Landroid/view/View;)V
 
-    .line 85
     return-void
 .end method
 
 .method public update(Lcom/netflix/mediaclient/servicemgr/interface_/Video;Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;IZZ)V
     .locals 8
 
-    .prologue
     const/4 v6, 0x1
 
     const/4 v7, 0x0
 
-    .line 110
     invoke-virtual {p0, p1, p5}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->getImageUrl(Lcom/netflix/mediaclient/servicemgr/interface_/Video;Z)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 111
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 112
     const-string/jumbo v0, "KubrickKidsCharacterView"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -325,7 +290,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 115
     :cond_0
     new-instance v0, Lcom/netflix/mediaclient/ui/common/PlayContextImp;
 
@@ -333,10 +297,8 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->playContext:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
-    .line 116
     invoke-virtual {p0, v7}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->setVisibility(I)V
 
-    .line 118
     sget-object v0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->BACKGROUND_DRAWABLE_IDS:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -345,7 +307,6 @@
 
     rem-int v1, p3, v0
 
-    .line 119
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->bg:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
     sget-object v0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->BACKGROUND_DRAWABLE_IDS:Ljava/util/List;
@@ -366,7 +327,6 @@
 
     invoke-virtual {v3, v0}, Lcom/netflix/mediaclient/android/widget/AdvancedImageView;->setBackgroundResource(I)V
 
-    .line 120
     sget-object v0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->BACKGROUND_DRAWABLE_IDS:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -385,7 +345,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->kidsColor:I
 
-    .line 122
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -398,7 +357,6 @@
 
     sget-object v3, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;->bif:Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
-    .line 123
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Video;->getTitle()Ljava/lang/String;
 
     move-result-object v4
@@ -409,11 +367,9 @@
 
     move v7, v6
 
-    .line 122
     :cond_1
     invoke-interface/range {v0 .. v7}, Lcom/netflix/mediaclient/util/gfx/ImageLoader;->showImg(Lcom/netflix/mediaclient/android/widget/AdvancedImageView;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;Ljava/lang/String;Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;ZI)V
 
-    .line 126
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->listener:Lcom/netflix/mediaclient/android/widget/VideoDetailsClickListener;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;->img:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
@@ -424,15 +380,12 @@
 
     invoke-virtual {v0, p0, p1, v1}, Lcom/netflix/mediaclient/android/widget/VideoDetailsClickListener;->update(Landroid/view/View;Lcom/netflix/mediaclient/servicemgr/interface_/Video;Lcom/netflix/mediaclient/android/widget/PressedStateHandler;)V
 
-    .line 127
     return-void
 .end method
 
 .method public bridge synthetic update(Ljava/lang/Object;Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;IZZ)V
     .locals 6
 
-    .prologue
-    .line 33
     move-object v1, p1
 
     check-cast v1, Lcom/netflix/mediaclient/servicemgr/interface_/Video;

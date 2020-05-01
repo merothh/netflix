@@ -11,8 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,8 +19,6 @@
 .method private static buildErrorStatusCode(Lorg/json/JSONObject;Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/BladerunnerErrorStatus$BrRequestType;)Lcom/netflix/mediaclient/android/app/Status;
     .locals 1
 
-    .prologue
-    .line 38
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/BladerunnerErrorStatus;
 
     invoke-direct {v0, p0, p1}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/BladerunnerErrorStatus;-><init>(Lorg/json/JSONObject;Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/BladerunnerErrorStatus$BrRequestType;)V
@@ -33,14 +29,10 @@
 .method public static getDataObj(Lorg/json/JSONObject;)Lorg/json/JSONObject;
     .locals 1
 
-    .prologue
-    .line 18
     if-nez p0, :cond_0
 
-    .line 19
     const/4 v0, 0x0
 
-    .line 21
     :goto_0
     return-object v0
 
@@ -57,24 +49,18 @@
 .method public static getJSONObject(Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
     .locals 1
 
-    .prologue
-    .line 25
     invoke-static {p2}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/BladerunnerParseUtils;->getDataObj(Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object v0
 
-    .line 26
     if-nez v0, :cond_0
 
-    .line 27
     const-string/jumbo v0, "null response "
 
     invoke-static {p0, v0}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 28
     const/4 v0, 0x0
 
-    .line 30
     :goto_0
     return-object v0
 
@@ -89,8 +75,6 @@
 .method public static getStatus(Lorg/json/JSONObject;Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/BladerunnerErrorStatus$BrRequestType;)Lcom/netflix/mediaclient/android/app/Status;
     .locals 1
 
-    .prologue
-    .line 34
     invoke-static {p0}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/BladerunnerParseUtils;->hasErrors(Lorg/json/JSONObject;)Z
 
     move-result v0
@@ -113,8 +97,6 @@
 .method public static hasErrors(Lorg/json/JSONObject;)Z
     .locals 5
 
-    .prologue
-    .line 42
     const-string/jumbo v0, "nf_bladerunner"
 
     const-string/jumbo v1, "hasErrors: %b"
@@ -137,7 +119,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 43
     invoke-static {p0}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/BladerunnerErrorStatus;->hasErrors(Lorg/json/JSONObject;)Z
 
     move-result v0

@@ -15,8 +15,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1561
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$19;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$19;->val$curProfile:Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;
@@ -33,25 +31,19 @@
 .method public onMovieDetailsFetched(Lcom/netflix/mediaclient/servicemgr/interface_/details/MovieDetails;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 3
 
-    .prologue
-    .line 1564
     invoke-super {p0, p1, p2}, Lcom/netflix/mediaclient/service/browse/SimpleBrowseAgentCallback;->onMovieDetailsFetched(Lcom/netflix/mediaclient/servicemgr/interface_/details/MovieDetails;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 1566
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isError()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1567
     invoke-static {p2}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;->access$4100(Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 1574
     :goto_0
     return-void
 
-    .line 1571
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$19;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
@@ -69,7 +61,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmProfile;->insertProfileIfNeeded(Lio/realm/Realm;Lcom/netflix/mediaclient/service/NetflixService;Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;)V
 
-    .line 1572
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$19;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;->access$1500(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;)Lio/realm/Realm;
@@ -90,7 +81,6 @@
 
     invoke-static {v0, v1, p1, v2}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;->insertInRealm(Lio/realm/Realm;Lcom/netflix/mediaclient/service/NetflixService;Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;Ljava/lang/String;)V
 
-    .line 1573
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$19;->val$playableId:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$19;->val$curProfile:Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;

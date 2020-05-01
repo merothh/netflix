@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)V
     .locals 0
 
-    .prologue
-    .line 139
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$1;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,25 +26,20 @@
 .method public onManagerReady(Lcom/netflix/mediaclient/servicemgr/ServiceManager;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 5
 
-    .prologue
-    .line 142
     const-string/jumbo v0, "ProfileDetailsActivity"
 
     const-string/jumbo v1, "Manager is here!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 143
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$1;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$002(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;Lcom/netflix/mediaclient/servicemgr/ServiceManager;)Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
-    .line 144
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$1;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$100(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)V
 
-    .line 145
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$1;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$200(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)Z
@@ -55,7 +48,6 @@
 
     if-nez v0, :cond_0
 
-    .line 147
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$1;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$300(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)Z
@@ -64,7 +56,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 148
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$1;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$000(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -81,17 +72,14 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->fetchAvailableAvatarsList(Lcom/netflix/mediaclient/servicemgr/ManagerCallback;)Z
 
-    .line 156
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$1;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$800(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)V
 
-    .line 157
     return-void
 
-    .line 152
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$1;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
@@ -123,7 +111,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$502(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;Lcom/netflix/mediaclient/service/webclient/model/leafs/AvatarInfo;)Lcom/netflix/mediaclient/service/webclient/model/leafs/AvatarInfo;
 
-    .line 153
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$1;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$1;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
@@ -140,26 +127,21 @@
 .method public onManagerUnavailable(Lcom/netflix/mediaclient/servicemgr/ServiceManager;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 161
     const-string/jumbo v0, "ProfileDetailsActivity"
 
     const-string/jumbo v1, "Manager isn\'t available!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 162
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$1;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$002(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;Lcom/netflix/mediaclient/servicemgr/ServiceManager;)Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
-    .line 163
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$1;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$800(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)V
 
-    .line 164
     return-void
 .end method

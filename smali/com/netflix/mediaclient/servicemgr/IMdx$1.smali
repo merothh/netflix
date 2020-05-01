@@ -19,11 +19,8 @@
 .method constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 232
     invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
-    .line 234
     const/16 v0, 0x64
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -38,7 +35,6 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/netflix/mediaclient/servicemgr/IMdx$1;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 235
     const/16 v0, 0x68
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -53,7 +49,6 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/netflix/mediaclient/servicemgr/IMdx$1;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 236
     const/16 v0, 0x69
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -68,6 +63,5 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/netflix/mediaclient/servicemgr/IMdx$1;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 237
     return-void
 .end method

@@ -21,24 +21,18 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
     const/high16 v1, 0x3f800000    # 1.0f
 
     const/4 v0, 0x0
 
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
     iput v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/ScreenMargins;->mHorizontalMargin:F
 
-    .line 27
     iput v1, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/ScreenMargins;->mHorizontalScale:F
 
-    .line 28
     iput v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/ScreenMargins;->mVerticalMargin:F
 
-    .line 29
     iput v1, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/ScreenMargins;->mVerticalScale:F
 
     return-void
@@ -47,32 +41,26 @@
 .method public static getScreenMargins(Ljava/lang/String;Ljava/lang/String;F)Lcom/netflix/mediaclient/service/player/subtitles/text/ScreenMargins;
     .locals 10
 
-    .prologue
     const/high16 v1, 0x3f800000    # 1.0f
 
     const/4 v2, 0x0
 
-    .line 40
-    .line 41
     new-instance v4, Lcom/netflix/mediaclient/service/player/subtitles/text/ScreenMargins;
 
     invoke-direct {v4}, Lcom/netflix/mediaclient/service/player/subtitles/text/ScreenMargins;-><init>()V
 
-    .line 43
     invoke-static {p0}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_6
 
-    .line 45
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 46
     const-string/jumbo v0, "nf_subtitles"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -95,24 +83,19 @@
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 48
     :cond_0
     invoke-static {p0}, Lcom/netflix/mediaclient/util/StringUtils;->extractNumberPair(Ljava/lang/String;)Landroid/util/Pair;
 
     move-result-object v5
 
-    .line 49
     if-eqz v5, :cond_7
 
-    .line 50
     invoke-static {p1}, Lcom/netflix/mediaclient/util/StringUtils;->extractNumberPair(Ljava/lang/String;)Landroid/util/Pair;
 
     move-result-object v6
 
-    .line 51
     if-eqz v6, :cond_2
 
-    .line 52
     iget-object v0, v5, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
@@ -133,7 +116,6 @@
 
     int-to-float v3, v0
 
-    .line 53
     iget-object v0, v5, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
@@ -154,7 +136,6 @@
 
     int-to-float v0, v0
 
-    .line 60
     :goto_0
     cmpl-float v5, v3, v2
 
@@ -166,17 +147,14 @@
 
     div-float v0, v3, v0
 
-    .line 61
     :goto_1
     cmpl-float v2, p2, v2
 
     if-lez v2, :cond_4
 
-    .line 62
     :goto_2
     div-float v2, v0, p2
 
-    .line 65
     sub-float v3, p2, v0
 
     invoke-static {v3}, Ljava/lang/Math;->abs(F)F
@@ -191,12 +169,10 @@
 
     if-lez v3, :cond_1
 
-    .line 67
     cmpl-float v0, p2, v0
 
     if-ltz v0, :cond_5
 
-    .line 78
     sub-float v0, v1, v2
 
     const/high16 v1, 0x40000000    # 2.0f
@@ -205,15 +181,12 @@
 
     iput v0, v4, Lcom/netflix/mediaclient/service/player/subtitles/text/ScreenMargins;->mHorizontalMargin:F
 
-    .line 79
     iput v2, v4, Lcom/netflix/mediaclient/service/player/subtitles/text/ScreenMargins;->mHorizontalScale:F
 
-    .line 102
     :cond_1
     :goto_3
     return-object v4
 
-    .line 55
     :cond_2
     iget-object v0, v5, Landroid/util/Pair;->first:Ljava/lang/Object;
 
@@ -225,7 +198,6 @@
 
     int-to-float v3, v0
 
-    .line 56
     iget-object v0, v5, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
@@ -241,16 +213,13 @@
     :cond_3
     move v0, v1
 
-    .line 60
     goto :goto_1
 
     :cond_4
     move p2, v1
 
-    .line 61
     goto :goto_2
 
-    .line 94
     :cond_5
     const-string/jumbo v0, "nf_subtitles"
 
@@ -260,7 +229,6 @@
 
     goto :goto_3
 
-    .line 99
     :cond_6
     const-string/jumbo v0, "nf_subtitles"
 
@@ -283,8 +251,6 @@
 .method public getHorizontalMargin()F
     .locals 1
 
-    .prologue
-    .line 111
     iget v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/ScreenMargins;->mHorizontalMargin:F
 
     return v0
@@ -293,8 +259,6 @@
 .method public getHorizontalScale()F
     .locals 1
 
-    .prologue
-    .line 120
     iget v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/ScreenMargins;->mHorizontalScale:F
 
     return v0
@@ -303,8 +267,6 @@
 .method public getVerticalMargin()F
     .locals 1
 
-    .prologue
-    .line 129
     iget v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/ScreenMargins;->mVerticalMargin:F
 
     return v0
@@ -313,8 +275,6 @@
 .method public getVerticalScale()F
     .locals 1
 
-    .prologue
-    .line 138
     iget v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/ScreenMargins;->mVerticalScale:F
 
     return v0

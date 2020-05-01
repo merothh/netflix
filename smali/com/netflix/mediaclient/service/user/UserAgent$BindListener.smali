@@ -14,8 +14,6 @@
 .method private constructor <init>(Lcom/netflix/mediaclient/service/user/UserAgent;)V
     .locals 0
 
-    .prologue
-    .line 871
     iput-object p1, p0, Lcom/netflix/mediaclient/service/user/UserAgent$BindListener;->this$0:Lcom/netflix/mediaclient/service/user/UserAgent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,8 +24,6 @@
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/service/user/UserAgent;Lcom/netflix/mediaclient/service/user/UserAgent$1;)V
     .locals 0
 
-    .prologue
-    .line 871
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/user/UserAgent$BindListener;-><init>(Lcom/netflix/mediaclient/service/user/UserAgent;)V
 
     return-void
@@ -38,14 +34,11 @@
 .method public received(Lcom/netflix/mediaclient/event/UIEvent;)V
     .locals 2
 
-    .prologue
-    .line 882
     const-string/jumbo v0, "nf_service_useragent"
 
     const-string/jumbo v1, "Received a bind event "
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 883
     return-void
 .end method

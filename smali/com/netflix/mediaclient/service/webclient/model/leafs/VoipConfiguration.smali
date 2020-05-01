@@ -73,8 +73,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 19
     const-string/jumbo v0, "nf_log"
 
     sput-object v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;->TAG:Ljava/lang/String;
@@ -85,22 +83,16 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     iput-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;->enableVoip:Z
 
-    .line 32
     iput-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;->enableVoipOverData:Z
 
-    .line 35
     iput-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;->enableVoipOverWiFi:Z
 
-    .line 50
     const/16 v0, 0x1f40
 
     iput v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;->sampleRateInHz:I
@@ -111,25 +103,20 @@
 .method public static loadFromPreferences(Landroid/content/Context;)Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;
     .locals 5
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 129
-    .line 130
     const-string/jumbo v0, "voip_configuration"
 
     invoke-static {p0, v0, v1}, Lcom/netflix/mediaclient/util/PreferenceUtils;->getStringPref(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 131
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 132
     sget-object v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "VOIP config not found in file system"
@@ -138,20 +125,16 @@
 
     move-object v0, v1
 
-    .line 144
     :goto_0
     if-nez v0, :cond_0
 
-    .line 145
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;-><init>()V
 
-    .line 148
     :cond_0
     return-object v0
 
-    .line 136
     :cond_1
     :try_start_0
     invoke-static {}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorParseUtils;->getGson()Lcom/google/gson/Gson;
@@ -168,7 +151,6 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 137
     :try_start_1
     sget-object v1, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;->TAG:Ljava/lang/String;
 
@@ -180,7 +162,6 @@
 
     goto :goto_0
 
-    .line 139
     :catch_0
     move-exception v1
 
@@ -190,7 +171,6 @@
 
     move-object v0, v4
 
-    .line 140
     :goto_1
     sget-object v2, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;->TAG:Ljava/lang/String;
 
@@ -202,7 +182,6 @@
 
     goto :goto_0
 
-    .line 139
     :catch_1
     move-exception v0
 
@@ -212,38 +191,30 @@
 .method public static saveToPreferences(Lcom/netflix/mediaclient/util/NetflixPreference;Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;)Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;
     .locals 2
 
-    .prologue
-    .line 116
     if-nez p1, :cond_0
 
-    .line 117
     const-string/jumbo v0, "voip_configuration"
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/util/NetflixPreference;->removePref(Ljava/lang/String;)Z
 
-    .line 118
     sget-object v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "Subtitle retry policy not found, return default"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
     new-instance p1, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;
 
     invoke-direct {p1}, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;-><init>()V
 
-    .line 123
     :goto_0
     return-object p1
 
-    .line 121
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorParseUtils;->getGson()Lcom/google/gson/Gson;
 
     move-result-object v0
 
-    .line 122
     const-string/jumbo v1, "voip_configuration"
 
     invoke-virtual {v0, p1}, Lcom/google/gson/Gson;->toJson(Ljava/lang/Object;)Ljava/lang/String;
@@ -260,8 +231,6 @@
 .method public getJitterThresholdInMs()Lcom/netflix/mediaclient/service/webclient/model/leafs/Threshold;
     .locals 1
 
-    .prologue
-    .line 73
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;->jitterThresholdInMs:Lcom/netflix/mediaclient/service/webclient/model/leafs/Threshold;
 
     return-object v0
@@ -270,8 +239,6 @@
 .method public getPacketLosThresholdInPercent()Lcom/netflix/mediaclient/service/webclient/model/leafs/Threshold;
     .locals 1
 
-    .prologue
-    .line 81
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;->packetLosThresholdInPercent:Lcom/netflix/mediaclient/service/webclient/model/leafs/Threshold;
 
     return-object v0
@@ -280,8 +247,6 @@
 .method public getRttThresholdInMs()Lcom/netflix/mediaclient/service/webclient/model/leafs/Threshold;
     .locals 1
 
-    .prologue
-    .line 69
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;->rttThresholdInMs:Lcom/netflix/mediaclient/service/webclient/model/leafs/Threshold;
 
     return-object v0
@@ -290,8 +255,6 @@
 .method public getSampleRateInHz()I
     .locals 1
 
-    .prologue
-    .line 85
     iget v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;->sampleRateInHz:I
 
     return v0
@@ -300,8 +263,6 @@
 .method public getSipThresholdInMs()Lcom/netflix/mediaclient/service/webclient/model/leafs/Threshold;
     .locals 1
 
-    .prologue
-    .line 77
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;->sipThresholdInMs:Lcom/netflix/mediaclient/service/webclient/model/leafs/Threshold;
 
     return-object v0
@@ -310,8 +271,6 @@
 .method public isEnableVoip()Z
     .locals 1
 
-    .prologue
-    .line 57
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;->enableVoip:Z
 
     return v0
@@ -320,8 +279,6 @@
 .method public isEnableVoipOverData()Z
     .locals 1
 
-    .prologue
-    .line 61
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;->enableVoipOverData:Z
 
     return v0
@@ -330,8 +287,6 @@
 .method public isEnableVoipOverWiFi()Z
     .locals 1
 
-    .prologue
-    .line 65
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;->enableVoipOverWiFi:Z
 
     return v0
@@ -340,8 +295,6 @@
 .method public isShowHelpForNonMember()Z
     .locals 1
 
-    .prologue
-    .line 89
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;->showHelpForNonMember:Z
 
     return v0
@@ -350,8 +303,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 94
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

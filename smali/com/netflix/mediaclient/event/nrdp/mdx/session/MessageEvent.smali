@@ -33,8 +33,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 24
     sget-object v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->mdx_session_message:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     sput-object v0, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessageEvent;->TYPE:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
@@ -45,8 +43,6 @@
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 1
 
-    .prologue
-    .line 45
     sget-object v0, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessageEvent;->TYPE:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->getName()Ljava/lang/String;
@@ -55,7 +51,6 @@
 
     invoke-direct {p0, v0, p1}, Lcom/netflix/mediaclient/event/nrdp/JsonBaseNccpEvent;-><init>(Ljava/lang/String;Lorg/json/JSONObject;)V
 
-    .line 46
     return-void
 .end method
 
@@ -64,8 +59,6 @@
 .method public getMsgObject()Lorg/json/JSONObject;
     .locals 1
 
-    .prologue
-    .line 101
     iget-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessageEvent;->msgObject:Lorg/json/JSONObject;
 
     return-object v0
@@ -74,8 +67,6 @@
 .method public getObject()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 111
     const-string/jumbo v0, "nrdp.mdx"
 
     return-object v0
@@ -84,8 +75,6 @@
 .method public getPairingContext()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 65
     iget-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessageEvent;->pairingContext:Ljava/lang/String;
 
     return-object v0
@@ -94,8 +83,6 @@
 .method public getSid()I
     .locals 1
 
-    .prologue
-    .line 92
     iget v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessageEvent;->sid:I
 
     return v0
@@ -104,8 +91,6 @@
 .method public getTransactionId()I
     .locals 1
 
-    .prologue
-    .line 74
     iget v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessageEvent;->transactionId:I
 
     return v0
@@ -114,8 +99,6 @@
 .method public getType()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 83
     iget-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessageEvent;->type:Ljava/lang/String;
 
     return-object v0
@@ -124,12 +107,10 @@
 .method protected populate(Lorg/json/JSONObject;)V
     .locals 3
 
-    .prologue
     const/4 v2, -0x1
 
     const/4 v1, 0x0
 
-    .line 52
     const-string/jumbo v0, "pairingContext"
 
     invoke-static {p1, v0, v1}, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessageEvent;->getUrlDecodedString(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -138,7 +119,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessageEvent;->pairingContext:Ljava/lang/String;
 
-    .line 53
     const-string/jumbo v0, "transactionId"
 
     invoke-static {p1, v0, v2}, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessageEvent;->getInt(Lorg/json/JSONObject;Ljava/lang/String;I)I
@@ -147,7 +127,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessageEvent;->transactionId:I
 
-    .line 54
     const-string/jumbo v0, "type"
 
     invoke-static {p1, v0, v1}, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessageEvent;->getString(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -156,7 +135,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessageEvent;->type:Ljava/lang/String;
 
-    .line 55
     const-string/jumbo v0, "sid"
 
     invoke-static {p1, v0, v2}, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessageEvent;->getInt(Lorg/json/JSONObject;Ljava/lang/String;I)I
@@ -165,7 +143,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessageEvent;->sid:I
 
-    .line 56
     const-string/jumbo v0, "msgObject"
 
     invoke-static {p1, v0, v1}, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessageEvent;->getJSONObject(Lorg/json/JSONObject;Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
@@ -174,6 +151,5 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessageEvent;->msgObject:Lorg/json/JSONObject;
 
-    .line 57
     return-void
 .end method

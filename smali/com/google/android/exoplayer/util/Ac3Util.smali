@@ -21,12 +21,10 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
     const/16 v2, 0x13
 
     const/4 v1, 0x3
 
-    .line 37
     const/4 v0, 0x4
 
     new-array v0, v0, [I
@@ -35,21 +33,18 @@
 
     sput-object v0, Lcom/google/android/exoplayer/util/Ac3Util;->BLOCKS_PER_SYNCFRAME_BY_NUMBLKSCOD:[I
 
-    .line 41
     new-array v0, v1, [I
 
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/google/android/exoplayer/util/Ac3Util;->SAMPLE_RATE_BY_FSCOD:[I
 
-    .line 45
     new-array v0, v1, [I
 
     fill-array-data v0, :array_2
 
     sput-object v0, Lcom/google/android/exoplayer/util/Ac3Util;->SAMPLE_RATE_BY_FSCOD2:[I
 
-    .line 49
     const/16 v0, 0x8
 
     new-array v0, v0, [I
@@ -58,14 +53,12 @@
 
     sput-object v0, Lcom/google/android/exoplayer/util/Ac3Util;->CHANNEL_COUNT_BY_ACMOD:[I
 
-    .line 53
     new-array v0, v2, [I
 
     fill-array-data v0, :array_4
 
     sput-object v0, Lcom/google/android/exoplayer/util/Ac3Util;->BITRATE_BY_HALF_FRMSIZECOD:[I
 
-    .line 58
     new-array v0, v2, [I
 
     fill-array-data v0, :array_5
@@ -74,7 +67,6 @@
 
     return-void
 
-    .line 37
     nop
 
     :array_0
@@ -85,7 +77,6 @@
         0x6
     .end array-data
 
-    .line 41
     :array_1
     .array-data 4
         0xbb80
@@ -93,7 +84,6 @@
         0x7d00
     .end array-data
 
-    .line 45
     :array_2
     .array-data 4
         0x5dc0
@@ -101,7 +91,6 @@
         0x3e80
     .end array-data
 
-    .line 49
     :array_3
     .array-data 4
         0x2
@@ -114,7 +103,6 @@
         0x5
     .end array-data
 
-    .line 53
     :array_4
     .array-data 4
         0x20
@@ -138,7 +126,6 @@
         0x280
     .end array-data
 
-    .line 58
     :array_5
     .array-data 4
         0x45
@@ -166,8 +153,6 @@
 .method public static getAc3SyncframeAudioSampleCount()I
     .locals 1
 
-    .prologue
-    .line 196
     const/16 v0, 0x600
 
     return v0
@@ -176,10 +161,8 @@
 .method public static parseAc3AnnexFFormat(Lcom/google/android/exoplayer/util/ParsableByteArray;Ljava/lang/String;JLjava/lang/String;)Lcom/google/android/exoplayer/MediaFormat;
     .locals 10
 
-    .prologue
     const/4 v2, -0x1
 
-    .line 73
     invoke-virtual {p0}, Lcom/google/android/exoplayer/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v0
@@ -188,17 +171,14 @@
 
     shr-int/lit8 v0, v0, 0x6
 
-    .line 74
     sget-object v1, Lcom/google/android/exoplayer/util/Ac3Util;->SAMPLE_RATE_BY_FSCOD:[I
 
     aget v7, v1, v0
 
-    .line 75
     invoke-virtual {p0}, Lcom/google/android/exoplayer/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v0
 
-    .line 76
     sget-object v1, Lcom/google/android/exoplayer/util/Ac3Util;->CHANNEL_COUNT_BY_ACMOD:[I
 
     and-int/lit8 v3, v0, 0x38
@@ -207,15 +187,12 @@
 
     aget v6, v1, v3
 
-    .line 77
     and-int/lit8 v0, v0, 0x4
 
     if-eqz v0, :cond_0
 
-    .line 78
     add-int/lit8 v6, v6, 0x1
 
-    .line 80
     :cond_0
     const-string/jumbo v1, "audio/ac3"
 
@@ -239,15 +216,12 @@
 .method public static parseEAc3AnnexFFormat(Lcom/google/android/exoplayer/util/ParsableByteArray;Ljava/lang/String;JLjava/lang/String;)Lcom/google/android/exoplayer/MediaFormat;
     .locals 10
 
-    .prologue
     const/4 v2, -0x1
 
-    .line 96
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer/util/ParsableByteArray;->skipBytes(I)V
 
-    .line 100
     invoke-virtual {p0}, Lcom/google/android/exoplayer/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v0
@@ -256,17 +230,14 @@
 
     shr-int/lit8 v0, v0, 0x6
 
-    .line 101
     sget-object v1, Lcom/google/android/exoplayer/util/Ac3Util;->SAMPLE_RATE_BY_FSCOD:[I
 
     aget v7, v1, v0
 
-    .line 102
     invoke-virtual {p0}, Lcom/google/android/exoplayer/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v0
 
-    .line 103
     sget-object v1, Lcom/google/android/exoplayer/util/Ac3Util;->CHANNEL_COUNT_BY_ACMOD:[I
 
     and-int/lit8 v3, v0, 0xe
@@ -275,15 +246,12 @@
 
     aget v6, v1, v3
 
-    .line 104
     and-int/lit8 v0, v0, 0x1
 
     if-eqz v0, :cond_0
 
-    .line 105
     add-int/lit8 v6, v6, 0x1
 
-    .line 107
     :cond_0
     const-string/jumbo v1, "audio/eac3"
 
@@ -307,8 +275,6 @@
 .method public static parseEAc3SyncframeAudioSampleCount(Ljava/nio/ByteBuffer;)I
     .locals 2
 
-    .prologue
-    .line 219
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v0
@@ -323,24 +289,20 @@
 
     shr-int/lit8 v0, v0, 0x6
 
-    .line 220
     const/4 v1, 0x3
 
     if-ne v0, v1, :cond_0
 
     const/4 v0, 0x6
 
-    .line 221
     :goto_0
     mul-int/lit16 v0, v0, 0x100
 
-    .line 220
     return v0
 
     :cond_0
     sget-object v0, Lcom/google/android/exoplayer/util/Ac3Util;->BLOCKS_PER_SYNCFRAME_BY_NUMBLKSCOD:[I
 
-    .line 221
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v1

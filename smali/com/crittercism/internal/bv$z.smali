@@ -13,16 +13,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 222
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 220
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/crittercism/internal/bv$z;->a:Ljava/lang/Float;
 
-    .line 224
     invoke-static {}, Lcom/crittercism/internal/bv;->b()Landroid/content/Context;
 
     move-result-object v0
@@ -43,7 +39,6 @@
 
     iput-object v0, p0, Lcom/crittercism/internal/bv$z;->a:Ljava/lang/Float;
 
-    .line 225
     return-void
 .end method
 
@@ -52,8 +47,6 @@
 .method public final a()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 228
     const-string/jumbo v0, "xdpi"
 
     return-object v0
@@ -62,11 +55,7 @@
 .method public final bridge synthetic b()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 219
-    .line 1232
     iget-object v0, p0, Lcom/crittercism/internal/bv$z;->a:Ljava/lang/Float;
 
-    .line 219
     return-object v0
 .end method

@@ -33,8 +33,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 56
     new-instance v0, Lcom/google/android/exoplayer/DecoderInfo;
 
     const-string/jumbo v1, "OMX.google.raw.decoder"
@@ -45,14 +43,12 @@
 
     sput-object v0, Lcom/google/android/exoplayer/MediaCodecUtil;->PASSTHROUGH_DECODER_INFO:Lcom/google/android/exoplayer/DecoderInfo;
 
-    .line 59
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/google/android/exoplayer/MediaCodecUtil;->decoderInfosCache:Ljava/util/Map;
 
-    .line 62
     const/4 v0, -0x1
 
     sput v0, Lcom/google/android/exoplayer/MediaCodecUtil;->maxH264DecodableFrameSize:I
@@ -63,7 +59,6 @@
 .method private static avcLevelToMaxFrameSize(I)I
     .locals 4
 
-    .prologue
     const/high16 v3, 0x200000
 
     const v2, 0x65400
@@ -72,10 +67,8 @@
 
     const v1, 0x18c00
 
-    .line 364
     sparse-switch p0, :sswitch_data_0
 
-    .line 380
     const/4 v0, -0x1
 
     :goto_0
@@ -85,22 +78,18 @@
     :sswitch_1
     move v0, v1
 
-    .line 367
     goto :goto_0
 
     :sswitch_2
     move v0, v1
 
-    .line 368
     goto :goto_0
 
     :sswitch_3
     move v0, v1
 
-    .line 369
     goto :goto_0
 
-    .line 370
     :sswitch_4
     const v0, 0x31800
 
@@ -109,22 +98,18 @@
     :sswitch_5
     move v0, v2
 
-    .line 371
     goto :goto_0
 
     :sswitch_6
     move v0, v2
 
-    .line 372
     goto :goto_0
 
-    .line 373
     :sswitch_7
     const v0, 0xe1000
 
     goto :goto_0
 
-    .line 374
     :sswitch_8
     const/high16 v0, 0x140000
 
@@ -133,34 +118,28 @@
     :sswitch_9
     move v0, v3
 
-    .line 375
     goto :goto_0
 
     :sswitch_a
     move v0, v3
 
-    .line 376
     goto :goto_0
 
-    .line 377
     :sswitch_b
     const/high16 v0, 0x220000
 
     goto :goto_0
 
-    .line 378
     :sswitch_c
     const v0, 0x564000
 
     goto :goto_0
 
-    .line 379
     :sswitch_d
     const/high16 v0, 0x900000
 
     goto :goto_0
 
-    .line 364
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0
@@ -184,13 +163,10 @@
 .method public static getDecoderInfo(Ljava/lang/String;Z)Lcom/google/android/exoplayer/DecoderInfo;
     .locals 2
 
-    .prologue
-    .line 104
     invoke-static {p0, p1}, Lcom/google/android/exoplayer/MediaCodecUtil;->getDecoderInfos(Ljava/lang/String;Z)Ljava/util/List;
 
     move-result-object v0
 
-    .line 105
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -228,10 +204,8 @@
         }
     .end annotation
 
-    .prologue
     const/16 v4, 0x15
 
-    .line 120
     const-class v2, Lcom/google/android/exoplayer/MediaCodecUtil;
 
     monitor-enter v2
@@ -241,7 +215,6 @@
 
     invoke-direct {v3, p0, p1}, Lcom/google/android/exoplayer/MediaCodecUtil$CodecKey;-><init>(Ljava/lang/String;Z)V
 
-    .line 121
     sget-object v0, Lcom/google/android/exoplayer/MediaCodecUtil;->decoderInfosCache:Ljava/util/Map;
 
     invoke-interface {v0, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -252,16 +225,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 122
     if-eqz v0, :cond_0
 
-    .line 140
     :goto_0
     monitor-exit v2
 
     return-object v0
 
-    .line 125
     :cond_0
     :try_start_1
     sget v0, Lcom/google/android/exoplayer/util/Util;->SDK_INT:I
@@ -272,13 +242,11 @@
 
     invoke-direct {v0, p1}, Lcom/google/android/exoplayer/MediaCodecUtil$MediaCodecListCompatV21;-><init>(Z)V
 
-    .line 127
     :goto_1
     invoke-static {v3, v0}, Lcom/google/android/exoplayer/MediaCodecUtil;->getDecoderInfosInternal(Lcom/google/android/exoplayer/MediaCodecUtil$CodecKey;Lcom/google/android/exoplayer/MediaCodecUtil$MediaCodecListCompat;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 128
     if-eqz p1, :cond_2
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -297,26 +265,22 @@
 
     if-gt v1, v4, :cond_2
 
-    .line 131
     new-instance v0, Lcom/google/android/exoplayer/MediaCodecUtil$MediaCodecListCompatV16;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lcom/google/android/exoplayer/MediaCodecUtil$MediaCodecListCompatV16;-><init>(Lcom/google/android/exoplayer/MediaCodecUtil$1;)V
 
-    .line 132
     invoke-static {v3, v0}, Lcom/google/android/exoplayer/MediaCodecUtil;->getDecoderInfosInternal(Lcom/google/android/exoplayer/MediaCodecUtil$CodecKey;Lcom/google/android/exoplayer/MediaCodecUtil$MediaCodecListCompat;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 133
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 134
     const-string/jumbo v4, "MediaCodecUtil"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -341,7 +305,6 @@
 
     const/4 v0, 0x0
 
-    .line 135
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -358,19 +321,16 @@
 
     move-result-object v0
 
-    .line 134
     invoke-static {v4, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
     move-object v0, v1
 
-    .line 138
     :cond_2
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 139
     sget-object v1, Lcom/google/android/exoplayer/MediaCodecUtil;->decoderInfosCache:Ljava/util/Map;
 
     invoke-interface {v1, v3, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -379,7 +339,6 @@
 
     goto :goto_0
 
-    .line 120
     :catchall_0
     move-exception v0
 
@@ -387,7 +346,6 @@
 
     throw v0
 
-    .line 125
     :cond_3
     :try_start_2
     new-instance v0, Lcom/google/android/exoplayer/MediaCodecUtil$MediaCodecListCompatV16;
@@ -416,29 +374,23 @@
         }
     .end annotation
 
-    .prologue
-    .line 146
     :try_start_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 147
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/google/android/exoplayer/MediaCodecUtil$CodecKey;->mimeType:Ljava/lang/String;
 
-    .line 148
     invoke-interface/range {p1 .. p1}, Lcom/google/android/exoplayer/MediaCodecUtil$MediaCodecListCompat;->getCodecCount()I
 
     move-result v6
 
-    .line 149
     invoke-interface/range {p1 .. p1}, Lcom/google/android/exoplayer/MediaCodecUtil$MediaCodecListCompat;->secureDecodersExplicit()Z
 
     move-result v7
 
-    .line 151
     const/4 v2, 0x0
 
     move v4, v2
@@ -446,26 +398,22 @@
     :goto_0
     if-ge v4, v6, :cond_4
 
-    .line 152
     move-object/from16 v0, p1
 
     invoke-interface {v0, v4}, Lcom/google/android/exoplayer/MediaCodecUtil$MediaCodecListCompat;->getCodecInfoAt(I)Landroid/media/MediaCodecInfo;
 
     move-result-object v8
 
-    .line 153
     invoke-virtual {v8}, Landroid/media/MediaCodecInfo;->getName()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 154
     invoke-static {v8, v9, v7}, Lcom/google/android/exoplayer/MediaCodecUtil;->isCodecUsableDecoder(Landroid/media/MediaCodecInfo;Ljava/lang/String;Z)Z
 
     move-result v2
 
     if-eqz v2, :cond_6
 
-    .line 155
     invoke-virtual {v8}, Landroid/media/MediaCodecInfo;->getSupportedTypes()[Ljava/lang/String;
 
     move-result-object v10
@@ -481,7 +429,6 @@
 
     aget-object v12, v10, v3
 
-    .line 156
     invoke-virtual {v12, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
@@ -490,20 +437,17 @@
 
     if-eqz v2, :cond_2
 
-    .line 158
     :try_start_1
     invoke-virtual {v8, v12}, Landroid/media/MediaCodecInfo;->getCapabilitiesForType(Ljava/lang/String;)Landroid/media/MediaCodecInfo$CodecCapabilities;
 
     move-result-object v2
 
-    .line 159
     move-object/from16 v0, p1
 
     invoke-interface {v0, v5, v2}, Lcom/google/android/exoplayer/MediaCodecUtil$MediaCodecListCompat;->isSecurePlaybackSupported(Ljava/lang/String;Landroid/media/MediaCodecInfo$CodecCapabilities;)Z
 
     move-result v13
 
-    .line 160
     if-eqz v7, :cond_0
 
     move-object/from16 v0, p0
@@ -521,7 +465,6 @@
 
     if-nez v14, :cond_3
 
-    .line 162
     :cond_1
     new-instance v13, Lcom/google/android/exoplayer/DecoderInfo;
 
@@ -529,7 +472,6 @@
 
     invoke-interface {v1, v13}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 155
     :cond_2
     :goto_2
     add-int/lit8 v2, v3, 0x1
@@ -538,13 +480,11 @@
 
     goto :goto_1
 
-    .line 163
     :cond_3
     if-nez v7, :cond_2
 
     if-eqz v13, :cond_2
 
-    .line 164
     new-instance v13, Lcom/google/android/exoplayer/DecoderInfo;
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -571,15 +511,12 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 183
     :cond_4
     return-object v1
 
-    .line 168
     :catch_0
     move-exception v2
 
-    .line 169
     :try_start_2
     sget v13, Lcom/google/android/exoplayer/util/Util;->SDK_INT:I
 
@@ -593,7 +530,6 @@
 
     if-nez v13, :cond_5
 
-    .line 171
     const-string/jumbo v2, "MediaCodecUtil"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -626,11 +562,9 @@
 
     goto :goto_2
 
-    .line 184
     :catch_1
     move-exception v1
 
-    .line 187
     new-instance v2, Lcom/google/android/exoplayer/MediaCodecUtil$DecoderQueryException;
 
     const/4 v3, 0x0
@@ -639,7 +573,6 @@
 
     throw v2
 
-    .line 175
     :cond_5
     :try_start_3
     const-string/jumbo v1, "MediaCodecUtil"
@@ -680,12 +613,10 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 176
     throw v2
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 151
     :cond_6
     add-int/lit8 v2, v4, 0x1
 
@@ -697,8 +628,6 @@
 .method public static getPassthroughDecoderInfo()Lcom/google/android/exoplayer/DecoderInfo;
     .locals 1
 
-    .prologue
-    .line 91
     sget-object v0, Lcom/google/android/exoplayer/MediaCodecUtil;->PASSTHROUGH_DECODER_INFO:Lcom/google/android/exoplayer/DecoderInfo;
 
     return-object v0
@@ -710,13 +639,10 @@
         value = 0x15
     .end annotation
 
-    .prologue
-    .line 352
     invoke-static {p0, p1}, Lcom/google/android/exoplayer/MediaCodecUtil;->getDecoderInfo(Ljava/lang/String;Z)Lcom/google/android/exoplayer/DecoderInfo;
 
     move-result-object v0
 
-    .line 353
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
@@ -737,7 +663,6 @@
 .method private static isCodecUsableDecoder(Landroid/media/MediaCodecInfo;Ljava/lang/String;Z)Z
     .locals 6
 
-    .prologue
     const/16 v5, 0x13
 
     const/16 v4, 0x12
@@ -746,7 +671,6 @@
 
     const/4 v0, 0x0
 
-    .line 196
     invoke-virtual {p0}, Landroid/media/MediaCodecInfo;->isEncoder()Z
 
     move-result v1
@@ -763,12 +687,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 262
     :cond_0
     :goto_0
     return v0
 
-    .line 201
     :cond_1
     sget v1, Lcom/google/android/exoplayer/util/Util;->SDK_INT:I
 
@@ -778,7 +700,6 @@
 
     const-string/jumbo v1, "CIPAACDecoder"
 
-    .line 202
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -787,7 +708,6 @@
 
     const-string/jumbo v1, "CIPMP3Decoder"
 
-    .line 203
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -796,7 +716,6 @@
 
     const-string/jumbo v1, "CIPVorbisDecoder"
 
-    .line 204
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -805,7 +724,6 @@
 
     const-string/jumbo v1, "AACDecoder"
 
-    .line 205
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -814,14 +732,12 @@
 
     const-string/jumbo v1, "MP3Decoder"
 
-    .line 206
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 210
     :cond_2
     sget v1, Lcom/google/android/exoplayer/util/Util;->SDK_INT:I
 
@@ -835,7 +751,6 @@
 
     if-nez v1, :cond_0
 
-    .line 214
     :cond_3
     sget v1, Lcom/google/android/exoplayer/util/Util;->SDK_INT:I
 
@@ -853,14 +768,12 @@
 
     sget-object v2, Lcom/google/android/exoplayer/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 215
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 221
     :cond_4
     sget v1, Lcom/google/android/exoplayer/util/Util;->SDK_INT:I
 
@@ -872,7 +785,6 @@
 
     const-string/jumbo v1, "OMX.qcom.audio.decoder.mp3"
 
-    .line 222
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -883,7 +795,6 @@
 
     sget-object v2, Lcom/google/android/exoplayer/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 223
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -894,7 +805,6 @@
 
     sget-object v2, Lcom/google/android/exoplayer/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 224
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -905,7 +815,6 @@
 
     sget-object v2, Lcom/google/android/exoplayer/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 225
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -916,7 +825,6 @@
 
     sget-object v2, Lcom/google/android/exoplayer/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 226
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -927,7 +835,6 @@
 
     sget-object v2, Lcom/google/android/exoplayer/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 227
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -938,7 +845,6 @@
 
     const-string/jumbo v2, "gee"
 
-    .line 228
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -949,7 +855,6 @@
 
     sget-object v2, Lcom/google/android/exoplayer/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 229
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -960,7 +865,6 @@
 
     sget-object v2, Lcom/google/android/exoplayer/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 230
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -971,7 +875,6 @@
 
     sget-object v2, Lcom/google/android/exoplayer/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 231
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -982,7 +885,6 @@
 
     sget-object v2, Lcom/google/android/exoplayer/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 232
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -993,7 +895,6 @@
 
     sget-object v2, Lcom/google/android/exoplayer/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 233
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -1004,14 +905,12 @@
 
     sget-object v2, Lcom/google/android/exoplayer/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 234
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 239
     :cond_5
     sget v1, Lcom/google/android/exoplayer/util/Util;->SDK_INT:I
 
@@ -1019,7 +918,6 @@
 
     const-string/jumbo v1, "OMX.qcom.audio.decoder.aac"
 
-    .line 240
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -1030,7 +928,6 @@
 
     sget-object v2, Lcom/google/android/exoplayer/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 241
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -1041,7 +938,6 @@
 
     sget-object v2, Lcom/google/android/exoplayer/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 242
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -1052,7 +948,6 @@
 
     sget-object v2, Lcom/google/android/exoplayer/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 243
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -1063,14 +958,12 @@
 
     sget-object v2, Lcom/google/android/exoplayer/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 244
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 250
     :cond_6
     sget v1, Lcom/google/android/exoplayer/util/Util;->SDK_INT:I
 
@@ -1084,7 +977,6 @@
 
     const-string/jumbo v2, "d2"
 
-    .line 251
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -1105,7 +997,6 @@
 
     const-string/jumbo v2, "jflte"
 
-    .line 252
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -1127,7 +1018,6 @@
 
     sget-object v2, Lcom/google/android/exoplayer/util/Util;->MANUFACTURER:Ljava/lang/String;
 
-    .line 253
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -1142,7 +1032,6 @@
 
     if-nez v1, :cond_0
 
-    .line 257
     :cond_8
     sget v1, Lcom/google/android/exoplayer/util/Util;->SDK_INT:I
 
@@ -1164,14 +1053,12 @@
 
     const-string/jumbo v1, "OMX.qcom.video.decoder.vp8"
 
-    .line 258
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 262
     :cond_9
     const/4 v0, 0x1
 
@@ -1184,12 +1071,10 @@
         value = 0x15
     .end annotation
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 303
     sget v0, Lcom/google/android/exoplayer/util/Util;->SDK_INT:I
 
     const/16 v3, 0x15
@@ -1201,35 +1086,29 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer/util/Assertions;->checkState(Z)V
 
-    .line 304
     invoke-static {p0, p1}, Lcom/google/android/exoplayer/MediaCodecUtil;->getVideoCapabilitiesV21(Ljava/lang/String;Z)Landroid/media/MediaCodecInfo$VideoCapabilities;
 
     move-result-object v0
 
-    .line 305
     if-eqz v0, :cond_1
 
-    .line 306
     invoke-virtual {v0, p2, p3, p4, p5}, Landroid/media/MediaCodecInfo$VideoCapabilities;->areSizeAndRateSupported(IID)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 305
     :goto_1
     return v1
 
     :cond_0
     move v0, v2
 
-    .line 303
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 306
     goto :goto_1
 .end method
 
@@ -1239,12 +1118,10 @@
         value = 0x15
     .end annotation
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 281
     sget v0, Lcom/google/android/exoplayer/util/Util;->SDK_INT:I
 
     const/16 v3, 0x15
@@ -1256,12 +1133,10 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer/util/Assertions;->checkState(Z)V
 
-    .line 282
     invoke-static {p0, p1}, Lcom/google/android/exoplayer/MediaCodecUtil;->getVideoCapabilitiesV21(Ljava/lang/String;Z)Landroid/media/MediaCodecInfo$VideoCapabilities;
 
     move-result-object v0
 
-    .line 283
     if-eqz v0, :cond_1
 
     invoke-virtual {v0, p2, p3}, Landroid/media/MediaCodecInfo$VideoCapabilities;->isSizeSupported(II)Z
@@ -1276,40 +1151,33 @@
     :cond_0
     move v0, v2
 
-    .line 281
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 283
     goto :goto_1
 .end method
 
 .method public static maxH264DecodableFrameSize()I
     .locals 5
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 334
     sget v1, Lcom/google/android/exoplayer/MediaCodecUtil;->maxH264DecodableFrameSize:I
 
     const/4 v2, -0x1
 
     if-ne v1, v2, :cond_2
 
-    .line 336
     const-string/jumbo v1, "video/avc"
 
     invoke-static {v1, v0}, Lcom/google/android/exoplayer/MediaCodecUtil;->getDecoderInfo(Ljava/lang/String;Z)Lcom/google/android/exoplayer/DecoderInfo;
 
     move-result-object v1
 
-    .line 337
     if-eqz v1, :cond_1
 
-    .line 338
     iget-object v1, v1, Lcom/google/android/exoplayer/DecoderInfo;->capabilities:Landroid/media/MediaCodecInfo$CodecCapabilities;
 
     iget-object v2, v1, Landroid/media/MediaCodecInfo$CodecCapabilities;->profileLevels:[Landroid/media/MediaCodecInfo$CodecProfileLevel;
@@ -1323,7 +1191,6 @@
 
     aget-object v4, v2, v0
 
-    .line 339
     iget v4, v4, Landroid/media/MediaCodecInfo$CodecProfileLevel;->level:I
 
     invoke-static {v4}, Lcom/google/android/exoplayer/MediaCodecUtil;->avcLevelToMaxFrameSize(I)I
@@ -1334,12 +1201,10 @@
 
     move-result v1
 
-    .line 338
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 342
     :cond_0
     const v0, 0x2a300
 
@@ -1347,11 +1212,9 @@
 
     move-result v0
 
-    .line 344
     :cond_1
     sput v0, Lcom/google/android/exoplayer/MediaCodecUtil;->maxH264DecodableFrameSize:I
 
-    .line 346
     :cond_2
     sget v0, Lcom/google/android/exoplayer/MediaCodecUtil;->maxH264DecodableFrameSize:I
 

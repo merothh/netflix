@@ -13,19 +13,14 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     return-void
 .end method
 
 .method public static declared-synchronized createCryptoInstance(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/INetflixService;Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$DrmReadyCallback;)V
     .locals 5
 
-    .prologue
-    .line 36
     const-class v1, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManagerRegistry;
 
     monitor-enter v1
@@ -35,7 +30,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 40
     const-string/jumbo v0, "nf_msl"
 
     const-string/jumbo v2, "CryptoManagerRegistry::createCryptoInstance:  CryptoManager can not be instantiated more than once!"
@@ -44,14 +38,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 76
     :cond_0
     :goto_0
     monitor-exit v1
 
     return-void
 
-    .line 45
     :cond_1
     :try_start_1
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/INetflixService;->getConfiguration()Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;
@@ -62,14 +54,12 @@
 
     move-result-object v0
 
-    .line 46
     if-eqz v0, :cond_2
 
     sget-object v2, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;->LEGACY:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;
 
     if-ne v0, v2, :cond_3
 
-    .line 47
     :cond_2
     const-string/jumbo v0, "nf_msl"
 
@@ -77,10 +67,8 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 48
     if-eqz p2, :cond_0
 
-    .line 49
     sget-object v0, Lcom/netflix/mediaclient/android/app/CommonStatus;->MSL_FAILED_TO_CREATE_CLIENT:Lcom/netflix/mediaclient/android/app/NetflixImmutableStatus;
 
     invoke-interface {p2, v0}, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$DrmReadyCallback;->drmError(Lcom/netflix/mediaclient/android/app/Status;)V
@@ -89,7 +77,6 @@
 
     goto :goto_0
 
-    .line 36
     :catchall_0
     move-exception v0
 
@@ -97,21 +84,18 @@
 
     throw v0
 
-    .line 54
     :cond_3
     :try_start_2
     sget-object v2, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;->WIDEVINE_L1:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;
 
     if-ne v0, v2, :cond_4
 
-    .line 56
     const-string/jumbo v0, "nf_msl"
 
     const-string/jumbo v2, "CryptoManagerRegistry::createCryptoInstance: create CryptoManager Widevine L1 starts..."
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 57
     new-instance v0, Lcom/netflix/mediaclient/service/configuration/crypto/MSLWidevineL1CryptoManager;
 
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/INetflixService;->getConfiguration()Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;
@@ -122,7 +106,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManagerRegistry;->sCryptoManager:Lcom/netflix/mediaclient/service/configuration/crypto/MSLWidevineCryptoManager;
 
-    .line 72
     :goto_1
     const-string/jumbo v0, "nf_msl"
 
@@ -130,12 +113,10 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 73
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManagerRegistry;->sCryptoManager:Lcom/netflix/mediaclient/service/configuration/crypto/MSLWidevineCryptoManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/configuration/crypto/MSLWidevineCryptoManager;->init()V
 
-    .line 74
     const-string/jumbo v0, "nf_msl"
 
     const-string/jumbo v2, "CryptoManagerRegistry::createCryptoInstance: create CryptoManager done."
@@ -144,20 +125,17 @@
 
     goto :goto_0
 
-    .line 59
     :cond_4
     sget-object v2, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;->WIDEVINE_L3:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;
 
     if-ne v0, v2, :cond_5
 
-    .line 61
     const-string/jumbo v0, "nf_msl"
 
     const-string/jumbo v2, "CryptoManagerRegistry::createCryptoInstance: create CryptoManager Widevine L3 starts..."
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 62
     new-instance v0, Lcom/netflix/mediaclient/service/configuration/crypto/MSLWidevineL3CryptoManager;
 
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/INetflixService;->getConfiguration()Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;
@@ -170,7 +148,6 @@
 
     goto :goto_1
 
-    .line 65
     :cond_5
     const-string/jumbo v2, "nf_msl"
 
@@ -194,10 +171,8 @@
 
     invoke-static {v2, v0}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
     if-eqz p2, :cond_0
 
-    .line 67
     sget-object v0, Lcom/netflix/mediaclient/android/app/CommonStatus;->MSL_FAILED_TO_CREATE_CLIENT:Lcom/netflix/mediaclient/android/app/NetflixImmutableStatus;
 
     invoke-interface {p2, v0}, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$DrmReadyCallback;->drmError(Lcom/netflix/mediaclient/android/app/Status;)V
@@ -210,8 +185,6 @@
 .method public static declared-synchronized getCryptoManager()Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager;
     .locals 2
 
-    .prologue
-    .line 79
     const-class v0, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManagerRegistry;
 
     monitor-enter v0
@@ -236,8 +209,6 @@
 .method public static declared-synchronized getCryptoProvider()Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;
     .locals 2
 
-    .prologue
-    .line 84
     const-class v1, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManagerRegistry;
 
     monitor-enter v1
@@ -247,17 +218,14 @@
 
     if-nez v0, :cond_0
 
-    .line 85
     const-string/jumbo v0, "CryptoManagerRegistry:: crypto manager is NULL!"
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/logging/error/ErrorLoggingManager;->logHandledException(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 86
     const/4 v0, 0x0
 
-    .line 88
     :goto_0
     monitor-exit v1
 
@@ -275,7 +243,6 @@
 
     goto :goto_0
 
-    .line 84
     :catchall_0
     move-exception v0
 

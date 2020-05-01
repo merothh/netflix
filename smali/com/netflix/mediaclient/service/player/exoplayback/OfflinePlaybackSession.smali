@@ -122,82 +122,64 @@
 .method constructor <init>(Landroid/content/Context;Landroid/os/Handler;Lcom/netflix/mediaclient/service/player/exoplayback/IPlaybackSession$PlaybackSessionCallback;Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface;Lcom/netflix/mediaclient/servicemgr/IClientLogging;Lcom/netflix/mediaclient/service/pdslogging/PdsPlayInterface;Lcom/netflix/mediaclient/service/offline/subtitles/SubtitleOfflineManager;JJLcom/netflix/mediaclient/ui/common/PlayContext;)V
     .locals 10
 
-    .prologue
-    .line 103
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 85
     sget-object v2, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;->none:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;
 
     iput-object v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mResumePlayReason:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;
 
-    .line 87
     const-wide/16 v2, 0x0
 
     iput-wide v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPlaybackTS:J
 
-    .line 517
     new-instance v2, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$2;
 
     invoke-direct {v2, p0}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$2;-><init>(Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;)V
 
     iput-object v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPeriodicCallback:Ljava/lang/Runnable;
 
-    .line 104
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mContext:Landroid/content/Context;
 
-    .line 105
     iput-object p2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mMainHandler:Landroid/os/Handler;
 
-    .line 106
     iput-object p3, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mCallback:Lcom/netflix/mediaclient/service/player/exoplayback/IPlaybackSession$PlaybackSessionCallback;
 
-    .line 107
     iput-object p4, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflineAgent:Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface;
 
-    .line 108
     iput-object p5, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mLoggingAgent:Lcom/netflix/mediaclient/servicemgr/IClientLogging;
 
-    .line 109
     invoke-static {}, Lcom/netflix/mediaclient/util/NetflixTransactionIdGenerator;->generateXid()Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mXid:Ljava/lang/String;
 
-    .line 110
     move-wide/from16 v0, p8
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mMovieId:J
 
-    .line 111
     move-wide/from16 v0, p10
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mBookmark:J
 
-    .line 112
     move-object/from16 v0, p7
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mSubtitles:Lcom/netflix/mediaclient/service/offline/subtitles/SubtitleOfflineManager;
 
-    .line 113
     invoke-static {}, Lcom/netflix/mediaclient/util/Time;->mono()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mUserPlay:J
 
-    .line 114
     move-object/from16 v0, p12
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPlayContext:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
-    .line 115
     move-wide/from16 v0, p8
 
     invoke-direct {p0, p4, v0, v1}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->requestOfflineManifest(Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface;J)V
 
-    .line 117
     invoke-static/range {p8 .. p9}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object v4
@@ -218,7 +200,6 @@
 
     iput-object v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPdsPlaySession:Lcom/netflix/mediaclient/service/pdslogging/PdsPlaySessionInterface;
 
-    .line 120
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Lcom/netflix/mediaclient/service/player/exoplayback/BatteryStats;->createBatteryStats(Landroid/content/Context;)Lcom/netflix/mediaclient/service/player/exoplayback/BatteryStats;
@@ -227,17 +208,14 @@
 
     iput-object v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mBatteryStats:Lcom/netflix/mediaclient/service/player/exoplayback/BatteryStats;
 
-    .line 121
     new-instance v2, Landroid/content/IntentFilter;
 
     invoke-direct {v2}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 122
     const-string/jumbo v3, "android.intent.action.ACTION_POWER_CONNECTED"
 
     invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 123
     new-instance v3, Lcom/netflix/mediaclient/service/player/exoplayback/PowerStatusReceiver;
 
     iget-object v4, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mBatteryStats:Lcom/netflix/mediaclient/service/player/exoplayback/BatteryStats;
@@ -246,20 +224,16 @@
 
     iput-object v3, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPowerStatusRcvr:Lcom/netflix/mediaclient/service/player/exoplayback/PowerStatusReceiver;
 
-    .line 124
     iget-object v3, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPowerStatusRcvr:Lcom/netflix/mediaclient/service/player/exoplayback/PowerStatusReceiver;
 
     invoke-virtual {p1, v3, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 125
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$OfflineManifest;)V
     .locals 0
 
-    .prologue
-    .line 51
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->handleManifest(Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$OfflineManifest;)V
 
     return-void
@@ -268,8 +242,6 @@
 .method static synthetic access$100(Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 51
     invoke-direct {p0, p1, p2, p3}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->reportStartPlay(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -278,8 +250,6 @@
 .method static synthetic access$200(Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;)Lcom/netflix/mediaclient/service/player/exoplayback/IPlaybackSession$PlaybackSessionCallback;
     .locals 1
 
-    .prologue
-    .line 51
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mCallback:Lcom/netflix/mediaclient/service/player/exoplayback/IPlaybackSession$PlaybackSessionCallback;
 
     return-object v0
@@ -288,8 +258,6 @@
 .method static synthetic access$300(Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;)J
     .locals 2
 
-    .prologue
-    .line 51
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPlaybackTS:J
 
     return-wide v0
@@ -298,8 +266,6 @@
 .method static synthetic access$302(Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;J)J
     .locals 1
 
-    .prologue
-    .line 51
     iput-wide p1, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPlaybackTS:J
 
     return-wide p1
@@ -308,8 +274,6 @@
 .method static synthetic access$400(Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;)Lcom/netflix/mediaclient/service/player/exoplayback/PlayTimeTracker;
     .locals 1
 
-    .prologue
-    .line 51
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPlayTracker:Lcom/netflix/mediaclient/service/player/exoplayback/PlayTimeTracker;
 
     return-object v0
@@ -318,8 +282,6 @@
 .method static synthetic access$500(Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;I)V
     .locals 0
 
-    .prologue
-    .line 51
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->handleSubtitleUpdate(I)V
 
     return-void
@@ -328,8 +290,6 @@
 .method static synthetic access$600(Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;)J
     .locals 2
 
-    .prologue
-    .line 51
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mMovieId:J
 
     return-wide v0
@@ -338,8 +298,6 @@
 .method static synthetic access$700(Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;)Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface;
     .locals 1
 
-    .prologue
-    .line 51
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflineAgent:Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface;
 
     return-object v0
@@ -348,8 +306,6 @@
 .method static synthetic access$800(Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;)Lcom/netflix/mediaclient/service/pdslogging/PdsPlaySessionInterface;
     .locals 1
 
-    .prologue
-    .line 51
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPdsPlaySession:Lcom/netflix/mediaclient/service/pdslogging/PdsPlaySessionInterface;
 
     return-object v0
@@ -358,8 +314,6 @@
 .method static synthetic access$900(Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;)Landroid/os/Handler;
     .locals 1
 
-    .prologue
-    .line 51
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mMainHandler:Landroid/os/Handler;
 
     return-object v0
@@ -368,8 +322,6 @@
 .method private getPlayTimeJson()Lorg/json/JSONObject;
     .locals 1
 
-    .prologue
-    .line 746
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPlayTracker:Lcom/netflix/mediaclient/service/player/exoplayback/PlayTimeTracker;
 
     if-eqz v0, :cond_0
@@ -394,60 +346,50 @@
 .method private handleManifest(Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$OfflineManifest;)V
     .locals 8
 
-    .prologue
     const/4 v1, 0x0
 
     const/4 v3, 0x0
 
-    .line 151
     invoke-interface {p1}, Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$OfflineManifest;->getAudioSubtitleDefaultOrderInfo()[Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mAudioSubtitleDefaultOrderInfo:[Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;
 
-    .line 152
     invoke-interface {p1}, Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$OfflineManifest;->getSubtitleTrackList()[Lcom/netflix/mediaclient/media/Subtitle;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mSubtitle:[Lcom/netflix/mediaclient/media/Subtitle;
 
-    .line 153
     invoke-interface {p1}, Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$OfflineManifest;->getAudioTrackList()[Lcom/netflix/mediaclient/media/AudioSource;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mAudioSource:[Lcom/netflix/mediaclient/media/AudioSource;
 
-    .line 154
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPdsPlaySession:Lcom/netflix/mediaclient/service/pdslogging/PdsPlaySessionInterface;
 
     invoke-interface {v0, p1}, Lcom/netflix/mediaclient/service/pdslogging/PdsPlaySessionInterface;->onManifest(Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$OfflineManifest;)V
 
-    .line 156
     invoke-interface {p1}, Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$OfflineManifest;->getOxId()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOxid:Ljava/lang/String;
 
-    .line 157
     invoke-interface {p1}, Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$OfflineManifest;->getDxId()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mDxid:Ljava/lang/String;
 
-    .line 159
     invoke-interface {p1}, Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$OfflineManifest;->getMpd()Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;
 
     move-result-object v4
 
-    .line 160
     if-nez v4, :cond_0
 
-    .line 161
     sget-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;->MANIFEST_PROCESSING:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;->toString()Ljava/lang/String;
@@ -460,7 +402,6 @@
 
     invoke-direct {p0, v0, v2, v3}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->reportStartPlay(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 163
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPdsPlaySession:Lcom/netflix/mediaclient/service/pdslogging/PdsPlaySessionInterface;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->getPlayTimeJson()Lorg/json/JSONObject;
@@ -477,7 +418,6 @@
 
     invoke-interface {v0, v2, v3, v4}, Lcom/netflix/mediaclient/service/pdslogging/PdsPlaySessionInterface;->stop(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 164
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mCallback:Lcom/netflix/mediaclient/service/player/exoplayback/IPlaybackSession$PlaybackSessionCallback;
 
     new-instance v2, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError;
@@ -488,21 +428,17 @@
 
     sget-object v5, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;->MANIFEST_PROCESSING:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;
 
-    .line 166
     invoke-virtual {v5}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;->toString()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-direct {v2, v3, v4, v5, v1}, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError;-><init>(Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 164
     invoke-interface {v0, v2}, Lcom/netflix/mediaclient/service/player/exoplayback/IPlaybackSession$PlaybackSessionCallback;->handleError(Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError;)V
 
-    .line 218
     :goto_0
     return-void
 
-    .line 170
     :cond_0
     invoke-interface {p1}, Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$OfflineManifest;->getVideoTrackList()Ljava/util/List;
 
@@ -510,7 +446,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mVideoTracks:Ljava/util/List;
 
-    .line 171
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mVideoTracks:Ljava/util/List;
 
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -521,7 +456,6 @@
 
     iget-object v2, v0, Lcom/netflix/mediaclient/media/manifest/VideoTrack;->streams:Ljava/util/List;
 
-    .line 172
     invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -534,7 +468,6 @@
 
     iput-wide v6, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mVBitrate:J
 
-    .line 173
     invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -545,33 +478,28 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mVdlid:Ljava/lang/String;
 
-    .line 176
     invoke-interface {p1}, Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$OfflineManifest;->getAspectWidthHeight()Landroid/util/Pair;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mAspectRatio:Landroid/util/Pair;
 
-    .line 177
     invoke-interface {p1}, Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$OfflineManifest;->getOfflineKeySetId()[B
 
     move-result-object v0
 
-    .line 179
     if-eqz v0, :cond_5
 
     array-length v2, v0
 
     if-lez v2, :cond_5
 
-    .line 180
     const-string/jumbo v2, "OfflinePlayback_Session"
 
     const-string/jumbo v3, "has KeySetId"
 
     invoke-static {v2, v3, v0}, Lcom/netflix/mediaclient/Log;->logByteArrayRaw(Ljava/lang/String;Ljava/lang/String;[B)V
 
-    .line 182
     :try_start_0
     new-instance v5, Lcom/netflix/mediaclient/service/player/exoplayback/OfflineDrmSession;
 
@@ -579,20 +507,17 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 200
     :goto_1
     invoke-interface {p1}, Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$OfflineManifest;->getBifFile()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 201
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 202
     const-string/jumbo v1, "OfflinePlayback_Session"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -615,11 +540,9 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 204
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 205
     new-instance v0, Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;
 
     invoke-interface {p1}, Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$OfflineManifest;->getBifFile()Ljava/lang/String;
@@ -630,7 +553,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflineBifManger:Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;
 
-    .line 208
     :cond_2
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
@@ -646,24 +568,20 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
-    .line 211
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mBookmark:J
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPlaybackTS:J
 
-    .line 212
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mSurface:Landroid/view/Surface;
 
     if-eqz v0, :cond_3
 
-    .line 213
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mSurface:Landroid/view/Surface;
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;->setSurface(Landroid/view/Surface;)V
 
-    .line 216
     :cond_3
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/PlayTimeTracker;
 
@@ -673,18 +591,15 @@
 
     goto/16 :goto_0
 
-    .line 183
     :catch_0
     move-exception v0
 
-    .line 184
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
-    .line 185
     const-string/jumbo v2, "OfflinePlayback_Session"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -707,7 +622,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 187
     :cond_4
     sget-object v2, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;->MANIFEST_PROCESSING:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;
 
@@ -717,15 +631,12 @@
 
     const-string/jumbo v3, "OfflinePlayback.DrmSessionRestoreFailed"
 
-    .line 188
     invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 187
     invoke-direct {p0, v2, v3, v0}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->reportStartPlay(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 189
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPdsPlaySession:Lcom/netflix/mediaclient/service/pdslogging/PdsPlaySessionInterface;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->getPlayTimeJson()Lorg/json/JSONObject;
@@ -742,7 +653,6 @@
 
     invoke-interface {v0, v2, v3, v4}, Lcom/netflix/mediaclient/service/pdslogging/PdsPlaySessionInterface;->stop(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 190
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mCallback:Lcom/netflix/mediaclient/service/player/exoplayback/IPlaybackSession$PlaybackSessionCallback;
 
     new-instance v2, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError;
@@ -753,19 +663,16 @@
 
     sget-object v5, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;->MANIFEST_PROCESSING:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;
 
-    .line 192
     invoke-virtual {v5}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;->toString()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-direct {v2, v3, v4, v5, v1}, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError;-><init>(Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 190
     invoke-interface {v0, v2}, Lcom/netflix/mediaclient/service/player/exoplayback/IPlaybackSession$PlaybackSessionCallback;->handleError(Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError;)V
 
     goto/16 :goto_0
 
-    .line 197
     :cond_5
     const-string/jumbo v0, "OfflinePlayback_Session"
 
@@ -781,8 +688,6 @@
 .method private declared-synchronized handleSubtitleUpdate(I)V
     .locals 4
 
-    .prologue
-    .line 480
     monitor-enter p0
 
     :try_start_0
@@ -792,7 +697,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 481
     const-string/jumbo v0, "OfflinePlayback_Session"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -815,7 +719,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 484
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->getCurrentSubtitleTrack()Lcom/netflix/mediaclient/media/Subtitle;
 
@@ -823,7 +726,6 @@
 
     if-nez v0, :cond_1
 
-    .line 485
     const-string/jumbo v0, "OfflinePlayback_Session"
 
     const-string/jumbo v1, "Subtitles are not visible, do not send any update"
@@ -832,21 +734,17 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 514
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 489
     :cond_1
     :try_start_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mSubtitles:Lcom/netflix/mediaclient/service/offline/subtitles/SubtitleOfflineManager;
 
-    .line 490
     if-nez v0, :cond_2
 
-    .line 492
     const-string/jumbo v0, "OfflinePlayback_Session"
 
     const-string/jumbo v1, "Subtitle manager is not available."
@@ -857,7 +755,6 @@
 
     goto :goto_0
 
-    .line 480
     :catchall_0
     move-exception v0
 
@@ -865,7 +762,6 @@
 
     throw v0
 
-    .line 496
     :cond_2
     :try_start_2
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/offline/subtitles/SubtitleOfflineManager;->getSubtitleParser()Lcom/netflix/mediaclient/service/player/subtitles/SubtitleParser;
@@ -874,7 +770,6 @@
 
     if-nez v1, :cond_3
 
-    .line 498
     const-string/jumbo v0, "OfflinePlayback_Session"
 
     const-string/jumbo v1, "Subtitle data is not available."
@@ -883,7 +778,6 @@
 
     goto :goto_0
 
-    .line 502
     :cond_3
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/offline/subtitles/SubtitleOfflineManager;->getSubtitleParser()Lcom/netflix/mediaclient/service/player/subtitles/SubtitleParser;
 
@@ -895,7 +789,6 @@
 
     if-nez v1, :cond_4
 
-    .line 503
     const-string/jumbo v0, "OfflinePlayback_Session"
 
     const-string/jumbo v1, "Subtitle data is not ready yet!"
@@ -904,7 +797,6 @@
 
     goto :goto_0
 
-    .line 507
     :cond_4
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->isPlaying()Z
 
@@ -912,7 +804,6 @@
 
     if-nez v1, :cond_5
 
-    .line 508
     const-string/jumbo v0, "OfflinePlayback_Session"
 
     const-string/jumbo v1, "Not playing, do NOT send subtitle screen update"
@@ -921,7 +812,6 @@
 
     goto :goto_0
 
-    .line 513
     :cond_5
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mCallback:Lcom/netflix/mediaclient/service/player/exoplayback/IPlaybackSession$PlaybackSessionCallback;
 
@@ -965,8 +855,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 541
     iget-object v0, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
@@ -975,7 +863,6 @@
 
     move-result v2
 
-    .line 542
     iget-object v0, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
@@ -984,7 +871,6 @@
 
     move-result v1
 
-    .line 543
     iget-object v0, p2, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
@@ -1003,28 +889,22 @@
 
     mul-int/2addr v0, v3
 
-    .line 544
     if-gtz v0, :cond_0
 
-    .line 545
     const v0, 0x54600
 
-    .line 551
     :cond_0
     :goto_0
     mul-int v3, v2, v1
 
     if-le v3, v0, :cond_1
 
-    .line 552
     div-int/lit8 v2, v2, 0x2
 
-    .line 553
     div-int/lit8 v1, v1, 0x2
 
     goto :goto_0
 
-    .line 555
     :cond_1
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1044,33 +924,27 @@
 .method private reportEndPlay(Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$EndPlayReason;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 25
 
-    .prologue
-    .line 680
     const-string/jumbo v2, "OfflinePlayback_Session"
 
     const-string/jumbo v3, "reportEndPlay: "
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 681
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mEndPlayLogged:Z
 
     if-eqz v2, :cond_0
 
-    .line 682
     const-string/jumbo v2, "OfflinePlayback_Session"
 
     const-string/jumbo v3, "reportEndPlay: Already logged"
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 715
     :goto_0
     return-void
 
-    .line 687
     :cond_0
     move-object/from16 v0, p0
 
@@ -1080,7 +954,6 @@
 
     invoke-virtual {v2, v3}, Lcom/netflix/mediaclient/service/player/exoplayback/BatteryStats;->updateBatteryStat(Z)V
 
-    .line 689
     invoke-static {}, Lcom/netflix/mediaclient/util/Time;->mono()J
 
     move-result-wide v2
@@ -1091,12 +964,10 @@
 
     sub-long v12, v2, v4
 
-    .line 690
     invoke-virtual/range {p0 .. p0}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->getCurrentPosition()J
 
     move-result-wide v14
 
-    .line 692
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mContext:Landroid/content/Context;
@@ -1105,31 +976,25 @@
 
     move-result v19
 
-    .line 693
     sget-object v4, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;->INFO:Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
 
-    .line 694
     sget-object v2, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$EndPlayReason;->error:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$EndPlayReason;
 
     move-object/from16 v0, p1
 
     if-ne v0, v2, :cond_1
 
-    .line 695
     sget-object v4, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;->ERROR:Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
 
-    .line 698
     :cond_1
     const/16 v20, 0x0
 
-    .line 699
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     if-eqz v2, :cond_2
 
-    .line 700
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
@@ -1138,7 +1003,6 @@
 
     move-result-object v20
 
-    .line 703
     :cond_2
     const-string/jumbo v2, "OfflinePlayback_Session"
 
@@ -1170,7 +1034,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 704
     const-string/jumbo v2, "OfflinePlayback_Session"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1197,7 +1060,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 707
     :try_start_0
     new-instance v3, Lcom/netflix/mediaclient/service/player/exoplayback/logblob/EndPlay;
 
@@ -1231,7 +1093,6 @@
 
     iget-object v2, v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPlayTracker:Lcom/netflix/mediaclient/service/player/exoplayback/PlayTimeTracker;
 
-    .line 708
     invoke-virtual {v2}, Lcom/netflix/mediaclient/service/player/exoplayback/PlayTimeTracker;->getMovieTotalInMs()J
 
     move-result-wide v16
@@ -1248,7 +1109,6 @@
 
     iget-object v2, v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mBatteryStats:Lcom/netflix/mediaclient/service/player/exoplayback/BatteryStats;
 
-    .line 709
     invoke-virtual {v2}, Lcom/netflix/mediaclient/service/player/exoplayback/BatteryStats;->getJSON()Lorg/json/JSONObject;
 
     move-result-object v21
@@ -1261,12 +1121,10 @@
 
     invoke-direct/range {v3 .. v24}, Lcom/netflix/mediaclient/service/player/exoplayback/logblob/EndPlay;-><init>(Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;JJJLjava/lang/String;ZLorg/json/JSONObject;Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 707
     move-object/from16 v0, p0
 
     invoke-direct {v0, v3}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->sendBlob(Lcom/netflix/mediaclient/service/logging/logblob/BaseLogblob;)V
 
-    .line 711
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
@@ -1277,11 +1135,9 @@
 
     goto/16 :goto_0
 
-    .line 712
     :catch_0
     move-exception v2
 
-    .line 713
     invoke-virtual {v2}, Lorg/json/JSONException;->printStackTrace()V
 
     goto/16 :goto_0
@@ -1290,8 +1146,6 @@
 .method private reportResumePlay(Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;)V
     .locals 20
 
-    .prologue
-    .line 729
     :try_start_0
     invoke-static {}, Lcom/netflix/mediaclient/util/Time;->mono()J
 
@@ -1303,12 +1157,10 @@
 
     sub-long v8, v2, v4
 
-    .line 730
     invoke-virtual/range {p0 .. p0}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->getCurrentPosition()J
 
     move-result-wide v6
 
-    .line 731
     new-instance v3, Lcom/netflix/mediaclient/service/player/exoplayback/logblob/ResumePlay;
 
     move-object/from16 v0, p0
@@ -1359,15 +1211,12 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 736
     :goto_0
     return-void
 
-    .line 733
     :catch_0
     move-exception v2
 
-    .line 734
     invoke-virtual {v2}, Lorg/json/JSONException;->printStackTrace()V
 
     goto :goto_0
@@ -1376,8 +1225,6 @@
 .method private reportStartPlay(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 28
 
-    .prologue
-    .line 657
     invoke-static {}, Lcom/netflix/mediaclient/util/Time;->mono()J
 
     move-result-wide v2
@@ -1388,7 +1235,6 @@
 
     sub-long v12, v2, v4
 
-    .line 658
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mContext:Landroid/content/Context;
@@ -1397,16 +1243,12 @@
 
     move-result v24
 
-    .line 659
     sget-object v4, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;->INFO:Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
 
-    .line 661
     if-eqz p1, :cond_0
 
-    .line 662
     sget-object v4, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;->ERROR:Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
 
-    .line 666
     :cond_0
     move-object/from16 v0, p0
 
@@ -1416,7 +1258,6 @@
 
     invoke-virtual {v2, v3}, Lcom/netflix/mediaclient/service/player/exoplayback/BatteryStats;->updateBatteryStat(Z)V
 
-    .line 669
     :try_start_0
     new-instance v3, Lcom/netflix/mediaclient/service/player/exoplayback/logblob/StartPlay;
 
@@ -1490,7 +1331,6 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 676
     :goto_0
     const/4 v2, 0x1
 
@@ -1498,14 +1338,11 @@
 
     iput-boolean v2, v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mStartPlayLogged:Z
 
-    .line 677
     return-void
 
-    .line 672
     :catch_0
     move-exception v2
 
-    .line 673
     invoke-virtual {v2}, Lorg/json/JSONException;->printStackTrace()V
 
     goto :goto_0
@@ -1514,8 +1351,6 @@
 .method private reportStateChange(Ljava/lang/String;Ljava/lang/String;)V
     .locals 10
 
-    .prologue
-    .line 719
     :try_start_0
     invoke-static {}, Lcom/netflix/mediaclient/util/Time;->mono()J
 
@@ -1525,12 +1360,10 @@
 
     sub-long v4, v0, v2
 
-    .line 720
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->getCurrentPosition()J
 
     move-result-wide v6
 
-    .line 721
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/logblob/StateChanged;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mXid:Ljava/lang/String;
@@ -1549,15 +1382,12 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 725
     :goto_0
     return-void
 
-    .line 722
     :catch_0
     move-exception v0
 
-    .line 723
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
     goto :goto_0
@@ -1566,8 +1396,6 @@
 .method private requestOfflineManifest(Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface;J)V
     .locals 4
 
-    .prologue
-    .line 128
     const-string/jumbo v0, "OfflinePlayback_Session"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1590,29 +1418,24 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$1;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$1;-><init>(Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;)V
 
     invoke-interface {p1, p2, p3, v0}, Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface;->requestOfflineManifest(JLcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$ManifestCallback;)V
 
-    .line 148
     return-void
 .end method
 
 .method private sendBlob(Lcom/netflix/mediaclient/service/logging/logblob/BaseLogblob;)V
     .locals 3
 
-    .prologue
-    .line 739
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 740
     const-string/jumbo v0, "OfflinePlayback_Session"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1653,7 +1476,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 742
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mLoggingAgent:Lcom/netflix/mediaclient/servicemgr/IClientLogging;
 
@@ -1663,27 +1485,22 @@
 
     invoke-interface {v0, p1}, Lcom/netflix/mediaclient/servicemgr/LogblobLogging;->sendLogblob(Lcom/netflix/mediaclient/servicemgr/Logblob;)V
 
-    .line 743
     return-void
 .end method
 
 .method private updateCurrentAudioTrackData()V
     .locals 8
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 565
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;->getAudioCurrentTrackId()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 566
     if-eqz v3, :cond_1
 
-    .line 567
     iget-object v4, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mAudioSource:[Lcom/netflix/mediaclient/media/AudioSource;
 
     array-length v5, v4
@@ -1695,7 +1512,6 @@
 
     aget-object v6, v4, v1
 
-    .line 568
     invoke-virtual {v6}, Lcom/netflix/mediaclient/media/AudioSource;->getId()Ljava/lang/String;
 
     move-result-object v0
@@ -1706,7 +1522,6 @@
 
     if-nez v0, :cond_0
 
-    .line 567
     :goto_1
     add-int/lit8 v0, v1, 0x1
 
@@ -1714,7 +1529,6 @@
 
     goto :goto_0
 
-    .line 571
     :cond_0
     invoke-virtual {v6}, Lcom/netflix/mediaclient/media/AudioSource;->getStreams()Ljava/util/List;
 
@@ -1730,7 +1544,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mAdlid:Ljava/lang/String;
 
-    .line 572
     invoke-virtual {v6}, Lcom/netflix/mediaclient/media/AudioSource;->getStreams()Ljava/util/List;
 
     move-result-object v0
@@ -1749,7 +1562,6 @@
 
     goto :goto_1
 
-    .line 574
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPlayTracker:Lcom/netflix/mediaclient/service/player/exoplayback/PlayTimeTracker;
 
@@ -1761,7 +1573,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/netflix/mediaclient/service/player/exoplayback/PlayTimeTracker;->updateCurrrentPlayDlids(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 575
     return-void
 .end method
 
@@ -1770,8 +1581,6 @@
 .method public getAudioSubtitleDefaultOrderInfo()[Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;
     .locals 1
 
-    .prologue
-    .line 403
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mAudioSubtitleDefaultOrderInfo:[Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;
 
     return-object v0
@@ -1780,8 +1589,6 @@
 .method public getAudioTrackList()[Lcom/netflix/mediaclient/media/AudioSource;
     .locals 1
 
-    .prologue
-    .line 388
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mAudioSource:[Lcom/netflix/mediaclient/media/AudioSource;
 
     return-object v0
@@ -1790,20 +1597,16 @@
 .method public getBifFrame(I)Ljava/nio/ByteBuffer;
     .locals 1
 
-    .prologue
-    .line 449
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflineBifManger:Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;
 
     if-eqz v0, :cond_0
 
-    .line 450
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflineBifManger:Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;->getIndexFrame(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 452
     :goto_0
     return-object v0
 
@@ -1816,20 +1619,16 @@
 .method public getBufferedPercentage()I
     .locals 1
 
-    .prologue
-    .line 352
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     if-eqz v0, :cond_0
 
-    .line 353
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;->getBufferedPercentage()I
 
     move-result v0
 
-    .line 355
     :goto_0
     return v0
 
@@ -1842,20 +1641,16 @@
 .method public getBufferedPosition()J
     .locals 2
 
-    .prologue
-    .line 344
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     if-eqz v0, :cond_0
 
-    .line 345
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;->getBufferedPosition()J
 
     move-result-wide v0
 
-    .line 347
     :goto_0
     return-wide v0
 
@@ -1868,18 +1663,14 @@
 .method public getCurrentAudioTrack()Lcom/netflix/mediaclient/media/AudioSource;
     .locals 1
 
-    .prologue
-    .line 368
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     if-eqz v0, :cond_0
 
-    .line 369
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;->getAudioCurrentTrackId()Ljava/lang/String;
 
-    .line 371
     :cond_0
     const/4 v0, 0x0
 
@@ -1889,8 +1680,6 @@
 .method public getCurrentPlayableId()J
     .locals 2
 
-    .prologue
-    .line 457
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mMovieId:J
 
     return-wide v0
@@ -1899,20 +1688,16 @@
 .method public getCurrentPosition()J
     .locals 2
 
-    .prologue
-    .line 336
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     if-eqz v0, :cond_0
 
-    .line 337
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;->getCurrentPosition()J
 
     move-result-wide v0
 
-    .line 339
     :goto_0
     return-wide v0
 
@@ -1925,8 +1710,6 @@
 .method public getCurrentSubtitleTrack()Lcom/netflix/mediaclient/media/Subtitle;
     .locals 1
 
-    .prologue
-    .line 398
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mCurrentSubtitleTrack:Lcom/netflix/mediaclient/media/Subtitle;
 
     return-object v0
@@ -1935,20 +1718,16 @@
 .method public getDuration()J
     .locals 2
 
-    .prologue
-    .line 328
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     if-eqz v0, :cond_0
 
-    .line 329
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;->getDuration()J
 
     move-result-wide v0
 
-    .line 331
     :goto_0
     return-wide v0
 
@@ -1961,13 +1740,10 @@
 .method public getPlayoutMetadata()Lcom/netflix/mediaclient/media/PlayoutMetadata;
     .locals 4
 
-    .prologue
-    .line 462
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     if-eqz v0, :cond_0
 
-    .line 463
     new-instance v0, Lcom/netflix/mediaclient/media/PlayoutMetadata;
 
     iget-wide v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mVBitrate:J
@@ -1976,21 +1752,18 @@
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
-    .line 465
     invoke-virtual {v2}, Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;->getVideoResolution()Landroid/util/Pair;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
-    .line 466
     invoke-virtual {v3}, Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;->getVideoDecoderName()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-direct {v0, v1, v2, v3}, Lcom/netflix/mediaclient/media/PlayoutMetadata;-><init>(ILandroid/util/Pair;Ljava/lang/String;)V
 
-    .line 469
     :goto_0
     return-object v0
 
@@ -2003,8 +1776,6 @@
 .method public getSessionId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 221
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mXid:Ljava/lang/String;
 
     return-object v0
@@ -2013,8 +1784,6 @@
 .method public getSubtitleTrackList()[Lcom/netflix/mediaclient/media/Subtitle;
     .locals 1
 
-    .prologue
-    .line 393
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mSubtitle:[Lcom/netflix/mediaclient/media/Subtitle;
 
     return-object v0
@@ -2033,13 +1802,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 226
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mReportedAspectRatio:Landroid/util/Pair;
 
     if-nez v0, :cond_0
 
-    .line 227
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mAspectRatio:Landroid/util/Pair;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
@@ -2054,7 +1820,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mReportedAspectRatio:Landroid/util/Pair;
 
-    .line 229
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -2062,7 +1827,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 230
     const-string/jumbo v0, "OfflinePlayback_Session"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2131,7 +1895,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 233
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mReportedAspectRatio:Landroid/util/Pair;
 
@@ -2141,20 +1904,16 @@
 .method public isPlaying()Z
     .locals 1
 
-    .prologue
-    .line 360
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     if-eqz v0, :cond_0
 
-    .line 361
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;->isPlaying()Z
 
     move-result v0
 
-    .line 363
     :goto_0
     return v0
 
@@ -2167,37 +1926,30 @@
 .method public pause()V
     .locals 4
 
-    .prologue
-    .line 254
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     if-eqz v0, :cond_0
 
-    .line 255
     const-string/jumbo v0, "OfflinePlayback_Session"
 
     const-string/jumbo v1, "pause: "
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 256
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;->pause()V
 
-    .line 257
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflineAgent:Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface;
 
     iget-wide v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mMovieId:J
 
     invoke-interface {v0, v2, v3}, Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface;->notifyPause(J)V
 
-    .line 258
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPdsPlaySession:Lcom/netflix/mediaclient/service/pdslogging/PdsPlaySessionInterface;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/pdslogging/PdsPlaySessionInterface;->pause()V
 
-    .line 260
     :cond_0
     return-void
 .end method
@@ -2205,30 +1957,24 @@
 .method public play()V
     .locals 2
 
-    .prologue
-    .line 245
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     if-eqz v0, :cond_0
 
-    .line 246
     const-string/jumbo v0, "OfflinePlayback_Session"
 
     const-string/jumbo v1, "play: "
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 247
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;->play()V
 
-    .line 248
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPdsPlaySession:Lcom/netflix/mediaclient/service/pdslogging/PdsPlaySessionInterface;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/pdslogging/PdsPlaySessionInterface;->play()V
 
-    .line 250
     :cond_0
     return-void
 .end method
@@ -2236,24 +1982,18 @@
 .method public playerBuffering()V
     .locals 0
 
-    .prologue
-    .line 586
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->play()V
 
-    .line 589
     return-void
 .end method
 
 .method public playerError(Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError;)V
     .locals 4
 
-    .prologue
-    .line 624
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mStartPlayLogged:Z
 
     if-eqz v0, :cond_0
 
-    .line 625
     sget-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$EndPlayReason;->error:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$EndPlayReason;
 
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError;->getUiDisplayErrorCode()Ljava/lang/String;
@@ -2262,15 +2002,12 @@
 
     const-string/jumbo v2, "OfflinePlayback.PlaybackFailed"
 
-    .line 626
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError;->getExceptionStack()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 625
     invoke-direct {p0, v0, v1, v2, v3}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->reportEndPlay(Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$EndPlayReason;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 627
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPdsPlaySession:Lcom/netflix/mediaclient/service/pdslogging/PdsPlaySessionInterface;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->getPlayTimeJson()Lorg/json/JSONObject;
@@ -2285,23 +2022,19 @@
 
     invoke-interface {v0, v1, v2, v3}, Lcom/netflix/mediaclient/service/pdslogging/PdsPlaySessionInterface;->stop(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 634
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mCallback:Lcom/netflix/mediaclient/service/player/exoplayback/IPlaybackSession$PlaybackSessionCallback;
 
     invoke-interface {v0, p1}, Lcom/netflix/mediaclient/service/player/exoplayback/IPlaybackSession$PlaybackSessionCallback;->handleError(Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError;)V
 
-    .line 635
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflineAgent:Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface;
 
     iget-wide v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mMovieId:J
 
     invoke-interface {v0, v2, v3}, Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface;->notifyPlayError(J)V
 
-    .line 636
     return-void
 
-    .line 630
     :cond_0
     sget-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;->PLAYBACK_INIT:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;
 
@@ -2311,12 +2044,10 @@
 
     const-string/jumbo v1, "OfflinePlayback.PlaybackFailed"
 
-    .line 631
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError;->getExceptionStack()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 630
     invoke-direct {p0, v0, v1, v2}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->reportStartPlay(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
@@ -2325,49 +2056,38 @@
 .method public playerPaused()V
     .locals 2
 
-    .prologue
-    .line 579
     const-string/jumbo v0, "Playing"
 
     const-string/jumbo v1, "Paused"
 
     invoke-direct {p0, v0, v1}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->reportStateChange(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 580
     return-void
 .end method
 
 .method public playerPrepared()V
     .locals 1
 
-    .prologue
-    .line 560
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->updateCurrentAudioTrackData()V
 
-    .line 561
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mCallback:Lcom/netflix/mediaclient/service/player/exoplayback/IPlaybackSession$PlaybackSessionCallback;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/player/exoplayback/IPlaybackSession$PlaybackSessionCallback;->handlePrepared()V
 
-    .line 562
     return-void
 .end method
 
 .method public playerStarted()V
     .locals 4
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 594
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mStartPlayLogged:Z
 
     if-nez v0, :cond_0
 
-    .line 595
     invoke-direct {p0, v1, v1, v1}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->reportStartPlay(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 608
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflineAgent:Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface;
 
@@ -2375,27 +2095,22 @@
 
     invoke-interface {v0, v2, v3}, Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface;->notifyPlay(J)V
 
-    .line 609
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mCallback:Lcom/netflix/mediaclient/service/player/exoplayback/IPlaybackSession$PlaybackSessionCallback;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/player/exoplayback/IPlaybackSession$PlaybackSessionCallback;->handleStarted()V
 
-    .line 610
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mCallback:Lcom/netflix/mediaclient/service/player/exoplayback/IPlaybackSession$PlaybackSessionCallback;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/player/exoplayback/IPlaybackSession$PlaybackSessionCallback;->handlePlaying()V
 
-    .line 611
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mMainHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPeriodicCallback:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 612
     return-void
 
-    .line 600
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mResumePlayReason:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;
 
@@ -2403,14 +2118,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 601
     const-string/jumbo v0, "Paused"
 
     const-string/jumbo v1, "Playing"
 
     invoke-direct {p0, v0, v1}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->reportStateChange(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 605
     :goto_1
     sget-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;->none:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;
 
@@ -2418,7 +2131,6 @@
 
     goto :goto_0
 
-    .line 603
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mResumePlayReason:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;
 
@@ -2430,15 +2142,12 @@
 .method public playerStopped()V
     .locals 4
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 616
     sget-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$EndPlayReason;->ended:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$EndPlayReason;
 
     invoke-direct {p0, v0, v2, v2, v2}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->reportEndPlay(Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$EndPlayReason;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 617
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPdsPlaySession:Lcom/netflix/mediaclient/service/pdslogging/PdsPlaySessionInterface;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->getPlayTimeJson()Lorg/json/JSONObject;
@@ -2447,64 +2156,52 @@
 
     invoke-interface {v0, v1, v2, v2}, Lcom/netflix/mediaclient/service/pdslogging/PdsPlaySessionInterface;->stop(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 618
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflineAgent:Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface;
 
     iget-wide v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mMovieId:J
 
     invoke-interface {v0, v2, v3}, Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface;->notifyStop(J)V
 
-    .line 619
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mCallback:Lcom/netflix/mediaclient/service/player/exoplayback/IPlaybackSession$PlaybackSessionCallback;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/player/exoplayback/IPlaybackSession$PlaybackSessionCallback;->handleStopped()V
 
-    .line 620
     return-void
 .end method
 
 .method public release()V
     .locals 4
 
-    .prologue
-    .line 264
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     if-eqz v0, :cond_2
 
-    .line 265
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;->release()V
 
-    .line 270
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflineBifManger:Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;
 
     if-eqz v0, :cond_0
 
-    .line 271
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflineBifManger:Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;->release()V
 
-    .line 272
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflineBifManger:Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;
 
-    .line 275
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mSubtitles:Lcom/netflix/mediaclient/service/offline/subtitles/SubtitleOfflineManager;
 
     if-eqz v0, :cond_1
 
-    .line 276
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mSubtitles:Lcom/netflix/mediaclient/service/offline/subtitles/SubtitleOfflineManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/offline/subtitles/SubtitleOfflineManager;->close()V
 
-    .line 279
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mContext:Landroid/content/Context;
 
@@ -2512,10 +2209,8 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 280
     return-void
 
-    .line 267
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflineAgent:Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface;
 
@@ -2529,18 +2224,14 @@
 .method public seekTo(J)V
     .locals 3
 
-    .prologue
-    .line 284
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     if-nez v0, :cond_1
 
-    .line 301
     :cond_0
     :goto_0
     return-void
 
-    .line 287
     :cond_1
     const-string/jumbo v0, "OfflinePlayback_Session"
 
@@ -2548,33 +2239,27 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 289
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mResumePlayReason:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;
 
     sget-object v1, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;->none:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;
 
     if-ne v0, v1, :cond_2
 
-    .line 290
     sget-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;->repos:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mResumePlayReason:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;
 
-    .line 292
     :cond_2
     iput-wide p1, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPlaybackTS:J
 
-    .line 293
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     invoke-virtual {v0, p1, p2}, Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;->seekTo(J)V
 
-    .line 296
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPdsPlaySession:Lcom/netflix/mediaclient/service/pdslogging/PdsPlaySessionInterface;
 
     invoke-interface {v0, p1, p2}, Lcom/netflix/mediaclient/service/pdslogging/PdsPlaySessionInterface;->seekTo(J)V
 
-    .line 297
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mSubtitles:Lcom/netflix/mediaclient/service/offline/subtitles/SubtitleOfflineManager;
 
     if-eqz v0, :cond_0
@@ -2587,7 +2272,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 298
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mSubtitles:Lcom/netflix/mediaclient/service/offline/subtitles/SubtitleOfflineManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/offline/subtitles/SubtitleOfflineManager;->getSubtitleParser()Lcom/netflix/mediaclient/service/player/subtitles/SubtitleParser;
@@ -2604,13 +2288,10 @@
 .method public selectAudioTrack(Lcom/netflix/mediaclient/media/AudioSource;)Z
     .locals 2
 
-    .prologue
-    .line 376
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     if-eqz v0, :cond_1
 
-    .line 377
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     invoke-virtual {p1}, Lcom/netflix/mediaclient/media/AudioSource;->getId()Ljava/lang/String;
@@ -2621,13 +2302,10 @@
 
     move-result v0
 
-    .line 378
     if-eqz v0, :cond_0
 
-    .line 379
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->updateCurrentAudioTrackData()V
 
-    .line 383
     :cond_0
     :goto_0
     return v0
@@ -2641,28 +2319,22 @@
 .method public selectTracks(Lcom/netflix/mediaclient/media/AudioSource;Lcom/netflix/mediaclient/media/Subtitle;Z)Z
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 408
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     if-nez v1, :cond_0
 
-    .line 443
     :goto_0
     return v0
 
-    .line 411
     :cond_0
     iput-object p2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mCurrentSubtitleTrack:Lcom/netflix/mediaclient/media/Subtitle;
 
-    .line 412
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mCurrentSubtitleTrack:Lcom/netflix/mediaclient/media/Subtitle;
 
     if-eqz v1, :cond_4
 
-    .line 413
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mCurrentSubtitleTrack:Lcom/netflix/mediaclient/media/Subtitle;
 
     invoke-interface {v1}, Lcom/netflix/mediaclient/media/Subtitle;->getDownloadableId()Ljava/lang/String;
@@ -2671,7 +2343,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mSubtitledlid:Ljava/lang/String;
 
-    .line 417
     :goto_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -2679,7 +2350,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 418
     const-string/jumbo v1, "OfflinePlayback_Session"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2702,7 +2372,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 419
     const-string/jumbo v1, "OfflinePlayback_Session"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2725,7 +2394,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 420
     const-string/jumbo v1, "OfflinePlayback_Session"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2748,22 +2416,17 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 426
     :cond_1
     if-eqz p3, :cond_5
 
-    .line 427
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->selectAudioTrack(Lcom/netflix/mediaclient/media/AudioSource;)Z
 
     move-result v0
 
-    .line 428
     if-eqz v0, :cond_2
 
-    .line 429
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->updateCurrentAudioTrackData()V
 
-    .line 435
     :cond_2
     :goto_2
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mSubtitles:Lcom/netflix/mediaclient/service/offline/subtitles/SubtitleOfflineManager;
@@ -2774,17 +2437,14 @@
 
     invoke-virtual {v1, p2, v2, v4, v5}, Lcom/netflix/mediaclient/service/offline/subtitles/SubtitleOfflineManager;->changeSubtitle(Lcom/netflix/mediaclient/media/Subtitle;FJ)V
 
-    .line 437
     if-nez p2, :cond_3
 
-    .line 438
     const-string/jumbo v1, "OfflinePlayback_Session"
 
     const-string/jumbo v2, "Removing subtitles"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 441
     :cond_3
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPlayTracker:Lcom/netflix/mediaclient/service/player/exoplayback/PlayTimeTracker;
 
@@ -2798,7 +2458,6 @@
 
     goto/16 :goto_0
 
-    .line 415
     :cond_4
     const/4 v1, 0x0
 
@@ -2806,7 +2465,6 @@
 
     goto/16 :goto_1
 
-    .line 432
     :cond_5
     const-string/jumbo v1, "OfflinePlayback_Session"
 
@@ -2820,18 +2478,14 @@
 .method public setAudioDuck(Z)V
     .locals 1
 
-    .prologue
-    .line 238
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     if-eqz v0, :cond_0
 
-    .line 239
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;->setAudioDuck(Z)V
 
-    .line 241
     :cond_0
     return-void
 .end method
@@ -2839,68 +2493,55 @@
 .method public setSurface(Landroid/view/Surface;)V
     .locals 1
 
-    .prologue
-    .line 320
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     if-eqz v0, :cond_0
 
-    .line 321
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;->setSurface(Landroid/view/Surface;)V
 
-    .line 323
     :cond_0
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mSurface:Landroid/view/Surface;
 
-    .line 324
     return-void
 .end method
 
 .method public stop()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 305
     const-string/jumbo v0, "OfflinePlayback_Session"
 
     const-string/jumbo v1, "stop: "
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 306
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     if-eqz v0, :cond_0
 
-    .line 307
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflinePlayer:Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/exoplayback/PlayerWithStaticMPD;->stop()V
 
-    .line 308
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mMainHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPeriodicCallback:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 309
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflineAgent:Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface;
 
     iget-wide v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mMovieId:J
 
     invoke-interface {v0, v2, v3}, Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface;->notifyStop(J)V
 
-    .line 310
     sget-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$EndPlayReason;->stopped:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$EndPlayReason;
 
     invoke-direct {p0, v0, v4, v4, v4}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->reportEndPlay(Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$EndPlayReason;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 311
     const-string/jumbo v0, "OfflinePlayback_Session"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2927,7 +2568,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 312
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mPdsPlaySession:Lcom/netflix/mediaclient/service/pdslogging/PdsPlaySessionInterface;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->getPlayTimeJson()Lorg/json/JSONObject;
@@ -2936,11 +2576,9 @@
 
     invoke-interface {v0, v1, v4, v4}, Lcom/netflix/mediaclient/service/pdslogging/PdsPlaySessionInterface;->stop(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 316
     :goto_0
     return-void
 
-    .line 314
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession;->mOfflineAgent:Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface;
 

@@ -29,11 +29,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig;->cellInt:I
@@ -46,13 +43,10 @@
 .method public getCell()Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
     .locals 1
 
-    .prologue
-    .line 54
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig;->cellEnum:Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     if-nez v0, :cond_0
 
-    .line 55
     iget v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig;->cellInt:I
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->fromInt(I)Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
@@ -61,7 +55,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig;->cellEnum:Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
-    .line 57
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig;->cellEnum:Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
@@ -71,8 +64,6 @@
 .method public isExplicit()Z
     .locals 1
 
-    .prologue
-    .line 61
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig;->isExplicit:Z
 
     return v0
@@ -81,8 +72,6 @@
 .method public isFallback()Z
     .locals 1
 
-    .prologue
-    .line 65
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig;->isFallback:Z
 
     return v0

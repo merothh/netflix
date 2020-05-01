@@ -45,11 +45,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     return-void
 .end method
 
@@ -58,8 +55,6 @@
 .method public isSignInSuccessful()Z
     .locals 2
 
-    .prologue
-    .line 32
     const-string/jumbo v0, "client"
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInData;->flow:Ljava/lang/String;
@@ -74,7 +69,6 @@
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInData;->mode:Ljava/lang/String;
 
-    .line 33
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/StringUtils;->safeEquals(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
@@ -83,11 +77,9 @@
 
     const/4 v0, 0x1
 
-    .line 32
     :goto_0
     return v0
 
-    .line 33
     :cond_0
     const/4 v0, 0x0
 
@@ -97,8 +89,6 @@
 .method public shouldRetrySignIn()Z
     .locals 2
 
-    .prologue
-    .line 37
     const-string/jumbo v0, "enterMemberCredentials"
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInData;->mode:Ljava/lang/String;
@@ -113,8 +103,6 @@
 .method public shouldTrySignUp()Z
     .locals 2
 
-    .prologue
-    .line 40
     const-string/jumbo v0, "welcome"
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInData;->mode:Ljava/lang/String;

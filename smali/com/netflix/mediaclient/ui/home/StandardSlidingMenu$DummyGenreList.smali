@@ -15,10 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 639
     invoke-direct {p0}, Lcom/netflix/model/leafs/ListOfGenreSummary;-><init>()V
 
-    .line 640
     return-void
 .end method

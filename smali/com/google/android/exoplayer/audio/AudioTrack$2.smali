@@ -13,8 +13,6 @@
 .method constructor <init>(Lcom/google/android/exoplayer/audio/AudioTrack;Landroid/media/AudioTrack;)V
     .locals 0
 
-    .prologue
-    .line 804
     iput-object p1, p0, Lcom/google/android/exoplayer/audio/AudioTrack$2;->this$0:Lcom/google/android/exoplayer/audio/AudioTrack;
 
     iput-object p2, p0, Lcom/google/android/exoplayer/audio/AudioTrack$2;->val$toRelease:Landroid/media/AudioTrack;
@@ -29,12 +27,9 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 807
     iget-object v0, p0, Lcom/google/android/exoplayer/audio/AudioTrack$2;->val$toRelease:Landroid/media/AudioTrack;
 
     invoke-virtual {v0}, Landroid/media/AudioTrack;->release()V
 
-    .line 808
     return-void
 .end method

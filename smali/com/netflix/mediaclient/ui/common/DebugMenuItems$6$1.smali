@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/common/DebugMenuItems$6;Z)V
     .locals 0
 
-    .prologue
-    .line 225
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/common/DebugMenuItems$6$1;->this$1:Lcom/netflix/mediaclient/ui/common/DebugMenuItems$6;
 
     iput-boolean p2, p0, Lcom/netflix/mediaclient/ui/common/DebugMenuItems$6$1;->val$isTestEnvironment:Z
@@ -32,8 +30,6 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
 
-    .prologue
-    .line 228
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/common/DebugMenuItems$6$1;->val$isTestEnvironment:Z
 
     if-eqz v0, :cond_1
@@ -42,7 +38,6 @@
 
     const-string/jumbo v0, "api-int.test.netflix.com"
 
-    .line 231
     :goto_0
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/common/DebugMenuItems$6$1;->this$1:Lcom/netflix/mediaclient/ui/common/DebugMenuItems$6;
 
@@ -56,7 +51,6 @@
 
     invoke-static {v1, v2, v0}, Lcom/netflix/mediaclient/util/PreferenceUtils;->putStringPref(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 232
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/DebugMenuItems$6$1;->this$1:Lcom/netflix/mediaclient/ui/common/DebugMenuItems$6;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/common/DebugMenuItems$6;->this$0:Lcom/netflix/mediaclient/ui/common/DebugMenuItems;
@@ -67,10 +61,8 @@
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/AndroidUtils;->restartApplication(Landroid/app/Activity;)V
 
-    .line 233
     return-void
 
-    .line 228
     :cond_0
     const-string/jumbo v0, "api.test.netflix.com"
 

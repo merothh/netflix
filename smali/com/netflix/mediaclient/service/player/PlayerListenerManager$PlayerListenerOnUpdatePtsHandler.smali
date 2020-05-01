@@ -14,8 +14,6 @@
 .method private constructor <init>(Lcom/netflix/mediaclient/service/player/PlayerListenerManager;)V
     .locals 0
 
-    .prologue
-    .line 317
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/PlayerListenerManager$PlayerListenerOnUpdatePtsHandler;->this$0:Lcom/netflix/mediaclient/service/player/PlayerListenerManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,8 +24,6 @@
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/service/player/PlayerListenerManager;Lcom/netflix/mediaclient/service/player/PlayerListenerManager$1;)V
     .locals 0
 
-    .prologue
-    .line 317
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/player/PlayerListenerManager$PlayerListenerOnUpdatePtsHandler;-><init>(Lcom/netflix/mediaclient/service/player/PlayerListenerManager;)V
 
     return-void
@@ -38,20 +34,16 @@
 .method public varargs handle(Lcom/netflix/mediaclient/servicemgr/IPlayer$PlayerListener;[Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 321
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/IPlayer$PlayerListener;->isListening()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 330
     :cond_0
     :goto_0
     return-void
 
-    .line 325
     :cond_1
     if-eqz p2, :cond_0
 
@@ -61,7 +53,6 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 328
     const/4 v0, 0x0
 
     aget-object v0, p2, v0

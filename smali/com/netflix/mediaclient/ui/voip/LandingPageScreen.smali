@@ -21,14 +21,10 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;)V
     .locals 2
 
-    .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
-    .line 37
     const v0, 0x7f0f010c
 
     invoke-virtual {p1, v0}, Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;->findViewById(I)Landroid/view/View;
@@ -37,7 +33,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mFab:Landroid/view/View;
 
-    .line 38
     const v0, 0x7f0f0110
 
     invoke-virtual {p1, v0}, Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;->findViewById(I)Landroid/view/View;
@@ -46,7 +41,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mCancelMyAccount:Landroid/view/View;
 
-    .line 39
     const v0, 0x7f0f010e
 
     invoke-virtual {p1, v0}, Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;->findViewById(I)Landroid/view/View;
@@ -55,28 +49,24 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mChangePassword:Landroid/view/View;
 
-    .line 41
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->shouldHidePersonalizedLinks()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 42
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mCancelMyAccount:Landroid/view/View;
 
     sget-object v1, Lcom/netflix/mediaclient/util/ViewUtils$Visibility;->GONE:Lcom/netflix/mediaclient/util/ViewUtils$Visibility;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibility(Landroid/view/View;Lcom/netflix/mediaclient/util/ViewUtils$Visibility;)V
 
-    .line 43
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mChangePassword:Landroid/view/View;
 
     sget-object v1, Lcom/netflix/mediaclient/util/ViewUtils$Visibility;->GONE:Lcom/netflix/mediaclient/util/ViewUtils$Visibility;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibility(Landroid/view/View;Lcom/netflix/mediaclient/util/ViewUtils$Visibility;)V
 
-    .line 46
     :cond_0
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->shouldHideCallButton()Z
 
@@ -84,14 +74,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 47
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mFab:Landroid/view/View;
 
     sget-object v1, Lcom/netflix/mediaclient/util/ViewUtils$Visibility;->GONE:Lcom/netflix/mediaclient/util/ViewUtils$Visibility;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibility(Landroid/view/View;Lcom/netflix/mediaclient/util/ViewUtils$Visibility;)V
 
-    .line 49
     :cond_1
     return-void
 .end method
@@ -99,15 +87,12 @@
 .method private openUrl(Ljava/lang/String;)V
     .locals 4
 
-    .prologue
-    .line 170
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 171
     const-string/jumbo v0, "VoipActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -130,13 +115,11 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 174
     :cond_0
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 175
     new-instance v1, Landroid/content/Intent;
 
     const-string/jumbo v2, "android.intent.action.VIEW"
@@ -147,12 +130,10 @@
 
     move-result-object v0
 
-    .line 177
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 178
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -165,12 +146,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 179
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 180
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     sget-object v1, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;->url:Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;
@@ -181,11 +160,9 @@
 
     invoke-static {v0, v1, p1, v2, v3}, Lcom/netflix/mediaclient/util/log/CustomerServiceLogUtils;->reportHelpRequestSessionEnded(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$Action;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;Lcom/netflix/mediaclient/service/logging/client/model/Error;)V
 
-    .line 185
     :goto_0
     return-void
 
-    .line 183
     :cond_1
     const-string/jumbo v0, "VoipActivity"
 
@@ -199,13 +176,10 @@
 .method private shouldHideCallButton()Z
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
     const/4 v0, 0x1
 
-    .line 85
-    .line 88
     :try_start_0
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
@@ -227,7 +201,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 90
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     invoke-virtual {v2}, Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -242,10 +215,8 @@
 
     move-result-object v2
 
-    .line 91
     if-nez v2, :cond_1
 
-    .line 92
     const-string/jumbo v2, "VoipActivity"
 
     const-string/jumbo v3, "VOIP config does not exist, by default it is enabled"
@@ -254,12 +225,10 @@
 
     move v0, v1
 
-    .line 122
     :cond_0
     :goto_0
     return v0
 
-    .line 96
     :cond_1
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
@@ -267,24 +236,20 @@
 
     move-result v3
 
-    .line 97
     iget-object v4, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     invoke-static {v4}, Lcom/netflix/mediaclient/util/ConnectivityUtils;->isNetworkTypeCellular(Landroid/content/Context;)Z
 
     move-result v4
 
-    .line 99
     if-eqz v4, :cond_3
 
-    .line 100
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 101
     const-string/jumbo v3, "VoipActivity"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -311,7 +276,6 @@
 
     invoke-static {v3, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
     :cond_2
     invoke-virtual {v2}, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;->isEnableVoipOverData()Z
 
@@ -323,11 +287,9 @@
 
     goto :goto_0
 
-    .line 106
     :cond_3
     if-eqz v3, :cond_4
 
-    .line 107
     const-string/jumbo v3, "VoipActivity"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -354,7 +316,6 @@
 
     invoke-static {v3, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     invoke-virtual {v2}, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipConfiguration;->isEnableVoipOverWiFi()Z
 
     move-result v2
@@ -365,7 +326,6 @@
 
     goto :goto_0
 
-    .line 111
     :cond_4
     const-string/jumbo v1, "VoipActivity"
 
@@ -377,11 +337,9 @@
 
     goto :goto_0
 
-    .line 118
     :catch_0
     move-exception v1
 
-    .line 119
     const-string/jumbo v1, "VoipActivity"
 
     const-string/jumbo v2, "Something is very wrong, go with default ."
@@ -390,7 +348,6 @@
 
     goto :goto_0
 
-    .line 115
     :cond_5
     :try_start_1
     const-string/jumbo v1, "VoipActivity"
@@ -407,11 +364,8 @@
 .method private shouldHidePersonalizedLinks()Z
     .locals 3
 
-    .prologue
-    .line 62
     const/4 v0, 0x1
 
-    .line 65
     :try_start_0
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
@@ -433,21 +387,17 @@
 
     if-eqz v1, :cond_0
 
-    .line 66
     const-string/jumbo v1, "VoipActivity"
 
     const-string/jumbo v2, "User is logged in, leave links..."
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     const/4 v0, 0x0
 
-    .line 76
     :goto_0
     return v0
 
-    .line 69
     :cond_0
     const-string/jumbo v1, "VoipActivity"
 
@@ -459,11 +409,9 @@
 
     goto :goto_0
 
-    .line 72
     :catch_0
     move-exception v1
 
-    .line 73
     const-string/jumbo v1, "VoipActivity"
 
     const-string/jumbo v2, "User is NOT logged in, remove personal links..."
@@ -478,8 +426,6 @@
 .method public getFab()Landroid/view/View;
     .locals 1
 
-    .prologue
-    .line 188
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mFab:Landroid/view/View;
 
     return-object v0
@@ -488,24 +434,19 @@
 .method public performAction(Landroid/view/View;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 133
     if-nez p1, :cond_0
 
-    .line 134
     const-string/jumbo v1, "VoipActivity"
 
     const-string/jumbo v2, "launchBrowser:: null view? This should never happen!"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 165
     :goto_0
     return v0
 
-    .line 138
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
@@ -513,14 +454,12 @@
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 159
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 160
     const-string/jumbo v0, "VoipActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -547,13 +486,11 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 162
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 140
     :sswitch_0
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
@@ -567,7 +504,6 @@
 
     goto :goto_0
 
-    .line 143
     :sswitch_1
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
@@ -581,7 +517,6 @@
 
     goto :goto_0
 
-    .line 146
     :sswitch_2
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
@@ -595,7 +530,6 @@
 
     goto :goto_0
 
-    .line 149
     :sswitch_3
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
@@ -609,7 +543,6 @@
 
     goto :goto_0
 
-    .line 152
     :sswitch_4
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
@@ -617,7 +550,6 @@
 
     goto :goto_0
 
-    .line 155
     :sswitch_5
     const-string/jumbo v1, "VoipActivity"
 
@@ -625,14 +557,12 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;->performUpAction()V
 
     goto :goto_0
 
-    .line 138
     nop
 
     :sswitch_data_0
@@ -649,26 +579,21 @@
 .method public update()V
     .locals 2
 
-    .prologue
-    .line 53
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->shouldHideCallButton()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 54
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mFab:Landroid/view/View;
 
     sget-object v1, Lcom/netflix/mediaclient/util/ViewUtils$Visibility;->GONE:Lcom/netflix/mediaclient/util/ViewUtils$Visibility;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibility(Landroid/view/View;Lcom/netflix/mediaclient/util/ViewUtils$Visibility;)V
 
-    .line 58
     :goto_0
     return-void
 
-    .line 56
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/LandingPageScreen;->mFab:Landroid/view/View;
 

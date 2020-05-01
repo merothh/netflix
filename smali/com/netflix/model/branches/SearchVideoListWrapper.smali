@@ -36,17 +36,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 14
     iput-object p1, p0, Lcom/netflix/model/branches/SearchVideoListWrapper;->videoList:Ljava/util/List;
 
-    .line 15
     iput-object p2, p0, Lcom/netflix/model/branches/SearchVideoListWrapper;->videoListSummary:Lcom/netflix/mediaclient/servicemgr/interface_/trackable/SearchTrackable;
 
-    .line 16
     return-void
 .end method
 
@@ -64,8 +59,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 20
     iget-object v0, p0, Lcom/netflix/model/branches/SearchVideoListWrapper;->videoList:Ljava/util/List;
 
     return-object v0
@@ -74,8 +67,6 @@
 .method public getVideosListTrackable()Lcom/netflix/mediaclient/servicemgr/interface_/trackable/SearchTrackable;
     .locals 1
 
-    .prologue
-    .line 25
     iget-object v0, p0, Lcom/netflix/model/branches/SearchVideoListWrapper;->videoListSummary:Lcom/netflix/mediaclient/servicemgr/interface_/trackable/SearchTrackable;
 
     return-object v0

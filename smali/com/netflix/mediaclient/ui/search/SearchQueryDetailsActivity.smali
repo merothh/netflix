@@ -57,16 +57,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 39
     invoke-direct {p0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;-><init>()V
 
-    .line 60
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->isLoading:Z
 
-    .line 257
     new-instance v0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$5;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$5;-><init>(Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;)V
@@ -79,8 +75,6 @@
 .method static synthetic access$000(Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;)Lcom/netflix/mediaclient/android/widget/StaticGridView;
     .locals 1
 
-    .prologue
-    .line 39
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->gridView:Lcom/netflix/mediaclient/android/widget/StaticGridView;
 
     return-object v0
@@ -89,8 +83,6 @@
 .method static synthetic access$102(Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;Lcom/netflix/mediaclient/servicemgr/ServiceManager;)Lcom/netflix/mediaclient/servicemgr/ServiceManager;
     .locals 0
 
-    .prologue
-    .line 39
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->manager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     return-object p1
@@ -99,8 +91,6 @@
 .method static synthetic access$200(Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;)V
     .locals 0
 
-    .prologue
-    .line 39
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->fetchData()V
 
     return-void
@@ -109,8 +99,6 @@
 .method static synthetic access$300(Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;)V
     .locals 0
 
-    .prologue
-    .line 39
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->reloadData()V
 
     return-void
@@ -119,8 +107,6 @@
 .method static synthetic access$400(Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;)J
     .locals 2
 
-    .prologue
-    .line 39
     iget-wide v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->requestId:J
 
     return-wide v0
@@ -129,8 +115,6 @@
 .method static synthetic access$502(Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;Z)Z
     .locals 0
 
-    .prologue
-    .line 39
     iput-boolean p1, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->isLoading:Z
 
     return p1
@@ -139,8 +123,6 @@
 .method static synthetic access$600(Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;)V
     .locals 0
 
-    .prologue
-    .line 39
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->showErrorView()V
 
     return-void
@@ -149,8 +131,6 @@
 .method static synthetic access$702(Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .prologue
-    .line 39
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->referenceId:Ljava/lang/String;
 
     return-object p1
@@ -159,8 +139,6 @@
 .method static synthetic access$800(Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;)Lcom/netflix/mediaclient/ui/common/SearchSimilarItemsGridViewAdapter;
     .locals 1
 
-    .prologue
-    .line 39
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->adapter:Lcom/netflix/mediaclient/ui/common/SearchSimilarItemsGridViewAdapter;
 
     return-object v0
@@ -169,8 +147,6 @@
 .method static synthetic access$900(Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;)V
     .locals 0
 
-    .prologue
-    .line 39
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->showContentView()V
 
     return-void
@@ -179,10 +155,8 @@
 .method private fetchData()V
     .locals 7
 
-    .prologue
     const/16 v6, 0x28
 
-    .line 199
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->manager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     if-eqz v0, :cond_0
@@ -195,7 +169,6 @@
 
     if-nez v0, :cond_1
 
-    .line 200
     :cond_0
     const-string/jumbo v0, "SearchQueryDetailsActivity"
 
@@ -203,31 +176,26 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 220
     :goto_0
     return-void
 
-    .line 204
     :cond_1
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->isLoading:Z
 
-    .line 205
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->requestId:J
 
-    .line 207
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->type:Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$SearchQueryDetailsType;
 
     sget-object v1, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$SearchQueryDetailsType;->PERSON:Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$SearchQueryDetailsType;
 
     if-ne v0, v1, :cond_2
 
-    .line 208
     const-string/jumbo v0, "SearchQueryDetailsActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -252,7 +220,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 209
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->manager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getBrowse()Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
@@ -273,7 +240,6 @@
 
     goto :goto_0
 
-    .line 212
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->type:Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$SearchQueryDetailsType;
 
@@ -281,7 +247,6 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 213
     const-string/jumbo v0, "SearchQueryDetailsActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -306,7 +271,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 214
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->manager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getBrowse()Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
@@ -327,7 +291,6 @@
 
     goto :goto_0
 
-    .line 218
     :cond_3
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -341,8 +304,6 @@
 .method private findViews()V
     .locals 1
 
-    .prologue
-    .line 175
     const v0, 0x7f0f00c2
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->findViewById(I)Landroid/view/View;
@@ -353,7 +314,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->titleView:Landroid/widget/TextView;
 
-    .line 176
     const v0, 0x7f0f034e
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->findViewById(I)Landroid/view/View;
@@ -364,7 +324,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->gridView:Lcom/netflix/mediaclient/android/widget/StaticGridView;
 
-    .line 178
     const v0, 0x7f0f033e
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->findViewById(I)Landroid/view/View;
@@ -373,7 +332,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->loadingWrapper:Landroid/view/View;
 
-    .line 179
     const v0, 0x7f0f033f
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->findViewById(I)Landroid/view/View;
@@ -384,30 +342,24 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->content:Lcom/netflix/mediaclient/android/widget/LoggingScrollView;
 
-    .line 180
     return-void
 .end method
 
 .method private getTitleForType(Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$SearchQueryDetailsType;Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 223
     sget-object v0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$SearchQueryDetailsType;->PERSON:Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$SearchQueryDetailsType;
 
     if-ne p1, v0, :cond_0
 
-    .line 227
     :goto_0
     return-object p2
 
-    .line 226
     :cond_0
     sget-object v0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$SearchQueryDetailsType;->SEARCH_SUGGESTION:Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$SearchQueryDetailsType;
 
     if-ne p1, v0, :cond_1
 
-    .line 227
     const v0, 0x7f080228
 
     const/4 v1, 0x1
@@ -424,7 +376,6 @@
 
     goto :goto_0
 
-    .line 229
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -438,24 +389,18 @@
 .method private reloadData()V
     .locals 0
 
-    .prologue
-    .line 233
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->showLoadingView()V
 
-    .line 234
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->fetchData()V
 
-    .line 235
     return-void
 .end method
 
 .method private setupGridView()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 120
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->gridView:Lcom/netflix/mediaclient/android/widget/StaticGridView;
 
     invoke-static {p0}, Lcom/netflix/mediaclient/util/gfx/AnimationUtils;->createGridLayoutAnimator(Landroid/content/Context;)Landroid/view/animation/LayoutAnimationController;
@@ -464,12 +409,10 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/StaticGridView;->setLayoutAnimation(Landroid/view/animation/LayoutAnimationController;)V
 
-    .line 121
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->gridView:Lcom/netflix/mediaclient/android/widget/StaticGridView;
 
     invoke-virtual {v0, v2}, Lcom/netflix/mediaclient/android/widget/StaticGridView;->setFocusable(Z)V
 
-    .line 123
     new-instance v0, Lcom/netflix/mediaclient/ui/common/SearchSimilarItemsGridViewAdapter;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->gridView:Lcom/netflix/mediaclient/android/widget/StaticGridView;
@@ -478,25 +421,20 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->adapter:Lcom/netflix/mediaclient/ui/common/SearchSimilarItemsGridViewAdapter;
 
-    .line 124
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->gridView:Lcom/netflix/mediaclient/android/widget/StaticGridView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->adapter:Lcom/netflix/mediaclient/ui/common/SearchSimilarItemsGridViewAdapter;
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/StaticGridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 125
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->setupScrollViewLogging()V
 
-    .line 126
     return-void
 .end method
 
 .method private setupGridViewObserver()V
     .locals 2
 
-    .prologue
-    .line 129
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->gridView:Lcom/netflix/mediaclient/android/widget/StaticGridView;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/widget/StaticGridView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
@@ -509,15 +447,12 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 138
     return-void
 .end method
 
 .method private setupLoading()V
     .locals 3
 
-    .prologue
-    .line 116
     new-instance v0, Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->loadingWrapper:Landroid/view/View;
@@ -528,20 +463,16 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->leWrapper:Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;
 
-    .line 117
     return-void
 .end method
 
 .method private setupMetaData()V
     .locals 2
 
-    .prologue
-    .line 99
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
-    .line 100
     const-string/jumbo v0, "extra_type"
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->getSerializableExtra(Ljava/lang/String;)Ljava/io/Serializable;
@@ -552,7 +483,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->type:Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$SearchQueryDetailsType;
 
-    .line 102
     const-string/jumbo v0, "extra_id"
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -561,7 +491,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->id:Ljava/lang/String;
 
-    .line 103
     const-string/jumbo v0, "extra_title"
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -570,7 +499,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->title:Ljava/lang/String;
 
-    .line 105
     const-string/jumbo v0, "extra_original_query"
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -579,7 +507,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->originalSearchTerm:Ljava/lang/String;
 
-    .line 106
     const-string/jumbo v0, "extra_reference_id"
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -588,28 +515,24 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->referenceId:Ljava/lang/String;
 
-    .line 108
     const-string/jumbo v0, "view"
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 110
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 111
     invoke-static {v0}, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->nonModalView:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 113
     :cond_0
     return-void
 .end method
@@ -617,8 +540,6 @@
 .method private setupScrollViewLogging()V
     .locals 2
 
-    .prologue
-    .line 141
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->gridView:Lcom/netflix/mediaclient/android/widget/StaticGridView;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$2;
@@ -627,12 +548,10 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/StaticGridView;->setOnScrollListener(Landroid/widget/AbsListView$OnScrollListener;)V
 
-    .line 154
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->content:Lcom/netflix/mediaclient/android/widget/LoggingScrollView;
 
     if-eqz v0, :cond_0
 
-    .line 155
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->content:Lcom/netflix/mediaclient/android/widget/LoggingScrollView;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$3;
@@ -641,7 +560,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/LoggingScrollView;->setOnScrollStopListener(Lcom/netflix/mediaclient/android/widget/LoggingScrollView$OnScrollStopListener;)V
 
-    .line 163
     :cond_0
     return-void
 .end method
@@ -649,10 +567,8 @@
 .method private setupViews()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 166
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -663,19 +579,16 @@
 
     move-result v0
 
-    .line 167
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->content:Lcom/netflix/mediaclient/android/widget/LoggingScrollView;
 
     invoke-virtual {v1, v0, v3, v0, v3}, Lcom/netflix/mediaclient/android/widget/LoggingScrollView;->setPadding(IIII)V
 
-    .line 168
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->content:Lcom/netflix/mediaclient/android/widget/LoggingScrollView;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/LoggingScrollView;->setVisibility(I)V
 
-    .line 170
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->titleView:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->type:Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$SearchQueryDetailsType;
@@ -688,20 +601,16 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 171
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->titleView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 172
     return-void
 .end method
 
 .method public static show(Landroid/app/Activity;Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$SearchQueryDetailsType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;)V
     .locals 3
 
-    .prologue
-    .line 72
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;
@@ -710,28 +619,24 @@
 
     const-string/jumbo v1, "extra_type"
 
-    .line 74
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
     move-result-object v0
 
     const-string/jumbo v1, "extra_id"
 
-    .line 75
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0
 
     const-string/jumbo v1, "extra_reference_id"
 
-    .line 76
     invoke-virtual {v0, v1, p5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0
 
     const-string/jumbo v1, "view"
 
-    .line 77
     invoke-virtual {p6}, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->name()Ljava/lang/String;
 
     move-result-object v2
@@ -742,82 +647,66 @@
 
     const-string/jumbo v1, "extra_original_query"
 
-    .line 78
     invoke-virtual {v0, v1, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0
 
     const-string/jumbo v1, "extra_title"
 
-    .line 79
     invoke-virtual {v0, v1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 72
     invoke-virtual {p0, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 80
     return-void
 .end method
 
 .method private showContentView()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 238
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->leWrapper:Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;->hide(Z)V
 
-    .line 239
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->content:Lcom/netflix/mediaclient/android/widget/LoggingScrollView;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/gfx/AnimationUtils;->showView(Landroid/view/View;Z)V
 
-    .line 240
     return-void
 .end method
 
 .method private showErrorView()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 243
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->leWrapper:Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;->showErrorView(Z)V
 
-    .line 244
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->content:Lcom/netflix/mediaclient/android/widget/LoggingScrollView;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/gfx/AnimationUtils;->hideView(Landroid/view/View;Z)V
 
-    .line 245
     return-void
 .end method
 
 .method private showLoadingView()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 248
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->leWrapper:Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;->showLoadingView(Z)V
 
-    .line 249
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->content:Lcom/netflix/mediaclient/android/widget/LoggingScrollView;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/gfx/AnimationUtils;->hideView(Landroid/view/View;Z)V
 
-    .line 250
     return-void
 .end method
 
@@ -826,8 +715,6 @@
 .method protected createManagerStatusListener()Lcom/netflix/mediaclient/servicemgr/ManagerStatusListener;
     .locals 1
 
-    .prologue
-    .line 184
     new-instance v0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$4;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$4;-><init>(Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;)V
@@ -838,12 +725,10 @@
 .method fireImpressionEvents()V
     .locals 9
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 312
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->content:Lcom/netflix/mediaclient/android/widget/LoggingScrollView;
 
     if-nez v0, :cond_1
@@ -864,7 +749,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 321
     :cond_0
     :goto_2
     return-void
@@ -872,7 +756,6 @@
     :cond_1
     move v0, v2
 
-    .line 312
     goto :goto_0
 
     :cond_2
@@ -880,7 +763,6 @@
 
     goto :goto_1
 
-    .line 316
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->gridView:Lcom/netflix/mediaclient/android/widget/StaticGridView;
 
@@ -890,10 +772,8 @@
 
     move-result-object v7
 
-    .line 317
     if-eqz v7, :cond_0
 
-    .line 318
     const-wide/16 v0, 0x1
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->gridView:Lcom/netflix/mediaclient/android/widget/StaticGridView;
@@ -920,14 +800,12 @@
 
     check-cast v7, Ljava/lang/Integer;
 
-    .line 319
     invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
 
     move-result v7
 
     iget-object v8, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->nonModalView:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 318
     invoke-static/range {v0 .. v8}, Lcom/netflix/mediaclient/service/logging/search/utils/SearchLogUtils;->reportSearchImpression(JLandroid/content/Context;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;Ljava/lang/String;[Ljava/lang/String;IILcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;)V
 
     goto :goto_2
@@ -936,8 +814,6 @@
 .method public getUiScreen()Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
     .locals 1
 
-    .prologue
-    .line 307
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->searchResults:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     return-object v0
@@ -946,8 +822,6 @@
 .method public isLoadingData()Z
     .locals 1
 
-    .prologue
-    .line 254
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->isLoading:Z
 
     return v0
@@ -956,33 +830,23 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 1
 
-    .prologue
-    .line 84
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 86
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->setupMetaData()V
 
-    .line 87
     const v0, 0x7f0300ef
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->setContentView(I)V
 
-    .line 89
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->findViews()V
 
-    .line 90
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->setupLoading()V
 
-    .line 92
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->setupViews()V
 
-    .line 93
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->setupGridView()V
 
-    .line 95
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->setupGridViewObserver()V
 
-    .line 96
     return-void
 .end method

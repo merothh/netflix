@@ -10,11 +10,8 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     return-void
 .end method
 
@@ -23,8 +20,6 @@
 .method public isQuickScaleEnabled(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 59
     invoke-static {p1}, Landroid/support/v4/view/ScaleGestureDetectorCompatKitKat;->isQuickScaleEnabled(Ljava/lang/Object;)Z
 
     move-result v0
@@ -35,10 +30,7 @@
 .method public setQuickScaleEnabled(Ljava/lang/Object;Z)V
     .locals 0
 
-    .prologue
-    .line 54
     invoke-static {p1, p2}, Landroid/support/v4/view/ScaleGestureDetectorCompatKitKat;->setQuickScaleEnabled(Ljava/lang/Object;Z)V
 
-    .line 55
     return-void
 .end method

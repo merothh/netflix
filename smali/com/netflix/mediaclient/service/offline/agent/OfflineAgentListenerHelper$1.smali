@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;Ljava/lang/String;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 0
 
-    .prologue
-    .line 33
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper$1;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper$1;->val$playableId:Ljava/lang/String;
@@ -36,13 +34,10 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 36
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper$1;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;->access$000(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;)V
 
-    .line 37
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper$1;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;->access$100(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;)Ljava/util/List;
@@ -66,7 +61,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListener;
 
-    .line 38
     iget-object v2, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper$1;->val$playableId:Ljava/lang/String;
 
     iget-object v3, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper$1;->val$status:Lcom/netflix/mediaclient/android/app/Status;
@@ -75,7 +69,6 @@
 
     goto :goto_0
 
-    .line 40
     :cond_0
     return-void
 .end method

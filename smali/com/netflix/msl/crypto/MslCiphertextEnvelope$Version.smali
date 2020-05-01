@@ -26,12 +26,10 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 71
     new-instance v0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
 
     const-string/jumbo v1, "V1"
@@ -40,7 +38,6 @@
 
     sput-object v0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;->V1:Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
 
-    .line 95
     new-instance v0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
 
     const-string/jumbo v1, "V2"
@@ -49,7 +46,6 @@
 
     sput-object v0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;->V2:Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
 
-    .line 50
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
@@ -75,8 +71,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 50
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -85,11 +79,8 @@
 .method public static valueOf(I)Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
     .locals 3
 
-    .prologue
-    .line 103
     packed-switch p0, :pswitch_data_0
 
-    .line 106
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -120,11 +111,9 @@
 
     throw v0
 
-    .line 104
     :pswitch_0
     sget-object v0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;->V1:Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
 
-    .line 105
     :goto_0
     return-object v0
 
@@ -133,7 +122,6 @@
 
     goto :goto_0
 
-    .line 103
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -144,8 +132,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
     .locals 1
 
-    .prologue
-    .line 50
     const-class v0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -160,8 +146,6 @@
 .method public static values()[Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
     .locals 1
 
-    .prologue
-    .line 50
     sget-object v0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;->$VALUES:[Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
 
     invoke-virtual {v0}, [Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;->clone()Ljava/lang/Object;
@@ -178,8 +162,6 @@
 .method public intValue()I
     .locals 3
 
-    .prologue
-    .line 114
     sget-object v0, Lcom/netflix/msl/crypto/MslCiphertextEnvelope$1;->$SwitchMap$com$netflix$msl$crypto$MslCiphertextEnvelope$Version:[I
 
     invoke-virtual {p0}, Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;->ordinal()I
@@ -190,7 +172,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 117
     new-instance v0, Lcom/netflix/msl/MslInternalException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -221,11 +202,9 @@
 
     throw v0
 
-    .line 115
     :pswitch_0
     const/4 v0, 0x1
 
-    .line 116
     :goto_0
     return v0
 
@@ -234,7 +213,6 @@
 
     goto :goto_0
 
-    .line 114
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

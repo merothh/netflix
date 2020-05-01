@@ -27,11 +27,8 @@
 .method public constructor <init>(Lcom/fasterxml/jackson/core/JsonParser;)V
     .locals 3
 
-    .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->getCurrentToken()Lcom/fasterxml/jackson/core/JsonToken;
 
     move-result-object v0
@@ -42,21 +39,16 @@
 
     invoke-static {p0, p1, v0, v1, v2}, Lcom/netflix/falkor/BranchNodeUtils;->merge(Lcom/netflix/mediaclient/servicemgr/interface_/JsonMerger;Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/core/JsonToken;ZI)Ljava/lang/Object;
 
-    .line 30
     return-void
 .end method
 
 .method public constructor <init>(Lcom/google/gson/JsonElement;)V
     .locals 0
 
-    .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     invoke-virtual {p0, p1}, Lcom/netflix/model/leafs/originals/BillboardAssets;->populate(Lcom/google/gson/JsonElement;)V
 
-    .line 34
     return-void
 .end method
 
@@ -65,8 +57,6 @@
 .method public getAwardsHeadline()Lcom/netflix/model/leafs/originals/BillboardAwardsHeadline;
     .locals 1
 
-    .prologue
-    .line 52
     iget-object v0, p0, Lcom/netflix/model/leafs/originals/BillboardAssets;->awardsHeadline:Lcom/netflix/model/leafs/originals/BillboardAwardsHeadline;
 
     return-object v0
@@ -75,8 +65,6 @@
 .method public getBackground()Lcom/netflix/model/leafs/originals/BillboardBackground;
     .locals 1
 
-    .prologue
-    .line 37
     iget-object v0, p0, Lcom/netflix/model/leafs/originals/BillboardAssets;->background:Lcom/netflix/model/leafs/originals/BillboardBackground;
 
     return-object v0
@@ -85,8 +73,6 @@
 .method public getBackgroundPortrait()Lcom/netflix/model/leafs/originals/BillboardBackgroundPortrait;
     .locals 1
 
-    .prologue
-    .line 41
     iget-object v0, p0, Lcom/netflix/model/leafs/originals/BillboardAssets;->backgroundPortrait:Lcom/netflix/model/leafs/originals/BillboardBackgroundPortrait;
 
     return-object v0
@@ -95,8 +81,6 @@
 .method public getDateBadge()Lcom/netflix/model/leafs/originals/BillboardDateBadge;
     .locals 1
 
-    .prologue
-    .line 49
     iget-object v0, p0, Lcom/netflix/model/leafs/originals/BillboardAssets;->dateBadge:Lcom/netflix/model/leafs/originals/BillboardDateBadge;
 
     return-object v0
@@ -105,8 +89,6 @@
 .method public getLogo()Lcom/netflix/model/leafs/originals/BillboardLogo;
     .locals 1
 
-    .prologue
-    .line 45
     iget-object v0, p0, Lcom/netflix/model/leafs/originals/BillboardAssets;->logo:Lcom/netflix/model/leafs/originals/BillboardLogo;
 
     return-object v0
@@ -115,18 +97,14 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 5
 
-    .prologue
-    .line 74
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 75
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 76
     const-string/jumbo v1, "Assets"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -149,7 +127,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     :cond_0
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -172,14 +149,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 79
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/gson/JsonElement;
 
-    .line 80
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -202,7 +177,6 @@
 
     goto :goto_0
 
-    .line 81
     :pswitch_0
     new-instance v0, Lcom/netflix/model/leafs/originals/BillboardLogo;
 
@@ -212,7 +186,6 @@
 
     goto :goto_0
 
-    .line 80
     :sswitch_0
     const-string/jumbo v4, "logo"
 
@@ -278,7 +251,6 @@
 
     goto :goto_1
 
-    .line 82
     :pswitch_1
     new-instance v0, Lcom/netflix/model/leafs/originals/BillboardBackground;
 
@@ -288,7 +260,6 @@
 
     goto :goto_0
 
-    .line 83
     :pswitch_2
     new-instance v0, Lcom/netflix/model/leafs/originals/BillboardBackgroundPortrait;
 
@@ -298,7 +269,6 @@
 
     goto :goto_0
 
-    .line 84
     :pswitch_3
     new-instance v0, Lcom/netflix/model/leafs/originals/BillboardDateBadge;
 
@@ -308,7 +278,6 @@
 
     goto :goto_0
 
-    .line 85
     :pswitch_4
     new-instance v0, Lcom/netflix/model/leafs/originals/BillboardAwardsHeadline;
 
@@ -318,11 +287,9 @@
 
     goto/16 :goto_0
 
-    .line 88
     :cond_2
     return-void
 
-    .line 80
     :sswitch_data_0
     .sparse-switch
         -0x4f67aad2 -> :sswitch_1
@@ -345,17 +312,14 @@
 .method public set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 57
     sget-boolean v2, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v2, :cond_0
 
-    .line 58
     const-string/jumbo v2, "Assets"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -378,7 +342,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 60
     :cond_0
     const/4 v2, -0x1
 
@@ -392,11 +355,9 @@
     :goto_0
     packed-switch v2, :pswitch_data_0
 
-    .line 69
     :goto_1
     return v0
 
-    .line 60
     :sswitch_0
     const-string/jumbo v3, "logo"
 
@@ -462,7 +423,6 @@
 
     goto :goto_0
 
-    .line 61
     :pswitch_0
     new-instance v0, Lcom/netflix/model/leafs/originals/BillboardLogo;
 
@@ -473,10 +433,8 @@
     :goto_2
     move v0, v1
 
-    .line 69
     goto :goto_1
 
-    .line 62
     :pswitch_1
     new-instance v0, Lcom/netflix/model/leafs/originals/BillboardBackground;
 
@@ -486,7 +444,6 @@
 
     goto :goto_2
 
-    .line 63
     :pswitch_2
     new-instance v0, Lcom/netflix/model/leafs/originals/BillboardDateBadge;
 
@@ -496,7 +453,6 @@
 
     goto :goto_2
 
-    .line 64
     :pswitch_3
     new-instance v0, Lcom/netflix/model/leafs/originals/BillboardBackgroundPortrait;
 
@@ -506,7 +462,6 @@
 
     goto :goto_2
 
-    .line 65
     :pswitch_4
     new-instance v0, Lcom/netflix/model/leafs/originals/BillboardAwardsHeadline;
 
@@ -516,7 +471,6 @@
 
     goto :goto_2
 
-    .line 60
     :sswitch_data_0
     .sparse-switch
         -0x4f67aad2 -> :sswitch_1

@@ -30,8 +30,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 32
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/BaseExtendedDiscoveryFrag;-><init>()V
 
     return-void
@@ -40,8 +38,6 @@
 .method static synthetic access$000(Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;)Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 32
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;->collectionData:Ljava/util/List;
 
     return-object v0
@@ -50,8 +46,6 @@
 .method static synthetic access$002(Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;Ljava/util/List;)Ljava/util/List;
     .locals 0
 
-    .prologue
-    .line 32
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;->collectionData:Ljava/util/List;
 
     return-object p1
@@ -62,26 +56,20 @@
 .method protected findViews(Landroid/view/View;)V
     .locals 2
 
-    .prologue
-    .line 140
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/BaseExtendedDiscoveryFrag;->findViews(Landroid/view/View;)V
 
-    .line 141
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;->titleView:Landroid/widget/TextView;
 
     const v1, 0x7f08012c
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 142
     return-void
 .end method
 
 .method protected setupLayoutManagerAndAdapter()V
     .locals 3
 
-    .prologue
-    .line 146
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;->recyclerView:Landroid/support/v7/widget/RecyclerView;
 
     new-instance v1, Landroid/support/v7/widget/LinearLayoutManager;
@@ -94,7 +82,6 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/RecyclerView;->setLayoutManager(Landroid/support/v7/widget/RecyclerView$LayoutManager;)V
 
-    .line 147
     new-instance v0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag$CollectionAdapter;
 
     const/4 v1, 0x0
@@ -103,7 +90,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;->adapter:Landroid/support/v7/widget/RecyclerView$Adapter;
 
-    .line 148
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;->recyclerView:Landroid/support/v7/widget/RecyclerView;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag$DiscoveryItemDecoration;
@@ -112,18 +98,14 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/RecyclerView;->addItemDecoration(Landroid/support/v7/widget/RecyclerView$ItemDecoration;)V
 
-    .line 149
     return-void
 .end method
 
 .method public updatePage(Lcom/netflix/mediaclient/servicemgr/ServiceManager;JLjava/lang/String;Lcom/netflix/mediaclient/ui/common/PlayContext;Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter$BlurredStoryArtProvider;)V
     .locals 4
 
-    .prologue
-    .line 49
     invoke-super/range {p0 .. p6}, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/BaseExtendedDiscoveryFrag;->updatePage(Lcom/netflix/mediaclient/servicemgr/ServiceManager;JLjava/lang/String;Lcom/netflix/mediaclient/ui/common/PlayContext;Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter$BlurredStoryArtProvider;)V
 
-    .line 51
     invoke-virtual {p1}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getBrowse()Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
 
     move-result-object v0
@@ -144,15 +126,12 @@
 
     invoke-interface {v0, v1, v2}, Lcom/netflix/mediaclient/servicemgr/IBrowseManager;->fetchTask(Lcom/netflix/falkor/CachedModelProxy$CmpTaskDetails;Lcom/netflix/mediaclient/servicemgr/ManagerCallback;)V
 
-    .line 83
     return-void
 .end method
 
 .method public updatePage(Lcom/netflix/mediaclient/servicemgr/ServiceManager;Lcom/netflix/mediaclient/ui/common/PlayContext;Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter$BlurredStoryArtProvider;)V
     .locals 7
 
-    .prologue
-    .line 45
     const-wide/16 v2, -0x1
 
     const-string/jumbo v4, ""
@@ -167,6 +146,5 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;->updatePage(Lcom/netflix/mediaclient/servicemgr/ServiceManager;JLjava/lang/String;Lcom/netflix/mediaclient/ui/common/PlayContext;Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter$BlurredStoryArtProvider;)V
 
-    .line 46
     return-void
 .end method

@@ -24,8 +24,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/configuration/DeviceConfiguration;)V
     .locals 0
 
-    .prologue
-    .line 571
     iput-object p1, p0, Lcom/netflix/mediaclient/service/configuration/DeviceConfiguration$1;->this$0:Lcom/netflix/mediaclient/service/configuration/DeviceConfiguration;
 
     invoke-direct {p0}, Lcom/google/gson/reflect/TypeToken;-><init>()V

@@ -62,35 +62,28 @@
         }
     .end annotation
 
-    .prologue
-    .line 750
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 751
     iput-object p1, p0, Lcom/netflix/falkor/CachedModelProxy$GetResult;->pqls:Ljava/util/Collection;
 
-    .line 753
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$GetResult;->missingPqls:Ljava/util/Set;
 
-    .line 754
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$GetResult;->foundPqls:Ljava/util/List;
 
-    .line 755
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$GetResult;->ignoredPqls:Ljava/util/List;
 
-    .line 756
     return-void
 .end method
 
@@ -99,8 +92,6 @@
 .method public hasMissingPaths()Z
     .locals 1
 
-    .prologue
-    .line 759
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$GetResult;->missingPqls:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->size()I
@@ -123,13 +114,10 @@
 .method public printPaths(Ljava/lang/String;)V
     .locals 4
 
-    .prologue
-    .line 763
     sget-boolean v0, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v0, :cond_2
 
-    .line 764
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$GetResult;->foundPqls:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -149,7 +137,6 @@
 
     check-cast v0, Lcom/netflix/falkor/PQL;
 
-    .line 765
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -172,7 +159,6 @@
 
     goto :goto_0
 
-    .line 767
     :cond_0
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$GetResult;->missingPqls:Ljava/util/Set;
 
@@ -193,7 +179,6 @@
 
     check-cast v0, Lcom/netflix/falkor/PQL;
 
-    .line 768
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -216,7 +201,6 @@
 
     goto :goto_1
 
-    .line 770
     :cond_1
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$GetResult;->ignoredPqls:Ljava/util/List;
 
@@ -237,7 +221,6 @@
 
     check-cast v0, Lcom/netflix/falkor/PQL;
 
-    .line 771
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -260,7 +243,6 @@
 
     goto :goto_2
 
-    .line 774
     :cond_2
     return-void
 .end method

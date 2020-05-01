@@ -20,19 +20,14 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter;JLjava/lang/String;Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;II)V
     .locals 4
 
-    .prologue
-    .line 137
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter$CollectionClickListener;->this$0:Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 138
     iput-wide p2, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter$CollectionClickListener;->turboCollectionId:J
 
-    .line 139
     iput-object p4, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter$CollectionClickListener;->title:Ljava/lang/String;
 
-    .line 142
     new-instance v0, Lcom/netflix/mediaclient/ui/common/PlayContextImp;
 
     invoke-interface {p5}, Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;->getRequestId()Ljava/lang/String;
@@ -45,7 +40,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter$CollectionClickListener;->trackable:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
-    .line 143
     return-void
 .end method
 
@@ -54,8 +48,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 7
 
-    .prologue
-    .line 147
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter$CollectionClickListener;->this$0:Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter;->getActivity()Landroid/app/Activity;
@@ -68,12 +60,10 @@
 
     if-nez v0, :cond_0
 
-    .line 148
     new-instance v0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/TurboExtendedDiscoveryFrag;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/TurboExtendedDiscoveryFrag;-><init>()V
 
-    .line 149
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter$CollectionClickListener;->this$0:Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter;->getActivity()Landroid/app/Activity;
@@ -84,7 +74,6 @@
 
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->showDialog(Landroid/app/DialogFragment;)Z
 
-    .line 151
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter$CollectionClickListener;->this$0:Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter;->getActivity()Landroid/app/Activity;
@@ -111,7 +100,6 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/BaseExtendedDiscoveryFrag;->updatePage(Lcom/netflix/mediaclient/servicemgr/ServiceManager;JLjava/lang/String;Lcom/netflix/mediaclient/ui/common/PlayContext;Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter$BlurredStoryArtProvider;)V
 
-    .line 153
     :cond_0
     return-void
 .end method

@@ -25,13 +25,10 @@
 .method constructor <init>(Lio/realm/RealmResults;I)V
     .locals 3
 
-    .prologue
-    .line 769
     iput-object p1, p0, Lio/realm/RealmResults$RealmResultsListIterator;->this$0:Lio/realm/RealmResults;
 
     invoke-direct {p0, p1}, Lio/realm/RealmResults$RealmResultsIterator;-><init>(Lio/realm/RealmResults;)V
 
-    .line 770
     if-ltz p2, :cond_0
 
     invoke-virtual {p1}, Lio/realm/RealmResults;->size()I
@@ -40,15 +37,12 @@
 
     if-gt p2, v0, :cond_0
 
-    .line 771
     add-int/lit8 v0, p2, -0x1
 
     iput v0, p0, Lio/realm/RealmResults$RealmResultsListIterator;->pos:I
 
-    .line 775
     return-void
 
-    .line 773
     :cond_0
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -104,8 +98,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 785
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string/jumbo v1, "Adding an element is not supported. Use Realm.createObject() instead."
@@ -120,8 +112,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 767
     check-cast p1, Lio/realm/RealmModel;
 
     invoke-virtual {p0, p1}, Lio/realm/RealmResults$RealmResultsListIterator;->add(Lio/realm/RealmModel;)V
@@ -132,8 +122,6 @@
 .method public hasPrevious()Z
     .locals 1
 
-    .prologue
-    .line 793
     iget v0, p0, Lio/realm/RealmResults$RealmResultsListIterator;->pos:I
 
     if-ltz v0, :cond_0
@@ -152,8 +140,6 @@
 .method public nextIndex()I
     .locals 1
 
-    .prologue
-    .line 801
     iget v0, p0, Lio/realm/RealmResults$RealmResultsListIterator;->pos:I
 
     add-int/lit8 v0, v0, 0x1
@@ -169,18 +155,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 809
     iget-object v0, p0, Lio/realm/RealmResults$RealmResultsListIterator;->this$0:Lio/realm/RealmResults;
 
     iget-object v0, v0, Lio/realm/RealmResults;->realm:Lio/realm/BaseRealm;
 
     invoke-virtual {v0}, Lio/realm/BaseRealm;->checkIfValid()V
 
-    .line 810
     invoke-virtual {p0}, Lio/realm/RealmResults$RealmResultsListIterator;->checkRealmIsStable()V
 
-    .line 812
     :try_start_0
     iget-object v0, p0, Lio/realm/RealmResults$RealmResultsListIterator;->this$0:Lio/realm/RealmResults;
 
@@ -190,7 +172,6 @@
 
     move-result-object v0
 
-    .line 813
     iget v1, p0, Lio/realm/RealmResults$RealmResultsListIterator;->pos:I
 
     add-int/lit8 v1, v1, -0x1
@@ -199,14 +180,11 @@
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 814
     return-object v0
 
-    .line 815
     :catch_0
     move-exception v0
 
-    .line 816
     new-instance v0, Ljava/util/NoSuchElementException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -243,8 +221,6 @@
 .method public bridge synthetic previous()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 767
     invoke-virtual {p0}, Lio/realm/RealmResults$RealmResultsListIterator;->previous()Lio/realm/RealmModel;
 
     move-result-object v0
@@ -255,8 +231,6 @@
 .method public previousIndex()I
     .locals 1
 
-    .prologue
-    .line 825
     iget v0, p0, Lio/realm/RealmResults$RealmResultsListIterator;->pos:I
 
     return v0
@@ -273,8 +247,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 836
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string/jumbo v1, "Replacing and element is not supported."
@@ -289,8 +261,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 767
     check-cast p1, Lio/realm/RealmModel;
 
     invoke-virtual {p0, p1}, Lio/realm/RealmResults$RealmResultsListIterator;->set(Lio/realm/RealmModel;)V

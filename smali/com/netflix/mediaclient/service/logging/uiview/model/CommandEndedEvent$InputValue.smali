@@ -26,12 +26,10 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 101
     new-instance v0, Lcom/netflix/mediaclient/service/logging/uiview/model/CommandEndedEvent$InputValue;
 
     const-string/jumbo v1, "swipe"
@@ -40,7 +38,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/logging/uiview/model/CommandEndedEvent$InputValue;->swipe:Lcom/netflix/mediaclient/service/logging/uiview/model/CommandEndedEvent$InputValue;
 
-    .line 102
     new-instance v0, Lcom/netflix/mediaclient/service/logging/uiview/model/CommandEndedEvent$InputValue;
 
     const-string/jumbo v1, "touch"
@@ -49,7 +46,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/logging/uiview/model/CommandEndedEvent$InputValue;->touch:Lcom/netflix/mediaclient/service/logging/uiview/model/CommandEndedEvent$InputValue;
 
-    .line 100
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/logging/uiview/model/CommandEndedEvent$InputValue;
@@ -75,8 +71,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 100
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -85,8 +79,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/logging/uiview/model/CommandEndedEvent$InputValue;
     .locals 1
 
-    .prologue
-    .line 100
     const-class v0, Lcom/netflix/mediaclient/service/logging/uiview/model/CommandEndedEvent$InputValue;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -101,8 +93,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/logging/uiview/model/CommandEndedEvent$InputValue;
     .locals 1
 
-    .prologue
-    .line 100
     sget-object v0, Lcom/netflix/mediaclient/service/logging/uiview/model/CommandEndedEvent$InputValue;->$VALUES:[Lcom/netflix/mediaclient/service/logging/uiview/model/CommandEndedEvent$InputValue;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/logging/uiview/model/CommandEndedEvent$InputValue;->clone()Ljava/lang/Object;

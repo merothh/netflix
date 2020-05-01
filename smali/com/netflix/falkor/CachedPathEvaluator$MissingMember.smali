@@ -16,13 +16,10 @@
 .method private constructor <init>(Lcom/netflix/falkor/CachedPathEvaluator;)V
     .locals 1
 
-    .prologue
-    .line 10
     iput-object p1, p0, Lcom/netflix/falkor/CachedPathEvaluator$MissingMember;->this$0:Lcom/netflix/falkor/CachedPathEvaluator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 11
     sget-object v0, Lcom/netflix/falkor/PQL;->EMPTY:Lcom/netflix/falkor/PQL;
 
     iput-object v0, p0, Lcom/netflix/falkor/CachedPathEvaluator$MissingMember;->path:Lcom/netflix/falkor/PQL;
@@ -33,8 +30,6 @@
 .method synthetic constructor <init>(Lcom/netflix/falkor/CachedPathEvaluator;Lcom/netflix/falkor/CachedPathEvaluator$1;)V
     .locals 0
 
-    .prologue
-    .line 10
     invoke-direct {p0, p1}, Lcom/netflix/falkor/CachedPathEvaluator$MissingMember;-><init>(Lcom/netflix/falkor/CachedPathEvaluator;)V
 
     return-void
@@ -45,8 +40,6 @@
 .method public getPath()Lcom/netflix/falkor/PQL;
     .locals 1
 
-    .prologue
-    .line 13
     iget-object v0, p0, Lcom/netflix/falkor/CachedPathEvaluator$MissingMember;->path:Lcom/netflix/falkor/PQL;
 
     return-object v0
@@ -55,10 +48,7 @@
 .method public setPath(Lcom/netflix/falkor/PQL;)V
     .locals 0
 
-    .prologue
-    .line 17
     iput-object p1, p0, Lcom/netflix/falkor/CachedPathEvaluator$MissingMember;->path:Lcom/netflix/falkor/PQL;
 
-    .line 18
     return-void
 .end method

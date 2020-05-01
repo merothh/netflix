@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/kubrick/details/BarkerMovieDetailsFrag;)V
     .locals 0
 
-    .prologue
-    .line 319
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerMovieDetailsFrag$2;->this$0:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerMovieDetailsFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .prologue
-    .line 323
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerMovieDetailsFrag$2;->this$0:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerMovieDetailsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerMovieDetailsFrag;->getActivity()Landroid/app/Activity;
@@ -38,6 +34,5 @@
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/details/DetailsActivity;->finishAllDetailsActivities(Landroid/content/Context;)V
 
-    .line 324
     return-void
 .end method

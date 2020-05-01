@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask;)V
     .locals 0
 
-    .prologue
-    .line 1835
     iput-object p1, p0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask$1;->this$1:Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/user/SimpleUserAgentWebCallback;-><init>()V
@@ -25,22 +23,18 @@
 .method public onUserDataFetched(Lcom/netflix/mediaclient/service/webclient/model/leafs/User;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 1838
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1839
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask$1;->this$1:Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask;->this$0:Lcom/netflix/mediaclient/service/user/UserAgent;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/service/user/UserAgent;->access$1700(Lcom/netflix/mediaclient/service/user/UserAgent;Lcom/netflix/mediaclient/service/webclient/model/leafs/User;)V
 
-    .line 1841
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask$1;->this$1:Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask;
 
@@ -56,6 +50,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1850
     return-void
 .end method

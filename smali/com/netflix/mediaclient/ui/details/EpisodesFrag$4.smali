@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/details/EpisodesFrag;)V
     .locals 0
 
-    .prologue
-    .line 476
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$4;->this$0:Lcom/netflix/mediaclient/ui/details/EpisodesFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public createItemView()Landroid/view/View;
     .locals 4
 
-    .prologue
-    .line 480
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$4;->this$0:Lcom/netflix/mediaclient/ui/details/EpisodesFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/EpisodesFrag;->getActivity()Landroid/app/Activity;
@@ -44,7 +40,6 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    .line 481
     const v1, 0x7f0300f7
 
     const/4 v2, 0x0

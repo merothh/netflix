@@ -17,13 +17,10 @@
 .method constructor <init>(Lcom/netflix/android/org/json/JSONObject;)V
     .locals 5
 
-    .prologue
-    .line 80
     sget-object v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->X509:Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
     invoke-direct {p0, v0}, Lcom/netflix/msl/entityauth/EntityAuthenticationData;-><init>(Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;)V
 
-    .line 85
     :try_start_0
     const-string/jumbo v0, "x509certificate"
 
@@ -33,7 +30,6 @@
 
     move-result-object v1
 
-    .line 93
     :try_start_1
     const-string/jumbo v0, "X.509"
 
@@ -43,7 +39,6 @@
 
     move-result-object v0
 
-    .line 101
     :try_start_2
     invoke-static {v1}, Lcom/netflix/msl/util/Base64;->decode(Ljava/lang/String;)[B
     :try_end_2
@@ -51,13 +46,11 @@
 
     move-result-object v2
 
-    .line 106
     :try_start_3
     new-instance v3, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v3, v2}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 107
     invoke-virtual {v0, v3}, Ljava/security/cert/CertificateFactory;->generateCertificate(Ljava/io/InputStream;)Ljava/security/cert/Certificate;
 
     move-result-object v0
@@ -66,7 +59,6 @@
 
     iput-object v0, p0, Lcom/netflix/msl/entityauth/X509AuthenticationData;->x509cert:Ljava/security/cert/X509Certificate;
 
-    .line 108
     iget-object v0, p0, Lcom/netflix/msl/entityauth/X509AuthenticationData;->x509cert:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getSubjectX500Principal()Ljavax/security/auth/x500/X500Principal;
@@ -81,14 +73,11 @@
     :try_end_3
     .catch Ljava/security/cert/CertificateException; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 112
     return-void
 
-    .line 86
     :catch_0
     move-exception v0
 
-    .line 87
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_PARSE_ERROR:Lcom/netflix/msl/MslError;
@@ -119,11 +108,9 @@
 
     throw v1
 
-    .line 94
     :catch_1
     move-exception v0
 
-    .line 95
     new-instance v1, Lcom/netflix/msl/MslInternalException;
 
     const-string/jumbo v2, "No certificate X.509 certificate factory."
@@ -132,11 +119,9 @@
 
     throw v1
 
-    .line 102
     :catch_2
     move-exception v0
 
-    .line 103
     new-instance v2, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v3, Lcom/netflix/msl/MslError;->X509CERT_INVALID:Lcom/netflix/msl/MslError;
@@ -145,11 +130,9 @@
 
     throw v2
 
-    .line 109
     :catch_3
     move-exception v0
 
-    .line 110
     new-instance v2, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v3, Lcom/netflix/msl/MslError;->X509CERT_PARSE_ERROR:Lcom/netflix/msl/MslError;
@@ -162,16 +145,12 @@
 .method public constructor <init>(Ljava/security/cert/X509Certificate;)V
     .locals 1
 
-    .prologue
-    .line 65
     sget-object v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->X509:Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
     invoke-direct {p0, v0}, Lcom/netflix/msl/entityauth/EntityAuthenticationData;-><init>(Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;)V
 
-    .line 66
     iput-object p1, p0, Lcom/netflix/msl/entityauth/X509AuthenticationData;->x509cert:Ljava/security/cert/X509Certificate;
 
-    .line 67
     invoke-virtual {p1}, Ljava/security/cert/X509Certificate;->getSubjectX500Principal()Ljavax/security/auth/x500/X500Principal;
 
     move-result-object v0
@@ -182,7 +161,6 @@
 
     iput-object v0, p0, Lcom/netflix/msl/entityauth/X509AuthenticationData;->identity:Ljava/lang/String;
 
-    .line 68
     return-void
 .end method
 
@@ -191,19 +169,15 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 150
     if-ne p1, p0, :cond_0
 
-    .line 153
     :goto_0
     return v1
 
-    .line 151
     :cond_0
     instance-of v0, p1, Lcom/netflix/msl/entityauth/X509AuthenticationData;
 
@@ -216,10 +190,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 152
     check-cast v0, Lcom/netflix/msl/entityauth/X509AuthenticationData;
 
-    .line 153
     invoke-super {p0, p1}, Lcom/netflix/msl/entityauth/EntityAuthenticationData;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -252,13 +224,10 @@
 .method public getAuthData()Lcom/netflix/android/org/json/JSONObject;
     .locals 4
 
-    .prologue
-    .line 134
     new-instance v0, Lcom/netflix/android/org/json/JSONObject;
 
     invoke-direct {v0}, Lcom/netflix/android/org/json/JSONObject;-><init>()V
 
-    .line 136
     :try_start_0
     const-string/jumbo v1, "x509certificate"
 
@@ -277,14 +246,11 @@
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/security/cert/CertificateEncodingException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 142
     return-object v0
 
-    .line 137
     :catch_0
     move-exception v0
 
-    .line 138
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_ENCODE_ERROR:Lcom/netflix/msl/MslError;
@@ -295,11 +261,9 @@
 
     throw v1
 
-    .line 139
     :catch_1
     move-exception v0
 
-    .line 140
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->X509CERT_ENCODE_ERROR:Lcom/netflix/msl/MslError;
@@ -314,8 +278,6 @@
 .method public getIdentity()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 126
     iget-object v0, p0, Lcom/netflix/msl/entityauth/X509AuthenticationData;->identity:Ljava/lang/String;
 
     return-object v0
@@ -324,8 +286,6 @@
 .method public getX509Cert()Ljava/security/cert/X509Certificate;
     .locals 1
 
-    .prologue
-    .line 118
     iget-object v0, p0, Lcom/netflix/msl/entityauth/X509AuthenticationData;->x509cert:Ljava/security/cert/X509Certificate;
 
     return-object v0
@@ -334,8 +294,6 @@
 .method public hashCode()I
     .locals 2
 
-    .prologue
-    .line 161
     invoke-super {p0}, Lcom/netflix/msl/entityauth/EntityAuthenticationData;->hashCode()I
 
     move-result v0

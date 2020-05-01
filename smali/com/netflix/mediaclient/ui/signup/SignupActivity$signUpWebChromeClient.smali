@@ -11,8 +11,6 @@
 .method private constructor <init>(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)V
     .locals 0
 
-    .prologue
-    .line 419
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$signUpWebChromeClient;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-direct {p0}, Landroid/webkit/WebChromeClient;-><init>()V
@@ -23,8 +21,6 @@
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/ui/signup/SignupActivity;Lcom/netflix/mediaclient/ui/signup/SignupActivity$1;)V
     .locals 0
 
-    .prologue
-    .line 419
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/signup/SignupActivity$signUpWebChromeClient;-><init>(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)V
 
     return-void
@@ -35,15 +31,12 @@
 .method public onConsoleMessage(Landroid/webkit/ConsoleMessage;)Z
     .locals 3
 
-    .prologue
-    .line 425
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 426
     const-string/jumbo v0, "JavaScript"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -92,7 +85,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 428
     :cond_0
     const/4 v0, 0x1
 

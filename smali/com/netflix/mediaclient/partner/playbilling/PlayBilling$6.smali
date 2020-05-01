@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/partner/playbilling/PlayBilling;Ljava/lang/String;Lcom/netflix/mediaclient/partner/playbilling/PlayBillingCallback;)V
     .locals 0
 
-    .prologue
-    .line 558
     iput-object p1, p0, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling$6;->this$0:Lcom/netflix/mediaclient/partner/playbilling/PlayBilling;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling$6;->val$continuationToken:Ljava/lang/String;
@@ -36,8 +34,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 560
     iget-object v0, p0, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling$6;->this$0:Lcom/netflix/mediaclient/partner/playbilling/PlayBilling;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling$6;->val$continuationToken:Ljava/lang/String;
@@ -46,18 +42,15 @@
 
     move-result-object v0
 
-    .line 561
     iget-object v1, p0, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling$6;->this$0:Lcom/netflix/mediaclient/partner/playbilling/PlayBilling;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling;->flagEndAsync()V
 
-    .line 562
     iget-object v1, p0, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling$6;->this$0:Lcom/netflix/mediaclient/partner/playbilling/PlayBilling;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling$6;->val$callback:Lcom/netflix/mediaclient/partner/playbilling/PlayBillingCallback;
 
     invoke-static {v1, v2, v0}, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling;->access$100(Lcom/netflix/mediaclient/partner/playbilling/PlayBilling;Lcom/netflix/mediaclient/partner/playbilling/PlayBillingCallback;Lorg/json/JSONObject;)V
 
-    .line 563
     return-void
 .end method

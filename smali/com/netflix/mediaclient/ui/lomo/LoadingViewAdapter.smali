@@ -20,17 +20,12 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/lomo/RowAdapterCallbacks;Lcom/netflix/mediaclient/android/widget/ObjectRecycler$ViewRecycler;)V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lomo/LoadingViewAdapter;->callbacks:Lcom/netflix/mediaclient/ui/lomo/RowAdapterCallbacks;
 
-    .line 19
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/lomo/LoadingViewAdapter;->viewRecycler:Lcom/netflix/mediaclient/android/widget/ObjectRecycler$ViewRecycler;
 
-    .line 20
     return-void
 .end method
 
@@ -39,8 +34,6 @@
 .method public getCount()I
     .locals 1
 
-    .prologue
-    .line 24
     const/4 v0, 0x1
 
     return v0
@@ -49,8 +42,6 @@
 .method public getRowHeightInPx()I
     .locals 1
 
-    .prologue
-    .line 29
     const/4 v0, -0x2
 
     return v0
@@ -59,8 +50,6 @@
 .method public getView(I)Landroid/view/View;
     .locals 4
 
-    .prologue
-    .line 39
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/LoadingViewAdapter;->viewRecycler:Lcom/netflix/mediaclient/android/widget/ObjectRecycler$ViewRecycler;
 
     const-class v1, Lcom/netflix/mediaclient/android/fragment/LoadingView;
@@ -71,14 +60,11 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 40
     if-eqz v0, :cond_0
 
-    .line 46
     :goto_0
     return-object v0
 
-    .line 44
     :cond_0
     new-instance v0, Lcom/netflix/mediaclient/android/fragment/LoadingView;
 
@@ -90,7 +76,6 @@
 
     invoke-direct {v0, v1}, Lcom/netflix/mediaclient/android/fragment/LoadingView;-><init>(Landroid/content/Context;)V
 
-    .line 45
     const-string/jumbo v1, "LoadingFragmentPagerAdapter"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -119,8 +104,6 @@
 .method public hasMoreData()Z
     .locals 1
 
-    .prologue
-    .line 51
     const/4 v0, 0x0
 
     return v0
@@ -129,32 +112,24 @@
 .method public invalidateRequestId()V
     .locals 0
 
-    .prologue
-    .line 57
     return-void
 .end method
 
 .method public refreshData(Lcom/netflix/mediaclient/servicemgr/interface_/BasicLoMo;I)V
     .locals 0
 
-    .prologue
-    .line 62
     return-void
 .end method
 
 .method public restoreFromMemento(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 71
     return-void
 .end method
 
 .method public saveToMemento()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 66
     const/4 v0, 0x0
 
     return-object v0
@@ -163,8 +138,6 @@
 .method public shouldOverlapPages()Z
     .locals 1
 
-    .prologue
-    .line 34
     const/4 v0, 0x1
 
     return v0
@@ -173,7 +146,5 @@
 .method public trackPresentation(I)V
     .locals 0
 
-    .prologue
-    .line 76
     return-void
 .end method

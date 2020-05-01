@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/NetflixService;)V
     .locals 0
 
-    .prologue
-    .line 1658
     iput-object p1, p0, Lcom/netflix/mediaclient/service/NetflixService$7;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,8 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .prologue
-    .line 1661
     if-eqz p2, :cond_0
 
     const-string/jumbo v0, "com.netflix.mediaclient.service.ACTION_SHOW_MDX_PLAYER"
@@ -41,7 +37,6 @@
 
     if-nez v0, :cond_1
 
-    .line 1662
     :cond_0
     const-string/jumbo v0, "NetflixService"
 
@@ -49,11 +44,9 @@
 
     invoke-static {v0, v1, p2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
-    .line 1677
     :goto_0
     return-void
 
-    .line 1667
     :cond_1
     const-string/jumbo v0, "NetflixService"
 
@@ -61,7 +54,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1668
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$7;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/NetflixService$7;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
@@ -78,7 +70,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/service/NetflixService;->startActivity(Landroid/content/Intent;)V
 
-    .line 1670
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$7;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/NetflixService;->access$2700(Lcom/netflix/mediaclient/service/NetflixService;)Landroid/os/Handler;

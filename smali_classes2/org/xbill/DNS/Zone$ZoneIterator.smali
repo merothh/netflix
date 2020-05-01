@@ -22,20 +22,16 @@
 .method constructor <init>(Lorg/xbill/DNS/Zone;Z)V
     .locals 8
 
-    .prologue
     const/4 v1, 0x2
 
     const/4 v3, 0x0
 
-    .line 39
     iput-object p1, p0, Lorg/xbill/DNS/Zone$ZoneIterator;->this$0:Lorg/xbill/DNS/Zone;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     monitor-enter p1
 
-    .line 41
     :try_start_0
     invoke-static {p1}, Lorg/xbill/DNS/Zone;->access$000(Lorg/xbill/DNS/Zone;)Ljava/util/Map;
 
@@ -51,15 +47,12 @@
 
     iput-object v0, p0, Lorg/xbill/DNS/Zone$ZoneIterator;->zentries:Ljava/util/Iterator;
 
-    .line 42
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 43
     iput-boolean p2, p0, Lorg/xbill/DNS/Zone$ZoneIterator;->wantLastSOA:Z
 
-    .line 44
     invoke-static {p1}, Lorg/xbill/DNS/Zone;->access$100(Lorg/xbill/DNS/Zone;)Ljava/lang/Object;
 
     move-result-object v0
@@ -68,7 +61,6 @@
 
     move-result-object v5
 
-    .line 45
     array-length v0, v5
 
     new-array v0, v0, [Lorg/xbill/DNS/RRset;
@@ -79,38 +71,32 @@
 
     move v2, v3
 
-    .line 46
     :goto_0
     array-length v4, v5
 
     if-ge v2, v4, :cond_2
 
-    .line 47
     aget-object v4, v5, v2
 
     invoke-virtual {v4}, Lorg/xbill/DNS/RRset;->getType()I
 
     move-result v4
 
-    .line 48
     const/4 v6, 0x6
 
     if-ne v4, v6, :cond_0
 
-    .line 49
     iget-object v4, p0, Lorg/xbill/DNS/Zone$ZoneIterator;->current:[Lorg/xbill/DNS/RRset;
 
     aget-object v6, v5, v2
 
     aput-object v6, v4, v3
 
-    .line 46
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 42
     :catchall_0
     move-exception v0
 
@@ -121,11 +107,9 @@
 
     throw v0
 
-    .line 50
     :cond_0
     if-ne v4, v1, :cond_1
 
-    .line 51
     iget-object v4, p0, Lorg/xbill/DNS/Zone$ZoneIterator;->current:[Lorg/xbill/DNS/RRset;
 
     const/4 v6, 0x1
@@ -136,7 +120,6 @@
 
     goto :goto_1
 
-    .line 53
     :cond_1
     iget-object v6, p0, Lorg/xbill/DNS/Zone$ZoneIterator;->current:[Lorg/xbill/DNS/RRset;
 
@@ -150,7 +133,6 @@
 
     goto :goto_1
 
-    .line 55
     :cond_2
     return-void
 .end method
@@ -160,8 +142,6 @@
 .method public hasNext()Z
     .locals 1
 
-    .prologue
-    .line 59
     iget-object v0, p0, Lorg/xbill/DNS/Zone$ZoneIterator;->current:[Lorg/xbill/DNS/RRset;
 
     if-nez v0, :cond_0
@@ -185,33 +165,27 @@
 .method public next()Ljava/lang/Object;
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 64
     invoke-virtual {p0}, Lorg/xbill/DNS/Zone$ZoneIterator;->hasNext()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 65
     new-instance v0, Ljava/util/NoSuchElementException;
 
     invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
     throw v0
 
-    .line 67
     :cond_0
     iget-object v0, p0, Lorg/xbill/DNS/Zone$ZoneIterator;->current:[Lorg/xbill/DNS/RRset;
 
     if-nez v0, :cond_1
 
-    .line 68
     iput-boolean v4, p0, Lorg/xbill/DNS/Zone$ZoneIterator;->wantLastSOA:Z
 
-    .line 69
     iget-object v0, p0, Lorg/xbill/DNS/Zone$ZoneIterator;->this$0:Lorg/xbill/DNS/Zone;
 
     iget-object v1, p0, Lorg/xbill/DNS/Zone$ZoneIterator;->this$0:Lorg/xbill/DNS/Zone;
@@ -226,11 +200,9 @@
 
     move-result-object v0
 
-    .line 86
     :goto_0
     return-object v0
 
-    .line 71
     :cond_1
     iget-object v0, p0, Lorg/xbill/DNS/Zone$ZoneIterator;->current:[Lorg/xbill/DNS/RRset;
 
@@ -242,7 +214,6 @@
 
     aget-object v1, v0, v1
 
-    .line 72
     iget v0, p0, Lorg/xbill/DNS/Zone$ZoneIterator;->count:I
 
     iget-object v2, p0, Lorg/xbill/DNS/Zone$ZoneIterator;->current:[Lorg/xbill/DNS/RRset;
@@ -251,12 +222,10 @@
 
     if-ne v0, v2, :cond_3
 
-    .line 73
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/xbill/DNS/Zone$ZoneIterator;->current:[Lorg/xbill/DNS/RRset;
 
-    .line 74
     :cond_2
     iget-object v0, p0, Lorg/xbill/DNS/Zone$ZoneIterator;->zentries:Ljava/util/Iterator;
 
@@ -266,7 +235,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 75
     iget-object v0, p0, Lorg/xbill/DNS/Zone$ZoneIterator;->zentries:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -275,7 +243,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 76
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -292,7 +259,6 @@
 
     if-nez v2, :cond_2
 
-    .line 78
     iget-object v2, p0, Lorg/xbill/DNS/Zone$ZoneIterator;->this$0:Lorg/xbill/DNS/Zone;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -303,29 +269,23 @@
 
     move-result-object v0
 
-    .line 79
     array-length v2, v0
 
     if-eqz v2, :cond_2
 
-    .line 81
     iput-object v0, p0, Lorg/xbill/DNS/Zone$ZoneIterator;->current:[Lorg/xbill/DNS/RRset;
 
-    .line 82
     iput v4, p0, Lorg/xbill/DNS/Zone$ZoneIterator;->count:I
 
     :cond_3
     move-object v0, v1
 
-    .line 86
     goto :goto_0
 .end method
 
 .method public remove()V
     .locals 1
 
-    .prologue
-    .line 91
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

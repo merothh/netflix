@@ -25,36 +25,28 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .prologue
-    .line 25
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/netflix/mediaclient/ui/player/PostPlayBackgroundBasic;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 26
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .prologue
-    .line 21
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/ui/player/PostPlayBackground;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 33
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayBackgroundBasic;->mPanAnimationInterpolator:Landroid/view/animation/DecelerateInterpolator;
 
-    .line 45
     const/16 v0, 0x2710
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayBackgroundBasic;->mOffsetMs:I
 
-    .line 22
     return-void
 .end method
 
@@ -63,8 +55,6 @@
 .method protected findViews()V
     .locals 1
 
-    .prologue
-    .line 29
     const v0, 0x7f0f02ac
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/player/PostPlayBackgroundBasic;->findViewById(I)Landroid/view/View;
@@ -75,7 +65,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayBackgroundBasic;->background:Lcom/netflix/mediaclient/android/widget/TopCropImageView;
 
-    .line 30
     const v0, 0x7f0f02b0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/player/PostPlayBackgroundBasic;->findViewById(I)Landroid/view/View;
@@ -86,15 +75,12 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayBackgroundBasic;->playButton:Landroid/widget/ImageView;
 
-    .line 31
     return-void
 .end method
 
 .method public startBackgroundAutoPan()V
     .locals 6
 
-    .prologue
-    .line 60
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayBackgroundBasic;->netflixActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     if-eqz v0, :cond_0
@@ -111,12 +97,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 70
     :cond_0
     :goto_0
     return-void
 
-    .line 64
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayBackgroundBasic;->background:Lcom/netflix/mediaclient/android/widget/TopCropImageView;
 
@@ -126,7 +110,6 @@
 
     if-nez v0, :cond_0
 
-    .line 65
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayBackgroundBasic;->background:Lcom/netflix/mediaclient/android/widget/TopCropImageView;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/widget/TopCropImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -149,7 +132,6 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 66
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayBackgroundBasic;->background:Lcom/netflix/mediaclient/android/widget/TopCropImageView;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/widget/TopCropImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -174,7 +156,6 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 67
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayBackgroundBasic;->background:Lcom/netflix/mediaclient/android/widget/TopCropImageView;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/widget/TopCropImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -193,7 +174,6 @@
 
     sub-int/2addr v0, v1
 
-    .line 68
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PostPlayBackgroundBasic;->background:Lcom/netflix/mediaclient/android/widget/TopCropImageView;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/android/widget/TopCropImageView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -230,38 +210,30 @@
 .method protected startTimer()V
     .locals 0
 
-    .prologue
-    .line 98
     return-void
 .end method
 
 .method protected stopTimer()V
     .locals 0
 
-    .prologue
-    .line 102
     return-void
 .end method
 
 .method public updateViews(Lcom/netflix/model/leafs/PostPlayItem;Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/ui/player/PlayerFragment;Lcom/netflix/mediaclient/ui/player/PostPlayRequestContext;)V
     .locals 9
 
-    .prologue
     const/4 v8, 0x0
 
     const/4 v6, 0x1
 
-    .line 73
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/player/PostPlayBackgroundBasic;->netflixActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
-    .line 74
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayBackgroundBasic;->background:Lcom/netflix/mediaclient/android/widget/TopCropImageView;
 
     if-eqz v0, :cond_0
 
     if-eqz p4, :cond_0
 
-    .line 75
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PostPlayBackgroundBasic;->background:Lcom/netflix/mediaclient/android/widget/TopCropImageView;
 
     sget-object v0, Lcom/netflix/mediaclient/ui/player/PostPlayRequestContext;->MDX:Lcom/netflix/mediaclient/ui/player/PostPlayRequestContext;
@@ -283,7 +255,6 @@
     :goto_0
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/android/widget/TopCropImageView;->setCutomCroppingEnabled(Z)V
 
-    .line 77
     :cond_0
     invoke-virtual {p1}, Lcom/netflix/model/leafs/PostPlayItem;->getBackgroundAsset()Lcom/netflix/model/leafs/PostPlayAsset;
 
@@ -301,7 +272,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 78
     invoke-virtual {p2}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -324,14 +294,12 @@
 
     move-result-object v4
 
-    .line 79
     invoke-static {p2}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getImageLoader(Landroid/content/Context;)Lcom/netflix/mediaclient/util/gfx/ImageLoader;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PostPlayBackgroundBasic;->background:Lcom/netflix/mediaclient/android/widget/TopCropImageView;
 
-    .line 81
     invoke-virtual {p1}, Lcom/netflix/model/leafs/PostPlayItem;->getBackgroundAsset()Lcom/netflix/model/leafs/PostPlayAsset;
 
     move-result-object v2
@@ -346,10 +314,8 @@
 
     move v7, v6
 
-    .line 79
     invoke-interface/range {v0 .. v7}, Lcom/netflix/mediaclient/util/gfx/ImageLoader;->showImg(Lcom/netflix/mediaclient/android/widget/AdvancedImageView;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;Ljava/lang/String;Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;ZI)V
 
-    .line 89
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayBackgroundBasic;->playButton:Landroid/widget/ImageView;
 
@@ -363,7 +329,6 @@
 
     if-eqz p3, :cond_2
 
-    .line 90
     new-instance v0, Lcom/netflix/mediaclient/ui/player/PostPlayCallToAction;
 
     invoke-virtual {p1}, Lcom/netflix/model/leafs/PostPlayItem;->getPlayAction()Lcom/netflix/model/leafs/PostPlayAction;
@@ -382,18 +347,15 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayBackgroundBasic;->playAction:Lcom/netflix/mediaclient/ui/player/PostPlayCallToAction;
 
-    .line 91
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayBackgroundBasic;->playButton:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v8}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 93
     :cond_2
     return-void
 
     :cond_3
     move v0, v8
 
-    .line 75
     goto :goto_0
 .end method

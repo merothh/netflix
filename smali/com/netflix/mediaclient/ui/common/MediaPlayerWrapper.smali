@@ -75,28 +75,22 @@
 .method public constructor <init>(Landroid/view/TextureView;ZIFLcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper$PlaybackEventsListener;)V
     .locals 3
 
-    .prologue
-    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->volume:F
 
-    .line 61
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->surfaceReady:Z
 
-    .line 73
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 74
     const-string/jumbo v0, "MediaPlayerWrapper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -149,38 +143,28 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     :cond_0
     iput-object p5, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->assetType:Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
-    .line 77
     iput-object p6, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->callbacks:Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper$PlaybackEventsListener;
 
-    .line 78
     if-eqz p1, :cond_1
 
-    .line 79
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mTextureView:Landroid/view/TextureView;
 
-    .line 80
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mTextureView:Landroid/view/TextureView;
 
     invoke-virtual {v0, p0}, Landroid/view/TextureView;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
 
-    .line 84
     :goto_0
     iput-boolean p2, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->shouldLoop:Z
 
-    .line 85
     iput p3, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->maxLoops:I
 
-    .line 86
     iput p4, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->volume:F
 
-    .line 87
     return-void
 
-    .line 82
     :cond_1
     const/4 v0, 0x1
 
@@ -192,8 +176,6 @@
 .method static synthetic access$000(Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;)V
     .locals 0
 
-    .prologue
-    .line 23
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->startPlayback()V
 
     return-void
@@ -202,24 +184,18 @@
 .method private releaseResources(Landroid/graphics/SurfaceTexture;)V
     .locals 1
 
-    .prologue
-    .line 416
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->releaseMediaPlayer()V
 
-    .line 417
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->releaseSurface(Landroid/graphics/SurfaceTexture;)V
 
-    .line 418
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->callbacks:Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper$PlaybackEventsListener;
 
     if-eqz v0, :cond_0
 
-    .line 419
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->callbacks:Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper$PlaybackEventsListener;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper$PlaybackEventsListener;->onPlaybackFinished()V
 
-    .line 421
     :cond_0
     return-void
 .end method
@@ -227,35 +203,27 @@
 .method private releaseSurface(Landroid/graphics/SurfaceTexture;)V
     .locals 1
 
-    .prologue
-    .line 444
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->surfaceReady:Z
 
-    .line 445
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->videoSurface:Landroid/view/Surface;
 
     if-eqz v0, :cond_0
 
-    .line 446
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->videoSurface:Landroid/view/Surface;
 
     invoke-virtual {v0}, Landroid/view/Surface;->release()V
 
-    .line 447
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->videoSurface:Landroid/view/Surface;
 
-    .line 449
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 450
     invoke-virtual {p1}, Landroid/graphics/SurfaceTexture;->release()V
 
-    .line 452
     :cond_1
     return-void
 .end method
@@ -263,22 +231,18 @@
 .method private startPlayback()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x6
 
-    .line 180
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     if-nez v0, :cond_1
 
-    .line 181
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 182
     const-string/jumbo v0, "MediaPlayerWrapper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -303,12 +267,10 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 205
     :cond_0
     :goto_0
     return-void
 
-    .line 186
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
@@ -316,14 +278,12 @@
 
     move-result v0
 
-    .line 187
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 188
     const-string/jumbo v1, "MediaPlayerWrapper"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -376,7 +336,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 190
     :cond_2
     iget-boolean v1, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->surfaceReady:Z
 
@@ -384,7 +343,6 @@
 
     if-nez v0, :cond_0
 
-    .line 191
     iget v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->playerState:I
 
     const/4 v1, 0x2
@@ -401,20 +359,17 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 193
     :cond_3
     iget v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->playerState:I
 
     if-eq v0, v4, :cond_4
 
-    .line 194
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     iget v1, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->seekPosition:I
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->seekTo(I)V
 
-    .line 197
     :cond_4
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -422,7 +377,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 198
     const-string/jumbo v0, "MediaPlayerWrapper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -447,18 +401,15 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
     :cond_5
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->start()V
 
-    .line 201
     const/4 v0, 0x4
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->playerState:I
 
-    .line 202
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0, p0}, Landroid/media/MediaPlayer;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
@@ -469,13 +420,10 @@
 .method private stopPlayback()V
     .locals 2
 
-    .prologue
-    .line 170
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 171
     iget v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->playerState:I
 
     if-eqz v0, :cond_0
@@ -492,7 +440,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 172
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->getCurrentPosition()I
@@ -501,17 +448,14 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->seekPosition:I
 
-    .line 173
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
 
-    .line 174
     const/4 v0, 0x5
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->playerState:I
 
-    .line 177
     :cond_0
     return-void
 .end method
@@ -519,13 +463,10 @@
 .method private updateVolume()V
     .locals 3
 
-    .prologue
-    .line 217
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 218
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     iget v1, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->volume:F
@@ -534,7 +475,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/media/MediaPlayer;->setVolume(FF)V
 
-    .line 220
     :cond_0
     return-void
 .end method
@@ -544,46 +484,37 @@
 .method public clearCallbacks()V
     .locals 1
 
-    .prologue
-    .line 427
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->callbacks:Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper$PlaybackEventsListener;
 
-    .line 428
     return-void
 .end method
 
 .method public delayedStartPlayback(I)V
     .locals 4
 
-    .prologue
-    .line 310
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->handler:Landroid/os/Handler;
 
     if-nez v0, :cond_0
 
-    .line 311
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->handler:Landroid/os/Handler;
 
-    .line 314
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->startPlaybackRunnable:Ljava/lang/Runnable;
 
     if-nez v0, :cond_1
 
-    .line 315
     new-instance v0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper$1;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper$1;-><init>(Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->startPlaybackRunnable:Ljava/lang/Runnable;
 
-    .line 323
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -591,7 +522,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 324
     const-string/jumbo v0, "MediaPlayerWrapper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -620,7 +550,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 326
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->handler:Landroid/os/Handler;
 
@@ -630,22 +559,18 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 327
     return-void
 .end method
 
 .method public initializeMediaPlayer()V
     .locals 7
 
-    .prologue
-    .line 96
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 97
     const-string/jumbo v0, "MediaPlayerWrapper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -676,81 +601,67 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 100
     :cond_0
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->surfaceReady:Z
 
     if-eqz v0, :cond_5
 
-    .line 102
     :try_start_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     if-nez v0, :cond_1
 
-    .line 103
     new-instance v0, Landroid/media/MediaPlayer;
 
     invoke-direct {v0}, Landroid/media/MediaPlayer;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
-    .line 104
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->playerState:I
 
-    .line 105
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0, p0}, Landroid/media/MediaPlayer;->setOnErrorListener(Landroid/media/MediaPlayer$OnErrorListener;)V
 
-    .line 106
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setAudioStreamType(I)V
 
-    .line 107
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setScreenOnWhilePlaying(Z)V
 
-    .line 108
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0, p0}, Landroid/media/MediaPlayer;->setOnInfoListener(Landroid/media/MediaPlayer$OnInfoListener;)V
 
-    .line 109
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0, p0}, Landroid/media/MediaPlayer;->setOnPreparedListener(Landroid/media/MediaPlayer$OnPreparedListener;)V
 
-    .line 110
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0, p0}, Landroid/media/MediaPlayer;->setOnVideoSizeChangedListener(Landroid/media/MediaPlayer$OnVideoSizeChangedListener;)V
 
-    .line 111
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->updateVolume()V
 
-    .line 114
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->videoSurface:Landroid/view/Surface;
 
     if-eqz v0, :cond_2
 
-    .line 115
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->videoSurface:Landroid/view/Surface;
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setSurface(Landroid/view/Surface;)V
 
-    .line 118
     :cond_2
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -758,7 +669,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 119
     const-string/jumbo v0, "MediaPlayerWrapper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -801,7 +711,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 122
     :cond_3
     iget v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->playerState:I
 
@@ -815,16 +724,13 @@
 
     if-ne v0, v1, :cond_6
 
-    .line 123
     :cond_4
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->startPlayback()V
 
-    .line 149
     :cond_5
     :goto_0
     return-void
 
-    .line 124
     :cond_6
     iget v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->playerState:I
 
@@ -836,7 +742,6 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 125
     :cond_7
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->localUrl:Ljava/lang/String;
 
@@ -846,26 +751,22 @@
 
     if-nez v0, :cond_5
 
-    .line 126
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->localUrl:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 127
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
 
     if-eqz v1, :cond_9
 
-    .line 128
     new-instance v6, Ljava/io/FileInputStream;
 
     invoke-direct {v6, v0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 129
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v6}, Ljava/io/FileInputStream;->getFD()Ljava/io/FileDescriptor;
@@ -878,20 +779,16 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/media/MediaPlayer;->setDataSource(Ljava/io/FileDescriptor;JJ)V
 
-    .line 130
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
 
-    .line 131
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->playerState:I
 
-    .line 132
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->prepareAsync()V
 
-    .line 133
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->playerState:I
@@ -901,11 +798,9 @@
 
     goto :goto_0
 
-    .line 142
     :catch_0
     move-exception v0
 
-    .line 143
     :goto_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -913,7 +808,6 @@
 
     if-eqz v1, :cond_8
 
-    .line 144
     const-string/jumbo v1, "MediaPlayerWrapper"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -944,13 +838,11 @@
 
     invoke-static {v1, v2, v0}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 146
     :cond_8
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->releaseResources()V
 
     goto :goto_0
 
-    .line 135
     :cond_9
     :try_start_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
@@ -959,7 +851,6 @@
 
     if-eqz v0, :cond_a
 
-    .line 136
     const-string/jumbo v0, "MediaPlayerWrapper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -984,7 +875,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 138
     :cond_a
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->releaseResources()V
     :try_end_1
@@ -993,7 +883,6 @@
 
     goto/16 :goto_0
 
-    .line 142
     :catch_1
     move-exception v0
 
@@ -1003,17 +892,14 @@
 .method public isDonePlaying()Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 223
     iget v1, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->maxLoops:I
 
     const/4 v2, -0x1
 
     if-ne v1, v2, :cond_1
 
-    .line 227
     :cond_0
     :goto_0
     return v0
@@ -1043,8 +929,6 @@
 .method public isMuted()Z
     .locals 2
 
-    .prologue
-    .line 208
     iget v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->volume:F
 
     const/4 v1, 0x0
@@ -1067,39 +951,32 @@
 .method public onCompletion(Landroid/media/MediaPlayer;)V
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 256
     const/4 v1, 0x7
 
     iput v1, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->playerState:I
 
-    .line 257
     iget v1, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->completedLoops:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->completedLoops:I
 
-    .line 258
     iput v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->seekPosition:I
 
-    .line 259
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->isDonePlaying()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 260
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 261
     const-string/jumbo v0, "MediaPlayerWrapper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1124,26 +1001,21 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 264
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->callbacks:Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper$PlaybackEventsListener;
 
     if-eqz v0, :cond_1
 
-    .line 265
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->callbacks:Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper$PlaybackEventsListener;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper$PlaybackEventsListener;->onPlaybackSuccessfullyCompleted()V
 
-    .line 268
     :cond_1
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->releaseResources()V
 
-    .line 300
     :goto_0
     return-void
 
-    .line 271
     :cond_2
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -1151,7 +1023,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 272
     const-string/jumbo v1, "MediaPlayerWrapper"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1182,7 +1053,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 286
     :cond_3
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
@@ -1198,7 +1068,6 @@
 
     const/4 v0, 0x1
 
-    .line 287
     :cond_4
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -1206,7 +1075,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 288
     const-string/jumbo v1, "MediaPlayerWrapper"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1235,18 +1103,15 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 291
     :cond_5
     if-eqz v0, :cond_7
 
-    .line 292
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    .line 293
     const-string/jumbo v0, "MediaPlayerWrapper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1271,7 +1136,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 295
     :cond_6
     const/16 v0, 0x64
 
@@ -1279,7 +1143,6 @@
 
     goto/16 :goto_0
 
-    .line 297
     :cond_7
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->startPlayback()V
 
@@ -1289,20 +1152,16 @@
 .method public onError(Landroid/media/MediaPlayer;II)Z
     .locals 3
 
-    .prologue
-    .line 331
     const/16 v0, 0x9
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->playerState:I
 
-    .line 333
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 334
     const-string/jumbo v0, "MediaPlayerWrapper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1341,22 +1200,18 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 337
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->callbacks:Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper$PlaybackEventsListener;
 
     if-eqz v0, :cond_1
 
-    .line 338
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->callbacks:Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper$PlaybackEventsListener;
 
     invoke-interface {v0, p2, p3}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper$PlaybackEventsListener;->onPlaybackError(II)V
 
-    .line 341
     :cond_1
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->releaseResources()V
 
-    .line 343
     const/4 v0, 0x1
 
     return v0
@@ -1365,27 +1220,21 @@
 .method public onInfo(Landroid/media/MediaPlayer;II)Z
     .locals 1
 
-    .prologue
-    .line 240
     const/4 v0, 0x3
 
     if-ne p2, v0, :cond_1
 
-    .line 241
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->callbacks:Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper$PlaybackEventsListener;
 
     if-eqz v0, :cond_0
 
-    .line 242
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->callbacks:Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper$PlaybackEventsListener;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper$PlaybackEventsListener;->onPlaybackStarted()V
 
-    .line 245
     :cond_0
     const/4 v0, 0x1
 
-    .line 248
     :goto_0
     return v0
 
@@ -1398,31 +1247,24 @@
 .method public onPrepared(Landroid/media/MediaPlayer;)V
     .locals 1
 
-    .prologue
-    .line 234
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->playerState:I
 
-    .line 235
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->startPlayback()V
 
-    .line 236
     return-void
 .end method
 
 .method public onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
     .locals 3
 
-    .prologue
-    .line 368
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 369
     const-string/jumbo v0, "MediaPlayerWrapper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1447,7 +1289,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 372
     :cond_0
     new-instance v0, Landroid/view/Surface;
 
@@ -1455,30 +1296,24 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->videoSurface:Landroid/view/Surface;
 
-    .line 373
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->surfaceReady:Z
 
-    .line 375
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->initializeMediaPlayer()V
 
-    .line 376
     return-void
 .end method
 
 .method public onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)Z
     .locals 3
 
-    .prologue
-    .line 380
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 381
     const-string/jumbo v0, "MediaPlayerWrapper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1503,11 +1338,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 383
     :cond_0
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->releaseResources(Landroid/graphics/SurfaceTexture;)V
 
-    .line 384
     const/4 v0, 0x0
 
     return v0
@@ -1516,37 +1349,28 @@
 .method public onSurfaceTextureSizeChanged(Landroid/graphics/SurfaceTexture;II)V
     .locals 0
 
-    .prologue
-    .line 389
     return-void
 .end method
 
 .method public onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
     .locals 0
 
-    .prologue
-    .line 393
     return-void
 .end method
 
 .method public onVideoSizeChanged(Landroid/media/MediaPlayer;II)V
     .locals 3
 
-    .prologue
-    .line 355
     if-lez p2, :cond_1
 
     if-lez p3, :cond_1
 
-    .line 356
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->startPlayback()V
 
-    .line 362
     :cond_0
     :goto_0
     return-void
 
-    .line 358
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -1554,7 +1378,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 359
     const-string/jumbo v0, "MediaPlayerWrapper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1599,13 +1422,10 @@
 .method public pausePlayback()V
     .locals 1
 
-    .prologue
-    .line 160
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 161
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->isPlaying()Z
@@ -1614,7 +1434,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 162
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->getCurrentPosition()I
@@ -1623,17 +1442,14 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->seekPosition:I
 
-    .line 163
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->pause()V
 
-    .line 164
     const/4 v0, 0x6
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->playerState:I
 
-    .line 167
     :cond_0
     return-void
 .end method
@@ -1641,13 +1457,10 @@
 .method public releaseMediaPlayer()V
     .locals 1
 
-    .prologue
-    .line 431
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_1
 
-    .line 432
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->isPlaying()Z
@@ -1656,36 +1469,29 @@
 
     if-eqz v0, :cond_0
 
-    .line 433
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->stopPlayback()V
 
-    .line 435
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->reset()V
 
-    .line 436
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->playerState:I
 
-    .line 437
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
-    .line 438
     const/16 v0, 0x8
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->playerState:I
 
-    .line 439
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mediaPlayer:Landroid/media/MediaPlayer;
 
-    .line 441
     :cond_1
     return-void
 .end method
@@ -1693,21 +1499,16 @@
 .method public releaseResources()V
     .locals 1
 
-    .prologue
-    .line 396
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->releaseResources(Z)V
 
-    .line 397
     return-void
 .end method
 
 .method public releaseResources(Z)V
     .locals 2
 
-    .prologue
-    .line 406
     if-eqz p1, :cond_1
 
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->mTextureView:Landroid/view/TextureView;
@@ -1716,11 +1517,9 @@
 
     move-result-object v0
 
-    .line 407
     :goto_0
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->releaseResources(Landroid/graphics/SurfaceTexture;)V
 
-    .line 408
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->handler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
@@ -1729,18 +1528,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 409
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->handler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->startPlaybackRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 411
     :cond_0
     return-void
 
-    .line 406
     :cond_1
     const/4 v0, 0x0
 
@@ -1750,19 +1546,14 @@
 .method public resumePlayback()Z
     .locals 1
 
-    .prologue
-    .line 152
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->surfaceReady:Z
 
     if-eqz v0, :cond_0
 
-    .line 153
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->startPlayback()V
 
-    .line 154
     const/4 v0, 0x1
 
-    .line 156
     :goto_0
     return v0
 
@@ -1775,25 +1566,18 @@
 .method public setDataSource(Ljava/lang/String;JJ)V
     .locals 0
 
-    .prologue
-    .line 90
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->localUrl:Ljava/lang/String;
 
-    .line 91
     iput-wide p2, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->offset:J
 
-    .line 92
     iput-wide p4, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->length:J
 
-    .line 93
     return-void
 .end method
 
 .method public toggleVolume()V
     .locals 2
 
-    .prologue
-    .line 212
     const/high16 v0, 0x3f800000    # 1.0f
 
     iget v1, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->volume:F
@@ -1802,9 +1586,7 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->volume:F
 
-    .line 213
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->updateVolume()V
 
-    .line 214
     return-void
 .end method

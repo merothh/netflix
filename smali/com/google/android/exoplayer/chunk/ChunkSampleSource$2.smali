@@ -30,8 +30,6 @@
 .method constructor <init>(Lcom/google/android/exoplayer/chunk/ChunkSampleSource;JIILcom/google/android/exoplayer/chunk/Format;JJJJ)V
     .locals 1
 
-    .prologue
-    .line 637
     iput-object p1, p0, Lcom/google/android/exoplayer/chunk/ChunkSampleSource$2;->this$0:Lcom/google/android/exoplayer/chunk/ChunkSampleSource;
 
     iput-wide p2, p0, Lcom/google/android/exoplayer/chunk/ChunkSampleSource$2;->val$bytesLoaded:J
@@ -60,8 +58,6 @@
 .method public run()V
     .locals 18
 
-    .prologue
-    .line 640
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/google/android/exoplayer/chunk/ChunkSampleSource$2;->this$0:Lcom/google/android/exoplayer/chunk/ChunkSampleSource;
@@ -102,7 +98,6 @@
 
     iget-wide v10, v0, Lcom/google/android/exoplayer/chunk/ChunkSampleSource$2;->val$mediaStartTimeUs:J
 
-    .line 641
     invoke-virtual {v2, v10, v11}, Lcom/google/android/exoplayer/chunk/ChunkSampleSource;->usToMs(J)J
 
     move-result-wide v10
@@ -129,9 +124,7 @@
 
     move-wide/from16 v16, v0
 
-    .line 640
     invoke-interface/range {v3 .. v17}, Lcom/google/android/exoplayer/chunk/ChunkSampleSource$EventListener;->onLoadCompleted(IJIILcom/google/android/exoplayer/chunk/Format;JJJJ)V
 
-    .line 642
     return-void
 .end method

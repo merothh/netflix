@@ -13,8 +13,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/player/bladerunnerclient/BladeRunnerClient;Lcom/netflix/mediaclient/service/player/bladerunnerclient/BladeRunnerWebCallback;)V
     .locals 0
 
-    .prologue
-    .line 113
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/BladeRunnerClient$1;->this$0:Lcom/netflix/mediaclient/service/player/bladerunnerclient/BladeRunnerClient;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/BladeRunnerClient$1;->val$callback:Lcom/netflix/mediaclient/service/player/bladerunnerclient/BladeRunnerWebCallback;
@@ -29,15 +27,12 @@
 .method public onOfflineLicenseFetched(Lcom/netflix/mediaclient/service/player/bladerunnerclient/OfflineLicenseResponse;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
     const/4 v5, 0x0
 
-    .line 116
     invoke-super {p0, p1, p2}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/SimpleBladeRunnerWebCallback;->onOfflineLicenseFetched(Lcom/netflix/mediaclient/service/player/bladerunnerclient/OfflineLicenseResponse;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 117
     invoke-static {}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/BladeRunnerClient;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -50,7 +45,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 119
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
 
     move-result v0
@@ -63,7 +57,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 120
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/BladeRunnerClient$1;->this$0:Lcom/netflix/mediaclient/service/player/bladerunnerclient/BladeRunnerClient;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/BladeRunnerClient$1;->this$0:Lcom/netflix/mediaclient/service/player/bladerunnerclient/BladeRunnerClient;
@@ -92,7 +85,6 @@
 
     move-result-object p2
 
-    .line 121
     invoke-static {}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/BladeRunnerClient;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -105,12 +97,10 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 125
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/BladeRunnerClient$1;->val$callback:Lcom/netflix/mediaclient/service/player/bladerunnerclient/BladeRunnerWebCallback;
 
     invoke-interface {v0, p1, p2}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/BladeRunnerWebCallback;->onOfflineLicenseFetched(Lcom/netflix/mediaclient/service/player/bladerunnerclient/OfflineLicenseResponse;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 127
     return-void
 .end method

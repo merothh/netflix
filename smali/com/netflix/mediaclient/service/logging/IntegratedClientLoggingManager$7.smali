@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;)V
     .locals 0
 
-    .prologue
-    .line 1045
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$7;->this$0:Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,19 +23,16 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
     const/4 v3, 0x0
 
-    .line 1049
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1050
     const-string/jumbo v0, "nf_log"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -60,13 +55,11 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1053
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1054
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.PLAYER_LOCAL_PLAYBACK_STARTED"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -75,14 +68,12 @@
 
     if-eqz v1, :cond_3
 
-    .line 1055
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 1056
     const-string/jumbo v0, "nf_log"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -115,7 +106,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1058
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$7;->this$0:Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;
 
@@ -125,12 +115,10 @@
 
     invoke-virtual {v0, v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 1079
     :cond_2
     :goto_0
     return-void
 
-    .line 1059
     :cond_3
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.PLAYER_LOCAL_PLAYBACK_ENDED"
 
@@ -140,14 +128,12 @@
 
     if-eqz v1, :cond_5
 
-    .line 1060
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 1061
     const-string/jumbo v0, "nf_log"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -180,7 +166,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1063
     :cond_4
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$7;->this$0:Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;
 
@@ -192,7 +177,6 @@
 
     goto :goto_0
 
-    .line 1064
     :cond_5
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.PLAYER_LOCAL_PLAYBACK_PAUSED"
 
@@ -202,14 +186,12 @@
 
     if-eqz v1, :cond_7
 
-    .line 1065
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    .line 1066
     const-string/jumbo v0, "nf_log"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -242,7 +224,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1068
     :cond_6
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$7;->this$0:Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;
 
@@ -254,7 +235,6 @@
 
     goto :goto_0
 
-    .line 1069
     :cond_7
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.PLAYER_LOCAL_PLAYBACK_UNPAUSED"
 
@@ -264,14 +244,12 @@
 
     if-eqz v1, :cond_9
 
-    .line 1070
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
-    .line 1071
     const-string/jumbo v0, "nf_log"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -304,7 +282,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1073
     :cond_8
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$7;->this$0:Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;
 
@@ -316,7 +293,6 @@
 
     goto/16 :goto_0
 
-    .line 1075
     :cond_9
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -324,7 +300,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1076
     const-string/jumbo v1, "nf_log"
 
     new-instance v2, Ljava/lang/StringBuilder;

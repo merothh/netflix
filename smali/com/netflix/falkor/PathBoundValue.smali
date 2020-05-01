@@ -52,11 +52,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     new-instance v0, Lcom/google/gson/GsonBuilder;
 
     invoke-direct {v0}, Lcom/google/gson/GsonBuilder;-><init>()V
@@ -77,13 +74,10 @@
 
     iput-object v0, p0, Lcom/netflix/falkor/PathBoundValue;->gson:Lcom/google/gson/Gson;
 
-    .line 16
     iput-object p1, p0, Lcom/netflix/falkor/PathBoundValue;->path:Lcom/netflix/falkor/PQL;
 
-    .line 17
     iput-object p2, p0, Lcom/netflix/falkor/PathBoundValue;->value:Lcom/netflix/falkor/Option;
 
-    .line 18
     return-void
 .end method
 
@@ -97,13 +91,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 48
     instance-of v0, p1, Lcom/netflix/falkor/PathBoundValue;
 
     if-nez v0, :cond_0
 
-    .line 49
     new-instance v0, Ljava/lang/ClassCastException;
 
     const-string/jumbo v1, "Invalid object"
@@ -112,7 +103,6 @@
 
     throw v0
 
-    .line 52
     :cond_0
     check-cast p1, Lcom/netflix/falkor/PathBoundValue;
 
@@ -120,12 +110,10 @@
 
     move-result-object v0
 
-    .line 53
     invoke-virtual {v0}, Lcom/netflix/falkor/PQL;->getKeySegments()Ljava/util/List;
 
     move-result-object v2
 
-    .line 54
     invoke-virtual {p0}, Lcom/netflix/falkor/PathBoundValue;->getPath()Lcom/netflix/falkor/PQL;
 
     move-result-object v0
@@ -134,7 +122,6 @@
 
     move-result-object v3
 
-    .line 55
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v0
@@ -145,7 +132,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 56
     new-instance v0, Ljava/lang/ClassCastException;
 
     const-string/jumbo v1, "Invalid object"
@@ -154,7 +140,6 @@
 
     throw v0
 
-    .line 62
     :cond_1
     const/4 v0, 0x1
 
@@ -167,7 +152,6 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 63
     invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -176,7 +160,6 @@
 
     move-result-object v1
 
-    .line 64
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -185,7 +168,6 @@
 
     move-result-object v4
 
-    .line 65
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v1
@@ -198,22 +180,18 @@
 
     move-result v1
 
-    .line 66
     if-eqz v1, :cond_2
 
     move v0, v1
 
-    .line 70
     :goto_1
     return v0
 
-    .line 62
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 70
     :cond_3
     const/4 v0, 0x0
 
@@ -223,8 +201,6 @@
 .method public getPath()Lcom/netflix/falkor/PQL;
     .locals 1
 
-    .prologue
-    .line 22
     iget-object v0, p0, Lcom/netflix/falkor/PathBoundValue;->path:Lcom/netflix/falkor/PQL;
 
     return-object v0
@@ -242,8 +218,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 26
     iget-object v0, p0, Lcom/netflix/falkor/PathBoundValue;->value:Lcom/netflix/falkor/Option;
 
     return-object v0
@@ -252,8 +226,6 @@
 .method public setPath(Lcom/netflix/falkor/PQL;)V
     .locals 2
 
-    .prologue
-    .line 75
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string/jumbo v1, "Path is immutable"
@@ -266,8 +238,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 31
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "new PathBoundValue("
@@ -288,7 +258,6 @@
 
     move-result-object v0
 
-    .line 32
     invoke-virtual {p0}, Lcom/netflix/falkor/PathBoundValue;->getValue()Lcom/netflix/falkor/Option;
 
     move-result-object v1
@@ -299,7 +268,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 33
     const-string/jumbo v1, ", "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -322,13 +290,11 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 35
     :cond_0
     const-string/jumbo v1, ")"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 37
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

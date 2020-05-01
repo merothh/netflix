@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)V
     .locals 0
 
-    .prologue
-    .line 289
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$6;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .prologue
-    .line 292
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$6;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$1400(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)Landroid/widget/CheckBox;
@@ -53,10 +49,8 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/widget/CheckBox;->setChecked(Z)V
 
-    .line 293
     return-void
 
-    .line 292
     :cond_0
     const/4 v0, 0x0
 

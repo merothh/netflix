@@ -22,8 +22,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,8 +32,6 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/netflix/mediaclient/ui/kubrick/details/RelatedTitleState;
     .locals 2
 
-    .prologue
-    .line 65
     new-instance v0, Lcom/netflix/mediaclient/ui/kubrick/details/RelatedTitleState;
 
     const/4 v1, 0x0
@@ -48,8 +44,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 63
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/ui/kubrick/details/RelatedTitleState$1;->createFromParcel(Landroid/os/Parcel;)Lcom/netflix/mediaclient/ui/kubrick/details/RelatedTitleState;
 
     move-result-object v0
@@ -60,8 +54,6 @@
 .method public newArray(I)[Lcom/netflix/mediaclient/ui/kubrick/details/RelatedTitleState;
     .locals 1
 
-    .prologue
-    .line 69
     new-array v0, p1, [Lcom/netflix/mediaclient/ui/kubrick/details/RelatedTitleState;
 
     return-object v0
@@ -70,8 +62,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 63
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/ui/kubrick/details/RelatedTitleState$1;->newArray(I)[Lcom/netflix/mediaclient/ui/kubrick/details/RelatedTitleState;
 
     move-result-object v0

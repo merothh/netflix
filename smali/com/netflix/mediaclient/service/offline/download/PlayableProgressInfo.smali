@@ -33,21 +33,16 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/netflix/mediaclient/service/offline/download/PlayableProgressInfo;->mPercentageDownloaded:I
 
-    .line 21
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/offline/download/PlayableProgressInfo;->mActualSizeOfPlayableOnDiskInCompleteState:J
 
-    .line 22
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -62,8 +57,6 @@
 .method public getActualSizeOfPlayableOnDiskInCompleteState(Ljava/io/File;)J
     .locals 4
 
-    .prologue
-    .line 58
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/offline/download/PlayableProgressInfo;->mActualSizeOfPlayableOnDiskInCompleteState:J
 
     const-wide/16 v2, -0x1
@@ -72,14 +65,12 @@
 
     if-nez v0, :cond_0
 
-    .line 59
     invoke-static {p1}, Lcom/netflix/mediaclient/util/FileUtils;->getDirectorySizeInBytes(Ljava/io/File;)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/offline/download/PlayableProgressInfo;->mActualSizeOfPlayableOnDiskInCompleteState:J
 
-    .line 61
     :cond_0
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/offline/download/PlayableProgressInfo;->mActualSizeOfPlayableOnDiskInCompleteState:J
 
@@ -89,8 +80,6 @@
 .method public getBytesDownloadedSoFar()J
     .locals 2
 
-    .prologue
-    .line 66
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/offline/download/PlayableProgressInfo;->mBytesDownloadedSoFar:J
 
     return-wide v0
@@ -99,8 +88,6 @@
 .method public getPercentageDownloaded()I
     .locals 1
 
-    .prologue
-    .line 76
     iget v0, p0, Lcom/netflix/mediaclient/service/offline/download/PlayableProgressInfo;->mPercentageDownloaded:I
 
     return v0
@@ -109,8 +96,6 @@
 .method public getTotalBytesToDownload()J
     .locals 2
 
-    .prologue
-    .line 71
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/offline/download/PlayableProgressInfo;->mTotalBytesToDownload:J
 
     return-wide v0
@@ -119,29 +104,22 @@
 .method public markComplete()V
     .locals 1
 
-    .prologue
-    .line 50
     const/16 v0, 0x64
 
     iput v0, p0, Lcom/netflix/mediaclient/service/offline/download/PlayableProgressInfo;->mPercentageDownloaded:I
 
-    .line 51
     return-void
 .end method
 
 .method public updateProgressPercentage()V
     .locals 10
 
-    .prologue
     const-wide/16 v8, 0x0
 
-    .line 26
     iput-wide v8, p0, Lcom/netflix/mediaclient/service/offline/download/PlayableProgressInfo;->mBytesDownloadedSoFar:J
 
-    .line 27
     iput-wide v8, p0, Lcom/netflix/mediaclient/service/offline/download/PlayableProgressInfo;->mTotalBytesToDownload:J
 
-    .line 29
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/PlayableProgressInfo;->mDownloadableProgressInfoMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -165,21 +143,18 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 31
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/netflix/mediaclient/service/offline/download/DownloadableProgressInfo;
 
-    .line 32
     iget-wide v4, v1, Lcom/netflix/mediaclient/service/offline/download/DownloadableProgressInfo;->mTotalBytesToDownload:J
 
     cmp-long v3, v4, v8
 
     if-lez v3, :cond_0
 
-    .line 33
     iget-wide v4, p0, Lcom/netflix/mediaclient/service/offline/download/PlayableProgressInfo;->mBytesDownloadedSoFar:J
 
     iget-wide v6, v1, Lcom/netflix/mediaclient/service/offline/download/DownloadableProgressInfo;->mBytesOnTheDisk:J
@@ -188,7 +163,6 @@
 
     iput-wide v4, p0, Lcom/netflix/mediaclient/service/offline/download/PlayableProgressInfo;->mBytesDownloadedSoFar:J
 
-    .line 34
     iget-wide v4, p0, Lcom/netflix/mediaclient/service/offline/download/PlayableProgressInfo;->mTotalBytesToDownload:J
 
     iget-wide v0, v1, Lcom/netflix/mediaclient/service/offline/download/DownloadableProgressInfo;->mTotalBytesToDownload:J
@@ -199,7 +173,6 @@
 
     goto :goto_0
 
-    .line 36
     :cond_0
     const-string/jumbo v3, "nf_playableProgress"
 
@@ -225,7 +198,6 @@
 
     move-result-object v1
 
-    .line 37
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -240,12 +212,10 @@
 
     move-result-object v0
 
-    .line 36
     invoke-static {v3, v0}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 40
     :cond_1
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/offline/download/PlayableProgressInfo;->mTotalBytesToDownload:J
 
@@ -253,7 +223,6 @@
 
     if-lez v0, :cond_2
 
-    .line 41
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/offline/download/PlayableProgressInfo;->mBytesDownloadedSoFar:J
 
     const-wide/16 v2, 0x64
@@ -268,11 +237,9 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/service/offline/download/PlayableProgressInfo;->mPercentageDownloaded:I
 
-    .line 46
     :goto_1
     return-void
 
-    .line 44
     :cond_2
     const/4 v0, 0x0
 

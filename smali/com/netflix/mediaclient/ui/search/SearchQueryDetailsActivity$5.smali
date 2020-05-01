@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;)V
     .locals 0
 
-    .prologue
-    .line 257
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$5;->this$0:Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,12 +26,9 @@
 .method public onRetryRequested()V
     .locals 1
 
-    .prologue
-    .line 260
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$5;->this$0:Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->access$300(Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;)V
 
-    .line 261
     return-void
 .end method

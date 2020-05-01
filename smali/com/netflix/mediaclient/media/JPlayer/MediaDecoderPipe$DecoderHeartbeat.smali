@@ -17,20 +17,16 @@
 .method constructor <init>(Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe;)V
     .locals 2
 
-    .prologue
-    .line 664
     iput-object p1, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe$DecoderHeartbeat;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 665
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe$DecoderHeartbeat;->mLastBeat:J
 
-    .line 666
     return-void
 .end method
 
@@ -39,13 +35,10 @@
 .method ShowHearbeat(JJ)V
     .locals 7
 
-    .prologue
-    .line 668
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 669
     iget-wide v2, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe$DecoderHeartbeat;->mLastBeat:J
 
     const-wide/16 v4, 0x1388
@@ -56,17 +49,14 @@
 
     if-ltz v2, :cond_0
 
-    .line 670
     iput-wide v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe$DecoderHeartbeat;->mLastBeat:J
 
-    .line 671
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 672
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe$DecoderHeartbeat;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe;->access$500(Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe;)Ljava/lang/String;
@@ -103,7 +93,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 675
     :cond_0
     return-void
 .end method

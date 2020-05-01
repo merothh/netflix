@@ -13,8 +13,6 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel;)V
     .locals 0
 
-    .prologue
-    .line 509
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongNextEpisodeImage;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,8 +25,6 @@
 .method public getInterestingMomentStill()Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongImage;
     .locals 1
 
-    .prologue
-    .line 513
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongNextEpisodeImage;->interestingMomentStill:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongImage;
 
     return-object v0
@@ -37,8 +33,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 518
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

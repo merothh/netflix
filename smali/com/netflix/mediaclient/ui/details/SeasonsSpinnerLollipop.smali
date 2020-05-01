@@ -7,8 +7,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 6
 
-    .prologue
-    .line 14
     const/4 v2, 0x0
 
     const/4 v3, 0x0
@@ -23,6 +21,5 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/netflix/mediaclient/ui/details/SeasonsSpinner;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;III)V
 
-    .line 15
     return-void
 .end method

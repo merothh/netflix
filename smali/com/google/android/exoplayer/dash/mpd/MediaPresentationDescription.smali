@@ -50,35 +50,24 @@
         }
     .end annotation
 
-    .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     iput-wide p1, p0, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->availabilityStartTime:J
 
-    .line 49
     iput-wide p3, p0, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->duration:J
 
-    .line 50
     iput-wide p5, p0, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->minBufferTime:J
 
-    .line 51
     iput-boolean p7, p0, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->dynamic:Z
 
-    .line 52
     iput-wide p8, p0, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->minUpdatePeriod:J
 
-    .line 53
     iput-wide p10, p0, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->timeShiftBufferDepth:J
 
-    .line 54
     iput-object p12, p0, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->utcTiming:Lcom/google/android/exoplayer/dash/mpd/UtcTimingElement;
 
-    .line 55
     iput-object p13, p0, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->location:Ljava/lang/String;
 
-    .line 56
     if-nez p14, :cond_0
 
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
@@ -88,7 +77,6 @@
     :cond_0
     iput-object p14, p0, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->periods:Ljava/util/List;
 
-    .line 57
     return-void
 .end method
 
@@ -97,8 +85,6 @@
 .method public final getNextManifestUri()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 61
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->location:Ljava/lang/String;
 
     return-object v0
@@ -107,8 +93,6 @@
 .method public final getPeriod(I)Lcom/google/android/exoplayer/dash/mpd/Period;
     .locals 1
 
-    .prologue
-    .line 69
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->periods:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -123,8 +107,6 @@
 .method public final getPeriodCount()I
     .locals 1
 
-    .prologue
-    .line 65
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->periods:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -137,10 +119,8 @@
 .method public final getPeriodDuration(I)J
     .locals 4
 
-    .prologue
     const-wide/16 v0, -0x1
 
-    .line 73
     iget-object v2, p0, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->periods:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -165,7 +145,6 @@
 
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->periods:Ljava/util/List;
 
-    .line 74
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -183,7 +162,6 @@
 
     add-int/lit8 v1, p1, 0x1
 
-    .line 75
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0

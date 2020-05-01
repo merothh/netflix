@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/jsapi/PartnerJSObject;Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 172
     iput-object p1, p0, Lcom/netflix/mediaclient/jsapi/PartnerJSObject$2;->this$0:Lcom/netflix/mediaclient/jsapi/PartnerJSObject;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/jsapi/PartnerJSObject$2;->val$service:Ljava/lang/String;
@@ -36,15 +34,12 @@
 .method public run()V
     .locals 7
 
-    .prologue
-    .line 176
     const-string/jumbo v0, "nf_partner"
 
     const-string/jumbo v1, "Find partner"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 177
     iget-object v0, p0, Lcom/netflix/mediaclient/jsapi/PartnerJSObject$2;->this$0:Lcom/netflix/mediaclient/jsapi/PartnerJSObject;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/jsapi/PartnerJSObject;->access$100(Lcom/netflix/mediaclient/jsapi/PartnerJSObject;)Lcom/netflix/mediaclient/partner/PartnerFactory;
@@ -67,10 +62,8 @@
 
     move-result-object v0
 
-    .line 181
     if-nez v0, :cond_0
 
-    .line 182
     :try_start_0
     const-string/jumbo v0, "nf_partner"
 
@@ -78,7 +71,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 183
     iget-object v0, p0, Lcom/netflix/mediaclient/jsapi/PartnerJSObject$2;->this$0:Lcom/netflix/mediaclient/jsapi/PartnerJSObject;
 
     const-string/jumbo v1, "nrdpPartner.Sso._handleExternalUserAuth"
@@ -99,11 +91,9 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/jsapi/PartnerJSObject;->access$300(Lcom/netflix/mediaclient/jsapi/PartnerJSObject;Ljava/lang/String;Lorg/json/JSONObject;)V
 
-    .line 208
     :goto_0
     return-void
 
-    .line 187
     :cond_0
     invoke-interface {v0}, Lcom/netflix/mediaclient/partner/Partner;->getSSO()Lcom/netflix/mediaclient/partner/Partner$SSO;
 
@@ -111,14 +101,12 @@
 
     if-nez v1, :cond_1
 
-    .line 188
     const-string/jumbo v0, "nf_partner"
 
     const-string/jumbo v1, "Service does not support SSO!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 189
     iget-object v0, p0, Lcom/netflix/mediaclient/jsapi/PartnerJSObject$2;->this$0:Lcom/netflix/mediaclient/jsapi/PartnerJSObject;
 
     const-string/jumbo v1, "nrdpPartner.Sso._handleExternalUserAuth"
@@ -143,11 +131,9 @@
 
     goto :goto_0
 
-    .line 205
     :catch_0
     move-exception v0
 
-    .line 206
     const-string/jumbo v1, "nf_partner"
 
     const-string/jumbo v2, "Failed to work with JSON"
@@ -156,7 +142,6 @@
 
     goto :goto_0
 
-    .line 193
     :cond_1
     :try_start_1
     invoke-interface {v0}, Lcom/netflix/mediaclient/partner/Partner;->getSSO()Lcom/netflix/mediaclient/partner/Partner$SSO;

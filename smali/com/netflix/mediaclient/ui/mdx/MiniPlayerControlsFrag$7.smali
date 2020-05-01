@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;)V
     .locals 0
 
-    .prologue
-    .line 981
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,8 +24,6 @@
 .method private handleSeekbarUpdate(Lcom/netflix/mediaclient/ui/mdx/RemotePlayer$RemoteTargetState;)V
     .locals 4
 
-    .prologue
-    .line 1023
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$900(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;)Z
@@ -44,12 +40,10 @@
 
     if-nez v0, :cond_1
 
-    .line 1038
     :cond_0
     :goto_0
     return-void
 
-    .line 1027
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
@@ -63,7 +57,6 @@
 
     if-ltz v0, :cond_2
 
-    .line 1028
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -88,7 +81,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$1000(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;Ljava/lang/String;)V
 
-    .line 1029
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$600(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;)Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
@@ -99,7 +91,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;->setProgress(I)V
 
-    .line 1032
     :cond_2
     iget-boolean v0, p1, Lcom/netflix/mediaclient/ui/mdx/RemotePlayer$RemoteTargetState;->buffering:Z
 
@@ -109,7 +100,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 1033
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
@@ -117,7 +107,6 @@
 
     goto :goto_0
 
-    .line 1035
     :cond_4
     iget-boolean v0, p1, Lcom/netflix/mediaclient/ui/mdx/RemotePlayer$RemoteTargetState;->paused:Z
 
@@ -131,7 +120,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1036
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     iget v1, p1, Lcom/netflix/mediaclient/ui/mdx/RemotePlayer$RemoteTargetState;->positionInSeconds:I
@@ -146,8 +134,6 @@
 .method private isErrorRequireDisableControl(I)Z
     .locals 1
 
-    .prologue
-    .line 1074
     const/16 v0, 0x64
 
     if-lt p1, v0, :cond_0
@@ -172,8 +158,6 @@
 .method public cancelDialog()V
     .locals 2
 
-    .prologue
-    .line 1170
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$800(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;)Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -186,11 +170,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 1179
     :goto_0
     return-void
 
-    .line 1174
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -198,14 +180,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 1175
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     const-string/jumbo v1, "cancelDialog"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$1000(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;Ljava/lang/String;)V
 
-    .line 1178
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
@@ -221,22 +201,18 @@
 .method public endOfPlayback()V
     .locals 3
 
-    .prologue
-    .line 1079
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1080
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     const-string/jumbo v1, "endOfPlayback"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$1000(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;Ljava/lang/String;)V
 
-    .line 1083
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
@@ -244,7 +220,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$2002(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;Z)Z
 
-    .line 1084
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$600(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;)Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
@@ -255,7 +230,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;->setControlsEnabled(Z)V
 
-    .line 1086
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->getNetflixActivity()Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -268,7 +242,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1087
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -293,7 +266,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1088
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -318,7 +290,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1089
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$1800(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;)Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;
@@ -343,14 +314,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 1090
     new-instance v0, Landroid/content/Intent;
 
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.MINI_PLAYER_POST_PLAY_TITLE_END"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1091
     const-string/jumbo v1, "id"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
@@ -365,12 +334,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1092
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->hideRDP()Z
 
-    .line 1093
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->getActivity()Landroid/app/Activity;
@@ -383,7 +350,6 @@
 
     invoke-virtual {v1, v0}, Landroid/support/v4/content/LocalBroadcastManager;->sendBroadcast(Landroid/content/Intent;)Z
 
-    .line 1101
     :cond_1
     :goto_0
     invoke-static {}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$2100()Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$SharedState;
@@ -392,17 +358,14 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$SharedState;->reset()V
 
-    .line 1102
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$1802(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;)Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;
 
-    .line 1103
     return-void
 
-    .line 1098
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
@@ -418,15 +381,12 @@
 .method public error(ILjava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 1055
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1056
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -459,7 +419,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$1000(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;Ljava/lang/String;)V
 
-    .line 1059
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
@@ -467,7 +426,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$2002(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;Z)Z
 
-    .line 1062
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$2500(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;)Z
@@ -476,7 +434,6 @@
 
     if-nez v0, :cond_1
 
-    .line 1063
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$2600(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;)Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;
@@ -485,7 +442,6 @@
 
     invoke-virtual {v0, p1, p2}, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->handleMdxError(ILjava/lang/String;)V
 
-    .line 1065
     :cond_1
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->isErrorRequireDisableControl(I)Z
 
@@ -493,7 +449,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1066
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$600(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;)Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
@@ -504,7 +459,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;->setControlsEnabled(Z)V
 
-    .line 1067
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$600(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;)Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
@@ -513,7 +467,6 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;->enableMdxMenu()V
 
-    .line 1068
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$800(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;)Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -522,7 +475,6 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->notifyMdxEndOfPlayback()V
 
-    .line 1070
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
@@ -532,22 +484,18 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;->updateMdxMenu()V
 
-    .line 1071
     return-void
 .end method
 
 .method public mdxStateChanged(Z)V
     .locals 3
 
-    .prologue
-    .line 1042
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1043
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -570,7 +518,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$1000(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;Ljava/lang/String;)V
 
-    .line 1051
     :cond_0
     return-void
 .end method
@@ -578,8 +525,6 @@
 .method public showDialog(Lcom/netflix/mediaclient/ui/mdx/RemoteDialog;)V
     .locals 3
 
-    .prologue
-    .line 1154
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$800(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;)Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -592,11 +537,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 1166
     :goto_0
     return-void
 
-    .line 1158
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -604,7 +547,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1159
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -631,13 +573,11 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$1000(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;Ljava/lang/String;)V
 
-    .line 1162
     :cond_1
     invoke-static {p1}, Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag;->newInstance(Lcom/netflix/mediaclient/ui/mdx/RemoteDialog;)Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag;
 
     move-result-object v0
 
-    .line 1163
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -648,12 +588,10 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag;->onManagerReady(Lcom/netflix/mediaclient/servicemgr/ServiceManager;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 1164
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/ShowMessageDialogFrag;->setCancelable(Z)V
 
-    .line 1165
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$800(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;)Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -668,23 +606,18 @@
 .method public targetListChanged()V
     .locals 2
 
-    .prologue
-    .line 1149
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     const-string/jumbo v1, "targetListChanged"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$1000(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;Ljava/lang/String;)V
 
-    .line 1150
     return-void
 .end method
 
 .method public updateDuration(I)V
     .locals 3
 
-    .prologue
-    .line 1134
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$800(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;)Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -697,11 +630,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 1145
     :goto_0
     return-void
 
-    .line 1138
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
@@ -725,10 +656,8 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$1000(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;Ljava/lang/String;)V
 
-    .line 1139
     if-lez p1, :cond_1
 
-    .line 1140
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$600(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;)Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
@@ -739,7 +668,6 @@
 
     goto :goto_0
 
-    .line 1143
     :cond_1
     const-string/jumbo v0, "MdxMiniPlayerFrag"
 
@@ -753,15 +681,12 @@
 .method public updateLanguage(Lcom/netflix/mediaclient/media/Language;)V
     .locals 3
 
-    .prologue
-    .line 1125
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1126
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -784,21 +709,17 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$1000(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;Ljava/lang/String;)V
 
-    .line 1129
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$1600(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;)V
 
-    .line 1130
     return-void
 .end method
 
 .method public updateTargetCapabilities(Lcom/netflix/mediaclient/ui/mdx/MdxTargetCapabilities;)V
     .locals 3
 
-    .prologue
-    .line 1107
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$800(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;)Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -811,22 +732,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 1121
     :goto_0
     return-void
 
-    .line 1111
     :cond_0
     if-nez p1, :cond_1
 
-    .line 1112
     const-string/jumbo v0, "MdxMiniPlayerFrag"
 
     const-string/jumbo v1, "Capabilities is null!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1113
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     const/4 v1, 0x0
@@ -835,7 +752,6 @@
 
     goto :goto_0
 
-    .line 1116
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -843,7 +759,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1117
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -870,7 +785,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$1000(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;Ljava/lang/String;)V
 
-    .line 1119
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
@@ -886,20 +800,16 @@
 .method public updateUi(Lcom/netflix/mediaclient/ui/mdx/RemotePlayer$RemoteTargetState;)V
     .locals 5
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 1007
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertOnMain()Z
 
-    .line 1008
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 1009
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -926,13 +836,11 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$1000(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;Ljava/lang/String;)V
 
-    .line 1012
     :cond_0
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$2002(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;Z)Z
 
-    .line 1013
     invoke-static {}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$2100()Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$SharedState;
 
     move-result-object v1
@@ -941,10 +849,8 @@
 
     iput v2, v1, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$SharedState;->mostRecentVolume:I
 
-    .line 1015
     iget-boolean v1, p1, Lcom/netflix/mediaclient/ui/mdx/RemotePlayer$RemoteTargetState;->showMiniPlayer:Z
 
-    .line 1016
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     iget-boolean v3, p1, Lcom/netflix/mediaclient/ui/mdx/RemotePlayer$RemoteTargetState;->paused:Z
@@ -961,7 +867,6 @@
 
     invoke-static {v2, v1, v3, v4}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$2200(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;ZZZ)V
 
-    .line 1017
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$600(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;)Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
@@ -981,25 +886,20 @@
     :cond_1
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;->setControlsEnabled(Z)V
 
-    .line 1019
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->handleSeekbarUpdate(Lcom/netflix/mediaclient/ui/mdx/RemotePlayer$RemoteTargetState;)V
 
-    .line 1020
     return-void
 .end method
 
 .method public updateVideoMetadata()V
     .locals 4
 
-    .prologue
-    .line 985
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     const-string/jumbo v1, "updateVideoMetadata"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$1000(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;Ljava/lang/String;)V
 
-    .line 987
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -1008,11 +908,9 @@
 
     if-nez v0, :cond_0
 
-    .line 1003
     :goto_0
     return-void
 
-    .line 991
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
@@ -1024,12 +922,10 @@
 
     move-result-object v0
 
-    .line 992
     invoke-interface {v0}, Lcom/netflix/mediaclient/servicemgr/IMdx;->getVideoDetail()Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;
 
     move-result-object v1
 
-    .line 993
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-static {v2}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$1800(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;)Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;
@@ -1058,7 +954,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 994
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     const-string/jumbo v1, "Same video is already playing, doing nothing"
@@ -1067,11 +962,9 @@
 
     goto :goto_0
 
-    .line 996
     :cond_1
     if-nez v1, :cond_2
 
-    .line 997
     const-string/jumbo v0, "MdxMiniPlayerFrag"
 
     const-string/jumbo v1, "null video details provided by mdx agent"
@@ -1080,7 +973,6 @@
 
     goto :goto_0
 
-    .line 1000
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
@@ -1108,7 +1000,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$1000(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;Ljava/lang/String;)V
 
-    .line 1001
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$7;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$1900(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;)V

@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;)V
     .locals 0
 
-    .prologue
-    .line 141
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$2;->this$0:Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,16 +26,12 @@
 .method public onScroll(Landroid/widget/AbsListView;III)V
     .locals 0
 
-    .prologue
-    .line 151
     return-void
 .end method
 
 .method public onScrollStateChanged(Landroid/widget/AbsListView;I)V
     .locals 1
 
-    .prologue
-    .line 145
     if-nez p2, :cond_0
 
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$2;->this$0:Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;
@@ -52,12 +46,10 @@
 
     if-lez v0, :cond_0
 
-    .line 146
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity$2;->this$0:Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/search/SearchQueryDetailsActivity;->fireImpressionEvents()V
 
-    .line 148
     :cond_0
     return-void
 .end method

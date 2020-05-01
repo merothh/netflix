@@ -15,14 +15,10 @@
 .method constructor <init>(Lcom/netflix/mediaclient/javabridge/ui/Nrdp;)V
     .locals 0
 
-    .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 11
     iput-object p1, p0, Lcom/netflix/mediaclient/service/mdx/MdxNrdpLogger;->mNrdp:Lcom/netflix/mediaclient/javabridge/ui/Nrdp;
 
-    .line 12
     return-void
 .end method
 
@@ -31,13 +27,10 @@
 .method public logDebug(Ljava/lang/String;)V
     .locals 4
 
-    .prologue
-    .line 15
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxNrdpLogger;->mNrdp:Lcom/netflix/mediaclient/javabridge/ui/Nrdp;
 
     if-eqz v0, :cond_0
 
-    .line 16
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/LogArguments;
 
     sget-object v1, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;->DEBUG:Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
@@ -48,7 +41,6 @@
 
     invoke-direct {v0, v1, p1, v2, v3}, Lcom/netflix/mediaclient/javabridge/ui/LogArguments;-><init>(Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 17
     iget-object v1, p0, Lcom/netflix/mediaclient/service/mdx/MdxNrdpLogger;->mNrdp:Lcom/netflix/mediaclient/javabridge/ui/Nrdp;
 
     invoke-interface {v1}, Lcom/netflix/mediaclient/javabridge/ui/Nrdp;->getLog()Lcom/netflix/mediaclient/javabridge/ui/Log;
@@ -57,7 +49,6 @@
 
     invoke-interface {v1, v0}, Lcom/netflix/mediaclient/javabridge/ui/Log;->log(Lcom/netflix/mediaclient/javabridge/ui/LogArguments;)V
 
-    .line 19
     :cond_0
     return-void
 .end method
@@ -65,13 +56,10 @@
 .method public logError(Ljava/lang/String;)V
     .locals 4
 
-    .prologue
-    .line 22
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxNrdpLogger;->mNrdp:Lcom/netflix/mediaclient/javabridge/ui/Nrdp;
 
     if-eqz v0, :cond_0
 
-    .line 23
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/LogArguments;
 
     sget-object v1, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;->ERROR:Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
@@ -82,7 +70,6 @@
 
     invoke-direct {v0, v1, p1, v2, v3}, Lcom/netflix/mediaclient/javabridge/ui/LogArguments;-><init>(Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 24
     iget-object v1, p0, Lcom/netflix/mediaclient/service/mdx/MdxNrdpLogger;->mNrdp:Lcom/netflix/mediaclient/javabridge/ui/Nrdp;
 
     invoke-interface {v1}, Lcom/netflix/mediaclient/javabridge/ui/Nrdp;->getLog()Lcom/netflix/mediaclient/javabridge/ui/Log;
@@ -91,7 +78,6 @@
 
     invoke-interface {v1, v0}, Lcom/netflix/mediaclient/javabridge/ui/Log;->log(Lcom/netflix/mediaclient/javabridge/ui/LogArguments;)V
 
-    .line 26
     :cond_0
     return-void
 .end method

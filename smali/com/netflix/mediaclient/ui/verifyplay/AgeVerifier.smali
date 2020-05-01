@@ -15,8 +15,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 15
     new-instance v0, Lcom/netflix/mediaclient/ui/verifyplay/AgeVerifier;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/ui/verifyplay/AgeVerifier;-><init>()V
@@ -29,8 +27,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,8 +35,6 @@
 .method public static getInstance()Lcom/netflix/mediaclient/ui/verifyplay/AgeVerifier;
     .locals 1
 
-    .prologue
-    .line 19
     sget-object v0, Lcom/netflix/mediaclient/ui/verifyplay/AgeVerifier;->sAgeVerifyInstance:Lcom/netflix/mediaclient/ui/verifyplay/AgeVerifier;
 
     return-object v0
@@ -49,13 +43,10 @@
 .method private shouldHandleNewRequest(Lcom/netflix/mediaclient/ui/verifyplay/PlayVerifierVault;)Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 46
-    .line 48
     sget-object v2, Lcom/netflix/mediaclient/ui/verifyplay/PlayVerifierVault$RequestedBy;->MDX:Lcom/netflix/mediaclient/ui/verifyplay/PlayVerifierVault$RequestedBy;
 
     invoke-virtual {v2}, Lcom/netflix/mediaclient/ui/verifyplay/PlayVerifierVault$RequestedBy;->getValue()Ljava/lang/String;
@@ -72,14 +63,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 49
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 50
     const-string/jumbo v2, "nf_age"
 
     const-string/jumbo v3, "Dismissing new request new one Invoked from: %s"
@@ -98,7 +87,6 @@
 
     invoke-static {v2, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 54
     :cond_0
     :goto_0
     return v0
@@ -114,15 +102,12 @@
 .method public verify(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/ui/verifyplay/PlayVerifierVault;Lcom/netflix/mediaclient/ui/verifyplay/PinAndAgeVerifier$PinAndAgeVerifyCallback;)V
     .locals 5
 
-    .prologue
-    .line 24
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 25
     const-string/jumbo v0, "nf_age"
 
     const-string/jumbo v1, "verifyAge invokeLoc:%s, vault:%s"
@@ -149,7 +134,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 28
     :cond_0
     invoke-direct {p0, p2}, Lcom/netflix/mediaclient/ui/verifyplay/AgeVerifier;->shouldHandleNewRequest(Lcom/netflix/mediaclient/ui/verifyplay/PlayVerifierVault;)Z
 
@@ -157,20 +141,16 @@
 
     if-nez v0, :cond_1
 
-    .line 36
     :goto_0
     return-void
 
-    .line 32
     :cond_1
     invoke-static {p2}, Lcom/netflix/mediaclient/ui/verifyplay/AgeDialog;->createAgeDialog(Lcom/netflix/mediaclient/ui/verifyplay/PlayVerifierVault;)Lcom/netflix/mediaclient/ui/verifyplay/AgeDialog;
 
     move-result-object v0
 
-    .line 33
     invoke-virtual {v0, p3}, Lcom/netflix/mediaclient/ui/verifyplay/AgeDialog;->setAgeVerifierCallback(Lcom/netflix/mediaclient/ui/verifyplay/PinAndAgeVerifier$PinAndAgeVerifyCallback;)V
 
-    .line 35
     invoke-virtual {p1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1

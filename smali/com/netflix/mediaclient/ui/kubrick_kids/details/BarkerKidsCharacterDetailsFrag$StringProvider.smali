@@ -16,17 +16,12 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;)V
     .locals 0
 
-    .prologue
-    .line 484
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 485
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsCharacterDetailsFrag$StringProvider;->context:Landroid/content/Context;
 
-    .line 486
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsCharacterDetailsFrag$StringProvider;->details:Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;
 
-    .line 487
     return-void
 .end method
 
@@ -35,8 +30,6 @@
 .method public getBasicInfoString()Ljava/lang/CharSequence;
     .locals 2
 
-    .prologue
-    .line 491
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsCharacterDetailsFrag$StringProvider;->context:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsCharacterDetailsFrag$StringProvider;->details:Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;
@@ -51,8 +44,6 @@
 .method public getCreatorsText()Ljava/lang/CharSequence;
     .locals 1
 
-    .prologue
-    .line 496
     const/4 v0, 0x0
 
     return-object v0
@@ -61,8 +52,6 @@
 .method public getGenresText()Ljava/lang/CharSequence;
     .locals 3
 
-    .prologue
-    .line 506
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsCharacterDetailsFrag$StringProvider;->details:Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;->getGenres()Ljava/lang/String;
@@ -75,10 +64,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 507
     const/4 v0, 0x0
 
-    .line 509
     :goto_0
     return-object v0
 
@@ -103,8 +90,6 @@
 .method public getStarringText()Ljava/lang/CharSequence;
     .locals 3
 
-    .prologue
-    .line 501
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsCharacterDetailsFrag$StringProvider;->context:Landroid/content/Context;
 
     const v1, 0x7f08021b

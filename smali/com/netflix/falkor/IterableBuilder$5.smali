@@ -28,8 +28,6 @@
 .method constructor <init>(Lcom/netflix/falkor/IterableBuilder;Lcom/netflix/falkor/IterableBuilder;Ljava/lang/Iterable;)V
     .locals 0
 
-    .prologue
-    .line 108
     iput-object p1, p0, Lcom/netflix/falkor/IterableBuilder$5;->this$0:Lcom/netflix/falkor/IterableBuilder;
 
     iput-object p2, p0, Lcom/netflix/falkor/IterableBuilder$5;->val$self:Lcom/netflix/falkor/IterableBuilder;
@@ -53,8 +51,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 110
     new-instance v0, Lcom/netflix/falkor/IterableBuilder$5$1;
 
     invoke-direct {v0, p0}, Lcom/netflix/falkor/IterableBuilder$5$1;-><init>(Lcom/netflix/falkor/IterableBuilder$5;)V

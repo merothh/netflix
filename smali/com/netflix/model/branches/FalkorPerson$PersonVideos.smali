@@ -30,13 +30,10 @@
 .method public constructor <init>(Lcom/netflix/model/branches/FalkorPerson;)V
     .locals 1
 
-    .prologue
-    .line 243
     iput-object p1, p0, Lcom/netflix/model/branches/FalkorPerson$PersonVideos;->this$0:Lcom/netflix/model/branches/FalkorPerson;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 247
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -51,25 +48,20 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
-    .line 252
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorPerson$PersonVideos;->videoIds:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 254
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 255
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 256
     const-string/jumbo v1, "PersonVideos"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -92,7 +84,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 259
     :cond_0
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -115,21 +106,18 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 260
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/gson/JsonElement;
 
-    .line 262
     invoke-virtual {v0}, Lcom/google/gson/JsonElement;->isJsonArray()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 263
     invoke-virtual {v0}, Lcom/google/gson/JsonElement;->getAsJsonArray()Lcom/google/gson/JsonArray;
 
     move-result-object v2
@@ -144,7 +132,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 264
     invoke-virtual {v0}, Lcom/google/gson/JsonElement;->getAsJsonArray()Lcom/google/gson/JsonArray;
 
     move-result-object v0
@@ -155,7 +142,6 @@
 
     check-cast v0, Lcom/google/gson/JsonArray;
 
-    .line 265
     invoke-virtual {v0}, Lcom/google/gson/JsonArray;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -173,7 +159,6 @@
 
     check-cast v0, Lcom/google/gson/JsonElement;
 
-    .line 266
     iget-object v3, p0, Lcom/netflix/model/branches/FalkorPerson$PersonVideos;->videoIds:Ljava/util/List;
 
     invoke-virtual {v0}, Lcom/google/gson/JsonElement;->toString()Ljava/lang/String;
@@ -184,7 +169,6 @@
 
     goto :goto_0
 
-    .line 271
     :cond_2
     return-void
 .end method
@@ -192,20 +176,16 @@
 .method public set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
-    .line 276
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorPerson$PersonVideos;->videoIds:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 278
     sget-boolean v0, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v0, :cond_0
 
-    .line 279
     const-string/jumbo v0, "PersonVideos"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -228,7 +208,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 282
     :cond_0
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getCurrentToken()Lcom/fasterxml/jackson/core/JsonToken;
 
@@ -242,12 +221,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 283
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->nextToken()Lcom/fasterxml/jackson/core/JsonToken;
 
     move-result-object v0
 
-    .line 284
     sget-object v1, Lcom/fasterxml/jackson/core/JsonToken;->END_ARRAY:Lcom/fasterxml/jackson/core/JsonToken;
 
     invoke-virtual {v0, v1}, Lcom/fasterxml/jackson/core/JsonToken;->equals(Ljava/lang/Object;)Z
@@ -256,7 +233,6 @@
 
     if-nez v1, :cond_2
 
-    .line 285
     sget-object v1, Lcom/fasterxml/jackson/core/JsonToken;->START_ARRAY:Lcom/fasterxml/jackson/core/JsonToken;
 
     invoke-virtual {v0, v1}, Lcom/fasterxml/jackson/core/JsonToken;->equals(Ljava/lang/Object;)Z
@@ -265,14 +241,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 286
     invoke-static {p2, v0, v3}, Lcom/netflix/falkor/BranchNodeUtils;->readValue(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/core/JsonToken;Z)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/List;
 
-    .line 287
     iget-object v1, p0, Lcom/netflix/model/branches/FalkorPerson$PersonVideos;->videoIds:Ljava/util/List;
 
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -285,11 +259,9 @@
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 289
     :cond_1
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->nextToken()Lcom/fasterxml/jackson/core/JsonToken;
 
-    .line 293
     :cond_2
     const/4 v0, 0x0
 

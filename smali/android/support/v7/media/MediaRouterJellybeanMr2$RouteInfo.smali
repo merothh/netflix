@@ -7,8 +7,6 @@
 .method public static getDescription(Ljava/lang/Object;)Ljava/lang/CharSequence;
     .locals 1
 
-    .prologue
-    .line 31
     check-cast p0, Landroid/media/MediaRouter$RouteInfo;
 
     invoke-virtual {p0}, Landroid/media/MediaRouter$RouteInfo;->getDescription()Ljava/lang/CharSequence;
@@ -21,8 +19,6 @@
 .method public static isConnecting(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 35
     check-cast p0, Landroid/media/MediaRouter$RouteInfo;
 
     invoke-virtual {p0}, Landroid/media/MediaRouter$RouteInfo;->isConnecting()Z

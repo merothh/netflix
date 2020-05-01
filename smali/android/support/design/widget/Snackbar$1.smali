@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 162
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,21 +20,17 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 3
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 165
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 173
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 167
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -46,10 +40,8 @@
 
     move v0, v1
 
-    .line 168
     goto :goto_0
 
-    .line 170
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -61,10 +53,8 @@
 
     move v0, v1
 
-    .line 171
     goto :goto_0
 
-    .line 165
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

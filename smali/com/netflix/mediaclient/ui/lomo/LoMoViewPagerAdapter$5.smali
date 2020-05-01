@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 290
     invoke-static {}, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$Type;->values()[Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter$Type;
 
     move-result-object v0

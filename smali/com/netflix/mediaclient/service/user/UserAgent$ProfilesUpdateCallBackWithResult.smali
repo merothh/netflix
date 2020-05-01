@@ -13,24 +13,18 @@
 .method private constructor <init>(Lcom/netflix/mediaclient/service/user/UserAgent;Lcom/netflix/mediaclient/service/user/UserAgent$UserAgentCallback;)V
     .locals 0
 
-    .prologue
-    .line 1225
     iput-object p1, p0, Lcom/netflix/mediaclient/service/user/UserAgent$ProfilesUpdateCallBackWithResult;->this$0:Lcom/netflix/mediaclient/service/user/UserAgent;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/user/SimpleUserAgentWebCallback;-><init>()V
 
-    .line 1226
     iput-object p2, p0, Lcom/netflix/mediaclient/service/user/UserAgent$ProfilesUpdateCallBackWithResult;->mResultCallback:Lcom/netflix/mediaclient/service/user/UserAgent$UserAgentCallback;
 
-    .line 1227
     return-void
 .end method
 
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/service/user/UserAgent;Lcom/netflix/mediaclient/service/user/UserAgent$UserAgentCallback;Lcom/netflix/mediaclient/service/user/UserAgent$1;)V
     .locals 0
 
-    .prologue
-    .line 1222
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/service/user/UserAgent$ProfilesUpdateCallBackWithResult;-><init>(Lcom/netflix/mediaclient/service/user/UserAgent;Lcom/netflix/mediaclient/service/user/UserAgent$UserAgentCallback;)V
 
     return-void
@@ -41,8 +35,6 @@
 .method public onUserProfilesUpdated(Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountData;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 1
 
-    .prologue
-    .line 1231
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$ProfilesUpdateCallBackWithResult;->this$0:Lcom/netflix/mediaclient/service/user/UserAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/user/UserAgent;->access$2700(Lcom/netflix/mediaclient/service/user/UserAgent;)Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;
@@ -51,11 +43,9 @@
 
     invoke-interface {v0, p1, p2}, Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;->onUserProfilesUpdated(Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountData;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 1232
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$ProfilesUpdateCallBackWithResult;->mResultCallback:Lcom/netflix/mediaclient/service/user/UserAgent$UserAgentCallback;
 
     invoke-interface {v0, p2}, Lcom/netflix/mediaclient/service/user/UserAgent$UserAgentCallback;->onProfilesListUpdateResult(Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 1233
     return-void
 .end method

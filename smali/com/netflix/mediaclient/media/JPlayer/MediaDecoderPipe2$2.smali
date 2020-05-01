@@ -13,13 +13,10 @@
 .method constructor <init>(Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;Landroid/os/Looper;)V
     .locals 2
 
-    .prologue
-    .line 415
     iput-object p1, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 416
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->frameDecoded:J
@@ -32,7 +29,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 10
 
-    .prologue
     const-wide/16 v6, 0x0
 
     const/4 v0, 0x4
@@ -41,12 +37,10 @@
 
     const/4 v1, 0x1
 
-    .line 420
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 525
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;->access$200(Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;)Ljava/lang/String;
@@ -57,11 +51,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 527
     :goto_0
     return-void
 
-    .line 422
     :pswitch_0
     iget-object v2, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
@@ -71,7 +63,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 423
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;->access$200(Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;)Ljava/lang/String;
@@ -84,13 +75,11 @@
 
     goto :goto_0
 
-    .line 429
     :cond_0
     new-instance v2, Landroid/media/MediaCodec$BufferInfo;
 
     invoke-direct {v2}, Landroid/media/MediaCodec$BufferInfo;-><init>()V
 
-    .line 431
     :try_start_0
     iget-object v3, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
@@ -104,12 +93,10 @@
 
     move-result v3
 
-    .line 437
     const/4 v4, -0x1
 
     if-ne v3, v4, :cond_2
 
-    .line 492
     :cond_1
     :goto_1
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
@@ -120,7 +107,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 493
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;->access$1300(Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;)Landroid/os/Handler;
@@ -131,11 +117,9 @@
 
     goto :goto_0
 
-    .line 432
     :catch_0
     move-exception v0
 
-    .line 433
     iget-object v1, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;->access$200(Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;)Ljava/lang/String;
@@ -168,13 +152,11 @@
 
     goto :goto_0
 
-    .line 439
     :cond_2
     const/4 v4, -0x3
 
     if-ne v3, v4, :cond_3
 
-    .line 440
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;->access$200(Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;)Ljava/lang/String;
@@ -185,20 +167,17 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 441
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;->access$1100(Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;)V
 
     goto :goto_1
 
-    .line 443
     :cond_3
     const/4 v4, -0x2
 
     if-ne v3, v4, :cond_4
 
-    .line 445
     :try_start_1
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
@@ -208,14 +187,12 @@
 
     move-result-object v0
 
-    .line 446
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 447
     iget-object v2, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
     invoke-static {v2}, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;->access$200(Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;)Ljava/lang/String;
@@ -246,11 +223,9 @@
 
     goto :goto_1
 
-    .line 449
     :catch_1
     move-exception v0
 
-    .line 450
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;->access$200(Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;)Ljava/lang/String;
@@ -263,7 +238,6 @@
 
     goto/16 :goto_1
 
-    .line 453
     :cond_4
     if-ltz v3, :cond_b
 
@@ -275,19 +249,16 @@
 
     if-ge v3, v4, :cond_b
 
-    .line 454
     iget-object v4, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
     invoke-virtual {v4, v3, v2}, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;->addToRenderer(ILandroid/media/MediaCodec$BufferInfo;)V
 
-    .line 457
     iget v4, v2, Landroid/media/MediaCodec$BufferInfo;->flags:I
 
     and-int/lit8 v4, v4, 0x4
 
     if-eqz v4, :cond_5
 
-    .line 458
     iget-object v4, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
     invoke-static {v4}, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;->access$200(Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;)Ljava/lang/String;
@@ -298,7 +269,6 @@
 
     invoke-static {v4, v5}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 460
     :cond_5
     iget-wide v4, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->frameDecoded:J
 
@@ -306,14 +276,12 @@
 
     if-gtz v4, :cond_6
 
-    .line 461
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v4
 
     if-eqz v4, :cond_6
 
-    .line 462
     iget-object v4, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
     invoke-static {v4}, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;->access$200(Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;)Ljava/lang/String;
@@ -372,7 +340,6 @@
 
     invoke-static {v4, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 466
     :cond_6
     iget-object v3, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
@@ -396,14 +363,12 @@
 
     if-gtz v3, :cond_7
 
-    .line 467
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v3
 
     if-eqz v3, :cond_7
 
-    .line 468
     iget-object v3, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
     invoke-static {v3}, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;->access$200(Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;)Ljava/lang/String;
@@ -480,7 +445,6 @@
 
     invoke-static {v3, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 471
     :cond_7
     iget-wide v2, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->frameDecoded:J
 
@@ -490,7 +454,6 @@
 
     iput-wide v2, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->frameDecoded:J
 
-    .line 474
     iget-object v2, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
     invoke-static {v2}, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;->access$300(Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;)Z
@@ -507,13 +470,11 @@
 
     add-int/lit8 v2, v2, -0x1
 
-    .line 475
     :goto_2
     if-gtz v2, :cond_a
 
     move v0, v1
 
-    .line 482
     :cond_8
     :goto_3
     iget-wide v2, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->frameDecoded:J
@@ -530,7 +491,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 483
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;->mEventListener:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase$EventListener;
@@ -548,10 +508,8 @@
     :cond_9
     move v2, v1
 
-    .line 474
     goto :goto_2
 
-    .line 478
     :cond_a
     if-ge v2, v0, :cond_8
 
@@ -559,7 +517,6 @@
 
     goto :goto_3
 
-    .line 490
     :cond_b
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
@@ -589,7 +546,6 @@
 
     goto/16 :goto_1
 
-    .line 499
     :pswitch_1
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
@@ -599,7 +555,6 @@
 
     monitor-enter v1
 
-    .line 500
     :try_start_2
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
@@ -609,15 +564,12 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->notify()V
 
-    .line 501
     monitor-exit v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 502
     iput-wide v6, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->frameDecoded:J
 
-    .line 503
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;->access$200(Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;)Ljava/lang/String;
@@ -630,7 +582,6 @@
 
     goto/16 :goto_0
 
-    .line 501
     :catchall_0
     move-exception v0
 
@@ -641,7 +592,6 @@
 
     throw v0
 
-    .line 506
     :pswitch_2
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
@@ -655,7 +605,6 @@
 
     goto/16 :goto_0
 
-    .line 512
     :pswitch_3
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
@@ -667,7 +616,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 514
     :try_start_4
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
@@ -677,7 +625,6 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 519
     :goto_4
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
@@ -687,7 +634,6 @@
 
     monitor-enter v1
 
-    .line 520
     :try_start_5
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
@@ -697,12 +643,10 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->notify()V
 
-    .line 521
     monitor-exit v1
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 522
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;->access$200(Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;)Ljava/lang/String;
@@ -715,11 +659,9 @@
 
     goto/16 :goto_0
 
-    .line 515
     :catch_2
     move-exception v0
 
-    .line 516
     iget-object v1, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2$2;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;->access$200(Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderPipe2;)Ljava/lang/String;
@@ -752,7 +694,6 @@
 
     goto :goto_4
 
-    .line 521
     :catchall_1
     move-exception v0
 
@@ -763,7 +704,6 @@
 
     throw v0
 
-    .line 420
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

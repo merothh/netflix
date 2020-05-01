@@ -22,8 +22,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper;Ljava/util/List;Ljava/util/List;Lcom/netflix/mediaclient/android/app/Status;Ljava/util/List;)V
     .locals 0
 
-    .prologue
-    .line 275
     iput-object p1, p0, Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper$22;->this$0:Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper$22;->val$actors:Ljava/util/List;
@@ -44,11 +42,8 @@
 .method public run()V
     .locals 5
 
-    .prologue
-    .line 278
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertOnMain()Z
 
-    .line 279
     iget-object v0, p0, Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper$22;->this$0:Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper;->access$000(Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper;)Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;
@@ -65,6 +60,5 @@
 
     invoke-interface {v0, v1, v2, v3, v4}, Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;->onActorDetailsAndRelatedFetched(Ljava/util/List;Ljava/util/List;Lcom/netflix/mediaclient/android/app/Status;Ljava/util/List;)V
 
-    .line 280
     return-void
 .end method

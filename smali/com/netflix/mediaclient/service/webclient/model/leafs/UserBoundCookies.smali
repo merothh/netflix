@@ -17,8 +17,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,8 +27,6 @@
 .method public getUserBoundNetflixId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 17
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/UserBoundCookies;->NetflixId:Ljava/lang/String;
 
     return-object v0
@@ -39,8 +35,6 @@
 .method public getUserBoundSecureNetflixId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 20
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/UserBoundCookies;->SecureNetflixId:Ljava/lang/String;
 
     return-object v0

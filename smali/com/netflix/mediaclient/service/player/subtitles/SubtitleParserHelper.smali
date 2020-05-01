@@ -13,19 +13,14 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
     return-void
 .end method
 
 .method public static isBreak(Lorg/w3c/dom/Element;)Z
     .locals 2
 
-    .prologue
-    .line 29
     if-eqz p0, :cond_0
 
     const-string/jumbo v0, "br"
@@ -54,8 +49,6 @@
 .method public static isSpan(Lorg/w3c/dom/Element;)Z
     .locals 2
 
-    .prologue
-    .line 40
     if-eqz p0, :cond_0
 
     const-string/jumbo v0, "span"

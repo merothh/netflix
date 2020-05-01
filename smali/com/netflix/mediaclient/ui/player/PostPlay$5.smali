@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/PostPlay;Lcom/netflix/mediaclient/ui/player/PostPlayCallToAction;)V
     .locals 0
 
-    .prologue
-    .line 419
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$5;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$5;->val$autoPlayCta:Lcom/netflix/mediaclient/ui/player/PostPlayCallToAction;
@@ -32,14 +30,11 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 422
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$5;->val$autoPlayCta:Lcom/netflix/mediaclient/ui/player/PostPlayCallToAction;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/player/PostPlayCallToAction;->playAction(Z)V
 
-    .line 423
     return-void
 .end method

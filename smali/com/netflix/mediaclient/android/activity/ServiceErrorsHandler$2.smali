@@ -14,8 +14,6 @@
 .method constructor <init>(Landroid/app/Activity;)V
     .locals 0
 
-    .prologue
-    .line 188
     iput-object p1, p0, Lcom/netflix/mediaclient/android/activity/ServiceErrorsHandler$2;->val$activity:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,30 +26,24 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
 
-    .prologue
-    .line 191
     const-string/jumbo v0, "ServiceErrorsHandler"
 
     const-string/jumbo v1, "User clicked Ok on prompt to update"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 192
     iget-object v0, p0, Lcom/netflix/mediaclient/android/activity/ServiceErrorsHandler$2;->val$activity:Landroid/app/Activity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/AppStoreHelper;->getUpdateSourceIntent(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 193
     if-eqz v0, :cond_0
 
-    .line 194
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 196
     :try_start_0
     iget-object v1, p0, Lcom/netflix/mediaclient/android/activity/ServiceErrorsHandler$2;->val$activity:Landroid/app/Activity;
 
@@ -60,21 +52,17 @@
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 202
     iget-object v0, p0, Lcom/netflix/mediaclient/android/activity/ServiceErrorsHandler$2;->val$activity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 205
     :cond_0
     :goto_0
     return-void
 
-    .line 198
     :catch_0
     move-exception v0
 
-    .line 199
     :try_start_1
     const-string/jumbo v1, "ServiceErrorsHandler"
 
@@ -84,7 +72,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 202
     iget-object v0, p0, Lcom/netflix/mediaclient/android/activity/ServiceErrorsHandler$2;->val$activity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V

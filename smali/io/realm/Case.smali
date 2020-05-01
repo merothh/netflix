@@ -30,12 +30,10 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 28
     new-instance v0, Lio/realm/Case;
 
     const-string/jumbo v1, "SENSITIVE"
@@ -44,7 +42,6 @@
 
     sput-object v0, Lio/realm/Case;->SENSITIVE:Lio/realm/Case;
 
-    .line 29
     new-instance v0, Lio/realm/Case;
 
     const-string/jumbo v1, "INSENSITIVE"
@@ -53,7 +50,6 @@
 
     sput-object v0, Lio/realm/Case;->INSENSITIVE:Lio/realm/Case;
 
-    .line 27
     const/4 v0, 0x2
 
     new-array v0, v0, [Lio/realm/Case;
@@ -79,22 +75,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 33
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 34
     iput-boolean p3, p0, Lio/realm/Case;->value:Z
 
-    .line 35
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lio/realm/Case;
     .locals 1
 
-    .prologue
-    .line 27
     const-class v0, Lio/realm/Case;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -109,8 +99,6 @@
 .method public static values()[Lio/realm/Case;
     .locals 1
 
-    .prologue
-    .line 27
     sget-object v0, Lio/realm/Case;->$VALUES:[Lio/realm/Case;
 
     invoke-virtual {v0}, [Lio/realm/Case;->clone()Ljava/lang/Object;
@@ -127,8 +115,6 @@
 .method public getValue()Z
     .locals 1
 
-    .prologue
-    .line 42
     iget-boolean v0, p0, Lio/realm/Case;->value:Z
 
     return v0

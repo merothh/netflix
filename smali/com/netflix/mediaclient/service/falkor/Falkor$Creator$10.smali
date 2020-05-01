@@ -22,8 +22,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 184
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,8 +32,6 @@
 .method public call()Lcom/netflix/model/branches/MementoVideoSwatch;
     .locals 1
 
-    .prologue
-    .line 187
     new-instance v0, Lcom/netflix/model/branches/MementoVideoSwatch;
 
     invoke-direct {v0}, Lcom/netflix/model/branches/MementoVideoSwatch;-><init>()V
@@ -46,8 +42,6 @@
 .method public bridge synthetic call()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 184
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$10;->call()Lcom/netflix/model/branches/MementoVideoSwatch;
 
     move-result-object v0

@@ -11,8 +11,6 @@
 .method private constructor <init>(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)V
     .locals 0
 
-    .prologue
-    .line 401
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$AvatarsFetchedCallback;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/servicemgr/SimpleManagerCallback;-><init>()V
@@ -23,8 +21,6 @@
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$1;)V
     .locals 0
 
-    .prologue
-    .line 401
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$AvatarsFetchedCallback;-><init>(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)V
 
     return-void
@@ -46,15 +42,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 404
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 405
     const-string/jumbo v0, "ProfileDetailsActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -77,7 +70,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 408
     :cond_0
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
 
@@ -87,7 +79,6 @@
 
     if-eqz p1, :cond_6
 
-    .line 411
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$AvatarsFetchedCallback;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$200(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)Z
@@ -108,7 +99,6 @@
 
     if-nez v0, :cond_5
 
-    .line 431
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$AvatarsFetchedCallback;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
@@ -116,7 +106,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$502(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;Lcom/netflix/mediaclient/service/webclient/model/leafs/AvatarInfo;)Lcom/netflix/mediaclient/service/webclient/model/leafs/AvatarInfo;
 
-    .line 435
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -134,19 +123,16 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AvatarInfo;
 
-    .line 436
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/AvatarInfo;->isInDefaultSet()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 437
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$AvatarsFetchedCallback;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$502(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;Lcom/netflix/mediaclient/service/webclient/model/leafs/AvatarInfo;)Lcom/netflix/mediaclient/service/webclient/model/leafs/AvatarInfo;
 
-    .line 442
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$AvatarsFetchedCallback;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
@@ -156,7 +142,6 @@
 
     if-nez v0, :cond_4
 
-    .line 444
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$AvatarsFetchedCallback;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -173,7 +158,6 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$502(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;Lcom/netflix/mediaclient/service/webclient/model/leafs/AvatarInfo;)Lcom/netflix/mediaclient/service/webclient/model/leafs/AvatarInfo;
 
-    .line 447
     :cond_4
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$AvatarsFetchedCallback;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
@@ -185,17 +169,14 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$702(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;Lcom/netflix/mediaclient/service/webclient/model/leafs/AvatarInfo;)Lcom/netflix/mediaclient/service/webclient/model/leafs/AvatarInfo;
 
-    .line 449
     :cond_5
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$AvatarsFetchedCallback;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$800(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)V
 
-    .line 464
     :goto_0
     return-void
 
-    .line 453
     :cond_6
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$AvatarsFetchedCallback;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
@@ -203,14 +184,12 @@
 
     move-result-object v0
 
-    .line 454
     sget-object v1, Lcom/netflix/mediaclient/service/logging/client/model/ActionOnUIError;->displayedError:Lcom/netflix/mediaclient/service/logging/client/model/ActionOnUIError;
 
     invoke-static {p2, v0, v1}, Lcom/netflix/mediaclient/util/log/ConsolidatedLoggingUtils;->createUIError(Lcom/netflix/mediaclient/android/app/Status;Ljava/lang/String;Lcom/netflix/mediaclient/service/logging/client/model/ActionOnUIError;)Lcom/netflix/mediaclient/service/logging/client/model/UIError;
 
     move-result-object v0
 
-    .line 457
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$AvatarsFetchedCallback;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;->access$900(Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;)Z
@@ -219,7 +198,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 458
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$AvatarsFetchedCallback;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     sget-object v2, Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;->failed:Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;
@@ -230,7 +208,6 @@
 
     goto :goto_0
 
-    .line 459
     :cond_7
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$AvatarsFetchedCallback;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
@@ -240,7 +217,6 @@
 
     if-eqz v1, :cond_8
 
-    .line 460
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$AvatarsFetchedCallback;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 
     sget-object v2, Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;->failed:Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;
@@ -257,7 +233,6 @@
 
     goto :goto_0
 
-    .line 462
     :cond_8
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity$AvatarsFetchedCallback;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileDetailsActivity;
 

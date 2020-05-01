@@ -11,14 +11,10 @@
 .method protected constructor <init>(Lcom/netflix/msl/keyx/KeyExchangeScheme;)V
     .locals 0
 
-    .prologue
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
     iput-object p1, p0, Lcom/netflix/msl/keyx/KeyExchangeFactory;->scheme:Lcom/netflix/msl/keyx/KeyExchangeScheme;
 
-    .line 68
     return-void
 .end method
 
@@ -42,8 +38,6 @@
 .method public getScheme()Lcom/netflix/msl/keyx/KeyExchangeScheme;
     .locals 1
 
-    .prologue
-    .line 74
     iget-object v0, p0, Lcom/netflix/msl/keyx/KeyExchangeFactory;->scheme:Lcom/netflix/msl/keyx/KeyExchangeScheme;
 
     return-object v0

@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;)V
     .locals 0
 
-    .prologue
-    .line 97
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown$1;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,12 +26,9 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 100
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown$1;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->refreshTimerText()V
 
-    .line 101
     return-void
 .end method

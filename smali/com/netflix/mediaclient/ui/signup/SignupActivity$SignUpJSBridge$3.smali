@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;)V
     .locals 0
 
-    .prologue
-    .line 690
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge$3;->this$1:Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,14 +26,11 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 693
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge$3;->this$1:Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$1600(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)V
 
-    .line 694
     return-void
 .end method

@@ -10,13 +10,10 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 12
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 13
     sput-object v0, Lcom/crittercism/internal/do;->a:Ljava/util/Map;
 
     const-string/jumbo v1, "com.amazon.venezia"
@@ -27,7 +24,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 14
     sget-object v0, Lcom/crittercism/internal/do;->a:Ljava/util/Map;
 
     const-string/jumbo v1, "com.android.vending"
@@ -38,15 +34,12 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 15
     return-void
 .end method
 
 .method public static a(Ljava/lang/String;)Lcom/crittercism/internal/dm;
     .locals 1
 
-    .prologue
-    .line 18
     if-eqz p0, :cond_0
 
     sget-object v0, Lcom/crittercism/internal/do;->a:Ljava/util/Map;
@@ -57,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 19
     sget-object v0, Lcom/crittercism/internal/do;->a:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -66,7 +58,6 @@
 
     check-cast v0, Lcom/crittercism/internal/dm;
 
-    .line 21
     :goto_0
     return-object v0
 

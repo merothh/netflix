@@ -25,13 +25,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .prologue
-    .line 16
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Lcom/netflix/mediaclient/ui/lomo/VideoViewGroup;-><init>(Landroid/content/Context;Z)V
 
-    .line 17
     return-void
 .end method
 
@@ -40,8 +37,6 @@
 .method protected bridge synthetic createChildView(Landroid/content/Context;)Landroid/view/View;
     .locals 1
 
-    .prologue
-    .line 11
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterViewGroup;->createChildView(Landroid/content/Context;)Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;
 
     move-result-object v0
@@ -52,8 +47,6 @@
 .method protected createChildView(Landroid/content/Context;)Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;
     .locals 1
 
-    .prologue
-    .line 21
     new-instance v0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;
 
     invoke-direct {v0, p1}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;-><init>(Landroid/content/Context;)V
@@ -64,8 +57,6 @@
 .method protected getLomoWidthType()Lcom/netflix/mediaclient/ui/lomo/LoMoUtils$LoMoWidthType;
     .locals 1
 
-    .prologue
-    .line 26
     sget-object v0, Lcom/netflix/mediaclient/ui/lomo/LoMoUtils$LoMoWidthType;->KUBRICK_KIDS_CHARACTER_ROW:Lcom/netflix/mediaclient/ui/lomo/LoMoUtils$LoMoWidthType;
 
     return-object v0
@@ -74,8 +65,6 @@
 .method protected shouldApplyPaddingToChildren()Z
     .locals 1
 
-    .prologue
-    .line 36
     const/4 v0, 0x0
 
     return v0
@@ -84,8 +73,6 @@
 .method protected bridge synthetic updateViewIds(Landroid/view/View;III)V
     .locals 0
 
-    .prologue
-    .line 11
     check-cast p1, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterViewGroup;->updateViewIds(Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;III)V
@@ -96,7 +83,5 @@
 .method protected updateViewIds(Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterView;III)V
     .locals 0
 
-    .prologue
-    .line 32
     return-void
 .end method

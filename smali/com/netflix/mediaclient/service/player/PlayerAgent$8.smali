@@ -20,8 +20,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/player/PlayerAgent;Lcom/netflix/mediaclient/service/player/PlayerListenerManager$PlayerListenerHandler;Lcom/netflix/mediaclient/servicemgr/IPlayer$PlayerListener;[Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 2244
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$8;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$8;->val$handler:Lcom/netflix/mediaclient/service/player/PlayerListenerManager$PlayerListenerHandler;
@@ -40,8 +38,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 2247
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$8;->val$handler:Lcom/netflix/mediaclient/service/player/PlayerListenerManager$PlayerListenerHandler;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$8;->val$listener:Lcom/netflix/mediaclient/servicemgr/IPlayer$PlayerListener;
@@ -50,6 +46,5 @@
 
     invoke-interface {v0, v1, v2}, Lcom/netflix/mediaclient/service/player/PlayerListenerManager$PlayerListenerHandler;->handle(Lcom/netflix/mediaclient/servicemgr/IPlayer$PlayerListener;[Ljava/lang/Object;)V
 
-    .line 2248
     return-void
 .end method

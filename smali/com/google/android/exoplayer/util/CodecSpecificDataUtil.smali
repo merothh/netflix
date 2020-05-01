@@ -15,8 +15,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 27
     const/4 v0, 0x4
 
     new-array v0, v0, [B
@@ -25,7 +23,6 @@
 
     sput-object v0, Lcom/google/android/exoplayer/util/CodecSpecificDataUtil;->NAL_START_CODE:[B
 
-    .line 31
     const/16 v0, 0xd
 
     new-array v0, v0, [I
@@ -34,7 +31,6 @@
 
     sput-object v0, Lcom/google/android/exoplayer/util/CodecSpecificDataUtil;->AUDIO_SPECIFIC_CONFIG_SAMPLING_RATE_TABLE:[I
 
-    .line 49
     const/16 v0, 0x10
 
     new-array v0, v0, [I
@@ -45,7 +41,6 @@
 
     return-void
 
-    .line 27
     nop
 
     :array_0
@@ -56,7 +51,6 @@
         0x1t
     .end array-data
 
-    .line 31
     :array_1
     .array-data 4
         0x17700
@@ -74,7 +68,6 @@
         0x1cb6
     .end array-data
 
-    .line 49
     :array_2
     .array-data 4
         0x0
@@ -99,10 +92,8 @@
 .method public static buildNalUnit([BII)[B
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 174
     sget-object v0, Lcom/google/android/exoplayer/util/CodecSpecificDataUtil;->NAL_START_CODE:[B
 
     array-length v0, v0
@@ -111,7 +102,6 @@
 
     new-array v0, v0, [B
 
-    .line 175
     sget-object v1, Lcom/google/android/exoplayer/util/CodecSpecificDataUtil;->NAL_START_CODE:[B
 
     sget-object v2, Lcom/google/android/exoplayer/util/CodecSpecificDataUtil;->NAL_START_CODE:[B
@@ -120,14 +110,12 @@
 
     invoke-static {v1, v3, v0, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 176
     sget-object v1, Lcom/google/android/exoplayer/util/CodecSpecificDataUtil;->NAL_START_CODE:[B
 
     array-length v1, v1
 
     invoke-static {p0, p1, v0, v1, p2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 177
     return-object v0
 .end method
 
@@ -144,7 +132,6 @@
         }
     .end annotation
 
-    .prologue
     const/16 v9, 0xd
 
     const/4 v8, 0x5
@@ -155,76 +142,63 @@
 
     const/4 v7, 0x4
 
-    .line 87
     new-instance v4, Lcom/google/android/exoplayer/util/ParsableBitArray;
 
     invoke-direct {v4, p0}, Lcom/google/android/exoplayer/util/ParsableBitArray;-><init>([B)V
 
-    .line 88
     invoke-virtual {v4, v8}, Lcom/google/android/exoplayer/util/ParsableBitArray;->readBits(I)I
 
     move-result v5
 
-    .line 89
     invoke-virtual {v4, v7}, Lcom/google/android/exoplayer/util/ParsableBitArray;->readBits(I)I
 
     move-result v3
 
-    .line 91
     const/16 v0, 0xf
 
     if-ne v3, v0, :cond_1
 
-    .line 92
     const/16 v0, 0x18
 
     invoke-virtual {v4, v0}, Lcom/google/android/exoplayer/util/ParsableBitArray;->readBits(I)I
 
     move-result v0
 
-    .line 97
     :goto_0
     invoke-virtual {v4, v7}, Lcom/google/android/exoplayer/util/ParsableBitArray;->readBits(I)I
 
     move-result v3
 
-    .line 98
     if-eq v5, v8, :cond_0
 
     const/16 v6, 0x1d
 
     if-ne v5, v6, :cond_6
 
-    .line 104
     :cond_0
     invoke-virtual {v4, v7}, Lcom/google/android/exoplayer/util/ParsableBitArray;->readBits(I)I
 
     move-result v5
 
-    .line 105
     const/16 v0, 0xf
 
     if-ne v5, v0, :cond_3
 
-    .line 106
     const/16 v0, 0x18
 
     invoke-virtual {v4, v0}, Lcom/google/android/exoplayer/util/ParsableBitArray;->readBits(I)I
 
     move-result v0
 
-    .line 111
     :goto_1
     invoke-virtual {v4, v8}, Lcom/google/android/exoplayer/util/ParsableBitArray;->readBits(I)I
 
     move-result v5
 
-    .line 112
     const/16 v6, 0x16
 
     if-ne v5, v6, :cond_6
 
-    .line 114
     invoke-virtual {v4, v7}, Lcom/google/android/exoplayer/util/ParsableBitArray;->readBits(I)I
 
     move-result v3
@@ -235,13 +209,11 @@
 
     move v0, v10
 
-    .line 117
     :goto_2
     sget-object v4, Lcom/google/android/exoplayer/util/CodecSpecificDataUtil;->AUDIO_SPECIFIC_CONFIG_CHANNEL_COUNT_TABLE:[I
 
     aget v0, v4, v0
 
-    .line 118
     const/4 v4, -0x1
 
     if-eq v0, v4, :cond_5
@@ -249,7 +221,6 @@
     :goto_3
     invoke-static {v1}, Lcom/google/android/exoplayer/util/Assertions;->checkArgument(Z)V
 
-    .line 119
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -264,7 +235,6 @@
 
     return-object v0
 
-    .line 94
     :cond_1
     if-ge v3, v9, :cond_2
 
@@ -273,7 +243,6 @@
     :goto_4
     invoke-static {v0}, Lcom/google/android/exoplayer/util/Assertions;->checkArgument(Z)V
 
-    .line 95
     sget-object v0, Lcom/google/android/exoplayer/util/CodecSpecificDataUtil;->AUDIO_SPECIFIC_CONFIG_SAMPLING_RATE_TABLE:[I
 
     aget v0, v0, v3
@@ -283,10 +252,8 @@
     :cond_2
     move v0, v2
 
-    .line 94
     goto :goto_4
 
-    .line 108
     :cond_3
     if-ge v5, v9, :cond_4
 
@@ -295,7 +262,6 @@
     :goto_5
     invoke-static {v0}, Lcom/google/android/exoplayer/util/Assertions;->checkArgument(Z)V
 
-    .line 109
     sget-object v0, Lcom/google/android/exoplayer/util/CodecSpecificDataUtil;->AUDIO_SPECIFIC_CONFIG_SAMPLING_RATE_TABLE:[I
 
     aget v0, v0, v5
@@ -305,13 +271,11 @@
     :cond_4
     move v0, v2
 
-    .line 108
     goto :goto_5
 
     :cond_5
     move v1, v2
 
-    .line 118
     goto :goto_3
 
     :cond_6

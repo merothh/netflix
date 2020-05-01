@@ -7,11 +7,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 23
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/lomo/PaginatedLoMoAdapter;-><init>(Landroid/content/Context;)V
 
-    .line 24
     return-void
 .end method
 
@@ -20,8 +17,6 @@
 .method protected computeNumItemsPerPage()I
     .locals 4
 
-    .prologue
-    .line 46
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsPaginatedCharacterAdapter;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     const/4 v1, 0x1
@@ -32,7 +27,6 @@
 
     move-result v0
 
-    .line 47
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsPaginatedCharacterAdapter;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
@@ -47,7 +41,6 @@
 
     move-result v1
 
-    .line 48
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsPaginatedCharacterAdapter;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
@@ -64,7 +57,6 @@
 
     add-int/2addr v1, v2
 
-    .line 49
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/MathUtils;->divideIntsWithRounding(II)I
 
     move-result v0
@@ -75,8 +67,6 @@
 .method public getRowHeightInPx()I
     .locals 3
 
-    .prologue
-    .line 55
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsPaginatedCharacterAdapter;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -91,7 +81,6 @@
 
     move-result v0
 
-    .line 56
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsPaginatedCharacterAdapter;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
@@ -108,7 +97,6 @@
 
     add-int/2addr v0, v1
 
-    .line 57
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsPaginatedCharacterAdapter;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
@@ -125,7 +113,6 @@
 
     add-int/2addr v0, v1
 
-    .line 55
     return v0
 .end method
 
@@ -145,8 +132,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 29
     const-class v0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterViewGroup;
 
     invoke-virtual {p1, v0}, Lcom/netflix/mediaclient/android/widget/ObjectRecycler$ViewRecycler;->pop(Ljava/lang/Class;)Ljava/lang/Object;
@@ -155,10 +140,8 @@
 
     check-cast v0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterViewGroup;
 
-    .line 30
     if-nez v0, :cond_0
 
-    .line 31
     new-instance v0, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterViewGroup;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsPaginatedCharacterAdapter;->getActivity()Landroid/app/Activity;
@@ -167,7 +150,6 @@
 
     invoke-direct {v0, v1}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsCharacterViewGroup;-><init>(Landroid/content/Context;)V
 
-    .line 32
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsPaginatedCharacterAdapter;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
@@ -184,7 +166,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/ViewUtils;->setPaddingTop(Landroid/view/View;I)V
 
-    .line 33
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsPaginatedCharacterAdapter;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
@@ -201,10 +182,8 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/ViewUtils;->setPaddingBottom(Landroid/view/View;I)V
 
-    .line 34
     invoke-virtual {v0, p3}, Lcom/netflix/mediaclient/ui/lomo/VideoViewGroup;->init(I)V
 
-    .line 36
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/lolomo/KubrickKidsPaginatedCharacterAdapter;->getListViewPos()I
 
@@ -220,6 +199,5 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/netflix/mediaclient/ui/lomo/VideoViewGroup;->updateDataThenViews(Ljava/util/List;IIILcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;)V
 
-    .line 37
     return-object v0
 .end method

@@ -13,17 +13,12 @@
 .method public constructor <init>(Ljava/lang/String;Z)V
     .locals 0
 
-    .prologue
-    .line 484
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 485
     iput-object p1, p0, Lcom/google/android/exoplayer/MediaCodecUtil$CodecKey;->mimeType:Ljava/lang/String;
 
-    .line 486
     iput-boolean p2, p0, Lcom/google/android/exoplayer/MediaCodecUtil$CodecKey;->secure:Z
 
-    .line 487
     return-void
 .end method
 
@@ -32,20 +27,16 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 500
     if-ne p0, p1, :cond_1
 
-    .line 507
     :cond_0
     :goto_0
     return v0
 
-    .line 503
     :cond_1
     if-eqz p1, :cond_2
 
@@ -60,14 +51,11 @@
     :cond_2
     move v0, v1
 
-    .line 504
     goto :goto_0
 
-    .line 506
     :cond_3
     check-cast p1, Lcom/google/android/exoplayer/MediaCodecUtil$CodecKey;
 
-    .line 507
     iget-object v2, p0, Lcom/google/android/exoplayer/MediaCodecUtil$CodecKey;->mimeType:Ljava/lang/String;
 
     iget-object v3, p1, Lcom/google/android/exoplayer/MediaCodecUtil$CodecKey;->mimeType:Ljava/lang/String;
@@ -93,9 +81,6 @@
 .method public hashCode()I
     .locals 2
 
-    .prologue
-    .line 491
-    .line 493
     iget-object v0, p0, Lcom/google/android/exoplayer/MediaCodecUtil$CodecKey;->mimeType:Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -105,7 +90,6 @@
     :goto_0
     add-int/lit8 v0, v0, 0x1f
 
-    .line 494
     mul-int/lit8 v1, v0, 0x1f
 
     iget-boolean v0, p0, Lcom/google/android/exoplayer/MediaCodecUtil$CodecKey;->secure:Z
@@ -117,10 +101,8 @@
     :goto_1
     add-int/2addr v0, v1
 
-    .line 495
     return v0
 
-    .line 493
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer/MediaCodecUtil$CodecKey;->mimeType:Ljava/lang/String;
 
@@ -130,7 +112,6 @@
 
     goto :goto_0
 
-    .line 494
     :cond_1
     const/16 v0, 0x4d5
 

@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 95
     invoke-direct {p0}, Landroid/support/v4/widget/TextViewCompat$BaseTextViewCompatImpl;-><init>()V
 
     return-void
@@ -19,8 +17,6 @@
 .method public getMaxLines(Landroid/widget/TextView;)I
     .locals 1
 
-    .prologue
-    .line 98
     invoke-static {p1}, Landroid/support/v4/widget/TextViewCompatJb;->getMaxLines(Landroid/widget/TextView;)I
 
     move-result v0
@@ -31,8 +27,6 @@
 .method public getMinLines(Landroid/widget/TextView;)I
     .locals 1
 
-    .prologue
-    .line 103
     invoke-static {p1}, Landroid/support/v4/widget/TextViewCompatJb;->getMinLines(Landroid/widget/TextView;)I
 
     move-result v0

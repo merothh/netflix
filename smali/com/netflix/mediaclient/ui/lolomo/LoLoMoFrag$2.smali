@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/lolomo/LoLoMoFrag;)V
     .locals 0
 
-    .prologue
-    .line 281
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lolomo/LoLoMoFrag$2;->this$0:Lcom/netflix/mediaclient/ui/lolomo/LoLoMoFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,12 +26,9 @@
 .method public onRetryRequested()V
     .locals 1
 
-    .prologue
-    .line 284
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lolomo/LoLoMoFrag$2;->this$0:Lcom/netflix/mediaclient/ui/lolomo/LoLoMoFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/lolomo/LoLoMoFrag;->refresh()V
 
-    .line 285
     return-void
 .end method

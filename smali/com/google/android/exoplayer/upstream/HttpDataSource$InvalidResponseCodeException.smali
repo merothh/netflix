@@ -39,8 +39,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 118
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -63,12 +61,9 @@
 
     invoke-direct {p0, v0, p3, v1}, Lcom/google/android/exoplayer/upstream/HttpDataSource$HttpDataSourceException;-><init>(Ljava/lang/String;Lcom/google/android/exoplayer/upstream/DataSpec;I)V
 
-    .line 119
     iput p1, p0, Lcom/google/android/exoplayer/upstream/HttpDataSource$InvalidResponseCodeException;->responseCode:I
 
-    .line 120
     iput-object p2, p0, Lcom/google/android/exoplayer/upstream/HttpDataSource$InvalidResponseCodeException;->headerFields:Ljava/util/Map;
 
-    .line 121
     return-void
 .end method

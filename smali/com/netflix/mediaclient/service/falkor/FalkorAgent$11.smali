@@ -19,8 +19,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/falkor/FalkorAgent;IIZLcom/netflix/mediaclient/service/browse/BrowseAgentCallback;)V
     .locals 0
 
-    .prologue
-    .line 947
     iput-object p1, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$11;->this$0:Lcom/netflix/mediaclient/service/falkor/FalkorAgent;
 
     iput p2, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$11;->val$standardListNumber:I
@@ -52,20 +50,16 @@
         }
     .end annotation
 
-    .prologue
     const/4 v8, 0x1
 
     const/4 v2, 0x0
 
-    .line 950
-    .line 951
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 953
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -86,7 +80,6 @@
 
     check-cast v1, Lcom/netflix/mediaclient/servicemgr/interface_/LoMo;
 
-    .line 954
     invoke-interface {v1}, Lcom/netflix/mediaclient/servicemgr/interface_/LoMo;->getType()Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
     move-result-object v4
@@ -97,19 +90,16 @@
 
     if-eqz v4, :cond_0
 
-    .line 955
     iget v4, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$11;->val$standardListNumber:I
 
     if-ne v0, v4, :cond_4
 
-    .line 956
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 957
     const-string/jumbo v0, "FalkorAgent"
 
     const-string/jumbo v3, "fetchRecommendedListFromCache listTitle: %s, listId: %s"
@@ -136,7 +126,6 @@
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 960
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$11;->this$0:Lcom/netflix/mediaclient/service/falkor/FalkorAgent;
 
@@ -160,22 +149,18 @@
 
     move v2, v8
 
-    .line 968
     :cond_2
     if-nez v2, :cond_3
 
-    .line 969
     iget-object v0, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$11;->val$cb:Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, v1, p2}, Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;->onVideosFetched(Ljava/util/List;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 971
     :cond_3
     return-void
 
-    .line 963
     :cond_4
     add-int/lit8 v0, v0, 0x1
 

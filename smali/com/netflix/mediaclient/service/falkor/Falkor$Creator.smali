@@ -141,78 +141,66 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 114
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$1;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$1;-><init>()V
 
     sput-object v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator;->Ref:Lcom/netflix/falkor/Func;
 
-    .line 121
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$2;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$2;-><init>()V
 
     sput-object v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator;->TrackableListSummary:Lcom/netflix/falkor/Func;
 
-    .line 128
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$3;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$3;-><init>()V
 
     sput-object v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator;->UnsummarizedListOfRef:Lcom/netflix/falkor/Func;
 
-    .line 135
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$4;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$4;-><init>()V
 
     sput-object v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator;->ListOfMoviesSummary:Lcom/netflix/falkor/Func;
 
-    .line 142
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$5;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$5;-><init>()V
 
     sput-object v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator;->SummarizedListOfMovieRefs:Lcom/netflix/falkor/Func;
 
-    .line 150
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$6;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$6;-><init>()V
 
     sput-object v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator;->LoLoMoSummary:Lcom/netflix/falkor/Func;
 
-    .line 157
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$7;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$7;-><init>()V
 
     sput-object v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator;->SummarizedListOfLoLoMoSummaryRefs:Lcom/netflix/falkor/Func;
 
-    .line 165
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$8;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$8;-><init>()V
 
     sput-object v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator;->SummarizedListOfSearchResults:Lcom/netflix/falkor/Func;
 
-    .line 184
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$10;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$10;-><init>()V
 
     sput-object v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator;->MementoVideoSwatch:Lcom/netflix/falkor/Func;
 
-    .line 191
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$11;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$11;-><init>()V
 
     sput-object v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator;->SearchTrackableListSummary:Lcom/netflix/falkor/Func;
 
-    .line 295
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$22;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$22;-><init>()V
@@ -225,8 +213,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 112
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -248,8 +234,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 245
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$17;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$17;-><init>(Lcom/netflix/falkor/ModelProxy;)V
@@ -269,8 +253,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 303
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$23;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$23;-><init>()V
@@ -297,8 +279,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 331
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$26;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$26;-><init>(Lcom/netflix/falkor/ModelProxy;)V
@@ -322,8 +302,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 321
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$25;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$25;-><init>()V
@@ -347,8 +325,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 218
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$14;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$14;-><init>(Lcom/netflix/falkor/ModelProxy;)V
@@ -374,8 +350,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 209
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$13;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$13;-><init>()V
@@ -399,8 +373,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 262
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$19;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$19;-><init>(Lcom/netflix/falkor/ModelProxy;)V
@@ -424,8 +396,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 236
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$16;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$16;-><init>(Lcom/netflix/falkor/ModelProxy;)V
@@ -449,8 +419,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 312
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$24;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$24;-><init>(Lcom/netflix/falkor/ModelProxy;)V
@@ -474,8 +442,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 227
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$15;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$15;-><init>(Lcom/netflix/falkor/ModelProxy;)V
@@ -499,8 +465,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 271
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$20;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$20;-><init>(Lcom/netflix/falkor/ModelProxy;)V
@@ -525,20 +489,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 291
     new-instance v0, Lcom/netflix/model/branches/SummarizedList;
 
     sget-object v1, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator;->Ref:Lcom/netflix/falkor/Func;
 
-    .line 292
     invoke-static {p0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator;->FalkorSocialNotificationsListSummary(Lcom/netflix/falkor/ModelProxy;)Lcom/netflix/falkor/Func;
 
     move-result-object v2
 
     invoke-direct {v0, v1, v2}, Lcom/netflix/model/branches/SummarizedList;-><init>(Lcom/netflix/falkor/Func;Lcom/netflix/falkor/Func;)V
 
-    .line 291
     return-object v0
 .end method
 
@@ -558,8 +518,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 281
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$21;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$21;-><init>()V
@@ -583,8 +541,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 254
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$18;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$18;-><init>(Lcom/netflix/falkor/ModelProxy;)V
@@ -608,8 +564,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 200
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$12;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$12;-><init>(Lcom/netflix/falkor/ModelProxy;)V
@@ -633,8 +587,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 176
     new-instance v0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$9;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$9;-><init>(Lcom/netflix/falkor/ModelProxy;)V

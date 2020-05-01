@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/user/UserAgent$DoOnRampEligibilityAction;)V
     .locals 0
 
-    .prologue
-    .line 1787
     iput-object p1, p0, Lcom/netflix/mediaclient/service/user/UserAgent$DoOnRampEligibilityAction$1;->this$1:Lcom/netflix/mediaclient/service/user/UserAgent$DoOnRampEligibilityAction;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/user/SimpleUserAgentWebCallback;-><init>()V
@@ -25,8 +23,6 @@
 .method public onOnRampEligibilityAction(Lcom/netflix/model/leafs/OnRampEligibility;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 1790
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$DoOnRampEligibilityAction$1;->this$1:Lcom/netflix/mediaclient/service/user/UserAgent$DoOnRampEligibilityAction;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/user/UserAgent$DoOnRampEligibilityAction;->this$0:Lcom/netflix/mediaclient/service/user/UserAgent;
@@ -41,6 +37,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1796
     return-void
 .end method

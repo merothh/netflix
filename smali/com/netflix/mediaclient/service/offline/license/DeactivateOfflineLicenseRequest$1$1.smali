@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/license/DeactivateOfflineLicenseRequest$1;Ljava/lang/String;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 0
 
-    .prologue
-    .line 73
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/license/DeactivateOfflineLicenseRequest$1$1;->this$1:Lcom/netflix/mediaclient/service/offline/license/DeactivateOfflineLicenseRequest$1;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/license/DeactivateOfflineLicenseRequest$1$1;->val$licenseRelease:Ljava/lang/String;
@@ -36,8 +34,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 76
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/license/DeactivateOfflineLicenseRequest$1$1;->this$1:Lcom/netflix/mediaclient/service/offline/license/DeactivateOfflineLicenseRequest$1;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/offline/license/DeactivateOfflineLicenseRequest$1;->this$0:Lcom/netflix/mediaclient/service/offline/license/DeactivateOfflineLicenseRequest;
@@ -48,6 +44,5 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/service/offline/license/DeactivateOfflineLicenseRequest;->access$000(Lcom/netflix/mediaclient/service/offline/license/DeactivateOfflineLicenseRequest;Ljava/lang/String;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 77
     return-void
 .end method

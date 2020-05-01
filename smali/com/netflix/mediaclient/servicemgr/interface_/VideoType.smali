@@ -47,7 +47,6 @@
 .method static constructor <clinit>()V
     .locals 10
 
-    .prologue
     const/4 v9, 0x4
 
     const/4 v8, 0x3
@@ -58,7 +57,6 @@
 
     const/4 v5, 0x0
 
-    .line 8
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     const-string/jumbo v1, "MOVIE"
@@ -69,7 +67,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->MOVIE:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
-    .line 9
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     const-string/jumbo v1, "SHOW"
@@ -80,7 +77,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->SHOW:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
-    .line 10
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     const-string/jumbo v1, "SEASON"
@@ -91,7 +87,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->SEASON:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
-    .line 11
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     const-string/jumbo v1, "EPISODE"
@@ -102,7 +97,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->EPISODE:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
-    .line 12
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     const-string/jumbo v1, "CHARACTERS"
@@ -113,7 +107,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->CHARACTERS:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
-    .line 14
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     const-string/jumbo v1, "SERIES"
@@ -128,7 +121,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->SERIES:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
-    .line 19
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     const-string/jumbo v1, "UNAVAILABLE"
@@ -143,7 +135,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->UNAVAILABLE:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
-    .line 20
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     const-string/jumbo v1, "UNKNOWN"
@@ -158,7 +149,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->UNKNOWN:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
-    .line 7
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
@@ -216,25 +206,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 25
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 26
     iput-object p3, p0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->value:Ljava/lang/String;
 
-    .line 27
     iput p4, p0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->key:I
 
-    .line 28
     return-void
 .end method
 
 .method public static create(I)Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
     .locals 5
 
-    .prologue
-    .line 40
     invoke-static {}, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->values()[Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     move-result-object v2
@@ -250,16 +233,13 @@
 
     aget-object v0, v2, v1
 
-    .line 41
     iget v4, v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->key:I
 
     if-ne v4, p0, :cond_0
 
-    .line 45
     :goto_1
     return-object v0
 
-    .line 40
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -267,7 +247,6 @@
 
     goto :goto_0
 
-    .line 45
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->UNKNOWN:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
@@ -277,8 +256,6 @@
 .method public static create(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
     .locals 5
 
-    .prologue
-    .line 31
     invoke-static {}, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->values()[Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     move-result-object v2
@@ -294,7 +271,6 @@
 
     aget-object v0, v2, v1
 
-    .line 32
     iget-object v4, v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->value:Ljava/lang/String;
 
     invoke-virtual {v4, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -303,11 +279,9 @@
 
     if-eqz v4, :cond_0
 
-    .line 36
     :goto_1
     return-object v0
 
-    .line 31
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -315,7 +289,6 @@
 
     goto :goto_0
 
-    .line 36
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->UNKNOWN:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
@@ -325,8 +298,6 @@
 .method public static isPresentationTrackingType(Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;)Z
     .locals 1
 
-    .prologue
-    .line 57
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->MOVIE:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     if-eq v0, p0, :cond_0
@@ -362,8 +333,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
     .locals 1
 
-    .prologue
-    .line 7
     const-class v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -378,8 +347,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
     .locals 1
 
-    .prologue
-    .line 7
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->clone()Ljava/lang/Object;
@@ -396,8 +363,6 @@
 .method public getKey()I
     .locals 1
 
-    .prologue
-    .line 53
     iget v0, p0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->key:I
 
     return v0
@@ -406,8 +371,6 @@
 .method public getValue()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 49
     iget-object v0, p0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->value:Ljava/lang/String;
 
     return-object v0

@@ -17,8 +17,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 30
     const/4 v0, 0x2
 
     new-array v0, v0, [B
@@ -41,16 +39,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 28
     invoke-direct {p0}, Lorg/java_websocket/drafts/Draft_75;-><init>()V
 
-    .line 29
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/java_websocket/drafts/Draft_76;->failed:Z
 
-    .line 32
     new-instance v0, Ljava/util/Random;
 
     invoke-direct {v0}, Ljava/util/Random;-><init>()V
@@ -63,7 +57,6 @@
 .method public static createChallenge(Ljava/lang/String;Ljava/lang/String;[B)[B
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -74,103 +67,86 @@
 
     const/4 v4, 0x0
 
-    .line 36
     invoke-static {p0}, Lorg/java_websocket/drafts/Draft_76;->getPart(Ljava/lang/String;)[B
 
     move-result-object v0
 
-    .line 37
     invoke-static {p1}, Lorg/java_websocket/drafts/Draft_76;->getPart(Ljava/lang/String;)[B
 
     move-result-object v1
 
-    .line 38
     const/16 v2, 0x10
 
     new-array v2, v2, [B
 
-    .line 39
     aget-byte v3, v0, v4
 
     aput-byte v3, v2, v4
 
-    .line 40
     aget-byte v3, v0, v5
 
     aput-byte v3, v2, v5
 
-    .line 41
     aget-byte v3, v0, v6
 
     aput-byte v3, v2, v6
 
-    .line 42
     aget-byte v0, v0, v7
 
     aput-byte v0, v2, v7
 
-    .line 43
     aget-byte v0, v1, v4
 
     aput-byte v0, v2, v8
 
-    .line 44
     const/4 v0, 0x5
 
     aget-byte v3, v1, v5
 
     aput-byte v3, v2, v0
 
-    .line 45
     const/4 v0, 0x6
 
     aget-byte v3, v1, v6
 
     aput-byte v3, v2, v0
 
-    .line 46
     const/4 v0, 0x7
 
     aget-byte v1, v1, v7
 
     aput-byte v1, v2, v0
 
-    .line 47
     const/16 v0, 0x8
 
     aget-byte v1, p2, v4
 
     aput-byte v1, v2, v0
 
-    .line 48
     const/16 v0, 0x9
 
     aget-byte v1, p2, v5
 
     aput-byte v1, v2, v0
 
-    .line 49
     const/16 v0, 0xa
 
     aget-byte v1, p2, v6
 
     aput-byte v1, v2, v0
 
-    .line 50
     const/16 v0, 0xb
 
     aget-byte v1, p2, v7
 
     aput-byte v1, v2, v0
 
-    .line 51
     const/16 v0, 0xc
 
     aget-byte v1, p2, v8
 
     aput-byte v1, v2, v0
 
-    .line 52
     const/16 v0, 0xd
 
     const/4 v1, 0x5
@@ -179,7 +155,6 @@
 
     aput-byte v1, v2, v0
 
-    .line 53
     const/16 v0, 0xe
 
     const/4 v1, 0x6
@@ -188,7 +163,6 @@
 
     aput-byte v1, v2, v0
 
-    .line 54
     const/16 v0, 0xf
 
     const/4 v1, 0x7
@@ -197,7 +171,6 @@
 
     aput-byte v1, v2, v0
 
-    .line 57
     :try_start_0
     const-string/jumbo v0, "MD5"
 
@@ -207,18 +180,15 @@
 
     move-result-object v0
 
-    .line 61
     invoke-virtual {v0, v2}, Ljava/security/MessageDigest;->digest([B)[B
 
     move-result-object v0
 
     return-object v0
 
-    .line 58
     :catch_0
     move-exception v0
 
-    .line 59
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -229,20 +199,16 @@
 .method private static generateKey()Ljava/lang/String;
     .locals 10
 
-    .prologue
     const/16 v5, 0xc
 
     const/4 v1, 0x0
 
-    .line 65
     new-instance v4, Ljava/util/Random;
 
     invoke-direct {v4}, Ljava/util/Random;-><init>()V
 
-    .line 66
     const-wide v2, 0xffffffffL
 
-    .line 67
     invoke-virtual {v4, v5}, Ljava/util/Random;->nextInt(I)I
 
     move-result v0
@@ -251,7 +217,6 @@
 
     int-to-long v6, v0
 
-    .line 68
     new-instance v0, Ljava/lang/Long;
 
     div-long/2addr v2, v6
@@ -262,29 +227,24 @@
 
     move-result v0
 
-    .line 69
     invoke-static {v0}, Ljava/lang/Math;->abs(I)I
 
     move-result v0
 
-    .line 70
     invoke-virtual {v4, v0}, Ljava/util/Random;->nextInt(I)I
 
     move-result v0
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 71
     int-to-long v2, v0
 
     mul-long/2addr v2, v6
 
-    .line 72
     invoke-static {v2, v3}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 74
     invoke-virtual {v4, v5}, Ljava/util/Random;->nextInt(I)I
 
     move-result v0
@@ -293,11 +253,9 @@
 
     move v3, v1
 
-    .line 75
     :goto_0
     if-ge v3, v5, :cond_1
 
-    .line 76
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -306,12 +264,10 @@
 
     move-result v0
 
-    .line 77
     invoke-static {v0}, Ljava/lang/Math;->abs(I)I
 
     move-result v8
 
-    .line 78
     const/16 v0, 0x5f
 
     invoke-virtual {v4, v0}, Ljava/util/Random;->nextInt(I)I
@@ -322,7 +278,6 @@
 
     int-to-char v0, v0
 
-    .line 80
     const/16 v9, 0x30
 
     if-lt v0, v9, :cond_0
@@ -331,12 +286,10 @@
 
     if-gt v0, v9, :cond_0
 
-    .line 81
     add-int/lit8 v0, v0, -0xf
 
     int-to-char v0, v0
 
-    .line 83
     :cond_0
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -350,7 +303,6 @@
 
     move-result-object v2
 
-    .line 75
     add-int/lit8 v0, v3, 0x1
 
     move v3, v0
@@ -362,7 +314,6 @@
 
     move-object v1, v2
 
-    .line 85
     :goto_1
     int-to-long v2, v0
 
@@ -370,7 +321,6 @@
 
     if-gez v2, :cond_2
 
-    .line 86
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -383,12 +333,10 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    .line 87
     invoke-static {v2}, Ljava/lang/Math;->abs(I)I
 
     move-result v2
 
-    .line 88
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -403,12 +351,10 @@
 
     move-result-object v1
 
-    .line 85
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 90
     :cond_2
     return-object v1
 .end method
@@ -416,10 +362,8 @@
 .method private static getPart(Ljava/lang/String;)[B
     .locals 7
 
-    .prologue
     const/16 v6, 0x18
 
-    .line 95
     :try_start_0
     const-string/jumbo v0, "[^0-9]"
 
@@ -433,7 +377,6 @@
 
     move-result-wide v0
 
-    .line 96
     const-string/jumbo v2, " "
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -446,14 +389,12 @@
 
     int-to-long v2, v2
 
-    .line 97
     const-wide/16 v4, 0x0
 
     cmp-long v4, v2, v4
 
     if-nez v4, :cond_0
 
-    .line 98
     new-instance v0, Lorg/java_websocket/exceptions/InvalidHandshakeException;
 
     const-string/jumbo v1, "invalid Sec-WebSocket-Key (/key2/)"
@@ -464,11 +405,9 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 102
     :catch_0
     move-exception v0
 
-    .line 103
     new-instance v0, Lorg/java_websocket/exceptions/InvalidHandshakeException;
 
     const-string/jumbo v1, "invalid Sec-WebSocket-Key (/key1/ or /key2/)"
@@ -477,7 +416,6 @@
 
     throw v0
 
-    .line 100
     :cond_0
     :try_start_1
     new-instance v4, Ljava/lang/Long;
@@ -490,7 +428,6 @@
 
     move-result-wide v0
 
-    .line 101
     const/4 v2, 0x4
 
     new-array v2, v2, [B
@@ -555,20 +492,15 @@
 .method public acceptHandshakeAsClient(Lorg/java_websocket/handshake/ClientHandshake;Lorg/java_websocket/handshake/ServerHandshake;)Lorg/java_websocket/drafts/Draft$HandshakeState;
     .locals 4
 
-    .prologue
-    .line 109
     iget-boolean v0, p0, Lorg/java_websocket/drafts/Draft_76;->failed:Z
 
     if-eqz v0, :cond_0
 
-    .line 110
     sget-object v0, Lorg/java_websocket/drafts/Draft$HandshakeState;->NOT_MATCHED:Lorg/java_websocket/drafts/Draft$HandshakeState;
 
-    .line 124
     :goto_0
     return-object v0
 
-    .line 114
     :cond_0
     :try_start_0
     const-string/jumbo v0, "Sec-WebSocket-Origin"
@@ -595,26 +527,22 @@
 
     if-nez v0, :cond_2
 
-    .line 115
     :cond_1
     sget-object v0, Lorg/java_websocket/drafts/Draft$HandshakeState;->NOT_MATCHED:Lorg/java_websocket/drafts/Draft$HandshakeState;
 
     goto :goto_0
 
-    .line 117
     :cond_2
     invoke-interface {p2}, Lorg/java_websocket/handshake/ServerHandshake;->getContent()[B
 
     move-result-object v0
 
-    .line 118
     if-eqz v0, :cond_3
 
     array-length v1, v0
 
     if-nez v1, :cond_4
 
-    .line 119
     :cond_3
     new-instance v0, Lorg/java_websocket/exceptions/IncompleteHandshakeException;
 
@@ -624,11 +552,9 @@
     :try_end_0
     .catch Lorg/java_websocket/exceptions/InvalidHandshakeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 126
     :catch_0
     move-exception v0
 
-    .line 127
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "bad handshakerequest"
@@ -637,7 +563,6 @@
 
     throw v1
 
-    .line 121
     :cond_4
     :try_start_1
     const-string/jumbo v1, "Sec-WebSocket-Key1"
@@ -666,12 +591,10 @@
 
     if-eqz v0, :cond_5
 
-    .line 122
     sget-object v0, Lorg/java_websocket/drafts/Draft$HandshakeState;->MATCHED:Lorg/java_websocket/drafts/Draft$HandshakeState;
 
     goto :goto_0
 
-    .line 124
     :cond_5
     sget-object v0, Lorg/java_websocket/drafts/Draft$HandshakeState;->NOT_MATCHED:Lorg/java_websocket/drafts/Draft$HandshakeState;
     :try_end_1
@@ -683,8 +606,6 @@
 .method public acceptHandshakeAsServer(Lorg/java_websocket/handshake/ClientHandshake;)Lorg/java_websocket/drafts/Draft$HandshakeState;
     .locals 2
 
-    .prologue
-    .line 133
     const-string/jumbo v0, "Upgrade"
 
     invoke-interface {p1, v0}, Lorg/java_websocket/handshake/ClientHandshake;->getFieldValue(Ljava/lang/String;)Ljava/lang/String;
@@ -745,10 +666,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 134
     sget-object v0, Lorg/java_websocket/drafts/Draft$HandshakeState;->MATCHED:Lorg/java_websocket/drafts/Draft$HandshakeState;
 
-    .line 135
     :goto_0
     return-object v0
 
@@ -761,8 +680,6 @@
 .method public copyInstance()Lorg/java_websocket/drafts/Draft;
     .locals 1
 
-    .prologue
-    .line 240
     new-instance v0, Lorg/java_websocket/drafts/Draft_76;
 
     invoke-direct {v0}, Lorg/java_websocket/drafts/Draft_76;-><init>()V
@@ -773,8 +690,6 @@
 .method public createBinaryFrame(Lorg/java_websocket/framing/Framedata;)Ljava/nio/ByteBuffer;
     .locals 2
 
-    .prologue
-    .line 228
     invoke-interface {p1}, Lorg/java_websocket/framing/Framedata;->getOpcode()Lorg/java_websocket/framing/Framedata$Opcode;
 
     move-result-object v0
@@ -783,14 +698,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 229
     sget-object v0, Lorg/java_websocket/drafts/Draft_76;->closehandshake:[B
 
     invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 230
     :goto_0
     return-object v0
 
@@ -805,8 +718,6 @@
 .method public getCloseHandshakeType()Lorg/java_websocket/drafts/Draft$CloseHandshakeType;
     .locals 1
 
-    .prologue
-    .line 235
     sget-object v0, Lorg/java_websocket/drafts/Draft$CloseHandshakeType;->ONEWAY:Lorg/java_websocket/drafts/Draft$CloseHandshakeType;
 
     return-object v0
@@ -815,22 +726,18 @@
 .method public postProcessHandshakeRequestAsClient(Lorg/java_websocket/handshake/ClientHandshakeBuilder;)Lorg/java_websocket/handshake/ClientHandshakeBuilder;
     .locals 3
 
-    .prologue
-    .line 140
     const-string/jumbo v0, "Upgrade"
 
     const-string/jumbo v1, "WebSocket"
 
     invoke-interface {p1, v0, v1}, Lorg/java_websocket/handshake/ClientHandshakeBuilder;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 141
     const-string/jumbo v0, "Connection"
 
     const-string/jumbo v1, "Upgrade"
 
     invoke-interface {p1, v0, v1}, Lorg/java_websocket/handshake/ClientHandshakeBuilder;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 142
     const-string/jumbo v0, "Sec-WebSocket-Key1"
 
     invoke-static {}, Lorg/java_websocket/drafts/Draft_76;->generateKey()Ljava/lang/String;
@@ -839,7 +746,6 @@
 
     invoke-interface {p1, v0, v1}, Lorg/java_websocket/handshake/ClientHandshakeBuilder;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 143
     const-string/jumbo v0, "Sec-WebSocket-Key2"
 
     invoke-static {}, Lorg/java_websocket/drafts/Draft_76;->generateKey()Ljava/lang/String;
@@ -848,7 +754,6 @@
 
     invoke-interface {p1, v0, v1}, Lorg/java_websocket/handshake/ClientHandshakeBuilder;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 145
     const-string/jumbo v0, "Origin"
 
     invoke-interface {p1, v0}, Lorg/java_websocket/handshake/ClientHandshakeBuilder;->hasFieldValue(Ljava/lang/String;)Z
@@ -857,7 +762,6 @@
 
     if-nez v0, :cond_0
 
-    .line 146
     const-string/jumbo v0, "Origin"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -886,41 +790,33 @@
 
     invoke-interface {p1, v0, v1}, Lorg/java_websocket/handshake/ClientHandshakeBuilder;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 149
     :cond_0
     const/16 v0, 0x8
 
     new-array v0, v0, [B
 
-    .line 150
     iget-object v1, p0, Lorg/java_websocket/drafts/Draft_76;->reuseableRandom:Ljava/util/Random;
 
     invoke-virtual {v1, v0}, Ljava/util/Random;->nextBytes([B)V
 
-    .line 151
     invoke-interface {p1, v0}, Lorg/java_websocket/handshake/ClientHandshakeBuilder;->setContent([B)V
 
-    .line 152
     return-object p1
 .end method
 
 .method public postProcessHandshakeResponseAsServer(Lorg/java_websocket/handshake/ClientHandshake;Lorg/java_websocket/handshake/ServerHandshakeBuilder;)Lorg/java_websocket/handshake/HandshakeBuilder;
     .locals 5
 
-    .prologue
-    .line 158
     const-string/jumbo v0, "WebSocket Protocol Handshake"
 
     invoke-interface {p2, v0}, Lorg/java_websocket/handshake/ServerHandshakeBuilder;->setHttpStatusMessage(Ljava/lang/String;)V
 
-    .line 159
     const-string/jumbo v0, "Upgrade"
 
     const-string/jumbo v1, "WebSocket"
 
     invoke-interface {p2, v0, v1}, Lorg/java_websocket/handshake/ServerHandshakeBuilder;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 160
     const-string/jumbo v0, "Connection"
 
     const-string/jumbo v1, "Connection"
@@ -931,7 +827,6 @@
 
     invoke-interface {p2, v0, v1}, Lorg/java_websocket/handshake/ServerHandshakeBuilder;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 161
     const-string/jumbo v0, "Sec-WebSocket-Origin"
 
     const-string/jumbo v1, "Origin"
@@ -942,7 +837,6 @@
 
     invoke-interface {p2, v0, v1}, Lorg/java_websocket/handshake/ServerHandshakeBuilder;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 162
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -975,31 +869,26 @@
 
     move-result-object v0
 
-    .line 163
     const-string/jumbo v1, "Sec-WebSocket-Location"
 
     invoke-interface {p2, v1, v0}, Lorg/java_websocket/handshake/ServerHandshakeBuilder;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 164
     const-string/jumbo v0, "Sec-WebSocket-Key1"
 
     invoke-interface {p1, v0}, Lorg/java_websocket/handshake/ClientHandshake;->getFieldValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 165
     const-string/jumbo v1, "Sec-WebSocket-Key2"
 
     invoke-interface {p1, v1}, Lorg/java_websocket/handshake/ClientHandshake;->getFieldValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 166
     invoke-interface {p1}, Lorg/java_websocket/handshake/ClientHandshake;->getContent()[B
 
     move-result-object v2
 
-    .line 167
     if-eqz v0, :cond_0
 
     if-eqz v1, :cond_0
@@ -1012,7 +901,6 @@
 
     if-eq v3, v4, :cond_1
 
-    .line 168
     :cond_0
     new-instance v0, Lorg/java_websocket/exceptions/InvalidHandshakeException;
 
@@ -1022,7 +910,6 @@
 
     throw v0
 
-    .line 170
     :cond_1
     invoke-static {v0, v1, v2}, Lorg/java_websocket/drafts/Draft_76;->createChallenge(Ljava/lang/String;Ljava/lang/String;[B)[B
 
@@ -1030,7 +917,6 @@
 
     invoke-interface {p2, v0}, Lorg/java_websocket/handshake/ServerHandshakeBuilder;->setContent([B)V
 
-    .line 171
     return-object p2
 .end method
 
@@ -1048,35 +934,26 @@
         }
     .end annotation
 
-    .prologue
-    .line 194
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->mark()Ljava/nio/Buffer;
 
-    .line 195
     invoke-super {p0, p1}, Lorg/java_websocket/drafts/Draft_75;->translateRegularFrame(Ljava/nio/ByteBuffer;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 196
     if-nez v0, :cond_2
 
-    .line 197
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->reset()Ljava/nio/Buffer;
 
-    .line 198
     iget-object v0, p0, Lorg/java_websocket/drafts/Draft_76;->readyframes:Ljava/util/List;
 
-    .line 199
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lorg/java_websocket/drafts/Draft_76;->readingState:Z
 
-    .line 200
     iget-object v1, p0, Lorg/java_websocket/drafts/Draft_76;->currentFrame:Ljava/nio/ByteBuffer;
 
     if-nez v1, :cond_0
 
-    .line 201
     const/4 v1, 0x2
 
     invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
@@ -1085,7 +962,6 @@
 
     iput-object v1, p0, Lorg/java_websocket/drafts/Draft_76;->currentFrame:Ljava/nio/ByteBuffer;
 
-    .line 205
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v1
@@ -1098,14 +974,12 @@
 
     if-le v1, v2, :cond_1
 
-    .line 206
     new-instance v0, Lorg/java_websocket/exceptions/InvalidFrameException;
 
     invoke-direct {v0}, Lorg/java_websocket/exceptions/InvalidFrameException;-><init>()V
 
     throw v0
 
-    .line 203
     :cond_0
     new-instance v0, Lorg/java_websocket/exceptions/InvalidFrameException;
 
@@ -1113,13 +987,11 @@
 
     throw v0
 
-    .line 208
     :cond_1
     iget-object v1, p0, Lorg/java_websocket/drafts/Draft_76;->currentFrame:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v1, p1}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
-    .line 210
     iget-object v1, p0, Lorg/java_websocket/drafts/Draft_76;->currentFrame:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->hasRemaining()Z
@@ -1128,7 +1000,6 @@
 
     if-nez v1, :cond_4
 
-    .line 211
     iget-object v1, p0, Lorg/java_websocket/drafts/Draft_76;->currentFrame:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->array()[B
@@ -1143,7 +1014,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 212
     new-instance v1, Lorg/java_websocket/framing/CloseFrameBuilder;
 
     const/16 v2, 0x3e8
@@ -1152,12 +1022,10 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 223
     :cond_2
     :goto_0
     return-object v0
 
-    .line 216
     :cond_3
     new-instance v0, Lorg/java_websocket/exceptions/InvalidFrameException;
 
@@ -1165,7 +1033,6 @@
 
     throw v0
 
-    .line 219
     :cond_4
     new-instance v1, Ljava/util/LinkedList;
 
@@ -1179,15 +1046,12 @@
 .method public translateHandshake(Ljava/nio/ByteBuffer;)Lorg/java_websocket/handshake/Handshakedata;
     .locals 3
 
-    .prologue
-    .line 177
     iget-object v0, p0, Lorg/java_websocket/drafts/Draft_76;->role:Lorg/java_websocket/WebSocket$Role;
 
     invoke-static {p1, v0}, Lorg/java_websocket/drafts/Draft_76;->translateHandshakeHttp(Ljava/nio/ByteBuffer;Lorg/java_websocket/WebSocket$Role;)Lorg/java_websocket/handshake/HandshakeBuilder;
 
     move-result-object v1
 
-    .line 179
     const-string/jumbo v0, "Sec-WebSocket-Key1"
 
     invoke-interface {v1, v0}, Lorg/java_websocket/handshake/HandshakeBuilder;->hasFieldValue(Ljava/lang/String;)Z
@@ -1211,7 +1075,6 @@
 
     if-nez v0, :cond_1
 
-    .line 180
     iget-object v0, p0, Lorg/java_websocket/drafts/Draft_76;->role:Lorg/java_websocket/WebSocket$Role;
 
     sget-object v2, Lorg/java_websocket/WebSocket$Role;->SERVER:Lorg/java_websocket/WebSocket$Role;
@@ -1223,30 +1086,24 @@
     :goto_0
     new-array v0, v0, [B
 
-    .line 182
     :try_start_0
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
     :try_end_0
     .catch Ljava/nio/BufferUnderflowException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 186
     invoke-interface {v1, v0}, Lorg/java_websocket/handshake/HandshakeBuilder;->setContent([B)V
 
-    .line 189
     :cond_1
     return-object v1
 
-    .line 180
     :cond_2
     const/16 v0, 0x10
 
     goto :goto_0
 
-    .line 183
     :catch_0
     move-exception v0
 
-    .line 184
     new-instance v0, Lorg/java_websocket/exceptions/IncompleteHandshakeException;
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->capacity()I

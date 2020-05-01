@@ -11,8 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,8 +19,6 @@
 .method static synthetic access$000(Lcom/netflix/mediaclient/service/NetflixService;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 26
     invoke-static {p0, p1, p2}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflineImageUtils;->copyResourceToFilesDir(Lcom/netflix/mediaclient/service/NetflixService;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -31,10 +27,8 @@
 .method private static cacheImageLocally(Lcom/netflix/mediaclient/service/NetflixService;Ljava/lang/String;Ljava/lang/String;)V
     .locals 6
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 70
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/NetflixService;->getImageLoader()Lcom/netflix/mediaclient/util/gfx/ImageLoader;
 
     move-result-object v0
@@ -51,66 +45,54 @@
 
     invoke-interface/range {v0 .. v5}, Lcom/netflix/mediaclient/util/gfx/ImageLoader;->getImg(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;IILcom/netflix/mediaclient/util/gfx/ImageLoader$ImageLoaderListener;)V
 
-    .line 81
     return-void
 .end method
 
 .method public static cacheProfileImage(Lcom/netflix/mediaclient/service/NetflixService;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 47
     invoke-static {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflineImageUtils;->getLocalDirectoryForProfile(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/FileUtils;->createDirectoryIfRequired(Ljava/lang/String;)Z
 
-    .line 48
     invoke-static {p0, p2}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflineImageUtils;->getLocalFileForProfileImage(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {p0, p1, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflineImageUtils;->cacheImageLocally(Lcom/netflix/mediaclient/service/NetflixService;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 49
     return-void
 .end method
 
 .method public static cacheVideoDetailsImage(Lcom/netflix/mediaclient/service/NetflixService;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 52
     invoke-static {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflineImageUtils;->getLocalDirectoryForVideoDetails(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/FileUtils;->createDirectoryIfRequired(Ljava/lang/String;)Z
 
-    .line 53
     invoke-static {p0, p2}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflineImageUtils;->getLocalFileForVideoDetailsImage(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {p0, p1, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflineImageUtils;->cacheImageLocally(Lcom/netflix/mediaclient/service/NetflixService;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 54
     return-void
 .end method
 
 .method private static copyResourceToFilesDir(Lcom/netflix/mediaclient/service/NetflixService;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 84
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 85
     const-string/jumbo v0, "offlineImageUtils"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -133,7 +115,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 87
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/NetflixService;->getResourceFetcher()Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher;
 
@@ -147,15 +128,12 @@
 
     invoke-virtual {v0, p1, v1, v2}, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher;->fetchResource(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;)V
 
-    .line 109
     return-void
 .end method
 
 .method public static deleteAllOfflineImages(Landroid/content/Context;)V
     .locals 3
 
-    .prologue
-    .line 57
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -184,37 +162,30 @@
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/FileUtils;->deleteRecursive(Ljava/io/File;)Z
 
-    .line 58
     return-void
 .end method
 
 .method public static deleteVideoDetailsImage(Landroid/content/Context;Ljava/lang/String;)V
     .locals 5
 
-    .prologue
-    .line 61
     invoke-static {p0, p1}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflineImageUtils;->getLocalFileForVideoDetailsImage(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 62
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 63
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 64
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
     move-result v0
 
-    .line 65
     const-string/jumbo v1, "offlineImageUtils"
 
     const-string/jumbo v2, "deleteVideoDetailsImage result=%b"
@@ -233,7 +204,6 @@
 
     invoke-static {v1, v2, v3}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 67
     :cond_0
     return-void
 .end method
@@ -241,8 +211,6 @@
 .method private static getLocalDirectoryForProfile(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 31
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -271,8 +239,6 @@
 .method private static getLocalDirectoryForVideoDetails(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 35
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -301,8 +267,6 @@
 .method public static getLocalFileForProfileImage(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 39
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -335,8 +299,6 @@
 .method public static getLocalFileForVideoDetailsImage(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 43
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -38,13 +38,10 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 38
     const-string/jumbo v0, "localhost"
 
     sput-object v0, Lorg/xbill/DNS/SimpleResolver;->defaultResolver:Ljava/lang/String;
 
-    .line 39
     const/4 v0, 0x0
 
     sput v0, Lorg/xbill/DNS/SimpleResolver;->uniqueID:I
@@ -55,32 +52,24 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 68
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lorg/xbill/DNS/SimpleResolver;-><init>(Ljava/lang/String;)V
 
-    .line 69
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     const-wide/16 v0, 0x2710
 
     iput-wide v0, p0, Lorg/xbill/DNS/SimpleResolver;->timeoutValue:J
 
-    .line 47
     if-nez p1, :cond_0
 
-    .line 48
     invoke-static {}, Lorg/xbill/DNS/ResolverConfig;->getCurrentConfig()Lorg/xbill/DNS/ResolverConfig;
 
     move-result-object v0
@@ -89,13 +78,10 @@
 
     move-result-object p1
 
-    .line 49
     if-nez p1, :cond_0
 
-    .line 50
     sget-object p1, Lorg/xbill/DNS/SimpleResolver;->defaultResolver:Ljava/lang/String;
 
-    .line 53
     :cond_0
     const-string/jumbo v0, "0"
 
@@ -105,12 +91,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 54
     invoke-static {}, Ljava/net/InetAddress;->getLocalHost()Ljava/net/InetAddress;
 
     move-result-object v0
 
-    .line 57
     :goto_0
     new-instance v1, Ljava/net/InetSocketAddress;
 
@@ -120,10 +104,8 @@
 
     iput-object v1, p0, Lorg/xbill/DNS/SimpleResolver;->address:Ljava/net/InetSocketAddress;
 
-    .line 58
     return-void
 
-    .line 56
     :cond_1
     invoke-static {p1}, Ljava/net/InetAddress;->getByName(Ljava/lang/String;)Ljava/net/InetAddress;
 
@@ -135,8 +117,6 @@
 .method private applyEDNS(Lorg/xbill/DNS/Message;)V
     .locals 2
 
-    .prologue
-    .line 205
     iget-object v0, p0, Lorg/xbill/DNS/SimpleResolver;->queryOPT:Lorg/xbill/DNS/OPTRecord;
 
     if-eqz v0, :cond_0
@@ -147,12 +127,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 208
     :cond_0
     :goto_0
     return-void
 
-    .line 207
     :cond_1
     iget-object v0, p0, Lorg/xbill/DNS/SimpleResolver;->queryOPT:Lorg/xbill/DNS/OPTRecord;
 
@@ -166,19 +144,14 @@
 .method private maxUDPSize(Lorg/xbill/DNS/Message;)I
     .locals 1
 
-    .prologue
-    .line 212
     invoke-virtual {p1}, Lorg/xbill/DNS/Message;->getOPT()Lorg/xbill/DNS/OPTRecord;
 
     move-result-object v0
 
-    .line 213
     if-nez v0, :cond_0
 
-    .line 214
     const/16 v0, 0x200
 
-    .line 216
     :goto_0
     return v0
 
@@ -193,8 +166,6 @@
 .method private parseMessage([B)Lorg/xbill/DNS/Message;
     .locals 2
 
-    .prologue
-    .line 183
     :try_start_0
     new-instance v0, Lorg/xbill/DNS/Message;
 
@@ -204,11 +175,9 @@
 
     return-object v0
 
-    .line 185
     :catch_0
     move-exception v0
 
-    .line 186
     const-string/jumbo v1, "verbose"
 
     invoke-static {v1}, Lorg/xbill/DNS/Options;->check(Ljava/lang/String;)Z
@@ -217,23 +186,19 @@
 
     if-eqz v1, :cond_0
 
-    .line 187
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 188
     :cond_0
     instance-of v1, v0, Lorg/xbill/DNS/WireParseException;
 
     if-nez v1, :cond_1
 
-    .line 189
     new-instance v0, Lorg/xbill/DNS/WireParseException;
 
     const-string/jumbo v1, "Error parsing message"
 
     invoke-direct {v0, v1}, Lorg/xbill/DNS/WireParseException;-><init>(Ljava/lang/String;)V
 
-    .line 190
     :cond_1
     check-cast v0, Lorg/xbill/DNS/WireParseException;
 
@@ -243,10 +208,8 @@
 .method private sendAXFR(Lorg/xbill/DNS/Message;)Lorg/xbill/DNS/Message;
     .locals 7
 
-    .prologue
     const/4 v6, 0x0
 
-    .line 330
     invoke-virtual {p1}, Lorg/xbill/DNS/Message;->getQuestion()Lorg/xbill/DNS/Record;
 
     move-result-object v0
@@ -255,7 +218,6 @@
 
     move-result-object v0
 
-    .line 331
     iget-object v1, p0, Lorg/xbill/DNS/SimpleResolver;->address:Ljava/net/InetSocketAddress;
 
     iget-object v2, p0, Lorg/xbill/DNS/SimpleResolver;->tsig:Lorg/xbill/DNS/TSIG;
@@ -264,7 +226,6 @@
 
     move-result-object v0
 
-    .line 332
     invoke-virtual {p0}, Lorg/xbill/DNS/SimpleResolver;->getTimeout()J
 
     move-result-wide v2
@@ -277,23 +238,19 @@
 
     invoke-virtual {v0, v1}, Lorg/xbill/DNS/ZoneTransferIn;->setTimeout(I)V
 
-    .line 333
     iget-object v1, p0, Lorg/xbill/DNS/SimpleResolver;->localAddress:Ljava/net/InetSocketAddress;
 
     invoke-virtual {v0, v1}, Lorg/xbill/DNS/ZoneTransferIn;->setLocalAddress(Ljava/net/SocketAddress;)V
 
-    .line 335
     :try_start_0
     invoke-virtual {v0}, Lorg/xbill/DNS/ZoneTransferIn;->run()Ljava/util/List;
     :try_end_0
     .catch Lorg/xbill/DNS/ZoneTransferException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 340
     invoke-virtual {v0}, Lorg/xbill/DNS/ZoneTransferIn;->getAXFR()Ljava/util/List;
 
     move-result-object v0
 
-    .line 341
     new-instance v1, Lorg/xbill/DNS/Message;
 
     invoke-virtual {p1}, Lorg/xbill/DNS/Message;->getHeader()Lorg/xbill/DNS/Header;
@@ -306,7 +263,6 @@
 
     invoke-direct {v1, v2}, Lorg/xbill/DNS/Message;-><init>(I)V
 
-    .line 342
     invoke-virtual {v1}, Lorg/xbill/DNS/Message;->getHeader()Lorg/xbill/DNS/Header;
 
     move-result-object v2
@@ -315,26 +271,22 @@
 
     invoke-virtual {v2, v3}, Lorg/xbill/DNS/Header;->setFlag(I)V
 
-    .line 343
     invoke-virtual {v1}, Lorg/xbill/DNS/Message;->getHeader()Lorg/xbill/DNS/Header;
 
     move-result-object v2
 
     invoke-virtual {v2, v6}, Lorg/xbill/DNS/Header;->setFlag(I)V
 
-    .line 344
     invoke-virtual {p1}, Lorg/xbill/DNS/Message;->getQuestion()Lorg/xbill/DNS/Record;
 
     move-result-object v2
 
     invoke-virtual {v1, v2, v6}, Lorg/xbill/DNS/Message;->addRecord(Lorg/xbill/DNS/Record;I)V
 
-    .line 345
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    .line 346
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -342,7 +294,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 347
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -355,11 +306,9 @@
 
     goto :goto_0
 
-    .line 337
     :catch_0
     move-exception v0
 
-    .line 338
     new-instance v1, Lorg/xbill/DNS/WireParseException;
 
     invoke-virtual {v0}, Lorg/xbill/DNS/ZoneTransferException;->getMessage()Ljava/lang/String;
@@ -370,7 +319,6 @@
 
     throw v1
 
-    .line 348
     :cond_0
     return-object v1
 .end method
@@ -378,27 +326,20 @@
 .method public static setDefaultResolver(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 84
     sput-object p0, Lorg/xbill/DNS/SimpleResolver;->defaultResolver:Ljava/lang/String;
 
-    .line 85
     return-void
 .end method
 
 .method private verifyTSIG(Lorg/xbill/DNS/Message;Lorg/xbill/DNS/Message;[BLorg/xbill/DNS/TSIG;)V
     .locals 4
 
-    .prologue
-    .line 196
     if-nez p4, :cond_1
 
-    .line 201
     :cond_0
     :goto_0
     return-void
 
-    .line 198
     :cond_1
     invoke-virtual {p1}, Lorg/xbill/DNS/Message;->getTSIG()Lorg/xbill/DNS/TSIGRecord;
 
@@ -408,7 +349,6 @@
 
     move-result v0
 
-    .line 199
     const-string/jumbo v1, "verbose"
 
     invoke-static {v1}, Lorg/xbill/DNS/Options;->check(Ljava/lang/String;)Z
@@ -417,7 +357,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 200
     sget-object v1, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -452,8 +391,6 @@
 .method public getAddress()Ljava/net/InetSocketAddress;
     .locals 1
 
-    .prologue
-    .line 78
     iget-object v0, p0, Lorg/xbill/DNS/SimpleResolver;->address:Ljava/net/InetSocketAddress;
 
     return-object v0
@@ -462,8 +399,6 @@
 .method getTSIGKey()Lorg/xbill/DNS/TSIG;
     .locals 1
 
-    .prologue
-    .line 162
     iget-object v0, p0, Lorg/xbill/DNS/SimpleResolver;->tsig:Lorg/xbill/DNS/TSIG;
 
     return-object v0
@@ -472,8 +407,6 @@
 .method getTimeout()J
     .locals 2
 
-    .prologue
-    .line 177
     iget-wide v0, p0, Lorg/xbill/DNS/SimpleResolver;->timeoutValue:J
 
     return-wide v0
@@ -482,12 +415,10 @@
 .method public send(Lorg/xbill/DNS/Message;)Lorg/xbill/DNS/Message;
     .locals 12
 
-    .prologue
     const/4 v7, 0x0
 
     const/4 v9, 0x1
 
-    .line 228
     const-string/jumbo v0, "verbose"
 
     invoke-static {v0}, Lorg/xbill/DNS/Options;->check(Ljava/lang/String;)Z
@@ -496,7 +427,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 229
     sget-object v0, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -511,7 +441,6 @@
 
     iget-object v2, p0, Lorg/xbill/DNS/SimpleResolver;->address:Ljava/net/InetSocketAddress;
 
-    .line 230
     invoke-virtual {v2}, Ljava/net/InetSocketAddress;->getAddress()Ljava/net/InetAddress;
 
     move-result-object v2
@@ -532,7 +461,6 @@
 
     iget-object v2, p0, Lorg/xbill/DNS/SimpleResolver;->address:Ljava/net/InetSocketAddress;
 
-    .line 231
     invoke-virtual {v2}, Ljava/net/InetSocketAddress;->getPort()I
 
     move-result v2
@@ -545,10 +473,8 @@
 
     move-result-object v1
 
-    .line 229
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 233
     :cond_0
     invoke-virtual {p1}, Lorg/xbill/DNS/Message;->getHeader()Lorg/xbill/DNS/Header;
 
@@ -560,12 +486,10 @@
 
     if-nez v0, :cond_1
 
-    .line 234
     invoke-virtual {p1}, Lorg/xbill/DNS/Message;->getQuestion()Lorg/xbill/DNS/Record;
 
     move-result-object v0
 
-    .line 235
     if-eqz v0, :cond_1
 
     invoke-virtual {v0}, Lorg/xbill/DNS/Record;->getType()I
@@ -576,16 +500,13 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 236
     invoke-direct {p0, p1}, Lorg/xbill/DNS/SimpleResolver;->sendAXFR(Lorg/xbill/DNS/Message;)Lorg/xbill/DNS/Message;
 
     move-result-object v0
 
-    .line 295
     :goto_0
     return-object v0
 
-    .line 239
     :cond_1
     invoke-virtual {p1}, Lorg/xbill/DNS/Message;->clone()Ljava/lang/Object;
 
@@ -595,22 +516,18 @@
 
     check-cast v6, Lorg/xbill/DNS/Message;
 
-    .line 240
     invoke-direct {p0, v6}, Lorg/xbill/DNS/SimpleResolver;->applyEDNS(Lorg/xbill/DNS/Message;)V
 
-    .line 241
     iget-object v0, p0, Lorg/xbill/DNS/SimpleResolver;->tsig:Lorg/xbill/DNS/TSIG;
 
     if-eqz v0, :cond_2
 
-    .line 242
     iget-object v0, p0, Lorg/xbill/DNS/SimpleResolver;->tsig:Lorg/xbill/DNS/TSIG;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v6, v1}, Lorg/xbill/DNS/TSIG;->apply(Lorg/xbill/DNS/Message;Lorg/xbill/DNS/TSIGRecord;)V
 
-    .line 244
     :cond_2
     const v0, 0xffff
 
@@ -618,12 +535,10 @@
 
     move-result-object v2
 
-    .line 245
     invoke-direct {p0, v6}, Lorg/xbill/DNS/SimpleResolver;->maxUDPSize(Lorg/xbill/DNS/Message;)I
 
     move-result v3
 
-    .line 247
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -634,7 +549,6 @@
 
     move v0, v7
 
-    .line 251
     :goto_1
     iget-boolean v1, p0, Lorg/xbill/DNS/SimpleResolver;->useTCP:Z
 
@@ -647,11 +561,9 @@
     :cond_3
     move v8, v9
 
-    .line 253
     :goto_2
     if-eqz v8, :cond_4
 
-    .line 254
     iget-object v0, p0, Lorg/xbill/DNS/SimpleResolver;->localAddress:Ljava/net/InetSocketAddress;
 
     iget-object v1, p0, Lorg/xbill/DNS/SimpleResolver;->address:Ljava/net/InetSocketAddress;
@@ -660,7 +572,6 @@
 
     move-result-object v0
 
-    .line 263
     :goto_3
     array-length v1, v0
 
@@ -668,7 +579,6 @@
 
     if-ge v1, v10, :cond_5
 
-    .line 264
     new-instance v0, Lorg/xbill/DNS/WireParseException;
 
     const-string/jumbo v1, "invalid DNS header - too short"
@@ -677,7 +587,6 @@
 
     throw v0
 
-    .line 257
     :cond_4
     iget-object v0, p0, Lorg/xbill/DNS/SimpleResolver;->localAddress:Ljava/net/InetSocketAddress;
 
@@ -689,7 +598,6 @@
 
     goto :goto_3
 
-    .line 273
     :cond_5
     aget-byte v1, v0, v7
 
@@ -703,7 +611,6 @@
 
     add-int/2addr v1, v10
 
-    .line 274
     invoke-virtual {v6}, Lorg/xbill/DNS/Message;->getHeader()Lorg/xbill/DNS/Header;
 
     move-result-object v10
@@ -712,10 +619,8 @@
 
     move-result v10
 
-    .line 275
     if-eq v1, v10, :cond_7
 
-    .line 276
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -744,17 +649,14 @@
 
     move-result-object v0
 
-    .line 278
     if-eqz v8, :cond_6
 
-    .line 279
     new-instance v1, Lorg/xbill/DNS/WireParseException;
 
     invoke-direct {v1, v0}, Lorg/xbill/DNS/WireParseException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 281
     :cond_6
     const-string/jumbo v1, "verbose"
 
@@ -764,7 +666,6 @@
 
     if-eqz v1, :cond_9
 
-    .line 282
     sget-object v1, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
     invoke-virtual {v1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
@@ -773,25 +674,21 @@
 
     goto :goto_1
 
-    .line 287
     :cond_7
     invoke-direct {p0, v0}, Lorg/xbill/DNS/SimpleResolver;->parseMessage([B)Lorg/xbill/DNS/Message;
 
     move-result-object v1
 
-    .line 288
     iget-object v10, p0, Lorg/xbill/DNS/SimpleResolver;->tsig:Lorg/xbill/DNS/TSIG;
 
     invoke-direct {p0, v6, v1, v0, v10}, Lorg/xbill/DNS/SimpleResolver;->verifyTSIG(Lorg/xbill/DNS/Message;Lorg/xbill/DNS/Message;[BLorg/xbill/DNS/TSIG;)V
 
-    .line 289
     if-nez v8, :cond_8
 
     iget-boolean v0, p0, Lorg/xbill/DNS/SimpleResolver;->ignoreTruncation:Z
 
     if-nez v0, :cond_8
 
-    .line 290
     invoke-virtual {v1}, Lorg/xbill/DNS/Message;->getHeader()Lorg/xbill/DNS/Header;
 
     move-result-object v0
@@ -806,13 +703,11 @@
 
     move v0, v9
 
-    .line 293
     goto/16 :goto_1
 
     :cond_8
     move-object v0, v1
 
-    .line 295
     goto/16 :goto_0
 
     :cond_9
@@ -829,11 +724,8 @@
 .method public sendAsync(Lorg/xbill/DNS/Message;Lorg/xbill/DNS/ResolverListener;)Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 311
     monitor-enter p0
 
-    .line 312
     :try_start_0
     new-instance v1, Ljava/lang/Integer;
 
@@ -845,20 +737,16 @@
 
     invoke-direct {v1, v0}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 313
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 314
     invoke-virtual {p1}, Lorg/xbill/DNS/Message;->getQuestion()Lorg/xbill/DNS/Record;
 
     move-result-object v0
 
-    .line 316
     if-eqz v0, :cond_0
 
-    .line 317
     invoke-virtual {v0}, Lorg/xbill/DNS/Record;->getName()Lorg/xbill/DNS/Name;
 
     move-result-object v0
@@ -867,7 +755,6 @@
 
     move-result-object v0
 
-    .line 320
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -895,26 +782,20 @@
 
     move-result-object v0
 
-    .line 321
     new-instance v2, Lorg/xbill/DNS/ResolveThread;
 
     invoke-direct {v2, p0, p1, v1, p2}, Lorg/xbill/DNS/ResolveThread;-><init>(Lorg/xbill/DNS/Resolver;Lorg/xbill/DNS/Message;Ljava/lang/Object;Lorg/xbill/DNS/ResolverListener;)V
 
-    .line 322
     invoke-virtual {v2, v0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
-    .line 323
     const/4 v0, 0x1
 
     invoke-virtual {v2, v0}, Ljava/lang/Thread;->setDaemon(Z)V
 
-    .line 324
     invoke-virtual {v2}, Ljava/lang/Thread;->start()V
 
-    .line 325
     return-object v1
 
-    .line 313
     :catchall_0
     move-exception v0
 
@@ -925,7 +806,6 @@
 
     throw v0
 
-    .line 319
     :cond_0
     const-string/jumbo v0, "(none)"
 
@@ -935,8 +815,6 @@
 .method public setAddress(Ljava/net/InetAddress;)V
     .locals 2
 
-    .prologue
-    .line 108
     new-instance v0, Ljava/net/InetSocketAddress;
 
     iget-object v1, p0, Lorg/xbill/DNS/SimpleResolver;->address:Ljava/net/InetSocketAddress;
@@ -949,48 +827,38 @@
 
     iput-object v0, p0, Lorg/xbill/DNS/SimpleResolver;->address:Ljava/net/InetSocketAddress;
 
-    .line 109
     return-void
 .end method
 
 .method public setAddress(Ljava/net/InetSocketAddress;)V
     .locals 0
 
-    .prologue
-    .line 98
     iput-object p1, p0, Lorg/xbill/DNS/SimpleResolver;->address:Ljava/net/InetSocketAddress;
 
-    .line 99
     return-void
 .end method
 
 .method public setEDNS(I)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 152
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v1, v1, v0}, Lorg/xbill/DNS/SimpleResolver;->setEDNS(IIILjava/util/List;)V
 
-    .line 153
     return-void
 .end method
 
 .method public setEDNS(IIILjava/util/List;)V
     .locals 6
 
-    .prologue
-    .line 142
     if-eqz p1, :cond_0
 
     const/4 v0, -0x1
 
     if-eq p1, v0, :cond_0
 
-    .line 143
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "invalid EDNS level - must be 0 or -1"
@@ -999,14 +867,11 @@
 
     throw v0
 
-    .line 145
     :cond_0
     if-nez p2, :cond_1
 
-    .line 146
     const/16 v1, 0x500
 
-    .line 147
     :goto_0
     new-instance v0, Lorg/xbill/DNS/OPTRecord;
 
@@ -1022,7 +887,6 @@
 
     iput-object v0, p0, Lorg/xbill/DNS/SimpleResolver;->queryOPT:Lorg/xbill/DNS/OPTRecord;
 
-    .line 148
     return-void
 
     :cond_1
@@ -1034,19 +898,14 @@
 .method public setIgnoreTruncation(Z)V
     .locals 0
 
-    .prologue
-    .line 137
     iput-boolean p1, p0, Lorg/xbill/DNS/SimpleResolver;->ignoreTruncation:Z
 
-    .line 138
     return-void
 .end method
 
 .method public setLocalAddress(Ljava/net/InetAddress;)V
     .locals 2
 
-    .prologue
-    .line 127
     new-instance v0, Ljava/net/InetSocketAddress;
 
     const/4 v1, 0x0
@@ -1055,26 +914,20 @@
 
     iput-object v0, p0, Lorg/xbill/DNS/SimpleResolver;->localAddress:Ljava/net/InetSocketAddress;
 
-    .line 128
     return-void
 .end method
 
 .method public setLocalAddress(Ljava/net/InetSocketAddress;)V
     .locals 0
 
-    .prologue
-    .line 117
     iput-object p1, p0, Lorg/xbill/DNS/SimpleResolver;->localAddress:Ljava/net/InetSocketAddress;
 
-    .line 118
     return-void
 .end method
 
 .method public setPort(I)V
     .locals 2
 
-    .prologue
-    .line 89
     new-instance v0, Ljava/net/InetSocketAddress;
 
     iget-object v1, p0, Lorg/xbill/DNS/SimpleResolver;->address:Ljava/net/InetSocketAddress;
@@ -1087,50 +940,38 @@
 
     iput-object v0, p0, Lorg/xbill/DNS/SimpleResolver;->address:Ljava/net/InetSocketAddress;
 
-    .line 90
     return-void
 .end method
 
 .method public setTCP(Z)V
     .locals 0
 
-    .prologue
-    .line 132
     iput-boolean p1, p0, Lorg/xbill/DNS/SimpleResolver;->useTCP:Z
 
-    .line 133
     return-void
 .end method
 
 .method public setTSIGKey(Lorg/xbill/DNS/TSIG;)V
     .locals 0
 
-    .prologue
-    .line 157
     iput-object p1, p0, Lorg/xbill/DNS/SimpleResolver;->tsig:Lorg/xbill/DNS/TSIG;
 
-    .line 158
     return-void
 .end method
 
 .method public setTimeout(I)V
     .locals 1
 
-    .prologue
-    .line 172
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lorg/xbill/DNS/SimpleResolver;->setTimeout(II)V
 
-    .line 173
     return-void
 .end method
 
 .method public setTimeout(II)V
     .locals 4
 
-    .prologue
-    .line 167
     int-to-long v0, p1
 
     const-wide/16 v2, 0x3e8
@@ -1143,6 +984,5 @@
 
     iput-wide v0, p0, Lorg/xbill/DNS/SimpleResolver;->timeoutValue:J
 
-    .line 168
     return-void
 .end method

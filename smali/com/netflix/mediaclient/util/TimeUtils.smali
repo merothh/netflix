@@ -35,8 +35,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,22 +43,18 @@
 .method public static computePlayPos(III)I
     .locals 2
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 70
     if-lez p1, :cond_1
 
     if-lt p0, p1, :cond_1
 
     move p0, v0
 
-    .line 79
     :cond_0
     :goto_0
     return p0
 
-    .line 73
     :cond_1
     if-lez p2, :cond_2
 
@@ -70,24 +64,19 @@
 
     move p0, v0
 
-    .line 74
     goto :goto_0
 
-    .line 76
     :cond_2
     if-gez p0, :cond_0
 
     move p0, v0
 
-    .line 77
     goto :goto_0
 .end method
 
 .method public static computeTimeInMsSinceStart(J)J
     .locals 4
 
-    .prologue
-    .line 48
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
@@ -104,8 +93,6 @@
 .method public static convertNsToMs(J)J
     .locals 2
 
-    .prologue
-    .line 44
     const-wide/32 v0, 0xf4240
 
     div-long v0, p0, v0
@@ -116,8 +103,6 @@
 .method public static convertSecondsToMinutes(I)I
     .locals 2
 
-    .prologue
-    .line 40
     int-to-float v0, p0
 
     const/high16 v1, 0x42700000    # 60.0f
@@ -136,8 +121,6 @@
 .method public static getDeviceCurrentBootTimeInMs()J
     .locals 4
 
-    .prologue
-    .line 36
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -154,25 +137,20 @@
 .method public static getFormattedTime(ILandroid/content/Context;)Ljava/lang/String;
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
     const/4 v5, 0x0
 
-    .line 55
     div-int/lit16 v0, p0, 0xe10
 
-    .line 56
     mul-int/lit16 v1, v0, 0xe10
 
     sub-int v1, p0, v1
 
     div-int/lit8 v1, v1, 0x3c
 
-    .line 57
     if-lez v0, :cond_0
 
-    .line 58
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -199,7 +177,6 @@
 
     move-result-object v0
 
-    .line 60
     :goto_0
     return-object v0
 

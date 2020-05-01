@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/android/app/UserInputManager;Landroid/content/Intent;)V
     .locals 0
 
-    .prologue
-    .line 221
     iput-object p1, p0, Lcom/netflix/mediaclient/android/app/UserInputManager$4;->this$0:Lcom/netflix/mediaclient/android/app/UserInputManager;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/android/app/UserInputManager$4;->val$intent:Landroid/content/Intent;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 225
     iget-object v0, p0, Lcom/netflix/mediaclient/android/app/UserInputManager$4;->this$0:Lcom/netflix/mediaclient/android/app/UserInputManager;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/android/app/UserInputManager;->access$000(Lcom/netflix/mediaclient/android/app/UserInputManager;)Ljava/util/List;
@@ -57,7 +53,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/android/app/ApplicationStateListener;
 
-    .line 226
     iget-object v2, p0, Lcom/netflix/mediaclient/android/app/UserInputManager$4;->this$0:Lcom/netflix/mediaclient/android/app/UserInputManager;
 
     iget-object v3, p0, Lcom/netflix/mediaclient/android/app/UserInputManager$4;->val$intent:Landroid/content/Intent;
@@ -66,7 +61,6 @@
 
     goto :goto_0
 
-    .line 228
     :cond_0
     return-void
 .end method

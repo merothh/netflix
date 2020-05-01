@@ -28,21 +28,16 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;Lcom/android/volley/Response$ErrorListener;I)V
     .locals 3
 
-    .prologue
-    .line 34
     const/4 v0, 0x0
 
     invoke-direct {p0, v0, p1, p3}, Lcom/android/volley/Request;-><init>(ILjava/lang/String;Lcom/android/volley/Response$ErrorListener;)V
 
-    .line 35
     iput-object p2, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/PrefetchResourceRequest;->mCallback:Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;
 
-    .line 36
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/resfetcher/volley/PrefetchResourceRequest;->setShouldCache(Z)V
 
-    .line 37
     new-instance v0, Lcom/android/volley/DefaultRetryPolicy;
 
     const/4 v1, 0x2
@@ -53,7 +48,6 @@
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/resfetcher/volley/PrefetchResourceRequest;->setRetryPolicy(Lcom/android/volley/RetryPolicy;)V
 
-    .line 38
     return-void
 .end method
 
@@ -62,13 +56,10 @@
 .method protected deliverResponse(Ljava/lang/Integer;)V
     .locals 4
 
-    .prologue
-    .line 48
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/PrefetchResourceRequest;->mCallback:Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;
 
     if-eqz v0, :cond_0
 
-    .line 49
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/PrefetchResourceRequest;->mCallback:Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/resfetcher/volley/PrefetchResourceRequest;->getUrl()Ljava/lang/String;
@@ -83,7 +74,6 @@
 
     invoke-interface {v0, v1, v2, v3}, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;->onResourcePrefetched(Ljava/lang/String;ILcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 51
     :cond_0
     return-void
 .end method
@@ -91,8 +81,6 @@
 .method protected bridge synthetic deliverResponse(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 21
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/resfetcher/volley/PrefetchResourceRequest;->deliverResponse(Ljava/lang/Integer;)V
@@ -103,8 +91,6 @@
 .method public getCacheKey()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 63
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/resfetcher/volley/PrefetchResourceRequest;->getUrl()Ljava/lang/String;
 
     move-result-object v0
@@ -119,8 +105,6 @@
 .method public getPriority()Lcom/android/volley/Request$Priority;
     .locals 1
 
-    .prologue
-    .line 55
     sget-object v0, Lcom/android/volley/Request$Priority;->LOW:Lcom/android/volley/Request$Priority;
 
     return-object v0
@@ -140,8 +124,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 42
     iget-object v0, p1, Lcom/android/volley/NetworkResponse;->data:[B
 
     array-length v0, v0
@@ -150,12 +132,10 @@
 
     move-result-object v0
 
-    .line 43
     invoke-static {p1}, Lcom/android/volley/toolbox/HttpHeaderParser;->parseCacheHeaders(Lcom/android/volley/NetworkResponse;)Lcom/android/volley/Cache$Entry;
 
     move-result-object v1
 
-    .line 42
     invoke-static {v0, v1}, Lcom/android/volley/Response;->success(Ljava/lang/Object;Lcom/android/volley/Cache$Entry;)Lcom/android/volley/Response;
 
     move-result-object v0

@@ -54,22 +54,18 @@
 .method constructor <init>(Lcom/netflix/falkor/CachedModelProxy$CmpTask;Landroid/content/Context;Ljava/util/List;)V
     .locals 2
 
-    .prologue
-    .line 960
     iput-object p1, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->this$1:Lcom/netflix/falkor/CachedModelProxy$CmpTask;
 
     iput-object p3, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->val$requestPql:Ljava/util/List;
 
     invoke-direct {p0, p2}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;-><init>(Landroid/content/Context;)V
 
-    .line 963
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertNotOnMain()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->notOnMain:Z
 
-    .line 965
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->val$requestPql:Ljava/util/List;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/DataUtil;->createStringListFromList(Ljava/util/List;)Ljava/util/List;
@@ -78,7 +74,6 @@
 
     iput-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->pqls:Ljava/util/List;
 
-    .line 966
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->this$1:Lcom/netflix/falkor/CachedModelProxy$CmpTask;
 
     invoke-virtual {v0}, Lcom/netflix/falkor/CachedModelProxy$CmpTask;->shouldUseCallMethod()Z
@@ -87,7 +82,6 @@
 
     iput-boolean v0, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->useCallMethod:Z
 
-    .line 967
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->this$1:Lcom/netflix/falkor/CachedModelProxy$CmpTask;
 
     invoke-virtual {v0}, Lcom/netflix/falkor/CachedModelProxy$CmpTask;->shouldUseAuthorization()Z
@@ -96,7 +90,6 @@
 
     iput-boolean v0, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->useAuthorization:Z
 
-    .line 968
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->this$1:Lcom/netflix/falkor/CachedModelProxy$CmpTask;
 
     invoke-virtual {v0}, Lcom/netflix/falkor/CachedModelProxy$CmpTask;->getOptionalRequestParams()Ljava/util/List;
@@ -105,7 +98,6 @@
 
     iput-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->optionalRequestParams:Ljava/util/List;
 
-    .line 969
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->requestStartTime:J
@@ -118,8 +110,6 @@
 .method protected getMethodType()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 1042
     iget-boolean v0, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->useCallMethod:Z
 
     if-eqz v0, :cond_0
@@ -138,11 +128,8 @@
 .method protected getOptionalParams()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 1052
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertNotOnMain()Z
 
-    .line 1053
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->optionalRequestParams:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -155,22 +142,18 @@
 
     if-nez v0, :cond_2
 
-    .line 1054
     :cond_0
     const/4 v0, 0x0
 
-    .line 1066
     :cond_1
     :goto_0
     return-object v0
 
-    .line 1057
     :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1058
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->optionalRequestParams:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -190,7 +173,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/util/DataUtil$StringPair;
 
-    .line 1059
     const-string/jumbo v1, "&"
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -219,20 +201,17 @@
 
     goto :goto_1
 
-    .line 1062
     :cond_3
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1063
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 1064
     const-string/jumbo v1, "CachedModelProxy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -270,8 +249,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 978
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->pqls:Ljava/util/List;
 
     return-object v0
@@ -280,8 +257,6 @@
 .method public getPriority()Lcom/android/volley/Request$Priority;
     .locals 1
 
-    .prologue
-    .line 973
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->this$1:Lcom/netflix/falkor/CachedModelProxy$CmpTask;
 
     invoke-virtual {v0}, Lcom/netflix/falkor/CachedModelProxy$CmpTask;->getPriorityOverride()Lcom/android/volley/Request$Priority;
@@ -310,8 +285,6 @@
 .method protected isAuthorizationRequired()Z
     .locals 1
 
-    .prologue
-    .line 1047
     iget-boolean v0, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->useAuthorization:Z
 
     return v0
@@ -320,11 +293,8 @@
 .method protected onFailure(Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 1087
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertOnMain()Z
 
-    .line 1089
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->this$1:Lcom/netflix/falkor/CachedModelProxy$CmpTask;
 
     iget-object v1, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->this$1:Lcom/netflix/falkor/CachedModelProxy$CmpTask;
@@ -335,15 +305,12 @@
 
     invoke-static {v0, v1, p1}, Lcom/netflix/falkor/CachedModelProxy$CmpTask;->access$900(Lcom/netflix/falkor/CachedModelProxy$CmpTask;Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 1090
     return-void
 .end method
 
 .method protected bridge synthetic onSuccess(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 960
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->onSuccess(Ljava/lang/Void;)V
@@ -354,19 +321,14 @@
 .method protected onSuccess(Ljava/lang/Void;)V
     .locals 0
 
-    .prologue
-    .line 1081
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertOnMain()Z
 
-    .line 1083
     return-void
 .end method
 
 .method protected bridge synthetic parseFalkorResponse(Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 960
     invoke-virtual {p0, p1}, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->parseFalkorResponse(Ljava/lang/String;)Ljava/lang/Void;
 
     move-result-object v0
@@ -377,16 +339,12 @@
 .method protected parseFalkorResponse(Ljava/lang/String;)Ljava/lang/Void;
     .locals 6
 
-    .prologue
-    .line 983
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertNotOnMain()Z
 
-    .line 985
     sget-boolean v0, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v0, :cond_0
 
-    .line 986
     const-string/jumbo v0, "CachedModelProxy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -409,11 +367,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 999
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    .line 1005
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->this$1:Lcom/netflix/falkor/CachedModelProxy$CmpTask;
 
     iget-object v0, v0, Lcom/netflix/falkor/CachedModelProxy$CmpTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
@@ -430,21 +386,18 @@
 
     move-result-object v0
 
-    .line 1006
     invoke-static {v0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorParseUtils;->hasErrors(Lcom/google/gson/JsonObject;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 1007
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 1008
     const-string/jumbo v1, "CachedModelProxy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -467,7 +420,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1009
     const-string/jumbo v1, "CachedModelProxy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -496,7 +448,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1011
     :cond_1
     iget-object v1, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->this$1:Lcom/netflix/falkor/CachedModelProxy$CmpTask;
 
@@ -506,7 +457,6 @@
 
     throw v0
 
-    .line 1013
     :cond_2
     iget-object v1, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->this$1:Lcom/netflix/falkor/CachedModelProxy$CmpTask;
 
@@ -516,23 +466,19 @@
 
     if-eqz v1, :cond_3
 
-    .line 1014
     iget-object v1, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->this$1:Lcom/netflix/falkor/CachedModelProxy$CmpTask;
 
     invoke-virtual {v1, v0}, Lcom/netflix/falkor/CachedModelProxy$CmpTask;->customHandleResponse(Lcom/google/gson/JsonObject;)V
 
-    .line 1035
     :goto_0
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->this$1:Lcom/netflix/falkor/CachedModelProxy$CmpTask;
 
     invoke-static {v0}, Lcom/netflix/falkor/CachedModelProxy$CmpTask;->access$700(Lcom/netflix/falkor/CachedModelProxy$CmpTask;)V
 
-    .line 1037
     const/4 v0, 0x0
 
     return-object v0
 
-    .line 1017
     :cond_3
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -540,14 +486,12 @@
 
     invoke-static {v2, v3}, Lcom/netflix/falkor/CachedModelProxy;->access$402(J)J
 
-    .line 1018
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 1019
     const-string/jumbo v1, "CachedModelProxy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -574,7 +518,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1022
     :cond_4
     iget-object v1, p0, Lcom/netflix/falkor/CachedModelProxy$CmpTask$1;->this$1:Lcom/netflix/falkor/CachedModelProxy$CmpTask;
 
@@ -602,8 +545,6 @@
 .method protected parsedResponseCanBeNull()Z
     .locals 1
 
-    .prologue
-    .line 1071
     const/4 v0, 0x1
 
     return v0
@@ -612,8 +553,6 @@
 .method protected shouldMaterializeRequest()Z
     .locals 1
 
-    .prologue
-    .line 1076
     const/4 v0, 0x1
 
     return v0

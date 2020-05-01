@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;)V
     .locals 0
 
-    .prologue
-    .line 98
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$1;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onRetryRequested()V
     .locals 1
 
-    .prologue
-    .line 101
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$1;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;->getActivity()Landroid/app/Activity;
@@ -40,6 +36,5 @@
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/android/widget/ErrorWrapper$Callback;->onRetryRequested()V
 
-    .line 102
     return-void
 .end method

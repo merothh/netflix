@@ -17,26 +17,21 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 103
     invoke-static {}, Landroid/support/v4/os/BuildCompat;->isAtLeastN()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 104
     new-instance v0, Landroid/support/v4/app/ServiceCompat$Api24ServiceCompatImpl;
 
     invoke-direct {v0}, Landroid/support/v4/app/ServiceCompat$Api24ServiceCompatImpl;-><init>()V
 
     sput-object v0, Landroid/support/v4/app/ServiceCompat;->IMPL:Landroid/support/v4/app/ServiceCompat$ServiceCompatImpl;
 
-    .line 108
     :goto_0
     return-void
 
-    .line 106
     :cond_0
     new-instance v0, Landroid/support/v4/app/ServiceCompat$BaseServiceCompatImpl;
 
@@ -50,23 +45,17 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     return-void
 .end method
 
 .method public static stopForeground(Landroid/app/Service;I)V
     .locals 1
 
-    .prologue
-    .line 119
     sget-object v0, Landroid/support/v4/app/ServiceCompat;->IMPL:Landroid/support/v4/app/ServiceCompat$ServiceCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/app/ServiceCompat$ServiceCompatImpl;->stopForeground(Landroid/app/Service;I)V
 
-    .line 120
     return-void
 .end method

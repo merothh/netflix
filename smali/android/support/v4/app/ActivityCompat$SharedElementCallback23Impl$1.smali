@@ -16,8 +16,6 @@
 .method constructor <init>(Landroid/support/v4/app/ActivityCompat$SharedElementCallback23Impl;Landroid/support/v4/app/ActivityCompatApi23$OnSharedElementsReadyListenerBridge;)V
     .locals 0
 
-    .prologue
-    .line 541
     iput-object p1, p0, Landroid/support/v4/app/ActivityCompat$SharedElementCallback23Impl$1;->this$0:Landroid/support/v4/app/ActivityCompat$SharedElementCallback23Impl;
 
     iput-object p2, p0, Landroid/support/v4/app/ActivityCompat$SharedElementCallback23Impl$1;->val$listener:Landroid/support/v4/app/ActivityCompatApi23$OnSharedElementsReadyListenerBridge;
@@ -32,12 +30,9 @@
 .method public onSharedElementsReady()V
     .locals 1
 
-    .prologue
-    .line 544
     iget-object v0, p0, Landroid/support/v4/app/ActivityCompat$SharedElementCallback23Impl$1;->val$listener:Landroid/support/v4/app/ActivityCompatApi23$OnSharedElementsReadyListenerBridge;
 
     invoke-interface {v0}, Landroid/support/v4/app/ActivityCompatApi23$OnSharedElementsReadyListenerBridge;->onSharedElementsReady()V
 
-    .line 545
     return-void
 .end method

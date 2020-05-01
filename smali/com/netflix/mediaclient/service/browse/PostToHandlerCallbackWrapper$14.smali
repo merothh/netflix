@@ -20,8 +20,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper;Lcom/netflix/mediaclient/servicemgr/interface_/details/KidsCharacterDetails;Ljava/lang/Boolean;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 0
 
-    .prologue
-    .line 189
     iput-object p1, p0, Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper$14;->this$0:Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper$14;->val$kidsCharacterDetails:Lcom/netflix/mediaclient/servicemgr/interface_/details/KidsCharacterDetails;
@@ -40,11 +38,8 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 192
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertOnMain()Z
 
-    .line 193
     iget-object v0, p0, Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper$14;->this$0:Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper;->access$000(Lcom/netflix/mediaclient/service/browse/PostToHandlerCallbackWrapper;)Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;
@@ -59,6 +54,5 @@
 
     invoke-interface {v0, v1, v2, v3}, Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;->onKidsCharacterDetailsFetched(Lcom/netflix/mediaclient/servicemgr/interface_/details/KidsCharacterDetails;Ljava/lang/Boolean;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 194
     return-void
 .end method

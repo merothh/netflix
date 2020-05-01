@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;Ljava/util/Map;)V
     .locals 0
 
-    .prologue
-    .line 773
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$9;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$9;->val$videoIdToProfileList:Ljava/util/Map;
@@ -32,15 +30,12 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 776
     const-string/jumbo v0, "nf_offlineAgent"
 
     const-string/jumbo v1, "buildNewUiList now in main.. regenerate"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 777
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$9;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;->access$1700(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;)Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflinePlayableUiListImpl;
@@ -63,6 +58,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflinePlayableUiListImpl;->regenerate(Lio/realm/Realm;Ljava/util/Map;Z)V
 
-    .line 778
     return-void
 .end method

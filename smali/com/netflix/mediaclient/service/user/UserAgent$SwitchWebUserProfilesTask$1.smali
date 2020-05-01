@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/user/UserAgent$SwitchWebUserProfilesTask;)V
     .locals 0
 
-    .prologue
-    .line 1138
     iput-object p1, p0, Lcom/netflix/mediaclient/service/user/UserAgent$SwitchWebUserProfilesTask$1;->this$1:Lcom/netflix/mediaclient/service/user/UserAgent$SwitchWebUserProfilesTask;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/user/SimpleUserAgentWebCallback;-><init>()V
@@ -25,22 +23,18 @@
 .method public onUserProfileSwitched(Lcom/netflix/mediaclient/service/webclient/model/leafs/UserBoundCookies;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 5
 
-    .prologue
-    .line 1142
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 1144
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1145
     const-string/jumbo v0, "nf_service_useragent"
 
     const-string/jumbo v1, "switchWebUserProfile  netflixId %s secureNetflixId %s"
@@ -51,7 +45,6 @@
 
     const/4 v3, 0x0
 
-    .line 1146
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/webclient/model/leafs/UserBoundCookies;->getUserBoundNetflixId()Ljava/lang/String;
 
     move-result-object v4
@@ -66,14 +59,12 @@
 
     aput-object v4, v2, v3
 
-    .line 1145
     invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1148
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$SwitchWebUserProfilesTask$1;->this$1:Lcom/netflix/mediaclient/service/user/UserAgent$SwitchWebUserProfilesTask;
 
@@ -85,7 +76,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1149
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$SwitchWebUserProfilesTask$1;->this$1:Lcom/netflix/mediaclient/service/user/UserAgent$SwitchWebUserProfilesTask;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/user/UserAgent$SwitchWebUserProfilesTask;->this$0:Lcom/netflix/mediaclient/service/user/UserAgent;
@@ -96,12 +86,10 @@
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/service/user/UserAgentStateManager;->profileSwitched(Lcom/netflix/mediaclient/service/webclient/model/leafs/UserBoundCookies;)V
 
-    .line 1160
     :cond_1
     :goto_0
     return-void
 
-    .line 1153
     :cond_2
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -109,7 +97,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 1154
     const-string/jumbo v0, "nf_service_useragent"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -136,7 +123,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1156
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$SwitchWebUserProfilesTask$1;->this$1:Lcom/netflix/mediaclient/service/user/UserAgent$SwitchWebUserProfilesTask;
 
@@ -148,7 +134,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1157
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$SwitchWebUserProfilesTask$1;->this$1:Lcom/netflix/mediaclient/service/user/UserAgent$SwitchWebUserProfilesTask;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/user/UserAgent$SwitchWebUserProfilesTask;->this$0:Lcom/netflix/mediaclient/service/user/UserAgent;

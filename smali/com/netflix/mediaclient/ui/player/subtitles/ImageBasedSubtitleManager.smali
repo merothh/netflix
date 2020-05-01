@@ -27,22 +27,18 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)V
     .locals 3
 
-    .prologue
     const/4 v2, -0x1
 
     const/4 v1, 0x0
 
-    .line 52
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/player/subtitles/BaseSubtitleManager;-><init>(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)V
 
-    .line 40
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mVisibleBlocks:Ljava/util/Map;
 
-    .line 55
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mDisplayArea:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0}, Landroid/widget/RelativeLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -51,20 +47,16 @@
 
     check-cast v0, Landroid/widget/RelativeLayout$LayoutParams;
 
-    .line 56
     invoke-virtual {v0, v1, v1, v1, v1}, Landroid/widget/RelativeLayout$LayoutParams;->setMargins(IIII)V
 
-    .line 57
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mDisplayArea:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v1, v0}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 58
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mDisplayArea:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0}, Landroid/widget/RelativeLayout;->removeAllViews()V
 
-    .line 60
     new-instance v0, Landroid/widget/RelativeLayout;
 
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getActivity()Landroid/app/Activity;
@@ -75,27 +67,22 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mImageWrapper:Landroid/widget/RelativeLayout;
 
-    .line 61
     new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v0, v2, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 62
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mDisplayArea:Landroid/widget/RelativeLayout;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mImageWrapper:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v1, v2, v0}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 63
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;Z)V
     .locals 0
 
-    .prologue
-    .line 35
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->setVisibility(Z)V
 
     return-void
@@ -104,8 +91,6 @@
 .method static synthetic access$100(Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;Lcom/netflix/mediaclient/service/player/subtitles/image/ImageSubtitleBlock;Ljava/util/List;)V
     .locals 0
 
-    .prologue
-    .line 35
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->showSubtitleBlock(Lcom/netflix/mediaclient/service/player/subtitles/image/ImageSubtitleBlock;Ljava/util/List;)V
 
     return-void
@@ -114,8 +99,6 @@
 .method static synthetic access$200(Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;Lcom/netflix/mediaclient/service/player/subtitles/image/ImageSubtitleBlock;)V
     .locals 0
 
-    .prologue
-    .line 35
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->removeSubtitleBlock(Lcom/netflix/mediaclient/service/player/subtitles/image/ImageSubtitleBlock;)V
 
     return-void
@@ -124,18 +107,14 @@
 .method private createImage(Ljava/lang/String;IIZ)Landroid/widget/ImageView;
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
-    .line 406
     invoke-static {p1}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 407
     if-nez v0, :cond_0
 
-    .line 408
     const-string/jumbo v0, "nf_subtitles_render"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -158,25 +137,20 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 409
     const/4 v0, 0x0
 
-    .line 424
     :goto_0
     return-object v0
 
-    .line 412
     :cond_0
     if-eqz p4, :cond_2
 
-    .line 413
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 414
     const-string/jumbo v1, "nf_subtitles_render"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -209,13 +183,11 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 416
     :cond_1
     invoke-static {v0, p2, p3, v4}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 421
     :goto_1
     new-instance v1, Landroid/widget/ImageView;
 
@@ -225,20 +197,16 @@
 
     invoke-direct {v1, v2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    .line 422
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 423
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     move-object v0, v1
 
-    .line 424
     goto :goto_0
 
-    .line 418
     :cond_2
     const-string/jumbo v1, "nf_subtitles_render"
 
@@ -246,7 +214,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 419
     invoke-static {v0, p2, p3, v4}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -257,16 +224,12 @@
 .method private getHorizontalOffset()I
     .locals 1
 
-    .prologue
-    .line 372
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mMeasureTranslator:Lcom/netflix/mediaclient/ui/player/subtitles/MeasureTranslator;
 
     if-nez v0, :cond_0
 
-    .line 373
     const/4 v0, 0x0
 
-    .line 375
     :goto_0
     return v0
 
@@ -283,16 +246,12 @@
 .method private getScaleFactor()F
     .locals 1
 
-    .prologue
-    .line 388
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mMeasureTranslator:Lcom/netflix/mediaclient/ui/player/subtitles/MeasureTranslator;
 
     if-nez v0, :cond_0
 
-    .line 389
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 391
     :goto_0
     return v0
 
@@ -309,16 +268,12 @@
 .method private getVerticalOffset()I
     .locals 1
 
-    .prologue
-    .line 380
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mMeasureTranslator:Lcom/netflix/mediaclient/ui/player/subtitles/MeasureTranslator;
 
     if-nez v0, :cond_0
 
-    .line 381
     const/4 v0, 0x0
 
-    .line 383
     :goto_0
     return v0
 
@@ -335,19 +290,14 @@
 .method private removeAll(Z)V
     .locals 0
 
-    .prologue
-    .line 140
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->removeVisibleSubtitleBlocks(Z)V
 
-    .line 141
     return-void
 .end method
 
 .method private removeSubtitleBlock(Lcom/netflix/mediaclient/service/player/subtitles/image/ImageSubtitleBlock;)V
     .locals 2
 
-    .prologue
-    .line 458
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageSubtitleBlock;->getImage()Lcom/netflix/mediaclient/service/player/subtitles/image/ImageDescriptor;
@@ -370,7 +320,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 459
     :cond_0
     const-string/jumbo v0, "nf_subtitles_render"
 
@@ -378,12 +327,10 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 471
     :cond_1
     :goto_0
     return-void
 
-    .line 463
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mVisibleBlocks:Ljava/util/Map;
 
@@ -401,15 +348,12 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 464
     if-eqz v0, :cond_1
 
-    .line 468
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 469
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mImageWrapper:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v1, v0}, Landroid/widget/RelativeLayout;->removeView(Landroid/view/View;)V
@@ -420,15 +364,12 @@
 .method private setVisibility(Z)V
     .locals 3
 
-    .prologue
-    .line 235
     const-string/jumbo v0, "nf_subtitles_render"
 
     const-string/jumbo v1, "All images invisible"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 236
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mVisibleBlocks:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -452,7 +393,6 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 237
     if-eqz p1, :cond_0
 
     const/4 v1, 0x0
@@ -467,7 +407,6 @@
 
     goto :goto_1
 
-    .line 239
     :cond_1
     return-void
 .end method
@@ -485,8 +424,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 249
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageSubtitleBlock;->getImage()Lcom/netflix/mediaclient/service/player/subtitles/image/ImageDescriptor;
@@ -509,7 +446,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 250
     :cond_0
     const-string/jumbo v0, "nf_subtitles_render"
 
@@ -517,11 +453,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 369
     :goto_0
     return-void
 
-    .line 254
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -529,7 +463,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 255
     const-string/jumbo v0, "nf_subtitles_render"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -552,24 +485,19 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 258
     :cond_2
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageSubtitleBlock;->displayed()V
 
-    .line 259
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->getScaleFactor()F
 
     move-result v7
 
-    .line 260
     const/4 v4, 0x1
 
-    .line 261
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageSubtitleBlock;->getImage()Lcom/netflix/mediaclient/service/player/subtitles/image/ImageDescriptor;
 
     move-result-object v9
 
-    .line 262
     invoke-interface {v9}, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageDescriptor;->getWidth()S
 
     move-result v0
@@ -580,7 +508,6 @@
 
     float-to-int v3, v0
 
-    .line 263
     invoke-interface {v9}, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageDescriptor;->getHeight()S
 
     move-result v0
@@ -591,13 +518,10 @@
 
     float-to-int v2, v0
 
-    .line 266
     const/4 v1, 0x0
 
-    .line 267
     const/4 v0, 0x0
 
-    .line 269
     const/high16 v5, 0x3f800000    # 1.0f
 
     cmpg-float v5, v7, v5
@@ -614,14 +538,12 @@
 
     if-ge v5, v6, :cond_4
 
-    .line 270
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 271
     const-string/jumbo v0, "nf_subtitles_render"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -660,11 +582,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 273
     :cond_3
     const/4 v4, 0x0
 
-    .line 274
     invoke-interface {v9}, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageDescriptor;->getHeight()S
 
     move-result v0
@@ -673,7 +593,6 @@
 
     div-int/lit8 v0, v0, 0x2
 
-    .line 275
     invoke-interface {v9}, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageDescriptor;->getWidth()S
 
     move-result v1
@@ -682,17 +601,14 @@
 
     div-int/lit8 v1, v1, 0x2
 
-    .line 276
     invoke-interface {v9}, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageDescriptor;->getWidth()S
 
     move-result v3
 
-    .line 277
     invoke-interface {v9}, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageDescriptor;->getHeight()S
 
     move-result v2
 
-    .line 280
     :cond_4
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -700,7 +616,6 @@
 
     if-eqz v5, :cond_5
 
-    .line 281
     const-string/jumbo v5, "nf_subtitles_render"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -775,7 +690,6 @@
 
     invoke-static {v5, v6}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 282
     const-string/jumbo v5, "nf_subtitles_render"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -808,7 +722,6 @@
 
     invoke-static {v5, v6}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 285
     :cond_5
     invoke-interface {v9}, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageDescriptor;->getHeight()S
 
@@ -822,17 +735,14 @@
 
     if-ne v5, v3, :cond_6
 
-    .line 286
     const/4 v4, 0x0
 
-    .line 287
     const-string/jumbo v5, "nf_subtitles_render"
 
     const-string/jumbo v6, "Source and target resolutions are the same, do not scale!"
 
     invoke-static {v5, v6}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 290
     :cond_6
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->getHorizontalOffset()I
 
@@ -852,7 +762,6 @@
 
     sub-int v6, v5, v1
 
-    .line 291
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mDisplayArea:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v1}, Landroid/widget/RelativeLayout;->getWidth()I
@@ -863,7 +772,6 @@
 
     sub-int v5, v1, v3
 
-    .line 292
     invoke-interface {v9}, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageDescriptor;->getOriginY()S
 
     move-result v1
@@ -882,7 +790,6 @@
 
     add-int/2addr v1, v0
 
-    .line 293
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->getContext()Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     move-result-object v0
@@ -895,12 +802,10 @@
 
     sub-int/2addr v0, v2
 
-    .line 296
     iget-boolean v7, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mPlayerControlsVisible:Z
 
     if-eqz v7, :cond_7
 
-    .line 297
     iget-object v7, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mDisplayArea:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v7}, Landroid/widget/RelativeLayout;->getHeight()I
@@ -911,23 +816,18 @@
 
     if-le v1, v7, :cond_c
 
-    .line 298
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->getDisplayAreaMarginBottom()I
 
     move-result v7
 
     sub-int/2addr v7, v0
 
-    .line 300
     if-lez v7, :cond_7
 
-    .line 301
     sub-int/2addr v1, v7
 
-    .line 302
     add-int/2addr v0, v7
 
-    .line 314
     :cond_7
     :goto_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
@@ -936,7 +836,6 @@
 
     if-eqz v7, :cond_8
 
-    .line 315
     const-string/jumbo v7, "nf_subtitles_render"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1031,7 +930,6 @@
 
     invoke-static {v7, v8}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 316
     const-string/jumbo v7, "nf_subtitles_render"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1098,79 +996,62 @@
 
     invoke-static {v7, v8}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 319
     :cond_8
     if-gez v1, :cond_9
 
-    .line 320
     const-string/jumbo v7, "nf_subtitles_render"
 
     const-string/jumbo v8, "Top was negative!"
 
     invoke-static {v7, v8}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 321
     sub-int/2addr v0, v1
 
-    .line 322
     const/4 v1, 0x0
 
-    .line 325
     :cond_9
     if-gez v0, :cond_12
 
-    .line 326
     const-string/jumbo v7, "nf_subtitles_render"
 
     const-string/jumbo v8, "Bottom was negative!"
 
     invoke-static {v7, v8}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 327
     add-int/2addr v1, v0
 
-    .line 328
     const/4 v0, 0x0
 
     move v7, v0
 
     move v8, v1
 
-    .line 331
     :goto_2
     if-gez v6, :cond_11
 
-    .line 332
     const-string/jumbo v0, "nf_subtitles_render"
 
     const-string/jumbo v1, "Left was negative!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 333
     sub-int v0, v5, v6
 
-    .line 334
     const/4 v1, 0x0
 
-    .line 337
     :goto_3
     if-gez v0, :cond_a
 
-    .line 338
     const-string/jumbo v5, "nf_subtitles_render"
 
     const-string/jumbo v6, "Right was negative!"
 
     invoke-static {v5, v6}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 339
     add-int/2addr v1, v0
 
-    .line 340
     const/4 v0, 0x0
 
-    .line 343
     :cond_a
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -1178,7 +1059,6 @@
 
     if-eqz v5, :cond_b
 
-    .line 344
     const-string/jumbo v5, "nf_subtitles_render"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1203,7 +1083,6 @@
 
     invoke-static {v5, v6}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 347
     :cond_b
     invoke-interface {v9}, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageDescriptor;->getLocalImagePath()Ljava/lang/String;
 
@@ -1213,10 +1092,8 @@
 
     move-result-object v5
 
-    .line 348
     if-nez v5, :cond_d
 
-    .line 349
     const-string/jumbo v0, "nf_subtitles_render"
 
     const-string/jumbo v1, "showSubtitleBlock:: NULL image for desc.getLocalImagePath()!"
@@ -1225,7 +1102,6 @@
 
     goto/16 :goto_0
 
-    .line 305
     :cond_c
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->getDisplayAreaMarginTop()I
 
@@ -1233,18 +1109,14 @@
 
     sub-int/2addr v7, v1
 
-    .line 307
     if-lez v7, :cond_7
 
-    .line 308
     add-int/2addr v1, v7
 
-    .line 309
     sub-int/2addr v0, v7
 
     goto/16 :goto_1
 
-    .line 352
     :cond_d
     const-string/jumbo v6, "nf_subtitles_render"
 
@@ -1319,17 +1191,14 @@
 
     invoke-static {v6, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 355
     if-eqz p2, :cond_e
 
-    .line 356
     new-instance v4, Lcom/netflix/mediaclient/util/ViewUtils$ViewComparator;
 
     invoke-direct {v4, v5}, Lcom/netflix/mediaclient/util/ViewUtils$ViewComparator;-><init>(Landroid/view/View;)V
 
     invoke-interface {p2, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 359
     :cond_e
     iget-object v4, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mVisibleBlocks:Ljava/util/Map;
 
@@ -1339,14 +1208,12 @@
 
     invoke-interface {v4, v6, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 361
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v4
 
     if-eqz v4, :cond_f
 
-    .line 362
     const-string/jumbo v4, "nf_subtitles_render"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1413,26 +1280,21 @@
 
     invoke-static {v4, v6}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 365
     :cond_f
     new-instance v4, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v4, v3, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 366
     invoke-virtual {v4, v1, v8, v0, v7}, Landroid/widget/RelativeLayout$LayoutParams;->setMargins(IIII)V
 
-    .line 367
     invoke-virtual {v5, v4}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 368
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mImageWrapper:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v5}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
     goto/16 :goto_0
 
-    .line 352
     :cond_10
     const/4 v4, 0x0
 
@@ -1465,21 +1327,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 209
     if-nez p1, :cond_0
 
-    .line 231
     :goto_0
     return-void
 
-    .line 213
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 214
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -1497,14 +1354,12 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/player/subtitles/SubtitleBlock;
 
-    .line 215
     check-cast v0, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageSubtitleBlock;
 
     invoke-direct {p0, v0, v1}, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->showSubtitleBlock(Lcom/netflix/mediaclient/service/player/subtitles/image/ImageSubtitleBlock;Ljava/util/List;)V
 
     goto :goto_1
 
-    .line 218
     :cond_1
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -1514,43 +1369,35 @@
 
     if-le v0, v2, :cond_2
 
-    .line 219
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->moveBlocksAppartIfNeeded(Ljava/util/List;)V
 
-    .line 223
     :goto_2
     invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->makeItVisible(Ljava/util/List;)V
 
-    .line 225
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mDisplayArea:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0}, Landroid/widget/RelativeLayout;->forceLayout()V
 
-    .line 226
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mDisplayArea:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0}, Landroid/widget/RelativeLayout;->requestLayout()V
 
-    .line 227
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mDisplayArea:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0}, Landroid/widget/RelativeLayout;->invalidate()V
 
-    .line 229
     const-string/jumbo v0, "nf_subtitles_render"
 
     const-string/jumbo v1, "Add displayed block to pending queue to be removed at end time"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 230
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->handleDelayedSubtitleBlocks(Ljava/util/List;Z)V
 
     goto :goto_0
 
-    .line 221
     :cond_2
     const-string/jumbo v0, "nf_subtitles_render"
 
@@ -1566,18 +1413,14 @@
 .method public canHandleSubtitleProfile(Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;)Z
     .locals 2
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 497
     if-nez p1, :cond_1
 
-    .line 505
     :cond_0
     :goto_0
     return v0
 
-    .line 501
     :cond_1
     sget-object v1, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->IMAGE:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
@@ -1587,7 +1430,6 @@
 
     if-ne p1, v1, :cond_0
 
-    .line 502
     :cond_2
     const/4 v0, 0x1
 
@@ -1597,20 +1439,16 @@
 .method public clear()V
     .locals 2
 
-    .prologue
-    .line 96
     const-string/jumbo v0, "nf_subtitles_render"
 
     const-string/jumbo v1, "Clear."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 97
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->removeAll(Z)V
 
-    .line 98
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mImageWrapper:Landroid/widget/RelativeLayout;
 
     if-eqz v0, :cond_0
@@ -1619,14 +1457,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 99
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mDisplayArea:Landroid/widget/RelativeLayout;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mImageWrapper:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->removeView(Landroid/view/View;)V
 
-    .line 101
     :cond_0
     return-void
 .end method
@@ -1634,44 +1470,34 @@
 .method public clearPendingUpdates()V
     .locals 2
 
-    .prologue
-    .line 108
     const-string/jumbo v0, "nf_subtitles_render"
 
     const-string/jumbo v1, "Clear pending updates:: NOOP."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     return-void
 .end method
 
 .method protected createRunnable(Lcom/netflix/mediaclient/service/player/subtitles/SubtitleBlock;Z)Ljava/lang/Runnable;
     .locals 2
 
-    .prologue
-    .line 429
     check-cast p1, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageSubtitleBlock;
 
-    .line 430
     new-instance v0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager$2;
 
     invoke-direct {v0, p0, p2, p1}, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager$2;-><init>(Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;ZLcom/netflix/mediaclient/service/player/subtitles/image/ImageSubtitleBlock;)V
 
-    .line 452
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mPendingActions:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 453
     return-object v0
 .end method
 
 .method public bridge synthetic getContext()Lcom/netflix/mediaclient/android/activity/NetflixActivity;
     .locals 1
 
-    .prologue
-    .line 35
     invoke-super {p0}, Lcom/netflix/mediaclient/ui/player/subtitles/BaseSubtitleManager;->getContext()Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     move-result-object v0
@@ -1682,8 +1508,6 @@
 .method public getSubtitleProfile()Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
     .locals 1
 
-    .prologue
-    .line 491
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->IMAGE:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
     return-object v0
@@ -1692,8 +1516,6 @@
 .method public declared-synchronized onPlayerOverlayVisibiltyChange(Z)V
     .locals 3
 
-    .prologue
-    .line 476
     monitor-enter p0
 
     :try_start_0
@@ -1703,7 +1525,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 477
     const-string/jumbo v0, "nf_subtitles_render"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1726,29 +1547,24 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 480
     :cond_0
     iput-boolean p1, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mPlayerControlsVisible:Z
 
-    .line 482
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mDisplayArea:Landroid/widget/RelativeLayout;
 
     if-eqz v0, :cond_1
 
-    .line 483
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->removeVisibleSubtitleBlocks(Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 487
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 485
     :cond_1
     :try_start_1
     const-string/jumbo v0, "nf_subtitles_render"
@@ -1761,7 +1577,6 @@
 
     goto :goto_0
 
-    .line 476
     :catchall_0
     move-exception v0
 
@@ -1773,30 +1588,24 @@
 .method public onSubtitleChange(Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;)V
     .locals 4
 
-    .prologue
-    .line 149
     const-string/jumbo v0, "nf_subtitles_render"
 
     const-string/jumbo v1, "ImageBasedSubtitleManager:: update subtitle data"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 151
     if-nez p1, :cond_1
 
-    .line 152
     const-string/jumbo v0, "nf_subtitles_render"
 
     const-string/jumbo v1, "Subtitle data is null. This should never happen!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
     :cond_0
     :goto_0
     return-void
 
-    .line 156
     :cond_1
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;->getParser()Lcom/netflix/mediaclient/service/player/subtitles/SubtitleParser;
 
@@ -1804,7 +1613,6 @@
 
     if-nez v0, :cond_2
 
-    .line 157
     const-string/jumbo v0, "nf_subtitles_render"
 
     const-string/jumbo v1, "Subtitle parser is null. This should never happen!"
@@ -1813,7 +1621,6 @@
 
     goto :goto_0
 
-    .line 162
     :cond_2
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;->getParser()Lcom/netflix/mediaclient/service/player/subtitles/SubtitleParser;
 
@@ -1823,26 +1630,22 @@
 
     if-eqz v0, :cond_5
 
-    .line 163
     const-string/jumbo v0, "nf_subtitles_render"
 
     const-string/jumbo v1, "Parser is as expected..."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 172
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;->getParser()Lcom/netflix/mediaclient/service/player/subtitles/SubtitleParser;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mParser:Lcom/netflix/mediaclient/service/player/subtitles/SubtitleParser;
 
-    .line 174
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->removeAll(Z)V
 
-    .line 176
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;->getParser()Lcom/netflix/mediaclient/service/player/subtitles/SubtitleParser;
 
     move-result-object v0
@@ -1851,7 +1654,6 @@
 
     move-result v0
 
-    .line 177
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mSubtitleParserId:Ljava/lang/Integer;
 
     if-eqz v1, :cond_6
@@ -1864,14 +1666,12 @@
 
     if-ne v1, v0, :cond_6
 
-    .line 178
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 179
     const-string/jumbo v0, "nf_subtitles_render"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1896,29 +1696,24 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 189
     :cond_3
     :goto_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mParser:Lcom/netflix/mediaclient/service/player/subtitles/SubtitleParser;
 
     check-cast v0, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageSubtitleMetadata;
 
-    .line 190
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mMeasureTranslator:Lcom/netflix/mediaclient/ui/player/subtitles/MeasureTranslator;
 
     if-nez v1, :cond_4
 
-    .line 191
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageSubtitleMetadata;->getRootContainerExtentX()S
 
     move-result v1
 
-    .line 192
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/player/subtitles/image/ImageSubtitleMetadata;->getRootContainerExtentY()S
 
     move-result v0
 
-    .line 193
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mDisplayArea:Landroid/widget/RelativeLayout;
 
     invoke-static {v1, v0, v2}, Lcom/netflix/mediaclient/ui/player/subtitles/MeasureTranslator;->createMeasureTranslator(IILandroid/view/View;)Lcom/netflix/mediaclient/ui/player/subtitles/MeasureTranslator;
@@ -1927,14 +1722,12 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mMeasureTranslator:Lcom/netflix/mediaclient/ui/player/subtitles/MeasureTranslator;
 
-    .line 194
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 195
     const-string/jumbo v0, "nf_subtitles_render"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1959,7 +1752,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 198
     :cond_4
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;->getDisplayNowBlocks()Ljava/util/List;
 
@@ -1967,7 +1759,6 @@
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->showSubtitleBlocks(Ljava/util/List;)V
 
-    .line 199
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;->getDisplayLaterBlocks()Ljava/util/List;
 
     move-result-object v0
@@ -1978,7 +1769,6 @@
 
     goto/16 :goto_0
 
-    .line 165
     :cond_5
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -1986,7 +1776,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 166
     const-string/jumbo v0, "nf_subtitles_render"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2015,7 +1804,6 @@
 
     goto/16 :goto_0
 
-    .line 182
     :cond_6
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -2023,7 +1811,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 183
     const-string/jumbo v1, "nf_subtitles_render"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2064,7 +1851,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 185
     :cond_7
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2072,7 +1858,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mSubtitleParserId:Ljava/lang/Integer;
 
-    .line 186
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mMeasureTranslator:Lcom/netflix/mediaclient/ui/player/subtitles/MeasureTranslator;
@@ -2083,39 +1868,31 @@
 .method public onSubtitleRemove()V
     .locals 2
 
-    .prologue
-    .line 70
     const-string/jumbo v0, "nf_subtitles_render"
 
     const-string/jumbo v1, "Remove all subtitles."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->removeAll(Z)V
 
-    .line 72
     return-void
 .end method
 
 .method protected declared-synchronized removeVisibleSubtitleBlocks(Z)V
     .locals 3
 
-    .prologue
-    .line 118
     monitor-enter p0
 
     if-eqz p1, :cond_1
 
-    .line 119
     :try_start_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mImageWrapper:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0}, Landroid/widget/RelativeLayout;->removeAllViews()V
 
-    .line 124
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mVisibleBlocks:Ljava/util/Map;
 
@@ -2141,10 +1918,8 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 127
     if-eqz v0, :cond_0
 
-    .line 128
     const/4 v2, 0x4
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
@@ -2153,7 +1928,6 @@
 
     goto :goto_1
 
-    .line 118
     :catchall_0
     move-exception v0
 
@@ -2161,7 +1935,6 @@
 
     throw v0
 
-    .line 121
     :cond_1
     :try_start_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mImageWrapper:Landroid/widget/RelativeLayout;
@@ -2170,7 +1943,6 @@
 
     goto :goto_0
 
-    .line 131
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mVisibleBlocks:Ljava/util/Map;
 
@@ -2178,7 +1950,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 132
     monitor-exit p0
 
     return-void
@@ -2187,15 +1958,12 @@
 .method public setSubtitleVisibility(Z)V
     .locals 3
 
-    .prologue
-    .line 79
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 80
     const-string/jumbo v0, "nf_subtitles_render"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2218,7 +1986,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 83
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mHandler:Landroid/os/Handler;
 
@@ -2228,6 +1995,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 89
     return-void
 .end method

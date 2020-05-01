@@ -15,8 +15,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/offline/OfflineErrorDialog$6;Lcom/netflix/mediaclient/android/activity/NetflixActivity;Ljava/lang/Runnable;)V
     .locals 0
 
-    .prologue
-    .line 178
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineErrorDialog$6$2;->this$1:Lcom/netflix/mediaclient/ui/offline/OfflineErrorDialog$6;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/offline/OfflineErrorDialog$6$2;->val$netflixActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -33,8 +31,6 @@
 .method public onAutoLoginTokenCreated(Ljava/lang/String;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 4
 
-    .prologue
-    .line 181
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineErrorDialog$6$2;->val$netflixActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/AndroidUtils;->isActivityFinishedOrDestroyed(Landroid/content/Context;)Z
@@ -49,7 +45,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 182
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineErrorDialog$6$2;->val$netflixActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getHandler()Landroid/os/Handler;
@@ -60,7 +55,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 183
     const-string/jumbo v0, "https://www.netflix.com/changeplan"
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/ui/home/AccountHandler;->createLink(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -71,7 +65,6 @@
 
     move-result-object v0
 
-    .line 184
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineErrorDialog$6$2;->val$netflixActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     new-instance v2, Landroid/content/Intent;
@@ -86,7 +79,6 @@
 
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 186
     :cond_0
     return-void
 .end method

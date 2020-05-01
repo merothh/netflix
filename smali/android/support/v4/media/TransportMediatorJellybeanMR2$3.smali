@@ -11,8 +11,6 @@
 .method constructor <init>(Landroid/support/v4/media/TransportMediatorJellybeanMR2;)V
     .locals 0
 
-    .prologue
-    .line 58
     iput-object p1, p0, Landroid/support/v4/media/TransportMediatorJellybeanMR2$3;->this$0:Landroid/support/v4/media/TransportMediatorJellybeanMR2;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,8 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .prologue
-    .line 62
     :try_start_0
     const-string/jumbo v0, "android.intent.extra.KEY_EVENT"
 
@@ -36,7 +32,6 @@
 
     check-cast v0, Landroid/view/KeyEvent;
 
-    .line 63
     iget-object v1, p0, Landroid/support/v4/media/TransportMediatorJellybeanMR2$3;->this$0:Landroid/support/v4/media/TransportMediatorJellybeanMR2;
 
     iget-object v1, v1, Landroid/support/v4/media/TransportMediatorJellybeanMR2;->mTransportCallback:Landroid/support/v4/media/TransportMediatorCallback;
@@ -45,15 +40,12 @@
     :try_end_0
     .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 67
     :goto_0
     return-void
 
-    .line 64
     :catch_0
     move-exception v0
 
-    .line 65
     const-string/jumbo v1, "TransportController"
 
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I

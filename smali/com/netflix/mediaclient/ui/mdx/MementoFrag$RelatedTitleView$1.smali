@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView;Landroid/widget/TextView;)V
     .locals 0
 
-    .prologue
-    .line 678
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView$1;->this$1:Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView$1;->val$moreInfo:Landroid/widget/TextView;
@@ -32,8 +30,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 4
 
-    .prologue
-    .line 681
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView$1;->this$1:Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
@@ -50,10 +46,8 @@
 
     check-cast v0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
-    .line 682
     if-eqz v0, :cond_1
 
-    .line 683
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView$1;->this$1:Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView;
 
     iget-object v1, v1, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
@@ -64,7 +58,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 684
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView$1;->this$1:Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView;
 
     iget-object v1, v1, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
@@ -77,7 +70,6 @@
 
     invoke-virtual {v1, v2}, Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;->showLoadingView(Z)V
 
-    .line 687
     :cond_0
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView$1;->val$moreInfo:Landroid/widget/TextView;
 
@@ -101,7 +93,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->fetchRelatedCollection(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 690
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView$1;->this$1:Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
@@ -112,7 +103,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 691
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView$1;->this$1:Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
@@ -139,7 +129,6 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/netflix/mediaclient/util/log/UIViewLogUtils;->reportUIViewCommand(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;Lcom/netflix/mediaclient/service/logging/client/model/DataContext;)V
 
-    .line 694
     :cond_1
     return-void
 .end method

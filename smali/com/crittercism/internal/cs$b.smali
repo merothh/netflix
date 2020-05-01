@@ -9,8 +9,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,12 +19,9 @@
 .method public final synthetic a(Lcom/crittercism/internal/ar;)Lcom/crittercism/internal/cw;
     .locals 1
 
-    .prologue
-    .line 1065
     new-instance v0, Lcom/crittercism/internal/cs;
 
     invoke-direct {v0}, Lcom/crittercism/internal/cs;-><init>()V
 
-    .line 62
     return-object v0
 .end method

@@ -17,8 +17,6 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel;)V
     .locals 0
 
-    .prologue
-    .line 250
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongResultString;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -31,8 +29,6 @@
 .method public getBattleAgain()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 264
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongResultString;->battleAgain:Ljava/lang/String;
 
     return-object v0
@@ -41,8 +37,6 @@
 .method public getBattleOptInHeader()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 260
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongResultString;->battleOptInHeader:Ljava/lang/String;
 
     return-object v0
@@ -51,8 +45,6 @@
 .method public getResultHeader()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 256
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongResultString;->resultHeader:Ljava/lang/String;
 
     return-object v0
@@ -61,10 +53,8 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
     const/16 v2, 0x27
 
-    .line 269
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

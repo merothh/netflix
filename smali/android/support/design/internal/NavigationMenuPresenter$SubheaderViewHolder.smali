@@ -7,8 +7,6 @@
 .method public constructor <init>(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)V
     .locals 2
 
-    .prologue
-    .line 297
     sget v0, Landroid/support/design/R$layout;->design_navigation_item_subheader:I
 
     const/4 v1, 0x0
@@ -19,6 +17,5 @@
 
     invoke-direct {p0, v0}, Landroid/support/design/internal/NavigationMenuPresenter$ViewHolder;-><init>(Landroid/view/View;)V
 
-    .line 298
     return-void
 .end method

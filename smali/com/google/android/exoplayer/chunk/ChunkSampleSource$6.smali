@@ -20,8 +20,6 @@
 .method constructor <init>(Lcom/google/android/exoplayer/chunk/ChunkSampleSource;Lcom/google/android/exoplayer/chunk/Format;IJ)V
     .locals 0
 
-    .prologue
-    .line 684
     iput-object p1, p0, Lcom/google/android/exoplayer/chunk/ChunkSampleSource$6;->this$0:Lcom/google/android/exoplayer/chunk/ChunkSampleSource;
 
     iput-object p2, p0, Lcom/google/android/exoplayer/chunk/ChunkSampleSource$6;->val$format:Lcom/google/android/exoplayer/chunk/Format;
@@ -40,8 +38,6 @@
 .method public run()V
     .locals 8
 
-    .prologue
-    .line 687
     iget-object v0, p0, Lcom/google/android/exoplayer/chunk/ChunkSampleSource$6;->this$0:Lcom/google/android/exoplayer/chunk/ChunkSampleSource;
 
     invoke-static {v0}, Lcom/google/android/exoplayer/chunk/ChunkSampleSource;->access$100(Lcom/google/android/exoplayer/chunk/ChunkSampleSource;)Lcom/google/android/exoplayer/chunk/ChunkSampleSource$EventListener;
@@ -62,14 +58,11 @@
 
     iget-wide v6, p0, Lcom/google/android/exoplayer/chunk/ChunkSampleSource$6;->val$positionUs:J
 
-    .line 688
     invoke-virtual {v4, v6, v7}, Lcom/google/android/exoplayer/chunk/ChunkSampleSource;->usToMs(J)J
 
     move-result-wide v4
 
-    .line 687
     invoke-interface/range {v0 .. v5}, Lcom/google/android/exoplayer/chunk/ChunkSampleSource$EventListener;->onDownstreamFormatChanged(ILcom/google/android/exoplayer/chunk/Format;IJ)V
 
-    .line 689
     return-void
 .end method

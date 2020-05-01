@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;ZLcom/netflix/mediaclient/service/player/subtitles/image/ImageSubtitleBlock;)V
     .locals 0
 
-    .prologue
-    .line 430
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager$2;->this$0:Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;
 
     iput-boolean p2, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager$2;->val$show:Z
@@ -36,8 +34,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 433
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager$2;->this$0:Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->mPendingActions:Ljava/util/List;
@@ -46,14 +42,12 @@
 
     move-result v0
 
-    .line 434
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 435
     const-string/jumbo v1, "nf_subtitles_render"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -94,7 +88,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 436
     const-string/jumbo v1, "nf_subtitles_render"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -117,26 +110,22 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 440
     :cond_0
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager$2;->this$0:Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;
 
     monitor-enter v1
 
-    .line 441
     :try_start_0
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager$2;->val$show:Z
 
     if-eqz v0, :cond_1
 
-    .line 442
     const-string/jumbo v0, "nf_subtitles_render"
 
     const-string/jumbo v2, "===> showSubtitleBlock was called from pending queue!!"
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 443
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager$2;->this$0:Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager$2;->val$block:Lcom/netflix/mediaclient/service/player/subtitles/image/ImageSubtitleBlock;
@@ -145,14 +134,11 @@
 
     invoke-static {v0, v2, v3}, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;->access$100(Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;Lcom/netflix/mediaclient/service/player/subtitles/image/ImageSubtitleBlock;Ljava/util/List;)V
 
-    .line 448
     :goto_0
     monitor-exit v1
 
-    .line 449
     return-void
 
-    .line 445
     :cond_1
     const-string/jumbo v0, "nf_subtitles_render"
 
@@ -160,7 +146,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 446
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager$2;->this$0:Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/player/subtitles/ImageBasedSubtitleManager$2;->val$block:Lcom/netflix/mediaclient/service/player/subtitles/image/ImageSubtitleBlock;
@@ -169,7 +154,6 @@
 
     goto :goto_0
 
-    .line 448
     :catchall_0
     move-exception v0
 

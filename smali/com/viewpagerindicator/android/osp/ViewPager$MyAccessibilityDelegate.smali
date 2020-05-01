@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/viewpagerindicator/android/osp/ViewPager;)V
     .locals 0
 
-    .prologue
-    .line 2749
     iput-object p1, p0, Lcom/viewpagerindicator/android/osp/ViewPager$MyAccessibilityDelegate;->this$0:Lcom/viewpagerindicator/android/osp/ViewPager;
 
     invoke-direct {p0}, Landroid/support/v4/view/AccessibilityDelegateCompat;-><init>()V
@@ -25,11 +23,8 @@
 .method public onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
     .locals 1
 
-    .prologue
-    .line 2753
     invoke-super {p0, p1, p2}, Landroid/support/v4/view/AccessibilityDelegateCompat;->onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 2754
     const-class v0, Lcom/viewpagerindicator/android/osp/ViewPager;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -38,20 +33,16 @@
 
     invoke-virtual {p2, v0}, Landroid/view/accessibility/AccessibilityEvent;->setClassName(Ljava/lang/CharSequence;)V
 
-    .line 2755
     return-void
 .end method
 
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;)V
     .locals 2
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 2759
     invoke-super {p0, p1, p2}, Landroid/support/v4/view/AccessibilityDelegateCompat;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;)V
 
-    .line 2760
     const-class v1, Lcom/viewpagerindicator/android/osp/ViewPager;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -60,7 +51,6 @@
 
     invoke-virtual {p2, v1}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->setClassName(Ljava/lang/CharSequence;)V
 
-    .line 2761
     iget-object v1, p0, Lcom/viewpagerindicator/android/osp/ViewPager$MyAccessibilityDelegate;->this$0:Lcom/viewpagerindicator/android/osp/ViewPager;
 
     invoke-static {v1}, Lcom/viewpagerindicator/android/osp/ViewPager;->access$200(Lcom/viewpagerindicator/android/osp/ViewPager;)Landroid/support/v4/view/PagerAdapter;
@@ -84,7 +74,6 @@
     :goto_0
     invoke-virtual {p2, v0}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->setScrollable(Z)V
 
-    .line 2762
     iget-object v0, p0, Lcom/viewpagerindicator/android/osp/ViewPager$MyAccessibilityDelegate;->this$0:Lcom/viewpagerindicator/android/osp/ViewPager;
 
     invoke-static {v0}, Lcom/viewpagerindicator/android/osp/ViewPager;->access$200(Lcom/viewpagerindicator/android/osp/ViewPager;)Landroid/support/v4/view/PagerAdapter;
@@ -121,12 +110,10 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 2763
     const/16 v0, 0x1000
 
     invoke-virtual {p2, v0}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->addAction(I)V
 
-    .line 2765
     :cond_0
     iget-object v0, p0, Lcom/viewpagerindicator/android/osp/ViewPager$MyAccessibilityDelegate;->this$0:Lcom/viewpagerindicator/android/osp/ViewPager;
 
@@ -162,16 +149,13 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 2766
     const/16 v0, 0x2000
 
     invoke-virtual {p2, v0}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->addAction(I)V
 
-    .line 2768
     :cond_1
     return-void
 
-    .line 2761
     :cond_2
     const/4 v0, 0x0
 
@@ -181,32 +165,26 @@
 .method public performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 2772
     invoke-super {p0, p1, p2, p3}, Landroid/support/v4/view/AccessibilityDelegateCompat;->performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 2789
     :goto_0
     return v0
 
-    .line 2775
     :cond_0
     sparse-switch p2, :sswitch_data_0
 
     move v0, v1
 
-    .line 2789
     goto :goto_0
 
-    .line 2777
     :sswitch_0
     iget-object v2, p0, Lcom/viewpagerindicator/android/osp/ViewPager$MyAccessibilityDelegate;->this$0:Lcom/viewpagerindicator/android/osp/ViewPager;
 
@@ -244,7 +222,6 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 2778
     iget-object v1, p0, Lcom/viewpagerindicator/android/osp/ViewPager$MyAccessibilityDelegate;->this$0:Lcom/viewpagerindicator/android/osp/ViewPager;
 
     iget-object v2, p0, Lcom/viewpagerindicator/android/osp/ViewPager$MyAccessibilityDelegate;->this$0:Lcom/viewpagerindicator/android/osp/ViewPager;
@@ -262,10 +239,8 @@
     :cond_1
     move v0, v1
 
-    .line 2781
     goto :goto_0
 
-    .line 2783
     :sswitch_1
     iget-object v2, p0, Lcom/viewpagerindicator/android/osp/ViewPager$MyAccessibilityDelegate;->this$0:Lcom/viewpagerindicator/android/osp/ViewPager;
 
@@ -301,7 +276,6 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 2784
     iget-object v1, p0, Lcom/viewpagerindicator/android/osp/ViewPager$MyAccessibilityDelegate;->this$0:Lcom/viewpagerindicator/android/osp/ViewPager;
 
     iget-object v2, p0, Lcom/viewpagerindicator/android/osp/ViewPager$MyAccessibilityDelegate;->this$0:Lcom/viewpagerindicator/android/osp/ViewPager;
@@ -319,10 +293,8 @@
     :cond_2
     move v0, v1
 
-    .line 2787
     goto :goto_0
 
-    .line 2775
     :sswitch_data_0
     .sparse-switch
         0x1000 -> :sswitch_0

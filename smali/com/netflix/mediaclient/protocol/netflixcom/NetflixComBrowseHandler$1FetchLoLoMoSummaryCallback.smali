@@ -20,8 +20,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 81
     iput-object p1, p0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComBrowseHandler$1FetchLoLoMoSummaryCallback;->this$0:Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComBrowseHandler;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComBrowseHandler$1FetchLoLoMoSummaryCallback;->val$activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -38,17 +36,14 @@
 .method public onLoLoMoSummaryFetched(Lcom/netflix/mediaclient/servicemgr/interface_/LoLoMo;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 11
 
-    .prologue
     const/4 v2, -0x1
 
-    .line 84
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 85
     iget-object v10, p0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComBrowseHandler$1FetchLoLoMoSummaryCallback;->val$activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;
@@ -59,7 +54,6 @@
 
     const-string/jumbo v4, ""
 
-    .line 86
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/LoLoMo;->getTitle()Ljava/lang/String;
 
     move-result-object v5
@@ -78,7 +72,6 @@
 
     move-result-object v3
 
-    .line 87
     invoke-virtual {v3}, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->toString()Ljava/lang/String;
 
     move-result-object v9
@@ -87,25 +80,20 @@
 
     invoke-direct/range {v0 .. v9}, Lcom/netflix/mediaclient/service/webclient/model/leafs/ListOfGenreSummary;-><init>(IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
 
-    .line 85
     invoke-static {v10, v0}, Lcom/netflix/mediaclient/ui/home/HomeActivity;->showGenreList(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/genre/GenreList;)V
 
-    .line 92
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComBrowseHandler$1FetchLoLoMoSummaryCallback;->val$activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/NflxProtocolUtils;->reportDelayedResponseHandled(Landroid/app/Activity;)V
 
-    .line 93
     return-void
 
-    .line 89
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComBrowseHandler$1FetchLoLoMoSummaryCallback;->val$activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComUtils;->startHomeActivity(Lcom/netflix/mediaclient/android/activity/NetflixActivity;)V
 
-    .line 90
     const-string/jumbo v0, "NetflixComBrowseHandler"
 
     const-string/jumbo v1, "Couldn\'t fetch genre details, launching HomeActivity"

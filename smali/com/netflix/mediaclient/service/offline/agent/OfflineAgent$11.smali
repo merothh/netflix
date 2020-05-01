@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 884
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$11;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$11;->val$playableId:Ljava/lang/String;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 887
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$11;->val$playableId:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$11;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
@@ -46,10 +42,8 @@
 
     move-result-object v0
 
-    .line 888
     if-eqz v0, :cond_0
 
-    .line 889
     sget-object v1, Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$OfflineRefreshInvoke;->USER:Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$OfflineRefreshInvoke;
 
     new-instance v2, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$11$1;
@@ -58,7 +52,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable;->refreshLicenseIfNeeded(Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$OfflineRefreshInvoke;Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface$PlayableRefreshLicenseCallBack;)V
 
-    .line 898
     :cond_0
     return-void
 .end method

@@ -18,11 +18,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 20
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/protocol/nflx/ViewDetailsActionHandler;-><init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Ljava/util/Map;)V
 
-    .line 21
     return-void
 .end method
 
@@ -31,8 +28,6 @@
 .method protected getAction()Lcom/netflix/mediaclient/ui/details/DetailsActivity$Action;
     .locals 1
 
-    .prologue
-    .line 29
     sget-object v0, Lcom/netflix/mediaclient/ui/details/DetailsActivity$Action;->AddToMyList:Lcom/netflix/mediaclient/ui/details/DetailsActivity$Action;
 
     return-object v0
@@ -41,8 +36,6 @@
 .method protected getActionToken()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 38
     iget-object v0, p0, Lcom/netflix/mediaclient/protocol/nflx/AddToMyListActionHandler;->mParamsMap:Ljava/util/Map;
 
     const-string/jumbo v1, "msg_token"

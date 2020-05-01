@@ -11,26 +11,21 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 129
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0xb
 
     if-lt v0, v1, :cond_0
 
-    .line 130
     new-instance v0, Landroid/support/v4/view/KeyEventCompat$HoneycombKeyEventVersionImpl;
 
     invoke-direct {v0}, Landroid/support/v4/view/KeyEventCompat$HoneycombKeyEventVersionImpl;-><init>()V
 
     sput-object v0, Landroid/support/v4/view/KeyEventCompat;->IMPL:Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;
 
-    .line 134
     :goto_0
     return-void
 
-    .line 132
     :cond_0
     new-instance v0, Landroid/support/v4/view/KeyEventCompat$BaseKeyEventVersionImpl;
 
@@ -44,8 +39,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 200
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -56,8 +49,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 193
     check-cast p2, Landroid/view/KeyEvent$DispatcherState;
 
     invoke-virtual {p0, p1, p2, p3}, Landroid/view/KeyEvent;->dispatch(Landroid/view/KeyEvent$Callback;Landroid/view/KeyEvent$DispatcherState;Ljava/lang/Object;)Z
@@ -72,8 +63,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 182
     invoke-virtual {p0}, Landroid/view/View;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
 
     move-result-object v0
@@ -84,8 +73,6 @@
 .method public static hasModifiers(Landroid/view/KeyEvent;I)Z
     .locals 2
 
-    .prologue
-    .line 151
     sget-object v0, Landroid/support/v4/view/KeyEventCompat;->IMPL:Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;
 
     invoke-virtual {p0}, Landroid/view/KeyEvent;->getMetaState()I
@@ -102,8 +89,6 @@
 .method public static hasNoModifiers(Landroid/view/KeyEvent;)Z
     .locals 2
 
-    .prologue
-    .line 155
     sget-object v0, Landroid/support/v4/view/KeyEventCompat;->IMPL:Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;
 
     invoke-virtual {p0}, Landroid/view/KeyEvent;->getMetaState()I
@@ -120,8 +105,6 @@
 .method public static isCtrlPressed(Landroid/view/KeyEvent;)Z
     .locals 1
 
-    .prologue
-    .line 197
     sget-object v0, Landroid/support/v4/view/KeyEventCompat;->IMPL:Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;->isCtrlPressed(Landroid/view/KeyEvent;)Z
@@ -136,8 +119,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 173
     invoke-virtual {p0}, Landroid/view/KeyEvent;->isTracking()Z
 
     move-result v0
@@ -148,8 +129,6 @@
 .method public static metaStateHasModifiers(II)Z
     .locals 1
 
-    .prologue
-    .line 143
     sget-object v0, Landroid/support/v4/view/KeyEventCompat;->IMPL:Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;->metaStateHasModifiers(II)Z
@@ -162,8 +141,6 @@
 .method public static metaStateHasNoModifiers(I)Z
     .locals 1
 
-    .prologue
-    .line 147
     sget-object v0, Landroid/support/v4/view/KeyEventCompat;->IMPL:Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;->metaStateHasNoModifiers(I)Z
@@ -176,8 +153,6 @@
 .method public static normalizeMetaState(I)I
     .locals 1
 
-    .prologue
-    .line 139
     sget-object v0, Landroid/support/v4/view/KeyEventCompat;->IMPL:Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;->normalizeMetaState(I)I
@@ -192,10 +167,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 164
     invoke-virtual {p0}, Landroid/view/KeyEvent;->startTracking()V
 
-    .line 165
     return-void
 .end method

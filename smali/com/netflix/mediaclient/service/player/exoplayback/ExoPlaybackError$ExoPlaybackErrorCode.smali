@@ -48,7 +48,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -59,7 +58,6 @@
 
     const/4 v4, 0x0
 
-    .line 11
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
     const-string/jumbo v1, "NO_ERROR"
@@ -68,7 +66,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;->NO_ERROR:Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
-    .line 12
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
     const-string/jumbo v1, "AUDIO_LOAD_ERROR"
@@ -77,7 +74,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;->AUDIO_LOAD_ERROR:Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
-    .line 13
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
     const-string/jumbo v1, "VIDEO_LOAD_ERROR"
@@ -86,7 +82,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;->VIDEO_LOAD_ERROR:Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
-    .line 14
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
     const-string/jumbo v1, "AUDIOTRACK_INIT_ERROR"
@@ -95,7 +90,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;->AUDIOTRACK_INIT_ERROR:Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
-    .line 15
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
     const-string/jumbo v1, "AUDIOTRACK_WRITE_ERROR"
@@ -104,7 +98,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;->AUDIOTRACK_WRITE_ERROR:Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
-    .line 16
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
     const-string/jumbo v1, "DECODER_INIT_ERROR"
@@ -117,7 +110,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;->DECODER_INIT_ERROR:Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
-    .line 17
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
     const-string/jumbo v1, "CRYPTO_ERROR"
@@ -130,7 +122,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;->CRYPTO_ERROR:Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
-    .line 18
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
     const-string/jumbo v1, "PLAYER_ERROR"
@@ -143,7 +134,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;->PLAYER_ERROR:Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
-    .line 19
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
     const-string/jumbo v1, "SESSION_INIT_ERROR"
@@ -156,7 +146,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;->SESSION_INIT_ERROR:Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
-    .line 20
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
     const-string/jumbo v1, "MANIFEST_FAILURE"
@@ -169,7 +158,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;->MANIFEST_FAILURE:Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
-    .line 21
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
     const-string/jumbo v1, "MPD_ERROR"
@@ -182,7 +170,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;->MPD_ERROR:Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
-    .line 10
     const/16 v0, 0xb
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
@@ -256,22 +243,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 24
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 25
     iput p3, p0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;->value:I
 
-    .line 26
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
     .locals 1
 
-    .prologue
-    .line 10
     const-class v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -286,8 +267,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
     .locals 1
 
-    .prologue
-    .line 10
     sget-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;->$VALUES:[Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;->clone()Ljava/lang/Object;
@@ -304,8 +283,6 @@
 .method getValue()I
     .locals 1
 
-    .prologue
-    .line 29
     iget v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;->value:I
 
     return v0

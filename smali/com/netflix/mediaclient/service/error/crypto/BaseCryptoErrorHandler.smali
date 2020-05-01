@@ -14,8 +14,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 18
     const-string/jumbo v0, "nf_crypto_error_handler"
 
     sput-object v0, Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler;->TAG:Ljava/lang/String;
@@ -26,8 +24,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,8 +34,6 @@
 .method protected getErrorMessageForFatalError()I
     .locals 3
 
-    .prologue
-    .line 71
     sget-object v0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;->INSTANCE:Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler;->getErrorSource()Lcom/netflix/mediaclient/service/error/crypto/ErrorSource;
@@ -63,13 +57,10 @@
 .method getForceStopTask(Landroid/content/Context;)Ljava/lang/Runnable;
     .locals 2
 
-    .prologue
-    .line 38
     new-instance v0, Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler$1;
 
     invoke-direct {v0, p0, p1}, Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler$1;-><init>(Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler;Landroid/content/Context;)V
 
-    .line 45
     new-instance v1, Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler$2;
 
     invoke-direct {v1, p0, v0, p1}, Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler$2;-><init>(Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler;Ljava/lang/Runnable;Landroid/content/Context;)V
@@ -83,8 +74,6 @@
 .method protected handleKillApp(Landroid/content/Context;Ljava/lang/Throwable;)Lcom/netflix/mediaclient/service/error/ErrorDescriptor;
     .locals 4
 
-    .prologue
-    .line 90
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler;->getStatusCode()Lcom/netflix/mediaclient/StatusCode;
 
     move-result-object v0
@@ -95,7 +84,6 @@
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler;->logHandledException(Ljava/lang/String;)V
 
-    .line 91
     new-instance v0, Lcom/netflix/mediaclient/service/configuration/crypto/WidevineErrorDescriptor;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler;->getStatusCode()Lcom/netflix/mediaclient/StatusCode;
@@ -118,8 +106,6 @@
 .method protected handleLogoutUserAndKillApp(Landroid/content/Context;Ljava/lang/Throwable;)Lcom/netflix/mediaclient/service/error/ErrorDescriptor;
     .locals 4
 
-    .prologue
-    .line 79
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler;->getStatusCode()Lcom/netflix/mediaclient/StatusCode;
 
     move-result-object v0
@@ -130,7 +116,6 @@
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler;->logHandledException(Ljava/lang/String;)V
 
-    .line 80
     sget-object v0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;->INSTANCE:Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;->getUserAgent()Lcom/netflix/mediaclient/service/ServiceAgent$UserAgentInterface;
@@ -139,7 +124,6 @@
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/ServiceAgent$UserAgentInterface;->logoutUser()V
 
-    .line 82
     new-instance v0, Lcom/netflix/mediaclient/service/configuration/crypto/WidevineErrorDescriptor;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler;->getStatusCode()Lcom/netflix/mediaclient/StatusCode;
@@ -162,8 +146,6 @@
 .method protected logHandledException(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 66
     sget-object v0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;->INSTANCE:Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;->getErrorLogger()Lcom/netflix/mediaclient/servicemgr/ErrorLogging;
@@ -172,15 +154,12 @@
 
     invoke-interface {v0, p1}, Lcom/netflix/mediaclient/servicemgr/ErrorLogging;->logHandledException(Ljava/lang/String;)V
 
-    .line 67
     return-void
 .end method
 
 .method protected logHandledException(Ljava/lang/Throwable;)V
     .locals 2
 
-    .prologue
-    .line 61
     sget-object v0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;->INSTANCE:Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;->getErrorLogger()Lcom/netflix/mediaclient/servicemgr/ErrorLogging;
@@ -197,6 +176,5 @@
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/servicemgr/ErrorLogging;->logHandledException(Ljava/lang/String;)V
 
-    .line 62
     return-void
 .end method

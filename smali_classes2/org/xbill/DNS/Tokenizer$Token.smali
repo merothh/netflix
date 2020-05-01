@@ -13,29 +13,22 @@
 .method private constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 76
     const/4 v0, -0x1
 
     iput v0, p0, Lorg/xbill/DNS/Tokenizer$Token;->type:I
 
-    .line 77
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/xbill/DNS/Tokenizer$Token;->value:Ljava/lang/String;
 
-    .line 78
     return-void
 .end method
 
 .method synthetic constructor <init>(Lorg/xbill/DNS/Tokenizer$1;)V
     .locals 0
 
-    .prologue
-    .line 67
     invoke-direct {p0}, Lorg/xbill/DNS/Tokenizer$Token;-><init>()V
 
     return-void
@@ -44,8 +37,6 @@
 .method static synthetic access$100(Lorg/xbill/DNS/Tokenizer$Token;ILjava/lang/StringBuffer;)Lorg/xbill/DNS/Tokenizer$Token;
     .locals 1
 
-    .prologue
-    .line 67
     invoke-direct {p0, p1, p2}, Lorg/xbill/DNS/Tokenizer$Token;->set(ILjava/lang/StringBuffer;)Lorg/xbill/DNS/Tokenizer$Token;
 
     move-result-object v0
@@ -56,22 +47,17 @@
 .method private set(ILjava/lang/StringBuffer;)Lorg/xbill/DNS/Tokenizer$Token;
     .locals 1
 
-    .prologue
-    .line 82
     if-gez p1, :cond_0
 
-    .line 83
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
     throw v0
 
-    .line 84
     :cond_0
     iput p1, p0, Lorg/xbill/DNS/Tokenizer$Token;->type:I
 
-    .line 85
     if-nez p2, :cond_1
 
     const/4 v0, 0x0
@@ -79,10 +65,8 @@
     :goto_0
     iput-object v0, p0, Lorg/xbill/DNS/Tokenizer$Token;->value:Ljava/lang/String;
 
-    .line 86
     return-object p0
 
-    .line 85
     :cond_1
     invoke-virtual {p2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -96,10 +80,8 @@
 .method public isEOL()Z
     .locals 2
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 122
     iget v1, p0, Lorg/xbill/DNS/Tokenizer$Token;->type:I
 
     if-eq v1, v0, :cond_0
@@ -121,8 +103,6 @@
 .method public isString()Z
     .locals 2
 
-    .prologue
-    .line 116
     iget v0, p0, Lorg/xbill/DNS/Tokenizer$Token;->type:I
 
     const/4 v1, 0x3
@@ -150,37 +130,30 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 95
     iget v0, p0, Lorg/xbill/DNS/Tokenizer$Token;->type:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 109
     const-string/jumbo v0, "<unknown>"
 
     :goto_0
     return-object v0
 
-    .line 97
     :pswitch_0
     const-string/jumbo v0, "<eof>"
 
     goto :goto_0
 
-    .line 99
     :pswitch_1
     const-string/jumbo v0, "<eol>"
 
     goto :goto_0
 
-    .line 101
     :pswitch_2
     const-string/jumbo v0, "<whitespace>"
 
     goto :goto_0
 
-    .line 103
     :pswitch_3
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -210,7 +183,6 @@
 
     goto :goto_0
 
-    .line 105
     :pswitch_4
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -240,7 +212,6 @@
 
     goto :goto_0
 
-    .line 107
     :pswitch_5
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -270,7 +241,6 @@
 
     goto :goto_0
 
-    .line 95
     nop
 
     :pswitch_data_0

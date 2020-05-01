@@ -19,13 +19,10 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 9
     const-string/jumbo v0, "nf_bw_delayed_bif"
 
     sput-object v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthDelayedBifDownload;->TAG:Ljava/lang/String;
 
-    .line 10
     const/high16 v0, 0x40200000    # 2.5f
 
     sput v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthDelayedBifDownload;->DELAY_MULTIPLE:F
@@ -36,18 +33,14 @@
 .method public constructor <init>()V
     .locals 6
 
-    .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthDelayedBifDownload;->startTimeInMs:J
 
-    .line 17
     sget-object v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthDelayedBifDownload;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "BandwidthDelayedBifDownload - startTimeInMs :%d"
@@ -72,7 +65,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 18
     return-void
 .end method
 
@@ -81,12 +73,10 @@
 .method public shouldDownloadBif(Z)Z
     .locals 10
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 21
     iget-wide v4, p0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthDelayedBifDownload;->bufferingCompleteTimeInMs:J
 
     const-wide/16 v6, 0x0
@@ -95,7 +85,6 @@
 
     if-lez v0, :cond_1
 
-    .line 22
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -124,7 +113,6 @@
 
     move v0, v1
 
-    .line 23
     :goto_0
     sget-object v3, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthDelayedBifDownload;->TAG:Ljava/lang/String;
 
@@ -174,28 +162,23 @@
 
     invoke-static {v3, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 31
     :goto_1
     return v0
 
     :cond_0
     move v0, v2
 
-    .line 22
     goto :goto_0
 
-    .line 27
     :cond_1
     if-eqz p1, :cond_2
 
-    .line 28
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
     iput-wide v4, p0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthDelayedBifDownload;->bufferingCompleteTimeInMs:J
 
-    .line 29
     sget-object v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthDelayedBifDownload;->TAG:Ljava/lang/String;
 
     const-string/jumbo v3, "bufferingComplete in ms:%d"
@@ -223,6 +206,5 @@
     :cond_2
     move v0, v2
 
-    .line 31
     goto :goto_1
 .end method

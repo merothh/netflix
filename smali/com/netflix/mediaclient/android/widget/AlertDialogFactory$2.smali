@@ -18,8 +18,6 @@
 .method constructor <init>(Ljava/lang/Runnable;Landroid/os/Handler;Ljava/lang/Runnable;)V
     .locals 0
 
-    .prologue
-    .line 165
     iput-object p1, p0, Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$2;->val$negativeButtonHandler:Ljava/lang/Runnable;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$2;->val$handler:Landroid/os/Handler;
@@ -36,33 +34,27 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
 
-    .prologue
-    .line 167
     iget-object v0, p0, Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$2;->val$negativeButtonHandler:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    .line 168
     iget-object v0, p0, Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$2;->val$handler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$2;->val$negativeButtonHandler:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 170
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$2;->val$cleanupHandler:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_1
 
-    .line 171
     iget-object v0, p0, Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$2;->val$handler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$2;->val$cleanupHandler:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 173
     :cond_1
     return-void
 .end method

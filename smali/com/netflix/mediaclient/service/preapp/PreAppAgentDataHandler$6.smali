@@ -27,8 +27,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;Lcom/netflix/mediaclient/service/pservice/PDiskData;Ljava/util/Set;Lcom/netflix/mediaclient/service/preapp/PreAppAgentEventType;Lcom/netflix/mediaclient/service/browse/SimpleBrowseAgentCallback;Lcom/netflix/mediaclient/service/browse/SimpleBrowseAgentCallback;Lcom/netflix/mediaclient/service/browse/SimpleBrowseAgentCallback;Lcom/netflix/mediaclient/service/browse/SimpleBrowseAgentCallback;Lcom/netflix/mediaclient/service/browse/SimpleBrowseAgentCallback;)V
     .locals 0
 
-    .prologue
-    .line 127
     iput-object p1, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$6;->this$0:Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$6;->val$newData:Lcom/netflix/mediaclient/service/pservice/PDiskData;
@@ -68,10 +66,8 @@
         }
     .end annotation
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 130
     const-string/jumbo v0, "nf_preappagentdatahandler"
 
     const-string/jumbo v1, "LoMos fetched "
@@ -84,28 +80,24 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 131
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 132
     iget-object v0, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$6;->this$0:Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$6;->val$newData:Lcom/netflix/mediaclient/service/pservice/PDiskData;
 
     invoke-static {v0, v1, p1}, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;->access$400(Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;Lcom/netflix/mediaclient/service/pservice/PDiskData;Ljava/util/List;)V
 
-    .line 133
     iget-object v0, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$6;->val$fetchCallbacksList:Ljava/util/Set;
 
     sget-object v1, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;->LOMO_INFO:Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
     invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 135
     iget-object v0, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$6;->this$0:Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$6;->val$updateType:Lcom/netflix/mediaclient/service/preapp/PreAppAgentEventType;
@@ -122,11 +114,9 @@
 
     invoke-static/range {v0 .. v6}, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;->access$500(Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;Lcom/netflix/mediaclient/service/preapp/PreAppAgentEventType;Lcom/netflix/mediaclient/service/browse/SimpleBrowseAgentCallback;Lcom/netflix/mediaclient/service/browse/SimpleBrowseAgentCallback;Lcom/netflix/mediaclient/service/browse/SimpleBrowseAgentCallback;Lcom/netflix/mediaclient/service/browse/SimpleBrowseAgentCallback;Lcom/netflix/mediaclient/service/browse/SimpleBrowseAgentCallback;)V
 
-    .line 139
     :goto_0
     return-void
 
-    .line 137
     :cond_0
     const-string/jumbo v0, "nf_preappagentdatahandler"
 

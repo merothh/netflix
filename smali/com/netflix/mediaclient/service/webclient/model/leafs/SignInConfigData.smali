@@ -39,8 +39,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,22 +47,17 @@
 .method public static fromJsonString(Ljava/lang/String;)Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInConfigData;
     .locals 3
 
-    .prologue
-    .line 52
     invoke-static {p0}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 53
     const/4 v0, 0x0
 
-    .line 61
     :goto_0
     return-object v0
 
-    .line 56
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -72,7 +65,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 57
     const-string/jumbo v0, "nf_config_signin"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -95,13 +87,11 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 60
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorParseUtils;->getGson()Lcom/google/gson/Gson;
 
     move-result-object v0
 
-    .line 61
     const-class v1, Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInConfigData;
 
     invoke-virtual {v0, p0, v1}, Lcom/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
@@ -116,8 +106,6 @@
 .method private getMaxEmailLen()I
     .locals 1
 
-    .prologue
-    .line 85
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInConfigData;->fields:Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInConfigData$Fields;
 
     if-eqz v0, :cond_0
@@ -136,11 +124,9 @@
 
     if-gtz v0, :cond_1
 
-    .line 86
     :cond_0
     const/16 v0, 0x32
 
-    .line 88
     :goto_0
     return v0
 
@@ -157,8 +143,6 @@
 .method private getMaxPwdLen()I
     .locals 1
 
-    .prologue
-    .line 99
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInConfigData;->fields:Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInConfigData$Fields;
 
     if-eqz v0, :cond_0
@@ -177,11 +161,9 @@
 
     if-gtz v0, :cond_1
 
-    .line 100
     :cond_0
     const/16 v0, 0x32
 
-    .line 102
     :goto_0
     return v0
 
@@ -198,8 +180,6 @@
 .method private getMinEmailLen()I
     .locals 1
 
-    .prologue
-    .line 78
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInConfigData;->fields:Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInConfigData$Fields;
 
     if-eqz v0, :cond_0
@@ -218,11 +198,9 @@
 
     if-gtz v0, :cond_1
 
-    .line 79
     :cond_0
     const/4 v0, 0x5
 
-    .line 81
     :goto_0
     return v0
 
@@ -239,8 +217,6 @@
 .method private getMinPwdLen()I
     .locals 1
 
-    .prologue
-    .line 92
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInConfigData;->fields:Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInConfigData$Fields;
 
     if-eqz v0, :cond_0
@@ -259,11 +235,9 @@
 
     if-gtz v0, :cond_1
 
-    .line 93
     :cond_0
     const/4 v0, 0x4
 
-    .line 95
     :goto_0
     return v0
 
@@ -282,17 +256,14 @@
 .method public isEmailValid(Ljava/lang/String;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 106
     invoke-static {p1}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 109
     :cond_0
     :goto_0
     return v0
@@ -316,17 +287,14 @@
 .method public isPasswordValid(Ljava/lang/String;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 113
     invoke-static {p1}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 116
     :cond_0
     :goto_0
     return v0
@@ -350,25 +318,20 @@
 .method public toJsonString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 69
     invoke-static {}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorParseUtils;->getGson()Lcom/google/gson/Gson;
 
     move-result-object v0
 
-    .line 70
     invoke-virtual {v0, p0}, Lcom/google/gson/Gson;->toJson(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 71
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 72
     const-string/jumbo v1, "nf_config_signin"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -391,7 +354,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     :cond_0
     return-object v0
 .end method

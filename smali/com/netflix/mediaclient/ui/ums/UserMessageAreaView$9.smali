@@ -20,8 +20,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;Lcom/netflix/mediaclient/ui/home/AccountHandler;Lcom/netflix/mediaclient/android/app/Status;Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaCta;)V
     .locals 0
 
-    .prologue
-    .line 334
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$9;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$9;->val$handler:Lcom/netflix/mediaclient/ui/home/AccountHandler;
@@ -40,8 +38,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 337
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$9;->val$handler:Lcom/netflix/mediaclient/ui/home/AccountHandler;
 
     const/4 v1, 0x0
@@ -56,6 +52,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/netflix/mediaclient/ui/home/AccountHandler;->handle(Ljava/lang/String;Lcom/netflix/mediaclient/android/app/Status;Ljava/lang/String;)V
 
-    .line 338
     return-void
 .end method

@@ -21,8 +21,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 17
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -51,8 +49,6 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/logging/client/model/DeviceUniqueId;JLcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;Lcom/netflix/mediaclient/service/logging/client/model/UIError;Ljava/lang/String;)V
     .locals 12
 
-    .prologue
-    .line 23
     const-string/jumbo v4, "command"
 
     move-object v3, p0
@@ -71,12 +67,10 @@
 
     invoke-direct/range {v3 .. v11}, Lcom/netflix/mediaclient/service/logging/uiaction/model/BaseUIActionSessionEndedEvent;-><init>(Ljava/lang/String;Lcom/netflix/mediaclient/service/logging/client/model/DeviceUniqueId;JLcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;Lcom/netflix/mediaclient/service/logging/client/model/UIError;)V
 
-    .line 24
     move-object/from16 v0, p8
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/logging/uiaction/model/ChangeValueEndedEvent;->mNewValue:Ljava/lang/String;
 
-    .line 25
     return-void
 .end method
 
@@ -85,35 +79,28 @@
 .method protected getData()Lorg/json/JSONObject;
     .locals 3
 
-    .prologue
-    .line 34
     invoke-super {p0}, Lcom/netflix/mediaclient/service/logging/uiaction/model/BaseUIActionSessionEndedEvent;->getData()Lorg/json/JSONObject;
 
     move-result-object v0
 
-    .line 35
     const-string/jumbo v1, "newValue"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/logging/uiaction/model/ChangeValueEndedEvent;->mNewValue:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 36
     const-string/jumbo v1, "name"
 
     sget-object v2, Lcom/netflix/mediaclient/service/logging/uiaction/model/ChangeValueEndedEvent;->UIA_SESSION_ENDED:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 37
     return-object v0
 .end method
 
 .method public isMemberEvent()Z
     .locals 1
 
-    .prologue
-    .line 45
     const/4 v0, 0x1
 
     return v0

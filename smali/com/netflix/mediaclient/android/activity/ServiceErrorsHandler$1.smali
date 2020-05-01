@@ -14,8 +14,6 @@
 .method constructor <init>(Landroid/app/Activity;)V
     .locals 0
 
-    .prologue
-    .line 166
     iput-object p1, p0, Lcom/netflix/mediaclient/android/activity/ServiceErrorsHandler$1;->val$activity:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 4
 
-    .prologue
-    .line 169
     iget-object v0, p0, Lcom/netflix/mediaclient/android/activity/ServiceErrorsHandler$1;->val$activity:Landroid/app/Activity;
 
     const-string/jumbo v1, "config_recommended_version"
@@ -40,14 +36,12 @@
 
     move-result v0
 
-    .line 172
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 173
     const-string/jumbo v1, "ServiceErrorsHandler"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -70,7 +64,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 175
     :cond_0
     iget-object v1, p0, Lcom/netflix/mediaclient/android/activity/ServiceErrorsHandler$1;->val$activity:Landroid/app/Activity;
 
@@ -78,7 +71,6 @@
 
     invoke-static {v1, v2, v0}, Lcom/netflix/mediaclient/util/PreferenceUtils;->putIntPref(Landroid/content/Context;Ljava/lang/String;I)Z
 
-    .line 179
     iget-object v0, p0, Lcom/netflix/mediaclient/android/activity/ServiceErrorsHandler$1;->val$activity:Landroid/app/Activity;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/android/activity/ServiceErrorsHandler$1;->val$activity:Landroid/app/Activity;
@@ -91,11 +83,9 @@
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 180
     iget-object v0, p0, Lcom/netflix/mediaclient/android/activity/ServiceErrorsHandler$1;->val$activity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 181
     return-void
 .end method

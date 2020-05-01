@@ -15,45 +15,35 @@
 .method constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 33
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/ResourceHelper;-><init>()V
 
-    .line 34
     const v0, 0x7f020112
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/player/ResourceHelperPhone;->pause:I
 
-    .line 35
     const v0, 0x7f020115
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/player/ResourceHelperPhone;->play:I
 
-    .line 36
     const v0, 0x7f02014c
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/player/ResourceHelperPhone;->zoomIn:I
 
-    .line 37
     const v0, 0x7f02014d
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/player/ResourceHelperPhone;->zoomOut:I
 
-    .line 38
     const/16 v0, 0x14
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/player/ResourceHelperPhone;->timelineHeightInDip:I
 
-    .line 39
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/player/ResourceHelperPhone;->timelineHeightPaddingInDip:I
 
-    .line 40
     const/16 v0, 0xc
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/player/ResourceHelperPhone;->timelineThumbOffsetInDip:I
 
-    .line 41
     return-void
 .end method

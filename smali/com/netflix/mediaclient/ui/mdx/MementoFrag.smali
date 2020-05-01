@@ -79,32 +79,26 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 49
     invoke-direct {p0}, Lcom/netflix/mediaclient/android/fragment/NetflixFrag;-><init>()V
 
-    .line 56
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->relatedTitles:Ljava/util/List;
 
-    .line 57
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->actors:Ljava/util/List;
 
-    .line 58
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->stills:Ljava/util/List;
 
-    .line 69
     const/4 v0, 0x5
 
     new-array v0, v0, [I
@@ -113,12 +107,10 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tintColors:[I
 
-    .line 76
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tintIndex:I
 
-    .line 77
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tintColors:[I
 
     const/4 v1, 0x0
@@ -127,21 +119,18 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->currentTint:I
 
-    .line 128
     new-instance v0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$2;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$2;-><init>(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->errorCallback:Lcom/netflix/mediaclient/android/widget/ErrorWrapper$Callback;
 
-    .line 338
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->resetPager:Z
 
     return-void
 
-    .line 69
     nop
 
     :array_0
@@ -157,8 +146,6 @@
 .method static synthetic access$000(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;)Lcom/viewpagerindicator/android/osp/ViewPager;
     .locals 1
 
-    .prologue
-    .line 49
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pager:Lcom/viewpagerindicator/android/osp/ViewPager;
 
     return-object v0
@@ -167,8 +154,6 @@
 .method static synthetic access$1000(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;)V
     .locals 0
 
-    .prologue
-    .line 49
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->showStandardViews()V
 
     return-void
@@ -177,8 +162,6 @@
 .method static synthetic access$102(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;I)I
     .locals 0
 
-    .prologue
-    .line 49
     iput p1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->currentTint:I
 
     return p1
@@ -187,8 +170,6 @@
 .method static synthetic access$1100(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;I)V
     .locals 0
 
-    .prologue
-    .line 49
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->resetTranslation(I)V
 
     return-void
@@ -197,8 +178,6 @@
 .method static synthetic access$1200(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;)[I
     .locals 1
 
-    .prologue
-    .line 49
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tintColors:[I
 
     return-object v0
@@ -207,8 +186,6 @@
 .method static synthetic access$1300(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 49
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->videoId:Ljava/lang/String;
 
     return-object v0
@@ -217,8 +194,6 @@
 .method static synthetic access$1400(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;)I
     .locals 1
 
-    .prologue
-    .line 49
     iget v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tintIndex:I
 
     return v0
@@ -227,8 +202,6 @@
 .method static synthetic access$1402(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;I)I
     .locals 0
 
-    .prologue
-    .line 49
     iput p1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tintIndex:I
 
     return p1
@@ -237,8 +210,6 @@
 .method static synthetic access$1408(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;)I
     .locals 2
 
-    .prologue
-    .line 49
     iget v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tintIndex:I
 
     add-int/lit8 v1, v0, 0x1
@@ -251,8 +222,6 @@
 .method static synthetic access$1500(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 49
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->showRDP(Ljava/lang/String;)V
 
     return-void
@@ -261,8 +230,6 @@
 .method static synthetic access$200(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;I)V
     .locals 0
 
-    .prologue
-    .line 49
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->toggleTabs(I)V
 
     return-void
@@ -271,8 +238,6 @@
 .method static synthetic access$300(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;)Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 49
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->actors:Ljava/util/List;
 
     return-object v0
@@ -281,8 +246,6 @@
 .method static synthetic access$302(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;Ljava/util/List;)Ljava/util/List;
     .locals 0
 
-    .prologue
-    .line 49
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->actors:Ljava/util/List;
 
     return-object p1
@@ -291,8 +254,6 @@
 .method static synthetic access$400(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;)Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 49
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->relatedTitles:Ljava/util/List;
 
     return-object v0
@@ -301,8 +262,6 @@
 .method static synthetic access$402(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;Ljava/util/List;)Ljava/util/List;
     .locals 0
 
-    .prologue
-    .line 49
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->relatedTitles:Ljava/util/List;
 
     return-object p1
@@ -311,8 +270,6 @@
 .method static synthetic access$500(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;)J
     .locals 2
 
-    .prologue
-    .line 49
     iget-wide v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->requestId:J
 
     return-wide v0
@@ -321,8 +278,6 @@
 .method static synthetic access$600(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;)Z
     .locals 1
 
-    .prologue
-    .line 49
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->isDestroyed()Z
 
     move-result v0
@@ -333,8 +288,6 @@
 .method static synthetic access$702(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;Z)Z
     .locals 0
 
-    .prologue
-    .line 49
     iput-boolean p1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->isLoading:Z
 
     return p1
@@ -343,8 +296,6 @@
 .method static synthetic access$800(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;)Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;
     .locals 1
 
-    .prologue
-    .line 49
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->leWrapper:Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;
 
     return-object v0
@@ -353,8 +304,6 @@
 .method static synthetic access$902(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;Ljava/util/List;)Ljava/util/List;
     .locals 0
 
-    .prologue
-    .line 49
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->stills:Ljava/util/List;
 
     return-object p1
@@ -363,43 +312,34 @@
 .method private fetchActorDetailsAndRelated()V
     .locals 6
 
-    .prologue
-    .line 201
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v0
 
-    .line 202
     if-nez v0, :cond_0
 
-    .line 203
     const-string/jumbo v0, "MementoFrag"
 
     const-string/jumbo v1, "Manager is null - can\'t reload data"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 213
     :goto_0
     return-void
 
-    .line 207
     :cond_0
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->isLoading:Z
 
-    .line 208
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->requestId:J
 
-    .line 209
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->hideStandardViews()V
 
-    .line 211
     const-string/jumbo v1, "MementoFrag"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -424,7 +364,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 212
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getBrowse()Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
 
     move-result-object v0
@@ -445,8 +384,6 @@
 .method private findViews(Landroid/view/View;)V
     .locals 1
 
-    .prologue
-    .line 117
     const v0, 0x7f0f021b
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -457,7 +394,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pagerIndicator:Lcom/viewpagerindicator/CirclePageIndicator;
 
-    .line 118
     const v0, 0x7f0f021c
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -468,7 +404,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
-    .line 119
     const v0, 0x7f0f021a
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -479,56 +414,46 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pager:Lcom/viewpagerindicator/android/osp/ViewPager;
 
-    .line 120
     return-void
 .end method
 
 .method private hideStandardViews()V
     .locals 3
 
-    .prologue
     const/4 v1, 0x4
 
     const/4 v2, 0x0
 
-    .line 216
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pager:Lcom/viewpagerindicator/android/osp/ViewPager;
 
     if-eqz v0, :cond_0
 
-    .line 217
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pager:Lcom/viewpagerindicator/android/osp/ViewPager;
 
     invoke-virtual {v0, v1}, Lcom/viewpagerindicator/android/osp/ViewPager;->setVisibility(I)V
 
-    .line 220
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pagerIndicator:Lcom/viewpagerindicator/CirclePageIndicator;
 
     if-eqz v0, :cond_1
 
-    .line 221
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pagerIndicator:Lcom/viewpagerindicator/CirclePageIndicator;
 
     invoke-virtual {v0, v1}, Lcom/viewpagerindicator/CirclePageIndicator;->setVisibility(I)V
 
-    .line 222
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pagerIndicator:Lcom/viewpagerindicator/CirclePageIndicator;
 
     invoke-virtual {v0, v2}, Lcom/viewpagerindicator/CirclePageIndicator;->setCurrentItem(I)V
 
-    .line 225
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pager:Lcom/viewpagerindicator/android/osp/ViewPager;
 
     if-eqz v0, :cond_2
 
-    .line 226
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pager:Lcom/viewpagerindicator/android/osp/ViewPager;
 
     invoke-virtual {v0, v2}, Lcom/viewpagerindicator/android/osp/ViewPager;->setCurrentItem(I)V
 
-    .line 229
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->leWrapper:Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;
 
@@ -540,30 +465,25 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;->showLoadingView(Z)V
 
-    .line 231
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     if-eqz v0, :cond_4
 
-    .line 232
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     invoke-virtual {v0, v2}, Landroid/support/design/widget/TabLayout;->setEnabled(Z)V
 
-    .line 233
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     invoke-virtual {v0, v2}, Landroid/support/design/widget/TabLayout;->setVisibility(I)V
 
-    .line 234
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     const/high16 v1, 0x3f000000    # 0.5f
 
     invoke-virtual {v0, v1}, Landroid/support/design/widget/TabLayout;->setAlpha(F)V
 
-    .line 235
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     invoke-virtual {v0, v2}, Landroid/support/design/widget/TabLayout;->getTabAt(I)Landroid/support/design/widget/TabLayout$Tab;
@@ -572,7 +492,6 @@
 
     invoke-virtual {v0}, Landroid/support/design/widget/TabLayout$Tab;->select()V
 
-    .line 237
     :cond_4
     return-void
 .end method
@@ -580,14 +499,10 @@
 .method private init(Landroid/view/View;)V
     .locals 2
 
-    .prologue
-    .line 123
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->initTabs()V
 
-    .line 124
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->initPager()V
 
-    .line 125
     new-instance v0, Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->errorCallback:Lcom/netflix/mediaclient/android/widget/ErrorWrapper$Callback;
@@ -596,15 +511,12 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->leWrapper:Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;
 
-    .line 126
     return-void
 .end method
 
 .method private initPager()V
     .locals 3
 
-    .prologue
-    .line 240
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pagerIndicator:Lcom/viewpagerindicator/CirclePageIndicator;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$3;
@@ -613,22 +525,18 @@
 
     invoke-virtual {v0, v1}, Lcom/viewpagerindicator/CirclePageIndicator;->setOnPageChangeListener(Lcom/viewpagerindicator/android/osp/ViewPager$OnPageChangeListener;)V
 
-    .line 261
     new-instance v0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$4;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$4;-><init>(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;)V
 
-    .line 309
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pager:Lcom/viewpagerindicator/android/osp/ViewPager;
 
     if-eqz v1, :cond_0
 
-    .line 310
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pager:Lcom/viewpagerindicator/android/osp/ViewPager;
 
     invoke-virtual {v1, v0}, Lcom/viewpagerindicator/android/osp/ViewPager;->setAdapter(Landroid/support/v4/view/PagerAdapter;)V
 
-    .line 311
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pager:Lcom/viewpagerindicator/android/osp/ViewPager;
 
     const/4 v1, 0x0
@@ -639,20 +547,17 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/viewpagerindicator/android/osp/ViewPager;->setPageTransformer(ZLcom/viewpagerindicator/android/osp/ViewPager$PageTransformer;)V
 
-    .line 333
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pagerIndicator:Lcom/viewpagerindicator/CirclePageIndicator;
 
     if-eqz v0, :cond_1
 
-    .line 334
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pagerIndicator:Lcom/viewpagerindicator/CirclePageIndicator;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pager:Lcom/viewpagerindicator/android/osp/ViewPager;
 
     invoke-virtual {v0, v1}, Lcom/viewpagerindicator/CirclePageIndicator;->setViewPager(Lcom/viewpagerindicator/android/osp/ViewPager;)V
 
-    .line 336
     :cond_1
     return-void
 .end method
@@ -660,7 +565,6 @@
 .method private initTabs()V
     .locals 6
 
-    .prologue
     const v5, 0x7f0f021f
 
     const v4, 0x7f0300a9
@@ -669,17 +573,14 @@
 
     const/4 v2, 0x1
 
-    .line 183
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     if-eqz v0, :cond_0
 
-    .line 185
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     invoke-virtual {v0}, Landroid/support/design/widget/TabLayout;->removeAllTabs()V
 
-    .line 186
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
@@ -694,7 +595,6 @@
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/support/design/widget/TabLayout;->addTab(Landroid/support/design/widget/TabLayout$Tab;IZ)V
 
-    .line 187
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
@@ -709,7 +609,6 @@
 
     invoke-virtual {v0, v1, v2, v2}, Landroid/support/design/widget/TabLayout;->addTab(Landroid/support/design/widget/TabLayout$Tab;IZ)V
 
-    .line 189
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     invoke-virtual {v0, v3}, Landroid/support/design/widget/TabLayout;->getTabAt(I)Landroid/support/design/widget/TabLayout$Tab;
@@ -730,7 +629,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 190
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     invoke-virtual {v0, v2}, Landroid/support/design/widget/TabLayout;->getTabAt(I)Landroid/support/design/widget/TabLayout$Tab;
@@ -751,7 +649,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 192
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$TabListener;
@@ -760,7 +657,6 @@
 
     invoke-virtual {v0, v1}, Landroid/support/design/widget/TabLayout;->setOnTabSelectedListener(Landroid/support/design/widget/TabLayout$OnTabSelectedListener;)V
 
-    .line 194
     :cond_0
     return-void
 .end method
@@ -768,10 +664,8 @@
 .method private isRDPShowing()Z
     .locals 3
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 175
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v0
@@ -784,10 +678,8 @@
 
     check-cast v0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
-    .line 176
     if-eqz v0, :cond_1
 
-    .line 177
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;->isHidden()Z
 
     move-result v0
@@ -796,38 +688,31 @@
 
     const/4 v0, 0x1
 
-    .line 179
     :goto_0
     return v0
 
     :cond_0
     move v0, v1
 
-    .line 177
     goto :goto_0
 
     :cond_1
     move v0, v1
 
-    .line 179
     goto :goto_0
 .end method
 
 .method private resetTranslation(I)V
     .locals 3
 
-    .prologue
-    .line 517
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pager:Lcom/viewpagerindicator/android/osp/ViewPager;
 
     if-nez v0, :cond_1
 
-    .line 534
     :cond_0
     :goto_0
     return-void
 
-    .line 521
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pager:Lcom/viewpagerindicator/android/osp/ViewPager;
 
@@ -857,31 +742,25 @@
 
     move-result-object v1
 
-    .line 522
     if-eqz v1, :cond_0
 
-    .line 526
     const v0, 0x7f0f01f5
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 527
     if-nez v0, :cond_2
 
-    .line 528
     const v0, 0x7f0f01fa
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 531
     :cond_2
     if-eqz v0, :cond_0
 
-    .line 532
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationX(F)V
@@ -892,27 +771,22 @@
 .method private restoreInstanceState(Landroid/os/Bundle;)V
     .locals 4
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 92
     if-eqz p1, :cond_0
 
-    .line 94
     const-string/jumbo v0, "showRDP"
 
     invoke-virtual {p1, v0, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    .line 95
     const-string/jumbo v1, "pagerIndex"
 
     invoke-virtual {p1, v1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 97
     new-instance v2, Landroid/os/Handler;
 
     invoke-direct {v2}, Landroid/os/Handler;-><init>()V
@@ -925,7 +799,6 @@
 
     invoke-virtual {v2, v3, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 114
     :cond_0
     return-void
 .end method
@@ -933,20 +806,16 @@
 .method private showRDP(Ljava/lang/String;)V
     .locals 4
 
-    .prologue
-    .line 148
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->isActivityValid()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 172
     :cond_0
     :goto_0
     return-void
 
-    .line 152
     :cond_1
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->getNetflixActivity()Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
@@ -958,7 +827,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 156
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v0
@@ -971,10 +839,8 @@
 
     check-cast v0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
-    .line 157
     if-eqz v0, :cond_0
 
-    .line 158
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1
@@ -983,17 +849,14 @@
 
     move-result-object v1
 
-    .line 159
     const v2, 0x7f050002
 
     const v3, 0x7f050003
 
     invoke-virtual {v1, v2, v3}, Landroid/app/FragmentTransaction;->setCustomAnimations(II)Landroid/app/FragmentTransaction;
 
-    .line 160
     invoke-virtual {v1, v0}, Landroid/app/FragmentTransaction;->show(Landroid/app/Fragment;)Landroid/app/FragmentTransaction;
 
-    .line 162
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pager:Lcom/viewpagerindicator/android/osp/ViewPager;
 
     invoke-virtual {v2}, Lcom/viewpagerindicator/android/osp/ViewPager;->getMeasuredHeight()I
@@ -1002,26 +865,20 @@
 
     invoke-virtual {v0, v2}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;->setStillImageHeight(I)V
 
-    .line 163
     iget v2, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->currentTint:I
 
     invoke-virtual {v0, v2}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;->setImageTint(I)V
 
-    .line 165
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->videoId:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;->setVideoId(Ljava/lang/String;)V
 
-    .line 166
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;->setActorId(Ljava/lang/String;)V
 
-    .line 167
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;->reload()V
 
-    .line 169
     invoke-virtual {v1}, Landroid/app/FragmentTransaction;->commitAllowingStateLoss()I
 
-    .line 170
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->getNetflixActivity()Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     move-result-object v0
@@ -1036,10 +893,8 @@
 .method private showStandardViews()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 419
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pagerIndicator:Lcom/viewpagerindicator/CirclePageIndicator;
 
     if-eqz v0, :cond_0
@@ -1048,7 +903,6 @@
 
     invoke-virtual {v0, v2}, Lcom/viewpagerindicator/CirclePageIndicator;->setVisibility(I)V
 
-    .line 420
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->leWrapper:Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;
 
@@ -1058,13 +912,11 @@
 
     invoke-virtual {v0, v2}, Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;->hide(Z)V
 
-    .line 422
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pager:Lcom/viewpagerindicator/android/osp/ViewPager;
 
     if-eqz v0, :cond_2
 
-    .line 423
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pager:Lcom/viewpagerindicator/android/osp/ViewPager;
 
     invoke-virtual {v0}, Lcom/viewpagerindicator/android/osp/ViewPager;->getAdapter()Landroid/support/v4/view/PagerAdapter;
@@ -1073,18 +925,15 @@
 
     invoke-virtual {v0}, Landroid/support/v4/view/PagerAdapter;->notifyDataSetChanged()V
 
-    .line 424
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->pager:Lcom/viewpagerindicator/android/osp/ViewPager;
 
     invoke-virtual {v0, v2}, Lcom/viewpagerindicator/android/osp/ViewPager;->setVisibility(I)V
 
-    .line 427
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     if-eqz v0, :cond_3
 
-    .line 428
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->actors:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -1101,44 +950,37 @@
 
     if-lez v0, :cond_4
 
-    .line 429
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/support/design/widget/TabLayout;->setEnabled(Z)V
 
-    .line 430
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {v0, v1}, Landroid/support/design/widget/TabLayout;->setAlpha(F)V
 
-    .line 431
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     invoke-virtual {v0, v2}, Landroid/support/design/widget/TabLayout;->setVisibility(I)V
 
-    .line 438
     :cond_3
     :goto_0
     return-void
 
-    .line 433
     :cond_4
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     invoke-virtual {v0, v2}, Landroid/support/design/widget/TabLayout;->setEnabled(Z)V
 
-    .line 434
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/support/design/widget/TabLayout;->setAlpha(F)V
 
-    .line 435
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     const/16 v1, 0x8
@@ -1151,12 +993,10 @@
 .method private toggleTabs(I)V
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 340
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     invoke-virtual {v0}, Landroid/support/design/widget/TabLayout;->getAlpha()F
@@ -1169,12 +1009,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 355
     :cond_0
     :goto_0
     return-void
 
-    .line 344
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->actors:Ljava/util/List;
 
@@ -1184,7 +1022,6 @@
 
     if-ge p1, v0, :cond_2
 
-    .line 345
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     invoke-virtual {v0}, Landroid/support/design/widget/TabLayout;->getSelectedTabPosition()I
@@ -1193,10 +1030,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 346
     iput-boolean v2, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->resetPager:Z
 
-    .line 347
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     invoke-virtual {v0, v2}, Landroid/support/design/widget/TabLayout;->getTabAt(I)Landroid/support/design/widget/TabLayout$Tab;
@@ -1207,7 +1042,6 @@
 
     goto :goto_0
 
-    .line 349
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->relatedTitles:Ljava/util/List;
 
@@ -1225,7 +1059,6 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 350
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     invoke-virtual {v0}, Landroid/support/design/widget/TabLayout;->getSelectedTabPosition()I
@@ -1234,10 +1067,8 @@
 
     if-eq v0, v3, :cond_0
 
-    .line 351
     iput-boolean v2, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->resetPager:Z
 
-    .line 352
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->tabLayout:Landroid/support/design/widget/TabLayout;
 
     invoke-virtual {v0, v3}, Landroid/support/design/widget/TabLayout;->getTabAt(I)Landroid/support/design/widget/TabLayout$Tab;
@@ -1254,11 +1085,8 @@
 .method protected adjustHeight(Landroid/widget/ImageView;)V
     .locals 4
 
-    .prologue
-    .line 633
     const/4 v0, 0x1
 
-    .line 634
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
@@ -1275,7 +1103,6 @@
 
     int-to-float v1, v1
 
-    .line 635
     int-to-float v2, v0
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -1284,7 +1111,6 @@
 
     mul-float/2addr v1, v2
 
-    .line 637
     invoke-virtual {p1}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
@@ -1305,7 +1131,6 @@
 
     div-float/2addr v1, v0
 
-    .line 638
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -1325,10 +1150,8 @@
 
     iput v0, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 639
     return-void
 
-    .line 638
     :cond_0
     const/high16 v0, 0x3f100000    # 0.5625f
 
@@ -1338,21 +1161,16 @@
 .method public fetchData()V
     .locals 0
 
-    .prologue
-    .line 197
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->fetchActorDetailsAndRelated()V
 
-    .line 198
     return-void
 .end method
 
 .method getStill(Ljava/lang/String;Ljava/lang/String;)Lcom/netflix/model/branches/FalkorActorStill;
     .locals 4
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 441
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->stills:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -1364,11 +1182,9 @@
     :cond_0
     move-object v0, v1
 
-    .line 459
     :goto_0
     return-object v0
 
-    .line 447
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->stills:Ljava/util/List;
 
@@ -1389,14 +1205,12 @@
 
     check-cast v0, Lcom/netflix/model/branches/FalkorActorStill;
 
-    .line 448
     iget-object v3, v0, Lcom/netflix/model/branches/FalkorActorStill;->summary:Lcom/netflix/model/branches/FalkorActorStill$Summary;
 
     iget-object v3, v3, Lcom/netflix/model/branches/FalkorActorStill$Summary;->videoId:Ljava/lang/String;
 
     if-eqz v3, :cond_2
 
-    .line 452
     iget-object v3, v0, Lcom/netflix/model/branches/FalkorActorStill;->summary:Lcom/netflix/model/branches/FalkorActorStill$Summary;
 
     iget-object v3, v3, Lcom/netflix/model/branches/FalkorActorStill$Summary;->videoId:Ljava/lang/String;
@@ -1411,7 +1225,6 @@
 
     iget-object v3, v3, Lcom/netflix/model/branches/FalkorActorStill$Summary;->personId:Ljava/lang/String;
 
-    .line 453
     invoke-virtual {p2, v3}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
     move-result v3
@@ -1429,20 +1242,16 @@
 .method public hideLoading()V
     .locals 2
 
-    .prologue
-    .line 642
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->leWrapper:Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 643
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->leWrapper:Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;->hide(Z)V
 
-    .line 645
     :cond_0
     return-void
 .end method
@@ -1450,8 +1259,6 @@
 .method public isLoadingData()Z
     .locals 1
 
-    .prologue
-    .line 359
     const/4 v0, 0x0
 
     return v0
@@ -1460,15 +1267,12 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 3
 
-    .prologue
-    .line 81
     const-string/jumbo v0, "MementoFrag"
 
     const-string/jumbo v1, "Creating new frag view..."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     const v0, 0x7f0300a7
 
     const/4 v1, 0x0
@@ -1479,52 +1283,40 @@
 
     move-result-object v0
 
-    .line 84
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->findViews(Landroid/view/View;)V
 
-    .line 85
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->init(Landroid/view/View;)V
 
-    .line 86
     invoke-direct {p0, p3}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->restoreInstanceState(Landroid/os/Bundle;)V
 
-    .line 88
     return-object v0
 .end method
 
 .method public onRetryRequested()V
     .locals 0
 
-    .prologue
-    .line 368
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->fetchActorDetailsAndRelated()V
 
-    .line 369
     return-void
 .end method
 
 .method public onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 2
 
-    .prologue
-    .line 137
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/android/fragment/NetflixFrag;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 138
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->isRDPShowing()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 139
     const-string/jumbo v0, "showRDP"
 
     const/4 v1, 0x1
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 142
     :cond_0
     const-string/jumbo v0, "pagerIndex"
 
@@ -1536,17 +1328,13 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 143
     return-void
 .end method
 
 .method public setVideoId(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 363
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->videoId:Ljava/lang/String;
 
-    .line 364
     return-void
 .end method

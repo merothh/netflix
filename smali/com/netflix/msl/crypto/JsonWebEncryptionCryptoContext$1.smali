@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 539
     invoke-static {}, Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$Format;->values()[Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$Format;
 
     move-result-object v0

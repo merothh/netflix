@@ -17,24 +17,20 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
     const/16 v1, 0x10
 
-    .line 29
     new-array v0, v1, [I
 
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/google/android/exoplayer/util/DtsUtil;->CHANNELS_BY_AMODE:[I
 
-    .line 35
     new-array v0, v1, [I
 
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/google/android/exoplayer/util/DtsUtil;->SAMPLE_RATE_BY_SFREQ:[I
 
-    .line 41
     const/16 v0, 0x1d
 
     new-array v0, v0, [I
@@ -43,7 +39,6 @@
 
     sput-object v0, Lcom/google/android/exoplayer/util/DtsUtil;->TWICE_BITRATE_KBPS_BY_RATE:[I
 
-    .line 45
     new-instance v0, Lcom/google/android/exoplayer/util/ParsableBitArray;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer/util/ParsableBitArray;-><init>()V
@@ -52,7 +47,6 @@
 
     return-void
 
-    .line 29
     nop
 
     :array_0
@@ -75,7 +69,6 @@
         0x8
     .end array-data
 
-    .line 35
     :array_1
     .array-data 4
         -0x1
@@ -96,7 +89,6 @@
         -0x1
     .end array-data
 
-    .line 41
     :array_2
     .array-data 4
         0x40
@@ -134,13 +126,10 @@
 .method public static parseDtsAudioSampleCount(Ljava/nio/ByteBuffer;)I
     .locals 2
 
-    .prologue
-    .line 95
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v0
 
-    .line 96
     add-int/lit8 v1, v0, 0x4
 
     invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->get(I)B
@@ -153,7 +142,6 @@
 
     add-int/lit8 v0, v0, 0x5
 
-    .line 97
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result v0
@@ -164,7 +152,6 @@
 
     or-int/2addr v0, v1
 
-    .line 98
     add-int/lit8 v0, v0, 0x1
 
     mul-int/lit8 v0, v0, 0x20

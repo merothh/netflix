@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;[B)V
     .locals 0
 
-    .prologue
-    .line 325
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$5;->this$0:Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$5;->val$sessionId:[B
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 328
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$5;->this$0:Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$5;->val$sessionId:[B
@@ -42,21 +38,17 @@
 
     move-result-object v0
 
-    .line 329
     if-eqz v0, :cond_0
 
-    .line 331
     :try_start_0
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/drm/NfDrmSession;->postKeyRequest()V
     :try_end_0
     .catch Landroid/media/NotProvisionedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 336
     :cond_0
     :goto_0
     return-void
 
-    .line 332
     :catch_0
     move-exception v0
 

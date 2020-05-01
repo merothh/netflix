@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/media/BookmarkStore;)V
     .locals 0
 
-    .prologue
-    .line 66
     iput-object p1, p0, Lcom/netflix/mediaclient/media/BookmarkStore$1;->this$0:Lcom/netflix/mediaclient/media/BookmarkStore;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,13 +26,10 @@
 .method public run()V
     .locals 5
 
-    .prologue
-    .line 69
     const-class v1, Lcom/netflix/mediaclient/media/BookmarkStore;
 
     monitor-enter v1
 
-    .line 71
     :try_start_0
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BookmarkStore$1;->this$0:Lcom/netflix/mediaclient/media/BookmarkStore;
 
@@ -48,7 +43,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 72
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BookmarkStore$1;->this$0:Lcom/netflix/mediaclient/media/BookmarkStore;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/media/BookmarkStore;->access$100(Lcom/netflix/mediaclient/media/BookmarkStore;)Ljava/io/File;
@@ -65,7 +59,6 @@
 
     move-result-object v0
 
-    .line 73
     iget-object v2, p0, Lcom/netflix/mediaclient/media/BookmarkStore$1;->this$0:Lcom/netflix/mediaclient/media/BookmarkStore;
 
     invoke-static {}, Lcom/netflix/mediaclient/NetflixApplication;->getGson()Lcom/google/gson/Gson;
@@ -85,7 +78,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 78
     :cond_0
     :goto_0
     :try_start_1
@@ -107,7 +99,6 @@
 
     if-nez v0, :cond_2
 
-    .line 79
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BookmarkStore$1;->this$0:Lcom/netflix/mediaclient/media/BookmarkStore;
 
@@ -121,7 +112,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/media/BookmarkStore;->access$202(Lcom/netflix/mediaclient/media/BookmarkStore;Lcom/netflix/mediaclient/media/BookmarkStore$BookmarkData;)Lcom/netflix/mediaclient/media/BookmarkStore$BookmarkData;
 
-    .line 80
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BookmarkStore$1;->this$0:Lcom/netflix/mediaclient/media/BookmarkStore;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/media/BookmarkStore;->access$200(Lcom/netflix/mediaclient/media/BookmarkStore;)Lcom/netflix/mediaclient/media/BookmarkStore$BookmarkData;
@@ -134,18 +124,14 @@
 
     iput-object v2, v0, Lcom/netflix/mediaclient/media/BookmarkStore$BookmarkData;->mBookmarkMap:Ljava/util/Map;
 
-    .line 82
     :cond_2
     monitor-exit v1
 
-    .line 83
     return-void
 
-    .line 75
     :catch_0
     move-exception v0
 
-    .line 76
     const-string/jumbo v2, "nf_BookmarkStore"
 
     const-string/jumbo v3, "init error"
@@ -158,7 +144,6 @@
 
     goto :goto_0
 
-    .line 82
     :catchall_0
     move-exception v0
 

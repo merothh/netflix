@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;)V
     .locals 0
 
-    .prologue
-    .line 144
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup$2;->this$0:Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
-    .prologue
-    .line 147
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup$2;->this$0:Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;->getContext()Landroid/content/Context;
@@ -42,12 +38,10 @@
 
     move-result-object v1
 
-    .line 148
     sget-object v0, Lcom/netflix/mediaclient/ui/common/PlayLocationType;->STORY_ART:Lcom/netflix/mediaclient/ui/common/PlayLocationType;
 
     invoke-interface {v1, v0}, Lcom/netflix/mediaclient/ui/common/PlayContext;->setPlayLocation(Lcom/netflix/mediaclient/ui/common/PlayLocationType;)V
 
-    .line 149
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup$2;->this$0:Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;->getContext()Landroid/content/Context;
@@ -66,6 +60,5 @@
 
     invoke-static {v0, v2, v1}, Lcom/netflix/mediaclient/ui/common/PlaybackLauncher;->startPlaybackAfterPIN(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/Playable;Lcom/netflix/mediaclient/ui/common/PlayContext;)V
 
-    .line 150
     return-void
 .end method

@@ -16,8 +16,6 @@
 .method constructor <init>(Ljava/lang/String;Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 141
     iput-object p1, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmUtils$2;->val$playableId:Ljava/lang/String;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmUtils$2;->val$context:Landroid/content/Context;
@@ -32,10 +30,8 @@
 .method public execute(Lio/realm/Realm;)V
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 144
     const-class v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;
 
     invoke-virtual {p1, v0}, Lio/realm/Realm;->where(Ljava/lang/Class;)Lio/realm/RealmQuery;
@@ -56,10 +52,8 @@
 
     check-cast v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;
 
-    .line 146
     if-nez v0, :cond_0
 
-    .line 148
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -88,11 +82,9 @@
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/logging/error/ErrorLoggingManager;->logHandledException(Ljava/lang/String;)V
 
-    .line 177
     :goto_0
     return-void
 
-    .line 153
     :cond_0
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;->getType()Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
@@ -102,7 +94,6 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 155
     const-class v2, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;
 
     invoke-virtual {p1, v2}, Lio/realm/Realm;->where(Ljava/lang/Class;)Lio/realm/RealmQuery;
@@ -143,14 +134,12 @@
 
     move-result-object v2
 
-    .line 156
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v2
 
     if-ne v2, v1, :cond_1
 
-    .line 157
     iget-object v2, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmUtils$2;->val$context:Landroid/content/Context;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;->getPlayable()Lcom/netflix/mediaclient/servicemgr/interface_/Playable;
@@ -163,7 +152,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflineImageUtils;->deleteVideoDetailsImage(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 159
     const-class v2, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;
 
     invoke-virtual {p1, v2}, Lio/realm/Realm;->where(Ljava/lang/Class;)Lio/realm/RealmQuery;
@@ -190,7 +178,6 @@
 
     invoke-virtual {v2}, Lio/realm/RealmResults;->deleteAllFromRealm()Z
 
-    .line 161
     const-class v2, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;
 
     invoke-virtual {p1, v2}, Lio/realm/Realm;->where(Ljava/lang/Class;)Lio/realm/RealmQuery;
@@ -217,7 +204,6 @@
 
     invoke-virtual {v0}, Lio/realm/RealmResults;->deleteAllFromRealm()Z
 
-    .line 165
     :cond_1
     const-class v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;
 
@@ -237,21 +223,17 @@
 
     move-result-object v0
 
-    .line 166
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
     if-le v0, v1, :cond_3
 
-    .line 167
     const/4 v0, 0x0
 
-    .line 170
     :goto_1
     if-eqz v0, :cond_2
 
-    .line 171
     const-class v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;
 
     invoke-virtual {p1, v0}, Lio/realm/Realm;->where(Ljava/lang/Class;)Lio/realm/RealmQuery;
@@ -272,7 +254,6 @@
 
     invoke-virtual {v0}, Lio/realm/RealmResults;->deleteAllFromRealm()Z
 
-    .line 174
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmUtils$2;->val$context:Landroid/content/Context;
 
@@ -280,7 +261,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflineImageUtils;->deleteVideoDetailsImage(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 176
     const-class v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;
 
     invoke-virtual {p1, v0}, Lio/realm/Realm;->where(Ljava/lang/Class;)Lio/realm/RealmQuery;

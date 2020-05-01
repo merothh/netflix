@@ -19,13 +19,10 @@
 .method public constructor <init>(Lcom/netflix/android/org/json/JSONObject;)V
     .locals 5
 
-    .prologue
-    .line 163
     sget-object v0, Lcom/netflix/msl/keyx/KeyExchangeScheme;->JWK_LADDER:Lcom/netflix/msl/keyx/KeyExchangeScheme;
 
     invoke-direct {p0, v0}, Lcom/netflix/msl/keyx/KeyRequestData;-><init>(Lcom/netflix/msl/keyx/KeyExchangeScheme;)V
 
-    .line 166
     :try_start_0
     const-string/jumbo v0, "mechanism"
 
@@ -35,7 +32,6 @@
 
     move-result-object v1
 
-    .line 168
     :try_start_1
     invoke-static {v1}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$Mechanism;->valueOf(Ljava/lang/String;)Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$Mechanism;
 
@@ -46,7 +42,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 177
     :try_start_2
     sget-object v0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$1;->$SwitchMap$com$netflix$msl$keyx$JsonWebKeyLadderExchange$Mechanism:[I
 
@@ -60,7 +55,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 195
     new-instance v0, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->UNSUPPORTED_KEYX_MECHANISM:Lcom/netflix/msl/MslError;
@@ -77,11 +71,9 @@
     :try_end_2
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 197
     :catch_0
     move-exception v0
 
-    .line 198
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_PARSE_ERROR:Lcom/netflix/msl/MslError;
@@ -112,11 +104,9 @@
 
     throw v1
 
-    .line 169
     :catch_1
     move-exception v0
 
-    .line 170
     :try_start_3
     new-instance v2, Lcom/netflix/msl/MslKeyExchangeException;
 
@@ -128,11 +118,9 @@
     :try_end_3
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 172
     :catch_2
     move-exception v0
 
-    .line 173
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_PARSE_ERROR:Lcom/netflix/msl/MslError;
@@ -163,7 +151,6 @@
 
     throw v1
 
-    .line 180
     :pswitch_0
     const/4 v0, 0x0
 
@@ -172,11 +159,9 @@
     :try_end_4
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 200
     :cond_0
     return-void
 
-    .line 186
     :pswitch_1
     :try_start_5
     const-string/jumbo v0, "wrapdata"
@@ -194,7 +179,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_5 .. :try_end_5} :catch_3
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_5 .. :try_end_5} :catch_0
 
-    .line 190
     :try_start_6
     iget-object v0, p0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;->wrapdata:[B
 
@@ -206,7 +190,6 @@
 
     if-nez v0, :cond_0
 
-    .line 191
     :cond_1
     new-instance v0, Lcom/netflix/msl/MslKeyExchangeException;
 
@@ -238,11 +221,9 @@
 
     throw v0
 
-    .line 187
     :catch_3
     move-exception v0
 
-    .line 188
     new-instance v1, Lcom/netflix/msl/MslKeyExchangeException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->KEYX_INVALID_WRAPDATA:Lcom/netflix/msl/MslError;
@@ -275,7 +256,6 @@
     :try_end_6
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_6 .. :try_end_6} :catch_0
 
-    .line 177
     nop
 
     :pswitch_data_0
@@ -288,16 +268,12 @@
 .method public constructor <init>(Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$Mechanism;[B)V
     .locals 2
 
-    .prologue
-    .line 136
     sget-object v0, Lcom/netflix/msl/keyx/KeyExchangeScheme;->JWK_LADDER:Lcom/netflix/msl/keyx/KeyExchangeScheme;
 
     invoke-direct {p0, v0}, Lcom/netflix/msl/keyx/KeyRequestData;-><init>(Lcom/netflix/msl/keyx/KeyExchangeScheme;)V
 
-    .line 137
     iput-object p1, p0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;->mechanism:Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$Mechanism;
 
-    .line 139
     sget-object v0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$1;->$SwitchMap$com$netflix$msl$keyx$JsonWebKeyLadderExchange$Mechanism:[I
 
     invoke-virtual {p1}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$Mechanism;->ordinal()I
@@ -308,20 +284,16 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 146
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;->wrapdata:[B
 
-    .line 149
     :goto_0
     return-void
 
-    .line 141
     :pswitch_0
     if-nez p2, :cond_0
 
-    .line 142
     new-instance v0, Lcom/netflix/msl/MslInternalException;
 
     const-string/jumbo v1, "Previous wrapping key based key exchange requires the previous wrapping key data and ID."
@@ -330,13 +302,11 @@
 
     throw v0
 
-    .line 143
     :cond_0
     iput-object p2, p0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;->wrapdata:[B
 
     goto :goto_0
 
-    .line 139
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -348,19 +318,15 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 232
     if-ne p1, p0, :cond_0
 
-    .line 237
     :goto_0
     return v1
 
-    .line 233
     :cond_0
     instance-of v0, p1, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;
 
@@ -373,10 +339,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 234
     check-cast v0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;
 
-    .line 235
     iget-object v3, p0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;->wrapdata:[B
 
     iget-object v4, v0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;->wrapdata:[B
@@ -385,7 +349,6 @@
 
     move-result v3
 
-    .line 236
     invoke-super {p0, p1}, Lcom/netflix/msl/keyx/KeyRequestData;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -396,7 +359,6 @@
 
     iget-object v0, v0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;->mechanism:Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$Mechanism;
 
-    .line 237
     invoke-virtual {v4, v0}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$Mechanism;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -421,13 +383,10 @@
 .method protected getKeydata()Lcom/netflix/android/org/json/JSONObject;
     .locals 3
 
-    .prologue
-    .line 221
     new-instance v0, Lcom/netflix/android/org/json/JSONObject;
 
     invoke-direct {v0}, Lcom/netflix/android/org/json/JSONObject;-><init>()V
 
-    .line 222
     const-string/jumbo v1, "mechanism"
 
     iget-object v2, p0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;->mechanism:Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$Mechanism;
@@ -438,7 +397,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 223
     iget-object v1, p0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;->wrapdata:[B
 
     if-eqz v1, :cond_0
@@ -453,7 +411,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 224
     :cond_0
     return-object v0
 .end method
@@ -461,8 +418,6 @@
 .method public getMechanism()Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$Mechanism;
     .locals 1
 
-    .prologue
-    .line 206
     iget-object v0, p0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;->mechanism:Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$Mechanism;
 
     return-object v0
@@ -471,8 +426,6 @@
 .method public getWrapdata()[B
     .locals 1
 
-    .prologue
-    .line 213
     iget-object v0, p0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;->wrapdata:[B
 
     return-object v0
@@ -481,8 +434,6 @@
 .method public hashCode()I
     .locals 3
 
-    .prologue
-    .line 246
     iget-object v0, p0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;->wrapdata:[B
 
     if-eqz v0, :cond_0
@@ -493,7 +444,6 @@
 
     move-result v0
 
-    .line 247
     :goto_0
     invoke-super {p0}, Lcom/netflix/msl/keyx/KeyRequestData;->hashCode()I
 
@@ -501,7 +451,6 @@
 
     iget-object v2, p0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;->mechanism:Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$Mechanism;
 
-    .line 248
     invoke-virtual {v2}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$Mechanism;->hashCode()I
 
     move-result v2
@@ -512,7 +461,6 @@
 
     return v0
 
-    .line 246
     :cond_0
     const/4 v0, 0x0
 

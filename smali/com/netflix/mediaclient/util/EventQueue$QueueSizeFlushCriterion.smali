@@ -14,8 +14,6 @@
 .method private constructor <init>(Lcom/netflix/mediaclient/util/EventQueue;)V
     .locals 0
 
-    .prologue
-    .line 284
     iput-object p1, p0, Lcom/netflix/mediaclient/util/EventQueue$QueueSizeFlushCriterion;->this$0:Lcom/netflix/mediaclient/util/EventQueue;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,8 +24,6 @@
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/util/EventQueue;Lcom/netflix/mediaclient/util/EventQueue$1;)V
     .locals 0
 
-    .prologue
-    .line 284
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/util/EventQueue$QueueSizeFlushCriterion;-><init>(Lcom/netflix/mediaclient/util/EventQueue;)V
 
     return-void
@@ -38,8 +34,6 @@
 .method public shouldFlushQueue(IJ)Z
     .locals 3
 
-    .prologue
-    .line 289
     iget-object v0, p0, Lcom/netflix/mediaclient/util/EventQueue$QueueSizeFlushCriterion;->this$0:Lcom/netflix/mediaclient/util/EventQueue;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/EventQueue;->access$200(Lcom/netflix/mediaclient/util/EventQueue;)Ljava/util/List;
@@ -58,14 +52,12 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 291
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 292
     iget-object v0, p0, Lcom/netflix/mediaclient/util/EventQueue$QueueSizeFlushCriterion;->this$0:Lcom/netflix/mediaclient/util/EventQueue;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/EventQueue;->access$400(Lcom/netflix/mediaclient/util/EventQueue;)Ljava/lang/String;
@@ -118,15 +110,12 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 294
     :cond_0
     const/4 v0, 0x1
 
-    .line 300
     :goto_0
     return v0
 
-    .line 296
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -134,7 +123,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 297
     iget-object v0, p0, Lcom/netflix/mediaclient/util/EventQueue$QueueSizeFlushCriterion;->this$0:Lcom/netflix/mediaclient/util/EventQueue;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/EventQueue;->access$400(Lcom/netflix/mediaclient/util/EventQueue;)Ljava/lang/String;
@@ -187,7 +175,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 300
     :cond_2
     const/4 v0, 0x0
 

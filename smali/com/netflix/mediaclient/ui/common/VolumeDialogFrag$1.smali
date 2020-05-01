@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/common/VolumeDialogFrag;)V
     .locals 0
 
-    .prologue
-    .line 65
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/common/VolumeDialogFrag$1;->this$0:Lcom/netflix/mediaclient/ui/common/VolumeDialogFrag;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,8 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .prologue
-    .line 68
     const-string/jumbo v0, "volume"
 
     const/4 v1, -0x1
@@ -35,10 +31,8 @@
 
     move-result v0
 
-    .line 69
     if-ltz v0, :cond_0
 
-    .line 70
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/common/VolumeDialogFrag$1;->this$0:Lcom/netflix/mediaclient/ui/common/VolumeDialogFrag;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/common/VolumeDialogFrag;->access$000(Lcom/netflix/mediaclient/ui/common/VolumeDialogFrag;)Landroid/widget/SeekBar;
@@ -47,11 +41,9 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/SeekBar;->setProgress(I)V
 
-    .line 75
     :goto_0
     return-void
 
-    .line 72
     :cond_0
     const-string/jumbo v0, "VolumeDialogFrag"
 

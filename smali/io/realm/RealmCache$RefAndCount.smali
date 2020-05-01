@@ -33,25 +33,20 @@
 .method private constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
     iput-object v0, p0, Lio/realm/RealmCache$RefAndCount;->localRealm:Ljava/lang/ThreadLocal;
 
-    .line 55
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
     iput-object v0, p0, Lio/realm/RealmCache$RefAndCount;->localCount:Ljava/lang/ThreadLocal;
 
-    .line 57
     const/4 v0, 0x0
 
     iput v0, p0, Lio/realm/RealmCache$RefAndCount;->globalCount:I
@@ -62,8 +57,6 @@
 .method synthetic constructor <init>(Lio/realm/RealmCache$1;)V
     .locals 0
 
-    .prologue
-    .line 51
     invoke-direct {p0}, Lio/realm/RealmCache$RefAndCount;-><init>()V
 
     return-void
@@ -72,8 +65,6 @@
 .method static synthetic access$100(Lio/realm/RealmCache$RefAndCount;)I
     .locals 1
 
-    .prologue
-    .line 51
     iget v0, p0, Lio/realm/RealmCache$RefAndCount;->globalCount:I
 
     return v0
@@ -82,8 +73,6 @@
 .method static synthetic access$108(Lio/realm/RealmCache$RefAndCount;)I
     .locals 2
 
-    .prologue
-    .line 51
     iget v0, p0, Lio/realm/RealmCache$RefAndCount;->globalCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -96,8 +85,6 @@
 .method static synthetic access$110(Lio/realm/RealmCache$RefAndCount;)I
     .locals 2
 
-    .prologue
-    .line 51
     iget v0, p0, Lio/realm/RealmCache$RefAndCount;->globalCount:I
 
     add-int/lit8 v1, v0, -0x1
@@ -110,8 +97,6 @@
 .method static synthetic access$200(Lio/realm/RealmCache$RefAndCount;)Ljava/lang/ThreadLocal;
     .locals 1
 
-    .prologue
-    .line 51
     iget-object v0, p0, Lio/realm/RealmCache$RefAndCount;->localRealm:Ljava/lang/ThreadLocal;
 
     return-object v0
@@ -120,8 +105,6 @@
 .method static synthetic access$300(Lio/realm/RealmCache$RefAndCount;)Ljava/lang/ThreadLocal;
     .locals 1
 
-    .prologue
-    .line 51
     iget-object v0, p0, Lio/realm/RealmCache$RefAndCount;->localCount:Ljava/lang/ThreadLocal;
 
     return-object v0

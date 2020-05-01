@@ -11,14 +11,10 @@
 .method public constructor <init>(Lorg/java_websocket/client/WebSocketClient;Ljava/nio/channels/ByteChannel;)V
     .locals 0
 
-    .prologue
-    .line 411
     iput-object p1, p0, Lorg/java_websocket/client/WebSocketClient$DefaultClientProxyChannel;->this$0:Lorg/java_websocket/client/WebSocketClient;
 
-    .line 412
     invoke-direct {p0, p2}, Lorg/java_websocket/client/AbstractClientProxyChannel;-><init>(Ljava/nio/channels/ByteChannel;)V
 
-    .line 413
     return-void
 .end method
 
@@ -27,13 +23,10 @@
 .method public buildHandShake()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 416
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 417
     iget-object v1, p0, Lorg/java_websocket/client/WebSocketClient$DefaultClientProxyChannel;->this$0:Lorg/java_websocket/client/WebSocketClient;
 
     iget-object v1, v1, Lorg/java_websocket/client/WebSocketClient;->uri:Ljava/net/URI;
@@ -42,20 +35,16 @@
 
     move-result-object v1
 
-    .line 418
     const-string/jumbo v2, "CONNECT "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 419
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 420
     const-string/jumbo v2, ":"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 421
     iget-object v2, p0, Lorg/java_websocket/client/WebSocketClient$DefaultClientProxyChannel;->this$0:Lorg/java_websocket/client/WebSocketClient;
 
     invoke-static {v2}, Lorg/java_websocket/client/WebSocketClient;->access$100(Lorg/java_websocket/client/WebSocketClient;)I
@@ -64,25 +53,20 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 422
     const-string/jumbo v2, " HTTP/1.1\n"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 423
     const-string/jumbo v2, "Host: "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 424
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 425
     const-string/jumbo v1, "\n"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 426
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

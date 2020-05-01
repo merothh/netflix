@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;Ljava/util/List;)V
     .locals 0
 
-    .prologue
-    .line 206
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$2;->this$0:Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$2;->val$prefetchHints:Ljava/util/List;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 7
 
-    .prologue
-    .line 210
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$2;->val$prefetchHints:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -54,22 +50,18 @@
 
     check-cast v0, Lcom/netflix/mediaclient/util/Triple;
 
-    .line 211
     iget-object v1, v0, Lcom/netflix/mediaclient/util/Triple;->first:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/Long;
 
-    .line 212
     iget-object v2, v0, Lcom/netflix/mediaclient/util/Triple;->second:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/Integer;
 
-    .line 213
     iget-object v0, v0, Lcom/netflix/mediaclient/util/Triple;->third:Ljava/lang/Object;
 
     check-cast v0, Lcom/netflix/mediaclient/ui/common/PlayContext;
 
-    .line 215
     iget-object v4, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$2;->this$0:Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;
 
     invoke-static {v4}, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;->access$200(Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;)Ljava/util/Map;
@@ -82,14 +74,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 216
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 217
     const-string/jumbo v0, "NfPlayerDrmManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -130,7 +120,6 @@
 
     goto :goto_0
 
-    .line 220
     :cond_1
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
@@ -148,14 +137,12 @@
 
     if-eqz v4, :cond_2
 
-    .line 222
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 223
     const-string/jumbo v0, "NfPlayerDrmManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -196,7 +183,6 @@
 
     goto/16 :goto_0
 
-    .line 226
     :cond_2
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -204,7 +190,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 227
     const-string/jumbo v4, "NfPlayerDrmManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -243,7 +228,6 @@
 
     invoke-static {v4, v5}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 229
     :cond_3
     iget-object v4, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$2;->this$0:Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;
 
@@ -257,7 +241,6 @@
 
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 230
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$2;->this$0:Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;->access$500(Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;)Lcom/netflix/mediaclient/service/player/manifest/NfManifestCachePlaybackInterface;
@@ -270,7 +253,6 @@
 
     goto/16 :goto_0
 
-    .line 233
     :cond_4
     return-void
 .end method

@@ -23,16 +23,12 @@
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 2
 
-    .prologue
-    .line 17
     const-string/jumbo v0, "META_DATA_CHANGED"
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/mdx/message/MdxMessage;-><init>(Ljava/lang/String;)V
 
-    .line 18
     iput-object p1, p0, Lcom/netflix/mediaclient/service/mdx/message/target/MetaDataChanged;->mJson:Lorg/json/JSONObject;
 
-    .line 19
     const-string/jumbo v0, "catalogId"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -41,7 +37,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/MetaDataChanged;->mCatalogId:Ljava/lang/String;
 
-    .line 20
     const-string/jumbo v0, "episodeId"
 
     const/4 v1, 0x0
@@ -52,7 +47,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/MetaDataChanged;->mEpisodeId:Ljava/lang/String;
 
-    .line 21
     const-string/jumbo v0, "type"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -61,7 +55,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/MetaDataChanged;->mType:Ljava/lang/String;
 
-    .line 22
     return-void
 .end method
 
@@ -70,8 +63,6 @@
 .method public getCatalogId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 25
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/MetaDataChanged;->mCatalogId:Ljava/lang/String;
 
     return-object v0
@@ -80,8 +71,6 @@
 .method public getEpisodeId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 28
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/MetaDataChanged;->mEpisodeId:Ljava/lang/String;
 
     return-object v0
@@ -90,8 +79,6 @@
 .method public getType()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 31
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/MetaDataChanged;->mType:Ljava/lang/String;
 
     return-object v0

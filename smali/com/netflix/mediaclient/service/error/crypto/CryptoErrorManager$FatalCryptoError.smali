@@ -31,45 +31,34 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/error/crypto/ErrorSource;Lcom/netflix/mediaclient/StatusCode;J)V
     .locals 3
 
-    .prologue
-    .line 450
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 452
     iput-object p1, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$FatalCryptoError;->errorSource:Lcom/netflix/mediaclient/service/error/crypto/ErrorSource;
 
-    .line 453
     iput-object p2, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$FatalCryptoError;->statusCode:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 454
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$FatalCryptoError;->timestamp:J
 
-    .line 455
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$FatalCryptoError;->howLongDeviceWasUpInMs:J
 
-    .line 456
     iput-wide p3, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$FatalCryptoError;->appStartupTimeInMs:J
 
-    .line 457
     return-void
 .end method
 
 .method constructor <init>(Lorg/json/JSONObject;)V
     .locals 2
 
-    .prologue
-    .line 459
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 461
     const-string/jumbo v0, "ts"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
@@ -78,7 +67,6 @@
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$FatalCryptoError;->timestamp:J
 
-    .line 462
     const-string/jumbo v0, "up"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
@@ -87,7 +75,6 @@
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$FatalCryptoError;->howLongDeviceWasUpInMs:J
 
-    .line 463
     const-string/jumbo v0, "appStartupTime"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
@@ -96,7 +83,6 @@
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$FatalCryptoError;->appStartupTimeInMs:J
 
-    .line 464
     const-string/jumbo v0, "src"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -109,7 +95,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$FatalCryptoError;->errorSource:Lcom/netflix/mediaclient/service/error/crypto/ErrorSource;
 
-    .line 465
     const-string/jumbo v0, "cause"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
@@ -122,7 +107,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$FatalCryptoError;->statusCode:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 466
     return-void
 .end method
 
@@ -131,8 +115,6 @@
 .method belongToApplicationInstance(J)Z
     .locals 3
 
-    .prologue
-    .line 489
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$FatalCryptoError;->appStartupTimeInMs:J
 
     cmp-long v0, v0, p1
@@ -153,8 +135,6 @@
 .method getDeviceBootTimeInMs()J
     .locals 4
 
-    .prologue
-    .line 528
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$FatalCryptoError;->timestamp:J
 
     iget-wide v2, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$FatalCryptoError;->howLongDeviceWasUpInMs:J
@@ -167,8 +147,6 @@
 .method isValid()Z
     .locals 4
 
-    .prologue
-    .line 520
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$FatalCryptoError;->timestamp:J
 
     invoke-static {}, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;->access$400()J
@@ -199,34 +177,28 @@
 .method toJson()Lorg/json/JSONObject;
     .locals 4
 
-    .prologue
-    .line 470
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    .line 471
     const-string/jumbo v1, "ts"
 
     iget-wide v2, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$FatalCryptoError;->timestamp:J
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 472
     const-string/jumbo v1, "appStartupTime"
 
     iget-wide v2, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$FatalCryptoError;->appStartupTimeInMs:J
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 473
     const-string/jumbo v1, "up"
 
     iget-wide v2, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$FatalCryptoError;->howLongDeviceWasUpInMs:J
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 474
     const-string/jumbo v1, "src"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$FatalCryptoError;->errorSource:Lcom/netflix/mediaclient/service/error/crypto/ErrorSource;
@@ -237,7 +209,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 475
     const-string/jumbo v1, "cause"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$FatalCryptoError;->statusCode:Lcom/netflix/mediaclient/StatusCode;
@@ -248,15 +219,12 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 477
     return-object v0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 533
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -337,17 +305,14 @@
 .method wasDeviceRestartedSinceErrorOccured(J)Z
     .locals 7
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 499
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 502
     invoke-virtual {p0, p1, p2}, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$FatalCryptoError;->belongToApplicationInstance(J)Z
 
     move-result v4
@@ -356,12 +321,10 @@
 
     move v0, v1
 
-    .line 512
     :cond_0
     :goto_0
     return v0
 
-    .line 508
     :cond_1
     const-wide/16 v4, 0x0
 
@@ -375,7 +338,6 @@
 
     if-ltz v2, :cond_0
 
-    .line 512
     :cond_2
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$FatalCryptoError;->getDeviceBootTimeInMs()J
 

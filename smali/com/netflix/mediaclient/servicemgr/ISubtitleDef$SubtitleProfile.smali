@@ -42,7 +42,6 @@
 .method static constructor <clinit>()V
     .locals 13
 
-    .prologue
     const/4 v12, 0x4
 
     const/4 v11, 0x3
@@ -53,7 +52,6 @@
 
     const/4 v2, 0x0
 
-    .line 56
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
     const-string/jumbo v1, "SIMPLE"
@@ -68,7 +66,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->SIMPLE:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
-    .line 57
     new-instance v3, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
     const-string/jumbo v4, "ENHANCED"
@@ -85,7 +82,6 @@
 
     sput-object v3, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->ENHANCED:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
-    .line 58
     new-instance v3, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
     const-string/jumbo v4, "IMAGE"
@@ -102,7 +98,6 @@
 
     sput-object v3, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->IMAGE:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
-    .line 59
     new-instance v3, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
     const-string/jumbo v4, "SIMPLE_ENC"
@@ -119,7 +114,6 @@
 
     sput-object v3, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->SIMPLE_ENC:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
-    .line 60
     new-instance v3, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
     const-string/jumbo v4, "ENHANCED_ENC"
@@ -136,7 +130,6 @@
 
     sput-object v3, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->ENHANCED_ENC:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
-    .line 61
     new-instance v3, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
     const-string/jumbo v4, "IMAGE_ENC"
@@ -153,7 +146,6 @@
 
     sput-object v3, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->IMAGE_ENC:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
-    .line 54
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
@@ -199,49 +191,37 @@
         }
     .end annotation
 
-    .prologue
-    .line 63
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 64
     iput p3, p0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->mValue:I
 
-    .line 65
     iput-object p4, p0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->mNccpCode:Ljava/lang/String;
 
-    .line 66
     iput-boolean p5, p0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->mEncrypted:Z
 
-    .line 67
     return-void
 .end method
 
 .method public static fromNccpCode(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
     .locals 6
 
-    .prologue
-    .line 103
     invoke-static {p0}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 104
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->SIMPLE:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
-    .line 113
     :cond_0
     :goto_0
     return-object v0
 
-    .line 106
     :cond_1
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 107
     invoke-static {}, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->values()[Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
     move-result-object v3
@@ -257,7 +237,6 @@
 
     aget-object v0, v3, v1
 
-    .line 108
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->getNccpCode()Ljava/lang/String;
 
     move-result-object v5
@@ -268,14 +247,12 @@
 
     if-nez v5, :cond_0
 
-    .line 107
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_1
 
-    .line 113
     :cond_2
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->SIMPLE:Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
@@ -285,8 +262,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
     .locals 1
 
-    .prologue
-    .line 54
     const-class v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -301,8 +276,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
     .locals 1
 
-    .prologue
-    .line 54
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->clone()Ljava/lang/Object;
@@ -319,8 +292,6 @@
 .method public getNccpCode()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 88
     iget-object v0, p0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->mNccpCode:Ljava/lang/String;
 
     return-object v0
@@ -329,8 +300,6 @@
 .method public final getValue()I
     .locals 1
 
-    .prologue
-    .line 79
     iget v0, p0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->mValue:I
 
     return v0
@@ -339,8 +308,6 @@
 .method public isEncrypted()Z
     .locals 1
 
-    .prologue
-    .line 92
     iget-boolean v0, p0, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->mEncrypted:Z
 
     return v0

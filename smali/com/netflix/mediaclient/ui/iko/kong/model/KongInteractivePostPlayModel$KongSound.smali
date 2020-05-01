@@ -19,8 +19,6 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel;)V
     .locals 0
 
-    .prologue
-    .line 811
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongSound;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,8 +31,6 @@
 .method public getId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 818
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongSound;->id:Ljava/lang/String;
 
     return-object v0
@@ -43,8 +39,6 @@
 .method public getSourceId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 826
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongSound;->sourceId:Ljava/lang/String;
 
     return-object v0
@@ -53,8 +47,6 @@
 .method public getUrl()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 822
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongSound;->url:Ljava/lang/String;
 
     return-object v0
@@ -63,8 +55,6 @@
 .method public getVolume()F
     .locals 2
 
-    .prologue
-    .line 830
     iget v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongSound;->volume:F
 
     const/4 v1, 0x0
@@ -73,10 +63,8 @@
 
     if-lez v0, :cond_0
 
-    .line 831
     iget v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongSound;->volume:F
 
-    .line 833
     :goto_0
     return v0
 
@@ -89,10 +77,8 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
     const/16 v2, 0x27
 
-    .line 838
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

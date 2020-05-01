@@ -31,19 +31,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 291
     iput-object p1, p0, Landroid/support/design/widget/HeaderBehavior$FlingRunnable;->this$0:Landroid/support/design/widget/HeaderBehavior;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 292
     iput-object p2, p0, Landroid/support/design/widget/HeaderBehavior$FlingRunnable;->mParent:Landroid/support/design/widget/CoordinatorLayout;
 
-    .line 293
     iput-object p3, p0, Landroid/support/design/widget/HeaderBehavior$FlingRunnable;->mLayout:Landroid/view/View;
 
-    .line 294
     return-void
 .end method
 
@@ -52,8 +47,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 298
     iget-object v0, p0, Landroid/support/design/widget/HeaderBehavior$FlingRunnable;->mLayout:Landroid/view/View;
 
     if-eqz v0, :cond_0
@@ -64,7 +57,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 299
     iget-object v0, p0, Landroid/support/design/widget/HeaderBehavior$FlingRunnable;->this$0:Landroid/support/design/widget/HeaderBehavior;
 
     iget-object v0, v0, Landroid/support/design/widget/HeaderBehavior;->mScroller:Landroid/support/v4/widget/ScrollerCompat;
@@ -75,7 +67,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 300
     iget-object v0, p0, Landroid/support/design/widget/HeaderBehavior$FlingRunnable;->this$0:Landroid/support/design/widget/HeaderBehavior;
 
     iget-object v1, p0, Landroid/support/design/widget/HeaderBehavior$FlingRunnable;->mParent:Landroid/support/design/widget/CoordinatorLayout;
@@ -92,17 +83,14 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/support/design/widget/HeaderBehavior;->setHeaderTopBottomOffset(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;I)I
 
-    .line 302
     iget-object v0, p0, Landroid/support/design/widget/HeaderBehavior$FlingRunnable;->mLayout:Landroid/view/View;
 
     invoke-static {v0, p0}, Landroid/support/v4/view/ViewCompat;->postOnAnimation(Landroid/view/View;Ljava/lang/Runnable;)V
 
-    .line 307
     :cond_0
     :goto_0
     return-void
 
-    .line 304
     :cond_1
     iget-object v0, p0, Landroid/support/design/widget/HeaderBehavior$FlingRunnable;->this$0:Landroid/support/design/widget/HeaderBehavior;
 

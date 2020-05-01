@@ -31,14 +31,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 594
     invoke-direct {p0, p2}, Lcom/netflix/msl/msg/MslControl$FilterMessageContext;-><init>(Lcom/netflix/msl/msg/MessageContext;)V
 
-    .line 595
     iput-object p1, p0, Lcom/netflix/msl/msg/MslControl$ResendMessageContext;->payloads:Ljava/util/List;
 
-    .line 596
     return-void
 .end method
 
@@ -47,8 +43,6 @@
 .method public write(Lcom/netflix/msl/msg/MessageOutputStream;)V
     .locals 3
 
-    .prologue
-    .line 605
     iget-object v0, p0, Lcom/netflix/msl/msg/MslControl$ResendMessageContext;->payloads:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -61,17 +55,14 @@
 
     if-eqz v0, :cond_2
 
-    .line 606
     :cond_0
     iget-object v0, p0, Lcom/netflix/msl/msg/MslControl$ResendMessageContext;->appCtx:Lcom/netflix/msl/msg/MessageContext;
 
     invoke-interface {v0, p1}, Lcom/netflix/msl/msg/MessageContext;->write(Lcom/netflix/msl/msg/MessageOutputStream;)V
 
-    .line 619
     :cond_1
     return-void
 
-    .line 611
     :cond_2
     iget-object v0, p0, Lcom/netflix/msl/msg/MslControl$ResendMessageContext;->payloads:Ljava/util/List;
 
@@ -92,33 +83,28 @@
 
     check-cast v0, Lcom/netflix/msl/msg/PayloadChunk;
 
-    .line 612
     invoke-virtual {v0}, Lcom/netflix/msl/msg/PayloadChunk;->getCompressionAlgo()Lcom/netflix/msl/MslConstants$CompressionAlgorithm;
 
     move-result-object v2
 
     invoke-virtual {p1, v2}, Lcom/netflix/msl/msg/MessageOutputStream;->setCompressionAlgorithm(Lcom/netflix/msl/MslConstants$CompressionAlgorithm;)Z
 
-    .line 613
     invoke-virtual {v0}, Lcom/netflix/msl/msg/PayloadChunk;->getData()[B
 
     move-result-object v2
 
     invoke-virtual {p1, v2}, Lcom/netflix/msl/msg/MessageOutputStream;->write([B)V
 
-    .line 614
     invoke-virtual {v0}, Lcom/netflix/msl/msg/PayloadChunk;->isEndOfMessage()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 615
     invoke-virtual {p1}, Lcom/netflix/msl/msg/MessageOutputStream;->close()V
 
     goto :goto_0
 
-    .line 617
     :cond_3
     invoke-virtual {p1}, Lcom/netflix/msl/msg/MessageOutputStream;->flush()V
 

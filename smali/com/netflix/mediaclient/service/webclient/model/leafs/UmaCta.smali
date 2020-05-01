@@ -20,8 +20,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,8 +39,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 45
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaCta$GsonTypeAdapter;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaCta$GsonTypeAdapter;-><init>(Lcom/google/gson/Gson;)V

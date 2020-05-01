@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/kubrick/details/BarkerMovieDetailsFrag;)V
     .locals 0
 
-    .prologue
-    .line 401
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerMovieDetailsFrag$BarkerSimilarItemsGridViewAdapter$1;->val$this$0:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerMovieDetailsFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,8 +24,6 @@
 .method private getImageHeight()I
     .locals 2
 
-    .prologue
-    .line 420
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerMovieDetailsFrag$BarkerSimilarItemsGridViewAdapter$1;->getImageWidth()I
 
     move-result v0
@@ -46,8 +42,6 @@
 .method private getImageWidth()I
     .locals 2
 
-    .prologue
-    .line 424
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerMovieDetailsFrag$BarkerSimilarItemsGridViewAdapter$1;->val$this$0:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerMovieDetailsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerMovieDetailsFrag;->getActivity()Landroid/app/Activity;
@@ -64,7 +58,6 @@
 
     move-result-object v1
 
-    .line 425
     invoke-virtual {v1}, Lcom/netflix/mediaclient/util/ItemDecorationBarkerGrid;->getAllSpaceWidth()I
 
     move-result v1
@@ -79,7 +72,6 @@
 
     div-int/2addr v0, v1
 
-    .line 424
     return v0
 .end method
 
@@ -88,8 +80,6 @@
 .method public createItemView()Landroid/view/View;
     .locals 4
 
-    .prologue
-    .line 405
     new-instance v0, Lcom/netflix/mediaclient/android/widget/VideoView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerMovieDetailsFrag$BarkerSimilarItemsGridViewAdapter$1;->val$this$0:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerMovieDetailsFrag;
@@ -104,12 +94,10 @@
 
     invoke-direct {v0, v1}, Lcom/netflix/mediaclient/android/widget/VideoView;-><init>(Landroid/content/Context;)V
 
-    .line 406
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/VideoView;->setAdjustViewBounds(Z)V
 
-    .line 407
     new-instance v1, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerMovieDetailsFrag$BarkerRelatedVideoDetailsClickListener;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerMovieDetailsFrag$BarkerSimilarItemsGridViewAdapter$1;->val$this$0:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerMovieDetailsFrag;
@@ -124,12 +112,10 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/VideoView;->setClickListener(Lcom/netflix/mediaclient/android/widget/VideoDetailsClickListener;)V
 
-    .line 411
     sget-object v1, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/VideoView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 413
     new-instance v1, Landroid/widget/AbsListView$LayoutParams;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerMovieDetailsFrag$BarkerSimilarItemsGridViewAdapter$1;->getImageWidth()I
@@ -142,14 +128,11 @@
 
     invoke-direct {v1, v2, v3}, Landroid/widget/AbsListView$LayoutParams;-><init>(II)V
 
-    .line 414
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/VideoView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 415
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/VideoView;->setIsHorizontal(Z)V
 
-    .line 416
     return-object v0
 .end method

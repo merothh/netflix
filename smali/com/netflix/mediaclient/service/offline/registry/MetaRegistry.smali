@@ -61,26 +61,20 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/offline/registry/MetaRegistry;->mCheckSumMap:Ljava/util/Map;
 
-    .line 36
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/service/offline/registry/MetaRegistry;->mDownloadsPausedByUser:Z
 
-    .line 37
     iput p1, p0, Lcom/netflix/mediaclient/service/offline/registry/MetaRegistry;->mVersion:I
 
-    .line 38
     return-void
 .end method
 
@@ -89,8 +83,6 @@
 .method public getCheckSumFor(I)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 41
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/registry/MetaRegistry;->mCheckSumMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -109,8 +101,6 @@
 .method public updateCheckSum(ILjava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 45
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/registry/MetaRegistry;->mCheckSumMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -119,6 +109,5 @@
 
     invoke-interface {v0, v1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 46
     return-void
 .end method

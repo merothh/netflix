@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongBackgroundScreen;Landroid/graphics/drawable/BitmapDrawable;)V
     .locals 0
 
-    .prologue
-    .line 151
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongBackgroundScreen$3;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongBackgroundScreen;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongBackgroundScreen$3;->val$drawable:Landroid/graphics/drawable/BitmapDrawable;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 154
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongBackgroundScreen$3;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongBackgroundScreen;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongBackgroundScreen;->access$100(Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongBackgroundScreen;)Landroid/widget/ImageView;
@@ -42,7 +38,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 155
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongBackgroundScreen$3;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongBackgroundScreen;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongBackgroundScreen;->access$100(Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongBackgroundScreen;)Landroid/widget/ImageView;
@@ -53,7 +48,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 157
     :cond_0
     return-void
 .end method

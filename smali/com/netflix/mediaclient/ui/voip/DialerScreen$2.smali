@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)V
     .locals 0
 
-    .prologue
-    .line 360
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen$2;->this$0:Lcom/netflix/mediaclient/ui/voip/DialerScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,10 +26,8 @@
 .method public onGlobalLayout()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
-    .line 364
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen$2;->this$0:Lcom/netflix/mediaclient/ui/voip/DialerScreen;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->access$100(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
@@ -44,7 +40,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 366
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen$2;->this$0:Lcom/netflix/mediaclient/ui/voip/DialerScreen;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->access$200(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)Landroid/view/View;
@@ -55,15 +50,12 @@
 
     move-result v0
 
-    .line 367
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-direct {v1, v0, v0}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 368
     iput v6, v1, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
-    .line 369
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen$2;->this$0:Lcom/netflix/mediaclient/ui/voip/DialerScreen;
 
     invoke-static {v2}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->access$300(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)Landroid/view/View;
@@ -72,17 +64,14 @@
 
     invoke-virtual {v2, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 371
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
     const/4 v2, -0x2
 
     invoke-direct {v1, v0, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 372
     iput v6, v1, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
-    .line 374
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen$2;->this$0:Lcom/netflix/mediaclient/ui/voip/DialerScreen;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->access$400(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)Landroid/view/View;
@@ -91,7 +80,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 400
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen$2;->this$0:Lcom/netflix/mediaclient/ui/voip/DialerScreen;
 
@@ -101,10 +89,8 @@
 
     invoke-static {v0, p0}, Lcom/netflix/mediaclient/util/ViewUtils;->removeGlobalLayoutListener(Landroid/view/View;Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 401
     return-void
 
-    .line 378
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen$2;->this$0:Lcom/netflix/mediaclient/ui/voip/DialerScreen;
 
@@ -116,7 +102,6 @@
 
     move-result v0
 
-    .line 380
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen$2;->this$0:Lcom/netflix/mediaclient/ui/voip/DialerScreen;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->access$200(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)Landroid/view/View;
@@ -139,7 +124,6 @@
 
     add-int/2addr v1, v2
 
-    .line 381
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen$2;->this$0:Lcom/netflix/mediaclient/ui/voip/DialerScreen;
 
     invoke-static {v2}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->access$400(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)Landroid/view/View;
@@ -152,14 +136,12 @@
 
     add-int/2addr v2, v0
 
-    .line 384
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 385
     const-string/jumbo v3, "VoipActivity"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -182,7 +164,6 @@
 
     invoke-static {v3, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 386
     const-string/jumbo v3, "VoipActivity"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -205,7 +186,6 @@
 
     invoke-static {v3, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 387
     const-string/jumbo v3, "VoipActivity"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -228,25 +208,20 @@
 
     invoke-static {v3, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 390
     :cond_1
     if-le v2, v1, :cond_2
 
-    .line 391
     sub-int/2addr v0, v2
 
     add-int/2addr v0, v1
 
-    .line 394
     :cond_2
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-direct {v1, v0, v0}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 395
     iput v6, v1, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
-    .line 397
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen$2;->this$0:Lcom/netflix/mediaclient/ui/voip/DialerScreen;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->access$300(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)Landroid/view/View;

@@ -25,19 +25,14 @@
 .method constructor <init>()V
     .locals 2
 
-    .prologue
     const-wide/16 v0, 0x0
 
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 14
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/offline/download/HttpUrlDownloadStats;->mHttpResponseStartTime:J
 
-    .line 15
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/offline/download/HttpUrlDownloadStats;->mBytesDownloadedInSession:J
 
-    .line 16
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/offline/download/HttpUrlDownloadStats;->mFileSizeAtDownloadStartTime:J
 
     return-void
@@ -48,8 +43,6 @@
 .method public dumpStats()V
     .locals 6
 
-    .prologue
-    .line 21
     const-string/jumbo v0, "nf_httpUrlDownloadStat"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -74,7 +67,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 22
     const-string/jumbo v0, "nf_httpUrlDownloadStat"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -99,7 +91,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 23
     const-string/jumbo v0, "nf_httpUrlDownloadStat"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -124,7 +115,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 24
     const-string/jumbo v0, "nf_httpUrlDownloadStat"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -149,7 +139,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 25
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/offline/download/HttpUrlDownloadStats;->mOnCompleteTime:J
 
     iget-wide v2, p0, Lcom/netflix/mediaclient/service/offline/download/HttpUrlDownloadStats;->mOnErrorTime:J
@@ -160,20 +149,17 @@
 
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/offline/download/HttpUrlDownloadStats;->mOnCompleteTime:J
 
-    .line 26
     :goto_0
     iget-wide v2, p0, Lcom/netflix/mediaclient/service/offline/download/HttpUrlDownloadStats;->mHttpResponseStartTime:J
 
     sub-long/2addr v0, v2
 
-    .line 27
     const-wide/16 v2, 0x0
 
     cmp-long v2, v0, v2
 
     if-lez v2, :cond_1
 
-    .line 28
     const-string/jumbo v2, "nf_httpUrlDownloadStat"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -200,17 +186,14 @@
 
     invoke-static {v2, v0}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 32
     :goto_1
     return-void
 
-    .line 25
     :cond_0
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/offline/download/HttpUrlDownloadStats;->mOnErrorTime:J
 
     goto :goto_0
 
-    .line 30
     :cond_1
     const-string/jumbo v2, "nf_httpUrlDownloadStat"
 

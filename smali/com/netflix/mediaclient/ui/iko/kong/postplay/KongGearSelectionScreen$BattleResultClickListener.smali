@@ -16,16 +16,12 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;I)V
     .locals 0
 
-    .prologue
-    .line 502
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen$BattleResultClickListener;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 503
     iput p2, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen$BattleResultClickListener;->index:I
 
-    .line 504
     return-void
 .end method
 
@@ -34,11 +30,8 @@
 .method public onClick(Landroid/view/View;)V
     .locals 5
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 508
-    .line 509
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen$BattleResultClickListener;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;->access$1000(Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;)I
@@ -47,12 +40,10 @@
 
     if-gtz v0, :cond_1
 
-    .line 510
     const/4 v0, 0x1
 
     move v1, v0
 
-    .line 515
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen$BattleResultClickListener;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;
 
@@ -62,7 +53,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibleOrInvisible(Landroid/view/View;Z)V
 
-    .line 516
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen$BattleResultClickListener;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;->access$800(Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;)Landroid/widget/TextView;
@@ -71,14 +61,12 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibleOrInvisible(Landroid/view/View;Z)V
 
-    .line 517
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen$BattleResultClickListener;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;->postPlayManager:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;->removeHandlerCallbacksAndMessages()V
 
-    .line 518
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen$BattleResultClickListener;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;->access$1200(Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;)Ljava/util/List;
@@ -101,7 +89,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 519
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen$BattleResultClickListener;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;->access$1200(Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;)Ljava/util/List;
@@ -120,7 +107,6 @@
 
     move-result v2
 
-    .line 520
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen$BattleResultClickListener;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;->access$1300(Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;)I
@@ -135,7 +121,6 @@
 
     move-result v0
 
-    .line 521
     :goto_1
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen$BattleResultClickListener;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;
 
@@ -151,7 +136,6 @@
 
     move-result v2
 
-    .line 522
     :goto_2
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen$BattleResultClickListener;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;
 
@@ -161,11 +145,9 @@
 
     invoke-virtual {v3, v0, v2, v4, v1}, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;->startPlayback(IILcom/netflix/mediaclient/servicemgr/interface_/VideoType;Z)V
 
-    .line 524
     :cond_0
     return-void
 
-    .line 512
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen$BattleResultClickListener;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;
 
@@ -177,7 +159,6 @@
 
     goto :goto_0
 
-    .line 520
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen$BattleResultClickListener;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;
 
@@ -187,7 +168,6 @@
 
     goto :goto_1
 
-    .line 521
     :cond_3
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen$BattleResultClickListener;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongGearSelectionScreen;
 

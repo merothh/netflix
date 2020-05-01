@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/NetflixService;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 70
     iput-object p1, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflineImageUtils$1;->val$service:Lcom/netflix/mediaclient/service/NetflixService;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflineImageUtils$1;->val$src:Ljava/lang/String;
@@ -36,19 +34,14 @@
 .method public onErrorResponse(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 73
     return-void
 .end method
 
 .method public onResponse(Landroid/graphics/Bitmap;Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 76
     if-eqz p1, :cond_0
 
-    .line 77
     iget-object v0, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflineImageUtils$1;->val$service:Lcom/netflix/mediaclient/service/NetflixService;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflineImageUtils$1;->val$src:Ljava/lang/String;
@@ -57,7 +50,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflineImageUtils;->access$000(Lcom/netflix/mediaclient/service/NetflixService;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 79
     :cond_0
     return-void
 .end method

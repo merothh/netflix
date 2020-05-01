@@ -55,8 +55,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 35
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -73,28 +71,22 @@
 .method constructor <init>()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x2
 
-    .line 30
     invoke-direct {p0}, Landroid/support/design/widget/ValueAnimatorCompat$Impl;-><init>()V
 
-    .line 41
     new-array v0, v1, [I
 
     iput-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mIntValues:[I
 
-    .line 42
     new-array v0, v1, [F
 
     iput-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mFloatValues:[F
 
-    .line 44
     const-wide/16 v0, 0xc8
 
     iput-wide v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mDuration:J
 
-    .line 49
     new-instance v0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread$1;
 
     invoke-direct {v0, p0}, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread$1;-><init>(Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;)V
@@ -107,13 +99,10 @@
 .method private dispatchAnimationCancel()V
     .locals 3
 
-    .prologue
-    .line 207
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mListeners:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
-    .line 208
     const/4 v0, 0x0
 
     iget-object v1, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mListeners:Ljava/util/ArrayList;
@@ -127,7 +116,6 @@
     :goto_0
     if-ge v1, v2, :cond_0
 
-    .line 209
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -138,14 +126,12 @@
 
     invoke-interface {v0}, Landroid/support/design/widget/ValueAnimatorCompat$Impl$AnimatorListenerProxy;->onAnimationCancel()V
 
-    .line 208
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 212
     :cond_0
     return-void
 .end method
@@ -153,13 +139,10 @@
 .method private dispatchAnimationEnd()V
     .locals 3
 
-    .prologue
-    .line 215
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mListeners:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
-    .line 216
     const/4 v0, 0x0
 
     iget-object v1, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mListeners:Ljava/util/ArrayList;
@@ -173,7 +156,6 @@
     :goto_0
     if-ge v1, v2, :cond_0
 
-    .line 217
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -184,14 +166,12 @@
 
     invoke-interface {v0}, Landroid/support/design/widget/ValueAnimatorCompat$Impl$AnimatorListenerProxy;->onAnimationEnd()V
 
-    .line 216
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 220
     :cond_0
     return-void
 .end method
@@ -199,13 +179,10 @@
 .method private dispatchAnimationStart()V
     .locals 3
 
-    .prologue
-    .line 199
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mListeners:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
-    .line 200
     const/4 v0, 0x0
 
     iget-object v1, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mListeners:Ljava/util/ArrayList;
@@ -219,7 +196,6 @@
     :goto_0
     if-ge v1, v2, :cond_0
 
-    .line 201
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -230,14 +206,12 @@
 
     invoke-interface {v0}, Landroid/support/design/widget/ValueAnimatorCompat$Impl$AnimatorListenerProxy;->onAnimationStart()V
 
-    .line 200
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 204
     :cond_0
     return-void
 .end method
@@ -245,13 +219,10 @@
 .method private dispatchAnimationUpdate()V
     .locals 3
 
-    .prologue
-    .line 191
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mUpdateListeners:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
-    .line 192
     const/4 v0, 0x0
 
     iget-object v1, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mUpdateListeners:Ljava/util/ArrayList;
@@ -265,7 +236,6 @@
     :goto_0
     if-ge v1, v2, :cond_0
 
-    .line 193
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mUpdateListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -276,14 +246,12 @@
 
     invoke-interface {v0}, Landroid/support/design/widget/ValueAnimatorCompat$Impl$AnimatorUpdateListenerProxy;->onAnimationUpdate()V
 
-    .line 192
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 196
     :cond_0
     return-void
 .end method
@@ -293,114 +261,90 @@
 .method public addListener(Landroid/support/design/widget/ValueAnimatorCompat$Impl$AnimatorListenerProxy;)V
     .locals 1
 
-    .prologue
-    .line 92
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mListeners:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
-    .line 93
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mListeners:Ljava/util/ArrayList;
 
-    .line 95
     :cond_0
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 96
     return-void
 .end method
 
 .method public addUpdateListener(Landroid/support/design/widget/ValueAnimatorCompat$Impl$AnimatorUpdateListenerProxy;)V
     .locals 1
 
-    .prologue
-    .line 100
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mUpdateListeners:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
-    .line 101
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mUpdateListeners:Ljava/util/ArrayList;
 
-    .line 103
     :cond_0
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mUpdateListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 104
     return-void
 .end method
 
 .method public cancel()V
     .locals 2
 
-    .prologue
-    .line 135
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mIsRunning:Z
 
-    .line 136
     sget-object v0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->sHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 138
     invoke-direct {p0}, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->dispatchAnimationCancel()V
 
-    .line 139
     invoke-direct {p0}, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->dispatchAnimationEnd()V
 
-    .line 140
     return-void
 .end method
 
 .method public end()V
     .locals 2
 
-    .prologue
-    .line 149
     iget-boolean v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mIsRunning:Z
 
     if-eqz v0, :cond_0
 
-    .line 150
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mIsRunning:Z
 
-    .line 151
     sget-object v0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->sHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 153
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mAnimatedFraction:F
 
-    .line 154
     invoke-direct {p0}, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->dispatchAnimationUpdate()V
 
-    .line 155
     invoke-direct {p0}, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->dispatchAnimationEnd()V
 
-    .line 157
     :cond_0
     return-void
 .end method
@@ -408,8 +352,6 @@
 .method public getAnimatedFloatValue()F
     .locals 3
 
-    .prologue
-    .line 125
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mFloatValues:[F
 
     const/4 v1, 0x0
@@ -436,8 +378,6 @@
 .method public getAnimatedFraction()F
     .locals 1
 
-    .prologue
-    .line 144
     iget v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mAnimatedFraction:F
 
     return v0
@@ -446,8 +386,6 @@
 .method public getAnimatedIntValue()I
     .locals 3
 
-    .prologue
-    .line 114
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mIntValues:[I
 
     const/4 v1, 0x0
@@ -474,8 +412,6 @@
 .method public getDuration()J
     .locals 2
 
-    .prologue
-    .line 161
     iget-wide v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mDuration:J
 
     return-wide v0
@@ -484,8 +420,6 @@
 .method public isRunning()Z
     .locals 1
 
-    .prologue
-    .line 82
     iget-boolean v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mIsRunning:Z
 
     return v0
@@ -494,107 +428,85 @@
 .method public setDuration(J)V
     .locals 1
 
-    .prologue
-    .line 130
     iput-wide p1, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mDuration:J
 
-    .line 131
     return-void
 .end method
 
 .method public setFloatValues(FF)V
     .locals 2
 
-    .prologue
-    .line 119
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mFloatValues:[F
 
     const/4 v1, 0x0
 
     aput p1, v0, v1
 
-    .line 120
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mFloatValues:[F
 
     const/4 v1, 0x1
 
     aput p2, v0, v1
 
-    .line 121
     return-void
 .end method
 
 .method public setIntValues(II)V
     .locals 2
 
-    .prologue
-    .line 108
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mIntValues:[I
 
     const/4 v1, 0x0
 
     aput p1, v0, v1
 
-    .line 109
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mIntValues:[I
 
     const/4 v1, 0x1
 
     aput p2, v0, v1
 
-    .line 110
     return-void
 .end method
 
 .method public setInterpolator(Landroid/view/animation/Interpolator;)V
     .locals 0
 
-    .prologue
-    .line 87
     iput-object p1, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mInterpolator:Landroid/view/animation/Interpolator;
 
-    .line 88
     return-void
 .end method
 
 .method public start()V
     .locals 1
 
-    .prologue
-    .line 57
     iget-boolean v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mIsRunning:Z
 
     if-eqz v0, :cond_0
 
-    .line 70
     :goto_0
     return-void
 
-    .line 61
     :cond_0
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mInterpolator:Landroid/view/animation/Interpolator;
 
     if-nez v0, :cond_1
 
-    .line 62
     new-instance v0, Landroid/view/animation/AccelerateDecelerateInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
 
     iput-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mInterpolator:Landroid/view/animation/Interpolator;
 
-    .line 64
     :cond_1
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mIsRunning:Z
 
-    .line 67
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mAnimatedFraction:F
 
-    .line 69
     invoke-virtual {p0}, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->startInternal()V
 
     goto :goto_0
@@ -603,21 +515,16 @@
 .method final startInternal()V
     .locals 4
 
-    .prologue
-    .line 73
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mStartTime:J
 
-    .line 74
     invoke-direct {p0}, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->dispatchAnimationUpdate()V
 
-    .line 75
     invoke-direct {p0}, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->dispatchAnimationStart()V
 
-    .line 77
     sget-object v0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->sHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mRunnable:Ljava/lang/Runnable;
@@ -626,20 +533,16 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 78
     return-void
 .end method
 
 .method final update()V
     .locals 6
 
-    .prologue
-    .line 165
     iget-boolean v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mIsRunning:Z
 
     if-eqz v0, :cond_1
 
-    .line 167
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -648,7 +551,6 @@
 
     sub-long/2addr v0, v2
 
-    .line 168
     long-to-float v0, v0
 
     iget-wide v2, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mDuration:J
@@ -665,14 +567,12 @@
 
     move-result v0
 
-    .line 169
     iget-object v1, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mInterpolator:Landroid/view/animation/Interpolator;
 
     if-eqz v1, :cond_0
 
     iget-object v1, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mInterpolator:Landroid/view/animation/Interpolator;
 
-    .line 170
     invoke-interface {v1, v0}, Landroid/view/animation/Interpolator;->getInterpolation(F)F
 
     move-result v0
@@ -680,10 +580,8 @@
     :cond_0
     iput v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mAnimatedFraction:F
 
-    .line 174
     invoke-direct {p0}, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->dispatchAnimationUpdate()V
 
-    .line 177
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -698,21 +596,17 @@
 
     if-ltz v0, :cond_1
 
-    .line 178
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mIsRunning:Z
 
-    .line 180
     invoke-direct {p0}, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->dispatchAnimationEnd()V
 
-    .line 184
     :cond_1
     iget-boolean v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mIsRunning:Z
 
     if-eqz v0, :cond_2
 
-    .line 186
     sget-object v0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->sHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;->mRunnable:Ljava/lang/Runnable;
@@ -721,7 +615,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 188
     :cond_2
     return-void
 .end method

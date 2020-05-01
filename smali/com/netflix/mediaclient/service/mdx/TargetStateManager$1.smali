@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 225
     invoke-static {}, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$StateId;->values()[Lcom/netflix/mediaclient/service/mdx/TargetStateManager$StateId;
 
     move-result-object v0

@@ -19,62 +19,48 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .prologue
-    .line 16
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 97
     new-instance v0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown$1;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown$1;-><init>(Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->refreshTextRunner:Ljava/lang/Runnable;
 
-    .line 17
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .prologue
-    .line 20
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 97
     new-instance v0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown$1;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown$1;-><init>(Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->refreshTextRunner:Ljava/lang/Runnable;
 
-    .line 21
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
 
-    .prologue
-    .line 24
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 97
     new-instance v0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown$1;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown$1;-><init>(Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->refreshTextRunner:Ljava/lang/Runnable;
 
-    .line 25
     return-void
 .end method
 
 .method private getString(I)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 62
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->getString(ILjava/lang/String;)Ljava/lang/String;
@@ -87,8 +73,6 @@
 .method private getString(ILjava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 66
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->netflixActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getResources()Landroid/content/res/Resources;
@@ -115,21 +99,16 @@
 .method protected onDetachedFromWindow()V
     .locals 1
 
-    .prologue
-    .line 88
     invoke-super {p0}, Landroid/widget/LinearLayout;->onDetachedFromWindow()V
 
-    .line 89
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->countdownTimer:Lcom/netflix/mediaclient/util/TimeUtils$CountdownTimer;
 
     if-eqz v0, :cond_0
 
-    .line 90
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->countdownTimer:Lcom/netflix/mediaclient/util/TimeUtils$CountdownTimer;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/util/TimeUtils$CountdownTimer;->stopTimer()V
 
-    .line 92
     :cond_0
     return-void
 .end method
@@ -137,11 +116,8 @@
 .method protected onFinishInflate()V
     .locals 1
 
-    .prologue
-    .line 106
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    .line 108
     const v0, 0x7f0f02b2
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->findViewById(I)Landroid/view/View;
@@ -152,27 +128,22 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->action:Landroid/widget/TextView;
 
-    .line 109
     return-void
 .end method
 
 .method public refreshTimerText()V
     .locals 3
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 70
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->countdownTimer:Lcom/netflix/mediaclient/util/TimeUtils$CountdownTimer;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/util/TimeUtils$CountdownTimer;->getTime()I
 
     move-result v0
 
-    .line 73
     if-le v0, v1, :cond_1
 
-    .line 75
     :goto_0
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->postPlayItem:Lcom/netflix/model/leafs/PostPlayItem;
 
@@ -182,18 +153,15 @@
 
     if-eqz v2, :cond_3
 
-    .line 76
     if-le v0, v1, :cond_2
 
     const v1, 0x7f0801d8
 
-    .line 81
     :goto_1
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->action:Landroid/widget/TextView;
 
     if-eqz v2, :cond_0
 
-    .line 82
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->action:Landroid/widget/TextView;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -210,23 +178,19 @@
 
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 84
     :cond_0
     return-void
 
     :cond_1
     move v0, v1
 
-    .line 73
     goto :goto_0
 
-    .line 76
     :cond_2
     const v1, 0x7f0801d6
 
     goto :goto_1
 
-    .line 78
     :cond_3
     if-le v0, v1, :cond_4
 
@@ -243,18 +207,14 @@
 .method public startTimer()V
     .locals 1
 
-    .prologue
-    .line 50
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->countdownTimer:Lcom/netflix/mediaclient/util/TimeUtils$CountdownTimer;
 
     if-eqz v0, :cond_0
 
-    .line 51
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->countdownTimer:Lcom/netflix/mediaclient/util/TimeUtils$CountdownTimer;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/util/TimeUtils$CountdownTimer;->startTimer()V
 
-    .line 53
     :cond_0
     return-void
 .end method
@@ -262,18 +222,14 @@
 .method public stopTimer()V
     .locals 1
 
-    .prologue
-    .line 56
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->countdownTimer:Lcom/netflix/mediaclient/util/TimeUtils$CountdownTimer;
 
     if-eqz v0, :cond_0
 
-    .line 57
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->countdownTimer:Lcom/netflix/mediaclient/util/TimeUtils$CountdownTimer;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/util/TimeUtils$CountdownTimer;->stopTimer()V
 
-    .line 59
     :cond_0
     return-void
 .end method
@@ -281,28 +237,22 @@
 .method public updateViews(Lcom/netflix/model/leafs/PostPlayItem;Lcom/netflix/mediaclient/android/activity/NetflixActivity;)V
     .locals 2
 
-    .prologue
-    .line 36
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->netflixActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
-    .line 37
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->postPlayItem:Lcom/netflix/model/leafs/PostPlayItem;
 
-    .line 39
     new-instance v0, Lcom/netflix/mediaclient/util/TimeUtils$CountdownTimer;
 
     invoke-direct {v0, p2}, Lcom/netflix/mediaclient/util/TimeUtils$CountdownTimer;-><init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->countdownTimer:Lcom/netflix/mediaclient/util/TimeUtils$CountdownTimer;
 
-    .line 40
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->countdownTimer:Lcom/netflix/mediaclient/util/TimeUtils$CountdownTimer;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->refreshTextRunner:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/util/TimeUtils$CountdownTimer;->setOnTick(Ljava/lang/Runnable;)V
 
-    .line 42
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->countdownTimer:Lcom/netflix/mediaclient/util/TimeUtils$CountdownTimer;
 
     invoke-virtual {p1}, Lcom/netflix/model/leafs/PostPlayItem;->getAutoPlaySeconds()I
@@ -311,7 +261,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/util/TimeUtils$CountdownTimer;->setTime(I)V
 
-    .line 43
     invoke-virtual {p1}, Lcom/netflix/model/leafs/PostPlayItem;->isNextEpisodeAutoPlay()Z
 
     move-result v0
@@ -324,19 +273,15 @@
 
     move-result-object v0
 
-    .line 45
     :goto_0
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->action:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 46
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/PostPlayCountDown;->refreshTimerText()V
 
-    .line 47
     return-void
 
-    .line 43
     :cond_0
     const v0, 0x7f0801de
 

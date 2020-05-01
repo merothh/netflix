@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/partner/playbilling/PlayBilling;Lcom/netflix/mediaclient/partner/playbilling/PlayBillingCallback;Lorg/json/JSONObject;)V
     .locals 0
 
-    .prologue
-    .line 586
     iput-object p1, p0, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling$8;->this$0:Lcom/netflix/mediaclient/partner/playbilling/PlayBilling;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling$8;->val$callback:Lcom/netflix/mediaclient/partner/playbilling/PlayBillingCallback;
@@ -36,14 +34,11 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 588
     iget-object v0, p0, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling$8;->val$callback:Lcom/netflix/mediaclient/partner/playbilling/PlayBillingCallback;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling$8;->val$data:Lorg/json/JSONObject;
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/partner/playbilling/PlayBillingCallback;->onResult(Lorg/json/JSONObject;)V
 
-    .line 589
     return-void
 .end method

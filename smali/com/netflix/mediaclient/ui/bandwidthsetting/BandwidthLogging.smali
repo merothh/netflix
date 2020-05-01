@@ -39,39 +39,30 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$SettingType;Ljava/lang/Boolean;Ljava/lang/Boolean;Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;)V
     .locals 1
 
-    .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$SettingType;->getValue()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging;->type:Ljava/lang/String;
 
-    .line 29
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging;->oldValue:Ljava/lang/Boolean;
 
-    .line 30
     iput-object p3, p0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging;->newValue:Ljava/lang/Boolean;
 
-    .line 31
     invoke-virtual {p4}, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;->getValue()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging;->location:Ljava/lang/String;
 
-    .line 32
     return-void
 .end method
 
 .method private static createInstance(Landroid/content/Context;Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$SettingType;ZLcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;)Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging;
     .locals 3
 
-    .prologue
-    .line 44
     new-instance v1, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging;
 
     if-nez p2, :cond_0
@@ -100,22 +91,18 @@
 .method public static reportBandwidthSettingChange(Landroid/content/Context;Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$SettingType;Z)V
     .locals 1
 
-    .prologue
-    .line 48
     const/4 v0, 0x0
 
     invoke-static {p0, p1, p2, v0}, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging;->createInstance(Landroid/content/Context;Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$SettingType;ZLcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;)Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging;
 
     move-result-object v0
 
-    .line 49
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging;->toJsonString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {p0, v0}, Lcom/netflix/mediaclient/util/log/ApmLogUtils;->reportLocalSettingsChange(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 50
     return-void
 .end method
 
@@ -124,8 +111,6 @@
 .method public toJsonString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 35
     invoke-static {}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorParseUtils;->getGson()Lcom/google/gson/Gson;
 
     move-result-object v0
@@ -134,14 +119,12 @@
 
     move-result-object v0
 
-    .line 36
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 37
     const-string/jumbo v1, "nf_bw_Logging"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -164,7 +147,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 39
     :cond_0
     return-object v0
 .end method

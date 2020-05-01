@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer;IJ)V
     .locals 1
 
-    .prologue
-    .line 600
     iput-object p1, p0, Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer$3;->this$0:Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer;
 
     iput p2, p0, Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer$3;->val$countToNotify:I
@@ -36,8 +34,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 603
     iget-object v0, p0, Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer$3;->this$0:Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer;
 
     invoke-static {v0}, Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer;->access$000(Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer;)Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer$EventListener;
@@ -50,6 +46,5 @@
 
     invoke-interface {v0, v1, v2, v3}, Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer$EventListener;->onDroppedFrames(IJ)V
 
-    .line 604
     return-void
 .end method

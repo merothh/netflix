@@ -14,8 +14,6 @@
 .method private constructor <init>(Lcom/netflix/mediaclient/service/player/PlayerAgent;)V
     .locals 0
 
-    .prologue
-    .line 1042
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$GenericMediaEventListener;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,8 +24,6 @@
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/service/player/PlayerAgent;Lcom/netflix/mediaclient/service/player/PlayerAgent$1;)V
     .locals 0
 
-    .prologue
-    .line 1042
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/player/PlayerAgent$GenericMediaEventListener;-><init>(Lcom/netflix/mediaclient/service/player/PlayerAgent;)V
 
     return-void
@@ -38,8 +34,6 @@
 .method public received(Lcom/netflix/mediaclient/event/UIEvent;)V
     .locals 3
 
-    .prologue
-    .line 1052
     invoke-static {}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$1600()Ljava/lang/String;
 
     move-result-object v0
@@ -48,29 +42,24 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1053
     instance-of v0, p1, Lcom/netflix/mediaclient/event/nrdp/media/GenericMediaEvent;
 
     if-eqz v0, :cond_0
 
-    .line 1054
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$GenericMediaEventListener;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     check-cast p1, Lcom/netflix/mediaclient/event/nrdp/media/GenericMediaEvent;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$3600(Lcom/netflix/mediaclient/service/player/PlayerAgent;Lcom/netflix/mediaclient/event/nrdp/media/GenericMediaEvent;)V
 
-    .line 1085
     :goto_0
     return-void
 
-    .line 1055
     :cond_0
     instance-of v0, p1, Lcom/netflix/mediaclient/event/nrdp/media/NccpError;
 
     if-eqz v0, :cond_1
 
-    .line 1056
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$GenericMediaEventListener;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     check-cast p1, Lcom/netflix/mediaclient/event/nrdp/media/NccpError;
@@ -79,13 +68,11 @@
 
     goto :goto_0
 
-    .line 1057
     :cond_1
     instance-of v0, p1, Lcom/netflix/mediaclient/event/nrdp/media/OpenComplete;
 
     if-eqz v0, :cond_2
 
-    .line 1058
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$GenericMediaEventListener;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     check-cast p1, Lcom/netflix/mediaclient/event/nrdp/media/OpenComplete;
@@ -94,13 +81,11 @@
 
     goto :goto_0
 
-    .line 1059
     :cond_2
     instance-of v0, p1, Lcom/netflix/mediaclient/event/nrdp/media/GenericMediaEvent;
 
     if-eqz v0, :cond_3
 
-    .line 1060
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$GenericMediaEventListener;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     check-cast p1, Lcom/netflix/mediaclient/event/nrdp/media/GenericMediaEvent;
@@ -109,13 +94,11 @@
 
     goto :goto_0
 
-    .line 1061
     :cond_3
     instance-of v0, p1, Lcom/netflix/mediaclient/event/nrdp/media/Buffering;
 
     if-eqz v0, :cond_4
 
-    .line 1062
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$GenericMediaEventListener;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     check-cast p1, Lcom/netflix/mediaclient/event/nrdp/media/Buffering;
@@ -124,13 +107,11 @@
 
     goto :goto_0
 
-    .line 1063
     :cond_4
     instance-of v0, p1, Lcom/netflix/mediaclient/event/nrdp/media/RemoveSubtitle;
 
     if-eqz v0, :cond_5
 
-    .line 1064
     invoke-static {}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$1600()Ljava/lang/String;
 
     move-result-object v0
@@ -141,13 +122,11 @@
 
     goto :goto_0
 
-    .line 1065
     :cond_5
     instance-of v0, p1, Lcom/netflix/mediaclient/event/nrdp/media/ShowSubtitle;
 
     if-eqz v0, :cond_6
 
-    .line 1066
     invoke-static {}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$1600()Ljava/lang/String;
 
     move-result-object v0
@@ -158,13 +137,11 @@
 
     goto :goto_0
 
-    .line 1067
     :cond_6
     instance-of v0, p1, Lcom/netflix/mediaclient/event/nrdp/media/SubtitleData;
 
     if-eqz v0, :cond_7
 
-    .line 1068
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$GenericMediaEventListener;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     check-cast p1, Lcom/netflix/mediaclient/event/nrdp/media/SubtitleData;
@@ -173,13 +150,11 @@
 
     goto :goto_0
 
-    .line 1069
     :cond_7
     instance-of v0, p1, Lcom/netflix/mediaclient/event/nrdp/media/AudioTrackChanged;
 
     if-eqz v0, :cond_8
 
-    .line 1070
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$GenericMediaEventListener;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     check-cast p1, Lcom/netflix/mediaclient/event/nrdp/media/AudioTrackChanged;
@@ -188,13 +163,11 @@
 
     goto :goto_0
 
-    .line 1071
     :cond_8
     instance-of v0, p1, Lcom/netflix/mediaclient/event/nrdp/media/Statechanged;
 
     if-eqz v0, :cond_9
 
-    .line 1072
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$GenericMediaEventListener;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     check-cast p1, Lcom/netflix/mediaclient/event/nrdp/media/Statechanged;
@@ -203,13 +176,11 @@
 
     goto :goto_0
 
-    .line 1073
     :cond_9
     instance-of v0, p1, Lcom/netflix/mediaclient/event/nrdp/media/BufferRange;
 
     if-eqz v0, :cond_a
 
-    .line 1074
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$GenericMediaEventListener;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     check-cast p1, Lcom/netflix/mediaclient/event/nrdp/media/BufferRange;
@@ -218,16 +189,13 @@
 
     goto :goto_0
 
-    .line 1075
     :cond_a
     instance-of v0, p1, Lcom/netflix/mediaclient/event/nrdp/media/UpdatePts;
 
     if-eqz v0, :cond_b
 
-    .line 1076
     check-cast p1, Lcom/netflix/mediaclient/event/nrdp/media/UpdatePts;
 
-    .line 1077
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$GenericMediaEventListener;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     invoke-virtual {p1}, Lcom/netflix/mediaclient/event/nrdp/media/UpdatePts;->getPts()I
@@ -238,13 +206,11 @@
 
     goto/16 :goto_0
 
-    .line 1078
     :cond_b
     instance-of v0, p1, Lcom/netflix/mediaclient/event/nrdp/media/Error;
 
     if-eqz v0, :cond_c
 
-    .line 1079
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$GenericMediaEventListener;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     check-cast p1, Lcom/netflix/mediaclient/event/nrdp/media/Error;
@@ -253,13 +219,11 @@
 
     goto/16 :goto_0
 
-    .line 1080
     :cond_c
     instance-of v0, p1, Lcom/netflix/mediaclient/event/nrdp/media/Warning;
 
     if-eqz v0, :cond_d
 
-    .line 1081
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$GenericMediaEventListener;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     check-cast p1, Lcom/netflix/mediaclient/event/nrdp/media/Warning;
@@ -268,7 +232,6 @@
 
     goto/16 :goto_0
 
-    .line 1083
     :cond_d
     invoke-static {}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$1600()Ljava/lang/String;
 

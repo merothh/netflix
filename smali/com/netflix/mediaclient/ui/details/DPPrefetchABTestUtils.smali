@@ -46,27 +46,20 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     return-void
 .end method
 
 .method public static addToPendingDetailsRequest(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 149
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertNotOnMain()Z
 
-    .line 150
     sget-object v0, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils;->pendingDetailsRequestsSet:Ljava/util/Set;
 
     if-nez v0, :cond_0
 
-    .line 151
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -77,24 +70,19 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils;->pendingDetailsRequestsSet:Ljava/util/Set;
 
-    .line 153
     :cond_0
     sget-object v0, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils;->pendingDetailsRequestsSet:Ljava/util/Set;
 
     invoke-interface {v0, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 154
     return-void
 .end method
 
 .method public static isInTest(Landroid/content/Context;)Z
     .locals 2
 
-    .prologue
-    .line 60
     if-eqz p0, :cond_0
 
-    .line 61
     invoke-static {p0}, Lcom/netflix/mediaclient/service/configuration/PersistentConfig;->getDPPrefetchABTestConfig(Landroid/content/Context;)Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     move-result-object v0
@@ -105,11 +93,9 @@
 
     const/4 v0, 0x1
 
-    .line 60
     :goto_0
     return v0
 
-    .line 61
     :cond_0
     const/4 v0, 0x0
 
@@ -129,10 +115,8 @@
         }
     .end annotation
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 251
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
@@ -141,7 +125,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 252
     :cond_0
     const-string/jumbo v1, "DPPrefetchABTestUtils"
 
@@ -149,11 +132,9 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 261
     :goto_0
     return v0
 
-    .line 256
     :cond_1
     if-eqz p0, :cond_2
 
@@ -173,7 +154,6 @@
 
     if-nez v1, :cond_3
 
-    .line 257
     :cond_2
     const-string/jumbo v1, "DPPrefetchABTestUtils"
 
@@ -183,7 +163,6 @@
 
     goto :goto_0
 
-    .line 261
     :cond_3
     const/4 v0, 0x1
 
@@ -193,11 +172,8 @@
 .method public static latchToPendingRequestsIfExists(Ljava/lang/String;)V
     .locals 4
 
-    .prologue
-    .line 189
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertNotOnMain()Z
 
-    .line 190
     sget-object v0, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils;->pendingDetailsRequestsSet:Ljava/util/Set;
 
     if-eqz v0, :cond_0
@@ -210,12 +186,10 @@
 
     if-nez v0, :cond_1
 
-    .line 221
     :cond_0
     :goto_0
     return-void
 
-    .line 193
     :cond_1
     new-instance v1, Ljava/util/concurrent/CountDownLatch;
 
@@ -223,12 +197,10 @@
 
     invoke-direct {v1, v0}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    .line 194
     sget-object v0, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils;->pendingDetailsRequestsMap:Ljava/util/Map;
 
     if-nez v0, :cond_2
 
-    .line 195
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -239,7 +211,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils;->pendingDetailsRequestsMap:Ljava/util/Map;
 
-    .line 197
     :cond_2
     sget-object v0, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils;->pendingDetailsRequestsMap:Ljava/util/Map;
 
@@ -249,7 +220,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 198
     sget-object v0, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils;->pendingDetailsRequestsMap:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -258,19 +228,15 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 199
     if-nez v0, :cond_3
 
-    .line 200
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 202
     :cond_3
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 209
     :goto_1
     :try_start_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
@@ -279,7 +245,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 210
     const-string/jumbo v0, "DPPrefetchABTestUtils"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -302,7 +267,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 212
     :cond_4
     invoke-static {}, Lcom/netflix/mediaclient/service/logging/perf/PerformanceProfiler;->getInstance()Lcom/netflix/mediaclient/service/logging/perf/PerformanceProfiler;
 
@@ -314,14 +278,12 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/netflix/mediaclient/service/logging/perf/PerformanceProfiler;->logEvent(Lcom/netflix/mediaclient/service/logging/perf/Events;Ljava/util/Map;)V
 
-    .line 213
     const-wide/16 v2, 0x4e20
 
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-virtual {v1, v2, v3, v0}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
 
-    .line 214
     const-string/jumbo v0, "DPPrefetchABTestUtils"
 
     const-string/jumbo v1, "latchToPendingRequestsIfExists: latch timed out"
@@ -331,34 +293,28 @@
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 219
     sget-object v0, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils;->pendingDetailsRequestsMap:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 204
     :cond_5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 205
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 206
     sget-object v2, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils;->pendingDetailsRequestsMap:Ljava/util/Map;
 
     invoke-interface {v2, p0, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_1
 
-    .line 215
     :catch_0
     move-exception v0
 
-    .line 216
     :try_start_1
     const-string/jumbo v0, "DPPrefetchABTestUtils"
 
@@ -368,7 +324,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 219
     sget-object v0, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils;->pendingDetailsRequestsMap:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -399,8 +354,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 75
     invoke-static {p0, p2}, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils;->isInputValid(Lcom/netflix/mediaclient/servicemgr/ServiceManager;Ljava/util/List;)Z
 
     move-result v0
@@ -417,7 +370,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 76
     :cond_0
     const-string/jumbo v0, "DPPrefetchABTestUtils"
 
@@ -425,15 +377,12 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
     :goto_0
     return-void
 
-    .line 80
     :cond_1
     const/4 v0, 0x0
 
-    .line 81
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -442,7 +391,6 @@
 
     move-result-object v1
 
-    .line 82
     sget-object v2, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils$2;->$SwitchMap$com$netflix$mediaclient$service$webclient$model$leafs$ABTestConfig$Cell:[I
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->ordinal()I
@@ -453,7 +401,6 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 93
     :goto_1
     invoke-virtual {v1}, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->getCellId()I
 
@@ -467,7 +414,6 @@
 
     if-lt v1, v2, :cond_3
 
-    .line 94
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/BasicLoMo;->getType()Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
     move-result-object v1
@@ -487,7 +433,6 @@
     :cond_2
     move v0, p3
 
-    .line 98
     :cond_3
     invoke-interface {p2}, Ljava/util/List;->size()I
 
@@ -497,14 +442,12 @@
 
     move-result v0
 
-    .line 100
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 101
     const-string/jumbo v1, "DPPrefetchABTestUtils"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -541,27 +484,21 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 104
     :cond_4
     invoke-static {p0, p2, v0}, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils;->prefetchVideoListDetails(Lcom/netflix/mediaclient/servicemgr/ServiceManager;Ljava/util/List;I)V
 
     goto :goto_0
 
-    .line 84
     :pswitch_0
     const/4 v0, 0x1
 
-    .line 85
     goto :goto_1
 
-    .line 87
     :pswitch_1
     const/4 v0, 0x3
 
-    .line 88
     goto :goto_1
 
-    .line 82
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -582,19 +519,15 @@
         }
     .end annotation
 
-    .prologue
-    .line 113
     invoke-static {p0, p1}, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils;->isInputValid(Lcom/netflix/mediaclient/servicemgr/ServiceManager;Ljava/util/List;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 117
     :goto_0
     return-void
 
-    .line 116
     :cond_0
     const/4 v0, 0x3
 
@@ -624,23 +557,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 125
     invoke-static {p0, p1}, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils;->isInputValid(Lcom/netflix/mediaclient/servicemgr/ServiceManager;Ljava/util/List;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 141
     :goto_0
     return-void
 
-    .line 128
     :cond_0
     const/4 v0, 0x0
 
-    .line 129
     sget-object v1, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils$2;->$SwitchMap$com$netflix$mediaclient$service$webclient$model$leafs$ABTestConfig$Cell:[I
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getContext()Landroid/content/Context;
@@ -659,7 +587,6 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 140
     :goto_1
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -673,21 +600,16 @@
 
     goto :goto_0
 
-    .line 131
     :pswitch_0
     const/4 v0, 0x1
 
-    .line 132
     goto :goto_1
 
-    .line 134
     :pswitch_1
     const/4 v0, 0x3
 
-    .line 135
     goto :goto_1
 
-    .line 129
     nop
 
     :pswitch_data_0
@@ -710,20 +632,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 238
     invoke-static {p0, p1}, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils;->isInputValid(Lcom/netflix/mediaclient/servicemgr/ServiceManager;Ljava/util/List;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 248
     :cond_0
     :goto_0
     return-void
 
-    .line 241
     :cond_1
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -733,10 +651,8 @@
 
     move-result v0
 
-    .line 243
     if-ltz v0, :cond_0
 
-    .line 244
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getBrowse()Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
 
     move-result-object v1
@@ -759,31 +675,25 @@
 .method public static removeFromPendingDetailsRequest(Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 161
     sget-object v0, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils;->pendingDetailsRequestsSet:Ljava/util/Set;
 
     if-nez v0, :cond_1
 
-    .line 180
     :cond_0
     :goto_0
     return-void
 
-    .line 164
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils;->pendingDetailsRequestsSet:Ljava/util/Set;
 
     invoke-interface {v0, p0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 165
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 166
     const-string/jumbo v0, "DPPrefetchABTestUtils"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -806,7 +716,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     :cond_2
     sget-object v0, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils;->pendingDetailsRequestsMap:Ljava/util/Map;
 
@@ -820,7 +729,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 169
     sget-object v0, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils;->pendingDetailsRequestsMap:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -829,10 +737,8 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 170
     if-eqz v0, :cond_4
 
-    .line 171
     const/4 v1, 0x0
 
     move v2, v1
@@ -844,20 +750,16 @@
 
     if-ge v2, v1, :cond_4
 
-    .line 172
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/concurrent/CountDownLatch;
 
-    .line 173
     if-eqz v1, :cond_3
 
-    .line 174
     invoke-virtual {v1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 171
     :cond_3
     add-int/lit8 v1, v2, 0x1
 
@@ -865,7 +767,6 @@
 
     goto :goto_1
 
-    .line 178
     :cond_4
     sget-object v0, Lcom/netflix/mediaclient/ui/details/DPPrefetchABTestUtils;->pendingDetailsRequestsMap:Ljava/util/Map;
 
@@ -877,23 +778,18 @@
 .method public static reportDPMetadataFetchedEvent(Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 4
 
-    .prologue
-    .line 228
     const/4 v0, 0x0
 
-    .line 229
     instance-of v1, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgentStatus;
 
     if-eqz v1, :cond_0
 
-    .line 230
     check-cast p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgentStatus;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/falkor/FalkorAgentStatus;->wasAllDataLocalToCache()Z
 
     move-result v0
 
-    .line 232
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/service/logging/perf/PerformanceProfiler;->getInstance()Lcom/netflix/mediaclient/service/logging/perf/PerformanceProfiler;
 
@@ -903,7 +799,6 @@
 
     const-string/jumbo v3, "isFromCache"
 
-    .line 233
     invoke-static {v0}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
     move-result-object v0
@@ -912,9 +807,7 @@
 
     move-result-object v0
 
-    .line 232
     invoke-virtual {v1, v2, v0}, Lcom/netflix/mediaclient/service/logging/perf/PerformanceProfiler;->logEvent(Lcom/netflix/mediaclient/service/logging/perf/Events;Ljava/util/Map;)V
 
-    .line 234
     return-void
 .end method

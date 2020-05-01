@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IPlayer$PlaybackType;)V
     .locals 0
 
-    .prologue
-    .line 63
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper$2;->this$0:Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper$2;->val$intentAction:Ljava/lang/String;
@@ -36,8 +34,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 66
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper$2;->val$intentAction:Ljava/lang/String;
 
     const/4 v0, -0x1
@@ -52,11 +48,9 @@
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 91
     :goto_1
     return-void
 
-    .line 66
     :sswitch_0
     const-string/jumbo v2, "com.netflix.mediaclient.intent.action.LOCAL_PLAYER_PLAY_START"
 
@@ -83,7 +77,6 @@
 
     goto :goto_0
 
-    .line 68
     :pswitch_0
     sget-object v0, Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper$5;->$SwitchMap$com$netflix$mediaclient$servicemgr$IPlayer$PlaybackType:[I
 
@@ -99,7 +92,6 @@
 
     goto :goto_1
 
-    .line 70
     :pswitch_1
     const-string/jumbo v0, "nf_offlineBroadcast"
 
@@ -107,7 +99,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper$2;->this$0:Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper;->access$100(Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper;)Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper$BroadcastHelperListener;
@@ -118,7 +109,6 @@
 
     goto :goto_1
 
-    .line 74
     :pswitch_2
     const-string/jumbo v0, "nf_offlineBroadcast"
 
@@ -128,7 +118,6 @@
 
     goto :goto_1
 
-    .line 79
     :pswitch_3
     sget-object v0, Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper$5;->$SwitchMap$com$netflix$mediaclient$servicemgr$IPlayer$PlaybackType:[I
 
@@ -144,7 +133,6 @@
 
     goto :goto_1
 
-    .line 81
     :pswitch_4
     const-string/jumbo v0, "nf_offlineBroadcast"
 
@@ -152,7 +140,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper$2;->this$0:Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper;->access$100(Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper;)Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper$BroadcastHelperListener;
@@ -163,7 +150,6 @@
 
     goto :goto_1
 
-    .line 85
     :pswitch_5
     const-string/jumbo v0, "nf_offlineBroadcast"
 
@@ -173,7 +159,6 @@
 
     goto :goto_1
 
-    .line 66
     :sswitch_data_0
     .sparse-switch
         -0x30b6e3cf -> :sswitch_1
@@ -186,14 +171,12 @@
         :pswitch_3
     .end packed-switch
 
-    .line 68
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_1
         :pswitch_2
     .end packed-switch
 
-    .line 79
     :pswitch_data_2
     .packed-switch 0x1
         :pswitch_4

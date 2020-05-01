@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/settings/SettingsFragment;Landroid/preference/ListPreference;Lcom/netflix/mediaclient/servicemgr/ServiceManager;)V
     .locals 0
 
-    .prologue
-    .line 558
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$10;->this$0:Lcom/netflix/mediaclient/ui/settings/SettingsFragment;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$10;->val$customPrefs:Landroid/preference/ListPreference;
@@ -36,18 +34,14 @@
 .method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 563
     instance-of v0, p2, Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    .line 564
     check-cast p2, Ljava/lang/String;
 
-    .line 566
     const/4 v0, -0x1
 
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
@@ -60,7 +54,6 @@
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 580
     const-string/jumbo v0, "SettingsFragment"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -83,11 +76,9 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 586
     :goto_1
     return v1
 
-    .line 566
     :sswitch_0
     const-string/jumbo v2, "BEST"
 
@@ -114,7 +105,6 @@
 
     goto :goto_0
 
-    .line 568
     :pswitch_0
     const-string/jumbo v0, "SettingsFragment"
 
@@ -122,7 +112,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 569
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$10;->val$customPrefs:Landroid/preference/ListPreference;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$10;->this$0:Lcom/netflix/mediaclient/ui/settings/SettingsFragment;
@@ -135,7 +124,6 @@
 
     invoke-virtual {v0, v2}, Landroid/preference/ListPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 570
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$10;->this$0:Lcom/netflix/mediaclient/ui/settings/SettingsFragment;
 
     sget-object v2, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadVideoQuality;->BEST:Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadVideoQuality;
@@ -146,7 +134,6 @@
 
     goto :goto_1
 
-    .line 574
     :pswitch_1
     const-string/jumbo v0, "SettingsFragment"
 
@@ -154,7 +141,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 575
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$10;->val$customPrefs:Landroid/preference/ListPreference;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$10;->this$0:Lcom/netflix/mediaclient/ui/settings/SettingsFragment;
@@ -167,7 +153,6 @@
 
     invoke-virtual {v0, v2}, Landroid/preference/ListPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 576
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$10;->this$0:Lcom/netflix/mediaclient/ui/settings/SettingsFragment;
 
     sget-object v2, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadVideoQuality;->DEFAULT:Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadVideoQuality;
@@ -178,7 +163,6 @@
 
     goto :goto_1
 
-    .line 584
     :cond_1
     const-string/jumbo v0, "SettingsFragment"
 
@@ -204,7 +188,6 @@
 
     goto :goto_1
 
-    .line 566
     :sswitch_data_0
     .sparse-switch
         -0x79209ddf -> :sswitch_1

@@ -68,7 +68,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -79,7 +78,6 @@
 
     const/4 v4, 0x0
 
-    .line 31
     new-instance v0, Lcom/fasterxml/jackson/core/JsonToken;
 
     const-string/jumbo v1, "NOT_AVAILABLE"
@@ -92,7 +90,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonToken;->NOT_AVAILABLE:Lcom/fasterxml/jackson/core/JsonToken;
 
-    .line 37
     new-instance v0, Lcom/fasterxml/jackson/core/JsonToken;
 
     const-string/jumbo v1, "START_OBJECT"
@@ -103,7 +100,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonToken;->START_OBJECT:Lcom/fasterxml/jackson/core/JsonToken;
 
-    .line 43
     new-instance v0, Lcom/fasterxml/jackson/core/JsonToken;
 
     const-string/jumbo v1, "END_OBJECT"
@@ -114,7 +110,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonToken;->END_OBJECT:Lcom/fasterxml/jackson/core/JsonToken;
 
-    .line 49
     new-instance v0, Lcom/fasterxml/jackson/core/JsonToken;
 
     const-string/jumbo v1, "START_ARRAY"
@@ -125,7 +120,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonToken;->START_ARRAY:Lcom/fasterxml/jackson/core/JsonToken;
 
-    .line 55
     new-instance v0, Lcom/fasterxml/jackson/core/JsonToken;
 
     const-string/jumbo v1, "END_ARRAY"
@@ -136,7 +130,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonToken;->END_ARRAY:Lcom/fasterxml/jackson/core/JsonToken;
 
-    .line 61
     new-instance v0, Lcom/fasterxml/jackson/core/JsonToken;
 
     const-string/jumbo v1, "FIELD_NAME"
@@ -149,7 +142,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonToken;->FIELD_NAME:Lcom/fasterxml/jackson/core/JsonToken;
 
-    .line 73
     new-instance v0, Lcom/fasterxml/jackson/core/JsonToken;
 
     const-string/jumbo v1, "VALUE_EMBEDDED_OBJECT"
@@ -162,7 +154,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonToken;->VALUE_EMBEDDED_OBJECT:Lcom/fasterxml/jackson/core/JsonToken;
 
-    .line 80
     new-instance v0, Lcom/fasterxml/jackson/core/JsonToken;
 
     const-string/jumbo v1, "VALUE_STRING"
@@ -175,7 +166,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonToken;->VALUE_STRING:Lcom/fasterxml/jackson/core/JsonToken;
 
-    .line 88
     new-instance v0, Lcom/fasterxml/jackson/core/JsonToken;
 
     const-string/jumbo v1, "VALUE_NUMBER_INT"
@@ -188,7 +178,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonToken;->VALUE_NUMBER_INT:Lcom/fasterxml/jackson/core/JsonToken;
 
-    .line 96
     new-instance v0, Lcom/fasterxml/jackson/core/JsonToken;
 
     const-string/jumbo v1, "VALUE_NUMBER_FLOAT"
@@ -201,7 +190,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonToken;->VALUE_NUMBER_FLOAT:Lcom/fasterxml/jackson/core/JsonToken;
 
-    .line 102
     new-instance v0, Lcom/fasterxml/jackson/core/JsonToken;
 
     const-string/jumbo v1, "VALUE_TRUE"
@@ -216,7 +204,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonToken;->VALUE_TRUE:Lcom/fasterxml/jackson/core/JsonToken;
 
-    .line 108
     new-instance v0, Lcom/fasterxml/jackson/core/JsonToken;
 
     const-string/jumbo v1, "VALUE_FALSE"
@@ -231,7 +218,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonToken;->VALUE_FALSE:Lcom/fasterxml/jackson/core/JsonToken;
 
-    .line 114
     new-instance v0, Lcom/fasterxml/jackson/core/JsonToken;
 
     const-string/jumbo v1, "VALUE_NULL"
@@ -246,7 +232,6 @@
 
     sput-object v0, Lcom/fasterxml/jackson/core/JsonToken;->VALUE_NULL:Lcom/fasterxml/jackson/core/JsonToken;
 
-    .line 12
     const/16 v0, 0xd
 
     new-array v0, v0, [Lcom/fasterxml/jackson/core/JsonToken;
@@ -336,33 +321,25 @@
         }
     .end annotation
 
-    .prologue
     const/4 v0, 0x0
 
     const/4 v2, 0x1
 
     const/4 v1, 0x0
 
-    .line 138
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 139
     if-nez p3, :cond_5
 
-    .line 140
     iput-object v0, p0, Lcom/fasterxml/jackson/core/JsonToken;->_serialized:Ljava/lang/String;
 
-    .line 141
     iput-object v0, p0, Lcom/fasterxml/jackson/core/JsonToken;->_serializedChars:[C
 
-    .line 142
     iput-object v0, p0, Lcom/fasterxml/jackson/core/JsonToken;->_serializedBytes:[B
 
-    .line 153
     :cond_0
     iput p4, p0, Lcom/fasterxml/jackson/core/JsonToken;->_id:I
 
-    .line 155
     const/16 v0, 0xa
 
     if-eq p4, v0, :cond_1
@@ -377,7 +354,6 @@
     :goto_0
     iput-boolean v0, p0, Lcom/fasterxml/jackson/core/JsonToken;->_isBoolean:Z
 
-    .line 156
     const/4 v0, 0x7
 
     if-eq p4, v0, :cond_2
@@ -392,7 +368,6 @@
     :goto_1
     iput-boolean v0, p0, Lcom/fasterxml/jackson/core/JsonToken;->_isNumber:Z
 
-    .line 158
     if-eq p4, v2, :cond_3
 
     const/4 v0, 0x3
@@ -405,7 +380,6 @@
     :goto_2
     iput-boolean v0, p0, Lcom/fasterxml/jackson/core/JsonToken;->_isStructStart:Z
 
-    .line 159
     const/4 v0, 0x2
 
     if-eq p4, v0, :cond_4
@@ -420,7 +394,6 @@
     :goto_3
     iput-boolean v0, p0, Lcom/fasterxml/jackson/core/JsonToken;->_isStructEnd:Z
 
-    .line 161
     iget-boolean v0, p0, Lcom/fasterxml/jackson/core/JsonToken;->_isStructStart:Z
 
     if-nez v0, :cond_a
@@ -440,37 +413,30 @@
     :goto_4
     iput-boolean v2, p0, Lcom/fasterxml/jackson/core/JsonToken;->_isScalar:Z
 
-    .line 164
     return-void
 
-    .line 144
     :cond_5
     iput-object p3, p0, Lcom/fasterxml/jackson/core/JsonToken;->_serialized:Ljava/lang/String;
 
-    .line 145
     invoke-virtual {p3}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/fasterxml/jackson/core/JsonToken;->_serializedChars:[C
 
-    .line 147
     iget-object v0, p0, Lcom/fasterxml/jackson/core/JsonToken;->_serializedChars:[C
 
     array-length v3, v0
 
-    .line 148
     new-array v0, v3, [B
 
     iput-object v0, p0, Lcom/fasterxml/jackson/core/JsonToken;->_serializedBytes:[B
 
     move v0, v1
 
-    .line 149
     :goto_5
     if-ge v0, v3, :cond_0
 
-    .line 150
     iget-object v4, p0, Lcom/fasterxml/jackson/core/JsonToken;->_serializedBytes:[B
 
     iget-object v5, p0, Lcom/fasterxml/jackson/core/JsonToken;->_serializedChars:[C
@@ -481,7 +447,6 @@
 
     aput-byte v5, v4, v0
 
-    .line 149
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_5
@@ -489,39 +454,32 @@
     :cond_6
     move v0, v1
 
-    .line 155
     goto :goto_0
 
     :cond_7
     move v0, v1
 
-    .line 156
     goto :goto_1
 
     :cond_8
     move v0, v1
 
-    .line 158
     goto :goto_2
 
     :cond_9
     move v0, v1
 
-    .line 159
     goto :goto_3
 
     :cond_a
     move v2, v1
 
-    .line 161
     goto :goto_4
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fasterxml/jackson/core/JsonToken;
     .locals 1
 
-    .prologue
-    .line 12
     const-class v0, Lcom/fasterxml/jackson/core/JsonToken;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -536,8 +494,6 @@
 .method public static values()[Lcom/fasterxml/jackson/core/JsonToken;
     .locals 1
 
-    .prologue
-    .line 12
     sget-object v0, Lcom/fasterxml/jackson/core/JsonToken;->$VALUES:[Lcom/fasterxml/jackson/core/JsonToken;
 
     invoke-virtual {v0}, [Lcom/fasterxml/jackson/core/JsonToken;->clone()Ljava/lang/Object;
@@ -554,8 +510,6 @@
 .method public final asString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 168
     iget-object v0, p0, Lcom/fasterxml/jackson/core/JsonToken;->_serialized:Ljava/lang/String;
 
     return-object v0
@@ -564,8 +518,6 @@
 .method public final id()I
     .locals 1
 
-    .prologue
-    .line 166
     iget v0, p0, Lcom/fasterxml/jackson/core/JsonToken;->_id:I
 
     return v0
@@ -574,8 +526,6 @@
 .method public final isScalarValue()Z
     .locals 1
 
-    .prologue
-    .line 199
     iget-boolean v0, p0, Lcom/fasterxml/jackson/core/JsonToken;->_isScalar:Z
 
     return v0

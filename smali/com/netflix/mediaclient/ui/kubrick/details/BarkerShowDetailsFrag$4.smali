@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;)V
     .locals 0
 
-    .prologue
-    .line 420
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$4;->this$0:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,8 +35,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 425
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$4;->this$0:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;->access$200(Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;)Landroid/support/v7/widget/RecyclerView;
@@ -51,12 +47,10 @@
 
     check-cast v0, Landroid/support/v7/widget/GridLayoutManager;
 
-    .line 426
     invoke-virtual {v0}, Landroid/support/v7/widget/GridLayoutManager;->findFirstVisibleItemPosition()I
 
     move-result v1
 
-    .line 428
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$4;->this$0:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;
 
     invoke-static {v2}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;->access$400(Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;)Landroid/support/v7/widget/RecyclerView;
@@ -69,7 +63,6 @@
 
     invoke-virtual {v2, v3}, Landroid/support/v7/widget/RecyclerView;->post(Ljava/lang/Runnable;)Z
 
-    .line 437
     return-void
 .end method
 
@@ -83,7 +76,5 @@
         }
     .end annotation
 
-    .prologue
-    .line 440
     return-void
 .end method

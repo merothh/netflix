@@ -27,13 +27,10 @@
 .method public constructor <init>(Lcom/netflix/msl/tokens/MasterToken;Lcom/netflix/android/org/json/JSONObject;)V
     .locals 5
 
-    .prologue
-    .line 301
     sget-object v0, Lcom/netflix/msl/keyx/KeyExchangeScheme;->JWE_LADDER:Lcom/netflix/msl/keyx/KeyExchangeScheme;
 
     invoke-direct {p0, p1, v0}, Lcom/netflix/msl/keyx/KeyResponseData;-><init>(Lcom/netflix/msl/tokens/MasterToken;Lcom/netflix/msl/keyx/KeyExchangeScheme;)V
 
-    .line 304
     :try_start_0
     const-string/jumbo v0, "wrapkey"
 
@@ -50,7 +47,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 309
     :try_start_1
     const-string/jumbo v0, "wrapdata"
 
@@ -67,7 +63,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 314
     :try_start_2
     const-string/jumbo v0, "encryptionkey"
 
@@ -84,7 +79,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_3
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 319
     :try_start_3
     const-string/jumbo v0, "hmackey"
 
@@ -101,14 +95,11 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_3 .. :try_end_3} :catch_4
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 326
     return-void
 
-    .line 305
     :catch_0
     move-exception v0
 
-    .line 306
     :try_start_4
     new-instance v1, Lcom/netflix/msl/MslKeyExchangeException;
 
@@ -142,11 +133,9 @@
     :try_end_4
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 323
     :catch_1
     move-exception v0
 
-    .line 324
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_PARSE_ERROR:Lcom/netflix/msl/MslError;
@@ -177,11 +166,9 @@
 
     throw v1
 
-    .line 310
     :catch_2
     move-exception v0
 
-    .line 311
     :try_start_5
     new-instance v1, Lcom/netflix/msl/MslKeyExchangeException;
 
@@ -213,11 +200,9 @@
 
     throw v1
 
-    .line 315
     :catch_3
     move-exception v0
 
-    .line 316
     new-instance v1, Lcom/netflix/msl/MslKeyExchangeException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->KEYX_INVALID_ENCRYPTION_KEY:Lcom/netflix/msl/MslError;
@@ -248,11 +233,9 @@
 
     throw v1
 
-    .line 320
     :catch_4
     move-exception v0
 
-    .line 321
     new-instance v1, Lcom/netflix/msl/MslKeyExchangeException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->KEYX_INVALID_HMAC_KEY:Lcom/netflix/msl/MslError;
@@ -289,25 +272,18 @@
 .method public constructor <init>(Lcom/netflix/msl/tokens/MasterToken;[B[B[B[B)V
     .locals 1
 
-    .prologue
-    .line 283
     sget-object v0, Lcom/netflix/msl/keyx/KeyExchangeScheme;->JWE_LADDER:Lcom/netflix/msl/keyx/KeyExchangeScheme;
 
     invoke-direct {p0, p1, v0}, Lcom/netflix/msl/keyx/KeyResponseData;-><init>(Lcom/netflix/msl/tokens/MasterToken;Lcom/netflix/msl/keyx/KeyExchangeScheme;)V
 
-    .line 284
     iput-object p2, p0, Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$ResponseData;->wrapKey:[B
 
-    .line 285
     iput-object p3, p0, Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$ResponseData;->wrapdata:[B
 
-    .line 286
     iput-object p4, p0, Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$ResponseData;->encryptionKey:[B
 
-    .line 287
     iput-object p5, p0, Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$ResponseData;->hmacKey:[B
 
-    .line 288
     return-void
 .end method
 
@@ -316,19 +292,15 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 374
     if-ne p1, p0, :cond_0
 
-    .line 381
     :goto_0
     return v1
 
-    .line 375
     :cond_0
     instance-of v0, p1, Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$ResponseData;
 
@@ -341,10 +313,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 376
     check-cast v0, Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$ResponseData;
 
-    .line 377
     invoke-super {p0, p1}, Lcom/netflix/msl/keyx/KeyResponseData;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -355,7 +325,6 @@
 
     iget-object v4, v0, Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$ResponseData;->wrapKey:[B
 
-    .line 378
     invoke-static {v3, v4}, Ljava/util/Arrays;->equals([B[B)Z
 
     move-result v3
@@ -366,7 +335,6 @@
 
     iget-object v4, v0, Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$ResponseData;->wrapdata:[B
 
-    .line 379
     invoke-static {v3, v4}, Ljava/util/Arrays;->equals([B[B)Z
 
     move-result v3
@@ -377,7 +345,6 @@
 
     iget-object v4, v0, Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$ResponseData;->encryptionKey:[B
 
-    .line 380
     invoke-static {v3, v4}, Ljava/util/Arrays;->equals([B[B)Z
 
     move-result v3
@@ -388,7 +355,6 @@
 
     iget-object v0, v0, Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$ResponseData;->hmacKey:[B
 
-    .line 381
     invoke-static {v3, v0}, Ljava/util/Arrays;->equals([B[B)Z
 
     move-result v0
@@ -411,8 +377,6 @@
 .method public getEncryptionKey()[B
     .locals 1
 
-    .prologue
-    .line 346
     iget-object v0, p0, Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$ResponseData;->encryptionKey:[B
 
     return-object v0
@@ -421,8 +385,6 @@
 .method public getHmacKey()[B
     .locals 1
 
-    .prologue
-    .line 353
     iget-object v0, p0, Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$ResponseData;->hmacKey:[B
 
     return-object v0
@@ -431,13 +393,10 @@
 .method protected getKeydata()Lcom/netflix/android/org/json/JSONObject;
     .locals 3
 
-    .prologue
-    .line 361
     new-instance v0, Lcom/netflix/android/org/json/JSONObject;
 
     invoke-direct {v0}, Lcom/netflix/android/org/json/JSONObject;-><init>()V
 
-    .line 362
     const-string/jumbo v1, "wrapkey"
 
     iget-object v2, p0, Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$ResponseData;->wrapKey:[B
@@ -448,7 +407,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 363
     const-string/jumbo v1, "wrapdata"
 
     iget-object v2, p0, Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$ResponseData;->wrapdata:[B
@@ -459,7 +417,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 364
     const-string/jumbo v1, "encryptionkey"
 
     iget-object v2, p0, Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$ResponseData;->encryptionKey:[B
@@ -470,7 +427,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 365
     const-string/jumbo v1, "hmackey"
 
     iget-object v2, p0, Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$ResponseData;->hmacKey:[B
@@ -481,15 +437,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 366
     return-object v0
 .end method
 
 .method public getWrapKey()[B
     .locals 1
 
-    .prologue
-    .line 332
     iget-object v0, p0, Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$ResponseData;->wrapKey:[B
 
     return-object v0
@@ -498,8 +451,6 @@
 .method public getWrapdata()[B
     .locals 1
 
-    .prologue
-    .line 339
     iget-object v0, p0, Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$ResponseData;->wrapdata:[B
 
     return-object v0
@@ -508,15 +459,12 @@
 .method public hashCode()I
     .locals 2
 
-    .prologue
-    .line 389
     invoke-super {p0}, Lcom/netflix/msl/keyx/KeyResponseData;->hashCode()I
 
     move-result v0
 
     iget-object v1, p0, Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$ResponseData;->wrapKey:[B
 
-    .line 390
     invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
 
     move-result v1
@@ -525,7 +473,6 @@
 
     iget-object v1, p0, Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$ResponseData;->wrapdata:[B
 
-    .line 391
     invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
 
     move-result v1
@@ -534,7 +481,6 @@
 
     iget-object v1, p0, Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$ResponseData;->encryptionKey:[B
 
-    .line 392
     invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
 
     move-result v1
@@ -543,7 +489,6 @@
 
     iget-object v1, p0, Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$ResponseData;->hmacKey:[B
 
-    .line 393
     invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
 
     move-result v1

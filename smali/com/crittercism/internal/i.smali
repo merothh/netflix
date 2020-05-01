@@ -6,13 +6,10 @@
 .method public static a(ZLjava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 54
     if-eqz p0, :cond_0
 
     const-string/jumbo v0, "installed "
 
-    .line 55
     :goto_0
     const-string/jumbo v1, "%s%s%s"
 
@@ -40,7 +37,6 @@
 
     return-object v0
 
-    .line 54
     :cond_0
     const-string/jumbo v0, "did not install "
 

@@ -38,14 +38,12 @@
 .method static constructor <clinit>()V
     .locals 14
 
-    .prologue
     const/4 v2, 0x0
 
     const/4 v3, 0x2
 
     const/4 v6, 0x1
 
-    .line 35
     new-instance v0, Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;
 
     const-string/jumbo v1, "AVC"
@@ -58,7 +56,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;->AVC:Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;
 
-    .line 39
     new-instance v4, Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;
 
     const-string/jumbo v5, "VP9"
@@ -75,7 +72,6 @@
 
     sput-object v4, Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;->VP9:Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;
 
-    .line 43
     new-instance v7, Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;
 
     const-string/jumbo v8, "HEVC"
@@ -94,7 +90,6 @@
 
     sput-object v7, Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;->HEVC:Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;
 
-    .line 34
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;
@@ -124,31 +119,22 @@
         }
     .end annotation
 
-    .prologue
-    .line 51
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 52
     iput p3, p0, Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;->interestedProfile:I
 
-    .line 53
     iput p4, p0, Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;->fhdLevel:I
 
-    .line 54
     iput p5, p0, Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;->hdLevel:I
 
-    .line 55
     iput p6, p0, Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;->lowestLevel:I
 
-    .line 56
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;
     .locals 1
 
-    .prologue
-    .line 34
     const-class v0, Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -163,8 +149,6 @@
 .method public static values()[Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;
     .locals 1
 
-    .prologue
-    .line 34
     sget-object v0, Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;->$VALUES:[Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;->clone()Ljava/lang/Object;
@@ -181,8 +165,6 @@
 .method getFhdLevel()I
     .locals 1
 
-    .prologue
-    .line 63
     iget v0, p0, Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;->fhdLevel:I
 
     return v0
@@ -191,8 +173,6 @@
 .method getHdLevel()I
     .locals 1
 
-    .prologue
-    .line 67
     iget v0, p0, Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;->hdLevel:I
 
     return v0
@@ -201,8 +181,6 @@
 .method getInterestedProfile()I
     .locals 1
 
-    .prologue
-    .line 59
     iget v0, p0, Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;->interestedProfile:I
 
     return v0
@@ -211,8 +189,6 @@
 .method getLowestLevel()I
     .locals 1
 
-    .prologue
-    .line 71
     iget v0, p0, Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;->lowestLevel:I
 
     return v0
@@ -221,8 +197,6 @@
 .method getName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 74
     invoke-virtual {p0}, Lcom/netflix/mediaclient/util/MediaUtils$VideoDecoderClassfier;->name()Ljava/lang/String;
 
     move-result-object v0

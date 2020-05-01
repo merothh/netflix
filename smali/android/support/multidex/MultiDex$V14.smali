@@ -7,8 +7,6 @@
 .method static synthetic access$100(Ljava/lang/ClassLoader;Ljava/util/List;Ljava/io/File;)V
     .locals 0
 
-    .prologue
-    .line 434
     invoke-static {p0, p1, p2}, Landroid/support/multidex/MultiDex$V14;->install(Ljava/lang/ClassLoader;Ljava/util/List;Ljava/io/File;)V
 
     return-void
@@ -29,20 +27,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 445
     const-string/jumbo v0, "pathList"
 
     invoke-static {p0, v0}, Landroid/support/multidex/MultiDex;->access$300(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
-    .line 446
     invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 447
     const-string/jumbo v1, "dexElements"
 
     new-instance v2, Ljava/util/ArrayList;
@@ -55,7 +49,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/support/multidex/MultiDex;->access$400(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 449
     return-void
 .end method
 
@@ -75,14 +68,12 @@
         }
     .end annotation
 
-    .prologue
     const/4 v5, 0x2
 
     const/4 v4, 0x1
 
     const/4 v3, 0x0
 
-    .line 459
     const-string/jumbo v0, "makeDexElements"
 
     new-array v1, v5, [Ljava/lang/Class;
@@ -99,7 +90,6 @@
 
     move-result-object v0
 
-    .line 462
     new-array v1, v5, [Ljava/lang/Object;
 
     aput-object p1, v1, v3

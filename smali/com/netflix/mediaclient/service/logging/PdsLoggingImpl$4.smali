@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 181
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl$4;->this$0:Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl$4;->val$deliveryRequestId:Ljava/lang/String;
@@ -32,8 +30,6 @@
 .method public onDataLoaded(Ljava/lang/String;[BJ)V
     .locals 5
 
-    .prologue
-    .line 185
     if-eqz p2, :cond_0
 
     array-length v0, p2
@@ -42,7 +38,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 186
     :cond_0
     const-string/jumbo v0, "nf_pds_logs"
 
@@ -50,18 +45,15 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 187
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl$4;->this$0:Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl$4;->val$deliveryRequestId:Ljava/lang/String;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl;->access$300(Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl;Ljava/lang/String;)V
 
-    .line 197
     :goto_0
     return-void
 
-    .line 190
     :cond_1
     :try_start_0
     new-instance v0, Ljava/lang/String;
@@ -70,7 +62,6 @@
 
     invoke-direct {v0, p2, v1}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
 
-    .line 192
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl$4;->this$0:Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl;
 
     new-instance v2, Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl$PdsEventsSentCallbackImpl;
@@ -87,11 +78,9 @@
 
     goto :goto_0
 
-    .line 193
     :catch_0
     move-exception v0
 
-    .line 194
     const-string/jumbo v1, "nf_pds_logs"
 
     const-string/jumbo v2, "Failed to send pdsEvent."

@@ -41,8 +41,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 127
     new-instance v0, Lcom/netflix/model/leafs/ListOfGenreSummary$1;
 
     invoke-direct {v0}, Lcom/netflix/model/leafs/ListOfGenreSummary$1;-><init>()V
@@ -55,36 +53,28 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 36
     invoke-direct {p0}, Lcom/netflix/model/leafs/TrackableListSummary;-><init>()V
 
-    .line 37
     return-void
 .end method
 
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
-    .prologue
-    .line 109
     invoke-direct {p0, p1}, Lcom/netflix/model/leafs/TrackableListSummary;-><init>(Landroid/os/Parcel;)V
 
-    .line 110
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/model/leafs/ListOfGenreSummary;->genreName:Ljava/lang/String;
 
-    .line 111
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/model/leafs/ListOfGenreSummary;->genreId:Ljava/lang/String;
 
-    .line 112
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
@@ -96,24 +86,20 @@
     :goto_0
     iput-boolean v0, p0, Lcom/netflix/model/leafs/ListOfGenreSummary;->isKidsGenre:Z
 
-    .line 113
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/model/leafs/ListOfGenreSummary;->genreExperience:Ljava/lang/String;
 
-    .line 114
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/model/leafs/ListOfGenreSummary;->genreType:Ljava/lang/String;
 
-    .line 115
     return-void
 
-    .line 112
     :cond_0
     const/4 v0, 0x0
 
@@ -125,8 +111,6 @@
 .method public describeContents()I
     .locals 1
 
-    .prologue
-    .line 141
     const/4 v0, 0x0
 
     return v0
@@ -135,16 +119,12 @@
 .method public getGenreType()Lcom/netflix/mediaclient/servicemgr/interface_/genre/GenreList$GenreType;
     .locals 2
 
-    .prologue
-    .line 79
     iget-object v0, p0, Lcom/netflix/model/leafs/ListOfGenreSummary;->genreType:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 80
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/genre/GenreList$GenreType;->UNKNOWN:Lcom/netflix/mediaclient/servicemgr/interface_/genre/GenreList$GenreType;
 
-    .line 82
     :goto_0
     return-object v0
 
@@ -167,8 +147,6 @@
 .method public getId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 74
     iget-object v0, p0, Lcom/netflix/model/leafs/ListOfGenreSummary;->genreId:Ljava/lang/String;
 
     return-object v0
@@ -177,8 +155,6 @@
 .method public getNumVideos()I
     .locals 1
 
-    .prologue
-    .line 105
     invoke-virtual {p0}, Lcom/netflix/model/leafs/ListOfGenreSummary;->getLength()I
 
     move-result v0
@@ -189,8 +165,6 @@
 .method public getTitle()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 87
     iget-object v0, p0, Lcom/netflix/model/leafs/ListOfGenreSummary;->genreName:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->decodeHtmlEntities(Ljava/lang/String;)Ljava/lang/String;
@@ -203,13 +177,10 @@
 .method public getType()Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
     .locals 1
 
-    .prologue
-    .line 92
     iget-object v0, p0, Lcom/netflix/model/leafs/ListOfGenreSummary;->enumType:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
     if-nez v0, :cond_0
 
-    .line 93
     iget-object v0, p0, Lcom/netflix/model/leafs/ListOfGenreSummary;->genreExperience:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->create(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
@@ -218,7 +189,6 @@
 
     iput-object v0, p0, Lcom/netflix/model/leafs/ListOfGenreSummary;->enumType:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
-    .line 95
     :cond_0
     iget-object v0, p0, Lcom/netflix/model/leafs/ListOfGenreSummary;->enumType:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
@@ -228,8 +198,6 @@
 .method public isKidsGenre()Z
     .locals 1
 
-    .prologue
-    .line 100
     iget-boolean v0, p0, Lcom/netflix/model/leafs/ListOfGenreSummary;->isKidsGenre:Z
 
     return v0
@@ -238,21 +206,16 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 5
 
-    .prologue
-    .line 41
     invoke-super {p0, p1}, Lcom/netflix/model/leafs/TrackableListSummary;->populate(Lcom/google/gson/JsonElement;)V
 
-    .line 42
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 43
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 44
     const-string/jumbo v1, "ListOfGenreSummary"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -275,7 +238,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 46
     :cond_0
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -298,7 +260,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 47
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -321,7 +282,6 @@
 
     goto :goto_0
 
-    .line 48
     :pswitch_0
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -337,7 +297,6 @@
 
     goto :goto_0
 
-    .line 47
     :sswitch_0
     const-string/jumbo v4, "genreName"
 
@@ -403,7 +362,6 @@
 
     goto :goto_1
 
-    .line 49
     :pswitch_1
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -419,7 +377,6 @@
 
     goto :goto_0
 
-    .line 50
     :pswitch_2
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -435,7 +392,6 @@
 
     goto :goto_0
 
-    .line 51
     :pswitch_3
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -451,7 +407,6 @@
 
     goto/16 :goto_0
 
-    .line 52
     :pswitch_4
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -467,11 +422,9 @@
 
     goto/16 :goto_0
 
-    .line 55
     :cond_2
     return-void
 
-    .line 47
     nop
 
     :sswitch_data_0
@@ -496,15 +449,12 @@
 .method public set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 59
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 60
     const-string/jumbo v1, "ListOfGenreSummary"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -527,7 +477,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 62
     :cond_0
     const/4 v1, -0x1
 
@@ -541,7 +490,6 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 69
     invoke-super {p0, p1, p2}, Lcom/netflix/model/leafs/TrackableListSummary;->set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
 
     move-result v0
@@ -549,7 +497,6 @@
     :goto_1
     return v0
 
-    .line 62
     :sswitch_0
     const-string/jumbo v2, "genreName"
 
@@ -615,7 +562,6 @@
 
     goto :goto_0
 
-    .line 63
     :pswitch_0
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -625,7 +571,6 @@
 
     goto :goto_1
 
-    .line 64
     :pswitch_1
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -635,7 +580,6 @@
 
     goto :goto_1
 
-    .line 65
     :pswitch_2
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -645,7 +589,6 @@
 
     goto :goto_1
 
-    .line 66
     :pswitch_3
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -655,7 +598,6 @@
 
     goto :goto_1
 
-    .line 67
     :pswitch_4
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -665,7 +607,6 @@
 
     goto :goto_1
 
-    .line 62
     nop
 
     :sswitch_data_0
@@ -690,8 +631,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 146
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -784,21 +723,16 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    .prologue
-    .line 119
     invoke-super {p0, p1, p2}, Lcom/netflix/model/leafs/TrackableListSummary;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 120
     iget-object v0, p0, Lcom/netflix/model/leafs/ListOfGenreSummary;->genreName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 121
     iget-object v0, p0, Lcom/netflix/model/leafs/ListOfGenreSummary;->genreId:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 122
     iget-boolean v0, p0, Lcom/netflix/model/leafs/ListOfGenreSummary;->isKidsGenre:Z
 
     if-eqz v0, :cond_0
@@ -810,20 +744,16 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 123
     iget-object v0, p0, Lcom/netflix/model/leafs/ListOfGenreSummary;->genreExperience:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 124
     iget-object v0, p0, Lcom/netflix/model/leafs/ListOfGenreSummary;->genreType:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 125
     return-void
 
-    .line 122
     :cond_0
     const/4 v0, 0x0
 

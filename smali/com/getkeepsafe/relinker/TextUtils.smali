@@ -7,8 +7,6 @@
 .method public static isEmpty(Ljava/lang/CharSequence;)Z
     .locals 1
 
-    .prologue
-    .line 15
     if-eqz p0, :cond_0
 
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I

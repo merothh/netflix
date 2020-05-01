@@ -20,16 +20,12 @@
 .method public constructor <init>(Lcom/netflix/falkor/CachedModelProxy;Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;)V
     .locals 1
 
-    .prologue
-    .line 3708
     iput-object p1, p0, Lcom/netflix/falkor/CachedModelProxy$TemplateTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
-    .line 3709
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/netflix/falkor/CachedModelProxy$CmpTask;-><init>(Lcom/netflix/falkor/CachedModelProxy;Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/falkor/CachedModelProxy$1;)V
 
-    .line 3710
     return-void
 .end method
 
@@ -47,23 +43,17 @@
         }
     .end annotation
 
-    .prologue
-    .line 3714
     return-void
 .end method
 
 .method protected callbackForFailure(Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 0
 
-    .prologue
-    .line 3722
     return-void
 .end method
 
 .method protected fetchResultsAndCallbackForSuccess(Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/falkor/CachedModelProxy$GetResult;)V
     .locals 0
 
-    .prologue
-    .line 3718
     return-void
 .end method

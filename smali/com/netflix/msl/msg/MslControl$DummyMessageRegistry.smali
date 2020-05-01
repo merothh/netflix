@@ -10,8 +10,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 439
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,8 +18,6 @@
 .method synthetic constructor <init>(Lcom/netflix/msl/msg/MslControl$1;)V
     .locals 0
 
-    .prologue
-    .line 439
     invoke-direct {p0}, Lcom/netflix/msl/msg/MslControl$DummyMessageRegistry;-><init>()V
 
     return-void
@@ -43,8 +39,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 445
     const/4 v0, 0x0
 
     return-object v0
@@ -64,8 +58,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 453
     const/4 v0, 0x0
 
     return-object v0

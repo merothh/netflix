@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 125
     invoke-static {}, Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$Mechanism;->values()[Lcom/netflix/msl/keyx/JsonWebEncryptionLadderExchange$Mechanism;
 
     move-result-object v0

@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/details/CopyrightView;Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 93
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/CopyrightView$1;->this$0:Lcom/netflix/mediaclient/ui/details/CopyrightView;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/details/CopyrightView$1;->val$context:Landroid/content/Context;
@@ -32,8 +30,6 @@
 .method public onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 4
 
-    .prologue
-    .line 99
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/CopyrightView$1;->this$0:Lcom/netflix/mediaclient/ui/details/CopyrightView;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/details/CopyrightView;->access$000(Lcom/netflix/mediaclient/ui/details/CopyrightView;)Landroid/widget/TextView;
@@ -42,7 +38,6 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    .line 100
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/CopyrightView$1;->this$0:Lcom/netflix/mediaclient/ui/details/CopyrightView;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/details/CopyrightView;->access$000(Lcom/netflix/mediaclient/ui/details/CopyrightView;)Landroid/widget/TextView;
@@ -53,10 +48,8 @@
 
     move-result-object v0
 
-    .line 101
     const/4 v1, 0x3
 
-    .line 103
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/details/CopyrightView$1;->this$0:Lcom/netflix/mediaclient/ui/details/CopyrightView;
 
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/details/CopyrightView$1;->this$0:Lcom/netflix/mediaclient/ui/details/CopyrightView;
@@ -73,7 +66,6 @@
 
     invoke-static {v2, v1}, Lcom/netflix/mediaclient/ui/details/CopyrightView;->access$102(Lcom/netflix/mediaclient/ui/details/CopyrightView;I)I
 
-    .line 105
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
@@ -84,7 +76,6 @@
 
     if-lez v0, :cond_0
 
-    .line 106
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/CopyrightView$1;->this$0:Lcom/netflix/mediaclient/ui/details/CopyrightView;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/details/CopyrightView;->access$000(Lcom/netflix/mediaclient/ui/details/CopyrightView;)Landroid/widget/TextView;
@@ -97,7 +88,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 113
     :cond_0
     return-void
 .end method

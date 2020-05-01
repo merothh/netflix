@@ -24,8 +24,6 @@
 .method constructor <init>(Lcom/netflix/falkor/Func;)V
     .locals 0
 
-    .prologue
-    .line 68
     iput-object p1, p0, Lcom/netflix/falkor/IterableBuilder$3;->val$func:Lcom/netflix/falkor/Func;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,8 +43,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 70
     iget-object v0, p0, Lcom/netflix/falkor/IterableBuilder$3;->val$func:Lcom/netflix/falkor/Func;
 
     invoke-interface {v0}, Lcom/netflix/falkor/Func;->call()Ljava/lang/Object;

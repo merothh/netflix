@@ -18,8 +18,6 @@
 .method constructor <init>(Landroid/support/v7/app/AlertController$AlertParams;Landroid/widget/ListView;Landroid/support/v7/app/AlertController;)V
     .locals 0
 
-    .prologue
-    .line 966
     iput-object p1, p0, Landroid/support/v7/app/AlertController$AlertParams$4;->this$0:Landroid/support/v7/app/AlertController$AlertParams;
 
     iput-object p2, p0, Landroid/support/v7/app/AlertController$AlertParams$4;->val$listView:Landroid/widget/ListView;
@@ -45,15 +43,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 969
     iget-object v0, p0, Landroid/support/v7/app/AlertController$AlertParams$4;->this$0:Landroid/support/v7/app/AlertController$AlertParams;
 
     iget-object v0, v0, Landroid/support/v7/app/AlertController$AlertParams;->mCheckedItems:[Z
 
     if-eqz v0, :cond_0
 
-    .line 970
     iget-object v0, p0, Landroid/support/v7/app/AlertController$AlertParams$4;->this$0:Landroid/support/v7/app/AlertController$AlertParams;
 
     iget-object v0, v0, Landroid/support/v7/app/AlertController$AlertParams;->mCheckedItems:[Z
@@ -66,7 +61,6 @@
 
     aput-boolean v1, v0, p3
 
-    .line 972
     :cond_0
     iget-object v0, p0, Landroid/support/v7/app/AlertController$AlertParams$4;->this$0:Landroid/support/v7/app/AlertController$AlertParams;
 
@@ -78,14 +72,11 @@
 
     iget-object v2, p0, Landroid/support/v7/app/AlertController$AlertParams$4;->val$listView:Landroid/widget/ListView;
 
-    .line 973
     invoke-virtual {v2, p3}, Landroid/widget/ListView;->isItemChecked(I)Z
 
     move-result v2
 
-    .line 972
     invoke-interface {v0, v1, p3, v2}, Landroid/content/DialogInterface$OnMultiChoiceClickListener;->onClick(Landroid/content/DialogInterface;IZ)V
 
-    .line 974
     return-void
 .end method

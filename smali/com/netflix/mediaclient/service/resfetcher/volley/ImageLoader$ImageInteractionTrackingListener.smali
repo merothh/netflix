@@ -20,19 +20,14 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;Lcom/netflix/mediaclient/android/widget/AdvancedImageView;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 353
     iput-object p1, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageInteractionTrackingListener;->this$0:Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 354
     iput-object p2, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageInteractionTrackingListener;->view:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
-    .line 355
     iput-object p3, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageInteractionTrackingListener;->imgUrl:Ljava/lang/String;
 
-    .line 356
     return-void
 .end method
 
@@ -41,8 +36,6 @@
 .method public onErrorResponse(Lcom/android/volley/VolleyError;)V
     .locals 2
 
-    .prologue
-    .line 378
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageInteractionTrackingListener;->this$0:Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;->mTTRTracker:Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker$TTRTracker;
@@ -53,7 +46,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 379
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageInteractionTrackingListener;->this$0:Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;->mTTRTracker:Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker$TTRTracker;
@@ -62,7 +54,6 @@
 
     invoke-virtual {v0, p0, v1}, Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker$TTRTracker;->onImageLoaded(Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageListener;Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$Type;)V
 
-    .line 381
     :cond_0
     return-void
 .end method
@@ -70,8 +61,6 @@
 .method public onResponse(Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageContainer;Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$Type;)V
     .locals 1
 
-    .prologue
-    .line 371
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageInteractionTrackingListener;->this$0:Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;->mTTRTracker:Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker$TTRTracker;
@@ -82,14 +71,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 372
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageInteractionTrackingListener;->this$0:Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;->mTTRTracker:Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker$TTRTracker;
 
     invoke-virtual {v0, p0, p2}, Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker$TTRTracker;->onImageLoaded(Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageListener;Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$Type;)V
 
-    .line 374
     :cond_0
     return-void
 .end method
@@ -97,8 +84,6 @@
 .method public registerForTTR(Lcom/android/volley/Request$Priority;)V
     .locals 2
 
-    .prologue
-    .line 363
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageInteractionTrackingListener;->this$0:Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;->mTTRTracker:Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker$TTRTracker;
@@ -117,7 +102,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 364
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageInteractionTrackingListener;->this$0:Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;->mTTRTracker:Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker$TTRTracker;
@@ -126,12 +110,10 @@
 
     invoke-virtual {v0, p0, v1}, Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker$TTRTracker;->registerListener(Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageListener;Landroid/widget/ImageView;)Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageListener;
 
-    .line 365
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$ImageInteractionTrackingListener;->hasRegistered:Z
 
-    .line 367
     :cond_0
     return-void
 .end method

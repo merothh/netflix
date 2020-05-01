@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/lomo/BillboardView;Lcom/netflix/mediaclient/servicemgr/ServiceManager;)V
     .locals 0
 
-    .prologue
-    .line 506
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView$1;->this$0:Lcom/netflix/mediaclient/ui/lomo/BillboardView;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView$1;->val$serviceMan:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -32,8 +30,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 6
 
-    .prologue
-    .line 509
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView$1;->val$serviceMan:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     if-eqz v0, :cond_0
@@ -46,7 +42,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 510
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView$1;->val$serviceMan:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getBrowse()Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
@@ -69,7 +64,6 @@
 
     invoke-interface {v0, v1, v2, v3}, Lcom/netflix/mediaclient/servicemgr/IBrowseManager;->logBillboardActivity(Lcom/netflix/mediaclient/servicemgr/interface_/Video;Lcom/netflix/mediaclient/servicemgr/BillboardInteractionType;Ljava/util/Map;)V
 
-    .line 513
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView$1;->this$0:Lcom/netflix/mediaclient/ui/lomo/BillboardView;
 
@@ -107,16 +101,13 @@
 
     iget-object v4, p0, Lcom/netflix/mediaclient/ui/lomo/BillboardView$1;->this$0:Lcom/netflix/mediaclient/ui/lomo/BillboardView;
 
-    .line 514
     invoke-static {v4}, Lcom/netflix/mediaclient/ui/lomo/BillboardView;->access$200(Lcom/netflix/mediaclient/ui/lomo/BillboardView;)Lcom/netflix/mediaclient/ui/common/PlayContext;
 
     move-result-object v4
 
     const-string/jumbo v5, "BbView"
 
-    .line 513
     invoke-static/range {v0 .. v5}, Lcom/netflix/mediaclient/ui/details/DetailsActivityLauncher;->show(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/Video;Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/ui/common/PlayContext;Ljava/lang/String;)V
 
-    .line 515
     return-void
 .end method

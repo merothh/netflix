@@ -42,7 +42,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -53,7 +52,6 @@
 
     const/4 v4, 0x0
 
-    .line 148
     new-instance v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
     const-string/jumbo v1, "BILLBOARD"
@@ -64,7 +62,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;->BILLBOARD:Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
-    .line 149
     new-instance v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
     const-string/jumbo v1, "CW"
@@ -75,7 +72,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;->CW:Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
-    .line 150
     new-instance v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
     const-string/jumbo v1, "IQ"
@@ -86,7 +82,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;->IQ:Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
-    .line 151
     new-instance v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
     const-string/jumbo v1, "STANDARD_FIRST"
@@ -97,7 +92,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;->STANDARD_FIRST:Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
-    .line 152
     new-instance v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
     const-string/jumbo v1, "STANDARD_SECOND"
@@ -108,7 +102,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;->STANDARD_SECOND:Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
-    .line 153
     new-instance v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
     const-string/jumbo v1, "NON_MEMBER"
@@ -121,7 +114,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;->NON_MEMBER:Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
-    .line 154
     new-instance v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
     const-string/jumbo v1, "LOMO_INFO"
@@ -134,7 +126,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;->LOMO_INFO:Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
-    .line 155
     new-instance v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
     const-string/jumbo v1, "UNKNOWN"
@@ -147,7 +138,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;->UNKNOWN:Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
-    .line 147
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
@@ -205,22 +195,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 159
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 160
     iput-object p3, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;->value:Ljava/lang/String;
 
-    .line 161
     return-void
 .end method
 
 .method public static create(Ljava/lang/String;)Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
     .locals 5
 
-    .prologue
-    .line 164
     invoke-static {}, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;->values()[Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
     move-result-object v2
@@ -236,7 +220,6 @@
 
     aget-object v0, v2, v1
 
-    .line 165
     iget-object v4, v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;->value:Ljava/lang/String;
 
     invoke-virtual {v4, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -245,11 +228,9 @@
 
     if-eqz v4, :cond_0
 
-    .line 169
     :goto_1
     return-object v0
 
-    .line 164
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -257,7 +238,6 @@
 
     goto :goto_0
 
-    .line 169
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;->UNKNOWN:Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
@@ -267,8 +247,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
     .locals 1
 
-    .prologue
-    .line 147
     const-class v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -283,8 +261,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
     .locals 1
 
-    .prologue
-    .line 147
     sget-object v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;->$VALUES:[Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;->clone()Ljava/lang/Object;
@@ -301,8 +277,6 @@
 .method public getValue()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 173
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;->value:Ljava/lang/String;
 
     return-object v0

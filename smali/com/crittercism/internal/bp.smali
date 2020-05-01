@@ -46,8 +46,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
-    .line 8
     new-instance v0, Lcom/crittercism/internal/bp;
 
     const-string/jumbo v1, "APP_LOADS"
@@ -76,7 +74,6 @@
 
     sput-object v0, Lcom/crittercism/internal/bp;->a:Lcom/crittercism/internal/bp;
 
-    .line 15
     new-instance v0, Lcom/crittercism/internal/bp;
 
     const-string/jumbo v1, "HAND_EXCS"
@@ -105,7 +102,6 @@
 
     sput-object v0, Lcom/crittercism/internal/bp;->b:Lcom/crittercism/internal/bp;
 
-    .line 22
     new-instance v0, Lcom/crittercism/internal/bp;
 
     const-string/jumbo v1, "INTERNAL_EXCS"
@@ -134,7 +130,6 @@
 
     sput-object v0, Lcom/crittercism/internal/bp;->c:Lcom/crittercism/internal/bp;
 
-    .line 29
     new-instance v0, Lcom/crittercism/internal/bp;
 
     const-string/jumbo v1, "NDK_CRASHES"
@@ -163,7 +158,6 @@
 
     sput-object v0, Lcom/crittercism/internal/bp;->d:Lcom/crittercism/internal/bp;
 
-    .line 36
     new-instance v0, Lcom/crittercism/internal/bp;
 
     const-string/jumbo v1, "SDK_CRASHES"
@@ -192,7 +186,6 @@
 
     sput-object v0, Lcom/crittercism/internal/bp;->e:Lcom/crittercism/internal/bp;
 
-    .line 43
     new-instance v0, Lcom/crittercism/internal/bp;
 
     const-string/jumbo v1, "CURR_BCS"
@@ -221,7 +214,6 @@
 
     sput-object v0, Lcom/crittercism/internal/bp;->f:Lcom/crittercism/internal/bp;
 
-    .line 50
     new-instance v0, Lcom/crittercism/internal/bp;
 
     const-string/jumbo v1, "NW_BCS"
@@ -250,7 +242,6 @@
 
     sput-object v0, Lcom/crittercism/internal/bp;->g:Lcom/crittercism/internal/bp;
 
-    .line 57
     new-instance v0, Lcom/crittercism/internal/bp;
 
     const-string/jumbo v1, "PREV_BCS"
@@ -279,7 +270,6 @@
 
     sput-object v0, Lcom/crittercism/internal/bp;->h:Lcom/crittercism/internal/bp;
 
-    .line 64
     new-instance v0, Lcom/crittercism/internal/bp;
 
     const-string/jumbo v1, "STARTED_TXNS"
@@ -308,7 +298,6 @@
 
     sput-object v0, Lcom/crittercism/internal/bp;->i:Lcom/crittercism/internal/bp;
 
-    .line 71
     new-instance v0, Lcom/crittercism/internal/bp;
 
     const-string/jumbo v1, "FINISHED_TXNS"
@@ -337,7 +326,6 @@
 
     sput-object v0, Lcom/crittercism/internal/bp;->j:Lcom/crittercism/internal/bp;
 
-    .line 80
     new-instance v0, Lcom/crittercism/internal/bp;
 
     const-string/jumbo v1, "SYSTEM_BCS"
@@ -366,7 +354,6 @@
 
     sput-object v0, Lcom/crittercism/internal/bp;->k:Lcom/crittercism/internal/bp;
 
-    .line 7
     const/16 v0, 0xb
 
     new-array v0, v0, [Lcom/crittercism/internal/bp;
@@ -445,37 +432,26 @@
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;IILcom/crittercism/internal/bq$a;Lcom/crittercism/internal/ch;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 101
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 102
     iput-object p3, p0, Lcom/crittercism/internal/bp;->l:Ljava/lang/String;
 
-    .line 103
     iput p4, p0, Lcom/crittercism/internal/bp;->m:I
 
-    .line 104
     iput p5, p0, Lcom/crittercism/internal/bp;->n:I
 
-    .line 105
     iput-object p6, p0, Lcom/crittercism/internal/bp;->o:Lcom/crittercism/internal/bq$a;
 
-    .line 106
     iput-object p7, p0, Lcom/crittercism/internal/bp;->p:Lcom/crittercism/internal/ch;
 
-    .line 107
     iput-object p8, p0, Lcom/crittercism/internal/bp;->q:Ljava/lang/String;
 
-    .line 112
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/crittercism/internal/bp;
     .locals 1
 
-    .prologue
-    .line 7
     const-class v0, Lcom/crittercism/internal/bp;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -490,8 +466,6 @@
 .method public static values()[Lcom/crittercism/internal/bp;
     .locals 1
 
-    .prologue
-    .line 7
     sget-object v0, Lcom/crittercism/internal/bp;->r:[Lcom/crittercism/internal/bp;
 
     invoke-virtual {v0}, [Lcom/crittercism/internal/bp;->clone()Ljava/lang/Object;

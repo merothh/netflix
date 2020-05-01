@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/jsapi/PartnerJSObject$4;)V
     .locals 0
 
-    .prologue
-    .line 308
     iput-object p1, p0, Lcom/netflix/mediaclient/jsapi/PartnerJSObject$4$1;->this$1:Lcom/netflix/mediaclient/jsapi/PartnerJSObject$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onResponseReceived(Lcom/netflix/mediaclient/partner/Response;)V
     .locals 3
 
-    .prologue
-    .line 313
     :try_start_0
     iget-object v0, p0, Lcom/netflix/mediaclient/jsapi/PartnerJSObject$4$1;->this$1:Lcom/netflix/mediaclient/jsapi/PartnerJSObject$4;
 
@@ -45,15 +41,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 317
     :goto_0
     return-void
 
-    .line 314
     :catch_0
     move-exception v0
 
-    .line 315
     const-string/jumbo v1, "nf_partner"
 
     const-string/jumbo v2, "Failed to get JSON from response"

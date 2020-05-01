@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,13 +15,10 @@
 .method public static getAudioSourceForDownloadable(Lcom/netflix/mediaclient/service/player/manifest/NfManifest;Ljava/lang/String;)Lcom/netflix/mediaclient/media/AudioSource;
     .locals 6
 
-    .prologue
-    .line 32
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->getAudioTrackList()[Lcom/netflix/mediaclient/media/AudioSource;
 
     move-result-object v3
 
-    .line 33
     array-length v4, v3
 
     const/4 v0, 0x0
@@ -35,7 +30,6 @@
 
     aget-object v1, v3, v2
 
-    .line 34
     invoke-virtual {v1}, Lcom/netflix/mediaclient/media/AudioSource;->getStreams()Ljava/util/List;
 
     move-result-object v0
@@ -57,7 +51,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/media/manifest/Stream;
 
-    .line 35
     iget-object v0, v0, Lcom/netflix/mediaclient/media/manifest/Stream;->downloadable_id:Ljava/lang/String;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/util/StringUtils;->notEmptyAndEquals(Ljava/lang/String;Ljava/lang/String;)Z
@@ -68,11 +61,9 @@
 
     move-object v0, v1
 
-    .line 40
     :goto_1
     return-object v0
 
-    .line 33
     :cond_1
     add-int/lit8 v0, v2, 0x1
 
@@ -80,7 +71,6 @@
 
     goto :goto_0
 
-    .line 40
     :cond_2
     const/4 v0, 0x0
 
@@ -103,13 +93,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 45
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->getAudioTrackList()[Lcom/netflix/mediaclient/media/AudioSource;
 
     move-result-object v2
 
-    .line 46
     array-length v3, v2
 
     const/4 v0, 0x0
@@ -121,7 +108,6 @@
 
     aget-object v4, v2, v1
 
-    .line 47
     invoke-virtual {v4}, Lcom/netflix/mediaclient/media/AudioSource;->getStreams()Ljava/util/List;
 
     move-result-object v0
@@ -143,7 +129,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/media/manifest/Stream;
 
-    .line 48
     iget-object v6, v0, Lcom/netflix/mediaclient/media/manifest/Stream;->downloadable_id:Ljava/lang/String;
 
     invoke-static {v6, p1}, Lcom/netflix/mediaclient/util/StringUtils;->notEmptyAndEquals(Ljava/lang/String;Ljava/lang/String;)Z
@@ -152,18 +137,15 @@
 
     if-eqz v6, :cond_0
 
-    .line 49
     new-instance v1, Landroid/util/Pair;
 
     invoke-direct {v1, v4, v0}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     move-object v0, v1
 
-    .line 53
     :goto_1
     return-object v0
 
-    .line 46
     :cond_1
     add-int/lit8 v0, v1, 0x1
 
@@ -171,7 +153,6 @@
 
     goto :goto_0
 
-    .line 53
     :cond_2
     const/4 v0, 0x0
 
@@ -181,15 +162,12 @@
 .method public static getDownloadableForAudioTrackId(Lcom/netflix/mediaclient/service/player/manifest/NfManifest;Ljava/lang/String;)Ljava/lang/String;
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 57
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->getAudioTrackList()[Lcom/netflix/mediaclient/media/AudioSource;
 
     move-result-object v2
 
-    .line 58
     array-length v3, v2
 
     move v0, v1
@@ -199,7 +177,6 @@
 
     aget-object v4, v2, v0
 
-    .line 60
     invoke-virtual {v4}, Lcom/netflix/mediaclient/media/AudioSource;->getId()Ljava/lang/String;
 
     move-result-object v5
@@ -210,12 +187,10 @@
 
     if-nez v5, :cond_0
 
-    .line 58
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 64
     :cond_0
     invoke-virtual {v4}, Lcom/netflix/mediaclient/media/AudioSource;->getStreams()Ljava/util/List;
 
@@ -229,7 +204,6 @@
 
     iget-object v0, v0, Lcom/netflix/mediaclient/media/manifest/Stream;->downloadable_id:Ljava/lang/String;
 
-    .line 67
     :goto_1
     return-object v0
 
@@ -255,13 +229,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 20
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->getVideoTracks()Ljava/util/List;
 
     move-result-object v0
 
-    .line 21
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -279,7 +250,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/media/manifest/VideoTrack;
 
-    .line 22
     iget-object v1, v0, Lcom/netflix/mediaclient/media/manifest/VideoTrack;->streams:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -299,7 +269,6 @@
 
     check-cast v1, Lcom/netflix/mediaclient/media/manifest/Stream;
 
-    .line 23
     iget-object v4, v1, Lcom/netflix/mediaclient/media/manifest/Stream;->downloadable_id:Ljava/lang/String;
 
     invoke-static {v4, p1}, Lcom/netflix/mediaclient/util/StringUtils;->notEmptyAndEquals(Ljava/lang/String;Ljava/lang/String;)Z
@@ -308,14 +277,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 24
     new-instance v2, Landroid/util/Pair;
 
     invoke-direct {v2, v0, v1}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     move-object v0, v2
 
-    .line 28
     :goto_0
     return-object v0
 

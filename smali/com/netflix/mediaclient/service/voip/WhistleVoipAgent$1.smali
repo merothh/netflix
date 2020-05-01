@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;)V
     .locals 0
 
-    .prologue
-    .line 289
     iput-object p1, p0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$1;->this$0:Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 3
 
-    .prologue
-    .line 293
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 294
     const-string/jumbo v0, "nf_voip"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -59,7 +54,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 298
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$1;->this$0:Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;
@@ -72,7 +66,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;->access$002(Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;Lcom/vailsys/whistleengine/WhistleEngine;)Lcom/vailsys/whistleengine/WhistleEngine;
 
-    .line 299
     iget-object v0, p0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$1;->this$0:Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;->access$000(Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;)Lcom/vailsys/whistleengine/WhistleEngine;
@@ -81,7 +74,6 @@
 
     invoke-virtual {v0}, Lcom/vailsys/whistleengine/WhistleEngine;->applicationInForeground()V
 
-    .line 300
     iget-object v0, p0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$1;->this$0:Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;->access$100(Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -92,36 +84,30 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 301
     iget-object v0, p0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$1;->this$0:Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;
 
     sget-object v1, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;->STARTED:Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;->access$202(Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;)Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;
 
-    .line 303
     iget-object v0, p0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$1;->this$0:Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;->access$300(Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 310
     :goto_0
     return-void
 
-    .line 305
     :catch_0
     move-exception v0
 
-    .line 306
     const-string/jumbo v1, "nf_voip"
 
     const-string/jumbo v2, "Failed to start VOIP service"
 
     invoke-static {v1, v2, v0}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 307
     iget-object v0, p0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$1;->this$0:Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;
 
     sget-object v1, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;->NOT_STARTED:Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;
@@ -134,22 +120,18 @@
 .method public final onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 2
 
-    .prologue
-    .line 314
     const-string/jumbo v0, "nf_voip"
 
     const-string/jumbo v1, "onServiceDisconnected"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 315
     iget-object v0, p0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$1;->this$0:Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;->access$002(Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;Lcom/vailsys/whistleengine/WhistleEngine;)Lcom/vailsys/whistleengine/WhistleEngine;
 
-    .line 316
     iget-object v0, p0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$1;->this$0:Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;->access$100(Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -160,13 +142,11 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 317
     iget-object v0, p0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$1;->this$0:Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;
 
     sget-object v1, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;->STOPPED:Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;->access$202(Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;)Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$ServiceState;
 
-    .line 318
     return-void
 .end method

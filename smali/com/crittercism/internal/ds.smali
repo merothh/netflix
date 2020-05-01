@@ -10,25 +10,18 @@
 .method protected constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     const-string/jumbo v0, "com.crittercism.ratemyapp"
 
-    .line 29
     const/4 v1, 0x0
 
     invoke-virtual {p1, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
@@ -37,7 +30,6 @@
 
     iput-object v0, p0, Lcom/crittercism/internal/ds;->a:Landroid/content/SharedPreferences;
 
-    .line 30
     return-void
 .end method
 
@@ -46,8 +38,6 @@
 .method public final a()I
     .locals 3
 
-    .prologue
-    .line 38
     iget-object v0, p0, Lcom/crittercism/internal/ds;->a:Landroid/content/SharedPreferences;
 
     const-string/jumbo v1, "numAppLoads"
@@ -64,8 +54,6 @@
 .method public final a(Z)V
     .locals 2
 
-    .prologue
-    .line 60
     iget-object v0, p0, Lcom/crittercism/internal/ds;->a:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -80,15 +68,12 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 61
     return-void
 .end method
 
 .method public final b()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 64
     iget-object v0, p0, Lcom/crittercism/internal/ds;->a:Landroid/content/SharedPreferences;
 
     const-string/jumbo v1, "rateAppMessage"
@@ -105,8 +90,6 @@
 .method public final c()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 72
     iget-object v0, p0, Lcom/crittercism/internal/ds;->a:Landroid/content/SharedPreferences;
 
     const-string/jumbo v1, "rateAppTitle"
@@ -123,8 +106,6 @@
 .method public final d()V
     .locals 3
 
-    .prologue
-    .line 105
     iget-object v0, p0, Lcom/crittercism/internal/ds;->a:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -141,6 +122,5 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 106
     return-void
 .end method

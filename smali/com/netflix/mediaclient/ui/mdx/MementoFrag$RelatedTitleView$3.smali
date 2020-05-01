@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView;Lcom/netflix/model/branches/MementoVideoSwatch;)V
     .locals 0
 
-    .prologue
-    .line 750
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView$3;->this$1:Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView$3;->val$swatch:Lcom/netflix/model/branches/MementoVideoSwatch;
@@ -32,8 +30,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 5
 
-    .prologue
-    .line 753
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView$3;->this$1:Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
@@ -62,7 +58,6 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Lcom/netflix/mediaclient/ui/details/DetailsActivityLauncher;->showMemento(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/ui/common/PlayContext;)V
 
-    .line 756
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView$3;->this$1:Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
@@ -73,7 +68,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 757
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView$3;->this$1:Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
@@ -100,7 +94,6 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/netflix/mediaclient/util/log/UIViewLogUtils;->reportUIViewCommand(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;Lcom/netflix/mediaclient/service/logging/client/model/DataContext;)V
 
-    .line 759
     :cond_0
     return-void
 .end method

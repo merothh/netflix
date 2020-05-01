@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener;I)V
     .locals 0
 
-    .prologue
-    .line 501
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener$4;->this$0:Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener;
 
     iput p2, p0, Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener$4;->val$seasonNumber:I
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 504
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener$4;->this$0:Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener;->access$300(Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener;)Lcom/netflix/mediaclient/ui/details/SeasonsSpinner;
@@ -46,21 +42,17 @@
 
     move-result v0
 
-    .line 505
     if-gez v0, :cond_0
 
-    .line 506
     const-string/jumbo v0, "DetailsPageParallaxScrollListener"
 
     const-string/jumbo v1, "No valid season index found"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 514
     :goto_0
     return-void
 
-    .line 510
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -68,7 +60,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 511
     const-string/jumbo v1, "DetailsPageParallaxScrollListener"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -91,7 +82,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 513
     :cond_1
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener$4;->this$0:Lcom/netflix/mediaclient/ui/details/DetailsPageParallaxScrollListener;
 

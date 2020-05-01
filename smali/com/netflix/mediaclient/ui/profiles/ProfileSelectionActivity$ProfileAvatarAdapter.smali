@@ -11,8 +11,6 @@
 .method private constructor <init>(Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;)V
     .locals 0
 
-    .prologue
-    .line 673
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$ProfileAvatarAdapter;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
@@ -23,8 +21,6 @@
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$1;)V
     .locals 0
 
-    .prologue
-    .line 673
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$ProfileAvatarAdapter;-><init>(Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;)V
 
     return-void
@@ -35,8 +31,6 @@
 .method public getCount()I
     .locals 2
 
-    .prologue
-    .line 677
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$ProfileAvatarAdapter;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;->access$600(Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;)Ljava/util/List;
@@ -47,7 +41,6 @@
 
     move-result v0
 
-    .line 678
     const/4 v1, 0x5
 
     if-ge v0, v1, :cond_0
@@ -61,8 +54,6 @@
 .method public getItem(I)Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;
     .locals 1
 
-    .prologue
-    .line 684
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$ProfileAvatarAdapter;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;->access$600(Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;)Ljava/util/List;
@@ -99,8 +90,6 @@
 .method public bridge synthetic getItem(I)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 673
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$ProfileAvatarAdapter;->getItem(I)Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;
 
     move-result-object v0
@@ -111,8 +100,6 @@
 .method public getItemId(I)J
     .locals 2
 
-    .prologue
-    .line 689
     int-to-long v0, p1
 
     return-wide v0
@@ -121,15 +108,12 @@
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 10
 
-    .prologue
     const/16 v9, 0x8
 
     const/4 v8, 0x0
 
-    .line 694
     if-nez p2, :cond_0
 
-    .line 695
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$ProfileAvatarAdapter;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
@@ -142,12 +126,10 @@
 
     move-result-object p2
 
-    .line 696
     new-instance v2, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;
 
     const v0, 0x7f0f0096
 
-    .line 698
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -156,7 +138,6 @@
 
     const v1, 0x7f0f031c
 
-    .line 699
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
@@ -165,17 +146,14 @@
 
     const v3, 0x7f0f031b
 
-    .line 700
     invoke-virtual {p2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     invoke-direct {v2, v0, v1, v3}, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;-><init>(Lcom/netflix/mediaclient/android/widget/AdvancedImageView;Landroid/widget/TextView;Landroid/view/View;)V
 
-    .line 696
     invoke-virtual {p2, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 703
     :cond_0
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -185,12 +163,10 @@
 
     check-cast v7, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;
 
-    .line 704
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$ProfileAvatarAdapter;->getItem(I)Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;
 
     move-result-object v4
 
-    .line 706
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$ProfileAvatarAdapter;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;->access$600(Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;)Ljava/util/List;
@@ -203,7 +179,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 708
     invoke-static {v7}, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;->access$700(Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;)Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
     move-result-object v0
@@ -212,7 +187,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/AdvancedImageView;->setImageResource(I)V
 
-    .line 709
     invoke-static {v7}, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;->access$800(Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;)Landroid/widget/TextView;
 
     move-result-object v0
@@ -221,18 +195,15 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 710
     invoke-static {v7}, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;->access$900(Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;)Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0, v9}, Landroid/view/View;->setVisibility(I)V
 
-    .line 721
     :goto_0
     return-object p2
 
-    .line 714
     :cond_1
     invoke-static {v7}, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;->access$800(Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;)Landroid/widget/TextView;
 
@@ -244,7 +215,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 715
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$ProfileAvatarAdapter;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getImageLoader(Landroid/content/Context;)Lcom/netflix/mediaclient/util/gfx/ImageLoader;
@@ -255,7 +225,6 @@
 
     move-result-object v1
 
-    .line 716
     invoke-interface {v4}, Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;->getAvatarUrl()Ljava/lang/String;
 
     move-result-object v2
@@ -270,10 +239,8 @@
 
     const/4 v6, 0x1
 
-    .line 715
     invoke-interface/range {v0 .. v6}, Lcom/netflix/mediaclient/util/gfx/ImageLoader;->showImg(Lcom/netflix/mediaclient/android/widget/AdvancedImageView;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;Ljava/lang/String;Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;Z)V
 
-    .line 717
     invoke-static {v7}, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;->access$900(Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;)Landroid/view/View;
 
     move-result-object v1
@@ -291,7 +258,6 @@
     :goto_1
     invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 718
     invoke-static {v7}, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;->access$700(Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;)Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
     move-result-object v1
@@ -314,10 +280,8 @@
     :cond_2
     move v0, v9
 
-    .line 717
     goto :goto_1
 
-    .line 718
     :cond_3
     const/high16 v0, 0x3f800000    # 1.0f
 
@@ -327,15 +291,11 @@
 .method public notifyDataSetChanged()V
     .locals 1
 
-    .prologue
-    .line 726
     invoke-super {p0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
-    .line 727
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$ProfileAvatarAdapter;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;->access$1000(Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;)V
 
-    .line 728
     return-void
 .end method

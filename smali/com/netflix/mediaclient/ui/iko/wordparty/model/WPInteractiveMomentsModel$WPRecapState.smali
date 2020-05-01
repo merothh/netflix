@@ -33,8 +33,6 @@
 .method private constructor <init>(Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;)V
     .locals 0
 
-    .prologue
-    .line 870
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPRecapState;->this$0:Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,8 +43,6 @@
 .method static synthetic access$3700(Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPRecapState;)Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 870
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPRecapState;->VO:Ljava/util/List;
 
     return-object v0
@@ -55,8 +51,6 @@
 .method static synthetic access$3800(Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPRecapState;)Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 870
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPRecapState;->items:Ljava/util/List;
 
     return-object v0

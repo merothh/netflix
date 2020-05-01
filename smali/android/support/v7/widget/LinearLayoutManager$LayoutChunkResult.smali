@@ -17,8 +17,6 @@
 .method protected constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 2272
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,21 +27,15 @@
 .method resetInternal()V
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 2279
     iput v0, p0, Landroid/support/v7/widget/LinearLayoutManager$LayoutChunkResult;->mConsumed:I
 
-    .line 2280
     iput-boolean v0, p0, Landroid/support/v7/widget/LinearLayoutManager$LayoutChunkResult;->mFinished:Z
 
-    .line 2281
     iput-boolean v0, p0, Landroid/support/v7/widget/LinearLayoutManager$LayoutChunkResult;->mIgnoreConsumed:Z
 
-    .line 2282
     iput-boolean v0, p0, Landroid/support/v7/widget/LinearLayoutManager$LayoutChunkResult;->mFocusable:Z
 
-    .line 2283
     return-void
 .end method

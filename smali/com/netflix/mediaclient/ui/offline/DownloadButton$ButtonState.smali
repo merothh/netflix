@@ -38,7 +38,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -49,7 +48,6 @@
 
     const/4 v3, 0x0
 
-    .line 63
     new-instance v0, Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
 
     const-string/jumbo v1, "AVAILABLE"
@@ -58,7 +56,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;->AVAILABLE:Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
 
-    .line 64
     new-instance v0, Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
 
     const-string/jumbo v1, "NOT_AVAILABLE"
@@ -67,7 +64,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;->NOT_AVAILABLE:Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
 
-    .line 65
     new-instance v0, Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
 
     const-string/jumbo v1, "SAVED"
@@ -76,7 +72,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;->SAVED:Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
 
-    .line 66
     new-instance v0, Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
 
     const-string/jumbo v1, "DOWNLOADING"
@@ -85,7 +80,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;->DOWNLOADING:Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
 
-    .line 67
     new-instance v0, Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
 
     const-string/jumbo v1, "PAUSED"
@@ -94,7 +88,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;->PAUSED:Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
 
-    .line 68
     new-instance v0, Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
 
     const-string/jumbo v1, "QUEUED"
@@ -105,7 +98,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;->QUEUED:Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
 
-    .line 69
     new-instance v0, Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
 
     const-string/jumbo v1, "PRE_QUEUED"
@@ -116,7 +108,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;->PRE_QUEUED:Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
 
-    .line 70
     new-instance v0, Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
 
     const-string/jumbo v1, "ERROR"
@@ -127,7 +118,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;->ERROR:Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
 
-    .line 62
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
@@ -183,8 +173,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 62
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -193,8 +181,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
     .locals 1
 
-    .prologue
-    .line 62
     const-class v0, Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -209,8 +195,6 @@
 .method public static values()[Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
     .locals 1
 
-    .prologue
-    .line 62
     sget-object v0, Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;->$VALUES:[Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;->clone()Ljava/lang/Object;

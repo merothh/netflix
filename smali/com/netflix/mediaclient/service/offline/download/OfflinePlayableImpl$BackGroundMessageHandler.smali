@@ -11,14 +11,10 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;Landroid/os/Looper;)V
     .locals 0
 
-    .prologue
-    .line 1144
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$BackGroundMessageHandler;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;
 
-    .line 1145
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 1146
     return-void
 .end method
 
@@ -27,8 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .prologue
-    .line 1150
     const-string/jumbo v0, "nf_offlinePlayable"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -53,21 +47,17 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1151
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$CdnUrlDownloaderResponse;
 
-    .line 1152
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1169
     :goto_0
     return-void
 
-    .line 1154
     :pswitch_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$BackGroundMessageHandler;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;
 
@@ -75,7 +65,6 @@
 
     goto :goto_0
 
-    .line 1157
     :pswitch_1
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$BackGroundMessageHandler;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;
 
@@ -87,7 +76,6 @@
 
     goto :goto_0
 
-    .line 1160
     :pswitch_2
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$BackGroundMessageHandler;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;
 
@@ -97,7 +85,6 @@
 
     goto :goto_0
 
-    .line 1163
     :pswitch_3
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$BackGroundMessageHandler;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;
 
@@ -107,7 +94,6 @@
 
     goto :goto_0
 
-    .line 1166
     :pswitch_4
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$BackGroundMessageHandler;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;
 
@@ -117,7 +103,6 @@
 
     goto :goto_0
 
-    .line 1152
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

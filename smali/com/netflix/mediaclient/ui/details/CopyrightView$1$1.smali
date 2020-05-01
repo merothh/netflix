@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/details/CopyrightView$1;)V
     .locals 0
 
-    .prologue
-    .line 106
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/CopyrightView$1$1;->this$1:Lcom/netflix/mediaclient/ui/details/CopyrightView$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
-    .prologue
-    .line 109
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/CopyrightView$1$1;->this$1:Lcom/netflix/mediaclient/ui/details/CopyrightView$1;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/details/CopyrightView$1;->this$0:Lcom/netflix/mediaclient/ui/details/CopyrightView;
@@ -48,6 +44,5 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/ui/details/CopyrightView;->access$400(Lcom/netflix/mediaclient/ui/details/CopyrightView;Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;Landroid/content/Context;)V
 
-    .line 110
     return-void
 .end method

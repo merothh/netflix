@@ -26,8 +26,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;Ljava/util/List;ILjava/util/List;Landroid/widget/RemoteViews;Ljava/lang/String;Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;)V
     .locals 0
 
-    .prologue
-    .line 1053
     iput-object p1, p0, Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent$1;->this$0:Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent$1;->val$imageUrlsList:Ljava/util/List;
@@ -52,11 +50,8 @@
 .method public run()V
     .locals 9
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 1056
-    .line 1057
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent$1;->val$imageUrlsList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -78,7 +73,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 1058
     const-string/jumbo v1, "nf_preapp_widgetagent"
 
     const-string/jumbo v5, "decoding (%d), bitmap (%d), %s, %s, "
@@ -123,10 +117,8 @@
 
     invoke-static {v1, v5}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1059
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertNotOnMain()Z
 
-    .line 1060
     iget-object v5, p0, Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent$1;->this$0:Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent$1;->val$imageTypeList:Ljava/util/List;
@@ -141,7 +133,6 @@
 
     move-result-object v0
 
-    .line 1061
     iget-object v1, p0, Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent$1;->val$remoteView:Landroid/widget/RemoteViews;
 
     iget-object v5, p0, Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent$1;->this$0:Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;
@@ -154,15 +145,12 @@
 
     invoke-virtual {v1, v5, v0}, Landroid/widget/RemoteViews;->setImageViewBitmap(ILandroid/graphics/Bitmap;)V
 
-    .line 1062
     add-int/lit8 v0, v2, 0x1
 
     move v2, v0
 
-    .line 1063
     goto :goto_0
 
-    .line 1064
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent$1;->this$0:Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;
 
@@ -182,6 +170,5 @@
 
     invoke-static/range {v0 .. v5}, Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;->access$200(Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;Landroid/content/Context;Landroid/widget/RemoteViews;ILjava/lang/String;Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;)V
 
-    .line 1065
     return-void
 .end method

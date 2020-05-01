@@ -26,8 +26,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;)V
     .locals 0
 
-    .prologue
-    .line 357
     iput-object p1, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl$1;->this$0:Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,8 +38,6 @@
 .method public compare(Lcom/netflix/mediaclient/util/data/DataRepository$Entry;Lcom/netflix/mediaclient/util/data/DataRepository$Entry;)I
     .locals 4
 
-    .prologue
-    .line 360
     invoke-interface {p1}, Lcom/netflix/mediaclient/util/data/DataRepository$Entry;->getTs()J
 
     move-result-wide v0
@@ -54,14 +50,11 @@
 
     if-nez v0, :cond_0
 
-    .line 361
     const/4 v0, 0x0
 
-    .line 365
     :goto_0
     return v0
 
-    .line 362
     :cond_0
     invoke-interface {p1}, Lcom/netflix/mediaclient/util/data/DataRepository$Entry;->getTs()J
 
@@ -75,12 +68,10 @@
 
     if-gez v0, :cond_1
 
-    .line 363
     const/4 v0, -0x1
 
     goto :goto_0
 
-    .line 365
     :cond_1
     const/4 v0, 0x1
 
@@ -90,8 +81,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 357
     check-cast p1, Lcom/netflix/mediaclient/util/data/DataRepository$Entry;
 
     check-cast p2, Lcom/netflix/mediaclient/util/data/DataRepository$Entry;

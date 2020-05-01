@@ -22,21 +22,16 @@
 .method constructor <init>(ILandroid/support/design/widget/SnackbarManager$Callback;)V
     .locals 1
 
-    .prologue
-    .line 172
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 173
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/support/design/widget/SnackbarManager$SnackbarRecord;->callback:Ljava/lang/ref/WeakReference;
 
-    .line 174
     iput p1, p0, Landroid/support/design/widget/SnackbarManager$SnackbarRecord;->duration:I
 
-    .line 175
     return-void
 .end method
 
@@ -45,8 +40,6 @@
 .method isSnackbar(Landroid/support/design/widget/SnackbarManager$Callback;)Z
     .locals 1
 
-    .prologue
-    .line 178
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Landroid/support/design/widget/SnackbarManager$SnackbarRecord;->callback:Ljava/lang/ref/WeakReference;

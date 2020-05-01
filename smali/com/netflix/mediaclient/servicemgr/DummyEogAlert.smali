@@ -11,8 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,8 +19,6 @@
 .method public static build()Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
     .locals 3
 
-    .prologue
-    .line 50
     invoke-static {}, Lcom/netflix/mediaclient/NetflixApplication;->getGson()Lcom/google/gson/Gson;
 
     move-result-object v0

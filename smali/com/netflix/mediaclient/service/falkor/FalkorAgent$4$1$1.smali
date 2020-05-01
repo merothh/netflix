@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/falkor/FalkorAgent$4$1;)V
     .locals 0
 
-    .prologue
-    .line 703
     iput-object p1, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$4$1$1;->this$2:Lcom/netflix/mediaclient/service/falkor/FalkorAgent$4$1;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/browse/SimpleBrowseAgentCallback;-><init>()V
@@ -36,15 +34,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 706
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 707
     const-string/jumbo v0, "FalkorAgent"
 
     const-string/jumbo v1, "fetchEpisodesForSeason - onEpisodesFetched res %d"
@@ -75,7 +70,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 710
     :cond_0
     return-void
 .end method

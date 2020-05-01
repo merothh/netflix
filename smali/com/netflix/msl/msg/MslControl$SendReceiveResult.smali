@@ -11,8 +11,6 @@
 .method public constructor <init>(Lcom/netflix/msl/msg/MessageInputStream;Lcom/netflix/msl/msg/MslControl$SendResult;)V
     .locals 3
 
-    .prologue
-    .line 1774
     iget-object v0, p2, Lcom/netflix/msl/msg/MslControl$SendResult;->request:Lcom/netflix/msl/msg/MessageOutputStream;
 
     iget-boolean v1, p2, Lcom/netflix/msl/msg/MslControl$SendResult;->handshake:Z
@@ -21,9 +19,7 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/netflix/msl/msg/MslControl$SendResult;-><init>(Lcom/netflix/msl/msg/MessageOutputStream;ZLcom/netflix/msl/msg/MslControl$1;)V
 
-    .line 1775
     iput-object p1, p0, Lcom/netflix/msl/msg/MslControl$SendReceiveResult;->response:Lcom/netflix/msl/msg/MessageInputStream;
 
-    .line 1776
     return-void
 .end method

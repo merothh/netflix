@@ -11,8 +11,6 @@
 .method private constructor <init>(Landroid/support/v7/media/MediaRouteProvider;)V
     .locals 0
 
-    .prologue
-    .line 400
     iput-object p1, p0, Landroid/support/v7/media/MediaRouteProvider$ProviderHandler;->this$0:Landroid/support/v7/media/MediaRouteProvider;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -23,8 +21,6 @@
 .method synthetic constructor <init>(Landroid/support/v7/media/MediaRouteProvider;Landroid/support/v7/media/MediaRouteProvider$1;)V
     .locals 0
 
-    .prologue
-    .line 400
     invoke-direct {p0, p1}, Landroid/support/v7/media/MediaRouteProvider$ProviderHandler;-><init>(Landroid/support/v7/media/MediaRouteProvider;)V
 
     return-void
@@ -35,17 +31,13 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .prologue
-    .line 403
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 411
     :goto_0
     return-void
 
-    .line 405
     :pswitch_0
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteProvider$ProviderHandler;->this$0:Landroid/support/v7/media/MediaRouteProvider;
 
@@ -53,7 +45,6 @@
 
     goto :goto_0
 
-    .line 408
     :pswitch_1
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteProvider$ProviderHandler;->this$0:Landroid/support/v7/media/MediaRouteProvider;
 
@@ -61,7 +52,6 @@
 
     goto :goto_0
 
-    .line 403
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

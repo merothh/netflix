@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 18
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/amazon/drm/AmazonLicenseVerificationCallback;->called:Z
@@ -23,8 +21,6 @@
 .method public static declared-synchronized isCalled()Z
     .locals 2
 
-    .prologue
-    .line 39
     const-class v0, Lcom/amazon/drm/AmazonLicenseVerificationCallback;
 
     monitor-enter v0

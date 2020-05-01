@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/agent/DownloadNotificationManager$2;Landroid/graphics/Bitmap;)V
     .locals 0
 
-    .prologue
-    .line 551
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/agent/DownloadNotificationManager$2$1;->this$1:Lcom/netflix/mediaclient/service/offline/agent/DownloadNotificationManager$2;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/agent/DownloadNotificationManager$2$1;->val$bitmap:Landroid/graphics/Bitmap;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 5
 
-    .prologue
-    .line 554
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/DownloadNotificationManager$2$1;->this$1:Lcom/netflix/mediaclient/service/offline/agent/DownloadNotificationManager$2;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/offline/agent/DownloadNotificationManager$2;->val$notificationData:Lcom/netflix/mediaclient/service/offline/agent/DownloadNotificationManager$NotificationData;
@@ -64,6 +60,5 @@
 
     iput-object v1, v0, Lcom/netflix/mediaclient/service/offline/agent/DownloadNotificationManager$NotificationData;->mBoxShot:Landroid/graphics/Bitmap;
 
-    .line 555
     return-void
 .end method

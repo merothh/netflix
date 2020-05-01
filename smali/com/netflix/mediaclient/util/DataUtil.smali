@@ -29,26 +29,20 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     return-void
 .end method
 
 .method public static varargs areAnyNull(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v2, 0x1
 
     const/4 v1, 0x0
 
-    .line 95
     if-nez p2, :cond_1
 
-    .line 96
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -71,7 +65,6 @@
 
     move v1, v2
 
-    .line 107
     :cond_0
     :goto_0
     return v1
@@ -79,18 +72,15 @@
     :cond_1
     move v0, v1
 
-    .line 100
     :goto_1
     array-length v3, p2
 
     if-ge v0, v3, :cond_0
 
-    .line 101
     aget-object v3, p2, v0
 
     if-nez v3, :cond_2
 
-    .line 102
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -123,10 +113,8 @@
 
     move v1, v2
 
-    .line 103
     goto :goto_0
 
-    .line 100
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
@@ -147,8 +135,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 87
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-interface {p0}, Ljava/util/List;->size()I
@@ -157,7 +143,6 @@
 
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 88
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -173,7 +158,6 @@
 
     move-result-object v0
 
-    .line 89
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
@@ -190,7 +174,6 @@
 
     goto :goto_1
 
-    .line 91
     :cond_1
     return-object v1
 .end method
@@ -211,18 +194,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 138
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 139
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 140
     :cond_0
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -231,24 +210,20 @@
 
     if-eqz v2, :cond_1
 
-    .line 141
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 142
     invoke-interface {p1, v2}, Lcom/netflix/mediaclient/util/DataUtil$IFilter;->keepIt(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 143
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 146
     :cond_1
     return-object v1
 .end method
@@ -264,20 +239,16 @@
         }
     .end annotation
 
-    .prologue
     const/4 v0, 0x0
 
     const/4 v2, 0x0
 
-    .line 62
     if-nez p0, :cond_1
 
-    .line 68
     :cond_0
     :goto_0
     return-object v0
 
-    .line 65
     :cond_1
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -285,7 +256,6 @@
 
     if-lez v1, :cond_0
 
-    .line 68
     invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -320,10 +290,8 @@
         }
     .end annotation
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 159
     move v1, v2
 
     :goto_0
@@ -333,14 +301,12 @@
 
     if-ge v1, v0, :cond_0
 
-    .line 160
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/netflix/mediaclient/servicemgr/interface_/details/EpisodeDetails;
 
-    .line 161
     if-eqz v0, :cond_1
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/details/EpisodeDetails;->isAvailableToStream()Z
@@ -349,14 +315,11 @@
 
     if-nez v0, :cond_1
 
-    .line 162
     const/4 v2, 0x1
 
-    .line 165
     :cond_0
     return v2
 
-    .line 159
     :cond_1
     add-int/lit8 v0, v1, 0x1
 
@@ -368,8 +331,6 @@
 .method public static invalidateCachedEpisodes(Lcom/netflix/mediaclient/servicemgr/ServiceManager;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/interface_/details/SeasonDetails;)V
     .locals 4
 
-    .prologue
-    .line 171
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->isReady()Z
@@ -378,7 +339,6 @@
 
     if-nez v0, :cond_2
 
-    .line 172
     :cond_0
     const-string/jumbo v0, "DataUtil"
 
@@ -386,16 +346,13 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
     :cond_1
     :goto_0
     return-void
 
-    .line 176
     :cond_2
     if-nez p2, :cond_3
 
-    .line 177
     const-string/jumbo v0, "DataUtil"
 
     const-string/jumbo v1, "No season details yet"
@@ -404,20 +361,17 @@
 
     goto :goto_0
 
-    .line 181
     :cond_3
     invoke-interface {p2}, Lcom/netflix/mediaclient/servicemgr/interface_/details/SeasonDetails;->getId()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 182
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 183
     const-string/jumbo v1, "DataUtil"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -440,7 +394,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 186
     :cond_4
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
@@ -448,7 +401,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 187
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getClientLogging()Lcom/netflix/mediaclient/servicemgr/IClientLogging;
 
     move-result-object v0
@@ -457,7 +409,6 @@
 
     goto :goto_0
 
-    .line 191
     :cond_5
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getContext()Landroid/content/Context;
 
@@ -469,14 +420,12 @@
 
     if-nez v1, :cond_6
 
-    .line 192
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 193
     const-string/jumbo v0, "DataUtil"
 
     const-string/jumbo v1, "not invalidating cache because of no network connectivity."
@@ -485,7 +434,6 @@
 
     goto :goto_0
 
-    .line 198
     :cond_6
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getBrowse()Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
 
@@ -501,20 +449,16 @@
 .method public static logVerboseUriInfo(Ljava/lang/String;Landroid/net/Uri;)V
     .locals 2
 
-    .prologue
-    .line 72
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 73
     const-string/jumbo v0, "Uri info"
 
     invoke-static {p0, v0}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -539,7 +483,6 @@
 
     invoke-static {p0, v0}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 75
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -564,7 +507,6 @@
 
     invoke-static {p0, v0}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -589,7 +531,6 @@
 
     invoke-static {p0, v0}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 77
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -614,7 +555,6 @@
 
     invoke-static {p0, v0}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -639,7 +579,6 @@
 
     invoke-static {p0, v0}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 79
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -664,7 +603,6 @@
 
     invoke-static {p0, v0}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 81
     :cond_0
     return-void
 .end method
@@ -681,14 +619,11 @@
         }
     .end annotation
 
-    .prologue
-    .line 117
     new-instance v0, Lcom/netflix/mediaclient/util/DataUtil$1;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/util/DataUtil$1;-><init>()V
 
     invoke-static {p0, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 131
     return-void
 .end method

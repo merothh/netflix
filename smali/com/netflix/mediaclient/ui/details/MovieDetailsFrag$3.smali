@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;)V
     .locals 0
 
-    .prologue
-    .line 159
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$3;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/util/TransitionListenerAdapter;-><init>()V
@@ -25,29 +23,23 @@
 .method public onTransitionEnd(Landroid/transition/Transition;)V
     .locals 2
 
-    .prologue
-    .line 167
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$3;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
     const v1, 0x7f0e00ed
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;->access$000(Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;I)V
 
-    .line 168
     return-void
 .end method
 
 .method public onTransitionStart(Landroid/transition/Transition;)V
     .locals 2
 
-    .prologue
-    .line 162
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$3;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
     const v1, 0x7f0e00fd
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;->access$000(Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;I)V
 
-    .line 163
     return-void
 .end method

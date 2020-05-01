@@ -60,7 +60,6 @@
 .method static constructor <clinit>()V
     .locals 10
 
-    .prologue
     const/4 v9, 0x4
 
     const/4 v8, 0x3
@@ -71,7 +70,6 @@
 
     const/4 v5, 0x0
 
-    .line 20
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
     const-string/jumbo v1, "defaultType"
@@ -84,7 +82,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->defaultType:Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
-    .line 21
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
     const-string/jumbo v1, "monospaceSansSerif"
@@ -97,7 +94,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->monospaceSansSerif:Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
-    .line 22
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
     const-string/jumbo v1, "monospaceSansSerifApi"
@@ -110,7 +106,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->monospaceSansSerifApi:Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
-    .line 23
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
     const-string/jumbo v1, "monospaceSerif"
@@ -123,7 +118,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->monospaceSerif:Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
-    .line 24
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
     const-string/jumbo v1, "monospaceSerifApi"
@@ -136,7 +130,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->monospaceSerifApi:Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
-    .line 25
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
     const-string/jumbo v1, "proportionalSansSerif"
@@ -151,7 +144,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->proportionalSansSerif:Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
-    .line 26
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
     const-string/jumbo v1, "proportionalSansSerifApi"
@@ -166,7 +158,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->proportionalSansSerifApi:Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
-    .line 27
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
     const-string/jumbo v1, "proportionalSerif"
@@ -181,7 +172,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->proportionalSerif:Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
-    .line 28
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
     const-string/jumbo v1, "proportionalSerifApi"
@@ -196,7 +186,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->proportionalSerifApi:Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
-    .line 29
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
     const-string/jumbo v1, "casual"
@@ -211,7 +200,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->casual:Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
-    .line 30
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
     const-string/jumbo v1, "cursive"
@@ -226,7 +214,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->cursive:Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
-    .line 31
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
     const-string/jumbo v1, "smallCapitals"
@@ -241,7 +228,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->smallCapitals:Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
-    .line 32
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
     const-string/jumbo v1, "smallCapitalsApi"
@@ -256,7 +242,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->smallCapitalsApi:Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
-    .line 33
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
     const-string/jumbo v1, "monospace"
@@ -271,7 +256,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->monospace:Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
-    .line 34
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
     const-string/jumbo v1, "sansSerif"
@@ -286,7 +270,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->sansSerif:Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
-    .line 35
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
     const-string/jumbo v1, "serif"
@@ -301,7 +284,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->serif:Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
-    .line 19
     const/16 v0, 0x10
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
@@ -408,25 +390,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 40
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 41
     iput-object p3, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->mValue:Landroid/graphics/Typeface;
 
-    .line 42
     iput-object p4, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->mLookup:Ljava/lang/String;
 
-    .line 43
     return-void
 .end method
 
 .method public static isMonospace(Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;)Z
     .locals 2
 
-    .prologue
-    .line 99
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->getTypeface()Landroid/graphics/Typeface;
@@ -451,8 +426,6 @@
 .method public static isProportional(Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;)Z
     .locals 1
 
-    .prologue
-    .line 109
     invoke-static {p0}, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->isMonospace(Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;)Z
 
     move-result v0
@@ -473,8 +446,6 @@
 .method public static isSansSerif(Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;)Z
     .locals 2
 
-    .prologue
-    .line 85
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->getTypeface()Landroid/graphics/Typeface;
@@ -500,8 +471,6 @@
 .method public static isSerif(Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;)Z
     .locals 2
 
-    .prologue
-    .line 89
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->getTypeface()Landroid/graphics/Typeface;
@@ -526,22 +495,18 @@
 .method public static lookup(Ljava/lang/String;)Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 71
     invoke-static {p0}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 81
     :cond_0
     :goto_0
     return-object v0
 
-    .line 75
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->values()[Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
@@ -558,7 +523,6 @@
 
     aget-object v1, v3, v2
 
-    .line 76
     invoke-virtual {v1}, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->getLookupValue()Ljava/lang/String;
 
     move-result-object v5
@@ -571,10 +535,8 @@
 
     move-object v0, v1
 
-    .line 77
     goto :goto_0
 
-    .line 75
     :cond_2
     add-int/lit8 v1, v2, 0x1
 
@@ -586,8 +548,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
     .locals 1
 
-    .prologue
-    .line 19
     const-class v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -602,8 +562,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
     .locals 1
 
-    .prologue
-    .line 19
     sget-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->$VALUES:[Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->clone()Ljava/lang/Object;
@@ -620,8 +578,6 @@
 .method public getLookupValue()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 63
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->mLookup:Ljava/lang/String;
 
     return-object v0
@@ -630,8 +586,6 @@
 .method public getTypeface()Landroid/graphics/Typeface;
     .locals 1
 
-    .prologue
-    .line 54
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontFamilyMapping;->mValue:Landroid/graphics/Typeface;
 
     return-object v0

@@ -11,13 +11,10 @@
 .method constructor <init>(Landroid/support/v7/widget/ActionMenuPresenter;)V
     .locals 0
 
-    .prologue
-    .line 811
     iput-object p1, p0, Landroid/support/v7/widget/ActionMenuPresenter$ActionMenuPopupCallback;->this$0:Landroid/support/v7/widget/ActionMenuPresenter;
 
     invoke-direct {p0}, Landroid/support/v7/view/menu/ActionMenuItemView$PopupCallback;-><init>()V
 
-    .line 812
     return-void
 .end method
 
@@ -26,8 +23,6 @@
 .method public getPopup()Landroid/support/v7/view/menu/ShowableListMenu;
     .locals 1
 
-    .prologue
-    .line 816
     iget-object v0, p0, Landroid/support/v7/widget/ActionMenuPresenter$ActionMenuPopupCallback;->this$0:Landroid/support/v7/widget/ActionMenuPresenter;
 
     iget-object v0, v0, Landroid/support/v7/widget/ActionMenuPresenter;->mActionButtonPopup:Landroid/support/v7/widget/ActionMenuPresenter$ActionButtonSubmenu;

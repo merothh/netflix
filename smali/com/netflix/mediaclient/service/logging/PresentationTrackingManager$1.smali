@@ -24,8 +24,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;Ljava/util/List;Ljava/util/List;ILcom/netflix/mediaclient/servicemgr/UiLocation;)V
     .locals 0
 
-    .prologue
-    .line 120
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$1;->this$0:Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$1;->val$trackable:Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;
@@ -48,8 +46,6 @@
 .method public run()V
     .locals 6
 
-    .prologue
-    .line 123
     new-instance v0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$1;->val$trackable:Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;
@@ -64,14 +60,12 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;-><init>(Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;Ljava/util/List;Ljava/util/List;ILcom/netflix/mediaclient/servicemgr/UiLocation;)V
 
-    .line 124
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 125
     const-string/jumbo v1, "nf_presentation"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -94,7 +88,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 128
     :cond_0
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$1;->this$0:Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;
 
@@ -104,6 +97,5 @@
 
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$PresentationTrackingEventQueue;->post(Ljava/lang/Object;)Z
 
-    .line 129
     return-void
 .end method

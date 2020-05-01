@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;I)V
     .locals 0
 
-    .prologue
-    .line 617
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$5;->this$0:Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;
 
     iput p2, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$5;->val$position:I
@@ -32,15 +30,12 @@
 .method public onClick(Landroid/view/View;)V
     .locals 4
 
-    .prologue
-    .line 621
     if-eqz p1, :cond_0
 
     instance-of v0, p1, Lcom/netflix/mediaclient/ui/search/SearchResultView;
 
     if-eqz v0, :cond_0
 
-    .line 622
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$5;->this$0:Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;
 
     check-cast p1, Lcom/netflix/mediaclient/ui/search/SearchResultView;
@@ -51,7 +46,6 @@
 
     invoke-static {v0, p1, v1, v2, v3}, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;->access$100(Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;Lcom/netflix/mediaclient/ui/search/SearchResultView;IJ)V
 
-    .line 624
     :cond_0
     return-void
 .end method

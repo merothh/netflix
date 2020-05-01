@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/coppola/details/CoppolaShowDetailsFrag;)V
     .locals 0
 
-    .prologue
-    .line 40
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/coppola/details/CoppolaShowDetailsFrag$1;->this$0:Lcom/netflix/mediaclient/ui/coppola/details/CoppolaShowDetailsFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public createItemView()Landroid/view/View;
     .locals 3
 
-    .prologue
-    .line 43
     new-instance v0, Lcom/netflix/mediaclient/ui/coppola/details/CoppolaShowDetailsFrag$CoppolaPlayerDialogEpisodesView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/coppola/details/CoppolaShowDetailsFrag$1;->this$0:Lcom/netflix/mediaclient/ui/coppola/details/CoppolaShowDetailsFrag;

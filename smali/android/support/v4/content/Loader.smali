@@ -52,37 +52,28 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 113
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     iput-boolean v1, p0, Landroid/support/v4/content/Loader;->mStarted:Z
 
-    .line 40
     iput-boolean v1, p0, Landroid/support/v4/content/Loader;->mAbandoned:Z
 
-    .line 41
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v4/content/Loader;->mReset:Z
 
-    .line 42
     iput-boolean v1, p0, Landroid/support/v4/content/Loader;->mContentChanged:Z
 
-    .line 43
     iput-boolean v1, p0, Landroid/support/v4/content/Loader;->mProcessingChange:Z
 
-    .line 114
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/v4/content/Loader;->mContext:Landroid/content/Context;
 
-    .line 115
     return-void
 .end method
 
@@ -91,24 +82,18 @@
 .method public abandon()V
     .locals 1
 
-    .prologue
-    .line 385
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v4/content/Loader;->mAbandoned:Z
 
-    .line 386
     invoke-virtual {p0}, Landroid/support/v4/content/Loader;->onAbandon()V
 
-    .line 387
     return-void
 .end method
 
 .method public cancelLoad()Z
     .locals 1
 
-    .prologue
-    .line 302
     invoke-virtual {p0}, Landroid/support/v4/content/Loader;->onCancelLoad()Z
 
     move-result v0
@@ -119,13 +104,10 @@
 .method public commitContentChanged()V
     .locals 1
 
-    .prologue
-    .line 457
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/support/v4/content/Loader;->mProcessingChange:Z
 
-    .line 458
     return-void
 .end method
 
@@ -138,23 +120,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 497
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x40
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 498
     invoke-static {p1, v0}, Landroid/support/v4/util/DebugUtils;->buildShortClassTag(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
 
-    .line 499
     const-string/jumbo v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 500
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -165,18 +142,14 @@
 .method public deliverCancellation()V
     .locals 1
 
-    .prologue
-    .line 137
     iget-object v0, p0, Landroid/support/v4/content/Loader;->mOnLoadCanceledListener:Landroid/support/v4/content/Loader$OnLoadCanceledListener;
 
     if-eqz v0, :cond_0
 
-    .line 138
     iget-object v0, p0, Landroid/support/v4/content/Loader;->mOnLoadCanceledListener:Landroid/support/v4/content/Loader$OnLoadCanceledListener;
 
     invoke-interface {v0, p0}, Landroid/support/v4/content/Loader$OnLoadCanceledListener;->onLoadCanceled(Landroid/support/v4/content/Loader;)V
 
-    .line 140
     :cond_0
     return-void
 .end method
@@ -189,18 +162,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 125
     iget-object v0, p0, Landroid/support/v4/content/Loader;->mListener:Landroid/support/v4/content/Loader$OnLoadCompleteListener;
 
     if-eqz v0, :cond_0
 
-    .line 126
     iget-object v0, p0, Landroid/support/v4/content/Loader;->mListener:Landroid/support/v4/content/Loader$OnLoadCompleteListener;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/content/Loader$OnLoadCompleteListener;->onLoadComplete(Landroid/support/v4/content/Loader;Ljava/lang/Object;)V
 
-    .line 128
     :cond_0
     return-void
 .end method
@@ -208,8 +177,6 @@
 .method public dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 522
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "mId="
@@ -220,7 +187,6 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 523
     const-string/jumbo v0, " mListener="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -229,7 +195,6 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 524
     iget-boolean v0, p0, Landroid/support/v4/content/Loader;->mStarted:Z
 
     if-nez v0, :cond_0
@@ -242,7 +207,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 525
     :cond_0
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -254,7 +218,6 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 526
     const-string/jumbo v0, " mContentChanged="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -263,7 +226,6 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 527
     const-string/jumbo v0, " mProcessingChange="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -272,7 +234,6 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 529
     :cond_1
     iget-boolean v0, p0, Landroid/support/v4/content/Loader;->mAbandoned:Z
 
@@ -282,7 +243,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 530
     :cond_2
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -294,7 +254,6 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 531
     const-string/jumbo v0, " mReset="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -303,7 +262,6 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 533
     :cond_3
     return-void
 .end method
@@ -311,19 +269,14 @@
 .method public forceLoad()V
     .locals 0
 
-    .prologue
-    .line 329
     invoke-virtual {p0}, Landroid/support/v4/content/Loader;->onForceLoad()V
 
-    .line 330
     return-void
 .end method
 
 .method public getContext()Landroid/content/Context;
     .locals 1
 
-    .prologue
-    .line 146
     iget-object v0, p0, Landroid/support/v4/content/Loader;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -332,8 +285,6 @@
 .method public getId()I
     .locals 1
 
-    .prologue
-    .line 153
     iget v0, p0, Landroid/support/v4/content/Loader;->mId:I
 
     return v0
@@ -342,8 +293,6 @@
 .method public isAbandoned()Z
     .locals 1
 
-    .prologue
-    .line 235
     iget-boolean v0, p0, Landroid/support/v4/content/Loader;->mAbandoned:Z
 
     return v0
@@ -352,8 +301,6 @@
 .method public isReset()Z
     .locals 1
 
-    .prologue
-    .line 244
     iget-boolean v0, p0, Landroid/support/v4/content/Loader;->mReset:Z
 
     return v0
@@ -362,8 +309,6 @@
 .method public isStarted()Z
     .locals 1
 
-    .prologue
-    .line 226
     iget-boolean v0, p0, Landroid/support/v4/content/Loader;->mStarted:Z
 
     return v0
@@ -372,16 +317,12 @@
 .method protected onAbandon()V
     .locals 0
 
-    .prologue
-    .line 399
     return-void
 .end method
 
 .method protected onCancelLoad()Z
     .locals 1
 
-    .prologue
-    .line 317
     const/4 v0, 0x0
 
     return v0
@@ -390,20 +331,15 @@
 .method public onContentChanged()V
     .locals 1
 
-    .prologue
-    .line 482
     iget-boolean v0, p0, Landroid/support/v4/content/Loader;->mStarted:Z
 
     if-eqz v0, :cond_0
 
-    .line 483
     invoke-virtual {p0}, Landroid/support/v4/content/Loader;->forceLoad()V
 
-    .line 490
     :goto_0
     return-void
 
-    .line 488
     :cond_0
     const/4 v0, 0x1
 
@@ -415,32 +351,24 @@
 .method protected onForceLoad()V
     .locals 0
 
-    .prologue
-    .line 337
     return-void
 .end method
 
 .method protected onReset()V
     .locals 0
 
-    .prologue
-    .line 435
     return-void
 .end method
 
 .method protected onStartLoading()V
     .locals 0
 
-    .prologue
-    .line 281
     return-void
 .end method
 
 .method protected onStopLoading()V
     .locals 0
 
-    .prologue
-    .line 371
     return-void
 .end method
 
@@ -454,13 +382,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 164
     iget-object v0, p0, Landroid/support/v4/content/Loader;->mListener:Landroid/support/v4/content/Loader$OnLoadCompleteListener;
 
     if-eqz v0, :cond_0
 
-    .line 165
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "There is already a listener registered"
@@ -469,14 +394,11 @@
 
     throw v0
 
-    .line 167
     :cond_0
     iput-object p2, p0, Landroid/support/v4/content/Loader;->mListener:Landroid/support/v4/content/Loader$OnLoadCompleteListener;
 
-    .line 168
     iput p1, p0, Landroid/support/v4/content/Loader;->mId:I
 
-    .line 169
     return-void
 .end method
 
@@ -490,13 +412,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 196
     iget-object v0, p0, Landroid/support/v4/content/Loader;->mOnLoadCanceledListener:Landroid/support/v4/content/Loader$OnLoadCanceledListener;
 
     if-eqz v0, :cond_0
 
-    .line 197
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "There is already a listener registered"
@@ -505,57 +424,43 @@
 
     throw v0
 
-    .line 199
     :cond_0
     iput-object p1, p0, Landroid/support/v4/content/Loader;->mOnLoadCanceledListener:Landroid/support/v4/content/Loader$OnLoadCanceledListener;
 
-    .line 200
     return-void
 .end method
 
 .method public reset()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 420
     invoke-virtual {p0}, Landroid/support/v4/content/Loader;->onReset()V
 
-    .line 421
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v4/content/Loader;->mReset:Z
 
-    .line 422
     iput-boolean v1, p0, Landroid/support/v4/content/Loader;->mStarted:Z
 
-    .line 423
     iput-boolean v1, p0, Landroid/support/v4/content/Loader;->mAbandoned:Z
 
-    .line 424
     iput-boolean v1, p0, Landroid/support/v4/content/Loader;->mContentChanged:Z
 
-    .line 425
     iput-boolean v1, p0, Landroid/support/v4/content/Loader;->mProcessingChange:Z
 
-    .line 426
     return-void
 .end method
 
 .method public rollbackContentChanged()V
     .locals 1
 
-    .prologue
-    .line 468
     iget-boolean v0, p0, Landroid/support/v4/content/Loader;->mProcessingChange:Z
 
     if-eqz v0, :cond_0
 
-    .line 469
     invoke-virtual {p0}, Landroid/support/v4/content/Loader;->onContentChanged()V
 
-    .line 471
     :cond_0
     return-void
 .end method
@@ -563,96 +468,74 @@
 .method public final startLoading()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 269
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v4/content/Loader;->mStarted:Z
 
-    .line 270
     iput-boolean v1, p0, Landroid/support/v4/content/Loader;->mReset:Z
 
-    .line 271
     iput-boolean v1, p0, Landroid/support/v4/content/Loader;->mAbandoned:Z
 
-    .line 272
     invoke-virtual {p0}, Landroid/support/v4/content/Loader;->onStartLoading()V
 
-    .line 273
     return-void
 .end method
 
 .method public stopLoading()V
     .locals 1
 
-    .prologue
-    .line 360
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/support/v4/content/Loader;->mStarted:Z
 
-    .line 361
     invoke-virtual {p0}, Landroid/support/v4/content/Loader;->onStopLoading()V
 
-    .line 362
     return-void
 .end method
 
 .method public takeContentChanged()Z
     .locals 2
 
-    .prologue
-    .line 443
     iget-boolean v0, p0, Landroid/support/v4/content/Loader;->mContentChanged:Z
 
-    .line 444
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Landroid/support/v4/content/Loader;->mContentChanged:Z
 
-    .line 445
     iget-boolean v1, p0, Landroid/support/v4/content/Loader;->mProcessingChange:Z
 
     or-int/2addr v1, v0
 
     iput-boolean v1, p0, Landroid/support/v4/content/Loader;->mProcessingChange:Z
 
-    .line 446
     return v0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 505
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x40
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 506
     invoke-static {p0, v0}, Landroid/support/v4/util/DebugUtils;->buildShortClassTag(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
 
-    .line 507
     const-string/jumbo v1, " id="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 508
     iget v1, p0, Landroid/support/v4/content/Loader;->mId:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 509
     const-string/jumbo v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 510
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -670,13 +553,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 177
     iget-object v0, p0, Landroid/support/v4/content/Loader;->mListener:Landroid/support/v4/content/Loader$OnLoadCompleteListener;
 
     if-nez v0, :cond_0
 
-    .line 178
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "No listener register"
@@ -685,13 +565,11 @@
 
     throw v0
 
-    .line 180
     :cond_0
     iget-object v0, p0, Landroid/support/v4/content/Loader;->mListener:Landroid/support/v4/content/Loader$OnLoadCompleteListener;
 
     if-eq v0, p1, :cond_1
 
-    .line 181
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Attempting to unregister the wrong listener"
@@ -700,13 +578,11 @@
 
     throw v0
 
-    .line 183
     :cond_1
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/support/v4/content/Loader;->mListener:Landroid/support/v4/content/Loader$OnLoadCompleteListener;
 
-    .line 184
     return-void
 .end method
 
@@ -720,13 +596,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 211
     iget-object v0, p0, Landroid/support/v4/content/Loader;->mOnLoadCanceledListener:Landroid/support/v4/content/Loader$OnLoadCanceledListener;
 
     if-nez v0, :cond_0
 
-    .line 212
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "No listener register"
@@ -735,13 +608,11 @@
 
     throw v0
 
-    .line 214
     :cond_0
     iget-object v0, p0, Landroid/support/v4/content/Loader;->mOnLoadCanceledListener:Landroid/support/v4/content/Loader$OnLoadCanceledListener;
 
     if-eq v0, p1, :cond_1
 
-    .line 215
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Attempting to unregister the wrong listener"
@@ -750,12 +621,10 @@
 
     throw v0
 
-    .line 217
     :cond_1
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/support/v4/content/Loader;->mOnLoadCanceledListener:Landroid/support/v4/content/Loader$OnLoadCanceledListener;
 
-    .line 218
     return-void
 .end method

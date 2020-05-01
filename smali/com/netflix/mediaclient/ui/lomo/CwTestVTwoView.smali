@@ -13,14 +13,10 @@
 .method public constructor <init>(Landroid/content/Context;Z)V
     .locals 0
 
-    .prologue
-    .line 31
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/lomo/CwView;-><init>(Landroid/content/Context;)V
 
-    .line 32
     iput-boolean p2, p0, Lcom/netflix/mediaclient/ui/lomo/CwTestVTwoView;->showEpisodeInfo:Z
 
-    .line 33
     return-void
 .end method
 
@@ -29,8 +25,6 @@
 .method public getImageUrl(Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;Z)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 37
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/CwTestVTwoView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -49,8 +43,6 @@
 .method public bridge synthetic getImageUrl(Ljava/lang/Object;Z)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 24
     check-cast p1, Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;
 
     invoke-virtual {p0, p1, p2}, Lcom/netflix/mediaclient/ui/lomo/CwTestVTwoView;->getImageUrl(Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;Z)Ljava/lang/String;
@@ -63,8 +55,6 @@
 .method protected getLayoutId()I
     .locals 1
 
-    .prologue
-    .line 45
     const v0, 0x7f030030
 
     return v0
@@ -73,32 +63,24 @@
 .method public setInfoViewId(I)V
     .locals 1
 
-    .prologue
-    .line 41
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/CwTestVTwoView;->info:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setId(I)V
 
-    .line 42
     return-void
 .end method
 
 .method public setTitle(Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;)V
     .locals 0
 
-    .prologue
-    .line 64
     return-void
 .end method
 
 .method public update(Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;IZZ)V
     .locals 6
 
-    .prologue
-    .line 50
     invoke-super/range {p0 .. p5}, Lcom/netflix/mediaclient/ui/lomo/CwView;->update(Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;IZZ)V
 
-    .line 51
     const v0, 0x7f0f0117
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/lomo/CwTestVTwoView;->findViewById(I)Landroid/view/View;
@@ -109,7 +91,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/CwTestVTwoView;->episodeInfo:Landroid/widget/TextView;
 
-    .line 53
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->SHOW:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;->getType()Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
@@ -118,7 +99,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 54
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/CwTestVTwoView;->episodeInfo:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/CwTestVTwoView;->getContext()Landroid/content/Context;
@@ -133,7 +113,6 @@
 
     const/4 v4, 0x0
 
-    .line 55
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;->getSeasonAbbrSeqLabel()Ljava/lang/String;
 
     move-result-object v5
@@ -152,25 +131,21 @@
 
     aput-object v5, v3, v4
 
-    .line 54
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 56
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/CwTestVTwoView;->episodeInfo:Landroid/widget/TextView;
 
     iget-boolean v1, p0, Lcom/netflix/mediaclient/ui/lomo/CwTestVTwoView;->showEpisodeInfo:Z
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibleOrGone(Landroid/view/View;Z)V
 
-    .line 60
     :goto_0
     return-void
 
-    .line 58
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/CwTestVTwoView;->episodeInfo:Landroid/widget/TextView;
 
@@ -184,8 +159,6 @@
 .method public bridge synthetic update(Ljava/lang/Object;Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;IZZ)V
     .locals 6
 
-    .prologue
-    .line 24
     move-object v1, p1
 
     check-cast v1, Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;

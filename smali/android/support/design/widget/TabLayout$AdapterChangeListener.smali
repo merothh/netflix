@@ -16,13 +16,10 @@
 .method constructor <init>(Landroid/support/design/widget/TabLayout;)V
     .locals 0
 
-    .prologue
-    .line 2198
     iput-object p1, p0, Landroid/support/design/widget/TabLayout$AdapterChangeListener;->this$0:Landroid/support/design/widget/TabLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2199
     return-void
 .end method
 
@@ -31,22 +28,18 @@
 .method public onAdapterChanged(Landroid/support/v4/view/ViewPager;Landroid/support/v4/view/PagerAdapter;Landroid/support/v4/view/PagerAdapter;)V
     .locals 2
 
-    .prologue
-    .line 2204
     iget-object v0, p0, Landroid/support/design/widget/TabLayout$AdapterChangeListener;->this$0:Landroid/support/design/widget/TabLayout;
 
     iget-object v0, v0, Landroid/support/design/widget/TabLayout;->mViewPager:Landroid/support/v4/view/ViewPager;
 
     if-ne v0, p1, :cond_0
 
-    .line 2205
     iget-object v0, p0, Landroid/support/design/widget/TabLayout$AdapterChangeListener;->this$0:Landroid/support/design/widget/TabLayout;
 
     iget-boolean v1, p0, Landroid/support/design/widget/TabLayout$AdapterChangeListener;->mAutoRefresh:Z
 
     invoke-virtual {v0, p3, v1}, Landroid/support/design/widget/TabLayout;->setPagerAdapter(Landroid/support/v4/view/PagerAdapter;Z)V
 
-    .line 2207
     :cond_0
     return-void
 .end method
@@ -54,10 +47,7 @@
 .method setAutoRefresh(Z)V
     .locals 0
 
-    .prologue
-    .line 2210
     iput-boolean p1, p0, Landroid/support/design/widget/TabLayout$AdapterChangeListener;->mAutoRefresh:Z
 
-    .line 2211
     return-void
 .end method

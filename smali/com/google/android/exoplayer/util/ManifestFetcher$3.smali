@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/google/android/exoplayer/util/ManifestFetcher;Ljava/io/IOException;)V
     .locals 0
 
-    .prologue
-    .line 340
     iput-object p1, p0, Lcom/google/android/exoplayer/util/ManifestFetcher$3;->this$0:Lcom/google/android/exoplayer/util/ManifestFetcher;
 
     iput-object p2, p0, Lcom/google/android/exoplayer/util/ManifestFetcher$3;->val$e:Ljava/io/IOException;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 343
     iget-object v0, p0, Lcom/google/android/exoplayer/util/ManifestFetcher$3;->this$0:Lcom/google/android/exoplayer/util/ManifestFetcher;
 
     invoke-static {v0}, Lcom/google/android/exoplayer/util/ManifestFetcher;->access$000(Lcom/google/android/exoplayer/util/ManifestFetcher;)Lcom/google/android/exoplayer/util/ManifestFetcher$EventListener;
@@ -44,6 +40,5 @@
 
     invoke-interface {v0, v1}, Lcom/google/android/exoplayer/util/ManifestFetcher$EventListener;->onManifestError(Ljava/io/IOException;)V
 
-    .line 344
     return-void
 .end method

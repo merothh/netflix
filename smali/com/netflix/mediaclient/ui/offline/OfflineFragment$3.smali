@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/offline/OfflineFragment;)V
     .locals 0
 
-    .prologue
-    .line 253
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineFragment$3;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineFragment;
 
     invoke-direct {p0}, Landroid/support/v7/widget/RecyclerView$AdapterDataObserver;-><init>()V
@@ -25,12 +23,9 @@
 .method public onChanged()V
     .locals 1
 
-    .prologue
-    .line 256
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineFragment$3;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/offline/OfflineFragment;->access$500(Lcom/netflix/mediaclient/ui/offline/OfflineFragment;)V
 
-    .line 257
     return-void
 .end method

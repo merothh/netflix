@@ -207,8 +207,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 232
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IMdx$1;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/servicemgr/IMdx$1;-><init>()V

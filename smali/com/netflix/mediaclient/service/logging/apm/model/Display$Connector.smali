@@ -30,7 +30,6 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x3
 
     const/4 v4, 0x2
@@ -39,7 +38,6 @@
 
     const/4 v2, 0x0
 
-    .line 146
     new-instance v0, Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;
 
     const-string/jumbo v1, "internal"
@@ -48,7 +46,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;->internal:Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;
 
-    .line 147
     new-instance v0, Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;
 
     const-string/jumbo v1, "component"
@@ -57,7 +54,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;->component:Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;
 
-    .line 148
     new-instance v0, Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;
 
     const-string/jumbo v1, "composite"
@@ -66,7 +62,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;->composite:Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;
 
-    .line 149
     new-instance v0, Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;
 
     const-string/jumbo v1, "hdmi"
@@ -75,7 +70,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;->hdmi:Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;
 
-    .line 145
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;
@@ -109,8 +103,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 145
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -119,8 +111,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;
     .locals 1
 
-    .prologue
-    .line 145
     const-class v0, Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -135,8 +125,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;
     .locals 1
 
-    .prologue
-    .line 145
     sget-object v0, Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;->$VALUES:[Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;->clone()Ljava/lang/Object;

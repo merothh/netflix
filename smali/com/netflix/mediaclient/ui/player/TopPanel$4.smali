@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/TopPanel;)V
     .locals 0
 
-    .prologue
-    .line 253
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/TopPanel$4;->this$0:Lcom/netflix/mediaclient/ui/player/TopPanel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,20 +26,16 @@
 .method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 3
 
-    .prologue
-    .line 256
     const-string/jumbo v0, "screen"
 
     const-string/jumbo v1, "Display language dialog"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 257
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel$4;->this$0:Lcom/netflix/mediaclient/ui/player/TopPanel;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/TopPanel;->access$200(Lcom/netflix/mediaclient/ui/player/TopPanel;)V
 
-    .line 258
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel$4;->this$0:Lcom/netflix/mediaclient/ui/player/TopPanel;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/TopPanel;->access$300(Lcom/netflix/mediaclient/ui/player/TopPanel;)Lcom/netflix/mediaclient/ui/common/LanguageSelector;
@@ -58,14 +52,12 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/common/LanguageSelector;->display(Lcom/netflix/mediaclient/media/Language;)V
 
-    .line 259
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel$4;->this$0:Lcom/netflix/mediaclient/ui/player/TopPanel;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/player/TopPanel;->playerFragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->stopScreenUpdateTask()V
 
-    .line 260
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel$4;->this$0:Lcom/netflix/mediaclient/ui/player/TopPanel;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/TopPanel$4;->this$0:Lcom/netflix/mediaclient/ui/player/TopPanel;
@@ -84,7 +76,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/player/TopPanel;->access$002(Lcom/netflix/mediaclient/ui/player/TopPanel;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 261
     const/4 v0, 0x1
 
     return v0

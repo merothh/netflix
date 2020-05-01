@@ -31,16 +31,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 105
     invoke-direct {p0}, Lcom/netflix/model/leafs/advisory/Advisory;-><init>()V
 
-    .line 75
     sget-object v0, Lcom/netflix/model/leafs/advisory/ExpiringContentAdvisory$ContentType;->SEASON:Lcom/netflix/model/leafs/advisory/ExpiringContentAdvisory$ContentType;
 
     iput-object v0, p0, Lcom/netflix/model/leafs/advisory/ExpiringContentAdvisory;->type:Lcom/netflix/model/leafs/advisory/ExpiringContentAdvisory$ContentType;
 
-    .line 107
     return-void
 .end method
 
@@ -49,18 +45,14 @@
 .method public getData(Lcom/google/gson/JsonElement;)Lcom/google/gson/JsonObject;
     .locals 6
 
-    .prologue
-    .line 116
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v3
 
-    .line 117
     sget-boolean v0, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v0, :cond_0
 
-    .line 118
     const-string/jumbo v0, "ExpiryAdvisory"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -83,7 +75,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
     :cond_0
     invoke-virtual {v3}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -106,14 +97,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 121
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/gson/JsonElement;
 
-    .line 122
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -136,7 +125,6 @@
 
     goto :goto_0
 
-    .line 123
     :pswitch_0
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsLong()J
 
@@ -146,7 +134,6 @@
 
     goto :goto_0
 
-    .line 122
     :sswitch_0
     const-string/jumbo v5, "video"
 
@@ -212,7 +199,6 @@
 
     goto :goto_1
 
-    .line 124
     :pswitch_1
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -222,7 +208,6 @@
 
     goto :goto_0
 
-    .line 125
     :pswitch_2
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -240,7 +225,6 @@
 
     goto :goto_0
 
-    .line 126
     :pswitch_3
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsLong()J
 
@@ -250,7 +234,6 @@
 
     goto :goto_0
 
-    .line 127
     :pswitch_4
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -260,11 +243,9 @@
 
     goto/16 :goto_0
 
-    .line 130
     :cond_2
     return-object v3
 
-    .line 122
     nop
 
     :sswitch_data_0
@@ -289,8 +270,6 @@
 .method public getMessage(Landroid/content/Context;)Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 83
     sget-object v0, Lcom/netflix/model/leafs/advisory/ExpiringContentAdvisory$1;->$SwitchMap$com$netflix$model$leafs$advisory$ExpiringContentAdvisory$ContentType:[I
 
     iget-object v1, p0, Lcom/netflix/model/leafs/advisory/ExpiringContentAdvisory;->type:Lcom/netflix/model/leafs/advisory/ExpiringContentAdvisory$ContentType;
@@ -303,10 +282,8 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 94
     const v0, 0x7f0800ef
 
-    .line 97
     :goto_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -328,28 +305,21 @@
 
     return-object v0
 
-    .line 85
     :pswitch_0
     const v0, 0x7f0800f1
 
-    .line 86
     goto :goto_0
 
-    .line 88
     :pswitch_1
     const v0, 0x7f0800f2
 
-    .line 89
     goto :goto_0
 
-    .line 91
     :pswitch_2
     const v0, 0x7f0800f0
 
-    .line 92
     goto :goto_0
 
-    .line 83
     nop
 
     :pswitch_data_0
@@ -363,8 +333,6 @@
 .method public getSecondaryMessage(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 102
     const/4 v0, 0x0
 
     return-object v0
@@ -373,8 +341,6 @@
 .method public getType()Lcom/netflix/model/leafs/advisory/Advisory$Type;
     .locals 1
 
-    .prologue
-    .line 111
     sget-object v0, Lcom/netflix/model/leafs/advisory/Advisory$Type;->EXPIRY_NOTICE:Lcom/netflix/model/leafs/advisory/Advisory$Type;
 
     return-object v0

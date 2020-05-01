@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/offline/TutorialHelper;Landroid/support/v7/widget/RecyclerView;Lcom/netflix/mediaclient/ui/offline/TutorialHelper$Tutorialable;)V
     .locals 0
 
-    .prologue
-    .line 147
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper$4;->this$0:Lcom/netflix/mediaclient/ui/offline/TutorialHelper;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper$4;->val$recyclerView:Landroid/support/v7/widget/RecyclerView;
@@ -36,8 +34,6 @@
 .method public onPreDraw()Z
     .locals 3
 
-    .prologue
-    .line 150
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper$4;->val$recyclerView:Landroid/support/v7/widget/RecyclerView;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
@@ -46,21 +42,18 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 153
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper$4;->this$0:Lcom/netflix/mediaclient/ui/offline/TutorialHelper;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper$4;->val$tutor:Lcom/netflix/mediaclient/ui/offline/TutorialHelper$Tutorialable;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->access$000(Lcom/netflix/mediaclient/ui/offline/TutorialHelper;Lcom/netflix/mediaclient/ui/offline/TutorialHelper$Tutorialable;)V
 
-    .line 154
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper$4;->this$0:Lcom/netflix/mediaclient/ui/offline/TutorialHelper;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->tooltip:Lcom/netflix/android/tooltips/Tooltip;
 
     if-nez v0, :cond_0
 
-    .line 155
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper$4;->this$0:Lcom/netflix/mediaclient/ui/offline/TutorialHelper;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper$4;->val$recyclerView:Landroid/support/v7/widget/RecyclerView;
@@ -69,13 +62,11 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->access$200(Lcom/netflix/mediaclient/ui/offline/TutorialHelper;Landroid/support/v7/widget/RecyclerView;Lcom/netflix/mediaclient/ui/offline/TutorialHelper$Tutorialable;)V
 
-    .line 159
     :goto_0
     const/4 v0, 0x1
 
     return v0
 
-    .line 157
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper$4;->this$0:Lcom/netflix/mediaclient/ui/offline/TutorialHelper;
 

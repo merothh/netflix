@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/common/LanguageSelector;Lcom/netflix/mediaclient/ui/common/LanguageSelector$SubtitleAdapter;Lcom/netflix/mediaclient/media/Language;)V
     .locals 0
 
-    .prologue
-    .line 133
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelector$2;->this$0:Lcom/netflix/mediaclient/ui/common/LanguageSelector;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelector$2;->val$subtitleAdapter:Lcom/netflix/mediaclient/ui/common/LanguageSelector$SubtitleAdapter;
@@ -45,22 +43,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 137
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelector$2;->val$subtitleAdapter:Lcom/netflix/mediaclient/ui/common/LanguageSelector$SubtitleAdapter;
 
     invoke-virtual {v0, p3}, Lcom/netflix/mediaclient/ui/common/LanguageSelector$SubtitleAdapter;->getItem(I)Lcom/netflix/mediaclient/media/Subtitle;
 
     move-result-object v0
 
-    .line 138
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 139
     const-string/jumbo v1, "nf_language_selector"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -93,7 +87,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 141
     :cond_0
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelector$2;->val$language:Lcom/netflix/mediaclient/media/Language;
 
@@ -101,31 +94,25 @@
 
     move-result-object v1
 
-    .line 142
     if-eq v1, v0, :cond_1
 
-    .line 143
     const-string/jumbo v1, "nf_language_selector"
 
     const-string/jumbo v2, "Subtitle is changed, refresh subtitle list view"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 144
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelector$2;->val$language:Lcom/netflix/mediaclient/media/Language;
 
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/media/Language;->setSelectedSubtitle(Lcom/netflix/mediaclient/media/Subtitle;)Lcom/netflix/mediaclient/media/Subtitle;
 
-    .line 145
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelector$2;->val$subtitleAdapter:Lcom/netflix/mediaclient/ui/common/LanguageSelector$SubtitleAdapter;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/common/LanguageSelector$SubtitleAdapter;->notifyDataSetChanged()V
 
-    .line 149
     :goto_0
     return-void
 
-    .line 147
     :cond_1
     const-string/jumbo v0, "nf_language_selector"
 

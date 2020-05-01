@@ -20,25 +20,20 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;)V
     .locals 3
 
-    .prologue
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 68
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x11
 
     if-eq v0, v1, :cond_0
 
-    .line 69
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
     throw v0
 
-    .line 72
     :cond_0
     const-string/jumbo v0, "display"
 
@@ -50,10 +45,8 @@
 
     iput-object v0, p0, Landroid/support/v7/media/MediaRouterJellybeanMr1$ActiveScanWorkaround;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
-    .line 73
     iput-object p2, p0, Landroid/support/v7/media/MediaRouterJellybeanMr1$ActiveScanWorkaround;->mHandler:Landroid/os/Handler;
 
-    .line 75
     :try_start_0
     const-class v0, Landroid/hardware/display/DisplayManager;
 
@@ -71,11 +64,9 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 78
     :goto_0
     return-void
 
-    .line 76
     :catch_0
     move-exception v0
 
@@ -87,13 +78,10 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 108
     iget-boolean v0, p0, Landroid/support/v7/media/MediaRouterJellybeanMr1$ActiveScanWorkaround;->mActivelyScanningWifiDisplays:Z
 
     if-eqz v0, :cond_0
 
-    .line 110
     :try_start_0
     iget-object v0, p0, Landroid/support/v7/media/MediaRouterJellybeanMr1$ActiveScanWorkaround;->mScanWifiDisplaysMethod:Ljava/lang/reflect/Method;
 
@@ -108,7 +96,6 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 116
     :goto_0
     iget-object v0, p0, Landroid/support/v7/media/MediaRouterJellybeanMr1$ActiveScanWorkaround;->mHandler:Landroid/os/Handler;
 
@@ -116,15 +103,12 @@
 
     invoke-virtual {v0, p0, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 118
     :cond_0
     return-void
 
-    .line 111
     :catch_0
     move-exception v0
 
-    .line 112
     const-string/jumbo v1, "MediaRouterJellybeanMr1"
 
     const-string/jumbo v2, "Cannot scan for wifi displays."
@@ -133,11 +117,9 @@
 
     goto :goto_0
 
-    .line 113
     :catch_1
     move-exception v0
 
-    .line 114
     const-string/jumbo v1, "MediaRouterJellybeanMr1"
 
     const-string/jumbo v2, "Cannot scan for wifi displays."
@@ -150,38 +132,30 @@
 .method public setActiveScanRouteTypes(I)V
     .locals 2
 
-    .prologue
-    .line 87
     and-int/lit8 v0, p1, 0x2
 
     if-eqz v0, :cond_2
 
-    .line 88
     iget-boolean v0, p0, Landroid/support/v7/media/MediaRouterJellybeanMr1$ActiveScanWorkaround;->mActivelyScanningWifiDisplays:Z
 
     if-nez v0, :cond_0
 
-    .line 89
     iget-object v0, p0, Landroid/support/v7/media/MediaRouterJellybeanMr1$ActiveScanWorkaround;->mScanWifiDisplaysMethod:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_1
 
-    .line 90
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v7/media/MediaRouterJellybeanMr1$ActiveScanWorkaround;->mActivelyScanningWifiDisplays:Z
 
-    .line 91
     iget-object v0, p0, Landroid/support/v7/media/MediaRouterJellybeanMr1$ActiveScanWorkaround;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 104
     :cond_0
     :goto_0
     return-void
 
-    .line 93
     :cond_1
     const-string/jumbo v0, "MediaRouterJellybeanMr1"
 
@@ -191,18 +165,15 @@
 
     goto :goto_0
 
-    .line 99
     :cond_2
     iget-boolean v0, p0, Landroid/support/v7/media/MediaRouterJellybeanMr1$ActiveScanWorkaround;->mActivelyScanningWifiDisplays:Z
 
     if-eqz v0, :cond_0
 
-    .line 100
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/support/v7/media/MediaRouterJellybeanMr1$ActiveScanWorkaround;->mActivelyScanningWifiDisplays:Z
 
-    .line 101
     iget-object v0, p0, Landroid/support/v7/media/MediaRouterJellybeanMr1$ActiveScanWorkaround;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V

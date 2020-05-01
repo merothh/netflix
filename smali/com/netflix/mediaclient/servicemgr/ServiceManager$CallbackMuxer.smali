@@ -20,11 +20,8 @@
 .method private constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1810
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1811
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -37,8 +34,6 @@
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/servicemgr/ServiceManager$1;)V
     .locals 0
 
-    .prologue
-    .line 1810
     invoke-direct {p0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager$CallbackMuxer;-><init>()V
 
     return-void
@@ -49,8 +44,6 @@
 .method public declared-synchronized demuxCallback(I)Lcom/netflix/mediaclient/servicemgr/ManagerCallback;
     .locals 3
 
-    .prologue
-    .line 1826
     monitor-enter p0
 
     :try_start_0
@@ -73,26 +66,22 @@
 
     check-cast v0, Lcom/netflix/mediaclient/servicemgr/ServiceManager$CallbackMuxer$MuxedCallback;
 
-    .line 1827
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager$CallbackMuxer$MuxedCallback;->getRequestId()I
 
     move-result v2
 
     if-ne v2, p1, :cond_0
 
-    .line 1828
     iget-object v1, p0, Lcom/netflix/mediaclient/servicemgr/ServiceManager$CallbackMuxer;->muxedCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 1829
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager$CallbackMuxer$MuxedCallback;->getDemuxedCallback()Lcom/netflix/mediaclient/servicemgr/ManagerCallback;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
-    .line 1832
     :goto_0
     monitor-exit p0
 
@@ -103,7 +92,6 @@
 
     goto :goto_0
 
-    .line 1826
     :catchall_0
     move-exception v0
 
@@ -115,8 +103,6 @@
 .method public declared-synchronized muxCallback(Lcom/netflix/mediaclient/servicemgr/ManagerCallback;)I
     .locals 2
 
-    .prologue
-    .line 1817
     monitor-enter p0
 
     :try_start_0
@@ -124,12 +110,10 @@
 
     invoke-direct {v0, p1}, Lcom/netflix/mediaclient/servicemgr/ServiceManager$CallbackMuxer$MuxedCallback;-><init>(Lcom/netflix/mediaclient/servicemgr/ManagerCallback;)V
 
-    .line 1818
     iget-object v1, p0, Lcom/netflix/mediaclient/servicemgr/ServiceManager$CallbackMuxer;->muxedCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1819
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager$CallbackMuxer$MuxedCallback;->getRequestId()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -140,7 +124,6 @@
 
     return v0
 
-    .line 1817
     :catchall_0
     move-exception v0
 
@@ -152,8 +135,6 @@
 .method public declared-synchronized reset()V
     .locals 1
 
-    .prologue
-    .line 1836
     monitor-enter p0
 
     :try_start_0
@@ -163,12 +144,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1837
     monitor-exit p0
 
     return-void
 
-    .line 1836
     :catchall_0
     move-exception v0
 

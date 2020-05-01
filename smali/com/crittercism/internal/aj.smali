@@ -6,11 +6,8 @@
 .method public constructor <init>(Lcom/crittercism/internal/ah;)V
     .locals 0
 
-    .prologue
-    .line 35
     invoke-direct {p0, p1}, Lcom/crittercism/internal/aa;-><init>(Lcom/crittercism/internal/ah;)V
 
-    .line 36
     return-void
 .end method
 
@@ -19,12 +16,10 @@
 .method public final a(Lcom/crittercism/internal/ab;)Z
     .locals 5
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 67
     invoke-virtual {p1}, Lcom/crittercism/internal/ab;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -35,39 +30,32 @@
 
     move-result-object v2
 
-    .line 68
     array-length v3, v2
 
     const/4 v4, 0x3
 
     if-ne v3, v4, :cond_0
 
-    .line 1130
     iget-object v3, p0, Lcom/crittercism/internal/aa;->a:Lcom/crittercism/internal/ah;
 
-    .line 69
     aget-object v1, v2, v1
 
     aget-object v2, v2, v0
 
     invoke-interface {v3, v1, v2}, Lcom/crittercism/internal/ah;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 73
     :goto_0
     return v0
 
     :cond_0
     move v0, v1
 
-    .line 71
     goto :goto_0
 .end method
 
 .method public final b()Lcom/crittercism/internal/aa;
     .locals 1
 
-    .prologue
-    .line 45
     new-instance v0, Lcom/crittercism/internal/ai;
 
     invoke-direct {v0, p0}, Lcom/crittercism/internal/ai;-><init>(Lcom/crittercism/internal/aa;)V
@@ -78,8 +66,6 @@
 .method public final c()Lcom/crittercism/internal/aa;
     .locals 1
 
-    .prologue
-    .line 57
     sget-object v0, Lcom/crittercism/internal/ao;->d:Lcom/crittercism/internal/ao;
 
     return-object v0
@@ -88,8 +74,6 @@
 .method protected final d()I
     .locals 1
 
-    .prologue
-    .line 86
     const/16 v0, 0x40
 
     return v0
@@ -98,8 +82,6 @@
 .method protected final e()I
     .locals 1
 
-    .prologue
-    .line 98
     const/16 v0, 0x800
 
     return v0

@@ -11,8 +11,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 18
     invoke-direct {p0}, Lorg/xbill/DNS/Record;-><init>()V
 
     return-void
@@ -23,8 +21,6 @@
 .method getObject()Lorg/xbill/DNS/Record;
     .locals 1
 
-    .prologue
-    .line 22
     new-instance v0, Lorg/xbill/DNS/EmptyRecord;
 
     invoke-direct {v0}, Lorg/xbill/DNS/EmptyRecord;-><init>()V
@@ -35,24 +31,18 @@
 .method rdataFromString(Lorg/xbill/DNS/Tokenizer;Lorg/xbill/DNS/Name;)V
     .locals 0
 
-    .prologue
-    .line 31
     return-void
 .end method
 
 .method rrFromWire(Lorg/xbill/DNS/DNSInput;)V
     .locals 0
 
-    .prologue
-    .line 27
     return-void
 .end method
 
 .method rrToString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 35
     const-string/jumbo v0, ""
 
     return-object v0
@@ -61,7 +51,5 @@
 .method rrToWire(Lorg/xbill/DNS/DNSOutput;Lorg/xbill/DNS/Compression;Z)V
     .locals 0
 
-    .prologue
-    .line 40
     return-void
 .end method

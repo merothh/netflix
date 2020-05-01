@@ -14,8 +14,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,10 +33,8 @@
         }
     .end annotation
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 21
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v1
@@ -70,8 +66,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 26
     const/4 v0, 0x1
 
     invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -80,7 +74,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 28
     invoke-virtual {p1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v1
@@ -89,17 +82,14 @@
 
     move-result-object v1
 
-    .line 29
     if-nez v1, :cond_0
 
-    .line 30
     const-string/jumbo v2, "NetflixComSyncHandler"
 
     const-string/jumbo v3, "Sync action is required, MDX agent is null. This should NOT happen!"
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 33
     :cond_0
     invoke-virtual {p1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
@@ -111,26 +101,22 @@
 
     if-eqz v2, :cond_2
 
-    .line 34
     const-string/jumbo v2, "NetflixComSyncHandler"
 
     const-string/jumbo v3, "Sync action is required, target is available, sync"
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 35
     invoke-interface {v1, v0}, Lcom/netflix/mediaclient/servicemgr/IMdx;->setDialUuidAsCurrentTarget(Ljava/lang/String;)Z
 
     move-result v0
 
-    .line 36
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 37
     const-string/jumbo v1, "NetflixComSyncHandler"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -153,17 +139,14 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 43
     :cond_1
     :goto_0
     invoke-static {p1}, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComUtils;->startHomeActivity(Lcom/netflix/mediaclient/android/activity/NetflixActivity;)V
 
-    .line 44
     sget-object v0, Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;->HANDLING:Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;
 
     return-object v0
 
-    .line 40
     :cond_2
     const-string/jumbo v0, "NetflixComSyncHandler"
 

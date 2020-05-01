@@ -53,8 +53,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 16
     const-class v0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -69,37 +67,26 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/service/logging/IPdsLogging;)V
     .locals 0
 
-    .prologue
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     iput-object p1, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mPlayableId:Ljava/lang/String;
 
-    .line 58
     iput-object p2, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mOxId:Ljava/lang/String;
 
-    .line 59
     iput-object p3, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mDxId:Ljava/lang/String;
 
-    .line 60
     iput-object p4, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mAppSessionId:Ljava/lang/String;
 
-    .line 61
     iput-object p5, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mUserSessionId:Ljava/lang/String;
 
-    .line 62
     iput-object p6, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mPdsLogging:Lcom/netflix/mediaclient/service/logging/IPdsLogging;
 
-    .line 63
     return-void
 .end method
 
 .method private areLinksPresent()Z
     .locals 1
 
-    .prologue
-    .line 182
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mLinkStartDownload:Lorg/json/JSONObject;
 
     if-eqz v0, :cond_0
@@ -122,18 +109,14 @@
 .method private buildDownloadEvent(Lorg/json/JSONObject;)Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadEventParamBuilder;
     .locals 3
 
-    .prologue
-    .line 195
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 196
     invoke-static {p1}, Ljunit/framework/Assert;->assertNotNull(Ljava/lang/Object;)V
 
-    .line 199
     :cond_0
     new-instance v0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadEventParamBuilder;
 
@@ -145,27 +128,21 @@
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mDc:Lcom/netflix/mediaclient/service/pdslogging/DownloadContext;
 
-    .line 200
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadEventParamBuilder;->setDownloadContext(Lcom/netflix/mediaclient/service/pdslogging/DownloadContext;)Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadEventParamBuilder;
 
     move-result-object v0
 
-    .line 199
     return-object v0
 .end method
 
 .method private sendEventForLink(Lorg/json/JSONObject;)V
     .locals 5
 
-    .prologue
-    .line 186
     if-nez p1, :cond_0
 
-    .line 192
     :goto_0
     return-void
 
-    .line 189
     :cond_0
     sget-object v0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->TAG:Ljava/lang/String;
 
@@ -187,7 +164,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 190
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->buildDownloadEvent(Lorg/json/JSONObject;)Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadEventParamBuilder;
 
     move-result-object v0
@@ -196,7 +172,6 @@
 
     move-result-object v0
 
-    .line 191
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->sendPdsEventViaLogging(Ljava/lang/String;)V
 
     goto :goto_0
@@ -205,20 +180,16 @@
 .method private sendPdsEventViaLogging(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 204
     invoke-static {p1}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 205
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mPdsLogging:Lcom/netflix/mediaclient/service/logging/IPdsLogging;
 
     invoke-interface {v0, p1}, Lcom/netflix/mediaclient/service/logging/IPdsLogging;->sendPdsEventViaLogging(Ljava/lang/String;)V
 
-    .line 207
     :cond_0
     return-void
 .end method
@@ -226,39 +197,30 @@
 .method private sendStopDownloadEventForLink(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 220
     if-nez p1, :cond_0
 
-    .line 230
     :goto_0
     return-void
 
-    .line 223
     :cond_0
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->setPaused(Z)V
 
-    .line 224
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->buildDownloadEvent(Lorg/json/JSONObject;)Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadEventParamBuilder;
 
     move-result-object v0
 
-    .line 225
     invoke-virtual {v0, p2, p3}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadEventParamBuilder;->setErrorInfo(Ljava/lang/String;Ljava/lang/String;)Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadEventParamBuilder;
 
     move-result-object v0
 
-    .line 226
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadEventParamBuilder;->build()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 227
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->sendPdsEventViaLogging(Ljava/lang/String;)V
 
-    .line 229
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mPdsLogging:Lcom/netflix/mediaclient/service/logging/IPdsLogging;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/logging/IPdsLogging;->flushEventsInLogging()V
@@ -269,12 +231,10 @@
 .method private shouldRateLimitProgressMessage(I)Z
     .locals 6
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 210
     if-eqz p1, :cond_0
 
     iget v2, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->lastNotifiedProgressPercentage:I
@@ -283,17 +243,14 @@
 
     if-lt p1, v2, :cond_1
 
-    .line 212
     :cond_0
     iput p1, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->lastNotifiedProgressPercentage:I
 
     move v0, v1
 
-    .line 216
     :goto_0
     return v0
 
-    .line 215
     :cond_1
     sget-object v2, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->TAG:Ljava/lang/String;
 
@@ -337,8 +294,6 @@
 .method public getDxId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 31
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mDxId:Ljava/lang/String;
 
     return-object v0
@@ -347,8 +302,6 @@
 .method public getOxId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 27
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mOxId:Ljava/lang/String;
 
     return-object v0
@@ -357,8 +310,6 @@
 .method public getPlayableId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 66
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mPlayableId:Ljava/lang/String;
 
     return-object v0
@@ -367,8 +318,6 @@
 .method public isManifestFetchInProgress()Z
     .locals 1
 
-    .prologue
-    .line 170
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->isManifestFetchInProgress:Z
 
     return v0
@@ -377,8 +326,6 @@
 .method public isPaused()Z
     .locals 1
 
-    .prologue
-    .line 233
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->isPaused:Z
 
     return v0
@@ -387,8 +334,6 @@
 .method public needToFetchManifest()Z
     .locals 1
 
-    .prologue
-    .line 178
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->areLinksPresent()Z
 
     move-result v0
@@ -415,49 +360,38 @@
 .method public sendDownloadCompleteMessage()V
     .locals 1
 
-    .prologue
-    .line 101
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mLinkCompleteDownload:Lorg/json/JSONObject;
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->sendEventForLink(Lorg/json/JSONObject;)V
 
-    .line 102
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mPdsLogging:Lcom/netflix/mediaclient/service/logging/IPdsLogging;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/logging/IPdsLogging;->flushEventsInLogging()V
 
-    .line 103
     return-void
 .end method
 
 .method public sendDownloadPauseMessage()V
     .locals 1
 
-    .prologue
-    .line 107
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mLinkPauseDownload:Lorg/json/JSONObject;
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->sendEventForLink(Lorg/json/JSONObject;)V
 
-    .line 108
     return-void
 .end method
 
 .method public sendDownloadProgressMessage(I)V
     .locals 1
 
-    .prologue
-    .line 116
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mLinkProgressDownload:Lorg/json/JSONObject;
 
     if-nez v0, :cond_1
 
-    .line 126
     :cond_0
     :goto_0
     return-void
 
-    .line 120
     :cond_1
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->shouldRateLimitProgressMessage(I)Z
 
@@ -465,24 +399,20 @@
 
     if-nez v0, :cond_0
 
-    .line 121
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mLinkProgressDownload:Lorg/json/JSONObject;
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->buildDownloadEvent(Lorg/json/JSONObject;)Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadEventParamBuilder;
 
     move-result-object v0
 
-    .line 122
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadEventParamBuilder;->setProgressPercentage(I)Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadEventParamBuilder;
 
     move-result-object v0
 
-    .line 123
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadEventParamBuilder;->build()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 124
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->sendPdsEventViaLogging(Ljava/lang/String;)V
 
     goto :goto_0
@@ -491,43 +421,33 @@
 .method public sendDownloadResumeMessage()V
     .locals 1
 
-    .prologue
-    .line 112
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mLinkResumeDownload:Lorg/json/JSONObject;
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->sendEventForLink(Lorg/json/JSONObject;)V
 
-    .line 113
     return-void
 .end method
 
 .method public sendStartDownloadMessage()V
     .locals 1
 
-    .prologue
-    .line 96
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mLinkStartDownload:Lorg/json/JSONObject;
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->sendEventForLink(Lorg/json/JSONObject;)V
 
-    .line 97
     return-void
 .end method
 
 .method public sendStopDownloadOnError(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 138
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mLinkStopDownloadOnError:Lorg/json/JSONObject;
 
     if-nez v0, :cond_0
 
-    .line 142
     :goto_0
     return-void
 
-    .line 141
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mLinkStopDownloadOnError:Lorg/json/JSONObject;
 
@@ -539,17 +459,13 @@
 .method public sendStopDownloadOnExpiredManifest(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 130
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mLinkStopDownloadOnExpiredManifest:Lorg/json/JSONObject;
 
     if-nez v0, :cond_0
 
-    .line 134
     :goto_0
     return-void
 
-    .line 133
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mLinkStopDownloadOnExpiredManifest:Lorg/json/JSONObject;
 
@@ -561,17 +477,13 @@
 .method public sendStopDownloadOnLicenseError(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 146
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mLinkStopDownloadOnLicenseError:Lorg/json/JSONObject;
 
     if-nez v0, :cond_0
 
-    .line 150
     :goto_0
     return-void
 
-    .line 149
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mLinkStopDownloadOnLicenseError:Lorg/json/JSONObject;
 
@@ -583,26 +495,19 @@
 .method public setDownloadContext(Lcom/netflix/mediaclient/service/pdslogging/DownloadContext;)Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;
     .locals 0
 
-    .prologue
-    .line 90
     iput-object p1, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mDc:Lcom/netflix/mediaclient/service/pdslogging/DownloadContext;
 
-    .line 91
     return-object p0
 .end method
 
 .method public setLinks(Lorg/json/JSONObject;)Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;
     .locals 1
 
-    .prologue
-    .line 71
     if-nez p1, :cond_0
 
-    .line 85
     :goto_0
     return-object p0
 
-    .line 74
     :cond_0
     const-string/jumbo v0, "startDownload"
 
@@ -612,7 +517,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mLinkStartDownload:Lorg/json/JSONObject;
 
-    .line 75
     const-string/jumbo v0, "pauseDownload"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
@@ -621,7 +525,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mLinkPauseDownload:Lorg/json/JSONObject;
 
-    .line 76
     const-string/jumbo v0, "resumeDownload"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
@@ -630,7 +533,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mLinkResumeDownload:Lorg/json/JSONObject;
 
-    .line 77
     const-string/jumbo v0, "completeDownload"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
@@ -639,7 +541,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mLinkCompleteDownload:Lorg/json/JSONObject;
 
-    .line 78
     const-string/jumbo v0, "cancelDownload"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
@@ -648,7 +549,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mLinkCancelDownload:Lorg/json/JSONObject;
 
-    .line 79
     const-string/jumbo v0, "reportProgress"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
@@ -657,7 +557,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mLinkProgressDownload:Lorg/json/JSONObject;
 
-    .line 80
     const-string/jumbo v0, "stopDownloadDueToRejectedLicense"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
@@ -666,7 +565,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mLinkStopDownloadOnLicenseError:Lorg/json/JSONObject;
 
-    .line 81
     const-string/jumbo v0, "stopDownloadDueToError"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
@@ -675,7 +573,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->mLinkStopDownloadOnError:Lorg/json/JSONObject;
 
-    .line 82
     const-string/jumbo v0, "stopDownloadDueToExpiredManifest"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
@@ -690,32 +587,24 @@
 .method public setManifestFetchInProgress(Z)V
     .locals 0
 
-    .prologue
-    .line 174
     iput-boolean p1, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->isManifestFetchInProgress:Z
 
-    .line 175
     return-void
 .end method
 
 .method public setPaused(Z)V
     .locals 0
 
-    .prologue
-    .line 237
     iput-boolean p1, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->isPaused:Z
 
-    .line 238
     return-void
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
     const/16 v2, 0x27
 
-    .line 154
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

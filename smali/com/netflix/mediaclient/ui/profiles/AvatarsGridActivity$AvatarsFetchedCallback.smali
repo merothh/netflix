@@ -11,8 +11,6 @@
 .method private constructor <init>(Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity;)V
     .locals 0
 
-    .prologue
-    .line 174
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity$AvatarsFetchedCallback;->this$0:Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/servicemgr/SimpleManagerCallback;-><init>()V
@@ -23,8 +21,6 @@
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity;Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity$1;)V
     .locals 0
 
-    .prologue
-    .line 174
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity$AvatarsFetchedCallback;-><init>(Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity;)V
 
     return-void
@@ -46,15 +42,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 178
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 179
     const-string/jumbo v0, "AvatarsGridActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -77,7 +70,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 182
     :cond_0
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
 
@@ -87,12 +79,10 @@
 
     if-eqz p1, :cond_2
 
-    .line 183
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity$AvatarsFetchedCallback;->this$0:Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity;->access$102(Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity;Ljava/util/List;)Ljava/util/List;
 
-    .line 187
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity$AvatarsFetchedCallback;->this$0:Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity;->access$100(Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity;)Ljava/util/List;
@@ -111,7 +101,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 188
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity$AvatarsFetchedCallback;->this$0:Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity;->access$100(Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity;)Ljava/util/List;
@@ -126,22 +115,18 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 190
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity$AvatarsFetchedCallback;->this$0:Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity;->access$300(Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity;)V
 
-    .line 191
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity$AvatarsFetchedCallback;->this$0:Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity;->access$400(Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity;)V
 
-    .line 196
     :goto_0
     return-void
 
-    .line 195
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity$AvatarsFetchedCallback;->this$0:Lcom/netflix/mediaclient/ui/profiles/AvatarsGridActivity;
 

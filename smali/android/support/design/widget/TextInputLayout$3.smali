@@ -13,8 +13,6 @@
 .method constructor <init>(Landroid/support/design/widget/TextInputLayout;Ljava/lang/CharSequence;)V
     .locals 0
 
-    .prologue
-    .line 675
     iput-object p1, p0, Landroid/support/design/widget/TextInputLayout$3;->this$0:Landroid/support/design/widget/TextInputLayout;
 
     iput-object p2, p0, Landroid/support/design/widget/TextInputLayout$3;->val$error:Ljava/lang/CharSequence;
@@ -29,8 +27,6 @@
 .method public onAnimationEnd(Landroid/view/View;)V
     .locals 2
 
-    .prologue
-    .line 678
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout$3;->this$0:Landroid/support/design/widget/TextInputLayout;
 
     iget-object v0, v0, Landroid/support/design/widget/TextInputLayout;->mErrorView:Landroid/widget/TextView;
@@ -39,11 +35,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 679
     const/4 v0, 0x4
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 680
     return-void
 .end method

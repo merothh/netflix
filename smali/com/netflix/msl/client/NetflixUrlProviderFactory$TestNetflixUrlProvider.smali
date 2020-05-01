@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public getApiUri(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 45
     const-string/jumbo v0, "http://api.test.netflix.com%s"
 
     const/4 v1, 0x1
@@ -44,8 +40,6 @@
 .method public getAppbootUri(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 40
     const-string/jumbo v0, "http://api.test.netflix.com/appboot/%s"
 
     const/4 v1, 0x1
@@ -66,8 +60,6 @@
 .method public getNccpUri(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 51
     const-string/jumbo v0, "http://api.test.netflix.com/nccp/controller%s"
 
     const/4 v1, 0x1

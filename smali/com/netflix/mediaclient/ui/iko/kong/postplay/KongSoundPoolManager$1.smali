@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongSoundPoolManager;)V
     .locals 0
 
-    .prologue
-    .line 40
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongSoundPoolManager$1;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongSoundPoolManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public onLoadComplete(Landroid/media/SoundPool;II)V
     .locals 3
 
-    .prologue
-    .line 43
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 44
     const-string/jumbo v1, "KongSoundPoolManager"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -74,7 +69,6 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 46
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongSoundPoolManager$1;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongSoundPoolManager;
 
@@ -95,16 +89,13 @@
 
     invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 47
     return-void
 
-    .line 44
     :cond_1
     const-string/jumbo v0, "failure"
 
     goto :goto_0
 
-    .line 46
     :cond_2
     const/4 v0, 0x0
 

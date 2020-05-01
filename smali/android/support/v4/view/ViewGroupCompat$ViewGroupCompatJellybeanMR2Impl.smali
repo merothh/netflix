@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 112
     invoke-direct {p0}, Landroid/support/v4/view/ViewGroupCompat$ViewGroupCompatIcsImpl;-><init>()V
 
     return-void
@@ -19,8 +17,6 @@
 .method public getLayoutMode(Landroid/view/ViewGroup;)I
     .locals 1
 
-    .prologue
-    .line 115
     invoke-static {p1}, Landroid/support/v4/view/ViewGroupCompatJellybeanMR2;->getLayoutMode(Landroid/view/ViewGroup;)I
 
     move-result v0
@@ -31,10 +27,7 @@
 .method public setLayoutMode(Landroid/view/ViewGroup;I)V
     .locals 0
 
-    .prologue
-    .line 120
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewGroupCompatJellybeanMR2;->setLayoutMode(Landroid/view/ViewGroup;I)V
 
-    .line 121
     return-void
 .end method

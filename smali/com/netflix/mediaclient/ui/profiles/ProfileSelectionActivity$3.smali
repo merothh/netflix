@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;)V
     .locals 0
 
-    .prologue
-    .line 494
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$3;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,10 +26,8 @@
 .method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 3
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 497
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$3;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;
 
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$3;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;
@@ -47,15 +43,12 @@
     :goto_0
     invoke-static {v2, v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;->access$402(Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;Z)Z
 
-    .line 498
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$3;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;->access$500(Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;)V
 
-    .line 499
     return v1
 
-    .line 497
     :cond_0
     const/4 v0, 0x0
 

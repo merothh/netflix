@@ -34,10 +34,8 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/netflix/mediaclient/StatusCode;Ljava/lang/Runnable;I)V
     .locals 9
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 38
     const v4, 0x7fffffff
 
     move-object v0, p0
@@ -56,58 +54,42 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;-><init>(Landroid/content/Context;Lcom/netflix/mediaclient/StatusCode;Ljava/lang/Throwable;ILjava/lang/Runnable;ILjava/lang/String;Ljava/lang/Runnable;)V
 
-    .line 39
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Lcom/netflix/mediaclient/StatusCode;Ljava/lang/Throwable;ILjava/lang/Runnable;ILjava/lang/String;Ljava/lang/Runnable;)V
     .locals 1
 
-    .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     const v0, 0x7fffffff
 
     iput v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mPriority:I
 
-    .line 42
     iput-object p1, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mContext:Landroid/content/Context;
 
-    .line 43
     iput-object p2, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mStatusCode:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 44
     iput-object p3, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mCause:Ljava/lang/Throwable;
 
-    .line 45
     iput p4, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mPriority:I
 
-    .line 46
     iput-object p5, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mTask:Ljava/lang/Runnable;
 
-    .line 47
     iput p6, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mMessageId:I
 
-    .line 48
     iput-object p7, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mLink:Ljava/lang/String;
 
-    .line 49
     iput-object p8, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mOkTask:Ljava/lang/Runnable;
 
-    .line 50
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->createData()V
 
-    .line 51
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;)Landroid/content/Context;
     .locals 1
 
-    .prologue
-    .line 23
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -116,22 +98,18 @@
 .method private createData()V
     .locals 8
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 75
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mStatusCode:Lcom/netflix/mediaclient/StatusCode;
 
     if-nez v0, :cond_2
 
-    .line 76
     const-string/jumbo v0, "ErrorAgent"
 
     const-string/jumbo v1, "Required to display error dialog without status code!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 83
     :cond_0
     :goto_0
     iget v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mMessageId:I
@@ -142,36 +120,29 @@
 
     move-result-object v2
 
-    .line 84
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mLink:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->getUri(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 86
     iget-object v4, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mOkTask:Ljava/lang/Runnable;
 
-    .line 87
     if-nez v4, :cond_1
 
-    .line 88
     new-instance v4, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor$1;
 
     invoke-direct {v4, p0}, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor$1;-><init>(Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;)V
 
-    .line 96
     :cond_1
     if-eqz v0, :cond_3
 
-    .line 97
     new-instance v6, Lcom/netflix/mediaclient/util/LaunchBrowser;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mContext:Landroid/content/Context;
 
     invoke-direct {v6, v1, v0}, Lcom/netflix/mediaclient/util/LaunchBrowser;-><init>(Landroid/content/Context;Landroid/net/Uri;)V
 
-    .line 98
     new-instance v0, Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$TwoButtonAlertDialogDescriptor;
 
     const-string/jumbo v1, ""
@@ -188,11 +159,9 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mData:Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$AlertDialogDescriptor;
 
-    .line 102
     :goto_1
     return-void
 
-    .line 78
     :cond_2
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -200,7 +169,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 79
     const-string/jumbo v0, "ErrorAgent"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -247,7 +215,6 @@
 
     goto :goto_0
 
-    .line 100
     :cond_3
     new-instance v0, Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$AlertDialogDescriptor;
 
@@ -263,31 +230,25 @@
 .method private getMessage(ILcom/netflix/mediaclient/StatusCode;)Ljava/lang/String;
     .locals 5
 
-    .prologue
     const v4, 0x7f080178
 
-    .line 113
     const v0, 0x7fffffff
 
     if-ne p1, v0, :cond_1
 
-    .line 114
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 125
     :cond_0
     :goto_0
     return-object v0
 
-    .line 117
     :cond_1
     if-eqz p2, :cond_2
 
-    .line 118
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mContext:Landroid/content/Context;
 
     const/4 v1, 0x1
@@ -310,11 +271,9 @@
 
     move-result-object v0
 
-    .line 122
     :goto_1
     if-nez v0, :cond_0
 
-    .line 123
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -323,7 +282,6 @@
 
     goto :goto_0
 
-    .line 120
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mContext:Landroid/content/Context;
 
@@ -337,18 +295,14 @@
 .method private getUri(Ljava/lang/String;)Landroid/net/Uri;
     .locals 1
 
-    .prologue
-    .line 130
     invoke-static {p1}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 131
     const/4 v0, 0x0
 
-    .line 133
     :goto_0
     return-object v0
 
@@ -365,8 +319,6 @@
 .method public getBackgroundTask()Ljava/lang/Runnable;
     .locals 1
 
-    .prologue
-    .line 65
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mTask:Ljava/lang/Runnable;
 
     return-object v0
@@ -375,8 +327,6 @@
 .method public getCause()Ljava/lang/Throwable;
     .locals 1
 
-    .prologue
-    .line 138
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mCause:Ljava/lang/Throwable;
 
     return-object v0
@@ -385,8 +335,6 @@
 .method public getData()Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$AlertDialogDescriptor;
     .locals 1
 
-    .prologue
-    .line 70
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mData:Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$AlertDialogDescriptor;
 
     return-object v0
@@ -395,8 +343,6 @@
 .method public getPriority()I
     .locals 1
 
-    .prologue
-    .line 55
     iget v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineErrorDescriptor;->mPriority:I
 
     return v0
@@ -405,8 +351,6 @@
 .method public shouldReportToUserAsDialog(Landroid/app/Activity;)Z
     .locals 1
 
-    .prologue
-    .line 60
     const/4 v0, 0x1
 
     return v0

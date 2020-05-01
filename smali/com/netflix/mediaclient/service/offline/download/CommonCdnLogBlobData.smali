@@ -19,41 +19,30 @@
 .method private constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/service/offline/download/DownloadableType;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/download/CommonCdnLogBlobData;->mOxId:Ljava/lang/String;
 
-    .line 20
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/download/CommonCdnLogBlobData;->mDxId:Ljava/lang/String;
 
-    .line 21
     iput-object p4, p0, Lcom/netflix/mediaclient/service/offline/download/CommonCdnLogBlobData;->mDownloadableType:Lcom/netflix/mediaclient/service/offline/download/DownloadableType;
 
-    .line 22
     iput-object p3, p0, Lcom/netflix/mediaclient/service/offline/download/CommonCdnLogBlobData;->mDownloadableId:Ljava/lang/String;
 
-    .line 23
     iput-object p5, p0, Lcom/netflix/mediaclient/service/offline/download/CommonCdnLogBlobData;->mManifestPlaybackContextId:Ljava/lang/String;
 
-    .line 24
     return-void
 .end method
 
 .method public static create(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData;Lcom/netflix/mediaclient/service/offline/download/DownloadableInfo;Ljava/lang/String;)Lcom/netflix/mediaclient/service/offline/download/CommonCdnLogBlobData;
     .locals 6
 
-    .prologue
-    .line 30
     new-instance v0, Lcom/netflix/mediaclient/service/offline/download/CommonCdnLogBlobData;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData;->mOxId:Ljava/lang/String;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData;->mDxId:Ljava/lang/String;
 
-    .line 31
     invoke-interface {p1}, Lcom/netflix/mediaclient/service/offline/download/DownloadableInfo;->getDownloadableId()Ljava/lang/String;
 
     move-result-object v3
@@ -66,6 +55,5 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/netflix/mediaclient/service/offline/download/CommonCdnLogBlobData;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/service/offline/download/DownloadableType;Ljava/lang/String;)V
 
-    .line 30
     return-object v0
 .end method

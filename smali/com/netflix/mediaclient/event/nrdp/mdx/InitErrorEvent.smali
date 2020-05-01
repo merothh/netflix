@@ -21,8 +21,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 24
     sget-object v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->mdx_init:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     sput-object v0, Lcom/netflix/mediaclient/event/nrdp/mdx/InitErrorEvent;->TYPE:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
@@ -33,8 +31,6 @@
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 1
 
-    .prologue
-    .line 39
     sget-object v0, Lcom/netflix/mediaclient/event/nrdp/mdx/InitErrorEvent;->TYPE:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->getName()Ljava/lang/String;
@@ -43,7 +39,6 @@
 
     invoke-direct {p0, v0, p1}, Lcom/netflix/mediaclient/event/nrdp/JsonBaseNccpEvent;-><init>(Ljava/lang/String;Lorg/json/JSONObject;)V
 
-    .line 40
     return-void
 .end method
 
@@ -52,8 +47,6 @@
 .method public getError()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 57
     iget v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/InitErrorEvent;->errorCode:I
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -66,8 +59,6 @@
 .method public getErrorCode()I
     .locals 1
 
-    .prologue
-    .line 66
     iget v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/InitErrorEvent;->errorCode:I
 
     return v0
@@ -76,8 +67,6 @@
 .method public getErrorDesc()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 75
     iget-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/InitErrorEvent;->errorDesc:Ljava/lang/String;
 
     return-object v0
@@ -86,8 +75,6 @@
 .method public getObject()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 85
     const-string/jumbo v0, "nrdp.mdx"
 
     return-object v0
@@ -96,8 +83,6 @@
 .method protected populate(Lorg/json/JSONObject;)V
     .locals 2
 
-    .prologue
-    .line 47
     const-string/jumbo v0, "errorCode"
 
     const/4 v1, -0x1
@@ -108,7 +93,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/InitErrorEvent;->errorCode:I
 
-    .line 48
     const-string/jumbo v0, "errorDesc"
 
     const/4 v1, 0x0
@@ -119,6 +103,5 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/InitErrorEvent;->errorDesc:Ljava/lang/String;
 
-    .line 49
     return-void
 .end method

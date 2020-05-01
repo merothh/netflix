@@ -7,12 +7,9 @@
 .method public static setDescription(Ljava/lang/Object;Ljava/lang/CharSequence;)V
     .locals 0
 
-    .prologue
-    .line 41
     check-cast p0, Landroid/media/MediaRouter$UserRouteInfo;
 
     invoke-virtual {p0, p1}, Landroid/media/MediaRouter$UserRouteInfo;->setDescription(Ljava/lang/CharSequence;)V
 
-    .line 42
     return-void
 .end method

@@ -23,11 +23,8 @@
 .method public constructor <init>([B)V
     .locals 2
 
-    .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     :try_start_0
     const-string/jumbo v0, "AES/CTR/NoPadding"
 
@@ -37,7 +34,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/AesCencDecryptor;->mCipher:Ljavax/crypto/Cipher;
 
-    .line 32
     new-instance v0, Ljavax/crypto/spec/SecretKeySpec;
 
     const-string/jumbo v1, "AES"
@@ -50,15 +46,12 @@
     .catch Ljavax/crypto/NoSuchPaddingException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 38
     :goto_0
     return-void
 
-    .line 33
     :catch_0
     move-exception v0
 
-    .line 34
     :goto_1
     const-string/jumbo v0, "AseCencDecryptor"
 
@@ -68,11 +61,9 @@
 
     goto :goto_0
 
-    .line 35
     :catch_1
     move-exception v0
 
-    .line 36
     const-string/jumbo v0, "AseCencDecryptor"
 
     const-string/jumbo v1, "KeySpec has IllegalArgumentException"
@@ -81,7 +72,6 @@
 
     goto :goto_0
 
-    .line 33
     :catch_2
     move-exception v0
 
@@ -91,63 +81,48 @@
 .method private copyWorkingBuffer(Ljava/nio/ByteBuffer;[B[I[IZ)V
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 105
-    .line 106
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v1
 
-    .line 107
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->mark()Ljava/nio/Buffer;
 
     move v2, v0
 
-    .line 108
     :goto_0
     array-length v3, p4
 
     if-ge v0, v3, :cond_1
 
-    .line 109
     aget v3, p3, v0
 
     add-int/2addr v1, v3
 
-    .line 110
     invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 111
     aget v3, p4, v0
 
-    .line 112
     if-eqz p5, :cond_0
 
-    .line 113
     invoke-virtual {p1, p2, v2, v3}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    .line 117
     :goto_1
     add-int/2addr v2, v3
 
-    .line 108
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 115
     :cond_0
     invoke-virtual {p1, p2, v2, v3}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
     goto :goto_1
 
-    .line 119
     :cond_1
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->reset()Ljava/nio/Buffer;
 
-    .line 120
     return-void
 .end method
 
@@ -156,14 +131,12 @@
 .method public decrypt(Ljava/nio/ByteBuffer;[B[I[I)Z
     .locals 10
 
-    .prologue
     const/4 v6, 0x1
 
     const/16 v3, 0x10
 
     const/4 v1, 0x0
 
-    .line 46
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
@@ -172,7 +145,6 @@
 
     if-nez p4, :cond_2
 
-    .line 47
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -180,7 +152,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 48
     const-string/jumbo v0, "AseCencDecryptor"
 
     const-string/jumbo v2, "input is null"
@@ -190,11 +161,9 @@
     :cond_1
     move v0, v1
 
-    .line 101
     :goto_0
     return v0
 
-    .line 52
     :cond_2
     array-length v0, p3
 
@@ -220,7 +189,6 @@
 
     if-eq v0, v2, :cond_5
 
-    .line 55
     :cond_3
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -228,7 +196,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 56
     const-string/jumbo v0, "AseCencDecryptor"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -280,37 +247,30 @@
     :cond_4
     move v0, v1
 
-    .line 59
     goto :goto_0
 
-    .line 61
     :cond_5
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v8
 
-    .line 63
     array-length v0, p2
 
     if-ge v0, v3, :cond_6
 
-    .line 64
     new-array v0, v3, [B
 
-    .line 65
     array-length v2, p2
 
     invoke-static {p2, v1, v0, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     move-object p2, v0
 
-    .line 71
     :cond_6
     new-instance v0, Ljavax/crypto/spec/IvParameterSpec;
 
     invoke-direct {v0, p2}, Ljavax/crypto/spec/IvParameterSpec;-><init>([B)V
 
-    .line 73
     :try_start_0
     iget-object v2, p0, Lcom/netflix/mediaclient/media/JPlayer/AesCencDecryptor;->mCipher:Ljavax/crypto/Cipher;
 
@@ -322,29 +282,24 @@
 
     move v7, v1
 
-    .line 75
     :goto_1
     array-length v0, p4
 
     if-ge v1, v0, :cond_7
 
-    .line 76
     aget v0, p4, v1
 
     add-int/2addr v0, v7
 
-    .line 75
     add-int/lit8 v1, v1, 0x1
 
     move v7, v0
 
     goto :goto_1
 
-    .line 81
     :cond_7
     new-array v2, v7, [B
 
-    .line 83
     const/4 v5, 0x1
 
     move-object v0, p0
@@ -357,14 +312,12 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/netflix/mediaclient/media/JPlayer/AesCencDecryptor;->copyWorkingBuffer(Ljava/nio/ByteBuffer;[B[I[IZ)V
 
-    .line 86
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/AesCencDecryptor;->mCipher:Ljavax/crypto/Cipher;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v2, v1, v7, v2}, Ljavax/crypto/Cipher;->doFinal([BII[B)I
 
-    .line 88
     const/4 v5, 0x0
 
     move-object v0, p0
@@ -377,14 +330,12 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/netflix/mediaclient/media/JPlayer/AesCencDecryptor;->copyWorkingBuffer(Ljava/nio/ByteBuffer;[B[I[IZ)V
 
-    .line 89
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
-    .line 90
     const-string/jumbo v0, "AseCencDecryptor"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -445,14 +396,11 @@
     :goto_2
     move v0, v6
 
-    .line 101
     goto/16 :goto_0
 
-    .line 92
     :catch_0
     move-exception v0
 
-    .line 93
     const-string/jumbo v1, "AseCencDecryptor"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -477,11 +425,9 @@
 
     goto :goto_2
 
-    .line 94
     :catch_1
     move-exception v0
 
-    .line 95
     const-string/jumbo v1, "AseCencDecryptor"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -506,11 +452,9 @@
 
     goto :goto_2
 
-    .line 96
     :catch_2
     move-exception v0
 
-    .line 97
     const-string/jumbo v0, "AseCencDecryptor"
 
     const-string/jumbo v1, "fail to decrypt, output buffer is too short. "
@@ -519,11 +463,9 @@
 
     goto :goto_2
 
-    .line 98
     :catch_3
     move-exception v0
 
-    .line 99
     :goto_3
     const-string/jumbo v1, "AseCencDecryptor"
 
@@ -549,7 +491,6 @@
 
     goto :goto_2
 
-    .line 98
     :catch_4
     move-exception v0
 

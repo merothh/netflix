@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/common/RatingDialogFrag;)V
     .locals 0
 
-    .prologue
-    .line 116
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/common/RatingDialogFrag$1;->this$0:Lcom/netflix/mediaclient/ui/common/RatingDialogFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public destroyed()Z
     .locals 1
 
-    .prologue
-    .line 134
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/RatingDialogFrag$1;->this$0:Lcom/netflix/mediaclient/ui/common/RatingDialogFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/common/RatingDialogFrag;->access$300(Lcom/netflix/mediaclient/ui/common/RatingDialogFrag;)Z
@@ -42,8 +38,6 @@
 .method public getPlayContext()Lcom/netflix/mediaclient/ui/common/PlayContext;
     .locals 1
 
-    .prologue
-    .line 139
     sget-object v0, Lcom/netflix/mediaclient/ui/common/PlayContext;->EMPTY_CONTEXT:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
     return-object v0
@@ -52,8 +46,6 @@
 .method public getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
     .locals 1
 
-    .prologue
-    .line 129
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/RatingDialogFrag$1;->this$0:Lcom/netflix/mediaclient/ui/common/RatingDialogFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/common/RatingDialogFrag;->access$200(Lcom/netflix/mediaclient/ui/common/RatingDialogFrag;)Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -70,8 +62,6 @@
 .method public getVideoId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 119
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/RatingDialogFrag$1;->this$0:Lcom/netflix/mediaclient/ui/common/RatingDialogFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/common/RatingDialogFrag;->access$000(Lcom/netflix/mediaclient/ui/common/RatingDialogFrag;)Ljava/lang/String;
@@ -84,8 +74,6 @@
 .method public getVideoType()Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
     .locals 1
 
-    .prologue
-    .line 124
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/RatingDialogFrag$1;->this$0:Lcom/netflix/mediaclient/ui/common/RatingDialogFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/common/RatingDialogFrag;->access$100(Lcom/netflix/mediaclient/ui/common/RatingDialogFrag;)Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;

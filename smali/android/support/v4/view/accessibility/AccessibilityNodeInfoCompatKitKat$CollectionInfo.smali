@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 150
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,8 +15,6 @@
 .method static getColumnCount(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 152
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;->getColumnCount()I
@@ -31,8 +27,6 @@
 .method static getRowCount(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 156
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;->getRowCount()I
@@ -45,8 +39,6 @@
 .method static isHierarchical(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 160
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;->isHierarchical()Z

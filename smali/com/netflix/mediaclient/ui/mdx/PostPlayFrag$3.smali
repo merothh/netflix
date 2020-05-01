@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;)V
     .locals 0
 
-    .prologue
-    .line 134
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag$3;->this$0:Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
-    .prologue
-    .line 137
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag$3;->this$0:Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;->getActivity()Landroid/app/Activity;
@@ -44,6 +40,5 @@
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 138
     return-void
 .end method

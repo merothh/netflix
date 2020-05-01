@@ -13,8 +13,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/logging/perf/PerfSession;Lcom/netflix/mediaclient/service/logging/client/model/SessionStartedEvent;JLjava/util/Map;)V
     .locals 1
 
-    .prologue
-    .line 108
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/perf/PerfSession$2;->this$0:Lcom/netflix/mediaclient/service/logging/perf/PerfSession;
 
     iput-object p5, p0, Lcom/netflix/mediaclient/service/logging/perf/PerfSession$2;->val$params:Ljava/util/Map;
@@ -29,8 +27,6 @@
 .method protected getCustomData()Lorg/json/JSONObject;
     .locals 2
 
-    .prologue
-    .line 111
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/perf/PerfSession$2;->val$params:Ljava/util/Map;
 
     if-eqz v0, :cond_0
@@ -43,14 +39,12 @@
 
     if-nez v0, :cond_0
 
-    .line 112
     new-instance v0, Lorg/json/JSONObject;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/perf/PerfSession$2;->val$params:Ljava/util/Map;
 
     invoke-direct {v0, v1}, Lorg/json/JSONObject;-><init>(Ljava/util/Map;)V
 
-    .line 114
     :goto_0
     return-object v0
 

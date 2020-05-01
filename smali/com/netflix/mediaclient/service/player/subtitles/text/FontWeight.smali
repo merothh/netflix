@@ -46,7 +46,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -57,7 +56,6 @@
 
     const/4 v4, 0x0
 
-    .line 24
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
 
     const-string/jumbo v1, "Thin"
@@ -68,7 +66,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;->Thin:Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
 
-    .line 25
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
 
     const-string/jumbo v1, "Light"
@@ -79,7 +76,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;->Light:Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
 
-    .line 26
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
 
     const-string/jumbo v1, "Book"
@@ -90,7 +86,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;->Book:Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
 
-    .line 27
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
 
     const-string/jumbo v1, "Regular"
@@ -101,7 +96,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;->Regular:Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
 
-    .line 28
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
 
     const-string/jumbo v1, "Medium"
@@ -112,7 +106,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;->Medium:Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
 
-    .line 29
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
 
     const-string/jumbo v1, "SemiBold"
@@ -125,7 +118,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;->SemiBold:Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
 
-    .line 30
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
 
     const-string/jumbo v1, "Bold"
@@ -138,7 +130,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;->Bold:Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
 
-    .line 31
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
 
     const-string/jumbo v1, "Black"
@@ -151,7 +142,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;->Black:Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
 
-    .line 32
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
 
     const-string/jumbo v1, "ExtraBlack"
@@ -164,7 +154,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;->ExtraBlack:Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
 
-    .line 23
     const/16 v0, 0x9
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
@@ -226,22 +215,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 37
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 38
     iput p3, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;->mValue:I
 
-    .line 39
     return-void
 .end method
 
 .method private static convertName(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 59
     const-string/jumbo v0, "normal"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -250,14 +233,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 60
     sget-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;->Regular:Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;->name()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 63
     :cond_0
     return-object p0
 .end method
@@ -265,13 +246,10 @@
 .method public static createFontWeight(Ljava/lang/String;)Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
     .locals 6
 
-    .prologue
-    .line 47
     invoke-static {p0}, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;->convertName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 48
     invoke-static {}, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;->values()[Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
 
     move-result-object v3
@@ -287,7 +265,6 @@
 
     aget-object v0, v3, v1
 
-    .line 49
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;->name()Ljava/lang/String;
 
     move-result-object v5
@@ -298,11 +275,9 @@
 
     if-eqz v5, :cond_0
 
-    .line 54
     :goto_1
     return-object v0
 
-    .line 48
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -310,7 +285,6 @@
 
     goto :goto_0
 
-    .line 54
     :cond_1
     const/4 v0, 0x0
 
@@ -320,8 +294,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
     .locals 1
 
-    .prologue
-    .line 23
     const-class v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -336,8 +308,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
     .locals 1
 
-    .prologue
-    .line 23
     sget-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;->$VALUES:[Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;->clone()Ljava/lang/Object;
@@ -354,8 +324,6 @@
 .method public getValue()I
     .locals 1
 
-    .prologue
-    .line 42
     iget v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/FontWeight;->mValue:I
 
     return v0

@@ -14,8 +14,6 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/media/JPlayer/JPlayer2;)V
     .locals 0
 
-    .prologue
-    .line 190
     iput-object p1, p0, Lcom/netflix/mediaclient/media/JPlayer/JPlayer2$DecoderListener;->this$0:Lcom/netflix/mediaclient/media/JPlayer/JPlayer2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,13 +26,10 @@
 .method public declared-synchronized onDecoderReady(Z)V
     .locals 2
 
-    .prologue
-    .line 192
     monitor-enter p0
 
     if-eqz p1, :cond_0
 
-    .line 193
     :try_start_0
     const-string/jumbo v0, "NF_JPlayer2"
 
@@ -44,13 +39,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 200
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 196
     :cond_0
     :try_start_1
     const-string/jumbo v0, "NF_JPlayer2"
@@ -59,7 +52,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 198
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/JPlayer2$DecoderListener;->this$0:Lcom/netflix/mediaclient/media/JPlayer/JPlayer2;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/media/JPlayer/JPlayer2;->access$600(Lcom/netflix/mediaclient/media/JPlayer/JPlayer2;)V
@@ -68,7 +60,6 @@
 
     goto :goto_0
 
-    .line 192
     :catchall_0
     move-exception v0
 
@@ -80,13 +71,10 @@
 .method public declared-synchronized onDecoderStarted(Z)V
     .locals 2
 
-    .prologue
-    .line 212
     monitor-enter p0
 
     if-eqz p1, :cond_0
 
-    .line 213
     :try_start_0
     const-string/jumbo v0, "NF_JPlayer2"
 
@@ -96,13 +84,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 222
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 217
     :cond_0
     :try_start_1
     const-string/jumbo v0, "NF_JPlayer2"
@@ -111,7 +97,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 220
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/JPlayer2$DecoderListener;->this$0:Lcom/netflix/mediaclient/media/JPlayer/JPlayer2;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/media/JPlayer/JPlayer2;->access$500(Lcom/netflix/mediaclient/media/JPlayer/JPlayer2;)Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase;
@@ -124,7 +109,6 @@
 
     goto :goto_0
 
-    .line 212
     :catchall_0
     move-exception v0
 
@@ -136,27 +120,21 @@
 .method public onEndOfStream(Z)V
     .locals 2
 
-    .prologue
-    .line 252
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/JPlayer2$DecoderListener;->this$0:Lcom/netflix/mediaclient/media/JPlayer/JPlayer2;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/media/JPlayer/JPlayer2;->access$1000(Lcom/netflix/mediaclient/media/JPlayer/JPlayer2;Z)V
 
-    .line 253
     if-eqz p1, :cond_0
 
-    .line 254
     const-string/jumbo v0, "NF_JPlayer2"
 
     const-string/jumbo v1, "AUDIO END_OF_STREAM"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 259
     :goto_0
     return-void
 
-    .line 257
     :cond_0
     const-string/jumbo v0, "NF_JPlayer2"
 
@@ -170,8 +148,6 @@
 .method public declared-synchronized onError(ZILjava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 205
     monitor-enter p0
 
     :try_start_0
@@ -183,12 +159,10 @@
 
     if-nez v0, :cond_0
 
-    .line 206
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/JPlayer2$DecoderListener;->this$0:Lcom/netflix/mediaclient/media/JPlayer/JPlayer2;
 
     invoke-static {v0, p2, p3}, Lcom/netflix/mediaclient/media/JPlayer/JPlayer2;->access$800(Lcom/netflix/mediaclient/media/JPlayer/JPlayer2;ILjava/lang/String;)V
 
-    .line 207
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/JPlayer2$DecoderListener;->this$0:Lcom/netflix/mediaclient/media/JPlayer/JPlayer2;
 
     const/4 v1, 0x1
@@ -197,13 +171,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 209
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 205
     :catchall_0
     move-exception v0
 
@@ -215,13 +187,10 @@
 .method public declared-synchronized onFlushed(Z)V
     .locals 2
 
-    .prologue
-    .line 243
     monitor-enter p0
 
     if-eqz p1, :cond_0
 
-    .line 244
     :try_start_0
     const-string/jumbo v0, "NF_JPlayer2"
 
@@ -229,20 +198,17 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 245
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/JPlayer2$DecoderListener;->this$0:Lcom/netflix/mediaclient/media/JPlayer/JPlayer2;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/media/JPlayer/JPlayer2;->access$600(Lcom/netflix/mediaclient/media/JPlayer/JPlayer2;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 250
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 248
     :cond_0
     :try_start_1
     const-string/jumbo v0, "NF_JPlayer2"
@@ -255,7 +221,6 @@
 
     goto :goto_0
 
-    .line 243
     :catchall_0
     move-exception v0
 
@@ -267,13 +232,10 @@
 .method public declared-synchronized onPasued(Z)V
     .locals 2
 
-    .prologue
-    .line 234
     monitor-enter p0
 
     if-eqz p1, :cond_0
 
-    .line 235
     :try_start_0
     const-string/jumbo v0, "NF_JPlayer2"
 
@@ -281,20 +243,17 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 236
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/JPlayer2$DecoderListener;->this$0:Lcom/netflix/mediaclient/media/JPlayer/JPlayer2;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/media/JPlayer/JPlayer2;->access$600(Lcom/netflix/mediaclient/media/JPlayer/JPlayer2;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 241
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 239
     :cond_0
     :try_start_1
     const-string/jumbo v0, "NF_JPlayer2"
@@ -307,7 +266,6 @@
 
     goto :goto_0
 
-    .line 234
     :catchall_0
     move-exception v0
 
@@ -319,8 +277,6 @@
 .method public declared-synchronized onSampleRendered(ZJJ)V
     .locals 2
 
-    .prologue
-    .line 225
     monitor-enter p0
 
     :try_start_0
@@ -330,16 +286,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 226
     if-eqz p1, :cond_0
 
-    .line 232
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 225
     :catchall_0
     move-exception v0
 

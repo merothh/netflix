@@ -21,14 +21,10 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/ServiceAgent$UserAgentInterface;)V
     .locals 0
 
-    .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/LicenseRequestParamBuilder;->mUser:Lcom/netflix/mediaclient/service/ServiceAgent$UserAgentInterface;
 
-    .line 23
     return-void
 .end method
 
@@ -37,29 +33,23 @@
 .method final build()Ljava/lang/String;
     .locals 7
 
-    .prologue
     const/4 v6, 0x0
 
-    .line 36
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
-    .line 37
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/LicenseRequestParamBuilder;->mLicenseLink:Lorg/json/JSONObject;
 
     if-nez v0, :cond_0
 
-    .line 38
     invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 67
     :goto_0
     return-object v0
 
-    .line 42
     :cond_0
     :try_start_0
     const-string/jumbo v0, "version"
@@ -68,7 +58,6 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 43
     const-string/jumbo v0, "method"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/LicenseRequestParamBuilder;->mLicenseLink:Lorg/json/JSONObject;
@@ -81,7 +70,6 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 44
     const-string/jumbo v0, "url"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/LicenseRequestParamBuilder;->mLicenseLink:Lorg/json/JSONObject;
@@ -94,7 +82,6 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 46
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -105,41 +92,34 @@
 
     move-result-wide v2
 
-    .line 47
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    .line 48
     const-string/jumbo v4, "clientTime"
 
     invoke-virtual {v0, v4, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 49
     const-string/jumbo v2, "forceDeviceActivate"
 
     iget-boolean v3, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/LicenseRequestParamBuilder;->mForceDeviceActivate:Z
 
     invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
-    .line 50
     const-string/jumbo v2, "challengeBase64"
 
     iget-object v3, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/LicenseRequestParamBuilder;->mBase64Challenge:Ljava/lang/String;
 
     invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 51
     const-string/jumbo v2, "params"
 
     invoke-virtual {v1, v2, v0}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 55
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    .line 56
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/LicenseRequestParamBuilder;->mUser:Lcom/netflix/mediaclient/service/ServiceAgent$UserAgentInterface;
 
     invoke-interface {v2}, Lcom/netflix/mediaclient/service/ServiceAgent$UserAgentInterface;->getCurrentProfile()Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;
@@ -150,7 +130,6 @@
 
     move-result-object v2
 
-    .line 57
     const/4 v3, 0x1
 
     new-array v3, v3, [Ljava/lang/String;
@@ -169,7 +148,6 @@
 
     aput-object v5, v3, v4
 
-    .line 58
     const-string/jumbo v4, "appselectedlanguages"
 
     new-instance v5, Lorg/json/JSONArray;
@@ -182,7 +160,6 @@
 
     invoke-virtual {v0, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 59
     const-string/jumbo v2, "platformselectedlanguages"
 
     new-instance v4, Lorg/json/JSONArray;
@@ -195,14 +172,12 @@
 
     invoke-virtual {v0, v2, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 60
     const-string/jumbo v2, "preferredlanguages"
 
     invoke-virtual {v1, v2, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 67
     :goto_1
     invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
@@ -210,11 +185,9 @@
 
     goto/16 :goto_0
 
-    .line 64
     :catch_0
     move-exception v0
 
-    .line 65
     const-string/jumbo v2, "nf_msl_volley_FetchLicenseRequest"
 
     const-string/jumbo v3, "error creating manifest params"
@@ -229,37 +202,28 @@
 .method buildBaseParams(Lorg/json/JSONObject;Ljava/lang/String;)Lcom/netflix/mediaclient/service/player/bladerunnerclient/LicenseRequestParamBuilder;
     .locals 1
 
-    .prologue
-    .line 71
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/LicenseRequestParamBuilder;->setLicenseLink(Lorg/json/JSONObject;)Lcom/netflix/mediaclient/service/player/bladerunnerclient/LicenseRequestParamBuilder;
 
     move-result-object v0
 
-    .line 72
     invoke-virtual {v0, p2}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/LicenseRequestParamBuilder;->setBase64Challenge(Ljava/lang/String;)Lcom/netflix/mediaclient/service/player/bladerunnerclient/LicenseRequestParamBuilder;
 
     move-result-object v0
 
-    .line 71
     return-object v0
 .end method
 
 .method setBase64Challenge(Ljava/lang/String;)Lcom/netflix/mediaclient/service/player/bladerunnerclient/LicenseRequestParamBuilder;
     .locals 0
 
-    .prologue
-    .line 31
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/LicenseRequestParamBuilder;->mBase64Challenge:Ljava/lang/String;
 
-    .line 32
     return-object p0
 .end method
 
 .method setInvokeLocation(Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$OfflineRefreshInvoke;)Lcom/netflix/mediaclient/service/player/bladerunnerclient/LicenseRequestParamBuilder;
     .locals 2
 
-    .prologue
-    .line 76
     sget-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$OfflineRefreshInvoke;->USER:Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$OfflineRefreshInvoke;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/IBladeRunnerClient$OfflineRefreshInvoke;->getValue()I
@@ -277,10 +241,8 @@
     :goto_0
     iput-boolean v0, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/LicenseRequestParamBuilder;->mForceDeviceActivate:Z
 
-    .line 77
     return-object p0
 
-    .line 76
     :cond_0
     const/4 v0, 0x0
 
@@ -290,10 +252,7 @@
 .method setLicenseLink(Lorg/json/JSONObject;)Lcom/netflix/mediaclient/service/player/bladerunnerclient/LicenseRequestParamBuilder;
     .locals 0
 
-    .prologue
-    .line 26
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/LicenseRequestParamBuilder;->mLicenseLink:Lorg/json/JSONObject;
 
-    .line 27
     return-object p0
 .end method

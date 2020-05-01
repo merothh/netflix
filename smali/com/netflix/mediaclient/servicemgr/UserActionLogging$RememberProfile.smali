@@ -28,14 +28,12 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x2
 
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 425
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$RememberProfile;
 
     const-string/jumbo v1, "userNotOfferedChoice"
@@ -44,7 +42,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$RememberProfile;->userNotOfferedChoice:Lcom/netflix/mediaclient/servicemgr/UserActionLogging$RememberProfile;
 
-    .line 426
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$RememberProfile;
 
     const-string/jumbo v1, "userChoseToRemember"
@@ -53,7 +50,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$RememberProfile;->userChoseToRemember:Lcom/netflix/mediaclient/servicemgr/UserActionLogging$RememberProfile;
 
-    .line 427
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$RememberProfile;
 
     const-string/jumbo v1, "userChoseNotToRemember"
@@ -62,7 +58,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$RememberProfile;->userChoseNotToRemember:Lcom/netflix/mediaclient/servicemgr/UserActionLogging$RememberProfile;
 
-    .line 424
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/UserActionLogging$RememberProfile;
@@ -92,8 +87,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 424
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -102,8 +95,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/UserActionLogging$RememberProfile;
     .locals 1
 
-    .prologue
-    .line 424
     const-class v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$RememberProfile;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -118,8 +109,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/UserActionLogging$RememberProfile;
     .locals 1
 
-    .prologue
-    .line 424
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$RememberProfile;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/UserActionLogging$RememberProfile;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/UserActionLogging$RememberProfile;->clone()Ljava/lang/Object;

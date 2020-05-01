@@ -19,8 +19,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;ILcom/netflix/mediaclient/service/pservice/PDiskData;Lcom/netflix/mediaclient/service/preapp/PreAppAgentEventType;)V
     .locals 1
 
-    .prologue
-    .line 193
     iput-object p1, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$8;->this$0:Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;
 
     iput p2, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$8;->val$urlFetchCount:I
@@ -31,7 +29,6 @@
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/resfetcher/LoggingResourceFetcherCallback;-><init>()V
 
-    .line 194
     iget v0, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$8;->val$urlFetchCount:I
 
     iput v0, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$8;->mCount:I
@@ -44,8 +41,6 @@
 .method public onResourceFetched(Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 5
 
-    .prologue
-    .line 197
     const-string/jumbo v0, "nf_preappagentdatahandler"
 
     const-string/jumbo v1, "onResourceFetched mCount: %d, reqUrl: %s, localUrl: %s"
@@ -78,14 +73,12 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 199
     iget-object v0, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$8;->val$newData:Lcom/netflix/mediaclient/service/pservice/PDiskData;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->urlMap:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 200
     iget v0, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$8;->mCount:I
 
     add-int/lit8 v0, v0, -0x1
@@ -94,14 +87,12 @@
 
     if-gtz v0, :cond_0
 
-    .line 201
     const-string/jumbo v0, "nf_preappagentdatahandler"
 
     const-string/jumbo v1, "fetching of images done. store newData"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 202
     iget-object v0, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$8;->this$0:Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$8;->val$newData:Lcom/netflix/mediaclient/service/pservice/PDiskData;
@@ -110,7 +101,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;->access$1100(Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;Lcom/netflix/mediaclient/service/pservice/PDiskData;Lcom/netflix/mediaclient/service/preapp/PreAppAgentEventType;)V
 
-    .line 204
     :cond_0
     return-void
 .end method

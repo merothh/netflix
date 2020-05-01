@@ -14,8 +14,6 @@
 .method private constructor <init>(Lcom/netflix/mediaclient/service/NrdController;)V
     .locals 0
 
-    .prologue
-    .line 252
     iput-object p1, p0, Lcom/netflix/mediaclient/service/NrdController$NrdBridge;->this$0:Lcom/netflix/mediaclient/service/NrdController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,8 +24,6 @@
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/service/NrdController;Lcom/netflix/mediaclient/service/NrdController$1;)V
     .locals 0
 
-    .prologue
-    .line 252
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/NrdController$NrdBridge;-><init>(Lcom/netflix/mediaclient/service/NrdController;)V
 
     return-void
@@ -38,8 +34,6 @@
 .method public enableLowBitrateStreams()Z
     .locals 1
 
-    .prologue
-    .line 330
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NrdController$NrdBridge;->this$0:Lcom/netflix/mediaclient/service/NrdController;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/NrdController;->getConfigurationAgent()Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;
@@ -56,8 +50,6 @@
 .method public getConfigVideoBufferSize()I
     .locals 1
 
-    .prologue
-    .line 315
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NrdController$NrdBridge;->this$0:Lcom/netflix/mediaclient/service/NrdController;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/NrdController;->getConfigurationAgent()Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;
@@ -74,8 +66,6 @@
 .method public getContext()Landroid/content/Context;
     .locals 1
 
-    .prologue
-    .line 325
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NrdController$NrdBridge;->this$0:Lcom/netflix/mediaclient/service/NrdController;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/NrdController;->getContext()Landroid/content/Context;
@@ -88,8 +78,6 @@
 .method public getCurrentPlayerType()Lcom/netflix/mediaclient/media/PlayerType;
     .locals 1
 
-    .prologue
-    .line 295
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NrdController$NrdBridge;->this$0:Lcom/netflix/mediaclient/service/NrdController;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/NrdController;->getConfigurationAgent()Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;
@@ -106,8 +94,6 @@
 .method public getDeviceCategory()Lcom/netflix/mediaclient/util/DeviceCategory;
     .locals 1
 
-    .prologue
-    .line 300
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NrdController$NrdBridge;->this$0:Lcom/netflix/mediaclient/service/NrdController;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/NrdController;->getConfigurationAgent()Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;
@@ -124,8 +110,6 @@
 .method public getDeviceLocale()Ljava/util/Locale;
     .locals 1
 
-    .prologue
-    .line 285
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/NrdController$NrdBridge;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -140,8 +124,6 @@
 .method public getDisplaySize()Landroid/view/Display;
     .locals 2
 
-    .prologue
-    .line 275
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/NrdController$NrdBridge;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -154,15 +136,12 @@
 
     check-cast v0, Landroid/view/WindowManager;
 
-    .line 276
     if-eqz v0, :cond_0
 
-    .line 277
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v0
 
-    .line 279
     :goto_0
     return-object v0
 
@@ -175,8 +154,6 @@
 .method public getEsnProvider()Lcom/netflix/mediaclient/service/configuration/esn/EsnProvider;
     .locals 1
 
-    .prologue
-    .line 270
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NrdController$NrdBridge;->this$0:Lcom/netflix/mediaclient/service/NrdController;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/NrdController;->getConfigurationAgent()Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;
@@ -193,8 +170,6 @@
 .method public getFileSystemRoot()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 290
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/NrdController$NrdBridge;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -213,8 +188,6 @@
 .method public getInstallationSource()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 305
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/NrdController$NrdBridge;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -229,8 +202,6 @@
 .method public getIpConnectivityPolicy()Lcom/netflix/mediaclient/service/net/IpConnectivityPolicy;
     .locals 1
 
-    .prologue
-    .line 320
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NrdController$NrdBridge;->this$0:Lcom/netflix/mediaclient/service/NrdController;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/NrdController;->getConfigurationAgent()Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;
@@ -247,8 +218,6 @@
 .method public getNrdProxy()Lcom/netflix/mediaclient/javabridge/NrdProxy;
     .locals 1
 
-    .prologue
-    .line 260
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NrdController$NrdBridge;->this$0:Lcom/netflix/mediaclient/service/NrdController;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/NrdController;->access$200(Lcom/netflix/mediaclient/service/NrdController;)Lcom/netflix/mediaclient/javabridge/NrdProxy;
@@ -261,8 +230,6 @@
 .method public getNrdp()Lcom/netflix/mediaclient/javabridge/ui/Nrdp;
     .locals 1
 
-    .prologue
-    .line 255
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NrdController$NrdBridge;->this$0:Lcom/netflix/mediaclient/service/NrdController;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/NrdController;->access$100(Lcom/netflix/mediaclient/service/NrdController;)Lcom/netflix/mediaclient/javabridge/ui/Nrdp;
@@ -275,8 +242,6 @@
 .method public getSoftwareVersion()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 265
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NrdController$NrdBridge;->this$0:Lcom/netflix/mediaclient/service/NrdController;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/NrdController;->getConfigurationAgent()Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;
@@ -293,8 +258,6 @@
 .method public isDeviceLowMem()Z
     .locals 1
 
-    .prologue
-    .line 310
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NrdController$NrdBridge;->this$0:Lcom/netflix/mediaclient/service/NrdController;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/NrdController;->getConfigurationAgent()Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;

@@ -50,8 +50,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -62,8 +60,6 @@
 .method public getBoxartImageTypeIdentifier()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 216
     iget-object v0, p0, Lcom/netflix/model/leafs/Video$Summary;->boxartImageTypeIdentifier:Ljava/lang/String;
 
     return-object v0
@@ -72,8 +68,6 @@
 .method public getBoxshotUrl()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 212
     iget-object v0, p0, Lcom/netflix/model/leafs/Video$Summary;->boxartUrl:Ljava/lang/String;
 
     return-object v0
@@ -82,8 +76,6 @@
 .method public getErrorType()Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
     .locals 1
 
-    .prologue
-    .line 234
     iget-object v0, p0, Lcom/netflix/model/leafs/Video$Summary;->errorType:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     return-object v0
@@ -92,8 +84,6 @@
 .method public getHorzDispSmallUrl()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 257
     iget-object v0, p0, Lcom/netflix/model/leafs/Video$Summary;->horzDispSmallUrl:Ljava/lang/String;
 
     return-object v0
@@ -102,8 +92,6 @@
 .method public getHorzDispUrl()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 252
     iget-object v0, p0, Lcom/netflix/model/leafs/Video$Summary;->horzDispUrl:Ljava/lang/String;
 
     return-object v0
@@ -112,8 +100,6 @@
 .method public getId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 202
     iget-object v0, p0, Lcom/netflix/model/leafs/Video$Summary;->id:Ljava/lang/String;
 
     return-object v0
@@ -122,8 +108,6 @@
 .method public getStoryDispUrl()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 262
     iget-object v0, p0, Lcom/netflix/model/leafs/Video$Summary;->storyImgDispUrl:Ljava/lang/String;
 
     return-object v0
@@ -132,8 +116,6 @@
 .method public getTitle()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 207
     iget-object v0, p0, Lcom/netflix/model/leafs/Video$Summary;->title:Ljava/lang/String;
 
     return-object v0
@@ -142,8 +124,6 @@
 .method public getTvCardUrl()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 247
     iget-object v0, p0, Lcom/netflix/model/leafs/Video$Summary;->tvCardUrl:Ljava/lang/String;
 
     return-object v0
@@ -152,13 +132,10 @@
 .method public getType()Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
     .locals 1
 
-    .prologue
-    .line 221
     iget-object v0, p0, Lcom/netflix/model/leafs/Video$Summary;->enumType:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     if-nez v0, :cond_0
 
-    .line 222
     iget-object v0, p0, Lcom/netflix/model/leafs/Video$Summary;->type:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->create(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
@@ -167,7 +144,6 @@
 
     iput-object v0, p0, Lcom/netflix/model/leafs/Video$Summary;->enumType:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
-    .line 224
     :cond_0
     iget-object v0, p0, Lcom/netflix/model/leafs/Video$Summary;->enumType:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
@@ -177,8 +153,6 @@
 .method public isEpisode()Z
     .locals 1
 
-    .prologue
-    .line 242
     iget-boolean v0, p0, Lcom/netflix/model/leafs/Video$Summary;->isEpisode:Z
 
     return v0
@@ -187,8 +161,6 @@
 .method public isOriginal()Z
     .locals 1
 
-    .prologue
-    .line 267
     iget-boolean v0, p0, Lcom/netflix/model/leafs/Video$Summary;->isOriginal:Z
 
     return v0
@@ -197,8 +169,6 @@
 .method public isPreRelease()Z
     .locals 1
 
-    .prologue
-    .line 272
     iget-boolean v0, p0, Lcom/netflix/model/leafs/Video$Summary;->isPreRelease:Z
 
     return v0
@@ -207,18 +177,14 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 6
 
-    .prologue
-    .line 116
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 117
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 118
     const-string/jumbo v1, "Summary"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -241,7 +207,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
     :cond_0
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -264,14 +229,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 121
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/gson/JsonElement;
 
-    .line 122
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -294,7 +257,6 @@
 
     goto :goto_0
 
-    .line 123
     :pswitch_0
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -304,7 +266,6 @@
 
     goto :goto_0
 
-    .line 122
     :sswitch_0
     const-string/jumbo v5, "id"
 
@@ -500,7 +461,6 @@
 
     goto/16 :goto_1
 
-    .line 124
     :pswitch_1
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -510,7 +470,6 @@
 
     goto/16 :goto_0
 
-    .line 125
     :pswitch_2
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -520,7 +479,6 @@
 
     goto/16 :goto_0
 
-    .line 126
     :pswitch_3
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -530,7 +488,6 @@
 
     goto/16 :goto_0
 
-    .line 127
     :pswitch_4
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -540,7 +497,6 @@
 
     goto/16 :goto_0
 
-    .line 128
     :pswitch_5
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -556,7 +512,6 @@
 
     goto/16 :goto_0
 
-    .line 129
     :pswitch_6
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -570,7 +525,6 @@
 
     goto/16 :goto_0
 
-    .line 130
     :pswitch_7
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -580,7 +534,6 @@
 
     goto/16 :goto_0
 
-    .line 131
     :pswitch_8
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -590,7 +543,6 @@
 
     goto/16 :goto_0
 
-    .line 132
     :pswitch_9
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -600,7 +552,6 @@
 
     goto/16 :goto_0
 
-    .line 133
     :pswitch_a
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -610,7 +561,6 @@
 
     goto/16 :goto_0
 
-    .line 134
     :pswitch_b
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -626,7 +576,6 @@
 
     goto/16 :goto_0
 
-    .line 135
     :pswitch_c
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -642,7 +591,6 @@
 
     goto/16 :goto_0
 
-    .line 136
     :pswitch_d
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -658,7 +606,6 @@
 
     goto/16 :goto_0
 
-    .line 137
     :pswitch_e
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -668,11 +615,9 @@
 
     goto/16 :goto_0
 
-    .line 140
     :cond_2
     return-void
 
-    .line 122
     :sswitch_data_0
     .sparse-switch
         -0x7e9cfa8f -> :sswitch_5
@@ -715,17 +660,14 @@
 .method public set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 144
     sget-boolean v2, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v2, :cond_0
 
-    .line 145
     const-string/jumbo v2, "Summary"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -748,7 +690,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 147
     :cond_0
     const/4 v2, -0x1
 
@@ -762,11 +703,9 @@
     :goto_0
     packed-switch v2, :pswitch_data_0
 
-    .line 196
     :goto_1
     return v0
 
-    .line 147
     :sswitch_0
     const-string/jumbo v3, "id"
 
@@ -962,7 +901,6 @@
 
     goto/16 :goto_0
 
-    .line 149
     :pswitch_0
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -973,10 +911,8 @@
     :goto_2
     move v0, v1
 
-    .line 196
     goto/16 :goto_1
 
-    .line 152
     :pswitch_1
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -986,7 +922,6 @@
 
     goto :goto_2
 
-    .line 155
     :pswitch_2
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -996,7 +931,6 @@
 
     goto :goto_2
 
-    .line 158
     :pswitch_3
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -1006,7 +940,6 @@
 
     goto :goto_2
 
-    .line 161
     :pswitch_4
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -1016,7 +949,6 @@
 
     goto :goto_2
 
-    .line 164
     :pswitch_5
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -1026,7 +958,6 @@
 
     goto :goto_2
 
-    .line 167
     :pswitch_6
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -1040,7 +971,6 @@
 
     goto :goto_2
 
-    .line 170
     :pswitch_7
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -1050,7 +980,6 @@
 
     goto :goto_2
 
-    .line 173
     :pswitch_8
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -1060,7 +989,6 @@
 
     goto :goto_2
 
-    .line 176
     :pswitch_9
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -1070,7 +998,6 @@
 
     goto :goto_2
 
-    .line 179
     :pswitch_a
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -1080,7 +1007,6 @@
 
     goto :goto_2
 
-    .line 182
     :pswitch_b
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsInt()I
 
@@ -1090,7 +1016,6 @@
 
     goto :goto_2
 
-    .line 185
     :pswitch_c
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -1100,7 +1025,6 @@
 
     goto :goto_2
 
-    .line 188
     :pswitch_d
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -1110,7 +1034,6 @@
 
     goto :goto_2
 
-    .line 191
     :pswitch_e
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -1120,7 +1043,6 @@
 
     goto :goto_2
 
-    .line 147
     nop
 
     :sswitch_data_0
@@ -1165,19 +1087,14 @@
 .method public setErrorType(Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;)V
     .locals 0
 
-    .prologue
-    .line 238
     iput-object p1, p0, Lcom/netflix/model/leafs/Video$Summary;->errorType:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
-    .line 239
     return-void
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 229
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

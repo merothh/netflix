@@ -14,8 +14,6 @@
 .method constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 201
     iput-object p1, p0, Lcom/google/android/exoplayer/util/Util$1;->val$threadName:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 2
 
-    .prologue
-    .line 204
     new-instance v0, Ljava/lang/Thread;
 
     iget-object v1, p0, Lcom/google/android/exoplayer/util/Util$1;->val$threadName:Ljava/lang/String;

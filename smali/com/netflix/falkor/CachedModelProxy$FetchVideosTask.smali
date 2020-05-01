@@ -32,34 +32,24 @@
 .method public constructor <init>(Lcom/netflix/falkor/CachedModelProxy;Lcom/netflix/mediaclient/servicemgr/interface_/LoMo;IIZZZLcom/netflix/mediaclient/service/browse/BrowseAgentCallback;)V
     .locals 1
 
-    .prologue
-    .line 1418
     iput-object p1, p0, Lcom/netflix/falkor/CachedModelProxy$FetchVideosTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
-    .line 1419
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p8, v0}, Lcom/netflix/falkor/CachedModelProxy$CmpTask;-><init>(Lcom/netflix/falkor/CachedModelProxy;Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/falkor/CachedModelProxy$1;)V
 
-    .line 1420
     iput-object p2, p0, Lcom/netflix/falkor/CachedModelProxy$FetchVideosTask;->lomo:Lcom/netflix/mediaclient/servicemgr/interface_/LoMo;
 
-    .line 1421
     iput p3, p0, Lcom/netflix/falkor/CachedModelProxy$FetchVideosTask;->fromVideo:I
 
-    .line 1422
     iput p4, p0, Lcom/netflix/falkor/CachedModelProxy$FetchVideosTask;->toVideo:I
 
-    .line 1423
     iput-boolean p5, p0, Lcom/netflix/falkor/CachedModelProxy$FetchVideosTask;->useCacheOnly:Z
 
-    .line 1424
     iput-boolean p6, p0, Lcom/netflix/falkor/CachedModelProxy$FetchVideosTask;->includeKubrick:Z
 
-    .line 1425
     iput-boolean p7, p0, Lcom/netflix/falkor/CachedModelProxy$FetchVideosTask;->fetchByLomoType:Z
 
-    .line 1426
     return-void
 .end method
 
@@ -77,7 +67,6 @@
         }
     .end annotation
 
-    .prologue
     const/4 v7, 0x3
 
     const/4 v6, 0x2
@@ -86,26 +75,22 @@
 
     const/4 v4, 0x0
 
-    .line 1435
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$FetchVideosTask;->lomo:Lcom/netflix/mediaclient/servicemgr/interface_/LoMo;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/LoMo;->getId()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1436
     iget-boolean v1, p0, Lcom/netflix/falkor/CachedModelProxy$FetchVideosTask;->fetchByLomoType:Z
 
     if-eqz v1, :cond_1
 
-    .line 1437
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 1438
     const-string/jumbo v1, "CachedModelProxy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -130,7 +115,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1440
     :cond_0
     iget-object v1, p0, Lcom/netflix/falkor/CachedModelProxy$FetchVideosTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
@@ -144,14 +128,12 @@
 
     move-result-object v1
 
-    .line 1441
     if-eqz v1, :cond_1
 
     iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     if-eqz v2, :cond_1
 
-    .line 1442
     iget-object v0, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMo;
@@ -160,14 +142,12 @@
 
     move-result-object v0
 
-    .line 1443
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 1444
     const-string/jumbo v1, "CachedModelProxy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -206,7 +186,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1449
     :cond_1
     sget-object v1, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->FLAT_GENRE:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
@@ -220,7 +199,6 @@
 
     const-string/jumbo v1, "flatGenre"
 
-    .line 1450
     :goto_0
     const/4 v2, 0x4
 
@@ -258,7 +236,6 @@
 
     aput-object v1, v0, v6
 
-    .line 1451
     invoke-static {v0}, Lcom/netflix/falkor/PQL;->array([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
@@ -266,23 +243,19 @@
     :goto_1
     aput-object v0, v2, v7
 
-    .line 1450
     invoke-static {v2}, Lcom/netflix/falkor/PQL;->create([Ljava/lang/Object;)Lcom/netflix/falkor/PQL;
 
     move-result-object v0
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1452
     return-void
 
-    .line 1449
     :cond_2
     const-string/jumbo v1, "lists"
 
     goto :goto_0
 
-    .line 1451
     :cond_3
     const-string/jumbo v0, "summary"
 
@@ -292,23 +265,18 @@
 .method protected callbackForFailure(Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 1
 
-    .prologue
-    .line 1462
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     invoke-interface {p1, v0, p2}, Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;->onVideosFetched(Ljava/util/List;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 1463
     return-void
 .end method
 
 .method protected fetchResultsAndCallbackForSuccess(Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/falkor/CachedModelProxy$GetResult;)V
     .locals 2
 
-    .prologue
-    .line 1456
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$FetchVideosTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
     iget-object v1, p2, Lcom/netflix/falkor/CachedModelProxy$GetResult;->pqls:Ljava/util/Collection;
@@ -317,20 +285,16 @@
 
     move-result-object v0
 
-    .line 1457
     sget-object v1, Lcom/netflix/mediaclient/android/app/CommonStatus;->OK:Lcom/netflix/mediaclient/android/app/NetflixImmutableStatus;
 
     invoke-interface {p1, v0, v1}, Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;->onVideosFetched(Ljava/util/List;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 1458
     return-void
 .end method
 
 .method protected shouldCollapseMissingPql()Z
     .locals 1
 
-    .prologue
-    .line 1430
     const/4 v0, 0x1
 
     return v0
@@ -339,8 +303,6 @@
 .method protected shouldUseCacheOnly()Z
     .locals 1
 
-    .prologue
-    .line 1467
     iget-boolean v0, p0, Lcom/netflix/falkor/CachedModelProxy$FetchVideosTask;->useCacheOnly:Z
 
     return v0

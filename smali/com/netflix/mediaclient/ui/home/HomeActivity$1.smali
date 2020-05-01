@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/home/HomeActivity;)V
     .locals 0
 
-    .prologue
-    .line 147
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/home/HomeActivity$1;->this$0:Lcom/netflix/mediaclient/ui/home/HomeActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,12 +23,9 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .prologue
-    .line 150
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/HomeActivity$1;->this$0:Lcom/netflix/mediaclient/ui/home/HomeActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/home/HomeActivity;->invalidateOptionsMenu()V
 
-    .line 151
     return-void
 .end method

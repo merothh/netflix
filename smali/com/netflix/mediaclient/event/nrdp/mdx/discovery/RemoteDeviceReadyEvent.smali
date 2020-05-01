@@ -27,8 +27,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 24
     sget-object v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->mdx_discovery_remoteDeviceReady:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     sput-object v0, Lcom/netflix/mediaclient/event/nrdp/mdx/discovery/RemoteDeviceReadyEvent;->TYPE:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
@@ -39,8 +37,6 @@
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 1
 
-    .prologue
-    .line 41
     sget-object v0, Lcom/netflix/mediaclient/event/nrdp/mdx/discovery/RemoteDeviceReadyEvent;->TYPE:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->getName()Ljava/lang/String;
@@ -49,7 +45,6 @@
 
     invoke-direct {p0, v0, p1}, Lcom/netflix/mediaclient/event/nrdp/JsonBaseNccpEvent;-><init>(Ljava/lang/String;Lorg/json/JSONObject;)V
 
-    .line 42
     return-void
 .end method
 
@@ -58,8 +53,6 @@
 .method public getDialUsn()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 64
     iget-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/discovery/RemoteDeviceReadyEvent;->mDialUsn:Ljava/lang/String;
 
     return-object v0
@@ -68,8 +61,6 @@
 .method public getLaunchStatus()I
     .locals 1
 
-    .prologue
-    .line 73
     iget v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/discovery/RemoteDeviceReadyEvent;->mLaunchStatus:I
 
     return v0
@@ -78,8 +69,6 @@
 .method public getObject()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 92
     const-string/jumbo v0, "nrdp.mdx"
 
     return-object v0
@@ -88,8 +77,6 @@
 .method public getUuid()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 82
     iget-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/discovery/RemoteDeviceReadyEvent;->mUuid:Ljava/lang/String;
 
     return-object v0
@@ -98,10 +85,8 @@
 .method protected populate(Lorg/json/JSONObject;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 48
     const-string/jumbo v0, "dialUsn"
 
     invoke-static {p1, v0, v1}, Lcom/netflix/mediaclient/event/nrdp/mdx/discovery/RemoteDeviceReadyEvent;->getUrlDecodedString(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -110,7 +95,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/discovery/RemoteDeviceReadyEvent;->mDialUsn:Ljava/lang/String;
 
-    .line 49
     const-string/jumbo v0, "uuid"
 
     invoke-static {p1, v0, v1}, Lcom/netflix/mediaclient/event/nrdp/mdx/discovery/RemoteDeviceReadyEvent;->getUrlDecodedString(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -119,7 +103,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/discovery/RemoteDeviceReadyEvent;->mUuid:Ljava/lang/String;
 
-    .line 50
     const-string/jumbo v0, "launchStatus"
 
     const/4 v1, 0x0
@@ -130,7 +113,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/discovery/RemoteDeviceReadyEvent;->mLaunchStatus:I
 
-    .line 51
     iget-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/discovery/RemoteDeviceReadyEvent;->mUuid:Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -139,7 +121,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 54
     iget-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/discovery/RemoteDeviceReadyEvent;->mDialUsn:Ljava/lang/String;
 
     const-string/jumbo v1, "uuid:"
@@ -154,7 +135,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/discovery/RemoteDeviceReadyEvent;->mUuid:Ljava/lang/String;
 
-    .line 56
     :cond_0
     return-void
 .end method

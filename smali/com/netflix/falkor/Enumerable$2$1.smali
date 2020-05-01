@@ -26,13 +26,10 @@
 .method constructor <init>(Lcom/netflix/falkor/Enumerable$2;)V
     .locals 1
 
-    .prologue
-    .line 69
     iput-object p1, p0, Lcom/netflix/falkor/Enumerable$2$1;->this$0:Lcom/netflix/falkor/Enumerable$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 70
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/falkor/Enumerable$2$1;->counter:Ljava/lang/Integer;
@@ -45,22 +42,18 @@
 .method public hasNext()Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 72
     iget-object v1, p0, Lcom/netflix/falkor/Enumerable$2$1;->counter:Ljava/lang/Integer;
 
     if-nez v1, :cond_1
 
-    .line 73
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/netflix/falkor/Enumerable$2$1;->counter:Ljava/lang/Integer;
 
-    .line 79
     :goto_0
     iget-object v1, p0, Lcom/netflix/falkor/Enumerable$2$1;->counter:Ljava/lang/Integer;
 
@@ -83,7 +76,6 @@
     :cond_0
     return v0
 
-    .line 76
     :cond_1
     iget-object v1, p0, Lcom/netflix/falkor/Enumerable$2$1;->counter:Ljava/lang/Integer;
 
@@ -112,8 +104,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 83
     iget-object v0, p0, Lcom/netflix/falkor/Enumerable$2$1;->this$0:Lcom/netflix/falkor/Enumerable$2;
 
     iget-object v0, v0, Lcom/netflix/falkor/Enumerable$2;->val$list:Ljava/util/List;
@@ -134,8 +124,6 @@
 .method public remove()V
     .locals 1
 
-    .prologue
-    .line 87
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

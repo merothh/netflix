@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,8 +29,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 113
     const/4 v0, 0x0
 
     return-object v0
@@ -41,8 +37,6 @@
 .method public getAutoPlayMaxCount()I
     .locals 1
 
-    .prologue
-    .line 93
     const/4 v0, -0x1
 
     return v0
@@ -51,8 +45,6 @@
 .method public getEndtime()I
     .locals 1
 
-    .prologue
-    .line 73
     const/4 v0, 0x0
 
     return v0
@@ -61,8 +53,6 @@
 .method public getEpisodeNumber()I
     .locals 1
 
-    .prologue
-    .line 63
     const/4 v0, 0x0
 
     return v0
@@ -71,8 +61,6 @@
 .method public getExpirationTime()J
     .locals 2
 
-    .prologue
-    .line 108
     const-wide/16 v0, 0x0
 
     return-wide v0
@@ -81,8 +69,6 @@
 .method public getLogicalStart()I
     .locals 1
 
-    .prologue
-    .line 78
     const/4 v0, 0x0
 
     return v0
@@ -91,8 +77,6 @@
 .method public getParentId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 38
     const/4 v0, 0x0
 
     return-object v0
@@ -101,8 +85,6 @@
 .method public getParentTitle()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 33
     const/4 v0, 0x0
 
     return-object v0
@@ -111,8 +93,6 @@
 .method public getPlayableBookmarkPosition()I
     .locals 1
 
-    .prologue
-    .line 28
     const/4 v0, 0x0
 
     return v0
@@ -121,8 +101,6 @@
 .method public getPlayableBookmarkUpdateTime()J
     .locals 2
 
-    .prologue
-    .line 23
     const-wide/16 v0, 0x0
 
     return-wide v0
@@ -131,8 +109,6 @@
 .method public getPlayableId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 13
     const/4 v0, 0x0
 
     return-object v0
@@ -141,8 +117,6 @@
 .method public getPlayableTitle()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 18
     const/4 v0, 0x0
 
     return-object v0
@@ -151,8 +125,6 @@
 .method public getRuntime()I
     .locals 1
 
-    .prologue
-    .line 118
     const/4 v0, -0x1
 
     return v0
@@ -161,8 +133,6 @@
 .method public getSeasonAbbrSeqLabel()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 132
     const/4 v0, 0x0
 
     return-object v0
@@ -171,8 +141,6 @@
 .method public getSeasonNumber()I
     .locals 1
 
-    .prologue
-    .line 68
     const/4 v0, 0x0
 
     return v0
@@ -181,8 +149,6 @@
 .method public isAdvisoryDisabled()Z
     .locals 1
 
-    .prologue
-    .line 128
     const/4 v0, 0x0
 
     return v0
@@ -191,8 +157,6 @@
 .method public isAgeProtected()Z
     .locals 1
 
-    .prologue
-    .line 123
     const/4 v0, 0x0
 
     return v0
@@ -201,8 +165,6 @@
 .method public isAutoPlayEnabled()Z
     .locals 1
 
-    .prologue
-    .line 83
     const/4 v0, 0x0
 
     return v0
@@ -211,8 +173,6 @@
 .method public isAvailableOffline()Z
     .locals 1
 
-    .prologue
-    .line 48
     const/4 v0, 0x0
 
     return v0
@@ -221,8 +181,6 @@
 .method public isAvailableToStream()Z
     .locals 1
 
-    .prologue
-    .line 134
     const/4 v0, 0x0
 
     return v0
@@ -231,8 +189,6 @@
 .method public isExemptFromInterrupterLimit()Z
     .locals 1
 
-    .prologue
-    .line 88
     const/4 v0, 0x0
 
     return v0
@@ -241,8 +197,6 @@
 .method public isNSRE()Z
     .locals 1
 
-    .prologue
-    .line 43
     const/4 v0, 0x0
 
     return v0
@@ -251,8 +205,6 @@
 .method public isNextPlayableEpisode()Z
     .locals 1
 
-    .prologue
-    .line 98
     const/4 v0, 0x0
 
     return v0
@@ -261,8 +213,6 @@
 .method public isPinProtected()Z
     .locals 1
 
-    .prologue
-    .line 103
     const/4 v0, 0x0
 
     return v0
@@ -271,8 +221,6 @@
 .method public isPlayableEpisode()Z
     .locals 1
 
-    .prologue
-    .line 58
     const/4 v0, 0x0
 
     return v0
@@ -281,8 +229,6 @@
 .method public isSupplementalVideo()Z
     .locals 1
 
-    .prologue
-    .line 53
     const/4 v0, 0x0
 
     return v0

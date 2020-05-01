@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 683
     iput-object p1, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$13;->this$0:Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$13;->val$fileToDelete:Ljava/lang/String;
@@ -36,12 +34,10 @@
 .method public run()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x1
 
     const/4 v4, 0x0
 
-    .line 686
     invoke-static {}, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;->access$1000()Lcom/netflix/mediaclient/service/ServiceAgent;
 
     move-result-object v0
@@ -58,7 +54,6 @@
 
     if-nez v0, :cond_0
 
-    .line 687
     const-string/jumbo v0, "nf_preappagentdatahandler"
 
     const-string/jumbo v1, "localFilename: %s, filename: %s delete failed"
@@ -81,11 +76,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 692
     :goto_0
     return-void
 
-    .line 689
     :cond_0
     const-string/jumbo v0, "nf_preappagentdatahandler"
 

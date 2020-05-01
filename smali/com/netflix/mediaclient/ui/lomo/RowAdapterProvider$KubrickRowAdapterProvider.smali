@@ -21,16 +21,12 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/ui/lomo/RowAdapterCallbacks;Lcom/netflix/mediaclient/android/widget/ObjectRecycler$ViewRecycler;Z)V
     .locals 3
 
-    .prologue
-    .line 149
     invoke-direct {p0, p2, p3}, Lcom/netflix/mediaclient/ui/lomo/RowAdapterProvider$DefaultRowAdapterProvider;-><init>(Lcom/netflix/mediaclient/ui/lomo/RowAdapterCallbacks;Lcom/netflix/mediaclient/android/widget/ObjectRecycler$ViewRecycler;)V
 
-    .line 150
     invoke-virtual {p1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v0
 
-    .line 152
     new-instance v1, Lcom/netflix/mediaclient/ui/lomo/ProgressiveBillboardAdapter;
 
     new-instance v2, Lcom/netflix/mediaclient/ui/lomo/PaginatedBillboardAdapter;
@@ -41,7 +37,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/RowAdapterProvider$KubrickRowAdapterProvider;->billboard:Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
 
-    .line 153
     new-instance v1, Lcom/netflix/mediaclient/ui/lomo/ProgressiveCwAdapter;
 
     new-instance v2, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedCwGalleryAdapter;
@@ -52,7 +47,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/RowAdapterProvider$KubrickRowAdapterProvider;->cw:Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
 
-    .line 156
     new-instance v1, Lcom/netflix/mediaclient/ui/lomo/ProgressiveIqAdapter;
 
     new-instance v2, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedGalleryAdapter;
@@ -63,7 +57,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/RowAdapterProvider$KubrickRowAdapterProvider;->iq:Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
 
-    .line 158
     new-instance v1, Lcom/netflix/mediaclient/ui/kubrick/lomo/ProgressiveKubrickHeroAdapter;
 
     new-instance v2, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedHeroAdapter;
@@ -74,7 +67,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/RowAdapterProvider$KubrickRowAdapterProvider;->kubrickHero:Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
 
-    .line 159
     new-instance v1, Lcom/netflix/mediaclient/ui/lomo/ProgressiveStandardAdapter;
 
     new-instance v2, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedLoMoAdapter;
@@ -85,7 +77,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/RowAdapterProvider$KubrickRowAdapterProvider;->kubrickHeroDuplicate:Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
 
-    .line 160
     new-instance v1, Lcom/netflix/mediaclient/ui/lomo/ProgressiveStandardAdapter;
 
     new-instance v2, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedGalleryAdapter;
@@ -96,7 +87,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/RowAdapterProvider$KubrickRowAdapterProvider;->kubrickGallery:Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
 
-    .line 161
     return-void
 .end method
 
@@ -105,8 +95,6 @@
 .method public getBillboardAdapter()Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
     .locals 1
 
-    .prologue
-    .line 165
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/RowAdapterProvider$KubrickRowAdapterProvider;->billboard:Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
 
     return-object v0
@@ -115,8 +103,6 @@
 .method public bridge synthetic getCharacterAdapter()Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
     .locals 1
 
-    .prologue
-    .line 140
     invoke-super {p0}, Lcom/netflix/mediaclient/ui/lomo/RowAdapterProvider$DefaultRowAdapterProvider;->getCharacterAdapter()Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
 
     move-result-object v0
@@ -127,8 +113,6 @@
 .method public getCwAdapter()Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
     .locals 1
 
-    .prologue
-    .line 170
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/RowAdapterProvider$KubrickRowAdapterProvider;->cw:Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
 
     return-object v0
@@ -137,8 +121,6 @@
 .method public bridge synthetic getErrorAdapter()Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
     .locals 1
 
-    .prologue
-    .line 140
     invoke-super {p0}, Lcom/netflix/mediaclient/ui/lomo/RowAdapterProvider$DefaultRowAdapterProvider;->getErrorAdapter()Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
 
     move-result-object v0
@@ -149,8 +131,6 @@
 .method public getIqAdapter()Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
     .locals 1
 
-    .prologue
-    .line 175
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/RowAdapterProvider$KubrickRowAdapterProvider;->iq:Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
 
     return-object v0
@@ -159,8 +139,6 @@
 .method public getKubrickHeroAdapter()Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
     .locals 1
 
-    .prologue
-    .line 180
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/RowAdapterProvider$KubrickRowAdapterProvider;->kubrickHero:Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
 
     return-object v0
@@ -169,8 +147,6 @@
 .method public getKubrickHeroDuplicateAdapter()Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
     .locals 1
 
-    .prologue
-    .line 185
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/RowAdapterProvider$KubrickRowAdapterProvider;->kubrickHeroDuplicate:Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
 
     return-object v0
@@ -179,8 +155,6 @@
 .method public bridge synthetic getKubrickKidsPopularAdapter()Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
     .locals 1
 
-    .prologue
-    .line 140
     invoke-super {p0}, Lcom/netflix/mediaclient/ui/lomo/RowAdapterProvider$DefaultRowAdapterProvider;->getKubrickKidsPopularAdapter()Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
 
     move-result-object v0
@@ -191,8 +165,6 @@
 .method public bridge synthetic getKubrickKidsTopTenAdapter()Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
     .locals 1
 
-    .prologue
-    .line 140
     invoke-super {p0}, Lcom/netflix/mediaclient/ui/lomo/RowAdapterProvider$DefaultRowAdapterProvider;->getKubrickKidsTopTenAdapter()Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
 
     move-result-object v0
@@ -203,8 +175,6 @@
 .method public bridge synthetic getLoadingAdapter()Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
     .locals 1
 
-    .prologue
-    .line 140
     invoke-super {p0}, Lcom/netflix/mediaclient/ui/lomo/RowAdapterProvider$DefaultRowAdapterProvider;->getLoadingAdapter()Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
 
     move-result-object v0
@@ -215,8 +185,6 @@
 .method public getStandardAdapter()Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
     .locals 1
 
-    .prologue
-    .line 190
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/RowAdapterProvider$KubrickRowAdapterProvider;->kubrickGallery:Lcom/netflix/mediaclient/ui/lomo/RowAdapter;
 
     return-object v0

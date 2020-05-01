@@ -15,18 +15,14 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/lolomo/LoLoMoFrag;)V
     .locals 1
 
-    .prologue
-    .line 28
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/lolomo/LoLoMoAdapter;-><init>(Lcom/netflix/mediaclient/ui/lolomo/LoLoMoFrag;)V
 
-    .line 29
     new-instance v0, Lcom/netflix/mediaclient/ui/kubrick/lolomo/KubrickLolomoUtils$HeroTitleScroller;
 
     invoke-direct {v0, p1}, Lcom/netflix/mediaclient/ui/kubrick/lolomo/KubrickLolomoUtils$HeroTitleScroller;-><init>(Lcom/netflix/mediaclient/ui/lolomo/LoLoMoFrag;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lolomo/KubrickLoLoMoAdapter;->heroTitleScroller:Lcom/netflix/mediaclient/ui/kubrick/lolomo/KubrickLolomoUtils$HeroTitleScroller;
 
-    .line 30
     return-void
 .end method
 
@@ -35,8 +31,6 @@
 .method protected createHolder(Landroid/view/View;Landroid/widget/LinearLayout;Landroid/widget/TextView;Lcom/netflix/mediaclient/ui/lolomo/BaseLoLoMoAdapter$LoMoRowContent;Landroid/view/View;)Lcom/netflix/mediaclient/ui/lolomo/BaseLoLoMoAdapter$RowHolder;
     .locals 6
 
-    .prologue
-    .line 44
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lolomo/KubrickLoLoMoAdapter;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     move-object v1, p1
@@ -59,8 +53,6 @@
 .method protected bridge synthetic getShelfVisibility(Lcom/netflix/mediaclient/servicemgr/interface_/BasicLoMo;I)I
     .locals 1
 
-    .prologue
-    .line 21
     check-cast p1, Lcom/netflix/mediaclient/servicemgr/interface_/LoMo;
 
     invoke-virtual {p0, p1, p2}, Lcom/netflix/mediaclient/ui/kubrick/lolomo/KubrickLoLoMoAdapter;->getShelfVisibility(Lcom/netflix/mediaclient/servicemgr/interface_/LoMo;I)I
@@ -73,8 +65,6 @@
 .method protected getShelfVisibility(Lcom/netflix/mediaclient/servicemgr/interface_/LoMo;I)I
     .locals 1
 
-    .prologue
-    .line 34
     const/16 v0, 0x8
 
     return v0
@@ -83,8 +73,6 @@
 .method protected getViewLayoutId()I
     .locals 1
 
-    .prologue
-    .line 39
     const v0, 0x7f03007f
 
     return v0
@@ -93,13 +81,10 @@
 .method public onScroll(Landroid/widget/AbsListView;III)V
     .locals 1
 
-    .prologue
-    .line 60
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lolomo/KubrickLoLoMoAdapter;->heroTitleScroller:Lcom/netflix/mediaclient/ui/kubrick/lolomo/KubrickLolomoUtils$HeroTitleScroller;
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/ui/kubrick/lolomo/KubrickLolomoUtils$HeroTitleScroller;->onScroll(Landroid/widget/AbsListView;)V
 
-    .line 61
     return-void
 .end method
 
@@ -115,8 +100,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 55
     const/16 v0, 0xa
 
     invoke-static {p0, p1, v0}, Lcom/netflix/mediaclient/ui/kubrick/lolomo/KubrickLolomoUtils;->createDuplicateRows(Lcom/netflix/mediaclient/ui/lolomo/BaseLoLoMoAdapter;Ljava/util/List;I)Ljava/util/List;
@@ -125,15 +108,12 @@
 
     invoke-super {p0, v0}, Lcom/netflix/mediaclient/ui/lolomo/LoLoMoAdapter;->updateLoMoData(Ljava/util/List;)V
 
-    .line 56
     return-void
 .end method
 
 .method protected bridge synthetic updateRowViews(Lcom/netflix/mediaclient/ui/lolomo/BaseLoLoMoAdapter$RowHolder;Lcom/netflix/mediaclient/servicemgr/interface_/BasicLoMo;I)V
     .locals 0
 
-    .prologue
-    .line 21
     check-cast p2, Lcom/netflix/mediaclient/servicemgr/interface_/LoMo;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/netflix/mediaclient/ui/kubrick/lolomo/KubrickLoLoMoAdapter;->updateRowViews(Lcom/netflix/mediaclient/ui/lolomo/BaseLoLoMoAdapter$RowHolder;Lcom/netflix/mediaclient/servicemgr/interface_/LoMo;I)V
@@ -144,13 +124,9 @@
 .method protected updateRowViews(Lcom/netflix/mediaclient/ui/lolomo/BaseLoLoMoAdapter$RowHolder;Lcom/netflix/mediaclient/servicemgr/interface_/LoMo;I)V
     .locals 0
 
-    .prologue
-    .line 49
     invoke-super {p0, p1, p2, p3}, Lcom/netflix/mediaclient/ui/lolomo/LoLoMoAdapter;->updateRowViews(Lcom/netflix/mediaclient/ui/lolomo/BaseLoLoMoAdapter$RowHolder;Lcom/netflix/mediaclient/servicemgr/interface_/BasicLoMo;I)V
 
-    .line 50
     invoke-static {p1, p2, p3}, Lcom/netflix/mediaclient/ui/kubrick/lolomo/KubrickLolomoUtils;->updateRowViews(Lcom/netflix/mediaclient/ui/lolomo/BaseLoLoMoAdapter$RowHolder;Lcom/netflix/mediaclient/servicemgr/interface_/LoMo;I)V
 
-    .line 51
     return-void
 .end method

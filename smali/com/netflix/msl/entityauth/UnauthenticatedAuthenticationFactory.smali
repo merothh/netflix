@@ -11,16 +11,12 @@
 .method public constructor <init>(Lcom/netflix/msl/util/AuthenticationUtils;)V
     .locals 1
 
-    .prologue
-    .line 41
     sget-object v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->NONE:Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
     invoke-direct {p0, v0}, Lcom/netflix/msl/entityauth/EntityAuthenticationFactory;-><init>(Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;)V
 
-    .line 42
     iput-object p1, p0, Lcom/netflix/msl/entityauth/UnauthenticatedAuthenticationFactory;->authutils:Lcom/netflix/msl/util/AuthenticationUtils;
 
-    .line 43
     return-void
 .end method
 
@@ -29,8 +25,6 @@
 .method public createData(Lcom/netflix/msl/util/MslContext;Lcom/netflix/android/org/json/JSONObject;)Lcom/netflix/msl/entityauth/EntityAuthenticationData;
     .locals 1
 
-    .prologue
-    .line 50
     new-instance v0, Lcom/netflix/msl/entityauth/UnauthenticatedAuthenticationData;
 
     invoke-direct {v0, p2}, Lcom/netflix/msl/entityauth/UnauthenticatedAuthenticationData;-><init>(Lcom/netflix/android/org/json/JSONObject;)V
@@ -41,13 +35,10 @@
 .method public getCryptoContext(Lcom/netflix/msl/util/MslContext;Lcom/netflix/msl/entityauth/EntityAuthenticationData;)Lcom/netflix/msl/crypto/ICryptoContext;
     .locals 5
 
-    .prologue
-    .line 59
     instance-of v0, p2, Lcom/netflix/msl/entityauth/UnauthenticatedAuthenticationData;
 
     if-nez v0, :cond_0
 
-    .line 60
     new-instance v0, Lcom/netflix/msl/MslInternalException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -86,16 +77,13 @@
 
     throw v0
 
-    .line 61
     :cond_0
     check-cast p2, Lcom/netflix/msl/entityauth/UnauthenticatedAuthenticationData;
 
-    .line 64
     invoke-virtual {p2}, Lcom/netflix/msl/entityauth/UnauthenticatedAuthenticationData;->getIdentity()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 65
     iget-object v1, p0, Lcom/netflix/msl/entityauth/UnauthenticatedAuthenticationFactory;->authutils:Lcom/netflix/msl/util/AuthenticationUtils;
 
     invoke-interface {v1, v0}, Lcom/netflix/msl/util/AuthenticationUtils;->isEntityRevoked(Ljava/lang/String;)Z
@@ -104,7 +92,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 66
     new-instance v1, Lcom/netflix/msl/MslEntityAuthException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->ENTITY_REVOKED:Lcom/netflix/msl/MslError;
@@ -135,7 +122,6 @@
 
     throw v0
 
-    .line 69
     :cond_1
     iget-object v1, p0, Lcom/netflix/msl/entityauth/UnauthenticatedAuthenticationFactory;->authutils:Lcom/netflix/msl/util/AuthenticationUtils;
 
@@ -149,7 +135,6 @@
 
     if-nez v1, :cond_2
 
-    .line 70
     new-instance v1, Lcom/netflix/msl/MslEntityAuthException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->INCORRECT_ENTITYAUTH_DATA:Lcom/netflix/msl/MslError;
@@ -194,7 +179,6 @@
 
     throw v0
 
-    .line 73
     :cond_2
     new-instance v0, Lcom/netflix/msl/crypto/NullCryptoContext;
 

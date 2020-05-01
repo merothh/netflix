@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/android/widgetry/buffet/BuffetBar;Landroid/view/View$OnClickListener;)V
     .locals 0
 
-    .prologue
-    .line 322
     iput-object p1, p0, Lcom/netflix/android/widgetry/buffet/BuffetBar$2;->this$0:Lcom/netflix/android/widgetry/buffet/BuffetBar;
 
     iput-object p2, p0, Lcom/netflix/android/widgetry/buffet/BuffetBar$2;->val$listener:Landroid/view/View$OnClickListener;
@@ -32,19 +30,15 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .prologue
-    .line 325
     iget-object v0, p0, Lcom/netflix/android/widgetry/buffet/BuffetBar$2;->val$listener:Landroid/view/View$OnClickListener;
 
     invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
-    .line 327
     iget-object v0, p0, Lcom/netflix/android/widgetry/buffet/BuffetBar$2;->this$0:Lcom/netflix/android/widgetry/buffet/BuffetBar;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/netflix/android/widgetry/buffet/BuffetBar;->dispatchDismiss(I)V
 
-    .line 328
     return-void
 .end method

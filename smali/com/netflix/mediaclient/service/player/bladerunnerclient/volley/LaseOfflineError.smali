@@ -88,7 +88,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -99,7 +98,6 @@
 
     const/4 v4, 0x0
 
-    .line 9
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "Undefined"
@@ -110,7 +108,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->Undefined:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 10
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "AggregateError"
@@ -121,7 +118,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->AggregateError:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 11
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "EventStoreError"
@@ -132,7 +128,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->EventStoreError:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 12
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "RequestTypeError"
@@ -143,7 +138,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->RequestTypeError:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 13
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "MembershipError"
@@ -154,7 +148,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->MembershipError:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 14
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "LicenseAggregateError"
@@ -167,7 +160,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->LicenseAggregateError:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 15
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "TotalLicensesPerDeviceReached"
@@ -180,7 +172,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->TotalLicensesPerDeviceReached:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 16
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "TotalLicensesPerAccountReached"
@@ -193,7 +184,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->TotalLicensesPerAccountReached:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 17
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "TitleNotAvailableForOffline"
@@ -206,7 +196,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->TitleNotAvailableForOffline:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 18
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "StudioOfflineTitleLimitReached"
@@ -219,7 +208,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->StudioOfflineTitleLimitReached:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 19
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "YearlyStudioDownloadLimitReached"
@@ -232,7 +220,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->YearlyStudioDownloadLimitReached:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 20
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "YearlyStudioLicenseLimitReached"
@@ -245,7 +232,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->YearlyStudioLicenseLimitReached:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 21
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "viewingWindowExpired"
@@ -258,7 +244,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->viewingWindowExpired:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 22
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "LicenseNotMarkedPlayable"
@@ -271,7 +256,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->LicenseNotMarkedPlayable:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 23
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "LicenseIdMismatch"
@@ -284,7 +268,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->LicenseIdMismatch:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 24
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "LicenseReleasedError"
@@ -297,7 +280,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->LicenseReleasedError:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 25
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "LicenseTooOld"
@@ -310,7 +292,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->LicenseTooOld:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 26
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "DataMissError"
@@ -323,7 +304,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->DataMissError:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 27
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "DataWriteError"
@@ -336,7 +316,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->DataWriteError:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 28
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "DeviceNotActiveError"
@@ -349,7 +328,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->DeviceNotActiveError:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 29
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "ViewableNotAvailableInRegion"
@@ -362,7 +340,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->ViewableNotAvailableInRegion:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 30
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "PackageRevokedError"
@@ -375,7 +352,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->PackageRevokedError:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 31
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "OfflineDeviceLimitReached"
@@ -388,7 +364,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->OfflineDeviceLimitReached:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 32
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "DeviceAggregateError"
@@ -401,7 +376,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->DeviceAggregateError:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 33
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "ServerError"
@@ -414,7 +388,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->ServerError:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 34
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "IOError"
@@ -427,7 +400,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->IOError:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 35
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "DependencyCommandError"
@@ -440,7 +412,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->DependencyCommandError:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 36
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "ClientUsageError"
@@ -453,7 +424,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->ClientUsageError:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 37
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "PlayableAggregateError"
@@ -466,7 +436,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->PlayableAggregateError:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 38
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "LicenseNotActive"
@@ -479,7 +448,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->LicenseNotActive:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 40
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     const-string/jumbo v1, "NOT_KNOWN_TO_CLIENT"
@@ -492,7 +460,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->NOT_KNOWN_TO_CLIENT:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
-    .line 7
     const/16 v0, 0x1f
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
@@ -686,22 +653,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 44
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 45
     iput p3, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->mValue:I
 
-    .line 46
     return-void
 .end method
 
 .method public static getByValue(I)Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
     .locals 5
 
-    .prologue
-    .line 54
     invoke-static {}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->values()[Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     move-result-object v2
@@ -717,18 +678,15 @@
 
     aget-object v0, v2, v1
 
-    .line 55
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->getIntValue()I
 
     move-result v4
 
     if-ne v4, p0, :cond_0
 
-    .line 59
     :goto_1
     return-object v0
 
-    .line 54
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -736,7 +694,6 @@
 
     goto :goto_0
 
-    .line 59
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->NOT_KNOWN_TO_CLIENT:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
@@ -746,8 +703,6 @@
 .method private getIntValue()I
     .locals 1
 
-    .prologue
-    .line 49
     iget v0, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->mValue:I
 
     return v0
@@ -756,8 +711,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
     .locals 1
 
-    .prologue
-    .line 7
     const-class v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -772,8 +725,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
     .locals 1
 
-    .prologue
-    .line 7
     sget-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->$VALUES:[Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/LaseOfflineError;->clone()Ljava/lang/Object;

@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 544
     invoke-direct {p0}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompat$AccessibilityRecordIcsMr1Impl;-><init>()V
 
     return-void
@@ -19,10 +17,7 @@
 .method public setSource(Ljava/lang/Object;Landroid/view/View;I)V
     .locals 0
 
-    .prologue
-    .line 547
     invoke-static {p1, p2, p3}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatJellyBean;->setSource(Ljava/lang/Object;Landroid/view/View;I)V
 
-    .line 548
     return-void
 .end method

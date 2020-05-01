@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)V
     .locals 0
 
-    .prologue
-    .line 2652
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$9;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public surfaceChanged(Landroid/view/SurfaceHolder;III)V
     .locals 3
 
-    .prologue
-    .line 2657
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2658
     const-string/jumbo v0, "PlayerFragment"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -79,7 +74,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2659
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
@@ -88,7 +82,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2660
     const-string/jumbo v0, "PlayerFragment"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -111,7 +104,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2661
     const-string/jumbo v0, "PlayerFragment"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -138,7 +130,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2664
     :cond_0
     return-void
 .end method
@@ -146,8 +137,6 @@
 .method public declared-synchronized surfaceCreated(Landroid/view/SurfaceHolder;)V
     .locals 3
 
-    .prologue
-    .line 2668
     monitor-enter p0
 
     :try_start_0
@@ -157,7 +146,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2670
     if-eqz p1, :cond_4
 
     invoke-interface {p1}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
@@ -174,14 +162,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 2671
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$9;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$1802(Lcom/netflix/mediaclient/ui/player/PlayerFragment;Z)Z
 
-    .line 2672
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$9;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$900(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/ui/player/PlayScreen;
@@ -196,14 +182,12 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/TappableSurfaceView;->setVisibility(I)V
 
-    .line 2673
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2674
     const-string/jumbo v0, "PlayerFragment"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -230,13 +214,11 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2677
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$9;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$1900(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)V
 
-    .line 2678
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$9;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$200(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/servicemgr/IPlayer;
@@ -245,7 +227,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2679
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$9;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$200(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/servicemgr/IPlayer;
@@ -258,7 +239,6 @@
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/servicemgr/IPlayer;->setSurface(Landroid/view/Surface;)V
 
-    .line 2682
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$9;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
@@ -268,12 +248,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 2683
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$9;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$2100(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)V
 
-    .line 2688
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$9;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$2200(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Z
@@ -282,7 +260,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 2689
     const-string/jumbo v0, "PlayerFragment"
 
     const-string/jumbo v1, "Do not un-pause player until user exits out of interactive post play."
@@ -291,14 +268,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2703
     :cond_2
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 2692
     :cond_3
     :try_start_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$9;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
@@ -309,7 +284,6 @@
 
     goto :goto_0
 
-    .line 2668
     :catchall_0
     move-exception v0
 
@@ -317,7 +291,6 @@
 
     throw v0
 
-    .line 2697
     :cond_4
     :try_start_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$9;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
@@ -326,7 +299,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$1802(Lcom/netflix/mediaclient/ui/player/PlayerFragment;Z)Z
 
-    .line 2698
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$9;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$400(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/servicemgr/Asset;
@@ -335,14 +307,12 @@
 
     if-nez v0, :cond_5
 
-    .line 2699
     const-string/jumbo v0, "PlayerFragment"
 
     const-string/jumbo v1, "surfaceCreated again, playout already set to null"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2701
     :cond_5
     const-string/jumbo v0, "PlayerFragment"
 
@@ -358,17 +328,14 @@
 .method public surfaceDestroyed(Landroid/view/SurfaceHolder;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 2707
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$9;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$1802(Lcom/netflix/mediaclient/ui/player/PlayerFragment;Z)Z
 
-    .line 2708
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$9;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$2300(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Z
@@ -377,16 +344,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 2710
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$9;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$2002(Lcom/netflix/mediaclient/ui/player/PlayerFragment;Z)Z
 
-    .line 2726
     :goto_0
     return-void
 
-    .line 2711
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$9;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
@@ -404,14 +368,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 2712
     const-string/jumbo v0, "PlayerFragment"
 
     const-string/jumbo v1, "Surface destroyed,, background player"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2713
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$9;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$200(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/servicemgr/IPlayer;
@@ -422,12 +384,10 @@
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/servicemgr/IPlayer;->setSurface(Landroid/view/Surface;)V
 
-    .line 2714
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$9;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$2002(Lcom/netflix/mediaclient/ui/player/PlayerFragment;Z)Z
 
-    .line 2715
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$9;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$2500(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Z
@@ -436,7 +396,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2716
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$9;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$2600(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/ui/player/PlayerSuspendNotification;
@@ -453,7 +412,6 @@
 
     goto :goto_0
 
-    .line 2718
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$9;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
@@ -471,7 +429,6 @@
 
     goto :goto_0
 
-    .line 2720
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$9;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
@@ -485,7 +442,6 @@
 
     if-nez v0, :cond_3
 
-    .line 2721
     const-string/jumbo v0, "PlayerFragment"
 
     const-string/jumbo v1, "In posplay when surface is destroyed, do not exit"
@@ -494,7 +450,6 @@
 
     goto :goto_0
 
-    .line 2723
     :cond_3
     const-string/jumbo v0, "PlayerFragment"
 
@@ -502,7 +457,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2724
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$9;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->cleanupAndExit()V

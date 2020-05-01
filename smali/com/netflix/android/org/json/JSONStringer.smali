@@ -7,15 +7,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 64
     new-instance v0, Ljava/io/StringWriter;
 
     invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
 
     invoke-direct {p0, v0}, Lcom/netflix/android/org/json/JSONWriter;-><init>(Ljava/io/Writer;)V
 
-    .line 65
     return-void
 .end method
 
@@ -24,8 +21,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 76
     iget-char v0, p0, Lcom/netflix/android/org/json/JSONStringer;->mode:C
 
     const/16 v1, 0x64

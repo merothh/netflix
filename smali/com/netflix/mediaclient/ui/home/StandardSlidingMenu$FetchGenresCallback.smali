@@ -11,16 +11,12 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;)V
     .locals 1
 
-    .prologue
-    .line 556
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$FetchGenresCallback;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 
-    .line 557
     const-string/jumbo v0, "StandardSlidingMenu"
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/servicemgr/LoggingManagerCallback;-><init>(Ljava/lang/String;)V
 
-    .line 558
     return-void
 .end method
 
@@ -40,34 +36,27 @@
         }
     .end annotation
 
-    .prologue
-    .line 562
     invoke-super {p0, p1, p2}, Lcom/netflix/mediaclient/servicemgr/LoggingManagerCallback;->onGenreListsFetched(Ljava/util/List;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 564
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isError()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 565
     const-string/jumbo v0, "StandardSlidingMenu"
 
     const-string/jumbo v1, "Invalid status code for genres fetch"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 566
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$FetchGenresCallback;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;->access$800(Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;)V
 
-    .line 579
     :goto_0
     return-void
 
-    .line 570
     :cond_0
     if-eqz p1, :cond_1
 
@@ -79,7 +68,6 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 571
     :cond_1
     const-string/jumbo v0, "StandardSlidingMenu"
 
@@ -87,17 +75,14 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 572
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$FetchGenresCallback;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;->access$800(Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;)V
 
-    .line 573
     if-nez p1, :cond_2
 
     const-string/jumbo v0, "null"
 
-    .line 574
     :goto_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -121,7 +106,6 @@
 
     goto :goto_0
 
-    .line 573
     :cond_2
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -133,7 +117,6 @@
 
     goto :goto_1
 
-    .line 578
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$FetchGenresCallback;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 

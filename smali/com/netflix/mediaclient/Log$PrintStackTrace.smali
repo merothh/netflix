@@ -7,8 +7,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 92
     invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
 
     return-void
@@ -17,8 +15,6 @@
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/Log$1;)V
     .locals 0
 
-    .prologue
-    .line 92
     invoke-direct {p0}, Lcom/netflix/mediaclient/Log$PrintStackTrace;-><init>()V
 
     return-void

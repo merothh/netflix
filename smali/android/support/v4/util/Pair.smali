@@ -43,17 +43,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     iput-object p1, p0, Landroid/support/v4/util/Pair;->first:Ljava/lang/Object;
 
-    .line 36
     iput-object p2, p0, Landroid/support/v4/util/Pair;->second:Ljava/lang/Object;
 
-    .line 37
     return-void
 .end method
 
@@ -71,8 +66,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 77
     new-instance v0, Landroid/support/v4/util/Pair;
 
     invoke-direct {v0, p0, p1}, Landroid/support/v4/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
@@ -83,8 +76,6 @@
 .method private static objectsEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 57
     if-eq p0, p1, :cond_0
 
     if-eqz p0, :cond_1
@@ -112,24 +103,19 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 49
     instance-of v1, p1, Landroid/support/v4/util/Pair;
 
     if-nez v1, :cond_1
 
-    .line 53
     :cond_0
     :goto_0
     return v0
 
-    .line 52
     :cond_1
     check-cast p1, Landroid/support/v4/util/Pair;
 
-    .line 53
     iget-object v1, p1, Landroid/support/v4/util/Pair;->first:Ljava/lang/Object;
 
     iget-object v2, p0, Landroid/support/v4/util/Pair;->first:Ljava/lang/Object;
@@ -158,10 +144,8 @@
 .method public hashCode()I
     .locals 3
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 67
     iget-object v0, p0, Landroid/support/v4/util/Pair;->first:Ljava/lang/Object;
 
     if-nez v0, :cond_0

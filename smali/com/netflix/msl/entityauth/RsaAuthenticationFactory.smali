@@ -15,35 +15,26 @@
 .method public constructor <init>(Lcom/netflix/msl/entityauth/RsaStore;Lcom/netflix/msl/util/AuthenticationUtils;)V
     .locals 1
 
-    .prologue
-    .line 48
     const/4 v0, 0x0
 
     invoke-direct {p0, v0, p1, p2}, Lcom/netflix/msl/entityauth/RsaAuthenticationFactory;-><init>(Ljava/lang/String;Lcom/netflix/msl/entityauth/RsaStore;Lcom/netflix/msl/util/AuthenticationUtils;)V
 
-    .line 49
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;Lcom/netflix/msl/entityauth/RsaStore;Lcom/netflix/msl/util/AuthenticationUtils;)V
     .locals 1
 
-    .prologue
-    .line 62
     sget-object v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->RSA:Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
     invoke-direct {p0, v0}, Lcom/netflix/msl/entityauth/EntityAuthenticationFactory;-><init>(Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;)V
 
-    .line 63
     iput-object p1, p0, Lcom/netflix/msl/entityauth/RsaAuthenticationFactory;->keyPairId:Ljava/lang/String;
 
-    .line 64
     iput-object p2, p0, Lcom/netflix/msl/entityauth/RsaAuthenticationFactory;->store:Lcom/netflix/msl/entityauth/RsaStore;
 
-    .line 65
     iput-object p3, p0, Lcom/netflix/msl/entityauth/RsaAuthenticationFactory;->authutils:Lcom/netflix/msl/util/AuthenticationUtils;
 
-    .line 66
     return-void
 .end method
 
@@ -52,8 +43,6 @@
 .method public createData(Lcom/netflix/msl/util/MslContext;Lcom/netflix/android/org/json/JSONObject;)Lcom/netflix/msl/entityauth/EntityAuthenticationData;
     .locals 1
 
-    .prologue
-    .line 73
     new-instance v0, Lcom/netflix/msl/entityauth/RsaAuthenticationData;
 
     invoke-direct {v0, p2}, Lcom/netflix/msl/entityauth/RsaAuthenticationData;-><init>(Lcom/netflix/android/org/json/JSONObject;)V
@@ -64,13 +53,10 @@
 .method public getCryptoContext(Lcom/netflix/msl/util/MslContext;Lcom/netflix/msl/entityauth/EntityAuthenticationData;)Lcom/netflix/msl/crypto/ICryptoContext;
     .locals 6
 
-    .prologue
-    .line 82
     instance-of v0, p2, Lcom/netflix/msl/entityauth/RsaAuthenticationData;
 
     if-nez v0, :cond_0
 
-    .line 83
     new-instance v0, Lcom/netflix/msl/MslInternalException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -109,16 +95,13 @@
 
     throw v0
 
-    .line 84
     :cond_0
     check-cast p2, Lcom/netflix/msl/entityauth/RsaAuthenticationData;
 
-    .line 87
     invoke-virtual {p2}, Lcom/netflix/msl/entityauth/RsaAuthenticationData;->getIdentity()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 88
     iget-object v0, p0, Lcom/netflix/msl/entityauth/RsaAuthenticationFactory;->authutils:Lcom/netflix/msl/util/AuthenticationUtils;
 
     invoke-interface {v0, v2}, Lcom/netflix/msl/util/AuthenticationUtils;->isEntityRevoked(Ljava/lang/String;)Z
@@ -127,7 +110,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 89
     new-instance v0, Lcom/netflix/msl/MslEntityAuthException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->ENTITY_REVOKED:Lcom/netflix/msl/MslError;
@@ -158,7 +140,6 @@
 
     throw v0
 
-    .line 92
     :cond_1
     iget-object v0, p0, Lcom/netflix/msl/entityauth/RsaAuthenticationFactory;->authutils:Lcom/netflix/msl/util/AuthenticationUtils;
 
@@ -172,7 +153,6 @@
 
     if-nez v0, :cond_2
 
-    .line 93
     new-instance v0, Lcom/netflix/msl/MslEntityAuthException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->INCORRECT_ENTITYAUTH_DATA:Lcom/netflix/msl/MslError;
@@ -217,27 +197,23 @@
 
     throw v0
 
-    .line 96
     :cond_2
     invoke-virtual {p2}, Lcom/netflix/msl/entityauth/RsaAuthenticationData;->getPublicKeyId()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 97
     iget-object v1, p0, Lcom/netflix/msl/entityauth/RsaAuthenticationFactory;->store:Lcom/netflix/msl/entityauth/RsaStore;
 
     invoke-interface {v1, v0}, Lcom/netflix/msl/entityauth/RsaStore;->getPublicKey(Ljava/lang/String;)Ljava/security/PublicKey;
 
     move-result-object v4
 
-    .line 98
     iget-object v1, p0, Lcom/netflix/msl/entityauth/RsaAuthenticationFactory;->store:Lcom/netflix/msl/entityauth/RsaStore;
 
     invoke-interface {v1, v0}, Lcom/netflix/msl/entityauth/RsaStore;->getPrivateKey(Ljava/lang/String;)Ljava/security/PrivateKey;
 
     move-result-object v3
 
-    .line 101
     iget-object v1, p0, Lcom/netflix/msl/entityauth/RsaAuthenticationFactory;->keyPairId:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -248,7 +224,6 @@
 
     if-nez v3, :cond_3
 
-    .line 102
     new-instance v1, Lcom/netflix/msl/MslEntityAuthException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->RSA_PRIVATEKEY_NOT_FOUND:Lcom/netflix/msl/MslError;
@@ -261,7 +236,6 @@
 
     throw v0
 
-    .line 105
     :cond_3
     iget-object v1, p0, Lcom/netflix/msl/entityauth/RsaAuthenticationFactory;->keyPairId:Ljava/lang/String;
 
@@ -273,7 +247,6 @@
 
     if-nez v4, :cond_4
 
-    .line 106
     new-instance v1, Lcom/netflix/msl/MslEntityAuthException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->RSA_PUBLICKEY_NOT_FOUND:Lcom/netflix/msl/MslError;
@@ -286,7 +259,6 @@
 
     throw v0
 
-    .line 109
     :cond_4
     new-instance v0, Lcom/netflix/msl/crypto/RsaCryptoContext;
 

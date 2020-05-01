@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;)V
     .locals 0
 
-    .prologue
-    .line 1147
     iput-object p1, p0, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent$5;->this$0:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public isLocalPlaybackEnabled()Z
     .locals 1
 
-    .prologue
-    .line 1156
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent$5;->this$0:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;->access$1200(Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;)Lcom/netflix/mediaclient/service/configuration/DeviceConfiguration;
@@ -46,8 +42,6 @@
 .method public isSuspendPlaybackEnabled()Z
     .locals 1
 
-    .prologue
-    .line 1151
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent$5;->this$0:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;->access$1300(Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;)Lcom/netflix/mediaclient/service/configuration/AccountConfiguration;

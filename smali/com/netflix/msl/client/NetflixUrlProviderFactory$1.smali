@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 9
     invoke-static {}, Lcom/netflix/msl/client/NetflixEnvironment;->values()[Lcom/netflix/msl/client/NetflixEnvironment;
 
     move-result-object v0

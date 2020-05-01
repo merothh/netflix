@@ -13,17 +13,12 @@
 .method public constructor <init>(Landroid/support/v7/view/menu/MenuItemWrapperICS;Landroid/content/Context;Landroid/view/ActionProvider;)V
     .locals 0
 
-    .prologue
-    .line 346
     iput-object p1, p0, Landroid/support/v7/view/menu/MenuItemWrapperICS$ActionProviderWrapper;->this$0:Landroid/support/v7/view/menu/MenuItemWrapperICS;
 
-    .line 347
     invoke-direct {p0, p2}, Landroid/support/v4/view/ActionProvider;-><init>(Landroid/content/Context;)V
 
-    .line 348
     iput-object p3, p0, Landroid/support/v7/view/menu/MenuItemWrapperICS$ActionProviderWrapper;->mInner:Landroid/view/ActionProvider;
 
-    .line 349
     return-void
 .end method
 
@@ -32,8 +27,6 @@
 .method public hasSubMenu()Z
     .locals 1
 
-    .prologue
-    .line 363
     iget-object v0, p0, Landroid/support/v7/view/menu/MenuItemWrapperICS$ActionProviderWrapper;->mInner:Landroid/view/ActionProvider;
 
     invoke-virtual {v0}, Landroid/view/ActionProvider;->hasSubMenu()Z
@@ -46,8 +39,6 @@
 .method public onCreateActionView()Landroid/view/View;
     .locals 1
 
-    .prologue
-    .line 353
     iget-object v0, p0, Landroid/support/v7/view/menu/MenuItemWrapperICS$ActionProviderWrapper;->mInner:Landroid/view/ActionProvider;
 
     invoke-virtual {v0}, Landroid/view/ActionProvider;->onCreateActionView()Landroid/view/View;
@@ -60,8 +51,6 @@
 .method public onPerformDefaultAction()Z
     .locals 1
 
-    .prologue
-    .line 358
     iget-object v0, p0, Landroid/support/v7/view/menu/MenuItemWrapperICS$ActionProviderWrapper;->mInner:Landroid/view/ActionProvider;
 
     invoke-virtual {v0}, Landroid/view/ActionProvider;->onPerformDefaultAction()Z
@@ -74,8 +63,6 @@
 .method public onPrepareSubMenu(Landroid/view/SubMenu;)V
     .locals 2
 
-    .prologue
-    .line 368
     iget-object v0, p0, Landroid/support/v7/view/menu/MenuItemWrapperICS$ActionProviderWrapper;->mInner:Landroid/view/ActionProvider;
 
     iget-object v1, p0, Landroid/support/v7/view/menu/MenuItemWrapperICS$ActionProviderWrapper;->this$0:Landroid/support/v7/view/menu/MenuItemWrapperICS;
@@ -86,6 +73,5 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ActionProvider;->onPrepareSubMenu(Landroid/view/SubMenu;)V
 
-    .line 369
     return-void
 .end method

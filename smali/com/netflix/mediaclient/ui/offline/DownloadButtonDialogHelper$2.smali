@@ -18,8 +18,6 @@
 .method constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/netflix/mediaclient/ui/offline/DownloadButton;)V
     .locals 0
 
-    .prologue
-    .line 83
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper$2;->val$context:Landroid/content/Context;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper$2;->val$playableId:Ljava/lang/String;
@@ -36,10 +34,8 @@
 .method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 86
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v0
@@ -48,7 +44,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 87
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper$2;->val$context:Landroid/content/Context;
 
     sget-object v1, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->PauseDownloadCommand:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
@@ -59,7 +54,6 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Lcom/netflix/mediaclient/util/log/UIViewLogUtils;->reportUIViewCommand(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;Lcom/netflix/mediaclient/service/logging/uiview/model/CommandEndedEvent$InputMethod;Lcom/netflix/mediaclient/service/logging/client/model/DataContext;)V
 
-    .line 88
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper$2;->val$context:Landroid/content/Context;
 
     check-cast v0, Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -72,12 +66,10 @@
 
     move-result-object v0
 
-    .line 89
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper$2;->val$playableId:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface;->pauseDownload(Ljava/lang/String;)V
 
-    .line 90
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper$2;->val$downloadButton:Lcom/netflix/mediaclient/ui/offline/DownloadButton;
 
     sget-object v1, Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;->PAUSED:Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
@@ -86,14 +78,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/mediaclient/ui/offline/DownloadButton;->setState(Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;Ljava/lang/String;)V
 
-    .line 100
     :cond_0
     :goto_0
     const/4 v0, 0x1
 
     return v0
 
-    .line 91
     :cond_1
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
@@ -103,7 +93,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 92
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper$2;->val$context:Landroid/content/Context;
 
     sget-object v1, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->RemoveCachedVideoCommand:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
@@ -114,7 +103,6 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Lcom/netflix/mediaclient/util/log/UIViewLogUtils;->reportUIViewCommand(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;Lcom/netflix/mediaclient/service/logging/uiview/model/CommandEndedEvent$InputMethod;Lcom/netflix/mediaclient/service/logging/client/model/DataContext;)V
 
-    .line 93
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper$2;->val$context:Landroid/content/Context;
 
     check-cast v0, Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -127,19 +115,16 @@
 
     move-result-object v0
 
-    .line 94
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper$2;->val$playableId:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface;->deleteOfflinePlayable(Ljava/lang/String;)V
 
-    .line 95
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper$2;->val$playableId:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/offline/DownloadButton;->removePreQueued(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 96
     :cond_2
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
@@ -149,7 +134,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 98
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper$2;->val$context:Landroid/content/Context;
 
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper$2;->val$context:Landroid/content/Context;

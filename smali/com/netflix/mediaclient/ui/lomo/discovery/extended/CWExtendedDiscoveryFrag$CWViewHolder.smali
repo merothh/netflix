@@ -11,14 +11,10 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;Landroid/view/View;)V
     .locals 0
 
-    .prologue
-    .line 89
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag$CWViewHolder;->this$0:Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;
 
-    .line 90
     invoke-direct {p0, p2}, Landroid/support/v7/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    .line 91
     return-void
 .end method
 
@@ -27,13 +23,10 @@
 .method public updateView(I)V
     .locals 7
 
-    .prologue
-    .line 94
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag$CWViewHolder;->itemView:Landroid/view/View;
 
     check-cast v0, Lcom/netflix/mediaclient/ui/lomo/CwDiscoveryView;
 
-    .line 95
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag$CWViewHolder;->this$0:Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;->access$000(Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;)Ljava/util/List;
@@ -62,6 +55,5 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/netflix/mediaclient/ui/lomo/CwDiscoveryView;->update(Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;IZZLcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag$RemotePlaybackListener;)V
 
-    .line 103
     return-void
 .end method

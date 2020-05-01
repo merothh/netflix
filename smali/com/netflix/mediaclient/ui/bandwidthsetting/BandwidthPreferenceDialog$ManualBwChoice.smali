@@ -38,7 +38,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -49,7 +48,6 @@
 
     const/4 v4, 0x0
 
-    .line 253
     new-instance v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;
 
     const-string/jumbo v1, "OFF"
@@ -58,7 +56,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;->OFF:Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;
 
-    .line 254
     new-instance v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;
 
     const-string/jumbo v1, "LOW"
@@ -67,7 +64,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;->LOW:Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;
 
-    .line 255
     new-instance v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;
 
     const-string/jumbo v1, "MEDIUM"
@@ -76,7 +72,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;->MEDIUM:Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;
 
-    .line 256
     new-instance v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;
 
     const-string/jumbo v1, "HIGH"
@@ -85,7 +80,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;->HIGH:Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;
 
-    .line 257
     new-instance v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;
 
     const-string/jumbo v1, "UNLIMITED"
@@ -94,7 +88,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;->UNLIMITED:Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;
 
-    .line 258
     new-instance v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;
 
     const-string/jumbo v1, "UNDEFINED"
@@ -107,7 +100,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;->UNDEFINED:Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;
 
-    .line 252
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;
@@ -151,8 +143,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 262
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     iput p3, p0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;->id:I
@@ -163,8 +153,6 @@
 .method public static create(I)Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;
     .locals 5
 
-    .prologue
-    .line 267
     invoke-static {}, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;->values()[Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;
 
     move-result-object v2
@@ -180,16 +168,13 @@
 
     aget-object v0, v2, v1
 
-    .line 268
     iget v4, v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;->id:I
 
     if-ne v4, p0, :cond_0
 
-    .line 272
     :goto_1
     return-object v0
 
-    .line 267
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -197,7 +182,6 @@
 
     goto :goto_0
 
-    .line 272
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;->UNDEFINED:Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;
 
@@ -207,8 +191,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;
     .locals 1
 
-    .prologue
-    .line 252
     const-class v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -223,8 +205,6 @@
 .method public static values()[Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;
     .locals 1
 
-    .prologue
-    .line 252
     sget-object v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;->$VALUES:[Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;->clone()Ljava/lang/Object;
@@ -241,8 +221,6 @@
 .method public getValue()I
     .locals 1
 
-    .prologue
-    .line 264
     iget v0, p0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthPreferenceDialog$ManualBwChoice;->id:I
 
     return v0

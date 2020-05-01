@@ -22,11 +22,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
     return-void
 .end method
 
@@ -35,8 +32,6 @@
 .method protected createRetryPolicy()Lcom/android/volley/RetryPolicy;
     .locals 4
 
-    .prologue
-    .line 61
     new-instance v1, Lcom/android/volley/DefaultRetryPolicy;
 
     iget v0, p0, Lcom/netflix/mediaclient/service/webclient/volley/VolleyWebClient;->mTimeoutInMs:I
@@ -63,8 +58,6 @@
 .method public final isSynchronous()Z
     .locals 1
 
-    .prologue
-    .line 25
     const/4 v0, 0x0
 
     return v0
@@ -73,10 +66,7 @@
 .method public setTimeout(I)V
     .locals 0
 
-    .prologue
-    .line 36
     iput p1, p0, Lcom/netflix/mediaclient/service/webclient/volley/VolleyWebClient;->mTimeoutInMs:I
 
-    .line 37
     return-void
 .end method

@@ -34,7 +34,6 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x3
 
     const/4 v4, 0x2
@@ -43,7 +42,6 @@
 
     const/4 v2, 0x0
 
-    .line 15
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;
 
     const-string/jumbo v1, "NO_ACTION"
@@ -52,7 +50,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;->NO_ACTION:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;
 
-    .line 16
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;
 
     const-string/jumbo v1, "ACQUIRE_NEW_LICENSE"
@@ -61,7 +58,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;->ACQUIRE_NEW_LICENSE:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;
 
-    .line 17
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;
 
     const-string/jumbo v1, "DELETE_LICENSES"
@@ -70,7 +66,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;->DELETE_LICENSES:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;
 
-    .line 18
     new-instance v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;
 
     const-string/jumbo v1, "MARK_PLAYABLE"
@@ -79,7 +74,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;->MARK_PLAYABLE:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;
 
-    .line 14
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;
@@ -113,22 +107,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 23
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 24
     iput p3, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;->mAction:I
 
-    .line 25
     return-void
 .end method
 
 .method public static create(I)Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;
     .locals 5
 
-    .prologue
-    .line 44
     invoke-static {}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;->values()[Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;
 
     move-result-object v2
@@ -144,16 +132,13 @@
 
     aget-object v0, v2, v1
 
-    .line 45
     iget v4, v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;->mAction:I
 
     if-ne v4, p0, :cond_0
 
-    .line 49
     :goto_1
     return-object v0
 
-    .line 44
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -161,7 +146,6 @@
 
     goto :goto_0
 
-    .line 49
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;->NO_ACTION:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;
 
@@ -171,8 +155,6 @@
 .method private isActionAcquireNewLicense()Z
     .locals 2
 
-    .prologue
-    .line 36
     iget v0, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;->mAction:I
 
     sget-object v1, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;->DELETE_LICENSES:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;
@@ -197,8 +179,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;
     .locals 1
 
-    .prologue
-    .line 14
     const-class v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -213,8 +193,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;
     .locals 1
 
-    .prologue
-    .line 14
     sget-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;->$VALUES:[Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;->clone()Ljava/lang/Object;
@@ -231,8 +209,6 @@
 .method public getStatusCode()Lcom/netflix/mediaclient/StatusCode;
     .locals 1
 
-    .prologue
-    .line 40
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;->isActionAcquireNewLicense()Z
 
     move-result v0
@@ -253,8 +229,6 @@
 .method public getValue()I
     .locals 1
 
-    .prologue
-    .line 28
     iget v0, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;->mAction:I
 
     return v0
@@ -263,8 +237,6 @@
 .method public isRecoverable()Z
     .locals 1
 
-    .prologue
-    .line 32
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/ClientActionFromLase;->isActionAcquireNewLicense()Z
 
     move-result v0

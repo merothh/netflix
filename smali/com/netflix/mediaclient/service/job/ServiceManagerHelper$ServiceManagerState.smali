@@ -28,14 +28,12 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x2
 
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 24
     new-instance v0, Lcom/netflix/mediaclient/service/job/ServiceManagerHelper$ServiceManagerState;
 
     const-string/jumbo v1, "WaitingForResult"
@@ -44,7 +42,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/job/ServiceManagerHelper$ServiceManagerState;->WaitingForResult:Lcom/netflix/mediaclient/service/job/ServiceManagerHelper$ServiceManagerState;
 
-    .line 25
     new-instance v0, Lcom/netflix/mediaclient/service/job/ServiceManagerHelper$ServiceManagerState;
 
     const-string/jumbo v1, "ServiceManagerReady"
@@ -53,7 +50,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/job/ServiceManagerHelper$ServiceManagerState;->ServiceManagerReady:Lcom/netflix/mediaclient/service/job/ServiceManagerHelper$ServiceManagerState;
 
-    .line 26
     new-instance v0, Lcom/netflix/mediaclient/service/job/ServiceManagerHelper$ServiceManagerState;
 
     const-string/jumbo v1, "ServiceManagerFailed"
@@ -62,7 +58,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/job/ServiceManagerHelper$ServiceManagerState;->ServiceManagerFailed:Lcom/netflix/mediaclient/service/job/ServiceManagerHelper$ServiceManagerState;
 
-    .line 23
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/job/ServiceManagerHelper$ServiceManagerState;
@@ -92,8 +87,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 23
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -102,8 +95,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/job/ServiceManagerHelper$ServiceManagerState;
     .locals 1
 
-    .prologue
-    .line 23
     const-class v0, Lcom/netflix/mediaclient/service/job/ServiceManagerHelper$ServiceManagerState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -118,8 +109,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/job/ServiceManagerHelper$ServiceManagerState;
     .locals 1
 
-    .prologue
-    .line 23
     sget-object v0, Lcom/netflix/mediaclient/service/job/ServiceManagerHelper$ServiceManagerState;->$VALUES:[Lcom/netflix/mediaclient/service/job/ServiceManagerHelper$ServiceManagerState;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/job/ServiceManagerHelper$ServiceManagerState;->clone()Ljava/lang/Object;

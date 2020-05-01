@@ -109,11 +109,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 128
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -126,18 +123,14 @@
 .method public static dumpLog([Lcom/netflix/mediaclient/media/AudioSource;Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 352
     if-eqz p0, :cond_0
 
-    .line 353
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 354
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -160,7 +153,6 @@
 
     invoke-static {p1, v0}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 355
     const/4 v0, 0x0
 
     :goto_0
@@ -168,7 +160,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 356
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -195,18 +186,15 @@
 
     invoke-static {p1, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 355
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 360
     :cond_0
     const-string/jumbo v0, "Audios are null!"
 
     invoke-static {p1, v0}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 362
     :cond_1
     return-void
 .end method
@@ -214,18 +202,13 @@
 .method public static restore(Lorg/json/JSONObject;)Lcom/netflix/mediaclient/media/AudioSource;
     .locals 4
 
-    .prologue
-    .line 413
     if-nez p0, :cond_0
 
-    .line 414
     const/4 v0, 0x0
 
-    .line 424
     :goto_0
     return-object v0
 
-    .line 417
     :cond_0
     const-string/jumbo v0, "impl"
 
@@ -235,46 +218,39 @@
 
     move-result v0
 
-    .line 418
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_1
 
-    .line 419
     const-string/jumbo v0, "order"
 
     invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 420
     invoke-static {p0, v0}, Lcom/netflix/mediaclient/ui/mdx/MdxAudioSource;->newInstance(Lorg/json/JSONObject;I)Lcom/netflix/mediaclient/ui/mdx/MdxAudioSource;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 422
     :cond_1
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_2
 
-    .line 423
     const-string/jumbo v0, "order"
 
     invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 424
     invoke-static {p0, v0}, Lcom/netflix/mediaclient/ui/player/NccpAudioSource;->newInstance(Lorg/json/JSONObject;I)Lcom/netflix/mediaclient/media/AudioSource;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 427
     :cond_2
     new-instance v1, Lorg/json/JSONException;
 
@@ -306,20 +282,16 @@
 .method public compareTo(Lcom/netflix/mediaclient/media/AudioSource;)I
     .locals 5
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, -0x1
 
-    .line 223
     if-nez p1, :cond_1
 
-    .line 256
     :cond_0
     :goto_0
     return v1
 
-    .line 228
     :cond_1
     iget v2, p0, Lcom/netflix/mediaclient/media/AudioSource;->trackType:I
 
@@ -329,10 +301,8 @@
 
     move v1, v0
 
-    .line 229
     goto :goto_0
 
-    .line 230
     :cond_2
     iget v2, p0, Lcom/netflix/mediaclient/media/AudioSource;->trackType:I
 
@@ -340,22 +310,18 @@
 
     if-lt v2, v3, :cond_0
 
-    .line 235
     iget-object v2, p0, Lcom/netflix/mediaclient/media/AudioSource;->languageDescription:Ljava/lang/String;
 
     if-eqz v2, :cond_0
 
-    .line 239
     iget-object v2, p1, Lcom/netflix/mediaclient/media/AudioSource;->languageDescription:Ljava/lang/String;
 
     if-nez v2, :cond_3
 
     move v1, v0
 
-    .line 240
     goto :goto_0
 
-    .line 243
     :cond_3
     sget-object v2, Ljava/lang/String;->CASE_INSENSITIVE_ORDER:Ljava/util/Comparator;
 
@@ -367,10 +333,8 @@
 
     move-result v2
 
-    .line 244
     if-nez v2, :cond_6
 
-    .line 245
     iget-object v2, p0, Lcom/netflix/mediaclient/media/AudioSource;->languageDescription:Ljava/lang/String;
 
     iget-object v3, p1, Lcom/netflix/mediaclient/media/AudioSource;->languageDescription:Ljava/lang/String;
@@ -379,10 +343,8 @@
 
     move-result v2
 
-    .line 246
     if-nez v2, :cond_6
 
-    .line 247
     iget v2, p0, Lcom/netflix/mediaclient/media/AudioSource;->numChannels:I
 
     iget v3, p1, Lcom/netflix/mediaclient/media/AudioSource;->numChannels:I
@@ -392,10 +354,8 @@
     :goto_1
     move v1, v0
 
-    .line 256
     goto :goto_0
 
-    .line 249
     :cond_4
     iget v0, p0, Lcom/netflix/mediaclient/media/AudioSource;->numChannels:I
 
@@ -403,7 +363,6 @@
 
     if-ne v0, v2, :cond_5
 
-    .line 250
     const/4 v0, 0x0
 
     goto :goto_1
@@ -411,7 +370,6 @@
     :cond_5
     move v0, v1
 
-    .line 252
     goto :goto_1
 
     :cond_6
@@ -423,8 +381,6 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 24
     check-cast p1, Lcom/netflix/mediaclient/media/AudioSource;
 
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/media/AudioSource;->compareTo(Lcom/netflix/mediaclient/media/AudioSource;)I
@@ -437,29 +393,23 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 383
     if-ne p0, p1, :cond_1
 
-    .line 393
     :cond_0
     :goto_0
     return v0
 
-    .line 386
     :cond_1
     if-nez p1, :cond_2
 
     move v0, v1
 
-    .line 387
     goto :goto_0
 
-    .line 389
     :cond_2
     instance-of v2, p1, Lcom/netflix/mediaclient/media/AudioSource;
 
@@ -467,14 +417,11 @@
 
     move v0, v1
 
-    .line 390
     goto :goto_0
 
-    .line 392
     :cond_3
     check-cast p1, Lcom/netflix/mediaclient/media/AudioSource;
 
-    .line 393
     iget v2, p0, Lcom/netflix/mediaclient/media/AudioSource;->nccpOrderNumber:I
 
     iget v3, p1, Lcom/netflix/mediaclient/media/AudioSource;->nccpOrderNumber:I
@@ -489,8 +436,6 @@
 .method public getBitrate()I
     .locals 1
 
-    .prologue
-    .line 274
     iget v0, p0, Lcom/netflix/mediaclient/media/AudioSource;->bitrate:I
 
     return v0
@@ -499,8 +444,6 @@
 .method public getCodecType()I
     .locals 1
 
-    .prologue
-    .line 187
     iget v0, p0, Lcom/netflix/mediaclient/media/AudioSource;->codecType:I
 
     return v0
@@ -509,8 +452,6 @@
 .method public getDisallowedSubtitles()[Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 307
     iget-object v0, p0, Lcom/netflix/mediaclient/media/AudioSource;->disallowedSubtitles:[Ljava/lang/String;
 
     return-object v0
@@ -519,8 +460,6 @@
 .method public getDlid()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 283
     iget-object v0, p0, Lcom/netflix/mediaclient/media/AudioSource;->dlid:Ljava/lang/String;
 
     return-object v0
@@ -529,8 +468,6 @@
 .method public getId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 265
     iget-object v0, p0, Lcom/netflix/mediaclient/media/AudioSource;->id:Ljava/lang/String;
 
     return-object v0
@@ -539,8 +476,6 @@
 .method public getLanguageCodeIso639_1()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 136
     iget-object v0, p0, Lcom/netflix/mediaclient/media/AudioSource;->languageCodeIso639_1:Ljava/lang/String;
 
     return-object v0
@@ -549,8 +484,6 @@
 .method public getLanguageCodeIso639_2()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 145
     iget-object v0, p0, Lcom/netflix/mediaclient/media/AudioSource;->languageCodeIso639_2:Ljava/lang/String;
 
     return-object v0
@@ -559,8 +492,6 @@
 .method public getLanguageDescription()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 154
     iget-object v0, p0, Lcom/netflix/mediaclient/media/AudioSource;->languageDescription:Ljava/lang/String;
 
     return-object v0
@@ -569,15 +500,12 @@
 .method public getLanguageDescriptionDisplayLabel()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 163
     iget v0, p0, Lcom/netflix/mediaclient/media/AudioSource;->numChannels:I
 
     const/4 v1, 0x6
 
     if-ne v0, v1, :cond_0
 
-    .line 164
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -598,7 +526,6 @@
 
     move-result-object v0
 
-    .line 166
     :goto_0
     return-object v0
 
@@ -611,8 +538,6 @@
 .method public getNccpOrderNumber()I
     .locals 1
 
-    .prologue
-    .line 214
     iget v0, p0, Lcom/netflix/mediaclient/media/AudioSource;->nccpOrderNumber:I
 
     return v0
@@ -621,8 +546,6 @@
 .method public getNumChannels()I
     .locals 1
 
-    .prologue
-    .line 205
     iget v0, p0, Lcom/netflix/mediaclient/media/AudioSource;->numChannels:I
 
     return v0
@@ -640,8 +563,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 341
     iget-object v0, p0, Lcom/netflix/mediaclient/media/AudioSource;->streams:Ljava/util/List;
 
     return-object v0
@@ -650,8 +571,6 @@
 .method public getTrackType()I
     .locals 1
 
-    .prologue
-    .line 178
     iget v0, p0, Lcom/netflix/mediaclient/media/AudioSource;->trackType:I
 
     return v0
@@ -660,26 +579,20 @@
 .method public hashCode()I
     .locals 1
 
-    .prologue
-    .line 369
-    .line 371
     iget v0, p0, Lcom/netflix/mediaclient/media/AudioSource;->nccpOrderNumber:I
 
     add-int/lit8 v0, v0, 0x1f
 
-    .line 372
     return v0
 .end method
 
 .method public isAllowedSubtitle(Lcom/netflix/mediaclient/media/Subtitle;)Z
     .locals 5
 
-    .prologue
     const/4 v2, 0x0
 
     const/4 v3, 0x1
 
-    .line 318
     iget-object v0, p0, Lcom/netflix/mediaclient/media/AudioSource;->disallowedSubtitles:[Ljava/lang/String;
 
     array-length v0, v0
@@ -688,19 +601,15 @@
 
     move v2, v3
 
-    .line 336
     :cond_0
     :goto_0
     return v2
 
-    .line 322
     :cond_1
     const-string/jumbo v0, "none"
 
-    .line 323
     if-nez p1, :cond_3
 
-    .line 324
     const-string/jumbo v1, "nf_audio_source"
 
     const-string/jumbo v4, "Checking if subtitle off is allowed"
@@ -710,7 +619,6 @@
     :goto_1
     move v1, v2
 
-    .line 330
     :goto_2
     iget-object v4, p0, Lcom/netflix/mediaclient/media/AudioSource;->disallowedSubtitles:[Ljava/lang/String;
 
@@ -718,7 +626,6 @@
 
     if-ge v1, v4, :cond_4
 
-    .line 331
     iget-object v4, p0, Lcom/netflix/mediaclient/media/AudioSource;->disallowedSubtitles:[Ljava/lang/String;
 
     aget-object v4, v4, v1
@@ -735,13 +642,11 @@
 
     if-nez v4, :cond_0
 
-    .line 330
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 326
     :cond_3
     const-string/jumbo v0, "nf_audio_source"
 
@@ -749,7 +654,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 327
     invoke-interface {p1}, Lcom/netflix/mediaclient/media/Subtitle;->getId()Ljava/lang/String;
 
     move-result-object v0
@@ -759,15 +663,12 @@
     :cond_4
     move v2, v3
 
-    .line 336
     goto :goto_0
 .end method
 
 .method public isNative()Z
     .locals 1
 
-    .prologue
-    .line 196
     iget-boolean v0, p0, Lcom/netflix/mediaclient/media/AudioSource;->isNative:Z
 
     return v0
@@ -779,8 +680,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 291
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

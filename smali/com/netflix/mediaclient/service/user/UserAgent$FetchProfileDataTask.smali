@@ -18,24 +18,18 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/user/UserAgent;Ljava/lang/String;Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;)V
     .locals 1
 
-    .prologue
-    .line 1038
     iput-object p1, p0, Lcom/netflix/mediaclient/service/user/UserAgent$FetchProfileDataTask;->this$0:Lcom/netflix/mediaclient/service/user/UserAgent;
 
-    .line 1039
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1048
     new-instance v0, Lcom/netflix/mediaclient/service/user/UserAgent$FetchProfileDataTask$1;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/user/UserAgent$FetchProfileDataTask$1;-><init>(Lcom/netflix/mediaclient/service/user/UserAgent$FetchProfileDataTask;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$FetchProfileDataTask;->webClientCallback:Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;
 
-    .line 1040
     iput-object p2, p0, Lcom/netflix/mediaclient/service/user/UserAgent$FetchProfileDataTask;->profileId:Ljava/lang/String;
 
-    .line 1041
     return-void
 .end method
 
@@ -44,8 +38,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 1045
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$FetchProfileDataTask;->this$0:Lcom/netflix/mediaclient/service/user/UserAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/user/UserAgent;->access$1200(Lcom/netflix/mediaclient/service/user/UserAgent;)Lcom/netflix/mediaclient/service/user/UserWebClient;
@@ -58,6 +50,5 @@
 
     invoke-interface {v0, v1, v2}, Lcom/netflix/mediaclient/service/user/UserWebClient;->fetchProfileData(Ljava/lang/String;Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;)V
 
-    .line 1046
     return-void
 .end method

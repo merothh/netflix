@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/voip/CallNotificationManager;Lcom/netflix/mediaclient/service/NetflixService;Landroid/app/Notification;)V
     .locals 0
 
-    .prologue
-    .line 53
     iput-object p1, p0, Lcom/netflix/mediaclient/service/voip/CallNotificationManager$1;->this$0:Lcom/netflix/mediaclient/service/voip/CallNotificationManager;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/voip/CallNotificationManager$1;->val$service:Lcom/netflix/mediaclient/service/NetflixService;
@@ -36,8 +34,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 56
     iget-object v0, p0, Lcom/netflix/mediaclient/service/voip/CallNotificationManager$1;->val$service:Lcom/netflix/mediaclient/service/NetflixService;
 
     const/16 v1, 0x14
@@ -46,6 +42,5 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/mediaclient/service/NetflixService;->requestForegroundForNotification(ILandroid/app/Notification;)V
 
-    .line 57
     return-void
 .end method

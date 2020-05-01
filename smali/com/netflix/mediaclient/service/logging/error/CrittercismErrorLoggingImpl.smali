@@ -14,8 +14,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,8 +24,6 @@
 .method public getLookupName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 34
     const-string/jumbo v0, "crittercism"
 
     return-object v0
@@ -36,21 +32,15 @@
 .method public logHandledException(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 24
     invoke-static {p1}, Lcom/netflix/mediaclient/service/logging/error/ErrorLoggingManager;->logHandledException(Ljava/lang/String;)V
 
-    .line 25
     return-void
 .end method
 
 .method public logHandledException(Ljava/lang/Throwable;)V
     .locals 0
 
-    .prologue
-    .line 29
     invoke-static {p1}, Lcom/netflix/mediaclient/service/logging/error/ErrorLoggingManager;->logHandledException(Ljava/lang/Throwable;)V
 
-    .line 30
     return-void
 .end method

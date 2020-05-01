@@ -22,8 +22,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 597
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,8 +32,6 @@
 .method public compare(Lcom/netflix/falkor/PQL;Lcom/netflix/falkor/PQL;)I
     .locals 1
 
-    .prologue
-    .line 600
     invoke-static {p1, p2}, Lcom/netflix/falkor/PQL;->access$000(Lcom/netflix/falkor/PQL;Lcom/netflix/falkor/PQL;)I
 
     move-result v0
@@ -46,8 +42,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 597
     check-cast p1, Lcom/netflix/falkor/PQL;
 
     check-cast p2, Lcom/netflix/falkor/PQL;

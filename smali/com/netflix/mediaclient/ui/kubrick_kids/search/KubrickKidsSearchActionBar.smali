@@ -7,11 +7,8 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;)V
     .locals 0
 
-    .prologue
-    .line 10
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/android/widget/SearchActionBar;-><init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;)V
 
-    .line 11
     return-void
 .end method
 
@@ -20,8 +17,6 @@
 .method protected getActiveSearchIconResId()I
     .locals 1
 
-    .prologue
-    .line 25
     const v0, 0x7f020138
 
     return v0
@@ -30,8 +25,6 @@
 .method protected getLayoutId()I
     .locals 1
 
-    .prologue
-    .line 15
     const v0, 0x7f03001c
 
     return v0
@@ -40,8 +33,6 @@
 .method protected getSearchCloseButtonTint()Ljava/lang/Integer;
     .locals 2
 
-    .prologue
-    .line 45
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/search/KubrickKidsSearchActionBar;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getResources()Landroid/content/res/Resources;
@@ -64,8 +55,6 @@
 .method protected getSearchViewBgResId()I
     .locals 1
 
-    .prologue
-    .line 30
     const v0, 0x7f0201d7
 
     return v0
@@ -74,8 +63,6 @@
 .method protected getSearchViewRightBgResId()I
     .locals 1
 
-    .prologue
-    .line 35
     const v0, 0x7f0201d9
 
     return v0
@@ -84,8 +71,6 @@
 .method protected getSearchViewTextColorResId()I
     .locals 1
 
-    .prologue
-    .line 20
     const v0, 0x7f0e0019
 
     return v0
@@ -94,8 +79,6 @@
 .method protected getSearchVoiceButtonTint()Ljava/lang/Integer;
     .locals 2
 
-    .prologue
-    .line 40
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/search/KubrickKidsSearchActionBar;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getResources()Landroid/content/res/Resources;

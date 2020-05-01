@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;Z)V
     .locals 0
 
-    .prologue
-    .line 254
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$3;->this$0:Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;
 
     iput-boolean p2, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$3;->val$keepInUseSession:Z
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 257
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$3;->this$0:Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;->access$200(Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;)Ljava/util/Map;
@@ -46,7 +42,6 @@
 
     if-nez v0, :cond_2
 
-    .line 258
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$3;->this$0:Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;->access$200(Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;)Ljava/util/Map;
@@ -61,7 +56,6 @@
 
     move-result-object v2
 
-    .line 259
     :cond_0
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -70,14 +64,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 260
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 261
     iget-boolean v1, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$3;->val$keepInUseSession:Z
 
     if-eqz v1, :cond_1
@@ -94,7 +86,6 @@
 
     if-nez v1, :cond_0
 
-    .line 264
     :cond_1
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -104,12 +95,10 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/drm/NfDrmSession;->close()V
 
-    .line 265
     invoke-interface {v2}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 268
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$3;->this$0:Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;
 
@@ -119,6 +108,5 @@
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 269
     return-void
 .end method

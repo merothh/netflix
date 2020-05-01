@@ -46,8 +46,6 @@
 .method static constructor <clinit>()V
     .locals 11
 
-    .prologue
-    .line 52
     new-instance v0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
 
     const-string/jumbo v1, "NARROW"
@@ -74,7 +72,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->NARROW:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
 
-    .line 56
     new-instance v0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
 
     const-string/jumbo v1, "STANDARD"
@@ -101,7 +98,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->STANDARD:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
 
-    .line 65
     new-instance v0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
 
     const-string/jumbo v1, "WIDE"
@@ -128,7 +124,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->WIDE:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
 
-    .line 47
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
@@ -164,51 +159,36 @@
         }
     .end annotation
 
-    .prologue
-    .line 95
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 96
     iput p3, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->mStartRangeDp:I
 
-    .line 97
     iput p4, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->mModalColumnSpan:I
 
-    .line 98
     iput p5, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->mEpImgColumnSpan:I
 
-    .line 99
     iput p6, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->mEpSynopsisColumnSpan:I
 
-    .line 100
     iput p7, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->mBookmarkColumnSpan:I
 
-    .line 101
     iput p8, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->mCreditsColumnSpan:I
 
-    .line 102
     iput p9, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->mPreReleaseColumnSpan:I
 
-    .line 103
     iput p10, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->mSimsNumber:I
 
-    .line 104
     return-void
 .end method
 
 .method public static getFormatForDevice(Landroid/content/Context;)Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
     .locals 8
 
-    .prologue
-    .line 159
     invoke-static {p0}, Lcom/netflix/mediaclient/util/DeviceUtils;->getScreenWidthInDPs(Landroid/content/Context;)I
 
     move-result v3
 
-    .line 161
     const/4 v1, 0x0
 
-    .line 163
     invoke-static {}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->values()[Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
 
     move-result-object v4
@@ -228,12 +208,10 @@
 
     aget-object v2, v4, v1
 
-    .line 164
     iget v6, v2, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->mStartRangeDp:I
 
     if-le v3, v6, :cond_0
 
-    .line 163
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
@@ -242,7 +220,6 @@
 
     goto :goto_0
 
-    .line 170
     :cond_0
     return-object v0
 .end method
@@ -250,8 +227,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
     .locals 1
 
-    .prologue
-    .line 47
     const-class v0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -266,8 +241,6 @@
 .method public static values()[Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
     .locals 1
 
-    .prologue
-    .line 47
     sget-object v0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->$VALUES:[Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->clone()Ljava/lang/Object;
@@ -284,8 +257,6 @@
 .method public getBookmarkColumnSpan()I
     .locals 1
 
-    .prologue
-    .line 131
     iget v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->mBookmarkColumnSpan:I
 
     return v0
@@ -294,8 +265,6 @@
 .method public getCreditsColumnSpan()I
     .locals 1
 
-    .prologue
-    .line 138
     iget v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->mCreditsColumnSpan:I
 
     return v0
@@ -304,8 +273,6 @@
 .method public getEpisodeImageColumnSpan()I
     .locals 1
 
-    .prologue
-    .line 117
     iget v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->mEpImgColumnSpan:I
 
     return v0
@@ -314,8 +281,6 @@
 .method public getEpisodeSynopsisColumnSpan()I
     .locals 1
 
-    .prologue
-    .line 124
     iget v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->mEpSynopsisColumnSpan:I
 
     return v0
@@ -324,8 +289,6 @@
 .method public getModalColumnSpan()I
     .locals 1
 
-    .prologue
-    .line 110
     iget v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->mModalColumnSpan:I
 
     return v0
@@ -334,8 +297,6 @@
 .method public getNumberOfSims()I
     .locals 1
 
-    .prologue
-    .line 152
     iget v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->mSimsNumber:I
 
     return v0
@@ -344,8 +305,6 @@
 .method public getPreReleaseColumnSpan()I
     .locals 1
 
-    .prologue
-    .line 145
     iget v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->mPreReleaseColumnSpan:I
 
     return v0

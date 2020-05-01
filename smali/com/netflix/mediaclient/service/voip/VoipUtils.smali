@@ -29,34 +29,26 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     return-void
 .end method
 
 .method static createDialExtra(Landroid/content/Context;Ljava/lang/String;)Lcom/vailsys/whistleengine/DialExtra;
     .locals 7
 
-    .prologue
     const/16 v6, 0x2d
 
-    .line 62
     new-instance v0, Lcom/vailsys/whistleengine/DialExtra;
 
     invoke-direct {v0}, Lcom/vailsys/whistleengine/DialExtra;-><init>()V
 
-    .line 64
     if-eqz p1, :cond_0
 
-    .line 65
     const-string/jumbo v1, "X-NFLX-SessionID"
 
     invoke-virtual {v0, v1, p1}, Lcom/vailsys/whistleengine/DialExtra;->addXHeader(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 68
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -64,7 +56,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 69
     const-string/jumbo v1, "nf_voip"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -87,25 +78,21 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 72
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 73
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/esn/BaseEsnProvider;->findDeviceModel()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 75
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 76
     const-string/jumbo v3, "nf_voip"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -128,7 +115,6 @@
 
     invoke-static {v3, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 79
     :cond_2
     invoke-static {v2}, Lcom/netflix/mediaclient/service/voip/VoipUtils;->modifyByXHeaderRules(Ljava/lang/String;)Ljava/lang/String;
 
@@ -136,7 +122,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 80
     const-string/jumbo v2, "-android"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -149,7 +134,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 81
     invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -158,7 +142,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 82
     invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -169,14 +152,12 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 84
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 85
     const-string/jumbo v2, "nf_voip"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -203,7 +184,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 88
     :cond_3
     const-string/jumbo v2, "X-NFLX-ClientAppVer"
 
@@ -213,15 +193,12 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/vailsys/whistleengine/DialExtra;->addXHeader(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 90
     return-object v0
 .end method
 
 .method static getCustomerServiceNumber(Lcom/netflix/mediaclient/util/l10n/UserLocale;)Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 123
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/util/l10n/UserLocale;->getLanguage()Ljava/lang/String;
@@ -230,7 +207,6 @@
 
     if-nez v0, :cond_2
 
-    .line 124
     :cond_0
     const-string/jumbo v0, "nf_voip"
 
@@ -238,10 +214,8 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     const-string/jumbo v0, "en"
 
-    .line 130
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -249,22 +223,18 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 131
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 136
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 137
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 138
     const-string/jumbo v1, "nf_voip"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -287,11 +257,9 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 141
     :cond_1
     return-object v0
 
-    .line 127
     :cond_2
     invoke-virtual {p0}, Lcom/netflix/mediaclient/util/l10n/UserLocale;->getLanguage()Ljava/lang/String;
 
@@ -303,10 +271,8 @@
 .method private static modifyByXHeaderRules(Ljava/lang/String;)Ljava/lang/String;
     .locals 6
 
-    .prologue
     const/16 v5, 0x3d
 
-    .line 95
     if-eqz p0, :cond_0
 
     const-string/jumbo v0, ""
@@ -321,15 +287,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 96
     :cond_0
     const-string/jumbo v0, ""
 
-    .line 110
     :goto_0
     return-object v0
 
-    .line 99
     :cond_1
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
@@ -337,12 +300,10 @@
 
     move-result-object v1
 
-    .line 100
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 102
     const/4 v0, 0x0
 
     :goto_1
@@ -352,12 +313,10 @@
 
     if-ge v0, v3, :cond_6
 
-    .line 103
     invoke-virtual {v1, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
 
-    .line 104
     const/16 v4, 0x41
 
     if-lt v3, v4, :cond_2
@@ -454,23 +413,19 @@
 
     if-ne v3, v4, :cond_5
 
-    .line 105
     :cond_4
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 102
     :goto_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 107
     :cond_5
     invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 110
     :cond_6
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

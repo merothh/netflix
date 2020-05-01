@@ -28,8 +28,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 681
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,35 +38,26 @@
 .method public clear()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 718
     iput-object v1, p0, Lio/realm/BaseRealm$RealmObjectContext;->realm:Lio/realm/BaseRealm;
 
-    .line 719
     iput-object v1, p0, Lio/realm/BaseRealm$RealmObjectContext;->row:Lio/realm/internal/Row;
 
-    .line 720
     iput-object v1, p0, Lio/realm/BaseRealm$RealmObjectContext;->columnInfo:Lio/realm/internal/ColumnInfo;
 
-    .line 721
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lio/realm/BaseRealm$RealmObjectContext;->acceptDefaultValue:Z
 
-    .line 722
     iput-object v1, p0, Lio/realm/BaseRealm$RealmObjectContext;->excludeFields:Ljava/util/List;
 
-    .line 723
     return-void
 .end method
 
 .method public getAcceptDefaultValue()Z
     .locals 1
 
-    .prologue
-    .line 710
     iget-boolean v0, p0, Lio/realm/BaseRealm$RealmObjectContext;->acceptDefaultValue:Z
 
     return v0
@@ -77,8 +66,6 @@
 .method public getColumnInfo()Lio/realm/internal/ColumnInfo;
     .locals 1
 
-    .prologue
-    .line 706
     iget-object v0, p0, Lio/realm/BaseRealm$RealmObjectContext;->columnInfo:Lio/realm/internal/ColumnInfo;
 
     return-object v0
@@ -96,8 +83,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 714
     iget-object v0, p0, Lio/realm/BaseRealm$RealmObjectContext;->excludeFields:Ljava/util/List;
 
     return-object v0
@@ -106,8 +91,6 @@
 .method public getRealm()Lio/realm/BaseRealm;
     .locals 1
 
-    .prologue
-    .line 698
     iget-object v0, p0, Lio/realm/BaseRealm$RealmObjectContext;->realm:Lio/realm/BaseRealm;
 
     return-object v0
@@ -116,8 +99,6 @@
 .method public getRow()Lio/realm/internal/Row;
     .locals 1
 
-    .prologue
-    .line 702
     iget-object v0, p0, Lio/realm/BaseRealm$RealmObjectContext;->row:Lio/realm/internal/Row;
 
     return-object v0
@@ -139,22 +120,15 @@
         }
     .end annotation
 
-    .prologue
-    .line 690
     iput-object p1, p0, Lio/realm/BaseRealm$RealmObjectContext;->realm:Lio/realm/BaseRealm;
 
-    .line 691
     iput-object p2, p0, Lio/realm/BaseRealm$RealmObjectContext;->row:Lio/realm/internal/Row;
 
-    .line 692
     iput-object p3, p0, Lio/realm/BaseRealm$RealmObjectContext;->columnInfo:Lio/realm/internal/ColumnInfo;
 
-    .line 693
     iput-boolean p4, p0, Lio/realm/BaseRealm$RealmObjectContext;->acceptDefaultValue:Z
 
-    .line 694
     iput-object p5, p0, Lio/realm/BaseRealm$RealmObjectContext;->excludeFields:Ljava/util/List;
 
-    .line 695
     return-void
 .end method

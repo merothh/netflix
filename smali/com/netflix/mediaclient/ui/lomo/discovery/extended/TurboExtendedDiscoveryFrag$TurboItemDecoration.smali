@@ -11,11 +11,8 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/lomo/discovery/extended/TurboExtendedDiscoveryFrag;)V
     .locals 2
 
-    .prologue
-    .line 105
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/TurboExtendedDiscoveryFrag$TurboItemDecoration;->this$0:Lcom/netflix/mediaclient/ui/lomo/discovery/extended/TurboExtendedDiscoveryFrag;
 
-    .line 106
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/TurboExtendedDiscoveryFrag;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -34,6 +31,5 @@
 
     invoke-direct {p0, v0, v1}, Lcom/netflix/mediaclient/util/ItemDecorationUniformPadding;-><init>(II)V
 
-    .line 107
     return-void
 .end method

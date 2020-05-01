@@ -11,11 +11,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 4
     invoke-direct {p0}, Lcom/netflix/falkor/AbstractPathEvaluator;-><init>()V
 
-    .line 5
     sget-object v0, Lcom/netflix/falkor/PQL;->EMPTY:Lcom/netflix/falkor/PQL;
 
     iput-object v0, p0, Lcom/netflix/falkor/BasePathEvaluator;->path:Lcom/netflix/falkor/PQL;
@@ -28,8 +25,6 @@
 .method public bind(Lcom/netflix/falkor/PQL;)Lcom/netflix/falkor/AbstractPathEvaluator;
     .locals 3
 
-    .prologue
-    .line 19
     new-instance v0, Lcom/netflix/falkor/BoundPathEvaluator;
 
     invoke-virtual {p0}, Lcom/netflix/falkor/BasePathEvaluator;->getRoot()Lcom/netflix/falkor/AbstractPathEvaluator;
@@ -65,8 +60,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 24
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -77,8 +70,6 @@
 .method public getPath()Lcom/netflix/falkor/PQL;
     .locals 1
 
-    .prologue
-    .line 9
     iget-object v0, p0, Lcom/netflix/falkor/BasePathEvaluator;->path:Lcom/netflix/falkor/PQL;
 
     return-object v0
@@ -87,10 +78,7 @@
 .method protected setPath(Lcom/netflix/falkor/PQL;)V
     .locals 0
 
-    .prologue
-    .line 14
     iput-object p1, p0, Lcom/netflix/falkor/BasePathEvaluator;->path:Lcom/netflix/falkor/PQL;
 
-    .line 15
     return-void
 .end method

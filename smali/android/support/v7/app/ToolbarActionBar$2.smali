@@ -14,8 +14,6 @@
 .method constructor <init>(Landroid/support/v7/app/ToolbarActionBar;)V
     .locals 0
 
-    .prologue
-    .line 66
     iput-object p1, p0, Landroid/support/v7/app/ToolbarActionBar$2;->this$0:Landroid/support/v7/app/ToolbarActionBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 2
 
-    .prologue
-    .line 69
     iget-object v0, p0, Landroid/support/v7/app/ToolbarActionBar$2;->this$0:Landroid/support/v7/app/ToolbarActionBar;
 
     iget-object v0, v0, Landroid/support/v7/app/ToolbarActionBar;->mWindowCallback:Landroid/view/Window$Callback;

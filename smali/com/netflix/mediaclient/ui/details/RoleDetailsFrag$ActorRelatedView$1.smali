@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorRelatedView;)V
     .locals 0
 
-    .prologue
-    .line 697
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorRelatedView$1;->this$1:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorRelatedView;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,8 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .prologue
-    .line 700
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorRelatedView$1;->this$1:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorRelatedView;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorRelatedView;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
@@ -41,12 +37,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 715
     :cond_0
     :goto_0
     return-void
 
-    .line 704
     :cond_1
     if-eqz p2, :cond_0
 
@@ -54,7 +48,6 @@
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorRelatedView;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
-    .line 705
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;->isResumed()Z
 
     move-result v0
@@ -71,7 +64,6 @@
 
     if-nez v0, :cond_0
 
-    .line 709
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -90,7 +82,6 @@
 
     goto :goto_0
 
-    .line 712
     :pswitch_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorRelatedView$1;->this$1:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorRelatedView;
 
@@ -116,7 +107,6 @@
 
     goto :goto_0
 
-    .line 709
     :pswitch_1
     const-string/jumbo v2, "com.netflix.mediaclient.intent.action.RDP_CLOSE"
 

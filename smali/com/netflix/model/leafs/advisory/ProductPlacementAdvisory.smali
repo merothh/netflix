@@ -23,11 +23,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 33
     invoke-direct {p0}, Lcom/netflix/model/leafs/advisory/Advisory;-><init>()V
 
-    .line 35
     return-void
 .end method
 
@@ -36,18 +33,14 @@
 .method public getData(Lcom/google/gson/JsonElement;)Lcom/google/gson/JsonObject;
     .locals 6
 
-    .prologue
-    .line 54
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v3
 
-    .line 55
     sget-boolean v0, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v0, :cond_0
 
-    .line 56
     const-string/jumbo v0, "ProductPlacementAdvisory"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -70,7 +63,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 58
     :cond_0
     invoke-virtual {v3}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -93,14 +85,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 59
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/gson/JsonElement;
 
-    .line 60
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -123,7 +113,6 @@
 
     goto :goto_0
 
-    .line 62
     :pswitch_0
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -133,7 +122,6 @@
 
     goto :goto_0
 
-    .line 60
     :pswitch_1
     const-string/jumbo v5, "text"
 
@@ -147,11 +135,9 @@
 
     goto :goto_1
 
-    .line 66
     :cond_2
     return-object v3
 
-    .line 60
     :pswitch_data_0
     .packed-switch 0x36452d
         :pswitch_1
@@ -166,8 +152,6 @@
 .method public getMessage(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 44
     iget-object v0, p0, Lcom/netflix/model/leafs/advisory/ProductPlacementAdvisory;->text:Ljava/lang/String;
 
     return-object v0
@@ -176,8 +160,6 @@
 .method public getSecondaryMessage(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 49
     const/4 v0, 0x0
 
     return-object v0
@@ -186,8 +168,6 @@
 .method public getType()Lcom/netflix/model/leafs/advisory/Advisory$Type;
     .locals 1
 
-    .prologue
-    .line 39
     sget-object v0, Lcom/netflix/model/leafs/advisory/Advisory$Type;->PRODUCT_PLACEMENT_ADVISORY:Lcom/netflix/model/leafs/advisory/Advisory$Type;
 
     return-object v0

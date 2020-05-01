@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/mdx/MdxImageLoader$2;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 102
     iput-object p1, p0, Lcom/netflix/mediaclient/service/mdx/MdxImageLoader$2$1;->this$1:Lcom/netflix/mediaclient/service/mdx/MdxImageLoader$2;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/mdx/MdxImageLoader$2$1;->val$localFileUrl:Ljava/lang/String;
@@ -32,11 +30,8 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 105
     const-string/jumbo v0, "file://"
 
-    .line 106
     iget-object v1, p0, Lcom/netflix/mediaclient/service/mdx/MdxImageLoader$2$1;->val$localFileUrl:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -47,18 +42,15 @@
 
     move-result-object v0
 
-    .line 110
     :try_start_0
     new-instance v1, Ljava/io/FileInputStream;
 
     invoke-direct {v1, v0}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
-    .line 111
     new-instance v0, Ljava/io/BufferedInputStream;
 
     invoke-direct {v0, v1}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 112
     iget-object v2, p0, Lcom/netflix/mediaclient/service/mdx/MdxImageLoader$2$1;->this$1:Lcom/netflix/mediaclient/service/mdx/MdxImageLoader$2;
 
     iget-object v2, v2, Lcom/netflix/mediaclient/service/mdx/MdxImageLoader$2;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxImageLoader;
@@ -69,22 +61,17 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/service/mdx/MdxImageLoader;->access$002(Lcom/netflix/mediaclient/service/mdx/MdxImageLoader;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    .line 113
     if-eqz v1, :cond_0
 
-    .line 114
     invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
 
-    .line 116
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 117
     invoke-virtual {v0}, Ljava/io/BufferedInputStream;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 122
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxImageLoader$2$1;->this$1:Lcom/netflix/mediaclient/service/mdx/MdxImageLoader$2;
@@ -97,14 +84,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 123
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 124
     const-string/jumbo v0, "nf_mdxImageLoader"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -161,7 +146,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 126
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxImageLoader$2$1;->this$1:Lcom/netflix/mediaclient/service/mdx/MdxImageLoader$2;
 
@@ -181,15 +165,12 @@
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/service/mdx/MdxImageLoader$MdxImageLoaderInterface;->onBitmapReady(Landroid/graphics/Bitmap;)V
 
-    .line 128
     :cond_3
     return-void
 
-    .line 119
     :catch_0
     move-exception v0
 
-    .line 120
     const-string/jumbo v1, "decode bitmap failed"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;

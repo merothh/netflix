@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 59
     invoke-static {}, Lcom/netflix/model/leafs/PostPlayAction$CallToActionType;->values()[Lcom/netflix/model/leafs/PostPlayAction$CallToActionType;
 
     move-result-object v0

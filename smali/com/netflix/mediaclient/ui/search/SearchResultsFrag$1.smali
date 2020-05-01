@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;)V
     .locals 0
 
-    .prologue
-    .line 368
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$1;->this$0:Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,22 +35,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 372
     if-eqz p2, :cond_0
 
     instance-of v0, p2, Lcom/netflix/mediaclient/ui/search/SearchResultView;
 
     if-eqz v0, :cond_0
 
-    .line 373
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$1;->this$0:Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;
 
     check-cast p2, Lcom/netflix/mediaclient/ui/search/SearchResultView;
 
     invoke-static {v0, p2, p3, p4, p5}, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;->access$000(Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;Lcom/netflix/mediaclient/ui/search/SearchResultView;IJ)V
 
-    .line 375
     :cond_0
     return-void
 .end method

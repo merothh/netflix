@@ -35,15 +35,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 36
     new-instance v0, Lcom/google/gson/GsonBuilder;
 
     invoke-direct {v0}, Lcom/google/gson/GsonBuilder;-><init>()V
 
     invoke-direct {p0, p1, p2, v0}, Lcom/netflix/falkor/RemotePathEvaluator;-><init>(Ljava/lang/Class;Ljava/net/URI;Lcom/google/gson/GsonBuilder;)V
 
-    .line 37
     return-void
 .end method
 
@@ -60,17 +57,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 29
     invoke-direct {p0}, Lcom/netflix/falkor/BasePathEvaluator;-><init>()V
 
-    .line 30
     iput-object p1, p0, Lcom/netflix/falkor/RemotePathEvaluator;->rootType:Ljava/lang/Class;
 
-    .line 31
     iput-object p2, p0, Lcom/netflix/falkor/RemotePathEvaluator;->uri:Ljava/net/URI;
 
-    .line 32
     const-class v0, Lcom/netflix/falkor/PQL;
 
     new-instance v1, Lcom/netflix/falkor/PQLAdapter;
@@ -87,15 +79,12 @@
 
     iput-object v0, p0, Lcom/netflix/falkor/RemotePathEvaluator;->gson:Lcom/google/gson/Gson;
 
-    .line 33
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/netflix/falkor/RemotePathEvaluator;Lcom/netflix/falkor/PQL;)Ljava/lang/reflect/Type;
     .locals 1
 
-    .prologue
-    .line 25
     invoke-direct {p0, p1}, Lcom/netflix/falkor/RemotePathEvaluator;->getPathClass(Lcom/netflix/falkor/PQL;)Ljava/lang/reflect/Type;
 
     move-result-object v0
@@ -106,18 +95,14 @@
 .method private getPathClass(Lcom/netflix/falkor/PQL;)Ljava/lang/reflect/Type;
     .locals 9
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 63
     invoke-virtual {p1}, Lcom/netflix/falkor/PQL;->getKeySegments()Ljava/util/List;
 
     move-result-object v2
 
-    .line 65
     iget-object v1, p0, Lcom/netflix/falkor/RemotePathEvaluator;->rootType:Ljava/lang/Class;
 
-    .line 68
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -137,12 +122,10 @@
 
     move-result-object v6
 
-    .line 69
     invoke-virtual {v6}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 71
     if-eqz v2, :cond_0
 
     :try_start_0
@@ -165,10 +148,8 @@
 
     move-object v4, v8
 
-    .line 107
     goto :goto_0
 
-    .line 76
     :cond_0
     if-eqz v4, :cond_1
 
@@ -176,10 +157,8 @@
 
     move-object v2, v3
 
-    .line 79
     goto :goto_1
 
-    .line 85
     :cond_1
     check-cast v1, Ljava/lang/Class;
 
@@ -231,17 +210,14 @@
 
     move-result-object v4
 
-    .line 86
     invoke-virtual {v4}, Ljava/lang/reflect/Method;->getReturnType()Ljava/lang/Class;
 
     move-result-object v2
 
-    .line 88
     instance-of v1, v2, Ljava/lang/Class;
 
     if-eqz v1, :cond_3
 
-    .line 89
     const-class v6, Ljava/util/List;
 
     move-object v0, v2
@@ -256,7 +232,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 90
     invoke-virtual {v4}, Ljava/lang/reflect/Method;->getGenericReturnType()Ljava/lang/reflect/Type;
 
     move-result-object v1
@@ -269,7 +244,6 @@
 
     goto :goto_1
 
-    .line 92
     :cond_2
     const-class v6, Ljava/util/Map;
 
@@ -285,17 +259,14 @@
 
     if-eqz v1, :cond_6
 
-    .line 93
     invoke-virtual {v4}, Ljava/lang/reflect/Method;->getGenericReturnType()Ljava/lang/reflect/Type;
 
     move-result-object v1
 
-    .line 94
     instance-of v4, v1, Ljava/lang/reflect/ParameterizedType;
 
     if-eqz v4, :cond_5
 
-    .line 95
     check-cast v1, Ljava/lang/reflect/ParameterizedType;
 
     invoke-interface {v1}, Ljava/lang/reflect/ParameterizedType;->getActualTypeArguments()[Ljava/lang/reflect/Type;
@@ -311,25 +282,20 @@
 
     move-object v2, v3
 
-    .line 97
     goto :goto_1
 
-    .line 100
     :cond_3
     const-class v1, Lcom/google/gson/JsonObject;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 109
     :cond_4
     :goto_3
     return-object v1
 
-    .line 104
     :catch_0
     move-exception v1
 
-    .line 105
     const-class v1, Lcom/google/gson/JsonObject;
 
     goto :goto_3
@@ -352,17 +318,13 @@
 .method private parseInt(Ljava/lang/String;)Ljava/lang/Integer;
     .locals 2
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 49
     if-nez p1, :cond_0
 
-    .line 57
     :goto_0
     return-object v0
 
-    .line 54
     :cond_0
     :try_start_0
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -377,7 +339,6 @@
 
     goto :goto_0
 
-    .line 56
     :catch_0
     move-exception v1
 
@@ -402,8 +363,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 245
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -427,23 +386,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 114
     iget-object v0, p0, Lcom/netflix/falkor/RemotePathEvaluator;->uri:Ljava/net/URI;
 
     invoke-virtual {v0}, Ljava/net/URI;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 115
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 116
     const/4 v0, 0x0
 
-    .line 118
     const-string/jumbo v3, "?"
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
@@ -454,18 +408,15 @@
 
     if-ne v1, v3, :cond_0
 
-    .line 119
     const-string/jumbo v1, "?"
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 125
     :goto_0
     const-string/jumbo v1, "method=get&responseFormat=json&pathFormat=canonical&progressive=false"
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 127
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -485,10 +436,8 @@
 
     check-cast v0, Lcom/netflix/falkor/PQL;
 
-    .line 128
     add-int/lit8 v1, v1, 0x1
 
-    .line 130
     :try_start_0
     const-string/jumbo v4, "&path="
 
@@ -514,20 +463,16 @@
 
     goto :goto_1
 
-    .line 132
     :catch_0
     move-exception v0
 
-    .line 133
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 141
     :goto_2
     return-object v0
 
-    .line 122
     :cond_0
     const-string/jumbo v1, "&"
 
@@ -535,18 +480,15 @@
 
     goto :goto_0
 
-    .line 137
     :cond_1
     if-nez v1, :cond_2
 
-    .line 138
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     goto :goto_2
 
-    .line 141
     :cond_2
     new-instance v0, Lcom/netflix/falkor/RemotePathEvaluator$1;
 
@@ -558,8 +500,6 @@
 .method public getRoot()Lcom/netflix/falkor/AbstractPathEvaluator;
     .locals 0
 
-    .prologue
-    .line 41
     return-object p0
 .end method
 
@@ -579,8 +519,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 250
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

@@ -26,8 +26,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;)V
     .locals 0
 
-    .prologue
-    .line 202
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager$2;->this$0:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,17 +38,13 @@
 .method public compare(Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;)I
     .locals 2
 
-    .prologue
-    .line 206
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 207
     :cond_0
     const/4 v0, -0x1
 
-    .line 209
     :goto_0
     return v0
 
@@ -79,8 +73,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 202
     check-cast p1, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;
 
     check-cast p2, Lcom/netflix/mediaclient/ui/iko/wordparty/model/WPInteractiveMomentsModel$WPMoment;

@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/settings/AboutFragment;)V
     .locals 0
 
-    .prologue
-    .line 61
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/settings/AboutFragment$2;->this$0:Lcom/netflix/mediaclient/ui/settings/AboutFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onPreferenceClick(Landroid/preference/Preference;)Z
     .locals 2
 
-    .prologue
-    .line 64
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/settings/AboutFragment$2;->this$0:Lcom/netflix/mediaclient/ui/settings/AboutFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/settings/AboutFragment;->access$000(Lcom/netflix/mediaclient/ui/settings/AboutFragment;)Landroid/app/Activity;
@@ -40,7 +36,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/log/ApmLogUtils;->reportUiModalViewChanged(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;)V
 
-    .line 65
     const/4 v0, 0x0
 
     return v0

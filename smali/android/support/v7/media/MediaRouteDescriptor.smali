@@ -32,25 +32,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     iput-object p1, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mBundle:Landroid/os/Bundle;
 
-    .line 60
     iput-object p2, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mControlFilters:Ljava/util/List;
 
-    .line 61
     return-void
 .end method
 
 .method synthetic constructor <init>(Landroid/os/Bundle;Ljava/util/List;Landroid/support/v7/media/MediaRouteDescriptor$1;)V
     .locals 0
 
-    .prologue
-    .line 38
     invoke-direct {p0, p1, p2}, Landroid/support/v7/media/MediaRouteDescriptor;-><init>(Landroid/os/Bundle;Ljava/util/List;)V
 
     return-void
@@ -59,8 +52,6 @@
 .method static synthetic access$000(Landroid/support/v7/media/MediaRouteDescriptor;)Landroid/os/Bundle;
     .locals 1
 
-    .prologue
-    .line 38
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mBundle:Landroid/os/Bundle;
 
     return-object v0
@@ -69,8 +60,6 @@
 .method static synthetic access$100(Landroid/support/v7/media/MediaRouteDescriptor;)V
     .locals 0
 
-    .prologue
-    .line 38
     invoke-direct {p0}, Landroid/support/v7/media/MediaRouteDescriptor;->ensureControlFilters()V
 
     return-void
@@ -79,8 +68,6 @@
 .method static synthetic access$200(Landroid/support/v7/media/MediaRouteDescriptor;)Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 38
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mControlFilters:Ljava/util/List;
 
     return-object v0
@@ -89,13 +76,10 @@
 .method private ensureControlFilters()V
     .locals 2
 
-    .prologue
-    .line 141
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mControlFilters:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 142
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mBundle:Landroid/os/Bundle;
 
     const-string/jumbo v1, "controlFilters"
@@ -106,19 +90,16 @@
 
     iput-object v0, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mControlFilters:Ljava/util/List;
 
-    .line 143
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mControlFilters:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 144
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mControlFilters:Ljava/util/List;
 
-    .line 147
     :cond_0
     return-void
 .end method
@@ -126,10 +107,8 @@
 .method public static fromBundle(Landroid/os/Bundle;)Landroid/support/v7/media/MediaRouteDescriptor;
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 252
     if-eqz p0, :cond_0
 
     new-instance v0, Landroid/support/v7/media/MediaRouteDescriptor;
@@ -150,8 +129,6 @@
 .method public asBundle()Landroid/os/Bundle;
     .locals 1
 
-    .prologue
-    .line 242
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mBundle:Landroid/os/Bundle;
 
     return-object v0
@@ -160,8 +137,6 @@
 .method public canDisconnectAndKeepPlaying()Z
     .locals 3
 
-    .prologue
-    .line 118
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mBundle:Landroid/os/Bundle;
 
     const-string/jumbo v1, "canDisconnect"
@@ -187,11 +162,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 136
     invoke-direct {p0}, Landroid/support/v7/media/MediaRouteDescriptor;->ensureControlFilters()V
 
-    .line 137
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mControlFilters:Ljava/util/List;
 
     return-object v0
@@ -200,8 +172,6 @@
 .method public getDescription()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 94
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mBundle:Landroid/os/Bundle;
 
     const-string/jumbo v1, "status"
@@ -216,8 +186,6 @@
 .method public getExtras()Landroid/os/Bundle;
     .locals 2
 
-    .prologue
-    .line 198
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mBundle:Landroid/os/Bundle;
 
     const-string/jumbo v1, "extras"
@@ -232,8 +200,6 @@
 .method public getId()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 72
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mBundle:Landroid/os/Bundle;
 
     const-string/jumbo v1, "id"
@@ -248,8 +214,6 @@
 .method public getName()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 83
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mBundle:Landroid/os/Bundle;
 
     const-string/jumbo v1, "name"
@@ -264,8 +228,6 @@
 .method public getPlaybackStream()I
     .locals 3
 
-    .prologue
-    .line 160
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mBundle:Landroid/os/Bundle;
 
     const-string/jumbo v1, "playbackStream"
@@ -282,8 +244,6 @@
 .method public getPlaybackType()I
     .locals 3
 
-    .prologue
-    .line 153
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mBundle:Landroid/os/Bundle;
 
     const-string/jumbo v1, "playbackType"
@@ -300,8 +260,6 @@
 .method public getPresentationDisplayId()I
     .locals 3
 
-    .prologue
-    .line 189
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mBundle:Landroid/os/Bundle;
 
     const-string/jumbo v1, "presentationDisplayId"
@@ -318,8 +276,6 @@
 .method public getSettingsActivity()Landroid/content/IntentSender;
     .locals 2
 
-    .prologue
-    .line 129
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mBundle:Landroid/os/Bundle;
 
     const-string/jumbo v1, "settingsIntent"
@@ -336,8 +292,6 @@
 .method public getVolume()I
     .locals 2
 
-    .prologue
-    .line 167
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mBundle:Landroid/os/Bundle;
 
     const-string/jumbo v1, "volume"
@@ -352,8 +306,6 @@
 .method public getVolumeHandling()I
     .locals 3
 
-    .prologue
-    .line 181
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mBundle:Landroid/os/Bundle;
 
     const-string/jumbo v1, "volumeHandling"
@@ -370,8 +322,6 @@
 .method public getVolumeMax()I
     .locals 2
 
-    .prologue
-    .line 174
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mBundle:Landroid/os/Bundle;
 
     const-string/jumbo v1, "volumeMax"
@@ -386,8 +336,6 @@
 .method public isConnecting()Z
     .locals 3
 
-    .prologue
-    .line 108
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mBundle:Landroid/os/Bundle;
 
     const-string/jumbo v1, "connecting"
@@ -404,8 +352,6 @@
 .method public isEnabled()Z
     .locals 3
 
-    .prologue
-    .line 101
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDescriptor;->mBundle:Landroid/os/Bundle;
 
     const-string/jumbo v1, "enabled"
@@ -422,11 +368,8 @@
 .method public isValid()Z
     .locals 2
 
-    .prologue
-    .line 205
     invoke-direct {p0}, Landroid/support/v7/media/MediaRouteDescriptor;->ensureControlFilters()V
 
-    .line 206
     invoke-virtual {p0}, Landroid/support/v7/media/MediaRouteDescriptor;->getId()Ljava/lang/String;
 
     move-result-object v0
@@ -457,11 +400,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 209
     :cond_0
     const/4 v0, 0x0
 
-    .line 211
     :goto_0
     return v0
 
@@ -474,18 +415,14 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 216
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 217
     const-string/jumbo v1, "MediaRouteDescriptor{ "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 218
     const-string/jumbo v1, "id="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -498,7 +435,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 219
     const-string/jumbo v1, ", name="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -511,7 +447,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 220
     const-string/jumbo v1, ", description="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -524,7 +459,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 221
     const-string/jumbo v1, ", isEnabled="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -537,7 +471,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 222
     const-string/jumbo v1, ", isConnecting="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -550,7 +483,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 223
     const-string/jumbo v1, ", controlFilters="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -571,7 +503,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 224
     const-string/jumbo v1, ", playbackType="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -584,7 +515,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 225
     const-string/jumbo v1, ", playbackStream="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -597,7 +527,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 226
     const-string/jumbo v1, ", volume="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -610,7 +539,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 227
     const-string/jumbo v1, ", volumeMax="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -623,7 +551,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 228
     const-string/jumbo v1, ", volumeHandling="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -636,7 +563,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 229
     const-string/jumbo v1, ", presentationDisplayId="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -649,7 +575,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 230
     const-string/jumbo v1, ", extras="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -662,7 +587,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 231
     const-string/jumbo v1, ", isValid="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -675,12 +599,10 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 232
     const-string/jumbo v1, " }"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 233
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

@@ -23,11 +23,8 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/player/subtitles/image/v2/BoxHeader;Ljava/io/DataInputStream;)V
     .locals 6
 
-    .prologue
-    .line 43
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/FullBox;-><init>(Lcom/netflix/mediaclient/service/player/subtitles/image/v2/BoxHeader;Ljava/io/DataInputStream;)V
 
-    .line 45
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex;->getBoxHeader()Lcom/netflix/mediaclient/service/player/subtitles/image/v2/BoxHeader;
 
     move-result-object v0
@@ -38,7 +35,6 @@
 
     if-nez v0, :cond_0
 
-    .line 46
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "MasterIndex is supposed to be extended type!"
@@ -47,7 +43,6 @@
 
     throw v0
 
-    .line 49
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex;->getBoxHeader()Lcom/netflix/mediaclient/service/player/subtitles/image/v2/BoxHeader;
 
@@ -61,7 +56,6 @@
 
     if-nez v0, :cond_1
 
-    .line 50
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "MasterIndex does not have expected user type value!"
@@ -70,7 +64,6 @@
 
     throw v0
 
-    .line 53
     :cond_1
     invoke-virtual {p2}, Ljava/io/DataInputStream;->readLong()J
 
@@ -78,24 +71,20 @@
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex;->segmentOffset:J
 
-    .line 54
     invoke-virtual {p2}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex;->segmentCount:I
 
-    .line 55
     iget v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex;->segmentCount:I
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex$SegmentDescriptor;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex;->segments:[Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex$SegmentDescriptor;
 
-    .line 57
     iget-wide v2, p0, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex;->segmentOffset:J
 
-    .line 58
     const/4 v0, 0x0
 
     :goto_0
@@ -103,7 +92,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 59
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex;->segments:[Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex$SegmentDescriptor;
 
     new-instance v4, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex$SegmentDescriptor;
@@ -112,7 +100,6 @@
 
     aput-object v4, v1, v0
 
-    .line 60
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex;->segments:[Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex$SegmentDescriptor;
 
     aget-object v1, v1, v0
@@ -125,7 +112,6 @@
 
     add-long/2addr v2, v4
 
-    .line 61
     iget v1, p0, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex;->segmentIndexesSize:I
 
     iget-object v4, p0, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex;->segments:[Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex$SegmentDescriptor;
@@ -140,12 +126,10 @@
 
     iput v1, p0, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex;->segmentIndexesSize:I
 
-    .line 58
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 63
     :cond_2
     return-void
 .end method
@@ -153,11 +137,8 @@
 .method public static isThisBox(Lcom/netflix/mediaclient/service/player/subtitles/image/v2/BoxHeader;)Z
     .locals 2
 
-    .prologue
-    .line 89
     if-nez p0, :cond_0
 
-    .line 90
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "Header is null!"
@@ -166,7 +147,6 @@
 
     throw v0
 
-    .line 93
     :cond_0
     const-string/jumbo v0, "com.netflix.midx"
 
@@ -186,8 +166,6 @@
 .method public getSegmentCount()I
     .locals 1
 
-    .prologue
-    .line 70
     iget v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex;->segmentCount:I
 
     return v0
@@ -196,8 +174,6 @@
 .method public getSegmentIndexesSize()I
     .locals 1
 
-    .prologue
-    .line 78
     iget v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex;->segmentIndexesSize:I
 
     return v0
@@ -206,8 +182,6 @@
 .method public getSegmentOffset()J
     .locals 2
 
-    .prologue
-    .line 66
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex;->segmentOffset:J
 
     return-wide v0
@@ -216,8 +190,6 @@
 .method public getSegments()[Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex$SegmentDescriptor;
     .locals 1
 
-    .prologue
-    .line 74
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex;->segments:[Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex$SegmentDescriptor;
 
     return-object v0
@@ -226,8 +198,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 199
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -264,7 +234,6 @@
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex;->segments:[Lcom/netflix/mediaclient/service/player/subtitles/image/v2/MasterIndex$SegmentDescriptor;
 
-    .line 202
     invoke-static {v1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -291,7 +260,6 @@
 
     move-result-object v0
 
-    .line 204
     invoke-super {p0}, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/FullBox;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -304,6 +272,5 @@
 
     move-result-object v0
 
-    .line 199
     return-object v0
 .end method

@@ -15,8 +15,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/player/subtitles/StreamingTextSubtitleParser;Ljava/lang/String;[Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 127
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/subtitles/StreamingTextSubtitleParser$1;->this$0:Lcom/netflix/mediaclient/service/player/subtitles/StreamingTextSubtitleParser;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/player/subtitles/StreamingTextSubtitleParser$1;->val$url:Ljava/lang/String;
@@ -33,15 +31,12 @@
 .method public onResourceRawFetched(Ljava/lang/String;[BLcom/netflix/mediaclient/android/app/Status;)V
     .locals 3
 
-    .prologue
-    .line 132
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 133
     const-string/jumbo v0, "nf_subtitles"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -86,7 +81,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 136
     :cond_0
     invoke-interface {p3}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
 
@@ -94,7 +88,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 137
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/StreamingTextSubtitleParser$1;->this$0:Lcom/netflix/mediaclient/service/player/subtitles/StreamingTextSubtitleParser;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/subtitles/StreamingTextSubtitleParser$1;->val$url:Ljava/lang/String;
@@ -103,11 +96,9 @@
 
     invoke-virtual {v0, p2, v1, v2}, Lcom/netflix/mediaclient/service/player/subtitles/StreamingTextSubtitleParser;->handleDownloadedSubtitleData([BLjava/lang/String;[Ljava/lang/String;)V
 
-    .line 145
     :goto_0
     return-void
 
-    .line 139
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -115,7 +106,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 140
     const-string/jumbo v0, "nf_subtitles"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -138,7 +128,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 143
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/StreamingTextSubtitleParser$1;->this$0:Lcom/netflix/mediaclient/service/player/subtitles/StreamingTextSubtitleParser;
 

@@ -41,20 +41,16 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 73
     invoke-static {}, Lio/realm/Realm;->getDefaultModule()Ljava/lang/Object;
 
     move-result-object v0
 
     sput-object v0, Lio/realm/RealmConfiguration;->DEFAULT_MODULE:Ljava/lang/Object;
 
-    .line 74
     sget-object v0, Lio/realm/RealmConfiguration;->DEFAULT_MODULE:Ljava/lang/Object;
 
     if-eqz v0, :cond_1
 
-    .line 75
     sget-object v0, Lio/realm/RealmConfiguration;->DEFAULT_MODULE:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -69,14 +65,12 @@
 
     move-result-object v0
 
-    .line 76
     invoke-virtual {v0}, Lio/realm/internal/RealmProxyMediator;->transformerApplied()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 77
     new-instance v0, Ljava/lang/ExceptionInInitializerError;
 
     const-string/jumbo v1, "RealmTransformer doesn\'t seem to be applied. Please update the project configuration to use the Realm Gradle plugin. See https://realm.io/news/android-installation-change/"
@@ -85,15 +79,12 @@
 
     throw v0
 
-    .line 81
     :cond_0
     sput-object v0, Lio/realm/RealmConfiguration;->DEFAULT_MODULE_MEDIATOR:Lio/realm/internal/RealmProxyMediator;
 
-    .line 85
     :goto_0
     return-void
 
-    .line 83
     :cond_1
     const/4 v0, 0x0
 
@@ -105,55 +96,38 @@
 .method protected constructor <init>(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[BJLio/realm/RealmMigration;ZLio/realm/internal/SharedRealm$Durability;Lio/realm/internal/RealmProxyMediator;Lio/realm/rx/RxObservableFactory;Lio/realm/Realm$Transaction;)V
     .locals 0
 
-    .prologue
-    .line 113
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 114
     iput-object p1, p0, Lio/realm/RealmConfiguration;->realmDirectory:Ljava/io/File;
 
-    .line 115
     iput-object p2, p0, Lio/realm/RealmConfiguration;->realmFileName:Ljava/lang/String;
 
-    .line 116
     iput-object p3, p0, Lio/realm/RealmConfiguration;->canonicalPath:Ljava/lang/String;
 
-    .line 117
     iput-object p4, p0, Lio/realm/RealmConfiguration;->assetFilePath:Ljava/lang/String;
 
-    .line 118
     iput-object p5, p0, Lio/realm/RealmConfiguration;->key:[B
 
-    .line 119
     iput-wide p6, p0, Lio/realm/RealmConfiguration;->schemaVersion:J
 
-    .line 120
     iput-object p8, p0, Lio/realm/RealmConfiguration;->migration:Lio/realm/RealmMigration;
 
-    .line 121
     iput-boolean p9, p0, Lio/realm/RealmConfiguration;->deleteRealmIfMigrationNeeded:Z
 
-    .line 122
     iput-object p10, p0, Lio/realm/RealmConfiguration;->durability:Lio/realm/internal/SharedRealm$Durability;
 
-    .line 123
     iput-object p11, p0, Lio/realm/RealmConfiguration;->schemaMediator:Lio/realm/internal/RealmProxyMediator;
 
-    .line 124
     iput-object p12, p0, Lio/realm/RealmConfiguration;->rxObservableFactory:Lio/realm/rx/RxObservableFactory;
 
-    .line 125
     iput-object p13, p0, Lio/realm/RealmConfiguration;->initialDataTransaction:Lio/realm/Realm$Transaction;
 
-    .line 126
     return-void
 .end method
 
 .method static synthetic access$000()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 63
     sget-object v0, Lio/realm/RealmConfiguration;->DEFAULT_MODULE:Ljava/lang/Object;
 
     return-object v0
@@ -162,8 +136,6 @@
 .method static synthetic access$200()Z
     .locals 1
 
-    .prologue
-    .line 63
     invoke-static {}, Lio/realm/RealmConfiguration;->isRxJavaAvailable()Z
 
     move-result v0
@@ -190,26 +162,21 @@
         }
     .end annotation
 
-    .prologue
-    .line 268
     invoke-interface {p1}, Ljava/util/Set;->size()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
-    .line 269
     new-instance v0, Lio/realm/internal/modules/FilterableMediator;
 
     sget-object v1, Lio/realm/RealmConfiguration;->DEFAULT_MODULE_MEDIATOR:Lio/realm/internal/RealmProxyMediator;
 
     invoke-direct {v0, v1, p1}, Lio/realm/internal/modules/FilterableMediator;-><init>(Lio/realm/internal/RealmProxyMediator;Ljava/util/Collection;)V
 
-    .line 284
     :goto_0
     return-object v0
 
-    .line 273
     :cond_0
     invoke-interface {p0}, Ljava/util/Set;->size()I
 
@@ -219,7 +186,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 274
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -242,7 +208,6 @@
 
     goto :goto_0
 
-    .line 278
     :cond_1
     invoke-interface {p0}, Ljava/util/Set;->size()I
 
@@ -250,10 +215,8 @@
 
     new-array v1, v0, [Lio/realm/internal/RealmProxyMediator;
 
-    .line 279
     const/4 v0, 0x0
 
-    .line 280
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -269,7 +232,6 @@
 
     move-result-object v3
 
-    .line 281
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
@@ -284,13 +246,10 @@
 
     aput-object v3, v1, v0
 
-    .line 282
     add-int/lit8 v0, v0, 0x1
 
-    .line 283
     goto :goto_1
 
-    .line 284
     :cond_2
     new-instance v0, Lio/realm/internal/modules/CompositeMediator;
 
@@ -302,8 +261,6 @@
 .method protected static getCanonicalPath(Ljava/io/File;)Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 355
     :try_start_0
     invoke-virtual {p0}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
     :try_end_0
@@ -313,11 +270,9 @@
 
     return-object v0
 
-    .line 356
     :catch_0
     move-exception v0
 
-    .line 357
     new-instance v1, Lio/realm/exceptions/RealmFileException;
 
     sget-object v2, Lio/realm/exceptions/RealmFileException$Kind;->ACCESS_ERROR:Lio/realm/exceptions/RealmFileException$Kind;
@@ -332,7 +287,6 @@
 
     move-result-object v3
 
-    .line 358
     invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v4
@@ -353,26 +307,22 @@
 .method private static getModuleMediator(Ljava/lang/String;)Lio/realm/internal/RealmProxyMediator;
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
     const/4 v3, 0x0
 
-    .line 289
     const-string/jumbo v0, "\\."
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 290
     array-length v1, v0
 
     add-int/lit8 v1, v1, -0x1
 
     aget-object v0, v0, v1
 
-    .line 291
     const-string/jumbo v1, "io.realm.%s%s"
 
     const/4 v2, 0x2
@@ -389,13 +339,11 @@
 
     move-result-object v1
 
-    .line 295
     :try_start_0
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 296
     invoke-virtual {v0}, Ljava/lang/Class;->getDeclaredConstructors()[Ljava/lang/reflect/Constructor;
 
     move-result-object v0
@@ -404,12 +352,10 @@
 
     aget-object v0, v0, v2
 
-    .line 297
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
 
-    .line 298
     const/4 v2, 0x0
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -427,11 +373,9 @@
 
     return-object v0
 
-    .line 299
     :catch_0
     move-exception v0
 
-    .line 300
     new-instance v2, Lio/realm/exceptions/RealmException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -456,11 +400,9 @@
 
     throw v2
 
-    .line 301
     :catch_1
     move-exception v0
 
-    .line 302
     new-instance v2, Lio/realm/exceptions/RealmException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -485,11 +427,9 @@
 
     throw v2
 
-    .line 303
     :catch_2
     move-exception v0
 
-    .line 304
     new-instance v2, Lio/realm/exceptions/RealmException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -514,11 +454,9 @@
 
     throw v2
 
-    .line 305
     :catch_3
     move-exception v0
 
-    .line 306
     new-instance v2, Lio/realm/exceptions/RealmException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -547,8 +485,6 @@
 .method private static declared-synchronized isRxJavaAvailable()Z
     .locals 2
 
-    .prologue
-    .line 341
     const-class v1, Lio/realm/RealmConfiguration;
 
     monitor-enter v1
@@ -560,13 +496,11 @@
 
     if-nez v0, :cond_0
 
-    .line 343
     :try_start_1
     const-string/jumbo v0, "rx.Observable"
 
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    .line 344
     const/4 v0, 0x1
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -578,7 +512,6 @@
     .catch Ljava/lang/ClassNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 349
     :cond_0
     :goto_0
     :try_start_2
@@ -594,11 +527,9 @@
 
     return v0
 
-    .line 345
     :catch_0
     move-exception v0
 
-    .line 346
     const/4 v0, 0x0
 
     :try_start_3
@@ -612,7 +543,6 @@
 
     goto :goto_0
 
-    .line 341
     :catchall_0
     move-exception v0
 
@@ -626,20 +556,16 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 224
     if-ne p0, p1, :cond_1
 
     const/4 v0, 0x1
 
-    .line 241
     :cond_0
     :goto_0
     return v0
 
-    .line 225
     :cond_1
     if-eqz p1, :cond_0
 
@@ -653,10 +579,8 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 227
     check-cast p1, Lio/realm/RealmConfiguration;
 
-    .line 229
     iget-wide v2, p0, Lio/realm/RealmConfiguration;->schemaVersion:J
 
     iget-wide v4, p1, Lio/realm/RealmConfiguration;->schemaVersion:J
@@ -665,14 +589,12 @@
 
     if-nez v1, :cond_0
 
-    .line 230
     iget-boolean v1, p0, Lio/realm/RealmConfiguration;->deleteRealmIfMigrationNeeded:Z
 
     iget-boolean v2, p1, Lio/realm/RealmConfiguration;->deleteRealmIfMigrationNeeded:Z
 
     if-ne v1, v2, :cond_0
 
-    .line 231
     iget-object v1, p0, Lio/realm/RealmConfiguration;->realmDirectory:Ljava/io/File;
 
     iget-object v2, p1, Lio/realm/RealmConfiguration;->realmDirectory:Ljava/io/File;
@@ -683,7 +605,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 232
     iget-object v1, p0, Lio/realm/RealmConfiguration;->realmFileName:Ljava/lang/String;
 
     iget-object v2, p1, Lio/realm/RealmConfiguration;->realmFileName:Ljava/lang/String;
@@ -694,7 +615,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 233
     iget-object v1, p0, Lio/realm/RealmConfiguration;->canonicalPath:Ljava/lang/String;
 
     iget-object v2, p1, Lio/realm/RealmConfiguration;->canonicalPath:Ljava/lang/String;
@@ -705,7 +625,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 234
     iget-object v1, p0, Lio/realm/RealmConfiguration;->key:[B
 
     iget-object v2, p1, Lio/realm/RealmConfiguration;->key:[B
@@ -716,7 +635,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 235
     iget-object v1, p0, Lio/realm/RealmConfiguration;->durability:Lio/realm/internal/SharedRealm$Durability;
 
     iget-object v2, p1, Lio/realm/RealmConfiguration;->durability:Lio/realm/internal/SharedRealm$Durability;
@@ -727,7 +645,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 236
     iget-object v1, p0, Lio/realm/RealmConfiguration;->migration:Lio/realm/RealmMigration;
 
     if-eqz v1, :cond_5
@@ -742,7 +659,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 238
     :cond_2
     iget-object v1, p0, Lio/realm/RealmConfiguration;->rxObservableFactory:Lio/realm/rx/RxObservableFactory;
 
@@ -758,7 +674,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 239
     :cond_3
     iget-object v1, p0, Lio/realm/RealmConfiguration;->initialDataTransaction:Lio/realm/Realm$Transaction;
 
@@ -774,7 +689,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 241
     :cond_4
     iget-object v0, p0, Lio/realm/RealmConfiguration;->schemaMediator:Lio/realm/internal/RealmProxyMediator;
 
@@ -786,7 +700,6 @@
 
     goto/16 :goto_0
 
-    .line 236
     :cond_5
     iget-object v1, p1, Lio/realm/RealmConfiguration;->migration:Lio/realm/RealmMigration;
 
@@ -794,7 +707,6 @@
 
     goto/16 :goto_0
 
-    .line 238
     :cond_6
     iget-object v1, p1, Lio/realm/RealmConfiguration;->rxObservableFactory:Lio/realm/rx/RxObservableFactory;
 
@@ -802,7 +714,6 @@
 
     goto/16 :goto_0
 
-    .line 239
     :cond_7
     iget-object v1, p1, Lio/realm/RealmConfiguration;->initialDataTransaction:Lio/realm/Realm$Transaction;
 
@@ -814,8 +725,6 @@
 .method getAssetFile()Ljava/io/InputStream;
     .locals 2
 
-    .prologue
-    .line 190
     sget-object v0, Lio/realm/BaseRealm;->applicationContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
@@ -834,8 +743,6 @@
 .method public getDurability()Lio/realm/internal/SharedRealm$Durability;
     .locals 1
 
-    .prologue
-    .line 153
     iget-object v0, p0, Lio/realm/RealmConfiguration;->durability:Lio/realm/internal/SharedRealm$Durability;
 
     return-object v0
@@ -844,8 +751,6 @@
 .method public getEncryptionKey()[B
     .locals 2
 
-    .prologue
-    .line 137
     iget-object v0, p0, Lio/realm/RealmConfiguration;->key:[B
 
     if-nez v0, :cond_0
@@ -872,8 +777,6 @@
 .method getInitialDataTransaction()Lio/realm/Realm$Transaction;
     .locals 1
 
-    .prologue
-    .line 171
     iget-object v0, p0, Lio/realm/RealmConfiguration;->initialDataTransaction:Lio/realm/Realm$Transaction;
 
     return-object v0
@@ -882,8 +785,6 @@
 .method public getMigration()Lio/realm/RealmMigration;
     .locals 1
 
-    .prologue
-    .line 145
     iget-object v0, p0, Lio/realm/RealmConfiguration;->migration:Lio/realm/RealmMigration;
 
     return-object v0
@@ -892,8 +793,6 @@
 .method public getPath()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 203
     iget-object v0, p0, Lio/realm/RealmConfiguration;->canonicalPath:Ljava/lang/String;
 
     return-object v0
@@ -902,8 +801,6 @@
 .method public getRealmDirectory()Ljava/io/File;
     .locals 1
 
-    .prologue
-    .line 129
     iget-object v0, p0, Lio/realm/RealmConfiguration;->realmDirectory:Ljava/io/File;
 
     return-object v0
@@ -912,8 +809,6 @@
 .method public getRealmFileName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 133
     iget-object v0, p0, Lio/realm/RealmConfiguration;->realmFileName:Ljava/lang/String;
 
     return-object v0
@@ -922,13 +817,10 @@
 .method public getRxFactory()Lio/realm/rx/RxObservableFactory;
     .locals 2
 
-    .prologue
-    .line 214
     iget-object v0, p0, Lio/realm/RealmConfiguration;->rxObservableFactory:Lio/realm/rx/RxObservableFactory;
 
     if-nez v0, :cond_0
 
-    .line 215
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string/jumbo v1, "RxJava seems to be missing from the classpath. Remember to add it as a compile dependency. See https://realm.io/docs/java/latest/#rxjava for more details."
@@ -937,7 +829,6 @@
 
     throw v0
 
-    .line 219
     :cond_0
     iget-object v0, p0, Lio/realm/RealmConfiguration;->rxObservableFactory:Lio/realm/rx/RxObservableFactory;
 
@@ -947,8 +838,6 @@
 .method getSchemaMediator()Lio/realm/internal/RealmProxyMediator;
     .locals 1
 
-    .prologue
-    .line 162
     iget-object v0, p0, Lio/realm/RealmConfiguration;->schemaMediator:Lio/realm/internal/RealmProxyMediator;
 
     return-object v0
@@ -957,8 +846,6 @@
 .method public getSchemaVersion()J
     .locals 2
 
-    .prologue
-    .line 141
     iget-wide v0, p0, Lio/realm/RealmConfiguration;->schemaVersion:J
 
     return-wide v0
@@ -967,8 +854,6 @@
 .method hasAssetFile()Z
     .locals 1
 
-    .prologue
-    .line 180
     iget-object v0, p0, Lio/realm/RealmConfiguration;->assetFilePath:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -991,17 +876,14 @@
 .method public hashCode()I
     .locals 4
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 248
     iget-object v0, p0, Lio/realm/RealmConfiguration;->realmDirectory:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->hashCode()I
 
     move-result v0
 
-    .line 249
     mul-int/lit8 v0, v0, 0x1f
 
     iget-object v2, p0, Lio/realm/RealmConfiguration;->realmFileName:Ljava/lang/String;
@@ -1012,7 +894,6 @@
 
     add-int/2addr v0, v2
 
-    .line 250
     mul-int/lit8 v0, v0, 0x1f
 
     iget-object v2, p0, Lio/realm/RealmConfiguration;->canonicalPath:Ljava/lang/String;
@@ -1023,7 +904,6 @@
 
     add-int/2addr v0, v2
 
-    .line 251
     mul-int/lit8 v2, v0, 0x1f
 
     iget-object v0, p0, Lio/realm/RealmConfiguration;->key:[B
@@ -1039,7 +919,6 @@
     :goto_0
     add-int/2addr v0, v2
 
-    .line 252
     mul-int/lit8 v0, v0, 0x1f
 
     iget-wide v2, p0, Lio/realm/RealmConfiguration;->schemaVersion:J
@@ -1048,7 +927,6 @@
 
     add-int/2addr v0, v2
 
-    .line 253
     mul-int/lit8 v2, v0, 0x1f
 
     iget-object v0, p0, Lio/realm/RealmConfiguration;->migration:Lio/realm/RealmMigration;
@@ -1064,7 +942,6 @@
     :goto_1
     add-int/2addr v0, v2
 
-    .line 254
     mul-int/lit8 v2, v0, 0x1f
 
     iget-boolean v0, p0, Lio/realm/RealmConfiguration;->deleteRealmIfMigrationNeeded:Z
@@ -1076,7 +953,6 @@
     :goto_2
     add-int/2addr v0, v2
 
-    .line 255
     mul-int/lit8 v0, v0, 0x1f
 
     iget-object v2, p0, Lio/realm/RealmConfiguration;->schemaMediator:Lio/realm/internal/RealmProxyMediator;
@@ -1087,7 +963,6 @@
 
     add-int/2addr v0, v2
 
-    .line 256
     mul-int/lit8 v0, v0, 0x1f
 
     iget-object v2, p0, Lio/realm/RealmConfiguration;->durability:Lio/realm/internal/SharedRealm$Durability;
@@ -1098,7 +973,6 @@
 
     add-int/2addr v0, v2
 
-    .line 257
     mul-int/lit8 v2, v0, 0x1f
 
     iget-object v0, p0, Lio/realm/RealmConfiguration;->rxObservableFactory:Lio/realm/rx/RxObservableFactory;
@@ -1114,7 +988,6 @@
     :goto_3
     add-int/2addr v0, v2
 
-    .line 258
     mul-int/lit8 v0, v0, 0x1f
 
     iget-object v2, p0, Lio/realm/RealmConfiguration;->initialDataTransaction:Lio/realm/Realm$Transaction;
@@ -1130,39 +1003,32 @@
     :cond_0
     add-int/2addr v0, v1
 
-    .line 260
     return v0
 
     :cond_1
     move v0, v1
 
-    .line 251
     goto :goto_0
 
     :cond_2
     move v0, v1
 
-    .line 253
     goto :goto_1
 
     :cond_3
     move v0, v1
 
-    .line 254
     goto :goto_2
 
     :cond_4
     move v0, v1
 
-    .line 257
     goto :goto_3
 .end method
 
 .method isSyncConfiguration()Z
     .locals 1
 
-    .prologue
-    .line 365
     const/4 v0, 0x0
 
     return v0
@@ -1171,8 +1037,6 @@
 .method public shouldDeleteRealmIfMigrationNeeded()Z
     .locals 1
 
-    .prologue
-    .line 149
     iget-boolean v0, p0, Lio/realm/RealmConfiguration;->deleteRealmIfMigrationNeeded:Z
 
     return v0
@@ -1181,13 +1045,10 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 313
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 314
     const-string/jumbo v0, "realmDirectory: "
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1202,12 +1063,10 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 315
     const-string/jumbo v0, "\n"
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 316
     const-string/jumbo v0, "realmFileName : "
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1218,12 +1077,10 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 317
     const-string/jumbo v0, "\n"
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 318
     const-string/jumbo v0, "canonicalPath: "
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1234,12 +1091,10 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 319
     const-string/jumbo v0, "\n"
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 320
     const-string/jumbo v0, "key: "
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1267,12 +1122,10 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 321
     const-string/jumbo v0, "\n"
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 322
     const-string/jumbo v0, "schemaVersion: "
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1287,12 +1140,10 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 323
     const-string/jumbo v0, "\n"
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 324
     const-string/jumbo v0, "migration: "
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1303,12 +1154,10 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 325
     const-string/jumbo v0, "\n"
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 326
     const-string/jumbo v0, "deleteRealmIfMigrationNeeded: "
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1319,12 +1168,10 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 327
     const-string/jumbo v0, "\n"
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 328
     const-string/jumbo v0, "durability: "
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1335,12 +1182,10 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 329
     const-string/jumbo v0, "\n"
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 330
     const-string/jumbo v0, "schemaMediator: "
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1351,14 +1196,12 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 332
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 320
     :cond_0
     const/16 v0, 0x40
 

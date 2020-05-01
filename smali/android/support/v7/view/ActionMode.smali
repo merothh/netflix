@@ -13,11 +13,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 240
     return-void
 .end method
 
@@ -41,8 +38,6 @@
 .method public getTag()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 67
     iget-object v0, p0, Landroid/support/v7/view/ActionMode;->mTag:Ljava/lang/Object;
 
     return-object v0
@@ -54,8 +49,6 @@
 .method public getTitleOptionalHint()Z
     .locals 1
 
-    .prologue
-    .line 141
     iget-boolean v0, p0, Landroid/support/v7/view/ActionMode;->mTitleOptionalHint:Z
 
     return v0
@@ -67,8 +60,6 @@
 .method public isTitleOptional()Z
     .locals 1
 
-    .prologue
-    .line 149
     const/4 v0, 0x0
 
     return v0
@@ -86,11 +77,8 @@
 .method public setTag(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 53
     iput-object p1, p0, Landroid/support/v7/view/ActionMode;->mTag:Ljava/lang/Object;
 
-    .line 54
     return-void
 .end method
 
@@ -103,10 +91,7 @@
 .method public setTitleOptionalHint(Z)V
     .locals 0
 
-    .prologue
-    .line 130
     iput-boolean p1, p0, Landroid/support/v7/view/ActionMode;->mTitleOptionalHint:Z
 
-    .line 131
     return-void
 .end method

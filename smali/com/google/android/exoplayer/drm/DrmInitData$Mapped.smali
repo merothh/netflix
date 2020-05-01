@@ -24,18 +24,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer/drm/DrmInitData$Mapped;->schemeData:Ljava/util/Map;
 
-    .line 48
     return-void
 .end method
 
@@ -44,10 +40,8 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 67
     if-eqz p1, :cond_0
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -63,15 +57,12 @@
     :cond_0
     move v0, v1
 
-    .line 79
     :goto_0
     return v0
 
-    .line 70
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer/drm/DrmInitData$Mapped;
 
-    .line 71
     iget-object v0, p0, Lcom/google/android/exoplayer/drm/DrmInitData$Mapped;->schemeData:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->size()I
@@ -88,10 +79,8 @@
 
     move v0, v1
 
-    .line 72
     goto :goto_0
 
-    .line 74
     :cond_2
     iget-object v0, p0, Lcom/google/android/exoplayer/drm/DrmInitData$Mapped;->schemeData:Ljava/util/Map;
 
@@ -116,7 +105,6 @@
 
     check-cast v0, Ljava/util/UUID;
 
-    .line 75
     iget-object v3, p0, Lcom/google/android/exoplayer/drm/DrmInitData$Mapped;->schemeData:Ljava/util/Map;
 
     invoke-interface {v3, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -137,10 +125,8 @@
 
     move v0, v1
 
-    .line 76
     goto :goto_0
 
-    .line 79
     :cond_4
     const/4 v0, 0x1
 
@@ -150,8 +136,6 @@
 .method public hashCode()I
     .locals 1
 
-    .prologue
-    .line 84
     iget-object v0, p0, Lcom/google/android/exoplayer/drm/DrmInitData$Mapped;->schemeData:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->hashCode()I
@@ -164,12 +148,9 @@
 .method public put(Ljava/util/UUID;Lcom/google/android/exoplayer/drm/DrmInitData$SchemeInitData;)V
     .locals 1
 
-    .prologue
-    .line 62
     iget-object v0, p0, Lcom/google/android/exoplayer/drm/DrmInitData$Mapped;->schemeData:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 63
     return-void
 .end method

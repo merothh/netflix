@@ -11,8 +11,6 @@
 .method public constructor <init>(IIII)V
     .locals 2
 
-    .prologue
-    .line 71
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -69,9 +67,7 @@
 
     invoke-direct {p0, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 73
     iput p1, p0, Lcom/google/android/exoplayer/audio/AudioTrack$InitializationException;->audioTrackState:I
 
-    .line 74
     return-void
 .end method

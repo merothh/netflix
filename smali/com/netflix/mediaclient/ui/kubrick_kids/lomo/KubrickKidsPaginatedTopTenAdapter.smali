@@ -7,11 +7,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 20
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedLoMoAdapter;-><init>(Landroid/content/Context;)V
 
-    .line 21
     return-void
 .end method
 
@@ -20,8 +17,6 @@
 .method protected computeNumItemsPerPage()I
     .locals 1
 
-    .prologue
-    .line 36
     const/4 v0, 0x1
 
     return v0
@@ -30,8 +25,6 @@
 .method public getRowHeightInPx()I
     .locals 3
 
-    .prologue
-    .line 41
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/lomo/KubrickKidsPaginatedTopTenAdapter;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     const/4 v1, 0x1
@@ -42,7 +35,6 @@
 
     move-result v0
 
-    .line 42
     iget v1, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/lomo/KubrickKidsPaginatedTopTenAdapter;->numItemsPerPage:I
 
     div-int/2addr v0, v1
@@ -74,8 +66,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 25
     const-class v0, Lcom/netflix/mediaclient/ui/kubrick_kids/lomo/KubrickKidsTopTenVideoViewGroup;
 
     invoke-virtual {p1, v0}, Lcom/netflix/mediaclient/android/widget/ObjectRecycler$ViewRecycler;->pop(Ljava/lang/Class;)Ljava/lang/Object;
@@ -84,10 +74,8 @@
 
     check-cast v0, Lcom/netflix/mediaclient/ui/kubrick_kids/lomo/KubrickKidsTopTenVideoViewGroup;
 
-    .line 26
     if-nez v0, :cond_0
 
-    .line 27
     new-instance v0, Lcom/netflix/mediaclient/ui/kubrick_kids/lomo/KubrickKidsTopTenVideoViewGroup;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/lomo/KubrickKidsPaginatedTopTenAdapter;->getActivity()Landroid/app/Activity;
@@ -96,10 +84,8 @@
 
     invoke-direct {v0, v1}, Lcom/netflix/mediaclient/ui/kubrick_kids/lomo/KubrickKidsTopTenVideoViewGroup;-><init>(Landroid/content/Context;)V
 
-    .line 28
     invoke-virtual {v0, p3}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickLoMoViewGroup;->init(I)V
 
-    .line 30
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/lomo/KubrickKidsPaginatedTopTenAdapter;->getListViewPos()I
 
@@ -115,6 +101,5 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickLoMoViewGroup;->updateDataThenViews(Ljava/util/List;IIILcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;)V
 
-    .line 31
     return-object v0
 .end method

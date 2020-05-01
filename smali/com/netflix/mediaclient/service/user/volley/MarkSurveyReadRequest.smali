@@ -22,11 +22,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 30
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;-><init>(Landroid/content/Context;)V
 
-    .line 31
     return-void
 .end method
 
@@ -44,8 +41,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 35
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -66,16 +61,12 @@
 .method protected onFailure(Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 0
 
-    .prologue
-    .line 51
     return-void
 .end method
 
 .method protected bridge synthetic onSuccess(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 25
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/user/volley/MarkSurveyReadRequest;->onSuccess(Ljava/lang/Void;)V
@@ -86,16 +77,12 @@
 .method protected onSuccess(Ljava/lang/Void;)V
     .locals 0
 
-    .prologue
-    .line 46
     return-void
 .end method
 
 .method protected bridge synthetic parseFalkorResponse(Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 25
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/user/volley/MarkSurveyReadRequest;->parseFalkorResponse(Ljava/lang/String;)Ljava/lang/Void;
 
     move-result-object v0
@@ -106,8 +93,6 @@
 .method protected parseFalkorResponse(Ljava/lang/String;)Ljava/lang/Void;
     .locals 1
 
-    .prologue
-    .line 55
     const/4 v0, 0x0
 
     return-object v0
@@ -116,8 +101,6 @@
 .method protected shouldSkipProcessingOnInvalidUser()Z
     .locals 1
 
-    .prologue
-    .line 40
     const/4 v0, 0x0
 
     return v0

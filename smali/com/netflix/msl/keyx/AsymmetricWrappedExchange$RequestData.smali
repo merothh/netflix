@@ -25,13 +25,10 @@
 .method public constructor <init>(Lcom/netflix/android/org/json/JSONObject;)V
     .locals 5
 
-    .prologue
-    .line 282
     sget-object v0, Lcom/netflix/msl/keyx/KeyExchangeScheme;->ASYMMETRIC_WRAPPED:Lcom/netflix/msl/keyx/KeyExchangeScheme;
 
     invoke-direct {p0, v0}, Lcom/netflix/msl/keyx/KeyRequestData;-><init>(Lcom/netflix/msl/keyx/KeyExchangeScheme;)V
 
-    .line 285
     :try_start_0
     const-string/jumbo v0, "keypairid"
 
@@ -41,7 +38,6 @@
 
     iput-object v0, p0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->keyPairId:Ljava/lang/String;
 
-    .line 286
     const-string/jumbo v0, "mechanism"
 
     invoke-virtual {p1, v0}, Lcom/netflix/android/org/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -50,7 +46,6 @@
 
     move-result-object v1
 
-    .line 288
     :try_start_1
     invoke-static {v1}, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;->valueOf(Ljava/lang/String;)Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
 
@@ -61,7 +56,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 293
     :try_start_2
     const-string/jumbo v0, "publickey"
 
@@ -76,7 +70,6 @@
 
     move-result-object v0
 
-    .line 302
     :try_start_3
     sget-object v1, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$1;->$SwitchMap$com$netflix$msl$keyx$AsymmetricWrappedExchange$RequestData$Mechanism:[I
 
@@ -90,7 +83,6 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 324
     new-instance v0, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->UNSUPPORTED_KEYX_MECHANISM:Lcom/netflix/msl/MslError;
@@ -109,11 +101,9 @@
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_3 .. :try_end_3} :catch_4
     .catch Ljava/security/spec/InvalidKeySpecException; {:try_start_3 .. :try_end_3} :catch_5
 
-    .line 326
     :catch_0
     move-exception v0
 
-    .line 327
     new-instance v1, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->INVALID_PUBLIC_KEY:Lcom/netflix/msl/MslError;
@@ -144,11 +134,9 @@
 
     throw v1
 
-    .line 289
     :catch_1
     move-exception v0
 
-    .line 290
     :try_start_4
     new-instance v2, Lcom/netflix/msl/MslKeyExchangeException;
 
@@ -160,11 +148,9 @@
     :try_end_4
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 297
     :catch_2
     move-exception v0
 
-    .line 298
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_PARSE_ERROR:Lcom/netflix/msl/MslError;
@@ -195,11 +181,9 @@
 
     throw v1
 
-    .line 294
     :catch_3
     move-exception v0
 
-    .line 295
     :try_start_5
     new-instance v1, Lcom/netflix/msl/MslCryptoException;
 
@@ -233,7 +217,6 @@
     :try_end_5
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_5 .. :try_end_5} :catch_2
 
-    .line 309
     :pswitch_0
     :try_start_6
     const-string/jumbo v1, "RSA"
@@ -242,12 +225,10 @@
 
     move-result-object v1
 
-    .line 310
     new-instance v2, Ljava/security/spec/X509EncodedKeySpec;
 
     invoke-direct {v2, v0}, Ljava/security/spec/X509EncodedKeySpec;-><init>([B)V
 
-    .line 311
     invoke-virtual {v1, v2}, Ljava/security/KeyFactory;->generatePublic(Ljava/security/spec/KeySpec;)Ljava/security/PublicKey;
 
     move-result-object v0
@@ -258,19 +239,15 @@
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_6 .. :try_end_6} :catch_4
     .catch Ljava/security/spec/InvalidKeySpecException; {:try_start_6 .. :try_end_6} :catch_5
 
-    .line 333
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->privateKey:Ljava/security/PrivateKey;
 
-    .line 334
     return-void
 
-    .line 328
     :catch_4
     move-exception v0
 
-    .line 329
     new-instance v1, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->UNSUPPORTED_KEYX_MECHANISM:Lcom/netflix/msl/MslError;
@@ -301,11 +278,9 @@
 
     throw v1
 
-    .line 330
     :catch_5
     move-exception v0
 
-    .line 331
     new-instance v1, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->INVALID_PUBLIC_KEY:Lcom/netflix/msl/MslError;
@@ -336,7 +311,6 @@
 
     throw v1
 
-    .line 302
     nop
 
     :pswitch_data_0
@@ -352,25 +326,18 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;Ljava/security/PublicKey;Ljava/security/PrivateKey;)V
     .locals 1
 
-    .prologue
-    .line 263
     sget-object v0, Lcom/netflix/msl/keyx/KeyExchangeScheme;->ASYMMETRIC_WRAPPED:Lcom/netflix/msl/keyx/KeyExchangeScheme;
 
     invoke-direct {p0, v0}, Lcom/netflix/msl/keyx/KeyRequestData;-><init>(Lcom/netflix/msl/keyx/KeyExchangeScheme;)V
 
-    .line 264
     iput-object p1, p0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->keyPairId:Ljava/lang/String;
 
-    .line 265
     iput-object p2, p0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->mechanism:Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
 
-    .line 266
     iput-object p3, p0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->publicKey:Ljava/security/PublicKey;
 
-    .line 267
     iput-object p4, p0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->privateKey:Ljava/security/PrivateKey;
 
-    .line 268
     return-void
 .end method
 
@@ -379,20 +346,16 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 381
     if-ne p1, p0, :cond_1
 
-    .line 392
     :cond_0
     :goto_0
     return v3
 
-    .line 382
     :cond_1
     instance-of v0, p1, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;
 
@@ -405,10 +368,8 @@
     :cond_2
     move-object v0, p1
 
-    .line 383
     check-cast v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;
 
-    .line 385
     iget-object v1, p0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->privateKey:Ljava/security/PrivateKey;
 
     iget-object v4, v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->privateKey:Ljava/security/PrivateKey;
@@ -425,7 +386,6 @@
 
     iget-object v1, p0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->privateKey:Ljava/security/PrivateKey;
 
-    .line 388
     invoke-interface {v1}, Ljava/security/PrivateKey;->getEncoded()[B
 
     move-result-object v1
@@ -445,7 +405,6 @@
     :cond_3
     move v1, v3
 
-    .line 389
     :goto_1
     invoke-super {p0, p1}, Lcom/netflix/msl/keyx/KeyRequestData;->equals(Ljava/lang/Object;)Z
 
@@ -457,7 +416,6 @@
 
     iget-object v5, v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->keyPairId:Ljava/lang/String;
 
-    .line 390
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -468,7 +426,6 @@
 
     iget-object v5, v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->mechanism:Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
 
-    .line 391
     invoke-virtual {v4, v5}, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -477,7 +434,6 @@
 
     iget-object v4, p0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->publicKey:Ljava/security/PublicKey;
 
-    .line 392
     invoke-interface {v4}, Ljava/security/PublicKey;->getEncoded()[B
 
     move-result-object v4
@@ -504,15 +460,12 @@
     :cond_5
     move v1, v2
 
-    .line 388
     goto :goto_1
 .end method
 
 .method public getKeyPairId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 340
     iget-object v0, p0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->keyPairId:Ljava/lang/String;
 
     return-object v0
@@ -521,20 +474,16 @@
 .method protected getKeydata()Lcom/netflix/android/org/json/JSONObject;
     .locals 3
 
-    .prologue
-    .line 369
     new-instance v0, Lcom/netflix/android/org/json/JSONObject;
 
     invoke-direct {v0}, Lcom/netflix/android/org/json/JSONObject;-><init>()V
 
-    .line 370
     const-string/jumbo v1, "keypairid"
 
     iget-object v2, p0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->keyPairId:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 371
     const-string/jumbo v1, "mechanism"
 
     iget-object v2, p0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->mechanism:Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
@@ -545,7 +494,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 372
     const-string/jumbo v1, "publickey"
 
     iget-object v2, p0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->publicKey:Ljava/security/PublicKey;
@@ -560,15 +508,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 373
     return-object v0
 .end method
 
 .method public getMechanism()Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
     .locals 1
 
-    .prologue
-    .line 347
     iget-object v0, p0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->mechanism:Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
 
     return-object v0
@@ -577,8 +522,6 @@
 .method public getPrivateKey()Ljava/security/PrivateKey;
     .locals 1
 
-    .prologue
-    .line 361
     iget-object v0, p0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->privateKey:Ljava/security/PrivateKey;
 
     return-object v0
@@ -587,8 +530,6 @@
 .method public getPublicKey()Ljava/security/PublicKey;
     .locals 1
 
-    .prologue
-    .line 354
     iget-object v0, p0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->publicKey:Ljava/security/PublicKey;
 
     return-object v0
@@ -597,15 +538,12 @@
 .method public hashCode()I
     .locals 3
 
-    .prologue
-    .line 402
     iget-object v0, p0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->privateKey:Ljava/security/PrivateKey;
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->privateKey:Ljava/security/PrivateKey;
 
-    .line 403
     invoke-interface {v0}, Ljava/security/PrivateKey;->getEncoded()[B
 
     move-result-object v0
@@ -614,7 +552,6 @@
 
     move-result v0
 
-    .line 404
     :goto_0
     invoke-super {p0}, Lcom/netflix/msl/keyx/KeyRequestData;->hashCode()I
 
@@ -622,7 +559,6 @@
 
     iget-object v2, p0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->keyPairId:Ljava/lang/String;
 
-    .line 405
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
     move-result v2
@@ -631,7 +567,6 @@
 
     iget-object v2, p0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->mechanism:Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
 
-    .line 406
     invoke-virtual {v2}, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;->hashCode()I
 
     move-result v2
@@ -640,7 +575,6 @@
 
     iget-object v2, p0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData;->publicKey:Ljava/security/PublicKey;
 
-    .line 407
     invoke-interface {v2}, Ljava/security/PublicKey;->getEncoded()[B
 
     move-result-object v2
@@ -655,7 +589,6 @@
 
     return v0
 
-    .line 403
     :cond_0
     const/4 v0, 0x0
 

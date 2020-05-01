@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListener;)V
     .locals 0
 
-    .prologue
-    .line 230
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper$11;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper$11;->val$listener:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListener;
@@ -32,13 +30,10 @@
 .method public run()V
     .locals 5
 
-    .prologue
-    .line 233
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper$11;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;->access$000(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;)V
 
-    .line 234
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper$11;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;->access$100(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;)Ljava/util/List;
@@ -53,7 +48,6 @@
 
     if-nez v0, :cond_0
 
-    .line 235
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper$11;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;->access$100(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;)Ljava/util/List;
@@ -64,7 +58,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 236
     const-string/jumbo v0, "nf_offlineAgent"
 
     const-string/jumbo v1, "addOfflineAgentListener after count=%d"
@@ -93,11 +86,9 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 240
     :goto_0
     return-void
 
-    .line 238
     :cond_0
     const-string/jumbo v0, "nf_offlineAgent"
 

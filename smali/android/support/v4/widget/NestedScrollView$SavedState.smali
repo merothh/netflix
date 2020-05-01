@@ -24,8 +24,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 1866
     new-instance v0, Landroid/support/v4/widget/NestedScrollView$SavedState$1;
 
     invoke-direct {v0}, Landroid/support/v4/widget/NestedScrollView$SavedState$1;-><init>()V
@@ -38,29 +36,22 @@
 .method constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
-    .prologue
-    .line 1849
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 1850
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/support/v4/widget/NestedScrollView$SavedState;->scrollPosition:I
 
-    .line 1851
     return-void
 .end method
 
 .method constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
-    .prologue
-    .line 1845
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 1846
     return-void
 .end method
 
@@ -69,8 +60,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 1861
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -81,7 +70,6 @@
 
     move-result-object v0
 
-    .line 1862
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -122,15 +110,11 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    .prologue
-    .line 1855
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 1856
     iget v0, p0, Landroid/support/v4/widget/NestedScrollView$SavedState;->scrollPosition:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1857
     return-void
 .end method

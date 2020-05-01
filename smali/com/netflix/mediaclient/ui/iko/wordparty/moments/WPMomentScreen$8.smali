@@ -16,13 +16,10 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;)V
     .locals 2
 
-    .prologue
-    .line 1043
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$8;->this$0:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1044
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$8;->mLastClickTime:J
@@ -35,8 +32,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 4
 
-    .prologue
-    .line 1048
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -51,11 +46,9 @@
 
     if-gez v0, :cond_0
 
-    .line 1054
     :goto_0
     return-void
 
-    .line 1052
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -63,7 +56,6 @@
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$8;->mLastClickTime:J
 
-    .line 1053
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$8;->this$0:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     check-cast p1, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardLayout;

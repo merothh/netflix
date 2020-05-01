@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;Landroid/os/Looper;)V
     .locals 0
 
-    .prologue
-    .line 73
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$1;->this$0:Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -23,8 +21,6 @@
 .method private getSessionId(II)Ljava/lang/Long;
     .locals 6
 
-    .prologue
-    .line 75
     int-to-long v0, p1
 
     const/16 v2, 0x20
@@ -39,7 +35,6 @@
 
     or-long/2addr v0, v2
 
-    .line 76
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -52,8 +47,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 5
 
-    .prologue
-    .line 80
     iget v0, p1, Landroid/os/Message;->arg1:I
 
     iget v1, p1, Landroid/os/Message;->arg2:I
@@ -62,17 +55,14 @@
 
     move-result-object v1
 
-    .line 81
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 131
     :cond_0
     :goto_0
     return-void
 
-    .line 83
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -84,14 +74,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 84
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/media/MediaDrm$ProvisionRequest;
 
     goto :goto_0
 
-    .line 90
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -103,19 +91,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 91
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/netflix/mediaclient/service/player/drm/LicenseContext;
 
-    .line 92
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 93
     const-string/jumbo v2, "NfPlayerDrmManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -138,7 +123,6 @@
 
     move-result-object v3
 
-    .line 94
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/drm/LicenseContext;->getBase64Challenge()Ljava/lang/String;
 
     move-result-object v4
@@ -157,7 +141,6 @@
 
     move-result-object v3
 
-    .line 95
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/drm/LicenseContext;->getmLicenseType()Lcom/netflix/mediaclient/service/player/drm/NfDrmManagerInterface$LicenseType;
 
     move-result-object v4
@@ -170,10 +153,8 @@
 
     move-result-object v3
 
-    .line 93
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 97
     :cond_1
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$1;->this$0:Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;
 
@@ -189,7 +170,6 @@
 
     goto :goto_0
 
-    .line 81
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

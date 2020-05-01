@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;)V
     .locals 0
 
-    .prologue
-    .line 837
     iput-object p1, p0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$2;->this$0:Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 840
     const-string/jumbo v0, "nf_voip"
 
     const-string/jumbo v1, "Back to landing page!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 841
     iget-object v0, p0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$2;->this$0:Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;->access$500(Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -47,7 +42,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 842
     iget-object v0, p0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$2;->this$0:Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;->access$600(Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;)Ljava/util/List;
@@ -71,7 +65,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/servicemgr/IVoip$OutboundCallListener;
 
-    .line 843
     iget-object v2, p0, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$2;->this$0:Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;
 
     invoke-static {v2}, Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;->access$700(Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent;)Lcom/netflix/mediaclient/service/voip/WhistleVoipAgent$WhistleCall;
@@ -82,7 +75,6 @@
 
     goto :goto_0
 
-    .line 845
     :cond_0
     return-void
 .end method

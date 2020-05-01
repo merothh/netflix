@@ -40,7 +40,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -51,7 +50,6 @@
 
     const/4 v4, 0x0
 
-    .line 27
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
 
     const-string/jumbo v1, "CONSOLE"
@@ -62,7 +60,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;->CONSOLE:Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
 
-    .line 28
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
 
     const-string/jumbo v1, "TRACE"
@@ -73,7 +70,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;->TRACE:Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
 
-    .line 29
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
 
     const-string/jumbo v1, "DEBUG"
@@ -84,7 +80,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;->DEBUG:Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
 
-    .line 30
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
 
     const-string/jumbo v1, "INFO"
@@ -95,7 +90,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;->INFO:Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
 
-    .line 31
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
 
     const-string/jumbo v1, "WARN"
@@ -106,7 +100,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;->WARN:Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
 
-    .line 32
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
 
     const-string/jumbo v1, "ERROR"
@@ -119,7 +112,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;->ERROR:Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
 
-    .line 33
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
 
     const-string/jumbo v1, "FATAL"
@@ -132,7 +124,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;->FATAL:Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
 
-    .line 26
     const/4 v0, 0x7
 
     new-array v0, v0, [Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
@@ -182,22 +173,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 36
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 37
     iput p3, p0, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;->mLevel:I
 
-    .line 38
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
     .locals 1
 
-    .prologue
-    .line 26
     const-class v0, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -212,8 +197,6 @@
 .method public static values()[Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
     .locals 1
 
-    .prologue
-    .line 26
     sget-object v0, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;->$VALUES:[Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;->clone()Ljava/lang/Object;
@@ -230,8 +213,6 @@
 .method public getLevel()I
     .locals 1
 
-    .prologue
-    .line 40
     iget v0, p0, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;->mLevel:I
 
     return v0
@@ -240,8 +221,6 @@
 .method public getLevelInString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 44
     iget v0, p0, Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;->mLevel:I
 
     invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;

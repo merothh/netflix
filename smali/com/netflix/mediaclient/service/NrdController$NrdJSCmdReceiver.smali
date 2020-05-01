@@ -15,8 +15,6 @@
 .method private constructor <init>(Lcom/netflix/mediaclient/service/NrdController;)V
     .locals 0
 
-    .prologue
-    .line 215
     iput-object p1, p0, Lcom/netflix/mediaclient/service/NrdController$NrdJSCmdReceiver;->this$0:Lcom/netflix/mediaclient/service/NrdController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -29,15 +27,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 6
 
-    .prologue
-    .line 224
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 225
     const-string/jumbo v0, "nf_nrdcontroller"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -64,7 +59,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 228
     :cond_0
     const-string/jumbo v0, "com.netflix.mediaclient.intent.action.JS_BRIDGE_CMD"
 
@@ -78,44 +72,37 @@
 
     if-eqz v0, :cond_2
 
-    .line 230
     :try_start_0
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 232
     if-eqz v0, :cond_2
 
-    .line 233
     const-string/jumbo v1, "object"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 234
     const-string/jumbo v2, "method"
 
     invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 235
     const-string/jumbo v3, "params"
 
     invoke-virtual {v0, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 236
     if-eqz v1, :cond_1
 
     if-eqz v2, :cond_1
 
     if-eqz v0, :cond_1
 
-    .line 237
     iget-object v3, p0, Lcom/netflix/mediaclient/service/NrdController$NrdJSCmdReceiver;->this$0:Lcom/netflix/mediaclient/service/NrdController;
 
     invoke-static {v3}, Lcom/netflix/mediaclient/service/NrdController;->access$200(Lcom/netflix/mediaclient/service/NrdController;)Lcom/netflix/mediaclient/javabridge/NrdProxy;
@@ -124,7 +111,6 @@
 
     invoke-interface {v3, v1, v2, v0}, Lcom/netflix/mediaclient/javabridge/NrdProxy;->invokeMethod(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 239
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -132,7 +118,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 240
     const-string/jumbo v3, "nf_nrdcontroller"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -177,16 +162,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 247
     :cond_2
     :goto_0
     return-void
 
-    .line 243
     :catch_0
     move-exception v0
 
-    .line 244
     const-string/jumbo v1, "nf_nrdcontroller"
 
     const-string/jumbo v2, "Unintented Exception thrown "

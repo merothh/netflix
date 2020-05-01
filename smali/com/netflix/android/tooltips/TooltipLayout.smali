@@ -65,20 +65,16 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .prologue
-    .line 90
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/netflix/android/tooltips/TooltipLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 91
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 6
 
-    .prologue
     const/4 v1, 0x2
 
     const/4 v5, 0x0
@@ -87,73 +83,60 @@
 
     const/4 v3, 0x0
 
-    .line 94
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 65
     const/16 v0, 0x50
 
     iput v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mGravity:I
 
-    .line 66
     iput v3, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mLastMeasuredWidth:I
 
-    .line 67
     iput v3, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mLastMeasuredHeight:I
 
-    .line 69
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTargetBounds:Landroid/graphics/RectF;
 
-    .line 70
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltipViewBounds:Landroid/graphics/Rect;
 
-    .line 71
     new-array v0, v1, [I
 
     iput-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mLocationHelper:[I
 
-    .line 72
     new-array v0, v1, [I
 
     iput-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mLocationHelperParent:[I
 
-    .line 73
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mArrow:Landroid/graphics/Rect;
 
-    .line 76
     new-instance v0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;
 
     invoke-direct {v0, p0, v5}, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;-><init>(Lcom/netflix/android/tooltips/TooltipLayout;Lcom/netflix/android/tooltips/TooltipLayout$1;)V
 
     iput-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltipDesignDrawable:Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;
 
-    .line 78
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mScrimPaint:Landroid/graphics/Paint;
 
-    .line 79
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mHighlightPaint:Landroid/graphics/Paint;
 
-    .line 97
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -166,7 +149,6 @@
 
     iput v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mAccentColor:I
 
-    .line 98
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -179,7 +161,6 @@
 
     iput v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mBackgroundColor:I
 
-    .line 99
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -192,7 +173,6 @@
 
     iput v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltipMaxWidth:I
 
-    .line 100
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -205,7 +185,6 @@
 
     iput v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltipElevation:I
 
-    .line 101
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mArrow:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->getResources()Landroid/content/res/Resources;
@@ -220,7 +199,6 @@
 
     iput v1, v0, Landroid/graphics/Rect;->right:I
 
-    .line 102
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mArrow:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->getResources()Landroid/content/res/Resources;
@@ -235,7 +213,6 @@
 
     iput v1, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 103
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -248,12 +225,10 @@
 
     iput v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltipDefaultSize:I
 
-    .line 106
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mHighlightPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 107
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mHighlightPaint:Landroid/graphics/Paint;
 
     new-instance v1, Landroid/graphics/PorterDuffXfermode;
@@ -264,7 +239,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 108
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mHighlightPaint:Landroid/graphics/Paint;
 
     new-instance v1, Landroid/graphics/CornerPathEffect;
@@ -285,7 +259,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setPathEffect(Landroid/graphics/PathEffect;)Landroid/graphics/PathEffect;
 
-    .line 109
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mScrimPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->getContext()Landroid/content/Context;
@@ -300,43 +273,34 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 110
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mScrimPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 111
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mScrimPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v4}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 112
     new-instance v0, Lcom/netflix/android/tooltips/TooltipLayout$ScrimDrawable;
 
     invoke-direct {v0, p0, v5}, Lcom/netflix/android/tooltips/TooltipLayout$ScrimDrawable;-><init>(Lcom/netflix/android/tooltips/TooltipLayout;Lcom/netflix/android/tooltips/TooltipLayout$1;)V
 
     invoke-virtual {p0, v0}, Lcom/netflix/android/tooltips/TooltipLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 115
     invoke-virtual {p0, v4, v5}, Lcom/netflix/android/tooltips/TooltipLayout;->setLayerType(ILandroid/graphics/Paint;)V
 
-    .line 117
     invoke-virtual {p0, v4}, Lcom/netflix/android/tooltips/TooltipLayout;->setFocusableInTouchMode(Z)V
 
-    .line 118
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->requestFocus()Z
 
-    .line 119
     return-void
 .end method
 
 .method static synthetic access$1100(Lcom/netflix/android/tooltips/TooltipLayout;)I
     .locals 1
 
-    .prologue
-    .line 45
     iget v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mBackgroundColor:I
 
     return v0
@@ -345,8 +309,6 @@
 .method static synthetic access$1200(Lcom/netflix/android/tooltips/TooltipLayout;)Landroid/view/ViewGroup;
     .locals 1
 
-    .prologue
-    .line 45
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltip:Landroid/view/ViewGroup;
 
     return-object v0
@@ -355,8 +317,6 @@
 .method static synthetic access$1300(Lcom/netflix/android/tooltips/TooltipLayout;)Landroid/widget/TextView;
     .locals 1
 
-    .prologue
-    .line 45
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTitle:Landroid/widget/TextView;
 
     return-object v0
@@ -365,8 +325,6 @@
 .method static synthetic access$1400(Lcom/netflix/android/tooltips/TooltipLayout;)I
     .locals 1
 
-    .prologue
-    .line 45
     iget v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mGravity:I
 
     return v0
@@ -375,8 +333,6 @@
 .method static synthetic access$1500(Lcom/netflix/android/tooltips/TooltipLayout;)Landroid/graphics/Rect;
     .locals 1
 
-    .prologue
-    .line 45
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mArrow:Landroid/graphics/Rect;
 
     return-object v0
@@ -385,8 +341,6 @@
 .method static synthetic access$1600(Lcom/netflix/android/tooltips/TooltipLayout;)I
     .locals 1
 
-    .prologue
-    .line 45
     iget v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mArrowCenterXInTooltipBounds:I
 
     return v0
@@ -395,8 +349,6 @@
 .method static synthetic access$202(Lcom/netflix/android/tooltips/TooltipLayout;Landroid/view/ViewPropertyAnimator;)Landroid/view/ViewPropertyAnimator;
     .locals 0
 
-    .prologue
-    .line 45
     iput-object p1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mAnimator:Landroid/view/ViewPropertyAnimator;
 
     return-object p1
@@ -405,8 +357,6 @@
 .method static synthetic access$300(Lcom/netflix/android/tooltips/TooltipLayout;)Lcom/netflix/android/tooltips/Tooltip$Callback;
     .locals 1
 
-    .prologue
-    .line 45
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mCallback:Lcom/netflix/android/tooltips/Tooltip$Callback;
 
     return-object v0
@@ -415,8 +365,6 @@
 .method static synthetic access$400(Lcom/netflix/android/tooltips/TooltipLayout;)Landroid/view/View$OnClickListener;
     .locals 1
 
-    .prologue
-    .line 45
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mUserOnClickListener:Landroid/view/View$OnClickListener;
 
     return-object v0
@@ -425,8 +373,6 @@
 .method static synthetic access$600(Lcom/netflix/android/tooltips/TooltipLayout;)Landroid/graphics/Paint;
     .locals 1
 
-    .prologue
-    .line 45
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mScrimPaint:Landroid/graphics/Paint;
 
     return-object v0
@@ -435,8 +381,6 @@
 .method static synthetic access$700(Lcom/netflix/android/tooltips/TooltipLayout;)Landroid/graphics/RectF;
     .locals 1
 
-    .prologue
-    .line 45
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTargetBounds:Landroid/graphics/RectF;
 
     return-object v0
@@ -445,8 +389,6 @@
 .method static synthetic access$800(Lcom/netflix/android/tooltips/TooltipLayout;)Landroid/graphics/Paint;
     .locals 1
 
-    .prologue
-    .line 45
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mHighlightPaint:Landroid/graphics/Paint;
 
     return-object v0
@@ -455,8 +397,6 @@
 .method static synthetic access$900(Lcom/netflix/android/tooltips/TooltipLayout;)I
     .locals 1
 
-    .prologue
-    .line 45
     iget v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mAccentColor:I
 
     return v0
@@ -465,8 +405,6 @@
 .method private debug(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 234
     return-void
 .end method
 
@@ -475,23 +413,18 @@
 .method dismiss(Landroid/view/ViewGroup;)V
     .locals 4
 
-    .prologue
-    .line 183
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mAnimator:Landroid/view/ViewPropertyAnimator;
 
     if-nez v0, :cond_0
 
-    .line 184
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 185
     if-eqz v0, :cond_0
 
-    .line 186
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v1
@@ -520,7 +453,6 @@
 
     iput-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mAnimator:Landroid/view/ViewPropertyAnimator;
 
-    .line 187
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mAnimator:Landroid/view/ViewPropertyAnimator;
 
     new-instance v2, Lcom/netflix/android/tooltips/TooltipLayout$2;
@@ -529,12 +461,10 @@
 
     invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
-    .line 196
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mAnimator:Landroid/view/ViewPropertyAnimator;
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 199
     :cond_0
     return-void
 .end method
@@ -542,10 +472,8 @@
 .method public dispatchKeyEventPreIme(Landroid/view/KeyEvent;)Z
     .locals 3
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 361
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v0
@@ -564,14 +492,12 @@
 
     if-nez v0, :cond_1
 
-    .line 363
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v0
 
     if-ne v0, v1, :cond_0
 
-    .line 364
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -583,7 +509,6 @@
     :cond_0
     move v0, v1
 
-    .line 367
     :goto_0
     return v0
 
@@ -598,8 +523,6 @@
 .method protected bridge synthetic generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;
     .locals 1
 
-    .prologue
-    .line 45
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->generateDefaultLayoutParams()Landroid/view/ViewGroup$MarginLayoutParams;
 
     move-result-object v0
@@ -610,10 +533,8 @@
 .method protected generateDefaultLayoutParams()Landroid/view/ViewGroup$MarginLayoutParams;
     .locals 2
 
-    .prologue
     const/4 v1, -0x1
 
-    .line 345
     new-instance v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
     invoke-direct {v0, v1, v1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
@@ -624,8 +545,6 @@
 .method public bridge synthetic generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;
     .locals 1
 
-    .prologue
-    .line 45
     invoke-virtual {p0, p1}, Lcom/netflix/android/tooltips/TooltipLayout;->generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$MarginLayoutParams;
 
     move-result-object v0
@@ -636,8 +555,6 @@
 .method protected bridge synthetic generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;
     .locals 1
 
-    .prologue
-    .line 45
     invoke-virtual {p0, p1}, Lcom/netflix/android/tooltips/TooltipLayout;->generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$MarginLayoutParams;
 
     move-result-object v0
@@ -648,8 +565,6 @@
 .method public generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$MarginLayoutParams;
     .locals 2
 
-    .prologue
-    .line 353
     new-instance v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->getContext()Landroid/content/Context;
@@ -664,8 +579,6 @@
 .method protected generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$MarginLayoutParams;
     .locals 1
 
-    .prologue
-    .line 337
     new-instance v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
     invoke-direct {v0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
@@ -676,8 +589,6 @@
 .method public getTarget()Landroid/view/View;
     .locals 1
 
-    .prologue
-    .line 153
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTarget:Landroid/view/View;
 
     return-object v0
@@ -686,11 +597,8 @@
 .method protected onAttachedToWindow()V
     .locals 1
 
-    .prologue
-    .line 220
     invoke-super {p0}, Landroid/view/ViewGroup;->onAttachedToWindow()V
 
-    .line 221
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -699,34 +607,26 @@
 
     iput-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mParent:Landroid/view/View;
 
-    .line 222
     return-void
 .end method
 
 .method protected onDetachedFromWindow()V
     .locals 1
 
-    .prologue
-    .line 226
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mParent:Landroid/view/View;
 
-    .line 227
     invoke-super {p0}, Landroid/view/ViewGroup;->onDetachedFromWindow()V
 
-    .line 228
     return-void
 .end method
 
 .method protected onFinishInflate()V
     .locals 2
 
-    .prologue
-    .line 203
     invoke-super {p0}, Landroid/view/ViewGroup;->onFinishInflate()V
 
-    .line 204
     sget v0, Lcom/netflix/android/tooltips/R$id;->title:I
 
     invoke-virtual {p0, v0}, Lcom/netflix/android/tooltips/TooltipLayout;->findViewById(I)Landroid/view/View;
@@ -737,7 +637,6 @@
 
     iput-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTitle:Landroid/widget/TextView;
 
-    .line 205
     sget v0, Lcom/netflix/android/tooltips/R$id;->detail:I
 
     invoke-virtual {p0, v0}, Lcom/netflix/android/tooltips/TooltipLayout;->findViewById(I)Landroid/view/View;
@@ -748,7 +647,6 @@
 
     iput-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mDetail:Landroid/widget/TextView;
 
-    .line 206
     sget v0, Lcom/netflix/android/tooltips/R$id;->tooltip:I
 
     invoke-virtual {p0, v0}, Lcom/netflix/android/tooltips/TooltipLayout;->findViewById(I)Landroid/view/View;
@@ -759,14 +657,12 @@
 
     iput-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltip:Landroid/view/ViewGroup;
 
-    .line 207
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltip:Landroid/view/ViewGroup;
 
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltipDesignDrawable:Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 208
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltip:Landroid/view/ViewGroup;
 
     new-instance v1, Lcom/netflix/android/tooltips/TooltipLayout$3;
@@ -775,15 +671,12 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 216
     return-void
 .end method
 
 .method protected onLayout(ZIIII)V
     .locals 5
 
-    .prologue
-    .line 329
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltip:Landroid/view/ViewGroup;
 
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltipViewBounds:Landroid/graphics/Rect;
@@ -804,22 +697,18 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/view/ViewGroup;->layout(IIII)V
 
-    .line 330
     return-void
 .end method
 
 .method protected onMeasure(II)V
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
     const/4 v3, 0x0
 
-    .line 245
     invoke-super {p0, p1, p2}, Landroid/view/ViewGroup;->onMeasure(II)V
 
-    .line 247
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTarget:Landroid/view/View;
 
     if-eqz v0, :cond_3
@@ -844,7 +733,6 @@
 
     if-eq v0, v1, :cond_3
 
-    .line 250
     :cond_0
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTarget:Landroid/view/View;
 
@@ -852,14 +740,12 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 251
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mParent:Landroid/view/View;
 
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mLocationHelperParent:[I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 252
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mLocationHelper:[I
 
     aget v1, v0, v3
@@ -872,7 +758,6 @@
 
     aput v1, v0, v3
 
-    .line 253
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mLocationHelper:[I
 
     aget v1, v0, v6
@@ -885,7 +770,6 @@
 
     aput v1, v0, v6
 
-    .line 256
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTargetBounds:Landroid/graphics/RectF;
 
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mLocationHelper:[I
@@ -896,7 +780,6 @@
 
     iput v1, v0, Landroid/graphics/RectF;->left:F
 
-    .line 257
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTargetBounds:Landroid/graphics/RectF;
 
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mLocationHelper:[I
@@ -907,7 +790,6 @@
 
     iput v1, v0, Landroid/graphics/RectF;->top:F
 
-    .line 258
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTargetBounds:Landroid/graphics/RectF;
 
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mLocationHelper:[I
@@ -926,7 +808,6 @@
 
     iput v1, v0, Landroid/graphics/RectF;->right:F
 
-    .line 259
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTargetBounds:Landroid/graphics/RectF;
 
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mLocationHelper:[I
@@ -945,7 +826,6 @@
 
     iput v1, v0, Landroid/graphics/RectF;->bottom:F
 
-    .line 262
     iget v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltipMaxWidth:I
 
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->getMeasuredWidth()I
@@ -956,7 +836,6 @@
 
     move-result v0
 
-    .line 263
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltip:Landroid/view/ViewGroup;
 
     const/high16 v2, 0x40000000    # 2.0f
@@ -973,7 +852,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/netflix/android/tooltips/TooltipLayout;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    .line 266
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltip:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -982,7 +860,6 @@
 
     check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 267
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltipViewBounds:Landroid/graphics/Rect;
 
     iget-object v2, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTargetBounds:Landroid/graphics/RectF;
@@ -997,7 +874,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->top:I
 
-    .line 268
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltipViewBounds:Landroid/graphics/Rect;
 
     iget-object v2, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltipViewBounds:Landroid/graphics/Rect;
@@ -1014,7 +890,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 269
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltipViewBounds:Landroid/graphics/Rect;
 
     iget-object v2, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTargetBounds:Landroid/graphics/RectF;
@@ -1047,7 +922,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->left:I
 
-    .line 270
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltipViewBounds:Landroid/graphics/Rect;
 
     iget-object v2, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltipViewBounds:Landroid/graphics/Rect;
@@ -1064,7 +938,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->right:I
 
-    .line 272
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltipViewBounds:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->right:I
@@ -1081,7 +954,6 @@
 
     if-le v1, v2, :cond_1
 
-    .line 274
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltipViewBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->getMeasuredWidth()I
@@ -1104,7 +976,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->left:I
 
-    .line 275
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltipViewBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->getMeasuredWidth()I
@@ -1119,7 +990,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->right:I
 
-    .line 278
     :cond_1
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltipViewBounds:Landroid/graphics/Rect;
 
@@ -1143,12 +1013,10 @@
 
     if-le v1, v2, :cond_4
 
-    .line 280
     const/16 v1, 0x30
 
     iput v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mGravity:I
 
-    .line 281
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltipViewBounds:Landroid/graphics/Rect;
 
     iget-object v2, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTargetBounds:Landroid/graphics/RectF;
@@ -1163,7 +1031,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 282
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltipViewBounds:Landroid/graphics/Rect;
 
     iget-object v2, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltipViewBounds:Landroid/graphics/Rect;
@@ -1180,7 +1047,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->top:I
 
-    .line 289
     :goto_0
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTargetBounds:Landroid/graphics/RectF;
 
@@ -1200,7 +1066,6 @@
 
     iput v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mArrowCenterXInTooltipBounds:I
 
-    .line 293
     iget v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mArrowCenterXInTooltipBounds:I
 
     iget-object v2, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mArrow:Landroid/graphics/Rect;
@@ -1213,7 +1078,6 @@
 
     sub-int v2, v1, v2
 
-    .line 294
     iget v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mArrowCenterXInTooltipBounds:I
 
     iget-object v3, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mArrow:Landroid/graphics/Rect;
@@ -1226,7 +1090,6 @@
 
     add-int/2addr v3, v1
 
-    .line 296
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->getLayoutDirection()I
 
     move-result v1
@@ -1235,7 +1098,6 @@
 
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltip:Landroid/view/ViewGroup;
 
-    .line 297
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getMeasuredWidth()I
 
     move-result v1
@@ -1248,20 +1110,17 @@
 
     sub-int/2addr v1, v4
 
-    .line 300
     :goto_1
     if-ge v2, v1, :cond_2
 
     if-le v3, v1, :cond_2
 
-    .line 302
     iget-object v4, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mArrow:Landroid/graphics/Rect;
 
     invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
 
     move-result v4
 
-    .line 304
     sub-int v2, v1, v2
 
     invoke-static {v2}, Ljava/lang/Math;->abs(I)I
@@ -1276,12 +1135,10 @@
 
     if-le v2, v3, :cond_6
 
-    .line 306
     sub-int/2addr v1, v4
 
     iput v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mArrowCenterXInTooltipBounds:I
 
-    .line 315
     :cond_2
     :goto_2
     iget v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mArrowCenterXInTooltipBounds:I
@@ -1294,30 +1151,25 @@
 
     iput v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mArrowCenterXInTooltipBounds:I
 
-    .line 318
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTooltipDesignDrawable:Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;
 
     invoke-static {v0}, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;->access$500(Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;)V
 
-    .line 321
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->getMeasuredWidth()I
 
     move-result v0
 
     iput v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mLastMeasuredWidth:I
 
-    .line 322
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->getMeasuredHeight()I
 
     move-result v0
 
     iput v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mLastMeasuredHeight:I
 
-    .line 325
     :cond_3
     return-void
 
-    .line 285
     :cond_4
     const/16 v1, 0x50
 
@@ -1325,18 +1177,15 @@
 
     goto :goto_0
 
-    .line 297
     :cond_5
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTitle:Landroid/widget/TextView;
 
-    .line 298
     invoke-virtual {v1}, Landroid/widget/TextView;->getMeasuredWidth()I
 
     move-result v1
 
     goto :goto_1
 
-    .line 309
     :cond_6
     add-int/2addr v1, v4
 
@@ -1348,98 +1197,72 @@
 .method public requestLayout()V
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 238
     iput v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mLastMeasuredWidth:I
 
-    .line 239
     iput v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mLastMeasuredHeight:I
 
-    .line 240
     invoke-super {p0}, Landroid/view/ViewGroup;->requestLayout()V
 
-    .line 241
     return-void
 .end method
 
 .method public setAccentColor(I)V
     .locals 0
 
-    .prologue
-    .line 127
     iput p1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mAccentColor:I
 
-    .line 128
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->requestLayout()V
 
-    .line 129
     return-void
 .end method
 
 .method public setBackgroundColor(I)V
     .locals 0
 
-    .prologue
-    .line 132
     iput p1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mBackgroundColor:I
 
-    .line 133
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->requestLayout()V
 
-    .line 134
     return-void
 .end method
 
 .method setCallback(Lcom/netflix/android/tooltips/Tooltip$Callback;)V
     .locals 0
 
-    .prologue
-    .line 179
     iput-object p1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mCallback:Lcom/netflix/android/tooltips/Tooltip$Callback;
 
-    .line 180
     return-void
 .end method
 
 .method public setDetail(Ljava/lang/CharSequence;)V
     .locals 1
 
-    .prologue
-    .line 141
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mDetail:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 142
     return-void
 .end method
 
 .method public setScrimColor(I)V
     .locals 1
 
-    .prologue
-    .line 122
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mScrimPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 123
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->invalidate()V
 
-    .line 124
     return-void
 .end method
 
 .method setTarget(Landroid/view/View;)V
     .locals 2
 
-    .prologue
-    .line 145
     iput-object p1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTarget:Landroid/view/View;
 
-    .line 147
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTarget:Landroid/view/View;
 
     invoke-static {v0}, Landroid/support/v4/view/ViewCompat;->getElevation(Landroid/view/View;)F
@@ -1454,55 +1277,42 @@
 
     invoke-static {p0, v0}, Landroid/support/v4/view/ViewCompat;->setElevation(Landroid/view/View;F)V
 
-    .line 149
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->requestLayout()V
 
-    .line 150
     return-void
 .end method
 
 .method public setTitle(Ljava/lang/CharSequence;)V
     .locals 1
 
-    .prologue
-    .line 137
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mTitle:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 138
     return-void
 .end method
 
 .method setUserOnClickListener(Landroid/view/View$OnClickListener;)V
     .locals 0
 
-    .prologue
-    .line 175
     iput-object p1, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mUserOnClickListener:Landroid/view/View$OnClickListener;
 
-    .line 176
     return-void
 .end method
 
 .method show(Landroid/view/ViewGroup;)V
     .locals 4
 
-    .prologue
-    .line 157
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mAnimator:Landroid/view/ViewPropertyAnimator;
 
     if-nez v0, :cond_0
 
-    .line 158
     invoke-virtual {p1, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 159
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/netflix/android/tooltips/TooltipLayout;->setAlpha(F)V
 
-    .line 160
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/TooltipLayout;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
@@ -1531,7 +1341,6 @@
 
     iput-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mAnimator:Landroid/view/ViewPropertyAnimator;
 
-    .line 161
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mAnimator:Landroid/view/ViewPropertyAnimator;
 
     new-instance v1, Lcom/netflix/android/tooltips/TooltipLayout$1;
@@ -1540,12 +1349,10 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
-    .line 170
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout;->mAnimator:Landroid/view/ViewPropertyAnimator;
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 172
     :cond_0
     return-void
 .end method

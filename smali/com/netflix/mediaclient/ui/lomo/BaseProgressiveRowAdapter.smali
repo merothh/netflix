@@ -65,30 +65,22 @@
         }
     .end annotation
 
-    .prologue
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
     iput-object p3, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->adapterCallbacks:Lcom/netflix/mediaclient/ui/lomo/RowAdapterCallbacks;
 
-    .line 68
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->manager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
-    .line 69
     iput-object p4, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->viewRecycler:Lcom/netflix/mediaclient/android/widget/ObjectRecycler$ViewRecycler;
 
-    .line 70
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->paginatedAdapter:Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;
 
-    .line 72
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 73
     const-string/jumbo v0, "BaseProgressiveRowAdapter"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -137,7 +129,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 75
     :cond_0
     return-void
 .end method
@@ -145,15 +136,12 @@
 .method private fetchMoreData()V
     .locals 2
 
-    .prologue
-    .line 195
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->requestId:J
 
-    .line 197
     iget v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->currDataIndex:I
 
     iget v1, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->currDataIndex:I
@@ -166,20 +154,16 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    .line 198
     iget v1, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->currDataIndex:I
 
     invoke-virtual {p0, v1, v0}, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->fetchMoreData(II)V
 
-    .line 199
     return-void
 .end method
 
 .method private getNumVideosToFetchPerBatch(I)I
     .locals 1
 
-    .prologue
-    .line 212
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->paginatedAdapter:Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;->computeNumVideosToFetchPerBatch(I)I
@@ -197,8 +181,6 @@
 .method public getCount()I
     .locals 1
 
-    .prologue
-    .line 79
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->paginatedAdapter:Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;->getCount()I
@@ -211,8 +193,6 @@
 .method protected getLoMo()Lcom/netflix/mediaclient/servicemgr/interface_/BasicLoMo;
     .locals 1
 
-    .prologue
-    .line 204
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->lomo:Lcom/netflix/mediaclient/servicemgr/interface_/BasicLoMo;
 
     return-object v0
@@ -221,8 +201,6 @@
 .method protected getManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
     .locals 1
 
-    .prologue
-    .line 208
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->manager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     return-object v0
@@ -231,8 +209,6 @@
 .method public getRequestId()J
     .locals 2
 
-    .prologue
-    .line 104
     iget-wide v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->requestId:J
 
     return-wide v0
@@ -241,8 +217,6 @@
 .method public getRowHeightInPx()I
     .locals 1
 
-    .prologue
-    .line 84
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->paginatedAdapter:Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;->getRowHeightInPx()I
@@ -255,8 +229,6 @@
 .method public getView(I)Landroid/view/View;
     .locals 3
 
-    .prologue
-    .line 96
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->hasMoreData()Z
 
     move-result v0
@@ -271,10 +243,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 97
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->fetchMoreData()V
 
-    .line 99
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->paginatedAdapter:Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;
 
@@ -299,22 +269,17 @@
         }
     .end annotation
 
-    .prologue
-    .line 167
     if-lez p2, :cond_0
 
-    .line 168
     const-string/jumbo v0, "BaseProgressiveRowAdapter"
 
     const-string/jumbo v1, "prefetch DP only for videos in first page."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 173
     :goto_0
     return-void
 
-    .line 172
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->manager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
@@ -334,8 +299,6 @@
 .method public hasMoreData()Z
     .locals 1
 
-    .prologue
-    .line 109
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->hasMoreData:Z
 
     return v0
@@ -344,80 +307,64 @@
 .method public invalidateRequestId()V
     .locals 2
 
-    .prologue
-    .line 114
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->requestId:J
 
-    .line 115
     return-void
 .end method
 
 .method public onErrorResponse()V
     .locals 2
 
-    .prologue
-    .line 119
     const-string/jumbo v0, "BaseProgressiveRowAdapter"
 
     const-string/jumbo v1, "onErrorResponse(), hasMoreData now false"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->hasMoreData:Z
 
-    .line 121
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->adapterCallbacks:Lcom/netflix/mediaclient/ui/lomo/RowAdapterCallbacks;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/ui/lomo/RowAdapterCallbacks;->notifyParentOfError()V
 
-    .line 122
     return-void
 .end method
 
 .method public onNoVideosInResponse()V
     .locals 2
 
-    .prologue
-    .line 126
     const-string/jumbo v0, "BaseProgressiveRowAdapter"
 
     const-string/jumbo v1, "onNoVideosInResponse(), hasMoreData now false"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->hasMoreData:Z
 
-    .line 128
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->adapterCallbacks:Lcom/netflix/mediaclient/ui/lomo/RowAdapterCallbacks;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/ui/lomo/RowAdapterCallbacks;->notifyParentOfDataSetChange()V
 
-    .line 129
     return-void
 .end method
 
 .method public final refreshData(Lcom/netflix/mediaclient/servicemgr/interface_/BasicLoMo;I)V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 133
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 134
     const-string/jumbo v1, "BaseProgressiveRowAdapter"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -477,33 +424,25 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 136
     :cond_0
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->lomo:Lcom/netflix/mediaclient/servicemgr/interface_/BasicLoMo;
 
-    .line 137
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->paginatedAdapter:Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;->clearData()V
 
-    .line 138
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->paginatedAdapter:Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;
 
     invoke-virtual {v0, p2}, Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;->setListViewPos(I)V
 
-    .line 139
     iput v3, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->currDataIndex:I
 
-    .line 140
     iput-boolean v3, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->hasMoreData:Z
 
-    .line 142
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->fetchMoreData()V
 
-    .line 143
     return-void
 
-    .line 134
     :cond_1
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/BasicLoMo;->getTitle()Ljava/lang/String;
 
@@ -515,43 +454,34 @@
 .method public restoreFromMemento(Ljava/lang/Object;)V
     .locals 3
 
-    .prologue
-    .line 183
     check-cast p1, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter$Memento;
 
-    .line 184
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->invalidateRequestId()V
 
-    .line 185
     iget-object v0, p1, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter$Memento;->lomo:Lcom/netflix/mediaclient/servicemgr/interface_/BasicLoMo;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->lomo:Lcom/netflix/mediaclient/servicemgr/interface_/BasicLoMo;
 
-    .line 186
     iget-boolean v0, p1, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter$Memento;->hasMoreData:Z
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->hasMoreData:Z
 
-    .line 187
     iget v0, p1, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter$Memento;->currDataIndex:I
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->currDataIndex:I
 
-    .line 188
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->paginatedAdapter:Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;
 
     iget-object v1, p1, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter$Memento;->adapterMemento:Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter$Memento;
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;->restoreFromMemento(Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter$Memento;)V
 
-    .line 189
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 190
     const-string/jumbo v0, "BaseProgressiveRowAdapter"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -592,7 +522,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 192
     :cond_0
     return-void
 .end method
@@ -600,8 +529,6 @@
 .method public saveToMemento()Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter$Memento;
     .locals 5
 
-    .prologue
-    .line 177
     new-instance v0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter$Memento;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->lomo:Lcom/netflix/mediaclient/servicemgr/interface_/BasicLoMo;
@@ -620,8 +547,6 @@
 .method public bridge synthetic saveToMemento()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 29
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->saveToMemento()Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter$Memento;
 
     move-result-object v0
@@ -632,8 +557,6 @@
 .method public shouldOverlapPages()Z
     .locals 1
 
-    .prologue
-    .line 89
     const/4 v0, 0x1
 
     return v0
@@ -642,8 +565,6 @@
 .method public trackPresentation(I)V
     .locals 4
 
-    .prologue
-    .line 217
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->paginatedAdapter:Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->manager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -658,7 +579,6 @@
 
     invoke-virtual {v0, v1, v2, p1, v3}, Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;->trackPresentation(Lcom/netflix/mediaclient/servicemgr/ServiceManager;Lcom/netflix/mediaclient/servicemgr/interface_/BasicLoMo;ILjava/lang/Boolean;)V
 
-    .line 218
     return-void
 .end method
 
@@ -674,8 +594,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 151
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -693,14 +611,12 @@
     :goto_0
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->hasMoreData:Z
 
-    .line 152
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 153
     const-string/jumbo v0, "BaseProgressiveRowAdapter"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -755,20 +671,17 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
     :cond_0
     add-int/lit8 v0, p4, 0x1
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->currDataIndex:I
 
-    .line 157
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 158
     const-string/jumbo v0, "BaseProgressiveRowAdapter"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -797,7 +710,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 161
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->paginatedAdapter:Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;
 
@@ -813,18 +725,14 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;->appendData(Ljava/util/List;Ljava/lang/String;IIZ)V
 
-    .line 162
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->adapterCallbacks:Lcom/netflix/mediaclient/ui/lomo/RowAdapterCallbacks;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/ui/lomo/RowAdapterCallbacks;->notifyParentOfDataSetChange()V
 
-    .line 163
     invoke-virtual {p0, p1, p3}, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->handlePrefetchDPData(Ljava/util/List;I)V
 
-    .line 164
     return-void
 
-    .line 151
     :cond_2
     const/4 v0, 0x0
 

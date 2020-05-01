@@ -15,13 +15,10 @@
 .method public constructor <init>(Lcom/netflix/android/org/json/JSONObject;)V
     .locals 5
 
-    .prologue
-    .line 143
     sget-object v0, Lcom/netflix/msl/keyx/KeyExchangeScheme;->DIFFIE_HELLMAN:Lcom/netflix/msl/keyx/KeyExchangeScheme;
 
     invoke-direct {p0, v0}, Lcom/netflix/msl/keyx/KeyRequestData;-><init>(Lcom/netflix/msl/keyx/KeyExchangeScheme;)V
 
-    .line 145
     :try_start_0
     const-string/jumbo v0, "parametersid"
 
@@ -31,7 +28,6 @@
 
     iput-object v0, p0, Lcom/netflix/msl/keyx/DiffieHellmanExchange$RequestData;->parametersId:Ljava/lang/String;
 
-    .line 146
     const-string/jumbo v0, "publickey"
 
     invoke-virtual {p1, v0}, Lcom/netflix/android/org/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -42,7 +38,6 @@
 
     move-result-object v0
 
-    .line 147
     new-instance v1, Ljava/math/BigInteger;
 
     invoke-static {v0}, Lcom/netflix/msl/keyx/DiffieHellmanExchange;->access$000([B)[B
@@ -58,19 +53,15 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_3
 
-    .line 157
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/msl/keyx/DiffieHellmanExchange$RequestData;->privateKey:Ljavax/crypto/interfaces/DHPrivateKey;
 
-    .line 158
     return-void
 
-    .line 148
     :catch_0
     move-exception v0
 
-    .line 149
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_PARSE_ERROR:Lcom/netflix/msl/MslError;
@@ -101,11 +92,9 @@
 
     throw v1
 
-    .line 150
     :catch_1
     move-exception v0
 
-    .line 151
     new-instance v1, Lcom/netflix/msl/MslKeyExchangeException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->KEYX_INVALID_PUBLIC_KEY:Lcom/netflix/msl/MslError;
@@ -136,11 +125,9 @@
 
     throw v1
 
-    .line 152
     :catch_2
     move-exception v0
 
-    .line 153
     new-instance v1, Lcom/netflix/msl/MslKeyExchangeException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->KEYX_INVALID_PUBLIC_KEY:Lcom/netflix/msl/MslError;
@@ -171,11 +158,9 @@
 
     throw v1
 
-    .line 154
     :catch_3
     move-exception v0
 
-    .line 155
     new-instance v1, Lcom/netflix/msl/MslKeyExchangeException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->KEYX_INVALID_PUBLIC_KEY:Lcom/netflix/msl/MslError;
@@ -210,22 +195,16 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/math/BigInteger;Ljavax/crypto/interfaces/DHPrivateKey;)V
     .locals 1
 
-    .prologue
-    .line 128
     sget-object v0, Lcom/netflix/msl/keyx/KeyExchangeScheme;->DIFFIE_HELLMAN:Lcom/netflix/msl/keyx/KeyExchangeScheme;
 
     invoke-direct {p0, v0}, Lcom/netflix/msl/keyx/KeyRequestData;-><init>(Lcom/netflix/msl/keyx/KeyExchangeScheme;)V
 
-    .line 129
     iput-object p1, p0, Lcom/netflix/msl/keyx/DiffieHellmanExchange$RequestData;->parametersId:Ljava/lang/String;
 
-    .line 130
     iput-object p2, p0, Lcom/netflix/msl/keyx/DiffieHellmanExchange$RequestData;->publicKey:Ljava/math/BigInteger;
 
-    .line 131
     iput-object p3, p0, Lcom/netflix/msl/keyx/DiffieHellmanExchange$RequestData;->privateKey:Ljavax/crypto/interfaces/DHPrivateKey;
 
-    .line 132
     return-void
 .end method
 
@@ -234,20 +213,16 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 198
     if-ne p1, p0, :cond_1
 
-    .line 208
     :cond_0
     :goto_0
     return v3
 
-    .line 200
     :cond_1
     instance-of v0, p1, Lcom/netflix/msl/keyx/DiffieHellmanExchange$RequestData;
 
@@ -255,16 +230,13 @@
 
     move v3, v2
 
-    .line 201
     goto :goto_0
 
     :cond_2
     move-object v0, p1
 
-    .line 202
     check-cast v0, Lcom/netflix/msl/keyx/DiffieHellmanExchange$RequestData;
 
-    .line 203
     iget-object v1, p0, Lcom/netflix/msl/keyx/DiffieHellmanExchange$RequestData;->privateKey:Ljavax/crypto/interfaces/DHPrivateKey;
 
     iget-object v4, v0, Lcom/netflix/msl/keyx/DiffieHellmanExchange$RequestData;->privateKey:Ljavax/crypto/interfaces/DHPrivateKey;
@@ -281,7 +253,6 @@
 
     iget-object v1, p0, Lcom/netflix/msl/keyx/DiffieHellmanExchange$RequestData;->privateKey:Ljavax/crypto/interfaces/DHPrivateKey;
 
-    .line 205
     invoke-interface {v1}, Ljavax/crypto/interfaces/DHPrivateKey;->getEncoded()[B
 
     move-result-object v1
@@ -301,7 +272,6 @@
     :cond_3
     move v1, v3
 
-    .line 206
     :goto_1
     invoke-super {p0, p1}, Lcom/netflix/msl/keyx/KeyRequestData;->equals(Ljava/lang/Object;)Z
 
@@ -313,7 +283,6 @@
 
     iget-object v5, v0, Lcom/netflix/msl/keyx/DiffieHellmanExchange$RequestData;->parametersId:Ljava/lang/String;
 
-    .line 207
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -324,7 +293,6 @@
 
     iget-object v0, v0, Lcom/netflix/msl/keyx/DiffieHellmanExchange$RequestData;->publicKey:Ljava/math/BigInteger;
 
-    .line 208
     invoke-virtual {v4, v0}, Ljava/math/BigInteger;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -341,34 +309,28 @@
     :cond_5
     move v1, v2
 
-    .line 205
     goto :goto_1
 .end method
 
 .method protected getKeydata()Lcom/netflix/android/org/json/JSONObject;
     .locals 3
 
-    .prologue
-    .line 162
     new-instance v0, Lcom/netflix/android/org/json/JSONObject;
 
     invoke-direct {v0}, Lcom/netflix/android/org/json/JSONObject;-><init>()V
 
-    .line 163
     const-string/jumbo v1, "parametersid"
 
     iget-object v2, p0, Lcom/netflix/msl/keyx/DiffieHellmanExchange$RequestData;->parametersId:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 164
     iget-object v1, p0, Lcom/netflix/msl/keyx/DiffieHellmanExchange$RequestData;->publicKey:Ljava/math/BigInteger;
 
     invoke-virtual {v1}, Ljava/math/BigInteger;->toByteArray()[B
 
     move-result-object v1
 
-    .line 165
     const-string/jumbo v2, "publickey"
 
     invoke-static {v1}, Lcom/netflix/msl/keyx/DiffieHellmanExchange;->access$000([B)[B
@@ -381,15 +343,12 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 166
     return-object v0
 .end method
 
 .method public getParametersId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 173
     iget-object v0, p0, Lcom/netflix/msl/keyx/DiffieHellmanExchange$RequestData;->parametersId:Ljava/lang/String;
 
     return-object v0
@@ -398,8 +357,6 @@
 .method public getPrivateKey()Ljavax/crypto/interfaces/DHPrivateKey;
     .locals 1
 
-    .prologue
-    .line 188
     iget-object v0, p0, Lcom/netflix/msl/keyx/DiffieHellmanExchange$RequestData;->privateKey:Ljavax/crypto/interfaces/DHPrivateKey;
 
     return-object v0
@@ -408,8 +365,6 @@
 .method public getPublicKey()Ljava/math/BigInteger;
     .locals 1
 
-    .prologue
-    .line 180
     iget-object v0, p0, Lcom/netflix/msl/keyx/DiffieHellmanExchange$RequestData;->publicKey:Ljava/math/BigInteger;
 
     return-object v0
@@ -418,8 +373,6 @@
 .method public hashCode()I
     .locals 3
 
-    .prologue
-    .line 219
     iget-object v0, p0, Lcom/netflix/msl/keyx/DiffieHellmanExchange$RequestData;->privateKey:Ljavax/crypto/interfaces/DHPrivateKey;
 
     if-eqz v0, :cond_0
@@ -434,7 +387,6 @@
 
     move-result v0
 
-    .line 220
     :goto_0
     invoke-super {p0}, Lcom/netflix/msl/keyx/KeyRequestData;->hashCode()I
 
@@ -450,7 +402,6 @@
 
     iget-object v2, p0, Lcom/netflix/msl/keyx/DiffieHellmanExchange$RequestData;->publicKey:Ljava/math/BigInteger;
 
-    .line 221
     invoke-virtual {v2}, Ljava/math/BigInteger;->hashCode()I
 
     move-result v2
@@ -461,7 +412,6 @@
 
     return v0
 
-    .line 219
     :cond_0
     const/4 v0, 0x0
 

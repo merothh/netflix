@@ -240,7 +240,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/16 v8, 0xb
 
     const/16 v7, 0xa
@@ -251,7 +250,6 @@
 
     const/4 v4, 0x0
 
-    .line 15
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "UNKNOWN"
@@ -262,7 +260,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->UNKNOWN:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 16
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "INTERNAL_ERROR"
@@ -273,7 +270,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->INTERNAL_ERROR:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 17
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NETWORK_ERROR"
@@ -284,7 +280,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NETWORK_ERROR:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 18
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NRD_ERROR"
@@ -297,7 +292,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NRD_ERROR:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 19
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "OBSOLETE_APP_VERSION"
@@ -310,7 +304,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->OBSOLETE_APP_VERSION:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 20
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "SET_FAILED"
@@ -323,7 +316,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->SET_FAILED:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 21
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "CONFIG_REFRESH_FAILED"
@@ -336,7 +328,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->CONFIG_REFRESH_FAILED:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 22
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "FORCED_TESTING_ERROR"
@@ -349,7 +340,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->FORCED_TESTING_ERROR:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 23
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "INIT_SERVICE_TIMEOUT"
@@ -362,7 +352,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->INIT_SERVICE_TIMEOUT:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 24
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NOT_IMPLEMENTED"
@@ -375,7 +364,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NOT_IMPLEMENTED:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 25
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NO_CONNECTIVITY"
@@ -386,7 +374,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NO_CONNECTIVITY:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 26
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "CONFIG_DOWNLOAD_FAILED"
@@ -397,7 +384,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->CONFIG_DOWNLOAD_FAILED:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 27
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "FATAL_CONFIG_DOWNLOAD_FAILED"
@@ -410,7 +396,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->FATAL_CONFIG_DOWNLOAD_FAILED:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 28
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "VOIP_CONFIG_DOWNLOAD_FAILED"
@@ -423,7 +408,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->VOIP_CONFIG_DOWNLOAD_FAILED:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 31
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NRD_INVALID_SW_VERSION"
@@ -436,7 +420,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NRD_INVALID_SW_VERSION:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 34
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NRD_LOGIN_ONGOING"
@@ -449,7 +432,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NRD_LOGIN_ONGOING:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 35
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NRD_REGISTRATION_EXISTS"
@@ -462,7 +444,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NRD_REGISTRATION_EXISTS:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 36
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NRD_REGISTRATION_INVALID_CREDENTIALS"
@@ -475,7 +456,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NRD_REGISTRATION_INVALID_CREDENTIALS:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 45
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "USER_SIGNIN_FAILURE"
@@ -488,7 +468,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->USER_SIGNIN_FAILURE:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 46
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "USER_SIGNIN_RETRY"
@@ -501,7 +480,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->USER_SIGNIN_RETRY:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 49
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "WRONG_PATH"
@@ -514,7 +492,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->WRONG_PATH:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 50
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "USER_NOT_AUTHORIZED"
@@ -527,7 +504,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->USER_NOT_AUTHORIZED:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 51
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "SERVER_ERROR"
@@ -540,7 +516,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->SERVER_ERROR:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 52
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "MISSING_ID_IN_CACHE"
@@ -553,7 +528,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->MISSING_ID_IN_CACHE:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 53
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "SERVER_ERROR_MAP_CACHE_MISS"
@@ -566,7 +540,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->SERVER_ERROR_MAP_CACHE_MISS:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 54
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "MAP_ERROR"
@@ -579,7 +552,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->MAP_ERROR:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 55
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "BROWSE_AGENT_WRONG_STATE"
@@ -592,7 +564,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->BROWSE_AGENT_WRONG_STATE:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 56
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "BROWSE_IQ_WRONG_STATE"
@@ -605,7 +576,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->BROWSE_IQ_WRONG_STATE:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 57
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "BROWSE_CW_WRONG_STATE"
@@ -618,7 +588,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->BROWSE_CW_WRONG_STATE:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 58
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DELETED_PROFILE"
@@ -631,7 +600,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DELETED_PROFILE:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 59
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "INVALID_COUNRTY"
@@ -644,7 +612,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->INVALID_COUNRTY:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 60
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "INSUFFICIENT_CONTENT"
@@ -657,7 +624,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->INSUFFICIENT_CONTENT:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 63
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "FALKOR_RESPONSE_PARSE_ERROR"
@@ -670,7 +636,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->FALKOR_RESPONSE_PARSE_ERROR:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 66
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DRM_FAILURE_CDM"
@@ -683,7 +648,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_CDM:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 67
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DRM_FAILURE_GOOGLE_CDM_PROVISIONG_DENIED"
@@ -696,7 +660,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_GOOGLE_CDM_PROVISIONG_DENIED:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 68
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DRM_FAILURE_CDM_KEY_SET_EMPTY"
@@ -709,7 +672,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_CDM_KEY_SET_EMPTY:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 69
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DRM_FAILURE_CDM_RESOURCE_BUSY"
@@ -722,7 +684,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_CDM_RESOURCE_BUSY:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 70
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DRM_FAILURE_CDM_LICENSE_EMPTY"
@@ -735,7 +696,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_CDM_LICENSE_EMPTY:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 71
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DRM_FAILURE_FORCE_CRYPTO_FALLBACK"
@@ -748,7 +708,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_FORCE_CRYPTO_FALLBACK:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 72
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DRM_FAILURE_CDM_NOT_PROVISIONED"
@@ -761,7 +720,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_CDM_NOT_PROVISIONED:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 73
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DRM_FAILURE_CDM_SERVER_DENIED"
@@ -774,7 +732,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_CDM_SERVER_DENIED:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 74
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DRM_FAILURE_CDM_EXCEPTION"
@@ -787,7 +744,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_CDM_EXCEPTION:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 76
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DRM_FAILURE_MEDIADRM_WIDEVINE_PLUGIN_CHANGED"
@@ -800,7 +756,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_MEDIADRM_WIDEVINE_PLUGIN_CHANGED:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 77
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DRM_FAILURE_MEDIADRM_SIGN"
@@ -813,7 +768,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_MEDIADRM_SIGN:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 78
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DRM_FAILURE_MEDIADRM_VERIFY"
@@ -826,7 +780,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_MEDIADRM_VERIFY:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 79
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DRM_FAILURE_MEDIADRM_DECRYPT"
@@ -839,7 +792,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_MEDIADRM_DECRYPT:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 80
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DRM_FAILURE_MEDIADRM_ENCRYPT"
@@ -852,7 +804,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_MEDIADRM_ENCRYPT:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 81
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DRM_FAILURE_MEDIADRM_GET_KEY_REQUEST"
@@ -865,7 +816,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_MEDIADRM_GET_KEY_REQUEST:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 82
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DRM_FAILURE_MEDIADRM_PROVIDE_KEY_RESPONSE"
@@ -878,7 +828,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_MEDIADRM_PROVIDE_KEY_RESPONSE:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 84
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DRM_FAILURE_MEDIADRM_KEYS_RESTORE_FAILED"
@@ -891,7 +840,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_MEDIADRM_KEYS_RESTORE_FAILED:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 85
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DRM_FAILURE_MEDIADRM_RESET"
@@ -904,7 +852,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_MEDIADRM_RESET:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 86
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DRM_FAILURE_GOOGLE_DECLINED_PROVISIONING"
@@ -917,7 +864,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_GOOGLE_DECLINED_PROVISIONING:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 89
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "HTTP_SSL_ERROR"
@@ -930,7 +876,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->HTTP_SSL_ERROR:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 90
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "HTTP_SSL_DATE_TIME_ERROR"
@@ -943,7 +888,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->HTTP_SSL_DATE_TIME_ERROR:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 91
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "HTTP_SSL_NO_VALID_CERT"
@@ -956,7 +900,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->HTTP_SSL_NO_VALID_CERT:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 95
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_URL_DOWNLOAD_DISK_IO_ERROR"
@@ -969,7 +912,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_URL_DOWNLOAD_DISK_IO_ERROR:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 96
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_TITTLE_ALREADY_DOWNLOADED"
@@ -982,7 +924,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_TITTLE_ALREADY_DOWNLOADED:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 97
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_REGISTRY_CHECKSUM_FAILED"
@@ -995,7 +936,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_REGISTRY_CHECKSUM_FAILED:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 98
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_ALL_CDN_URLS_FAILED"
@@ -1008,7 +948,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_ALL_CDN_URLS_FAILED:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 99
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_OFFLINE_STORAGE_NOT_AVAILABLE"
@@ -1021,7 +960,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_OFFLINE_STORAGE_NOT_AVAILABLE:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 100
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_CANT_CREATE_VIEWABLE_DIRECTORY"
@@ -1034,7 +972,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_CANT_CREATE_VIEWABLE_DIRECTORY:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 101
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_CANT_PERSIST_MANIFEST"
@@ -1047,7 +984,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_CANT_PERSIST_MANIFEST:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 102
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_MANIFEST_NO_TRACKS_TO_DOWNLOAD"
@@ -1060,7 +996,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_MANIFEST_NO_TRACKS_TO_DOWNLOAD:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 103
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_CANT_DELETE_DOWNLOADABLES"
@@ -1073,7 +1008,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_CANT_DELETE_DOWNLOADABLES:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 104
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_CANT_DELETE_PLAYABLE_DIRECTORY"
@@ -1086,7 +1020,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_CANT_DELETE_PLAYABLE_DIRECTORY:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 105
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_NOT_ENOUGH_FREE_SPACE"
@@ -1099,7 +1032,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_NOT_ENOUGH_FREE_SPACE:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 106
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_MANIFEST_NOT_FOUND_IN_CACHE"
@@ -1112,7 +1044,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_MANIFEST_NOT_FOUND_IN_CACHE:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 107
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_CANT_PERSIST_REGISTRY"
@@ -1125,7 +1056,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_CANT_PERSIST_REGISTRY:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 108
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_TITTLE_ALREADY_REQUESTED_FOR_DOWNLOAD"
@@ -1138,7 +1068,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_TITTLE_ALREADY_REQUESTED_FOR_DOWNLOAD:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 109
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_OFFLINE_AGENT_NOT_READY"
@@ -1151,7 +1080,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_OFFLINE_AGENT_NOT_READY:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 110
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_OFFLINE_PLAYABLE_NOT_FOUND"
@@ -1164,7 +1092,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_OFFLINE_PLAYABLE_NOT_FOUND:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 111
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_CREATE_REQUEST_ALREADY_PENDING"
@@ -1177,7 +1104,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_CREATE_REQUEST_ALREADY_PENDING:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 112
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_USER_NOT_LOGGED_IN"
@@ -1190,7 +1116,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_USER_NOT_LOGGED_IN:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 113
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_ENCODES_ARE_NOT_AVAILABLE"
@@ -1203,7 +1128,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_ENCODES_ARE_NOT_AVAILABLE:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 114
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_MANIFEST_DATA_MISSING"
@@ -1216,7 +1140,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_MANIFEST_DATA_MISSING:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 115
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_BUSY_TRY_DELETE_AGAIN"
@@ -1229,7 +1152,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_BUSY_TRY_DELETE_AGAIN:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 116
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_PLAY_WINDOW_RENEW_FAILED"
@@ -1242,7 +1164,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_PLAY_WINDOW_RENEW_FAILED:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 118
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_LIMIT_CANT_DOWNLOAD_TILL_DATE"
@@ -1255,7 +1176,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_LIMIT_CANT_DOWNLOAD_TILL_DATE:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 119
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_LIMIT_TOO_MANY_DOWNLOADED_DELETE_SOME"
@@ -1268,7 +1188,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_LIMIT_TOO_MANY_DOWNLOADED_DELETE_SOME:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 120
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_LIMIT_TOO_MANY_DEVICES_PLAN_OPTION"
@@ -1281,7 +1200,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_LIMIT_TOO_MANY_DEVICES_PLAN_OPTION:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 124
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NRD_LOGIN_ACTIONID_1"
@@ -1294,7 +1212,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NRD_LOGIN_ACTIONID_1:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 125
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NRD_LOGIN_ACTIONID_2"
@@ -1307,7 +1224,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NRD_LOGIN_ACTIONID_2:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 126
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NRD_LOGIN_ACTIONID_3"
@@ -1320,7 +1236,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NRD_LOGIN_ACTIONID_3:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 127
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NRD_LOGIN_ACTIONID_4"
@@ -1333,7 +1248,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NRD_LOGIN_ACTIONID_4:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 128
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NRD_LOGIN_ACTIONID_5"
@@ -1346,7 +1260,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NRD_LOGIN_ACTIONID_5:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 129
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NRD_LOGIN_ACTIONID_6"
@@ -1359,7 +1272,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NRD_LOGIN_ACTIONID_6:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 130
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NRD_LOGIN_ACTIONID_7"
@@ -1372,7 +1284,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NRD_LOGIN_ACTIONID_7:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 131
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NRD_LOGIN_ACTIONID_8"
@@ -1385,7 +1296,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NRD_LOGIN_ACTIONID_8:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 132
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NRD_LOGIN_ACTIONID_9"
@@ -1398,7 +1308,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NRD_LOGIN_ACTIONID_9:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 133
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NRD_LOGIN_ACTIONID_10"
@@ -1411,7 +1320,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NRD_LOGIN_ACTIONID_10:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 134
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NRD_LOGIN_ACTIONID_11"
@@ -1424,7 +1332,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NRD_LOGIN_ACTIONID_11:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 135
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NRD_LOGIN_ACTIONID_12"
@@ -1437,7 +1344,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NRD_LOGIN_ACTIONID_12:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 138
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "RESPONSE_PARSE_ERROR"
@@ -1450,7 +1356,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->RESPONSE_PARSE_ERROR:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 139
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "BLADERUNNER_FAILURE"
@@ -1463,7 +1368,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->BLADERUNNER_FAILURE:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 140
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "OFFLINE_LICENSE_MAX_DEVICE_LIMIT"
@@ -1476,7 +1380,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->OFFLINE_LICENSE_MAX_DEVICE_LIMIT:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 141
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "OFFLINE_LICENSE_NOT_TESTER"
@@ -1489,7 +1392,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->OFFLINE_LICENSE_NOT_TESTER:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 142
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "OFFLINE_LICENSE_ERROR"
@@ -1502,7 +1404,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->OFFLINE_LICENSE_ERROR:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 143
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "OFFLINE_LICENSE_FETCH_NEW"
@@ -1515,7 +1416,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->OFFLINE_LICENSE_FETCH_NEW:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 147
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "MSL_FAILED_TO_CREATE_CLIENT"
@@ -1528,7 +1428,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->MSL_FAILED_TO_CREATE_CLIENT:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 148
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "MSL_FAILED_TO_UPDATE_USER_ID"
@@ -1541,7 +1440,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->MSL_FAILED_TO_UPDATE_USER_ID:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 151
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "OK"
@@ -1552,7 +1450,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->OK:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 154
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NON_RECOMMENDED_APP_VERSION"
@@ -1563,7 +1460,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NON_RECOMMENDED_APP_VERSION:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 155
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NON_SUPPORTED_LOCALE"
@@ -1574,7 +1470,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NON_SUPPORTED_LOCALE:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 157
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "ALREADY_IN_QUEUE"
@@ -1585,7 +1480,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->ALREADY_IN_QUEUE:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 158
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NOT_IN_QUEUE"
@@ -1596,7 +1490,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NOT_IN_QUEUE:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 159
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "NOT_VALID"
@@ -1609,7 +1502,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->NOT_VALID:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 160
     new-instance v0, Lcom/netflix/mediaclient/StatusCode;
 
     const-string/jumbo v1, "DL_WARNING_DL_N_TIMES_BEFORE_DATE"
@@ -1622,7 +1514,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/StatusCode;->DL_WARNING_DL_N_TIMES_BEFORE_DATE:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 13
     const/16 v0, 0x6b
 
     new-array v0, v0, [Lcom/netflix/mediaclient/StatusCode;
@@ -2272,22 +2163,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 164
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 165
     iput p3, p0, Lcom/netflix/mediaclient/StatusCode;->mValue:I
 
-    .line 166
     return-void
 .end method
 
 .method public static getStatusCodeByValue(I)Lcom/netflix/mediaclient/StatusCode;
     .locals 5
 
-    .prologue
-    .line 201
     invoke-static {}, Lcom/netflix/mediaclient/StatusCode;->values()[Lcom/netflix/mediaclient/StatusCode;
 
     move-result-object v2
@@ -2303,7 +2188,6 @@
 
     aget-object v0, v2, v1
 
-    .line 202
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/StatusCode;->getValue()I
@@ -2312,11 +2196,9 @@
 
     if-ne v4, p0, :cond_0
 
-    .line 207
     :goto_1
     return-object v0
 
-    .line 201
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -2324,7 +2206,6 @@
 
     goto :goto_0
 
-    .line 207
     :cond_1
     const/4 v0, 0x0
 
@@ -2334,8 +2215,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/StatusCode;
     .locals 1
 
-    .prologue
-    .line 13
     const-class v0, Lcom/netflix/mediaclient/StatusCode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -2350,8 +2229,6 @@
 .method public static values()[Lcom/netflix/mediaclient/StatusCode;
     .locals 1
 
-    .prologue
-    .line 13
     sget-object v0, Lcom/netflix/mediaclient/StatusCode;->$VALUES:[Lcom/netflix/mediaclient/StatusCode;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/StatusCode;->clone()Ljava/lang/Object;
@@ -2368,8 +2245,6 @@
 .method public getValue()I
     .locals 1
 
-    .prologue
-    .line 174
     iget v0, p0, Lcom/netflix/mediaclient/StatusCode;->mValue:I
 
     return v0
@@ -2378,8 +2253,6 @@
 .method public isError()Z
     .locals 1
 
-    .prologue
-    .line 178
     iget v0, p0, Lcom/netflix/mediaclient/StatusCode;->mValue:I
 
     if-gez v0, :cond_0
@@ -2398,8 +2271,6 @@
 .method public isSucess()Z
     .locals 1
 
-    .prologue
-    .line 183
     iget v0, p0, Lcom/netflix/mediaclient/StatusCode;->mValue:I
 
     if-ltz v0, :cond_0
@@ -2418,8 +2289,6 @@
 .method public isWarning()Z
     .locals 1
 
-    .prologue
-    .line 187
     iget v0, p0, Lcom/netflix/mediaclient/StatusCode;->mValue:I
 
     if-lez v0, :cond_0
@@ -2438,8 +2307,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 196
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

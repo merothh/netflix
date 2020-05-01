@@ -23,11 +23,8 @@
 .method public constructor <init>(Lcom/fasterxml/jackson/core/JsonParser;)V
     .locals 3
 
-    .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->getCurrentToken()Lcom/fasterxml/jackson/core/JsonToken;
 
     move-result-object v0
@@ -38,21 +35,16 @@
 
     invoke-static {p0, p1, v0, v1, v2}, Lcom/netflix/falkor/BranchNodeUtils;->merge(Lcom/netflix/mediaclient/servicemgr/interface_/JsonMerger;Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/core/JsonToken;ZI)Ljava/lang/Object;
 
-    .line 28
     return-void
 .end method
 
 .method public constructor <init>(Lcom/google/gson/JsonElement;)V
     .locals 0
 
-    .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     invoke-virtual {p0, p1}, Lcom/netflix/model/leafs/Rating;->populate(Lcom/google/gson/JsonElement;)V
 
-    .line 32
     return-void
 .end method
 
@@ -61,8 +53,6 @@
 .method public getAverage()F
     .locals 1
 
-    .prologue
-    .line 35
     iget v0, p0, Lcom/netflix/model/leafs/Rating;->average:F
 
     return v0
@@ -71,8 +61,6 @@
 .method public getPredicted()F
     .locals 1
 
-    .prologue
-    .line 39
     iget v0, p0, Lcom/netflix/model/leafs/Rating;->predicted:F
 
     return v0
@@ -81,8 +69,6 @@
 .method public getUserRating()F
     .locals 1
 
-    .prologue
-    .line 43
     iget v0, p0, Lcom/netflix/model/leafs/Rating;->userRating:F
 
     return v0
@@ -91,18 +77,14 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 5
 
-    .prologue
-    .line 48
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 49
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 50
     const-string/jumbo v1, "Rating"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -125,7 +107,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
     :cond_0
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -148,14 +129,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 53
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/gson/JsonElement;
 
-    .line 54
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -178,7 +157,6 @@
 
     goto :goto_0
 
-    .line 55
     :pswitch_0
     invoke-static {v1}, Lcom/netflix/mediaclient/util/JsonUtils;->getAsFloatSafe(Lcom/google/gson/JsonElement;)F
 
@@ -188,7 +166,6 @@
 
     goto :goto_0
 
-    .line 54
     :sswitch_0
     const-string/jumbo v4, "average"
 
@@ -228,7 +205,6 @@
 
     goto :goto_1
 
-    .line 56
     :pswitch_1
     invoke-static {v1}, Lcom/netflix/mediaclient/util/JsonUtils;->getAsFloatSafe(Lcom/google/gson/JsonElement;)F
 
@@ -238,7 +214,6 @@
 
     goto :goto_0
 
-    .line 57
     :pswitch_2
     invoke-static {v1}, Lcom/netflix/mediaclient/util/JsonUtils;->getAsFloatSafe(Lcom/google/gson/JsonElement;)F
 
@@ -248,11 +223,9 @@
 
     goto :goto_0
 
-    .line 60
     :cond_2
     return-void
 
-    .line 54
     :sswitch_data_0
     .sparse-switch
         -0x505910c8 -> :sswitch_1
@@ -271,17 +244,14 @@
 .method public set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 64
     sget-boolean v2, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v2, :cond_0
 
-    .line 65
     const-string/jumbo v2, "Rating"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -304,7 +274,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     :cond_0
     const/4 v2, -0x1
 
@@ -318,11 +287,9 @@
     :goto_0
     packed-switch v2, :pswitch_data_0
 
-    .line 80
     :goto_1
     return v0
 
-    .line 67
     :sswitch_0
     const-string/jumbo v3, "average"
 
@@ -362,7 +329,6 @@
 
     goto :goto_0
 
-    .line 69
     :pswitch_0
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsDouble()D
 
@@ -375,10 +341,8 @@
     :goto_2
     move v0, v1
 
-    .line 80
     goto :goto_1
 
-    .line 72
     :pswitch_1
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsDouble()D
 
@@ -390,7 +354,6 @@
 
     goto :goto_2
 
-    .line 75
     :pswitch_2
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsDouble()D
 
@@ -402,7 +365,6 @@
 
     goto :goto_2
 
-    .line 67
     :sswitch_data_0
     .sparse-switch
         -0x505910c8 -> :sswitch_1

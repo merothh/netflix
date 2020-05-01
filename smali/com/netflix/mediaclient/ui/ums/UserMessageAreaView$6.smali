@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;)V
     .locals 0
 
-    .prologue
-    .line 196
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$6;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onGlobalLayout()V
     .locals 4
 
-    .prologue
-    .line 199
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$6;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
@@ -38,7 +34,6 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 201
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$6;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     new-instance v1, Landroid/widget/Space;
@@ -53,7 +48,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;->access$202(Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;Landroid/widget/Space;)Landroid/widget/Space;
 
-    .line 202
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$6;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;->access$200(Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;)Landroid/widget/Space;
@@ -78,7 +72,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Space;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 203
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$6;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;->access$300(Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;)Landroid/widget/ListView;
@@ -97,6 +90,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/widget/ListView;->addHeaderView(Landroid/view/View;Ljava/lang/Object;Z)V
 
-    .line 204
     return-void
 .end method

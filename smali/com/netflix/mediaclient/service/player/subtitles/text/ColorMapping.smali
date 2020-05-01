@@ -74,8 +74,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
-    .line 21
     new-instance v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     const-string/jumbo v2, "black"
@@ -92,7 +90,6 @@
 
     sput-object v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->black:Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
-    .line 22
     new-instance v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     const-string/jumbo v2, "silver"
@@ -109,7 +106,6 @@
 
     sput-object v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->silver:Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
-    .line 23
     new-instance v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     const-string/jumbo v2, "gray"
@@ -126,7 +122,6 @@
 
     sput-object v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->gray:Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
-    .line 24
     new-instance v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     const-string/jumbo v2, "white"
@@ -143,7 +138,6 @@
 
     sput-object v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->white:Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
-    .line 25
     new-instance v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     const-string/jumbo v2, "maroon"
@@ -160,7 +154,6 @@
 
     sput-object v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->maroon:Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
-    .line 26
     new-instance v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     const-string/jumbo v2, "red"
@@ -177,7 +170,6 @@
 
     sput-object v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->red:Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
-    .line 27
     new-instance v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     const-string/jumbo v2, "purple"
@@ -194,7 +186,6 @@
 
     sput-object v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->purple:Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
-    .line 28
     new-instance v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     const-string/jumbo v2, "fuchsia"
@@ -211,7 +202,6 @@
 
     sput-object v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->fuchsia:Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
-    .line 29
     new-instance v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     const-string/jumbo v2, "magenta"
@@ -228,7 +218,6 @@
 
     sput-object v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->magenta:Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
-    .line 30
     new-instance v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     const-string/jumbo v2, "green"
@@ -245,7 +234,6 @@
 
     sput-object v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->green:Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
-    .line 31
     new-instance v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     const-string/jumbo v2, "lime"
@@ -262,7 +250,6 @@
 
     sput-object v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->lime:Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
-    .line 32
     new-instance v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     const-string/jumbo v2, "olive"
@@ -279,7 +266,6 @@
 
     sput-object v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->olive:Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
-    .line 33
     new-instance v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     const-string/jumbo v2, "yellow"
@@ -296,7 +282,6 @@
 
     sput-object v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->yellow:Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
-    .line 34
     new-instance v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     const-string/jumbo v2, "navy"
@@ -313,7 +298,6 @@
 
     sput-object v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->navy:Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
-    .line 35
     new-instance v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     const-string/jumbo v2, "blue"
@@ -330,7 +314,6 @@
 
     sput-object v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->blue:Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
-    .line 36
     new-instance v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     const-string/jumbo v2, "teal"
@@ -347,7 +330,6 @@
 
     sput-object v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->teal:Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
-    .line 37
     new-instance v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     const-string/jumbo v2, "aqua"
@@ -364,7 +346,6 @@
 
     sput-object v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->aqua:Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
-    .line 38
     new-instance v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     const-string/jumbo v2, "cyan"
@@ -381,7 +362,6 @@
 
     sput-object v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->cyan:Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
-    .line 39
     new-instance v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     const-string/jumbo v2, "orange"
@@ -398,7 +378,6 @@
 
     sput-object v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->orange:Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
-    .line 40
     new-instance v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     const-string/jumbo v2, "pink"
@@ -415,7 +394,6 @@
 
     sput-object v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->pink:Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
-    .line 41
     new-instance v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     const-string/jumbo v2, "transparent"
@@ -432,7 +410,6 @@
 
     sput-object v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->transparent:Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
-    .line 20
     const/16 v0, 0x15
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
@@ -579,58 +556,44 @@
         }
     .end annotation
 
-    .prologue
-    .line 62
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 63
     iput-wide p3, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->mValue:D
 
-    .line 64
     iput-object p5, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->mLookupValue:Ljava/lang/String;
 
-    .line 65
     iput-object p6, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->mColorStringValue:Ljava/lang/String;
 
-    .line 66
     return-void
 .end method
 
 .method public static findColor(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 118
     invoke-static {p0}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 119
     const/4 v0, 0x0
 
-    .line 127
     :goto_0
     return-object v0
 
-    .line 122
     :cond_0
     invoke-static {p0}, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->lookup(Ljava/lang/String;)Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     move-result-object v0
 
-    .line 123
     if-eqz v0, :cond_1
 
-    .line 124
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->getColorStringValue()Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 127
     :cond_1
     invoke-static {p0}, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->parseColor(Ljava/lang/String;)Ljava/lang/String;
 
@@ -642,22 +605,18 @@
 .method public static lookup(Ljava/lang/String;)Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 100
     invoke-static {p0}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 110
     :cond_0
     :goto_0
     return-object v0
 
-    .line 104
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->values()[Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
@@ -674,7 +633,6 @@
 
     aget-object v1, v3, v2
 
-    .line 105
     iget-object v5, v1, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->mLookupValue:Ljava/lang/String;
 
     invoke-virtual {v5, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -685,10 +643,8 @@
 
     move-object v0, v1
 
-    .line 106
     goto :goto_0
 
-    .line 104
     :cond_2
     add-int/lit8 v1, v2, 0x1
 
@@ -700,7 +656,6 @@
 .method private static parseColor(Ljava/lang/String;)Ljava/lang/String;
     .locals 9
 
-    .prologue
     const/4 v0, 0x0
 
     const/4 v8, 0x4
@@ -711,12 +666,10 @@
 
     const/4 v5, 0x1
 
-    .line 137
     invoke-virtual {p0}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object v1
 
-    .line 138
     const/4 v2, 0x0
 
     aget-char v2, v1, v2
@@ -725,19 +678,16 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 139
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 140
     array-length v3, v1
 
     const/4 v4, 0x7
 
     if-ne v3, v4, :cond_1
 
-    .line 141
     aget-char v0, v1, v5
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -748,7 +698,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 142
     aget-char v0, v1, v7
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -759,7 +708,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 143
     const/4 v0, 0x5
 
     aget-char v0, v1, v0
@@ -774,23 +722,19 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 152
     :goto_0
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 155
     :cond_0
     return-object v0
 
-    .line 144
     :cond_1
     array-length v3, v1
 
     if-ne v3, v8, :cond_0
 
-    .line 146
     aget-char v0, v1, v5
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -801,7 +745,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 147
     aget-char v0, v1, v6
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -812,7 +755,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 148
     aget-char v0, v1, v7
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -829,17 +771,13 @@
 .method public static resolveColor(Ljava/lang/Float;Ljava/lang/String;)Ljava/lang/Integer;
     .locals 5
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 160
     if-nez p1, :cond_0
 
-    .line 175
     :goto_0
     return-object v0
 
-    .line 165
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -867,7 +805,6 @@
 
     move-result-object v1
 
-    .line 172
     :try_start_0
     invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
@@ -881,11 +818,9 @@
 
     goto :goto_0
 
-    .line 173
     :catch_0
     move-exception v2
 
-    .line 174
     const-string/jumbo v2, "nf_subtitles"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -914,8 +849,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
     .locals 1
 
-    .prologue
-    .line 20
     const-class v0, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -930,8 +863,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
     .locals 1
 
-    .prologue
-    .line 20
     sget-object v0, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->$VALUES:[Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->clone()Ljava/lang/Object;
@@ -948,8 +879,6 @@
 .method public getColorStringValue()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 92
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->mColorStringValue:Ljava/lang/String;
 
     return-object v0
@@ -958,8 +887,6 @@
 .method public getLookupValue()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 83
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->mLookupValue:Ljava/lang/String;
 
     return-object v0
@@ -968,8 +895,6 @@
 .method public getValue()D
     .locals 2
 
-    .prologue
-    .line 74
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/text/ColorMapping;->mValue:D
 
     return-wide v0

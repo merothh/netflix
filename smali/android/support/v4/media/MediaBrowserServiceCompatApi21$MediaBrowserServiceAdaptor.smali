@@ -11,17 +11,12 @@
 .method constructor <init>(Landroid/content/Context;Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceCompatProxy;)V
     .locals 0
 
-    .prologue
-    .line 109
     invoke-direct {p0}, Landroid/service/media/MediaBrowserService;-><init>()V
 
-    .line 110
     invoke-virtual {p0, p1}, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$MediaBrowserServiceAdaptor;->attachBaseContext(Landroid/content/Context;)V
 
-    .line 111
     iput-object p2, p0, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$MediaBrowserServiceAdaptor;->mServiceProxy:Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceCompatProxy;
 
-    .line 112
     return-void
 .end method
 
@@ -30,15 +25,12 @@
 .method public onGetRoot(Ljava/lang/String;ILandroid/os/Bundle;)Landroid/service/media/MediaBrowserService$BrowserRoot;
     .locals 3
 
-    .prologue
-    .line 117
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$MediaBrowserServiceAdaptor;->mServiceProxy:Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceCompatProxy;
 
     invoke-interface {v0, p1, p2, p3}, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceCompatProxy;->onGetRoot(Ljava/lang/String;ILandroid/os/Bundle;)Landroid/support/v4/media/MediaBrowserServiceCompatApi21$BrowserRoot;
 
     move-result-object v1
 
-    .line 119
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
@@ -73,8 +65,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 125
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$MediaBrowserServiceAdaptor;->mServiceProxy:Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceCompatProxy;
 
     new-instance v1, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ResultWrapper;
@@ -83,6 +73,5 @@
 
     invoke-interface {v0, p1, v1}, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceCompatProxy;->onLoadChildren(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ResultWrapper;)V
 
-    .line 126
     return-void
 .end method

@@ -27,36 +27,27 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/media/Display;I)V
     .locals 2
 
-    .prologue
-    .line 43
     const-string/jumbo v0, "media"
 
     const-string/jumbo v1, "setVideoWindow"
 
     invoke-direct {p0, v0, v1}, Lcom/netflix/mediaclient/javabridge/invoke/BaseInvoke;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 44
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/javabridge/invoke/media/SetVideoWindow;->setArguments(Lcom/netflix/mediaclient/media/Display;I)V
 
-    .line 45
     iput-object p1, p0, Lcom/netflix/mediaclient/javabridge/invoke/media/SetVideoWindow;->display:Lcom/netflix/mediaclient/media/Display;
 
-    .line 46
     return-void
 .end method
 
 .method private setArguments(Lcom/netflix/mediaclient/media/Display;I)V
     .locals 3
 
-    .prologue
-    .line 53
-    .line 56
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    .line 57
     const-string/jumbo v1, "width"
 
     invoke-virtual {p1}, Lcom/netflix/mediaclient/media/Display;->getWidth()I
@@ -65,7 +56,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 58
     const-string/jumbo v1, "height"
 
     invoke-virtual {p1}, Lcom/netflix/mediaclient/media/Display;->getHeight()I
@@ -74,7 +64,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 59
     const-string/jumbo v1, "x"
 
     invoke-virtual {p1}, Lcom/netflix/mediaclient/media/Display;->getX()I
@@ -83,7 +72,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 60
     const-string/jumbo v1, "y"
 
     invoke-virtual {p1}, Lcom/netflix/mediaclient/media/Display;->getY()I
@@ -92,12 +80,10 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 61
     const-string/jumbo v1, "transitionDuration"
 
     invoke-virtual {v0, v1, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 62
     invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -106,15 +92,12 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 67
     :goto_0
     return-void
 
-    .line 64
     :catch_0
     move-exception v0
 
-    .line 65
     const-string/jumbo v1, "nf_invoke"
 
     const-string/jumbo v2, "Failed to create JSON object"
@@ -129,8 +112,6 @@
 .method public getDisplay()Lcom/netflix/mediaclient/media/Display;
     .locals 1
 
-    .prologue
-    .line 75
     iget-object v0, p0, Lcom/netflix/mediaclient/javabridge/invoke/media/SetVideoWindow;->display:Lcom/netflix/mediaclient/media/Display;
 
     return-object v0

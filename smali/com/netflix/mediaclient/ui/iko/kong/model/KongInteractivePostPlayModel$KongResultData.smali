@@ -25,8 +25,6 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel;)V
     .locals 0
 
-    .prologue
-    .line 199
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongResultData;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,8 +37,6 @@
 .method public getAudio()Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongVOSound;
     .locals 1
 
-    .prologue
-    .line 225
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongResultData;->audio:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongVOSound;
 
     return-object v0
@@ -49,8 +45,6 @@
 .method public getAvatar()Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongAvatarResult;
     .locals 1
 
-    .prologue
-    .line 221
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongResultData;->avatar:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongAvatarResult;
 
     return-object v0
@@ -59,8 +53,6 @@
 .method public getBattle()Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongResultBattleSound;
     .locals 1
 
-    .prologue
-    .line 229
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongResultData;->battle:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongResultBattleSound;
 
     return-object v0
@@ -69,8 +61,6 @@
 .method public getBattleCard()Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongImage;
     .locals 1
 
-    .prologue
-    .line 233
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongResultData;->battleCard:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongImage;
 
     return-object v0
@@ -79,8 +69,6 @@
 .method public getStrings()Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongResultString;
     .locals 1
 
-    .prologue
-    .line 217
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongResultData;->strings:Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongResultString;
 
     return-object v0
@@ -89,8 +77,6 @@
 .method public getType()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 209
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongResultData;->type:Ljava/lang/String;
 
     return-object v0
@@ -99,8 +85,6 @@
 .method public isHasWatchedAllBattleVideosForEpisode()Z
     .locals 1
 
-    .prologue
-    .line 213
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractivePostPlayModel$KongResultData;->hasWatchedAllBattleVideosForEpisode:Z
 
     return v0
@@ -109,8 +93,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 238
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

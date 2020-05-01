@@ -13,8 +13,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/offline/ActivityPageOfflineAgentListener;Lcom/netflix/mediaclient/android/activity/NetflixActivity;)V
     .locals 0
 
-    .prologue
-    .line 172
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/offline/ActivityPageOfflineAgentListener$2;->this$0:Lcom/netflix/mediaclient/ui/offline/ActivityPageOfflineAgentListener;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/offline/ActivityPageOfflineAgentListener$2;->val$activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -29,8 +27,6 @@
 .method public onDismissed(Lcom/netflix/android/widgetry/buffet/BuffetBar;I)V
     .locals 2
 
-    .prologue
-    .line 175
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/ActivityPageOfflineAgentListener$2;->val$activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/AndroidUtils;->isActivityFinishedOrDestroyed(Landroid/content/Context;)Z
@@ -39,11 +35,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 182
     :goto_0
     return-void
 
-    .line 178
     :cond_0
     if-eqz p2, :cond_1
 
@@ -51,7 +45,6 @@
 
     if-ne p2, v0, :cond_2
 
-    .line 179
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/ActivityPageOfflineAgentListener$2;->this$0:Lcom/netflix/mediaclient/ui/offline/ActivityPageOfflineAgentListener;
 
@@ -59,7 +52,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/offline/ActivityPageOfflineAgentListener;->access$100(Lcom/netflix/mediaclient/ui/offline/ActivityPageOfflineAgentListener;Lcom/netflix/mediaclient/android/activity/NetflixActivity;)V
 
-    .line 181
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/ActivityPageOfflineAgentListener$2;->this$0:Lcom/netflix/mediaclient/ui/offline/ActivityPageOfflineAgentListener;
 

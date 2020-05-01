@@ -11,11 +11,8 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;)V
     .locals 0
 
-    .prologue
-    .line 12
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/service/logging/uiaction/BaseUIActionSession;-><init>(Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;)V
 
-    .line 13
     return-void
 .end method
 
@@ -24,8 +21,6 @@
 .method public createEndedEvent(Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;Lcom/netflix/mediaclient/service/logging/client/model/UIError;)Lcom/netflix/mediaclient/service/logging/uiaction/model/PrefetchLolomoJobEndedEvent;
     .locals 10
 
-    .prologue
-    .line 23
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -34,7 +29,6 @@
 
     sub-long v4, v0, v2
 
-    .line 24
     new-instance v1, Lcom/netflix/mediaclient/service/logging/uiaction/model/PrefetchLolomoJobEndedEvent;
 
     const-string/jumbo v2, "prefetchLolomoJob"
@@ -51,27 +45,22 @@
 
     invoke-direct/range {v1 .. v9}, Lcom/netflix/mediaclient/service/logging/uiaction/model/PrefetchLolomoJobEndedEvent;-><init>(Ljava/lang/String;Lcom/netflix/mediaclient/service/logging/client/model/DeviceUniqueId;JLcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;Lcom/netflix/mediaclient/service/logging/client/model/UIError;)V
 
-    .line 26
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/logging/uiaction/PrefetchLolomoJobSession;->getCategory()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/service/logging/uiaction/model/PrefetchLolomoJobEndedEvent;->setCategory(Ljava/lang/String;)V
 
-    .line 27
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/uiaction/PrefetchLolomoJobSession;->mId:Lcom/netflix/mediaclient/service/logging/client/model/DeviceUniqueId;
 
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/service/logging/uiaction/model/PrefetchLolomoJobEndedEvent;->setSessionId(Lcom/netflix/mediaclient/service/logging/client/model/DeviceUniqueId;)V
 
-    .line 28
     return-object v1
 .end method
 
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 17
     const-string/jumbo v0, "prefetchLolomoJob"
 
     return-object v0

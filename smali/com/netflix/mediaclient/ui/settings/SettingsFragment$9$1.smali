@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/settings/SettingsFragment$9;)V
     .locals 0
 
-    .prologue
-    .line 502
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$9$1;->this$1:Lcom/netflix/mediaclient/ui/settings/SettingsFragment$9;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 5
 
-    .prologue
-    .line 505
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$9$1;->this$1:Lcom/netflix/mediaclient/ui/settings/SettingsFragment$9;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$9;->this$0:Lcom/netflix/mediaclient/ui/settings/SettingsFragment;
@@ -48,7 +44,6 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Lcom/netflix/mediaclient/util/log/UIViewLogUtils;->reportUIViewCommand(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;Lcom/netflix/mediaclient/service/logging/uiview/model/CommandEndedEvent$InputMethod;Lcom/netflix/mediaclient/service/logging/client/model/DataContext;)V
 
-    .line 506
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$9$1;->this$1:Lcom/netflix/mediaclient/ui/settings/SettingsFragment$9;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$9;->val$manager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -57,10 +52,8 @@
 
     move-result-object v0
 
-    .line 507
     if-eqz v0, :cond_0
 
-    .line 508
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$9$1;->this$1:Lcom/netflix/mediaclient/ui/settings/SettingsFragment$9;
 
     iget-object v1, v1, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$9;->this$0:Lcom/netflix/mediaclient/ui/settings/SettingsFragment;
@@ -71,16 +64,12 @@
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface;->addOfflineAgentListener(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListener;)V
 
-    .line 509
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface;->deleteAllOfflineContent()V
 
-    .line 510
     invoke-static {}, Lcom/netflix/mediaclient/ui/offline/DownloadButton;->clearPreQueued()V
 
-    .line 512
     :cond_0
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 513
     return-void
 .end method

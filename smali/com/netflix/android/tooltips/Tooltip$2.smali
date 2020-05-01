@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/android/tooltips/Tooltip;Landroid/view/View;)V
     .locals 0
 
-    .prologue
-    .line 84
     iput-object p1, p0, Lcom/netflix/android/tooltips/Tooltip$2;->this$0:Lcom/netflix/android/tooltips/Tooltip;
 
     iput-object p2, p0, Lcom/netflix/android/tooltips/Tooltip$2;->val$target:Landroid/view/View;
@@ -32,8 +30,6 @@
 .method public onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 2
 
-    .prologue
-    .line 87
     iget-object v0, p0, Lcom/netflix/android/tooltips/Tooltip$2;->val$target:Landroid/view/View;
 
     if-eq p1, v0, :cond_0
@@ -46,7 +42,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 88
     :cond_0
     iget-object v0, p0, Lcom/netflix/android/tooltips/Tooltip$2;->this$0:Lcom/netflix/android/tooltips/Tooltip;
 
@@ -58,7 +53,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/android/tooltips/TooltipLayout;->setTarget(Landroid/view/View;)V
 
-    .line 90
     :cond_1
     return-void
 .end method

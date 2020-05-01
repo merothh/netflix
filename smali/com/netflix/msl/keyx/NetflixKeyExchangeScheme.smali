@@ -17,8 +17,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 13
     new-instance v0, Lcom/netflix/msl/keyx/NetflixKeyExchangeScheme;
 
     const-string/jumbo v1, "AUTHENTICATED_DH"
@@ -27,7 +25,6 @@
 
     sput-object v0, Lcom/netflix/msl/keyx/NetflixKeyExchangeScheme;->AUTHENTICATED_DH:Lcom/netflix/msl/keyx/KeyExchangeScheme;
 
-    .line 15
     new-instance v0, Lcom/netflix/msl/keyx/NetflixKeyExchangeScheme;
 
     const-string/jumbo v1, "WIDEVINE"
@@ -36,7 +33,6 @@
 
     sput-object v0, Lcom/netflix/msl/keyx/NetflixKeyExchangeScheme;->WIDEVINE:Lcom/netflix/msl/keyx/KeyExchangeScheme;
 
-    .line 17
     new-instance v0, Lcom/netflix/msl/keyx/NetflixKeyExchangeScheme;
 
     const-string/jumbo v1, "ANYCAST"
@@ -45,7 +41,6 @@
 
     sput-object v0, Lcom/netflix/msl/keyx/NetflixKeyExchangeScheme;->ANYCAST:Lcom/netflix/msl/keyx/KeyExchangeScheme;
 
-    .line 19
     new-instance v0, Lcom/netflix/msl/keyx/NetflixKeyExchangeScheme;
 
     const-string/jumbo v1, "CDM"
@@ -60,10 +55,7 @@
 .method protected constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 26
     invoke-direct {p0, p1}, Lcom/netflix/msl/keyx/KeyExchangeScheme;-><init>(Ljava/lang/String;)V
 
-    .line 27
     return-void
 .end method

@@ -30,7 +30,6 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x3
 
     const/4 v4, 0x2
@@ -39,7 +38,6 @@
 
     const/4 v2, 0x0
 
-    .line 650
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;
 
     const-string/jumbo v1, "none"
@@ -48,7 +46,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;->none:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;
 
-    .line 651
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;
 
     const-string/jumbo v1, "repos"
@@ -57,7 +54,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;->repos:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;
 
-    .line 652
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;
 
     const-string/jumbo v1, "rebuffer"
@@ -66,7 +62,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;->rebuffer:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;
 
-    .line 653
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;
 
     const-string/jumbo v1, "skip"
@@ -75,7 +70,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;->skip:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;
 
-    .line 649
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;
@@ -109,8 +103,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 649
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -119,8 +111,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;
     .locals 1
 
-    .prologue
-    .line 649
     const-class v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -135,8 +125,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;
     .locals 1
 
-    .prologue
-    .line 649
     sget-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;->$VALUES:[Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackSession$ResumePlayReason;->clone()Ljava/lang/Object;

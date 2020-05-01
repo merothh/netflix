@@ -47,45 +47,32 @@
 .method public constructor <init>(IIIIZZLjava/lang/String;II)V
     .locals 2
 
-    .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/media/PlayoutMetadata;->timestamp:J
 
-    .line 35
     iput p1, p0, Lcom/netflix/mediaclient/media/PlayoutMetadata;->position:I
 
-    .line 36
     iput p2, p0, Lcom/netflix/mediaclient/media/PlayoutMetadata;->duration:I
 
-    .line 37
     iput p3, p0, Lcom/netflix/mediaclient/media/PlayoutMetadata;->instantBitRate:I
 
-    .line 38
     iput p4, p0, Lcom/netflix/mediaclient/media/PlayoutMetadata;->targetBitRate:I
 
-    .line 39
     iput-boolean p5, p0, Lcom/netflix/mediaclient/media/PlayoutMetadata;->isHD:Z
 
-    .line 40
     iput-boolean p6, p0, Lcom/netflix/mediaclient/media/PlayoutMetadata;->isSuperHD:Z
 
-    .line 41
     iput-object p7, p0, Lcom/netflix/mediaclient/media/PlayoutMetadata;->language:Ljava/lang/String;
 
-    .line 42
     iput p8, p0, Lcom/netflix/mediaclient/media/PlayoutMetadata;->numChannels:I
 
-    .line 43
     iput p9, p0, Lcom/netflix/mediaclient/media/PlayoutMetadata;->audioTrackType:I
 
-    .line 44
     return-void
 .end method
 
@@ -104,27 +91,20 @@
         }
     .end annotation
 
-    .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/media/PlayoutMetadata;->timestamp:J
 
-    .line 55
     iput p1, p0, Lcom/netflix/mediaclient/media/PlayoutMetadata;->instantBitRate:I
 
-    .line 56
     iput-object p2, p0, Lcom/netflix/mediaclient/media/PlayoutMetadata;->mVideoResolution:Landroid/util/Pair;
 
-    .line 57
     iput-object p3, p0, Lcom/netflix/mediaclient/media/PlayoutMetadata;->mVideoDecoderName:Ljava/lang/String;
 
-    .line 58
     return-void
 .end method
 
@@ -133,13 +113,10 @@
 .method public getAudioChannel()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 150
     iget v0, p0, Lcom/netflix/mediaclient/media/PlayoutMetadata;->numChannels:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 166
     :pswitch_0
     iget v0, p0, Lcom/netflix/mediaclient/media/PlayoutMetadata;->numChannels:I
 
@@ -150,37 +127,31 @@
     :goto_0
     return-object v0
 
-    .line 152
     :pswitch_1
     const-string/jumbo v0, "Mono"
 
     goto :goto_0
 
-    .line 154
     :pswitch_2
     const-string/jumbo v0, "Stereo"
 
     goto :goto_0
 
-    .line 156
     :pswitch_3
     const-string/jumbo v0, "5.1"
 
     goto :goto_0
 
-    .line 158
     :pswitch_4
     const-string/jumbo v0, "6.1"
 
     goto :goto_0
 
-    .line 160
     :pswitch_5
     const-string/jumbo v0, "7.1"
 
     goto :goto_0
 
-    .line 150
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -197,37 +168,30 @@
 .method public getAudioTrackType()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 131
     iget v0, p0, Lcom/netflix/mediaclient/media/PlayoutMetadata;->audioTrackType:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 140
     const-string/jumbo v0, "uknown"
 
     :goto_0
     return-object v0
 
-    .line 133
     :pswitch_0
     const-string/jumbo v0, "primary"
 
     goto :goto_0
 
-    .line 135
     :pswitch_1
     const-string/jumbo v0, "commentary"
 
     goto :goto_0
 
-    .line 137
     :pswitch_2
     const-string/jumbo v0, "assitive"
 
     goto :goto_0
 
-    .line 131
     nop
 
     :pswitch_data_0
@@ -241,13 +205,10 @@
 .method public isCurrent()Z
     .locals 4
 
-    .prologue
-    .line 175
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 176
     const-wide/16 v2, 0x3e8
 
     sub-long/2addr v0, v2
@@ -272,8 +233,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 181
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -380,7 +339,6 @@
 
     move-result-object v0
 
-    .line 186
     invoke-virtual {p0}, Lcom/netflix/mediaclient/media/PlayoutMetadata;->getAudioChannel()Ljava/lang/String;
 
     move-result-object v1
@@ -395,7 +353,6 @@
 
     move-result-object v0
 
-    .line 187
     invoke-virtual {p0}, Lcom/netflix/mediaclient/media/PlayoutMetadata;->getAudioTrackType()Ljava/lang/String;
 
     move-result-object v1
@@ -414,6 +371,5 @@
 
     move-result-object v0
 
-    .line 181
     return-object v0
 .end method

@@ -15,8 +15,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/license/OfflineLicenseManagerImpl;Lcom/netflix/mediaclient/service/offline/license/OfflineLicenseManager$DownloadCompleteAndActivateCallback;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 188
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/license/OfflineLicenseManagerImpl$1;->this$0:Lcom/netflix/mediaclient/service/offline/license/OfflineLicenseManagerImpl;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/license/OfflineLicenseManagerImpl$1;->val$callback:Lcom/netflix/mediaclient/service/offline/license/OfflineLicenseManager$DownloadCompleteAndActivateCallback;
@@ -33,14 +31,11 @@
 .method public onDownloadComplete(Lcom/netflix/mediaclient/android/app/Status;Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 191
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/license/OfflineLicenseManagerImpl$1;->val$callback:Lcom/netflix/mediaclient/service/offline/license/OfflineLicenseManager$DownloadCompleteAndActivateCallback;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/license/OfflineLicenseManagerImpl$1;->val$playableId:Ljava/lang/String;
 
     invoke-interface {v0, v1, p2, p1}, Lcom/netflix/mediaclient/service/offline/license/OfflineLicenseManager$DownloadCompleteAndActivateCallback;->onDownloadCompleteAndActivateDone(Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 192
     return-void
 .end method

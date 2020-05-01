@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;)V
     .locals 0
 
-    .prologue
-    .line 596
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup$5;->this$0:Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,15 +23,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .prologue
-    .line 599
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup$5;->this$0:Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/ViewUtils;->getNetflixActivitySafely(Landroid/view/View;)Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     move-result-object v0
 
-    .line 600
     invoke-static {v0}, Lcom/netflix/mediaclient/util/AndroidUtils;->isActivityFinishedOrDestroyed(Landroid/content/Context;)Z
 
     move-result v1
@@ -46,7 +41,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 601
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup$5;->this$0:Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup$5;->this$0:Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;
@@ -55,7 +49,6 @@
 
     invoke-virtual {v1, v2, v0}, Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;->updateBadges(Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;Lcom/netflix/mediaclient/android/activity/NetflixActivity;)V
 
-    .line 603
     :cond_0
     return-void
 .end method

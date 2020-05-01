@@ -38,7 +38,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -49,7 +48,6 @@
 
     const/4 v3, 0x0
 
-    .line 8
     new-instance v0, Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;
 
     const-string/jumbo v1, "UNKNOWN"
@@ -60,7 +58,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;->UNKNOWN:Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;
 
-    .line 9
     new-instance v0, Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;
 
     const-string/jumbo v1, "MSG_ERROR"
@@ -69,7 +66,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;->MSG_ERROR:Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;
 
-    .line 10
     new-instance v0, Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;
 
     const-string/jumbo v1, "MSG_PROVISION"
@@ -78,7 +74,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;->MSG_PROVISION:Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;
 
-    .line 11
     new-instance v0, Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;
 
     const-string/jumbo v1, "MSG_KEYS"
@@ -87,7 +82,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;->MSG_KEYS:Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;
 
-    .line 12
     new-instance v0, Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;
 
     const-string/jumbo v1, "MSG_KEYS_LDL"
@@ -96,7 +90,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;->MSG_KEYS_LDL:Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;
 
-    .line 13
     new-instance v0, Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;
 
     const-string/jumbo v1, "MSG_KEYS_OFFLINE"
@@ -107,7 +100,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;->MSG_KEYS_OFFLINE:Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;
 
-    .line 6
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;
@@ -151,22 +143,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 18
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 19
     iput p3, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;->mValue:I
 
-    .line 20
     return-void
 .end method
 
 .method public static getMsgTypeFromValue(I)Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;
     .locals 5
 
-    .prologue
-    .line 28
     invoke-static {}, Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;->values()[Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;
 
     move-result-object v2
@@ -182,18 +168,15 @@
 
     aget-object v0, v2, v1
 
-    .line 29
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;->getValue()I
 
     move-result v4
 
     if-ne v4, p0, :cond_0
 
-    .line 33
     :goto_1
     return-object v0
 
-    .line 28
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -201,7 +184,6 @@
 
     goto :goto_0
 
-    .line 33
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;->UNKNOWN:Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;
 
@@ -211,8 +193,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;
     .locals 1
 
-    .prologue
-    .line 6
     const-class v0, Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -227,8 +207,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;
     .locals 1
 
-    .prologue
-    .line 6
     sget-object v0, Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;->$VALUES:[Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;->clone()Ljava/lang/Object;
@@ -245,8 +223,6 @@
 .method public getValue()I
     .locals 1
 
-    .prologue
-    .line 23
     iget v0, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmMsgType;->mValue:I
 
     return v0

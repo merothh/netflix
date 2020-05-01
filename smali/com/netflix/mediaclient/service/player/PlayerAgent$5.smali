@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/player/PlayerAgent;)V
     .locals 0
 
-    .prologue
-    .line 1192
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$5;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/user/SimpleUserAgentWebCallback;-><init>()V
@@ -25,36 +23,30 @@
 .method public onDummyWebCallDone(Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 6
 
-    .prologue
     const/4 v5, 0x1
 
     const/4 v4, 0x0
 
-    .line 1195
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$5;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     invoke-static {v0, v4}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$4702(Lcom/netflix/mediaclient/service/player/PlayerAgent;Z)Z
 
-    .line 1196
     invoke-interface {p1}, Lcom/netflix/mediaclient/android/app/Status;->getStatusCode()Lcom/netflix/mediaclient/StatusCode;
 
     move-result-object v0
 
-    .line 1197
     invoke-interface {p1}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 1198
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 1199
     invoke-static {}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$1600()Ljava/lang/String;
 
     move-result-object v1
@@ -79,7 +71,6 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1201
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$5;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
@@ -87,14 +78,12 @@
 
     move-result-object v0
 
-    .line 1202
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$5;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     const/4 v2, 0x0
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$4802(Lcom/netflix/mediaclient/service/player/PlayerAgent;Lcom/netflix/mediaclient/event/nrdp/media/NccpError;)Lcom/netflix/mediaclient/event/nrdp/media/NccpError;
 
-    .line 1203
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$5;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$5;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
@@ -113,11 +102,9 @@
 
     invoke-static {v1, v2, v3}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$5000(Lcom/netflix/mediaclient/service/player/PlayerAgent;Lcom/netflix/mediaclient/service/player/PlayerListenerManager$PlayerListenerHandler;[Ljava/lang/Object;)V
 
-    .line 1211
     :goto_0
     return-void
 
-    .line 1206
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -125,7 +112,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1207
     invoke-static {}, Lcom/netflix/mediaclient/service/player/PlayerAgent;->access$1600()Ljava/lang/String;
 
     move-result-object v1
@@ -150,7 +136,6 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1209
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerAgent$5;->this$0:Lcom/netflix/mediaclient/service/player/PlayerAgent;
 

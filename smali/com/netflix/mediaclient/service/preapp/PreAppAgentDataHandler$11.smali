@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;Lcom/netflix/mediaclient/service/pservice/PDiskData;Lcom/netflix/mediaclient/util/data/DataRepository$DataSavedCallback;)V
     .locals 0
 
-    .prologue
-    .line 310
     iput-object p1, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$11;->this$0:Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$11;->val$newData:Lcom/netflix/mediaclient/service/pservice/PDiskData;
@@ -36,8 +34,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 313
     invoke-static {}, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;->access$600()Landroid/content/Context;
 
     move-result-object v0
@@ -52,6 +48,5 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/service/pservice/PDiskDataRepository;->saveData(Landroid/content/Context;Ljava/lang/String;Lcom/netflix/mediaclient/util/data/DataRepository$DataSavedCallback;)V
 
-    .line 314
     return-void
 .end method

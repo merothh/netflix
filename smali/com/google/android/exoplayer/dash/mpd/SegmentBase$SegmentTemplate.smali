@@ -30,20 +30,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 309
     invoke-direct/range {p0 .. p9}, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$MultiSegmentBase;-><init>(Lcom/google/android/exoplayer/dash/mpd/RangedUri;JJIJLjava/util/List;)V
 
-    .line 311
     iput-object p10, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SegmentTemplate;->initializationTemplate:Lcom/google/android/exoplayer/dash/mpd/UrlTemplate;
 
-    .line 312
     iput-object p11, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SegmentTemplate;->mediaTemplate:Lcom/google/android/exoplayer/dash/mpd/UrlTemplate;
 
-    .line 313
     iput-object p12, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SegmentTemplate;->baseUrl:Ljava/lang/String;
 
-    .line 314
     return-void
 .end method
 
@@ -52,15 +46,12 @@
 .method public getInitialization(Lcom/google/android/exoplayer/dash/mpd/Representation;)Lcom/google/android/exoplayer/dash/mpd/RangedUri;
     .locals 8
 
-    .prologue
     const-wide/16 v4, 0x0
 
-    .line 318
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SegmentTemplate;->initializationTemplate:Lcom/google/android/exoplayer/dash/mpd/UrlTemplate;
 
     if-eqz v0, :cond_0
 
-    .line 319
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SegmentTemplate;->initializationTemplate:Lcom/google/android/exoplayer/dash/mpd/UrlTemplate;
 
     iget-object v1, p1, Lcom/google/android/exoplayer/dash/mpd/Representation;->format:Lcom/google/android/exoplayer/chunk/Format;
@@ -77,7 +68,6 @@
 
     move-result-object v3
 
-    .line 321
     new-instance v1, Lcom/google/android/exoplayer/dash/mpd/RangedUri;
 
     iget-object v2, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SegmentTemplate;->baseUrl:Ljava/lang/String;
@@ -86,7 +76,6 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/google/android/exoplayer/dash/mpd/RangedUri;-><init>(Ljava/lang/String;Ljava/lang/String;JJ)V
 
-    .line 323
     :goto_0
     return-object v1
 
@@ -101,13 +90,10 @@
 .method public getLastSegmentNum(J)I
     .locals 5
 
-    .prologue
-    .line 342
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SegmentTemplate;->segmentTimeline:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 343
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SegmentTemplate;->segmentTimeline:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -120,11 +106,9 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    .line 348
     :goto_0
     return v0
 
-    .line 344
     :cond_0
     const-wide/16 v0, -0x1
 
@@ -132,12 +116,10 @@
 
     if-nez v0, :cond_1
 
-    .line 345
     const/4 v0, -0x1
 
     goto :goto_0
 
-    .line 347
     :cond_1
     iget-wide v0, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SegmentTemplate;->duration:J
 
@@ -149,7 +131,6 @@
 
     div-long/2addr v0, v2
 
-    .line 348
     iget v2, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SegmentTemplate;->startNumber:I
 
     invoke-static {p1, p2, v0, v1}, Lcom/google/android/exoplayer/util/Util;->ceilDivide(JJ)J
@@ -168,14 +149,10 @@
 .method public getSegmentUrl(Lcom/google/android/exoplayer/dash/mpd/Representation;I)Lcom/google/android/exoplayer/dash/mpd/RangedUri;
     .locals 8
 
-    .prologue
-    .line 329
-    .line 330
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SegmentTemplate;->segmentTimeline:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 331
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SegmentTemplate;->segmentTimeline:Ljava/util/List;
 
     iget v1, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SegmentTemplate;->startNumber:I
@@ -190,7 +167,6 @@
 
     iget-wide v4, v0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SegmentTimelineElement;->startTime:J
 
-    .line 335
     :goto_0
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SegmentTemplate;->mediaTemplate:Lcom/google/android/exoplayer/dash/mpd/UrlTemplate;
 
@@ -208,7 +184,6 @@
 
     move-result-object v3
 
-    .line 337
     new-instance v1, Lcom/google/android/exoplayer/dash/mpd/RangedUri;
 
     iget-object v2, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SegmentTemplate;->baseUrl:Ljava/lang/String;
@@ -221,7 +196,6 @@
 
     return-object v1
 
-    .line 333
     :cond_0
     iget v0, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SegmentTemplate;->startNumber:I
 

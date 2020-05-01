@@ -36,7 +36,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -47,7 +46,6 @@
 
     const/4 v3, 0x0
 
-    .line 120
     new-instance v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;
 
     const-string/jumbo v1, "STORY_ART"
@@ -58,7 +56,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;->STORY_ART:Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;
 
-    .line 121
     new-instance v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;
 
     const-string/jumbo v1, "HORIZONTAL_ART"
@@ -69,7 +66,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;->HORIZONTAL_ART:Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;
 
-    .line 122
     new-instance v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;
 
     const-string/jumbo v1, "TRICKPLAY"
@@ -80,7 +76,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;->TRICKPLAY:Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;
 
-    .line 123
     new-instance v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;
 
     const-string/jumbo v1, "TITLE_CARD"
@@ -91,7 +86,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;->TITLE_CARD:Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;
 
-    .line 124
     new-instance v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;
 
     const-string/jumbo v1, "UNKNOWN"
@@ -102,7 +96,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;->UNKNOWN:Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;
 
-    .line 119
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;
@@ -142,22 +135,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 128
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 129
     iput-object p3, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;->value:Ljava/lang/String;
 
-    .line 130
     return-void
 .end method
 
 .method public static create(Ljava/lang/String;)Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;
     .locals 5
 
-    .prologue
-    .line 133
     invoke-static {}, Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;->values()[Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;
 
     move-result-object v2
@@ -173,7 +160,6 @@
 
     aget-object v0, v2, v1
 
-    .line 134
     iget-object v4, v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;->value:Ljava/lang/String;
 
     invoke-virtual {v4, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -182,11 +168,9 @@
 
     if-eqz v4, :cond_0
 
-    .line 138
     :goto_1
     return-object v0
 
-    .line 133
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -194,7 +178,6 @@
 
     goto :goto_0
 
-    .line 138
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;->UNKNOWN:Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;
 
@@ -204,8 +187,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;
     .locals 1
 
-    .prologue
-    .line 119
     const-class v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -220,8 +201,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;
     .locals 1
 
-    .prologue
-    .line 119
     sget-object v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;->$VALUES:[Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;->clone()Ljava/lang/Object;
@@ -238,8 +217,6 @@
 .method public getValue()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 142
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData$ImageType;->value:Ljava/lang/String;
 
     return-object v0

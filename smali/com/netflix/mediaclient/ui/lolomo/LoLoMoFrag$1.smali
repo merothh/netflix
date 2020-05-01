@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/lolomo/LoLoMoFrag;)V
     .locals 0
 
-    .prologue
-    .line 200
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lolomo/LoLoMoFrag$1;->this$0:Lcom/netflix/mediaclient/ui/lolomo/LoLoMoFrag;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity$ServiceManagerRunnable;-><init>()V
@@ -25,15 +23,12 @@
 .method public run(Lcom/netflix/mediaclient/servicemgr/ServiceManager;)V
     .locals 1
 
-    .prologue
-    .line 203
     invoke-virtual {p1}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->isOfflineFeatureAvailable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 204
     invoke-virtual {p1}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getOfflineAgent()Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface;
 
     move-result-object v0
@@ -46,17 +41,14 @@
 
     move-result v0
 
-    .line 205
     if-lez v0, :cond_0
 
-    .line 206
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lolomo/LoLoMoFrag$1;->this$0:Lcom/netflix/mediaclient/ui/lolomo/LoLoMoFrag;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/lolomo/LoLoMoFrag;->leWrapper:Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;->showViewMyDownloadsButton()V
 
-    .line 209
     :cond_0
     return-void
 .end method

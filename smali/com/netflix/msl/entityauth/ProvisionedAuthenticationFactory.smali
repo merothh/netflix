@@ -11,16 +11,12 @@
 .method public constructor <init>(Lcom/netflix/msl/entityauth/ProvisionedAuthenticationFactory$IdentityProvisioningService;)V
     .locals 1
 
-    .prologue
-    .line 49
     sget-object v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->PROVISIONED:Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
     invoke-direct {p0, v0}, Lcom/netflix/msl/entityauth/EntityAuthenticationFactory;-><init>(Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;)V
 
-    .line 50
     iput-object p1, p0, Lcom/netflix/msl/entityauth/ProvisionedAuthenticationFactory;->service:Lcom/netflix/msl/entityauth/ProvisionedAuthenticationFactory$IdentityProvisioningService;
 
-    .line 51
     return-void
 .end method
 
@@ -29,8 +25,6 @@
 .method public createData(Lcom/netflix/msl/util/MslContext;Lcom/netflix/android/org/json/JSONObject;)Lcom/netflix/msl/entityauth/EntityAuthenticationData;
     .locals 1
 
-    .prologue
-    .line 58
     new-instance v0, Lcom/netflix/msl/entityauth/ProvisionedAuthenticationData;
 
     invoke-direct {v0, p2}, Lcom/netflix/msl/entityauth/ProvisionedAuthenticationData;-><init>(Lcom/netflix/android/org/json/JSONObject;)V
@@ -41,13 +35,10 @@
 .method public getCryptoContext(Lcom/netflix/msl/util/MslContext;Lcom/netflix/msl/entityauth/EntityAuthenticationData;)Lcom/netflix/msl/crypto/ICryptoContext;
     .locals 3
 
-    .prologue
-    .line 67
     instance-of v0, p2, Lcom/netflix/msl/entityauth/ProvisionedAuthenticationData;
 
     if-nez v0, :cond_0
 
-    .line 68
     new-instance v0, Lcom/netflix/msl/MslInternalException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -86,21 +77,17 @@
 
     throw v0
 
-    .line 69
     :cond_0
     check-cast p2, Lcom/netflix/msl/entityauth/ProvisionedAuthenticationData;
 
-    .line 72
     iget-object v0, p0, Lcom/netflix/msl/entityauth/ProvisionedAuthenticationFactory;->service:Lcom/netflix/msl/entityauth/ProvisionedAuthenticationFactory$IdentityProvisioningService;
 
     invoke-interface {v0}, Lcom/netflix/msl/entityauth/ProvisionedAuthenticationFactory$IdentityProvisioningService;->nextIdentity()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 73
     invoke-virtual {p2, v0}, Lcom/netflix/msl/entityauth/ProvisionedAuthenticationData;->setIdentity(Ljava/lang/String;)V
 
-    .line 76
     new-instance v0, Lcom/netflix/msl/crypto/NullCryptoContext;
 
     invoke-direct {v0}, Lcom/netflix/msl/crypto/NullCryptoContext;-><init>()V

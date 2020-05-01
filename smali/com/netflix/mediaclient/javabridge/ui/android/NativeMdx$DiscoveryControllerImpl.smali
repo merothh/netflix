@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx;)V
     .locals 0
 
-    .prologue
-    .line 275
     iput-object p1, p0, Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx$DiscoveryControllerImpl;->this$0:Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public isRemoteDeviceReady(Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 282
     iget-object v0, p0, Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx$DiscoveryControllerImpl;->this$0:Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx;
 
     new-instance v1, Lcom/netflix/mediaclient/javabridge/invoke/mdx/discovery/IsRemoteDeviceReady;
@@ -38,7 +34,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx;->access$000(Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx;Lcom/netflix/mediaclient/javabridge/invoke/Invoke;)V
 
-    .line 283
     return-void
 .end method
 
@@ -56,8 +51,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 278
     iget-object v0, p0, Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx$DiscoveryControllerImpl;->this$0:Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx;
 
     new-instance v1, Lcom/netflix/mediaclient/javabridge/invoke/mdx/discovery/LaunchNetflix;
@@ -66,6 +59,5 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx;->access$000(Lcom/netflix/mediaclient/javabridge/ui/android/NativeMdx;Lcom/netflix/mediaclient/javabridge/invoke/Invoke;)V
 
-    .line 279
     return-void
 .end method

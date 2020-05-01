@@ -20,23 +20,16 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError;->mCode:Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
-    .line 46
     iput-object p2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError;->mMessage:Ljava/lang/String;
 
-    .line 47
     iput-object p3, p0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError;->mPlayerState:Ljava/lang/String;
 
-    .line 48
     iput-object p4, p0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError;->mExceptionStack:Ljava/lang/String;
 
-    .line 49
     return-void
 .end method
 
@@ -45,8 +38,6 @@
 .method public getErrorCode()I
     .locals 1
 
-    .prologue
-    .line 58
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError;->mCode:Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError$ExoPlaybackErrorCode;->getValue()I
@@ -59,8 +50,6 @@
 .method public getExceptionStack()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 40
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError;->mExceptionStack:Ljava/lang/String;
 
     return-object v0
@@ -69,8 +58,6 @@
 .method public getMessage()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 53
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -115,13 +102,10 @@
 .method public getUiDisplayErrorCode()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 63
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/ExoPlaybackError;->mPlayerState:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 64
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -152,7 +136,6 @@
 
     move-result-object v0
 
-    .line 66
     :goto_0
     return-object v0
 

@@ -13,17 +13,12 @@
 .method public constructor <init>(Lcom/netflix/msl/util/MslContext;Lcom/netflix/msl/tokens/MasterToken;)V
     .locals 0
 
-    .prologue
-    .line 217
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 218
     iput-object p1, p0, Lcom/netflix/msl/msg/MslControl$MslContextMasterTokenKey;->ctx:Lcom/netflix/msl/util/MslContext;
 
-    .line 219
     iput-object p2, p0, Lcom/netflix/msl/msg/MslControl$MslContextMasterTokenKey;->masterToken:Lcom/netflix/msl/tokens/MasterToken;
 
-    .line 220
     return-void
 .end method
 
@@ -32,20 +27,16 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 235
     if-ne p1, p0, :cond_1
 
-    .line 238
     :cond_0
     :goto_0
     return v0
 
-    .line 236
     :cond_1
     instance-of v2, p1, Lcom/netflix/msl/msg/MslControl$MslContextMasterTokenKey;
 
@@ -55,11 +46,9 @@
 
     goto :goto_0
 
-    .line 237
     :cond_2
     check-cast p1, Lcom/netflix/msl/msg/MslControl$MslContextMasterTokenKey;
 
-    .line 238
     iget-object v2, p0, Lcom/netflix/msl/msg/MslControl$MslContextMasterTokenKey;->ctx:Lcom/netflix/msl/util/MslContext;
 
     iget-object v3, p1, Lcom/netflix/msl/msg/MslControl$MslContextMasterTokenKey;->ctx:Lcom/netflix/msl/util/MslContext;
@@ -89,8 +78,6 @@
 .method public hashCode()I
     .locals 2
 
-    .prologue
-    .line 227
     iget-object v0, p0, Lcom/netflix/msl/msg/MslControl$MslContextMasterTokenKey;->ctx:Lcom/netflix/msl/util/MslContext;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I

@@ -58,26 +58,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/manifest/MpdBuilder;->mDirPathOfPlayable:Ljava/lang/String;
 
-    .line 50
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/manifest/MpdBuilder;->mNfManifest:Lcom/netflix/mediaclient/service/player/manifest/NfManifest;
 
-    .line 51
     iput-object p3, p0, Lcom/netflix/mediaclient/service/offline/manifest/MpdBuilder;->mAudioDownloadables:Ljava/util/List;
 
-    .line 52
     iput-object p4, p0, Lcom/netflix/mediaclient/service/offline/manifest/MpdBuilder;->mVideoDownloadables:Ljava/util/List;
 
-    .line 53
     iput-object p5, p0, Lcom/netflix/mediaclient/service/offline/manifest/MpdBuilder;->mDefaultAudioTrackDownloadableId:Ljava/lang/String;
 
-    .line 54
     return-void
 .end method
 
@@ -94,13 +86,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 119
     new-instance v12, Ljava/util/ArrayList;
 
     invoke-direct {v12}, Ljava/util/ArrayList;-><init>()V
 
-    .line 120
     invoke-interface/range {p2 .. p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v13
@@ -119,17 +108,14 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 125
     if-eqz p3, :cond_1
 
-    .line 126
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/manifest/MpdBuilder;->mNfManifest:Lcom/netflix/mediaclient/service/player/manifest/NfManifest;
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/service/player/manifest/NfManifestUtils;->getAudioSourceStreamForDownloadable(Lcom/netflix/mediaclient/service/player/manifest/NfManifest;Ljava/lang/String;)Landroid/util/Pair;
 
     move-result-object v9
 
-    .line 128
     if-eqz v9, :cond_0
 
     iget-object v0, v9, Landroid/util/Pair;->first:Ljava/lang/Object;
@@ -140,14 +126,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 130
     iget-object v0, v9, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Lcom/netflix/mediaclient/media/manifest/Stream;
 
     iget-object v11, v0, Lcom/netflix/mediaclient/media/manifest/Stream;->downloadable_id:Ljava/lang/String;
 
-    .line 131
     new-instance v0, Lcom/google/android/exoplayer/chunk/Format;
 
     iget-object v1, v9, Landroid/util/Pair;->first:Ljava/lang/Object;
@@ -170,7 +154,6 @@
 
     check-cast v6, Lcom/netflix/mediaclient/media/AudioSource;
 
-    .line 133
     invoke-virtual {v6}, Lcom/netflix/mediaclient/media/AudioSource;->getNumChannels()I
 
     move-result v6
@@ -189,7 +172,6 @@
 
     check-cast v9, Lcom/netflix/mediaclient/media/AudioSource;
 
-    .line 136
     invoke-virtual {v9}, Lcom/netflix/mediaclient/media/AudioSource;->getLanguageCodeIso639_1()Ljava/lang/String;
 
     move-result-object v9
@@ -202,7 +184,6 @@
 
     move-object v2, v0
 
-    .line 159
     :goto_1
     if-eqz p3, :cond_2
 
@@ -217,7 +198,6 @@
 
     goto :goto_0
 
-    .line 143
     :cond_1
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/manifest/MpdBuilder;->mNfManifest:Lcom/netflix/mediaclient/service/player/manifest/NfManifest;
 
@@ -225,7 +205,6 @@
 
     move-result-object v8
 
-    .line 145
     if-eqz v8, :cond_0
 
     iget-object v0, v8, Landroid/util/Pair;->first:Ljava/lang/Object;
@@ -236,14 +215,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 147
     iget-object v0, v8, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Lcom/netflix/mediaclient/media/manifest/Stream;
 
     iget-object v11, v0, Lcom/netflix/mediaclient/media/manifest/Stream;->downloadable_id:Ljava/lang/String;
 
-    .line 148
     new-instance v0, Lcom/google/android/exoplayer/chunk/Format;
 
     iget-object v1, v8, Landroid/util/Pair;->first:Ljava/lang/Object;
@@ -284,13 +261,11 @@
 
     goto :goto_1
 
-    .line 159
     :cond_2
     sget-object v0, Lcom/netflix/mediaclient/service/offline/download/DownloadableType;->Video:Lcom/netflix/mediaclient/service/offline/download/DownloadableType;
 
     goto :goto_2
 
-    .line 162
     :cond_3
     new-instance v1, Lcom/google/android/exoplayer/dash/mpd/AdaptationSet;
 
@@ -323,17 +298,14 @@
         }
     .end annotation
 
-    .prologue
     const/4 v4, 0x1
 
     const/4 v3, 0x0
 
-    .line 76
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 78
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/manifest/MpdBuilder;->mAudioDownloadables:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -342,7 +314,6 @@
 
     if-lez v1, :cond_0
 
-    .line 79
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/manifest/MpdBuilder;->mAudioDownloadables:Ljava/util/List;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/offline/manifest/MpdBuilder;->mDefaultAudioTrackDownloadableId:Ljava/lang/String;
@@ -351,14 +322,12 @@
 
     move-result-object v1
 
-    .line 80
     invoke-direct {p0, v3, v1, v4}, Lcom/netflix/mediaclient/service/offline/manifest/MpdBuilder;->buildAdaptationSet(ILjava/util/List;Z)Lcom/google/android/exoplayer/dash/mpd/AdaptationSet;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 83
     :cond_0
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/manifest/MpdBuilder;->mVideoDownloadables:Ljava/util/List;
 
@@ -368,7 +337,6 @@
 
     if-lez v1, :cond_1
 
-    .line 84
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/manifest/MpdBuilder;->mVideoDownloadables:Ljava/util/List;
 
     invoke-direct {p0, v4, v1, v3}, Lcom/netflix/mediaclient/service/offline/manifest/MpdBuilder;->buildAdaptationSet(ILjava/util/List;Z)Lcom/google/android/exoplayer/dash/mpd/AdaptationSet;
@@ -377,7 +345,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 86
     :cond_1
     new-instance v1, Lcom/google/android/exoplayer/dash/mpd/Period;
 
@@ -387,7 +354,6 @@
 
     invoke-direct {v1, v2, v4, v5, v0}, Lcom/google/android/exoplayer/dash/mpd/Period;-><init>(Ljava/lang/String;JLjava/util/List;)V
 
-    .line 87
     invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
@@ -398,16 +364,12 @@
 .method private buildRepresentation(Lcom/google/android/exoplayer/chunk/Format;Ljava/lang/String;Lcom/netflix/mediaclient/service/offline/download/DownloadableType;)Lcom/google/android/exoplayer/dash/mpd/Representation;
     .locals 4
 
-    .prologue
-    .line 171
     invoke-direct {p0, p2, p3}, Lcom/netflix/mediaclient/service/offline/manifest/MpdBuilder;->getSegmentBase(Ljava/lang/String;Lcom/netflix/mediaclient/service/offline/download/DownloadableType;)Lcom/google/android/exoplayer/dash/mpd/SegmentBase;
 
     move-result-object v0
 
-    .line 172
     if-nez v0, :cond_0
 
-    .line 175
     :cond_0
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/manifest/MpdBuilder;->mNfManifest:Lcom/netflix/mediaclient/service/player/manifest/NfManifest;
 
@@ -431,27 +393,22 @@
 .method private getSegmentBase(Ljava/lang/String;Lcom/netflix/mediaclient/service/offline/download/DownloadableType;)Lcom/google/android/exoplayer/dash/mpd/SegmentBase;
     .locals 12
 
-    .prologue
     const-wide/16 v4, 0x0
 
     const/4 v1, 0x0
 
-    .line 180
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/manifest/MpdBuilder;->mDirPathOfPlayable:Ljava/lang/String;
 
     invoke-static {v0, p1, p2}, Lcom/netflix/mediaclient/service/offline/utils/OfflinePathUtils;->getFilePathForDownloadable(Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/service/offline/download/DownloadableType;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 182
     invoke-static {v6}, Lcom/netflix/mediaclient/service/offline/manifest/NetflixFMP4Parser;->parseSidxInfo(Ljava/lang/String;)Lcom/netflix/mediaclient/service/offline/manifest/NetflixFMP4Parser$SidxInfo;
 
     move-result-object v7
 
-    .line 183
     if-eqz v7, :cond_0
 
-    .line 184
     new-instance v0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SingleSegmentBase;
 
     const-wide/16 v2, 0x1
@@ -474,7 +431,6 @@
 
     move-result-object v6
 
-    .line 186
     invoke-virtual {v7}, Lcom/netflix/mediaclient/service/offline/manifest/NetflixFMP4Parser$SidxInfo;->getSidxOffset()J
 
     move-result-wide v8
@@ -489,7 +445,6 @@
 
     invoke-direct/range {v0 .. v10}, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SingleSegmentBase;-><init>(Lcom/google/android/exoplayer/dash/mpd/RangedUri;JJLjava/lang/String;JJ)V
 
-    .line 188
     :goto_0
     return-object v0
 
@@ -517,27 +472,22 @@
         }
     .end annotation
 
-    .prologue
     const/4 v7, 0x1
 
     const/4 v6, 0x0
 
-    .line 93
     invoke-static {p2}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 115
     :goto_0
     return-object p1
 
-    .line 97
     :cond_0
     const/4 v1, 0x0
 
-    .line 98
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -546,7 +496,6 @@
 
     invoke-direct {v2, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 99
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -564,14 +513,12 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 101
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 102
     const-string/jumbo v1, "nf_offline_mpd_builder"
 
     const-string/jumbo v4, "setDefaultAudio:: default audio track found %s"
@@ -585,10 +532,8 @@
     :goto_2
     move-object v1, v0
 
-    .line 107
     goto :goto_1
 
-    .line 105
     :cond_1
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -596,20 +541,16 @@
 
     goto :goto_2
 
-    .line 109
     :cond_2
     if-eqz v1, :cond_3
 
-    .line 110
     invoke-interface {v2, v6, v1}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
     :goto_3
     move-object p1, v2
 
-    .line 115
     goto :goto_0
 
-    .line 112
     :cond_3
     const-string/jumbo v0, "nf_offline_mpd_builder"
 
@@ -629,20 +570,15 @@
 .method public buildMpd()Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;
     .locals 18
 
-    .prologue
-    .line 57
     const/4 v15, 0x0
 
-    .line 58
     const/16 v16, 0x0
 
-    .line 60
     :try_start_0
     invoke-direct/range {p0 .. p0}, Lcom/netflix/mediaclient/service/offline/manifest/MpdBuilder;->buildPeriods()Ljava/util/List;
 
     move-result-object v17
 
-    .line 61
     new-instance v3, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;
 
     const-wide/16 v4, 0x0
@@ -651,7 +587,6 @@
 
     iget-object v2, v0, Lcom/netflix/mediaclient/service/offline/manifest/MpdBuilder;->mNfManifest:Lcom/netflix/mediaclient/service/player/manifest/NfManifest;
 
-    .line 63
     invoke-virtual {v2}, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->getDuration()J
 
     move-result-wide v6
@@ -668,15 +603,12 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 71
     :goto_0
     return-object v3
 
-    .line 70
     :catch_0
     move-exception v2
 
-    .line 71
     const/4 v3, 0x0
 
     goto :goto_0

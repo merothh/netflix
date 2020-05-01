@@ -11,8 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 16
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -23,8 +21,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .prologue
-    .line 21
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -35,18 +31,14 @@
 
     move-result v0
 
-    .line 22
     if-eqz v0, :cond_1
 
-    .line 23
     invoke-static {p1, p2}, Lcom/netflix/mediaclient/service/job/NetflixJobSchedulerPreL;->onAlarmReceived(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 29
     :cond_0
     :goto_0
     return-void
 
-    .line 25
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -54,7 +46,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 26
     const-string/jumbo v0, "nf_alarm_receiver"
 
     const-string/jumbo v1, "onReceive alarmReceiverOn=false"

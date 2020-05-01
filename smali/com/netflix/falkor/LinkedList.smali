@@ -42,14 +42,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 8
     iput-object p1, p0, Lcom/netflix/falkor/LinkedList;->value:Ljava/lang/Object;
 
-    .line 9
     return-void
 .end method
 
@@ -63,17 +59,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12
     iput-object p1, p0, Lcom/netflix/falkor/LinkedList;->value:Ljava/lang/Object;
 
-    .line 13
     iput-object p2, p0, Lcom/netflix/falkor/LinkedList;->next:Lcom/netflix/falkor/LinkedList;
 
-    .line 14
     return-void
 .end method
 
@@ -89,8 +80,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 23
     iget-object v0, p0, Lcom/netflix/falkor/LinkedList;->next:Lcom/netflix/falkor/LinkedList;
 
     return-object v0
@@ -104,8 +93,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 18
     iget-object v0, p0, Lcom/netflix/falkor/LinkedList;->value:Ljava/lang/Object;
 
     return-object v0
@@ -121,27 +108,21 @@
         }
     .end annotation
 
-    .prologue
-    .line 27
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 29
     :goto_0
     if-eqz p0, :cond_0
 
-    .line 30
     iget-object v1, p0, Lcom/netflix/falkor/LinkedList;->value:Ljava/lang/Object;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 31
     iget-object p0, p0, Lcom/netflix/falkor/LinkedList;->next:Lcom/netflix/falkor/LinkedList;
 
     goto :goto_0
 
-    .line 33
     :cond_0
     return-object v0
 .end method

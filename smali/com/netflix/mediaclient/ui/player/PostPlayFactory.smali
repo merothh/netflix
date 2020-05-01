@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,8 +15,6 @@
 .method static create(Lcom/netflix/mediaclient/ui/player/PlayerFragment;Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;)Lcom/netflix/mediaclient/ui/player/PostPlay;
     .locals 1
 
-    .prologue
-    .line 24
     new-instance v0, Lcom/netflix/mediaclient/ui/player/PostPlayForPlayer;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/player/PostPlayForPlayer;-><init>(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)V
@@ -29,8 +25,6 @@
 .method static createForMdx(Lcom/netflix/mediaclient/android/activity/NetflixActivity;)Lcom/netflix/mediaclient/ui/player/PostPlay;
     .locals 1
 
-    .prologue
-    .line 27
     new-instance v0, Lcom/netflix/mediaclient/ui/player/PostPlayForMDX;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/player/PostPlayForMDX;-><init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;)V

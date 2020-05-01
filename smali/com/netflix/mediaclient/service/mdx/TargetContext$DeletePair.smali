@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/mdx/TargetContext;)V
     .locals 0
 
-    .prologue
-    .line 309
     iput-object p1, p0, Lcom/netflix/mediaclient/service/mdx/TargetContext$DeletePair;->this$0:Lcom/netflix/mediaclient/service/mdx/TargetContext;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 312
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/TargetContext$DeletePair;->this$0:Lcom/netflix/mediaclient/service/mdx/TargetContext;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/mdx/TargetContext;->access$700(Lcom/netflix/mediaclient/service/mdx/TargetContext;)Lcom/netflix/mediaclient/javabridge/ui/mdxcontroller/MdxController;
@@ -48,22 +44,18 @@
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/javabridge/ui/mdxcontroller/PairingController;->deletePairing(Ljava/lang/String;)V
 
-    .line 313
     new-instance v0, Landroid/os/Message;
 
     invoke-direct {v0}, Landroid/os/Message;-><init>()V
 
-    .line 314
     const/4 v1, 0x1
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 315
     sget-object v1, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->DeletePairSucceed:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 316
     iget-object v1, p0, Lcom/netflix/mediaclient/service/mdx/TargetContext$DeletePair;->this$0:Lcom/netflix/mediaclient/service/mdx/TargetContext;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/service/mdx/TargetContext;->access$1000(Lcom/netflix/mediaclient/service/mdx/TargetContext;)Landroid/os/Handler;
@@ -74,6 +66,5 @@
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 317
     return-void
 .end method

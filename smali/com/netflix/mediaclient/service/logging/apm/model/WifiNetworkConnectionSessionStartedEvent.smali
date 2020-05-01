@@ -11,23 +11,17 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 34
     const-string/jumbo v0, "wifiNetworkConnection"
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/logging/client/model/SessionStartedEvent;-><init>(Ljava/lang/String;)V
 
-    .line 35
     return-void
 .end method
 
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 0
 
-    .prologue
-    .line 30
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/logging/client/model/SessionStartedEvent;-><init>(Lorg/json/JSONObject;)V
 
-    .line 31
     return-void
 .end method

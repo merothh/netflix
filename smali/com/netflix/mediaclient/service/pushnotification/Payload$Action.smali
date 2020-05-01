@@ -29,27 +29,20 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 645
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 646
     iput-object p1, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload$Action;->guid:Ljava/lang/String;
 
-    .line 647
     return-void
 .end method
 
 .method public static isSupportedActionKey(Ljava/lang/String;)Z
     .locals 2
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 684
     if-nez p0, :cond_1
 
-    .line 688
     :cond_0
     :goto_0
     return v0
@@ -98,8 +91,6 @@
 .method public getIcon()I
     .locals 1
 
-    .prologue
-    .line 673
     const v0, 0x7f02014f
 
     return v0
@@ -108,11 +99,8 @@
 .method public getPayload()Landroid/net/Uri;
     .locals 5
 
-    .prologue
-    .line 651
     const/4 v0, 0x0
 
-    .line 654
     :try_start_0
     iget-object v1, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload$Action;->payload:Ljava/lang/String;
 
@@ -124,15 +112,12 @@
 
     move-result-object v0
 
-    .line 659
     :goto_0
     return-object v0
 
-    .line 656
     :catch_0
     move-exception v1
 
-    .line 657
     const-string/jumbo v2, "nf_push"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -163,8 +148,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 696
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -20,8 +20,6 @@
 .method constructor <init>(Lcom/vailsys/whistleengine/WhistleEngine;Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 274
     iput-object p1, p0, Lcom/vailsys/whistleengine/WhistleEngine$1;->this$0:Lcom/vailsys/whistleengine/WhistleEngine;
 
     iput-object p2, p0, Lcom/vailsys/whistleengine/WhistleEngine$1;->val$displayName:Ljava/lang/String;
@@ -40,8 +38,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 280
     iget-object v0, p0, Lcom/vailsys/whistleengine/WhistleEngine$1;->val$displayName:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -50,10 +46,8 @@
 
     if-nez v0, :cond_1
 
-    .line 281
     const/4 v0, 0x0
 
-    .line 285
     :goto_0
     iget-object v1, p0, Lcom/vailsys/whistleengine/WhistleEngine$1;->this$0:Lcom/vailsys/whistleengine/WhistleEngine;
 
@@ -63,7 +57,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 286
     iget-object v1, p0, Lcom/vailsys/whistleengine/WhistleEngine$1;->this$0:Lcom/vailsys/whistleengine/WhistleEngine;
 
     invoke-static {v1}, Lcom/vailsys/whistleengine/WhistleEngine;->access$000(Lcom/vailsys/whistleengine/WhistleEngine;)Lcom/vailsys/whistleengine/WhistleEngineDelegate;
@@ -76,11 +69,9 @@
 
     invoke-interface {v1, v2, v3, v0}, Lcom/vailsys/whistleengine/WhistleEngineDelegate;->incomingCall(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 287
     :cond_0
     return-void
 
-    .line 283
     :cond_1
     iget-object v0, p0, Lcom/vailsys/whistleengine/WhistleEngine$1;->val$displayName:Ljava/lang/String;
 

@@ -20,7 +20,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v0, 0x5
 
     const/4 v6, 0x4
@@ -31,19 +30,16 @@
 
     const/4 v3, 0x1
 
-    .line 65
     sput v3, Lcom/crittercism/internal/at$a;->a:I
 
     sput v4, Lcom/crittercism/internal/at$a;->b:I
 
     sput v5, Lcom/crittercism/internal/at$a;->c:I
 
-    .line 67
     sput v6, Lcom/crittercism/internal/at$a;->d:I
 
     sput v0, Lcom/crittercism/internal/at$a;->e:I
 
-    .line 64
     new-array v0, v0, [I
 
     const/4 v1, 0x0
@@ -76,42 +72,33 @@
 .method public static a(Landroid/content/Context;)I
     .locals 1
 
-    .prologue
-    .line 75
     instance-of v0, p0, Landroid/app/Application;
 
     if-eqz v0, :cond_0
 
-    .line 76
     sget v0, Lcom/crittercism/internal/at$a;->a:I
 
-    .line 82
     :goto_0
     return v0
 
-    .line 77
     :cond_0
     instance-of v0, p0, Landroid/app/Activity;
 
     if-eqz v0, :cond_1
 
-    .line 78
     sget v0, Lcom/crittercism/internal/at$a;->b:I
 
     goto :goto_0
 
-    .line 79
     :cond_1
     instance-of v0, p0, Landroid/app/Service;
 
     if-eqz v0, :cond_2
 
-    .line 80
     sget v0, Lcom/crittercism/internal/at$a;->c:I
 
     goto :goto_0
 
-    .line 82
     :cond_2
     const/4 v0, 0x0
 

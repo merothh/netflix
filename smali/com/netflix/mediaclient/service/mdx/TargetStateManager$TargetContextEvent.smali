@@ -70,7 +70,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -81,7 +80,6 @@
 
     const/4 v3, 0x0
 
-    .line 95
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "StartTarget"
@@ -90,7 +88,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->StartTarget:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 96
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "LaunchSucceed"
@@ -99,7 +96,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->LaunchSucceed:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 97
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "LaunchFailed"
@@ -108,7 +104,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->LaunchFailed:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 98
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "PairSucceed"
@@ -117,7 +112,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->PairSucceed:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 99
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "PairFailed"
@@ -126,7 +120,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->PairFailed:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 100
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "PairFailedExistedPair"
@@ -137,7 +130,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->PairFailedExistedPair:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 101
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "PairFailedNeedRegPair"
@@ -148,7 +140,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->PairFailedNeedRegPair:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 102
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "PairNotAllowed"
@@ -159,7 +150,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->PairNotAllowed:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 103
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "RegistrationInProgress"
@@ -170,7 +160,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->RegistrationInProgress:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 104
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "DeletePairSucceed"
@@ -181,7 +170,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->DeletePairSucceed:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 105
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "StartSessionSucceed"
@@ -192,7 +180,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->StartSessionSucceed:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 106
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "HandShakeSucceed"
@@ -203,7 +190,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->HandShakeSucceed:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 107
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "HandShakeFailed"
@@ -214,7 +200,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->HandShakeFailed:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 108
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "SendMessageSucceed"
@@ -225,7 +210,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->SendMessageSucceed:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 109
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "SendMessageFailed"
@@ -236,7 +220,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->SendMessageFailed:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 110
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "SendMessageFailedNeedRepair"
@@ -247,7 +230,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->SendMessageFailedNeedRepair:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 111
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "SendMessageFailedNeedNewSession"
@@ -258,7 +240,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->SendMessageFailedNeedNewSession:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 112
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "SessionEnd"
@@ -269,7 +250,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->SessionEnd:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 113
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "SessionCommandReceived"
@@ -280,7 +260,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->SessionCommandReceived:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 114
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "TargetUpdate"
@@ -291,7 +270,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->TargetUpdate:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 115
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "SessionRetry"
@@ -302,7 +280,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->SessionRetry:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 116
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "PairingRetry"
@@ -313,7 +290,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->PairingRetry:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 117
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "LaunchRetry"
@@ -324,7 +300,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->LaunchRetry:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 118
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     const-string/jumbo v1, "Timeout"
@@ -335,7 +310,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->Timeout:Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
-    .line 94
     const/16 v0, 0x18
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
@@ -487,8 +461,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 94
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -497,8 +469,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
     .locals 1
 
-    .prologue
-    .line 94
     const-class v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -513,8 +483,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
     .locals 1
 
-    .prologue
-    .line 94
     sget-object v0, Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->$VALUES:[Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/mdx/TargetStateManager$TargetContextEvent;->clone()Ljava/lang/Object;

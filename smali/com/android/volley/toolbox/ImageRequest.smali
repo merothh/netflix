@@ -47,8 +47,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 50
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -74,13 +72,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 71
     const/4 v0, 0x0
 
     invoke-direct {p0, v0, p1, p6}, Lcom/android/volley/Request;-><init>(ILjava/lang/String;Lcom/android/volley/Response$ErrorListener;)V
 
-    .line 72
     new-instance v0, Lcom/android/volley/DefaultRetryPolicy;
 
     const/16 v1, 0x3e8
@@ -93,19 +88,14 @@
 
     invoke-virtual {p0, v0}, Lcom/android/volley/toolbox/ImageRequest;->setRetryPolicy(Lcom/android/volley/RetryPolicy;)V
 
-    .line 74
     iput-object p2, p0, Lcom/android/volley/toolbox/ImageRequest;->mListener:Lcom/android/volley/Response$Listener;
 
-    .line 75
     iput-object p5, p0, Lcom/android/volley/toolbox/ImageRequest;->mDecodeConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 76
     iput p3, p0, Lcom/android/volley/toolbox/ImageRequest;->mMaxWidth:I
 
-    .line 77
     iput p4, p0, Lcom/android/volley/toolbox/ImageRequest;->mMaxHeight:I
 
-    .line 78
     return-void
 .end method
 
@@ -123,20 +113,16 @@
         }
     .end annotation
 
-    .prologue
     const/4 v8, 0x1
 
     const/4 v7, 0x0
 
-    .line 138
     iget-object v0, p1, Lcom/android/volley/NetworkResponse;->data:[B
 
-    .line 139
     new-instance v1, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v1}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 141
     iget v2, p0, Lcom/android/volley/toolbox/ImageRequest;->mMaxWidth:I
 
     if-nez v2, :cond_0
@@ -145,23 +131,19 @@
 
     if-nez v2, :cond_0
 
-    .line 142
     iget-object v2, p0, Lcom/android/volley/toolbox/ImageRequest;->mDecodeConfig:Landroid/graphics/Bitmap$Config;
 
     iput-object v2, v1, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 143
     array-length v2, v0
 
     invoke-static {v0, v7, v2, v1}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 177
     :goto_0
     if-nez v0, :cond_3
 
-    .line 178
     new-instance v0, Lcom/android/volley/ParseError;
 
     invoke-direct {v0}, Lcom/android/volley/ParseError;-><init>()V
@@ -170,26 +152,20 @@
 
     move-result-object v0
 
-    .line 180
     :goto_1
     return-object v0
 
-    .line 146
     :cond_0
     iput-boolean v8, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 147
     array-length v2, v0
 
     invoke-static {v0, v7, v2, v1}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 148
     iget v2, v1, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
-    .line 149
     iget v3, v1, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
-    .line 152
     iget v4, p0, Lcom/android/volley/toolbox/ImageRequest;->mMaxWidth:I
 
     iget v5, p0, Lcom/android/volley/toolbox/ImageRequest;->mMaxHeight:I
@@ -198,7 +174,6 @@
 
     move-result v4
 
-    .line 154
     iget v5, p0, Lcom/android/volley/toolbox/ImageRequest;->mMaxHeight:I
 
     iget v6, p0, Lcom/android/volley/toolbox/ImageRequest;->mMaxWidth:I
@@ -207,25 +182,20 @@
 
     move-result v5
 
-    .line 158
     iput-boolean v7, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 162
     invoke-static {v2, v3, v4, v5}, Lcom/android/volley/toolbox/ImageRequest;->findBestSampleSize(IIII)I
 
     move-result v2
 
     iput v2, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 163
     array-length v2, v0
 
-    .line 164
     invoke-static {v0, v7, v2, v1}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 167
     if-eqz v1, :cond_2
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
@@ -234,20 +204,17 @@
 
     if-gt v0, v4, :cond_1
 
-    .line 168
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v0
 
     if-le v0, v5, :cond_2
 
-    .line 169
     :cond_1
     invoke-static {v1, v4, v5, v8}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 171
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
 
     goto :goto_0
@@ -255,10 +222,8 @@
     :cond_2
     move-object v0, v1
 
-    .line 173
     goto :goto_0
 
-    .line 180
     :cond_3
     invoke-static {p1}, Lcom/android/volley/toolbox/HttpHeaderParser;->parseCacheHeaders(Lcom/android/volley/NetworkResponse;)Lcom/android/volley/Cache$Entry;
 
@@ -274,32 +239,26 @@
 .method static findBestSampleSize(IIII)I
     .locals 7
 
-    .prologue
     const/high16 v6, 0x40000000    # 2.0f
 
-    .line 201
     int-to-double v0, p0
 
     int-to-double v2, p2
 
     div-double/2addr v0, v2
 
-    .line 202
     int-to-double v2, p1
 
     int-to-double v4, p3
 
     div-double/2addr v2, v4
 
-    .line 203
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(DD)D
 
     move-result-wide v2
 
-    .line 204
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 205
     :goto_0
     mul-float v1, v0, v6
 
@@ -309,12 +268,10 @@
 
     if-gtz v1, :cond_0
 
-    .line 206
     mul-float/2addr v0, v6
 
     goto :goto_0
 
-    .line 209
     :cond_0
     float-to-int v0, v0
 
@@ -324,31 +281,25 @@
 .method private static getResizedDimension(IIII)I
     .locals 6
 
-    .prologue
-    .line 99
     if-nez p0, :cond_1
 
     if-nez p1, :cond_1
 
     move p0, p2
 
-    .line 118
     :cond_0
     :goto_0
     return p0
 
-    .line 104
     :cond_1
     if-nez p0, :cond_2
 
-    .line 105
     int-to-double v0, p1
 
     int-to-double v2, p3
 
     div-double/2addr v0, v2
 
-    .line 106
     int-to-double v2, p2
 
     mul-double/2addr v0, v2
@@ -357,18 +308,15 @@
 
     goto :goto_0
 
-    .line 109
     :cond_2
     if-eqz p1, :cond_0
 
-    .line 113
     int-to-double v0, p3
 
     int-to-double v2, p2
 
     div-double/2addr v0, v2
 
-    .line 115
     int-to-double v2, p0
 
     mul-double/2addr v2, v0
@@ -379,7 +327,6 @@
 
     if-lez v2, :cond_0
 
-    .line 116
     int-to-double v2, p1
 
     div-double v0, v2, v0
@@ -394,21 +341,16 @@
 .method protected deliverResponse(Landroid/graphics/Bitmap;)V
     .locals 1
 
-    .prologue
-    .line 186
     iget-object v0, p0, Lcom/android/volley/toolbox/ImageRequest;->mListener:Lcom/android/volley/Response$Listener;
 
     invoke-interface {v0, p1}, Lcom/android/volley/Response$Listener;->onResponse(Ljava/lang/Object;)V
 
-    .line 187
     return-void
 .end method
 
 .method protected bridge synthetic deliverResponse(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 34
     check-cast p1, Landroid/graphics/Bitmap;
 
     invoke-virtual {p0, p1}, Lcom/android/volley/toolbox/ImageRequest;->deliverResponse(Landroid/graphics/Bitmap;)V
@@ -419,8 +361,6 @@
 .method public getPriority()Lcom/android/volley/Request$Priority;
     .locals 1
 
-    .prologue
-    .line 82
     sget-object v0, Lcom/android/volley/Request$Priority;->LOW:Lcom/android/volley/Request$Priority;
 
     return-object v0
@@ -440,13 +380,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 124
     sget-object v1, Lcom/android/volley/toolbox/ImageRequest;->sDecodeLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 126
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/volley/toolbox/ImageRequest;->doParse(Lcom/android/volley/NetworkResponse;)Lcom/android/volley/Response;
     :try_end_0
@@ -458,15 +395,12 @@
     :try_start_1
     monitor-exit v1
 
-    .line 129
     :goto_0
     return-object v0
 
-    .line 127
     :catch_0
     move-exception v0
 
-    .line 128
     const-string/jumbo v2, "Caught OOM for %d byte image, url=%s"
 
     const/4 v3, 0x2
@@ -495,7 +429,6 @@
 
     invoke-static {v2, v3}, Lcom/android/volley/VolleyLog;->e(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 129
     new-instance v2, Lcom/android/volley/ParseError;
 
     invoke-direct {v2, v0}, Lcom/android/volley/ParseError;-><init>(Ljava/lang/Throwable;)V
@@ -508,7 +441,6 @@
 
     goto :goto_0
 
-    .line 131
     :catchall_0
     move-exception v0
 

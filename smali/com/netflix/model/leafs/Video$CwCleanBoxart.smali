@@ -20,8 +20,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,8 +30,6 @@
 .method public getCleanBoxshotUrl()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 41
     iget-object v0, p0, Lcom/netflix/model/leafs/Video$CwCleanBoxart;->bannerLessBoxartUrl:Ljava/lang/String;
 
     return-object v0
@@ -42,18 +38,14 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 4
 
-    .prologue
-    .line 46
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 47
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 48
     const-string/jumbo v1, "CwCleanBoxart"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -76,7 +68,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
     :cond_0
     const-string/jumbo v1, "cleanBoxartUrl"
 
@@ -90,20 +81,16 @@
 
     iput-object v0, p0, Lcom/netflix/model/leafs/Video$CwCleanBoxart;->bannerLessBoxartUrl:Ljava/lang/String;
 
-    .line 51
     return-void
 .end method
 
 .method public set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
     .locals 3
 
-    .prologue
-    .line 55
     sget-boolean v0, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v0, :cond_0
 
-    .line 56
     const-string/jumbo v0, "CwCleanBoxart"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -126,7 +113,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 58
     :cond_0
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -134,7 +120,6 @@
 
     iput-object v0, p0, Lcom/netflix/model/leafs/Video$CwCleanBoxart;->bannerLessBoxartUrl:Ljava/lang/String;
 
-    .line 59
     const/4 v0, 0x1
 
     return v0

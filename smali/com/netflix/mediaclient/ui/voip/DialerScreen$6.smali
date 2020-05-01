@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)V
     .locals 0
 
-    .prologue
-    .line 644
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen$6;->this$0:Lcom/netflix/mediaclient/ui/voip/DialerScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 649
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen$6;->this$0:Lcom/netflix/mediaclient/ui/voip/DialerScreen;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->access$100(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
@@ -42,24 +38,20 @@
 
     if-eqz v0, :cond_0
 
-    .line 650
     const-string/jumbo v0, "VoipActivity"
 
     const-string/jumbo v1, "timer update exit"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 656
     :goto_0
     return-void
 
-    .line 654
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen$6;->this$0:Lcom/netflix/mediaclient/ui/voip/DialerScreen;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->access$1000(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)V
 
-    .line 655
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen$6;->this$0:Lcom/netflix/mediaclient/ui/voip/DialerScreen;
 
     const/16 v1, 0x3e8

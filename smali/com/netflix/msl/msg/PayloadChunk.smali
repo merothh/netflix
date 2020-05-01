@@ -42,11 +42,8 @@
 .method public constructor <init>(JJZLcom/netflix/msl/MslConstants$CompressionAlgorithm;[BLcom/netflix/msl/crypto/ICryptoContext;)V
     .locals 7
 
-    .prologue
-    .line 115
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 117
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0
@@ -59,7 +56,6 @@
 
     if-lez v0, :cond_1
 
-    .line 118
     :cond_0
     new-instance v0, Lcom/netflix/msl/MslInternalException;
 
@@ -91,7 +87,6 @@
 
     throw v0
 
-    .line 119
     :cond_1
     const-wide/16 v0, 0x0
 
@@ -105,7 +100,6 @@
 
     if-lez v0, :cond_3
 
-    .line 120
     :cond_2
     new-instance v0, Lcom/netflix/msl/MslInternalException;
 
@@ -137,59 +131,47 @@
 
     throw v0
 
-    .line 124
     :cond_3
     if-eqz p6, :cond_7
 
-    .line 125
     invoke-static {p6, p7}, Lcom/netflix/msl/util/MslUtils;->compress(Lcom/netflix/msl/MslConstants$CompressionAlgorithm;[B)[B
 
     move-result-object v0
 
-    .line 129
     array-length v1, v0
 
     array-length v2, p7
 
     if-ge v1, v2, :cond_6
 
-    .line 130
     iput-object p6, p0, Lcom/netflix/msl/msg/PayloadChunk;->compressionAlgo:Lcom/netflix/msl/MslConstants$CompressionAlgorithm;
 
-    .line 141
     :goto_0
     iput-wide p1, p0, Lcom/netflix/msl/msg/PayloadChunk;->sequenceNumber:J
 
-    .line 142
     iput-wide p3, p0, Lcom/netflix/msl/msg/PayloadChunk;->messageId:J
 
-    .line 143
     iput-boolean p5, p0, Lcom/netflix/msl/msg/PayloadChunk;->endofmsg:Z
 
-    .line 144
     iput-object p7, p0, Lcom/netflix/msl/msg/PayloadChunk;->data:[B
 
-    .line 148
     :try_start_0
     new-instance v1, Lcom/netflix/android/org/json/JSONObject;
 
     invoke-direct {v1}, Lcom/netflix/android/org/json/JSONObject;-><init>()V
 
-    .line 149
     const-string/jumbo v2, "sequencenumber"
 
     iget-wide v4, p0, Lcom/netflix/msl/msg/PayloadChunk;->sequenceNumber:J
 
     invoke-virtual {v1, v2, v4, v5}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;J)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 150
     const-string/jumbo v2, "messageid"
 
     iget-wide v4, p0, Lcom/netflix/msl/msg/PayloadChunk;->messageId:J
 
     invoke-virtual {v1, v2, v4, v5}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;J)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 151
     iget-boolean v2, p0, Lcom/netflix/msl/msg/PayloadChunk;->endofmsg:Z
 
     if-eqz v2, :cond_4
@@ -200,7 +182,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Z)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 152
     :cond_4
     iget-object v2, p0, Lcom/netflix/msl/msg/PayloadChunk;->compressionAlgo:Lcom/netflix/msl/MslConstants$CompressionAlgorithm;
 
@@ -216,7 +197,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 153
     :cond_5
     const-string/jumbo v2, "data"
 
@@ -226,7 +206,6 @@
 
     invoke-virtual {v1, v2, v0}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 154
     invoke-virtual {v1}, Lcom/netflix/android/org/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -237,7 +216,6 @@
 
     move-result-object v0
 
-    .line 155
     invoke-interface {p8, v0}, Lcom/netflix/msl/crypto/ICryptoContext;->encrypt([B)[B
 
     move-result-object v0
@@ -246,7 +224,6 @@
     :try_end_0
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 161
     iget-object v0, p0, Lcom/netflix/msl/msg/PayloadChunk;->payload:[B
 
     invoke-interface {p8, v0}, Lcom/netflix/msl/crypto/ICryptoContext;->sign([B)[B
@@ -255,10 +232,8 @@
 
     iput-object v0, p0, Lcom/netflix/msl/msg/PayloadChunk;->signature:[B
 
-    .line 162
     return-void
 
-    .line 133
     :cond_6
     const/4 v0, 0x0
 
@@ -266,10 +241,8 @@
 
     move-object v0, p7
 
-    .line 134
     goto :goto_0
 
-    .line 137
     :cond_7
     const/4 v0, 0x0
 
@@ -277,14 +250,11 @@
 
     move-object v0, p7
 
-    .line 138
     goto :goto_0
 
-    .line 156
     :catch_0
     move-exception v0
 
-    .line 157
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_ENCODE_ERROR:Lcom/netflix/msl/MslError;
@@ -299,7 +269,6 @@
 .method public constructor <init>(Lcom/netflix/android/org/json/JSONObject;Lcom/netflix/msl/crypto/ICryptoContext;)V
     .locals 10
 
-    .prologue
     const-wide/high16 v8, 0x20000000000000L
 
     const-wide/16 v6, 0x0
@@ -308,10 +277,8 @@
 
     const/4 v1, 0x0
 
-    .line 179
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 183
     :try_start_0
     const-string/jumbo v2, "payload"
 
@@ -328,7 +295,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 188
     :try_start_1
     const-string/jumbo v2, "signature"
 
@@ -345,7 +311,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 192
     :try_start_2
     iget-object v2, p0, Lcom/netflix/msl/msg/PayloadChunk;->payload:[B
 
@@ -357,7 +322,6 @@
 
     if-nez v2, :cond_0
 
-    .line 193
     new-instance v0, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->PAYLOAD_VERIFICATION_FAILED:Lcom/netflix/msl/MslError;
@@ -368,11 +332,9 @@
     :try_end_2
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 194
     :catch_0
     move-exception v0
 
-    .line 195
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_PARSE_ERROR:Lcom/netflix/msl/MslError;
@@ -403,11 +365,9 @@
 
     throw v1
 
-    .line 184
     :catch_1
     move-exception v0
 
-    .line 185
     :try_start_3
     new-instance v1, Lcom/netflix/msl/MslMessageException;
 
@@ -439,11 +399,9 @@
 
     throw v1
 
-    .line 189
     :catch_2
     move-exception v0
 
-    .line 190
     new-instance v1, Lcom/netflix/msl/MslMessageException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->PAYLOAD_SIGNATURE_INVALID:Lcom/netflix/msl/MslError;
@@ -476,7 +434,6 @@
     :try_end_3
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 199
     :cond_0
     iget-object v2, p0, Lcom/netflix/msl/msg/PayloadChunk;->payload:[B
 
@@ -484,20 +441,17 @@
 
     move-result-object v2
 
-    .line 200
     new-instance v3, Ljava/lang/String;
 
     sget-object v4, Lcom/netflix/msl/MslConstants;->DEFAULT_CHARSET:Ljava/nio/charset/Charset;
 
     invoke-direct {v3, v2, v4}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
 
-    .line 202
     :try_start_4
     new-instance v2, Lcom/netflix/android/org/json/JSONObject;
 
     invoke-direct {v2, v3}, Lcom/netflix/android/org/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 203
     const-string/jumbo v4, "sequencenumber"
 
     invoke-virtual {v2, v4}, Lcom/netflix/android/org/json/JSONObject;->getLong(Ljava/lang/String;)J
@@ -506,7 +460,6 @@
 
     iput-wide v4, p0, Lcom/netflix/msl/msg/PayloadChunk;->sequenceNumber:J
 
-    .line 204
     iget-wide v4, p0, Lcom/netflix/msl/msg/PayloadChunk;->sequenceNumber:J
 
     cmp-long v4, v4, v6
@@ -519,7 +472,6 @@
 
     if-lez v4, :cond_2
 
-    .line 205
     :cond_1
     new-instance v0, Lcom/netflix/msl/MslException;
 
@@ -549,11 +501,9 @@
     :try_end_4
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_4 .. :try_end_4} :catch_3
 
-    .line 242
     :catch_3
     move-exception v0
 
-    .line 243
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_PARSE_ERROR:Lcom/netflix/msl/MslError;
@@ -580,7 +530,6 @@
 
     throw v1
 
-    .line 206
     :cond_2
     :try_start_5
     const-string/jumbo v4, "messageid"
@@ -591,7 +540,6 @@
 
     iput-wide v4, p0, Lcom/netflix/msl/msg/PayloadChunk;->messageId:J
 
-    .line 207
     iget-wide v4, p0, Lcom/netflix/msl/msg/PayloadChunk;->messageId:J
 
     cmp-long v4, v4, v6
@@ -604,7 +552,6 @@
 
     if-lez v4, :cond_4
 
-    .line 208
     :cond_3
     new-instance v0, Lcom/netflix/msl/MslException;
 
@@ -632,7 +579,6 @@
 
     throw v0
 
-    .line 209
     :cond_4
     const-string/jumbo v4, "endofmsg"
 
@@ -651,7 +597,6 @@
     :cond_5
     iput-boolean v1, p0, Lcom/netflix/msl/msg/PayloadChunk;->endofmsg:Z
 
-    .line 210
     const-string/jumbo v1, "compressionalgo"
 
     invoke-virtual {v2, v1}, Lcom/netflix/android/org/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -660,7 +605,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 211
     const-string/jumbo v1, "compressionalgo"
 
     invoke-virtual {v2, v1}, Lcom/netflix/android/org/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -669,7 +613,6 @@
 
     move-result-object v1
 
-    .line 213
     :try_start_6
     invoke-static {v1}, Lcom/netflix/msl/MslConstants$CompressionAlgorithm;->valueOf(Ljava/lang/String;)Lcom/netflix/msl/MslConstants$CompressionAlgorithm;
 
@@ -680,7 +623,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_6 .. :try_end_6} :catch_4
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_6 .. :try_end_6} :catch_3
 
-    .line 220
     :goto_0
     :try_start_7
     const-string/jumbo v1, "data"
@@ -691,7 +633,6 @@
 
     move-result-object v1
 
-    .line 223
     :try_start_8
     invoke-static {v1}, Lcom/netflix/msl/util/Base64;->decode(Ljava/lang/String;)[B
     :try_end_8
@@ -700,7 +641,6 @@
 
     move-result-object v0
 
-    .line 228
     :goto_1
     if-eqz v0, :cond_6
 
@@ -709,7 +649,6 @@
 
     if-nez v2, :cond_a
 
-    .line 229
     :cond_6
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -717,7 +656,6 @@
 
     if-lez v0, :cond_8
 
-    .line 230
     new-instance v0, Lcom/netflix/msl/MslMessageException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->PAYLOAD_DATA_CORRUPT:Lcom/netflix/msl/MslError;
@@ -726,11 +664,9 @@
 
     throw v0
 
-    .line 214
     :catch_4
     move-exception v0
 
-    .line 215
     new-instance v2, Lcom/netflix/msl/MslMessageException;
 
     sget-object v4, Lcom/netflix/msl/MslError;->UNIDENTIFIED_COMPRESSION:Lcom/netflix/msl/MslError;
@@ -739,7 +675,6 @@
 
     throw v2
 
-    .line 218
     :cond_7
     const/4 v1, 0x0
 
@@ -747,13 +682,11 @@
 
     goto :goto_0
 
-    .line 231
     :cond_8
     iget-boolean v0, p0, Lcom/netflix/msl/msg/PayloadChunk;->endofmsg:Z
 
     if-nez v0, :cond_9
 
-    .line 232
     new-instance v0, Lcom/netflix/msl/MslMessageException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->PAYLOAD_DATA_MISSING:Lcom/netflix/msl/MslError;
@@ -762,7 +695,6 @@
 
     throw v0
 
-    .line 234
     :cond_9
     const/4 v0, 0x0
 
@@ -770,22 +702,18 @@
 
     iput-object v0, p0, Lcom/netflix/msl/msg/PayloadChunk;->data:[B
 
-    .line 245
     :goto_2
     return-void
 
-    .line 236
     :cond_a
     iget-object v1, p0, Lcom/netflix/msl/msg/PayloadChunk;->compressionAlgo:Lcom/netflix/msl/MslConstants$CompressionAlgorithm;
 
     if-nez v1, :cond_b
 
-    .line 237
     iput-object v0, p0, Lcom/netflix/msl/msg/PayloadChunk;->data:[B
 
     goto :goto_2
 
-    .line 239
     :cond_b
     iget-object v1, p0, Lcom/netflix/msl/msg/PayloadChunk;->compressionAlgo:Lcom/netflix/msl/MslConstants$CompressionAlgorithm;
 
@@ -799,7 +727,6 @@
 
     goto :goto_2
 
-    .line 224
     :catch_5
     move-exception v2
 
@@ -811,20 +738,16 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 305
     if-ne p1, p0, :cond_1
 
-    .line 312
     :cond_0
     :goto_0
     return v0
 
-    .line 306
     :cond_1
     instance-of v2, p1, Lcom/netflix/msl/msg/PayloadChunk;
 
@@ -834,11 +757,9 @@
 
     goto :goto_0
 
-    .line 307
     :cond_2
     check-cast p1, Lcom/netflix/msl/msg/PayloadChunk;
 
-    .line 308
     iget-wide v2, p0, Lcom/netflix/msl/msg/PayloadChunk;->sequenceNumber:J
 
     iget-wide v4, p1, Lcom/netflix/msl/msg/PayloadChunk;->sequenceNumber:J
@@ -871,7 +792,6 @@
 
     iget-object v3, p1, Lcom/netflix/msl/msg/PayloadChunk;->data:[B
 
-    .line 312
     invoke-static {v2, v3}, Ljava/util/Arrays;->equals([B[B)Z
 
     move-result v2
@@ -887,8 +807,6 @@
 .method public getCompressionAlgo()Lcom/netflix/msl/MslConstants$CompressionAlgorithm;
     .locals 1
 
-    .prologue
-    .line 273
     iget-object v0, p0, Lcom/netflix/msl/msg/PayloadChunk;->compressionAlgo:Lcom/netflix/msl/MslConstants$CompressionAlgorithm;
 
     return-object v0
@@ -897,8 +815,6 @@
 .method public getData()[B
     .locals 1
 
-    .prologue
-    .line 282
     iget-object v0, p0, Lcom/netflix/msl/msg/PayloadChunk;->data:[B
 
     return-object v0
@@ -907,8 +823,6 @@
 .method public getMessageId()J
     .locals 2
 
-    .prologue
-    .line 258
     iget-wide v0, p0, Lcom/netflix/msl/msg/PayloadChunk;->messageId:J
 
     return-wide v0
@@ -917,8 +831,6 @@
 .method public getSequenceNumber()J
     .locals 2
 
-    .prologue
-    .line 251
     iget-wide v0, p0, Lcom/netflix/msl/msg/PayloadChunk;->sequenceNumber:J
 
     return-wide v0
@@ -927,8 +839,6 @@
 .method public hashCode()I
     .locals 4
 
-    .prologue
-    .line 320
     iget-wide v0, p0, Lcom/netflix/msl/msg/PayloadChunk;->sequenceNumber:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -941,7 +851,6 @@
 
     iget-wide v2, p0, Lcom/netflix/msl/msg/PayloadChunk;->messageId:J
 
-    .line 321
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
@@ -954,7 +863,6 @@
 
     iget-boolean v1, p0, Lcom/netflix/msl/msg/PayloadChunk;->endofmsg:Z
 
-    .line 322
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
@@ -971,7 +879,6 @@
 
     iget-object v0, p0, Lcom/netflix/msl/msg/PayloadChunk;->compressionAlgo:Lcom/netflix/msl/MslConstants$CompressionAlgorithm;
 
-    .line 323
     invoke-virtual {v0}, Lcom/netflix/msl/MslConstants$CompressionAlgorithm;->hashCode()I
 
     move-result v0
@@ -981,7 +888,6 @@
 
     iget-object v1, p0, Lcom/netflix/msl/msg/PayloadChunk;->data:[B
 
-    .line 324
     invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
 
     move-result v1
@@ -990,7 +896,6 @@
 
     return v0
 
-    .line 323
     :cond_0
     const/4 v0, 0x0
 
@@ -1000,8 +905,6 @@
 .method public isEndOfMessage()Z
     .locals 1
 
-    .prologue
-    .line 265
     iget-boolean v0, p0, Lcom/netflix/msl/msg/PayloadChunk;->endofmsg:Z
 
     return v0
@@ -1010,14 +913,11 @@
 .method public toJSONString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 291
     :try_start_0
     new-instance v0, Lcom/netflix/android/org/json/JSONObject;
 
     invoke-direct {v0}, Lcom/netflix/android/org/json/JSONObject;-><init>()V
 
-    .line 292
     const-string/jumbo v1, "payload"
 
     iget-object v2, p0, Lcom/netflix/msl/msg/PayloadChunk;->payload:[B
@@ -1028,7 +928,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 293
     const-string/jumbo v1, "signature"
 
     iget-object v2, p0, Lcom/netflix/msl/msg/PayloadChunk;->signature:[B
@@ -1039,7 +938,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 294
     invoke-virtual {v0}, Lcom/netflix/android/org/json/JSONObject;->toString()Ljava/lang/String;
     :try_end_0
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1048,11 +946,9 @@
 
     return-object v0
 
-    .line 295
     :catch_0
     move-exception v0
 
-    .line 296
     new-instance v1, Lcom/netflix/msl/MslInternalException;
 
     new-instance v2, Ljava/lang/StringBuilder;

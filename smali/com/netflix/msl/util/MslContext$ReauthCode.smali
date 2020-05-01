@@ -30,12 +30,10 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
     const/4 v3, 0x0
 
-    .line 53
     new-instance v0, Lcom/netflix/msl/util/MslContext$ReauthCode;
 
     const-string/jumbo v1, "ENTITY_REAUTH"
@@ -46,7 +44,6 @@
 
     sput-object v0, Lcom/netflix/msl/util/MslContext$ReauthCode;->ENTITY_REAUTH:Lcom/netflix/msl/util/MslContext$ReauthCode;
 
-    .line 55
     new-instance v0, Lcom/netflix/msl/util/MslContext$ReauthCode;
 
     const-string/jumbo v1, "ENTITYDATA_REAUTH"
@@ -57,7 +54,6 @@
 
     sput-object v0, Lcom/netflix/msl/util/MslContext$ReauthCode;->ENTITYDATA_REAUTH:Lcom/netflix/msl/util/MslContext$ReauthCode;
 
-    .line 51
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/netflix/msl/util/MslContext$ReauthCode;
@@ -85,22 +81,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 78
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 79
     iput-object p3, p0, Lcom/netflix/msl/util/MslContext$ReauthCode;->code:Lcom/netflix/msl/MslConstants$ResponseCode;
 
-    .line 80
     return-void
 .end method
 
 .method public static valueOf(Lcom/netflix/msl/MslConstants$ResponseCode;)Lcom/netflix/msl/util/MslContext$ReauthCode;
     .locals 5
 
-    .prologue
-    .line 65
     invoke-static {}, Lcom/netflix/msl/util/MslContext$ReauthCode;->values()[Lcom/netflix/msl/util/MslContext$ReauthCode;
 
     move-result-object v1
@@ -114,21 +104,17 @@
 
     aget-object v3, v1, v0
 
-    .line 66
     iget-object v4, v3, Lcom/netflix/msl/util/MslContext$ReauthCode;->code:Lcom/netflix/msl/MslConstants$ResponseCode;
 
     if-ne v4, p0, :cond_0
 
-    .line 67
     return-object v3
 
-    .line 65
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 69
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -164,8 +150,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/msl/util/MslContext$ReauthCode;
     .locals 1
 
-    .prologue
-    .line 51
     const-class v0, Lcom/netflix/msl/util/MslContext$ReauthCode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -180,8 +164,6 @@
 .method public static values()[Lcom/netflix/msl/util/MslContext$ReauthCode;
     .locals 1
 
-    .prologue
-    .line 51
     sget-object v0, Lcom/netflix/msl/util/MslContext$ReauthCode;->$VALUES:[Lcom/netflix/msl/util/MslContext$ReauthCode;
 
     invoke-virtual {v0}, [Lcom/netflix/msl/util/MslContext$ReauthCode;->clone()Ljava/lang/Object;
@@ -198,8 +180,6 @@
 .method public intValue()I
     .locals 1
 
-    .prologue
-    .line 86
     iget-object v0, p0, Lcom/netflix/msl/util/MslContext$ReauthCode;->code:Lcom/netflix/msl/MslConstants$ResponseCode;
 
     invoke-virtual {v0}, Lcom/netflix/msl/MslConstants$ResponseCode;->intValue()I

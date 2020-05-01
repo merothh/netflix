@@ -130,16 +130,12 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 501
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 554
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/netflix/model/leafs/Video$Detail;->autoPlayMaxCount:I
 
-    .line 555
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x3
@@ -156,8 +152,6 @@
 .method public getInterestingUrl()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 886
     iget-object v0, p0, Lcom/netflix/model/leafs/Video$Detail;->interestingUrl:Ljava/lang/String;
 
     return-object v0
@@ -166,20 +160,16 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 6
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 573
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 574
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 575
     const-string/jumbo v1, "Detail"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -202,7 +192,6 @@
 
     invoke-static {v1, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 577
     :cond_0
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -226,14 +215,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 578
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/gson/JsonElement;
 
-    .line 579
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -256,7 +243,6 @@
 
     goto :goto_0
 
-    .line 580
     :pswitch_0
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsInt()I
 
@@ -266,7 +252,6 @@
 
     goto :goto_0
 
-    .line 579
     :sswitch_0
     const-string/jumbo v5, "year"
 
@@ -930,7 +915,6 @@
 
     goto/16 :goto_1
 
-    .line 581
     :pswitch_1
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -940,7 +924,6 @@
 
     goto/16 :goto_0
 
-    .line 582
     :pswitch_2
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -950,7 +933,6 @@
 
     goto/16 :goto_0
 
-    .line 583
     :pswitch_3
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -960,7 +942,6 @@
 
     goto/16 :goto_0
 
-    .line 584
     :pswitch_4
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -970,7 +951,6 @@
 
     goto/16 :goto_0
 
-    .line 585
     :pswitch_5
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -980,7 +960,6 @@
 
     goto/16 :goto_0
 
-    .line 586
     :pswitch_6
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -990,7 +969,6 @@
 
     goto/16 :goto_0
 
-    .line 587
     :pswitch_7
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -1000,7 +978,6 @@
 
     goto/16 :goto_0
 
-    .line 588
     :pswitch_8
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -1010,7 +987,6 @@
 
     goto/16 :goto_0
 
-    .line 589
     :pswitch_9
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsInt()I
 
@@ -1020,7 +996,6 @@
 
     goto/16 :goto_0
 
-    .line 592
     :pswitch_a
     if-eqz v1, :cond_1
 
@@ -1030,7 +1005,6 @@
 
     if-nez v0, :cond_1
 
-    .line 593
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsLong()J
 
     move-result-wide v0
@@ -1039,7 +1013,6 @@
 
     goto/16 :goto_0
 
-    .line 597
     :pswitch_b
     invoke-static {v1}, Lcom/netflix/mediaclient/util/JsonUtils;->getAsStringSafe(Lcom/google/gson/JsonElement;)Ljava/lang/String;
 
@@ -1049,7 +1022,6 @@
 
     goto/16 :goto_0
 
-    .line 598
     :pswitch_c
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -1059,7 +1031,6 @@
 
     goto/16 :goto_0
 
-    .line 599
     :pswitch_d
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -1069,7 +1040,6 @@
 
     goto/16 :goto_0
 
-    .line 600
     :pswitch_e
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -1079,7 +1049,6 @@
 
     goto/16 :goto_0
 
-    .line 601
     :pswitch_f
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -1089,7 +1058,6 @@
 
     goto/16 :goto_0
 
-    .line 603
     :pswitch_10
     if-eqz v1, :cond_1
 
@@ -1099,7 +1067,6 @@
 
     if-nez v0, :cond_1
 
-    .line 604
     invoke-static {v1}, Lcom/netflix/mediaclient/util/JsonUtils;->getAsStringSafe(Lcom/google/gson/JsonElement;)Ljava/lang/String;
 
     move-result-object v0
@@ -1108,7 +1075,6 @@
 
     goto/16 :goto_0
 
-    .line 607
     :pswitch_11
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -1118,7 +1084,6 @@
 
     goto/16 :goto_0
 
-    .line 608
     :pswitch_12
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -1128,7 +1093,6 @@
 
     goto/16 :goto_0
 
-    .line 609
     :pswitch_13
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -1138,7 +1102,6 @@
 
     goto/16 :goto_0
 
-    .line 610
     :pswitch_14
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -1148,7 +1111,6 @@
 
     goto/16 :goto_0
 
-    .line 611
     :pswitch_15
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -1158,7 +1120,6 @@
 
     goto/16 :goto_0
 
-    .line 612
     :pswitch_16
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -1168,7 +1129,6 @@
 
     goto/16 :goto_0
 
-    .line 613
     :pswitch_17
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -1178,7 +1138,6 @@
 
     goto/16 :goto_0
 
-    .line 614
     :pswitch_18
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -1188,7 +1147,6 @@
 
     goto/16 :goto_0
 
-    .line 615
     :pswitch_19
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsInt()I
 
@@ -1198,7 +1156,6 @@
 
     goto/16 :goto_0
 
-    .line 616
     :pswitch_1a
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsInt()I
 
@@ -1208,7 +1165,6 @@
 
     goto/16 :goto_0
 
-    .line 617
     :pswitch_1b
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsInt()I
 
@@ -1218,7 +1174,6 @@
 
     goto/16 :goto_0
 
-    .line 618
     :pswitch_1c
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsInt()I
 
@@ -1228,7 +1183,6 @@
 
     goto/16 :goto_0
 
-    .line 619
     :pswitch_1d
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsInt()I
 
@@ -1238,7 +1192,6 @@
 
     goto/16 :goto_0
 
-    .line 621
     :pswitch_1e
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -1248,7 +1201,6 @@
 
     goto/16 :goto_0
 
-    .line 622
     :pswitch_1f
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -1258,7 +1210,6 @@
 
     goto/16 :goto_0
 
-    .line 623
     :pswitch_20
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -1268,7 +1219,6 @@
 
     goto/16 :goto_0
 
-    .line 624
     :pswitch_21
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -1278,7 +1228,6 @@
 
     goto/16 :goto_0
 
-    .line 625
     :pswitch_22
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -1288,7 +1237,6 @@
 
     goto/16 :goto_0
 
-    .line 626
     :pswitch_23
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -1298,7 +1246,6 @@
 
     goto/16 :goto_0
 
-    .line 627
     :pswitch_24
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -1308,7 +1255,6 @@
 
     goto/16 :goto_0
 
-    .line 628
     :pswitch_25
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -1318,7 +1264,6 @@
 
     goto/16 :goto_0
 
-    .line 629
     :pswitch_26
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsInt()I
 
@@ -1328,7 +1273,6 @@
 
     goto/16 :goto_0
 
-    .line 630
     :pswitch_27
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -1338,7 +1282,6 @@
 
     goto/16 :goto_0
 
-    .line 631
     :pswitch_28
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -1348,7 +1291,6 @@
 
     goto/16 :goto_0
 
-    .line 632
     :pswitch_29
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -1358,7 +1300,6 @@
 
     goto/16 :goto_0
 
-    .line 633
     :pswitch_2a
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -1368,7 +1309,6 @@
 
     goto/16 :goto_0
 
-    .line 634
     :pswitch_2b
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsFloat()F
 
@@ -1378,7 +1318,6 @@
 
     goto/16 :goto_0
 
-    .line 635
     :pswitch_2c
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -1388,7 +1327,6 @@
 
     goto/16 :goto_0
 
-    .line 636
     :pswitch_2d
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -1398,7 +1336,6 @@
 
     goto/16 :goto_0
 
-    .line 637
     :pswitch_2e
     invoke-static {v1}, Lcom/netflix/mediaclient/util/JsonUtils;->getAsStringSafe(Lcom/google/gson/JsonElement;)Ljava/lang/String;
 
@@ -1408,7 +1345,6 @@
 
     goto/16 :goto_0
 
-    .line 639
     :pswitch_2f
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsJsonArray()Lcom/google/gson/JsonArray;
 
@@ -1416,7 +1352,6 @@
 
     move v0, v2
 
-    .line 640
     :goto_2
     invoke-virtual {v1}, Lcom/google/gson/JsonArray;->size()I
 
@@ -1424,7 +1359,6 @@
 
     if-ge v0, v3, :cond_1
 
-    .line 641
     iget-object v3, p0, Lcom/netflix/model/leafs/Video$Detail;->episodeBadges:Ljava/util/List;
 
     invoke-virtual {v1, v0}, Lcom/google/gson/JsonArray;->get(I)Lcom/google/gson/JsonElement;
@@ -1437,12 +1371,10 @@
 
     invoke-interface {v3, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 640
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 644
     :pswitch_30
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -1452,7 +1384,6 @@
 
     goto/16 :goto_0
 
-    .line 645
     :pswitch_31
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -1462,7 +1393,6 @@
 
     goto/16 :goto_0
 
-    .line 647
     :pswitch_32
     if-eqz v1, :cond_1
 
@@ -1472,7 +1402,6 @@
 
     if-nez v0, :cond_1
 
-    .line 648
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
     move-result-object v0
@@ -1481,11 +1410,9 @@
 
     goto/16 :goto_0
 
-    .line 653
     :cond_3
     return-void
 
-    .line 579
     :sswitch_data_0
     .sparse-switch
         -0x73e4001e -> :sswitch_1f
@@ -1600,17 +1527,14 @@
 .method public set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
     .locals 5
 
-    .prologue
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
-    .line 657
     sget-boolean v2, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v2, :cond_0
 
-    .line 658
     const-string/jumbo v2, "Detail"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1633,7 +1557,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 660
     :cond_0
     const/4 v2, -0x1
 
@@ -1647,11 +1570,9 @@
     :goto_0
     packed-switch v2, :pswitch_data_0
 
-    .line 824
     :goto_1
     return v0
 
-    .line 660
     :sswitch_0
     const-string/jumbo v3, "year"
 
@@ -2315,7 +2236,6 @@
 
     goto/16 :goto_0
 
-    .line 662
     :pswitch_0
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsInt()I
 
@@ -2327,10 +2247,8 @@
     :goto_2
     move v0, v1
 
-    .line 824
     goto/16 :goto_1
 
-    .line 665
     :pswitch_1
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -2340,7 +2258,6 @@
 
     goto :goto_2
 
-    .line 668
     :pswitch_2
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -2350,7 +2267,6 @@
 
     goto :goto_2
 
-    .line 671
     :pswitch_3
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -2360,7 +2276,6 @@
 
     goto :goto_2
 
-    .line 674
     :pswitch_4
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -2370,7 +2285,6 @@
 
     goto :goto_2
 
-    .line 677
     :pswitch_5
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -2380,7 +2294,6 @@
 
     goto :goto_2
 
-    .line 680
     :pswitch_6
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -2390,7 +2303,6 @@
 
     goto :goto_2
 
-    .line 683
     :pswitch_7
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -2400,7 +2312,6 @@
 
     goto :goto_2
 
-    .line 686
     :pswitch_8
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -2410,7 +2321,6 @@
 
     goto :goto_2
 
-    .line 689
     :pswitch_9
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsInt()I
 
@@ -2420,11 +2330,9 @@
 
     goto :goto_2
 
-    .line 694
     :pswitch_a
     if-eqz p2, :cond_2
 
-    .line 695
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsLong()J
 
     move-result-wide v2
@@ -2433,7 +2341,6 @@
 
     goto :goto_2
 
-    .line 699
     :pswitch_b
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -2443,7 +2350,6 @@
 
     goto :goto_2
 
-    .line 702
     :pswitch_c
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -2453,7 +2359,6 @@
 
     goto :goto_2
 
-    .line 705
     :pswitch_d
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -2463,7 +2368,6 @@
 
     goto :goto_2
 
-    .line 708
     :pswitch_e
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -2473,7 +2377,6 @@
 
     goto :goto_2
 
-    .line 711
     :pswitch_f
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -2483,11 +2386,9 @@
 
     goto :goto_2
 
-    .line 714
     :pswitch_10
     if-eqz p2, :cond_2
 
-    .line 715
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
     move-result-object v0
@@ -2496,7 +2397,6 @@
 
     goto :goto_2
 
-    .line 720
     :pswitch_11
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -2506,7 +2406,6 @@
 
     goto :goto_2
 
-    .line 723
     :pswitch_12
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -2516,7 +2415,6 @@
 
     goto/16 :goto_2
 
-    .line 726
     :pswitch_13
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -2526,7 +2424,6 @@
 
     goto/16 :goto_2
 
-    .line 729
     :pswitch_14
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -2536,7 +2433,6 @@
 
     goto/16 :goto_2
 
-    .line 732
     :pswitch_15
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -2546,7 +2442,6 @@
 
     goto/16 :goto_2
 
-    .line 735
     :pswitch_16
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -2556,7 +2451,6 @@
 
     goto/16 :goto_2
 
-    .line 738
     :pswitch_17
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -2566,7 +2460,6 @@
 
     goto/16 :goto_2
 
-    .line 741
     :pswitch_18
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -2576,7 +2469,6 @@
 
     goto/16 :goto_2
 
-    .line 744
     :pswitch_19
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -2586,7 +2478,6 @@
 
     goto/16 :goto_2
 
-    .line 747
     :pswitch_1a
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsInt()I
 
@@ -2596,7 +2487,6 @@
 
     goto/16 :goto_2
 
-    .line 750
     :pswitch_1b
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsInt()I
 
@@ -2606,7 +2496,6 @@
 
     goto/16 :goto_2
 
-    .line 753
     :pswitch_1c
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsInt()I
 
@@ -2616,7 +2505,6 @@
 
     goto/16 :goto_2
 
-    .line 756
     :pswitch_1d
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsInt()I
 
@@ -2626,7 +2514,6 @@
 
     goto/16 :goto_2
 
-    .line 759
     :pswitch_1e
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsInt()I
 
@@ -2636,7 +2523,6 @@
 
     goto/16 :goto_2
 
-    .line 762
     :pswitch_1f
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -2646,7 +2532,6 @@
 
     goto/16 :goto_2
 
-    .line 765
     :pswitch_20
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -2656,7 +2541,6 @@
 
     goto/16 :goto_2
 
-    .line 768
     :pswitch_21
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -2666,7 +2550,6 @@
 
     goto/16 :goto_2
 
-    .line 771
     :pswitch_22
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -2676,7 +2559,6 @@
 
     goto/16 :goto_2
 
-    .line 774
     :pswitch_23
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -2686,7 +2568,6 @@
 
     goto/16 :goto_2
 
-    .line 777
     :pswitch_24
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -2696,7 +2577,6 @@
 
     goto/16 :goto_2
 
-    .line 780
     :pswitch_25
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -2706,7 +2586,6 @@
 
     goto/16 :goto_2
 
-    .line 783
     :pswitch_26
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -2716,7 +2595,6 @@
 
     goto/16 :goto_2
 
-    .line 786
     :pswitch_27
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsInt()I
 
@@ -2726,7 +2604,6 @@
 
     goto/16 :goto_2
 
-    .line 789
     :pswitch_28
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -2736,7 +2613,6 @@
 
     goto/16 :goto_2
 
-    .line 792
     :pswitch_29
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -2746,7 +2622,6 @@
 
     goto/16 :goto_2
 
-    .line 795
     :pswitch_2a
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -2756,7 +2631,6 @@
 
     goto/16 :goto_2
 
-    .line 798
     :pswitch_2b
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -2766,7 +2640,6 @@
 
     goto/16 :goto_2
 
-    .line 801
     :pswitch_2c
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsDouble()D
 
@@ -2778,7 +2651,6 @@
 
     goto/16 :goto_2
 
-    .line 804
     :pswitch_2d
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -2788,7 +2660,6 @@
 
     goto/16 :goto_2
 
-    .line 807
     :pswitch_2e
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -2798,7 +2669,6 @@
 
     goto/16 :goto_2
 
-    .line 810
     :pswitch_2f
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -2808,7 +2678,6 @@
 
     goto/16 :goto_2
 
-    .line 813
     :pswitch_30
     sget-object v0, Lcom/fasterxml/jackson/core/JsonToken;->START_ARRAY:Lcom/fasterxml/jackson/core/JsonToken;
 
@@ -2822,7 +2691,6 @@
 
     goto/16 :goto_2
 
-    .line 816
     :pswitch_31
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -2832,7 +2700,6 @@
 
     goto/16 :goto_2
 
-    .line 819
     :pswitch_32
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -2842,7 +2709,6 @@
 
     goto/16 :goto_2
 
-    .line 660
     nop
 
     :sswitch_data_0
@@ -2959,10 +2825,8 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
-    .prologue
     const/16 v4, 0x27
 
-    .line 830
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

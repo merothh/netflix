@@ -15,33 +15,24 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/android/widget/AdvancedImageView;Landroid/widget/TextView;Landroid/view/View;)V
     .locals 1
 
-    .prologue
-    .line 736
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 737
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;->img:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
-    .line 738
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;->title:Landroid/widget/TextView;
 
-    .line 739
     iput-object p3, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;->topEditImg:Landroid/view/View;
 
-    .line 741
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Lcom/netflix/mediaclient/android/widget/AdvancedImageView;->setPressedStateHandlerEnabled(Z)V
 
-    .line 742
     return-void
 .end method
 
 .method static synthetic access$700(Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;)Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
     .locals 1
 
-    .prologue
-    .line 731
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;->img:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
     return-object v0
@@ -50,8 +41,6 @@
 .method static synthetic access$800(Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;)Landroid/widget/TextView;
     .locals 1
 
-    .prologue
-    .line 731
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;->title:Landroid/widget/TextView;
 
     return-object v0
@@ -60,8 +49,6 @@
 .method static synthetic access$900(Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;)Landroid/view/View;
     .locals 1
 
-    .prologue
-    .line 731
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$Holder;->topEditImg:Landroid/view/View;
 
     return-object v0

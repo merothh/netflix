@@ -33,59 +33,42 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 458
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
-    .line 459
     invoke-direct {p0, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
-    .line 460
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->init()V
 
-    .line 461
     return-void
 .end method
 
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .prologue
-    .line 463
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
-    .line 464
     invoke-direct {p0, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 465
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->init()V
 
-    .line 466
     return-void
 .end method
 
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .prologue
-    .line 468
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
-    .line 469
     invoke-direct {p0, p2, p3, p4}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 470
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->init()V
 
-    .line 471
     return-void
 .end method
 
 .method private findViews()V
     .locals 2
 
-    .prologue
-    .line 484
     const v0, 0x7f0f0323
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->findViewById(I)Landroid/view/View;
@@ -96,7 +79,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->actorStillImg:Lcom/netflix/mediaclient/android/widget/FocalPointImageView;
 
-    .line 485
     const v0, 0x7f0f0324
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->findViewById(I)Landroid/view/View;
@@ -107,7 +89,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->actorHeadshotImg:Lcom/netflix/mediaclient/android/widget/CircleImageView;
 
-    .line 487
     const v0, 0x7f0f0328
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->findViewById(I)Landroid/view/View;
@@ -118,7 +99,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->knownFor:Landroid/widget/TextView;
 
-    .line 488
     const v0, 0x7f0f0327
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->findViewById(I)Landroid/view/View;
@@ -129,7 +109,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->knownForLabel:Landroid/widget/TextView;
 
-    .line 489
     const v0, 0x7f0f032c
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->findViewById(I)Landroid/view/View;
@@ -140,7 +119,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->spouse:Landroid/widget/TextView;
 
-    .line 490
     const v0, 0x7f0f032b
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->findViewById(I)Landroid/view/View;
@@ -151,7 +129,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->spouseLabel:Landroid/widget/TextView;
 
-    .line 491
     const v0, 0x7f0f0326
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->findViewById(I)Landroid/view/View;
@@ -162,7 +139,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->name:Landroid/widget/TextView;
 
-    .line 492
     const v0, 0x7f0f032a
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->findViewById(I)Landroid/view/View;
@@ -173,7 +149,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->born:Landroid/widget/TextView;
 
-    .line 493
     const v0, 0x7f0f0329
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->findViewById(I)Landroid/view/View;
@@ -184,7 +159,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->bornLabel:Landroid/widget/TextView;
 
-    .line 494
     const v0, 0x7f0f0325
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->findViewById(I)Landroid/view/View;
@@ -195,7 +169,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->onNetFlixLabel:Landroid/view/View;
 
-    .line 495
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
     const v1, 0x7f0f032d
@@ -206,15 +179,12 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;->access$1102(Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;Landroid/view/View;)Landroid/view/View;
 
-    .line 496
     return-void
 .end method
 
 .method private init()V
     .locals 3
 
-    .prologue
-    .line 478
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -231,21 +201,16 @@
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 479
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->findViews()V
 
-    .line 480
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->setupCaret()V
 
-    .line 481
     return-void
 .end method
 
 .method private setupCaret()V
     .locals 3
 
-    .prologue
-    .line 499
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;->access$1100(Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;)Landroid/view/View;
@@ -254,7 +219,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 501
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;->getActivity()Landroid/app/Activity;
@@ -269,7 +233,6 @@
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
-    .line 502
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
@@ -286,7 +249,6 @@
 
     sub-int/2addr v0, v1
 
-    .line 504
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;->access$1100(Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;)Landroid/view/View;
@@ -299,7 +261,6 @@
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 506
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;->access$1100(Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;)Landroid/view/View;
@@ -312,7 +273,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 513
     :cond_0
     return-void
 .end method
@@ -320,15 +280,12 @@
 .method private updateActorHeadshotmage(Lcom/netflix/model/branches/FalkorPerson;)V
     .locals 7
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 579
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->actorHeadshotImg:Lcom/netflix/mediaclient/android/widget/CircleImageView;
 
     if-eqz v0, :cond_0
 
-    .line 580
     iget-object v0, p1, Lcom/netflix/model/branches/FalkorPerson;->detail:Lcom/netflix/model/branches/FalkorPerson$PersonDetail;
 
     invoke-virtual {v0}, Lcom/netflix/model/branches/FalkorPerson$PersonDetail;->getHeadshotImageUrl()Ljava/lang/String;
@@ -337,7 +294,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 581
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;->getActivity()Landroid/app/Activity;
@@ -352,7 +308,6 @@
 
     iget-object v2, p1, Lcom/netflix/model/branches/FalkorPerson;->detail:Lcom/netflix/model/branches/FalkorPerson$PersonDetail;
 
-    .line 583
     invoke-virtual {v2}, Lcom/netflix/model/branches/FalkorPerson$PersonDetail;->getHeadshotImageUrl()Ljava/lang/String;
 
     move-result-object v2
@@ -361,28 +316,23 @@
 
     const-string/jumbo v4, "RoleDetailsFrag.ActorDetailsView.actorHeadshotImg"
 
-    .line 586
     invoke-static {}, Lcom/netflix/mediaclient/ui/experience/BrowseExperience;->getImageLoaderConfig()Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;
 
     move-result-object v5
 
     const/4 v6, 0x1
 
-    .line 581
     invoke-interface/range {v0 .. v6}, Lcom/netflix/mediaclient/util/gfx/ImageLoader;->showImg(Lcom/netflix/mediaclient/android/widget/AdvancedImageView;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;Ljava/lang/String;Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;Z)V
 
-    .line 593
     :cond_0
     :goto_0
     return-void
 
-    .line 589
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->actorHeadshotImg:Lcom/netflix/mediaclient/android/widget/CircleImageView;
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/CircleImageView;->setImageLoaderInfo(Lcom/netflix/mediaclient/android/widget/AdvancedImageView$ImageLoaderInfo;)V
 
-    .line 590
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->actorHeadshotImg:Lcom/netflix/mediaclient/android/widget/CircleImageView;
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/CircleImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
@@ -393,36 +343,30 @@
 .method private updateActorStillImage(Lcom/netflix/model/branches/FalkorPerson;)V
     .locals 9
 
-    .prologue
     const/4 v1, 0x0
 
     const/4 v6, 0x1
 
     const/4 v8, 0x0
 
-    .line 529
     const v0, 0x7f0f01f6
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->findViewById(I)Landroid/view/View;
 
     move-result-object v7
 
-    .line 531
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->actorStillImg:Lcom/netflix/mediaclient/android/widget/FocalPointImageView;
 
     if-eqz v0, :cond_1
 
-    .line 532
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->actorStillImg:Lcom/netflix/mediaclient/android/widget/FocalPointImageView;
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->adjustHeight(Landroid/widget/ImageView;)V
 
-    .line 533
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->actorStillImg:Lcom/netflix/mediaclient/android/widget/FocalPointImageView;
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->setImageLoaderInfo(Lcom/netflix/mediaclient/android/widget/AdvancedImageView$ImageLoaderInfo;)V
 
-    .line 535
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;->access$700(Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;)Lcom/netflix/model/branches/FalkorActorStill;
@@ -431,17 +375,14 @@
 
     if-eqz v0, :cond_2
 
-    .line 537
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->actorStillImg:Lcom/netflix/mediaclient/android/widget/FocalPointImageView;
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 538
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->actorStillImg:Lcom/netflix/mediaclient/android/widget/FocalPointImageView;
 
     invoke-virtual {v0, v6}, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->setCutomCroppingEnabled(Z)V
 
-    .line 540
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;->getActivity()Landroid/app/Activity;
@@ -454,7 +395,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 541
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->actorStillImg:Lcom/netflix/mediaclient/android/widget/FocalPointImageView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
@@ -469,7 +409,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->setCropPointXOffsetPercent(F)V
 
-    .line 544
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
@@ -485,7 +424,6 @@
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
-    .line 546
     invoke-static {v2}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;->access$700(Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;)Lcom/netflix/model/branches/FalkorActorStill;
 
     move-result-object v2
@@ -498,28 +436,22 @@
 
     const-string/jumbo v4, "RoleDetailsFrag.ActorDetailsView.actorStillImg"
 
-    .line 549
     invoke-static {}, Lcom/netflix/mediaclient/ui/experience/BrowseExperience;->getImageLoaderConfig()Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;
 
     move-result-object v5
 
-    .line 544
     invoke-interface/range {v0 .. v6}, Lcom/netflix/mediaclient/util/gfx/ImageLoader;->showImg(Lcom/netflix/mediaclient/android/widget/AdvancedImageView;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;Ljava/lang/String;Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;Z)V
 
-    .line 552
     invoke-virtual {v7, v8}, Landroid/view/View;->setVisibility(I)V
 
-    .line 553
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->actorStillImg:Lcom/netflix/mediaclient/android/widget/FocalPointImageView;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->clearColorFilter()V
 
-    .line 563
     :cond_1
     :goto_0
     return-void
 
-    .line 556
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->actorStillImg:Lcom/netflix/mediaclient/android/widget/FocalPointImageView;
 
@@ -527,12 +459,10 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->setImageResource(I)V
 
-    .line 557
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->actorStillImg:Lcom/netflix/mediaclient/android/widget/FocalPointImageView;
 
     invoke-virtual {v0, v8}, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->setCutomCroppingEnabled(Z)V
 
-    .line 559
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->actorStillImg:Lcom/netflix/mediaclient/android/widget/FocalPointImageView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
@@ -543,7 +473,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/FocalPointImageView;->setColorFilter(I)V
 
-    .line 560
     const/4 v0, 0x4
 
     invoke-virtual {v7, v0}, Landroid/view/View;->setVisibility(I)V
@@ -554,17 +483,14 @@
 .method private updateBorn(Lcom/netflix/model/branches/FalkorPerson;)V
     .locals 3
 
-    .prologue
     const/16 v1, 0x8
 
     const/4 v2, 0x0
 
-    .line 609
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->born:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
-    .line 610
     iget-object v0, p1, Lcom/netflix/model/branches/FalkorPerson;->detail:Lcom/netflix/model/branches/FalkorPerson$PersonDetail;
 
     invoke-virtual {v0}, Lcom/netflix/model/branches/FalkorPerson$PersonDetail;->getBorn()Ljava/lang/String;
@@ -577,7 +503,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 611
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->born:Landroid/widget/TextView;
 
     iget-object v1, p1, Lcom/netflix/model/branches/FalkorPerson;->detail:Lcom/netflix/model/branches/FalkorPerson$PersonDetail;
@@ -588,28 +513,23 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 612
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->born:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 613
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->bornLabel:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 619
     :cond_0
     :goto_0
     return-void
 
-    .line 615
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->born:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 616
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->bornLabel:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
@@ -620,17 +540,14 @@
 .method private updateKnownFor(Lcom/netflix/model/branches/FalkorPerson;)V
     .locals 3
 
-    .prologue
     const/16 v1, 0x8
 
     const/4 v2, 0x0
 
-    .line 596
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->knownFor:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
-    .line 597
     iget-object v0, p1, Lcom/netflix/model/branches/FalkorPerson;->detail:Lcom/netflix/model/branches/FalkorPerson$PersonDetail;
 
     invoke-virtual {v0}, Lcom/netflix/model/branches/FalkorPerson$PersonDetail;->getKnownFor()Ljava/lang/String;
@@ -643,7 +560,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 598
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->knownFor:Landroid/widget/TextView;
 
     iget-object v1, p1, Lcom/netflix/model/branches/FalkorPerson;->detail:Lcom/netflix/model/branches/FalkorPerson$PersonDetail;
@@ -654,28 +570,23 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 599
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->knownForLabel:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 600
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->knownFor:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 606
     :cond_0
     :goto_0
     return-void
 
-    .line 602
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->knownForLabel:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 603
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->knownFor:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
@@ -686,13 +597,10 @@
 .method private updateName(Lcom/netflix/model/branches/FalkorPerson;)V
     .locals 2
 
-    .prologue
-    .line 635
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->name:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
-    .line 636
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->name:Landroid/widget/TextView;
 
     iget-object v1, p1, Lcom/netflix/model/branches/FalkorPerson;->detail:Lcom/netflix/model/branches/FalkorPerson$PersonDetail;
@@ -703,7 +611,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 638
     :cond_0
     return-void
 .end method
@@ -711,17 +618,14 @@
 .method private updateSpouse(Lcom/netflix/model/branches/FalkorPerson;)V
     .locals 3
 
-    .prologue
     const/16 v1, 0x8
 
     const/4 v2, 0x0
 
-    .line 622
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->spouse:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
-    .line 623
     iget-object v0, p1, Lcom/netflix/model/branches/FalkorPerson;->detail:Lcom/netflix/model/branches/FalkorPerson$PersonDetail;
 
     invoke-virtual {v0}, Lcom/netflix/model/branches/FalkorPerson$PersonDetail;->getSpouse()Ljava/lang/String;
@@ -734,7 +638,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 624
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->spouse:Landroid/widget/TextView;
 
     iget-object v1, p1, Lcom/netflix/model/branches/FalkorPerson;->detail:Lcom/netflix/model/branches/FalkorPerson$PersonDetail;
@@ -745,28 +648,23 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 625
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->spouse:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 626
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->spouseLabel:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 632
     :cond_0
     :goto_0
     return-void
 
-    .line 628
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->spouse:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 629
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->spouseLabel:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
@@ -779,10 +677,8 @@
 .method protected adjustHeight(Landroid/widget/ImageView;)V
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
-    .line 566
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;->access$1300(Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;)I
@@ -791,7 +687,6 @@
 
     if-ge v0, v3, :cond_1
 
-    .line 568
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;->getActivity()Landroid/app/Activity;
@@ -810,7 +705,6 @@
 
     int-to-float v0, v0
 
-    .line 569
     int-to-float v1, v3
 
     const/high16 v2, 0x3f800000    # 1.0f
@@ -819,7 +713,6 @@
 
     mul-float/2addr v0, v1
 
-    .line 571
     invoke-virtual {p1}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
@@ -844,7 +737,6 @@
 
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
-    .line 572
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -864,17 +756,14 @@
 
     iput v0, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 576
     :goto_1
     return-void
 
-    .line 572
     :cond_0
     const/high16 v0, 0x3f100000    # 0.5625f
 
     goto :goto_0
 
-    .line 574
     :cond_1
     invoke-virtual {p1}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -894,8 +783,6 @@
 .method protected getlayoutId()I
     .locals 1
 
-    .prologue
-    .line 474
     const v0, 0x7f0300eb
 
     return v0
@@ -904,31 +791,22 @@
 .method updateDetails(Lcom/netflix/model/branches/FalkorPerson;Z)V
     .locals 0
 
-    .prologue
-    .line 516
     if-nez p1, :cond_0
 
-    .line 526
     :goto_0
     return-void
 
-    .line 520
     :cond_0
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->updateName(Lcom/netflix/model/branches/FalkorPerson;)V
 
-    .line 521
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->updateSpouse(Lcom/netflix/model/branches/FalkorPerson;)V
 
-    .line 522
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->updateBorn(Lcom/netflix/model/branches/FalkorPerson;)V
 
-    .line 523
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->updateKnownFor(Lcom/netflix/model/branches/FalkorPerson;)V
 
-    .line 524
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->updateActorStillImage(Lcom/netflix/model/branches/FalkorPerson;)V
 
-    .line 525
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$ActorDetailsView;->updateActorHeadshotmage(Lcom/netflix/model/branches/FalkorPerson;)V
 
     goto :goto_0

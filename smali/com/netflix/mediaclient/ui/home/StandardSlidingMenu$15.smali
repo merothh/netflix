@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;)V
     .locals 0
 
-    .prologue
-    .line 824
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$15;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,8 +35,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 827
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$15;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;->access$300(Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;)Landroid/support/v4/widget/DrawerLayout;
@@ -47,7 +43,6 @@
 
     invoke-virtual {v0}, Landroid/support/v4/widget/DrawerLayout;->closeDrawers()V
 
-    .line 828
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$15;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;->access$1200(Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;)Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$AppListAdapter;
@@ -58,19 +53,16 @@
 
     move-result-object v0
 
-    .line 829
     if-eqz v0, :cond_0
 
     iget-object v1, v0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$AppAction;->action:Ljava/lang/Runnable;
 
     if-eqz v1, :cond_0
 
-    .line 830
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$AppAction;->action:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 832
     :cond_0
     return-void
 .end method

@@ -11,8 +11,6 @@
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 131
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -47,10 +45,8 @@
 
     invoke-direct {p0, v0}, Lorg/xbill/DNS/TextParseException;-><init>(Ljava/lang/String;)V
 
-    .line 132
     iput-object p3, p0, Lorg/xbill/DNS/Tokenizer$TokenizerException;->message:Ljava/lang/String;
 
-    .line 133
     return-void
 .end method
 
@@ -59,8 +55,6 @@
 .method public getBaseMessage()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 137
     iget-object v0, p0, Lorg/xbill/DNS/Tokenizer$TokenizerException;->message:Ljava/lang/String;
 
     return-object v0

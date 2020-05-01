@@ -30,11 +30,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 32
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;-><init>(Landroid/content/Context;)V
 
-    .line 33
     return-void
 .end method
 
@@ -43,10 +40,8 @@
 .method protected computeNumItemsPerPage()I
     .locals 3
 
-    .prologue
     const/4 v0, 0x6
 
-    .line 89
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedCwGalleryAdapter;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/util/DeviceUtils;->getScreenSizeCategory(Landroid/content/Context;)I
@@ -57,7 +52,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 90
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedCwGalleryAdapter;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/util/DeviceUtils;->isLandscape(Landroid/content/Context;)Z
@@ -66,18 +60,15 @@
 
     if-eqz v1, :cond_1
 
-    .line 92
     :cond_0
     :goto_0
     return v0
 
-    .line 90
     :cond_1
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 92
     :cond_2
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedCwGalleryAdapter;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
@@ -93,8 +84,6 @@
 .method protected computeNumPages()I
     .locals 2
 
-    .prologue
-    .line 84
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedCwGalleryAdapter;->data:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -115,8 +104,6 @@
 .method protected computeNumVideosToFetchPerBatch(I)I
     .locals 4
 
-    .prologue
-    .line 97
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedCwGalleryAdapter;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     sget-object v1, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->STANDARD:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
@@ -125,20 +112,16 @@
 
     move-result v0
 
-    .line 98
     if-nez p1, :cond_0
 
-    .line 99
     add-int/lit8 v0, v0, -0x3
 
-    .line 100
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 101
     const-string/jumbo v1, "KubrickPaginatedCwGalleryAdapter"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -161,7 +144,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 104
     :cond_0
     return v0
 .end method
@@ -178,36 +160,28 @@
         }
     .end annotation
 
-    .prologue
     const/4 v8, 0x3
 
-    .line 55
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedCwGalleryAdapter;->computeNumPages()I
 
     move-result v0
 
     if-lt p1, v0, :cond_0
 
-    .line 56
     const/4 v0, 0x0
 
-    .line 69
     :goto_0
     return-object v0
 
-    .line 59
     :cond_0
     iget v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedCwGalleryAdapter;->numItemsPerPage:I
 
     mul-int/2addr v0, p1
 
-    .line 60
     if-lt v0, v8, :cond_1
 
-    .line 61
     add-int/lit8 v0, v0, -0x3
 
-    .line 63
     :cond_1
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedCwGalleryAdapter;->data:Ljava/util/List;
 
@@ -219,7 +193,6 @@
 
     move-result v0
 
-    .line 64
     iget v1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedCwGalleryAdapter;->numItemsPerPage:I
 
     add-int/2addr v1, v0
@@ -234,14 +207,12 @@
 
     move-result v1
 
-    .line 66
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 67
     const-string/jumbo v2, "KubrickPaginatedCwGalleryAdapter"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -312,7 +283,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 69
     :cond_2
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedCwGalleryAdapter;->data:Ljava/util/List;
 
@@ -326,15 +296,12 @@
 .method public getRowHeightInPx()I
     .locals 5
 
-    .prologue
-    .line 37
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedCwGalleryAdapter;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/kubrick/BarkerUtils;->getCwGalleryWidthType(Lcom/netflix/mediaclient/android/activity/NetflixActivity;)Lcom/netflix/mediaclient/ui/lomo/LoMoUtils$LoMoWidthType;
 
     move-result-object v0
 
-    .line 38
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedCwGalleryAdapter;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     const/4 v2, 0x1
@@ -343,7 +310,6 @@
 
     move-result v1
 
-    .line 39
     iget v2, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedCwGalleryAdapter;->numItemsPerPage:I
 
     div-int/2addr v1, v2
@@ -356,17 +322,14 @@
 
     float-to-int v1, v1
 
-    .line 45
     mul-int/lit8 v1, v1, 0x4
 
-    .line 47
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 48
     const-string/jumbo v2, "KubrickPaginatedCwGalleryAdapter"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -399,7 +362,6 @@
 
     invoke-static {v2, v0}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
     :cond_0
     return v1
 .end method
@@ -420,8 +382,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 74
     const-class v0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickCwGalleryViewGroup;
 
     invoke-virtual {p1, v0}, Lcom/netflix/mediaclient/android/widget/ObjectRecycler$ViewRecycler;->pop(Ljava/lang/Class;)Ljava/lang/Object;
@@ -430,10 +390,8 @@
 
     check-cast v0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickCwGalleryViewGroup;
 
-    .line 75
     if-nez v0, :cond_0
 
-    .line 76
     new-instance v0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickCwGalleryViewGroup;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedCwGalleryAdapter;->getActivity()Landroid/app/Activity;
@@ -442,7 +400,6 @@
 
     invoke-direct {v0, v1, p3}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickCwGalleryViewGroup;-><init>(Landroid/content/Context;I)V
 
-    .line 78
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickPaginatedCwGalleryAdapter;->getListViewPos()I
 
@@ -458,6 +415,5 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickCwGalleryViewGroup;->updateDataThenViews(Ljava/util/List;IIILcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;)V
 
-    .line 79
     return-object v0
 .end method

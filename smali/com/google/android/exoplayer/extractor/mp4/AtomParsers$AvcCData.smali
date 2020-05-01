@@ -29,19 +29,13 @@
         }
     .end annotation
 
-    .prologue
-    .line 1225
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1226
     iput-object p1, p0, Lcom/google/android/exoplayer/extractor/mp4/AtomParsers$AvcCData;->initializationData:Ljava/util/List;
 
-    .line 1227
     iput p2, p0, Lcom/google/android/exoplayer/extractor/mp4/AtomParsers$AvcCData;->nalUnitLengthFieldLength:I
 
-    .line 1228
     iput p3, p0, Lcom/google/android/exoplayer/extractor/mp4/AtomParsers$AvcCData;->pixelWidthAspectRatio:F
 
-    .line 1229
     return-void
 .end method

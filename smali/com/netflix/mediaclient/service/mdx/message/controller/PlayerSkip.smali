@@ -17,30 +17,22 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 1
 
-    .prologue
-    .line 38
     const-string/jumbo v0, "PLAYER_SKIP"
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/mdx/message/MdxMessage;-><init>(Ljava/lang/String;)V
 
-    .line 39
     iput-object p1, p0, Lcom/netflix/mediaclient/service/mdx/message/controller/PlayerSkip;->mXid:Ljava/lang/String;
 
-    .line 40
     iput p2, p0, Lcom/netflix/mediaclient/service/mdx/message/controller/PlayerSkip;->seconds:I
 
-    .line 41
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/mdx/message/controller/PlayerSkip;->createObj()V
 
-    .line 42
     return-void
 .end method
 
 .method private createObj()V
     .locals 4
 
-    .prologue
-    .line 46
     :try_start_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/controller/PlayerSkip;->mJson:Lorg/json/JSONObject;
 
@@ -50,7 +42,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 47
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/message/controller/PlayerSkip;->mJson:Lorg/json/JSONObject;
 
     const-string/jumbo v1, "xid"
@@ -61,15 +52,12 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 52
     :goto_0
     return-void
 
-    .line 49
     :catch_0
     move-exception v0
 
-    .line 50
     const-string/jumbo v1, "nf_mdx"
 
     new-instance v2, Ljava/lang/StringBuilder;

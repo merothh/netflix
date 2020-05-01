@@ -36,17 +36,12 @@
 .method protected constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;)V
     .locals 3
 
-    .prologue
-    .line 31
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;-><init>(Landroid/content/Context;)V
 
-    .line 32
     iput-object p3, p0, Lcom/netflix/mediaclient/service/user/volley/VerifyPinRequest;->responseCallback:Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;
 
-    .line 33
     iput-object p2, p0, Lcom/netflix/mediaclient/service/user/volley/VerifyPinRequest;->enteredPin:Ljava/lang/String;
 
-    .line 35
     const-string/jumbo v0, "[\'user\', \'verifyPin\', \'%s\']"
 
     const/4 v1, 0x1
@@ -63,14 +58,12 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/user/volley/VerifyPinRequest;->pqlQuery1:Ljava/lang/String;
 
-    .line 37
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 38
     const-string/jumbo v0, "nf_pin"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -95,7 +88,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 40
     :cond_0
     return-void
 .end method
@@ -114,8 +106,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 44
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -136,20 +126,16 @@
 .method protected onFailure(Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 83
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/volley/VerifyPinRequest;->responseCallback:Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;
 
     if-eqz v0, :cond_0
 
-    .line 84
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/volley/VerifyPinRequest;->responseCallback:Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, v1, p1}, Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;->onVerified(ZLcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 86
     :cond_0
     return-void
 .end method
@@ -157,13 +143,10 @@
 .method protected onSuccess(Ljava/lang/Boolean;)V
     .locals 3
 
-    .prologue
-    .line 76
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/volley/VerifyPinRequest;->responseCallback:Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;
 
     if-eqz v0, :cond_0
 
-    .line 77
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/volley/VerifyPinRequest;->responseCallback:Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -174,7 +157,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;->onVerified(ZLcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 79
     :cond_0
     return-void
 .end method
@@ -182,8 +164,6 @@
 .method protected bridge synthetic onSuccess(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 17
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/user/volley/VerifyPinRequest;->onSuccess(Ljava/lang/Boolean;)V
@@ -194,15 +174,12 @@
 .method protected parseFalkorResponse(Ljava/lang/String;)Ljava/lang/Boolean;
     .locals 4
 
-    .prologue
-    .line 51
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 52
     const-string/jumbo v0, "nf_pin"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -225,7 +202,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 54
     :cond_0
     const-string/jumbo v0, "nf_pin"
 
@@ -233,14 +209,12 @@
 
     move-result-object v0
 
-    .line 55
     invoke-static {v0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorParseUtils;->isEmpty(Lcom/google/gson/JsonObject;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 56
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorException;
 
     const-string/jumbo v1, "verifyPinResponse empty!!!"
@@ -249,7 +223,6 @@
 
     throw v0
 
-    .line 62
     :cond_1
     :try_start_0
     const-string/jumbo v1, "user"
@@ -260,21 +233,18 @@
 
     move-result-object v0
 
-    .line 67
     const-string/jumbo v1, "verifyPin"
 
     invoke-virtual {v0, v1}, Lcom/google/gson/JsonObject;->getAsJsonObject(Ljava/lang/String;)Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 68
     iget-object v1, p0, Lcom/netflix/mediaclient/service/user/volley/VerifyPinRequest;->enteredPin:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/google/gson/JsonObject;->getAsJsonObject(Ljava/lang/String;)Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 69
     const-string/jumbo v1, "isPinValid"
 
     invoke-virtual {v0, v1}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;
@@ -289,14 +259,11 @@
 
     move-result-object v0
 
-    .line 71
     return-object v0
 
-    .line 63
     :catch_0
     move-exception v0
 
-    .line 64
     const-string/jumbo v1, "nf_pin"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -319,7 +286,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
     new-instance v1, Lcom/netflix/mediaclient/service/webclient/volley/FalkorException;
 
     const-string/jumbo v2, "response missing user json objects"
@@ -332,8 +298,6 @@
 .method protected bridge synthetic parseFalkorResponse(Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 17
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/user/volley/VerifyPinRequest;->parseFalkorResponse(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0

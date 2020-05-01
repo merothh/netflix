@@ -27,16 +27,12 @@
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 1
 
-    .prologue
-    .line 50
     const-string/jumbo v0, "HANDSHAKE_ACCEPTED"
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/mdx/message/MdxMessage;-><init>(Ljava/lang/String;)V
 
-    .line 51
     iput-object p1, p0, Lcom/netflix/mediaclient/service/mdx/message/target/HandshakeAccepted;->mJson:Lorg/json/JSONObject;
 
-    .line 52
     const-string/jumbo v0, "contractVersion"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
@@ -45,7 +41,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/HandshakeAccepted;->mContractVersion:I
 
-    .line 53
     const-string/jumbo v0, "accepted"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
@@ -54,7 +49,6 @@
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/HandshakeAccepted;->mAccepted:Z
 
-    .line 54
     const-string/jumbo v0, "volumeControl"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -63,7 +57,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 55
     const-string/jumbo v0, "volumeControl"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;)Z
@@ -72,7 +65,6 @@
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/HandshakeAccepted;->mVolumeControl:Z
 
-    .line 57
     :cond_0
     const-string/jumbo v0, "volumeStep"
 
@@ -82,7 +74,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 58
     const-string/jumbo v0, "volumeStep"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
@@ -91,7 +82,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/HandshakeAccepted;->mVolumeStep:I
 
-    .line 60
     :cond_1
     return-void
 .end method
@@ -101,8 +91,6 @@
 .method public getContractVersion()I
     .locals 1
 
-    .prologue
-    .line 68
     iget v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/HandshakeAccepted;->mContractVersion:I
 
     return v0
@@ -111,8 +99,6 @@
 .method public getVolumeStep()I
     .locals 1
 
-    .prologue
-    .line 95
     iget v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/HandshakeAccepted;->mVolumeStep:I
 
     return v0
@@ -121,8 +107,6 @@
 .method public isAccepted()Z
     .locals 1
 
-    .prologue
-    .line 77
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/HandshakeAccepted;->mAccepted:Z
 
     return v0
@@ -131,8 +115,6 @@
 .method public isVolumeControl()Z
     .locals 1
 
-    .prologue
-    .line 86
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/mdx/message/target/HandshakeAccepted;->mVolumeControl:Z
 
     return v0
@@ -141,8 +123,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 102
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

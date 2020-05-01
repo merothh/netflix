@@ -67,8 +67,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 22
     const-string/jumbo v0, "nf_presentation"
 
     sput-object v0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->TAG:Ljava/lang/String;
@@ -79,25 +77,20 @@
 .method private constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 71
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->videoIds:Ljava/util/List;
 
-    .line 72
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->videoImageTypeIdentifierIds:Ljava/util/List;
 
-    .line 73
     return-void
 .end method
 
@@ -120,24 +113,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     iput-object p2, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->videoIds:Ljava/util/List;
 
-    .line 78
     iput-object p3, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->videoImageTypeIdentifierIds:Ljava/util/List;
 
-    .line 79
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;->getRequestId()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->requestId:Ljava/lang/String;
 
-    .line 80
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;->isHero()Z
 
     move-result v0
@@ -151,41 +138,34 @@
     :goto_0
     iput v0, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->trackId:I
 
-    .line 81
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;->getListPos()I
 
     move-result v0
 
     iput v0, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->row:I
 
-    .line 82
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;->isHero()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->isHero:Z
 
-    .line 83
     iput p4, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->rank:I
 
-    .line 84
     invoke-virtual {p5}, Lcom/netflix/mediaclient/servicemgr/UiLocation;->getValue()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->location:Ljava/lang/String;
 
-    .line 85
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->time:J
 
-    .line 86
     return-void
 
-    .line 80
     :cond_0
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;->getTrackId()I
 
@@ -197,25 +177,20 @@
 .method static createInstance(Lorg/json/JSONObject;)Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;
     .locals 7
 
-    .prologue
     const/4 v6, 0x0
 
     const/4 v0, 0x0
 
-    .line 115
     if-nez p0, :cond_0
 
-    .line 138
     :goto_0
     return-object v0
 
-    .line 119
     :cond_0
     new-instance v1, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;
 
     invoke-direct {v1}, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;-><init>()V
 
-    .line 121
     :try_start_0
     const-string/jumbo v2, "video_id"
 
@@ -225,12 +200,10 @@
 
     move-result-object v2
 
-    .line 122
     iget-object v3, v1, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->videoIds:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 123
     const-string/jumbo v2, "image_key"
 
     const/4 v3, 0x0
@@ -239,19 +212,16 @@
 
     move-result-object v2
 
-    .line 124
     if-eqz v1, :cond_1
 
     iget-object v3, v1, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->videoImageTypeIdentifierIds:Ljava/util/List;
 
     if-eqz v3, :cond_1
 
-    .line 125
     iget-object v3, v1, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->videoImageTypeIdentifierIds:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 127
     :cond_1
     const-string/jumbo v2, "request_id"
 
@@ -263,7 +233,6 @@
 
     iput-object v2, v1, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->requestId:Ljava/lang/String;
 
-    .line 128
     const-string/jumbo v2, "track_id"
 
     const/4 v3, 0x0
@@ -274,7 +243,6 @@
 
     iput v2, v1, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->trackId:I
 
-    .line 129
     const-string/jumbo v2, "row"
 
     const/4 v3, 0x0
@@ -285,7 +253,6 @@
 
     iput v2, v1, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->row:I
 
-    .line 130
     const-string/jumbo v2, "rank"
 
     const/4 v3, 0x0
@@ -296,7 +263,6 @@
 
     iput v2, v1, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->rank:I
 
-    .line 131
     const-string/jumbo v2, "location"
 
     const/4 v3, 0x0
@@ -307,7 +273,6 @@
 
     iput-object v2, v1, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->location:Ljava/lang/String;
 
-    .line 132
     const-string/jumbo v2, "time"
 
     const-wide/16 v4, 0x0
@@ -318,7 +283,6 @@
 
     iput-wide v2, v1, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->time:J
 
-    .line 133
     const-string/jumbo v2, "is_hero"
 
     const/4 v3, 0x0
@@ -333,14 +297,11 @@
 
     move-object v0, v1
 
-    .line 138
     goto :goto_0
 
-    .line 134
     :catch_0
     move-exception v1
 
-    .line 135
     sget-object v1, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "fail to create PT event from json: %s "
@@ -369,8 +330,6 @@
 .method getLocation()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 57
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->location:Ljava/lang/String;
 
     return-object v0
@@ -379,8 +338,6 @@
 .method getRank()I
     .locals 1
 
-    .prologue
-    .line 51
     iget v0, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->rank:I
 
     return v0
@@ -389,8 +346,6 @@
 .method getRow()I
     .locals 1
 
-    .prologue
-    .line 48
     iget v0, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->row:I
 
     return v0
@@ -399,8 +354,6 @@
 .method getTime()J
     .locals 2
 
-    .prologue
-    .line 54
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->time:J
 
     return-wide v0
@@ -409,8 +362,6 @@
 .method getVideoIds()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 42
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->videoIds:Ljava/util/List;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -423,8 +374,6 @@
 .method getVideoImageTypeIdentifierIds()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 45
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->videoImageTypeIdentifierIds:Ljava/util/List;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -437,16 +386,12 @@
 .method toJSONArray()Lorg/json/JSONArray;
     .locals 8
 
-    .prologue
-    .line 89
     new-instance v3, Lorg/json/JSONArray;
 
     invoke-direct {v3}, Lorg/json/JSONArray;-><init>()V
 
-    .line 90
     iget v1, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->rank:I
 
-    .line 91
     const/4 v0, 0x0
 
     move v2, v1
@@ -462,7 +407,6 @@
 
     if-ge v1, v0, :cond_1
 
-    .line 92
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->videoIds:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -471,24 +415,20 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 93
     new-instance v4, Lorg/json/JSONObject;
 
     invoke-direct {v4}, Lorg/json/JSONObject;-><init>()V
 
-    .line 94
     const-string/jumbo v5, "video_id"
 
     invoke-virtual {v4, v5, v0}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 95
     const-string/jumbo v0, "request_id"
 
     iget-object v5, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->requestId:Ljava/lang/String;
 
     invoke-virtual {v4, v0, v5}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 96
     const-string/jumbo v0, "track_id"
 
     iget v5, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->trackId:I
@@ -499,7 +439,6 @@
 
     invoke-virtual {v4, v0, v5}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 97
     const-string/jumbo v0, "row"
 
     iget v5, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->row:I
@@ -510,7 +449,6 @@
 
     invoke-virtual {v4, v0, v5}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 98
     const-string/jumbo v0, "rank"
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -519,14 +457,12 @@
 
     invoke-virtual {v4, v0, v5}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 99
     const-string/jumbo v0, "location"
 
     iget-object v5, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->location:Ljava/lang/String;
 
     invoke-virtual {v4, v0, v5}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 100
     const-string/jumbo v0, "time"
 
     iget-wide v6, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->time:J
@@ -537,7 +473,6 @@
 
     invoke-virtual {v4, v0, v5}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 101
     const-string/jumbo v0, "is_hero"
 
     iget-boolean v5, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->isHero:Z
@@ -548,7 +483,6 @@
 
     invoke-virtual {v4, v0, v5}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 102
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->videoImageTypeIdentifierIds:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -561,7 +495,6 @@
 
     if-le v0, v1, :cond_0
 
-    .line 103
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/presentation/PresentationEvent;->videoImageTypeIdentifierIds:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -570,33 +503,27 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 104
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 105
     const-string/jumbo v5, "image_key"
 
     invoke-virtual {v4, v5, v0}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 108
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
-    .line 109
     invoke-virtual {v3, v4}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
-    .line 91
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto/16 :goto_0
 
-    .line 111
     :cond_1
     return-object v3
 .end method
@@ -604,8 +531,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 26
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

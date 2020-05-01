@@ -38,7 +38,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -49,7 +48,6 @@
 
     const/4 v3, 0x0
 
-    .line 74
     new-instance v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;
 
     const-string/jumbo v1, "INTRODUCTION"
@@ -58,7 +56,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;->INTRODUCTION:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;
 
-    .line 75
     new-instance v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;
 
     const-string/jumbo v1, "INSTRUCTION"
@@ -67,7 +64,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;->INSTRUCTION:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;
 
-    .line 76
     new-instance v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;
 
     const-string/jumbo v1, "ITEM_SELECTION"
@@ -76,7 +72,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;->ITEM_SELECTION:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;
 
-    .line 77
     new-instance v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;
 
     const-string/jumbo v1, "POSITIVE_LINE"
@@ -85,7 +80,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;->POSITIVE_LINE:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;
 
-    .line 78
     new-instance v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;
 
     const-string/jumbo v1, "RECAP"
@@ -94,7 +88,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;->RECAP:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;
 
-    .line 79
     new-instance v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;
 
     const-string/jumbo v1, "RECAP_ITEMS"
@@ -105,7 +98,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;->RECAP_ITEMS:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;
 
-    .line 80
     new-instance v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;
 
     const-string/jumbo v1, "SUMMARY"
@@ -116,7 +108,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;->SUMMARY:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;
 
-    .line 81
     new-instance v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;
 
     const-string/jumbo v1, "OUTRO"
@@ -127,7 +118,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;->OUTRO:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;
 
-    .line 73
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;
@@ -183,8 +173,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 73
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -193,8 +181,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;
     .locals 1
 
-    .prologue
-    .line 73
     const-class v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -209,8 +195,6 @@
 .method public static values()[Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;
     .locals 1
 
-    .prologue
-    .line 73
     sget-object v0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;->$VALUES:[Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;->clone()Ljava/lang/Object;

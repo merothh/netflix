@@ -11,15 +11,12 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Landroid/support/v4/widget/DrawerLayout;)V
     .locals 5
 
-    .prologue
     const/16 v4, 0x8
 
     const/4 v3, 0x0
 
-    .line 18
     invoke-direct {p0, p1, p2, v3}, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;-><init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Landroid/support/v4/widget/DrawerLayout;Z)V
 
-    .line 21
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kids/lolomo/KidsSlidingMenu;->notificationsDivider:Landroid/view/View;
 
     invoke-virtual {p1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getResources()Landroid/content/res/Resources;
@@ -34,12 +31,10 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 22
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kids/lolomo/KidsSlidingMenu;->notificationsDivider:Landroid/view/View;
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 25
     const v0, 0x7f0f0366
 
     invoke-virtual {p2, v0}, Landroid/support/v4/widget/DrawerLayout;->findViewById(I)Landroid/view/View;
@@ -48,7 +43,6 @@
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 26
     const v0, 0x7f0f036d
 
     invoke-virtual {p2, v0}, Landroid/support/v4/widget/DrawerLayout;->findViewById(I)Landroid/view/View;
@@ -57,7 +51,6 @@
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 29
     const v0, 0x7f0f0360
 
     invoke-virtual {p2, v0}, Landroid/support/v4/widget/DrawerLayout;->findViewById(I)Landroid/view/View;
@@ -80,7 +73,6 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 32
     invoke-virtual {p1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -93,31 +85,26 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/kids/lolomo/KidsSlidingMenu;->kidsItemTextColor:I
 
-    .line 33
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kids/lolomo/KidsSlidingMenu;->profileName:Landroid/widget/TextView;
 
     iget v1, p0, Lcom/netflix/mediaclient/ui/kids/lolomo/KidsSlidingMenu;->kidsItemTextColor:I
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 34
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kids/lolomo/KidsSlidingMenu;->profileName:Landroid/widget/TextView;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/ViewUtils;->setTextViewToBold(Landroid/widget/TextView;)V
 
-    .line 35
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kids/lolomo/KidsSlidingMenu;->homeText:Landroid/widget/TextView;
 
     iget v1, p0, Lcom/netflix/mediaclient/ui/kids/lolomo/KidsSlidingMenu;->kidsItemTextColor:I
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 36
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kids/lolomo/KidsSlidingMenu;->homeText:Landroid/widget/TextView;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/ViewUtils;->setTextViewToBold(Landroid/widget/TextView;)V
 
-    .line 39
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kids/lolomo/KidsSlidingMenu;->genresList:Lcom/netflix/mediaclient/android/widget/StaticListView;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/widget/StaticListView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -140,12 +127,10 @@
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
 
-    .line 40
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kids/lolomo/KidsSlidingMenu;->homeText:Landroid/widget/TextView;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/ViewUtils;->removeShadow(Landroid/widget/TextView;)V
 
-    .line 41
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kids/lolomo/KidsSlidingMenu;->homeText:Landroid/widget/TextView;
 
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
@@ -166,7 +151,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 44
     const v0, 0x7f0f035b
 
     invoke-virtual {p2, v0}, Landroid/support/v4/widget/DrawerLayout;->findViewById(I)Landroid/view/View;
@@ -177,7 +161,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 45
     return-void
 .end method
 
@@ -186,18 +169,14 @@
 .method protected updateAdapterViews(Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$GenreRowHolder;Z)V
     .locals 5
 
-    .prologue
-    .line 56
     invoke-super {p0, p1, p2}, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;->updateAdapterViews(Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$GenreRowHolder;Z)V
 
-    .line 58
     iget-object v0, p1, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$GenreRowHolder;->tv:Landroid/widget/TextView;
 
     iget v1, p0, Lcom/netflix/mediaclient/ui/kids/lolomo/KidsSlidingMenu;->kidsItemTextColor:I
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 59
     iget-object v1, p1, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$GenreRowHolder;->tv:Landroid/widget/TextView;
 
     iget-object v0, p1, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$GenreRowHolder;->tv:Landroid/widget/TextView;
@@ -213,7 +192,6 @@
     :goto_0
     invoke-virtual {v1, v2, v0}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
 
-    .line 60
     iget-object v0, p1, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$GenreRowHolder;->tv:Landroid/widget/TextView;
 
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
@@ -236,15 +214,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 61
     iget-object v0, p1, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$GenreRowHolder;->tv:Landroid/widget/TextView;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/ViewUtils;->removeShadow(Landroid/widget/TextView;)V
 
-    .line 62
     return-void
 
-    .line 59
     :cond_0
     const/4 v0, 0x0
 
@@ -254,17 +229,13 @@
 .method protected updateSwitchProfileButton()V
     .locals 2
 
-    .prologue
-    .line 49
     invoke-super {p0}, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;->updateSwitchProfileButton()V
 
-    .line 51
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kids/lolomo/KidsSlidingMenu;->switchProfilesIcon:Landroid/widget/ImageView;
 
     const v1, 0x7f0200e1
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 52
     return-void
 .end method

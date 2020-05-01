@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;Lcom/netflix/mediaclient/service/player/manifest/NfManifest;Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface$PlayableRefreshLicenseCallBack;)V
     .locals 0
 
-    .prologue
-    .line 1336
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$10;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$10;->val$offlineManifest:Lcom/netflix/mediaclient/service/player/manifest/NfManifest;
@@ -36,8 +34,6 @@
 .method public onOfflineLicenseRequestDone(Ljava/lang/String;Lcom/netflix/mediaclient/service/player/bladerunnerclient/OfflineLicenseResponse;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 3
 
-    .prologue
-    .line 1339
     invoke-interface {p3}, Lcom/netflix/mediaclient/android/app/Status;->getStatusCode()Lcom/netflix/mediaclient/StatusCode;
 
     move-result-object v0
@@ -46,7 +42,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1340
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$10;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$10;->val$offlineManifest:Lcom/netflix/mediaclient/service/player/manifest/NfManifest;
@@ -55,11 +50,9 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;->access$1900(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;Lcom/netflix/mediaclient/service/player/manifest/NfManifest;Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface$PlayableRefreshLicenseCallBack;)V
 
-    .line 1345
     :goto_0
     return-void
 
-    .line 1344
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$10;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;
 

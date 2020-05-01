@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public isEncrypted()Z
     .locals 1
 
-    .prologue
-    .line 36
     const/4 v0, 0x1
 
     return v0
@@ -32,8 +28,6 @@
 .method public isIntegrityProtected()Z
     .locals 1
 
-    .prologue
-    .line 44
     const/4 v0, 0x1
 
     return v0
@@ -42,8 +36,6 @@
 .method public isNonReplayable()Z
     .locals 1
 
-    .prologue
-    .line 52
     const/4 v0, 0x0
 
     return v0

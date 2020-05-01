@@ -14,8 +14,6 @@
 .method public constructor <init>(Ljava/lang/String;JLcom/google/android/exoplayer/chunk/Format;Lcom/google/android/exoplayer/dash/mpd/SegmentBase$MultiSegmentBase;Ljava/lang/String;)V
     .locals 8
 
-    .prologue
-    .line 238
     const/4 v7, 0x0
 
     move-object v0, p0
@@ -32,10 +30,8 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/google/android/exoplayer/dash/mpd/Representation;-><init>(Ljava/lang/String;JLcom/google/android/exoplayer/chunk/Format;Lcom/google/android/exoplayer/dash/mpd/SegmentBase;Ljava/lang/String;Lcom/google/android/exoplayer/dash/mpd/Representation$1;)V
 
-    .line 239
     iput-object p5, p0, Lcom/google/android/exoplayer/dash/mpd/Representation$MultiSegmentRepresentation;->segmentBase:Lcom/google/android/exoplayer/dash/mpd/SegmentBase$MultiSegmentBase;
 
-    .line 240
     return-void
 .end method
 
@@ -44,8 +40,6 @@
 .method public getDurationUs(IJ)J
     .locals 2
 
-    .prologue
-    .line 271
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/Representation$MultiSegmentRepresentation;->segmentBase:Lcom/google/android/exoplayer/dash/mpd/SegmentBase$MultiSegmentBase;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$MultiSegmentBase;->getSegmentDurationUs(IJ)J
@@ -58,8 +52,6 @@
 .method public getFirstSegmentNum()I
     .locals 1
 
-    .prologue
-    .line 276
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/Representation$MultiSegmentRepresentation;->segmentBase:Lcom/google/android/exoplayer/dash/mpd/SegmentBase$MultiSegmentBase;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$MultiSegmentBase;->getFirstSegmentNum()I
@@ -72,16 +64,12 @@
 .method public getIndex()Lcom/google/android/exoplayer/dash/DashSegmentIndex;
     .locals 0
 
-    .prologue
-    .line 249
     return-object p0
 .end method
 
 .method public getIndexUri()Lcom/google/android/exoplayer/dash/mpd/RangedUri;
     .locals 1
 
-    .prologue
-    .line 244
     const/4 v0, 0x0
 
     return-object v0
@@ -90,8 +78,6 @@
 .method public getLastSegmentNum(J)I
     .locals 1
 
-    .prologue
-    .line 281
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/Representation$MultiSegmentRepresentation;->segmentBase:Lcom/google/android/exoplayer/dash/mpd/SegmentBase$MultiSegmentBase;
 
     invoke-virtual {v0, p1, p2}, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$MultiSegmentBase;->getLastSegmentNum(J)I
@@ -104,8 +90,6 @@
 .method public getSegmentNum(JJ)I
     .locals 1
 
-    .prologue
-    .line 261
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/Representation$MultiSegmentRepresentation;->segmentBase:Lcom/google/android/exoplayer/dash/mpd/SegmentBase$MultiSegmentBase;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$MultiSegmentBase;->getSegmentNum(JJ)I
@@ -118,8 +102,6 @@
 .method public getSegmentUrl(I)Lcom/google/android/exoplayer/dash/mpd/RangedUri;
     .locals 1
 
-    .prologue
-    .line 256
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/Representation$MultiSegmentRepresentation;->segmentBase:Lcom/google/android/exoplayer/dash/mpd/SegmentBase$MultiSegmentBase;
 
     invoke-virtual {v0, p0, p1}, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$MultiSegmentBase;->getSegmentUrl(Lcom/google/android/exoplayer/dash/mpd/Representation;I)Lcom/google/android/exoplayer/dash/mpd/RangedUri;
@@ -132,8 +114,6 @@
 .method public getTimeUs(I)J
     .locals 2
 
-    .prologue
-    .line 266
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/Representation$MultiSegmentRepresentation;->segmentBase:Lcom/google/android/exoplayer/dash/mpd/SegmentBase$MultiSegmentBase;
 
     invoke-virtual {v0, p1}, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$MultiSegmentBase;->getSegmentTimeUs(I)J
@@ -146,8 +126,6 @@
 .method public isExplicit()Z
     .locals 1
 
-    .prologue
-    .line 286
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/Representation$MultiSegmentRepresentation;->segmentBase:Lcom/google/android/exoplayer/dash/mpd/SegmentBase$MultiSegmentBase;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$MultiSegmentBase;->isExplicit()Z

@@ -13,26 +13,20 @@
 .method public constructor <init>(Lcom/android/volley/VolleyError;)V
     .locals 1
 
-    .prologue
-    .line 16
     invoke-direct {p0}, Lcom/netflix/mediaclient/android/app/BaseStatus;-><init>()V
 
-    .line 17
     sget-object v0, Lcom/netflix/mediaclient/StatusCode;->NETWORK_ERROR:Lcom/netflix/mediaclient/StatusCode;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/android/app/NetworkErrorStatus;->mStatusCode:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 18
     iput-object p1, p0, Lcom/netflix/mediaclient/android/app/NetworkErrorStatus;->mVolleyError:Lcom/android/volley/VolleyError;
 
-    .line 19
     invoke-static {p1}, Lcom/netflix/mediaclient/util/VolleyUtils;->toError(Lcom/android/volley/VolleyError;)Lcom/netflix/mediaclient/service/logging/client/model/Error;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/android/app/NetworkErrorStatus;->mError:Lcom/netflix/mediaclient/service/logging/client/model/Error;
 
-    .line 20
     return-void
 .end method
 
@@ -41,8 +35,6 @@
 .method public getError()Lcom/netflix/mediaclient/service/logging/client/model/Error;
     .locals 1
 
-    .prologue
-    .line 29
     iget-object v0, p0, Lcom/netflix/mediaclient/android/app/NetworkErrorStatus;->mError:Lcom/netflix/mediaclient/service/logging/client/model/Error;
 
     return-object v0
@@ -51,8 +43,6 @@
 .method public getMessage()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 34
     const/4 v0, 0x0
 
     return-object v0
@@ -61,8 +51,6 @@
 .method public getRequestId()I
     .locals 1
 
-    .prologue
-    .line 24
     const/4 v0, 0x0
 
     return v0
@@ -71,8 +59,6 @@
 .method public getVolleyError()Lcom/android/volley/VolleyError;
     .locals 1
 
-    .prologue
-    .line 43
     iget-object v0, p0, Lcom/netflix/mediaclient/android/app/NetworkErrorStatus;->mVolleyError:Lcom/android/volley/VolleyError;
 
     return-object v0
@@ -81,8 +67,6 @@
 .method public shouldDisplayMessage()Z
     .locals 1
 
-    .prologue
-    .line 39
     const/4 v0, 0x0
 
     return v0
@@ -91,8 +75,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 48
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -44,7 +44,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -55,7 +54,6 @@
 
     const/4 v4, 0x0
 
-    .line 7
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UiLocation;
 
     const-string/jumbo v1, "HOME_LOLOMO"
@@ -66,7 +64,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UiLocation;->HOME_LOLOMO:Lcom/netflix/mediaclient/servicemgr/UiLocation;
 
-    .line 8
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UiLocation;
 
     const-string/jumbo v1, "GENRE_LOLOMO"
@@ -77,7 +74,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UiLocation;->GENRE_LOLOMO:Lcom/netflix/mediaclient/servicemgr/UiLocation;
 
-    .line 9
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UiLocation;
 
     const-string/jumbo v1, "MDP"
@@ -88,7 +84,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UiLocation;->MDP:Lcom/netflix/mediaclient/servicemgr/UiLocation;
 
-    .line 10
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UiLocation;
 
     const-string/jumbo v1, "MDP_SIMILARS"
@@ -99,7 +94,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UiLocation;->MDP_SIMILARS:Lcom/netflix/mediaclient/servicemgr/UiLocation;
 
-    .line 11
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UiLocation;
 
     const-string/jumbo v1, "SDP"
@@ -110,7 +104,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UiLocation;->SDP:Lcom/netflix/mediaclient/servicemgr/UiLocation;
 
-    .line 12
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UiLocation;
 
     const-string/jumbo v1, "SDP_SIMILARS"
@@ -123,7 +116,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UiLocation;->SDP_SIMILARS:Lcom/netflix/mediaclient/servicemgr/UiLocation;
 
-    .line 13
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UiLocation;
 
     const-string/jumbo v1, "SEARCH"
@@ -136,7 +128,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UiLocation;->SEARCH:Lcom/netflix/mediaclient/servicemgr/UiLocation;
 
-    .line 14
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UiLocation;
 
     const-string/jumbo v1, "PEOPLE"
@@ -149,7 +140,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UiLocation;->PEOPLE:Lcom/netflix/mediaclient/servicemgr/UiLocation;
 
-    .line 15
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UiLocation;
 
     const-string/jumbo v1, "UNKNOWN"
@@ -162,7 +152,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UiLocation;->UNKNOWN:Lcom/netflix/mediaclient/servicemgr/UiLocation;
 
-    .line 6
     const/16 v0, 0x9
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/UiLocation;
@@ -226,22 +215,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 19
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 20
     iput-object p3, p0, Lcom/netflix/mediaclient/servicemgr/UiLocation;->value:Ljava/lang/String;
 
-    .line 21
     return-void
 .end method
 
 .method public static create(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/UiLocation;
     .locals 5
 
-    .prologue
-    .line 24
     invoke-static {}, Lcom/netflix/mediaclient/servicemgr/UiLocation;->values()[Lcom/netflix/mediaclient/servicemgr/UiLocation;
 
     move-result-object v2
@@ -257,7 +240,6 @@
 
     aget-object v0, v2, v1
 
-    .line 25
     iget-object v4, v0, Lcom/netflix/mediaclient/servicemgr/UiLocation;->value:Ljava/lang/String;
 
     invoke-virtual {v4, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -266,11 +248,9 @@
 
     if-eqz v4, :cond_0
 
-    .line 29
     :goto_1
     return-object v0
 
-    .line 24
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -278,7 +258,6 @@
 
     goto :goto_0
 
-    .line 29
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/UiLocation;->UNKNOWN:Lcom/netflix/mediaclient/servicemgr/UiLocation;
 
@@ -288,8 +267,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/UiLocation;
     .locals 1
 
-    .prologue
-    .line 6
     const-class v0, Lcom/netflix/mediaclient/servicemgr/UiLocation;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -304,8 +281,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/UiLocation;
     .locals 1
 
-    .prologue
-    .line 6
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/UiLocation;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/UiLocation;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/UiLocation;->clone()Ljava/lang/Object;
@@ -322,8 +297,6 @@
 .method public getValue()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 33
     iget-object v0, p0, Lcom/netflix/mediaclient/servicemgr/UiLocation;->value:Ljava/lang/String;
 
     return-object v0

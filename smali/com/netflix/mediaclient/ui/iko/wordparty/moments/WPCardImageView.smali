@@ -21,32 +21,24 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .prologue
-    .line 24
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 25
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .prologue
-    .line 28
     invoke-direct {p0, p1, p2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 21
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardImageView;->isCardClosed:Z
 
-    .line 30
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardImageView;->init(Landroid/content/Context;)V
 
-    .line 31
     return-void
 .end method
 
@@ -58,8 +50,6 @@
 .method public isOpen()Z
     .locals 1
 
-    .prologue
-    .line 87
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardImageView;->isCardClosed:Z
 
     if-nez v0, :cond_0
@@ -78,8 +68,6 @@
 .method public varargs recycleDrawables([Landroid/graphics/drawable/BitmapDrawable;)V
     .locals 3
 
-    .prologue
-    .line 106
     if-eqz p1, :cond_0
 
     array-length v0, p1
@@ -88,11 +76,9 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 118
     :cond_0
     return-void
 
-    .line 109
     :cond_1
     array-length v1, p1
 
@@ -103,21 +89,16 @@
 
     aget-object v2, p1, v0
 
-    .line 110
     if-eqz v2, :cond_0
 
-    .line 113
     invoke-virtual {v2}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 114
     if-eqz v2, :cond_2
 
-    .line 115
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 109
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
@@ -127,10 +108,8 @@
 .method public releaseResources()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 94
     const/4 v0, 0x3
 
     new-array v0, v0, [Landroid/graphics/drawable/BitmapDrawable;
@@ -155,45 +134,34 @@
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardImageView;->recycleDrawables([Landroid/graphics/drawable/BitmapDrawable;)V
 
-    .line 95
     iput-object v3, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardImageView;->closedDrawable:Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 96
     iput-object v3, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardImageView;->openDrawable:Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 97
     iput-object v3, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardImageView;->currentBitmapDrawable:Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 98
     return-void
 .end method
 
 .method public reset(Z)V
     .locals 0
 
-    .prologue
-    .line 76
     iput-boolean p1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardImageView;->isCardClosed:Z
 
-    .line 77
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardImageView;->updateDrawableBitmap()V
 
-    .line 78
     return-void
 .end method
 
 .method public setDrawables(Landroid/graphics/drawable/BitmapDrawable;Landroid/graphics/drawable/BitmapDrawable;)V
     .locals 3
 
-    .prologue
-    .line 41
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 42
     const-string/jumbo v0, "WPCardImageView"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -216,30 +184,23 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardImageView;->isCardClosed:Z
 
-    .line 46
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardImageView;->closedDrawable:Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 47
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardImageView;->openDrawable:Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 48
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardImageView;->updateDrawableBitmap()V
 
-    .line 49
     return-void
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 122
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -308,15 +269,12 @@
 .method public toggleCardClosed()V
     .locals 2
 
-    .prologue
-    .line 55
     const-string/jumbo v0, "WPCardImageView"
 
     const-string/jumbo v1, "toggleCardClosed"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 57
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardImageView;->isCardClosed:Z
 
     if-nez v0, :cond_0
@@ -326,10 +284,8 @@
     :goto_0
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardImageView;->isCardClosed:Z
 
-    .line 58
     return-void
 
-    .line 57
     :cond_0
     const/4 v0, 0x0
 
@@ -339,8 +295,6 @@
 .method public updateDrawableBitmap()V
     .locals 1
 
-    .prologue
-    .line 65
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardImageView;->isCardClosed:Z
 
     if-eqz v0, :cond_0
@@ -350,15 +304,12 @@
     :goto_0
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardImageView;->currentBitmapDrawable:Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 66
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardImageView;->currentBitmapDrawable:Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 67
     return-void
 
-    .line 65
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPCardImageView;->openDrawable:Landroid/graphics/drawable/BitmapDrawable;
 

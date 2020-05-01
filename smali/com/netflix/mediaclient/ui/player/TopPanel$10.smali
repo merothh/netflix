@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/TopPanel;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 541
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/TopPanel$10;->this$0:Lcom/netflix/mediaclient/ui/player/TopPanel;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/player/TopPanel$10;->val$title:Ljava/lang/String;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 544
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel$10;->val$title:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
@@ -42,7 +38,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 545
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel$10;->this$0:Lcom/netflix/mediaclient/ui/player/TopPanel;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/TopPanel;->access$500(Lcom/netflix/mediaclient/ui/player/TopPanel;)Landroid/widget/TextView;
@@ -53,11 +48,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 549
     :goto_0
     return-void
 
-    .line 547
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel$10;->this$0:Lcom/netflix/mediaclient/ui/player/TopPanel;
 

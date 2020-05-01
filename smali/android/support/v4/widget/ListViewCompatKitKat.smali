@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,10 +15,7 @@
 .method static scrollListBy(Landroid/widget/ListView;I)V
     .locals 0
 
-    .prologue
-    .line 24
     invoke-virtual {p0, p1}, Landroid/widget/ListView;->scrollListBy(I)V
 
-    .line 25
     return-void
 .end method

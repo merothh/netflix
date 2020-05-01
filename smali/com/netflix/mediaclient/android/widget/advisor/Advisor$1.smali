@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/android/widget/advisor/Advisor;)V
     .locals 0
 
-    .prologue
-    .line 83
     iput-object p1, p0, Lcom/netflix/mediaclient/android/widget/advisor/Advisor$1;->this$0:Lcom/netflix/mediaclient/android/widget/advisor/Advisor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,10 +26,8 @@
 .method public run()V
     .locals 8
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 88
     iget-object v0, p0, Lcom/netflix/mediaclient/android/widget/advisor/Advisor$1;->this$0:Lcom/netflix/mediaclient/android/widget/advisor/Advisor;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -40,14 +36,12 @@
 
     iput-wide v2, v0, Lcom/netflix/mediaclient/android/widget/advisor/Advisor;->timeSinceLastShow:J
 
-    .line 90
     iget-object v0, p0, Lcom/netflix/mediaclient/android/widget/advisor/Advisor$1;->this$0:Lcom/netflix/mediaclient/android/widget/advisor/Advisor;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/android/widget/advisor/Advisor;->anchor:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 91
     iget-object v0, p0, Lcom/netflix/mediaclient/android/widget/advisor/Advisor$1;->this$0:Lcom/netflix/mediaclient/android/widget/advisor/Advisor;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/android/widget/advisor/Advisor;->popupWindow:Landroid/widget/PopupWindow;
@@ -58,7 +52,6 @@
 
     invoke-virtual {v0, v1, v4, v4}, Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;II)V
 
-    .line 95
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/android/widget/advisor/Advisor$1;->this$0:Lcom/netflix/mediaclient/android/widget/advisor/Advisor;
 
@@ -92,10 +85,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 96
     return-void
 
-    .line 93
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/android/widget/advisor/Advisor$1;->this$0:Lcom/netflix/mediaclient/android/widget/advisor/Advisor;
 

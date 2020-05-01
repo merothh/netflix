@@ -27,29 +27,23 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/offline/download/DownloadableInfo;)V
     .locals 2
 
-    .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
     invoke-interface {p1}, Lcom/netflix/mediaclient/service/offline/download/DownloadableInfo;->getDownloadableId()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/DownloadablePersistentData;->mDownloadableId:Ljava/lang/String;
 
-    .line 22
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/service/offline/download/DownloadablePersistentData;->mIsComplete:Z
 
-    .line 23
     invoke-interface {p1}, Lcom/netflix/mediaclient/service/offline/download/DownloadableInfo;->getSizeOfDownloadable()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/offline/download/DownloadablePersistentData;->mSizeOfDownloadable:J
 
-    .line 24
     return-void
 .end method

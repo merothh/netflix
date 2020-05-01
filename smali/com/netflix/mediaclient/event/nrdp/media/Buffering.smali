@@ -17,13 +17,10 @@
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 1
 
-    .prologue
-    .line 33
     const-string/jumbo v0, "buffering"
 
     invoke-direct {p0, v0, p1}, Lcom/netflix/mediaclient/event/nrdp/media/BaseMediaEvent;-><init>(Ljava/lang/String;Lorg/json/JSONObject;)V
 
-    .line 34
     return-void
 .end method
 
@@ -32,8 +29,6 @@
 .method public getPercentage()I
     .locals 1
 
-    .prologue
-    .line 50
     iget v0, p0, Lcom/netflix/mediaclient/event/nrdp/media/Buffering;->percentage:I
 
     return v0
@@ -42,8 +37,6 @@
 .method protected populate(Lorg/json/JSONObject;)V
     .locals 2
 
-    .prologue
-    .line 41
     const-string/jumbo v0, "percentage"
 
     const/4 v1, 0x0
@@ -54,6 +47,5 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/event/nrdp/media/Buffering;->percentage:I
 
-    .line 42
     return-void
 .end method

@@ -17,46 +17,38 @@
 .method private constructor <init>(Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;I)V
     .locals 4
 
-    .prologue
-    .line 480
     iput-object p1, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->this$1:Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;
 
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 475
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPath:Landroid/graphics/Path;
 
-    .line 477
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPaint:Landroid/graphics/Paint;
 
-    .line 481
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 482
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 483
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPaint:Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 484
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPaint:Landroid/graphics/Paint;
 
     new-instance v1, Landroid/graphics/CornerPathEffect;
@@ -79,7 +71,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setPathEffect(Landroid/graphics/PathEffect;)Landroid/graphics/PathEffect;
 
-    .line 485
     iget-object v0, p1, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;->this$0:Lcom/netflix/android/tooltips/TooltipLayout;
 
     invoke-virtual {v0}, Lcom/netflix/android/tooltips/TooltipLayout;->getResources()Landroid/content/res/Resources;
@@ -94,15 +85,12 @@
 
     iput v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPaddingStart:I
 
-    .line 486
     return-void
 .end method
 
 .method synthetic constructor <init>(Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;ILcom/netflix/android/tooltips/TooltipLayout$1;)V
     .locals 0
 
-    .prologue
-    .line 473
     invoke-direct {p0, p1, p2}, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;-><init>(Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;I)V
 
     return-void
@@ -113,23 +101,18 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 2
 
-    .prologue
-    .line 521
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPath:Landroid/graphics/Path;
 
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 522
     return-void
 .end method
 
 .method public getColor()I
     .locals 1
 
-    .prologue
-    .line 541
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->getColor()I
@@ -142,8 +125,6 @@
 .method public getOpacity()I
     .locals 1
 
-    .prologue
-    .line 536
     const/4 v0, -0x1
 
     return v0
@@ -152,43 +133,34 @@
 .method public setAlpha(I)V
     .locals 1
 
-    .prologue
-    .line 526
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 527
     return-void
 .end method
 
 .method public setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 1
 
-    .prologue
-    .line 531
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
-    .line 532
     return-void
 .end method
 
 .method public update()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x0
 
     const/4 v5, 0x0
 
-    .line 489
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPath:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
 
-    .line 490
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->this$1:Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;
 
     iget-object v0, v0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;->this$0:Lcom/netflix/android/tooltips/TooltipLayout;
@@ -201,7 +173,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 492
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->this$1:Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;
 
     iget-object v0, v0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;->this$0:Lcom/netflix/android/tooltips/TooltipLayout;
@@ -228,14 +199,12 @@
 
     sub-int/2addr v0, v1
 
-    .line 493
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPath:Landroid/graphics/Path;
 
     int-to-float v2, v5
 
     invoke-virtual {v1, v6, v2}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 494
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPath:Landroid/graphics/Path;
 
     iget-object v2, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->this$1:Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;
@@ -256,7 +225,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 495
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPath:Landroid/graphics/Path;
 
     iget-object v2, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->this$1:Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;
@@ -277,7 +245,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 496
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPath:Landroid/graphics/Path;
 
     iget-object v2, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->this$1:Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;
@@ -314,7 +281,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 497
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPath:Landroid/graphics/Path;
 
     iget-object v2, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->this$1:Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;
@@ -349,7 +315,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 498
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPath:Landroid/graphics/Path;
 
     iget-object v2, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->this$1:Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;
@@ -386,26 +351,22 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 499
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPath:Landroid/graphics/Path;
 
     int-to-float v0, v0
 
     invoke-virtual {v1, v6, v0}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 500
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPath:Landroid/graphics/Path;
 
     int-to-float v1, v5
 
     invoke-virtual {v0, v6, v1}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 501
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPath:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->close()V
 
-    .line 502
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->this$1:Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;
 
     iget-object v0, v0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;->this$0:Lcom/netflix/android/tooltips/TooltipLayout;
@@ -428,11 +389,9 @@
 
     invoke-virtual {v0, v5, v5, v5, v1}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
-    .line 517
     :goto_0
     return-void
 
-    .line 504
     :cond_0
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->this$1:Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;
 
@@ -446,7 +405,6 @@
 
     move-result v0
 
-    .line 505
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->this$1:Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;
 
     iget-object v1, v1, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;->this$0:Lcom/netflix/android/tooltips/TooltipLayout;
@@ -459,14 +417,12 @@
 
     move-result v1
 
-    .line 506
     iget-object v2, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPath:Landroid/graphics/Path;
 
     int-to-float v3, v0
 
     invoke-virtual {v2, v6, v3}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 507
     iget-object v2, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPath:Landroid/graphics/Path;
 
     iget-object v3, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->this$1:Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;
@@ -503,7 +459,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 508
     iget-object v2, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPath:Landroid/graphics/Path;
 
     iget-object v3, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->this$1:Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;
@@ -538,7 +493,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 509
     iget-object v2, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPath:Landroid/graphics/Path;
 
     iget-object v3, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->this$1:Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;
@@ -575,7 +529,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 510
     iget-object v2, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPath:Landroid/graphics/Path;
 
     iget-object v3, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->this$1:Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;
@@ -596,7 +549,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 511
     iget-object v2, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPath:Landroid/graphics/Path;
 
     iget-object v3, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->this$1:Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;
@@ -617,26 +569,22 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 512
     iget-object v2, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPath:Landroid/graphics/Path;
 
     int-to-float v1, v1
 
     invoke-virtual {v2, v6, v1}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 513
     iget-object v1, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPath:Landroid/graphics/Path;
 
     int-to-float v0, v0
 
     invoke-virtual {v1, v6, v0}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 514
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->mPath:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->close()V
 
-    .line 515
     iget-object v0, p0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable$ColoredTooltipDrawable;->this$1:Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;
 
     iget-object v0, v0, Lcom/netflix/android/tooltips/TooltipLayout$TooltipDesignDrawable;->this$0:Lcom/netflix/android/tooltips/TooltipLayout;

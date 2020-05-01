@@ -15,14 +15,10 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/player/subtitles/image/v2/BoxHeader;)V
     .locals 2
 
-    .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     if-nez p1, :cond_0
 
-    .line 30
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Box header is null!"
@@ -31,11 +27,9 @@
 
     throw v0
 
-    .line 33
     :cond_0
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/Box;->boxHeader:Lcom/netflix/mediaclient/service/player/subtitles/image/v2/BoxHeader;
 
-    .line 34
     return-void
 .end method
 
@@ -44,8 +38,6 @@
 .method public getBoxHeader()Lcom/netflix/mediaclient/service/player/subtitles/image/v2/BoxHeader;
     .locals 1
 
-    .prologue
-    .line 37
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/Box;->boxHeader:Lcom/netflix/mediaclient/service/player/subtitles/image/v2/BoxHeader;
 
     return-object v0
@@ -54,8 +46,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 42
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

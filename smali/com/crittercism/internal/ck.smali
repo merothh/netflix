@@ -74,7 +74,6 @@
 .method static constructor <clinit>()V
     .locals 10
 
-    .prologue
     const/4 v9, 0x4
 
     const/4 v8, 0x3
@@ -85,7 +84,6 @@
 
     const/4 v5, 0x0
 
-    .line 31
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "OK"
@@ -96,7 +94,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->a:Lcom/crittercism/internal/ck;
 
-    .line 32
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "ASSERTION_ERROR"
@@ -107,7 +104,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->b:Lcom/crittercism/internal/ck;
 
-    .line 33
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "BIND_EXCEPTION"
@@ -118,7 +114,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->c:Lcom/crittercism/internal/ck;
 
-    .line 34
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "CLASS_NOT_FOUND_EXCEPTION"
@@ -129,7 +124,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->d:Lcom/crittercism/internal/ck;
 
-    .line 35
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "ERROR"
@@ -140,7 +134,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->e:Lcom/crittercism/internal/ck;
 
-    .line 36
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "IO_EXCEPTION"
@@ -155,7 +148,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->f:Lcom/crittercism/internal/ck;
 
-    .line 37
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "ILLEGAL_ARGUMENT_EXCEPTION"
@@ -170,7 +162,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->g:Lcom/crittercism/internal/ck;
 
-    .line 38
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "ILLEGAL_STATE_EXCEPTION"
@@ -185,7 +176,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->h:Lcom/crittercism/internal/ck;
 
-    .line 39
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "INDEX_OUT_OF_BOUNDS_EXCEPTION"
@@ -200,7 +190,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->i:Lcom/crittercism/internal/ck;
 
-    .line 40
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "MALFORMED_URL_EXCEPTION"
@@ -215,7 +204,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->j:Lcom/crittercism/internal/ck;
 
-    .line 41
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "NO_SUCH_PROVIDER_EXCEPTION"
@@ -230,7 +218,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->k:Lcom/crittercism/internal/ck;
 
-    .line 42
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "NULL_POINTER_EXCEPTION"
@@ -245,7 +232,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->l:Lcom/crittercism/internal/ck;
 
-    .line 43
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "PROTOCOL_EXCEPTION"
@@ -260,7 +246,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->m:Lcom/crittercism/internal/ck;
 
-    .line 44
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "SECURITY_EXCEPTION"
@@ -275,7 +260,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->n:Lcom/crittercism/internal/ck;
 
-    .line 45
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "SOCKET_EXCEPTION"
@@ -290,7 +274,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->o:Lcom/crittercism/internal/ck;
 
-    .line 46
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "SOCKET_TIMEOUT_EXCEPTION"
@@ -305,7 +288,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->p:Lcom/crittercism/internal/ck;
 
-    .line 47
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "SSL_PEER_UNVERIFIED_EXCEPTION"
@@ -320,7 +302,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->q:Lcom/crittercism/internal/ck;
 
-    .line 48
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "STRING_INDEX_OUT_OF_BOUNDS_EXCEPTION"
@@ -335,7 +316,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->r:Lcom/crittercism/internal/ck;
 
-    .line 49
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "UNKNOWN_HOST_EXCEPTION"
@@ -350,7 +330,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->s:Lcom/crittercism/internal/ck;
 
-    .line 50
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "UNKNOWN_SERVICE_EXCEPTION"
@@ -365,7 +344,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->t:Lcom/crittercism/internal/ck;
 
-    .line 51
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "UNSUPPORTED_OPERATION_EXCEPTION"
@@ -380,7 +358,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->u:Lcom/crittercism/internal/ck;
 
-    .line 52
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "URI_SYNTAX_EXCEPTION"
@@ -395,7 +372,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->v:Lcom/crittercism/internal/ck;
 
-    .line 53
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "CONNECT_EXCEPTION"
@@ -410,7 +386,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->w:Lcom/crittercism/internal/ck;
 
-    .line 54
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "SSL_EXCEPTION"
@@ -425,7 +400,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->x:Lcom/crittercism/internal/ck;
 
-    .line 55
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "SSL_HANDSHAKE_EXCEPTION"
@@ -440,7 +414,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->y:Lcom/crittercism/internal/ck;
 
-    .line 56
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "SSL_KEY_EXCEPTION"
@@ -455,7 +428,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->z:Lcom/crittercism/internal/ck;
 
-    .line 57
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "SSL_PROTOCOL_EXCEPTION"
@@ -470,7 +442,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->A:Lcom/crittercism/internal/ck;
 
-    .line 58
     new-instance v0, Lcom/crittercism/internal/ck;
 
     const-string/jumbo v1, "UNDEFINED_EXCEPTION"
@@ -485,7 +456,6 @@
 
     sput-object v0, Lcom/crittercism/internal/ck;->B:Lcom/crittercism/internal/ck;
 
-    .line 19
     const/16 v0, 0x1c
 
     new-array v0, v0, [Lcom/crittercism/internal/ck;
@@ -656,40 +626,29 @@
 .method private constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 65
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 66
     iput p3, p0, Lcom/crittercism/internal/ck;->C:I
 
-    .line 67
     iput-object p4, p0, Lcom/crittercism/internal/ck;->E:Ljava/lang/String;
 
-    .line 68
     return-void
 .end method
 
 .method public static a(Ljava/lang/Throwable;)Lcom/crittercism/internal/ck;
     .locals 2
 
-    .prologue
-    .line 104
     sget-object v0, Lcom/crittercism/internal/ck;->D:Ljava/util/HashMap;
 
     if-nez v0, :cond_0
 
-    .line 105
     invoke-static {}, Lcom/crittercism/internal/ck;->a()V
 
-    .line 108
     :cond_0
     const/4 v0, 0x0
 
-    .line 110
     if-eqz p0, :cond_1
 
-    .line 111
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -698,7 +657,6 @@
 
     move-result-object v0
 
-    .line 114
     :cond_1
     sget-object v1, Lcom/crittercism/internal/ck;->D:Ljava/util/HashMap;
 
@@ -708,13 +666,10 @@
 
     check-cast v0, Lcom/crittercism/internal/ck;
 
-    .line 116
     if-nez v0, :cond_2
 
-    .line 117
     sget-object v0, Lcom/crittercism/internal/ck;->B:Lcom/crittercism/internal/ck;
 
-    .line 120
     :cond_2
     return-object v0
 .end method
@@ -722,8 +677,6 @@
 .method private static declared-synchronized a()V
     .locals 7
 
-    .prologue
-    .line 85
     const-class v1, Lcom/crittercism/internal/ck;
 
     monitor-enter v1
@@ -735,20 +688,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 96
     :goto_0
     monitor-exit v1
 
     return-void
 
-    .line 89
     :cond_0
     :try_start_1
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
-    .line 91
     invoke-static {}, Lcom/crittercism/internal/ck;->values()[Lcom/crittercism/internal/ck;
 
     move-result-object v3
@@ -762,17 +712,14 @@
 
     aget-object v5, v3, v0
 
-    .line 92
     iget-object v6, v5, Lcom/crittercism/internal/ck;->E:Ljava/lang/String;
 
     invoke-virtual {v2, v6, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 91
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 95
     :cond_1
     sput-object v2, Lcom/crittercism/internal/ck;->D:Ljava/util/HashMap;
     :try_end_1
@@ -780,7 +727,6 @@
 
     goto :goto_0
 
-    .line 85
     :catchall_0
     move-exception v0
 
@@ -792,8 +738,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/crittercism/internal/ck;
     .locals 1
 
-    .prologue
-    .line 19
     const-class v0, Lcom/crittercism/internal/ck;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -808,8 +752,6 @@
 .method public static values()[Lcom/crittercism/internal/ck;
     .locals 1
 
-    .prologue
-    .line 19
     sget-object v0, Lcom/crittercism/internal/ck;->F:[Lcom/crittercism/internal/ck;
 
     invoke-virtual {v0}, [Lcom/crittercism/internal/ck;->clone()Ljava/lang/Object;

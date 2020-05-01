@@ -17,19 +17,14 @@
 .method public constructor <init>(Ljava/security/PrivateKey;Ljava/security/PublicKey;)V
     .locals 1
 
-    .prologue
-    .line 213
     sget-object v0, Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$Algorithm;->RSA_OAEP:Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$Algorithm;
 
     invoke-direct {p0, v0}, Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$CekCryptoContext;-><init>(Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$Algorithm;)V
 
-    .line 214
     iput-object p1, p0, Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$RsaOaepCryptoContext;->privateKey:Ljava/security/PrivateKey;
 
-    .line 215
     iput-object p2, p0, Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$RsaOaepCryptoContext;->publicKey:Ljava/security/PublicKey;
 
-    .line 216
     return-void
 .end method
 
@@ -38,13 +33,10 @@
 .method public decrypt([B)[B
     .locals 6
 
-    .prologue
-    .line 264
     iget-object v0, p0, Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$RsaOaepCryptoContext;->privateKey:Ljava/security/PrivateKey;
 
     if-nez v0, :cond_0
 
-    .line 265
     new-instance v0, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->DECRYPT_NOT_SUPPORTED:Lcom/netflix/msl/MslError;
@@ -55,11 +47,9 @@
 
     throw v0
 
-    .line 266
     :cond_0
     const/4 v1, 0x0
 
-    .line 269
     :try_start_0
     const-string/jumbo v0, "RSA/ECB/OAEPPadding"
 
@@ -67,7 +57,6 @@
 
     move-result-object v0
 
-    .line 270
     const/4 v2, 0x2
 
     iget-object v3, p0, Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$RsaOaepCryptoContext;->privateKey:Ljava/security/PrivateKey;
@@ -76,7 +65,6 @@
 
     invoke-virtual {v0, v2, v3, v4}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
 
-    .line 271
     invoke-virtual {v0, p1}, Ljavax/crypto/Cipher;->doFinal([B)[B
     :try_end_0
     .catch Ljavax/crypto/NoSuchPaddingException; {:try_start_0 .. :try_end_0} :catch_0
@@ -90,10 +78,8 @@
 
     move-result-object v0
 
-    .line 295
     if-eqz v1, :cond_1
 
-    .line 296
     const-string/jumbo v1, "RSA/ECB/OAEPPadding"
 
     invoke-static {v1}, Lcom/netflix/msl/crypto/CryptoCache;->resetCipher(Ljava/lang/String;)V
@@ -101,11 +87,9 @@
     :cond_1
     return-object v0
 
-    .line 272
     :catch_0
     move-exception v0
 
-    .line 274
     :try_start_1
     new-instance v1, Lcom/netflix/msl/MslInternalException;
 
@@ -117,7 +101,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 295
     :catchall_0
     move-exception v1
 
@@ -130,7 +113,6 @@
     :goto_0
     if-eqz v1, :cond_2
 
-    .line 296
     const-string/jumbo v1, "RSA/ECB/OAEPPadding"
 
     invoke-static {v1}, Lcom/netflix/msl/crypto/CryptoCache;->resetCipher(Ljava/lang/String;)V
@@ -138,11 +120,9 @@
     :cond_2
     throw v0
 
-    .line 275
     :catch_1
     move-exception v0
 
-    .line 277
     :try_start_2
     new-instance v1, Lcom/netflix/msl/MslInternalException;
 
@@ -154,7 +134,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 295
     :catchall_1
     move-exception v1
 
@@ -166,11 +145,9 @@
 
     goto :goto_0
 
-    .line 278
     :catch_2
     move-exception v0
 
-    .line 280
     :try_start_3
     new-instance v1, Lcom/netflix/msl/MslCryptoException;
 
@@ -182,7 +159,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 295
     :catchall_2
     move-exception v1
 
@@ -194,11 +170,9 @@
 
     goto :goto_0
 
-    .line 281
     :catch_3
     move-exception v0
 
-    .line 283
     :try_start_4
     new-instance v1, Lcom/netflix/msl/MslCryptoException;
 
@@ -210,7 +184,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_3
 
-    .line 295
     :catchall_3
     move-exception v1
 
@@ -222,11 +195,9 @@
 
     goto :goto_0
 
-    .line 284
     :catch_4
     move-exception v0
 
-    .line 286
     :try_start_5
     new-instance v1, Lcom/netflix/msl/MslCryptoException;
 
@@ -238,7 +209,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_4
 
-    .line 295
     :catchall_4
     move-exception v1
 
@@ -250,11 +220,9 @@
 
     goto :goto_0
 
-    .line 287
     :catch_5
     move-exception v0
 
-    .line 289
     :try_start_6
     new-instance v1, Lcom/netflix/msl/MslCryptoException;
 
@@ -266,7 +234,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_5
 
-    .line 295
     :catchall_5
     move-exception v1
 
@@ -278,17 +245,14 @@
 
     goto :goto_0
 
-    .line 290
     :catch_6
     move-exception v0
 
-    .line 292
     :try_start_7
     throw v0
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_6
 
-    .line 295
     :catchall_6
     move-exception v1
 
@@ -309,13 +273,10 @@
 .method public encrypt([B)[B
     .locals 6
 
-    .prologue
-    .line 223
     iget-object v0, p0, Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$RsaOaepCryptoContext;->publicKey:Ljava/security/PublicKey;
 
     if-nez v0, :cond_0
 
-    .line 224
     new-instance v0, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->ENCRYPT_NOT_SUPPORTED:Lcom/netflix/msl/MslError;
@@ -326,11 +287,9 @@
 
     throw v0
 
-    .line 225
     :cond_0
     const/4 v1, 0x0
 
-    .line 228
     :try_start_0
     const-string/jumbo v0, "RSA/ECB/OAEPPadding"
 
@@ -338,7 +297,6 @@
 
     move-result-object v0
 
-    .line 229
     const/4 v2, 0x1
 
     iget-object v3, p0, Lcom/netflix/msl/crypto/JsonWebEncryptionCryptoContext$RsaOaepCryptoContext;->publicKey:Ljava/security/PublicKey;
@@ -347,7 +305,6 @@
 
     invoke-virtual {v0, v2, v3, v4}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
 
-    .line 230
     invoke-virtual {v0, p1}, Ljavax/crypto/Cipher;->doFinal([B)[B
     :try_end_0
     .catch Ljavax/crypto/NoSuchPaddingException; {:try_start_0 .. :try_end_0} :catch_0
@@ -361,10 +318,8 @@
 
     move-result-object v0
 
-    .line 254
     if-eqz v1, :cond_1
 
-    .line 255
     const-string/jumbo v1, "RSA/ECB/OAEPPadding"
 
     invoke-static {v1}, Lcom/netflix/msl/crypto/CryptoCache;->resetCipher(Ljava/lang/String;)V
@@ -372,11 +327,9 @@
     :cond_1
     return-object v0
 
-    .line 231
     :catch_0
     move-exception v0
 
-    .line 233
     :try_start_1
     new-instance v1, Lcom/netflix/msl/MslInternalException;
 
@@ -388,7 +341,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 254
     :catchall_0
     move-exception v1
 
@@ -401,7 +353,6 @@
     :goto_0
     if-eqz v1, :cond_2
 
-    .line 255
     const-string/jumbo v1, "RSA/ECB/OAEPPadding"
 
     invoke-static {v1}, Lcom/netflix/msl/crypto/CryptoCache;->resetCipher(Ljava/lang/String;)V
@@ -409,11 +360,9 @@
     :cond_2
     throw v0
 
-    .line 234
     :catch_1
     move-exception v0
 
-    .line 236
     :try_start_2
     new-instance v1, Lcom/netflix/msl/MslInternalException;
 
@@ -425,7 +374,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 254
     :catchall_1
     move-exception v1
 
@@ -437,11 +385,9 @@
 
     goto :goto_0
 
-    .line 237
     :catch_2
     move-exception v0
 
-    .line 239
     :try_start_3
     new-instance v1, Lcom/netflix/msl/MslCryptoException;
 
@@ -453,7 +399,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 254
     :catchall_2
     move-exception v1
 
@@ -465,11 +410,9 @@
 
     goto :goto_0
 
-    .line 240
     :catch_3
     move-exception v0
 
-    .line 242
     :try_start_4
     new-instance v1, Lcom/netflix/msl/MslCryptoException;
 
@@ -483,7 +426,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_3
 
-    .line 254
     :catchall_3
     move-exception v1
 
@@ -495,11 +437,9 @@
 
     goto :goto_0
 
-    .line 243
     :catch_4
     move-exception v0
 
-    .line 245
     :try_start_5
     new-instance v1, Lcom/netflix/msl/MslCryptoException;
 
@@ -513,7 +453,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_4
 
-    .line 254
     :catchall_4
     move-exception v1
 
@@ -525,11 +464,9 @@
 
     goto :goto_0
 
-    .line 246
     :catch_5
     move-exception v0
 
-    .line 248
     :try_start_6
     new-instance v1, Lcom/netflix/msl/MslCryptoException;
 
@@ -541,7 +478,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_5
 
-    .line 254
     :catchall_5
     move-exception v1
 
@@ -553,17 +489,14 @@
 
     goto :goto_0
 
-    .line 249
     :catch_6
     move-exception v0
 
-    .line 251
     :try_start_7
     throw v0
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_6
 
-    .line 254
     :catchall_6
     move-exception v1
 

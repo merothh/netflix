@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl$2$1;Lcom/netflix/mediaclient/android/app/Status;Lorg/json/JSONObject;)V
     .locals 0
 
-    .prologue
-    .line 144
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl$2$1$1;->this$2:Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl$2$1;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl$2$1$1;->val$status:Lcom/netflix/mediaclient/android/app/Status;
@@ -36,8 +34,6 @@
 .method public run()V
     .locals 9
 
-    .prologue
-    .line 147
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl$2$1$1;->this$2:Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl$2$1;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl$2$1;->this$1:Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl$2;
@@ -78,6 +74,5 @@
 
     invoke-static/range {v0 .. v8}, Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl;->access$000(Lcom/netflix/mediaclient/service/offline/manifest/OfflineManifestManagerImpl;Lcom/netflix/mediaclient/android/app/Status;Ljava/lang/String;Ljava/lang/String;ZLorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/service/pdslogging/DownloadContext;)V
 
-    .line 148
     return-void
 .end method

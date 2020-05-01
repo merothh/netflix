@@ -38,25 +38,18 @@
 .method public constructor <init>(Ljava/lang/String;JJLcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;Lcom/android/volley/Response$ErrorListener;I)V
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 57
     invoke-direct {p0, v0, p1, p7}, Lcom/android/volley/Request;-><init>(ILjava/lang/String;Lcom/android/volley/Response$ErrorListener;)V
 
-    .line 58
     iput-object p6, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/HttpRangeRequest;->mCallback:Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;
 
-    .line 59
     iput-wide p4, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/HttpRangeRequest;->mSize:J
 
-    .line 60
     iput-wide p2, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/HttpRangeRequest;->mStartByte:J
 
-    .line 61
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/resfetcher/volley/HttpRangeRequest;->setShouldCache(Z)V
 
-    .line 62
     new-instance v0, Lcom/android/volley/DefaultRetryPolicy;
 
     const/4 v1, 0x2
@@ -67,7 +60,6 @@
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/resfetcher/volley/HttpRangeRequest;->setRetryPolicy(Lcom/android/volley/RetryPolicy;)V
 
-    .line 63
     return-void
 .end method
 
@@ -76,8 +68,6 @@
 .method protected bridge synthetic deliverResponse(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 27
     check-cast p1, [B
 
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/resfetcher/volley/HttpRangeRequest;->deliverResponse([B)V
@@ -88,13 +78,10 @@
 .method protected deliverResponse([B)V
     .locals 3
 
-    .prologue
-    .line 89
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/HttpRangeRequest;->mCallback:Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;
 
     if-eqz v0, :cond_0
 
-    .line 90
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/HttpRangeRequest;->mCallback:Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/resfetcher/volley/HttpRangeRequest;->getUrl()Ljava/lang/String;
@@ -105,7 +92,6 @@
 
     invoke-interface {v0, v1, p1, v2}, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;->onResourceRawFetched(Ljava/lang/String;[BLcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 92
     :cond_0
     return-void
 .end method
@@ -123,13 +109,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 96
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 97
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -170,12 +153,10 @@
 
     move-result-object v1
 
-    .line 98
     const-string/jumbo v2, "Range"
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 99
     return-object v0
 .end method
 
@@ -191,20 +172,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 68
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/resfetcher/volley/HttpRangeRequest;->getUrl()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 69
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 70
     const-string/jumbo v1, "nf_service_httprangerequest"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -227,7 +204,6 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     iget-object v0, p1, Lcom/android/volley/NetworkResponse;->headers:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -251,7 +227,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 72
     const-string/jumbo v2, "nf_service_httprangerequest"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -294,7 +269,6 @@
 
     goto :goto_0
 
-    .line 76
     :cond_0
     iget v0, p1, Lcom/android/volley/NetworkResponse;->statusCode:I
 
@@ -302,14 +276,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 77
     const-string/jumbo v0, "nf_service_httprangerequest"
 
     const-string/jumbo v1, "Received partial content as expected"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     iget-object v0, p1, Lcom/android/volley/NetworkResponse;->data:[B
 
     const/4 v1, 0x0
@@ -318,11 +290,9 @@
 
     move-result-object v0
 
-    .line 83
     :goto_1
     return-object v0
 
-    .line 80
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -330,7 +300,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 81
     const-string/jumbo v0, "nf_service_httprangerequest"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -355,7 +324,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 83
     :cond_2
     new-instance v0, Lcom/android/volley/VolleyError;
 

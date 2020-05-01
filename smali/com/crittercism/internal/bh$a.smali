@@ -14,17 +14,14 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v0, 0x2
 
     const/4 v3, 0x1
 
-    .line 28
     sput v3, Lcom/crittercism/internal/bh$a;->a:I
 
     sput v0, Lcom/crittercism/internal/bh$a;->b:I
 
-    .line 27
     new-array v0, v0, [I
 
     const/4 v1, 0x0

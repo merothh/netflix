@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 111
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper$4;->this$0:Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper$4;->val$intentAction:Ljava/lang/String;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 114
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper$4;->val$intentAction:Ljava/lang/String;
 
     const/4 v0, -0x1
@@ -48,11 +44,9 @@
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 129
     :goto_1
     return-void
 
-    .line 114
     :sswitch_0
     const-string/jumbo v2, "com.netflix.mediaclient.intent.action.NOTIFY_USER_ACCOUNT_ACTIVE"
 
@@ -92,7 +86,6 @@
 
     goto :goto_0
 
-    .line 118
     :pswitch_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper$4;->this$0:Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper;
 
@@ -104,7 +97,6 @@
 
     goto :goto_1
 
-    .line 121
     :pswitch_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper$4;->this$0:Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper;
 
@@ -116,7 +108,6 @@
 
     goto :goto_1
 
-    .line 125
     :pswitch_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper$4;->this$0:Lcom/netflix/mediaclient/service/offline/agent/BroadcastReceiverHelper;
 
@@ -128,7 +119,6 @@
 
     goto :goto_1
 
-    .line 114
     nop
 
     :sswitch_data_0

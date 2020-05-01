@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/details/EpisodesFrag;)V
     .locals 0
 
-    .prologue
-    .line 435
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$3;->this$0:Lcom/netflix/mediaclient/ui/details/EpisodesFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,8 +35,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 438
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$3;->this$0:Lcom/netflix/mediaclient/ui/details/EpisodesFrag;
 
     const-wide/16 v2, 0x1
@@ -52,10 +48,8 @@
     :goto_0
     invoke-virtual {v1, p3, v0}, Lcom/netflix/mediaclient/ui/details/EpisodesFrag;->switchSeason(IZ)V
 
-    .line 439
     return-void
 
-    .line 438
     :cond_0
     const/4 v0, 0x0
 
@@ -72,14 +66,11 @@
         }
     .end annotation
 
-    .prologue
-    .line 443
     const-string/jumbo v0, "EpisodesFrag"
 
     const-string/jumbo v1, "Season spinner - Nothing selected"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 444
     return-void
 .end method

@@ -31,11 +31,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 17
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;-><init>(Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;Lcom/netflix/mediaclient/servicemgr/ServiceManager;Lcom/netflix/mediaclient/ui/lomo/RowAdapterCallbacks;Lcom/netflix/mediaclient/android/widget/ObjectRecycler$ViewRecycler;)V
 
-    .line 18
     return-void
 .end method
 
@@ -44,8 +41,6 @@
 .method protected fetchMoreData(II)V
     .locals 7
 
-    .prologue
-    .line 22
     const-string/jumbo v0, "BaseProgressiveRowAdapter"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -78,7 +73,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 23
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/ProgressiveCwAdapter;->getManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v0
@@ -103,6 +97,5 @@
 
     invoke-interface {v6, p1, p2, v0}, Lcom/netflix/mediaclient/servicemgr/IBrowseManager;->fetchCWVideos(IILcom/netflix/mediaclient/servicemgr/ManagerCallback;)Z
 
-    .line 24
     return-void
 .end method

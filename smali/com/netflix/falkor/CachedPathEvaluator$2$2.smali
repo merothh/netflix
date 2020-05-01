@@ -32,8 +32,6 @@
 .method constructor <init>(Lcom/netflix/falkor/CachedPathEvaluator$2;Lcom/netflix/falkor/PathMap;Lcom/netflix/falkor/PathMap;Ljava/util/Set;)V
     .locals 0
 
-    .prologue
-    .line 67
     iput-object p1, p0, Lcom/netflix/falkor/CachedPathEvaluator$2$2;->this$1:Lcom/netflix/falkor/CachedPathEvaluator$2;
 
     iput-object p2, p0, Lcom/netflix/falkor/CachedPathEvaluator$2$2;->val$reversePathMap:Lcom/netflix/falkor/PathMap;
@@ -52,20 +50,16 @@
 .method public call(Lcom/netflix/falkor/PathBoundValue;)V
     .locals 4
 
-    .prologue
-    .line 69
     invoke-virtual {p1}, Lcom/netflix/falkor/PathBoundValue;->getValue()Lcom/netflix/falkor/Option;
 
     move-result-object v1
 
-    .line 70
     invoke-virtual {v1}, Lcom/netflix/falkor/Option;->getHasValue()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 72
     invoke-virtual {v1}, Lcom/netflix/falkor/Option;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -74,7 +68,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 73
     iget-object v2, p0, Lcom/netflix/falkor/CachedPathEvaluator$2$2;->val$reversePathMap:Lcom/netflix/falkor/PathMap;
 
     invoke-virtual {v1}, Lcom/netflix/falkor/Option;->getValue()Ljava/lang/Object;
@@ -89,7 +82,6 @@
 
     invoke-virtual {v2, v0, v3}, Lcom/netflix/falkor/PathMap;->add(Lcom/netflix/falkor/PQL;Lcom/netflix/falkor/PQL;)V
 
-    .line 74
     iget-object v2, p0, Lcom/netflix/falkor/CachedPathEvaluator$2$2;->val$pathMap:Lcom/netflix/falkor/PathMap;
 
     invoke-virtual {p1}, Lcom/netflix/falkor/PathBoundValue;->getPath()Lcom/netflix/falkor/PQL;
@@ -104,12 +96,10 @@
 
     invoke-virtual {v2, v3, v0}, Lcom/netflix/falkor/PathMap;->add(Lcom/netflix/falkor/PQL;Lcom/netflix/falkor/PQL;)V
 
-    .line 82
     :cond_0
     :goto_0
     return-void
 
-    .line 78
     :cond_1
     iget-object v0, p0, Lcom/netflix/falkor/CachedPathEvaluator$2$2;->val$reversePathMap:Lcom/netflix/falkor/PathMap;
 
@@ -121,7 +111,6 @@
 
     move-result-object v0
 
-    .line 79
     iget-object v1, p0, Lcom/netflix/falkor/CachedPathEvaluator$2$2;->val$paths:Ljava/util/Set;
 
     invoke-interface {v1, v0}, Ljava/util/Set;->removeAll(Ljava/util/Collection;)Z
@@ -132,8 +121,6 @@
 .method public bridge synthetic call(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 67
     check-cast p1, Lcom/netflix/falkor/PathBoundValue;
 
     invoke-virtual {p0, p1}, Lcom/netflix/falkor/CachedPathEvaluator$2$2;->call(Lcom/netflix/falkor/PathBoundValue;)V

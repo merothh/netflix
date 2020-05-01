@@ -13,8 +13,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/pservice/PServiceFetchAgent;Landroid/content/Intent;)V
     .locals 0
 
-    .prologue
-    .line 52
     iput-object p1, p0, Lcom/netflix/mediaclient/service/pservice/PServiceFetchAgent$1;->this$0:Lcom/netflix/mediaclient/service/pservice/PServiceFetchAgent;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/pservice/PServiceFetchAgent$1;->val$intent:Landroid/content/Intent;
@@ -29,8 +27,6 @@
 .method public onDataLoaded(Lcom/netflix/mediaclient/service/pservice/PDiskData;)V
     .locals 2
 
-    .prologue
-    .line 56
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PServiceFetchAgent$1;->this$0:Lcom/netflix/mediaclient/service/pservice/PServiceFetchAgent;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/pservice/PServiceFetchAgent;->getMainHandler()Landroid/os/Handler;
@@ -43,6 +39,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 77
     return-void
 .end method

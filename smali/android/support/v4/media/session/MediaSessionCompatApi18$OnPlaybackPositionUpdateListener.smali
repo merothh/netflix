@@ -37,14 +37,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 111
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 112
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompatApi18$OnPlaybackPositionUpdateListener;->mCallback:Landroid/support/v4/media/session/MediaSessionCompatApi18$Callback;
 
-    .line 113
     return-void
 .end method
 
@@ -53,12 +49,9 @@
 .method public onPlaybackPositionUpdate(J)V
     .locals 1
 
-    .prologue
-    .line 117
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompatApi18$OnPlaybackPositionUpdateListener;->mCallback:Landroid/support/v4/media/session/MediaSessionCompatApi18$Callback;
 
     invoke-interface {v0, p1, p2}, Landroid/support/v4/media/session/MediaSessionCompatApi18$Callback;->onSeekTo(J)V
 
-    .line 118
     return-void
 .end method

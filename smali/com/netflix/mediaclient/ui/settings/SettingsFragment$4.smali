@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/settings/SettingsFragment;)V
     .locals 0
 
-    .prologue
-    .line 241
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$4;->this$0:Lcom/netflix/mediaclient/ui/settings/SettingsFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,30 +26,23 @@
 .method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
     .locals 3
 
-    .prologue
-    .line 246
     instance-of v0, p2, Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 247
     check-cast p2, Ljava/lang/String;
 
-    .line 248
     invoke-static {p2}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/ManifestRequestParamBuilder;->presetVideoFormat(Ljava/lang/String;)V
 
-    .line 249
     check-cast p1, Landroid/preference/ListPreference;
 
     invoke-virtual {p1, p2}, Landroid/preference/ListPreference;->setValue(Ljava/lang/String;)V
 
-    .line 253
     :goto_0
     const/4 v0, 0x1
 
     return v0
 
-    .line 251
     :cond_0
     const-string/jumbo v0, "SettingsFragment"
 

@@ -14,8 +14,6 @@
 .method constructor <init>(Landroid/support/design/widget/Snackbar;)V
     .locals 0
 
-    .prologue
-    .line 486
     iput-object p1, p0, Landroid/support/design/widget/Snackbar$5;->this$0:Landroid/support/design/widget/Snackbar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,16 +26,12 @@
 .method public onViewAttachedToWindow(Landroid/view/View;)V
     .locals 0
 
-    .prologue
-    .line 488
     return-void
 .end method
 
 .method public onViewDetachedFromWindow(Landroid/view/View;)V
     .locals 2
 
-    .prologue
-    .line 492
     iget-object v0, p0, Landroid/support/design/widget/Snackbar$5;->this$0:Landroid/support/design/widget/Snackbar;
 
     invoke-virtual {v0}, Landroid/support/design/widget/Snackbar;->isShownOrQueued()Z
@@ -46,7 +40,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 497
     sget-object v0, Landroid/support/design/widget/Snackbar;->sHandler:Landroid/os/Handler;
 
     new-instance v1, Landroid/support/design/widget/Snackbar$5$1;
@@ -55,7 +48,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 504
     :cond_0
     return-void
 .end method

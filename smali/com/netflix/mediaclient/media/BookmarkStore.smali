@@ -23,11 +23,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     new-instance v0, Lcom/netflix/mediaclient/media/BookmarkStore$BookmarkData;
 
     const/4 v1, 0x0
@@ -42,8 +39,6 @@
 .method static synthetic access$100(Lcom/netflix/mediaclient/media/BookmarkStore;)Ljava/io/File;
     .locals 1
 
-    .prologue
-    .line 38
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BookmarkStore;->mBookmarkStoreFile:Ljava/io/File;
 
     return-object v0
@@ -52,8 +47,6 @@
 .method static synthetic access$200(Lcom/netflix/mediaclient/media/BookmarkStore;)Lcom/netflix/mediaclient/media/BookmarkStore$BookmarkData;
     .locals 1
 
-    .prologue
-    .line 38
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BookmarkStore;->mBookmarkData:Lcom/netflix/mediaclient/media/BookmarkStore$BookmarkData;
 
     return-object v0
@@ -62,8 +55,6 @@
 .method static synthetic access$202(Lcom/netflix/mediaclient/media/BookmarkStore;Lcom/netflix/mediaclient/media/BookmarkStore$BookmarkData;)Lcom/netflix/mediaclient/media/BookmarkStore$BookmarkData;
     .locals 0
 
-    .prologue
-    .line 38
     iput-object p1, p0, Lcom/netflix/mediaclient/media/BookmarkStore;->mBookmarkData:Lcom/netflix/mediaclient/media/BookmarkStore$BookmarkData;
 
     return-object p1
@@ -72,43 +63,35 @@
 .method public static getInstance()Lcom/netflix/mediaclient/media/BookmarkStore;
     .locals 2
 
-    .prologue
-    .line 47
     sget-object v0, Lcom/netflix/mediaclient/media/BookmarkStore;->sBookmarkStore:Lcom/netflix/mediaclient/media/BookmarkStore;
 
     if-nez v0, :cond_1
 
-    .line 48
     const-class v1, Lcom/netflix/mediaclient/media/BookmarkStore;
 
     monitor-enter v1
 
-    .line 49
     :try_start_0
     sget-object v0, Lcom/netflix/mediaclient/media/BookmarkStore;->sBookmarkStore:Lcom/netflix/mediaclient/media/BookmarkStore;
 
     if-nez v0, :cond_0
 
-    .line 50
     new-instance v0, Lcom/netflix/mediaclient/media/BookmarkStore;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/media/BookmarkStore;-><init>()V
 
     sput-object v0, Lcom/netflix/mediaclient/media/BookmarkStore;->sBookmarkStore:Lcom/netflix/mediaclient/media/BookmarkStore;
 
-    .line 52
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 54
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/media/BookmarkStore;->sBookmarkStore:Lcom/netflix/mediaclient/media/BookmarkStore;
 
     return-object v0
 
-    .line 52
     :catchall_0
     move-exception v0
 
@@ -133,8 +116,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 182
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -152,7 +133,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/UserProfile;
 
-    .line 183
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/UserProfile;->getProfileGuid()Ljava/lang/String;
 
     move-result-object v0
@@ -163,10 +143,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 184
     const/4 v0, 0x1
 
-    .line 187
     :goto_0
     return v0
 
@@ -179,8 +157,6 @@
 .method private persistBookmarkData()V
     .locals 2
 
-    .prologue
-    .line 137
     new-instance v0, Lcom/netflix/mediaclient/android/app/BackgroundTask;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/android/app/BackgroundTask;-><init>()V
@@ -191,22 +167,18 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/app/BackgroundTask;->execute(Ljava/lang/Runnable;)V
 
-    .line 149
     return-void
 .end method
 
 .method private setBookmarkNoPersist(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/interface_/PlaybackBookmark;)V
     .locals 3
 
-    .prologue
-    .line 152
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 153
     const-string/jumbo v0, "nf_BookmarkStore"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -243,7 +215,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BookmarkStore;->mBookmarkData:Lcom/netflix/mediaclient/media/BookmarkStore$BookmarkData;
 
@@ -255,7 +226,6 @@
 
     if-nez v0, :cond_1
 
-    .line 157
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BookmarkStore;->mBookmarkData:Lcom/netflix/mediaclient/media/BookmarkStore$BookmarkData;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/media/BookmarkStore$BookmarkData;->mBookmarkMap:Ljava/util/Map;
@@ -266,7 +236,6 @@
 
     invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 159
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BookmarkStore;->mBookmarkData:Lcom/netflix/mediaclient/media/BookmarkStore$BookmarkData;
 
@@ -278,15 +247,12 @@
 
     check-cast v0, Ljava/util/Map;
 
-    .line 160
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/media/BookmarkStore;->trimSizeIfNeeded(Ljava/util/Map;)V
 
-    .line 161
     iget-object v1, p2, Lcom/netflix/mediaclient/servicemgr/interface_/PlaybackBookmark;->mVideoId:Ljava/lang/String;
 
     invoke-interface {v0, v1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 162
     return-void
 .end method
 
@@ -303,14 +269,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 166
     const/4 v4, 0x0
 
-    .line 167
     const-wide/32 v2, 0x7fffffff
 
-    .line 168
     invoke-interface {p1}, Ljava/util/Map;->size()I
 
     move-result v0
@@ -319,7 +281,6 @@
 
     if-le v0, v1, :cond_0
 
-    .line 169
     invoke-interface {p1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -343,7 +304,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 170
     invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -356,7 +316,6 @@
 
     if-gez v0, :cond_2
 
-    .line 172
     invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -376,17 +335,13 @@
 
     move-wide v2, v0
 
-    .line 174
     goto :goto_0
 
-    .line 176
     :cond_0
     if-eqz v4, :cond_1
 
-    .line 177
     invoke-interface {p1, v4}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 179
     :cond_1
     return-void
 
@@ -403,10 +358,8 @@
 .method public declared-synchronized getBookmark(Ljava/lang/String;Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/interface_/PlaybackBookmark;
     .locals 4
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 118
     monitor-enter p0
 
     :try_start_0
@@ -418,14 +371,12 @@
 
     move-object v0, v1
 
-    .line 132
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-object v0
 
-    .line 119
     :cond_1
     :try_start_1
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BookmarkStore;->mBookmarkData:Lcom/netflix/mediaclient/media/BookmarkStore$BookmarkData;
@@ -438,15 +389,12 @@
 
     check-cast v0, Ljava/util/Map;
 
-    .line 120
     if-nez v0, :cond_2
 
     move-object v0, v1
 
-    .line 121
     goto :goto_0
 
-    .line 123
     :cond_2
     invoke-interface {v0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -454,17 +402,14 @@
 
     check-cast v0, Lcom/netflix/mediaclient/servicemgr/interface_/PlaybackBookmark;
 
-    .line 124
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 125
     if-eqz v0, :cond_3
 
-    .line 126
     const-string/jumbo v1, "nf_BookmarkStore"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -503,7 +448,6 @@
 
     goto :goto_0
 
-    .line 118
     :catchall_0
     move-exception v0
 
@@ -511,7 +455,6 @@
 
     throw v0
 
-    .line 129
     :cond_3
     :try_start_2
     const-string/jumbo v1, "nf_BookmarkStore"
@@ -544,11 +487,8 @@
 .method public init(Landroid/content/Context;)V
     .locals 3
 
-    .prologue
-    .line 64
     iput-object p1, p0, Lcom/netflix/mediaclient/media/BookmarkStore;->mContext:Landroid/content/Context;
 
-    .line 65
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -579,7 +519,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/media/BookmarkStore;->mBookmarkStoreFile:Ljava/io/File;
 
-    .line 66
     new-instance v0, Lcom/netflix/mediaclient/android/app/BackgroundTask;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/android/app/BackgroundTask;-><init>()V
@@ -590,7 +529,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/app/BackgroundTask;->execute(Ljava/lang/Runnable;)V
 
-    .line 85
     return-void
 .end method
 
@@ -608,12 +546,10 @@
         }
     .end annotation
 
-    .prologue
     const/4 v4, 0x0
 
     const/4 v1, 0x1
 
-    .line 191
     monitor-enter p0
 
     :try_start_0
@@ -627,14 +563,12 @@
 
     if-nez p2, :cond_1
 
-    .line 223
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 193
     :cond_1
     :try_start_1
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -656,14 +590,12 @@
 
     check-cast v0, Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;
 
-    .line 194
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 195
     const-string/jumbo v3, "nf_BookmarkStore"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -690,7 +622,6 @@
 
     invoke-static {v3, v6}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 197
     :cond_2
     invoke-interface {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;->getPlayableId()Ljava/lang/String;
 
@@ -700,10 +631,8 @@
 
     move-result-object v3
 
-    .line 199
     if-nez v3, :cond_3
 
-    .line 201
     const-string/jumbo v3, "nf_BookmarkStore"
 
     const-string/jumbo v6, "got a new bookmark"
@@ -712,18 +641,15 @@
 
     move v3, v1
 
-    .line 212
     :goto_2
     if-eqz v3, :cond_5
 
-    .line 213
     new-instance v2, Lcom/netflix/mediaclient/servicemgr/interface_/PlaybackBookmark;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;->getPlayableBookmarkPosition()I
 
     move-result v3
 
-    .line 214
     invoke-interface {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;->getPlayableBookmarkUpdateTime()J
 
     move-result-wide v6
@@ -734,7 +660,6 @@
 
     invoke-direct {v2, v3, v6, v7, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/PlaybackBookmark;-><init>(IJLjava/lang/String;)V
 
-    .line 215
     invoke-direct {p0, p2, v2}, Lcom/netflix/mediaclient/media/BookmarkStore;->setBookmarkNoPersist(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/interface_/PlaybackBookmark;)V
 
     move v0, v1
@@ -742,28 +667,23 @@
     :goto_3
     move v2, v0
 
-    .line 218
     goto :goto_1
 
-    .line 203
     :cond_3
     sget-object v6, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     iget-wide v8, v3, Lcom/netflix/mediaclient/servicemgr/interface_/PlaybackBookmark;->mBookmarkUpdateTimeInUTCMs:J
 
-    .line 204
     invoke-interface {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;->getPlayableBookmarkUpdateTime()J
 
     move-result-wide v10
 
     sub-long/2addr v8, v10
 
-    .line 203
     invoke-virtual {v6, v8, v9}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
 
     move-result-wide v6
 
-    .line 205
     const-string/jumbo v3, "nf_BookmarkStore"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -786,7 +706,6 @@
 
     invoke-static {v3, v8}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 207
     const-wide/16 v8, 0x0
 
     cmp-long v3, v6, v8
@@ -795,21 +714,17 @@
 
     move v3, v1
 
-    .line 208
     goto :goto_2
 
-    .line 220
     :cond_4
     if-eqz v2, :cond_0
 
-    .line 221
     invoke-direct {p0}, Lcom/netflix/mediaclient/media/BookmarkStore;->persistBookmarkData()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto/16 :goto_0
 
-    .line 191
     :catchall_0
     move-exception v0
 
@@ -831,8 +746,6 @@
 .method public declared-synchronized setBookmark(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/interface_/PlaybackBookmark;)V
     .locals 2
 
-    .prologue
-    .line 107
     monitor-enter p0
 
     :try_start_0
@@ -842,19 +755,16 @@
 
     if-nez v0, :cond_0
 
-    .line 115
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 109
     :cond_0
     if-eqz p1, :cond_1
 
     if-nez p2, :cond_2
 
-    .line 110
     :cond_1
     :try_start_1
     const-string/jumbo v0, "nf_BookmarkStore"
@@ -867,7 +777,6 @@
 
     goto :goto_0
 
-    .line 107
     :catchall_0
     move-exception v0
 
@@ -875,12 +784,10 @@
 
     throw v0
 
-    .line 113
     :cond_2
     :try_start_2
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/media/BookmarkStore;->setBookmarkNoPersist(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/interface_/PlaybackBookmark;)V
 
-    .line 114
     invoke-direct {p0}, Lcom/netflix/mediaclient/media/BookmarkStore;->persistBookmarkData()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -900,8 +807,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 88
     monitor-enter p0
 
     if-eqz p1, :cond_3
@@ -913,7 +818,6 @@
 
     if-lez v0, :cond_3
 
-    .line 89
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BookmarkStore;->mBookmarkData:Lcom/netflix/mediaclient/media/BookmarkStore$BookmarkData;
 
     if-eqz v0, :cond_3
@@ -924,12 +828,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 90
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 91
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BookmarkStore;->mBookmarkData:Lcom/netflix/mediaclient/media/BookmarkStore$BookmarkData;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/media/BookmarkStore$BookmarkData;->mBookmarkMap:Ljava/util/Map;
@@ -956,7 +858,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 92
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -969,7 +870,6 @@
 
     if-nez v1, :cond_0
 
-    .line 93
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -980,7 +880,6 @@
 
     goto :goto_0
 
-    .line 88
     :catchall_0
     move-exception v0
 
@@ -988,7 +887,6 @@
 
     throw v0
 
-    .line 96
     :cond_1
     :try_start_1
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1008,7 +906,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 97
     iget-object v3, p0, Lcom/netflix/mediaclient/media/BookmarkStore;->mBookmarkData:Lcom/netflix/mediaclient/media/BookmarkStore$BookmarkData;
 
     iget-object v3, v3, Lcom/netflix/mediaclient/media/BookmarkStore$BookmarkData;->mBookmarkMap:Ljava/util/Map;
@@ -1017,7 +914,6 @@
 
     goto :goto_1
 
-    .line 99
     :cond_2
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -1025,12 +921,10 @@
 
     if-lez v0, :cond_3
 
-    .line 100
     invoke-direct {p0}, Lcom/netflix/mediaclient/media/BookmarkStore;->persistBookmarkData()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 104
     :cond_3
     monitor-exit p0
 

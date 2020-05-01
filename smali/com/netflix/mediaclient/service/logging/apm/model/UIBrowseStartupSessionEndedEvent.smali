@@ -27,8 +27,6 @@
 .method public constructor <init>(JJ)V
     .locals 3
 
-    .prologue
-    .line 82
     const-string/jumbo v0, "uiBrowseStartup"
 
     new-instance v1, Lcom/netflix/mediaclient/service/logging/client/model/DeviceUniqueId;
@@ -37,43 +35,34 @@
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/netflix/mediaclient/service/logging/client/model/SessionEndedEvent;-><init>(Ljava/lang/String;Lcom/netflix/mediaclient/service/logging/client/model/DeviceUniqueId;J)V
 
-    .line 45
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIBrowseStartupSessionEndedEvent;->success:Z
 
-    .line 83
     iput-wide p3, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIBrowseStartupSessionEndedEvent;->timeToBrowseInteractive:J
 
-    .line 84
     return-void
 .end method
 
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
     const/4 v2, 0x1
 
-    .line 66
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/logging/client/model/SessionEndedEvent;-><init>(Lorg/json/JSONObject;)V
 
-    .line 45
     iput-boolean v2, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIBrowseStartupSessionEndedEvent;->success:Z
 
-    .line 67
     const-string/jumbo v0, "data"
 
     invoke-static {p1, v0, v3}, Lcom/netflix/mediaclient/util/JsonUtils;->getJSONObject(Lorg/json/JSONObject;Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object v0
 
-    .line 68
     if-eqz v0, :cond_0
 
-    .line 69
     const-string/jumbo v1, "success"
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/util/JsonUtils;->getBoolean(Lorg/json/JSONObject;Ljava/lang/String;Z)Z
@@ -82,7 +71,6 @@
 
     iput-boolean v1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIBrowseStartupSessionEndedEvent;->success:Z
 
-    .line 70
     const-string/jumbo v1, "error"
 
     invoke-static {v0, v1, v3}, Lcom/netflix/mediaclient/util/JsonUtils;->getJSONObject(Lorg/json/JSONObject;Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
@@ -95,7 +83,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIBrowseStartupSessionEndedEvent;->error:Lcom/netflix/mediaclient/service/logging/client/model/UIError;
 
-    .line 71
     const-string/jumbo v1, "timeToBrowseInteractive"
 
     const-wide/16 v2, 0x0
@@ -106,7 +93,6 @@
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIBrowseStartupSessionEndedEvent;->timeToBrowseInteractive:J
 
-    .line 73
     :cond_0
     return-void
 .end method
@@ -116,8 +102,6 @@
 .method protected getCustomData()Lorg/json/JSONObject;
     .locals 4
 
-    .prologue
-    .line 163
     invoke-static {}, Lcom/netflix/mediaclient/ui/experience/BrowseExperience;->get()Lcom/netflix/mediaclient/ui/experience/BrowseExperience;
 
     move-result-object v0
@@ -126,14 +110,12 @@
 
     move-result-object v0
 
-    .line 164
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 165
     const-string/jumbo v1, "UIBrowseStartupSessionEndedEvent"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -156,7 +138,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     :cond_0
     new-instance v1, Ljava/util/HashMap;
 
@@ -164,12 +145,10 @@
 
     invoke-direct {v1, v2}, Ljava/util/HashMap;-><init>(I)V
 
-    .line 169
     const-string/jumbo v2, "browseExperience"
 
     invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 170
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0, v1}, Lorg/json/JSONObject;-><init>(Ljava/util/Map;)V
@@ -180,21 +159,16 @@
 .method protected getData()Lorg/json/JSONObject;
     .locals 4
 
-    .prologue
-    .line 93
     invoke-super {p0}, Lcom/netflix/mediaclient/service/logging/client/model/SessionEndedEvent;->getData()Lorg/json/JSONObject;
 
     move-result-object v0
 
-    .line 94
     if-nez v0, :cond_0
 
-    .line 95
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    .line 97
     :cond_0
     const-string/jumbo v1, "success"
 
@@ -202,19 +176,16 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
-    .line 98
     const-string/jumbo v1, "timeToBrowseInteractive"
 
     iget-wide v2, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIBrowseStartupSessionEndedEvent;->timeToBrowseInteractive:J
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 100
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIBrowseStartupSessionEndedEvent;->error:Lcom/netflix/mediaclient/service/logging/client/model/UIError;
 
     if-eqz v1, :cond_1
 
-    .line 101
     const-string/jumbo v1, "error"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIBrowseStartupSessionEndedEvent;->error:Lcom/netflix/mediaclient/service/logging/client/model/UIError;
@@ -225,7 +196,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 103
     :cond_1
     return-object v0
 .end method
@@ -233,8 +203,6 @@
 .method public getError()Lcom/netflix/mediaclient/service/logging/client/model/UIError;
     .locals 1
 
-    .prologue
-    .line 130
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIBrowseStartupSessionEndedEvent;->error:Lcom/netflix/mediaclient/service/logging/client/model/UIError;
 
     return-object v0
@@ -243,8 +211,6 @@
 .method public getTimeToBrowseInteractive()J
     .locals 2
 
-    .prologue
-    .line 148
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIBrowseStartupSessionEndedEvent;->timeToBrowseInteractive:J
 
     return-wide v0
@@ -253,8 +219,6 @@
 .method public isSuccess()Z
     .locals 1
 
-    .prologue
-    .line 112
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIBrowseStartupSessionEndedEvent;->success:Z
 
     return v0
@@ -263,32 +227,23 @@
 .method public setError(Lcom/netflix/mediaclient/service/logging/client/model/UIError;)V
     .locals 0
 
-    .prologue
-    .line 139
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIBrowseStartupSessionEndedEvent;->error:Lcom/netflix/mediaclient/service/logging/client/model/UIError;
 
-    .line 140
     return-void
 .end method
 
 .method public setSuccess(Z)V
     .locals 0
 
-    .prologue
-    .line 121
     iput-boolean p1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIBrowseStartupSessionEndedEvent;->success:Z
 
-    .line 122
     return-void
 .end method
 
 .method public setTimeToBrowseInteractive(J)V
     .locals 1
 
-    .prologue
-    .line 157
     iput-wide p1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIBrowseStartupSessionEndedEvent;->timeToBrowseInteractive:J
 
-    .line 158
     return-void
 .end method

@@ -30,7 +30,6 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x3
 
     const/4 v4, 0x2
@@ -39,7 +38,6 @@
 
     const/4 v2, 0x0
 
-    .line 516
     new-instance v0, Lcom/android/volley/Request$Priority;
 
     const-string/jumbo v1, "LOW"
@@ -48,7 +46,6 @@
 
     sput-object v0, Lcom/android/volley/Request$Priority;->LOW:Lcom/android/volley/Request$Priority;
 
-    .line 517
     new-instance v0, Lcom/android/volley/Request$Priority;
 
     const-string/jumbo v1, "NORMAL"
@@ -57,7 +54,6 @@
 
     sput-object v0, Lcom/android/volley/Request$Priority;->NORMAL:Lcom/android/volley/Request$Priority;
 
-    .line 518
     new-instance v0, Lcom/android/volley/Request$Priority;
 
     const-string/jumbo v1, "HIGH"
@@ -66,7 +62,6 @@
 
     sput-object v0, Lcom/android/volley/Request$Priority;->HIGH:Lcom/android/volley/Request$Priority;
 
-    .line 519
     new-instance v0, Lcom/android/volley/Request$Priority;
 
     const-string/jumbo v1, "IMMEDIATE"
@@ -75,7 +70,6 @@
 
     sput-object v0, Lcom/android/volley/Request$Priority;->IMMEDIATE:Lcom/android/volley/Request$Priority;
 
-    .line 515
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/volley/Request$Priority;
@@ -109,8 +103,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 515
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -119,8 +111,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/volley/Request$Priority;
     .locals 1
 
-    .prologue
-    .line 515
     const-class v0, Lcom/android/volley/Request$Priority;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -135,8 +125,6 @@
 .method public static values()[Lcom/android/volley/Request$Priority;
     .locals 1
 
-    .prologue
-    .line 515
     sget-object v0, Lcom/android/volley/Request$Priority;->$VALUES:[Lcom/android/volley/Request$Priority;
 
     invoke-virtual {v0}, [Lcom/android/volley/Request$Priority;->clone()Ljava/lang/Object;

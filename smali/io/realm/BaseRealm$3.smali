@@ -16,8 +16,6 @@
 .method constructor <init>(Lio/realm/RealmConfiguration;Ljava/util/concurrent/atomic/AtomicBoolean;)V
     .locals 0
 
-    .prologue
-    .line 561
     iput-object p1, p0, Lio/realm/BaseRealm$3;->val$configuration:Lio/realm/RealmConfiguration;
 
     iput-object p2, p0, Lio/realm/BaseRealm$3;->val$realmDeleted:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -32,11 +30,8 @@
 .method public onResult(I)V
     .locals 4
 
-    .prologue
-    .line 564
     if-eqz p1, :cond_0
 
-    .line 565
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -51,7 +46,6 @@
 
     iget-object v2, p0, Lio/realm/BaseRealm$3;->val$configuration:Lio/realm/RealmConfiguration;
 
-    .line 566
     invoke-virtual {v2}, Lio/realm/RealmConfiguration;->getPath()Ljava/lang/String;
 
     move-result-object v2
@@ -68,7 +62,6 @@
 
     throw v0
 
-    .line 569
     :cond_0
     iget-object v0, p0, Lio/realm/BaseRealm$3;->val$configuration:Lio/realm/RealmConfiguration;
 
@@ -76,21 +69,18 @@
 
     move-result-object v0
 
-    .line 570
     iget-object v1, p0, Lio/realm/BaseRealm$3;->val$configuration:Lio/realm/RealmConfiguration;
 
     invoke-virtual {v1}, Lio/realm/RealmConfiguration;->getRealmDirectory()Ljava/io/File;
 
     move-result-object v1
 
-    .line 571
     iget-object v2, p0, Lio/realm/BaseRealm$3;->val$configuration:Lio/realm/RealmConfiguration;
 
     invoke-virtual {v2}, Lio/realm/RealmConfiguration;->getRealmFileName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 572
     iget-object v3, p0, Lio/realm/BaseRealm$3;->val$realmDeleted:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-static {v0, v1, v2}, Lio/realm/internal/Util;->deleteRealm(Ljava/lang/String;Ljava/io/File;Ljava/lang/String;)Z
@@ -99,6 +89,5 @@
 
     invoke-virtual {v3, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 573
     return-void
 .end method

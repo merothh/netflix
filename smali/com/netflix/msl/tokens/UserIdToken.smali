@@ -56,25 +56,20 @@
 .method public constructor <init>(Lcom/netflix/msl/util/MslContext;Lcom/netflix/android/org/json/JSONObject;Lcom/netflix/msl/tokens/MasterToken;)V
     .locals 12
 
-    .prologue
     const-wide/high16 v10, 0x20000000000000L
 
     const-wide/16 v8, 0x0
 
     const/4 v0, 0x0
 
-    .line 208
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 209
     iput-object p1, p0, Lcom/netflix/msl/tokens/UserIdToken;->ctx:Lcom/netflix/msl/util/MslContext;
 
-    .line 212
     invoke-virtual {p1}, Lcom/netflix/msl/util/MslContext;->getMslCryptoContext()Lcom/netflix/msl/crypto/ICryptoContext;
 
     move-result-object v1
 
-    .line 217
     :try_start_0
     const-string/jumbo v2, "tokendata"
 
@@ -91,7 +86,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 221
     :try_start_1
     iget-object v2, p0, Lcom/netflix/msl/tokens/UserIdToken;->tokendata:[B
 
@@ -103,7 +97,6 @@
 
     if-nez v2, :cond_1
 
-    .line 222
     :cond_0
     new-instance v0, Lcom/netflix/msl/MslEncodingException;
 
@@ -141,11 +134,9 @@
     :try_end_1
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 229
     :catch_0
     move-exception v0
 
-    .line 230
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_PARSE_ERROR:Lcom/netflix/msl/MslError;
@@ -180,11 +171,9 @@
 
     throw v0
 
-    .line 218
     :catch_1
     move-exception v0
 
-    .line 219
     :try_start_2
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
@@ -222,7 +211,6 @@
     :try_end_2
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 224
     :cond_1
     :try_start_3
     const-string/jumbo v2, "signature"
@@ -240,7 +228,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_3 .. :try_end_3} :catch_3
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 228
     :try_start_4
     iget-object v2, p0, Lcom/netflix/msl/tokens/UserIdToken;->tokendata:[B
 
@@ -254,7 +241,6 @@
     :try_end_4
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 234
     new-instance v2, Ljava/lang/String;
 
     iget-object v3, p0, Lcom/netflix/msl/tokens/UserIdToken;->tokendata:[B
@@ -263,13 +249,11 @@
 
     invoke-direct {v2, v3, v4}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
 
-    .line 236
     :try_start_5
     new-instance v3, Lcom/netflix/android/org/json/JSONObject;
 
     invoke-direct {v3, v2}, Lcom/netflix/android/org/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 237
     const-string/jumbo v4, "renewalwindow"
 
     invoke-virtual {v3, v4}, Lcom/netflix/android/org/json/JSONObject;->getLong(Ljava/lang/String;)J
@@ -278,7 +262,6 @@
 
     iput-wide v4, p0, Lcom/netflix/msl/tokens/UserIdToken;->renewalWindow:J
 
-    .line 238
     const-string/jumbo v4, "expiration"
 
     invoke-virtual {v3, v4}, Lcom/netflix/android/org/json/JSONObject;->getLong(Ljava/lang/String;)J
@@ -287,7 +270,6 @@
 
     iput-wide v4, p0, Lcom/netflix/msl/tokens/UserIdToken;->expiration:J
 
-    .line 239
     iget-wide v4, p0, Lcom/netflix/msl/tokens/UserIdToken;->expiration:J
 
     iget-wide v6, p0, Lcom/netflix/msl/tokens/UserIdToken;->renewalWindow:J
@@ -296,7 +278,6 @@
 
     if-gez v4, :cond_2
 
-    .line 240
     new-instance v0, Lcom/netflix/msl/MslException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->USERIDTOKEN_EXPIRES_BEFORE_RENEWAL:Lcom/netflix/msl/MslError;
@@ -330,11 +311,9 @@
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_5 .. :try_end_5} :catch_2
     .catch Lcom/netflix/msl/MslCryptoException; {:try_start_5 .. :try_end_5} :catch_4
 
-    .line 256
     :catch_2
     move-exception v0
 
-    .line 257
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v3, Lcom/netflix/msl/MslError;->USERIDTOKEN_TOKENDATA_PARSE_ERROR:Lcom/netflix/msl/MslError;
@@ -365,11 +344,9 @@
 
     throw v0
 
-    .line 225
     :catch_3
     move-exception v0
 
-    .line 226
     :try_start_6
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
@@ -407,7 +384,6 @@
     :try_end_6
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_6 .. :try_end_6} :catch_0
 
-    .line 241
     :cond_2
     :try_start_7
     const-string/jumbo v4, "mtserialnumber"
@@ -418,7 +394,6 @@
 
     iput-wide v4, p0, Lcom/netflix/msl/tokens/UserIdToken;->mtSerialNumber:J
 
-    .line 242
     iget-wide v4, p0, Lcom/netflix/msl/tokens/UserIdToken;->mtSerialNumber:J
 
     cmp-long v4, v4, v8
@@ -431,7 +406,6 @@
 
     if-lez v4, :cond_4
 
-    .line 243
     :cond_3
     new-instance v0, Lcom/netflix/msl/MslException;
 
@@ -466,17 +440,13 @@
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_7 .. :try_end_7} :catch_2
     .catch Lcom/netflix/msl/MslCryptoException; {:try_start_7 .. :try_end_7} :catch_4
 
-    .line 258
     :catch_4
     move-exception v0
 
-    .line 259
     invoke-virtual {v0, p3}, Lcom/netflix/msl/MslCryptoException;->setMasterToken(Lcom/netflix/msl/tokens/MasterToken;)Lcom/netflix/msl/MslCryptoException;
 
-    .line 260
     throw v0
 
-    .line 244
     :cond_4
     :try_start_8
     const-string/jumbo v4, "serialnumber"
@@ -487,7 +457,6 @@
 
     iput-wide v4, p0, Lcom/netflix/msl/tokens/UserIdToken;->serialNumber:J
 
-    .line 245
     iget-wide v4, p0, Lcom/netflix/msl/tokens/UserIdToken;->serialNumber:J
 
     cmp-long v4, v4, v8
@@ -500,7 +469,6 @@
 
     if-lez v4, :cond_6
 
-    .line 246
     :cond_5
     new-instance v0, Lcom/netflix/msl/MslException;
 
@@ -535,7 +503,6 @@
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_8 .. :try_end_8} :catch_2
     .catch Lcom/netflix/msl/MslCryptoException; {:try_start_8 .. :try_end_8} :catch_4
 
-    .line 249
     :cond_6
     :try_start_9
     const-string/jumbo v4, "userdata"
@@ -552,7 +519,6 @@
 
     move-result-object v4
 
-    .line 253
     if-eqz v4, :cond_7
 
     :try_start_a
@@ -560,7 +526,6 @@
 
     if-nez v5, :cond_8
 
-    .line 254
     :cond_7
     new-instance v0, Lcom/netflix/msl/MslException;
 
@@ -580,11 +545,9 @@
 
     throw v0
 
-    .line 250
     :catch_5
     move-exception v0
 
-    .line 251
     new-instance v0, Lcom/netflix/msl/MslException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->USERIDTOKEN_USERDATA_INVALID:Lcom/netflix/msl/MslError;
@@ -603,7 +566,6 @@
 
     throw v0
 
-    .line 255
     :cond_8
     iget-boolean v3, p0, Lcom/netflix/msl/tokens/UserIdToken;->verified:Z
 
@@ -619,12 +581,10 @@
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_a .. :try_end_a} :catch_2
     .catch Lcom/netflix/msl/MslCryptoException; {:try_start_a .. :try_end_a} :catch_4
 
-    .line 264
     iget-object v1, p0, Lcom/netflix/msl/tokens/UserIdToken;->userdata:[B
 
     if-eqz v1, :cond_d
 
-    .line 265
     new-instance v1, Ljava/lang/String;
 
     iget-object v2, p0, Lcom/netflix/msl/tokens/UserIdToken;->userdata:[B
@@ -633,13 +593,11 @@
 
     invoke-direct {v1, v2, v3}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
 
-    .line 267
     :try_start_b
     new-instance v2, Lcom/netflix/android/org/json/JSONObject;
 
     invoke-direct {v2, v1}, Lcom/netflix/android/org/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 268
     const-string/jumbo v3, "issuerdata"
 
     invoke-virtual {v2, v3}, Lcom/netflix/android/org/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -657,14 +615,12 @@
     :cond_9
     iput-object v0, p0, Lcom/netflix/msl/tokens/UserIdToken;->issuerData:Lcom/netflix/android/org/json/JSONObject;
 
-    .line 269
     const-string/jumbo v0, "identity"
 
     invoke-virtual {v2, v0}, Lcom/netflix/android/org/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 270
     if-eqz v0, :cond_a
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -673,7 +629,6 @@
 
     if-nez v2, :cond_c
 
-    .line 271
     :cond_a
     new-instance v0, Lcom/netflix/msl/MslException;
 
@@ -707,11 +662,9 @@
     :try_end_b
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_b .. :try_end_b} :catch_6
 
-    .line 276
     :catch_6
     move-exception v0
 
-    .line 277
     new-instance v2, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v3, Lcom/netflix/msl/MslError;->USERIDTOKEN_USERDATA_PARSE_ERROR:Lcom/netflix/msl/MslError;
@@ -745,29 +698,24 @@
     :cond_b
     move-object v1, v0
 
-    .line 255
     goto :goto_0
 
-    .line 272
     :cond_c
     :try_start_c
     invoke-virtual {p1}, Lcom/netflix/msl/util/MslContext;->getTokenFactory()Lcom/netflix/msl/tokens/TokenFactory;
 
     move-result-object v2
 
-    .line 273
     invoke-interface {v2, p1, v0}, Lcom/netflix/msl/tokens/TokenFactory;->createUser(Lcom/netflix/msl/util/MslContext;Ljava/lang/String;)Lcom/netflix/msl/tokens/MslUser;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/msl/tokens/UserIdToken;->user:Lcom/netflix/msl/tokens/MslUser;
 
-    .line 274
     iget-object v0, p0, Lcom/netflix/msl/tokens/UserIdToken;->user:Lcom/netflix/msl/tokens/MslUser;
 
     if-nez v0, :cond_e
 
-    .line 275
     new-instance v0, Lcom/netflix/msl/MslInternalException;
 
     const-string/jumbo v2, "TokenFactory.createUser() returned null in violation of the interface contract."
@@ -778,14 +726,11 @@
     :try_end_c
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_c .. :try_end_c} :catch_6
 
-    .line 280
     :cond_d
     iput-object v0, p0, Lcom/netflix/msl/tokens/UserIdToken;->issuerData:Lcom/netflix/android/org/json/JSONObject;
 
-    .line 281
     iput-object v0, p0, Lcom/netflix/msl/tokens/UserIdToken;->user:Lcom/netflix/msl/tokens/MslUser;
 
-    .line 285
     :cond_e
     if-eqz p3, :cond_f
 
@@ -799,7 +744,6 @@
 
     if-eqz v0, :cond_10
 
-    .line 286
     :cond_f
     new-instance v0, Lcom/netflix/msl/MslException;
 
@@ -843,7 +787,6 @@
 
     throw v0
 
-    .line 287
     :cond_10
     return-void
 .end method
@@ -851,20 +794,16 @@
 .method public constructor <init>(Lcom/netflix/msl/util/MslContext;Ljava/util/Date;Ljava/util/Date;Lcom/netflix/msl/tokens/MasterToken;JLcom/netflix/android/org/json/JSONObject;Lcom/netflix/msl/tokens/MslUser;)V
     .locals 7
 
-    .prologue
     const-wide/16 v2, 0x3e8
 
-    .line 133
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 135
     invoke-virtual {p3, p2}, Ljava/util/Date;->before(Ljava/util/Date;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 136
     new-instance v0, Lcom/netflix/msl/MslInternalException;
 
     const-string/jumbo v1, "Cannot construct a user ID token that expires before its renewal window opens."
@@ -873,11 +812,9 @@
 
     throw v0
 
-    .line 138
     :cond_0
     if-nez p4, :cond_1
 
-    .line 139
     new-instance v0, Lcom/netflix/msl/MslInternalException;
 
     const-string/jumbo v1, "Cannot construct a user ID token without a master token."
@@ -886,7 +823,6 @@
 
     throw v0
 
-    .line 141
     :cond_1
     const-wide/16 v0, 0x0
 
@@ -900,7 +836,6 @@
 
     if-lez v0, :cond_3
 
-    .line 142
     :cond_2
     new-instance v0, Lcom/netflix/msl/MslInternalException;
 
@@ -932,11 +867,9 @@
 
     throw v0
 
-    .line 144
     :cond_3
     iput-object p1, p0, Lcom/netflix/msl/tokens/UserIdToken;->ctx:Lcom/netflix/msl/util/MslContext;
 
-    .line 145
     invoke-virtual {p2}, Ljava/util/Date;->getTime()J
 
     move-result-wide v0
@@ -945,7 +878,6 @@
 
     iput-wide v0, p0, Lcom/netflix/msl/tokens/UserIdToken;->renewalWindow:J
 
-    .line 146
     invoke-virtual {p3}, Ljava/util/Date;->getTime()J
 
     move-result-wide v0
@@ -954,41 +886,33 @@
 
     iput-wide v0, p0, Lcom/netflix/msl/tokens/UserIdToken;->expiration:J
 
-    .line 147
     invoke-virtual {p4}, Lcom/netflix/msl/tokens/MasterToken;->getSerialNumber()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/netflix/msl/tokens/UserIdToken;->mtSerialNumber:J
 
-    .line 148
     iput-wide p5, p0, Lcom/netflix/msl/tokens/UserIdToken;->serialNumber:J
 
-    .line 149
     iput-object p7, p0, Lcom/netflix/msl/tokens/UserIdToken;->issuerData:Lcom/netflix/android/org/json/JSONObject;
 
-    .line 150
     iput-object p8, p0, Lcom/netflix/msl/tokens/UserIdToken;->user:Lcom/netflix/msl/tokens/MslUser;
 
-    .line 153
     new-instance v0, Lcom/netflix/android/org/json/JSONObject;
 
     invoke-direct {v0}, Lcom/netflix/android/org/json/JSONObject;-><init>()V
 
-    .line 155
     :try_start_0
     iget-object v1, p0, Lcom/netflix/msl/tokens/UserIdToken;->issuerData:Lcom/netflix/android/org/json/JSONObject;
 
     if-eqz v1, :cond_4
 
-    .line 156
     const-string/jumbo v1, "issuerdata"
 
     iget-object v2, p0, Lcom/netflix/msl/tokens/UserIdToken;->issuerData:Lcom/netflix/android/org/json/JSONObject;
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 157
     :cond_4
     const-string/jumbo v1, "identity"
 
@@ -998,7 +922,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 158
     invoke-virtual {v0}, Lcom/netflix/android/org/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -1013,13 +936,11 @@
     :try_end_0
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 165
     :try_start_1
     invoke-virtual {p1}, Lcom/netflix/msl/util/MslContext;->getMslCryptoContext()Lcom/netflix/msl/crypto/ICryptoContext;
 
     move-result-object v0
 
-    .line 166
     iget-object v1, p0, Lcom/netflix/msl/tokens/UserIdToken;->userdata:[B
 
     invoke-interface {v0, v1}, Lcom/netflix/msl/crypto/ICryptoContext;->encrypt([B)[B
@@ -1028,41 +949,35 @@
 
     move-result-object v1
 
-    .line 170
     :try_start_2
     new-instance v2, Lcom/netflix/android/org/json/JSONObject;
 
     invoke-direct {v2}, Lcom/netflix/android/org/json/JSONObject;-><init>()V
 
-    .line 171
     const-string/jumbo v3, "renewalwindow"
 
     iget-wide v4, p0, Lcom/netflix/msl/tokens/UserIdToken;->renewalWindow:J
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;J)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 172
     const-string/jumbo v3, "expiration"
 
     iget-wide v4, p0, Lcom/netflix/msl/tokens/UserIdToken;->expiration:J
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;J)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 173
     const-string/jumbo v3, "mtserialnumber"
 
     iget-wide v4, p0, Lcom/netflix/msl/tokens/UserIdToken;->mtSerialNumber:J
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;J)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 174
     const-string/jumbo v3, "serialnumber"
 
     iget-wide v4, p0, Lcom/netflix/msl/tokens/UserIdToken;->serialNumber:J
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;J)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 175
     const-string/jumbo v3, "userdata"
 
     invoke-static {v1}, Lcom/netflix/msl/util/Base64;->encode([B)Ljava/lang/String;
@@ -1071,7 +986,6 @@
 
     invoke-virtual {v2, v3, v1}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 176
     invoke-virtual {v2}, Lcom/netflix/android/org/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -1087,7 +1001,6 @@
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Lcom/netflix/msl/MslCryptoException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 182
     :try_start_3
     iget-object v1, p0, Lcom/netflix/msl/tokens/UserIdToken;->tokendata:[B
 
@@ -1097,21 +1010,17 @@
 
     iput-object v0, p0, Lcom/netflix/msl/tokens/UserIdToken;->signature:[B
 
-    .line 183
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/msl/tokens/UserIdToken;->verified:Z
     :try_end_3
     .catch Lcom/netflix/msl/MslCryptoException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 188
     return-void
 
-    .line 159
     :catch_0
     move-exception v0
 
-    .line 160
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_ENCODE_ERROR:Lcom/netflix/msl/MslError;
@@ -1122,11 +1031,9 @@
 
     throw v1
 
-    .line 177
     :catch_1
     move-exception v0
 
-    .line 178
     :try_start_4
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
@@ -1144,14 +1051,11 @@
     :try_end_4
     .catch Lcom/netflix/msl/MslCryptoException; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 184
     :catch_2
     move-exception v0
 
-    .line 185
     invoke-virtual {v0, p4}, Lcom/netflix/msl/MslCryptoException;->setMasterToken(Lcom/netflix/msl/tokens/MasterToken;)Lcom/netflix/msl/MslCryptoException;
 
-    .line 186
     throw v0
 .end method
 
@@ -1160,29 +1064,23 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 480
     if-ne p0, p1, :cond_1
 
-    .line 486
     :cond_0
     :goto_0
     return v0
 
-    .line 481
     :cond_1
     instance-of v2, p1, Lcom/netflix/msl/tokens/UserIdToken;
 
     if-eqz v2, :cond_3
 
-    .line 482
     check-cast p1, Lcom/netflix/msl/tokens/UserIdToken;
 
-    .line 483
     iget-wide v2, p0, Lcom/netflix/msl/tokens/UserIdToken;->serialNumber:J
 
     iget-wide v4, p1, Lcom/netflix/msl/tokens/UserIdToken;->serialNumber:J
@@ -1207,15 +1105,12 @@
     :cond_3
     move v0, v1
 
-    .line 486
     goto :goto_0
 .end method
 
 .method public getExpiration()Ljava/util/Date;
     .locals 6
 
-    .prologue
-    .line 339
     new-instance v0, Ljava/util/Date;
 
     iget-wide v2, p0, Lcom/netflix/msl/tokens/UserIdToken;->expiration:J
@@ -1232,8 +1127,6 @@
 .method public getIssuerData()Lcom/netflix/android/org/json/JSONObject;
     .locals 1
 
-    .prologue
-    .line 372
     iget-object v0, p0, Lcom/netflix/msl/tokens/UserIdToken;->issuerData:Lcom/netflix/android/org/json/JSONObject;
 
     return-object v0
@@ -1242,8 +1135,6 @@
 .method public getMasterTokenSerialNumber()J
     .locals 2
 
-    .prologue
-    .line 397
     iget-wide v0, p0, Lcom/netflix/msl/tokens/UserIdToken;->mtSerialNumber:J
 
     return-wide v0
@@ -1252,8 +1143,6 @@
 .method public getRenewalWindow()Ljava/util/Date;
     .locals 6
 
-    .prologue
-    .line 307
     new-instance v0, Ljava/util/Date;
 
     iget-wide v2, p0, Lcom/netflix/msl/tokens/UserIdToken;->renewalWindow:J
@@ -1270,8 +1159,6 @@
 .method public getSerialNumber()J
     .locals 2
 
-    .prologue
-    .line 387
     iget-wide v0, p0, Lcom/netflix/msl/tokens/UserIdToken;->serialNumber:J
 
     return-wide v0
@@ -1280,8 +1167,6 @@
 .method public getUser()Lcom/netflix/msl/tokens/MslUser;
     .locals 1
 
-    .prologue
-    .line 380
     iget-object v0, p0, Lcom/netflix/msl/tokens/UserIdToken;->user:Lcom/netflix/msl/tokens/MslUser;
 
     return-object v0
@@ -1290,8 +1175,6 @@
 .method public hashCode()I
     .locals 4
 
-    .prologue
-    .line 494
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1336,8 +1219,6 @@
 .method public isBoundTo(Lcom/netflix/msl/tokens/MasterToken;)Z
     .locals 4
 
-    .prologue
-    .line 405
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Lcom/netflix/msl/tokens/MasterToken;->getSerialNumber()J
@@ -1364,8 +1245,6 @@
 .method public isDecrypted()Z
     .locals 1
 
-    .prologue
-    .line 293
     iget-object v0, p0, Lcom/netflix/msl/tokens/UserIdToken;->user:Lcom/netflix/msl/tokens/MslUser;
 
     if-eqz v0, :cond_0
@@ -1384,17 +1263,14 @@
 .method public isExpired(Ljava/util/Date;)Z
     .locals 6
 
-    .prologue
     const-wide/16 v4, 0x3e8
 
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 360
     if-eqz p1, :cond_2
 
-    .line 361
     iget-wide v2, p0, Lcom/netflix/msl/tokens/UserIdToken;->expiration:J
 
     mul-long/2addr v2, v4
@@ -1407,7 +1283,6 @@
 
     if-gtz v2, :cond_1
 
-    .line 364
     :cond_0
     :goto_0
     return v0
@@ -1415,10 +1290,8 @@
     :cond_1
     move v0, v1
 
-    .line 361
     goto :goto_0
 
-    .line 362
     :cond_2
     invoke-virtual {p0}, Lcom/netflix/msl/tokens/UserIdToken;->isVerified()Z
 
@@ -1426,7 +1299,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 363
     iget-wide v2, p0, Lcom/netflix/msl/tokens/UserIdToken;->expiration:J
 
     mul-long/2addr v2, v4
@@ -1448,24 +1320,20 @@
     :cond_3
     move v0, v1
 
-    .line 364
     goto :goto_0
 .end method
 
 .method public isRenewable(Ljava/util/Date;)Z
     .locals 6
 
-    .prologue
     const-wide/16 v4, 0x3e8
 
     const/4 v1, 0x0
 
     const/4 v0, 0x1
 
-    .line 328
     if-eqz p1, :cond_2
 
-    .line 329
     iget-wide v2, p0, Lcom/netflix/msl/tokens/UserIdToken;->renewalWindow:J
 
     mul-long/2addr v2, v4
@@ -1478,7 +1346,6 @@
 
     if-gtz v2, :cond_1
 
-    .line 332
     :cond_0
     :goto_0
     return v0
@@ -1486,10 +1353,8 @@
     :cond_1
     move v0, v1
 
-    .line 329
     goto :goto_0
 
-    .line 330
     :cond_2
     invoke-virtual {p0}, Lcom/netflix/msl/tokens/UserIdToken;->isVerified()Z
 
@@ -1497,7 +1362,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 331
     iget-wide v2, p0, Lcom/netflix/msl/tokens/UserIdToken;->renewalWindow:J
 
     mul-long/2addr v2, v4
@@ -1520,8 +1384,6 @@
 .method public isVerified()Z
     .locals 1
 
-    .prologue
-    .line 300
     iget-boolean v0, p0, Lcom/netflix/msl/tokens/UserIdToken;->verified:Z
 
     return v0
@@ -1530,14 +1392,11 @@
 .method public final toJSONString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 441
     :try_start_0
     new-instance v0, Lcom/netflix/android/org/json/JSONObject;
 
     invoke-direct {v0}, Lcom/netflix/android/org/json/JSONObject;-><init>()V
 
-    .line 442
     const-string/jumbo v1, "tokendata"
 
     iget-object v2, p0, Lcom/netflix/msl/tokens/UserIdToken;->tokendata:[B
@@ -1548,7 +1407,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 443
     const-string/jumbo v1, "signature"
 
     iget-object v2, p0, Lcom/netflix/msl/tokens/UserIdToken;->signature:[B
@@ -1559,7 +1417,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 444
     invoke-virtual {v0}, Lcom/netflix/android/org/json/JSONObject;->toString()Ljava/lang/String;
     :try_end_0
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1568,11 +1425,9 @@
 
     return-object v0
 
-    .line 445
     :catch_0
     move-exception v0
 
-    .line 446
     new-instance v1, Lcom/netflix/msl/MslInternalException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1615,59 +1470,49 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 456
     :try_start_0
     new-instance v0, Lcom/netflix/android/org/json/JSONObject;
 
     invoke-direct {v0}, Lcom/netflix/android/org/json/JSONObject;-><init>()V
 
-    .line 457
     const-string/jumbo v1, "renewalwindow"
 
     iget-wide v2, p0, Lcom/netflix/msl/tokens/UserIdToken;->renewalWindow:J
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;J)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 458
     const-string/jumbo v1, "expiration"
 
     iget-wide v2, p0, Lcom/netflix/msl/tokens/UserIdToken;->expiration:J
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;J)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 459
     const-string/jumbo v1, "mtserialnumber"
 
     iget-wide v2, p0, Lcom/netflix/msl/tokens/UserIdToken;->mtSerialNumber:J
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;J)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 460
     const-string/jumbo v1, "serialnumber"
 
     iget-wide v2, p0, Lcom/netflix/msl/tokens/UserIdToken;->serialNumber:J
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;J)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 461
     const-string/jumbo v1, "userdata"
 
     const-string/jumbo v2, "(redacted)"
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 463
     new-instance v1, Lcom/netflix/android/org/json/JSONObject;
 
     invoke-direct {v1}, Lcom/netflix/android/org/json/JSONObject;-><init>()V
 
-    .line 464
     const-string/jumbo v2, "tokendata"
 
     invoke-virtual {v1, v2, v0}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 465
     const-string/jumbo v0, "signature"
 
     iget-object v2, p0, Lcom/netflix/msl/tokens/UserIdToken;->signature:[B
@@ -1678,7 +1523,6 @@
 
     invoke-virtual {v1, v0, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 466
     invoke-virtual {v1}, Lcom/netflix/android/org/json/JSONObject;->toString()Ljava/lang/String;
     :try_end_0
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1687,11 +1531,9 @@
 
     return-object v0
 
-    .line 467
     :catch_0
     move-exception v0
 
-    .line 468
     new-instance v1, Lcom/netflix/msl/MslInternalException;
 
     new-instance v2, Ljava/lang/StringBuilder;

@@ -18,8 +18,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 725
     invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
 
     return-void
@@ -30,8 +28,6 @@
 .method protected initialValue()Lio/realm/BaseRealm$RealmObjectContext;
     .locals 1
 
-    .prologue
-    .line 728
     new-instance v0, Lio/realm/BaseRealm$RealmObjectContext;
 
     invoke-direct {v0}, Lio/realm/BaseRealm$RealmObjectContext;-><init>()V
@@ -42,8 +38,6 @@
 .method protected bridge synthetic initialValue()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 725
     invoke-virtual {p0}, Lio/realm/BaseRealm$ThreadLocalRealmObjectContext;->initialValue()Lio/realm/BaseRealm$RealmObjectContext;
 
     move-result-object v0

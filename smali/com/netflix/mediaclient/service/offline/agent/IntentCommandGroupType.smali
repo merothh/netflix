@@ -32,12 +32,10 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
     const/4 v3, 0x1
 
-    .line 13
     new-instance v0, Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;
 
     const-string/jumbo v1, "Unknown"
@@ -48,7 +46,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;->Unknown:Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;
 
-    .line 14
     new-instance v0, Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;
 
     const-string/jumbo v1, "DownloadNotification"
@@ -57,7 +54,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;->DownloadNotification:Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;
 
-    .line 11
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;
@@ -83,22 +79,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 20
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 21
     iput p3, p0, Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;->mValue:I
 
-    .line 22
     return-void
 .end method
 
 .method private static getByValue(I)Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;
     .locals 5
 
-    .prologue
-    .line 30
     invoke-static {}, Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;->values()[Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;
 
     move-result-object v2
@@ -114,18 +104,15 @@
 
     aget-object v0, v2, v1
 
-    .line 31
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;->getIntValue()I
 
     move-result v4
 
     if-ne v4, p0, :cond_0
 
-    .line 35
     :goto_1
     return-object v0
 
-    .line 30
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -133,7 +120,6 @@
 
     goto :goto_0
 
-    .line 35
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;->Unknown:Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;
 
@@ -143,8 +129,6 @@
 .method public static getGroupType(Landroid/content/Intent;)Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;
     .locals 2
 
-    .prologue
-    .line 43
     const-string/jumbo v0, "of_intent_group_type"
 
     sget-object v1, Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;->Unknown:Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;
@@ -155,7 +139,6 @@
 
     move-result v0
 
-    .line 44
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;->getByValue(I)Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;
 
     move-result-object v0
@@ -166,8 +149,6 @@
 .method private getIntValue()I
     .locals 1
 
-    .prologue
-    .line 25
     iget v0, p0, Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;->mValue:I
 
     return v0
@@ -176,8 +157,6 @@
 .method public static setIntentGroupType(Landroid/content/Intent;Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;)V
     .locals 2
 
-    .prologue
-    .line 39
     const-string/jumbo v0, "of_intent_group_type"
 
     invoke-direct {p1}, Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;->getIntValue()I
@@ -186,15 +165,12 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 40
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;
     .locals 1
 
-    .prologue
-    .line 11
     const-class v0, Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -209,8 +185,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;
     .locals 1
 
-    .prologue
-    .line 11
     sget-object v0, Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;->$VALUES:[Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/offline/agent/IntentCommandGroupType;->clone()Ljava/lang/Object;

@@ -13,8 +13,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;I)V
     .locals 0
 
-    .prologue
-    .line 271
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$5;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
     iput p2, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$5;->val$finalColumnSize:I
@@ -29,10 +27,8 @@
 .method public getSpanSize(I)I
     .locals 2
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 277
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$5;->this$0:Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;->access$200(Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag;)Landroid/support/v7/widget/RecyclerView;
@@ -53,15 +49,12 @@
 
     move v0, v1
 
-    .line 284
     :goto_0
     return v0
 
-    .line 281
     :cond_0
     if-nez p1, :cond_1
 
-    .line 282
     iget v0, p0, Lcom/netflix/mediaclient/ui/details/RoleDetailsFrag$5;->val$finalColumnSize:I
 
     goto :goto_0
@@ -69,6 +62,5 @@
     :cond_1
     move v0, v1
 
-    .line 284
     goto :goto_0
 .end method

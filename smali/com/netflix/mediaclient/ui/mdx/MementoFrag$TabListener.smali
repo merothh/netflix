@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;)V
     .locals 0
 
-    .prologue
-    .line 462
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$TabListener;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,38 +24,31 @@
 .method private setPagerPositionOnTabSelect(Landroid/support/design/widget/TabLayout$Tab;)V
     .locals 3
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 499
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$TabListener;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
     iget-boolean v0, v0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->resetPager:Z
 
     if-nez v0, :cond_1
 
-    .line 500
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$TabListener;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
     iput-boolean v1, v0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->resetPager:Z
 
-    .line 513
     :cond_0
     :goto_0
     return-void
 
-    .line 504
     :cond_1
     invoke-virtual {p1}, Landroid/support/design/widget/TabLayout$Tab;->getPosition()I
 
     move-result v0
 
-    .line 506
     if-nez v0, :cond_2
 
-    .line 507
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$TabListener;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->access$000(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;)Lcom/viewpagerindicator/android/osp/ViewPager;
@@ -66,18 +57,15 @@
 
     invoke-virtual {v0, v2, v2}, Lcom/viewpagerindicator/android/osp/ViewPager;->setCurrentItem(IZ)V
 
-    .line 508
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$TabListener;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->access$1100(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;I)V
 
     goto :goto_0
 
-    .line 509
     :cond_2
     if-ne v0, v1, :cond_0
 
-    .line 510
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$TabListener;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->access$000(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;)Lcom/viewpagerindicator/android/osp/ViewPager;
@@ -96,7 +84,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/viewpagerindicator/android/osp/ViewPager;->setCurrentItem(IZ)V
 
-    .line 511
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$TabListener;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$TabListener;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
@@ -119,19 +106,14 @@
 .method public onTabReselected(Landroid/support/design/widget/TabLayout$Tab;)V
     .locals 0
 
-    .prologue
-    .line 494
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$TabListener;->setPagerPositionOnTabSelect(Landroid/support/design/widget/TabLayout$Tab;)V
 
-    .line 495
     return-void
 .end method
 
 .method public onTabSelected(Landroid/support/design/widget/TabLayout$Tab;)V
     .locals 4
 
-    .prologue
-    .line 467
     invoke-virtual {p1}, Landroid/support/design/widget/TabLayout$Tab;->getCustomView()Landroid/view/View;
 
     move-result-object v0
@@ -146,7 +128,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 469
     invoke-virtual {p1}, Landroid/support/design/widget/TabLayout$Tab;->getCustomView()Landroid/view/View;
 
     move-result-object v0
@@ -159,15 +140,12 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 470
     sget-object v1, Landroid/graphics/Typeface;->DEFAULT_BOLD:Landroid/graphics/Typeface;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 471
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$TabListener;->setPagerPositionOnTabSelect(Landroid/support/design/widget/TabLayout$Tab;)V
 
-    .line 475
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$TabListener;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->isActivityValid()Z
@@ -176,12 +154,10 @@
 
     if-nez v1, :cond_1
 
-    .line 484
     :cond_0
     :goto_0
     return-void
 
-    .line 479
     :cond_1
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$TabListener;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
@@ -209,7 +185,6 @@
 
     if-nez v1, :cond_2
 
-    .line 480
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$TabListener;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->getActivity()Landroid/app/Activity;
@@ -234,7 +209,6 @@
 
     goto :goto_0
 
-    .line 481
     :cond_2
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$TabListener;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
@@ -262,7 +236,6 @@
 
     if-nez v0, :cond_0
 
-    .line 482
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$TabListener;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->getActivity()Landroid/app/Activity;
@@ -291,8 +264,6 @@
 .method public onTabUnselected(Landroid/support/design/widget/TabLayout$Tab;)V
     .locals 2
 
-    .prologue
-    .line 488
     invoke-virtual {p1}, Landroid/support/design/widget/TabLayout$Tab;->getCustomView()Landroid/view/View;
 
     move-result-object v0
@@ -307,7 +278,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 489
     invoke-virtual {p1}, Landroid/support/design/widget/TabLayout$Tab;->getCustomView()Landroid/view/View;
 
     move-result-object v0
@@ -324,6 +294,5 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 490
     return-void
 .end method

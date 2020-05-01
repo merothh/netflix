@@ -22,13 +22,10 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl;)V
     .locals 8
 
-    .prologue
     const/4 v6, 0x1
 
-    .line 309
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl$PdsEventQueue;->this$0:Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl;
 
-    .line 310
     const-string/jumbo v2, "nf_pds_queue"
 
     const/4 v3, 0x6
@@ -41,7 +38,6 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/netflix/mediaclient/util/EventQueue;-><init>(Ljava/lang/String;IJZZ)V
 
-    .line 311
     return-void
 .end method
 
@@ -59,12 +55,9 @@
         }
     .end annotation
 
-    .prologue
-    .line 315
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl$PdsEventQueue;->this$0:Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl;
 
     invoke-static {v0, p1, p2}, Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl;->access$600(Lcom/netflix/mediaclient/service/logging/PdsLoggingImpl;Ljava/util/List;Z)V
 
-    .line 316
     return-void
 .end method

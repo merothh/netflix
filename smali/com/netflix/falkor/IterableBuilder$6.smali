@@ -24,8 +24,6 @@
 .method constructor <init>(Ljava/util/List;)V
     .locals 0
 
-    .prologue
-    .line 142
     iput-object p1, p0, Lcom/netflix/falkor/IterableBuilder$6;->val$list:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,8 +43,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 144
     new-instance v0, Lcom/netflix/falkor/IterableBuilder$6$1;
 
     invoke-direct {v0, p0}, Lcom/netflix/falkor/IterableBuilder$6$1;-><init>(Lcom/netflix/falkor/IterableBuilder$6;)V

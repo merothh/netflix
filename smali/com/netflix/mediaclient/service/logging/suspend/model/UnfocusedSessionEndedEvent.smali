@@ -13,15 +13,11 @@
 .method public constructor <init>(J)V
     .locals 1
 
-    .prologue
-    .line 15
     const-string/jumbo v0, "unfocused"
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/logging/client/model/SessionEndedEvent;-><init>(Ljava/lang/String;)V
 
-    .line 16
     iput-wide p1, p0, Lcom/netflix/mediaclient/service/logging/suspend/model/UnfocusedSessionEndedEvent;->duration:J
 
-    .line 17
     return-void
 .end method

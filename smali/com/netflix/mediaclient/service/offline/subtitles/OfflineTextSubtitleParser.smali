@@ -14,8 +14,6 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/servicemgr/IPlayer;Lcom/netflix/mediaclient/ui/offline/OfflineSubtitle;Lcom/netflix/mediaclient/service/player/subtitles/text/TextStyle;Lcom/netflix/mediaclient/service/player/subtitles/text/TextStyle;F)V
     .locals 10
 
-    .prologue
-    .line 22
     invoke-virtual {p2}, Lcom/netflix/mediaclient/ui/offline/OfflineSubtitle;->getSubtitleUrl()Lcom/netflix/mediaclient/media/SubtitleUrl;
 
     move-result-object v3
@@ -36,17 +34,14 @@
 
     invoke-direct/range {v1 .. v9}, Lcom/netflix/mediaclient/service/player/subtitles/BaseTextSubtitleParser;-><init>(Lcom/netflix/mediaclient/servicemgr/IPlayer;Lcom/netflix/mediaclient/media/SubtitleUrl;Lcom/netflix/mediaclient/service/player/subtitles/text/TextStyle;Lcom/netflix/mediaclient/service/player/subtitles/text/TextStyle;FLcom/netflix/mediaclient/service/player/subtitles/SubtitleParser$DownloadFailedCallback;J)V
 
-    .line 23
     const-string/jumbo v0, "nf_subtitles"
 
     const-string/jumbo v1, "Create text based offline subtitle parser"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 24
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/subtitles/OfflineTextSubtitleParser;->mOfflineSubtitle:Lcom/netflix/mediaclient/ui/offline/OfflineSubtitle;
 
-    .line 25
     return-void
 .end method
 
@@ -55,8 +50,6 @@
 .method public getCurrentSubtitle()Lcom/netflix/mediaclient/media/Subtitle;
     .locals 1
 
-    .prologue
-    .line 70
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/subtitles/OfflineTextSubtitleParser;->mOfflineSubtitle:Lcom/netflix/mediaclient/ui/offline/OfflineSubtitle;
 
     return-object v0
@@ -65,19 +58,16 @@
 .method protected handleImport()Z
     .locals 8
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 43
     const-string/jumbo v2, "nf_subtitles"
 
     const-string/jumbo v3, "Check if cache exist!"
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     new-instance v2, Ljava/io/File;
 
     iget-object v3, p0, Lcom/netflix/mediaclient/service/offline/subtitles/OfflineTextSubtitleParser;->mOfflineSubtitle:Lcom/netflix/mediaclient/ui/offline/OfflineSubtitle;
@@ -88,7 +78,6 @@
 
     invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 46
     if-eqz v2, :cond_1
 
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
@@ -97,14 +86,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 47
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 48
     const-string/jumbo v3, "nf_subtitles"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -137,7 +124,6 @@
 
     invoke-static {v3, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     :cond_0
     :try_start_0
     invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
@@ -148,7 +134,6 @@
 
     move-result-object v3
 
-    .line 53
     const-string/jumbo v4, "nf_subtitles"
 
     const-string/jumbo v5, "Importing subtitles metadata from offline directory %s :\n%s "
@@ -171,10 +156,8 @@
 
     invoke-static {v4, v5, v6}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 55
     invoke-virtual {p0, v3}, Lcom/netflix/mediaclient/service/offline/subtitles/OfflineTextSubtitleParser;->parse(Ljava/lang/String;)V
 
-    .line 56
     const-string/jumbo v2, "nf_subtitles"
 
     const-string/jumbo v3, "Imported data from offline directory!"
@@ -183,15 +166,12 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 65
     :goto_0
     return v0
 
-    .line 59
     :catch_0
     move-exception v0
 
-    .line 60
     const-string/jumbo v2, "nf_subtitles"
 
     const-string/jumbo v3, "We failed to parse subtitle metadata from cached file"
@@ -201,10 +181,8 @@
     :goto_1
     move v0, v1
 
-    .line 65
     goto :goto_0
 
-    .line 63
     :cond_1
     const-string/jumbo v0, "nf_subtitles"
 
@@ -240,10 +218,7 @@
 .method public load()V
     .locals 0
 
-    .prologue
-    .line 33
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/offline/subtitles/OfflineTextSubtitleParser;->handleImport()Z
 
-    .line 34
     return-void
 .end method

@@ -38,7 +38,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -49,7 +48,6 @@
 
     const/4 v4, 0x0
 
-    .line 28
     new-instance v0, Lcom/netflix/mediaclient/media/PlayerType;
 
     const-string/jumbo v1, "device7"
@@ -62,7 +60,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/media/PlayerType;->device7:Lcom/netflix/mediaclient/media/PlayerType;
 
-    .line 29
     new-instance v0, Lcom/netflix/mediaclient/media/PlayerType;
 
     const-string/jumbo v1, "device8"
@@ -75,7 +72,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/media/PlayerType;->device8:Lcom/netflix/mediaclient/media/PlayerType;
 
-    .line 30
     new-instance v0, Lcom/netflix/mediaclient/media/PlayerType;
 
     const-string/jumbo v1, "device10"
@@ -88,7 +84,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/media/PlayerType;->device10:Lcom/netflix/mediaclient/media/PlayerType;
 
-    .line 31
     new-instance v0, Lcom/netflix/mediaclient/media/PlayerType;
 
     const-string/jumbo v1, "device11"
@@ -101,7 +96,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/media/PlayerType;->device11:Lcom/netflix/mediaclient/media/PlayerType;
 
-    .line 32
     new-instance v0, Lcom/netflix/mediaclient/media/PlayerType;
 
     const-string/jumbo v1, "device12"
@@ -114,7 +108,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/media/PlayerType;->device12:Lcom/netflix/mediaclient/media/PlayerType;
 
-    .line 27
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/netflix/mediaclient/media/PlayerType;
@@ -154,81 +147,63 @@
         }
     .end annotation
 
-    .prologue
-    .line 48
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 49
     iput p3, p0, Lcom/netflix/mediaclient/media/PlayerType;->value:I
 
-    .line 50
     iput-object p4, p0, Lcom/netflix/mediaclient/media/PlayerType;->description:Ljava/lang/String;
 
-    .line 51
     return-void
 .end method
 
 .method public static mapPlayerTypeForLogging(Lcom/netflix/mediaclient/media/PlayerType;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 98
     sget-object v0, Lcom/netflix/mediaclient/media/PlayerType;->device7:Lcom/netflix/mediaclient/media/PlayerType;
 
     if-ne p0, v0, :cond_0
 
-    .line 99
     const-string/jumbo v0, "XAL"
 
-    .line 109
     :goto_0
     return-object v0
 
-    .line 100
     :cond_0
     sget-object v0, Lcom/netflix/mediaclient/media/PlayerType;->device8:Lcom/netflix/mediaclient/media/PlayerType;
 
     if-ne p0, v0, :cond_1
 
-    .line 101
     const-string/jumbo v0, "XALMP"
 
     goto :goto_0
 
-    .line 102
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/media/PlayerType;->device10:Lcom/netflix/mediaclient/media/PlayerType;
 
     if-ne p0, v0, :cond_2
 
-    .line 103
     const-string/jumbo v0, "JPLAYER"
 
     goto :goto_0
 
-    .line 104
     :cond_2
     sget-object v0, Lcom/netflix/mediaclient/media/PlayerType;->device11:Lcom/netflix/mediaclient/media/PlayerType;
 
     if-ne p0, v0, :cond_3
 
-    .line 105
     const-string/jumbo v0, "JPLAYERBASE"
 
     goto :goto_0
 
-    .line 106
     :cond_3
     sget-object v0, Lcom/netflix/mediaclient/media/PlayerType;->device12:Lcom/netflix/mediaclient/media/PlayerType;
 
     if-ne p0, v0, :cond_4
 
-    .line 107
     const-string/jumbo v0, "JPLAYER2"
 
     goto :goto_0
 
-    .line 109
     :cond_4
     const-string/jumbo v0, "N/A"
 
@@ -238,8 +213,6 @@
 .method public static toPlayerType(I)Lcom/netflix/mediaclient/media/PlayerType;
     .locals 2
 
-    .prologue
-    .line 61
     const/4 v0, 0x0
 
     :goto_0
@@ -251,7 +224,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 62
     invoke-static {}, Lcom/netflix/mediaclient/media/PlayerType;->values()[Lcom/netflix/mediaclient/media/PlayerType;
 
     move-result-object v1
@@ -262,24 +234,20 @@
 
     if-ne v1, p0, :cond_0
 
-    .line 63
     invoke-static {}, Lcom/netflix/mediaclient/media/PlayerType;->values()[Lcom/netflix/mediaclient/media/PlayerType;
 
     move-result-object v1
 
     aget-object v0, v1, v0
 
-    .line 67
     :goto_1
     return-object v0
 
-    .line 61
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 67
     :cond_1
     const/4 v0, 0x0
 
@@ -289,8 +257,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/media/PlayerType;
     .locals 1
 
-    .prologue
-    .line 27
     const-class v0, Lcom/netflix/mediaclient/media/PlayerType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -305,8 +271,6 @@
 .method public static values()[Lcom/netflix/mediaclient/media/PlayerType;
     .locals 1
 
-    .prologue
-    .line 27
     sget-object v0, Lcom/netflix/mediaclient/media/PlayerType;->$VALUES:[Lcom/netflix/mediaclient/media/PlayerType;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/media/PlayerType;->clone()Ljava/lang/Object;
@@ -323,8 +287,6 @@
 .method public getDescription()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 85
     iget-object v0, p0, Lcom/netflix/mediaclient/media/PlayerType;->description:Ljava/lang/String;
 
     return-object v0
@@ -333,8 +295,6 @@
 .method public getValue()I
     .locals 1
 
-    .prologue
-    .line 76
     iget v0, p0, Lcom/netflix/mediaclient/media/PlayerType;->value:I
 
     return v0

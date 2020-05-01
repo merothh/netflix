@@ -14,13 +14,10 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 937
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$ClientLoggingWebCallbackImpl;->this$0:Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 941
     return-void
 .end method
 
@@ -29,15 +26,12 @@
 .method public onEventsDelivered(Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 973
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 974
     const-string/jumbo v0, "nf_log"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -60,7 +54,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 983
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$ClientLoggingWebCallbackImpl;->this$0:Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;
 
@@ -70,27 +63,22 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/logging/LoggingAgent;->clearFailureCounter()V
 
-    .line 984
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$ClientLoggingWebCallbackImpl;->this$0:Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;->access$600(Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;Ljava/lang/String;)V
 
-    .line 985
     return-void
 .end method
 
 .method public onEventsDeliveryFailed(Ljava/lang/String;)V
     .locals 5
 
-    .prologue
-    .line 946
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 947
     const-string/jumbo v0, "nf_log"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -113,7 +101,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 950
     :cond_0
     invoke-static {p1}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
@@ -121,11 +108,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 968
     :goto_0
     return-void
 
-    .line 954
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$ClientLoggingWebCallbackImpl;->this$0:Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;
 
@@ -135,7 +120,6 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 962
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$ClientLoggingWebCallbackImpl;->this$0:Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;->access$1000(Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;)Ljava/util/concurrent/ScheduledExecutorService;
@@ -148,7 +132,6 @@
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$ClientLoggingWebCallbackImpl;->this$0:Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;
 
-    .line 967
     invoke-static {v2}, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;->access$900(Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;)Lcom/netflix/mediaclient/service/logging/LoggingAgent;
 
     move-result-object v2
@@ -159,7 +142,6 @@
 
     sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 962
     invoke-interface {v0, v1, v2, v3, v4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
     goto :goto_0

@@ -34,7 +34,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x3
 
     const/4 v5, 0x2
@@ -43,7 +42,6 @@
 
     const/4 v3, 0x0
 
-    .line 8
     new-instance v0, Lcom/netflix/mediaclient/ui/common/PlayLocationType;
 
     const-string/jumbo v1, "STORY_ART"
@@ -54,7 +52,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/common/PlayLocationType;->STORY_ART:Lcom/netflix/mediaclient/ui/common/PlayLocationType;
 
-    .line 9
     new-instance v0, Lcom/netflix/mediaclient/ui/common/PlayLocationType;
 
     const-string/jumbo v1, "EPISODE"
@@ -65,7 +62,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/common/PlayLocationType;->EPISODE:Lcom/netflix/mediaclient/ui/common/PlayLocationType;
 
-    .line 10
     new-instance v0, Lcom/netflix/mediaclient/ui/common/PlayLocationType;
 
     const-string/jumbo v1, "DIRECT_PLAY"
@@ -76,7 +72,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/common/PlayLocationType;->DIRECT_PLAY:Lcom/netflix/mediaclient/ui/common/PlayLocationType;
 
-    .line 11
     new-instance v0, Lcom/netflix/mediaclient/ui/common/PlayLocationType;
 
     const-string/jumbo v1, "UNKNOWN"
@@ -87,7 +82,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/common/PlayLocationType;->UNKNOWN:Lcom/netflix/mediaclient/ui/common/PlayLocationType;
 
-    .line 6
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/netflix/mediaclient/ui/common/PlayLocationType;
@@ -123,22 +117,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 15
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 16
     iput-object p3, p0, Lcom/netflix/mediaclient/ui/common/PlayLocationType;->value:Ljava/lang/String;
 
-    .line 17
     return-void
 .end method
 
 .method public static create(Ljava/lang/String;)Lcom/netflix/mediaclient/ui/common/PlayLocationType;
     .locals 5
 
-    .prologue
-    .line 26
     invoke-static {}, Lcom/netflix/mediaclient/ui/common/PlayLocationType;->values()[Lcom/netflix/mediaclient/ui/common/PlayLocationType;
 
     move-result-object v2
@@ -154,7 +142,6 @@
 
     aget-object v0, v2, v1
 
-    .line 27
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/common/PlayLocationType;->getValue()Ljava/lang/String;
 
     move-result-object v4
@@ -165,11 +152,9 @@
 
     if-eqz v4, :cond_0
 
-    .line 31
     :goto_1
     return-object v0
 
-    .line 26
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -177,7 +162,6 @@
 
     goto :goto_0
 
-    .line 31
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/ui/common/PlayLocationType;->UNKNOWN:Lcom/netflix/mediaclient/ui/common/PlayLocationType;
 
@@ -187,8 +171,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/ui/common/PlayLocationType;
     .locals 1
 
-    .prologue
-    .line 6
     const-class v0, Lcom/netflix/mediaclient/ui/common/PlayLocationType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -203,8 +185,6 @@
 .method public static values()[Lcom/netflix/mediaclient/ui/common/PlayLocationType;
     .locals 1
 
-    .prologue
-    .line 6
     sget-object v0, Lcom/netflix/mediaclient/ui/common/PlayLocationType;->$VALUES:[Lcom/netflix/mediaclient/ui/common/PlayLocationType;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/ui/common/PlayLocationType;->clone()Ljava/lang/Object;
@@ -221,8 +201,6 @@
 .method public getValue()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 39
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/PlayLocationType;->value:Ljava/lang/String;
 
     return-object v0

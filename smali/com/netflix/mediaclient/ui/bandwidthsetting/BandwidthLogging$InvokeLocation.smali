@@ -36,14 +36,12 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x2
 
     const/4 v4, 0x1
 
     const/4 v3, 0x0
 
-    .line 53
     new-instance v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;
 
     const-string/jumbo v1, "FROM_SETTINGS"
@@ -54,7 +52,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;->FROM_SETTINGS:Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;
 
-    .line 54
     new-instance v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;
 
     const-string/jumbo v1, "FROM_PLAYER"
@@ -65,7 +62,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;->FROM_PLAYER:Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;
 
-    .line 55
     new-instance v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;
 
     const-string/jumbo v1, "UNKNOWN"
@@ -76,7 +72,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;->UNKNOWN:Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;
 
-    .line 52
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;
@@ -108,22 +103,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 69
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 70
     iput-object p3, p0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;->value:Ljava/lang/String;
 
-    .line 71
     return-void
 .end method
 
 .method public static create(Ljava/lang/String;)Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;
     .locals 5
 
-    .prologue
-    .line 61
     invoke-static {}, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;->values()[Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;
 
     move-result-object v2
@@ -139,7 +128,6 @@
 
     aget-object v0, v2, v1
 
-    .line 62
     iget-object v4, v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;->value:Ljava/lang/String;
 
     invoke-virtual {v4, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -148,11 +136,9 @@
 
     if-eqz v4, :cond_0
 
-    .line 66
     :goto_1
     return-object v0
 
-    .line 61
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -160,7 +146,6 @@
 
     goto :goto_0
 
-    .line 66
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;->UNKNOWN:Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;
 
@@ -170,8 +155,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;
     .locals 1
 
-    .prologue
-    .line 52
     const-class v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -186,8 +169,6 @@
 .method public static values()[Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;
     .locals 1
 
-    .prologue
-    .line 52
     sget-object v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;->$VALUES:[Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;->clone()Ljava/lang/Object;
@@ -204,8 +185,6 @@
 .method public getValue()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 73
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$InvokeLocation;->value:Ljava/lang/String;
 
     return-object v0

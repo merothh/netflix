@@ -42,20 +42,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter$Memento;->data:Ljava/util/List;
 
-    .line 45
     iput p2, p0, Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter$Memento;->listViewPos:I
 
-    .line 46
     iput-object p3, p0, Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter$Memento;->currTitle:Ljava/lang/String;
 
-    .line 47
     return-void
 .end method
 
@@ -64,8 +58,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 51
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -24,8 +24,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 903
     new-instance v0, Landroid/support/design/widget/TextInputLayout$SavedState$1;
 
     invoke-direct {v0}, Landroid/support/design/widget/TextInputLayout$SavedState$1;-><init>()V
@@ -42,11 +40,8 @@
 .method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 1
 
-    .prologue
-    .line 885
     invoke-direct {p0, p1, p2}, Landroid/support/v4/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
-    .line 886
     sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -57,18 +52,14 @@
 
     iput-object v0, p0, Landroid/support/design/widget/TextInputLayout$SavedState;->error:Ljava/lang/CharSequence;
 
-    .line 888
     return-void
 .end method
 
 .method constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
-    .prologue
-    .line 881
     invoke-direct {p0, p1}, Landroid/support/v4/view/AbsSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 882
     return-void
 .end method
 
@@ -77,8 +68,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 898
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -89,7 +78,6 @@
 
     move-result-object v0
 
-    .line 899
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -130,15 +118,11 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    .prologue
-    .line 892
     invoke-super {p0, p1, p2}, Landroid/support/v4/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 893
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout$SavedState;->error:Ljava/lang/CharSequence;
 
     invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    .line 894
     return-void
 .end method

@@ -13,11 +13,8 @@
 .method public constructor <init>(Ljava/lang/String;[B)V
     .locals 1
 
-    .prologue
-    .line 138
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 139
     invoke-static {p1}, Lcom/google/android/exoplayer/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -26,7 +23,6 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer/drm/DrmInitData$SchemeInitData;->mimeType:Ljava/lang/String;
 
-    .line 140
     invoke-static {p2}, Lcom/google/android/exoplayer/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -35,7 +31,6 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer/drm/DrmInitData$SchemeInitData;->data:[B
 
-    .line 141
     return-void
 .end method
 
@@ -44,31 +39,25 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 145
     instance-of v2, p1, Lcom/google/android/exoplayer/drm/DrmInitData$SchemeInitData;
 
     if-nez v2, :cond_1
 
     move v0, v1
 
-    .line 153
     :cond_0
     :goto_0
     return v0
 
-    .line 148
     :cond_1
     if-eq p1, p0, :cond_0
 
-    .line 152
     check-cast p1, Lcom/google/android/exoplayer/drm/DrmInitData$SchemeInitData;
 
-    .line 153
     iget-object v2, p0, Lcom/google/android/exoplayer/drm/DrmInitData$SchemeInitData;->mimeType:Ljava/lang/String;
 
     iget-object v3, p1, Lcom/google/android/exoplayer/drm/DrmInitData$SchemeInitData;->mimeType:Ljava/lang/String;
@@ -98,8 +87,6 @@
 .method public hashCode()I
     .locals 2
 
-    .prologue
-    .line 158
     iget-object v0, p0, Lcom/google/android/exoplayer/drm/DrmInitData$SchemeInitData;->mimeType:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I

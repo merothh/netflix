@@ -21,18 +21,14 @@
 .method public constructor <init>()V
     .locals 3
 
-    .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/util/TimeFormatterHelper;->formatBuilder:Ljava/lang/StringBuilder;
 
-    .line 27
     new-instance v0, Ljava/util/Formatter;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/util/TimeFormatterHelper;->formatBuilder:Ljava/lang/StringBuilder;
@@ -45,7 +41,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/util/TimeFormatterHelper;->formatter:Ljava/util/Formatter;
 
-    .line 36
     return-void
 .end method
 
@@ -54,8 +49,6 @@
 .method public getStringForMs(I)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 71
     div-int/lit16 v0, p1, 0x3e8
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/util/TimeFormatterHelper;->getStringForSeconds(I)Ljava/lang/String;
@@ -68,22 +61,18 @@
 .method public getStringForSeconds(I)Ljava/lang/String;
     .locals 9
 
-    .prologue
     const/4 v8, 0x2
 
     const/4 v7, 0x1
 
     const/4 v6, 0x0
 
-    .line 45
     iget-object v0, p0, Lcom/netflix/mediaclient/util/TimeFormatterHelper;->formatBuilder:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 47
     if-gez p1, :cond_0
 
-    .line 48
     const-string/jumbo v0, "TimeFormatterHelper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -106,7 +95,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 49
     iget-object v0, p0, Lcom/netflix/mediaclient/util/TimeFormatterHelper;->formatter:Ljava/util/Formatter;
 
     const-string/jumbo v1, "%02d:%02d"
@@ -133,26 +121,20 @@
 
     move-result-object v0
 
-    .line 60
     :goto_0
     return-object v0
 
-    .line 52
     :cond_0
     rem-int/lit8 v0, p1, 0x3c
 
-    .line 53
     div-int/lit8 v1, p1, 0x3c
 
     rem-int/lit8 v1, v1, 0x3c
 
-    .line 54
     div-int/lit16 v2, p1, 0xe10
 
-    .line 56
     if-lez v2, :cond_1
 
-    .line 57
     iget-object v3, p0, Lcom/netflix/mediaclient/util/TimeFormatterHelper;->formatter:Ljava/util/Formatter;
 
     const-string/jumbo v4, "%d:%02d:%02d"
@@ -189,7 +171,6 @@
 
     goto :goto_0
 
-    .line 60
     :cond_1
     iget-object v2, p0, Lcom/netflix/mediaclient/util/TimeFormatterHelper;->formatter:Ljava/util/Formatter;
 

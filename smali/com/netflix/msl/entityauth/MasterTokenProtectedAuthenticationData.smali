@@ -25,13 +25,10 @@
 .method public constructor <init>(Lcom/netflix/msl/util/MslContext;Lcom/netflix/android/org/json/JSONObject;)V
     .locals 5
 
-    .prologue
-    .line 113
     sget-object v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->MT_PROTECTED:Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
     invoke-direct {p0, v0}, Lcom/netflix/msl/entityauth/EntityAuthenticationData;-><init>(Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;)V
 
-    .line 118
     :try_start_0
     new-instance v0, Lcom/netflix/msl/tokens/MasterToken;
 
@@ -48,7 +45,6 @@
     .catch Lcom/netflix/msl/MslException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 123
     :try_start_1
     const-string/jumbo v0, "authdata"
 
@@ -65,7 +61,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_3
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 128
     :try_start_2
     const-string/jumbo v0, "signature"
 
@@ -82,7 +77,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_4
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 139
     :try_start_3
     invoke-virtual {p1}, Lcom/netflix/msl/util/MslContext;->getMslStore()Lcom/netflix/msl/util/MslStore;
 
@@ -96,10 +90,8 @@
 
     move-result-object v0
 
-    .line 140
     if-eqz v0, :cond_0
 
-    .line 150
     :goto_0
     :try_start_4
     iget-object v1, p0, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;->ciphertext:[B
@@ -112,7 +104,6 @@
 
     if-nez v1, :cond_1
 
-    .line 151
     new-instance v0, Lcom/netflix/msl/MslEntityAuthException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->ENTITYAUTH_VERIFICATION_FAILED:Lcom/netflix/msl/MslError;
@@ -145,11 +136,9 @@
     :try_end_4
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 155
     :catch_0
     move-exception v0
 
-    .line 156
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_PARSE_ERROR:Lcom/netflix/msl/MslError;
@@ -180,11 +169,9 @@
 
     throw v1
 
-    .line 119
     :catch_1
     move-exception v0
 
-    .line 120
     :try_start_5
     new-instance v1, Lcom/netflix/msl/MslEntityAuthException;
 
@@ -218,11 +205,9 @@
     :try_end_5
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_5 .. :try_end_5} :catch_2
 
-    .line 132
     :catch_2
     move-exception v0
 
-    .line 133
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_PARSE_ERROR:Lcom/netflix/msl/MslError;
@@ -253,11 +238,9 @@
 
     throw v1
 
-    .line 124
     :catch_3
     move-exception v0
 
-    .line 125
     :try_start_6
     new-instance v1, Lcom/netflix/msl/MslEntityAuthException;
 
@@ -289,11 +272,9 @@
 
     throw v1
 
-    .line 129
     :catch_4
     move-exception v0
 
-    .line 130
     new-instance v1, Lcom/netflix/msl/MslEntityAuthException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->ENTITYAUTH_SIGNATURE_INVALID:Lcom/netflix/msl/MslError;
@@ -326,7 +307,6 @@
     :try_end_6
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_6 .. :try_end_6} :catch_2
 
-    .line 143
     :cond_0
     :try_start_7
     new-instance v0, Lcom/netflix/msl/crypto/SessionCryptoContext;
@@ -339,11 +319,9 @@
 
     goto/16 :goto_0
 
-    .line 144
     :catch_5
     move-exception v0
 
-    .line 145
     new-instance v1, Lcom/netflix/msl/MslEntityAuthException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->ENTITYAUTH_MASTERTOKEN_NOT_DECRYPTED:Lcom/netflix/msl/MslError;
@@ -352,7 +330,6 @@
 
     throw v1
 
-    .line 152
     :cond_1
     :try_start_8
     iget-object v1, p0, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;->ciphertext:[B
@@ -361,7 +338,6 @@
 
     move-result-object v0
 
-    .line 153
     new-instance v1, Lcom/netflix/android/org/json/JSONObject;
 
     new-instance v2, Ljava/lang/String;
@@ -372,7 +348,6 @@
 
     invoke-direct {v1, v2}, Lcom/netflix/android/org/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 154
     invoke-static {p1, v1}, Lcom/netflix/msl/entityauth/EntityAuthenticationData;->create(Lcom/netflix/msl/util/MslContext;Lcom/netflix/android/org/json/JSONObject;)Lcom/netflix/msl/entityauth/EntityAuthenticationData;
 
     move-result-object v0
@@ -381,26 +356,20 @@
     :try_end_8
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_8 .. :try_end_8} :catch_0
 
-    .line 158
     return-void
 .end method
 
 .method public constructor <init>(Lcom/netflix/msl/util/MslContext;Lcom/netflix/msl/tokens/MasterToken;Lcom/netflix/msl/entityauth/EntityAuthenticationData;)V
     .locals 3
 
-    .prologue
-    .line 74
     sget-object v0, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->MT_PROTECTED:Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
     invoke-direct {p0, v0}, Lcom/netflix/msl/entityauth/EntityAuthenticationData;-><init>(Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;)V
 
-    .line 76
     iput-object p2, p0, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;->masterToken:Lcom/netflix/msl/tokens/MasterToken;
 
-    .line 77
     iput-object p3, p0, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;->authdata:Lcom/netflix/msl/entityauth/EntityAuthenticationData;
 
-    .line 82
     :try_start_0
     invoke-virtual {p1}, Lcom/netflix/msl/util/MslContext;->getMslStore()Lcom/netflix/msl/util/MslStore;
 
@@ -412,10 +381,8 @@
 
     move-result-object v0
 
-    .line 83
     if-eqz v0, :cond_0
 
-    .line 92
     :goto_0
     invoke-virtual {p3}, Lcom/netflix/msl/entityauth/EntityAuthenticationData;->toJSONString()Ljava/lang/String;
 
@@ -427,14 +394,12 @@
 
     move-result-object v1
 
-    .line 93
     invoke-interface {v0, v1}, Lcom/netflix/msl/crypto/ICryptoContext;->encrypt([B)[B
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;->ciphertext:[B
 
-    .line 94
     iget-object v1, p0, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;->ciphertext:[B
 
     invoke-interface {v0, v1}, Lcom/netflix/msl/crypto/ICryptoContext;->sign([B)[B
@@ -443,10 +408,8 @@
 
     iput-object v0, p0, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;->signature:[B
 
-    .line 95
     return-void
 
-    .line 86
     :cond_0
     :try_start_1
     new-instance v0, Lcom/netflix/msl/crypto/SessionCryptoContext;
@@ -457,11 +420,9 @@
 
     goto :goto_0
 
-    .line 87
     :catch_0
     move-exception v0
 
-    .line 88
     new-instance v1, Lcom/netflix/msl/MslEntityAuthException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->ENTITYAUTH_MASTERTOKEN_NOT_DECRYPTED:Lcom/netflix/msl/MslError;
@@ -476,19 +437,15 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 198
     if-ne p1, p0, :cond_0
 
-    .line 203
     :goto_0
     return v1
 
-    .line 199
     :cond_0
     instance-of v0, p1, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;
 
@@ -501,10 +458,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 200
     check-cast v0, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;
 
-    .line 201
     invoke-super {p0, p1}, Lcom/netflix/msl/entityauth/EntityAuthenticationData;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -515,7 +470,6 @@
 
     iget-object v4, v0, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;->masterToken:Lcom/netflix/msl/tokens/MasterToken;
 
-    .line 202
     invoke-virtual {v3, v4}, Lcom/netflix/msl/tokens/MasterToken;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -526,7 +480,6 @@
 
     iget-object v0, v0, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;->authdata:Lcom/netflix/msl/entityauth/EntityAuthenticationData;
 
-    .line 203
     invoke-virtual {v3, v0}, Lcom/netflix/msl/entityauth/EntityAuthenticationData;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -549,21 +502,17 @@
 .method public getAuthData()Lcom/netflix/android/org/json/JSONObject;
     .locals 4
 
-    .prologue
-    .line 183
     :try_start_0
     new-instance v0, Lcom/netflix/android/org/json/JSONObject;
 
     invoke-direct {v0}, Lcom/netflix/android/org/json/JSONObject;-><init>()V
 
-    .line 184
     const-string/jumbo v1, "mastertoken"
 
     iget-object v2, p0, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;->masterToken:Lcom/netflix/msl/tokens/MasterToken;
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 185
     const-string/jumbo v1, "authdata"
 
     iget-object v2, p0, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;->ciphertext:[B
@@ -574,7 +523,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 186
     const-string/jumbo v1, "signature"
 
     iget-object v2, p0, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;->signature:[B
@@ -585,7 +533,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 187
     new-instance v1, Lcom/netflix/android/org/json/JSONObject;
 
     invoke-virtual {v0}, Lcom/netflix/android/org/json/JSONObject;->toString()Ljava/lang/String;
@@ -598,11 +545,9 @@
 
     return-object v1
 
-    .line 188
     :catch_0
     move-exception v0
 
-    .line 189
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_ENCODE_ERROR:Lcom/netflix/msl/MslError;
@@ -617,8 +562,6 @@
 .method public getEncapsulatedAuthdata()Lcom/netflix/msl/entityauth/EntityAuthenticationData;
     .locals 1
 
-    .prologue
-    .line 174
     iget-object v0, p0, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;->authdata:Lcom/netflix/msl/entityauth/EntityAuthenticationData;
 
     return-object v0
@@ -627,8 +570,6 @@
 .method public getIdentity()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 165
     iget-object v0, p0, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;->authdata:Lcom/netflix/msl/entityauth/EntityAuthenticationData;
 
     invoke-virtual {v0}, Lcom/netflix/msl/entityauth/EntityAuthenticationData;->getIdentity()Ljava/lang/String;
@@ -641,15 +582,12 @@
 .method public hashCode()I
     .locals 2
 
-    .prologue
-    .line 211
     invoke-super {p0}, Lcom/netflix/msl/entityauth/EntityAuthenticationData;->hashCode()I
 
     move-result v0
 
     iget-object v1, p0, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;->masterToken:Lcom/netflix/msl/tokens/MasterToken;
 
-    .line 212
     invoke-virtual {v1}, Lcom/netflix/msl/tokens/MasterToken;->hashCode()I
 
     move-result v1
@@ -658,7 +596,6 @@
 
     iget-object v1, p0, Lcom/netflix/msl/entityauth/MasterTokenProtectedAuthenticationData;->authdata:Lcom/netflix/msl/entityauth/EntityAuthenticationData;
 
-    .line 213
     invoke-virtual {v1}, Lcom/netflix/msl/entityauth/EntityAuthenticationData;->hashCode()I
 
     move-result v1

@@ -23,16 +23,12 @@
 .method private constructor <init>(Landroid/content/Context;Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
     .locals 5
 
-    .prologue
     const/4 v4, -0x1
 
-    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 73
     iput-object p2, p0, Lcom/netflix/android/tooltips/Tooltip;->mParent:Landroid/support/design/widget/CoordinatorLayout;
 
-    .line 74
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
@@ -51,7 +47,6 @@
 
     iput-object v0, p0, Lcom/netflix/android/tooltips/Tooltip;->mTooltipLayout:Lcom/netflix/android/tooltips/TooltipLayout;
 
-    .line 75
     iget-object v0, p0, Lcom/netflix/android/tooltips/Tooltip;->mTooltipLayout:Lcom/netflix/android/tooltips/TooltipLayout;
 
     new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
@@ -60,7 +55,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/android/tooltips/TooltipLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 76
     iget-object v0, p0, Lcom/netflix/android/tooltips/Tooltip;->mTooltipLayout:Lcom/netflix/android/tooltips/TooltipLayout;
 
     new-instance v1, Lcom/netflix/android/tooltips/Tooltip$1;
@@ -69,38 +63,30 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/android/tooltips/TooltipLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 82
     iget-object v0, p0, Lcom/netflix/android/tooltips/Tooltip;->mTooltipLayout:Lcom/netflix/android/tooltips/TooltipLayout;
 
     invoke-virtual {v0, p4}, Lcom/netflix/android/tooltips/TooltipLayout;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 83
     iget-object v0, p0, Lcom/netflix/android/tooltips/Tooltip;->mTooltipLayout:Lcom/netflix/android/tooltips/TooltipLayout;
 
     invoke-virtual {v0, p5}, Lcom/netflix/android/tooltips/TooltipLayout;->setDetail(Ljava/lang/CharSequence;)V
 
-    .line 84
     new-instance v0, Lcom/netflix/android/tooltips/Tooltip$2;
 
     invoke-direct {v0, p0, p3}, Lcom/netflix/android/tooltips/Tooltip$2;-><init>(Lcom/netflix/android/tooltips/Tooltip;Landroid/view/View;)V
 
-    .line 92
     invoke-virtual {p3, v0}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    .line 94
     iget-object v0, p0, Lcom/netflix/android/tooltips/Tooltip;->mTooltipLayout:Lcom/netflix/android/tooltips/TooltipLayout;
 
     invoke-virtual {v0, p3}, Lcom/netflix/android/tooltips/TooltipLayout;->setTarget(Landroid/view/View;)V
 
-    .line 95
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/netflix/android/tooltips/Tooltip;)Landroid/support/design/widget/CoordinatorLayout;
     .locals 1
 
-    .prologue
-    .line 24
     iget-object v0, p0, Lcom/netflix/android/tooltips/Tooltip;->mParent:Landroid/support/design/widget/CoordinatorLayout;
 
     return-object v0
@@ -109,8 +95,6 @@
 .method static synthetic access$100(Lcom/netflix/android/tooltips/Tooltip;)Lcom/netflix/android/tooltips/TooltipLayout;
     .locals 1
 
-    .prologue
-    .line 24
     iget-object v0, p0, Lcom/netflix/android/tooltips/Tooltip;->mTooltipLayout:Lcom/netflix/android/tooltips/TooltipLayout;
 
     return-object v0
@@ -119,8 +103,6 @@
 .method static synthetic access$200(Lcom/netflix/android/tooltips/Tooltip;)Lcom/netflix/android/tooltips/Tooltip$Callback;
     .locals 1
 
-    .prologue
-    .line 24
     iget-object v0, p0, Lcom/netflix/android/tooltips/Tooltip;->mCallback:Lcom/netflix/android/tooltips/Tooltip$Callback;
 
     return-object v0
@@ -129,8 +111,6 @@
 .method static synthetic access$300(Lcom/netflix/android/tooltips/Tooltip;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 24
     iget-object v0, p0, Lcom/netflix/android/tooltips/Tooltip;->mKey:Ljava/lang/String;
 
     return-object v0
@@ -139,8 +119,6 @@
 .method static synthetic access$400(Lcom/netflix/android/tooltips/Tooltip;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 24
     invoke-direct {p0}, Lcom/netflix/android/tooltips/Tooltip;->getPrefKey()Ljava/lang/String;
 
     move-result-object v0
@@ -151,8 +129,6 @@
 .method static synthetic access$500(Lcom/netflix/android/tooltips/Tooltip;)Landroid/content/SharedPreferences;
     .locals 1
 
-    .prologue
-    .line 24
     invoke-direct {p0}, Lcom/netflix/android/tooltips/Tooltip;->getPrefs()Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -163,8 +139,6 @@
 .method public static clearPrefs(Landroid/content/Context;)V
     .locals 2
 
-    .prologue
-    .line 60
     const-string/jumbo v0, "com.netflix.android.tooltips"
 
     const/4 v1, 0x0
@@ -183,15 +157,12 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 61
     return-void
 .end method
 
 .method private getPrefKey()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 149
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -218,8 +189,6 @@
 .method private getPrefs()Landroid/content/SharedPreferences;
     .locals 3
 
-    .prologue
-    .line 144
     iget-object v0, p0, Lcom/netflix/android/tooltips/Tooltip;->mParent:Landroid/support/design/widget/CoordinatorLayout;
 
     invoke-virtual {v0}, Landroid/support/design/widget/CoordinatorLayout;->getContext()Landroid/content/Context;
@@ -240,10 +209,8 @@
 .method public static isConsumed(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 140
     const-string/jumbo v0, "com.netflix.android.tooltips"
 
     invoke-virtual {p0, v0, v3}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
@@ -278,8 +245,6 @@
 .method public static makeTooltip(Landroid/content/Context;Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;II)Lcom/netflix/android/tooltips/Tooltip;
     .locals 6
 
-    .prologue
-    .line 39
     new-instance v0, Lcom/netflix/android/tooltips/Tooltip;
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -320,8 +285,6 @@
 .method public static makeTooltip(Landroid/content/Context;Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Lcom/netflix/android/tooltips/Tooltip;
     .locals 6
 
-    .prologue
-    .line 52
     new-instance v0, Lcom/netflix/android/tooltips/Tooltip;
 
     move-object v1, p0
@@ -344,22 +307,18 @@
 .method public dismiss()V
     .locals 2
 
-    .prologue
-    .line 153
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/Tooltip;->isConsumed()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 154
     iget-object v0, p0, Lcom/netflix/android/tooltips/Tooltip;->mTooltipLayout:Lcom/netflix/android/tooltips/TooltipLayout;
 
     iget-object v1, p0, Lcom/netflix/android/tooltips/Tooltip;->mParent:Landroid/support/design/widget/CoordinatorLayout;
 
     invoke-virtual {v0, v1}, Lcom/netflix/android/tooltips/TooltipLayout;->dismiss(Landroid/view/ViewGroup;)V
 
-    .line 156
     :cond_0
     return-void
 .end method
@@ -367,8 +326,6 @@
 .method public getTarget()Landroid/view/View;
     .locals 1
 
-    .prologue
-    .line 98
     iget-object v0, p0, Lcom/netflix/android/tooltips/Tooltip;->mTooltipLayout:Lcom/netflix/android/tooltips/TooltipLayout;
 
     invoke-virtual {v0}, Lcom/netflix/android/tooltips/TooltipLayout;->getTarget()Landroid/view/View;
@@ -381,10 +338,8 @@
 .method public isConsumed()Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 136
     iget-object v1, p0, Lcom/netflix/android/tooltips/Tooltip;->mKey:Ljava/lang/String;
 
     if-eqz v1, :cond_0
@@ -412,8 +367,6 @@
 .method public isShown()Z
     .locals 1
 
-    .prologue
-    .line 159
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/Tooltip;->isConsumed()Z
 
     move-result v0
@@ -442,57 +395,44 @@
 .method public setCallback(Lcom/netflix/android/tooltips/Tooltip$Callback;)V
     .locals 0
 
-    .prologue
-    .line 167
     iput-object p1, p0, Lcom/netflix/android/tooltips/Tooltip;->mCallback:Lcom/netflix/android/tooltips/Tooltip$Callback;
 
-    .line 168
     return-void
 .end method
 
 .method public setOnClickListener(Landroid/view/View$OnClickListener;)V
     .locals 1
 
-    .prologue
-    .line 102
     iget-object v0, p0, Lcom/netflix/android/tooltips/Tooltip;->mTooltipLayout:Lcom/netflix/android/tooltips/TooltipLayout;
 
     invoke-virtual {v0, p1}, Lcom/netflix/android/tooltips/TooltipLayout;->setUserOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 103
     return-void
 .end method
 
 .method public setOneTime(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 163
     iput-object p1, p0, Lcom/netflix/android/tooltips/Tooltip;->mKey:Ljava/lang/String;
 
-    .line 164
     return-void
 .end method
 
 .method public show()V
     .locals 2
 
-    .prologue
-    .line 106
     invoke-virtual {p0}, Lcom/netflix/android/tooltips/Tooltip;->isConsumed()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 107
     iget-object v0, p0, Lcom/netflix/android/tooltips/Tooltip;->mTooltipLayout:Lcom/netflix/android/tooltips/TooltipLayout;
 
     iget-object v1, p0, Lcom/netflix/android/tooltips/Tooltip;->mParent:Landroid/support/design/widget/CoordinatorLayout;
 
     invoke-virtual {v0, v1}, Lcom/netflix/android/tooltips/TooltipLayout;->show(Landroid/view/ViewGroup;)V
 
-    .line 108
     iget-object v0, p0, Lcom/netflix/android/tooltips/Tooltip;->mTooltipLayout:Lcom/netflix/android/tooltips/TooltipLayout;
 
     new-instance v1, Lcom/netflix/android/tooltips/Tooltip$3;
@@ -501,7 +441,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/android/tooltips/TooltipLayout;->setCallback(Lcom/netflix/android/tooltips/Tooltip$Callback;)V
 
-    .line 133
     :cond_0
     return-void
 .end method

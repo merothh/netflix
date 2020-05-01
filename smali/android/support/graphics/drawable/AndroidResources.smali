@@ -21,10 +21,8 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x2
 
-    .line 20
     const/16 v0, 0x9
 
     new-array v0, v0, [I
@@ -33,7 +31,6 @@
 
     sput-object v0, Landroid/support/graphics/drawable/AndroidResources;->styleable_VectorDrawableTypeArray:[I
 
-    .line 34
     const/16 v0, 0x8
 
     new-array v0, v0, [I
@@ -42,7 +39,6 @@
 
     sput-object v0, Landroid/support/graphics/drawable/AndroidResources;->styleable_VectorDrawableGroup:[I
 
-    .line 47
     const/16 v0, 0xd
 
     new-array v0, v0, [I
@@ -51,14 +47,12 @@
 
     sput-object v0, Landroid/support/graphics/drawable/AndroidResources;->styleable_VectorDrawablePath:[I
 
-    .line 67
     new-array v0, v3, [I
 
     fill-array-data v0, :array_3
 
     sput-object v0, Landroid/support/graphics/drawable/AndroidResources;->styleable_VectorDrawableClipPath:[I
 
-    .line 73
     const/4 v0, 0x1
 
     new-array v0, v0, [I
@@ -71,7 +65,6 @@
 
     sput-object v0, Landroid/support/graphics/drawable/AndroidResources;->styleable_AnimatedVectorDrawable:[I
 
-    .line 77
     new-array v0, v3, [I
 
     fill-array-data v0, :array_4
@@ -80,7 +73,6 @@
 
     return-void
 
-    .line 20
     :array_0
     .array-data 4
         0x1010003
@@ -94,7 +86,6 @@
         0x1010403
     .end array-data
 
-    .line 34
     :array_1
     .array-data 4
         0x1010003
@@ -107,7 +98,6 @@
         0x101045b
     .end array-data
 
-    .line 47
     :array_2
     .array-data 4
         0x1010003
@@ -125,14 +115,12 @@
         0x10104cc
     .end array-data
 
-    .line 67
     :array_3
     .array-data 4
         0x1010003
         0x1010405
     .end array-data
 
-    .line 77
     :array_4
     .array-data 4
         0x1010003

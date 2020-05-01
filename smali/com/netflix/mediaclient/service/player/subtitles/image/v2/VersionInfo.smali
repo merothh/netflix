@@ -15,11 +15,8 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/player/subtitles/image/v2/BoxHeader;Ljava/io/DataInputStream;)V
     .locals 2
 
-    .prologue
-    .line 19
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/FullBox;-><init>(Lcom/netflix/mediaclient/service/player/subtitles/image/v2/BoxHeader;Ljava/io/DataInputStream;)V
 
-    .line 21
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/VersionInfo;->getBoxHeader()Lcom/netflix/mediaclient/service/player/subtitles/image/v2/BoxHeader;
 
     move-result-object v0
@@ -30,7 +27,6 @@
 
     if-nez v0, :cond_0
 
-    .line 22
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "VersionInfo is supposed to be extended type!"
@@ -39,7 +35,6 @@
 
     throw v0
 
-    .line 25
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/VersionInfo;->getBoxHeader()Lcom/netflix/mediaclient/service/player/subtitles/image/v2/BoxHeader;
 
@@ -53,7 +48,6 @@
 
     if-nez v0, :cond_1
 
-    .line 26
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "VersionInfo does not have expected user type value!"
@@ -62,7 +56,6 @@
 
     throw v0
 
-    .line 30
     :cond_1
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/VersionInfo;->getBoxHeader()Lcom/netflix/mediaclient/service/player/subtitles/image/v2/BoxHeader;
 
@@ -72,32 +65,26 @@
 
     move-result-wide v0
 
-    .line 31
     long-to-int v0, v0
 
     invoke-static {p2, v0}, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/ParserUtils;->readByteArray(Ljava/io/DataInputStream;I)[B
 
     move-result-object v0
 
-    .line 32
     invoke-static {v0}, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/ParserUtils;->decode([B)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/VersionInfo;->builtWithLibraryVersion:Ljava/lang/String;
 
-    .line 33
     return-void
 .end method
 
 .method public static isThisBox(Lcom/netflix/mediaclient/service/player/subtitles/image/v2/BoxHeader;)Z
     .locals 2
 
-    .prologue
-    .line 43
     if-nez p0, :cond_0
 
-    .line 44
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "Header is null!"
@@ -106,7 +93,6 @@
 
     throw v0
 
-    .line 47
     :cond_0
     const-string/jumbo v0, "com.netflix.vinf"
 
@@ -126,8 +112,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 52
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -156,7 +140,6 @@
 
     move-result-object v0
 
-    .line 54
     invoke-super {p0}, Lcom/netflix/mediaclient/service/player/subtitles/image/v2/FullBox;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -169,6 +152,5 @@
 
     move-result-object v0
 
-    .line 52
     return-object v0
 .end method

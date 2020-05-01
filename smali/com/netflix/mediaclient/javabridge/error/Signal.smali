@@ -92,7 +92,6 @@
 .method static constructor <clinit>()V
     .locals 10
 
-    .prologue
     const/4 v9, 0x5
 
     const/4 v8, 0x4
@@ -103,7 +102,6 @@
 
     const/4 v5, 0x1
 
-    .line 17
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGHUP"
@@ -116,7 +114,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGHUP:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 18
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGINT"
@@ -127,7 +124,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGINT:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 19
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGQUIT"
@@ -138,7 +134,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGQUIT:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 20
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGILL"
@@ -149,7 +144,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGILL:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 21
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGTRAP"
@@ -160,7 +154,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGTRAP:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 22
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGABRT"
@@ -173,7 +166,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGABRT:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 23
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGBUS"
@@ -188,7 +180,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGBUS:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 24
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGFPE"
@@ -203,7 +194,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGFPE:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 25
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGKILL"
@@ -218,7 +208,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGKILL:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 26
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGUSR1"
@@ -233,7 +222,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGUSR1:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 27
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGSEGV"
@@ -248,7 +236,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGSEGV:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 28
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGUSR2"
@@ -263,7 +250,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGUSR2:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 29
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGPIPE"
@@ -278,7 +264,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGPIPE:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 30
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGALRM"
@@ -293,7 +278,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGALRM:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 31
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGTERM"
@@ -308,7 +292,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGTERM:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 32
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGSTKFLT"
@@ -323,7 +306,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGSTKFLT:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 33
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGCHLD"
@@ -338,7 +320,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGCHLD:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 34
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGCONT"
@@ -353,7 +334,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGCONT:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 35
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGSTOP"
@@ -368,7 +348,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGSTOP:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 36
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGTSTP"
@@ -383,7 +362,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGTSTP:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 37
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGTTIN"
@@ -398,7 +376,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGTTIN:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 38
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGTTOU"
@@ -413,7 +390,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGTTOU:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 39
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGURG"
@@ -428,7 +404,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGURG:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 40
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGXCPU"
@@ -443,7 +418,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGXCPU:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 41
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGXFSZ"
@@ -458,7 +432,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGXFSZ:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 42
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGVTALRM"
@@ -473,7 +446,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGVTALRM:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 43
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGPROF"
@@ -488,7 +460,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGPROF:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 44
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGWINCH"
@@ -503,7 +474,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGWINCH:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 45
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGIO"
@@ -518,7 +488,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGIO:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 46
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGPWR"
@@ -533,7 +502,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGPWR:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 47
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGSYS"
@@ -548,7 +516,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGSYS:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 48
     new-instance v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     const-string/jumbo v1, "SIGRTMIN"
@@ -563,7 +530,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->SIGRTMIN:Lcom/netflix/mediaclient/javabridge/error/Signal;
 
-    .line 15
     const/16 v0, 0x20
 
     new-array v0, v0, [Lcom/netflix/mediaclient/javabridge/error/Signal;
@@ -765,25 +731,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 56
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 57
     iput p3, p0, Lcom/netflix/mediaclient/javabridge/error/Signal;->value:I
 
-    .line 58
     iput-object p4, p0, Lcom/netflix/mediaclient/javabridge/error/Signal;->description:Ljava/lang/String;
 
-    .line 59
     return-void
 .end method
 
 .method public static toSignal(I)Lcom/netflix/mediaclient/javabridge/error/Signal;
     .locals 2
 
-    .prologue
-    .line 97
     const/4 v0, 0x0
 
     :goto_0
@@ -795,7 +754,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 98
     invoke-static {}, Lcom/netflix/mediaclient/javabridge/error/Signal;->values()[Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     move-result-object v1
@@ -806,24 +764,20 @@
 
     if-ne v1, p0, :cond_0
 
-    .line 99
     invoke-static {}, Lcom/netflix/mediaclient/javabridge/error/Signal;->values()[Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     move-result-object v1
 
     aget-object v0, v1, v0
 
-    .line 103
     :goto_1
     return-object v0
 
-    .line 97
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 103
     :cond_1
     const/4 v0, 0x0
 
@@ -833,8 +787,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/javabridge/error/Signal;
     .locals 1
 
-    .prologue
-    .line 15
     const-class v0, Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -849,8 +801,6 @@
 .method public static values()[Lcom/netflix/mediaclient/javabridge/error/Signal;
     .locals 1
 
-    .prologue
-    .line 15
     sget-object v0, Lcom/netflix/mediaclient/javabridge/error/Signal;->$VALUES:[Lcom/netflix/mediaclient/javabridge/error/Signal;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/javabridge/error/Signal;->clone()Ljava/lang/Object;
@@ -867,8 +817,6 @@
 .method public getDescription()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 86
     iget-object v0, p0, Lcom/netflix/mediaclient/javabridge/error/Signal;->description:Ljava/lang/String;
 
     return-object v0
@@ -877,8 +825,6 @@
 .method public getNumber()I
     .locals 1
 
-    .prologue
-    .line 77
     iget v0, p0, Lcom/netflix/mediaclient/javabridge/error/Signal;->value:I
 
     return v0

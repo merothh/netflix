@@ -17,8 +17,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 13
     new-instance v0, Lcom/netflix/msl/userauth/NetflixUserAuthenticationScheme;
 
     const-string/jumbo v1, "NETFLIXID"
@@ -27,7 +25,6 @@
 
     sput-object v0, Lcom/netflix/msl/userauth/NetflixUserAuthenticationScheme;->NETFLIXID:Lcom/netflix/msl/userauth/UserAuthenticationScheme;
 
-    .line 15
     new-instance v0, Lcom/netflix/msl/userauth/NetflixUserAuthenticationScheme;
 
     const-string/jumbo v1, "SSO"
@@ -36,7 +33,6 @@
 
     sput-object v0, Lcom/netflix/msl/userauth/NetflixUserAuthenticationScheme;->SSO:Lcom/netflix/msl/userauth/UserAuthenticationScheme;
 
-    .line 17
     new-instance v0, Lcom/netflix/msl/userauth/NetflixUserAuthenticationScheme;
 
     const-string/jumbo v1, "SWITCH_PROFILE"
@@ -45,7 +41,6 @@
 
     sput-object v0, Lcom/netflix/msl/userauth/NetflixUserAuthenticationScheme;->SWITCH_PROFILE:Lcom/netflix/msl/userauth/UserAuthenticationScheme;
 
-    .line 19
     new-instance v0, Lcom/netflix/msl/userauth/NetflixUserAuthenticationScheme;
 
     const-string/jumbo v1, "MDX"
@@ -60,10 +55,7 @@
 .method protected constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 27
     invoke-direct {p0, p1}, Lcom/netflix/msl/userauth/UserAuthenticationScheme;-><init>(Ljava/lang/String;)V
 
-    .line 28
     return-void
 .end method

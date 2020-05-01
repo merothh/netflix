@@ -16,19 +16,16 @@
         }
     .end annotation
 
-    .prologue
     const/4 v9, 0x1
 
     const/4 v8, 0x0
 
     const/4 v0, 0x0
 
-    .line 102
     new-instance v1, Lcom/google/android/exoplayer/util/ParsableByteArray;
 
     invoke-direct {v1, p0}, Lcom/google/android/exoplayer/util/ParsableByteArray;-><init>([B)V
 
-    .line 103
     invoke-virtual {v1}, Lcom/google/android/exoplayer/util/ParsableByteArray;->limit()I
 
     move-result v2
@@ -37,21 +34,17 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 135
     :cond_0
     :goto_0
     return-object v0
 
-    .line 107
     :cond_1
     invoke-virtual {v1, v8}, Lcom/google/android/exoplayer/util/ParsableByteArray;->setPosition(I)V
 
-    .line 108
     invoke-virtual {v1}, Lcom/google/android/exoplayer/util/ParsableByteArray;->readInt()I
 
     move-result v2
 
-    .line 109
     invoke-virtual {v1}, Lcom/google/android/exoplayer/util/ParsableByteArray;->bytesLeft()I
 
     move-result v3
@@ -60,17 +53,14 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 113
     invoke-virtual {v1}, Lcom/google/android/exoplayer/util/ParsableByteArray;->readInt()I
 
     move-result v2
 
-    .line 114
     sget v3, Lcom/google/android/exoplayer/extractor/mp4/Atom;->TYPE_pssh:I
 
     if-ne v2, v3, :cond_0
 
-    .line 118
     invoke-virtual {v1}, Lcom/google/android/exoplayer/util/ParsableByteArray;->readInt()I
 
     move-result v2
@@ -79,10 +69,8 @@
 
     move-result v2
 
-    .line 119
     if-le v2, v9, :cond_2
 
-    .line 120
     const-string/jumbo v1, "PsshAtomUtil"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -107,7 +95,6 @@
 
     goto :goto_0
 
-    .line 123
     :cond_2
     new-instance v3, Ljava/util/UUID;
 
@@ -121,39 +108,31 @@
 
     invoke-direct {v3, v4, v5, v6, v7}, Ljava/util/UUID;-><init>(JJ)V
 
-    .line 124
     if-ne v2, v9, :cond_3
 
-    .line 125
     invoke-virtual {v1}, Lcom/google/android/exoplayer/util/ParsableByteArray;->readUnsignedIntToInt()I
 
     move-result v2
 
-    .line 126
     mul-int/lit8 v2, v2, 0x10
 
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer/util/ParsableByteArray;->skipBytes(I)V
 
-    .line 128
     :cond_3
     invoke-virtual {v1}, Lcom/google/android/exoplayer/util/ParsableByteArray;->readUnsignedIntToInt()I
 
     move-result v2
 
-    .line 129
     invoke-virtual {v1}, Lcom/google/android/exoplayer/util/ParsableByteArray;->bytesLeft()I
 
     move-result v4
 
     if-ne v2, v4, :cond_0
 
-    .line 133
     new-array v0, v2, [B
 
-    .line 134
     invoke-virtual {v1, v0, v8, v2}, Lcom/google/android/exoplayer/util/ParsableByteArray;->readBytes([BII)V
 
-    .line 135
     invoke-static {v3, v0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
     move-result-object v0
@@ -164,19 +143,14 @@
 .method public static parseUuid([B)Ljava/util/UUID;
     .locals 1
 
-    .prologue
-    .line 63
     invoke-static {p0}, Lcom/google/android/exoplayer/extractor/mp4/PsshAtomUtil;->parsePsshAtom([B)Landroid/util/Pair;
 
     move-result-object v0
 
-    .line 64
     if-nez v0, :cond_0
 
-    .line 65
     const/4 v0, 0x0
 
-    .line 67
     :goto_0
     return-object v0
 

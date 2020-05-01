@@ -30,7 +30,6 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x3
 
     const/4 v4, 0x2
@@ -39,7 +38,6 @@
 
     const/4 v2, 0x0
 
-    .line 39
     new-instance v0, Lcom/netflix/msl/crypto/RsaCryptoContext$Mode;
 
     const-string/jumbo v1, "ENCRYPT_DECRYPT_OAEP"
@@ -48,7 +46,6 @@
 
     sput-object v0, Lcom/netflix/msl/crypto/RsaCryptoContext$Mode;->ENCRYPT_DECRYPT_OAEP:Lcom/netflix/msl/crypto/RsaCryptoContext$Mode;
 
-    .line 41
     new-instance v0, Lcom/netflix/msl/crypto/RsaCryptoContext$Mode;
 
     const-string/jumbo v1, "ENCRYPT_DECRYPT_PKCS1"
@@ -57,7 +54,6 @@
 
     sput-object v0, Lcom/netflix/msl/crypto/RsaCryptoContext$Mode;->ENCRYPT_DECRYPT_PKCS1:Lcom/netflix/msl/crypto/RsaCryptoContext$Mode;
 
-    .line 43
     new-instance v0, Lcom/netflix/msl/crypto/RsaCryptoContext$Mode;
 
     const-string/jumbo v1, "WRAP_UNWRAP"
@@ -66,7 +62,6 @@
 
     sput-object v0, Lcom/netflix/msl/crypto/RsaCryptoContext$Mode;->WRAP_UNWRAP:Lcom/netflix/msl/crypto/RsaCryptoContext$Mode;
 
-    .line 45
     new-instance v0, Lcom/netflix/msl/crypto/RsaCryptoContext$Mode;
 
     const-string/jumbo v1, "SIGN_VERIFY"
@@ -75,7 +70,6 @@
 
     sput-object v0, Lcom/netflix/msl/crypto/RsaCryptoContext$Mode;->SIGN_VERIFY:Lcom/netflix/msl/crypto/RsaCryptoContext$Mode;
 
-    .line 37
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/netflix/msl/crypto/RsaCryptoContext$Mode;
@@ -109,8 +103,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 37
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -119,8 +111,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/msl/crypto/RsaCryptoContext$Mode;
     .locals 1
 
-    .prologue
-    .line 37
     const-class v0, Lcom/netflix/msl/crypto/RsaCryptoContext$Mode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -135,8 +125,6 @@
 .method public static values()[Lcom/netflix/msl/crypto/RsaCryptoContext$Mode;
     .locals 1
 
-    .prologue
-    .line 37
     sget-object v0, Lcom/netflix/msl/crypto/RsaCryptoContext$Mode;->$VALUES:[Lcom/netflix/msl/crypto/RsaCryptoContext$Mode;
 
     invoke-virtual {v0}, [Lcom/netflix/msl/crypto/RsaCryptoContext$Mode;->clone()Ljava/lang/Object;

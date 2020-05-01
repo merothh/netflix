@@ -38,7 +38,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -49,7 +48,6 @@
 
     const/4 v4, 0x0
 
-    .line 231
     new-instance v0, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
 
     const-string/jumbo v1, "EVENT_PLAYBACK_ENDED"
@@ -60,7 +58,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->EVENT_PLAYBACK_ENDED:Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
 
-    .line 232
     new-instance v0, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
 
     const-string/jumbo v1, "EVENT_MYLIST_CHANGED"
@@ -71,7 +68,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->EVENT_MYLIST_CHANGED:Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
 
-    .line 233
     new-instance v0, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
 
     const-string/jumbo v1, "EVENT_NOTIFICATION_LIST_CHANGED"
@@ -82,7 +78,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->EVENT_NOTIFICATION_LIST_CHANGED:Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
 
-    .line 234
     new-instance v0, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
 
     const-string/jumbo v1, "EVENT_NOTIFICATION_READ"
@@ -93,7 +88,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->EVENT_NOTIFICATION_READ:Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
 
-    .line 235
     new-instance v0, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
 
     const-string/jumbo v1, "EVENT_LOLOMO_REFRESH"
@@ -104,7 +98,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->EVENT_LOLOMO_REFRESH:Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
 
-    .line 236
     new-instance v0, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
 
     const-string/jumbo v1, "UNKNOWN"
@@ -117,7 +110,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->UNKNOWN:Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
 
-    .line 229
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
@@ -163,22 +155,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 240
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 241
     iput-object p3, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->value:Ljava/lang/String;
 
-    .line 242
     return-void
 .end method
 
 .method public static create(Ljava/lang/String;)Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
     .locals 5
 
-    .prologue
-    .line 245
     invoke-static {}, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->values()[Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
 
     move-result-object v2
@@ -194,7 +180,6 @@
 
     aget-object v0, v2, v1
 
-    .line 246
     iget-object v4, v0, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->value:Ljava/lang/String;
 
     invoke-virtual {v4, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -203,11 +188,9 @@
 
     if-eqz v4, :cond_0
 
-    .line 250
     :goto_1
     return-object v0
 
-    .line 245
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -215,7 +198,6 @@
 
     goto :goto_0
 
-    .line 250
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->UNKNOWN:Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
 
@@ -225,8 +207,6 @@
 .method public static isLolomoRefreshEvent(Ljava/lang/String;)Z
     .locals 1
 
-    .prologue
-    .line 258
     sget-object v0, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->EVENT_LOLOMO_REFRESH:Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->getValue()Ljava/lang/String;
@@ -243,8 +223,6 @@
 .method public static isMylistChangedEvent(Ljava/lang/String;)Z
     .locals 1
 
-    .prologue
-    .line 262
     sget-object v0, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->EVENT_MYLIST_CHANGED:Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->getValue()Ljava/lang/String;
@@ -261,8 +239,6 @@
 .method public static isNotificationListChangedEvent(Ljava/lang/String;)Z
     .locals 1
 
-    .prologue
-    .line 268
     sget-object v0, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->EVENT_NOTIFICATION_LIST_CHANGED:Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->getValue()Ljava/lang/String;
@@ -279,8 +255,6 @@
 .method public static isNotificationReadEvent(Ljava/lang/String;)Z
     .locals 1
 
-    .prologue
-    .line 271
     sget-object v0, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->EVENT_NOTIFICATION_READ:Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->getValue()Ljava/lang/String;
@@ -297,8 +271,6 @@
 .method public static isPlayEndEvent(Ljava/lang/String;)Z
     .locals 1
 
-    .prologue
-    .line 265
     sget-object v0, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->EVENT_PLAYBACK_ENDED:Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->getValue()Ljava/lang/String;
@@ -315,8 +287,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
     .locals 1
 
-    .prologue
-    .line 229
     const-class v0, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -331,8 +301,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
     .locals 1
 
-    .prologue
-    .line 229
     sget-object v0, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->$VALUES:[Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->clone()Ljava/lang/Object;
@@ -349,8 +317,6 @@
 .method public getValue()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 254
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->value:Ljava/lang/String;
 
     return-object v0

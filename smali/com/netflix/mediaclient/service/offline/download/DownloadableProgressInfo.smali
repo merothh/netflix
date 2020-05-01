@@ -13,16 +13,12 @@
 .method constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 81
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/offline/download/DownloadableProgressInfo;->mBytesOnTheDisk:J
 
-    .line 82
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/offline/download/DownloadableProgressInfo;->mTotalBytesToDownload:J

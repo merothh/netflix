@@ -47,8 +47,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 75
     const-wide/16 v0, 0x0
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -71,17 +69,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 135
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 136
     iput-object p1, p0, Lio/realm/RealmQuery;->realm:Lio/realm/BaseRealm;
 
-    .line 137
     iput-object p2, p0, Lio/realm/RealmQuery;->clazz:Ljava/lang/Class;
 
-    .line 138
     iget-object v0, p1, Lio/realm/Realm;->schema:Lio/realm/RealmSchema;
 
     invoke-virtual {v0, p2}, Lio/realm/RealmSchema;->getSchemaForClass(Ljava/lang/Class;)Lio/realm/RealmObjectSchema;
@@ -90,19 +83,16 @@
 
     iput-object v0, p0, Lio/realm/RealmQuery;->schema:Lio/realm/RealmObjectSchema;
 
-    .line 139
     iget-object v0, p0, Lio/realm/RealmQuery;->schema:Lio/realm/RealmObjectSchema;
 
     iget-object v0, v0, Lio/realm/RealmObjectSchema;->table:Lio/realm/internal/Table;
 
     iput-object v0, p0, Lio/realm/RealmQuery;->table:Lio/realm/internal/TableOrView;
 
-    .line 140
     const/4 v0, 0x0
 
     iput-object v0, p0, Lio/realm/RealmQuery;->linkView:Lio/realm/internal/LinkView;
 
-    .line 141
     iget-object v0, p0, Lio/realm/RealmQuery;->table:Lio/realm/internal/TableOrView;
 
     invoke-interface {v0}, Lio/realm/internal/TableOrView;->where()Lio/realm/internal/TableQuery;
@@ -111,20 +101,16 @@
 
     iput-object v0, p0, Lio/realm/RealmQuery;->query:Lio/realm/internal/TableQuery;
 
-    .line 142
     return-void
 .end method
 
 .method private checkQueryIsNotReused()V
     .locals 2
 
-    .prologue
-    .line 2215
     iget-object v0, p0, Lio/realm/RealmQuery;->argumentsHolder:Lio/realm/internal/async/ArgumentsHolder;
 
     if-eqz v0, :cond_0
 
-    .line 2216
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "This RealmQuery is already used by a find* query, please create a new query"
@@ -133,7 +119,6 @@
 
     throw v0
 
-    .line 2218
     :cond_0
     return-void
 .end method
@@ -153,8 +138,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 87
     new-instance v0, Lio/realm/RealmQuery;
 
     invoke-direct {v0, p0, p1}, Lio/realm/RealmQuery;-><init>(Lio/realm/Realm;Ljava/lang/Class;)V
@@ -165,23 +148,18 @@
 .method private getSourceRowIndexForFirstObject()J
     .locals 2
 
-    .prologue
-    .line 2221
     iget-object v0, p0, Lio/realm/RealmQuery;->query:Lio/realm/internal/TableQuery;
 
     invoke-virtual {v0}, Lio/realm/internal/TableQuery;->find()J
 
     move-result-wide v0
 
-    .line 2222
     return-wide v0
 .end method
 
 .method private isDynamicQuery()Z
     .locals 1
 
-    .prologue
-    .line 1926
     iget-object v0, p0, Lio/realm/RealmQuery;->className:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -202,8 +180,6 @@
 .method public count()J
     .locals 2
 
-    .prologue
-    .line 1636
     iget-object v0, p0, Lio/realm/RealmQuery;->query:Lio/realm/internal/TableQuery;
 
     invoke-virtual {v0}, Lio/realm/internal/TableQuery;->count()J
@@ -226,8 +202,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 332
     iget-object v0, p0, Lio/realm/RealmQuery;->schema:Lio/realm/RealmObjectSchema;
 
     const/4 v1, 0x1
@@ -244,19 +218,15 @@
 
     move-result-object v0
 
-    .line 333
     if-nez p2, :cond_0
 
-    .line 334
     iget-object v1, p0, Lio/realm/RealmQuery;->query:Lio/realm/internal/TableQuery;
 
     invoke-virtual {v1, v0}, Lio/realm/internal/TableQuery;->isNull([J)Lio/realm/internal/TableQuery;
 
-    .line 338
     :goto_0
     return-object p0
 
-    .line 336
     :cond_0
     iget-object v1, p0, Lio/realm/RealmQuery;->query:Lio/realm/internal/TableQuery;
 
@@ -284,8 +254,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 251
     sget-object v0, Lio/realm/Case;->SENSITIVE:Lio/realm/Case;
 
     invoke-virtual {p0, p1, p2, v0}, Lio/realm/RealmQuery;->equalTo(Ljava/lang/String;Ljava/lang/String;Lio/realm/Case;)Lio/realm/RealmQuery;
@@ -309,8 +277,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 264
     iget-object v0, p0, Lio/realm/RealmQuery;->schema:Lio/realm/RealmObjectSchema;
 
     const/4 v1, 0x1
@@ -327,12 +293,10 @@
 
     move-result-object v0
 
-    .line 265
     iget-object v1, p0, Lio/realm/RealmQuery;->query:Lio/realm/internal/TableQuery;
 
     invoke-virtual {v1, v0, p2, p3}, Lio/realm/internal/TableQuery;->equalTo([JLjava/lang/String;Lio/realm/Case;)Lio/realm/internal/TableQuery;
 
-    .line 266
     return-object p0
 .end method
 
@@ -346,18 +310,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 1648
     invoke-direct {p0}, Lio/realm/RealmQuery;->checkQueryIsNotReused()V
 
-    .line 1650
     invoke-direct {p0}, Lio/realm/RealmQuery;->isDynamicQuery()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1651
     iget-object v0, p0, Lio/realm/RealmQuery;->realm:Lio/realm/BaseRealm;
 
     iget-object v1, p0, Lio/realm/RealmQuery;->query:Lio/realm/internal/TableQuery;
@@ -372,11 +332,9 @@
 
     move-result-object v0
 
-    .line 1655
     :goto_0
     return-object v0
 
-    .line 1653
     :cond_0
     iget-object v0, p0, Lio/realm/RealmQuery;->realm:Lio/realm/BaseRealm;
 
@@ -403,23 +361,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 2067
     invoke-direct {p0}, Lio/realm/RealmQuery;->checkQueryIsNotReused()V
 
-    .line 2068
     invoke-direct {p0}, Lio/realm/RealmQuery;->getSourceRowIndexForFirstObject()J
 
     move-result-wide v0
 
-    .line 2069
     const-wide/16 v2, 0x0
 
     cmp-long v2, v0, v2
 
     if-ltz v2, :cond_0
 
-    .line 2070
     iget-object v2, p0, Lio/realm/RealmQuery;->realm:Lio/realm/BaseRealm;
 
     iget-object v3, p0, Lio/realm/RealmQuery;->clazz:Ljava/lang/Class;
@@ -430,7 +383,6 @@
 
     move-result-object v0
 
-    .line 2073
     :goto_0
     return-object v0
 
@@ -443,8 +395,6 @@
 .method public getArgument()Lio/realm/internal/async/ArgumentsHolder;
     .locals 1
 
-    .prologue
-    .line 2243
     iget-object v0, p0, Lio/realm/RealmQuery;->argumentsHolder:Lio/realm/internal/async/ArgumentsHolder;
 
     return-object v0
@@ -453,8 +403,6 @@
 .method handoverQueryPointer()J
     .locals 2
 
-    .prologue
-    .line 2252
     iget-object v0, p0, Lio/realm/RealmQuery;->query:Lio/realm/internal/TableQuery;
 
     iget-object v1, p0, Lio/realm/RealmQuery;->realm:Lio/realm/BaseRealm;
@@ -481,8 +429,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 707
     iget-object v0, p0, Lio/realm/RealmQuery;->schema:Lio/realm/RealmObjectSchema;
 
     const/4 v1, 0x1
@@ -499,19 +445,15 @@
 
     move-result-object v0
 
-    .line 708
     if-nez p2, :cond_0
 
-    .line 709
     iget-object v1, p0, Lio/realm/RealmQuery;->query:Lio/realm/internal/TableQuery;
 
     invoke-virtual {v1, v0}, Lio/realm/internal/TableQuery;->isNotNull([J)Lio/realm/internal/TableQuery;
 
-    .line 713
     :goto_0
     return-object p0
 
-    .line 711
     :cond_0
     iget-object v1, p0, Lio/realm/RealmQuery;->query:Lio/realm/internal/TableQuery;
 

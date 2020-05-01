@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 587
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag$5;->this$0:Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;
 
     invoke-direct {p0, p2}, Lcom/netflix/mediaclient/servicemgr/LoggingManagerCallback;-><init>(Ljava/lang/String;)V
@@ -25,11 +23,8 @@
 .method public onNotificationsListFetched(Lcom/netflix/mediaclient/servicemgr/interface_/search/IrisNotificationsList;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 3
 
-    .prologue
-    .line 590
     invoke-super {p0, p1, p2}, Lcom/netflix/mediaclient/servicemgr/LoggingManagerCallback;->onNotificationsListFetched(Lcom/netflix/mediaclient/servicemgr/interface_/search/IrisNotificationsList;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 592
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag$5;->this$0:Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;
 
     invoke-static {v0, p2}, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;->access$1500(Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;Lcom/netflix/mediaclient/android/app/Status;)Z
@@ -38,7 +33,6 @@
 
     if-nez v0, :cond_1
 
-    .line 593
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag$5;->this$0:Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;
 
     if-eqz p1, :cond_2
@@ -49,7 +43,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 594
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/search/IrisNotificationsList;->getSocialNotifications()Ljava/util/List;
 
     move-result-object v0
@@ -68,11 +61,9 @@
 
     const/4 v0, 0x1
 
-    .line 593
     :goto_0
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;->access$1602(Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;Z)Z
 
-    .line 596
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/search/IrisNotificationsList;->getSocialNotifications()Ljava/util/List;
@@ -81,7 +72,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 597
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag$5;->this$0:Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;->access$400(Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;)Lcom/netflix/mediaclient/servicemgr/interface_/search/IrisNotificationsList;
@@ -98,12 +88,10 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 598
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag$5;->this$0:Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;->access$1700(Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;)V
 
-    .line 601
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag$5;->this$0:Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;
 
@@ -113,7 +101,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 602
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag$5;->this$0:Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;->access$1800(Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;)Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag$NotificationsListAdapter;
@@ -122,11 +109,9 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag$NotificationsListAdapter;->notifyDataSetChanged()V
 
-    .line 605
     :cond_1
     return-void
 
-    .line 594
     :cond_2
     const/4 v0, 0x0
 

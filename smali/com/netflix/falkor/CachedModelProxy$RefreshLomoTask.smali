@@ -26,33 +26,24 @@
 .method public constructor <init>(Lcom/netflix/falkor/CachedModelProxy;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 3491
     iput-object p1, p0, Lcom/netflix/falkor/CachedModelProxy$RefreshLomoTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
-    .line 3492
     invoke-direct {p0, p1, v0, v0}, Lcom/netflix/falkor/CachedModelProxy$CmpTask;-><init>(Lcom/netflix/falkor/CachedModelProxy;Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/falkor/CachedModelProxy$1;)V
 
-    .line 3494
     iput-object p2, p0, Lcom/netflix/falkor/CachedModelProxy$RefreshLomoTask;->lolomoId:Ljava/lang/String;
 
-    .line 3495
     iput-object p3, p0, Lcom/netflix/falkor/CachedModelProxy$RefreshLomoTask;->lomoId:Ljava/lang/String;
 
-    .line 3496
     iput-object p4, p0, Lcom/netflix/falkor/CachedModelProxy$RefreshLomoTask;->lomoIndex:Ljava/lang/String;
 
-    .line 3497
     return-void
 .end method
 
 .method private doDebugValidation()V
     .locals 0
 
-    .prologue
-    .line 3512
     return-void
 .end method
 
@@ -70,11 +61,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 3501
     invoke-direct {p0}, Lcom/netflix/falkor/CachedModelProxy$RefreshLomoTask;->doDebugValidation()V
 
-    .line 3502
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -103,15 +91,12 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3503
     return-void
 .end method
 
 .method protected callbackForFailure(Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 3
 
-    .prologue
-    .line 3542
     const-string/jumbo v0, "CachedModelProxy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -134,44 +119,34 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3543
     invoke-virtual {p0}, Lcom/netflix/falkor/CachedModelProxy$RefreshLomoTask;->notifyOfRefresh()V
 
-    .line 3544
     return-void
 .end method
 
 .method protected fetchResultsAndCallbackForSuccess(Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/falkor/CachedModelProxy$GetResult;)V
     .locals 2
 
-    .prologue
-    .line 3536
     const-string/jumbo v0, "CachedModelProxy"
 
     const-string/jumbo v1, "RefreshLomoTask finished onSuccess"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3537
     invoke-virtual {p0}, Lcom/netflix/falkor/CachedModelProxy$RefreshLomoTask;->notifyOfRefresh()V
 
-    .line 3538
     return-void
 .end method
 
 .method protected notifyOfRefresh()V
     .locals 0
 
-    .prologue
-    .line 3551
     return-void
 .end method
 
 .method protected shouldUseCallMethod()Z
     .locals 1
 
-    .prologue
-    .line 3507
     const/4 v0, 0x1
 
     return v0

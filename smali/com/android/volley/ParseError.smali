@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 27
     invoke-direct {p0}, Lcom/android/volley/VolleyError;-><init>()V
 
     return-void
@@ -17,10 +15,7 @@
 .method public constructor <init>(Ljava/lang/Throwable;)V
     .locals 0
 
-    .prologue
-    .line 34
     invoke-direct {p0, p1}, Lcom/android/volley/VolleyError;-><init>(Ljava/lang/Throwable;)V
 
-    .line 35
     return-void
 .end method

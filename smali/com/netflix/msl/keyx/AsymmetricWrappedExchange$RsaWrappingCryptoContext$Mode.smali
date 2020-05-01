@@ -26,12 +26,10 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 88
     new-instance v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RsaWrappingCryptoContext$Mode;
 
     const-string/jumbo v1, "WRAP_UNWRAP_OAEP"
@@ -40,7 +38,6 @@
 
     sput-object v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RsaWrappingCryptoContext$Mode;->WRAP_UNWRAP_OAEP:Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RsaWrappingCryptoContext$Mode;
 
-    .line 90
     new-instance v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RsaWrappingCryptoContext$Mode;
 
     const-string/jumbo v1, "WRAP_UNWRAP_PKCS1"
@@ -49,7 +46,6 @@
 
     sput-object v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RsaWrappingCryptoContext$Mode;->WRAP_UNWRAP_PKCS1:Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RsaWrappingCryptoContext$Mode;
 
-    .line 86
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RsaWrappingCryptoContext$Mode;
@@ -75,8 +71,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 86
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -85,8 +79,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RsaWrappingCryptoContext$Mode;
     .locals 1
 
-    .prologue
-    .line 86
     const-class v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RsaWrappingCryptoContext$Mode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -101,8 +93,6 @@
 .method public static values()[Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RsaWrappingCryptoContext$Mode;
     .locals 1
 
-    .prologue
-    .line 86
     sget-object v0, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RsaWrappingCryptoContext$Mode;->$VALUES:[Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RsaWrappingCryptoContext$Mode;
 
     invoke-virtual {v0}, [Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RsaWrappingCryptoContext$Mode;->clone()Ljava/lang/Object;

@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryPage;)V
     .locals 0
 
-    .prologue
-    .line 67
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryPage$1;->this$0:Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryPage;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,7 +26,5 @@
 .method public onClick(Landroid/view/View;)V
     .locals 0
 
-    .prologue
-    .line 68
     return-void
 .end method

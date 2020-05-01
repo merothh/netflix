@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)V
     .locals 0
 
-    .prologue
-    .line 3444
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$18;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,20 +26,16 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 3447
     const-string/jumbo v0, "PlayerFragment"
 
     const-string/jumbo v1, "===fatal error, shutdown==="
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3448
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
 
-    .line 3449
     const-string/jumbo v1, "PlayerFragment"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -70,10 +64,8 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3450
     invoke-static {v0}, Landroid/os/Process;->killProcess(I)V
 
-    .line 3451
     const-string/jumbo v1, "PlayerFragment"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -102,6 +94,5 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3452
     return-void
 .end method

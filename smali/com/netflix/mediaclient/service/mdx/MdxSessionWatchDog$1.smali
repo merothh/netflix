@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/mdx/MdxSessionWatchDog;)V
     .locals 0
 
-    .prologue
-    .line 21
     iput-object p1, p0, Lcom/netflix/mediaclient/service/mdx/MdxSessionWatchDog$1;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxSessionWatchDog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,10 +26,8 @@
 .method public run()V
     .locals 6
 
-    .prologue
     const-wide/32 v4, 0x493e0
 
-    .line 25
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxSessionWatchDog$1;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxSessionWatchDog;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/mdx/MdxSessionWatchDog;->access$000(Lcom/netflix/mediaclient/service/mdx/MdxSessionWatchDog;)Lcom/netflix/mediaclient/service/mdx/MdxSessionWatchDog$SessionWatchDogInterface;
@@ -46,7 +42,6 @@
 
     move-result-object v0
 
-    .line 26
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -61,14 +56,12 @@
 
     if-lez v0, :cond_0
 
-    .line 27
     const-string/jumbo v0, "nf_mdxSessionWatchDog"
 
     const-string/jumbo v1, "MdxSessionWatchDog:  expired"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 28
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxSessionWatchDog$1;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxSessionWatchDog;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/mdx/MdxSessionWatchDog;->access$000(Lcom/netflix/mediaclient/service/mdx/MdxSessionWatchDog;)Lcom/netflix/mediaclient/service/mdx/MdxSessionWatchDog$SessionWatchDogInterface;
@@ -77,11 +70,9 @@
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/mdx/MdxSessionWatchDog$SessionWatchDogInterface;->onSessionWatchDogExpired()V
 
-    .line 33
     :goto_0
     return-void
 
-    .line 30
     :cond_0
     const-string/jumbo v0, "nf_mdxSessionWatchDog"
 
@@ -89,7 +80,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 31
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxSessionWatchDog$1;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxSessionWatchDog;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/mdx/MdxSessionWatchDog;->access$200(Lcom/netflix/mediaclient/service/mdx/MdxSessionWatchDog;)Landroid/os/Handler;

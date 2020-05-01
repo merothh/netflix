@@ -19,8 +19,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,15 +29,11 @@
 .method public onDismissed(Lcom/netflix/android/widgetry/buffet/BuffetBar;I)V
     .locals 0
 
-    .prologue
-    .line 105
     return-void
 .end method
 
 .method public onShown(Lcom/netflix/android/widgetry/buffet/BuffetBar;)V
     .locals 0
 
-    .prologue
-    .line 115
     return-void
 .end method

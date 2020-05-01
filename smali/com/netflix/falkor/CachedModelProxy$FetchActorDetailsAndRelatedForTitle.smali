@@ -32,29 +32,22 @@
 .method public constructor <init>(Lcom/netflix/falkor/CachedModelProxy;Ljava/lang/String;Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;)V
     .locals 1
 
-    .prologue
-    .line 2128
     iput-object p1, p0, Lcom/netflix/falkor/CachedModelProxy$FetchActorDetailsAndRelatedForTitle;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
-    .line 2129
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p3, v0}, Lcom/netflix/falkor/CachedModelProxy$CmpTask;-><init>(Lcom/netflix/falkor/CachedModelProxy;Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/falkor/CachedModelProxy$1;)V
 
-    .line 2121
     const/4 v0, 0x7
 
     iput v0, p0, Lcom/netflix/falkor/CachedModelProxy$FetchActorDetailsAndRelatedForTitle;->maxItemsDetails:I
 
-    .line 2122
     const/4 v0, 0x5
 
     iput v0, p0, Lcom/netflix/falkor/CachedModelProxy$FetchActorDetailsAndRelatedForTitle;->maxItemsSwatches:I
 
-    .line 2130
     iput-object p2, p0, Lcom/netflix/falkor/CachedModelProxy$FetchActorDetailsAndRelatedForTitle;->videoId:Ljava/lang/String;
 
-    .line 2131
     return-void
 .end method
 
@@ -72,7 +65,6 @@
         }
     .end annotation
 
-    .prologue
     const/4 v6, 0x3
 
     const/4 v5, 0x2
@@ -83,7 +75,6 @@
 
     const/4 v2, 0x0
 
-    .line 2136
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -118,7 +109,6 @@
 
     iput-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$FetchActorDetailsAndRelatedForTitle;->performerStillsPQL:Lcom/netflix/falkor/PQL;
 
-    .line 2137
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -153,7 +143,6 @@
 
     iput-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$FetchActorDetailsAndRelatedForTitle;->performersPQL:Lcom/netflix/falkor/PQL;
 
-    .line 2138
     new-array v0, v3, [Ljava/lang/Object;
 
     const-string/jumbo v1, "videos"
@@ -180,43 +169,34 @@
 
     iput-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$FetchActorDetailsAndRelatedForTitle;->mementoSwatchPQL:Lcom/netflix/falkor/PQL;
 
-    .line 2140
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$FetchActorDetailsAndRelatedForTitle;->performerStillsPQL:Lcom/netflix/falkor/PQL;
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2141
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$FetchActorDetailsAndRelatedForTitle;->performersPQL:Lcom/netflix/falkor/PQL;
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2142
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$FetchActorDetailsAndRelatedForTitle;->mementoSwatchPQL:Lcom/netflix/falkor/PQL;
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2143
     return-void
 .end method
 
 .method protected callbackForFailure(Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 2159
     invoke-interface {p1, v0, v0, p2, v0}, Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;->onActorDetailsAndRelatedFetched(Ljava/util/List;Ljava/util/List;Lcom/netflix/mediaclient/android/app/Status;Ljava/util/List;)V
 
-    .line 2160
     return-void
 .end method
 
 .method protected fetchResultsAndCallbackForSuccess(Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/falkor/CachedModelProxy$GetResult;)V
     .locals 4
 
-    .prologue
-    .line 2148
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$FetchActorDetailsAndRelatedForTitle;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
     iget-object v1, p0, Lcom/netflix/falkor/CachedModelProxy$FetchActorDetailsAndRelatedForTitle;->performerStillsPQL:Lcom/netflix/falkor/PQL;
@@ -225,7 +205,6 @@
 
     move-result-object v0
 
-    .line 2149
     iget-object v1, p0, Lcom/netflix/falkor/CachedModelProxy$FetchActorDetailsAndRelatedForTitle;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
     iget-object v2, p0, Lcom/netflix/falkor/CachedModelProxy$FetchActorDetailsAndRelatedForTitle;->performersPQL:Lcom/netflix/falkor/PQL;
@@ -234,7 +213,6 @@
 
     move-result-object v1
 
-    .line 2150
     iget-object v2, p0, Lcom/netflix/falkor/CachedModelProxy$FetchActorDetailsAndRelatedForTitle;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
     iget-object v3, p0, Lcom/netflix/falkor/CachedModelProxy$FetchActorDetailsAndRelatedForTitle;->mementoSwatchPQL:Lcom/netflix/falkor/PQL;
@@ -243,15 +221,12 @@
 
     move-result-object v2
 
-    .line 2152
     if-eqz p1, :cond_0
 
-    .line 2153
     sget-object v3, Lcom/netflix/mediaclient/android/app/CommonStatus;->OK:Lcom/netflix/mediaclient/android/app/NetflixImmutableStatus;
 
     invoke-interface {p1, v1, v2, v3, v0}, Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;->onActorDetailsAndRelatedFetched(Ljava/util/List;Ljava/util/List;Lcom/netflix/mediaclient/android/app/Status;Ljava/util/List;)V
 
-    .line 2155
     :cond_0
     return-void
 .end method

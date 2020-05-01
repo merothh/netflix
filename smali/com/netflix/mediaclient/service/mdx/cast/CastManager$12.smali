@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/mdx/cast/CastManager;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 747
     iput-object p1, p0, Lcom/netflix/mediaclient/service/mdx/cast/CastManager$12;->this$0:Lcom/netflix/mediaclient/service/mdx/cast/CastManager;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/mdx/cast/CastManager$12;->val$id:Ljava/lang/String;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 750
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/cast/CastManager$12;->this$0:Lcom/netflix/mediaclient/service/mdx/cast/CastManager;
 
     const/4 v1, 0x0
@@ -42,6 +38,5 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/service/mdx/cast/CastManager;->access$1200(Lcom/netflix/mediaclient/service/mdx/cast/CastManager;ZLjava/lang/String;)V
 
-    .line 751
     return-void
 .end method

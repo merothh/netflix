@@ -37,14 +37,10 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;Landroid/os/Looper;)V
     .locals 0
 
-    .prologue
-    .line 1281
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$BackGroundHandler;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
-    .line 1282
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 1283
     return-void
 .end method
 
@@ -53,17 +49,13 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .prologue
-    .line 1286
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1326
     :goto_0
     return-void
 
-    .line 1288
     :pswitch_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$BackGroundHandler;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
@@ -71,7 +63,6 @@
 
     goto :goto_0
 
-    .line 1291
     :pswitch_1
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$BackGroundHandler;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
@@ -83,7 +74,6 @@
 
     goto :goto_0
 
-    .line 1294
     :pswitch_2
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$BackGroundHandler;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
@@ -95,7 +85,6 @@
 
     goto :goto_0
 
-    .line 1297
     :pswitch_3
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$BackGroundHandler;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
@@ -107,7 +96,6 @@
 
     goto :goto_0
 
-    .line 1300
     :pswitch_4
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$BackGroundHandler;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
@@ -119,7 +107,6 @@
 
     goto :goto_0
 
-    .line 1303
     :pswitch_5
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$BackGroundHandler;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
@@ -127,7 +114,6 @@
 
     goto :goto_0
 
-    .line 1306
     :pswitch_6
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$BackGroundHandler;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
@@ -135,7 +121,6 @@
 
     goto :goto_0
 
-    .line 1309
     :pswitch_7
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$BackGroundHandler;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
@@ -143,7 +128,6 @@
 
     goto :goto_0
 
-    .line 1312
     :pswitch_8
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$BackGroundHandler;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
@@ -153,20 +137,17 @@
 
     goto :goto_0
 
-    .line 1315
     :pswitch_9
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Long;
 
-    .line 1316
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$BackGroundHandler;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;->access$3300(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;Ljava/lang/Long;)V
 
     goto :goto_0
 
-    .line 1319
     :pswitch_a
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$BackGroundHandler;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
@@ -176,7 +157,6 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/offline/agent/DownloadController;->onMaintenanceJobDone()V
 
-    .line 1320
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$BackGroundHandler;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
     const/4 v1, 0x0
@@ -185,7 +165,6 @@
 
     goto :goto_0
 
-    .line 1323
     :pswitch_b
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$BackGroundHandler;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
@@ -193,7 +172,6 @@
 
     goto :goto_0
 
-    .line 1286
     nop
 
     :pswitch_data_0

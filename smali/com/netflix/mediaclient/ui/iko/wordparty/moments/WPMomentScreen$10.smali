@@ -26,8 +26,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;ZLandroid/view/View;IIILandroid/animation/ObjectAnimator;)V
     .locals 0
 
-    .prologue
-    .line 1193
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$10;->this$0:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     iput-boolean p2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$10;->val$open:Z
@@ -52,8 +50,6 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 4
 
-    .prologue
-    .line 1196
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
     move-result v0
@@ -66,12 +62,10 @@
 
     if-ltz v0, :cond_1
 
-    .line 1197
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$10;->val$open:Z
 
     if-eqz v0, :cond_2
 
-    .line 1198
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$10;->val$panelView:Landroid/view/View;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$10;->this$0:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
@@ -82,7 +76,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 1202
     :goto_0
     iget v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$10;->val$cardIndex:I
 
@@ -92,7 +85,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1203
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$10;->this$0:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;->access$100(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;)Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;
@@ -101,17 +93,14 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPInteractiveMomentsManager;->playPanelShuffleSound()V
 
-    .line 1205
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$10;->val$cardAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0, p0}, Landroid/animation/ObjectAnimator;->removeUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 1207
     :cond_1
     return-void
 
-    .line 1200
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$10;->val$panelView:Landroid/view/View;
 

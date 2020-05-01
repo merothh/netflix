@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;)V
     .locals 0
 
-    .prologue
-    .line 1273
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$8;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,17 +26,14 @@
 .method public onDownloadCompleteAndActivateDone(Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 1277
     invoke-interface {p3}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 1278
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$8;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;->access$1500(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;)Landroid/content/Context;
@@ -57,7 +52,6 @@
 
     invoke-static {v0, v1, v4, v2, v4}, Lcom/netflix/mediaclient/util/log/OfflineLogUtils;->reportDownloadEnded(Landroid/content/Context;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;Lcom/netflix/mediaclient/service/logging/client/model/Error;)V
 
-    .line 1287
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$8;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;
@@ -66,10 +60,8 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;->access$1700(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;Z)V
 
-    .line 1288
     return-void
 
-    .line 1281
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$8;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;
 
@@ -93,14 +85,12 @@
 
     invoke-static {v0, v1, v4, v2, v3}, Lcom/netflix/mediaclient/util/log/OfflineLogUtils;->reportDownloadEnded(Landroid/content/Context;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;Lcom/netflix/mediaclient/service/logging/client/model/Error;)V
 
-    .line 1283
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1284
     const-string/jumbo v0, "nf_offlinePlayable"
 
     new-instance v1, Ljava/lang/StringBuilder;

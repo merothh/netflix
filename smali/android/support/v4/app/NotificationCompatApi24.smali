@@ -37,11 +37,8 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     return-void
 .end method
 
@@ -76,18 +73,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 150
     new-instance v0, Landroid/app/Notification$MessagingStyle;
 
     invoke-direct {v0, p1}, Landroid/app/Notification$MessagingStyle;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 151
     invoke-virtual {v0, p2}, Landroid/app/Notification$MessagingStyle;->setConversationTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$MessagingStyle;
 
     move-result-object v3
 
-    .line 152
     const/4 v0, 0x0
 
     move v2, v0
@@ -99,10 +92,8 @@
 
     if-ge v2, v0, :cond_1
 
-    .line 153
     new-instance v4, Landroid/app/Notification$MessagingStyle$Message;
 
-    .line 154
     invoke-interface {p3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -127,14 +118,12 @@
 
     invoke-direct {v4, v0, v6, v7, v1}, Landroid/app/Notification$MessagingStyle$Message;-><init>(Ljava/lang/CharSequence;JLjava/lang/CharSequence;)V
 
-    .line 155
     invoke-interface {p6, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 156
     invoke-interface {p6, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -149,18 +138,15 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/app/Notification$MessagingStyle$Message;->setData(Ljava/lang/String;Landroid/net/Uri;)Landroid/app/Notification$MessagingStyle$Message;
 
-    .line 158
     :cond_0
     invoke-virtual {v3, v4}, Landroid/app/Notification$MessagingStyle;->addMessage(Landroid/app/Notification$MessagingStyle$Message;)Landroid/app/Notification$MessagingStyle;
 
-    .line 152
     add-int/lit8 v0, v2, 0x1
 
     move v2, v0
 
     goto :goto_0
 
-    .line 160
     :cond_1
     invoke-interface {p0}, Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;->getBuilder()Landroid/app/Notification$Builder;
 
@@ -168,6 +154,5 @@
 
     invoke-virtual {v3, v0}, Landroid/app/Notification$MessagingStyle;->setBuilder(Landroid/app/Notification$Builder;)V
 
-    .line 161
     return-void
 .end method

@@ -22,8 +22,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 135
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,8 +32,6 @@
 .method public call()Lcom/netflix/model/leafs/ListOfMoviesSummary;
     .locals 1
 
-    .prologue
-    .line 138
     new-instance v0, Lcom/netflix/model/leafs/ListOfMoviesSummary;
 
     invoke-direct {v0}, Lcom/netflix/model/leafs/ListOfMoviesSummary;-><init>()V
@@ -46,8 +42,6 @@
 .method public bridge synthetic call()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 135
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$4;->call()Lcom/netflix/model/leafs/ListOfMoviesSummary;
 
     move-result-object v0

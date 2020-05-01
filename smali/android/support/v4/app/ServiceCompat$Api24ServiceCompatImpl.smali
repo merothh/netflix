@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,10 +20,7 @@
 .method public stopForeground(Landroid/app/Service;I)V
     .locals 0
 
-    .prologue
-    .line 97
     invoke-static {p1, p2}, Landroid/support/v4/app/ServiceCompatApi24;->stopForeground(Landroid/app/Service;I)V
 
-    .line 98
     return-void
 .end method

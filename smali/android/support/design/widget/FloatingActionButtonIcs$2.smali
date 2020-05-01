@@ -15,8 +15,6 @@
 .method constructor <init>(Landroid/support/design/widget/FloatingActionButtonIcs;ZLandroid/support/design/widget/FloatingActionButtonImpl$InternalVisibilityChangedListener;)V
     .locals 0
 
-    .prologue
-    .line 128
     iput-object p1, p0, Landroid/support/design/widget/FloatingActionButtonIcs$2;->this$0:Landroid/support/design/widget/FloatingActionButtonIcs;
 
     iput-boolean p2, p0, Landroid/support/design/widget/FloatingActionButtonIcs$2;->val$fromUser:Z
@@ -33,25 +31,20 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .prologue
-    .line 136
     iget-object v0, p0, Landroid/support/design/widget/FloatingActionButtonIcs$2;->this$0:Landroid/support/design/widget/FloatingActionButtonIcs;
 
     const/4 v1, 0x0
 
     iput v1, v0, Landroid/support/design/widget/FloatingActionButtonIcs;->mAnimState:I
 
-    .line 137
     iget-object v0, p0, Landroid/support/design/widget/FloatingActionButtonIcs$2;->val$listener:Landroid/support/design/widget/FloatingActionButtonImpl$InternalVisibilityChangedListener;
 
     if-eqz v0, :cond_0
 
-    .line 138
     iget-object v0, p0, Landroid/support/design/widget/FloatingActionButtonIcs$2;->val$listener:Landroid/support/design/widget/FloatingActionButtonImpl$InternalVisibilityChangedListener;
 
     invoke-interface {v0}, Landroid/support/design/widget/FloatingActionButtonImpl$InternalVisibilityChangedListener;->onShown()V
 
-    .line 140
     :cond_0
     return-void
 .end method
@@ -59,8 +52,6 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 3
 
-    .prologue
-    .line 131
     iget-object v0, p0, Landroid/support/design/widget/FloatingActionButtonIcs$2;->this$0:Landroid/support/design/widget/FloatingActionButtonIcs;
 
     iget-object v0, v0, Landroid/support/design/widget/FloatingActionButtonIcs;->mView:Landroid/support/design/widget/VisibilityAwareImageButton;
@@ -71,6 +62,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/support/design/widget/VisibilityAwareImageButton;->internalSetVisibility(IZ)V
 
-    .line 132
     return-void
 .end method

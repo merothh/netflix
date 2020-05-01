@@ -14,8 +14,6 @@
 .method constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 264
     iput-object p1, p0, Landroid/support/multidex/MultiDexExtractor$1;->val$extractedFilePrefix:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public accept(Ljava/io/File;)Z
     .locals 2
 
-    .prologue
-    .line 268
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v0

@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/offline/ActivityPageOfflineAgentListener;)V
     .locals 0
 
-    .prologue
-    .line 72
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/offline/ActivityPageOfflineAgentListener$1;->this$0:Lcom/netflix/mediaclient/ui/offline/ActivityPageOfflineAgentListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
-    .prologue
-    .line 75
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -42,51 +38,42 @@
 
     check-cast v0, Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
-    .line 76
     invoke-static {v0}, Lcom/netflix/mediaclient/util/AndroidUtils;->isActivityFinishedOrDestroyed(Landroid/content/Context;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 77
     invoke-static {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getOfflineAgentOrNull(Lcom/netflix/mediaclient/android/activity/NetflixActivity;)Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface;
 
     move-result-object v1
 
-    .line 78
     if-eqz v1, :cond_0
 
-    .line 79
     invoke-interface {v1}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface;->getLatestOfflinePlayableList()Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflinePlayableUiList;
 
     move-result-object v1
 
-    .line 80
     invoke-interface {v1}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflinePlayableUiList;->numberOfIncompleteItems()I
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 81
     const-string/jumbo v1, "ActivityPageOfflineAgentListener"
 
     const-string/jumbo v2, "launchMyDownloads dismissing"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/ActivityPageOfflineAgentListener$1;->this$0:Lcom/netflix/mediaclient/ui/offline/ActivityPageOfflineAgentListener;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/offline/ActivityPageOfflineAgentListener;->access$000(Lcom/netflix/mediaclient/ui/offline/ActivityPageOfflineAgentListener;)V
 
-    .line 83
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/ActivityPageOfflineAgentListener$1;->this$0:Lcom/netflix/mediaclient/ui/offline/ActivityPageOfflineAgentListener;
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/ui/offline/ActivityPageOfflineAgentListener;->access$100(Lcom/netflix/mediaclient/ui/offline/ActivityPageOfflineAgentListener;Lcom/netflix/mediaclient/android/activity/NetflixActivity;)V
 
-    .line 86
     :cond_0
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/offline/OfflineActivity;->showAllDownloads(Landroid/app/Activity;)Landroid/content/Intent;
 
@@ -94,7 +81,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 88
     :cond_1
     return-void
 .end method

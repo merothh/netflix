@@ -41,11 +41,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 14
     invoke-direct {p0, p1}, Lcom/netflix/falkor/BranchMap;-><init>(Lcom/netflix/falkor/Func;)V
 
-    .line 15
     return-void
 .end method
 
@@ -54,8 +51,6 @@
 .method public getExpires()Ljava/util/Date;
     .locals 1
 
-    .prologue
-    .line 30
     iget-object v0, p0, Lcom/netflix/model/branches/UnsummarizedList;->expires:Ljava/util/Date;
 
     return-object v0
@@ -73,8 +68,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 20
     iget-object v0, p0, Lcom/netflix/model/branches/UnsummarizedList;->references:Lcom/netflix/falkor/LinkedList;
 
     return-object v0
@@ -83,11 +76,8 @@
 .method public setExpires(Ljava/util/Date;)V
     .locals 0
 
-    .prologue
-    .line 34
     iput-object p1, p0, Lcom/netflix/model/branches/UnsummarizedList;->expires:Ljava/util/Date;
 
-    .line 35
     return-void
 .end method
 
@@ -103,10 +93,7 @@
         }
     .end annotation
 
-    .prologue
-    .line 24
     iput-object p1, p0, Lcom/netflix/model/branches/UnsummarizedList;->references:Lcom/netflix/falkor/LinkedList;
 
-    .line 25
     return-void
 .end method

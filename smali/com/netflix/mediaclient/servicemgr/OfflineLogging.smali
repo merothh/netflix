@@ -49,8 +49,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 43
     const/16 v0, 0x8
 
     new-array v0, v0, [Ljava/lang/String;

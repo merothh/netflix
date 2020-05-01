@@ -30,23 +30,18 @@
 .method private constructor <init>(Lio/realm/RealmList;)V
     .locals 1
 
-    .prologue
-    .line 782
     iput-object p1, p0, Lio/realm/RealmList$RealmItr;->this$0:Lio/realm/RealmList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 786
     const/4 v0, 0x0
 
     iput v0, p0, Lio/realm/RealmList$RealmItr;->cursor:I
 
-    .line 793
     const/4 v0, -0x1
 
     iput v0, p0, Lio/realm/RealmList$RealmItr;->lastRet:I
 
-    .line 800
     iget-object v0, p0, Lio/realm/RealmList$RealmItr;->this$0:Lio/realm/RealmList;
 
     invoke-static {v0}, Lio/realm/RealmList;->access$100(Lio/realm/RealmList;)I
@@ -61,8 +56,6 @@
 .method synthetic constructor <init>(Lio/realm/RealmList;Lio/realm/RealmList$1;)V
     .locals 0
 
-    .prologue
-    .line 782
     invoke-direct {p0, p1}, Lio/realm/RealmList$RealmItr;-><init>(Lio/realm/RealmList;)V
 
     return-void
@@ -73,8 +66,6 @@
 .method final checkConcurrentModification()V
     .locals 2
 
-    .prologue
-    .line 858
     iget-object v0, p0, Lio/realm/RealmList$RealmItr;->this$0:Lio/realm/RealmList;
 
     invoke-static {v0}, Lio/realm/RealmList;->access$300(Lio/realm/RealmList;)I
@@ -85,14 +76,12 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 859
     new-instance v0, Ljava/util/ConcurrentModificationException;
 
     invoke-direct {v0}, Ljava/util/ConcurrentModificationException;-><init>()V
 
     throw v0
 
-    .line 861
     :cond_0
     return-void
 .end method
@@ -100,18 +89,14 @@
 .method public hasNext()Z
     .locals 2
 
-    .prologue
-    .line 806
     iget-object v0, p0, Lio/realm/RealmList$RealmItr;->this$0:Lio/realm/RealmList;
 
     iget-object v0, v0, Lio/realm/RealmList;->realm:Lio/realm/BaseRealm;
 
     invoke-virtual {v0}, Lio/realm/BaseRealm;->checkIfValid()V
 
-    .line 807
     invoke-virtual {p0}, Lio/realm/RealmList$RealmItr;->checkConcurrentModification()V
 
-    .line 808
     iget v0, p0, Lio/realm/RealmList$RealmItr;->cursor:I
 
     iget-object v1, p0, Lio/realm/RealmList$RealmItr;->this$0:Lio/realm/RealmList;
@@ -141,21 +126,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 815
     iget-object v0, p0, Lio/realm/RealmList$RealmItr;->this$0:Lio/realm/RealmList;
 
     iget-object v0, v0, Lio/realm/RealmList;->realm:Lio/realm/BaseRealm;
 
     invoke-virtual {v0}, Lio/realm/BaseRealm;->checkIfValid()V
 
-    .line 816
     invoke-virtual {p0}, Lio/realm/RealmList$RealmItr;->checkConcurrentModification()V
 
-    .line 817
     iget v0, p0, Lio/realm/RealmList$RealmItr;->cursor:I
 
-    .line 819
     :try_start_0
     iget-object v1, p0, Lio/realm/RealmList$RealmItr;->this$0:Lio/realm/RealmList;
 
@@ -163,27 +143,21 @@
 
     move-result-object v1
 
-    .line 820
     iput v0, p0, Lio/realm/RealmList$RealmItr;->lastRet:I
 
-    .line 821
     add-int/lit8 v2, v0, 0x1
 
     iput v2, p0, Lio/realm/RealmList$RealmItr;->cursor:I
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 822
     return-object v1
 
-    .line 823
     :catch_0
     move-exception v1
 
-    .line 824
     invoke-virtual {p0}, Lio/realm/RealmList$RealmItr;->checkConcurrentModification()V
 
-    .line 825
     new-instance v1, Ljava/util/NoSuchElementException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -234,8 +208,6 @@
 .method public bridge synthetic next()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 782
     invoke-virtual {p0}, Lio/realm/RealmList$RealmItr;->next()Lio/realm/RealmModel;
 
     move-result-object v0
@@ -246,20 +218,16 @@
 .method public remove()V
     .locals 2
 
-    .prologue
-    .line 833
     iget-object v0, p0, Lio/realm/RealmList$RealmItr;->this$0:Lio/realm/RealmList;
 
     iget-object v0, v0, Lio/realm/RealmList;->realm:Lio/realm/BaseRealm;
 
     invoke-virtual {v0}, Lio/realm/BaseRealm;->checkIfValid()V
 
-    .line 834
     iget v0, p0, Lio/realm/RealmList$RealmItr;->lastRet:I
 
     if-gez v0, :cond_0
 
-    .line 835
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "Cannot call remove() twice. Must call next() in between."
@@ -268,11 +236,9 @@
 
     throw v0
 
-    .line 837
     :cond_0
     invoke-virtual {p0}, Lio/realm/RealmList$RealmItr;->checkConcurrentModification()V
 
-    .line 840
     :try_start_0
     iget-object v0, p0, Lio/realm/RealmList$RealmItr;->this$0:Lio/realm/RealmList;
 
@@ -280,27 +246,23 @@
 
     invoke-virtual {v0, v1}, Lio/realm/RealmList;->remove(I)Lio/realm/RealmModel;
 
-    .line 841
     iget v0, p0, Lio/realm/RealmList$RealmItr;->lastRet:I
 
     iget v1, p0, Lio/realm/RealmList$RealmItr;->cursor:I
 
     if-ge v0, v1, :cond_1
 
-    .line 842
     iget v0, p0, Lio/realm/RealmList$RealmItr;->cursor:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lio/realm/RealmList$RealmItr;->cursor:I
 
-    .line 844
     :cond_1
     const/4 v0, -0x1
 
     iput v0, p0, Lio/realm/RealmList$RealmItr;->lastRet:I
 
-    .line 845
     iget-object v0, p0, Lio/realm/RealmList$RealmItr;->this$0:Lio/realm/RealmList;
 
     invoke-static {v0}, Lio/realm/RealmList;->access$200(Lio/realm/RealmList;)I
@@ -311,14 +273,11 @@
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 849
     return-void
 
-    .line 846
     :catch_0
     move-exception v0
 
-    .line 847
     new-instance v0, Ljava/util/ConcurrentModificationException;
 
     invoke-direct {v0}, Ljava/util/ConcurrentModificationException;-><init>()V

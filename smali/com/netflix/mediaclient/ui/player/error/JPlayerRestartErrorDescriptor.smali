@@ -13,8 +13,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 17
     const/4 v0, 0x0
 
     sput v0, Lcom/netflix/mediaclient/ui/player/error/JPlayerRestartErrorDescriptor;->sAppRestartCountForJPlayer:I
@@ -25,26 +23,20 @@
 .method constructor <init>(Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$AlertDialogDescriptor;)V
     .locals 0
 
-    .prologue
-    .line 22
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/player/error/PlaybackErrorDescriptor;-><init>(Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$AlertDialogDescriptor;)V
 
-    .line 23
     return-void
 .end method
 
 .method static build(Lcom/netflix/mediaclient/ui/player/PlayerFragment;Lcom/netflix/mediaclient/event/nrdp/media/Error;)Lcom/netflix/mediaclient/ui/player/error/JPlayerRestartErrorDescriptor;
     .locals 7
 
-    .prologue
-    .line 27
     const v0, 0x7f08005b
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 28
     new-instance v6, Lcom/netflix/mediaclient/service/error/action/LaunchHelpInBrowserAction;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getActivity()Landroid/app/Activity;
@@ -55,7 +47,6 @@
 
     invoke-direct {v6, v0, v1}, Lcom/netflix/mediaclient/service/error/action/LaunchHelpInBrowserAction;-><init>(Landroid/app/Activity;Ljava/lang/String;)V
 
-    .line 29
     new-instance v4, Lcom/netflix/mediaclient/service/error/action/RestartApplicationAction;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getActivity()Landroid/app/Activity;
@@ -64,7 +55,6 @@
 
     invoke-direct {v4, v0}, Lcom/netflix/mediaclient/service/error/action/RestartApplicationAction;-><init>(Landroid/app/Activity;)V
 
-    .line 30
     new-instance v0, Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$TwoButtonAlertDialogDescriptor;
 
     const-string/jumbo v1, ""
@@ -79,7 +69,6 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$TwoButtonAlertDialogDescriptor;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;Ljava/lang/String;Ljava/lang/Runnable;)V
 
-    .line 32
     new-instance v1, Lcom/netflix/mediaclient/ui/player/error/JPlayerRestartErrorDescriptor;
 
     invoke-direct {v1, v0}, Lcom/netflix/mediaclient/ui/player/error/JPlayerRestartErrorDescriptor;-><init>(Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$AlertDialogDescriptor;)V
@@ -90,8 +79,6 @@
 .method static isValid(Lcom/netflix/mediaclient/event/nrdp/media/Error;Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;)Z
     .locals 4
 
-    .prologue
-    .line 37
     invoke-virtual {p0}, Lcom/netflix/mediaclient/event/nrdp/media/Error;->getError()I
 
     move-result v0
@@ -122,7 +109,6 @@
 
     const/4 v0, 0x1
 
-    .line 38
     :goto_0
     if-eqz v0, :cond_0
 
@@ -132,7 +118,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 39
     const-string/jumbo v1, "nf_play_error"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -159,11 +144,9 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 41
     :cond_0
     return v0
 
-    .line 37
     :cond_1
     const/4 v0, 0x0
 
@@ -175,8 +158,6 @@
 .method public bridge synthetic getBackgroundTask()Ljava/lang/Runnable;
     .locals 1
 
-    .prologue
-    .line 15
     invoke-super {p0}, Lcom/netflix/mediaclient/ui/player/error/PlaybackErrorDescriptor;->getBackgroundTask()Ljava/lang/Runnable;
 
     move-result-object v0
@@ -187,8 +168,6 @@
 .method public bridge synthetic getData()Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$AlertDialogDescriptor;
     .locals 1
 
-    .prologue
-    .line 15
     invoke-super {p0}, Lcom/netflix/mediaclient/ui/player/error/PlaybackErrorDescriptor;->getData()Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$AlertDialogDescriptor;
 
     move-result-object v0
@@ -199,8 +178,6 @@
 .method public bridge synthetic getPriority()I
     .locals 1
 
-    .prologue
-    .line 15
     invoke-super {p0}, Lcom/netflix/mediaclient/ui/player/error/PlaybackErrorDescriptor;->getPriority()I
 
     move-result v0
@@ -211,8 +188,6 @@
 .method public bridge synthetic shouldReportToUserAsDialog(Landroid/app/Activity;)Z
     .locals 1
 
-    .prologue
-    .line 15
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/ui/player/error/PlaybackErrorDescriptor;->shouldReportToUserAsDialog(Landroid/app/Activity;)Z
 
     move-result v0

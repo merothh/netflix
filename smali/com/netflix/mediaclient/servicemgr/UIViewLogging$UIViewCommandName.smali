@@ -104,7 +104,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -115,7 +114,6 @@
 
     const/4 v3, 0x0
 
-    .line 79
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "moreButton"
@@ -124,7 +122,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->moreButton:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 80
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "upButton"
@@ -133,7 +130,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->upButton:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 81
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "backButton"
@@ -142,7 +138,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->backButton:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 82
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "optInButton"
@@ -151,7 +146,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->optInButton:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 84
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "actionBarBackButton"
@@ -160,7 +154,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->actionBarBackButton:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 85
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "actionBarKidsEntry"
@@ -171,7 +164,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->actionBarKidsEntry:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 86
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "actionBarKidsExit"
@@ -182,7 +174,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->actionBarKidsExit:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 88
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "slidingMenuKidsEntry"
@@ -193,7 +184,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->slidingMenuKidsEntry:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 89
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "slidingMenuKidsExit"
@@ -204,7 +194,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->slidingMenuKidsExit:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 90
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "slidingMenuOpened"
@@ -215,7 +204,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->slidingMenuOpened:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 91
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "slidingMenuClosed"
@@ -226,7 +214,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->slidingMenuClosed:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 93
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "genreKidsEntry"
@@ -237,7 +224,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->genreKidsEntry:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 95
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "deepLink"
@@ -248,7 +234,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->deepLink:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 97
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "shareSheet"
@@ -259,7 +244,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->shareSheet:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 98
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "shareOpenSheet"
@@ -270,7 +254,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->shareOpenSheet:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 99
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "recommendSheet"
@@ -281,7 +264,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->recommendSheet:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 101
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "viewMenu"
@@ -292,7 +274,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->viewMenu:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 102
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "startPlay"
@@ -303,7 +284,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->startPlay:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 103
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "viewTitleDetails"
@@ -314,7 +294,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->viewTitleDetails:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 104
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "search"
@@ -325,7 +304,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->search:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 105
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "changeValue"
@@ -336,7 +314,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->changeValue:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 106
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "surveyButton"
@@ -347,7 +324,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->surveyButton:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 107
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "select"
@@ -358,7 +334,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->select:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 109
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "mementoTabCast"
@@ -369,7 +344,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->mementoTabCast:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 110
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "mementoTabRelated"
@@ -380,7 +354,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->mementoTabRelated:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 111
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "mementoRelatedHero"
@@ -391,7 +364,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->mementoRelatedHero:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 112
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "mementoRelatedInset"
@@ -402,7 +374,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->mementoRelatedInset:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 113
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "mementoRelatedMore"
@@ -413,7 +384,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->mementoRelatedMore:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 114
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "mementoRelatedMoreGoToDP"
@@ -424,7 +394,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->mementoRelatedMoreGoToDP:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 115
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "mementoGoToRDP"
@@ -435,7 +404,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->mementoGoToRDP:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 116
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "mementoRDPRelatedExpand"
@@ -446,7 +414,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->mementoRDPRelatedExpand:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 117
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "mementoRDPRelatedExpandedAdd"
@@ -457,7 +424,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->mementoRDPRelatedExpandedAdd:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 118
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "mementoRDPRelatedExpandedGoToDP"
@@ -468,7 +434,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->mementoRDPRelatedExpandedGoToDP:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 121
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "AddCachedVideoCommand"
@@ -479,7 +444,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->AddCachedVideoCommand:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 122
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "RemoveCachedVideoCommand"
@@ -490,7 +454,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->RemoveCachedVideoCommand:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 123
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "RemoveAllCachedVideosCommand"
@@ -501,7 +464,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->RemoveAllCachedVideosCommand:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 124
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "RemoveCachedVideoAndPlayNextCommand"
@@ -512,7 +474,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->RemoveCachedVideoAndPlayNextCommand:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 125
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "PauseDownloadCommand"
@@ -523,7 +484,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->PauseDownloadCommand:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 126
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "ResumeDownloadCommand"
@@ -534,7 +494,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->ResumeDownloadCommand:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 127
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "RetryDownloadCommand"
@@ -545,7 +504,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->RetryDownloadCommand:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 128
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     const-string/jumbo v1, "StartCachedPlay"
@@ -556,7 +514,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->StartCachedPlay:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
-    .line 78
     const/16 v0, 0x29
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
@@ -810,8 +767,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 78
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -820,8 +775,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
     .locals 1
 
-    .prologue
-    .line 78
     const-class v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -836,8 +789,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
     .locals 1
 
-    .prologue
-    .line 78
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->clone()Ljava/lang/Object;

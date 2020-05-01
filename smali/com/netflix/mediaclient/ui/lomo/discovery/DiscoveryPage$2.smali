@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryPage;)V
     .locals 0
 
-    .prologue
-    .line 73
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryPage$2;->this$0:Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryPage;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public onPreDraw()Z
     .locals 3
 
-    .prologue
-    .line 76
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 77
     const-string/jumbo v0, "DiscoveryPage"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -69,7 +64,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryPage$2;->this$0:Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryPage;
 
@@ -101,7 +95,6 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 81
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryPage$2;->this$0:Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryPage;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryPage;->access$000(Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryPage;)Lcom/netflix/mediaclient/ui/lomo/CwDiscoveryView;
@@ -114,7 +107,6 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 82
     const/4 v0, 0x1
 
     return v0

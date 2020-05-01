@@ -13,8 +13,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 209
     invoke-static {}, Lcom/netflix/mediaclient/ui/experience/BrowseExperience;->values()[Lcom/netflix/mediaclient/ui/experience/BrowseExperience;
 
     move-result-object v0
@@ -120,7 +118,6 @@
     :try_end_5
     .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_1
 
-    .line 196
     :goto_5
     invoke-static {}, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->values()[Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
@@ -155,7 +152,6 @@
 
     goto :goto_6
 
-    .line 209
     :catch_1
     move-exception v0
 

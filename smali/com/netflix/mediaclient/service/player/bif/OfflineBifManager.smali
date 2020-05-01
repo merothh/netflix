@@ -19,11 +19,8 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 20
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/player/bif/BasicBifManager;-><init>()V
 
-    .line 17
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -32,7 +29,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;->mIsBifLoaded:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 21
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager$1;
@@ -45,20 +41,16 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;->mBifLoadingThread:Ljava/lang/Thread;
 
-    .line 37
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;->mBifLoadingThread:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 38
     return-void
 .end method
 
 .method static synthetic access$002(Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;Ljava/io/RandomAccessFile;)Ljava/io/RandomAccessFile;
     .locals 0
 
-    .prologue
-    .line 15
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;->mFile:Ljava/io/RandomAccessFile;
 
     return-object p1
@@ -67,8 +59,6 @@
 .method static synthetic access$100(Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;)Ljava/util/concurrent/atomic/AtomicBoolean;
     .locals 1
 
-    .prologue
-    .line 15
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;->mIsBifLoaded:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-object v0
@@ -79,8 +69,6 @@
 .method public bridge synthetic getIndexFrame(I)Ljava/nio/ByteBuffer;
     .locals 1
 
-    .prologue
-    .line 15
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/service/player/bif/BasicBifManager;->getIndexFrame(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -91,8 +79,6 @@
 .method protected getRandomAccessFile()Ljava/io/RandomAccessFile;
     .locals 1
 
-    .prologue
-    .line 47
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;->mFile:Ljava/io/RandomAccessFile;
 
     return-object v0
@@ -101,8 +87,6 @@
 .method protected isBifLoaded()Z
     .locals 1
 
-    .prologue
-    .line 42
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;->mIsBifLoaded:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -115,15 +99,12 @@
 .method public release()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 51
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;->mBifLoadingThread:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
-    .line 53
     :try_start_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;->mBifLoadingThread:Ljava/lang/Thread;
 
@@ -131,13 +112,11 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 57
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;->mFile:Ljava/io/RandomAccessFile;
 
     if-eqz v0, :cond_0
 
-    .line 59
     :try_start_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/bif/OfflineBifManager;->mFile:Ljava/io/RandomAccessFile;
 
@@ -145,7 +124,6 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 64
     :cond_0
     :goto_1
     const-string/jumbo v0, "OfflineBifManager"
@@ -154,14 +132,11 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
     return-void
 
-    .line 54
     :catch_0
     move-exception v0
 
-    .line 55
     const-string/jumbo v1, "OfflineBifManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -188,11 +163,9 @@
 
     goto :goto_0
 
-    .line 60
     :catch_1
     move-exception v0
 
-    .line 61
     const-string/jumbo v1, "OfflineBifManager"
 
     new-instance v2, Ljava/lang/StringBuilder;

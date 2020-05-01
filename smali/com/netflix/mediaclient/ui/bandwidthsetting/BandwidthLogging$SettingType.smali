@@ -36,14 +36,12 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x2
 
     const/4 v4, 0x1
 
     const/4 v3, 0x0
 
-    .line 78
     new-instance v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$SettingType;
 
     const-string/jumbo v1, "DATA_SAVING"
@@ -54,7 +52,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$SettingType;->DATA_SAVING:Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$SettingType;
 
-    .line 79
     new-instance v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$SettingType;
 
     const-string/jumbo v1, "HD_PLAYBACK"
@@ -65,7 +62,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$SettingType;->HD_PLAYBACK:Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$SettingType;
 
-    .line 80
     new-instance v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$SettingType;
 
     const-string/jumbo v1, "UNKNOWN"
@@ -76,7 +72,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$SettingType;->UNKNOWN:Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$SettingType;
 
-    .line 77
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$SettingType;
@@ -108,22 +103,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 85
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 86
     iput-object p3, p0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$SettingType;->value:Ljava/lang/String;
 
-    .line 87
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$SettingType;
     .locals 1
 
-    .prologue
-    .line 77
     const-class v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$SettingType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -138,8 +127,6 @@
 .method public static values()[Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$SettingType;
     .locals 1
 
-    .prologue
-    .line 77
     sget-object v0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$SettingType;->$VALUES:[Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$SettingType;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$SettingType;->clone()Ljava/lang/Object;
@@ -156,8 +143,6 @@
 .method public getValue()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 90
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/bandwidthsetting/BandwidthLogging$SettingType;->value:Ljava/lang/String;
 
     return-object v0

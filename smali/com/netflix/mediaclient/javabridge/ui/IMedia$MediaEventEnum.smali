@@ -82,7 +82,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -93,7 +92,6 @@
 
     const/4 v4, 0x0
 
-    .line 53
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_openComplete"
@@ -104,7 +102,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_openComplete:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 54
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_streamSelected"
@@ -115,7 +112,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_streamSelected:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 55
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_newStream"
@@ -126,7 +122,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_newStream:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 56
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_endOfStream"
@@ -137,7 +132,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_endOfStream:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 57
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_underflow"
@@ -148,7 +142,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_underflow:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 58
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_buffering"
@@ -161,7 +154,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_buffering:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 59
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_bufferingComplete"
@@ -174,7 +166,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_bufferingComplete:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 60
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_updatePts"
@@ -187,7 +178,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_updatePts:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 61
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_updateVideoBitrate"
@@ -200,7 +190,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_updateVideoBitrate:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 62
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_audioTrackChanged"
@@ -213,7 +202,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_audioTrackChanged:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 63
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_nccpError"
@@ -226,7 +214,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_nccpError:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 64
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_nccp"
@@ -239,7 +226,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_nccp:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 65
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_subtitleTrackChanged"
@@ -252,7 +238,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_subtitleTrackChanged:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 66
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_videoWindowChanged"
@@ -265,7 +250,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_videoWindowChanged:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 67
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_showSubtitle"
@@ -278,7 +262,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_showSubtitle:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 68
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_removeSubtitle"
@@ -291,7 +274,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_removeSubtitle:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 69
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_error"
@@ -304,7 +286,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_error:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 70
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_warning"
@@ -317,7 +298,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_warning:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 71
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_exception"
@@ -330,7 +310,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_exception:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 72
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_stateChanged"
@@ -343,7 +322,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_stateChanged:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 73
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_bufferrange"
@@ -356,7 +334,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_bufferrange:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 74
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "generic_background"
@@ -369,7 +346,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->generic_background:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 79
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_skip"
@@ -382,7 +358,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_skip:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 80
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_swim"
@@ -395,7 +370,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_swim:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 81
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_setvideobitraterange"
@@ -408,7 +382,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_setvideobitraterange:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 82
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_setvideoresolutionrange"
@@ -421,7 +394,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_setvideoresolutionrange:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 83
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_videobitraterangechanged"
@@ -434,7 +406,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_videobitraterangechanged:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 89
     new-instance v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     const-string/jumbo v1, "media_subtitledata"
@@ -447,7 +418,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->media_subtitledata:Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
-    .line 47
     const/16 v0, 0x1c
 
     new-array v0, v0, [Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
@@ -625,22 +595,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 96
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 97
     iput-object p3, p0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->eventName:Ljava/lang/String;
 
-    .line 98
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
     .locals 1
 
-    .prologue
-    .line 47
     const-class v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -655,8 +619,6 @@
 .method public static values()[Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
     .locals 1
 
-    .prologue
-    .line 47
     sget-object v0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->$VALUES:[Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->clone()Ljava/lang/Object;
@@ -673,8 +635,6 @@
 .method public final getName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 108
     iget-object v0, p0, Lcom/netflix/mediaclient/javabridge/ui/IMedia$MediaEventEnum;->eventName:Ljava/lang/String;
 
     return-object v0

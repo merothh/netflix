@@ -37,8 +37,6 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
-    .line 42
     sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v2, 0x5
@@ -49,7 +47,6 @@
 
     sput-wide v0, Lcom/netflix/mediaclient/ui/signup/OnRampActivity;->PAGE_LOAD_TIMEOUT:J
 
-    .line 45
     new-instance v0, Lcom/netflix/mediaclient/ui/signup/OnRampActivity$Latch;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/ui/signup/OnRampActivity$Latch;-><init>()V
@@ -62,18 +59,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 38
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/signup/WebViewAccountActivity;-><init>()V
 
-    .line 78
     new-instance v0, Lcom/netflix/mediaclient/ui/signup/OnRampActivity$1;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/signup/OnRampActivity$1;-><init>(Lcom/netflix/mediaclient/ui/signup/OnRampActivity;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/signup/OnRampActivity;->mAbortOnRamp:Ljava/lang/Runnable;
 
-    .line 192
     new-instance v0, Lcom/netflix/mediaclient/ui/signup/OnRampActivity$3;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/signup/OnRampActivity$3;-><init>(Lcom/netflix/mediaclient/ui/signup/OnRampActivity;)V
@@ -86,8 +79,6 @@
 .method static synthetic access$000(Lcom/netflix/mediaclient/ui/signup/OnRampActivity;)Z
     .locals 1
 
-    .prologue
-    .line 38
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/signup/OnRampActivity;->onLoadedBeenCalled:Z
 
     return v0
@@ -96,8 +87,6 @@
 .method static synthetic access$002(Lcom/netflix/mediaclient/ui/signup/OnRampActivity;Z)Z
     .locals 0
 
-    .prologue
-    .line 38
     iput-boolean p1, p0, Lcom/netflix/mediaclient/ui/signup/OnRampActivity;->onLoadedBeenCalled:Z
 
     return p1
@@ -106,8 +95,6 @@
 .method static synthetic access$102(Lcom/netflix/mediaclient/ui/signup/OnRampActivity;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .prologue
-    .line 38
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/signup/OnRampActivity;->mBootUrl:Ljava/lang/String;
 
     return-object p1
@@ -116,8 +103,6 @@
 .method static synthetic access$200()Lcom/netflix/mediaclient/ui/signup/OnRampActivity$Latch;
     .locals 1
 
-    .prologue
-    .line 38
     sget-object v0, Lcom/netflix/mediaclient/ui/signup/OnRampActivity;->onRampLatch:Lcom/netflix/mediaclient/ui/signup/OnRampActivity$Latch;
 
     return-object v0
@@ -126,8 +111,6 @@
 .method public static getOnRampLatch()Lcom/netflix/mediaclient/ui/signup/OnRampActivity$Latch;
     .locals 1
 
-    .prologue
-    .line 66
     sget-object v0, Lcom/netflix/mediaclient/ui/signup/OnRampActivity;->onRampLatch:Lcom/netflix/mediaclient/ui/signup/OnRampActivity$Latch;
 
     return-object v0
@@ -136,8 +119,6 @@
 .method public static shouldShowOnRamp(Lcom/netflix/mediaclient/servicemgr/ServiceManager;Landroid/app/Activity;)Z
     .locals 1
 
-    .prologue
-    .line 70
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->isReady()Z
 
     move-result v0
@@ -184,8 +165,6 @@
 .method public createJSBridge()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 96
     new-instance v0, Lcom/netflix/mediaclient/ui/signup/OnRampActivity$OnRampJSBridge;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/signup/OnRampActivity$OnRampJSBridge;-><init>(Lcom/netflix/mediaclient/ui/signup/OnRampActivity;)V
@@ -196,8 +175,6 @@
 .method protected createManagerStatusListener()Lcom/netflix/mediaclient/servicemgr/ManagerStatusListener;
     .locals 1
 
-    .prologue
-    .line 101
     new-instance v0, Lcom/netflix/mediaclient/ui/signup/OnRampActivity$2;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/signup/OnRampActivity$2;-><init>(Lcom/netflix/mediaclient/ui/signup/OnRampActivity;)V
@@ -208,8 +185,6 @@
 .method public getBootUrl()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 181
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/OnRampActivity;->mBootUrl:Ljava/lang/String;
 
     return-object v0
@@ -218,16 +193,12 @@
 .method public getContext()Landroid/content/Context;
     .locals 0
 
-    .prologue
-    .line 166
     return-object p0
 .end method
 
 .method protected getEntryPoint()Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;
     .locals 1
 
-    .prologue
-    .line 213
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;->profileGate:Lcom/netflix/mediaclient/servicemgr/CustomerServiceLogging$EntryPoint;
 
     return-object v0
@@ -236,8 +207,6 @@
 .method public getErrorHandler()Ljava/lang/Runnable;
     .locals 1
 
-    .prologue
-    .line 171
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/OnRampActivity;->mHandleError:Ljava/lang/Runnable;
 
     return-object v0
@@ -246,8 +215,6 @@
 .method public getNextTask()Ljava/lang/Runnable;
     .locals 1
 
-    .prologue
-    .line 176
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/OnRampActivity;->mAbortOnRamp:Ljava/lang/Runnable;
 
     return-object v0
@@ -256,8 +223,6 @@
 .method public getTimeout()J
     .locals 2
 
-    .prologue
-    .line 186
     sget-wide v0, Lcom/netflix/mediaclient/ui/signup/OnRampActivity;->PAGE_LOAD_TIMEOUT:J
 
     return-wide v0
@@ -266,8 +231,6 @@
 .method public getUiScreen()Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
     .locals 1
 
-    .prologue
-    .line 208
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->onramp:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     return-object v0
@@ -276,8 +239,6 @@
 .method public isLoadingData()Z
     .locals 1
 
-    .prologue
-    .line 91
     const/4 v0, 0x0
 
     return v0
@@ -286,25 +247,18 @@
 .method protected onDestroy()V
     .locals 0
 
-    .prologue
-    .line 156
     invoke-super {p0}, Lcom/netflix/mediaclient/ui/signup/WebViewAccountActivity;->onDestroy()V
 
-    .line 157
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/signup/OnRampActivity;->clearCookies()V
 
-    .line 158
     return-void
 .end method
 
 .method public onWebViewLoaded()V
     .locals 3
 
-    .prologue
-    .line 218
     invoke-super {p0}, Lcom/netflix/mediaclient/ui/signup/WebViewAccountActivity;->onWebViewLoaded()V
 
-    .line 219
     invoke-static {}, Lcom/netflix/mediaclient/service/logging/perf/PerformanceProfiler;->getInstance()Lcom/netflix/mediaclient/service/logging/perf/PerformanceProfiler;
 
     move-result-object v0
@@ -315,15 +269,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/mediaclient/service/logging/perf/PerformanceProfiler;->endSession(Lcom/netflix/mediaclient/service/logging/perf/Sessions;Ljava/util/Map;)V
 
-    .line 220
     return-void
 .end method
 
 .method public provideDialog(Ljava/lang/String;Ljava/lang/Runnable;)V
     .locals 3
 
-    .prologue
-    .line 143
     new-instance v0, Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$AlertDialogDescriptor;
 
     const/4 v1, 0x0
@@ -336,27 +287,22 @@
 
     invoke-direct {v0, v1, p1, v2, p2}, Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$AlertDialogDescriptor;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;)V
 
-    .line 144
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/signup/OnRampActivity;->handler:Landroid/os/Handler;
 
     invoke-static {p0, v1, v0}, Lcom/netflix/mediaclient/android/widget/AlertDialogFactory;->createDialog(Landroid/content/Context;Landroid/os/Handler;Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$AlertDialogDescriptor;)Lcom/netflix/mediaclient/android/widget/UpdateDialog$Builder;
 
     move-result-object v0
 
-    .line 145
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/signup/OnRampActivity;->displayDialog(Lcom/netflix/mediaclient/android/widget/UpdateDialog$Builder;)Landroid/app/Dialog;
 
-    .line 146
     return-void
 .end method
 
 .method public provideTwoButtonDialog(Ljava/lang/String;Ljava/lang/Runnable;)V
     .locals 7
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 149
     new-instance v0, Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$TwoButtonAlertDialogDescriptor;
 
     const v2, 0x7f0801c0
@@ -379,25 +325,20 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$TwoButtonAlertDialogDescriptor;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;Ljava/lang/String;Ljava/lang/Runnable;)V
 
-    .line 150
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/signup/OnRampActivity;->handler:Landroid/os/Handler;
 
     invoke-static {p0, v1, v0}, Lcom/netflix/mediaclient/android/widget/AlertDialogFactory;->createDialog(Landroid/content/Context;Landroid/os/Handler;Lcom/netflix/mediaclient/android/widget/AlertDialogFactory$AlertDialogDescriptor;)Lcom/netflix/mediaclient/android/widget/UpdateDialog$Builder;
 
     move-result-object v0
 
-    .line 151
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/signup/OnRampActivity;->displayDialog(Lcom/netflix/mediaclient/android/widget/UpdateDialog$Builder;)Landroid/app/Dialog;
 
-    .line 152
     return-void
 .end method
 
 .method public showAboutInMenu()Z
     .locals 1
 
-    .prologue
-    .line 139
     const/4 v0, 0x0
 
     return v0
@@ -406,8 +347,6 @@
 .method protected showHelpInMenu()Z
     .locals 1
 
-    .prologue
-    .line 75
     const/4 v0, 0x0
 
     return v0
@@ -416,8 +355,6 @@
 .method public showToast(Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 162
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/signup/OnRampActivity;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -430,6 +367,5 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 163
     return-void
 .end method

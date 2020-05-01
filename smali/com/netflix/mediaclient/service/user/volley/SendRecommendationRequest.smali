@@ -70,20 +70,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 47
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;-><init>(Landroid/content/Context;)V
 
-    .line 48
     iput-object p6, p0, Lcom/netflix/mediaclient/service/user/volley/SendRecommendationRequest;->responseCallback:Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;
 
-    .line 50
     iput-object p2, p0, Lcom/netflix/mediaclient/service/user/volley/SendRecommendationRequest;->mVideoId:Ljava/lang/String;
 
-    .line 51
     iput-object p3, p0, Lcom/netflix/mediaclient/service/user/volley/SendRecommendationRequest;->mFriends:Ljava/util/Set;
 
-    .line 52
     if-nez p4, :cond_1
 
     const/4 v0, 0x0
@@ -91,20 +85,16 @@
     :goto_0
     iput-object v0, p0, Lcom/netflix/mediaclient/service/user/volley/SendRecommendationRequest;->mBodyText:Ljava/lang/String;
 
-    .line 53
     iput-object p5, p0, Lcom/netflix/mediaclient/service/user/volley/SendRecommendationRequest;->mGUID:Ljava/lang/String;
 
-    .line 55
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string/jumbo v0, "["
 
     invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 56
     const/4 v0, 0x0
 
-    .line 58
     invoke-interface {p3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -124,15 +114,12 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;
 
-    .line 59
     if-lez v1, :cond_0
 
-    .line 60
     const-string/jumbo v4, ", "
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 62
     :cond_0
     const-string/jumbo v4, "\'"
 
@@ -156,15 +143,12 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 63
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
-    .line 64
     goto :goto_1
 
-    .line 52
     :cond_1
     invoke-static {p4}, Lcom/netflix/mediaclient/util/StringUtils;->escapeJsonChars(Ljava/lang/String;)Ljava/lang/String;
 
@@ -172,13 +156,11 @@
 
     goto :goto_0
 
-    .line 66
     :cond_2
     const-string/jumbo v0, "]"
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 68
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "[\'"
@@ -217,7 +199,6 @@
 
     const-string/jumbo v1, "\', \'"
 
-    .line 69
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -240,14 +221,12 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/user/volley/SendRecommendationRequest;->pqlQuery:Ljava/lang/String;
 
-    .line 71
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 72
     const-string/jumbo v0, "nf_service_user_fetchfriendsforrecommendationrequest"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -272,7 +251,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     :cond_3
     return-void
 .end method
@@ -282,8 +260,6 @@
 .method protected getMethodType()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 83
     const-string/jumbo v0, "call"
 
     return-object v0
@@ -292,8 +268,6 @@
 .method protected getOptionalParams()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 89
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "param"
@@ -330,7 +304,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 90
     const-string/jumbo v1, "&param="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -353,7 +326,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 91
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -373,8 +345,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 96
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -395,20 +365,16 @@
 .method protected onFailure(Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 154
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/volley/SendRecommendationRequest;->responseCallback:Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;
 
     if-eqz v0, :cond_0
 
-    .line 155
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/volley/SendRecommendationRequest;->responseCallback:Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, v1, p1}, Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;->onRecommendationsSent(Ljava/util/Set;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 157
     :cond_0
     return-void
 .end method
@@ -416,8 +382,6 @@
 .method protected bridge synthetic onSuccess(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 27
     check-cast p1, Ljava/util/Set;
 
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/user/volley/SendRecommendationRequest;->onSuccess(Ljava/util/Set;)V
@@ -437,20 +401,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 161
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/volley/SendRecommendationRequest;->responseCallback:Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;
 
     if-eqz v0, :cond_0
 
-    .line 162
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/volley/SendRecommendationRequest;->responseCallback:Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;
 
     sget-object v1, Lcom/netflix/mediaclient/android/app/CommonStatus;->OK:Lcom/netflix/mediaclient/android/app/NetflixImmutableStatus;
 
     invoke-interface {v0, p1, v1}, Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;->onRecommendationsSent(Ljava/util/Set;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 164
     :cond_0
     return-void
 .end method
@@ -458,8 +418,6 @@
 .method protected bridge synthetic parseFalkorResponse(Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 27
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/user/volley/SendRecommendationRequest;->parseFalkorResponse(Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object v0
@@ -481,15 +439,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 102
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 103
     const-string/jumbo v0, "nf_service_user_fetchfriendsforrecommendationrequest"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -512,7 +467,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
     :cond_0
     const-string/jumbo v0, "nf_service_user_fetchfriendsforrecommendationrequest"
 
@@ -520,14 +474,12 @@
 
     move-result-object v0
 
-    .line 107
     invoke-static {v0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorParseUtils;->isEmpty(Lcom/google/gson/JsonObject;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 108
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorException;
 
     const-string/jumbo v1, "UserProfiles empty!!!"
@@ -536,7 +488,6 @@
 
     throw v0
 
-    .line 115
     :cond_1
     :try_start_0
     const-string/jumbo v1, "friendVideos"
@@ -547,35 +498,28 @@
 
     move-result-object v1
 
-    .line 123
     if-nez v1, :cond_3
 
-    .line 124
     const-string/jumbo v0, "nf_service_user_fetchfriendsforrecommendationrequest"
 
     const-string/jumbo v1, "While parsing the response got null friendsListObj"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/volley/SendRecommendationRequest;->mFriends:Ljava/util/Set;
 
-    .line 149
     :goto_0
     return-object v0
 
-    .line 116
     :catch_0
     move-exception v0
 
-    .line 117
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 118
     const-string/jumbo v1, "nf_service_user_fetchfriendsforrecommendationrequest"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -598,7 +542,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
     :cond_2
     new-instance v1, Lcom/netflix/mediaclient/service/webclient/volley/FalkorException;
 
@@ -608,7 +551,6 @@
 
     throw v1
 
-    .line 129
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/volley/SendRecommendationRequest;->mFriends:Ljava/util/Set;
 
@@ -630,7 +572,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;
 
-    .line 130
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->getFriendProfile()Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
 
     move-result-object v3
@@ -639,19 +580,16 @@
 
     move-result-object v3
 
-    .line 132
     invoke-virtual {v1, v3}, Lcom/google/gson/JsonObject;->has(Ljava/lang/String;)Z
 
     move-result v4
 
     if-eqz v4, :cond_4
 
-    .line 133
     invoke-virtual {v1, v3}, Lcom/google/gson/JsonObject;->getAsJsonObject(Ljava/lang/String;)Lcom/google/gson/JsonObject;
 
     move-result-object v3
 
-    .line 135
     iget-object v4, p0, Lcom/netflix/mediaclient/service/user/volley/SendRecommendationRequest;->mVideoId:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Lcom/google/gson/JsonObject;->has(Ljava/lang/String;)Z
@@ -660,14 +598,12 @@
 
     if-eqz v4, :cond_5
 
-    .line 136
     iget-object v4, p0, Lcom/netflix/mediaclient/service/user/volley/SendRecommendationRequest;->mVideoId:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Lcom/google/gson/JsonObject;->getAsJsonObject(Ljava/lang/String;)Lcom/google/gson/JsonObject;
 
     move-result-object v3
 
-    .line 138
     const-string/jumbo v4, "wasRecommended"
 
     invoke-virtual {v3, v4}, Lcom/google/gson/JsonObject;->getAsJsonPrimitive(Ljava/lang/String;)Lcom/google/gson/JsonPrimitive;
@@ -678,12 +614,10 @@
 
     move-result v3
 
-    .line 139
     invoke-virtual {v0, v3}, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->setWasRecommended(Z)V
 
     goto :goto_1
 
-    .line 141
     :cond_5
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -691,7 +625,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 142
     const-string/jumbo v0, "nf_service_user_fetchfriendsforrecommendationrequest"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -734,7 +667,6 @@
 
     goto :goto_1
 
-    .line 149
     :cond_6
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/volley/SendRecommendationRequest;->mFriends:Ljava/util/Set;
 
@@ -744,8 +676,6 @@
 .method protected shouldSkipProcessingOnInvalidUser()Z
     .locals 1
 
-    .prologue
-    .line 78
     const/4 v0, 0x0
 
     return v0

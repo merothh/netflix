@@ -30,7 +30,6 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x3
 
     const/4 v4, 0x2
@@ -39,7 +38,6 @@
 
     const/4 v2, 0x0
 
-    .line 44
     new-instance v0, Lcom/netflix/model/leafs/advisory/Advisory$Type;
 
     const-string/jumbo v1, "EXPIRY_NOTICE"
@@ -48,7 +46,6 @@
 
     sput-object v0, Lcom/netflix/model/leafs/advisory/Advisory$Type;->EXPIRY_NOTICE:Lcom/netflix/model/leafs/advisory/Advisory$Type;
 
-    .line 45
     new-instance v0, Lcom/netflix/model/leafs/advisory/Advisory$Type;
 
     const-string/jumbo v1, "CONTENT_ADVISORY"
@@ -57,7 +54,6 @@
 
     sput-object v0, Lcom/netflix/model/leafs/advisory/Advisory$Type;->CONTENT_ADVISORY:Lcom/netflix/model/leafs/advisory/Advisory$Type;
 
-    .line 46
     new-instance v0, Lcom/netflix/model/leafs/advisory/Advisory$Type;
 
     const-string/jumbo v1, "PRODUCT_PLACEMENT_ADVISORY"
@@ -66,7 +62,6 @@
 
     sput-object v0, Lcom/netflix/model/leafs/advisory/Advisory$Type;->PRODUCT_PLACEMENT_ADVISORY:Lcom/netflix/model/leafs/advisory/Advisory$Type;
 
-    .line 47
     new-instance v0, Lcom/netflix/model/leafs/advisory/Advisory$Type;
 
     const-string/jumbo v1, "UNKNOWN"
@@ -75,7 +70,6 @@
 
     sput-object v0, Lcom/netflix/model/leafs/advisory/Advisory$Type;->UNKNOWN:Lcom/netflix/model/leafs/advisory/Advisory$Type;
 
-    .line 43
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/netflix/model/leafs/advisory/Advisory$Type;
@@ -109,8 +103,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 43
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -119,8 +111,6 @@
 .method public static fromString(Ljava/lang/String;)Lcom/netflix/model/leafs/advisory/Advisory$Type;
     .locals 1
 
-    .prologue
-    .line 51
     :try_start_0
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
@@ -134,15 +124,12 @@
 
     move-result-object v0
 
-    .line 55
     :goto_0
     return-object v0
 
-    .line 52
     :catch_0
     move-exception v0
 
-    .line 55
     sget-object v0, Lcom/netflix/model/leafs/advisory/Advisory$Type;->UNKNOWN:Lcom/netflix/model/leafs/advisory/Advisory$Type;
 
     goto :goto_0
@@ -151,8 +138,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/model/leafs/advisory/Advisory$Type;
     .locals 1
 
-    .prologue
-    .line 43
     const-class v0, Lcom/netflix/model/leafs/advisory/Advisory$Type;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -167,8 +152,6 @@
 .method public static values()[Lcom/netflix/model/leafs/advisory/Advisory$Type;
     .locals 1
 
-    .prologue
-    .line 43
     sget-object v0, Lcom/netflix/model/leafs/advisory/Advisory$Type;->$VALUES:[Lcom/netflix/model/leafs/advisory/Advisory$Type;
 
     invoke-virtual {v0}, [Lcom/netflix/model/leafs/advisory/Advisory$Type;->clone()Ljava/lang/Object;

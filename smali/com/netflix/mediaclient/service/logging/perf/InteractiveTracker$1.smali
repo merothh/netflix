@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker;Landroid/widget/ImageView;)V
     .locals 0
 
-    .prologue
-    .line 66
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker$1;->this$0:Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker$1;->val$view:Landroid/widget/ImageView;
@@ -32,8 +30,6 @@
 .method public onPreDraw()Z
     .locals 2
 
-    .prologue
-    .line 69
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker$1;->val$view:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
@@ -42,14 +38,12 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 70
     const-string/jumbo v0, "InteractiveTracker"
 
     const-string/jumbo v1, "onPreDraw"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker$1;->this$0:Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker;->isComplete()Z
@@ -68,19 +62,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 72
     const-string/jumbo v0, "InteractiveTracker"
 
     const-string/jumbo v1, "ALL IMAGES LOADED!!!.. before first "
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 73
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker$1;->this$0:Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker;->isNowInteractive()V
 
-    .line 75
     :cond_0
     const/4 v0, 0x1
 

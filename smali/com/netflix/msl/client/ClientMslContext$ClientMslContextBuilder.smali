@@ -45,8 +45,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -57,8 +55,6 @@
 .method public build()Lcom/netflix/msl/client/ClientMslContext;
     .locals 9
 
-    .prologue
-    .line 43
     new-instance v0, Lcom/netflix/msl/client/ClientMslContext;
 
     iget-object v1, p0, Lcom/netflix/msl/client/ClientMslContext$ClientMslContextBuilder;->clock:Lcom/netflix/msl/client/ClientMslContext$ClockProvider;
@@ -85,8 +81,6 @@
 .method public clock(Lcom/netflix/msl/client/ClientMslContext$ClockProvider;)Lcom/netflix/msl/client/ClientMslContext$ClientMslContextBuilder;
     .locals 0
 
-    .prologue
-    .line 43
     iput-object p1, p0, Lcom/netflix/msl/client/ClientMslContext$ClientMslContextBuilder;->clock:Lcom/netflix/msl/client/ClientMslContext$ClockProvider;
 
     return-object p0
@@ -95,8 +89,6 @@
 .method public entityAuthData(Lcom/netflix/msl/entityauth/EntityAuthenticationData;)Lcom/netflix/msl/client/ClientMslContext$ClientMslContextBuilder;
     .locals 0
 
-    .prologue
-    .line 43
     iput-object p1, p0, Lcom/netflix/msl/client/ClientMslContext$ClientMslContextBuilder;->entityAuthData:Lcom/netflix/msl/entityauth/EntityAuthenticationData;
 
     return-object p0
@@ -116,8 +108,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 43
     iput-object p1, p0, Lcom/netflix/msl/client/ClientMslContext$ClientMslContextBuilder;->entityAuthFactories:Ljava/util/Map;
 
     return-object p0
@@ -137,8 +127,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 43
     iput-object p1, p0, Lcom/netflix/msl/client/ClientMslContext$ClientMslContextBuilder;->keyxFactories:Ljava/util/Map;
 
     return-object p0
@@ -147,8 +135,6 @@
 .method public mslCryptoContext(Lcom/netflix/msl/crypto/ICryptoContext;)Lcom/netflix/msl/client/ClientMslContext$ClientMslContextBuilder;
     .locals 0
 
-    .prologue
-    .line 43
     iput-object p1, p0, Lcom/netflix/msl/client/ClientMslContext$ClientMslContextBuilder;->mslCryptoContext:Lcom/netflix/msl/crypto/ICryptoContext;
 
     return-object p0
@@ -157,8 +143,6 @@
 .method public mslStore(Lcom/netflix/msl/util/MslStore;)Lcom/netflix/msl/client/ClientMslContext$ClientMslContextBuilder;
     .locals 0
 
-    .prologue
-    .line 43
     iput-object p1, p0, Lcom/netflix/msl/client/ClientMslContext$ClientMslContextBuilder;->mslStore:Lcom/netflix/msl/util/MslStore;
 
     return-object p0
@@ -167,8 +151,6 @@
 .method public random(Ljava/util/Random;)Lcom/netflix/msl/client/ClientMslContext$ClientMslContextBuilder;
     .locals 0
 
-    .prologue
-    .line 43
     iput-object p1, p0, Lcom/netflix/msl/client/ClientMslContext$ClientMslContextBuilder;->random:Ljava/util/Random;
 
     return-object p0
@@ -177,8 +159,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 43
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -295,8 +275,6 @@
 .method public tokenFactory(Lcom/netflix/msl/tokens/TokenFactory;)Lcom/netflix/msl/client/ClientMslContext$ClientMslContextBuilder;
     .locals 0
 
-    .prologue
-    .line 43
     iput-object p1, p0, Lcom/netflix/msl/client/ClientMslContext$ClientMslContextBuilder;->tokenFactory:Lcom/netflix/msl/tokens/TokenFactory;
 
     return-object p0

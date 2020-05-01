@@ -44,26 +44,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 161
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 162
     iput-object p1, p0, Lcom/netflix/mediaclient/servicemgr/IMSLClient$MSLApiUnwrappedParams;->uri:Ljava/lang/String;
 
-    .line 163
     iput-object p2, p0, Lcom/netflix/mediaclient/servicemgr/IMSLClient$MSLApiUnwrappedParams;->method:Ljava/lang/String;
 
-    .line 164
     iput-object p3, p0, Lcom/netflix/mediaclient/servicemgr/IMSLClient$MSLApiUnwrappedParams;->mslHeaders:Ljava/util/Map;
 
-    .line 165
     iput-object p4, p0, Lcom/netflix/mediaclient/servicemgr/IMSLClient$MSLApiUnwrappedParams;->mslQuery:Ljava/lang/String;
 
-    .line 166
     iput-object p5, p0, Lcom/netflix/mediaclient/servicemgr/IMSLClient$MSLApiUnwrappedParams;->mslPayload:Ljava/lang/String;
 
-    .line 167
     return-void
 .end method
 
@@ -72,15 +64,12 @@
 .method public toString()Ljava/lang/String;
     .locals 6
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 172
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 173
     const-string/jumbo v1, "MSLApiUnwrappedParams{ uri="
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -95,7 +84,6 @@
 
     const-string/jumbo v3, ", method=\'"
 
-    .line 174
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -108,10 +96,8 @@
 
     const-string/jumbo v3, ", additional headers="
 
-    .line 175
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 177
     iget-object v1, p0, Lcom/netflix/mediaclient/servicemgr/IMSLClient$MSLApiUnwrappedParams;->mslHeaders:Ljava/util/Map;
 
     if-eqz v1, :cond_0
@@ -124,13 +110,11 @@
 
     if-ge v1, v0, :cond_1
 
-    .line 178
     :cond_0
     const-string/jumbo v0, "null"
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 194
     :goto_0
     const-string/jumbo v0, ", query=\'"
 
@@ -146,7 +130,6 @@
 
     const-string/jumbo v1, ", payload=\'"
 
-    .line 195
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -159,23 +142,19 @@
 
     const-string/jumbo v1, "}"
 
-    .line 196
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 198
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 180
     :cond_1
     const-string/jumbo v1, "{"
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 182
     iget-object v1, p0, Lcom/netflix/mediaclient/servicemgr/IMSLClient$MSLApiUnwrappedParams;->mslHeaders:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -201,13 +180,10 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 183
     if-eqz v1, :cond_2
 
-    .line 184
     const/4 v1, 0x0
 
-    .line 188
     :goto_2
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -231,7 +207,6 @@
 
     goto :goto_1
 
-    .line 186
     :cond_2
     const-string/jumbo v4, ", "
 
@@ -239,7 +214,6 @@
 
     goto :goto_2
 
-    .line 191
     :cond_3
     const-string/jumbo v0, "}"
 

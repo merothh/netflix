@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;)V
     .locals 0
 
-    .prologue
-    .line 628
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$4;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,7 +26,5 @@
 .method public onRetryRequested()V
     .locals 0
 
-    .prologue
-    .line 632
     return-void
 .end method

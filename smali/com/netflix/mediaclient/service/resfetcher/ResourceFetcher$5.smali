@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher;Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 378
     iput-object p1, p0, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher$5;->this$0:Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher$5;->val$callback:Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;
@@ -36,8 +34,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 381
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher$5;->val$callback:Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher$5;->val$resourceUrl:Ljava/lang/String;
@@ -48,6 +44,5 @@
 
     invoke-interface {v0, v1, v2, v3}, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;->onResourcePrefetched(Ljava/lang/String;ILcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 382
     return-void
 .end method

@@ -15,18 +15,14 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/netflix/mediaclient/webapi/AuthorizationCredentials;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 28
     invoke-static {}, Lcom/netflix/mediaclient/webapi/CommonRequestParameters;->getInstanceWithCredentials()Lcom/netflix/mediaclient/webapi/CommonRequestParameters;
 
     move-result-object v0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdxCeWebApiCommand;-><init>(Ljava/lang/String;Lcom/netflix/mediaclient/webapi/AuthorizationCredentials;Lcom/netflix/mediaclient/webapi/CommonRequestParameters;)V
 
-    .line 29
     iput-object p3, p0, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdxCustomerEvent;->mEventData:Ljava/lang/String;
 
-    .line 30
     return-void
 .end method
 
@@ -47,18 +43,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 83
     if-eqz p3, :cond_0
 
-    .line 84
     new-instance v0, Lorg/apache/http/message/BasicNameValuePair;
 
     invoke-direct {v0, p2, p3}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 86
     :cond_0
     return-void
 .end method
@@ -66,47 +58,37 @@
 .method public execute()V
     .locals 0
 
-    .prologue
-    .line 97
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdxCustomerEvent;->doExecute()Ljava/lang/String;
 
-    .line 98
     return-void
 .end method
 
 .method protected getBaseUrl()Ljava/lang/StringBuilder;
     .locals 3
 
-    .prologue
-    .line 61
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 63
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdxCustomerEvent;->isSecure()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 64
     const-string/jumbo v1, "https://"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 69
     :goto_0
     sget-object v1, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdxCustomerEvent;->mCustomerEventEndPoint:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 70
     const-string/jumbo v1, "/users/customerevents"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 71
     const/16 v1, 0x3f
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -131,7 +113,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 72
     const/16 v1, 0x26
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -148,10 +129,8 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 73
     return-object v0
 
-    .line 66
     :cond_0
     const-string/jumbo v1, "http://"
 
@@ -163,8 +142,6 @@
 .method public getCommandPath()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 89
     const-string/jumbo v0, "/users"
 
     return-object v0
@@ -173,8 +150,6 @@
 .method protected getHttpMethod()Lorg/apache/http/client/methods/HttpUriRequest;
     .locals 3
 
-    .prologue
-    .line 37
     new-instance v0, Lorg/apache/http/client/methods/HttpPost;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdxCustomerEvent;->getUrl()Ljava/lang/StringBuilder;
@@ -187,7 +162,6 @@
 
     invoke-direct {v0, v1}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
 
-    .line 38
     new-instance v1, Lorg/apache/http/client/entity/UrlEncodedFormEntity;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdxCustomerEvent;->getParameters()Ljava/util/List;
@@ -198,7 +172,6 @@
 
     invoke-virtual {v0, v1}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
 
-    .line 40
     return-object v0
 .end method
 
@@ -214,15 +187,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 49
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x3
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 50
     const-string/jumbo v1, "output"
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdxCustomerEvent;->getOuput()Ljava/lang/String;
@@ -231,14 +201,12 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdxCustomerEvent;->addIfNotNull(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 51
     const-string/jumbo v1, "data"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdxCustomerEvent;->mEventData:Ljava/lang/String;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdxCustomerEvent;->addIfNotNull(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 52
     const-string/jumbo v1, "withCredentials"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdxCustomerEvent;->commonRequestParameters:Lcom/netflix/mediaclient/webapi/CommonRequestParameters;
@@ -251,6 +219,5 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdxCustomerEvent;->addIfNotNull(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 53
     return-object v0
 .end method

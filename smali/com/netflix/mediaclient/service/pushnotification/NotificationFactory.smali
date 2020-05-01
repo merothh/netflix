@@ -13,31 +13,24 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     return-void
 .end method
 
 .method public static createDummyGcmInfoIntent(Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;)Landroid/content/Intent;
     .locals 5
 
-    .prologue
-    .line 158
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 159
     const-string/jumbo v1, "profileId"
 
     const-string/jumbo v2, "W6HQ56YURRBVHKDXMUT6FBHWRY"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 160
     const-string/jumbo v1, "type"
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/pushnotification/Payload$ActionInfoType;->getValue()Ljava/lang/String;
@@ -46,21 +39,18 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 161
     const-string/jumbo v1, "when"
 
     const-string/jumbo v2, "1408065095164"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 162
     const-string/jumbo v1, "defaultActionKey"
 
     const-string/jumbo v2, "INFO"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 163
     const-string/jumbo v1, "nf_push_notificationFactory"
 
     const-string/jumbo v2, "Built gcmInfoEvent for type:%s, intent: %s"
@@ -83,46 +73,37 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 165
     return-object v0
 .end method
 
 .method public static createDummyNotification(Lcom/netflix/mediaclient/service/NetflixService;)V
     .locals 0
 
-    .prologue
-    .line 169
     return-void
 .end method
 
 .method public static createNotification(Lcom/netflix/mediaclient/service/NetflixService;Landroid/content/Intent;Lcom/netflix/mediaclient/util/gfx/ImageLoader;I)V
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
     const/4 v5, 0x0
 
-    .line 61
     if-nez p1, :cond_1
 
-    .line 62
     const-string/jumbo v0, "nf_push_notificationFactory"
 
     const-string/jumbo v1, "NotificationFactory.createNotification:: Intent is null!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
     :cond_0
     :goto_0
     return-void
 
-    .line 66
     :cond_1
     if-nez p0, :cond_2
 
-    .line 67
     const-string/jumbo v0, "nf_push_notificationFactory"
 
     const-string/jumbo v1, "NotificationFactory.createNotification:: service is null!"
@@ -131,28 +112,23 @@
 
     goto :goto_0
 
-    .line 71
     :cond_2
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/NetflixService;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 72
     if-eqz v0, :cond_0
 
-    .line 76
     new-instance v1, Lcom/netflix/mediaclient/service/pushnotification/Payload;
 
     invoke-direct {v1, p1}, Lcom/netflix/mediaclient/service/pushnotification/Payload;-><init>(Landroid/content/Intent;)V
 
-    .line 77
     invoke-static {v1}, Lcom/netflix/mediaclient/service/pushnotification/NotificationFactory;->isValid(Lcom/netflix/mediaclient/service/pushnotification/Payload;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 82
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/NetflixService;->getCurrentProfile()Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;
 
     move-result-object v2
@@ -167,7 +143,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 83
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/NetflixService;->getCurrentProfile()Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;
 
     move-result-object v2
@@ -176,7 +151,6 @@
 
     move-result-object v2
 
-    .line 84
     iget-object v3, v1, Lcom/netflix/mediaclient/service/pushnotification/Payload;->profileGuid:Ljava/lang/String;
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/util/StringUtils;->safeEquals(Ljava/lang/String;Ljava/lang/String;)Z
@@ -185,7 +159,6 @@
 
     if-nez v3, :cond_4
 
-    .line 85
     const-string/jumbo v0, "nf_push_notificationFactory"
 
     const-string/jumbo v3, "drop push event - currentProfile :%s != profileGuid:%s"
@@ -208,7 +181,6 @@
 
     goto :goto_0
 
-    .line 89
     :cond_3
     const-string/jumbo v2, "nf_push_notificationFactory"
 
@@ -216,7 +188,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
     :cond_4
     const-string/jumbo v2, "INFO"
 
@@ -228,14 +199,12 @@
 
     if-eqz v2, :cond_6
 
-    .line 94
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/NetflixService;->getCurrentProfile()Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;
 
     move-result-object v0
 
     if-nez v0, :cond_5
 
-    .line 95
     const-string/jumbo v0, "nf_push_notificationFactory"
 
     const-string/jumbo v2, "currentProfile null dropping gcm event payload:%s"
@@ -252,7 +221,6 @@
 
     goto :goto_0
 
-    .line 99
     :cond_5
     invoke-static {}, Lcom/netflix/mediaclient/service/pushnotification/InfoEventHandler;->getInstance()Lcom/netflix/mediaclient/service/pushnotification/InfoEventHandler;
 
@@ -262,7 +230,6 @@
 
     goto/16 :goto_0
 
-    .line 103
     :cond_6
     invoke-static {p0, v1, p1}, Lcom/netflix/mediaclient/service/pushnotification/NotificationFactory;->handleSocialAction(Lcom/netflix/mediaclient/service/NetflixService;Lcom/netflix/mediaclient/service/pushnotification/Payload;Landroid/content/Intent;)Z
 
@@ -270,14 +237,12 @@
 
     if-nez v2, :cond_0
 
-    .line 107
     invoke-static {}, Lcom/netflix/mediaclient/NetflixApplication;->isActivityVisible()Z
 
     move-result v2
 
     if-eqz v2, :cond_7
 
-    .line 108
     const-string/jumbo v0, "nf_push_notificationFactory"
 
     const-string/jumbo v1, "App is active - don\'t send a notification to Android status bar"
@@ -286,34 +251,28 @@
 
     goto/16 :goto_0
 
-    .line 110
     :cond_7
     invoke-static {}, Lcom/netflix/mediaclient/util/AndroidUtils;->getAndroidVersion()I
 
     move-result v2
 
-    .line 111
     const/16 v3, 0x10
 
     if-lt v2, v3, :cond_8
 
-    .line 112
     invoke-static {v0, v1, p2, p3}, Lcom/netflix/mediaclient/service/pushnotification/NotificationBuilderJellyBean;->createNotification(Landroid/content/Context;Lcom/netflix/mediaclient/service/pushnotification/Payload;Lcom/netflix/mediaclient/util/gfx/ImageLoader;I)V
 
     goto/16 :goto_0
 
-    .line 113
     :cond_8
     const/16 v3, 0xb
 
     if-lt v2, v3, :cond_9
 
-    .line 114
     invoke-static {v0, v1, p2, p3}, Lcom/netflix/mediaclient/service/pushnotification/NotificationBuilderHoneycomb;->createNotification(Landroid/content/Context;Lcom/netflix/mediaclient/service/pushnotification/Payload;Lcom/netflix/mediaclient/util/gfx/ImageLoader;I)V
 
     goto/16 :goto_0
 
-    .line 116
     :cond_9
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -327,12 +286,10 @@
 .method private static handleSocialAction(Lcom/netflix/mediaclient/service/NetflixService;Lcom/netflix/mediaclient/service/pushnotification/Payload;Landroid/content/Intent;)Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x0
 
     const/4 v0, 0x1
 
-    .line 132
     const-string/jumbo v2, "SOCIAL"
 
     iget-object v3, p1, Lcom/netflix/mediaclient/service/pushnotification/Payload;->defaultActionKey:Ljava/lang/String;
@@ -343,21 +300,18 @@
 
     if-eqz v2, :cond_4
 
-    .line 133
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/NetflixService;->getCurrentProfile()Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;
 
     move-result-object v2
 
     if-nez v2, :cond_1
 
-    .line 134
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 135
     const-string/jumbo v2, "nf_push_notificationFactory"
 
     const-string/jumbo v3, "currentProfile null dropping social event payload:%s"
@@ -372,12 +326,10 @@
 
     invoke-static {v2, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 154
     :cond_0
     :goto_0
     return v0
 
-    .line 141
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -385,7 +337,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 142
     const-string/jumbo v2, "nf_push_notificationFactory"
 
     const-string/jumbo v3, "rcvd visible push social notification: payload: %s"
@@ -400,20 +351,17 @@
 
     invoke-static {v2, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 145
     :cond_2
     invoke-static {p2}, Lcom/netflix/mediaclient/service/pushnotification/MessageData;->createInstance(Landroid/content/Intent;)Lcom/netflix/mediaclient/service/pushnotification/MessageData;
 
     move-result-object v1
 
-    .line 147
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 148
     const-string/jumbo v2, "nf_push_notificationFactory"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -436,7 +384,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 150
     :cond_3
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/NetflixService;->getBrowse()Lcom/netflix/mediaclient/servicemgr/IBrowseInterface;
 
@@ -449,34 +396,28 @@
     :cond_4
     move v0, v1
 
-    .line 154
     goto :goto_0
 .end method
 
 .method private static isValid(Lcom/netflix/mediaclient/service/pushnotification/Payload;)Z
     .locals 4
 
-    .prologue
-    .line 45
     invoke-static {p0}, Lcom/netflix/mediaclient/service/pushnotification/Payload;->isValid(Lcom/netflix/mediaclient/service/pushnotification/Payload;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 46
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 47
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 48
     const-string/jumbo v1, "nf_push_notificationFactory"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -499,11 +440,9 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
     :cond_0
     const/4 v0, 0x0
 
-    .line 52
     :goto_0
     return v0
 

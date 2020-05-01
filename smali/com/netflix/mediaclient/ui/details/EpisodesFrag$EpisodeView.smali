@@ -13,14 +13,10 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/details/EpisodesFrag;Landroid/content/Context;I)V
     .locals 0
 
-    .prologue
-    .line 211
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$EpisodeView;->this$0:Lcom/netflix/mediaclient/ui/details/EpisodesFrag;
 
-    .line 212
     invoke-direct {p0, p2, p3}, Lcom/netflix/mediaclient/ui/details/AbsEpisodeView;-><init>(Landroid/content/Context;I)V
 
-    .line 213
     return-void
 .end method
 
@@ -29,17 +25,13 @@
 .method protected setupPlayButton(Lcom/netflix/mediaclient/servicemgr/interface_/details/EpisodeDetails;)V
     .locals 2
 
-    .prologue
-    .line 217
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$EpisodeView;->playButton:Landroid/widget/ImageView;
 
     if-nez v0, :cond_0
 
-    .line 233
     :goto_0
     return-void
 
-    .line 221
     :cond_0
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$EpisodeView;->playButton:Landroid/widget/ImageView;
 
@@ -54,7 +46,6 @@
     :goto_1
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 222
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$EpisodeView;->playButton:Landroid/widget/ImageView;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$EpisodeView$1;
@@ -65,7 +56,6 @@
 
     goto :goto_0
 
-    .line 221
     :cond_1
     const/4 v0, 0x4
 
@@ -75,15 +65,12 @@
 .method public update(Lcom/netflix/mediaclient/servicemgr/interface_/details/EpisodeDetails;)V
     .locals 2
 
-    .prologue
-    .line 263
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/details/EpisodeDetails;->getPlayable()Lcom/netflix/mediaclient/servicemgr/interface_/Playable;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$EpisodeView;->playable:Lcom/netflix/mediaclient/servicemgr/interface_/Playable;
 
-    .line 264
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$EpisodeView;->this$0:Lcom/netflix/mediaclient/ui/details/EpisodesFrag;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/details/EpisodesFrag;->showDetails:Lcom/netflix/mediaclient/servicemgr/interface_/details/ShowDetails;
@@ -102,7 +89,6 @@
 
     invoke-virtual {p0, p1, v0}, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$EpisodeView;->update(Lcom/netflix/mediaclient/servicemgr/interface_/details/EpisodeDetails;Z)V
 
-    .line 265
     const v0, 0x7f0f001e
 
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/details/EpisodeDetails;->getId()Ljava/lang/String;
@@ -111,7 +97,6 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$EpisodeView;->setTag(ILjava/lang/Object;)V
 
-    .line 266
     const v0, 0x7f0f001f
 
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/details/EpisodeDetails;->getType()Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
@@ -124,15 +109,12 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$EpisodeView;->setTag(ILjava/lang/Object;)V
 
-    .line 267
     return-void
 .end method
 
 .method public bridge synthetic update(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 209
     check-cast p1, Lcom/netflix/mediaclient/servicemgr/interface_/details/EpisodeDetails;
 
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$EpisodeView;->update(Lcom/netflix/mediaclient/servicemgr/interface_/details/EpisodeDetails;)V
@@ -143,20 +125,16 @@
 .method protected updateDownloadButton(Lcom/netflix/mediaclient/servicemgr/interface_/Playable;)V
     .locals 4
 
-    .prologue
     const/16 v3, 0x8
 
-    .line 237
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$EpisodeView;->episodeDownloadButton:Lcom/netflix/mediaclient/ui/offline/DownloadButton;
 
     if-nez v0, :cond_1
 
-    .line 257
     :cond_0
     :goto_0
     return-void
 
-    .line 241
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$EpisodeView;->this$0:Lcom/netflix/mediaclient/ui/details/EpisodesFrag;
 
@@ -164,7 +142,6 @@
 
     move-result-object v0
 
-    .line 243
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->isReady()Z
@@ -173,15 +150,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 247
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getOfflineAgent()Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface;
 
     move-result-object v0
 
-    .line 248
     if-eqz v0, :cond_2
 
-    .line 249
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$EpisodeView;->episodeDownloadButton:Lcom/netflix/mediaclient/ui/offline/DownloadButton;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$EpisodeView;->this$0:Lcom/netflix/mediaclient/ui/details/EpisodesFrag;
@@ -192,7 +166,6 @@
 
     invoke-virtual {v1, p1, v2}, Lcom/netflix/mediaclient/ui/offline/DownloadButton;->setStateFromPlayable(Lcom/netflix/mediaclient/servicemgr/interface_/Playable;Lcom/netflix/mediaclient/android/activity/NetflixActivity;)V
 
-    .line 250
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface;->getLatestOfflinePlayableList()Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflinePlayableUiList;
 
     move-result-object v0
@@ -205,7 +178,6 @@
 
     move-result-object v0
 
-    .line 251
     if-eqz v0, :cond_0
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/offline/OfflineUiHelper;->isFullyDownloadedAndNotWatchable(Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflinePlayableViewData;)Z
@@ -214,14 +186,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 252
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$EpisodeView;->playButton:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 255
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/EpisodesFrag$EpisodeView;->episodeDownloadButton:Lcom/netflix/mediaclient/ui/offline/DownloadButton;
 

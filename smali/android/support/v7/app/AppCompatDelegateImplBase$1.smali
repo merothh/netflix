@@ -14,8 +14,6 @@
 .method constructor <init>(Ljava/lang/Thread$UncaughtExceptionHandler;)V
     .locals 0
 
-    .prologue
-    .line 55
     iput-object p1, p0, Landroid/support/v7/app/AppCompatDelegateImplBase$1;->val$defHandler:Ljava/lang/Thread$UncaughtExceptionHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,20 +24,16 @@
 .method private shouldWrapException(Ljava/lang/Throwable;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 71
     instance-of v1, p1, Landroid/content/res/Resources$NotFoundException;
 
     if-eqz v1, :cond_1
 
-    .line 72
     invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 73
     if-eqz v1, :cond_1
 
     const-string/jumbo v2, "drawable"
@@ -52,7 +46,6 @@
 
     const-string/jumbo v2, "Drawable"
 
-    .line 74
     invoke-virtual {v1, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -62,7 +55,6 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 76
     :cond_1
     return v0
 .end method
@@ -72,22 +64,18 @@
 .method public uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
     .locals 3
 
-    .prologue
-    .line 58
     invoke-direct {p0, p2}, Landroid/support/v7/app/AppCompatDelegateImplBase$1;->shouldWrapException(Ljava/lang/Throwable;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 60
     new-instance v0, Landroid/content/res/Resources$NotFoundException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 61
     invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v2
@@ -108,30 +96,25 @@
 
     invoke-direct {v0, v1}, Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
 
-    .line 62
     invoke-virtual {p2}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    .line 63
     invoke-virtual {p2}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/Throwable;->setStackTrace([Ljava/lang/StackTraceElement;)V
 
-    .line 64
     iget-object v1, p0, Landroid/support/v7/app/AppCompatDelegateImplBase$1;->val$defHandler:Ljava/lang/Thread$UncaughtExceptionHandler;
 
     invoke-interface {v1, p1, v0}, Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
 
-    .line 68
     :goto_0
     return-void
 
-    .line 66
     :cond_0
     iget-object v0, p0, Landroid/support/v7/app/AppCompatDelegateImplBase$1;->val$defHandler:Ljava/lang/Thread$UncaughtExceptionHandler;
 

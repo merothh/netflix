@@ -10,8 +10,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 1360
     invoke-static {}, Lcom/crittercism/app/CritterRateMyAppButtons;->values()[Lcom/crittercism/app/CritterRateMyAppButtons;
 
     move-result-object v0

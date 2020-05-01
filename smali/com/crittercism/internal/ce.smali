@@ -16,8 +16,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 10
     new-instance v0, Lcom/crittercism/internal/ce;
 
     invoke-direct {v0}, Lcom/crittercism/internal/ce;-><init>()V
@@ -30,31 +28,24 @@
 .method private constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/crittercism/internal/ce;->b:I
 
-    .line 15
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/crittercism/internal/ce;->c:J
 
-    .line 16
     return-void
 .end method
 
 .method private declared-synchronized b()I
     .locals 2
 
-    .prologue
-    .line 19
     monitor-enter p0
 
     :try_start_0
@@ -83,10 +74,8 @@
 .method public final a()Ljava/lang/String;
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
-    .line 27
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string/jumbo v1, "%d.%d.%09d"

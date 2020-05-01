@@ -18,8 +18,6 @@
 .method constructor <init>(Ljava/lang/reflect/Field;Landroid/widget/PopupWindow;Landroid/view/ViewTreeObserver$OnScrollChangedListener;)V
     .locals 0
 
-    .prologue
-    .line 128
     iput-object p1, p0, Landroid/support/v7/widget/AppCompatPopupWindow$1;->val$fieldAnchor:Ljava/lang/reflect/Field;
 
     iput-object p2, p0, Landroid/support/v7/widget/AppCompatPopupWindow$1;->val$popup:Landroid/widget/PopupWindow;
@@ -36,8 +34,6 @@
 .method public onScrollChanged()V
     .locals 2
 
-    .prologue
-    .line 132
     :try_start_0
     iget-object v0, p0, Landroid/support/v7/widget/AppCompatPopupWindow$1;->val$fieldAnchor:Ljava/lang/reflect/Field;
 
@@ -49,7 +45,6 @@
 
     check-cast v0, Ljava/lang/ref/WeakReference;
 
-    .line 133
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -58,12 +53,10 @@
 
     if-nez v0, :cond_1
 
-    .line 141
     :cond_0
     :goto_0
     return-void
 
-    .line 136
     :cond_1
     iget-object v0, p0, Landroid/support/v7/widget/AppCompatPopupWindow$1;->val$originalListener:Landroid/view/ViewTreeObserver$OnScrollChangedListener;
 
@@ -73,7 +66,6 @@
 
     goto :goto_0
 
-    .line 138
     :catch_0
     move-exception v0
 

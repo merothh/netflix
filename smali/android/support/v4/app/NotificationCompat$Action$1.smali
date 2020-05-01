@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 2761
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public build(ILjava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;Z)Landroid/support/v4/app/NotificationCompatBase$Action;
     .locals 7
 
-    .prologue
-    .line 2767
     new-instance v0, Landroid/support/v4/app/NotificationCompat$Action;
 
     check-cast p5, [Landroid/support/v4/app/RemoteInput;
@@ -50,8 +46,6 @@
 .method public newArray(I)[Landroid/support/v4/app/NotificationCompat$Action;
     .locals 1
 
-    .prologue
-    .line 2773
     new-array v0, p1, [Landroid/support/v4/app/NotificationCompat$Action;
 
     return-object v0
@@ -60,8 +54,6 @@
 .method public bridge synthetic newArray(I)[Landroid/support/v4/app/NotificationCompatBase$Action;
     .locals 1
 
-    .prologue
-    .line 2761
     invoke-virtual {p0, p1}, Landroid/support/v4/app/NotificationCompat$Action$1;->newArray(I)[Landroid/support/v4/app/NotificationCompat$Action;
 
     move-result-object v0

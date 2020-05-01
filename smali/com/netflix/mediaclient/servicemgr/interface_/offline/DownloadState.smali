@@ -42,7 +42,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -53,7 +52,6 @@
 
     const/4 v4, 0x0
 
-    .line 9
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
     const-string/jumbo v1, "Unknown"
@@ -62,7 +60,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;->Unknown:Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
-    .line 10
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
     const-string/jumbo v1, "Creating"
@@ -71,7 +68,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;->Creating:Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
-    .line 11
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
     const-string/jumbo v1, "InProgress"
@@ -80,7 +76,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;->InProgress:Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
-    .line 12
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
     const-string/jumbo v1, "Stopped"
@@ -89,7 +84,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;->Stopped:Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
-    .line 13
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
     const-string/jumbo v1, "Complete"
@@ -98,7 +92,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;->Complete:Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
-    .line 14
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
     const-string/jumbo v1, "Deleted"
@@ -111,7 +104,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;->Deleted:Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
-    .line 15
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
     const-string/jumbo v1, "DeleteComplete"
@@ -124,7 +116,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;->DeleteComplete:Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
-    .line 16
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
     const-string/jumbo v1, "CreateFailed"
@@ -137,7 +128,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;->CreateFailed:Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
-    .line 7
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
@@ -193,22 +183,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 20
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 21
     iput p3, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;->mValue:I
 
-    .line 22
     return-void
 .end method
 
 .method public static getStateByValue(I)Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
     .locals 5
 
-    .prologue
-    .line 30
     invoke-static {}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;->values()[Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
     move-result-object v2
@@ -224,18 +208,15 @@
 
     aget-object v0, v2, v1
 
-    .line 31
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;->getIntValue()I
 
     move-result v4
 
     if-ne v4, p0, :cond_0
 
-    .line 35
     :goto_1
     return-object v0
 
-    .line 30
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -243,7 +224,6 @@
 
     goto :goto_0
 
-    .line 35
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;->Unknown:Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
@@ -253,8 +233,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
     .locals 1
 
-    .prologue
-    .line 7
     const-class v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -269,8 +247,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
     .locals 1
 
-    .prologue
-    .line 7
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;->clone()Ljava/lang/Object;
@@ -287,8 +263,6 @@
 .method public getIntValue()I
     .locals 1
 
-    .prologue
-    .line 25
     iget v0, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;->mValue:I
 
     return v0

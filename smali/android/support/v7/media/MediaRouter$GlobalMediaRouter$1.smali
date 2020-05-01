@@ -14,8 +14,6 @@
 .method constructor <init>(Landroid/support/v7/media/MediaRouter$GlobalMediaRouter;)V
     .locals 0
 
-    .prologue
-    .line 1629
     iput-object p1, p0, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter$1;->this$0:Landroid/support/v7/media/MediaRouter$GlobalMediaRouter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onActiveChanged()V
     .locals 2
 
-    .prologue
-    .line 1632
     iget-object v0, p0, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter$1;->this$0:Landroid/support/v7/media/MediaRouter$GlobalMediaRouter;
 
     invoke-static {v0}, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter;->access$300(Landroid/support/v7/media/MediaRouter$GlobalMediaRouter;)Landroid/support/v4/media/session/MediaSessionCompat;
@@ -38,7 +34,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1633
     iget-object v0, p0, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter$1;->this$0:Landroid/support/v7/media/MediaRouter$GlobalMediaRouter;
 
     invoke-static {v0}, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter;->access$300(Landroid/support/v7/media/MediaRouter$GlobalMediaRouter;)Landroid/support/v4/media/session/MediaSessionCompat;
@@ -51,7 +46,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1634
     iget-object v0, p0, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter$1;->this$0:Landroid/support/v7/media/MediaRouter$GlobalMediaRouter;
 
     iget-object v1, p0, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter$1;->this$0:Landroid/support/v7/media/MediaRouter$GlobalMediaRouter;
@@ -66,12 +60,10 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter;->addRemoteControlClient(Ljava/lang/Object;)V
 
-    .line 1639
     :cond_0
     :goto_0
     return-void
 
-    .line 1636
     :cond_1
     iget-object v0, p0, Landroid/support/v7/media/MediaRouter$GlobalMediaRouter$1;->this$0:Landroid/support/v7/media/MediaRouter$GlobalMediaRouter;
 

@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 113
     sget v0, Lcom/google/android/exoplayer/util/Util;->SDK_INT:I
 
     const/16 v1, 0x17

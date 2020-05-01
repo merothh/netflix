@@ -25,11 +25,8 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 43
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/event/nrdp/BaseNccpEvent;-><init>(Ljava/lang/String;)V
 
-    .line 44
     return-void
 .end method
 
@@ -38,11 +35,8 @@
 .method public getJSON()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 75
     const/4 v1, 0x0
 
-    .line 79
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
 
@@ -50,7 +44,6 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 80
     :try_start_1
     const-string/jumbo v1, "name"
 
@@ -60,14 +53,12 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 81
     const-string/jumbo v1, "type"
 
     const-string/jumbo v2, "Event"
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 82
     const-string/jumbo v1, "object"
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/event/nrdp/BaseUIEvent;->getObject()Ljava/lang/String;
@@ -76,21 +67,18 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 83
     const-string/jumbo v1, "nrdp"
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 84
     invoke-virtual {p0}, Lcom/netflix/mediaclient/event/nrdp/BaseUIEvent;->getData()Lorg/json/JSONObject;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 85
     const-string/jumbo v1, "data"
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/event/nrdp/BaseUIEvent;->getData()Lorg/json/JSONObject;
@@ -101,7 +89,6 @@
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 94
     :goto_0
     invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
@@ -109,7 +96,6 @@
 
     return-object v0
 
-    .line 87
     :cond_0
     :try_start_2
     const-string/jumbo v1, "data"
@@ -124,11 +110,9 @@
 
     goto :goto_0
 
-    .line 90
     :catch_0
     move-exception v1
 
-    .line 91
     :goto_1
     const-string/jumbo v2, "nf_ui_event"
 
@@ -138,7 +122,6 @@
 
     goto :goto_0
 
-    .line 90
     :catch_1
     move-exception v0
 
@@ -154,8 +137,6 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 63
     invoke-virtual {p0}, Lcom/netflix/mediaclient/event/nrdp/BaseUIEvent;->getType()Ljava/lang/String;
 
     move-result-object v0
@@ -166,8 +147,6 @@
 .method public getNrdSource()I
     .locals 1
 
-    .prologue
-    .line 54
     const/4 v0, 0x0
 
     return v0

@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/player/exoplayback/DummyOfflineAgent;)V
     .locals 0
 
-    .prologue
-    .line 80
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/exoplayback/DummyOfflineAgent$DummyOfflineManifest;->this$0:Lcom/netflix/mediaclient/service/player/exoplayback/DummyOfflineAgent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,8 +36,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 104
     const/4 v0, 0x0
 
     return-object v0
@@ -48,8 +44,6 @@
 .method public getAudioSubtitleDefaultOrderInfo()[Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;
     .locals 1
 
-    .prologue
-    .line 99
     const/4 v0, 0x0
 
     new-array v0, v0, [Lcom/netflix/mediaclient/media/AudioSubtitleDefaultOrderInfo;
@@ -60,8 +54,6 @@
 .method public getAudioTrackList()[Lcom/netflix/mediaclient/media/AudioSource;
     .locals 1
 
-    .prologue
-    .line 89
     const/4 v0, 0x0
 
     new-array v0, v0, [Lcom/netflix/mediaclient/media/AudioSource;
@@ -72,8 +64,6 @@
 .method public getBifFile()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 109
     const/4 v0, 0x0
 
     return-object v0
@@ -82,8 +72,6 @@
 .method public getDownloadContext()Lcom/netflix/mediaclient/service/pdslogging/DownloadContext;
     .locals 1
 
-    .prologue
-    .line 119
     const/4 v0, 0x0
 
     return-object v0
@@ -92,8 +80,6 @@
 .method public getDxId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 139
     const/4 v0, 0x0
 
     return-object v0
@@ -102,8 +88,6 @@
 .method public getLinks()Lorg/json/JSONObject;
     .locals 1
 
-    .prologue
-    .line 114
     const/4 v0, 0x0
 
     return-object v0
@@ -112,8 +96,6 @@
 .method public getMpd()Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;
     .locals 3
 
-    .prologue
-    .line 84
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/DummyOfflineAgent$DummyOfflineManifest;->this$0:Lcom/netflix/mediaclient/service/player/exoplayback/DummyOfflineAgent;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/exoplayback/DummyOfflineAgent$DummyOfflineManifest;->this$0:Lcom/netflix/mediaclient/service/player/exoplayback/DummyOfflineAgent;
@@ -134,8 +116,6 @@
 .method public getOfflineKeySetId()[B
     .locals 1
 
-    .prologue
-    .line 124
     const/4 v0, 0x0
 
     new-array v0, v0, [B
@@ -146,8 +126,6 @@
 .method public getOxId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 134
     const/4 v0, 0x0
 
     return-object v0
@@ -156,8 +134,6 @@
 .method public getSubtitleTrackList()[Lcom/netflix/mediaclient/media/Subtitle;
     .locals 1
 
-    .prologue
-    .line 94
     const/4 v0, 0x0
 
     new-array v0, v0, [Lcom/netflix/mediaclient/media/Subtitle;
@@ -177,8 +153,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 129
     const/4 v0, 0x0
 
     return-object v0

@@ -28,20 +28,16 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;)V
     .locals 1
 
-    .prologue
-    .line 56
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->selectedVideoIds:Landroid/util/SparseArray;
 
-    .line 66
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->isSelectable:Z
@@ -52,8 +48,6 @@
 .method static synthetic access$100(Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;)J
     .locals 2
 
-    .prologue
-    .line 56
     iget-wide v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->estimateSpaceToFree:J
 
     return-wide v0
@@ -62,48 +56,38 @@
 .method private reset()V
     .locals 2
 
-    .prologue
-    .line 216
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->selectedVideoIds:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    .line 217
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->isSelectable:Z
 
-    .line 218
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->updateToolbarTitle()V
 
-    .line 219
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->initialToolbarTitle:Ljava/lang/String;
 
-    .line 220
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->estimateSpaceToFree:J
 
-    .line 221
     return-void
 .end method
 
 .method private setItemChecked(ILjava/lang/String;Z)V
     .locals 6
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 73
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;
 
     instance-of v1, v1, Lcom/netflix/mediaclient/ui/offline/OfflineEpisodesAdapter;
 
     if-eqz v1, :cond_2
 
-    .line 74
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;
 
     iget-object v1, v1, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;->mOfflineAgent:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface;
@@ -116,19 +100,15 @@
 
     move-result-object v1
 
-    .line 75
     invoke-interface {v1}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflinePlayableViewData;->getCurrentEstimatedSpace()J
 
     move-result-wide v2
 
-    .line 80
     :goto_0
     const/4 v1, 0x0
 
-    .line 81
     if-eqz p3, :cond_3
 
-    .line 82
     iget-object v4, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->selectedVideoIds:Landroid/util/SparseArray;
 
     invoke-virtual {v4}, Landroid/util/SparseArray;->size()I
@@ -137,11 +117,9 @@
 
     if-nez v4, :cond_5
 
-    .line 85
     :goto_1
     const/4 v1, 0x0
 
-    .line 87
     invoke-static {p2}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmUtils;->getOfflineVideoDetails(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;
 
     move-result-object v4
@@ -154,7 +132,6 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 88
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;
 
     iget-object v1, v1, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;->mOfflineAgent:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface;
@@ -167,7 +144,6 @@
 
     move-result-object v1
 
-    .line 90
     :cond_0
     iget-object v4, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->selectedVideoIds:Landroid/util/SparseArray;
 
@@ -177,35 +153,28 @@
 
     invoke-virtual {v4, p1, v5}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 91
     iget-wide v4, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->estimateSpaceToFree:J
 
     add-long/2addr v2, v4
 
     iput-wide v2, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->estimateSpaceToFree:J
 
-    .line 101
     :goto_2
     if-eqz v0, :cond_1
 
-    .line 102
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;->access$000(Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;)V
 
-    .line 104
     :cond_1
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->updateToolbarTitle()V
 
-    .line 105
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;->notifyItemChanged(I)V
 
-    .line 106
     return-void
 
-    .line 77
     :cond_2
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;
 
@@ -221,7 +190,6 @@
 
     goto :goto_0
 
-    .line 93
     :cond_3
     iget-object v4, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->selectedVideoIds:Landroid/util/SparseArray;
 
@@ -231,13 +199,11 @@
 
     if-ne v4, v0, :cond_4
 
-    .line 96
     :goto_3
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->selectedVideoIds:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 97
     iget-wide v4, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->estimateSpaceToFree:J
 
     sub-long v2, v4, v2
@@ -260,15 +226,12 @@
 .method private updateToolbarTitle()V
     .locals 8
 
-    .prologue
     const/4 v0, -0x1
 
-    .line 109
     iget-boolean v1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->isSelectable:Z
 
     if-eqz v1, :cond_2
 
-    .line 110
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->selectedVideoIds:Landroid/util/SparseArray;
 
     invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
@@ -277,7 +240,6 @@
 
     if-lez v1, :cond_1
 
-    .line 111
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;
 
     const-string/jumbo v2, "%d (%s)"
@@ -318,12 +280,10 @@
 
     invoke-virtual {v1, v2, v0}, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;->setToolbarTitle(Ljava/lang/String;I)V
 
-    .line 118
     :cond_0
     :goto_0
     return-void
 
-    .line 113
     :cond_1
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;
 
@@ -345,13 +305,11 @@
 
     goto :goto_0
 
-    .line 115
     :cond_2
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->initialToolbarTitle:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 116
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->initialToolbarTitle:Ljava/lang/String;
@@ -375,10 +333,8 @@
 .method public deleteSelected()V
     .locals 13
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 152
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;->mActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -391,7 +347,6 @@
 
     move-result-object v3
 
-    .line 153
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->selectedVideoIds:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
@@ -400,11 +355,9 @@
 
     move v2, v1
 
-    .line 154
     :goto_0
     if-ge v2, v4, :cond_3
 
-    .line 155
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->selectedVideoIds:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -415,7 +368,6 @@
 
     iget-object v5, v0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController$VideoAndProfileId;->videoId:Ljava/lang/String;
 
-    .line 157
     invoke-static {v5}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmUtils;->getOfflineVideoDetails(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;
 
     move-result-object v0
@@ -428,7 +380,6 @@
 
     if-ne v0, v6, :cond_1
 
-    .line 158
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;->mOfflineAgent:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface;
@@ -451,7 +402,6 @@
 
     move-result-object v0
 
-    .line 159
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflineAdapterData;->getEpisodes()[Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;
 
     move-result-object v5
@@ -465,12 +415,10 @@
 
     aget-object v7, v5, v0
 
-    .line 160
     invoke-virtual {v7}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;->getType()Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     move-result-object v8
 
-    .line 161
     const-string/jumbo v9, "OfflineBaseAdapter"
 
     const-string/jumbo v10, "details id=%s videoType=%s"
@@ -491,12 +439,10 @@
 
     invoke-static {v9, v10, v11}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 162
     sget-object v9, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->EPISODE:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
     if-ne v8, v9, :cond_0
 
-    .line 163
     invoke-virtual {v7}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;->getPlayable()Lcom/netflix/mediaclient/servicemgr/interface_/Playable;
 
     move-result-object v8
@@ -507,7 +453,6 @@
 
     invoke-interface {v3, v8}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface;->deleteOfflinePlayable(Ljava/lang/String;)V
 
-    .line 164
     invoke-virtual {v7}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;->getPlayable()Lcom/netflix/mediaclient/servicemgr/interface_/Playable;
 
     move-result-object v7
@@ -518,20 +463,16 @@
 
     invoke-static {v7}, Lcom/netflix/mediaclient/ui/offline/DownloadButton;->removePreQueued(Ljava/lang/String;)V
 
-    .line 159
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 169
     :cond_1
     invoke-interface {v3, v5}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface;->deleteOfflinePlayable(Ljava/lang/String;)V
 
-    .line 170
     invoke-static {v5}, Lcom/netflix/mediaclient/ui/offline/DownloadButton;->removePreQueued(Ljava/lang/String;)V
 
-    .line 154
     :cond_2
     add-int/lit8 v0, v2, 0x1
 
@@ -539,24 +480,19 @@
 
     goto :goto_0
 
-    .line 173
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->selectedVideoIds:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    .line 174
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->updateToolbarTitle()V
 
-    .line 176
     if-lez v4, :cond_4
 
-    .line 177
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;->access$000(Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;)V
 
-    .line 179
     :cond_4
     return-void
 .end method
@@ -564,7 +500,6 @@
 .method public generateDeleteDlgString()Ljava/lang/String;
     .locals 10
 
-    .prologue
     const/4 v5, 0x0
 
     const/4 v9, 0x2
@@ -573,14 +508,12 @@
 
     const/4 v2, 0x0
 
-    .line 182
     move v1, v2
 
     move v3, v2
 
     move v4, v2
 
-    .line 183
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->selectedVideoIds:Landroid/util/SparseArray;
 
@@ -590,14 +523,12 @@
 
     if-ge v1, v0, :cond_0
 
-    .line 184
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->selectedVideoIds:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v0
 
-    .line 185
     sget-object v6, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$1;->$SwitchMap$com$netflix$mediaclient$servicemgr$interface_$VideoType:[I
 
     iget-object v7, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;
@@ -614,7 +545,6 @@
 
     packed-switch v6, :pswitch_data_0
 
-    .line 183
     :goto_1
     add-int/lit8 v0, v1, 0x1
 
@@ -622,21 +552,16 @@
 
     goto :goto_0
 
-    .line 187
     :pswitch_0
     add-int/lit8 v3, v3, 0x1
 
-    .line 188
     goto :goto_1
 
-    .line 190
     :pswitch_1
     add-int/lit8 v4, v4, 0x1
 
-    .line 191
     goto :goto_1
 
-    .line 193
     :pswitch_2
     iget-object v6, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;
 
@@ -662,11 +587,9 @@
 
     goto :goto_1
 
-    .line 199
     :cond_0
     if-lez v4, :cond_4
 
-    .line 200
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;->mActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -689,11 +612,9 @@
 
     move-result-object v0
 
-    .line 202
     :goto_2
     if-lez v3, :cond_3
 
-    .line 203
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;
 
     iget-object v1, v1, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;->mActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -716,13 +637,11 @@
 
     move-result-object v1
 
-    .line 207
     :goto_3
     if-eqz v0, :cond_1
 
     if-eqz v1, :cond_1
 
-    .line 208
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;
 
     iget-object v3, v3, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;->mActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -751,11 +670,9 @@
 
     move-result-object v0
 
-    .line 212
     :goto_4
     return-object v0
 
-    .line 210
     :cond_1
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;
 
@@ -801,7 +718,6 @@
 
     goto :goto_2
 
-    .line 185
     nop
 
     :pswitch_data_0
@@ -815,8 +731,6 @@
 .method public getItemsCheckedCount()I
     .locals 1
 
-    .prologue
-    .line 148
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->selectedVideoIds:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
@@ -829,8 +743,6 @@
 .method public isItemChecked(I)Z
     .locals 1
 
-    .prologue
-    .line 126
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->selectedVideoIds:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -853,8 +765,6 @@
 .method public isSelectable()Z
     .locals 1
 
-    .prologue
-    .line 144
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->isSelectable:Z
 
     return v0
@@ -863,19 +773,14 @@
 .method public setSelectable(Z)V
     .locals 1
 
-    .prologue
-    .line 130
     iput-boolean p1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->isSelectable:Z
 
-    .line 131
     if-eqz p1, :cond_1
 
-    .line 133
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->initialToolbarTitle:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 134
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;->mActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -898,20 +803,16 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->initialToolbarTitle:Ljava/lang/String;
 
-    .line 136
     :cond_0
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->updateToolbarTitle()V
 
-    .line 140
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter;->setToolbarCancelIcon(Z)V
 
-    .line 141
     return-void
 
-    .line 138
     :cond_1
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->reset()V
 
@@ -921,8 +822,6 @@
 .method public toggleChecked(ILjava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 121
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->selectedVideoIds:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -933,14 +832,11 @@
 
     const/4 v0, 0x1
 
-    .line 122
     :goto_0
     invoke-direct {p0, p1, p2, v0}, Lcom/netflix/mediaclient/ui/offline/OfflineBaseAdapter$SelectionController;->setItemChecked(ILjava/lang/String;Z)V
 
-    .line 123
     return-void
 
-    .line 121
     :cond_0
     const/4 v0, 0x0
 

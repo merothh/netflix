@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler;Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 38
     iput-object p1, p0, Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler$1;->this$0:Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler$1;->val$context:Landroid/content/Context;
@@ -32,12 +30,9 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 41
     iget-object v0, p0, Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler$1;->val$context:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/AndroidUtils;->forceStop(Landroid/content/Context;)V
 
-    .line 42
     return-void
 .end method

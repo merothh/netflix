@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;)V
     .locals 0
 
-    .prologue
-    .line 138
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator$2;->this$0:Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,12 +26,9 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .prologue
-    .line 141
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator$2;->this$0:Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;->access$700(Lcom/netflix/mediaclient/ui/player/CoppolaLoadingDecorator;)V
 
-    .line 142
     return-void
 .end method

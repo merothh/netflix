@@ -20,7 +20,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v0, 0x5
 
     const/4 v6, 0x4
@@ -31,22 +30,16 @@
 
     const/4 v3, 0x1
 
-    .line 8
     sput v3, Lcom/crittercism/internal/cm;->a:I
 
-    .line 9
     sput v4, Lcom/crittercism/internal/cm;->b:I
 
-    .line 10
     sput v5, Lcom/crittercism/internal/cm;->c:I
 
-    .line 11
     sput v6, Lcom/crittercism/internal/cm;->d:I
 
-    .line 12
     sput v0, Lcom/crittercism/internal/cm;->e:I
 
-    .line 3
     new-array v0, v0, [I
 
     const/4 v1, 0x0
@@ -79,23 +72,18 @@
 .method public static a(Ljava/lang/Throwable;)I
     .locals 2
 
-    .prologue
-    .line 15
     sget v0, Lcom/crittercism/internal/cm;->d:I
 
     add-int/lit8 v0, v0, -0x1
 
-    .line 16
     instance-of v1, p0, Lcom/crittercism/error/CRXMLHttpRequestException;
 
     if-eqz v1, :cond_0
 
-    .line 20
     sget v0, Lcom/crittercism/internal/cm;->e:I
 
     add-int/lit8 v0, v0, -0x1
 
-    .line 22
     :cond_0
     return v0
 .end method

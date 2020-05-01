@@ -12,8 +12,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 54
     invoke-static {}, Lcom/crittercism/app/Crittercism$LoggingLevel;->values()[Lcom/crittercism/app/Crittercism$LoggingLevel;
 
     move-result-object v0
@@ -87,7 +85,6 @@
     :try_end_3
     .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 41
     :goto_3
     invoke-static {}, Lcom/crittercism/internal/dw$b;->values()[Lcom/crittercism/internal/dw$b;
 

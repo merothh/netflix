@@ -11,8 +11,6 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)V
     .locals 0
 
-    .prologue
-    .line 436
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -23,8 +21,6 @@
 .method static synthetic access$1800(Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;Ljava/lang/String;Lorg/json/JSONObject;)V
     .locals 0
 
-    .prologue
-    .line 436
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->invokeJsCallback(Ljava/lang/String;Lorg/json/JSONObject;)V
 
     return-void
@@ -33,8 +29,6 @@
 .method static synthetic access$2000(Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;Lcom/netflix/mediaclient/android/app/Status;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 436
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->handleTokenActivate(Lcom/netflix/mediaclient/android/app/Status;Ljava/lang/String;)V
 
     return-void
@@ -43,10 +37,8 @@
 .method private handleTokenActivate(Lcom/netflix/mediaclient/android/app/Status;Ljava/lang/String;)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 854
     invoke-interface {p1}, Lcom/netflix/mediaclient/android/app/Status;->getMessage()Ljava/lang/String;
 
     move-result-object v0
@@ -57,7 +49,6 @@
 
     move-result-object v0
 
-    .line 855
     :goto_0
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
@@ -65,14 +56,12 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$1102(Lcom/netflix/mediaclient/ui/signup/SignupActivity;Z)Z
 
-    .line 856
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 857
     const-string/jumbo v1, "SignupActivity"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -109,13 +98,11 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 860
     :cond_0
     invoke-interface {p1}, Lcom/netflix/mediaclient/android/app/Status;->getStatusCode()Lcom/netflix/mediaclient/StatusCode;
 
     move-result-object v0
 
-    .line 863
     invoke-interface {p1}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
 
     move-result v1
@@ -126,7 +113,6 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 864
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
@@ -136,21 +122,17 @@
 
     invoke-static {v0, v1, v2, v4}, Lcom/netflix/mediaclient/util/log/SignInLogUtils;->reportSignInRequestSessionEnded(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/SignInLogging$SignInType;Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;Lcom/netflix/mediaclient/service/logging/client/model/Error;)V
 
-    .line 865
     invoke-direct {p0, p2, v4}, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->invokeJsCallback(Ljava/lang/String;Lorg/json/JSONObject;)V
 
-    .line 877
     :cond_2
     :goto_1
     return-void
 
-    .line 854
     :cond_3
     const-string/jumbo v0, ""
 
     goto :goto_0
 
-    .line 869
     :cond_4
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
@@ -164,7 +146,6 @@
 
     invoke-static {v1, v2, v3, v4}, Lcom/netflix/mediaclient/util/log/SignInLogUtils;->reportSignInRequestSessionEnded(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/SignInLogging$SignInType;Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;Lcom/netflix/mediaclient/service/logging/client/model/Error;)V
 
-    .line 870
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -213,10 +194,8 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->provideDialog(Ljava/lang/String;Ljava/lang/Runnable;)V
 
-    .line 872
     if-eqz p2, :cond_2
 
-    .line 873
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -255,7 +234,6 @@
 
     move-result-object v0
 
-    .line 874
     const-string/jumbo v1, "SignupActivity"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -278,7 +256,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 875
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->getWebView()Landroid/webkit/WebView;
@@ -293,15 +270,12 @@
 .method private invokeJsCallback(Ljava/lang/String;Lorg/json/JSONObject;)V
     .locals 4
 
-    .prologue
-    .line 880
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 881
     const-string/jumbo v0, "SignupActivity"
 
     const-string/jumbo v1, "invokeJsCallbackQuery - func: %s, data: %s"
@@ -324,7 +298,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 883
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
@@ -368,7 +341,6 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 884
     return-void
 .end method
 
@@ -379,8 +351,6 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
-    .line 533
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$1000(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)Ljava/lang/String;
@@ -389,14 +359,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 534
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$1000(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 536
     :goto_0
     return-object v0
 
@@ -411,8 +379,6 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
-    .line 506
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$700(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)Ljava/lang/String;
@@ -421,14 +387,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 507
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$700(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 509
     :goto_0
     return-object v0
 
@@ -443,8 +407,6 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
-    .line 515
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$800(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)Ljava/lang/String;
@@ -453,14 +415,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 516
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$800(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 518
     :goto_0
     return-object v0
 
@@ -475,8 +435,6 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
-    .line 542
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->getDeviceLanguage()Ljava/lang/String;
@@ -491,8 +449,6 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
-    .line 524
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$900(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)Ljava/lang/String;
@@ -501,14 +457,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 525
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$900(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 527
     :goto_0
     return-object v0
 
@@ -523,8 +477,6 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
-    .line 576
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/AndroidUtils;->isNetflixPreloaded(Landroid/content/Context;)Z
@@ -533,10 +485,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 577
     const-string/jumbo v0, "true"
 
-    .line 579
     :goto_0
     return-object v0
 
@@ -551,18 +501,14 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 591
-    .line 592
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v1
 
-    .line 593
     if-eqz v1, :cond_2
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->isReady()Z
@@ -573,7 +519,6 @@
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
-    .line 594
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v1
@@ -584,7 +529,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 595
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -599,7 +543,6 @@
 
     move-result v1
 
-    .line 599
     :goto_0
     if-nez v1, :cond_0
 
@@ -613,7 +556,6 @@
 
     const/4 v0, 0x1
 
-    .line 601
     :cond_0
     if-eqz v0, :cond_1
 
@@ -638,14 +580,10 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
-    .line 491
     if-nez p1, :cond_1
 
-    .line 492
     const-string/jumbo v0, "http://netflix.com"
 
-    .line 500
     :cond_0
     :goto_0
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
@@ -662,16 +600,13 @@
 
     invoke-virtual {v1, v2}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 501
     return-void
 
-    .line 494
     :cond_1
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 495
     sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
@@ -686,7 +621,6 @@
 
     if-nez v1, :cond_0
 
-    .line 496
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -713,15 +647,12 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
-    .line 474
     const-string/jumbo v0, "SignupActivity"
 
     const-string/jumbo v1, "loginCompleted, noop"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 475
     return-void
 .end method
 
@@ -730,10 +661,8 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
     const/4 v5, 0x0
 
-    .line 626
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$1100(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)Z
@@ -742,18 +671,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 627
     const-string/jumbo v0, "SignupActivity"
 
     const-string/jumbo v1, "loginToApp ongoing, returning NULL operation"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 670
     :goto_0
     return-void
 
-    .line 631
     :cond_0
     const-string/jumbo v0, "SignupActivity"
 
@@ -787,12 +713,10 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 632
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0, p2}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$1202(Lcom/netflix/mediaclient/ui/signup/SignupActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 633
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/ConnectivityUtils;->isConnectedOrConnecting(Landroid/content/Context;)Z
@@ -801,28 +725,24 @@
 
     if-nez v0, :cond_1
 
-    .line 634
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->noConnectivityWarning()V
 
     goto :goto_0
 
-    .line 640
     :cond_1
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 641
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 642
     const-string/jumbo v1, "SignupActivity"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -851,7 +771,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 643
     const-string/jumbo v1, "SignupActivity"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -880,20 +799,17 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 645
     :cond_2
     new-instance v1, Lcom/netflix/mediaclient/javabridge/ui/ActivationTokens;
 
     invoke-direct {v1, v0}, Lcom/netflix/mediaclient/javabridge/ui/ActivationTokens;-><init>(Lorg/json/JSONObject;)V
 
-    .line 646
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v0
 
-    .line 647
     if-eqz v0, :cond_3
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->isReady()Z
@@ -902,7 +818,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 648
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     const-string/jumbo v3, "prefs_non_member_playback"
@@ -911,14 +826,12 @@
 
     invoke-static {v2, v3, v4}, Lcom/netflix/mediaclient/util/PreferenceUtils;->putBooleanPref(Landroid/content/Context;Ljava/lang/String;Z)Z
 
-    .line 649
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     sget-object v3, Lcom/netflix/mediaclient/servicemgr/SignInLogging$SignInType;->tokenActivate:Lcom/netflix/mediaclient/servicemgr/SignInLogging$SignInType;
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/util/log/SignInLogUtils;->reportSignInRequestSessionStarted(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/SignInLogging$SignInType;)V
 
-    .line 650
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v2}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$1300(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)Lcom/netflix/mediaclient/servicemgr/SimpleManagerCallback;
@@ -927,14 +840,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->loginUserByTokens(Lcom/netflix/mediaclient/javabridge/ui/ActivationTokens;Lcom/netflix/mediaclient/servicemgr/ManagerCallback;)Z
 
-    .line 655
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$1102(Lcom/netflix/mediaclient/ui/signup/SignupActivity;Z)Z
 
-    .line 657
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge$2;
@@ -947,23 +858,19 @@
 
     goto/16 :goto_0
 
-    .line 665
     :catch_0
     move-exception v0
 
-    .line 666
     const-string/jumbo v1, "SignupActivity"
 
     const-string/jumbo v2, "Failed to LoginToApp"
 
     invoke-static {v1, v2, v0}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 667
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0, v5}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$1102(Lcom/netflix/mediaclient/ui/signup/SignupActivity;Z)Z
 
-    .line 668
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
@@ -982,7 +889,6 @@
 
     goto/16 :goto_0
 
-    .line 652
     :cond_3
     :try_start_1
     const-string/jumbo v0, "SignupActivity"
@@ -1001,15 +907,12 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
-    .line 674
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v0
 
-    .line 675
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->isReady()Z
@@ -1018,12 +921,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 676
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->logoutUser(Lcom/netflix/mediaclient/servicemgr/ManagerCallback;)Z
 
-    .line 678
     :cond_0
     return-void
 .end method
@@ -1033,15 +934,12 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
-    .line 610
     const-string/jumbo v0, "SignupActivity"
 
     const-string/jumbo v1, "Signup UI ready to interact"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 611
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->getHandler()Landroid/os/Handler;
@@ -1054,7 +952,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 613
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge$1;
@@ -1063,7 +960,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 622
     return-void
 .end method
 
@@ -1072,8 +968,6 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
-    .line 453
     const-string/jumbo v0, "SignupActivity"
 
     const-string/jumbo v1, "Ignoring passNonMemberInfo %s"
@@ -1088,7 +982,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 454
     return-void
 .end method
 
@@ -1097,22 +990,18 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
-    .line 750
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$1900(Lcom/netflix/mediaclient/ui/signup/SignupActivity;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 751
     const-string/jumbo v1, "SignupActivity"
 
     const-string/jumbo v2, "playBillingGetPurchaseHistory"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 754
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$1700(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)Z
@@ -1121,23 +1010,19 @@
 
     if-nez v1, :cond_0
 
-    .line 755
     const-string/jumbo v0, "SignupActivity"
 
     const-string/jumbo v1, "playBillingGetPurchaseHistory - playBillingNotReady"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 756
     const/4 v0, 0x0
 
     invoke-direct {p0, p2, v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->invokeJsCallback(Ljava/lang/String;Lorg/json/JSONObject;)V
 
-    .line 766
     :goto_0
     return-void
 
-    .line 760
     :cond_0
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
@@ -1159,22 +1044,18 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
-    .line 730
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$1900(Lcom/netflix/mediaclient/ui/signup/SignupActivity;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 731
     const-string/jumbo v1, "SignupActivity"
 
     const-string/jumbo v2, "playBillingGetPurchases"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 734
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$1700(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)Z
@@ -1183,23 +1064,19 @@
 
     if-nez v1, :cond_0
 
-    .line 735
     const-string/jumbo v0, "SignupActivity"
 
     const-string/jumbo v1, "playBillingGetPurchases - playBillingNotReady"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 736
     const/4 v0, 0x0
 
     invoke-direct {p0, p2, v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->invokeJsCallback(Ljava/lang/String;Lorg/json/JSONObject;)V
 
-    .line 746
     :goto_0
     return-void
 
-    .line 740
     :cond_0
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
@@ -1221,22 +1098,18 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 704
     const-string/jumbo v0, ","
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 705
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 706
     array-length v4, v2
 
     move v0, v1
@@ -1246,19 +1119,16 @@
 
     aget-object v5, v2, v0
 
-    .line 707
     invoke-virtual {v5}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {v3, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 706
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 710
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -1266,7 +1136,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 711
     const-string/jumbo v0, "SignupActivity"
 
     const-string/jumbo v2, "playBillingGetSkuDetails, input:%s,  List:%s"
@@ -1287,7 +1156,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 714
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
@@ -1297,23 +1165,19 @@
 
     if-nez v0, :cond_2
 
-    .line 715
     const-string/jumbo v0, "SignupActivity"
 
     const-string/jumbo v1, "playBillingGetSkuDetails - playBillingNotReady"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 716
     const/4 v0, 0x0
 
     invoke-direct {p0, p2, v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->invokeJsCallback(Ljava/lang/String;Lorg/json/JSONObject;)V
 
-    .line 726
     :goto_1
     return-void
 
-    .line 720
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
@@ -1335,31 +1199,26 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
     const/4 v6, 0x2
 
-    .line 770
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0, p4}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$1900(Lcom/netflix/mediaclient/ui/signup/SignupActivity;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 771
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0, p2}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$1900(Lcom/netflix/mediaclient/ui/signup/SignupActivity;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 772
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 773
     const-string/jumbo v0, "SignupActivity"
 
     const-string/jumbo v1, "playBillingPurchase sku:%s, callbackFunc:%s"
@@ -1380,7 +1239,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 775
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
@@ -1390,23 +1248,19 @@
 
     if-nez v0, :cond_1
 
-    .line 776
     const-string/jumbo v0, "SignupActivity"
 
     const-string/jumbo v1, "playBillingPurchase - playBillingNotReady"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 777
     const/4 v0, 0x0
 
     invoke-direct {p0, p5, v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->invokeJsCallback(Ljava/lang/String;Lorg/json/JSONObject;)V
 
-    .line 787
     :goto_0
     return-void
 
-    .line 781
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
@@ -1434,17 +1288,14 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 791
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v0
 
-    .line 792
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->isReady()Z
@@ -1453,12 +1304,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 793
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->setNonMemberPlayback(Z)Z
 
-    .line 795
     :cond_0
     const-string/jumbo v0, "episode"
 
@@ -1470,7 +1319,6 @@
 
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->EPISODE:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
-    .line 796
     :goto_0
     new-instance v1, Lcom/netflix/mediaclient/ui/common/PlayContextImp;
 
@@ -1478,7 +1326,6 @@
 
     invoke-direct {v1, v2, p2, v3, v3}, Lcom/netflix/mediaclient/ui/common/PlayContextImp;-><init>(Ljava/lang/String;III)V
 
-    .line 797
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-virtual {v2}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->getBootLoader()Lcom/netflix/mediaclient/ui/signup/Bootloader;
@@ -1491,7 +1338,6 @@
 
     invoke-virtual {v2, v3}, Lcom/netflix/mediaclient/ui/signup/Bootloader;->setVideoId(Ljava/lang/String;)V
 
-    .line 798
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -1502,17 +1348,14 @@
 
     move-result-object v0
 
-    .line 799
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     const/16 v2, 0x14
 
     invoke-virtual {v1, v0, v2}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 800
     return-void
 
-    .line 795
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;->MOVIE:Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
@@ -1524,8 +1367,6 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
-    .line 804
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$1100(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)Z
@@ -1534,18 +1375,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 805
     const-string/jumbo v0, "SignupActivity"
 
     const-string/jumbo v1, "Another potential token activate ongoing, returning NULL operation"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 851
     :goto_0
     return-void
 
-    .line 809
     :cond_0
     const-string/jumbo v0, "SignupActivity"
 
@@ -1569,7 +1407,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 810
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/ConnectivityUtils;->isConnectedOrConnecting(Landroid/content/Context;)Z
@@ -1578,28 +1415,24 @@
 
     if-nez v0, :cond_1
 
-    .line 811
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->noConnectivityWarning()V
 
     goto :goto_0
 
-    .line 817
     :cond_1
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 818
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 819
     const-string/jumbo v1, "SignupActivity"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1628,7 +1461,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 820
     const-string/jumbo v1, "SignupActivity"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1657,20 +1489,17 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 822
     :cond_2
     new-instance v1, Lcom/netflix/mediaclient/javabridge/ui/ActivationTokens;
 
     invoke-direct {v1, v0}, Lcom/netflix/mediaclient/javabridge/ui/ActivationTokens;-><init>(Lorg/json/JSONObject;)V
 
-    .line 823
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v0
 
-    .line 824
     if-eqz v0, :cond_4
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->isReady()Z
@@ -1679,14 +1508,12 @@
 
     if-eqz v2, :cond_4
 
-    .line 825
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->isUserLoggedIn()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 827
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge$8;
@@ -1699,25 +1526,21 @@
 
     goto/16 :goto_0
 
-    .line 846
     :catch_0
     move-exception v0
 
-    .line 847
     const-string/jumbo v1, "SignupActivity"
 
     const-string/jumbo v2, "Failed to TokenActivate"
 
     invoke-static {v1, v2, v0}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 848
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$1102(Lcom/netflix/mediaclient/ui/signup/SignupActivity;Z)Z
 
-    .line 849
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
@@ -1736,7 +1559,6 @@
 
     goto/16 :goto_0
 
-    .line 834
     :cond_3
     :try_start_1
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
@@ -1745,7 +1567,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/util/log/SignInLogUtils;->reportSignInRequestSessionStarted(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/SignInLogging$SignInType;)V
 
-    .line 835
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     const-string/jumbo v3, "prefs_non_member_playback"
@@ -1754,7 +1575,6 @@
 
     invoke-static {v2, v3, v4}, Lcom/netflix/mediaclient/util/PreferenceUtils;->putBooleanPref(Landroid/content/Context;Ljava/lang/String;Z)Z
 
-    .line 836
     new-instance v2, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge$9;
 
     invoke-direct {v2, p0, p2}, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge$9;-><init>(Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;Ljava/lang/String;)V
@@ -1763,7 +1583,6 @@
 
     goto/16 :goto_0
 
-    .line 844
     :cond_4
     const-string/jumbo v0, "SignupActivity"
 
@@ -1781,15 +1600,12 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
-    .line 683
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 684
     const-string/jumbo v0, "SignupActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1822,18 +1638,15 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 687
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$1402(Lcom/netflix/mediaclient/ui/signup/SignupActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 688
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0, p2}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$1502(Lcom/netflix/mediaclient/ui/signup/SignupActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 690
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge$3;
@@ -1842,7 +1655,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 697
     return-void
 .end method
 
@@ -1851,8 +1663,6 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
-    .line 547
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->getLanguage()Ljava/lang/String;
 
     move-result-object v0
@@ -1861,7 +1671,6 @@
 
     move-result v0
 
-    .line 548
     const-string/jumbo v1, "SignupActivity"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1884,17 +1693,14 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 549
     if-nez v0, :cond_0
 
-    .line 550
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v0
 
-    .line 551
     if-eqz v0, :cond_1
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->isReady()Z
@@ -1903,7 +1709,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 552
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -1912,7 +1717,6 @@
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->setCurrentAppLocale(Ljava/lang/String;)Z
 
-    .line 553
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->getApplication()Landroid/app/Application;
@@ -1923,17 +1727,14 @@
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/NetflixApplication;->refreshLocale(Ljava/lang/String;)V
 
-    .line 554
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$600(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)V
 
-    .line 559
     :cond_0
     :goto_0
     return-void
 
-    .line 556
     :cond_1
     const-string/jumbo v0, "SignupActivity"
 
@@ -1949,27 +1750,22 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
-    .line 459
     const-string/jumbo v0, "SignupActivity"
 
     const-string/jumbo v1, "Show SignIn: "
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 460
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$502(Lcom/netflix/mediaclient/ui/signup/SignupActivity;Z)Z
 
-    .line 461
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$600(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)V
 
-    .line 462
     return-void
 .end method
 
@@ -1978,27 +1774,22 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
-    .line 467
     const-string/jumbo v0, "SignupActivity"
 
     const-string/jumbo v1, "Show SignOut"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 468
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$502(Lcom/netflix/mediaclient/ui/signup/SignupActivity;Z)Z
 
-    .line 469
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$600(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)V
 
-    .line 470
     return-void
 .end method
 
@@ -2007,20 +1798,16 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
-    .line 479
     const-string/jumbo v0, "SignupActivity"
 
     const-string/jumbo v1, "signupCompleted, report"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 480
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/LogUtils;->reportSignUpOnDevice(Landroid/content/Context;)V
 
-    .line 481
     return-void
 .end method
 
@@ -2029,8 +1816,6 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
-    .line 564
     const-string/jumbo v0, "SignupActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2053,7 +1838,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 566
     return-void
 .end method
 
@@ -2062,15 +1846,12 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .prologue
-    .line 440
     const-string/jumbo v0, "SignupActivity"
 
     const-string/jumbo v1, "Redirecting to Login screen"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 441
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
@@ -2081,11 +1862,9 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->startNextActivity(Landroid/content/Intent;)V
 
-    .line 442
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$SignUpJSBridge;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->finish()V
 
-    .line 443
     return-void
 .end method

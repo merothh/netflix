@@ -11,11 +11,8 @@
 .method private constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 250
     invoke-direct {p0}, Ljava/util/concurrent/AbstractExecutorService;-><init>()V
 
-    .line 306
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/netflix/msl/msg/MslControl$SynchronousExecutor;->shutdown:Z
@@ -26,8 +23,6 @@
 .method synthetic constructor <init>(Lcom/netflix/msl/msg/MslControl$1;)V
     .locals 0
 
-    .prologue
-    .line 250
     invoke-direct {p0}, Lcom/netflix/msl/msg/MslControl$SynchronousExecutor;-><init>()V
 
     return-void
@@ -38,8 +33,6 @@
 .method public awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
     .locals 1
 
-    .prologue
-    .line 269
     const/4 v0, 0x0
 
     return v0
@@ -48,13 +41,10 @@
 .method public execute(Ljava/lang/Runnable;)V
     .locals 2
 
-    .prologue
-    .line 259
     iget-boolean v0, p0, Lcom/netflix/msl/msg/MslControl$SynchronousExecutor;->shutdown:Z
 
     if-eqz v0, :cond_0
 
-    .line 260
     new-instance v0, Ljava/util/concurrent/RejectedExecutionException;
 
     const-string/jumbo v1, "Synchronous executor already shut down."
@@ -63,19 +53,15 @@
 
     throw v0
 
-    .line 261
     :cond_0
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    .line 262
     return-void
 .end method
 
 .method public isShutdown()Z
     .locals 1
 
-    .prologue
-    .line 277
     iget-boolean v0, p0, Lcom/netflix/msl/msg/MslControl$SynchronousExecutor;->shutdown:Z
 
     return v0
@@ -84,8 +70,6 @@
 .method public isTerminated()Z
     .locals 1
 
-    .prologue
-    .line 285
     iget-boolean v0, p0, Lcom/netflix/msl/msg/MslControl$SynchronousExecutor;->shutdown:Z
 
     return v0
@@ -94,13 +78,10 @@
 .method public shutdown()V
     .locals 1
 
-    .prologue
-    .line 293
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/msl/msg/MslControl$SynchronousExecutor;->shutdown:Z
 
-    .line 294
     return-void
 .end method
 
@@ -116,13 +97,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 301
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/msl/msg/MslControl$SynchronousExecutor;->shutdown:Z
 
-    .line 302
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0

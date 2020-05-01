@@ -15,8 +15,6 @@
 .method constructor <init>(Lcom/crittercism/internal/ax;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1425
     iput-object p1, p0, Lcom/crittercism/internal/ax$12;->b:Lcom/crittercism/internal/ax;
 
     iput-object p2, p0, Lcom/crittercism/internal/ax$12;->a:Ljava/lang/String;
@@ -31,8 +29,6 @@
 .method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 2
 
-    .prologue
-    .line 1428
     :try_start_0
     invoke-static {}, Lcom/crittercism/internal/ax;->C()Lcom/crittercism/internal/ax;
 
@@ -44,11 +40,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1432
     :goto_0
     return-void
 
-    .line 1430
     :catch_0
     move-exception v0
 

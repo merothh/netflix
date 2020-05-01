@@ -33,8 +33,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 75
     new-instance v0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation$1;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation$1;-><init>()V
@@ -47,19 +45,14 @@
 .method protected constructor <init>(Landroid/os/Parcel;)V
     .locals 6
 
-    .prologue
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
     const/4 v0, 0x7
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 64
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readStringArray([Ljava/lang/String;)V
 
-    .line 65
     const/4 v1, 0x0
 
     aget-object v1, v0, v1
@@ -74,7 +67,6 @@
 
     iput-boolean v1, p0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->bWasWatched:Z
 
-    .line 66
     const/4 v1, 0x1
 
     aget-object v1, v0, v1
@@ -89,7 +81,6 @@
 
     iput-boolean v1, p0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->bNetflixConnected:Z
 
-    .line 67
     const/4 v1, 0x2
 
     aget-object v1, v0, v1
@@ -104,27 +95,22 @@
 
     iput-boolean v1, p0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->bWasRecommended:Z
 
-    .line 68
     const/4 v1, 0x3
 
     aget-object v1, v0, v1
 
-    .line 69
     const/4 v2, 0x4
 
     aget-object v2, v0, v2
 
-    .line 70
     const/4 v3, 0x5
 
     aget-object v3, v0, v3
 
-    .line 71
     const/4 v4, 0x6
 
     aget-object v5, v0, v4
 
-    .line 72
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
 
     const/4 v4, 0x0
@@ -133,27 +119,20 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->profile:Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
 
-    .line 73
     return-void
 .end method
 
 .method public constructor <init>(Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;ZZ)V
     .locals 0
 
-    .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 23
     iput-object p1, p0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->profile:Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
 
-    .line 24
     iput-boolean p2, p0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->bWasWatched:Z
 
-    .line 25
     iput-boolean p3, p0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->bNetflixConnected:Z
 
-    .line 26
     return-void
 .end method
 
@@ -162,8 +141,6 @@
 .method public describeContents()I
     .locals 1
 
-    .prologue
-    .line 101
     const/4 v0, 0x0
 
     return v0
@@ -172,19 +149,15 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 111
     if-eqz p1, :cond_0
 
     instance-of v0, p1, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;
 
     if-nez v0, :cond_1
 
-    .line 112
     :cond_0
     const/4 v0, 0x0
 
-    .line 114
     :goto_0
     return v0
 
@@ -213,8 +186,6 @@
 .method public getFriendProfile()Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
     .locals 1
 
-    .prologue
-    .line 29
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->profile:Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
 
     return-object v0
@@ -223,8 +194,6 @@
 .method public hashCode()I
     .locals 1
 
-    .prologue
-    .line 106
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->profile:Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;->getId()Ljava/lang/String;
@@ -241,8 +210,6 @@
 .method public isNetlflixConnected()Z
     .locals 1
 
-    .prologue
-    .line 41
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->bNetflixConnected:Z
 
     return v0
@@ -251,41 +218,30 @@
 .method public setNetflixConnected(Z)V
     .locals 0
 
-    .prologue
-    .line 45
     iput-boolean p1, p0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->bNetflixConnected:Z
 
-    .line 46
     return-void
 .end method
 
 .method public setWasRecommended(Z)V
     .locals 0
 
-    .prologue
-    .line 49
     iput-boolean p1, p0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->bWasRecommended:Z
 
-    .line 50
     return-void
 .end method
 
 .method public setWasWatched(Z)V
     .locals 0
 
-    .prologue
-    .line 37
     iput-boolean p1, p0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->bWasWatched:Z
 
-    .line 38
     return-void
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 58
     new-instance v0, Ljava/lang/StringBuffer;
 
     const-string/jumbo v1, "Name: "
@@ -316,7 +272,6 @@
 
     const-string/jumbo v1, "; bNetflixConnected: "
 
-    .line 59
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     move-result-object v0
@@ -331,15 +286,12 @@
 
     move-result-object v0
 
-    .line 58
     return-object v0
 .end method
 
 .method public wasRecommended()Z
     .locals 1
 
-    .prologue
-    .line 53
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->bWasRecommended:Z
 
     return v0
@@ -348,8 +300,6 @@
 .method public wasWatched()Z
     .locals 1
 
-    .prologue
-    .line 33
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->bWasWatched:Z
 
     return v0
@@ -358,13 +308,10 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    .prologue
-    .line 88
     const/4 v0, 0x7
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 89
     const/4 v1, 0x0
 
     iget-boolean v2, p0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->bWasWatched:Z
@@ -375,7 +322,6 @@
 
     aput-object v2, v0, v1
 
-    .line 90
     const/4 v1, 0x1
 
     iget-boolean v2, p0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->bNetflixConnected:Z
@@ -386,7 +332,6 @@
 
     aput-object v2, v0, v1
 
-    .line 91
     const/4 v1, 0x2
 
     iget-boolean v2, p0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->bWasRecommended:Z
@@ -397,7 +342,6 @@
 
     aput-object v2, v0, v1
 
-    .line 92
     const/4 v1, 0x3
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->profile:Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
@@ -408,7 +352,6 @@
 
     aput-object v2, v0, v1
 
-    .line 93
     const/4 v1, 0x4
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->profile:Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
@@ -419,7 +362,6 @@
 
     aput-object v2, v0, v1
 
-    .line 94
     const/4 v1, 0x5
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->profile:Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
@@ -430,7 +372,6 @@
 
     aput-object v2, v0, v1
 
-    .line 95
     const/4 v1, 0x6
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/user/volley/FriendForRecommendation;->profile:Lcom/netflix/mediaclient/service/webclient/model/leafs/FriendProfile;
@@ -441,9 +382,7 @@
 
     aput-object v2, v0, v1
 
-    .line 96
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 97
     return-void
 .end method

@@ -15,31 +15,24 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .prologue
-    .line 44
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/support/design/widget/TabItem;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 45
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
 
-    .prologue
-    .line 48
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 50
     sget-object v0, Landroid/support/design/R$styleable;->TabItem:[I
 
     invoke-static {p1, p2, v0}, Landroid/support/v7/widget/TintTypedArray;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroid/support/v7/widget/TintTypedArray;
 
     move-result-object v0
 
-    .line 52
     sget v1, Landroid/support/design/R$styleable;->TabItem_android_text:I
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/TintTypedArray;->getText(I)Ljava/lang/CharSequence;
@@ -48,7 +41,6 @@
 
     iput-object v1, p0, Landroid/support/design/widget/TabItem;->mText:Ljava/lang/CharSequence;
 
-    .line 53
     sget v1, Landroid/support/design/R$styleable;->TabItem_android_icon:I
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/TintTypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -57,7 +49,6 @@
 
     iput-object v1, p0, Landroid/support/design/widget/TabItem;->mIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 54
     sget v1, Landroid/support/design/R$styleable;->TabItem_android_layout:I
 
     const/4 v2, 0x0
@@ -68,9 +59,7 @@
 
     iput v1, p0, Landroid/support/design/widget/TabItem;->mCustomLayout:I
 
-    .line 55
     invoke-virtual {v0}, Landroid/support/v7/widget/TintTypedArray;->recycle()V
 
-    .line 56
     return-void
 .end method

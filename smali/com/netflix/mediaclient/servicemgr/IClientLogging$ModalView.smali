@@ -172,7 +172,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -183,7 +182,6 @@
 
     const/4 v3, 0x0
 
-    .line 184
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "appLoading"
@@ -192,7 +190,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->appLoading:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 185
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "nmLanding"
@@ -201,7 +198,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->nmLanding:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 186
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "signupPrompt"
@@ -210,7 +206,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->signupPrompt:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 187
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "registration"
@@ -219,7 +214,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->registration:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 188
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "emailConfirmation"
@@ -228,7 +222,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->emailConfirmation:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 189
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "login"
@@ -239,7 +232,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->login:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 190
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "privacyPolicy"
@@ -250,7 +242,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->privacyPolicy:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 191
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "offerDetails"
@@ -261,7 +252,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->offerDetails:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 192
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "payment"
@@ -272,7 +262,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->payment:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 193
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "badPayment"
@@ -283,7 +272,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->badPayment:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 194
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "legalTerms"
@@ -294,7 +282,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->legalTerms:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 195
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "orderConfirmation"
@@ -305,7 +292,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->orderConfirmation:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 196
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "profilesGate"
@@ -316,7 +302,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->profilesGate:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 197
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "jfkGate"
@@ -327,7 +312,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->jfkGate:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 198
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "homeScreen"
@@ -338,7 +322,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->homeScreen:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 199
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "bob"
@@ -349,7 +332,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->bob:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 200
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "movieDetails"
@@ -360,7 +342,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->movieDetails:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 201
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "browseTitles"
@@ -371,7 +352,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->browseTitles:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 202
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "originalDetails"
@@ -382,7 +362,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->originalDetails:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 203
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "audioSubtitlesSelector"
@@ -393,7 +372,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->audioSubtitlesSelector:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 204
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "characterDetails"
@@ -404,7 +382,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->characterDetails:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 205
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "seasonsSelector"
@@ -415,7 +392,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->seasonsSelector:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 206
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "episodesSelector"
@@ -426,7 +402,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->episodesSelector:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 207
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "search"
@@ -437,7 +412,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->search:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 208
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "searchResults"
@@ -448,7 +422,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->searchResults:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 209
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "prePlayback"
@@ -459,7 +432,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->prePlayback:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 210
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "playback"
@@ -470,7 +442,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->playback:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 211
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "playbackControls"
@@ -481,7 +452,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->playbackControls:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 212
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "trickplay"
@@ -492,7 +462,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->trickplay:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 213
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "postPlay"
@@ -503,7 +472,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->postPlay:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 214
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "customerService"
@@ -514,7 +482,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->customerService:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 215
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "logout"
@@ -525,7 +492,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->logout:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 216
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "errorDialog"
@@ -536,7 +502,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->errorDialog:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 217
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "upgradeStreamsPitch"
@@ -547,7 +512,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->upgradeStreamsPitch:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 218
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "upgradeStreamsPrompt"
@@ -558,7 +522,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->upgradeStreamsPrompt:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 219
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "upgradeStreamsError"
@@ -569,7 +532,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->upgradeStreamsError:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 220
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "maxStreamsReached"
@@ -580,7 +542,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->maxStreamsReached:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 221
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "mdxPlayback"
@@ -591,7 +552,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->mdxPlayback:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 222
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "openSourceLicenses"
@@ -602,7 +562,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->openSourceLicenses:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 223
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "settings"
@@ -613,7 +572,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->settings:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 224
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "profileDetails"
@@ -624,7 +582,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->profileDetails:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 225
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "titleResults"
@@ -635,7 +592,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->titleResults:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 226
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "peopleResults"
@@ -646,7 +602,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->peopleResults:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 227
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "suggestionResults"
@@ -657,7 +612,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->suggestionResults:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 228
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "peopleTitleResults"
@@ -668,7 +622,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->peopleTitleResults:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 229
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "suggestionTitleResults"
@@ -679,7 +632,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->suggestionTitleResults:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 230
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "socialNotifications"
@@ -690,7 +642,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->socialNotifications:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 231
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "externalLink"
@@ -701,7 +652,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->externalLink:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 232
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "contactUs"
@@ -712,7 +662,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->contactUs:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 233
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "menuPanel"
@@ -723,7 +672,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->menuPanel:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 234
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "notification"
@@ -734,7 +682,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->notification:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 235
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "survey"
@@ -745,7 +692,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->survey:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 236
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "optInDialog"
@@ -756,7 +702,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->optInDialog:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 237
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "eogPrompt"
@@ -767,7 +712,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->eogPrompt:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 238
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "eogPlanSelector"
@@ -778,7 +722,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->eogPlanSelector:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 239
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "ageVerificationDialog"
@@ -789,7 +732,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->ageVerificationDialog:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 240
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "ikoMode"
@@ -800,7 +742,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->ikoMode:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 241
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "ikoMoment"
@@ -811,7 +752,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->ikoMoment:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 242
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "ikoNotification"
@@ -822,7 +762,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->ikoNotification:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 243
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "memento"
@@ -833,7 +772,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->memento:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 244
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "rdp"
@@ -844,7 +782,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->rdp:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 245
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "onramp"
@@ -855,7 +792,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->onramp:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 248
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "offlineShows"
@@ -866,7 +802,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->offlineShows:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 249
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "addCachedVideoButton"
@@ -877,7 +812,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->addCachedVideoButton:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 250
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "removeCachedVideoButton"
@@ -888,7 +822,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->removeCachedVideoButton:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 251
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "viewCachedVideosButton"
@@ -899,7 +832,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->viewCachedVideosButton:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 252
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "cachedVideos"
@@ -910,7 +842,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->cachedVideos:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 253
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "cachedEpisodes"
@@ -921,7 +852,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->cachedEpisodes:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 254
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "pauseDownloadButton"
@@ -932,7 +862,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->pauseDownloadButton:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 255
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "resumeDownloadButton"
@@ -943,7 +872,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->resumeDownloadButton:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 256
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "retryDownloadButton"
@@ -954,7 +882,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->retryDownloadButton:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 257
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "downloadProgress"
@@ -965,7 +892,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->downloadProgress:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 258
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "videoNotAvailableToCacheWarning"
@@ -976,7 +902,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->videoNotAvailableToCacheWarning:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 259
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "videoNotEligibleToCacheWarning"
@@ -987,7 +912,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->videoNotEligibleToCacheWarning:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 260
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     const-string/jumbo v1, "noConnectivityWarning"
@@ -998,7 +922,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->noConnectivityWarning:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 183
     const/16 v0, 0x4b
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
@@ -1456,8 +1379,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 183
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -1466,8 +1387,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
     .locals 1
 
-    .prologue
-    .line 183
     const-class v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -1482,8 +1401,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
     .locals 1
 
-    .prologue
-    .line 183
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->clone()Ljava/lang/Object;

@@ -18,18 +18,14 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 2263
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2264
     invoke-static {p1, p2}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->createSession(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionObj:Ljava/lang/Object;
 
-    .line 2265
     new-instance v0, Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
     iget-object v1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionObj:Ljava/lang/Object;
@@ -42,25 +38,20 @@
 
     iput-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mToken:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    .line 2266
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 2268
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2269
     invoke-static {p1}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->verifySession(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionObj:Ljava/lang/Object;
 
-    .line 2270
     new-instance v0, Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
     iget-object v1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionObj:Ljava/lang/Object;
@@ -73,7 +64,6 @@
 
     iput-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mToken:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    .line 2271
     return-void
 .end method
 
@@ -82,18 +72,14 @@
 .method public getCallingPackage()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 2386
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x18
 
     if-ge v0, v1, :cond_0
 
-    .line 2387
     const/4 v0, 0x0
 
-    .line 2389
     :goto_0
     return-object v0
 
@@ -110,8 +96,6 @@
 .method public getMediaSession()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 2376
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionObj:Ljava/lang/Object;
 
     return-object v0
@@ -120,8 +104,6 @@
 .method public getRemoteControlClient()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 2381
     const/4 v0, 0x0
 
     return-object v0
@@ -130,8 +112,6 @@
 .method public getSessionToken()Landroid/support/v4/media/session/MediaSessionCompat$Token;
     .locals 1
 
-    .prologue
-    .line 2317
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mToken:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
     return-object v0
@@ -140,8 +120,6 @@
 .method public isActive()Z
     .locals 1
 
-    .prologue
-    .line 2302
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionObj:Ljava/lang/Object;
 
     invoke-static {v0}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->isActive(Ljava/lang/Object;)Z
@@ -154,47 +132,36 @@
 .method public release()V
     .locals 1
 
-    .prologue
-    .line 2312
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionObj:Ljava/lang/Object;
 
     invoke-static {v0}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->release(Ljava/lang/Object;)V
 
-    .line 2313
     return-void
 .end method
 
 .method public sendSessionEvent(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
-    .prologue
-    .line 2307
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionObj:Ljava/lang/Object;
 
     invoke-static {v0, p1, p2}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->sendSessionEvent(Ljava/lang/Object;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 2308
     return-void
 .end method
 
 .method public setActive(Z)V
     .locals 1
 
-    .prologue
-    .line 2297
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionObj:Ljava/lang/Object;
 
     invoke-static {v0, p1}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->setActive(Ljava/lang/Object;Z)V
 
-    .line 2298
     return-void
 .end method
 
 .method public setCallback(Landroid/support/v4/media/session/MediaSessionCompat$Callback;Landroid/os/Handler;)V
     .locals 2
 
-    .prologue
-    .line 2275
     iget-object v1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionObj:Ljava/lang/Object;
 
     if-nez p1, :cond_0
@@ -204,10 +171,8 @@
     :goto_0
     invoke-static {v1, v0, p2}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->setCallback(Ljava/lang/Object;Ljava/lang/Object;Landroid/os/Handler;)V
 
-    .line 2277
     return-void
 
-    .line 2275
     :cond_0
     iget-object v0, p1, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->mCallbackObj:Ljava/lang/Object;
 
@@ -217,50 +182,38 @@
 .method public setExtras(Landroid/os/Bundle;)V
     .locals 1
 
-    .prologue
-    .line 2371
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionObj:Ljava/lang/Object;
 
     invoke-static {v0, p1}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->setExtras(Ljava/lang/Object;Landroid/os/Bundle;)V
 
-    .line 2372
     return-void
 .end method
 
 .method public setFlags(I)V
     .locals 1
 
-    .prologue
-    .line 2281
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionObj:Ljava/lang/Object;
 
     invoke-static {v0, p1}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->setFlags(Ljava/lang/Object;I)V
 
-    .line 2282
     return-void
 .end method
 
 .method public setMediaButtonReceiver(Landroid/app/PendingIntent;)V
     .locals 1
 
-    .prologue
-    .line 2339
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mMediaButtonIntent:Landroid/app/PendingIntent;
 
-    .line 2340
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionObj:Ljava/lang/Object;
 
     invoke-static {v0, p1}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->setMediaButtonReceiver(Ljava/lang/Object;Landroid/app/PendingIntent;)V
 
-    .line 2341
     return-void
 .end method
 
 .method public setMetadata(Landroid/support/v4/media/MediaMetadataCompat;)V
     .locals 2
 
-    .prologue
-    .line 2328
     iget-object v1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionObj:Ljava/lang/Object;
 
     if-nez p1, :cond_0
@@ -270,10 +223,8 @@
     :goto_0
     invoke-static {v1, v0}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->setMetadata(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 2330
     return-void
 
-    .line 2329
     :cond_0
     invoke-virtual {p1}, Landroid/support/v4/media/MediaMetadataCompat;->getMediaMetadata()Ljava/lang/Object;
 
@@ -285,8 +236,6 @@
 .method public setPlaybackState(Landroid/support/v4/media/session/PlaybackStateCompat;)V
     .locals 2
 
-    .prologue
-    .line 2322
     iget-object v1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionObj:Ljava/lang/Object;
 
     if-nez p1, :cond_0
@@ -296,10 +245,8 @@
     :goto_0
     invoke-static {v1, v0}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->setPlaybackState(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 2324
     return-void
 
-    .line 2323
     :cond_0
     invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat;->getPlaybackState()Ljava/lang/Object;
 
@@ -311,32 +258,24 @@
 .method public setPlaybackToLocal(I)V
     .locals 1
 
-    .prologue
-    .line 2286
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionObj:Ljava/lang/Object;
 
     invoke-static {v0, p1}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->setPlaybackToLocal(Ljava/lang/Object;I)V
 
-    .line 2287
     return-void
 .end method
 
 .method public setPlaybackToRemote(Landroid/support/v4/media/VolumeProviderCompat;)V
     .locals 2
 
-    .prologue
-    .line 2291
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionObj:Ljava/lang/Object;
 
-    .line 2292
     invoke-virtual {p1}, Landroid/support/v4/media/VolumeProviderCompat;->getVolumeProvider()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 2291
     invoke-static {v0, v1}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->setPlaybackToRemote(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 2293
     return-void
 .end method
 
@@ -352,19 +291,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 2345
     const/4 v0, 0x0
 
-    .line 2346
     if-eqz p1, :cond_1
 
-    .line 2347
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2348
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -382,7 +316,6 @@
 
     check-cast v0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;
 
-    .line 2349
     invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->getQueueItem()Ljava/lang/Object;
 
     move-result-object v0
@@ -394,45 +327,36 @@
     :cond_0
     move-object v0, v1
 
-    .line 2352
     :cond_1
     iget-object v1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionObj:Ljava/lang/Object;
 
     invoke-static {v1, v0}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->setQueue(Ljava/lang/Object;Ljava/util/List;)V
 
-    .line 2353
     return-void
 .end method
 
 .method public setQueueTitle(Ljava/lang/CharSequence;)V
     .locals 1
 
-    .prologue
-    .line 2357
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionObj:Ljava/lang/Object;
 
     invoke-static {v0, p1}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->setQueueTitle(Ljava/lang/Object;Ljava/lang/CharSequence;)V
 
-    .line 2358
     return-void
 .end method
 
 .method public setRatingType(I)V
     .locals 2
 
-    .prologue
-    .line 2362
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x16
 
     if-ge v0, v1, :cond_0
 
-    .line 2367
     :goto_0
     return-void
 
-    .line 2365
     :cond_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionObj:Ljava/lang/Object;
 
@@ -444,12 +368,9 @@
 .method public setSessionActivity(Landroid/app/PendingIntent;)V
     .locals 1
 
-    .prologue
-    .line 2334
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionObj:Ljava/lang/Object;
 
     invoke-static {v0, p1}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->setSessionActivity(Ljava/lang/Object;Landroid/app/PendingIntent;)V
 
-    .line 2335
     return-void
 .end method

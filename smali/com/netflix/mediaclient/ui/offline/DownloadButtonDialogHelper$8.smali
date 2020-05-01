@@ -16,8 +16,6 @@
 .method constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 198
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper$8;->val$context:Landroid/content/Context;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper$8;->val$playableId:Ljava/lang/String;
@@ -32,31 +30,24 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
 
-    .prologue
-    .line 201
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper$8;->val$context:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper;->access$000(Landroid/content/Context;)Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface;
 
     move-result-object v0
 
-    .line 202
     if-eqz v0, :cond_0
 
-    .line 203
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper$8;->val$playableId:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface;->deleteOfflinePlayable(Ljava/lang/String;)V
 
-    .line 204
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButtonDialogHelper$8;->val$playableId:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/offline/DownloadButton;->removePreQueued(Ljava/lang/String;)V
 
-    .line 206
     :cond_0
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 207
     return-void
 .end method

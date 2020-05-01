@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/google/android/exoplayer/chunk/ChunkSampleSource;Ljava/io/IOException;)V
     .locals 0
 
-    .prologue
-    .line 660
     iput-object p1, p0, Lcom/google/android/exoplayer/chunk/ChunkSampleSource$4;->this$0:Lcom/google/android/exoplayer/chunk/ChunkSampleSource;
 
     iput-object p2, p0, Lcom/google/android/exoplayer/chunk/ChunkSampleSource$4;->val$e:Ljava/io/IOException;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 663
     iget-object v0, p0, Lcom/google/android/exoplayer/chunk/ChunkSampleSource$4;->this$0:Lcom/google/android/exoplayer/chunk/ChunkSampleSource;
 
     invoke-static {v0}, Lcom/google/android/exoplayer/chunk/ChunkSampleSource;->access$100(Lcom/google/android/exoplayer/chunk/ChunkSampleSource;)Lcom/google/android/exoplayer/chunk/ChunkSampleSource$EventListener;
@@ -50,6 +46,5 @@
 
     invoke-interface {v0, v1, v2}, Lcom/google/android/exoplayer/chunk/ChunkSampleSource$EventListener;->onLoadError(ILjava/io/IOException;)V
 
-    .line 664
     return-void
 .end method

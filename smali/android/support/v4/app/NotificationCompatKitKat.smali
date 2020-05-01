@@ -7,27 +7,20 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     return-void
 .end method
 
 .method public static getAction(Landroid/app/Notification;ILandroid/support/v4/app/NotificationCompatBase$Action$Factory;Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput$Factory;)Landroid/support/v4/app/NotificationCompatBase$Action;
     .locals 6
 
-    .prologue
-    .line 141
     iget-object v0, p0, Landroid/app/Notification;->actions:[Landroid/app/Notification$Action;
 
     aget-object v1, v0, p1
 
-    .line 142
     const/4 v5, 0x0
 
-    .line 143
     iget-object v0, p0, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
     const-string/jumbo v2, "android.support.actionExtras"
@@ -36,10 +29,8 @@
 
     move-result-object v0
 
-    .line 145
     if-eqz v0, :cond_0
 
-    .line 146
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -48,7 +39,6 @@
 
     move-object v5, v0
 
-    .line 148
     :cond_0
     iget v2, v1, Landroid/app/Notification$Action;->icon:I
 
@@ -70,8 +60,6 @@
 .method public static getActionCount(Landroid/app/Notification;)I
     .locals 1
 
-    .prologue
-    .line 135
     iget-object v0, p0, Landroid/app/Notification;->actions:[Landroid/app/Notification$Action;
 
     if-eqz v0, :cond_0
@@ -92,8 +80,6 @@
 .method public static getExtras(Landroid/app/Notification;)Landroid/os/Bundle;
     .locals 1
 
-    .prologue
-    .line 131
     iget-object v0, p0, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
     return-object v0
@@ -102,8 +88,6 @@
 .method public static getGroup(Landroid/app/Notification;)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 157
     iget-object v0, p0, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
     const-string/jumbo v1, "android.support.groupKey"
@@ -118,8 +102,6 @@
 .method public static getLocalOnly(Landroid/app/Notification;)Z
     .locals 2
 
-    .prologue
-    .line 153
     iget-object v0, p0, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
     const-string/jumbo v1, "android.support.localOnly"
@@ -134,8 +116,6 @@
 .method public static getSortKey(Landroid/app/Notification;)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 165
     iget-object v0, p0, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
     const-string/jumbo v1, "android.support.sortKey"
@@ -150,8 +130,6 @@
 .method public static isGroupSummary(Landroid/app/Notification;)Z
     .locals 2
 
-    .prologue
-    .line 161
     iget-object v0, p0, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
     const-string/jumbo v1, "android.support.isGroupSummary"

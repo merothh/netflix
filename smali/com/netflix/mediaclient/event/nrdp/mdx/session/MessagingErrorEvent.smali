@@ -29,8 +29,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 24
     sget-object v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->mdx_session_messagingerror:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     sput-object v0, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessagingErrorEvent;->TYPE:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
@@ -41,8 +39,6 @@
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 1
 
-    .prologue
-    .line 43
     sget-object v0, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessagingErrorEvent;->TYPE:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->getName()Ljava/lang/String;
@@ -51,7 +47,6 @@
 
     invoke-direct {p0, v0, p1}, Lcom/netflix/mediaclient/event/nrdp/JsonBaseNccpEvent;-><init>(Ljava/lang/String;Lorg/json/JSONObject;)V
 
-    .line 44
     return-void
 .end method
 
@@ -60,8 +55,6 @@
 .method public getError()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 89
     iget v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessagingErrorEvent;->errorCode:I
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -74,8 +67,6 @@
 .method public getErrorCode()I
     .locals 1
 
-    .prologue
-    .line 98
     iget v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessagingErrorEvent;->errorCode:I
 
     return v0
@@ -84,8 +75,6 @@
 .method public getObject()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 108
     const-string/jumbo v0, "nrdp.mdx"
 
     return-object v0
@@ -94,8 +83,6 @@
 .method public getPairingContext()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 62
     iget-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessagingErrorEvent;->pairingContext:Ljava/lang/String;
 
     return-object v0
@@ -104,8 +91,6 @@
 .method public getSid()I
     .locals 1
 
-    .prologue
-    .line 80
     iget v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessagingErrorEvent;->sid:I
 
     return v0
@@ -114,8 +99,6 @@
 .method public getTransactionId()I
     .locals 1
 
-    .prologue
-    .line 71
     iget v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessagingErrorEvent;->transactionId:I
 
     return v0
@@ -124,10 +107,8 @@
 .method protected populate(Lorg/json/JSONObject;)V
     .locals 3
 
-    .prologue
     const/4 v2, -0x1
 
-    .line 50
     const-string/jumbo v0, "pairingContext"
 
     const/4 v1, 0x0
@@ -138,7 +119,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessagingErrorEvent;->pairingContext:Ljava/lang/String;
 
-    .line 51
     const-string/jumbo v0, "transactionId"
 
     invoke-static {p1, v0, v2}, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessagingErrorEvent;->getInt(Lorg/json/JSONObject;Ljava/lang/String;I)I
@@ -147,7 +127,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessagingErrorEvent;->transactionId:I
 
-    .line 52
     const-string/jumbo v0, "sid"
 
     invoke-static {p1, v0, v2}, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessagingErrorEvent;->getInt(Lorg/json/JSONObject;Ljava/lang/String;I)I
@@ -156,7 +135,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessagingErrorEvent;->sid:I
 
-    .line 53
     const-string/jumbo v0, "errorCode"
 
     invoke-static {p1, v0, v2}, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessagingErrorEvent;->getInt(Lorg/json/JSONObject;Ljava/lang/String;I)I
@@ -165,6 +143,5 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/session/MessagingErrorEvent;->errorCode:I
 
-    .line 54
     return-void
 .end method

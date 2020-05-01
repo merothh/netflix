@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/common/DebugMenuItems;)V
     .locals 0
 
-    .prologue
-    .line 482
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/common/DebugMenuItems$25;->this$0:Lcom/netflix/mediaclient/ui/common/DebugMenuItems;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 3
 
-    .prologue
-    .line 485
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/DebugMenuItems$25;->this$0:Lcom/netflix/mediaclient/ui/common/DebugMenuItems;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/common/DebugMenuItems;->access$000(Lcom/netflix/mediaclient/ui/common/DebugMenuItems;)Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -50,7 +46,6 @@
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;->fetchAccountConfigData(Lcom/netflix/mediaclient/service/configuration/ConfigurationAgentWebCallback;)V
 
-    .line 497
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/DebugMenuItems$25;->this$0:Lcom/netflix/mediaclient/ui/common/DebugMenuItems;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/common/DebugMenuItems;->access$000(Lcom/netflix/mediaclient/ui/common/DebugMenuItems;)Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -67,7 +62,6 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 498
     const/4 v0, 0x1
 
     return v0

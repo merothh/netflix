@@ -24,8 +24,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/iris/notifications/type/BaseNotification;Lcom/netflix/mediaclient/util/gfx/ImageLoader;Lcom/netflix/model/leafs/social/IrisNotificationSummary;Lcom/netflix/mediaclient/service/pushnotification/MessageData;Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 285
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iris/notifications/type/BaseNotification$1;->this$0:Lcom/netflix/mediaclient/ui/iris/notifications/type/BaseNotification;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/iris/notifications/type/BaseNotification$1;->val$imageLoader:Lcom/netflix/mediaclient/util/gfx/ImageLoader;
@@ -48,15 +46,12 @@
 .method public onErrorResponse(Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 294
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 295
     sget-object v0, Lcom/netflix/mediaclient/ui/iris/notifications/type/BaseNotification;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -79,7 +74,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 297
     :cond_0
     return-void
 .end method
@@ -87,13 +81,10 @@
 .method public onResponse(Landroid/graphics/Bitmap;Ljava/lang/String;)V
     .locals 11
 
-    .prologue
     const/4 v10, 0x0
 
-    .line 288
     if-eqz p1, :cond_0
 
-    .line 289
     iget-object v7, p0, Lcom/netflix/mediaclient/ui/iris/notifications/type/BaseNotification$1;->val$imageLoader:Lcom/netflix/mediaclient/util/gfx/ImageLoader;
 
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iris/notifications/type/BaseNotification$1;->val$notificationSummary:Lcom/netflix/model/leafs/social/IrisNotificationSummary;
@@ -134,7 +125,6 @@
 
     invoke-interface/range {v1 .. v6}, Lcom/netflix/mediaclient/util/gfx/ImageLoader;->getImg(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;IILcom/netflix/mediaclient/util/gfx/ImageLoader$ImageLoaderListener;)V
 
-    .line 291
     :cond_0
     return-void
 .end method

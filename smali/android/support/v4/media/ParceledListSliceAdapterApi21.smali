@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
-    .line 32
     :try_start_0
     const-string/jumbo v0, "android.content.pm.ParceledListSlice"
 
@@ -20,7 +18,6 @@
 
     move-result-object v0
 
-    .line 33
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Class;
@@ -40,21 +37,17 @@
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 37
     :goto_0
     return-void
 
-    .line 34
     :catch_0
     move-exception v0
 
-    .line 35
     :goto_1
     invoke-virtual {v0}, Ljava/lang/ReflectiveOperationException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 34
     :catch_1
     move-exception v0
 
@@ -64,8 +57,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -84,11 +75,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 40
     const/4 v1, 0x0
 
-    .line 42
     :try_start_0
     sget-object v0, Landroid/support/v4/media/ParceledListSliceAdapterApi21;->sConstructor:Ljava/lang/reflect/Constructor;
 
@@ -108,15 +96,12 @@
 
     move-result-object v0
 
-    .line 46
     :goto_0
     return-object v0
 
-    .line 43
     :catch_0
     move-exception v0
 
-    .line 44
     :goto_1
     invoke-virtual {v0}, Ljava/lang/ReflectiveOperationException;->printStackTrace()V
 
@@ -124,7 +109,6 @@
 
     goto :goto_0
 
-    .line 43
     :catch_1
     move-exception v0
 

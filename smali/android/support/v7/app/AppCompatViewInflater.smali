@@ -41,14 +41,12 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x2
 
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 63
     new-array v0, v4, [Ljava/lang/Class;
 
     const-class v1, Landroid/content/Context;
@@ -61,7 +59,6 @@
 
     sput-object v0, Landroid/support/v7/app/AppCompatViewInflater;->sConstructorSignature:[Ljava/lang/Class;
 
-    .line 65
     new-array v0, v3, [I
 
     const v1, 0x101026f
@@ -70,7 +67,6 @@
 
     sput-object v0, Landroid/support/v7/app/AppCompatViewInflater;->sOnClickAttrs:[I
 
-    .line 67
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/String;
@@ -89,7 +85,6 @@
 
     sput-object v0, Landroid/support/v7/app/AppCompatViewInflater;->sClassPrefixList:[Ljava/lang/String;
 
-    .line 75
     new-instance v0, Landroid/support/v4/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/support/v4/util/ArrayMap;-><init>()V
@@ -102,31 +97,24 @@
 .method constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 78
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/Object;
 
     iput-object v0, p0, Landroid/support/v7/app/AppCompatViewInflater;->mConstructorArgs:[Ljava/lang/Object;
 
-    .line 269
     return-void
 .end method
 
 .method private checkOnClickListener(Landroid/view/View;Landroid/util/AttributeSet;)V
     .locals 3
 
-    .prologue
-    .line 194
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 196
     instance-of v1, v0, Landroid/content/ContextWrapper;
 
     if-eqz v1, :cond_0
@@ -137,19 +125,16 @@
 
     if-lt v1, v2, :cond_1
 
-    .line 197
     invoke-static {p1}, Landroid/support/v4/view/ViewCompat;->hasOnClickListeners(Landroid/view/View;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 210
     :cond_0
     :goto_0
     return-void
 
-    .line 204
     :cond_1
     sget-object v1, Landroid/support/v7/app/AppCompatViewInflater;->sOnClickAttrs:[I
 
@@ -157,24 +142,20 @@
 
     move-result-object v0
 
-    .line 205
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 206
     if-eqz v1, :cond_2
 
-    .line 207
     new-instance v2, Landroid/support/v7/app/AppCompatViewInflater$DeclaredOnClickListener;
 
     invoke-direct {v2, p1, v1}, Landroid/support/v7/app/AppCompatViewInflater$DeclaredOnClickListener;-><init>(Landroid/view/View;Ljava/lang/String;)V
 
     invoke-virtual {p1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 209
     :cond_2
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
@@ -184,8 +165,6 @@
 .method private createView(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/view/View;
     .locals 2
 
-    .prologue
-    .line 214
     sget-object v0, Landroid/support/v7/app/AppCompatViewInflater;->sConstructorMap:Ljava/util/Map;
 
     invoke-interface {v0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -194,10 +173,8 @@
 
     check-cast v0, Ljava/lang/reflect/Constructor;
 
-    .line 217
     if-nez v0, :cond_0
 
-    .line 219
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -228,30 +205,25 @@
 
     const-class v1, Landroid/view/View;
 
-    .line 220
     invoke-virtual {v0, v1}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 222
     sget-object v1, Landroid/support/v7/app/AppCompatViewInflater;->sConstructorSignature:[Ljava/lang/Class;
 
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v0
 
-    .line 223
     sget-object v1, Landroid/support/v7/app/AppCompatViewInflater;->sConstructorMap:Ljava/util/Map;
 
     invoke-interface {v1, p2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 225
     :cond_0
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
 
-    .line 226
     iget-object v1, p0, Landroid/support/v7/app/AppCompatViewInflater;->mConstructorArgs:[Ljava/lang/Object;
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
@@ -262,21 +234,17 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 230
     :goto_1
     return-object v0
 
     :cond_1
     move-object v0, p2
 
-    .line 219
     goto :goto_0
 
-    .line 227
     :catch_0
     move-exception v0
 
-    .line 230
     const/4 v0, 0x0
 
     goto :goto_1
@@ -285,14 +253,12 @@
 .method private createViewFromTag(Landroid/content/Context;Ljava/lang/String;Landroid/util/AttributeSet;)Landroid/view/View;
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
     const/4 v3, 0x0
 
     const/4 v1, 0x0
 
-    .line 158
     const-string/jumbo v0, "view"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -301,14 +267,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 159
     const-string/jumbo v0, "class"
 
     invoke-interface {p3, v1, v0}, Landroid/util/AttributeSet;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 163
     :cond_0
     :try_start_0
     iget-object v0, p0, Landroid/support/v7/app/AppCompatViewInflater;->mConstructorArgs:[Ljava/lang/Object;
@@ -317,14 +281,12 @@
 
     aput-object p1, v0, v2
 
-    .line 164
     iget-object v0, p0, Landroid/support/v7/app/AppCompatViewInflater;->mConstructorArgs:[Ljava/lang/Object;
 
     const/4 v2, 0x1
 
     aput-object p3, v0, v2
 
-    .line 166
     const/4 v0, -0x1
 
     const/16 v2, 0x2e
@@ -337,7 +299,6 @@
 
     move v2, v3
 
-    .line 167
     :goto_0
     sget-object v0, Landroid/support/v7/app/AppCompatViewInflater;->sClassPrefixList:[Ljava/lang/String;
 
@@ -345,7 +306,6 @@
 
     if-ge v2, v0, :cond_2
 
-    .line 168
     sget-object v0, Landroid/support/v7/app/AppCompatViewInflater;->sClassPrefixList:[Ljava/lang/String;
 
     aget-object v0, v0, v2
@@ -357,15 +317,12 @@
 
     move-result-object v0
 
-    .line 169
     if-eqz v0, :cond_1
 
-    .line 183
     iget-object v2, p0, Landroid/support/v7/app/AppCompatViewInflater;->mConstructorArgs:[Ljava/lang/Object;
 
     aput-object v1, v2, v3
 
-    .line 184
     iget-object v2, p0, Landroid/support/v7/app/AppCompatViewInflater;->mConstructorArgs:[Ljava/lang/Object;
 
     aput-object v1, v2, v4
@@ -373,7 +330,6 @@
     :goto_1
     return-object v0
 
-    .line 167
     :cond_1
     add-int/lit8 v0, v2, 0x1
 
@@ -381,13 +337,11 @@
 
     goto :goto_0
 
-    .line 183
     :cond_2
     iget-object v0, p0, Landroid/support/v7/app/AppCompatViewInflater;->mConstructorArgs:[Ljava/lang/Object;
 
     aput-object v1, v0, v3
 
-    .line 184
     iget-object v0, p0, Landroid/support/v7/app/AppCompatViewInflater;->mConstructorArgs:[Ljava/lang/Object;
 
     aput-object v1, v0, v4
@@ -396,7 +350,6 @@
 
     goto :goto_1
 
-    .line 175
     :cond_3
     const/4 v0, 0x0
 
@@ -408,28 +361,23 @@
 
     move-result-object v0
 
-    .line 183
     iget-object v2, p0, Landroid/support/v7/app/AppCompatViewInflater;->mConstructorArgs:[Ljava/lang/Object;
 
     aput-object v1, v2, v3
 
-    .line 184
     iget-object v2, p0, Landroid/support/v7/app/AppCompatViewInflater;->mConstructorArgs:[Ljava/lang/Object;
 
     aput-object v1, v2, v4
 
     goto :goto_1
 
-    .line 177
     :catch_0
     move-exception v0
 
-    .line 183
     iget-object v0, p0, Landroid/support/v7/app/AppCompatViewInflater;->mConstructorArgs:[Ljava/lang/Object;
 
     aput-object v1, v0, v3
 
-    .line 184
     iget-object v0, p0, Landroid/support/v7/app/AppCompatViewInflater;->mConstructorArgs:[Ljava/lang/Object;
 
     aput-object v1, v0, v4
@@ -438,7 +386,6 @@
 
     goto :goto_1
 
-    .line 183
     :catchall_0
     move-exception v0
 
@@ -446,7 +393,6 @@
 
     aput-object v1, v2, v3
 
-    .line 184
     iget-object v2, p0, Landroid/support/v7/app/AppCompatViewInflater;->mConstructorArgs:[Ljava/lang/Object;
 
     aput-object v1, v2, v4
@@ -457,43 +403,35 @@
 .method private static themifyContext(Landroid/content/Context;Landroid/util/AttributeSet;ZZ)Landroid/content/Context;
     .locals 4
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 239
     sget-object v0, Landroid/support/v7/appcompat/R$styleable;->View:[I
 
     invoke-virtual {p0, p1, v0, v1, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v2
 
-    .line 241
     if-eqz p2, :cond_3
 
-    .line 243
     sget v0, Landroid/support/v7/appcompat/R$styleable;->View_android_theme:I
 
     invoke-virtual {v2, v0, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v0
 
-    .line 245
     :goto_0
     if-eqz p3, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 247
     sget v0, Landroid/support/v7/appcompat/R$styleable;->View_theme:I
 
     invoke-virtual {v2, v0, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v0
 
-    .line 249
     if-eqz v0, :cond_0
 
-    .line 250
     const-string/jumbo v1, "AppCompatViewInflater"
 
     const-string/jumbo v3, "app:theme is now deprecated. Please move to using android:theme instead."
@@ -503,10 +441,8 @@
     :cond_0
     move v1, v0
 
-    .line 254
     invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 256
     if-eqz v1, :cond_2
 
     instance-of v0, p0, Landroid/support/v7/view/ContextThemeWrapper;
@@ -517,14 +453,12 @@
 
     check-cast v0, Landroid/support/v7/view/ContextThemeWrapper;
 
-    .line 257
     invoke-virtual {v0}, Landroid/support/v7/view/ContextThemeWrapper;->getThemeResId()I
 
     move-result v0
 
     if-eq v0, v1, :cond_2
 
-    .line 260
     :cond_1
     new-instance v0, Landroid/support/v7/view/ContextThemeWrapper;
 
@@ -532,7 +466,6 @@
 
     move-object p0, v0
 
-    .line 262
     :cond_2
     return-object p0
 
@@ -547,44 +480,34 @@
 .method public final createView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;ZZZZ)Landroid/view/View;
     .locals 4
 
-    .prologue
-    .line 83
-    .line 87
     if-eqz p5, :cond_6
 
     if-eqz p1, :cond_6
 
-    .line 88
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 90
     :goto_0
     if-nez p6, :cond_0
 
     if-eqz p7, :cond_1
 
-    .line 92
     :cond_0
     invoke-static {v0, p4, p6, p7}, Landroid/support/v7/app/AppCompatViewInflater;->themifyContext(Landroid/content/Context;Landroid/util/AttributeSet;ZZ)Landroid/content/Context;
 
     move-result-object v0
 
-    .line 94
     :cond_1
     if-eqz p8, :cond_2
 
-    .line 95
     invoke-static {v0}, Landroid/support/v7/widget/TintContextWrapper;->wrap(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object v0
 
-    .line 98
     :cond_2
     const/4 v1, 0x0
 
-    .line 101
     const/4 v2, -0x1
 
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
@@ -597,29 +520,23 @@
     :goto_1
     packed-switch v2, :pswitch_data_0
 
-    .line 143
     :goto_2
     if-nez v1, :cond_5
 
     if-eq p3, v0, :cond_5
 
-    .line 146
     invoke-direct {p0, v0, p2, p4}, Landroid/support/v7/app/AppCompatViewInflater;->createViewFromTag(Landroid/content/Context;Ljava/lang/String;Landroid/util/AttributeSet;)Landroid/view/View;
 
     move-result-object v0
 
-    .line 149
     :goto_3
     if-eqz v0, :cond_4
 
-    .line 151
     invoke-direct {p0, v0, p4}, Landroid/support/v7/app/AppCompatViewInflater;->checkOnClickListener(Landroid/view/View;Landroid/util/AttributeSet;)V
 
-    .line 154
     :cond_4
     return-object v0
 
-    .line 101
     :sswitch_0
     const-string/jumbo v3, "TextView"
 
@@ -789,7 +706,6 @@
 
     goto/16 :goto_1
 
-    .line 103
     :pswitch_0
     new-instance v1, Landroid/support/v7/widget/AppCompatTextView;
 
@@ -797,7 +713,6 @@
 
     goto/16 :goto_2
 
-    .line 106
     :pswitch_1
     new-instance v1, Landroid/support/v7/widget/AppCompatImageView;
 
@@ -805,7 +720,6 @@
 
     goto/16 :goto_2
 
-    .line 109
     :pswitch_2
     new-instance v1, Landroid/support/v7/widget/AppCompatButton;
 
@@ -813,7 +727,6 @@
 
     goto/16 :goto_2
 
-    .line 112
     :pswitch_3
     new-instance v1, Landroid/support/v7/widget/AppCompatEditText;
 
@@ -821,7 +734,6 @@
 
     goto/16 :goto_2
 
-    .line 115
     :pswitch_4
     new-instance v1, Landroid/support/v7/widget/AppCompatSpinner;
 
@@ -829,7 +741,6 @@
 
     goto/16 :goto_2
 
-    .line 118
     :pswitch_5
     new-instance v1, Landroid/support/v7/widget/AppCompatImageButton;
 
@@ -837,7 +748,6 @@
 
     goto/16 :goto_2
 
-    .line 121
     :pswitch_6
     new-instance v1, Landroid/support/v7/widget/AppCompatCheckBox;
 
@@ -845,7 +755,6 @@
 
     goto/16 :goto_2
 
-    .line 124
     :pswitch_7
     new-instance v1, Landroid/support/v7/widget/AppCompatRadioButton;
 
@@ -853,7 +762,6 @@
 
     goto/16 :goto_2
 
-    .line 127
     :pswitch_8
     new-instance v1, Landroid/support/v7/widget/AppCompatCheckedTextView;
 
@@ -861,7 +769,6 @@
 
     goto/16 :goto_2
 
-    .line 130
     :pswitch_9
     new-instance v1, Landroid/support/v7/widget/AppCompatAutoCompleteTextView;
 
@@ -869,7 +776,6 @@
 
     goto/16 :goto_2
 
-    .line 133
     :pswitch_a
     new-instance v1, Landroid/support/v7/widget/AppCompatMultiAutoCompleteTextView;
 
@@ -877,7 +783,6 @@
 
     goto/16 :goto_2
 
-    .line 136
     :pswitch_b
     new-instance v1, Landroid/support/v7/widget/AppCompatRatingBar;
 
@@ -885,7 +790,6 @@
 
     goto/16 :goto_2
 
-    .line 139
     :pswitch_c
     new-instance v1, Landroid/support/v7/widget/AppCompatSeekBar;
 
@@ -903,7 +807,6 @@
 
     goto/16 :goto_0
 
-    .line 101
     :sswitch_data_0
     .sparse-switch
         -0x7404ceea -> :sswitch_b

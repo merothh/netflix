@@ -33,8 +33,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 246
     new-instance v0, Lcom/netflix/mediaclient/ui/details/MovieDetailsActivity$BackStackData$1;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/ui/details/MovieDetailsActivity$BackStackData$1;-><init>()V
@@ -47,20 +45,16 @@
 .method private constructor <init>(Landroid/os/Parcel;)V
     .locals 4
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 216
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 217
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsActivity$BackStackData;->videoId:Ljava/lang/String;
 
-    .line 218
     const-class v0, Lcom/netflix/mediaclient/ui/common/PlayContextImp;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -75,7 +69,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsActivity$BackStackData;->playContext:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
-    .line 224
     :try_start_0
     const-class v0, Landroid/support/v7/widget/GridLayoutManager;
 
@@ -91,7 +84,6 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 230
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
@@ -104,27 +96,21 @@
     :goto_1
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsActivity$BackStackData;->bIsShow:Z
 
-    .line 231
     return-void
 
-    .line 225
     :catch_0
     move-exception v0
 
-    .line 226
     const-string/jumbo v2, "SPY-8852: Failed to load layout manager state"
 
-    .line 227
     const-string/jumbo v3, "MovieDetailsActivity"
 
     invoke-static {v3, v2, v0}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 228
     invoke-static {v0}, Lcom/netflix/mediaclient/service/logging/error/ErrorLoggingManager;->logHandledException(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 230
     :cond_0
     const/4 v0, 0x0
 
@@ -134,8 +120,6 @@
 .method synthetic constructor <init>(Landroid/os/Parcel;Lcom/netflix/mediaclient/ui/details/MovieDetailsActivity$1;)V
     .locals 0
 
-    .prologue
-    .line 201
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/details/MovieDetailsActivity$BackStackData;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -144,27 +128,20 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/netflix/mediaclient/ui/common/PlayContext;Landroid/support/v7/widget/RecyclerView$LayoutManager;)V
     .locals 1
 
-    .prologue
-    .line 207
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 209
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsActivity$BackStackData;->videoId:Ljava/lang/String;
 
-    .line 210
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsActivity$BackStackData;->playContext:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
-    .line 211
     if-eqz p3, :cond_0
 
-    .line 212
     invoke-virtual {p3}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsActivity$BackStackData;->layoutManagerState:Landroid/os/Parcelable;
 
-    .line 214
     :cond_0
     return-void
 .end method
@@ -174,8 +151,6 @@
 .method public describeContents()I
     .locals 1
 
-    .prologue
-    .line 243
     const/4 v0, 0x0
 
     return v0
@@ -184,8 +159,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 260
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -242,25 +215,20 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 235
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsActivity$BackStackData;->videoId:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 236
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsActivity$BackStackData;->playContext:Lcom/netflix/mediaclient/ui/common/PlayContext;
 
     invoke-virtual {p1, v1, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 237
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsActivity$BackStackData;->layoutManagerState:Landroid/os/Parcelable;
 
     invoke-virtual {p1, v1, v0}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 238
     iget-boolean v1, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsActivity$BackStackData;->bIsShow:Z
 
     if-eqz v1, :cond_0
@@ -270,6 +238,5 @@
     :cond_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 239
     return-void
 .end method

@@ -30,12 +30,10 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
     const/4 v3, 0x0
 
-    .line 4
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/BillboardInteractionType;
 
     const-string/jumbo v1, "IMPRESSION"
@@ -46,7 +44,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/BillboardInteractionType;->IMPRESSION:Lcom/netflix/mediaclient/servicemgr/BillboardInteractionType;
 
-    .line 5
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/BillboardInteractionType;
 
     const-string/jumbo v1, "ACTION"
@@ -57,7 +54,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/BillboardInteractionType;->ACTION:Lcom/netflix/mediaclient/servicemgr/BillboardInteractionType;
 
-    .line 3
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/BillboardInteractionType;
@@ -85,22 +81,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 9
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 10
     iput-object p3, p0, Lcom/netflix/mediaclient/servicemgr/BillboardInteractionType;->name:Ljava/lang/String;
 
-    .line 11
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/BillboardInteractionType;
     .locals 1
 
-    .prologue
-    .line 3
     const-class v0, Lcom/netflix/mediaclient/servicemgr/BillboardInteractionType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -115,8 +105,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/BillboardInteractionType;
     .locals 1
 
-    .prologue
-    .line 3
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/BillboardInteractionType;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/BillboardInteractionType;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/BillboardInteractionType;->clone()Ljava/lang/Object;
@@ -133,8 +121,6 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 14
     iget-object v0, p0, Lcom/netflix/mediaclient/servicemgr/BillboardInteractionType;->name:Ljava/lang/String;
 
     return-object v0

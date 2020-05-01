@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 160
     invoke-static {}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflineAdapterData$ViewType;->values()[Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflineAdapterData$ViewType;
 
     move-result-object v0

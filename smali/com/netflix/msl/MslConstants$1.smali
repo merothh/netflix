@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 137
     invoke-static {}, Lcom/netflix/msl/MslConstants$CipherSpec;->values()[Lcom/netflix/msl/MslConstants$CipherSpec;
 
     move-result-object v0

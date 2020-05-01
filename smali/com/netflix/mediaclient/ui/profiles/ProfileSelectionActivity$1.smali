@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;)V
     .locals 0
 
-    .prologue
-    .line 199
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$1;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,12 +26,9 @@
 .method public onGlobalLayout()V
     .locals 1
 
-    .prologue
-    .line 202
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity$1;->this$0:Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;->access$000(Lcom/netflix/mediaclient/ui/profiles/ProfileSelectionActivity;)V
 
-    .line 203
     return-void
 .end method

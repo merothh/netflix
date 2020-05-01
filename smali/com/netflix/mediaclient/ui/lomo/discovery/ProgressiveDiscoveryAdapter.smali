@@ -35,16 +35,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 24
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;-><init>(Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;Lcom/netflix/mediaclient/servicemgr/ServiceManager;Lcom/netflix/mediaclient/ui/lomo/RowAdapterCallbacks;Lcom/netflix/mediaclient/android/widget/ObjectRecycler$ViewRecycler;)V
 
-    .line 27
     new-instance v1, Lcom/netflix/mediaclient/ui/lomo/discovery/ProgressiveDiscoveryAdapter$1;
 
     invoke-direct {v1, p0}, Lcom/netflix/mediaclient/ui/lomo/discovery/ProgressiveDiscoveryAdapter$1;-><init>(Lcom/netflix/mediaclient/ui/lomo/discovery/ProgressiveDiscoveryAdapter;)V
 
-    .line 33
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -53,10 +49,8 @@
 
     const-string/jumbo v2, "com.netflix.mediaclient.intent.action.DISCOVERY_LIST_UPDATED"
 
-    .line 34
     invoke-virtual {v0, v1, v2}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->registerReceiverLocallyWithAutoUnregister(Landroid/content/BroadcastReceiver;Ljava/lang/String;)V
 
-    .line 35
     return-void
 .end method
 
@@ -65,28 +59,23 @@
 .method protected fetchMoreData(II)V
     .locals 9
 
-    .prologue
     const/4 v8, 0x0
 
-    .line 39
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/discovery/ProgressiveDiscoveryAdapter;->getLoMo()Lcom/netflix/mediaclient/servicemgr/interface_/BasicLoMo;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 40
     const-string/jumbo v0, "ProgressiveDiscoveryAdapter"
 
     const-string/jumbo v1, "discovery lomo pager - no lomo data to use for fetch request"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     :goto_0
     return-void
 
-    .line 44
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/discovery/ProgressiveDiscoveryAdapter;->getLoMo()Lcom/netflix/mediaclient/servicemgr/interface_/BasicLoMo;
 
@@ -96,14 +85,12 @@
 
     check-cast v6, Lcom/netflix/mediaclient/servicemgr/interface_/LoMo;
 
-    .line 45
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 46
     const-string/jumbo v0, "ProgressiveDiscoveryAdapter"
 
     const-string/jumbo v1, "fetching discovery videos for: Title: %s, Type: %s, Total Vids: %d, Id: %s, start: %d, end: %d"
@@ -112,7 +99,6 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 47
     invoke-interface {v6}, Lcom/netflix/mediaclient/servicemgr/interface_/LoMo;->getTitle()Ljava/lang/String;
 
     move-result-object v3
@@ -163,14 +149,12 @@
 
     aput-object v4, v2, v3
 
-    .line 46
     invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
     :cond_1
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/discovery/ProgressiveDiscoveryAdapter;->getManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
@@ -220,8 +204,6 @@
 .method public shouldOverlapPages()Z
     .locals 1
 
-    .prologue
-    .line 55
     const/4 v0, 0x0
 
     return v0
@@ -241,13 +223,10 @@
         }
     .end annotation
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 61
     invoke-super {p0, p1, p2, p3, p4}, Lcom/netflix/mediaclient/ui/lomo/BaseProgressiveRowAdapter;->updateDataSet(Ljava/util/List;Ljava/lang/String;II)V
 
-    .line 62
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
@@ -262,7 +241,6 @@
 
     if-nez v0, :cond_0
 
-    .line 63
     const-string/jumbo v1, "ProgressiveDiscoveryAdapter"
 
     const-string/jumbo v2, "first title in dataSet: %s"
@@ -289,7 +267,6 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/ProgressiveDiscoveryAdapter;->paginatedAdapter:Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;
 
@@ -297,6 +274,5 @@
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter;->updateAnimatorData(Ljava/util/List;)V
 
-    .line 68
     return-void
 .end method

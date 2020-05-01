@@ -14,8 +14,6 @@
 .method constructor <init>(Landroid/support/design/widget/CollapsingToolbarLayout;)V
     .locals 0
 
-    .prologue
-    .line 600
     iput-object p1, p0, Landroid/support/design/widget/CollapsingToolbarLayout$2;->this$0:Landroid/support/design/widget/CollapsingToolbarLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onAnimationUpdate(Landroid/support/design/widget/ValueAnimatorCompat;)V
     .locals 2
 
-    .prologue
-    .line 603
     iget-object v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$2;->this$0:Landroid/support/design/widget/CollapsingToolbarLayout;
 
     invoke-virtual {p1}, Landroid/support/design/widget/ValueAnimatorCompat;->getAnimatedIntValue()I
@@ -38,6 +34,5 @@
 
     invoke-virtual {v0, v1}, Landroid/support/design/widget/CollapsingToolbarLayout;->setScrimAlpha(I)V
 
-    .line 604
     return-void
 .end method

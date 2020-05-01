@@ -11,8 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,13 +19,10 @@
 .method public static isInTest(Landroid/content/Context;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 26
     if-nez p0, :cond_1
 
-    .line 29
     :cond_0
     :goto_0
     return v0
@@ -41,7 +36,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 30
     invoke-static {p0}, Lcom/netflix/mediaclient/util/DeviceUtils;->isTabletByContext(Landroid/content/Context;)Z
 
     move-result v1

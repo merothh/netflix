@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 28
     invoke-direct {p0}, Landroid/support/v7/app/AppCompatDialogFragment;-><init>()V
 
     return-void
@@ -19,8 +17,6 @@
 .method public onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
     .locals 3
 
-    .prologue
-    .line 32
     new-instance v0, Landroid/support/design/widget/BottomSheetDialog;
 
     invoke-virtual {p0}, Landroid/support/design/widget/BottomSheetDialogFragment;->getContext()Landroid/content/Context;

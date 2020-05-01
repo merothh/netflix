@@ -13,8 +13,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/launch/LaunchActivity;Lcom/google/android/gms/auth/api/credentials/Credential;)V
     .locals 0
 
-    .prologue
-    .line 841
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/launch/LaunchActivity$5;->this$0:Lcom/netflix/mediaclient/ui/launch/LaunchActivity;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/launch/LaunchActivity$5;->val$credential:Lcom/google/android/gms/auth/api/credentials/Credential;
@@ -29,8 +27,6 @@
 .method public onLoginComplete(Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 844
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/launch/LaunchActivity$5;->this$0:Lcom/netflix/mediaclient/ui/launch/LaunchActivity;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/launch/LaunchActivity$5$1;
@@ -39,6 +35,5 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/launch/LaunchActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 850
     return-void
 .end method

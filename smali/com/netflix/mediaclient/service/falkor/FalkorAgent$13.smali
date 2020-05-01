@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/falkor/FalkorAgent;Ljava/util/concurrent/CountDownLatch;)V
     .locals 0
 
-    .prologue
-    .line 1059
     iput-object p1, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$13;->this$0:Lcom/netflix/mediaclient/service/falkor/FalkorAgent;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$13;->val$jobSchedulerCountdown:Ljava/util/concurrent/CountDownLatch;
@@ -32,12 +30,10 @@
 .method public run()V
     .locals 8
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 1063
     :try_start_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -45,14 +41,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1064
     const-string/jumbo v0, "FalkorAgent"
 
     const-string/jumbo v3, "notifyJobSchedulerFinishedAsync: waiting on jobSchedulerCountdown latch"
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1066
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$13;->val$jobSchedulerCountdown:Ljava/util/concurrent/CountDownLatch;
 
@@ -64,7 +58,6 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1073
     :cond_1
     :goto_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
@@ -73,20 +66,17 @@
 
     if-eqz v0, :cond_2
 
-    .line 1074
     const-string/jumbo v0, "FalkorAgent"
 
     const-string/jumbo v3, "Prefetch lolomo job finished"
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1077
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$13;->this$0:Lcom/netflix/mediaclient/service/falkor/FalkorAgent;
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/service/falkor/FalkorAgent;->access$902(Lcom/netflix/mediaclient/service/falkor/FalkorAgent;Z)Z
 
-    .line 1078
     iget-object v3, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$13;->this$0:Lcom/netflix/mediaclient/service/falkor/FalkorAgent;
 
     iget-object v0, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$13;->val$jobSchedulerCountdown:Ljava/util/concurrent/CountDownLatch;
@@ -108,21 +98,17 @@
 
     invoke-static {v3, v0, v2, v1, v4}, Lcom/netflix/mediaclient/service/falkor/FalkorAgent;->access$1000(Lcom/netflix/mediaclient/service/falkor/FalkorAgent;ZZZLjava/lang/String;)V
 
-    .line 1079
     return-void
 
-    .line 1067
     :catch_0
     move-exception v0
 
-    .line 1068
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 1069
     const-string/jumbo v3, "FalkorAgent"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -154,6 +140,5 @@
     :cond_3
     move v0, v2
 
-    .line 1078
     goto :goto_1
 .end method

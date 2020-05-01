@@ -13,8 +13,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,8 +21,6 @@
 .method public static isAccountError(Lcom/netflix/mediaclient/StatusCode;)Z
     .locals 1
 
-    .prologue
-    .line 20
     sget-object v0, Lcom/netflix/mediaclient/StatusCode;->DELETED_PROFILE:Lcom/netflix/mediaclient/StatusCode;
 
     if-ne p0, v0, :cond_0
@@ -43,28 +39,23 @@
 .method public static notifyOthersOfAccountErrors(Landroid/content/Context;Lcom/netflix/mediaclient/StatusCode;)V
     .locals 2
 
-    .prologue
-    .line 24
     const-string/jumbo v0, "nf_fetcherrorutils"
 
     const-string/jumbo v1, "Broadcasting DELETED_PROFILE intent"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 26
     new-instance v0, Landroid/content/Intent;
 
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.DELETED_PROFILE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 27
     invoke-static {p0}, Landroid/support/v4/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroid/support/v4/content/LocalBroadcastManager;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroid/support/v4/content/LocalBroadcastManager;->sendBroadcast(Landroid/content/Intent;)Z
 
-    .line 28
     return-void
 .end method

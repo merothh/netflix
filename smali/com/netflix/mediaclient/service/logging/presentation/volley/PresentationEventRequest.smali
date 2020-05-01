@@ -30,20 +30,14 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/netflix/mediaclient/service/logging/presentation/PresentationRequest;Lcom/netflix/mediaclient/service/logging/presentation/PresentationWebCallback;)V
     .locals 0
 
-    .prologue
-    .line 29
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/logging/presentation/volley/PresentationVolleyWebClientRequest;-><init>()V
 
-    .line 30
     iput-object p3, p0, Lcom/netflix/mediaclient/service/logging/presentation/volley/PresentationEventRequest;->mCallback:Lcom/netflix/mediaclient/service/logging/presentation/PresentationWebCallback;
 
-    .line 31
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/presentation/volley/PresentationEventRequest;->mDeliveryRequestId:Ljava/lang/String;
 
-    .line 32
     iput-object p2, p0, Lcom/netflix/mediaclient/service/logging/presentation/volley/PresentationEventRequest;->mRequestObj:Lcom/netflix/mediaclient/service/logging/presentation/PresentationRequest;
 
-    .line 33
     return-void
 .end method
 
@@ -62,22 +56,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 37
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/presentation/volley/PresentationEventRequest;->mRequestObj:Lcom/netflix/mediaclient/service/logging/presentation/PresentationRequest;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/logging/presentation/PresentationRequest;->toRequestParams()Ljava/util/Map;
 
     move-result-object v0
 
-    .line 38
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 39
     const-string/jumbo v1, "nf_presentation"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -108,7 +98,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 42
     :cond_0
     return-object v0
 .end method
@@ -116,15 +105,12 @@
 .method protected onFailure(Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 3
 
-    .prologue
-    .line 61
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 62
     const-string/jumbo v0, "nf_presentation"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -147,20 +133,17 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/presentation/volley/PresentationEventRequest;->mCallback:Lcom/netflix/mediaclient/service/logging/presentation/PresentationWebCallback;
 
     if-eqz v0, :cond_1
 
-    .line 65
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/presentation/volley/PresentationEventRequest;->mCallback:Lcom/netflix/mediaclient/service/logging/presentation/PresentationWebCallback;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/presentation/volley/PresentationEventRequest;->mDeliveryRequestId:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/service/logging/presentation/PresentationWebCallback;->onEventsDeliveryFailed(Ljava/lang/String;)V
 
-    .line 67
     :cond_1
     return-void
 .end method
@@ -168,8 +151,6 @@
 .method protected bridge synthetic onSuccess(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 21
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/logging/presentation/volley/PresentationEventRequest;->onSuccess(Ljava/lang/String;)V
@@ -180,27 +161,22 @@
 .method protected onSuccess(Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 53
     const-string/jumbo v0, "nf_presentation"
 
     const-string/jumbo v1, "presentationEvent OK : "
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 54
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/presentation/volley/PresentationEventRequest;->mCallback:Lcom/netflix/mediaclient/service/logging/presentation/PresentationWebCallback;
 
     if-eqz v0, :cond_0
 
-    .line 55
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/presentation/volley/PresentationEventRequest;->mCallback:Lcom/netflix/mediaclient/service/logging/presentation/PresentationWebCallback;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/presentation/volley/PresentationEventRequest;->mDeliveryRequestId:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/service/logging/presentation/PresentationWebCallback;->onEventsDelivered(Ljava/lang/String;)V
 
-    .line 57
     :cond_0
     return-void
 .end method
@@ -208,8 +184,6 @@
 .method protected bridge synthetic parseResponse(Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 21
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/logging/presentation/volley/PresentationEventRequest;->parseResponse(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -220,8 +194,6 @@
 .method protected parseResponse(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 48
     const-string/jumbo v0, "OK"
 
     return-object v0

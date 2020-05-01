@@ -40,52 +40,40 @@
 .method public constructor <init>(Ljava/io/File;)V
     .locals 2
 
-    .prologue
-    .line 90
     const/high16 v0, 0x500000
 
     const/16 v1, 0x400
 
     invoke-direct {p0, p1, v0, v1}, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;-><init>(Ljava/io/File;II)V
 
-    .line 91
     return-void
 .end method
 
 .method public constructor <init>(Ljava/io/File;II)V
     .locals 2
 
-    .prologue
-    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mEntries:Ljava/util/Map;
 
-    .line 54
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mTotalSize:J
 
-    .line 79
     iput-object p1, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mRootDirectory:Ljava/io/File;
 
-    .line 80
     iput p2, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mMaxSizeInBytes:I
 
-    .line 81
     return-void
 .end method
 
 .method private getFileForName(Ljava/lang/String;)Ljava/io/File;
     .locals 2
 
-    .prologue
-    .line 287
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mRootDirectory:Ljava/io/File;
@@ -98,12 +86,10 @@
 .method private isHigherThanMaximumAllocatedSize(I)Z
     .locals 8
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 400
     iget-wide v4, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mTotalSize:J
 
     int-to-long v6, p1
@@ -120,7 +106,6 @@
 
     move v0, v1
 
-    .line 401
     :goto_0
     const-string/jumbo v3, "nf_log"
 
@@ -136,32 +121,27 @@
 
     invoke-static {v3, v4, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 402
     return v0
 
     :cond_0
     move v0, v2
 
-    .line 400
     goto :goto_0
 .end method
 
 .method private isNotEnoughSpaceAvailable(I)Z
     .locals 10
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 413
     iget-object v0, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mRootDirectory:Ljava/io/File;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/FileUtils;->getUsableSpace(Ljava/io/File;)J
 
     move-result-wide v4
 
-    .line 415
     int-to-long v6, p1
 
     cmp-long v0, v6, v4
@@ -170,7 +150,6 @@
 
     move v0, v1
 
-    .line 417
     :goto_0
     const-string/jumbo v3, "nf_log"
 
@@ -204,29 +183,23 @@
 
     invoke-static {v3, v6, v7}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 419
     return v0
 
     :cond_0
     move v0, v2
 
-    .line 415
     goto :goto_0
 .end method
 
 .method private pruneIfNeeded(I)V
     .locals 12
 
-    .prologue
-    .line 341
     iget v0, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mMaxEntrySizeInBytes:I
 
     if-le p1, v0, :cond_0
 
-    .line 342
     iput p1, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mMaxEntrySizeInBytes:I
 
-    .line 345
     :cond_0
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->isHigherThanMaximumAllocatedSize(I)Z
 
@@ -240,7 +213,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 346
     :cond_1
     const-string/jumbo v0, "nf_log"
 
@@ -248,18 +220,14 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 352
     iget-wide v2, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mTotalSize:J
 
-    .line 353
     const/4 v0, 0x0
 
-    .line 354
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v4
 
-    .line 356
     new-instance v1, Ljava/util/ArrayList;
 
     iget-object v6, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mEntries:Ljava/util/Map;
@@ -270,14 +238,12 @@
 
     invoke-direct {v1, v6}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 357
     new-instance v6, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl$1;
 
     invoke-direct {v6, p0}, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl$1;-><init>(Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;)V
 
     invoke-static {v1, v6}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 370
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
@@ -297,7 +263,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/util/data/DataRepository$Entry;
 
-    .line 371
     invoke-interface {v0}, Lcom/netflix/mediaclient/util/data/DataRepository$Entry;->getKey()Ljava/lang/String;
 
     move-result-object v7
@@ -306,27 +271,22 @@
 
     move-result-object v7
 
-    .line 372
     invoke-virtual {v7}, Ljava/io/File;->length()J
 
     move-result-wide v8
 
-    .line 373
     invoke-virtual {v7}, Ljava/io/File;->delete()Z
 
     move-result v10
 
-    .line 374
     if-eqz v10, :cond_4
 
-    .line 375
     iget-wide v10, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mTotalSize:J
 
     sub-long v8, v10, v8
 
     iput-wide v8, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mTotalSize:J
 
-    .line 379
     :goto_1
     iget-object v7, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mEntries:Ljava/util/Map;
 
@@ -336,10 +296,8 @@
 
     invoke-interface {v7, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 380
     add-int/lit8 v0, v1, 0x1
 
-    .line 381
     iget-wide v8, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mTotalSize:J
 
     int-to-long v10, p1
@@ -354,7 +312,6 @@
 
     if-gez v1, :cond_5
 
-    .line 386
     :goto_2
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -362,14 +319,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 387
     iget-object v1, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mRootDirectory:Ljava/io/File;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/util/FileUtils;->getUsableSpace(Ljava/io/File;)J
 
     move-result-wide v6
 
-    .line 388
     const-string/jumbo v1, "nf_log"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -432,12 +387,10 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 390
     :cond_2
     :goto_3
     return-void
 
-    .line 348
     :cond_3
     const-string/jumbo v0, "nf_log"
 
@@ -447,7 +400,6 @@
 
     goto :goto_3
 
-    .line 377
     :cond_4
     const-string/jumbo v8, "nf_log"
 
@@ -480,7 +432,6 @@
     :cond_5
     move v1, v0
 
-    .line 384
     goto/16 :goto_0
 
     :cond_6
@@ -492,14 +443,10 @@
 .method private static streamToBytes(Ljava/io/InputStream;I)[B
     .locals 4
 
-    .prologue
-    .line 297
     new-array v1, p1, [B
 
-    .line 299
     const/4 v0, 0x0
 
-    .line 300
     :goto_0
     if-ge v0, p1, :cond_0
 
@@ -513,16 +460,13 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 301
     add-int/2addr v0, v2
 
     goto :goto_0
 
-    .line 303
     :cond_0
     if-eq v0, p1, :cond_1
 
-    .line 304
     new-instance v1, Ljava/io/IOException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -563,7 +507,6 @@
 
     throw v1
 
-    .line 306
     :cond_1
     return-object v1
 .end method
@@ -573,8 +516,6 @@
 .method public declared-synchronized clear()V
     .locals 8
 
-    .prologue
-    .line 264
     monitor-enter p0
 
     :try_start_0
@@ -584,10 +525,8 @@
 
     move-result-object v1
 
-    .line 265
     if-eqz v1, :cond_1
 
-    .line 266
     array-length v2, v1
 
     const/4 v0, 0x0
@@ -597,19 +536,16 @@
 
     aget-object v3, v1, v0
 
-    .line 267
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
     move-result v4
 
-    .line 268
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 269
     const-string/jumbo v5, "nf_log"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -646,24 +582,20 @@
 
     invoke-static {v5, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 266
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 273
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mEntries:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 274
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mTotalSize:J
 
-    .line 275
     const-string/jumbo v0, "nf_log"
 
     const-string/jumbo v1, "Cache cleared."
@@ -672,12 +604,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 276
     monitor-exit p0
 
     return-void
 
-    .line 264
     :catchall_0
     move-exception v0
 
@@ -689,8 +619,6 @@
 .method public declared-synchronized getEntries()[Lcom/netflix/mediaclient/util/data/DataRepository$Entry;
     .locals 2
 
-    .prologue
-    .line 280
     monitor-enter p0
 
     :try_start_0
@@ -731,10 +659,8 @@
 .method public declared-synchronized load(Ljava/lang/String;Lcom/netflix/mediaclient/util/data/DataRepository$DataLoadedCallback;)V
     .locals 8
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 186
     monitor-enter p0
 
     :try_start_0
@@ -746,14 +672,12 @@
 
     check-cast v0, Lcom/netflix/mediaclient/util/data/DataRepository$Entry;
 
-    .line 188
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 189
     const-string/jumbo v1, "nf_log"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -786,21 +710,17 @@
 
     invoke-static {v1, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 193
     :cond_0
     if-nez v0, :cond_2
 
-    .line 194
     const-string/jumbo v0, "nf_log"
 
     const-string/jumbo v1, "Entry not found!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 195
     if-eqz p2, :cond_1
 
-    .line 196
     const/4 v0, 0x0
 
     const-wide/16 v2, 0x0
@@ -809,14 +729,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 226
     :cond_1
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 201
     :cond_2
     :try_start_1
     const-string/jumbo v0, "nf_log"
@@ -825,14 +743,12 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 202
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->getFileForName(Ljava/lang/String;)Ljava/io/File;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-object v3
 
-    .line 205
     :try_start_2
     new-instance v1, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl$CountingInputStream;
 
@@ -847,7 +763,6 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 206
     :try_start_3
     invoke-virtual {v3}, Ljava/io/File;->length()J
 
@@ -867,10 +782,8 @@
 
     move-result-object v0
 
-    .line 207
     if-eqz p2, :cond_3
 
-    .line 208
     invoke-virtual {v3}, Ljava/io/File;->lastModified()J
 
     move-result-wide v4
@@ -880,11 +793,9 @@
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_4
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 215
     :cond_3
     if-eqz v1, :cond_1
 
-    .line 217
     :try_start_4
     invoke-virtual {v1}, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl$CountingInputStream;->close()V
     :try_end_4
@@ -893,19 +804,16 @@
 
     goto :goto_0
 
-    .line 218
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 211
     :catch_1
     move-exception v0
 
     move-object v1, v2
 
-    .line 212
     :goto_1
     :try_start_5
     const-string/jumbo v2, "nf_log"
@@ -934,27 +842,22 @@
 
     invoke-static {v2, v3, v0}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 213
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->remove(Ljava/lang/String;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 215
     if-eqz v1, :cond_4
 
-    .line 217
     :try_start_6
     invoke-virtual {v1}, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl$CountingInputStream;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_2
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 223
     :cond_4
     :goto_2
     if-eqz p2, :cond_1
 
-    .line 224
     const/4 v0, 0x0
 
     const-wide/16 v2, 0x0
@@ -966,7 +869,6 @@
 
     goto :goto_0
 
-    .line 186
     :catchall_0
     move-exception v0
 
@@ -974,7 +876,6 @@
 
     throw v0
 
-    .line 215
     :catchall_1
     move-exception v0
 
@@ -983,14 +884,12 @@
     :goto_3
     if-eqz v1, :cond_5
 
-    .line 217
     :try_start_8
     invoke-virtual {v1}, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl$CountingInputStream;->close()V
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_3
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    .line 219
     :cond_5
     :goto_4
     :try_start_9
@@ -998,7 +897,6 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
-    .line 218
     :catch_2
     move-exception v0
 
@@ -1009,13 +907,11 @@
 
     goto :goto_4
 
-    .line 215
     :catchall_2
     move-exception v0
 
     goto :goto_3
 
-    .line 211
     :catch_4
     move-exception v0
 
@@ -1025,8 +921,6 @@
 .method public declared-synchronized loadAll(Lcom/netflix/mediaclient/util/data/DataRepository$LoadedCallback;)V
     .locals 8
 
-    .prologue
-    .line 102
     monitor-enter p0
 
     :try_start_0
@@ -1038,7 +932,6 @@
 
     if-nez v0, :cond_2
 
-    .line 103
     iget-object v0, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mRootDirectory:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
@@ -1047,7 +940,6 @@
 
     if-nez v0, :cond_0
 
-    .line 104
     const-string/jumbo v0, "nf_log"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1076,25 +968,21 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 107
     const/4 v0, 0x0
 
     invoke-interface {p1, v0}, Lcom/netflix/mediaclient/util/data/DataRepository$LoadedCallback;->onLoaded([Lcom/netflix/mediaclient/util/data/DataRepository$Entry;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 139
     :cond_1
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 112
     :cond_2
     :try_start_1
     iget-object v0, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mRootDirectory:Ljava/io/File;
@@ -1103,13 +991,10 @@
 
     move-result-object v1
 
-    .line 113
     if-nez v1, :cond_3
 
-    .line 114
     if-eqz p1, :cond_1
 
-    .line 115
     const/4 v0, 0x0
 
     invoke-interface {p1, v0}, Lcom/netflix/mediaclient/util/data/DataRepository$LoadedCallback;->onLoaded([Lcom/netflix/mediaclient/util/data/DataRepository$Entry;)V
@@ -1118,7 +1003,6 @@
 
     goto :goto_0
 
-    .line 102
     :catchall_0
     move-exception v0
 
@@ -1126,7 +1010,6 @@
 
     throw v0
 
-    .line 120
     :cond_3
     :try_start_2
     array-length v2, v1
@@ -1138,7 +1021,6 @@
 
     aget-object v3, v1, v0
 
-    .line 121
     if-eqz v3, :cond_5
 
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
@@ -1147,21 +1029,18 @@
 
     if-eqz v4, :cond_5
 
-    .line 122
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v4
 
     if-eqz v4, :cond_4
 
-    .line 123
     new-instance v4, Ljava/text/SimpleDateFormat;
 
     const-string/jumbo v5, "dd.MM.yyyy HH:mm:ss"
 
     invoke-direct {v4, v5}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 124
     new-instance v5, Ljava/util/Date;
 
     invoke-virtual {v3}, Ljava/io/File;->lastModified()J
@@ -1174,7 +1053,6 @@
 
     move-result-object v4
 
-    .line 125
     const-string/jumbo v5, "nf_log"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1225,7 +1103,6 @@
 
     invoke-static {v5, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
     :cond_4
     iget-object v4, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mEntries:Ljava/util/Map;
 
@@ -1239,13 +1116,11 @@
 
     invoke-interface {v4, v5, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 120
     :cond_5
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 131
     :cond_6
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -1253,7 +1128,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 132
     const-string/jumbo v0, "nf_log"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1282,18 +1156,15 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 135
     :cond_7
     if-eqz p1, :cond_1
 
-    .line 136
     iget-object v0, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mEntries:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object v0
 
-    .line 137
     invoke-interface {v0}, Ljava/util/Collection;->size()I
 
     move-result v1
@@ -1316,8 +1187,6 @@
 .method public declared-synchronized remove(Ljava/lang/String;)V
     .locals 5
 
-    .prologue
-    .line 234
     monitor-enter p0
 
     :try_start_0
@@ -1327,7 +1196,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 235
     const-string/jumbo v0, "nf_log"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1360,7 +1228,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mEntries:Ljava/util/Map;
 
@@ -1370,17 +1237,14 @@
 
     check-cast v0, Lcom/netflix/mediaclient/util/data/DataRepository$Entry;
 
-    .line 239
     if-eqz v0, :cond_4
 
-    .line 240
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 241
     const-string/jumbo v0, "nf_log"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1403,28 +1267,23 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 244
     :cond_1
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->getFileForName(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 245
     if-eqz v0, :cond_3
 
-    .line 246
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     move-result v1
 
-    .line 247
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 248
     const-string/jumbo v2, "nf_log"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1473,14 +1332,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 260
     :cond_2
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 251
     :cond_3
     :try_start_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
@@ -1489,7 +1346,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 252
     const-string/jumbo v0, "nf_log"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1516,7 +1372,6 @@
 
     goto :goto_0
 
-    .line 234
     :catchall_0
     move-exception v0
 
@@ -1524,7 +1379,6 @@
 
     throw v0
 
-    .line 256
     :cond_4
     :try_start_2
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
@@ -1533,7 +1387,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 257
     const-string/jumbo v0, "nf_log"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1564,8 +1417,6 @@
 .method public declared-synchronized save(Ljava/lang/String;[B)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 143
     monitor-enter p0
 
     const/4 v0, 0x0
@@ -1592,10 +1443,8 @@
 .method public declared-synchronized save(Ljava/lang/String;[BLcom/netflix/mediaclient/util/data/DataRepository$DataSavedCallback;)Ljava/lang/String;
     .locals 7
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 149
     monitor-enter p0
 
     :try_start_0
@@ -1603,14 +1452,12 @@
 
     invoke-direct {p0, v1}, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->pruneIfNeeded(I)V
 
-    .line 151
     iget-object v1, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mRootDirectory:Ljava/io/File;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/util/FileUtils;->getUsableSpace(Ljava/io/File;)J
 
     move-result-wide v2
 
-    .line 152
     array-length v1, p2
 
     int-to-long v4, v1
@@ -1619,7 +1466,6 @@
 
     if-gez v1, :cond_0
 
-    .line 153
     const-string/jumbo v1, "nf_log"
 
     const-string/jumbo v4, "Even after pruning, we may NOT have enough space avilable. Free space: %d vs entry space %d"
@@ -1648,20 +1494,17 @@
 
     invoke-static {v1, v4, v5}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 156
     :cond_0
     invoke-static {p1}, Lcom/netflix/mediaclient/util/data/FileSystemEntryImpl;->getFilenameForKey(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 157
     invoke-direct {p0, v1}, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->getFileForName(Ljava/lang/String;)Ljava/io/File;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v2
 
-    .line 159
     :try_start_1
     new-instance v1, Ljava/io/BufferedOutputStream;
 
@@ -1671,21 +1514,16 @@
 
     invoke-direct {v1, v3}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 160
     invoke-virtual {v1, p2}, Ljava/io/BufferedOutputStream;->write([B)V
 
-    .line 161
     invoke-virtual {v1}, Ljava/io/BufferedOutputStream;->flush()V
 
-    .line 162
     invoke-virtual {v1}, Ljava/io/BufferedOutputStream;->close()V
 
-    .line 163
     new-instance v1, Lcom/netflix/mediaclient/util/data/FileSystemEntryImpl;
 
     invoke-direct {v1, v2}, Lcom/netflix/mediaclient/util/data/FileSystemEntryImpl;-><init>(Ljava/io/File;)V
 
-    .line 164
     iget-object v3, p0, Lcom/netflix/mediaclient/util/data/FileSystemDataRepositoryImpl;->mEntries:Ljava/util/Map;
 
     invoke-virtual {v2}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -1694,17 +1532,14 @@
 
     invoke-interface {v3, v4, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 165
     if-eqz p3, :cond_1
 
-    .line 166
     invoke-interface {v1}, Lcom/netflix/mediaclient/util/data/DataRepository$Entry;->getKey()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-interface {p3, v3}, Lcom/netflix/mediaclient/util/data/DataRepository$DataSavedCallback;->onDataSaved(Ljava/lang/String;)V
 
-    .line 168
     :cond_1
     invoke-interface {v1}, Lcom/netflix/mediaclient/util/data/DataRepository$Entry;->getKey()Ljava/lang/String;
     :try_end_1
@@ -1713,18 +1548,15 @@
 
     move-result-object v0
 
-    .line 180
     :cond_2
     :goto_0
     monitor-exit p0
 
     return-object v0
 
-    .line 169
     :catch_0
     move-exception v1
 
-    .line 170
     :try_start_2
     const-string/jumbo v3, "nf_log"
 
@@ -1732,15 +1564,12 @@
 
     invoke-static {v3, v4, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 172
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
     move-result v1
 
-    .line 173
     if-nez v1, :cond_3
 
-    .line 174
     const-string/jumbo v1, "nf_log"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1767,11 +1596,9 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 177
     :cond_3
     if-eqz p3, :cond_2
 
-    .line 178
     const/4 v1, 0x0
 
     invoke-interface {p3, v1}, Lcom/netflix/mediaclient/util/data/DataRepository$DataSavedCallback;->onDataSaved(Ljava/lang/String;)V
@@ -1780,7 +1607,6 @@
 
     goto :goto_0
 
-    .line 149
     :catchall_0
     move-exception v0
 

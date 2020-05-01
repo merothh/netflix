@@ -40,7 +40,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -51,7 +50,6 @@
 
     const/4 v3, 0x0
 
-    .line 364
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;
 
     const-string/jumbo v1, "rating"
@@ -60,7 +58,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;->rating:Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;
 
-    .line 365
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;
 
     const-string/jumbo v1, "androidWidgetCommand"
@@ -69,7 +66,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;->androidWidgetCommand:Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;
 
-    .line 368
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;
 
     const-string/jumbo v1, "AddCachedVideoCommand"
@@ -78,7 +74,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;->AddCachedVideoCommand:Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;
 
-    .line 369
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;
 
     const-string/jumbo v1, "RemoveCachedVideoCommand"
@@ -87,7 +82,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;->RemoveCachedVideoCommand:Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;
 
-    .line 370
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;
 
     const-string/jumbo v1, "RemoveAllCachedVideosCommand"
@@ -96,7 +90,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;->RemoveAllCachedVideosCommand:Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;
 
-    .line 371
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;
 
     const-string/jumbo v1, "RemoveCachedVideoAndPlayNextCommand"
@@ -107,7 +100,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;->RemoveCachedVideoAndPlayNextCommand:Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;
 
-    .line 372
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;
 
     const-string/jumbo v1, "PauseDownloadCommand"
@@ -118,7 +110,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;->PauseDownloadCommand:Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;
 
-    .line 373
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;
 
     const-string/jumbo v1, "ResumeDownloadCommand"
@@ -129,7 +120,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;->ResumeDownloadCommand:Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;
 
-    .line 374
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;
 
     const-string/jumbo v1, "RetryDownloadCommand"
@@ -140,7 +130,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;->RetryDownloadCommand:Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;
 
-    .line 363
     const/16 v0, 0x9
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;
@@ -202,8 +191,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 363
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -212,8 +199,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;
     .locals 1
 
-    .prologue
-    .line 363
     const-class v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -228,8 +213,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;
     .locals 1
 
-    .prologue
-    .line 363
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;->clone()Ljava/lang/Object;

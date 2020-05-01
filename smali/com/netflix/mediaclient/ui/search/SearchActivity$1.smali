@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/search/SearchActivity;)V
     .locals 0
 
-    .prologue
-    .line 176
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$1;->this$0:Lcom/netflix/mediaclient/ui/search/SearchActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,12 +26,9 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .prologue
-    .line 179
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$1;->this$0:Lcom/netflix/mediaclient/ui/search/SearchActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/search/SearchActivity;->access$000(Lcom/netflix/mediaclient/ui/search/SearchActivity;)V
 
-    .line 180
     return-void
 .end method

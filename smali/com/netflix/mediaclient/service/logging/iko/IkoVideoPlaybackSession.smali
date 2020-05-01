@@ -17,14 +17,10 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 19
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/logging/client/BaseLoggingSession;-><init>()V
 
-    .line 21
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/iko/IkoVideoPlaybackSession;->mUrl:Ljava/lang/String;
 
-    .line 22
     return-void
 .end method
 
@@ -33,8 +29,6 @@
 .method public createEndedEvent(Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;II)Lcom/netflix/mediaclient/service/logging/iko/model/IkoVideoPlaybackEndedEvent;
     .locals 10
 
-    .prologue
-    .line 35
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -43,7 +37,6 @@
 
     sub-long v4, v0, v2
 
-    .line 37
     new-instance v1, Lcom/netflix/mediaclient/service/logging/iko/model/IkoVideoPlaybackEndedEvent;
 
     const-string/jumbo v2, "ikoVideoPlayback"
@@ -66,8 +59,6 @@
 .method public getCategory()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 26
     const-string/jumbo v0, "iko"
 
     return-object v0
@@ -76,8 +67,6 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 31
     const-string/jumbo v0, "ikoVideoPlayback"
 
     return-object v0

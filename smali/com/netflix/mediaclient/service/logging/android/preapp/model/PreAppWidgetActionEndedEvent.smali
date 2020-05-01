@@ -19,17 +19,12 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/netflix/mediaclient/service/logging/client/model/DeviceUniqueId;JLcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;Lcom/netflix/mediaclient/service/logging/client/model/UIError;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 27
     invoke-direct/range {p0 .. p8}, Lcom/netflix/mediaclient/service/logging/uiaction/model/BaseUIActionSessionEndedEvent;-><init>(Ljava/lang/String;Lcom/netflix/mediaclient/service/logging/client/model/DeviceUniqueId;JLcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;Lcom/netflix/mediaclient/service/logging/client/model/UIError;)V
 
-    .line 28
     iput-object p9, p0, Lcom/netflix/mediaclient/service/logging/android/preapp/model/PreAppWidgetActionEndedEvent;->widgetLogData:Ljava/lang/String;
 
-    .line 29
     iput-object p10, p0, Lcom/netflix/mediaclient/service/logging/android/preapp/model/PreAppWidgetActionEndedEvent;->widgetActionData:Ljava/lang/String;
 
-    .line 30
     invoke-static {}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorParseUtils;->getGson()Lcom/google/gson/Gson;
 
     move-result-object v0
@@ -44,7 +39,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/logging/android/preapp/model/PreAppWidgetActionEndedEvent;->widgetLogObj:Lcom/netflix/mediaclient/service/pservice/logging/PreAppWidgetLogData;
 
-    .line 31
     return-void
 .end method
 
@@ -53,11 +47,8 @@
 .method protected getCustomData()Lorg/json/JSONObject;
     .locals 6
 
-    .prologue
-    .line 49
     const/4 v2, 0x0
 
-    .line 51
     :try_start_0
     new-instance v1, Lorg/json/JSONObject;
 
@@ -67,7 +58,6 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 52
     :try_start_1
     new-instance v2, Lorg/json/JSONObject;
 
@@ -75,7 +65,6 @@
 
     invoke-direct {v2, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 54
     invoke-virtual {v2}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
 
     move-result-object v3
@@ -87,14 +76,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 55
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 56
     invoke-virtual {v2, v0}, Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
@@ -105,7 +92,6 @@
 
     goto :goto_0
 
-    .line 58
     :catch_0
     move-exception v0
 
@@ -115,7 +101,6 @@
 
     move-object v1, v5
 
-    .line 59
     :goto_1
     const-string/jumbo v2, "nf_preapp_actionEndedEvent"
 
@@ -123,17 +108,14 @@
 
     invoke-static {v2, v3, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 61
     :goto_2
     return-object v0
 
     :cond_0
     move-object v0, v1
 
-    .line 60
     goto :goto_2
 
-    .line 58
     :catch_1
     move-exception v0
 
@@ -147,21 +129,16 @@
 .method protected getData()Lorg/json/JSONObject;
     .locals 1
 
-    .prologue
-    .line 40
     invoke-super {p0}, Lcom/netflix/mediaclient/service/logging/uiaction/model/BaseUIActionSessionEndedEvent;->getData()Lorg/json/JSONObject;
 
     move-result-object v0
 
-    .line 41
     if-nez v0, :cond_0
 
-    .line 42
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    .line 44
     :cond_0
     return-object v0
 .end method
@@ -169,8 +146,6 @@
 .method public isMemberEvent()Z
     .locals 1
 
-    .prologue
-    .line 35
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/android/preapp/model/PreAppWidgetActionEndedEvent;->widgetLogObj:Lcom/netflix/mediaclient/service/pservice/logging/PreAppWidgetLogData;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/pservice/logging/PreAppWidgetLogData;->isMember()Z

@@ -13,14 +13,10 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag;Landroid/content/Context;I)V
     .locals 2
 
-    .prologue
-    .line 377
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag$KubrickKidsEpisodeView;->this$0:Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag;
 
-    .line 378
     invoke-direct {p0, p1, p2, p3}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$BarkerEpisodeView;-><init>(Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag;Landroid/content/Context;I)V
 
-    .line 379
     const v0, 0x7f0f018e
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag$KubrickKidsEpisodeView;->findViewById(I)Landroid/view/View;
@@ -31,14 +27,12 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag$KubrickKidsEpisodeView;->pressableViewGroup:Lcom/netflix/mediaclient/android/widget/PressAnimationFrameLayout;
 
-    .line 380
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag$KubrickKidsEpisodeView;->image:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/AdvancedImageView;->setPressedStateHandlerEnabled(Z)V
 
-    .line 381
     return-void
 .end method
 
@@ -47,8 +41,6 @@
 .method protected adjustEpisodeImageHeight()V
     .locals 3
 
-    .prologue
-    .line 420
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag$KubrickKidsEpisodeView;->this$0:Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag;->getActivity()Landroid/app/Activity;
@@ -67,7 +59,6 @@
 
     int-to-float v0, v0
 
-    .line 421
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag$KubrickKidsEpisodeView;->this$0:Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag;->getNumColumns()I
@@ -82,7 +73,6 @@
 
     mul-float/2addr v0, v1
 
-    .line 423
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag$KubrickKidsEpisodeView;->image:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/android/widget/AdvancedImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -121,23 +111,18 @@
 
     iput v0, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 424
     return-void
 .end method
 
 .method protected adjustEpisodeImageWidth()V
     .locals 0
 
-    .prologue
-    .line 417
     return-void
 .end method
 
 .method protected createTitleText(Lcom/netflix/mediaclient/servicemgr/interface_/details/EpisodeDetails;)Ljava/lang/CharSequence;
     .locals 1
 
-    .prologue
-    .line 412
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/details/EpisodeDetails;->getTitle()Ljava/lang/String;
 
     move-result-object v0
@@ -148,8 +133,6 @@
 .method protected getPressableView()Landroid/view/View;
     .locals 1
 
-    .prologue
-    .line 385
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag$KubrickKidsEpisodeView;->pressableViewGroup:Lcom/netflix/mediaclient/android/widget/PressAnimationFrameLayout;
 
     return-object v0
@@ -158,8 +141,6 @@
 .method protected getPressedStateHandler()Lcom/netflix/mediaclient/android/widget/PressedStateHandler;
     .locals 1
 
-    .prologue
-    .line 390
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag$KubrickKidsEpisodeView;->pressableViewGroup:Lcom/netflix/mediaclient/android/widget/PressAnimationFrameLayout;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/widget/PressAnimationFrameLayout;->getPressedStateHandler()Lcom/netflix/mediaclient/android/widget/PressedStateHandler;
@@ -172,19 +153,15 @@
 .method protected updateProgressBar()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 396
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag$KubrickKidsEpisodeView;->progressBar:Landroid/widget/ProgressBar;
 
     if-nez v0, :cond_0
 
-    .line 408
     :goto_0
     return-void
 
-    .line 400
     :cond_0
     iget v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag$KubrickKidsEpisodeView;->progressVal:I
 
@@ -194,24 +171,20 @@
 
     if-eqz v0, :cond_1
 
-    .line 401
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag$KubrickKidsEpisodeView;->progressBar:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0, v2}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    .line 402
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag$KubrickKidsEpisodeView;->progressBar:Landroid/widget/ProgressBar;
 
     iget v1, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag$KubrickKidsEpisodeView;->progressVal:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setProgress(I)V
 
-    .line 403
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag$KubrickKidsEpisodeView;->progressBar:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0, v2}, Landroid/widget/ProgressBar;->setSecondaryProgress(I)V
 
-    .line 404
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag$KubrickKidsEpisodeView;->progressBar:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0}, Landroid/widget/ProgressBar;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -224,7 +197,6 @@
 
     goto :goto_0
 
-    .line 406
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag$KubrickKidsEpisodeView;->progressBar:Landroid/widget/ProgressBar;
 
@@ -238,22 +210,17 @@
 .method protected updateTitle(Lcom/netflix/mediaclient/servicemgr/interface_/details/EpisodeDetails;)V
     .locals 3
 
-    .prologue
-    .line 428
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag$KubrickKidsEpisodeView;->title:Landroid/widget/TextView;
 
     if-nez v0, :cond_1
 
-    .line 441
     :cond_0
     :goto_0
     return-void
 
-    .line 432
     :cond_1
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$BarkerEpisodeView;->updateTitle(Lcom/netflix/mediaclient/servicemgr/interface_/details/EpisodeDetails;)V
 
-    .line 434
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag$KubrickKidsEpisodeView;->title:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag$KubrickKidsEpisodeView;->getResources()Landroid/content/res/Resources;
@@ -268,17 +235,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 437
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsShowDetailsFrag$KubrickKidsEpisodeView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/View;
 
-    .line 438
     if-eqz v0, :cond_0
 
-    .line 439
     const v1, 0x7f0f0014
 
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/details/EpisodeDetails;->getSeasonNumber()I

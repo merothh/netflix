@@ -23,8 +23,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 19
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
     return-void
@@ -40,14 +38,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 26
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/util/SortedListUtil;->add(Ljava/lang/Object;)Z
 
-    .line 28
     check-cast p1, Ljava/lang/Comparable;
 
-    .line 29
     invoke-virtual {p0}, Lcom/netflix/mediaclient/util/SortedListUtil;->size()I
 
     move-result v0
@@ -69,17 +63,14 @@
 
     if-gez v1, :cond_0
 
-    .line 30
     add-int/lit8 v1, v0, -0x1
 
     invoke-static {p0, v0, v1}, Ljava/util/Collections;->swap(Ljava/util/List;II)V
 
-    .line 29
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 32
     :cond_0
     return-void
 .end method

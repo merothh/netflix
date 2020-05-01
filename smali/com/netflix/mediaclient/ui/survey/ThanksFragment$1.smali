@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/survey/ThanksFragment;)V
     .locals 0
 
-    .prologue
-    .line 34
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/survey/ThanksFragment$1;->this$0:Lcom/netflix/mediaclient/ui/survey/ThanksFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 38
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/survey/ThanksFragment$1;->this$0:Lcom/netflix/mediaclient/ui/survey/ThanksFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/survey/ThanksFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
@@ -50,7 +46,6 @@
 
     if-nez v0, :cond_0
 
-    .line 39
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/survey/ThanksFragment$1;->this$0:Lcom/netflix/mediaclient/ui/survey/ThanksFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/survey/ThanksFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
@@ -63,7 +58,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/support/v4/app/FragmentActivity;->overridePendingTransition(II)V
 
-    .line 40
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/survey/ThanksFragment$1;->this$0:Lcom/netflix/mediaclient/ui/survey/ThanksFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/survey/ThanksFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
@@ -72,7 +66,6 @@
 
     invoke-virtual {v0}, Landroid/support/v4/app/FragmentActivity;->finish()V
 
-    .line 42
     :cond_0
     return-void
 .end method

@@ -16,16 +16,12 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 337
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl$LogblobsSentCallbackImpl;->this$0:Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 338
     iput-object p2, p0, Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl$LogblobsSentCallbackImpl;->deliveryId:Ljava/lang/String;
 
-    .line 339
     return-void
 .end method
 
@@ -34,33 +30,27 @@
 .method public onLogblobsSent(Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 343
     invoke-interface {p1}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 344
     const-string/jumbo v0, "nf_logblob"
 
     const-string/jumbo v1, "Logblobs are succcesfully sent to backend"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 345
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl$LogblobsSentCallbackImpl;->this$0:Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl$LogblobsSentCallbackImpl;->deliveryId:Ljava/lang/String;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl;->access$300(Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl;Ljava/lang/String;)V
 
-    .line 350
     :goto_0
     return-void
 
-    .line 347
     :cond_0
     const-string/jumbo v0, "nf_logblob"
 
@@ -68,7 +58,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 348
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl$LogblobsSentCallbackImpl;->this$0:Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl;->access$500(Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl;)Ljava/util/List;

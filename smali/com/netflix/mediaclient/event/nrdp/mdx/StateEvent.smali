@@ -21,8 +21,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 24
     sget-object v0, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->mdx_mdxstate:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     sput-object v0, Lcom/netflix/mediaclient/event/nrdp/mdx/StateEvent;->TYPE:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
@@ -33,8 +31,6 @@
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 1
 
-    .prologue
-    .line 40
     sget-object v0, Lcom/netflix/mediaclient/event/nrdp/mdx/StateEvent;->TYPE:Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/javabridge/ui/Mdx$Events;->getName()Ljava/lang/String;
@@ -43,7 +39,6 @@
 
     invoke-direct {p0, v0, p1}, Lcom/netflix/mediaclient/event/nrdp/JsonBaseNccpEvent;-><init>(Ljava/lang/String;Lorg/json/JSONObject;)V
 
-    .line 41
     return-void
 .end method
 
@@ -52,8 +47,6 @@
 .method public getObject()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 62
     const-string/jumbo v0, "nrdp.mdx"
 
     return-object v0
@@ -62,8 +55,6 @@
 .method public isReady()Z
     .locals 1
 
-    .prologue
-    .line 58
     iget-boolean v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/StateEvent;->ready:Z
 
     return v0
@@ -72,8 +63,6 @@
 .method protected populate(Lorg/json/JSONObject;)V
     .locals 2
 
-    .prologue
-    .line 48
     const-string/jumbo v0, "status"
 
     const-string/jumbo v1, "NOT_READY"
@@ -82,7 +71,6 @@
 
     move-result-object v0
 
-    .line 49
     const-string/jumbo v1, "READY"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -91,6 +79,5 @@
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/event/nrdp/mdx/StateEvent;->ready:Z
 
-    .line 50
     return-void
 .end method

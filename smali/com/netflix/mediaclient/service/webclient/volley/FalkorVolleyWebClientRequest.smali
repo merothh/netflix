@@ -55,71 +55,54 @@
 .method protected constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .prologue
-    .line 105
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/webclient/volley/VolleyWebClientRequest;-><init>(I)V
 
-    .line 89
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->mServerExecTimeInMs:J
 
-    .line 106
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->initParam(Landroid/content/Context;)V
 
-    .line 107
     return-void
 .end method
 
 .method protected constructor <init>(Landroid/content/Context;I)V
     .locals 2
 
-    .prologue
-    .line 110
     invoke-direct {p0, p2}, Lcom/netflix/mediaclient/service/webclient/volley/VolleyWebClientRequest;-><init>(I)V
 
-    .line 89
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->mServerExecTimeInMs:J
 
-    .line 111
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->initParam(Landroid/content/Context;)V
 
-    .line 112
     return-void
 .end method
 
 .method private initParam(Landroid/content/Context;)V
     .locals 1
 
-    .prologue
-    .line 115
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->mUuid:Ljava/util/UUID;
 
-    .line 116
     iput-object p1, p0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->mContext:Landroid/content/Context;
 
-    .line 117
     return-void
 .end method
 
 .method protected static urlEncodPQLParam(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 122
     invoke-static {p1}, Lcom/netflix/mediaclient/util/UriUtil;->urlEncodeParam(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 123
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string/jumbo v2, "&"
@@ -140,7 +123,6 @@
 
     move-result-object v0
 
-    .line 124
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -153,36 +135,28 @@
 .method public changeHostUrl(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 363
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/service/webclient/volley/VolleyWebClientRequest;->changeHostUrl(Ljava/lang/String;)V
 
-    .line 365
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->mApiEndpointRegistry:Lcom/netflix/mediaclient/service/webclient/ApiEndpointRegistry;
 
     invoke-interface {v0, p1}, Lcom/netflix/mediaclient/service/webclient/ApiEndpointRegistry;->updateApiEndpointHost(Ljava/lang/String;)V
 
-    .line 366
     return-void
 .end method
 
 .method public deliverError(Lcom/android/volley/VolleyError;)V
     .locals 7
 
-    .prologue
-    .line 332
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->getDurationTimeMs()J
 
     move-result-wide v0
 
-    .line 333
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 334
     const-string/jumbo v2, "FalkorVolleyWebClientRequest"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -229,7 +203,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 338
     :cond_0
     iget-object v2, p0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->mErrorLogger:Lcom/netflix/mediaclient/servicemgr/ErrorLogging;
 
@@ -237,12 +210,10 @@
 
     move-result-object v6
 
-    .line 340
     iget-object v2, p0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->mContext:Landroid/content/Context;
 
     if-eqz v2, :cond_1
 
-    .line 342
     invoke-virtual {v6}, Lcom/netflix/mediaclient/android/app/NetflixStatus;->getStatusCode()Lcom/netflix/mediaclient/StatusCode;
 
     move-result-object v2
@@ -253,7 +224,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 343
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6}, Lcom/netflix/mediaclient/android/app/NetflixStatus;->getStatusCode()Lcom/netflix/mediaclient/StatusCode;
@@ -262,21 +232,17 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/FetchErrorUtils;->notifyOthersOfAccountErrors(Landroid/content/Context;Lcom/netflix/mediaclient/StatusCode;)V
 
-    .line 354
     :cond_1
     :goto_0
     invoke-virtual {p0, v6}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->onFailure(Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 355
     return-void
 
-    .line 347
     :cond_2
     invoke-static {p1}, Lcom/netflix/mediaclient/util/log/ConsolidatedLoggingUtils;->toError(Lcom/android/volley/VolleyError;)Lcom/netflix/mediaclient/service/logging/client/model/Error;
 
     move-result-object v4
 
-    .line 348
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->getResponseSizeInBytes()I
 
     move-result v2
@@ -285,7 +251,6 @@
 
     move-result-object v5
 
-    .line 349
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->getPQLQueries()Ljava/util/List;
 
     move-result-object v0
@@ -294,7 +259,6 @@
 
     move-result-object v3
 
-    .line 350
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->mUuid:Ljava/util/UUID;
@@ -318,25 +282,20 @@
         }
     .end annotation
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 291
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/service/webclient/volley/VolleyWebClientRequest;->deliverResponse(Ljava/lang/Object;)V
 
-    .line 293
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->getDurationTimeMs()J
 
     move-result-wide v0
 
-    .line 294
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 295
     const-string/jumbo v2, "FalkorVolleyWebClientRequest"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -373,25 +332,21 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 298
     :cond_0
     iget-object v2, p0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->mContext:Landroid/content/Context;
 
     if-eqz v2, :cond_3
 
-    .line 299
     const-string/jumbo v2, "FalkorVolleyWebClientRequest"
 
     const-string/jumbo v3, "Report data request success"
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 300
     new-instance v5, Lcom/netflix/mediaclient/service/logging/client/model/HttpResponse;
 
     invoke-direct {v5}, Lcom/netflix/mediaclient/service/logging/client/model/HttpResponse;-><init>()V
 
-    .line 301
     long-to-int v0, v0
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -400,7 +355,6 @@
 
     invoke-virtual {v5, v0}, Lcom/netflix/mediaclient/service/logging/client/model/HttpResponse;->setResponseTime(Ljava/lang/Integer;)V
 
-    .line 302
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->mParseTimeInMs:J
 
     long-to-int v0, v0
@@ -411,12 +365,10 @@
 
     invoke-virtual {v5, v0}, Lcom/netflix/mediaclient/service/logging/client/model/HttpResponse;->setParseTime(Ljava/lang/Integer;)V
 
-    .line 303
     const-string/jumbo v0, "text/x-json"
 
     invoke-virtual {v5, v0}, Lcom/netflix/mediaclient/service/logging/client/model/HttpResponse;->setMimeType(Ljava/lang/String;)V
 
-    .line 304
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->mServerExecTimeInMs:J
 
     long-to-int v0, v0
@@ -427,7 +379,6 @@
 
     invoke-virtual {v5, v0}, Lcom/netflix/mediaclient/service/logging/client/model/HttpResponse;->setServerExecutionTime(Ljava/lang/Integer;)V
 
-    .line 305
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->getResponseSizeInBytes()I
 
     move-result v0
@@ -438,7 +389,6 @@
 
     invoke-virtual {v5, v0}, Lcom/netflix/mediaclient/service/logging/client/model/HttpResponse;->setContentLength(Ljava/lang/Integer;)V
 
-    .line 306
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->mApiScriptExecTimeInMs:J
 
     long-to-int v0, v0
@@ -449,37 +399,29 @@
 
     invoke-virtual {v5, v0}, Lcom/netflix/mediaclient/service/logging/client/model/HttpResponse;->setApiScriptExecutionTime(Ljava/lang/Integer;)V
 
-    .line 307
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->mEndpointRevision:Ljava/lang/String;
 
     invoke-virtual {v5, v0}, Lcom/netflix/mediaclient/service/logging/client/model/HttpResponse;->setEndpointRevision(Ljava/lang/String;)V
 
-    .line 309
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->getPQLQueries()Ljava/util/List;
 
     move-result-object v1
 
-    .line 310
     const/4 v0, 0x0
 
-    .line 311
     if-eqz v1, :cond_1
 
-    .line 312
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 314
     :cond_1
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 315
     if-eqz v1, :cond_2
 
-    .line 316
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -497,7 +439,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 317
     new-instance v2, Lcom/netflix/mediaclient/service/logging/client/model/FalkorPathResult;
 
     const/4 v6, 0x1
@@ -508,7 +449,6 @@
 
     goto :goto_0
 
-    .line 320
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->mContext:Landroid/content/Context;
 
@@ -522,12 +462,10 @@
 
     invoke-static/range {v0 .. v5}, Lcom/netflix/mediaclient/util/log/ApmLogUtils;->reportDataRequestEnded(Landroid/content/Context;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;Ljava/util/List;Lcom/netflix/mediaclient/service/logging/client/model/Error;Lcom/netflix/mediaclient/service/logging/client/model/HttpResponse;)V
 
-    .line 321
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/agent/PlayabilityEnforcer;->updateLastContactNetflix(Landroid/content/Context;)V
 
-    .line 323
     :cond_3
     return-void
 .end method
@@ -535,8 +473,6 @@
 .method getContext()Landroid/content/Context;
     .locals 1
 
-    .prologue
-    .line 417
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -555,8 +491,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 390
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->isAuthorizationRequired()Z
 
     move-result v0
@@ -569,7 +503,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 391
     new-instance v0, Lcom/android/volley/AuthFailureError;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -598,21 +531,17 @@
 
     throw v0
 
-    .line 394
     :cond_0
     invoke-super {p0}, Lcom/netflix/mediaclient/service/webclient/volley/VolleyWebClientRequest;->getHeaders()Ljava/util/Map;
 
     move-result-object v0
 
-    .line 395
     if-nez v0, :cond_1
 
-    .line 396
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 398
     :cond_1
     const-string/jumbo v1, "X-Netflix.request.uuid"
 
@@ -638,15 +567,12 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 399
     return-object v0
 .end method
 
 .method protected getMethodType()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 370
     const-string/jumbo v0, "get"
 
     return-object v0
@@ -667,8 +593,6 @@
 .method public getPQLQueriesRepresentationAsString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 426
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->getPQLQueries()Ljava/util/List;
 
     move-result-object v0
@@ -722,8 +646,6 @@
 .method protected getQueryPathName()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 377
     const-string/jumbo v0, "get"
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->getMethodType()Ljava/lang/String;
@@ -736,10 +658,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 378
     const-string/jumbo v0, "path"
 
-    .line 380
     :goto_0
     return-object v0
 
@@ -752,16 +672,12 @@
 .method protected getRawPQLQuery()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 181
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->getPQLQueries()Ljava/util/List;
 
     move-result-object v0
 
-    .line 182
     if-nez v0, :cond_0
 
-    .line 183
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "List of queries is null!"
@@ -770,13 +686,11 @@
 
     throw v0
 
-    .line 186
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 187
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -794,7 +708,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 188
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->getQueryPathName()Ljava/lang/String;
 
     move-result-object v3
@@ -807,7 +720,6 @@
 
     goto :goto_0
 
-    .line 190
     :cond_1
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -819,8 +731,6 @@
 .method public getRequestId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 408
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->mUuid:Ljava/util/UUID;
 
     invoke-virtual {v0}, Ljava/util/UUID;->toString()Ljava/lang/String;
@@ -833,18 +743,14 @@
 .method protected getUrl(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 134
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->getRawPQLQuery()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 136
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 137
     const-string/jumbo v2, "method"
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->getMethodType()Ljava/lang/String;
@@ -857,14 +763,12 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 138
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->shouldMaterializeRequest()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 139
     const-string/jumbo v2, "materialize"
 
     const-string/jumbo v3, "true"
@@ -875,26 +779,21 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 141
     :cond_0
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 143
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->getOptionalParams()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 144
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 145
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 148
     :cond_1
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->getCurrentNetflixId()Ljava/lang/String;
 
@@ -902,19 +801,16 @@
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->storeReqNetflixId(Ljava/lang/String;)V
 
-    .line 150
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 151
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 152
     const-string/jumbo v1, "FalkorVolleyWebClientRequest"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -937,7 +833,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 154
     :cond_2
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -945,7 +840,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 155
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -954,14 +848,12 @@
 
     if-le v1, v2, :cond_3
 
-    .line 156
     const-string/jumbo v1, "FalkorVolleyWebClientRequest"
 
     const-string/jumbo v2, "URL length is over 2000 chars... this will probably cause problems"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
     const-string/jumbo v1, "FalkorVolleyWebClientRequest"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -984,7 +876,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 161
     :cond_3
     return-object v0
 .end method
@@ -1011,15 +902,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 200
     if-eqz p1, :cond_3
 
     iget-object v0, p1, Lcom/android/volley/NetworkResponse;->headers:Ljava/util/Map;
 
     if-eqz v0, :cond_3
 
-    .line 201
     iget-object v0, p1, Lcom/android/volley/NetworkResponse;->headers:Ljava/util/Map;
 
     const-string/jumbo v1, "X-Netflix.api-script-execution-time"
@@ -1030,7 +918,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 202
     iget-object v1, p1, Lcom/android/volley/NetworkResponse;->headers:Ljava/util/Map;
 
     const-string/jumbo v2, "X-Netflix.execution-time"
@@ -1041,7 +928,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 203
     iget-object v2, p1, Lcom/android/volley/NetworkResponse;->headers:Ljava/util/Map;
 
     const-string/jumbo v3, "X-Netflix.api-script-revision"
@@ -1054,14 +940,12 @@
 
     iput-object v2, p0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->mEndpointRevision:Ljava/lang/String;
 
-    .line 204
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 205
     const-string/jumbo v2, "FalkorVolleyWebClientRequest"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1106,7 +990,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 208
     :cond_0
     invoke-static {v1}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
 
@@ -1114,7 +997,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 210
     :try_start_0
     invoke-static {v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -1124,7 +1006,6 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 217
     :cond_1
     :goto_0
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
@@ -1133,7 +1014,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 219
     :try_start_1
     invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -1143,7 +1023,6 @@
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 229
     :cond_2
     :goto_1
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/service/webclient/volley/VolleyWebClientRequest;->parseNetworkResponse(Lcom/android/volley/NetworkResponse;)Lcom/android/volley/Response;
@@ -1152,11 +1031,9 @@
 
     return-object v0
 
-    .line 212
     :catch_0
     move-exception v1
 
-    .line 213
     const-string/jumbo v2, "FalkorVolleyWebClientRequest"
 
     const-string/jumbo v3, "Failed to parse server execution time!"
@@ -1165,11 +1042,9 @@
 
     goto :goto_0
 
-    .line 221
     :catch_1
     move-exception v0
 
-    .line 222
     const-string/jumbo v1, "FalkorVolleyWebClientRequest"
 
     const-string/jumbo v2, "Failed to parse api script execution time!"
@@ -1178,7 +1053,6 @@
 
     goto :goto_1
 
-    .line 227
     :cond_3
     const-string/jumbo v0, "FalkorVolleyWebClientRequest"
 
@@ -1199,15 +1073,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 252
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->mParseTimeInMs:J
 
-    .line 256
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->parseFalkorResponse(Ljava/lang/String;)Ljava/lang/Object;
     :try_end_0
@@ -1215,7 +1086,6 @@
 
     move-result-object v0
 
-    .line 272
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
@@ -1226,14 +1096,12 @@
 
     iput-wide v2, p0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->mParseTimeInMs:J
 
-    .line 274
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 275
     const-string/jumbo v1, "FalkorVolleyWebClientRequest"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1272,7 +1140,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 278
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->parsedResponseCanBeNull()Z
 
@@ -1282,7 +1149,6 @@
 
     if-nez v0, :cond_3
 
-    .line 279
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorException;
 
     const-string/jumbo v1, "Parsing returned null."
@@ -1291,11 +1157,9 @@
 
     throw v0
 
-    .line 258
     :catch_0
     move-exception v0
 
-    .line 263
     instance-of v1, v0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorException;
 
     if-nez v1, :cond_1
@@ -1304,13 +1168,11 @@
 
     if-eqz v1, :cond_2
 
-    .line 265
     :cond_1
     check-cast v0, Lcom/android/volley/VolleyError;
 
     throw v0
 
-    .line 268
     :cond_2
     new-instance v1, Lcom/android/volley/VolleyError;
 
@@ -1318,7 +1180,6 @@
 
     throw v1
 
-    .line 281
     :cond_3
     return-object v0
 .end method
@@ -1326,19 +1187,14 @@
 .method setApiEndpointRegistry(Lcom/netflix/mediaclient/service/webclient/ApiEndpointRegistry;)V
     .locals 0
 
-    .prologue
-    .line 358
     iput-object p1, p0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;->mApiEndpointRegistry:Lcom/netflix/mediaclient/service/webclient/ApiEndpointRegistry;
 
-    .line 359
     return-void
 .end method
 
 .method protected shouldMaterializeRequest()Z
     .locals 1
 
-    .prologue
-    .line 165
     const/4 v0, 0x0
 
     return v0

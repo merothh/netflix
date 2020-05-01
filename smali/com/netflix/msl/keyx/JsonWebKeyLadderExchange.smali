@@ -52,14 +52,12 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x2
 
     const/4 v4, 0x1
 
     const/4 v3, 0x0
 
-    .line 81
     const-string/jumbo v0, "UTF-8"
 
     invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
@@ -68,7 +66,6 @@
 
     sput-object v0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange;->UTF_8:Ljava/nio/charset/Charset;
 
-    .line 87
     new-instance v0, Ljava/util/HashSet;
 
     new-array v1, v5, [Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
@@ -89,7 +86,6 @@
 
     sput-object v0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange;->ENCRYPT_DECRYPT:Ljava/util/Set;
 
-    .line 89
     new-instance v0, Ljava/util/HashSet;
 
     new-array v1, v5, [Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
@@ -110,7 +106,6 @@
 
     sput-object v0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange;->WRAP_UNWRAP:Ljava/util/Set;
 
-    .line 91
     new-instance v0, Ljava/util/HashSet;
 
     new-array v1, v5, [Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
@@ -137,27 +132,20 @@
 .method public constructor <init>(Lcom/netflix/msl/keyx/WrapCryptoContextRepository;Lcom/netflix/msl/util/AuthenticationUtils;)V
     .locals 1
 
-    .prologue
-    .line 627
     sget-object v0, Lcom/netflix/msl/keyx/KeyExchangeScheme;->JWK_LADDER:Lcom/netflix/msl/keyx/KeyExchangeScheme;
 
     invoke-direct {p0, v0}, Lcom/netflix/msl/keyx/KeyExchangeFactory;-><init>(Lcom/netflix/msl/keyx/KeyExchangeScheme;)V
 
-    .line 628
     iput-object p1, p0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange;->repository:Lcom/netflix/msl/keyx/WrapCryptoContextRepository;
 
-    .line 629
     iput-object p2, p0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange;->authutils:Lcom/netflix/msl/util/AuthenticationUtils;
 
-    .line 630
     return-void
 .end method
 
 .method private static createCryptoContext(Lcom/netflix/msl/util/MslContext;Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$Mechanism;[BLjava/lang/String;)Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$JwkCryptoContext;
     .locals 3
 
-    .prologue
-    .line 596
     sget-object v0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$1;->$SwitchMap$com$netflix$msl$keyx$JsonWebKeyLadderExchange$Mechanism:[I
 
     invoke-virtual {p1}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$Mechanism;->ordinal()I
@@ -168,7 +156,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 616
     new-instance v0, Lcom/netflix/msl/MslKeyExchangeException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->UNSUPPORTED_KEYX_MECHANISM:Lcom/netflix/msl/MslError;
@@ -181,23 +168,19 @@
 
     throw v0
 
-    .line 599
     :pswitch_0
     new-instance v0, Lcom/netflix/msl/entityauth/PresharedAuthenticationData;
 
     invoke-direct {v0, p3}, Lcom/netflix/msl/entityauth/PresharedAuthenticationData;-><init>(Ljava/lang/String;)V
 
-    .line 600
     sget-object v1, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->PSK:Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
     invoke-virtual {p0, v1}, Lcom/netflix/msl/util/MslContext;->getEntityAuthenticationFactory(Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;)Lcom/netflix/msl/entityauth/EntityAuthenticationFactory;
 
     move-result-object v1
 
-    .line 601
     if-nez v1, :cond_0
 
-    .line 602
     new-instance v0, Lcom/netflix/msl/MslKeyExchangeException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->UNSUPPORTED_KEYX_MECHANISM:Lcom/netflix/msl/MslError;
@@ -210,40 +193,33 @@
 
     throw v0
 
-    .line 603
     :cond_0
     invoke-virtual {v1, p0, v0}, Lcom/netflix/msl/entityauth/EntityAuthenticationFactory;->getCryptoContext(Lcom/netflix/msl/util/MslContext;Lcom/netflix/msl/entityauth/EntityAuthenticationData;)Lcom/netflix/msl/crypto/ICryptoContext;
 
     move-result-object v1
 
-    .line 604
     new-instance v0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$AesKwJwkCryptoContext;
 
     invoke-direct {v0, v1}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$AesKwJwkCryptoContext;-><init>(Lcom/netflix/msl/crypto/ICryptoContext;)V
 
-    .line 613
     :goto_0
     return-object v0
 
-    .line 608
     :pswitch_1
     invoke-virtual {p0}, Lcom/netflix/msl/util/MslContext;->getMslCryptoContext()Lcom/netflix/msl/crypto/ICryptoContext;
 
     move-result-object v0
 
-    .line 609
     invoke-interface {v0, p2}, Lcom/netflix/msl/crypto/ICryptoContext;->unwrap([B)[B
 
     move-result-object v0
 
-    .line 610
     if-eqz v0, :cond_1
 
     array-length v1, v0
 
     if-nez v1, :cond_2
 
-    .line 611
     :cond_1
     new-instance v0, Lcom/netflix/msl/MslKeyExchangeException;
 
@@ -253,7 +229,6 @@
 
     throw v0
 
-    .line 612
     :cond_2
     new-instance v1, Ljavax/crypto/spec/SecretKeySpec;
 
@@ -261,14 +236,12 @@
 
     invoke-direct {v1, v0, v2}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    .line 613
     new-instance v0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$AesKwJwkCryptoContext;
 
     invoke-direct {v0, v1}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$AesKwJwkCryptoContext;-><init>(Ljavax/crypto/SecretKey;)V
 
     goto :goto_0
 
-    .line 596
     nop
 
     :pswitch_data_0
@@ -283,8 +256,6 @@
 .method protected createRequestData(Lcom/netflix/msl/util/MslContext;Lcom/netflix/android/org/json/JSONObject;)Lcom/netflix/msl/keyx/KeyRequestData;
     .locals 1
 
-    .prologue
-    .line 637
     new-instance v0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;
 
     invoke-direct {v0, p2}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;-><init>(Lcom/netflix/android/org/json/JSONObject;)V
@@ -295,8 +266,6 @@
 .method protected createResponseData(Lcom/netflix/msl/util/MslContext;Lcom/netflix/msl/tokens/MasterToken;Lcom/netflix/android/org/json/JSONObject;)Lcom/netflix/msl/keyx/KeyResponseData;
     .locals 1
 
-    .prologue
-    .line 645
     new-instance v0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$ResponseData;
 
     invoke-direct {v0, p2, p3}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$ResponseData;-><init>(Lcom/netflix/msl/tokens/MasterToken;Lcom/netflix/android/org/json/JSONObject;)V
@@ -307,15 +276,12 @@
 .method public generateResponse(Lcom/netflix/msl/util/MslContext;Lcom/netflix/msl/keyx/KeyRequestData;Lcom/netflix/msl/entityauth/EntityAuthenticationData;)Lcom/netflix/msl/keyx/KeyExchangeFactory$KeyExchangeData;
     .locals 14
 
-    .prologue
-    .line 717
     move-object/from16 v0, p2
 
     instance-of v1, v0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;
 
     if-nez v1, :cond_0
 
-    .line 718
     new-instance v1, Lcom/netflix/msl/MslInternalException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -354,16 +320,13 @@
 
     throw v1
 
-    .line 719
     :cond_0
     check-cast p2, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;
 
-    .line 722
     invoke-virtual/range {p3 .. p3}, Lcom/netflix/msl/entityauth/EntityAuthenticationData;->getIdentity()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 723
     iget-object v1, p0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange;->authutils:Lcom/netflix/msl/util/AuthenticationUtils;
 
     invoke-virtual {p0}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange;->getScheme()Lcom/netflix/msl/keyx/KeyExchangeScheme;
@@ -376,7 +339,6 @@
 
     if-nez v1, :cond_1
 
-    .line 724
     new-instance v1, Lcom/netflix/msl/MslKeyExchangeException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->KEYX_INCORRECT_DATA:Lcom/netflix/msl/MslError;
@@ -423,85 +385,71 @@
 
     throw v1
 
-    .line 727
     :cond_1
     const/16 v1, 0x10
 
     new-array v1, v1, [B
 
-    .line 728
     invoke-virtual {p1}, Lcom/netflix/msl/util/MslContext;->getRandom()Ljava/util/Random;
 
     move-result-object v2
 
     invoke-virtual {v2, v1}, Ljava/util/Random;->nextBytes([B)V
 
-    .line 729
     new-instance v6, Ljavax/crypto/spec/SecretKeySpec;
 
     const-string/jumbo v2, "AES"
 
     invoke-direct {v6, v1, v2}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    .line 732
     invoke-virtual {p1}, Lcom/netflix/msl/util/MslContext;->getMslCryptoContext()Lcom/netflix/msl/crypto/ICryptoContext;
 
     move-result-object v2
 
-    .line 733
     invoke-interface {v2, v1}, Lcom/netflix/msl/crypto/ICryptoContext;->wrap([B)[B
 
     move-result-object v9
 
-    .line 736
     const/16 v1, 0x10
 
     new-array v1, v1, [B
 
-    .line 737
     const/16 v2, 0x20
 
     new-array v2, v2, [B
 
-    .line 738
     invoke-virtual {p1}, Lcom/netflix/msl/util/MslContext;->getRandom()Ljava/util/Random;
 
     move-result-object v3
 
     invoke-virtual {v3, v1}, Ljava/util/Random;->nextBytes([B)V
 
-    .line 739
     invoke-virtual {p1}, Lcom/netflix/msl/util/MslContext;->getRandom()Ljava/util/Random;
 
     move-result-object v3
 
     invoke-virtual {v3, v2}, Ljava/util/Random;->nextBytes([B)V
 
-    .line 740
     new-instance v10, Ljavax/crypto/spec/SecretKeySpec;
 
     const-string/jumbo v3, "AES"
 
     invoke-direct {v10, v1, v3}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    .line 741
     new-instance v7, Ljavax/crypto/spec/SecretKeySpec;
 
     const-string/jumbo v1, "HmacSHA256"
 
     invoke-direct {v7, v2, v1}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    .line 744
     invoke-virtual/range {p2 .. p2}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;->getMechanism()Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$Mechanism;
 
     move-result-object v11
 
-    .line 745
     invoke-virtual/range {p2 .. p2}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;->getWrapdata()[B
 
     move-result-object v12
 
-    .line 748
     new-instance v1, Lcom/netflix/msl/crypto/JsonWebKey;
 
     sget-object v2, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange;->WRAP_UNWRAP:Ljava/util/Set;
@@ -514,12 +462,10 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/netflix/msl/crypto/JsonWebKey;-><init>(Ljava/util/Set;Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;ZLjava/lang/String;Ljavax/crypto/SecretKey;)V
 
-    .line 749
     invoke-static {p1, v11, v12, v8}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange;->createCryptoContext(Lcom/netflix/msl/util/MslContext;Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$Mechanism;[BLjava/lang/String;)Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$JwkCryptoContext;
 
     move-result-object v2
 
-    .line 750
     invoke-virtual {v1}, Lcom/netflix/msl/crypto/JsonWebKey;->toJSONString()Ljava/lang/String;
 
     move-result-object v1
@@ -534,12 +480,10 @@
 
     move-result-object v11
 
-    .line 753
     new-instance v8, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$AesKwJwkCryptoContext;
 
     invoke-direct {v8, v6}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$AesKwJwkCryptoContext;-><init>(Ljavax/crypto/SecretKey;)V
 
-    .line 754
     new-instance v1, Lcom/netflix/msl/crypto/JsonWebKey;
 
     sget-object v2, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange;->ENCRYPT_DECRYPT:Ljava/util/Set;
@@ -554,7 +498,6 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/netflix/msl/crypto/JsonWebKey;-><init>(Ljava/util/Set;Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;ZLjava/lang/String;Ljavax/crypto/SecretKey;)V
 
-    .line 755
     new-instance v2, Lcom/netflix/msl/crypto/JsonWebKey;
 
     sget-object v3, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange;->SIGN_VERIFY:Ljava/util/Set;
@@ -567,7 +510,6 @@
 
     invoke-direct/range {v2 .. v7}, Lcom/netflix/msl/crypto/JsonWebKey;-><init>(Ljava/util/Set;Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;ZLjava/lang/String;Ljavax/crypto/SecretKey;)V
 
-    .line 756
     invoke-virtual {v1}, Lcom/netflix/msl/crypto/JsonWebKey;->toJSONString()Ljava/lang/String;
 
     move-result-object v1
@@ -582,7 +524,6 @@
 
     move-result-object v12
 
-    .line 757
     invoke-virtual {v2}, Lcom/netflix/msl/crypto/JsonWebKey;->toJSONString()Ljava/lang/String;
 
     move-result-object v1
@@ -597,12 +538,10 @@
 
     move-result-object v13
 
-    .line 760
     invoke-virtual {p1}, Lcom/netflix/msl/util/MslContext;->getTokenFactory()Lcom/netflix/msl/tokens/TokenFactory;
 
     move-result-object v3
 
-    .line 761
     const/4 v8, 0x0
 
     move-object v4, p1
@@ -615,12 +554,10 @@
 
     move-result-object v2
 
-    .line 764
     new-instance v7, Lcom/netflix/msl/crypto/SessionCryptoContext;
 
     invoke-direct {v7, p1, v2}, Lcom/netflix/msl/crypto/SessionCryptoContext;-><init>(Lcom/netflix/msl/util/MslContext;Lcom/netflix/msl/tokens/MasterToken;)V
 
-    .line 767
     new-instance v1, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$ResponseData;
 
     move-object v3, v11
@@ -633,7 +570,6 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$ResponseData;-><init>(Lcom/netflix/msl/tokens/MasterToken;[B[B[B[B)V
 
-    .line 768
     new-instance v2, Lcom/netflix/msl/keyx/KeyExchangeFactory$KeyExchangeData;
 
     invoke-direct {v2, v1, v7}, Lcom/netflix/msl/keyx/KeyExchangeFactory$KeyExchangeData;-><init>(Lcom/netflix/msl/keyx/KeyResponseData;Lcom/netflix/msl/crypto/ICryptoContext;)V
@@ -644,15 +580,12 @@
 .method public generateResponse(Lcom/netflix/msl/util/MslContext;Lcom/netflix/msl/keyx/KeyRequestData;Lcom/netflix/msl/tokens/MasterToken;)Lcom/netflix/msl/keyx/KeyExchangeFactory$KeyExchangeData;
     .locals 14
 
-    .prologue
-    .line 653
     move-object/from16 v0, p2
 
     instance-of v1, v0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;
 
     if-nez v1, :cond_0
 
-    .line 654
     new-instance v1, Lcom/netflix/msl/MslInternalException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -691,18 +624,15 @@
 
     throw v1
 
-    .line 655
     :cond_0
     check-cast p2, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;
 
-    .line 659
     invoke-virtual/range {p3 .. p3}, Lcom/netflix/msl/tokens/MasterToken;->isVerified()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 660
     new-instance v1, Lcom/netflix/msl/MslMasterTokenException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->MASTERTOKEN_UNTRUSTED:Lcom/netflix/msl/MslError;
@@ -713,23 +643,19 @@
 
     throw v1
 
-    .line 663
     :cond_1
     invoke-virtual/range {p2 .. p2}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;->getMechanism()Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$Mechanism;
 
     move-result-object v8
 
-    .line 664
     invoke-virtual/range {p2 .. p2}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;->getWrapdata()[B
 
     move-result-object v9
 
-    .line 665
     invoke-virtual/range {p3 .. p3}, Lcom/netflix/msl/tokens/MasterToken;->getIdentity()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 668
     iget-object v1, p0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange;->authutils:Lcom/netflix/msl/util/AuthenticationUtils;
 
     invoke-virtual {p0}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange;->getScheme()Lcom/netflix/msl/keyx/KeyExchangeScheme;
@@ -742,7 +668,6 @@
 
     if-nez v1, :cond_2
 
-    .line 669
     new-instance v1, Lcom/netflix/msl/MslKeyExchangeException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->KEYX_INCORRECT_DATA:Lcom/netflix/msl/MslError;
@@ -789,75 +714,63 @@
 
     throw v1
 
-    .line 672
     :cond_2
     const/16 v1, 0x10
 
     new-array v1, v1, [B
 
-    .line 673
     invoke-virtual {p1}, Lcom/netflix/msl/util/MslContext;->getRandom()Ljava/util/Random;
 
     move-result-object v2
 
     invoke-virtual {v2, v1}, Ljava/util/Random;->nextBytes([B)V
 
-    .line 674
     new-instance v6, Ljavax/crypto/spec/SecretKeySpec;
 
     const-string/jumbo v2, "AES"
 
     invoke-direct {v6, v1, v2}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    .line 677
     invoke-virtual {p1}, Lcom/netflix/msl/util/MslContext;->getMslCryptoContext()Lcom/netflix/msl/crypto/ICryptoContext;
 
     move-result-object v2
 
-    .line 678
     invoke-interface {v2, v1}, Lcom/netflix/msl/crypto/ICryptoContext;->wrap([B)[B
 
     move-result-object v11
 
-    .line 681
     const/16 v1, 0x10
 
     new-array v1, v1, [B
 
-    .line 682
     const/16 v2, 0x20
 
     new-array v2, v2, [B
 
-    .line 683
     invoke-virtual {p1}, Lcom/netflix/msl/util/MslContext;->getRandom()Ljava/util/Random;
 
     move-result-object v3
 
     invoke-virtual {v3, v1}, Ljava/util/Random;->nextBytes([B)V
 
-    .line 684
     invoke-virtual {p1}, Lcom/netflix/msl/util/MslContext;->getRandom()Ljava/util/Random;
 
     move-result-object v3
 
     invoke-virtual {v3, v2}, Ljava/util/Random;->nextBytes([B)V
 
-    .line 685
     new-instance v12, Ljavax/crypto/spec/SecretKeySpec;
 
     const-string/jumbo v3, "AES"
 
     invoke-direct {v12, v1, v3}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    .line 686
     new-instance v7, Ljavax/crypto/spec/SecretKeySpec;
 
     const-string/jumbo v1, "HmacSHA256"
 
     invoke-direct {v7, v2, v1}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    .line 689
     new-instance v1, Lcom/netflix/msl/crypto/JsonWebKey;
 
     sget-object v2, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange;->WRAP_UNWRAP:Ljava/util/Set;
@@ -870,12 +783,10 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/netflix/msl/crypto/JsonWebKey;-><init>(Ljava/util/Set;Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;ZLjava/lang/String;Ljavax/crypto/SecretKey;)V
 
-    .line 690
     invoke-static {p1, v8, v9, v10}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange;->createCryptoContext(Lcom/netflix/msl/util/MslContext;Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$Mechanism;[BLjava/lang/String;)Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$JwkCryptoContext;
 
     move-result-object v2
 
-    .line 691
     invoke-virtual {v1}, Lcom/netflix/msl/crypto/JsonWebKey;->toJSONString()Ljava/lang/String;
 
     move-result-object v1
@@ -890,12 +801,10 @@
 
     move-result-object v9
 
-    .line 694
     new-instance v8, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$AesKwJwkCryptoContext;
 
     invoke-direct {v8, v6}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$AesKwJwkCryptoContext;-><init>(Ljavax/crypto/SecretKey;)V
 
-    .line 695
     new-instance v1, Lcom/netflix/msl/crypto/JsonWebKey;
 
     sget-object v2, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange;->ENCRYPT_DECRYPT:Ljava/util/Set;
@@ -910,7 +819,6 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/netflix/msl/crypto/JsonWebKey;-><init>(Ljava/util/Set;Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;ZLjava/lang/String;Ljavax/crypto/SecretKey;)V
 
-    .line 696
     new-instance v2, Lcom/netflix/msl/crypto/JsonWebKey;
 
     sget-object v3, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange;->SIGN_VERIFY:Ljava/util/Set;
@@ -923,7 +831,6 @@
 
     invoke-direct/range {v2 .. v7}, Lcom/netflix/msl/crypto/JsonWebKey;-><init>(Ljava/util/Set;Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;ZLjava/lang/String;Ljavax/crypto/SecretKey;)V
 
-    .line 697
     invoke-virtual {v1}, Lcom/netflix/msl/crypto/JsonWebKey;->toJSONString()Ljava/lang/String;
 
     move-result-object v1
@@ -938,7 +845,6 @@
 
     move-result-object v10
 
-    .line 698
     invoke-virtual {v2}, Lcom/netflix/msl/crypto/JsonWebKey;->toJSONString()Ljava/lang/String;
 
     move-result-object v1
@@ -953,12 +859,10 @@
 
     move-result-object v13
 
-    .line 701
     invoke-virtual {p1}, Lcom/netflix/msl/util/MslContext;->getTokenFactory()Lcom/netflix/msl/tokens/TokenFactory;
 
     move-result-object v3
 
-    .line 702
     const/4 v8, 0x0
 
     move-object v4, p1
@@ -971,12 +875,10 @@
 
     move-result-object v2
 
-    .line 705
     new-instance v7, Lcom/netflix/msl/crypto/SessionCryptoContext;
 
     invoke-direct {v7, p1, v2}, Lcom/netflix/msl/crypto/SessionCryptoContext;-><init>(Lcom/netflix/msl/util/MslContext;Lcom/netflix/msl/tokens/MasterToken;)V
 
-    .line 708
     new-instance v1, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$ResponseData;
 
     move-object v3, v9
@@ -989,7 +891,6 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$ResponseData;-><init>(Lcom/netflix/msl/tokens/MasterToken;[B[B[B[B)V
 
-    .line 709
     new-instance v2, Lcom/netflix/msl/keyx/KeyExchangeFactory$KeyExchangeData;
 
     invoke-direct {v2, v1, v7}, Lcom/netflix/msl/keyx/KeyExchangeFactory$KeyExchangeData;-><init>(Lcom/netflix/msl/keyx/KeyResponseData;Lcom/netflix/msl/crypto/ICryptoContext;)V
@@ -1000,13 +901,10 @@
 .method public getCryptoContext(Lcom/netflix/msl/util/MslContext;Lcom/netflix/msl/keyx/KeyRequestData;Lcom/netflix/msl/keyx/KeyResponseData;Lcom/netflix/msl/tokens/MasterToken;)Lcom/netflix/msl/crypto/ICryptoContext;
     .locals 8
 
-    .prologue
-    .line 776
     instance-of v0, p2, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;
 
     if-nez v0, :cond_0
 
-    .line 777
     new-instance v0, Lcom/netflix/msl/MslInternalException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1045,16 +943,13 @@
 
     throw v0
 
-    .line 778
     :cond_0
     check-cast p2, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;
 
-    .line 779
     instance-of v0, p3, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$ResponseData;
 
     if-nez v0, :cond_1
 
-    .line 780
     new-instance v0, Lcom/netflix/msl/MslInternalException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1093,33 +988,27 @@
 
     throw v0
 
-    .line 781
     :cond_1
     check-cast p3, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$ResponseData;
 
-    .line 784
     invoke-virtual {p2}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;->getMechanism()Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$Mechanism;
 
     move-result-object v0
 
-    .line 785
     invoke-virtual {p2}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$RequestData;->getWrapdata()[B
 
     move-result-object v1
 
-    .line 786
     const/4 v2, 0x0
 
     invoke-virtual {p1, v2}, Lcom/netflix/msl/util/MslContext;->getEntityAuthenticationData(Lcom/netflix/msl/util/MslContext$ReauthCode;)Lcom/netflix/msl/entityauth/EntityAuthenticationData;
 
     move-result-object v2
 
-    .line 787
     invoke-virtual {v2}, Lcom/netflix/msl/entityauth/EntityAuthenticationData;->getIdentity()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 789
     sget-object v4, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$1;->$SwitchMap$com$netflix$msl$keyx$JsonWebKeyLadderExchange$Mechanism:[I
 
     invoke-virtual {v0}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$Mechanism;->ordinal()I
@@ -1130,7 +1019,6 @@
 
     packed-switch v4, :pswitch_data_0
 
-    .line 808
     new-instance v1, Lcom/netflix/msl/MslKeyExchangeException;
 
     sget-object v3, Lcom/netflix/msl/MslError;->UNSUPPORTED_KEYX_MECHANISM:Lcom/netflix/msl/MslError;
@@ -1147,23 +1035,19 @@
 
     throw v0
 
-    .line 792
     :pswitch_0
     new-instance v4, Lcom/netflix/msl/entityauth/PresharedAuthenticationData;
 
     invoke-direct {v4, v3}, Lcom/netflix/msl/entityauth/PresharedAuthenticationData;-><init>(Ljava/lang/String;)V
 
-    .line 793
     sget-object v5, Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;->PSK:Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;
 
     invoke-virtual {p1, v5}, Lcom/netflix/msl/util/MslContext;->getEntityAuthenticationFactory(Lcom/netflix/msl/entityauth/EntityAuthenticationScheme;)Lcom/netflix/msl/entityauth/EntityAuthenticationFactory;
 
     move-result-object v5
 
-    .line 794
     if-nez v5, :cond_2
 
-    .line 795
     new-instance v1, Lcom/netflix/msl/MslKeyExchangeException;
 
     sget-object v3, Lcom/netflix/msl/MslError;->UNSUPPORTED_KEYX_MECHANISM:Lcom/netflix/msl/MslError;
@@ -1180,18 +1064,15 @@
 
     throw v0
 
-    .line 796
     :cond_2
     invoke-virtual {v5, p1, v4}, Lcom/netflix/msl/entityauth/EntityAuthenticationFactory;->getCryptoContext(Lcom/netflix/msl/util/MslContext;Lcom/netflix/msl/entityauth/EntityAuthenticationData;)Lcom/netflix/msl/crypto/ICryptoContext;
 
     move-result-object v4
 
-    .line 797
     new-instance v0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$AesKwJwkCryptoContext;
 
     invoke-direct {v0, v4}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$AesKwJwkCryptoContext;-><init>(Lcom/netflix/msl/crypto/ICryptoContext;)V
 
-    .line 812
     :cond_3
     invoke-virtual {p3}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$ResponseData;->getWrapKey()[B
 
@@ -1201,14 +1082,12 @@
 
     move-result-object v0
 
-    .line 813
     new-instance v4, Ljava/lang/String;
 
     sget-object v5, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-direct {v4, v0, v5}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
 
-    .line 816
     :try_start_0
     new-instance v0, Lcom/netflix/msl/crypto/JsonWebKey;
 
@@ -1220,17 +1099,14 @@
     :try_end_0
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 820
     invoke-virtual {v0}, Lcom/netflix/msl/crypto/JsonWebKey;->getSecretKey()Ljavax/crypto/SecretKey;
 
     move-result-object v0
 
-    .line 823
     new-instance v4, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$AesKwJwkCryptoContext;
 
     invoke-direct {v4, v0}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$AesKwJwkCryptoContext;-><init>(Ljavax/crypto/SecretKey;)V
 
-    .line 824
     invoke-virtual {p3}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$ResponseData;->getEncryptionKey()[B
 
     move-result-object v0
@@ -1239,7 +1115,6 @@
 
     move-result-object v0
 
-    .line 825
     invoke-virtual {p3}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$ResponseData;->getHmacKey()[B
 
     move-result-object v5
@@ -1248,21 +1123,18 @@
 
     move-result-object v5
 
-    .line 826
     new-instance v6, Ljava/lang/String;
 
     sget-object v7, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-direct {v6, v0, v7}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
 
-    .line 827
     new-instance v7, Ljava/lang/String;
 
     sget-object v0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-direct {v7, v5, v0}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
 
-    .line 830
     :try_start_1
     new-instance v0, Lcom/netflix/msl/crypto/JsonWebKey;
 
@@ -1274,7 +1146,6 @@
     :try_end_1
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 836
     :try_start_2
     new-instance v5, Lcom/netflix/msl/crypto/JsonWebKey;
 
@@ -1286,41 +1157,33 @@
     :try_end_2
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 842
     invoke-virtual {p3}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$ResponseData;->getWrapdata()[B
 
     move-result-object v2
 
-    .line 843
     iget-object v6, p0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange;->repository:Lcom/netflix/msl/keyx/WrapCryptoContextRepository;
 
     invoke-interface {v6, v2, v4}, Lcom/netflix/msl/keyx/WrapCryptoContextRepository;->addCryptoContext([BLcom/netflix/msl/crypto/ICryptoContext;)V
 
-    .line 844
     if-eqz v1, :cond_4
 
-    .line 845
     iget-object v2, p0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange;->repository:Lcom/netflix/msl/keyx/WrapCryptoContextRepository;
 
     invoke-interface {v2, v1}, Lcom/netflix/msl/keyx/WrapCryptoContextRepository;->removeCryptoContext([B)V
 
-    .line 848
     :cond_4
     invoke-virtual {p3}, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange$ResponseData;->getMasterToken()Lcom/netflix/msl/tokens/MasterToken;
 
     move-result-object v2
 
-    .line 849
     invoke-virtual {v0}, Lcom/netflix/msl/crypto/JsonWebKey;->getSecretKey()Ljavax/crypto/SecretKey;
 
     move-result-object v4
 
-    .line 850
     invoke-virtual {v5}, Lcom/netflix/msl/crypto/JsonWebKey;->getSecretKey()Ljavax/crypto/SecretKey;
 
     move-result-object v5
 
-    .line 851
     new-instance v0, Lcom/netflix/msl/crypto/SessionCryptoContext;
 
     move-object v1, p1
@@ -1329,7 +1192,6 @@
 
     return-object v0
 
-    .line 802
     :pswitch_1
     iget-object v0, p0, Lcom/netflix/msl/keyx/JsonWebKeyLadderExchange;->repository:Lcom/netflix/msl/keyx/WrapCryptoContextRepository;
 
@@ -1337,10 +1199,8 @@
 
     move-result-object v0
 
-    .line 803
     if-nez v0, :cond_3
 
-    .line 804
     new-instance v0, Lcom/netflix/msl/MslKeyExchangeException;
 
     sget-object v3, Lcom/netflix/msl/MslError;->KEYX_WRAPPING_KEY_MISSING:Lcom/netflix/msl/MslError;
@@ -1357,11 +1217,9 @@
 
     throw v0
 
-    .line 817
     :catch_0
     move-exception v0
 
-    .line 818
     new-instance v1, Lcom/netflix/msl/MslKeyExchangeException;
 
     sget-object v3, Lcom/netflix/msl/MslError;->INVALID_JWK:Lcom/netflix/msl/MslError;
@@ -1374,11 +1232,9 @@
 
     throw v0
 
-    .line 831
     :catch_1
     move-exception v0
 
-    .line 832
     new-instance v1, Lcom/netflix/msl/MslKeyExchangeException;
 
     sget-object v3, Lcom/netflix/msl/MslError;->INVALID_JWK:Lcom/netflix/msl/MslError;
@@ -1391,11 +1247,9 @@
 
     throw v0
 
-    .line 837
     :catch_2
     move-exception v0
 
-    .line 838
     new-instance v1, Lcom/netflix/msl/MslKeyExchangeException;
 
     sget-object v3, Lcom/netflix/msl/MslError;->INVALID_JWK:Lcom/netflix/msl/MslError;
@@ -1408,7 +1262,6 @@
 
     throw v0
 
-    .line 789
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

@@ -29,8 +29,6 @@
 .method constructor <init>(Lcom/netflix/falkor/ModelProxy;)V
     .locals 0
 
-    .prologue
-    .line 331
     iput-object p1, p0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$26;->val$proxy:Lcom/netflix/falkor/ModelProxy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,30 +51,24 @@
         }
     .end annotation
 
-    .prologue
-    .line 334
     new-instance v0, Lcom/netflix/model/branches/SummarizedList;
 
     sget-object v1, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator;->Ref:Lcom/netflix/falkor/Func;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$26;->val$proxy:Lcom/netflix/falkor/ModelProxy;
 
-    .line 335
     invoke-static {v2}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator;->FalkorDiscoverySummary(Lcom/netflix/falkor/ModelProxy;)Lcom/netflix/falkor/Func;
 
     move-result-object v2
 
     invoke-direct {v0, v1, v2}, Lcom/netflix/model/branches/SummarizedList;-><init>(Lcom/netflix/falkor/Func;Lcom/netflix/falkor/Func;)V
 
-    .line 334
     return-object v0
 .end method
 
 .method public bridge synthetic call()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 331
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/falkor/Falkor$Creator$26;->call()Lcom/netflix/model/branches/SummarizedList;
 
     move-result-object v0

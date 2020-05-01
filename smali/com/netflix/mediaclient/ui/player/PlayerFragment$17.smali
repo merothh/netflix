@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)V
     .locals 0
 
-    .prologue
-    .line 3349
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$17;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,12 +23,9 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .prologue
-    .line 3352
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$17;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->handleConnectivityCheck()Z
 
-    .line 3353
     return-void
 .end method

@@ -15,28 +15,22 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;)V
     .locals 1
 
-    .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongBaseScreen;->postPlayManager:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;
 
-    .line 20
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongBaseScreen;->getPlayerFragment()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongBaseScreen;->playerFragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
-    .line 21
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongBaseScreen;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongBaseScreen;->handler:Landroid/os/Handler;
 
-    .line 22
     return-void
 .end method
 
@@ -45,8 +39,6 @@
 .method protected getActivity()Lcom/netflix/mediaclient/android/activity/NetflixActivity;
     .locals 1
 
-    .prologue
-    .line 45
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongBaseScreen;->postPlayManager:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;->getActivity()Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -59,8 +51,6 @@
 .method protected getHandler()Landroid/os/Handler;
     .locals 1
 
-    .prologue
-    .line 37
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongBaseScreen;->postPlayManager:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;->getHandler()Landroid/os/Handler;
@@ -73,8 +63,6 @@
 .method protected getPlayerFragment()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
     .locals 1
 
-    .prologue
-    .line 29
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongBaseScreen;->postPlayManager:Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager;->getPlayerFragment()Lcom/netflix/mediaclient/ui/player/PlayerFragment;

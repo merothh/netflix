@@ -6,8 +6,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 13
     invoke-direct {p0}, Lcom/crittercism/internal/ch;-><init>()V
 
     return-void
@@ -18,8 +16,6 @@
 .method public final a(Ljava/io/File;)Lcom/crittercism/internal/bo;
     .locals 2
 
-    .prologue
-    .line 15
     new-instance v0, Lcom/crittercism/internal/bx;
 
     const/4 v1, 0x0

@@ -11,21 +11,16 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
     return-void
 .end method
 
 .method public static applyContentOverlapPadding(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Landroid/view/View;Lcom/netflix/mediaclient/ui/lomo/LoMoUtils$LoMoWidthType;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 29
     invoke-static {p0}, Lcom/netflix/mediaclient/ui/lomo/LoMoUtils;->getLomoFragOffsetLeftPx(Landroid/app/Activity;)I
 
     move-result v0
@@ -36,15 +31,12 @@
 
     invoke-virtual {p1, v0, v2, v1, v2}, Landroid/view/View;->setPadding(IIII)V
 
-    .line 30
     return-void
 .end method
 
 .method public static getGalleryLomoGenreNumColumns(Lcom/netflix/mediaclient/android/activity/NetflixActivity;)I
     .locals 1
 
-    .prologue
-    .line 69
     const/4 v0, 0x0
 
     invoke-static {p0, v0}, Lcom/netflix/mediaclient/ui/lomo/LomoConfig;->computeStandardNumVideosPerPage(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Z)I
@@ -57,13 +49,10 @@
 .method public static getLomoFragImageOffsetLeftPx(Lcom/netflix/mediaclient/android/activity/NetflixActivity;)I
     .locals 3
 
-    .prologue
-    .line 64
     invoke-static {p0}, Lcom/netflix/mediaclient/ui/lomo/LoMoUtils;->getLomoFragOffsetLeftPx(Landroid/app/Activity;)I
 
     move-result v0
 
-    .line 65
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -76,15 +65,12 @@
 
     add-int/2addr v0, v1
 
-    .line 64
     return v0
 .end method
 
 .method public static getLomoFragOffsetLeftPx(Landroid/app/Activity;)I
     .locals 2
 
-    .prologue
-    .line 33
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -103,15 +89,12 @@
 .method public static getLomoFragOffsetRightPx(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/ui/lomo/LoMoUtils$LoMoWidthType;)I
     .locals 3
 
-    .prologue
-    .line 37
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 38
     const-string/jumbo v0, "LoMoUtils"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -152,7 +135,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 42
     :cond_0
     sget-object v0, Lcom/netflix/mediaclient/ui/lomo/LoMoUtils$1;->$SwitchMap$com$netflix$mediaclient$ui$lomo$LoMoUtils$LoMoWidthType:[I
 
@@ -164,7 +146,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 59
     invoke-static {p0}, Lcom/netflix/mediaclient/ui/lomo/LomoConfig;->getLomoFragOffsetRightPx(Lcom/netflix/mediaclient/android/activity/NetflixActivity;)I
 
     move-result v0
@@ -172,11 +153,9 @@
     :goto_0
     return v0
 
-    .line 44
     :pswitch_0
     const v0, 0x7f0a00a4
 
-    .line 45
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -187,7 +166,6 @@
 
     goto :goto_0
 
-    .line 48
     :pswitch_1
     invoke-static {p0}, Lcom/netflix/mediaclient/util/DeviceUtils;->isLandscape(Landroid/content/Context;)Z
 
@@ -197,7 +175,6 @@
 
     const v0, 0x7f0a01ba
 
-    .line 51
     :goto_1
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getResources()Landroid/content/res/Resources;
 
@@ -209,17 +186,14 @@
 
     goto :goto_0
 
-    .line 48
     :cond_1
     const v0, 0x7f0a01c0
 
     goto :goto_1
 
-    .line 54
     :pswitch_2
     const v0, 0x7f0a019a
 
-    .line 55
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -230,7 +204,6 @@
 
     goto :goto_0
 
-    .line 42
     nop
 
     :pswitch_data_0
@@ -244,14 +217,12 @@
 .method static getTextForCTA(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
-    .prologue
     const v4, 0x7f0800c2
 
     const/4 v2, 0x1
 
     const/4 v1, 0x0
 
-    .line 74
     const/4 v0, -0x1
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -264,7 +235,6 @@
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 97
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -273,11 +243,9 @@
 
     move-result-object v0
 
-    .line 100
     :goto_1
     return-object v0
 
-    .line 74
     :sswitch_0
     const-string/jumbo v3, "play"
 
@@ -369,7 +337,6 @@
 
     goto :goto_0
 
-    .line 76
     :pswitch_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -381,7 +348,6 @@
 
     goto :goto_1
 
-    .line 79
     :pswitch_1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -399,7 +365,6 @@
 
     goto :goto_1
 
-    .line 82
     :pswitch_2
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -413,7 +378,6 @@
 
     goto :goto_1
 
-    .line 85
     :pswitch_3
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -427,7 +391,6 @@
 
     goto :goto_1
 
-    .line 88
     :pswitch_4
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -441,7 +404,6 @@
 
     goto/16 :goto_1
 
-    .line 91
     :pswitch_5
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -455,7 +417,6 @@
 
     goto/16 :goto_1
 
-    .line 94
     :pswitch_6
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -469,7 +430,6 @@
 
     goto/16 :goto_1
 
-    .line 74
     :sswitch_data_0
     .sparse-switch
         -0x7e6f77d9 -> :sswitch_2
@@ -507,17 +467,13 @@
         }
     .end annotation
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 108
     if-nez p1, :cond_0
 
-    .line 119
     :goto_0
     return-void
 
-    .line 111
     :cond_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -543,7 +499,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 113
     invoke-virtual {p1}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -554,15 +509,12 @@
 
     move-result-object v0
 
-    .line 112
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 115
     invoke-virtual {p1, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 117
     :cond_1
     const/16 v0, 0x8
 

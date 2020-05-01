@@ -46,8 +46,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 47
     new-instance v0, Lcom/netflix/mediaclient/service/user/UserAgentBroadcastIntents$1;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/user/UserAgentBroadcastIntents$1;-><init>()V
@@ -60,8 +58,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -70,13 +66,10 @@
 .method public static getNotificationIntentFilter()Landroid/content/IntentFilter;
     .locals 3
 
-    .prologue
-    .line 63
     new-instance v1, Landroid/content/IntentFilter;
 
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 64
     sget-object v0, Lcom/netflix/mediaclient/service/user/UserAgentBroadcastIntents;->notifSet:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -96,12 +89,10 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 65
     invoke-virtual {v1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 67
     :cond_0
     return-object v1
 .end method
@@ -109,8 +100,6 @@
 .method public static signalAccountDataFetched(Landroid/content/Context;)V
     .locals 3
 
-    .prologue
-    .line 121
     invoke-static {p0}, Landroid/support/v4/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroid/support/v4/content/LocalBroadcastManager;
 
     move-result-object v0
@@ -123,34 +112,28 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v4/content/LocalBroadcastManager;->sendBroadcast(Landroid/content/Intent;)Z
 
-    .line 122
     return-void
 .end method
 
 .method static signalAutoLoginTokenCreated(Ljava/lang/String;Landroid/content/Context;)V
     .locals 2
 
-    .prologue
-    .line 109
     new-instance v0, Landroid/content/Intent;
 
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.NOTIFY_AUTOLOGIN_TOKEN_CREATED"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 110
     invoke-static {p0}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 111
     const-string/jumbo v1, "token"
 
     invoke-virtual {v0, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 113
     :cond_0
     invoke-static {p1}, Landroid/support/v4/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroid/support/v4/content/LocalBroadcastManager;
 
@@ -158,15 +141,12 @@
 
     invoke-virtual {v1, v0}, Landroid/support/v4/content/LocalBroadcastManager;->sendBroadcast(Landroid/content/Intent;)Z
 
-    .line 114
     return-void
 .end method
 
 .method static signalProfileActive(Landroid/content/Context;)V
     .locals 3
 
-    .prologue
-    .line 79
     invoke-static {p0}, Landroid/support/v4/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroid/support/v4/content/LocalBroadcastManager;
 
     move-result-object v0
@@ -179,15 +159,12 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v4/content/LocalBroadcastManager;->sendBroadcast(Landroid/content/Intent;)Z
 
-    .line 80
     return-void
 .end method
 
 .method static signalProfileDeactivated(Landroid/content/Context;)V
     .locals 3
 
-    .prologue
-    .line 83
     invoke-static {p0}, Landroid/support/v4/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroid/support/v4/content/LocalBroadcastManager;
 
     move-result-object v0
@@ -200,15 +177,12 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v4/content/LocalBroadcastManager;->sendBroadcast(Landroid/content/Intent;)Z
 
-    .line 84
     return-void
 .end method
 
 .method static signalProfileInvalid(Landroid/content/Context;)V
     .locals 3
 
-    .prologue
-    .line 87
     invoke-static {p0}, Landroid/support/v4/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroid/support/v4/content/LocalBroadcastManager;
 
     move-result-object v0
@@ -221,15 +195,12 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v4/content/LocalBroadcastManager;->sendBroadcast(Landroid/content/Intent;)Z
 
-    .line 88
     return-void
 .end method
 
 .method static signalProfileReady2Select(Landroid/content/Context;)V
     .locals 3
 
-    .prologue
-    .line 91
     invoke-static {p0}, Landroid/support/v4/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroid/support/v4/content/LocalBroadcastManager;
 
     move-result-object v0
@@ -242,39 +213,32 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v4/content/LocalBroadcastManager;->sendBroadcast(Landroid/content/Intent;)Z
 
-    .line 92
     return-void
 .end method
 
 .method static signalProfileSelectionResult(Landroid/content/Context;ILjava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 100
     new-instance v0, Landroid/content/Intent;
 
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.NOTIFY_USER_PROFILE_SELECTION_RESULT"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 101
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.EXTRA_USER_PROFILE_SELECTION_RESULT_INT"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 102
     invoke-static {p2}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 103
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.EXTRA_USER_PROFILE_SELECTION_RESULT_STRING"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 105
     :cond_0
     invoke-static {p0}, Landroid/support/v4/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroid/support/v4/content/LocalBroadcastManager;
 
@@ -282,15 +246,12 @@
 
     invoke-virtual {v1, v0}, Landroid/support/v4/content/LocalBroadcastManager;->sendBroadcast(Landroid/content/Intent;)Z
 
-    .line 106
     return-void
 .end method
 
 .method static signalProfilesListUpdated(Landroid/content/Context;)V
     .locals 3
 
-    .prologue
-    .line 95
     invoke-static {p0}, Landroid/support/v4/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroid/support/v4/content/LocalBroadcastManager;
 
     move-result-object v0
@@ -303,15 +264,12 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v4/content/LocalBroadcastManager;->sendBroadcast(Landroid/content/Intent;)Z
 
-    .line 96
     return-void
 .end method
 
 .method static signalUserAccountActive(Landroid/content/Context;)V
     .locals 3
 
-    .prologue
-    .line 71
     invoke-static {p0}, Landroid/support/v4/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroid/support/v4/content/LocalBroadcastManager;
 
     move-result-object v0
@@ -324,15 +282,12 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v4/content/LocalBroadcastManager;->sendBroadcast(Landroid/content/Intent;)Z
 
-    .line 72
     return-void
 .end method
 
 .method static signalUserAccountDeactivated(Landroid/content/Context;)V
     .locals 3
 
-    .prologue
-    .line 75
     invoke-static {p0}, Landroid/support/v4/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroid/support/v4/content/LocalBroadcastManager;
 
     move-result-object v0
@@ -345,6 +300,5 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v4/content/LocalBroadcastManager;->sendBroadcast(Landroid/content/Intent;)Z
 
-    .line 76
     return-void
 .end method

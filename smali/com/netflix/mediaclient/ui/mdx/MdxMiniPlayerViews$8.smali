@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;)V
     .locals 0
 
-    .prologue
-    .line 941
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews$8;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
-    .prologue
-    .line 944
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews$8;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -40,11 +36,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 964
     :goto_0
     return-void
 
-    .line 948
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews$8;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
 
@@ -56,10 +50,8 @@
 
     move-result-object v0
 
-    .line 949
     if-nez v0, :cond_1
 
-    .line 950
     const-string/jumbo v0, "MdxMiniPlayerViews"
 
     const-string/jumbo v1, "currentVideo is null - can\'t show episodes"
@@ -68,13 +60,11 @@
 
     goto :goto_0
 
-    .line 954
     :cond_1
     instance-of v1, v0, Lcom/netflix/mediaclient/servicemgr/interface_/details/EpisodeDetails;
 
     if-nez v1, :cond_2
 
-    .line 955
     const-string/jumbo v0, "MdxMiniPlayerViews"
 
     const-string/jumbo v1, "currentVideo is not an episode detail"
@@ -83,7 +73,6 @@
 
     goto :goto_0
 
-    .line 959
     :cond_2
     const-string/jumbo v1, "MdxMiniPlayerViews"
 
@@ -91,7 +80,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 960
     invoke-interface {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;->getPlayable()Lcom/netflix/mediaclient/servicemgr/interface_/Playable;
 
     move-result-object v0
@@ -108,7 +96,6 @@
 
     move-result-object v0
 
-    .line 961
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews$8;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;->access$000(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;)Lcom/netflix/mediaclient/ui/mdx/IMdxMiniPlayerViewCallbacks;
@@ -123,12 +110,10 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/mediaclient/android/fragment/NetflixDialogFrag;->onManagerReady(Lcom/netflix/mediaclient/servicemgr/ServiceManager;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 962
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/fragment/NetflixDialogFrag;->setCancelable(Z)V
 
-    .line 963
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews$8;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
 
     iget-object v1, v1, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;

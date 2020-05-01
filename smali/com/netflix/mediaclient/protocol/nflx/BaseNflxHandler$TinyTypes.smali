@@ -49,7 +49,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -60,7 +59,6 @@
 
     const/4 v0, 0x0
 
-    .line 116
     new-instance v1, Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$TinyTypes;
 
     const-string/jumbo v2, "NO_TYPE"
@@ -69,7 +67,6 @@
 
     sput-object v1, Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$TinyTypes;->NO_TYPE:Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$TinyTypes;
 
-    .line 117
     new-instance v1, Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$TinyTypes;
 
     const-string/jumbo v2, "MOVIE_TYPE"
@@ -132,7 +129,6 @@
 
     sput-object v1, Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$TinyTypes;->PERSON_TYPE:Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$TinyTypes;
 
-    .line 115
     const/16 v1, 0x8
 
     new-array v1, v1, [Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$TinyTypes;
@@ -177,19 +173,16 @@
 
     sput-object v1, Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$TinyTypes;->$VALUES:[Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$TinyTypes;
 
-    .line 119
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
 
     sput-object v1, Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$TinyTypes;->hashOrdToType:Landroid/util/SparseArray;
 
-    .line 121
     invoke-static {}, Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$TinyTypes;->values()[Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$TinyTypes;
 
     move-result-object v1
 
-    .line 122
     array-length v2, v1
 
     :goto_0
@@ -197,7 +190,6 @@
 
     aget-object v3, v1, v0
 
-    .line 123
     sget-object v4, Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$TinyTypes;->hashOrdToType:Landroid/util/SparseArray;
 
     invoke-virtual {v3}, Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$TinyTypes;->ordinal()I
@@ -206,12 +198,10 @@
 
     invoke-virtual {v4, v5, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 122
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 125
     :cond_0
     return-void
 .end method
@@ -224,8 +214,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 115
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -234,8 +222,6 @@
 .method public static ordinalToType(I)Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$TinyTypes;
     .locals 1
 
-    .prologue
-    .line 128
     sget-object v0, Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$TinyTypes;->hashOrdToType:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -250,8 +236,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$TinyTypes;
     .locals 1
 
-    .prologue
-    .line 115
     const-class v0, Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$TinyTypes;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -266,8 +250,6 @@
 .method public static values()[Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$TinyTypes;
     .locals 1
 
-    .prologue
-    .line 115
     sget-object v0, Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$TinyTypes;->$VALUES:[Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$TinyTypes;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$TinyTypes;->clone()Ljava/lang/Object;

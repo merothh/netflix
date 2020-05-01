@@ -26,12 +26,10 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 82
     new-instance v0, Lcom/netflix/mediaclient/media/Watermark$Anchor;
 
     const-string/jumbo v1, "top_center"
@@ -40,7 +38,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/media/Watermark$Anchor;->top_center:Lcom/netflix/mediaclient/media/Watermark$Anchor;
 
-    .line 83
     new-instance v0, Lcom/netflix/mediaclient/media/Watermark$Anchor;
 
     const-string/jumbo v1, "bottom_center"
@@ -49,7 +46,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/media/Watermark$Anchor;->bottom_center:Lcom/netflix/mediaclient/media/Watermark$Anchor;
 
-    .line 81
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/netflix/mediaclient/media/Watermark$Anchor;
@@ -75,8 +71,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 81
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -85,8 +79,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/media/Watermark$Anchor;
     .locals 1
 
-    .prologue
-    .line 81
     const-class v0, Lcom/netflix/mediaclient/media/Watermark$Anchor;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -101,8 +93,6 @@
 .method public static values()[Lcom/netflix/mediaclient/media/Watermark$Anchor;
     .locals 1
 
-    .prologue
-    .line 81
     sget-object v0, Lcom/netflix/mediaclient/media/Watermark$Anchor;->$VALUES:[Lcom/netflix/mediaclient/media/Watermark$Anchor;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/media/Watermark$Anchor;->clone()Ljava/lang/Object;

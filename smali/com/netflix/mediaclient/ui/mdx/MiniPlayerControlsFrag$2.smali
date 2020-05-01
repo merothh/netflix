@@ -14,24 +14,18 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;)V
     .locals 0
 
-    .prologue
-    .line 287
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$2;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 291
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$2;->calculateViewDimensions()V
 
-    .line 292
     return-void
 .end method
 
 .method private calculateViewDimensions()V
     .locals 5
 
-    .prologue
-    .line 304
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$2;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$2;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
@@ -46,7 +40,6 @@
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$2;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
-    .line 305
     invoke-static {v2}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$400(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;)Landroid/support/v7/widget/RecyclerView;
 
     move-result-object v2
@@ -59,7 +52,6 @@
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$2;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
-    .line 306
     invoke-static {v2}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$400(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;)Landroid/support/v7/widget/RecyclerView;
 
     move-result-object v2
@@ -78,7 +70,6 @@
 
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$2;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
-    .line 307
     invoke-virtual {v3}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
@@ -103,10 +94,8 @@
 
     div-int/2addr v1, v2
 
-    .line 304
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$202(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;I)I
 
-    .line 309
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$2;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$2;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
@@ -125,7 +114,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;->access$302(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;I)I
 
-    .line 310
     return-void
 .end method
 
@@ -134,8 +122,6 @@
 .method public createItemView()Landroid/view/View;
     .locals 3
 
-    .prologue
-    .line 296
     new-instance v0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$MementoRelatedView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$2;->this$0:Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
@@ -152,6 +138,5 @@
 
     invoke-direct {v0, v1, v2}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag$MementoRelatedView;-><init>(Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;Landroid/content/Context;)V
 
-    .line 297
     return-object v0
 .end method

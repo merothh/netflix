@@ -7,11 +7,8 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     return-void
 .end method
 
@@ -20,8 +17,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 40
     invoke-static {p0}, Landroid/support/v4/os/UserManagerCompat;->isUserUnlocked(Landroid/content/Context;)Z
 
     move-result v0
@@ -44,8 +39,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 54
     invoke-static {p0}, Landroid/support/v4/os/UserManagerCompat;->isUserUnlocked(Landroid/content/Context;)Z
 
     move-result v0
@@ -56,20 +49,16 @@
 .method public static isUserUnlocked(Landroid/content/Context;)Z
     .locals 1
 
-    .prologue
-    .line 64
     invoke-static {}, Landroid/support/v4/os/BuildCompat;->isAtLeastN()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 65
     invoke-static {p0}, Landroid/support/v4/os/UserManagerCompatApi24;->isUserUnlocked(Landroid/content/Context;)Z
 
     move-result v0
 
-    .line 67
     :goto_0
     return v0
 

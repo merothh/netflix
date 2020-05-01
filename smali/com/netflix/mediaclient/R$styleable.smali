@@ -1279,7 +1279,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x6
 
     const/4 v5, 0x2
@@ -1290,7 +1289,6 @@
 
     const/4 v2, 0x3
 
-    .line 7476
     const/16 v0, 0x1d
 
     new-array v0, v0, [I
@@ -1299,7 +1297,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->ActionBar:[I
 
-    .line 7882
     new-array v0, v4, [I
 
     const v1, 0x10100b3
@@ -1308,7 +1305,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->ActionBarLayout:[I
 
-    .line 7901
     new-array v0, v4, [I
 
     const v1, 0x101013f
@@ -1317,33 +1313,28 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->ActionMenuItemView:[I
 
-    .line 7912
     new-array v0, v3, [I
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->ActionMenuView:[I
 
-    .line 7935
     new-array v0, v6, [I
 
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->ActionMode:[I
 
-    .line 8019
     new-array v0, v5, [I
 
     fill-array-data v0, :array_2
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->ActivityChooserView:[I
 
-    .line 8060
     new-array v0, v2, [I
 
     fill-array-data v0, :array_3
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->AdsAttrs:[I
 
-    .line 8115
     new-array v0, v4, [I
 
     const v1, 0x1010109
@@ -1352,42 +1343,36 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->AdvancedImageView:[I
 
-    .line 8144
     new-array v0, v6, [I
 
     fill-array-data v0, :array_4
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->AlertDialog:[I
 
-    .line 8218
     new-array v0, v2, [I
 
     fill-array-data v0, :array_5
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->AppBarLayout:[I
 
-    .line 8269
     new-array v0, v5, [I
 
     fill-array-data v0, :array_6
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->AppBarLayoutStates:[I
 
-    .line 8312
     new-array v0, v5, [I
 
     fill-array-data v0, :array_7
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->AppBarLayout_Layout:[I
 
-    .line 8357
     new-array v0, v5, [I
 
     fill-array-data v0, :array_8
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->AppCompatImageView:[I
 
-    .line 8392
     const/4 v0, 0x4
 
     new-array v0, v0, [I
@@ -1396,7 +1381,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->AppCompatSeekBar:[I
 
-    .line 8469
     const/4 v0, 0x7
 
     new-array v0, v0, [I
@@ -1405,14 +1389,12 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->AppCompatTextHelper:[I
 
-    .line 8527
     new-array v0, v5, [I
 
     fill-array-data v0, :array_b
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->AppCompatTextView:[I
 
-    .line 8785
     const/16 v0, 0x73
 
     new-array v0, v0, [I
@@ -1421,7 +1403,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->AppCompatTheme:[I
 
-    .line 10157
     new-array v0, v4, [I
 
     const v1, 0x7f0100b4
@@ -1430,14 +1411,12 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->AspectRatioImageView:[I
 
-    .line 10191
     new-array v0, v2, [I
 
     fill-array-data v0, :array_d
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->BottomSheetBehavior_Layout:[I
 
-    .line 10256
     new-array v0, v4, [I
 
     const v1, 0x7f0100b8
@@ -1446,7 +1425,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->ButtonBarLayout:[I
 
-    .line 10307
     const/16 v0, 0xd
 
     new-array v0, v0, [I
@@ -1455,7 +1433,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->CardView:[I
 
-    .line 10528
     const/16 v0, 0xc
 
     new-array v0, v0, [I
@@ -1464,7 +1441,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->CircleImageView:[I
 
-    .line 10735
     const/16 v0, 0x9
 
     new-array v0, v0, [I
@@ -1473,7 +1449,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->CirclePageIndicator:[I
 
-    .line 10897
     const/16 v0, 0x10
 
     new-array v0, v0, [I
@@ -1482,35 +1457,30 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->CollapsingToolbarLayout:[I
 
-    .line 11163
     new-array v0, v5, [I
 
     fill-array-data v0, :array_12
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->CollapsingToolbarLayout_Layout:[I
 
-    .line 11212
     new-array v0, v2, [I
 
     fill-array-data v0, :array_13
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->ColorStateListItem:[I
 
-    .line 11255
     new-array v0, v2, [I
 
     fill-array-data v0, :array_14
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->CompoundButton:[I
 
-    .line 11311
     new-array v0, v5, [I
 
     fill-array-data v0, :array_15
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->CoordinatorLayout:[I
 
-    .line 11356
     const/4 v0, 0x7
 
     new-array v0, v0, [I
@@ -1519,21 +1489,18 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->CoordinatorLayout_Layout:[I
 
-    .line 11492
     new-array v0, v2, [I
 
     fill-array-data v0, :array_17
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->DesignTheme:[I
 
-    .line 11544
     new-array v0, v2, [I
 
     fill-array-data v0, :array_18
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->DownloadButton:[I
 
-    .line 11613
     const/16 v0, 0x8
 
     new-array v0, v0, [I
@@ -1542,7 +1509,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->DrawerArrowToggle:[I
 
-    .line 11766
     const/16 v0, 0x8
 
     new-array v0, v0, [I
@@ -1551,7 +1517,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->FloatingActionButton:[I
 
-    .line 11910
     new-array v0, v4, [I
 
     const v1, 0x7f010104
@@ -1560,14 +1525,12 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->FloatingActionButton_Behavior_Layout:[I
 
-    .line 11941
     new-array v0, v2, [I
 
     fill-array-data v0, :array_1b
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->FlowLayout:[I
 
-    .line 12002
     new-array v0, v4, [I
 
     const v1, 0x7f010108
@@ -1576,14 +1539,12 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->FlowLayout_LayoutParams:[I
 
-    .line 12035
     new-array v0, v2, [I
 
     fill-array-data v0, :array_1c
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->ForegroundLinearLayout:[I
 
-    .line 12086
     const/4 v0, 0x7
 
     new-array v0, v0, [I
@@ -1592,7 +1553,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->LinePageIndicator:[I
 
-    .line 12214
     const/16 v0, 0x9
 
     new-array v0, v0, [I
@@ -1601,7 +1561,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->LinearLayoutCompat:[I
 
-    .line 12324
     const/4 v0, 0x4
 
     new-array v0, v0, [I
@@ -1610,21 +1569,18 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->LinearLayoutCompat_Layout:[I
 
-    .line 12363
     new-array v0, v5, [I
 
     fill-array-data v0, :array_20
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->ListPopupWindow:[I
 
-    .line 12392
     new-array v0, v2, [I
 
     fill-array-data v0, :array_21
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->LoadingImageView:[I
 
-    .line 12479
     const/16 v0, 0xf
 
     new-array v0, v0, [I
@@ -1633,21 +1589,18 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->MagicTextView:[I
 
-    .line 12712
     new-array v0, v2, [I
 
     fill-array-data v0, :array_23
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->MediaRouteButton:[I
 
-    .line 12757
     new-array v0, v6, [I
 
     fill-array-data v0, :array_24
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->MenuGroup:[I
 
-    .line 12839
     const/16 v0, 0x11
 
     new-array v0, v0, [I
@@ -1656,7 +1609,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->MenuItem:[I
 
-    .line 13008
     const/16 v0, 0x9
 
     new-array v0, v0, [I
@@ -1665,7 +1617,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->MenuView:[I
 
-    .line 13107
     const/16 v0, 0xa
 
     new-array v0, v0, [I
@@ -1674,7 +1625,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->NavigationView:[I
 
-    .line 13240
     const/16 v0, 0x8
 
     new-array v0, v0, [I
@@ -1683,14 +1633,12 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->NetflixButton:[I
 
-    .line 13368
     new-array v0, v2, [I
 
     fill-array-data v0, :array_29
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->PopupWindow:[I
 
-    .line 13407
     new-array v0, v4, [I
 
     const v1, 0x7f010137
@@ -1699,21 +1647,18 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->PopupWindowBackgroundState:[I
 
-    .line 13444
     new-array v0, v6, [I
 
     fill-array-data v0, :array_2a
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->RecyclerView:[I
 
-    .line 13536
     new-array v0, v6, [I
 
     fill-array-data v0, :array_2b
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->RoundedImageView:[I
 
-    .line 13631
     new-array v0, v4, [I
 
     const v1, 0x7f010141
@@ -1722,7 +1667,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->ScrimInsetsFrameLayout:[I
 
-    .line 13656
     new-array v0, v4, [I
 
     const v1, 0x7f010142
@@ -1731,7 +1675,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->ScrollingViewBehavior_Layout:[I
 
-    .line 13717
     const/16 v0, 0x11
 
     new-array v0, v0, [I
@@ -1740,14 +1683,12 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->SearchView:[I
 
-    .line 13904
     new-array v0, v2, [I
 
     fill-array-data v0, :array_2d
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->SimpleStrokedTextView:[I
 
-    .line 13969
     const/4 v0, 0x5
 
     new-array v0, v0, [I
@@ -1756,14 +1697,12 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->SlidingUpPanelLayout:[I
 
-    .line 14058
     new-array v0, v2, [I
 
     fill-array-data v0, :array_2f
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->SnackbarLayout:[I
 
-    .line 14117
     const/4 v0, 0x5
 
     new-array v0, v0, [I
@@ -1772,14 +1711,12 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->Spinner:[I
 
-    .line 14167
     new-array v0, v5, [I
 
     fill-array-data v0, :array_31
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->StrokeTextView:[I
 
-    .line 14237
     const/16 v0, 0xe
 
     new-array v0, v0, [I
@@ -1788,14 +1725,12 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->SwitchCompat:[I
 
-    .line 14443
     new-array v0, v2, [I
 
     fill-array-data v0, :array_33
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->TabItem:[I
 
-    .line 14504
     const/16 v0, 0x10
 
     new-array v0, v0, [I
@@ -1804,7 +1739,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->TabLayout:[I
 
-    .line 14779
     const/16 v0, 0x9
 
     new-array v0, v0, [I
@@ -1813,7 +1747,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->TextAppearance:[I
 
-    .line 14883
     const/16 v0, 0x10
 
     new-array v0, v0, [I
@@ -1822,7 +1755,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->TextInputLayout:[I
 
-    .line 15122
     const/16 v0, 0xf
 
     new-array v0, v0, [I
@@ -1831,7 +1763,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->TitlePageIndicator:[I
 
-    .line 15403
     const/16 v0, 0x1d
 
     new-array v0, v0, [I
@@ -1840,7 +1771,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->Toolbar:[I
 
-    .line 15820
     new-array v0, v4, [I
 
     const v1, 0x7f0101a0
@@ -1849,7 +1779,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->TopCropImageView:[I
 
-    .line 15857
     const/4 v0, 0x5
 
     new-array v0, v0, [I
@@ -1858,7 +1787,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->UnderlinePageIndicator:[I
 
-    .line 15934
     new-array v0, v4, [I
 
     const v1, 0x7f0101a4
@@ -1867,7 +1795,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->UnderlineTextView:[I
 
-    .line 15969
     const/4 v0, 0x5
 
     new-array v0, v0, [I
@@ -1876,21 +1803,18 @@
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->View:[I
 
-    .line 16041
     new-array v0, v2, [I
 
     fill-array-data v0, :array_3b
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->ViewBackgroundHelper:[I
 
-    .line 16105
     new-array v0, v6, [I
 
     fill-array-data v0, :array_3c
 
     sput-object v0, Lcom/netflix/mediaclient/R$styleable;->ViewPagerIndicator:[I
 
-    .line 16183
     new-array v0, v2, [I
 
     fill-array-data v0, :array_3d
@@ -1899,7 +1823,6 @@
 
     return-void
 
-    .line 7476
     nop
 
     :array_0
@@ -1935,7 +1858,6 @@
         0x7f010072
     .end array-data
 
-    .line 7935
     :array_1
     .array-data 4
         0x7f010002
@@ -1946,14 +1868,12 @@
         0x7f01002e
     .end array-data
 
-    .line 8019
     :array_2
     .array-data 4
         0x7f01002f
         0x7f010030
     .end array-data
 
-    .line 8060
     :array_3
     .array-data 4
         0x7f010031
@@ -1961,7 +1881,6 @@
         0x7f010033
     .end array-data
 
-    .line 8144
     :array_4
     .array-data 4
         0x10100f2
@@ -1972,7 +1891,6 @@
         0x7f010038
     .end array-data
 
-    .line 8218
     :array_5
     .array-data 4
         0x10100d4
@@ -1980,28 +1898,24 @@
         0x7f010039
     .end array-data
 
-    .line 8269
     :array_6
     .array-data 4
         0x7f01003a
         0x7f01003b
     .end array-data
 
-    .line 8312
     :array_7
     .array-data 4
         0x7f01003c
         0x7f01003d
     .end array-data
 
-    .line 8357
     :array_8
     .array-data 4
         0x1010119
         0x7f01003e
     .end array-data
 
-    .line 8392
     :array_9
     .array-data 4
         0x1010142
@@ -2010,7 +1924,6 @@
         0x7f010041
     .end array-data
 
-    .line 8469
     :array_a
     .array-data 4
         0x1010034
@@ -2022,14 +1935,12 @@
         0x1010393
     .end array-data
 
-    .line 8527
     :array_b
     .array-data 4
         0x1010034
         0x7f010042
     .end array-data
 
-    .line 8785
     :array_c
     .array-data 4
         0x1010057
@@ -2149,7 +2060,6 @@
         0x7f0100b3
     .end array-data
 
-    .line 10191
     :array_d
     .array-data 4
         0x7f0100b5
@@ -2157,7 +2067,6 @@
         0x7f0100b7
     .end array-data
 
-    .line 10307
     :array_e
     .array-data 4
         0x101013f
@@ -2175,7 +2084,6 @@
         0x7f0100c3
     .end array-data
 
-    .line 10528
     :array_f
     .array-data 4
         0x7f0100c4
@@ -2192,7 +2100,6 @@
         0x7f0100cf
     .end array-data
 
-    .line 10735
     :array_10
     .array-data 4
         0x10100c4
@@ -2206,7 +2113,6 @@
         0x7f0100d4
     .end array-data
 
-    .line 10897
     :array_11
     .array-data 4
         0x7f010011
@@ -2227,14 +2133,12 @@
         0x7f0100e3
     .end array-data
 
-    .line 11163
     :array_12
     .array-data 4
         0x7f0100e4
         0x7f0100e5
     .end array-data
 
-    .line 11212
     :array_13
     .array-data 4
         0x10101a5
@@ -2242,7 +2146,6 @@
         0x7f0100e6
     .end array-data
 
-    .line 11255
     :array_14
     .array-data 4
         0x1010107
@@ -2250,14 +2153,12 @@
         0x7f0100e8
     .end array-data
 
-    .line 11311
     :array_15
     .array-data 4
         0x7f0100e9
         0x7f0100ea
     .end array-data
 
-    .line 11356
     :array_16
     .array-data 4
         0x10100b3
@@ -2269,7 +2170,6 @@
         0x7f0100f0
     .end array-data
 
-    .line 11492
     :array_17
     .array-data 4
         0x7f0100f1
@@ -2277,7 +2177,6 @@
         0x7f0100f3
     .end array-data
 
-    .line 11544
     :array_18
     .array-data 4
         0x7f0100f4
@@ -2285,7 +2184,6 @@
         0x7f0100f6
     .end array-data
 
-    .line 11613
     :array_19
     .array-data 4
         0x7f0100f7
@@ -2298,7 +2196,6 @@
         0x7f0100fe
     .end array-data
 
-    .line 11766
     :array_1a
     .array-data 4
         0x7f01002c
@@ -2311,7 +2208,6 @@
         0x7f0101a9
     .end array-data
 
-    .line 11941
     :array_1b
     .array-data 4
         0x7f010105
@@ -2319,7 +2215,6 @@
         0x7f010107
     .end array-data
 
-    .line 12035
     :array_1c
     .array-data 4
         0x1010109
@@ -2327,7 +2222,6 @@
         0x7f010109
     .end array-data
 
-    .line 12086
     :array_1d
     .array-data 4
         0x10100d4
@@ -2339,7 +2233,6 @@
         0x7f01010b
     .end array-data
 
-    .line 12214
     :array_1e
     .array-data 4
         0x10100af
@@ -2353,7 +2246,6 @@
         0x7f01010e
     .end array-data
 
-    .line 12324
     :array_1f
     .array-data 4
         0x10100b3
@@ -2362,14 +2254,12 @@
         0x1010181
     .end array-data
 
-    .line 12363
     :array_20
     .array-data 4
         0x10102ac
         0x10102ad
     .end array-data
 
-    .line 12392
     :array_21
     .array-data 4
         0x7f01010f
@@ -2377,7 +2267,6 @@
         0x7f010111
     .end array-data
 
-    .line 12479
     :array_22
     .array-data 4
         0x7f010112
@@ -2397,7 +2286,6 @@
         0x7f010120
     .end array-data
 
-    .line 12712
     :array_23
     .array-data 4
         0x101013f
@@ -2405,7 +2293,6 @@
         0x7f010121
     .end array-data
 
-    .line 12757
     :array_24
     .array-data 4
         0x101000e
@@ -2416,7 +2303,6 @@
         0x10101e0
     .end array-data
 
-    .line 12839
     :array_25
     .array-data 4
         0x1010002
@@ -2438,7 +2324,6 @@
         0x7f010125
     .end array-data
 
-    .line 13008
     :array_26
     .array-data 4
         0x10100ae
@@ -2452,7 +2337,6 @@
         0x7f010127
     .end array-data
 
-    .line 13107
     :array_27
     .array-data 4
         0x10100d4
@@ -2467,7 +2351,6 @@
         0x7f01012d
     .end array-data
 
-    .line 13240
     :array_28
     .array-data 4
         0x7f01012e
@@ -2480,7 +2363,6 @@
         0x7f010135
     .end array-data
 
-    .line 13368
     :array_29
     .array-data 4
         0x1010176
@@ -2488,7 +2370,6 @@
         0x7f010136
     .end array-data
 
-    .line 13444
     :array_2a
     .array-data 4
         0x10100c4
@@ -2499,7 +2380,6 @@
         0x7f01013b
     .end array-data
 
-    .line 13536
     :array_2b
     .array-data 4
         0x101011d
@@ -2510,7 +2390,6 @@
         0x7f010140
     .end array-data
 
-    .line 13717
     :array_2c
     .array-data 4
         0x10100da
@@ -2532,7 +2411,6 @@
         0x7f01014f
     .end array-data
 
-    .line 13904
     :array_2d
     .array-data 4
         0x7f010150
@@ -2540,7 +2418,6 @@
         0x7f010152
     .end array-data
 
-    .line 13969
     :array_2e
     .array-data 4
         0x7f010153
@@ -2550,7 +2427,6 @@
         0x7f010157
     .end array-data
 
-    .line 14058
     :array_2f
     .array-data 4
         0x101011f
@@ -2558,7 +2434,6 @@
         0x7f010158
     .end array-data
 
-    .line 14117
     :array_30
     .array-data 4
         0x10100b2
@@ -2568,14 +2443,12 @@
         0x7f01002d
     .end array-data
 
-    .line 14167
     :array_31
     .array-data 4
         0x7f010159
         0x7f01015a
     .end array-data
 
-    .line 14237
     :array_32
     .array-data 4
         0x1010124
@@ -2594,7 +2467,6 @@
         0x7f010165
     .end array-data
 
-    .line 14443
     :array_33
     .array-data 4
         0x1010002
@@ -2602,7 +2474,6 @@
         0x101014f
     .end array-data
 
-    .line 14504
     :array_34
     .array-data 4
         0x7f010166
@@ -2623,7 +2494,6 @@
         0x7f010175
     .end array-data
 
-    .line 14779
     :array_35
     .array-data 4
         0x1010095
@@ -2637,7 +2507,6 @@
         0x7f010042
     .end array-data
 
-    .line 14883
     :array_36
     .array-data 4
         0x101009a
@@ -2658,7 +2527,6 @@
         0x7f010183
     .end array-data
 
-    .line 15122
     :array_37
     .array-data 4
         0x1010095
@@ -2678,7 +2546,6 @@
         0x7f01018e
     .end array-data
 
-    .line 15403
     :array_38
     .array-data 4
         0x10100af
@@ -2712,7 +2579,6 @@
         0x7f01019f
     .end array-data
 
-    .line 15857
     :array_39
     .array-data 4
         0x10100d4
@@ -2722,7 +2588,6 @@
         0x7f0101a3
     .end array-data
 
-    .line 15969
     :array_3a
     .array-data 4
         0x1010000
@@ -2732,7 +2597,6 @@
         0x7f0101a7
     .end array-data
 
-    .line 16041
     :array_3b
     .array-data 4
         0x10100d4
@@ -2740,7 +2604,6 @@
         0x7f0101a9
     .end array-data
 
-    .line 16105
     :array_3c
     .array-data 4
         0x7f0101aa
@@ -2751,7 +2614,6 @@
         0x7f0101af
     .end array-data
 
-    .line 16183
     :array_3d
     .array-data 4
         0x10100d0
@@ -2763,8 +2625,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 7409
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

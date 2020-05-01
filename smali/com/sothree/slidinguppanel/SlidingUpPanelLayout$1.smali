@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 536
     invoke-static {}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$SlideState;->values()[Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$SlideState;
 
     move-result-object v0

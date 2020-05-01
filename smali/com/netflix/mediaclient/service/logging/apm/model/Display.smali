@@ -41,66 +41,48 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 70
     return-void
 .end method
 
 .method public constructor <init>(Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Lcom/netflix/mediaclient/service/logging/apm/model/Display$ScanMode;I)V
     .locals 0
 
-    .prologue
-    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 81
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->connector:Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;
 
-    .line 82
     iput-object p2, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->aspectRatio:Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;
 
-    .line 83
     iput-object p3, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->width:Ljava/lang/Integer;
 
-    .line 84
     iput-object p4, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->height:Ljava/lang/Integer;
 
-    .line 85
     iput-object p5, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->refreshRate:Ljava/lang/Integer;
 
-    .line 86
     iput-object p6, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->scanMode:Lcom/netflix/mediaclient/service/logging/apm/model/Display$ScanMode;
 
-    .line 87
     iput p7, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->horizontalDpi:I
 
-    .line 88
     return-void
 .end method
 
 .method public static createInstance(Lorg/json/JSONObject;)Lcom/netflix/mediaclient/service/logging/apm/model/Display;
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 120
     if-nez p0, :cond_0
 
-    .line 137
     :goto_0
     return-object v0
 
-    .line 124
     :cond_0
     new-instance v1, Lcom/netflix/mediaclient/service/logging/apm/model/Display;
 
     invoke-direct {v1}, Lcom/netflix/mediaclient/service/logging/apm/model/Display;-><init>()V
 
-    .line 125
     const-string/jumbo v2, "refreshRate"
 
     invoke-static {p0, v2, v0}, Lcom/netflix/mediaclient/util/JsonUtils;->getIntegerObject(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Integer;)Ljava/lang/Integer;
@@ -109,7 +91,6 @@
 
     iput-object v2, v1, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->refreshRate:Ljava/lang/Integer;
 
-    .line 126
     const-string/jumbo v2, "aspectRatio"
 
     invoke-static {p0, v2, v0}, Lcom/netflix/mediaclient/util/JsonUtils;->getString(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -122,17 +103,14 @@
 
     iput-object v2, v1, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->aspectRatio:Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;
 
-    .line 127
     const-string/jumbo v2, "resolution"
 
     invoke-static {p0, v2, v0}, Lcom/netflix/mediaclient/util/JsonUtils;->getJSONObject(Lorg/json/JSONObject;Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object v2
 
-    .line 128
     if-eqz v2, :cond_1
 
-    .line 129
     const-string/jumbo v3, "width"
 
     invoke-static {v2, v3, v0}, Lcom/netflix/mediaclient/util/JsonUtils;->getIntegerObject(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Integer;)Ljava/lang/Integer;
@@ -141,7 +119,6 @@
 
     iput-object v3, v1, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->width:Ljava/lang/Integer;
 
-    .line 130
     const-string/jumbo v3, "height"
 
     invoke-static {v2, v3, v0}, Lcom/netflix/mediaclient/util/JsonUtils;->getIntegerObject(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Integer;)Ljava/lang/Integer;
@@ -150,7 +127,6 @@
 
     iput-object v2, v1, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->height:Ljava/lang/Integer;
 
-    .line 132
     :cond_1
     const-string/jumbo v2, "connector"
 
@@ -158,10 +134,8 @@
 
     move-result-object v0
 
-    .line 133
     if-eqz v0, :cond_2
 
-    .line 134
     invoke-static {v0}, Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;->valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;
 
     move-result-object v0
@@ -171,7 +145,6 @@
     :cond_2
     move-object v0, v1
 
-    .line 137
     goto :goto_0
 .end method
 
@@ -180,8 +153,6 @@
 .method public getConnector()Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;
     .locals 1
 
-    .prologue
-    .line 199
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->connector:Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;
 
     return-object v0
@@ -190,8 +161,6 @@
 .method public getHeight()Ljava/lang/Integer;
     .locals 1
 
-    .prologue
-    .line 217
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->height:Ljava/lang/Integer;
 
     return-object v0
@@ -200,8 +169,6 @@
 .method public getRefreshRate()Ljava/lang/Integer;
     .locals 1
 
-    .prologue
-    .line 226
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->refreshRate:Ljava/lang/Integer;
 
     return-object v0
@@ -210,8 +177,6 @@
 .method public getScanMode()Lcom/netflix/mediaclient/service/logging/apm/model/Display$ScanMode;
     .locals 1
 
-    .prologue
-    .line 235
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->scanMode:Lcom/netflix/mediaclient/service/logging/apm/model/Display$ScanMode;
 
     return-object v0
@@ -220,8 +185,6 @@
 .method public getWidth()Ljava/lang/Integer;
     .locals 1
 
-    .prologue
-    .line 208
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->width:Ljava/lang/Integer;
 
     return-object v0
@@ -230,18 +193,14 @@
 .method public toJSONObject()Lorg/json/JSONObject;
     .locals 4
 
-    .prologue
-    .line 92
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    .line 93
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->connector:Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;
 
     if-eqz v1, :cond_0
 
-    .line 94
     const-string/jumbo v1, "connector"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->connector:Lcom/netflix/mediaclient/service/logging/apm/model/Display$Connector;
@@ -252,13 +211,11 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 96
     :cond_0
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->aspectRatio:Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;
 
     if-eqz v1, :cond_1
 
-    .line 97
     const-string/jumbo v1, "aspectRatio"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->aspectRatio:Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;
@@ -269,13 +226,11 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 99
     :cond_1
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->scanMode:Lcom/netflix/mediaclient/service/logging/apm/model/Display$ScanMode;
 
     if-eqz v1, :cond_2
 
-    .line 100
     const-string/jumbo v1, "scanMode"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->scanMode:Lcom/netflix/mediaclient/service/logging/apm/model/Display$ScanMode;
@@ -286,7 +241,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 102
     :cond_2
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->width:Ljava/lang/Integer;
 
@@ -296,17 +250,14 @@
 
     if-eqz v1, :cond_3
 
-    .line 103
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
-    .line 104
     const-string/jumbo v2, "resolution"
 
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 105
     const-string/jumbo v2, "height"
 
     iget-object v3, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->height:Ljava/lang/Integer;
@@ -317,7 +268,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 106
     const-string/jumbo v2, "width"
 
     iget-object v3, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->width:Ljava/lang/Integer;
@@ -328,13 +278,11 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 109
     :cond_3
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->refreshRate:Ljava/lang/Integer;
 
     if-eqz v1, :cond_4
 
-    .line 110
     const-string/jumbo v1, "refreshRate"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display;->refreshRate:Ljava/lang/Integer;
@@ -345,7 +293,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 113
     :cond_4
     const-string/jumbo v1, "horizontalDpi"
 
@@ -353,6 +300,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 115
     return-object v0
 .end method

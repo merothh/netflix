@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflinePlayableViewData;)V
     .locals 0
 
-    .prologue
-    .line 63
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper$3;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper$3;->val$offlinePlayableViewData:Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflinePlayableViewData;
@@ -32,18 +30,14 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 66
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper$3;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;->access$300(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;)V
 
-    .line 67
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper$3;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;->access$000(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;)V
 
-    .line 68
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper$3;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;->access$100(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper;)Ljava/util/List;
@@ -67,14 +61,12 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListener;
 
-    .line 69
     iget-object v2, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListenerHelper$3;->val$offlinePlayableViewData:Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflinePlayableViewData;
 
     invoke-interface {v0, v2}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListener;->onDownloadCompleted(Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflinePlayableViewData;)V
 
     goto :goto_0
 
-    .line 71
     :cond_0
     return-void
 .end method

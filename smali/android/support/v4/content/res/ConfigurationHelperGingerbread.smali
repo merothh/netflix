@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,8 +15,6 @@
 .method static getDensityDpi(Landroid/content/res/Resources;)I
     .locals 1
 
-    .prologue
-    .line 42
     invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     move-result-object v0
@@ -31,13 +27,10 @@
 .method static getScreenHeightDp(Landroid/content/res/Resources;)I
     .locals 2
 
-    .prologue
-    .line 27
     invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     move-result-object v0
 
-    .line 28
     iget v1, v0, Landroid/util/DisplayMetrics;->heightPixels:I
 
     int-to-float v1, v1
@@ -54,13 +47,10 @@
 .method static getScreenWidthDp(Landroid/content/res/Resources;)I
     .locals 2
 
-    .prologue
-    .line 32
     invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     move-result-object v0
 
-    .line 33
     iget v1, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
     int-to-float v1, v1
@@ -77,8 +67,6 @@
 .method static getSmallestScreenWidthDp(Landroid/content/res/Resources;)I
     .locals 2
 
-    .prologue
-    .line 38
     invoke-static {p0}, Landroid/support/v4/content/res/ConfigurationHelperGingerbread;->getScreenWidthDp(Landroid/content/res/Resources;)I
 
     move-result v0

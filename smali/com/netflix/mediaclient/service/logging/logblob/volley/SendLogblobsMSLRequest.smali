@@ -32,8 +32,6 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
-    .line 36
     new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
     const-wide/16 v2, 0x0
@@ -61,11 +59,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 44
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/msl/volley/ApiFalkorMSLVolleyRequest;-><init>()V
 
-    .line 46
     sget-object v0, Lcom/netflix/mediaclient/service/logging/logblob/volley/SendLogblobsMSLRequest;->sLogSequenceNumber:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
@@ -80,25 +75,20 @@
 
     move-object v5, p2
 
-    .line 47
     invoke-direct/range {v0 .. v5}, Lcom/netflix/mediaclient/service/logging/logblob/volley/SendLogblobsMSLRequest;->createLogblob(Landroid/content/Context;JLcom/netflix/mediaclient/servicemgr/Logblob$CommonParams;Ljava/util/List;)Lorg/json/JSONObject;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/logging/logblob/volley/SendLogblobsMSLRequest;->mLogblobs:Lorg/json/JSONObject;
 
-    .line 48
     iput-object p4, p0, Lcom/netflix/mediaclient/service/logging/logblob/volley/SendLogblobsMSLRequest;->responseCallback:Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl$LogblobsSentCallback;
 
-    .line 49
     return-void
 .end method
 
 .method private convertToServerEpoch(J)J
     .locals 1
 
-    .prologue
-    .line 59
     return-wide p1
 .end method
 
@@ -118,18 +108,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 64
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
-    .line 65
     new-instance v3, Lorg/json/JSONArray;
 
     invoke-direct {v3}, Lorg/json/JSONArray;-><init>()V
 
-    .line 67
     const/4 v0, 0x0
 
     move v1, v0
@@ -141,7 +127,6 @@
 
     if-ge v1, v0, :cond_0
 
-    .line 68
     invoke-interface {p5, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -152,7 +137,6 @@
 
     move-result-object v4
 
-    .line 71
     const-string/jumbo v5, "clienttime"
 
     invoke-interface {p5, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -171,47 +155,40 @@
 
     invoke-virtual {v4, v5, v6, v7}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 72
     const-string/jumbo v0, "snum"
 
     invoke-virtual {v4, v0, p2, p3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 73
     const-string/jumbo v0, "lnum"
 
     add-int/lit8 v5, v1, 0x1
 
     invoke-virtual {v4, v0, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 74
     const-string/jumbo v0, "esn"
 
     iget-object v5, p4, Lcom/netflix/mediaclient/servicemgr/Logblob$CommonParams;->esn:Ljava/lang/String;
 
     invoke-virtual {v4, v0, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 76
     const-string/jumbo v0, "devmod"
 
     iget-object v5, p4, Lcom/netflix/mediaclient/servicemgr/Logblob$CommonParams;->deviceModel:Ljava/lang/String;
 
     invoke-virtual {v4, v0, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 77
     const-string/jumbo v0, "lver"
 
     const-string/jumbo v5, "2013.2"
 
     invoke-virtual {v4, v0, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 78
     const-string/jumbo v0, "sdkver"
 
     const-string/jumbo v5, "4.0.4"
 
     invoke-virtual {v4, v0, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 79
     const-string/jumbo v0, "platformVersion"
 
     invoke-static {p1}, Lcom/netflix/mediaclient/util/AndroidManifestUtils;->getVersion(Landroid/content/Context;)Ljava/lang/String;
@@ -220,7 +197,6 @@
 
     invoke-virtual {v4, v0, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 80
     const-string/jumbo v0, "platformBuildNum"
 
     invoke-static {p1}, Lcom/netflix/mediaclient/util/AndroidManifestUtils;->getVersionCode(Landroid/content/Context;)I
@@ -229,14 +205,12 @@
 
     invoke-virtual {v4, v0, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 81
     const-string/jumbo v0, "platformType"
 
     const-string/jumbo v5, "Android Sidecar"
 
     invoke-virtual {v4, v0, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 82
     const-string/jumbo v0, "uiver"
 
     invoke-static {p1}, Lcom/netflix/mediaclient/util/AndroidManifestUtils;->getVersion(Landroid/content/Context;)Ljava/lang/String;
@@ -245,37 +219,31 @@
 
     invoke-virtual {v4, v0, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 83
     const-string/jumbo v0, "via"
 
     const-string/jumbo v5, "br"
 
     invoke-virtual {v4, v0, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 84
     const-string/jumbo v0, "fingerprint"
 
     sget-object v5, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
 
     invoke-virtual {v4, v0, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 87
     invoke-virtual {v3, v4}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
-    .line 67
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto/16 :goto_0
 
-    .line 90
     :cond_0
     const-string/jumbo v0, "entries"
 
     invoke-virtual {v2, v0, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 92
     return-object v2
 .end method
 
@@ -293,8 +261,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 116
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -325,18 +291,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 99
     invoke-super {p0}, Lcom/netflix/mediaclient/service/msl/volley/ApiFalkorMSLVolleyRequest;->getParams()Ljava/util/Map;
 
     move-result-object v1
 
-    .line 101
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
-    .line 103
     :try_start_0
     const-string/jumbo v0, "method"
 
@@ -344,7 +306,6 @@
 
     invoke-virtual {v2, v0, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 104
     const-string/jumbo v0, "logblobs"
 
     iget-object v3, p0, Lcom/netflix/mediaclient/service/logging/logblob/volley/SendLogblobsMSLRequest;->mLogblobs:Lorg/json/JSONObject;
@@ -353,7 +314,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 110
     :goto_0
     const-string/jumbo v0, "bladerunnerParams"
 
@@ -363,14 +323,11 @@
 
     invoke-interface {v1, v0, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 111
     return-object v1
 
-    .line 106
     :catch_0
     move-exception v0
 
-    .line 107
     const-string/jumbo v3, "nf_msl_volley_SendLogblobs"
 
     const-string/jumbo v4, "error creating logblob params"
@@ -383,22 +340,17 @@
 .method protected onFailure(Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 139
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/logblob/volley/SendLogblobsMSLRequest;->responseCallback:Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl$LogblobsSentCallback;
 
     if-eqz v0, :cond_0
 
-    .line 140
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/logblob/volley/SendLogblobsMSLRequest;->responseCallback:Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl$LogblobsSentCallback;
 
     invoke-interface {v0, p1}, Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl$LogblobsSentCallback;->onLogblobsSent(Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 144
     :goto_0
     return-void
 
-    .line 142
     :cond_0
     const-string/jumbo v0, "nf_msl_volley_SendLogblobs"
 
@@ -412,8 +364,6 @@
 .method protected bridge synthetic onSuccess(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 29
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/logging/logblob/volley/SendLogblobsMSLRequest;->onSuccess(Ljava/lang/String;)V
@@ -424,24 +374,19 @@
 .method protected onSuccess(Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 130
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/logblob/volley/SendLogblobsMSLRequest;->responseCallback:Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl$LogblobsSentCallback;
 
     if-eqz v0, :cond_0
 
-    .line 131
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/logblob/volley/SendLogblobsMSLRequest;->responseCallback:Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl$LogblobsSentCallback;
 
     sget-object v1, Lcom/netflix/mediaclient/android/app/CommonStatus;->OK:Lcom/netflix/mediaclient/android/app/NetflixImmutableStatus;
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/service/logging/LogblobLoggingImpl$LogblobsSentCallback;->onLogblobsSent(Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 135
     :goto_0
     return-void
 
-    .line 133
     :cond_0
     const-string/jumbo v0, "nf_msl_volley_SendLogblobs"
 
@@ -455,8 +400,6 @@
 .method protected bridge synthetic parseFalkorResponse(Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 29
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/logging/logblob/volley/SendLogblobsMSLRequest;->parseFalkorResponse(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -467,15 +410,12 @@
 .method protected parseFalkorResponse(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 122
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 123
     const-string/jumbo v0, "nf_msl_volley_SendLogblobs"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -498,7 +438,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     :cond_0
     return-object p1
 .end method

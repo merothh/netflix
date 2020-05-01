@@ -38,18 +38,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 61
     invoke-direct {p0}, Lcom/netflix/model/leafs/advisory/Advisory;-><init>()V
 
-    .line 47
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/model/leafs/advisory/ContentAdvisory;->advisories:Ljava/util/ArrayList;
 
-    .line 63
     return-void
 .end method
 
@@ -58,18 +54,14 @@
 .method public getData(Lcom/google/gson/JsonElement;)Lcom/google/gson/JsonObject;
     .locals 6
 
-    .prologue
-    .line 72
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v3
 
-    .line 73
     sget-boolean v0, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v0, :cond_0
 
-    .line 74
     const-string/jumbo v0, "ContentAdvisory"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -92,7 +84,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     :cond_0
     invoke-virtual {v3}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -115,14 +106,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 77
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/gson/JsonElement;
 
-    .line 78
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -145,7 +134,6 @@
 
     goto :goto_0
 
-    .line 79
     :pswitch_0
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -155,7 +143,6 @@
 
     goto :goto_0
 
-    .line 78
     :sswitch_0
     const-string/jumbo v5, "rating"
 
@@ -208,7 +195,6 @@
 
     goto :goto_1
 
-    .line 80
     :pswitch_1
     new-instance v0, Ljava/util/ArrayList;
 
@@ -226,7 +212,6 @@
 
     goto :goto_0
 
-    .line 81
     :pswitch_2
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -236,7 +221,6 @@
 
     goto :goto_0
 
-    .line 82
     :pswitch_3
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -246,11 +230,9 @@
 
     goto :goto_0
 
-    .line 85
     :cond_2
     return-object v3
 
-    .line 78
     nop
 
     :sswitch_data_0
@@ -273,8 +255,6 @@
 .method public getMessage(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 53
     iget-object v0, p0, Lcom/netflix/model/leafs/advisory/ContentAdvisory;->i18nRating:Ljava/lang/String;
 
     return-object v0
@@ -283,8 +263,6 @@
 .method public getSecondaryMessage(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 58
     iget-object v0, p0, Lcom/netflix/model/leafs/advisory/ContentAdvisory;->i18nAdvisories:Ljava/lang/String;
 
     return-object v0
@@ -293,8 +271,6 @@
 .method public getType()Lcom/netflix/model/leafs/advisory/Advisory$Type;
     .locals 1
 
-    .prologue
-    .line 67
     sget-object v0, Lcom/netflix/model/leafs/advisory/Advisory$Type;->CONTENT_ADVISORY:Lcom/netflix/model/leafs/advisory/Advisory$Type;
 
     return-object v0

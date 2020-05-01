@@ -35,14 +35,10 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;)V
     .locals 1
 
-    .prologue
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mOwner:Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;
 
-    .line 50
     const v0, 0x7f0f0150
 
     invoke-virtual {p1, v0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->findViewById(I)Landroid/view/View;
@@ -53,7 +49,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mTitle:Landroid/widget/TextView;
 
-    .line 51
     const v0, 0x7f0f0151
 
     invoke-virtual {p1, v0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->findViewById(I)Landroid/view/View;
@@ -64,7 +59,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mBody:Landroid/widget/TextView;
 
-    .line 52
     const v0, 0x7f0f0153
 
     invoke-virtual {p1, v0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->findViewById(I)Landroid/view/View;
@@ -75,7 +69,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mContinue:Landroid/widget/TextView;
 
-    .line 53
     const v0, 0x7f0f0155
 
     invoke-virtual {p1, v0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->findViewById(I)Landroid/view/View;
@@ -86,7 +79,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mPlans:Landroid/widget/TextView;
 
-    .line 54
     const v0, 0x7f0f0156
 
     invoke-virtual {p1, v0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->findViewById(I)Landroid/view/View;
@@ -97,7 +89,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mSkip:Landroid/widget/TextView;
 
-    .line 55
     const v0, 0x7f0f0157
 
     invoke-virtual {p1, v0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->findViewById(I)Landroid/view/View;
@@ -108,7 +99,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mAccount:Landroid/widget/TextView;
 
-    .line 56
     const v0, 0x7f0f014c
 
     invoke-virtual {p1, v0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->findViewById(I)Landroid/view/View;
@@ -119,7 +109,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mSkipNowButton:Landroid/widget/LinearLayout;
 
-    .line 57
     const v0, 0x7f0f0154
 
     invoke-virtual {p1, v0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->findViewById(I)Landroid/view/View;
@@ -130,15 +119,12 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mSeeOtherPlansHeader:Landroid/widget/LinearLayout;
 
-    .line 58
     return-void
 .end method
 
 .method public static buildAccountString(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;)Landroid/text/SpannableString;
     .locals 5
 
-    .prologue
-    .line 103
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->footerText()Ljava/lang/String;
 
     move-result-object v0
@@ -159,15 +145,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 104
     :cond_0
     const/4 v0, 0x0
 
-    .line 145
     :goto_0
     return-object v0
 
-    .line 107
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -193,7 +176,6 @@
 
     move-result-object v1
 
-    .line 108
     new-instance v0, Landroid/text/SpannableString;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -202,12 +184,10 @@
 
     invoke-direct {v0, v1}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 110
     new-instance v1, Lcom/netflix/mediaclient/ui/ums/EogLandingPage$1;
 
     invoke-direct {v1, p0}, Lcom/netflix/mediaclient/ui/ums/EogLandingPage$1;-><init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;)V
 
-    .line 144
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->footerText()Ljava/lang/String;
 
     move-result-object v2
@@ -234,12 +214,10 @@
 .method public initUi()V
     .locals 9
 
-    .prologue
     const/16 v8, 0x8
 
     const/4 v6, 0x1
 
-    .line 62
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mOwner:Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->canProceed()Z
@@ -248,12 +226,10 @@
 
     if-nez v0, :cond_1
 
-    .line 100
     :cond_0
     :goto_0
     return-void
 
-    .line 66
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mOwner:Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;
 
@@ -261,7 +237,6 @@
 
     move-result-object v7
 
-    .line 67
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mTitle:Landroid/widget/TextView;
 
     invoke-virtual {v7}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->title()Ljava/lang/String;
@@ -270,7 +245,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 68
     invoke-virtual {v7}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->body()Ljava/lang/String;
 
     move-result-object v0
@@ -281,7 +255,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 69
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mBody:Landroid/widget/TextView;
 
     invoke-virtual {v7}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->body()Ljava/lang/String;
@@ -294,7 +267,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 71
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mContinue:Landroid/widget/TextView;
 
@@ -304,7 +276,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 72
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mPlans:Landroid/widget/TextView;
 
     invoke-virtual {v7}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->seeOtherPlansText()Ljava/lang/String;
@@ -313,7 +284,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 73
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mSkip:Landroid/widget/TextView;
 
     invoke-virtual {v7}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->skipBtnText()Ljava/lang/String;
@@ -322,7 +292,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 74
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mAccount:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mOwner:Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;
@@ -333,7 +302,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 75
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mAccount:Landroid/widget/TextView;
 
     invoke-static {}, Landroid/text/method/LinkMovementMethod;->getInstance()Landroid/text/method/MovementMethod;
@@ -342,7 +310,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
 
-    .line 77
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mOwner:Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;
 
     invoke-virtual {v7}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->isBlocking()Z
@@ -355,12 +322,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 78
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mSkipNowButton:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v8}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 81
     :cond_3
     invoke-static {v7}, Lcom/netflix/mediaclient/ui/ums/EogUtils;->shouldUseLayoutWithImages(Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;)Z
 
@@ -368,7 +333,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 82
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mOwner:Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;
 
     const v1, 0x7f0f014d
@@ -381,7 +345,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mImage1:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
-    .line 83
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mOwner:Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;
 
     const v1, 0x7f0f014e
@@ -394,7 +357,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mImage2:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
-    .line 85
     invoke-virtual {v7}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->urlImage1()Ljava/lang/String;
 
     move-result-object v0
@@ -409,7 +371,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 86
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mOwner:Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getImageLoader(Landroid/content/Context;)Lcom/netflix/mediaclient/util/gfx/ImageLoader;
@@ -418,7 +379,6 @@
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mImage1:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
-    .line 87
     invoke-virtual {v7}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->urlImage1()Ljava/lang/String;
 
     move-result-object v2
@@ -427,15 +387,12 @@
 
     const-string/jumbo v4, ""
 
-    .line 88
     invoke-static {}, Lcom/netflix/mediaclient/ui/experience/BrowseExperience;->getImageLoaderConfig()Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;
 
     move-result-object v5
 
-    .line 86
     invoke-interface/range {v0 .. v6}, Lcom/netflix/mediaclient/util/gfx/ImageLoader;->showImg(Lcom/netflix/mediaclient/android/widget/AdvancedImageView;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;Ljava/lang/String;Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;Z)V
 
-    .line 90
     :cond_4
     invoke-virtual {v7}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->urlImage2()Ljava/lang/String;
 
@@ -451,7 +408,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 91
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mOwner:Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getImageLoader(Landroid/content/Context;)Lcom/netflix/mediaclient/util/gfx/ImageLoader;
@@ -460,7 +416,6 @@
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mImage2:Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
-    .line 92
     invoke-virtual {v7}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->urlImage2()Ljava/lang/String;
 
     move-result-object v2
@@ -469,15 +424,12 @@
 
     const-string/jumbo v4, ""
 
-    .line 93
     invoke-static {}, Lcom/netflix/mediaclient/ui/experience/BrowseExperience;->getImageLoaderConfig()Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;
 
     move-result-object v5
 
-    .line 91
     invoke-interface/range {v0 .. v6}, Lcom/netflix/mediaclient/util/gfx/ImageLoader;->showImg(Lcom/netflix/mediaclient/android/widget/AdvancedImageView;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;Ljava/lang/String;Lcom/netflix/mediaclient/util/gfx/ImageLoader$StaticImgConfig;Z)V
 
-    .line 97
     :cond_5
     invoke-static {v7}, Lcom/netflix/mediaclient/ui/ums/EogUtils;->shouldShowOtherPlans(Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;)Z
 
@@ -485,7 +437,6 @@
 
     if-nez v0, :cond_0
 
-    .line 98
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mSeeOtherPlansHeader:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v8}, Landroid/widget/LinearLayout;->setVisibility(I)V
@@ -496,24 +447,19 @@
 .method public performAction(Landroid/view/View;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 156
     if-nez p1, :cond_0
 
-    .line 157
     const-string/jumbo v1, "eog_landing"
 
     const-string/jumbo v2, "EogLandingPage:: null view? This should never happen!"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 185
     :goto_0
     return v0
 
-    .line 161
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
@@ -521,14 +467,12 @@
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 180
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 181
     const-string/jumbo v0, "eog_landing"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -555,13 +499,11 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 183
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 163
     :sswitch_0
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mOwner:Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;
 
@@ -575,14 +517,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 164
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mOwner:Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->goToPlanPage()V
 
     goto :goto_0
 
-    .line 166
     :cond_2
     const-string/jumbo v1, "eog_landing"
 
@@ -592,7 +532,6 @@
 
     goto :goto_0
 
-    .line 170
     :sswitch_1
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mOwner:Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;
 
@@ -600,13 +539,11 @@
 
     goto :goto_0
 
-    .line 173
     :sswitch_2
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mOwner:Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->recordPlanSelection()V
 
-    .line 174
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mOwner:Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->getEogAlert()Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
@@ -623,7 +560,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 175
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mOwner:Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mOwner:Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;
@@ -634,7 +570,6 @@
 
     invoke-virtual {v1, v2}, Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 177
     :cond_3
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/ums/EogLandingPage;->mOwner:Lcom/netflix/mediaclient/ui/ums/EndOfGrandfatheringActivity;
 
@@ -642,7 +577,6 @@
 
     goto :goto_0
 
-    .line 161
     :sswitch_data_0
     .sparse-switch
         0x7f0f014c -> :sswitch_1

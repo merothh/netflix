@@ -46,7 +46,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -57,7 +56,6 @@
 
     const/4 v3, 0x0
 
-    .line 273
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
     const-string/jumbo v1, "boxArt"
@@ -66,7 +64,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;->boxArt:Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
-    .line 274
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
     const-string/jumbo v1, "merchStill"
@@ -75,7 +72,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;->merchStill:Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
-    .line 275
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
     const-string/jumbo v1, "bif"
@@ -84,7 +80,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;->bif:Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
-    .line 276
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
     const-string/jumbo v1, "heroImage"
@@ -93,7 +88,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;->heroImage:Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
-    .line 277
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
     const-string/jumbo v1, "profileAvatar"
@@ -102,7 +96,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;->profileAvatar:Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
-    .line 278
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
     const-string/jumbo v1, "subtitles"
@@ -113,7 +106,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;->subtitles:Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
-    .line 279
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
     const-string/jumbo v1, "imageSubtitlesMasterIndex"
@@ -124,7 +116,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;->imageSubtitlesMasterIndex:Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
-    .line 280
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
     const-string/jumbo v1, "imageSubtitlesSegmentIndex"
@@ -135,7 +126,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;->imageSubtitlesSegmentIndex:Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
-    .line 281
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
     const-string/jumbo v1, "imageSubtitlesSegment"
@@ -146,7 +136,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;->imageSubtitlesSegment:Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
-    .line 282
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
     const-string/jumbo v1, "motionBillboard"
@@ -157,7 +146,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;->motionBillboard:Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
-    .line 283
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
     const-string/jumbo v1, "interactiveContent"
@@ -168,7 +156,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;->interactiveContent:Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
-    .line 284
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
     const-string/jumbo v1, "wordPartyVideoCard"
@@ -179,7 +166,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;->wordPartyVideoCard:Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
-    .line 272
     const/16 v0, 0xc
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
@@ -259,8 +245,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 272
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -269,8 +253,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
     .locals 1
 
-    .prologue
-    .line 272
     const-class v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -285,8 +267,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
     .locals 1
 
-    .prologue
-    .line 272
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;->clone()Ljava/lang/Object;

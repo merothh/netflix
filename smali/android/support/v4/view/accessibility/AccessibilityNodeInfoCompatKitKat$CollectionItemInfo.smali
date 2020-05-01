@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 164
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,8 +15,6 @@
 .method static getColumnIndex(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 166
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;->getColumnIndex()I
@@ -31,8 +27,6 @@
 .method static getColumnSpan(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 170
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;->getColumnSpan()I
@@ -45,8 +39,6 @@
 .method static getRowIndex(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 174
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;->getRowIndex()I
@@ -59,8 +51,6 @@
 .method static getRowSpan(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 178
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;->getRowSpan()I
@@ -73,8 +63,6 @@
 .method static isHeading(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 182
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;->isHeading()Z

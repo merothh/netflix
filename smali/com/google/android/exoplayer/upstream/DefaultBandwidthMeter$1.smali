@@ -20,8 +20,6 @@
 .method constructor <init>(Lcom/google/android/exoplayer/upstream/DefaultBandwidthMeter;IJJ)V
     .locals 1
 
-    .prologue
-    .line 107
     iput-object p1, p0, Lcom/google/android/exoplayer/upstream/DefaultBandwidthMeter$1;->this$0:Lcom/google/android/exoplayer/upstream/DefaultBandwidthMeter;
 
     iput p2, p0, Lcom/google/android/exoplayer/upstream/DefaultBandwidthMeter$1;->val$elapsedMs:I
@@ -40,8 +38,6 @@
 .method public run()V
     .locals 6
 
-    .prologue
-    .line 110
     iget-object v0, p0, Lcom/google/android/exoplayer/upstream/DefaultBandwidthMeter$1;->this$0:Lcom/google/android/exoplayer/upstream/DefaultBandwidthMeter;
 
     invoke-static {v0}, Lcom/google/android/exoplayer/upstream/DefaultBandwidthMeter;->access$000(Lcom/google/android/exoplayer/upstream/DefaultBandwidthMeter;)Lcom/google/android/exoplayer/upstream/BandwidthMeter$EventListener;
@@ -56,6 +52,5 @@
 
     invoke-interface/range {v0 .. v5}, Lcom/google/android/exoplayer/upstream/BandwidthMeter$EventListener;->onBandwidthSample(IJJ)V
 
-    .line 111
     return-void
 .end method

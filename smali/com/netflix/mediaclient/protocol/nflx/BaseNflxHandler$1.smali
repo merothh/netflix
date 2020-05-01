@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 97
     iput-object p1, p0, Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$1;->this$0:Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$1;->val$tinyUrl:Ljava/lang/String;
@@ -32,15 +30,12 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 100
     const-string/jumbo v0, "NflxHandler"
 
     const-string/jumbo v1, "Resolving tiny URL in background"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
     iget-object v1, p0, Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$1;->this$0:Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler$1;->val$tinyUrl:Ljava/lang/String;
@@ -71,6 +66,5 @@
 
     invoke-virtual {v1, v2, v0, v3}, Lcom/netflix/mediaclient/protocol/nflx/BaseNflxHandler;->handleTinyUrl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 102
     return-void
 .end method

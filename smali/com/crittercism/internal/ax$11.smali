@@ -12,8 +12,6 @@
 .method constructor <init>(Lcom/crittercism/internal/ax;Lcom/crittercism/internal/cg;)V
     .locals 0
 
-    .prologue
-    .line 899
     iput-object p1, p0, Lcom/crittercism/internal/ax$11;->b:Lcom/crittercism/internal/ax;
 
     iput-object p2, p0, Lcom/crittercism/internal/ax$11;->a:Lcom/crittercism/internal/cg;
@@ -28,18 +26,13 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 902
     iget-object v0, p0, Lcom/crittercism/internal/ax$11;->b:Lcom/crittercism/internal/ax;
 
-    .line 1091
     iget-object v0, v0, Lcom/crittercism/internal/ax;->k:Lcom/crittercism/internal/bq;
 
-    .line 902
     iget-object v1, p0, Lcom/crittercism/internal/ax$11;->a:Lcom/crittercism/internal/cg;
 
     invoke-virtual {v0, v1}, Lcom/crittercism/internal/bq;->a(Lcom/crittercism/internal/cf;)Z
 
-    .line 903
     return-void
 .end method

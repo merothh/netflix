@@ -11,8 +11,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,15 +19,12 @@
 .method static hasGeoCountryChanged(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 3
 
-    .prologue
-    .line 55
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 56
     const-string/jumbo v0, "nf_downloadGeoPlay"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -62,7 +57,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 63
     :cond_0
     if-eqz p1, :cond_1
 
@@ -72,10 +66,8 @@
 
     if-nez v0, :cond_1
 
-    .line 64
     const/4 v0, 0x1
 
-    .line 66
     :goto_0
     return v0
 
@@ -100,29 +92,23 @@
         }
     .end annotation
 
-    .prologue
-    .line 31
     const-string/jumbo v0, "nf_downloadGeoPlay"
 
     const-string/jumbo v1, "sendGeoPlayabilityRequest"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 32
     if-nez p1, :cond_0
 
-    .line 33
     const-string/jumbo v0, "nf_downloadGeoPlay"
 
     const-string/jumbo v1, "browseAgent null"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     :goto_0
     return-void
 
-    .line 36
     :cond_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -130,7 +116,6 @@
 
     if-gtz v0, :cond_1
 
-    .line 37
     const-string/jumbo v0, "nf_downloadGeoPlay"
 
     const-string/jumbo v1, "videoIdList is empty"
@@ -139,7 +124,6 @@
 
     goto :goto_0
 
-    .line 41
     :cond_1
     const-string/jumbo v0, "nf_downloadGeoPlay"
 
@@ -147,7 +131,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 42
     new-instance v0, Lcom/netflix/mediaclient/service/offline/agent/DownloadGeoPlayabilityHelper$1;
 
     invoke-direct {v0, p2}, Lcom/netflix/mediaclient/service/offline/agent/DownloadGeoPlayabilityHelper$1;-><init>(Lcom/netflix/mediaclient/service/offline/agent/DownloadGeoPlayabilityHelper$GeoPlayabilityCallBack;)V

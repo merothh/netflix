@@ -15,8 +15,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0}, Lcom/netflix/model/leafs/Video$Summary;-><init>()V
 
     return-void
@@ -27,8 +25,6 @@
 .method public getCharacterImageUrl()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 66
     iget-object v0, p0, Lcom/netflix/model/leafs/KidsCharacter$Summary;->characterImageUrl:Ljava/lang/String;
 
     return-object v0
@@ -37,23 +33,18 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 5
 
-    .prologue
-    .line 24
     invoke-super {p0, p1}, Lcom/netflix/model/leafs/Video$Summary;->populate(Lcom/google/gson/JsonElement;)V
 
-    .line 25
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 27
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 28
     const-string/jumbo v1, "KidsCharacter.Summary"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -76,7 +67,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 31
     :cond_0
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -99,14 +89,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 32
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/gson/JsonElement;
 
-    .line 33
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -129,7 +117,6 @@
 
     goto :goto_0
 
-    .line 34
     :pswitch_0
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -139,7 +126,6 @@
 
     goto :goto_0
 
-    .line 33
     :pswitch_1
     const-string/jumbo v4, "characterImgUrl"
 
@@ -153,11 +139,9 @@
 
     goto :goto_1
 
-    .line 37
     :cond_2
     return-void
 
-    .line 33
     nop
 
     :pswitch_data_0
@@ -174,15 +158,12 @@
 .method public set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
     .locals 3
 
-    .prologue
-    .line 42
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 43
     const-string/jumbo v0, "KidsCharacter.Summary"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -205,7 +186,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 46
     :cond_0
     const/4 v0, -0x1
 
@@ -219,7 +199,6 @@
     :goto_0
     packed-switch v0, :pswitch_data_1
 
-    .line 51
     :goto_1
     invoke-super {p0, p1, p2}, Lcom/netflix/model/leafs/Video$Summary;->set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
 
@@ -227,7 +206,6 @@
 
     return v0
 
-    .line 46
     :pswitch_0
     const-string/jumbo v1, "characterImgUrl"
 
@@ -241,7 +219,6 @@
 
     goto :goto_0
 
-    .line 48
     :pswitch_1
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -251,7 +228,6 @@
 
     goto :goto_1
 
-    .line 46
     :pswitch_data_0
     .packed-switch 0x6de4df35
         :pswitch_0
@@ -266,8 +242,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 56
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

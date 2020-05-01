@@ -51,8 +51,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -63,13 +61,10 @@
 .method public enableAudioUseGetTimestampAPI()V
     .locals 1
 
-    .prologue
-    .line 211
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase;->mAudioUseGetTimestampAPI:Z
 
-    .line 212
     return-void
 .end method
 
@@ -79,20 +74,16 @@
 .method public getClock()Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase$Clock;
     .locals 1
 
-    .prologue
-    .line 108
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase;->mClock:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase$Clock;
 
     if-nez v0, :cond_0
 
-    .line 109
     new-instance v0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase$Clock;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase$Clock;-><init>(Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase;->mClock:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase$Clock;
 
-    .line 111
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase;->mClock:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase$Clock;
 
@@ -102,8 +93,6 @@
 .method public getMime()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 96
     iget-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase;->mMime:Ljava/lang/String;
 
     return-object v0
@@ -112,8 +101,6 @@
 .method public isDecoderCreated()Z
     .locals 2
 
-    .prologue
-    .line 80
     iget v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase;->mState:I
 
     const/4 v1, -0x1
@@ -134,8 +121,6 @@
 .method public isPauseded()Z
     .locals 2
 
-    .prologue
-    .line 92
     iget v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase;->mState:I
 
     const/4 v1, 0x2
@@ -156,8 +141,6 @@
 .method public isStopped()Z
     .locals 1
 
-    .prologue
-    .line 86
     iget v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase;->mState:I
 
     if-nez v0, :cond_0
@@ -179,13 +162,10 @@
 .method public removeEventListener()V
     .locals 1
 
-    .prologue
-    .line 73
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase;->mEventListener:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase$EventListener;
 
-    .line 74
     return-void
 .end method
 
@@ -195,22 +175,16 @@
 .method protected setEventListener(Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase$EventListener;)V
     .locals 0
 
-    .prologue
-    .line 70
     iput-object p1, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase;->mEventListener:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase$EventListener;
 
-    .line 71
     return-void
 .end method
 
 .method public setReferenceClock(Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase$Clock;)V
     .locals 0
 
-    .prologue
-    .line 118
     iput-object p1, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase;->mRefClock:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoderBase$Clock;
 
-    .line 119
     return-void
 .end method
 

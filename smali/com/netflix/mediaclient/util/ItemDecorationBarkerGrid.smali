@@ -11,8 +11,6 @@
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 2
 
-    .prologue
-    .line 12
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -25,10 +23,8 @@
 
     invoke-direct {p0, v0, p2}, Lcom/netflix/mediaclient/util/ItemDecorationUniformPadding;-><init>(II)V
 
-    .line 13
     iput-object p1, p0, Lcom/netflix/mediaclient/util/ItemDecorationBarkerGrid;->context:Landroid/content/Context;
 
-    .line 14
     return-void
 .end method
 
@@ -37,8 +33,6 @@
 .method public getAllSpaceWidth()I
     .locals 2
 
-    .prologue
-    .line 20
     iget v0, p0, Lcom/netflix/mediaclient/util/ItemDecorationBarkerGrid;->numColumns:I
 
     add-int/lit8 v0, v0, 0x1

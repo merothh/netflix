@@ -13,17 +13,12 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/media/Subtitle;Lcom/netflix/mediaclient/media/AudioSource;)V
     .locals 0
 
-    .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     iput-object p1, p0, Lcom/netflix/mediaclient/util/LanguageChoice;->subtitle:Lcom/netflix/mediaclient/media/Subtitle;
 
-    .line 32
     iput-object p2, p0, Lcom/netflix/mediaclient/util/LanguageChoice;->audio:Lcom/netflix/mediaclient/media/AudioSource;
 
-    .line 33
     return-void
 .end method
 
@@ -32,8 +27,6 @@
 .method public getAudio()Lcom/netflix/mediaclient/media/AudioSource;
     .locals 1
 
-    .prologue
-    .line 49
     iget-object v0, p0, Lcom/netflix/mediaclient/util/LanguageChoice;->audio:Lcom/netflix/mediaclient/media/AudioSource;
 
     return-object v0
@@ -42,8 +35,6 @@
 .method public getSubtitle()Lcom/netflix/mediaclient/media/Subtitle;
     .locals 1
 
-    .prologue
-    .line 41
     iget-object v0, p0, Lcom/netflix/mediaclient/util/LanguageChoice;->subtitle:Lcom/netflix/mediaclient/media/Subtitle;
 
     return-object v0
@@ -52,8 +43,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 56
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

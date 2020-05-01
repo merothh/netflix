@@ -76,39 +76,32 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->resourceToLocalCacheFileMap:Ljava/util/Map;
 
-    .line 42
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->options:Landroid/graphics/BitmapFactory$Options;
 
-    .line 43
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->optionsWithSubSampling:Landroid/graphics/BitmapFactory$Options;
 
-    .line 44
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->assetsRequestSet:Ljava/util/HashSet;
 
-    .line 45
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -121,8 +114,6 @@
 .method static synthetic access$008(Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;)I
     .locals 2
 
-    .prologue
-    .line 32
     iget v0, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->resourceResponseCounter:I
 
     add-int/lit8 v1, v0, 0x1
@@ -135,8 +126,6 @@
 .method static synthetic access$108(Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;)I
     .locals 2
 
-    .prologue
-    .line 32
     iget v0, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->failureCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -151,8 +140,6 @@
 .method protected areResourcesCached()Z
     .locals 2
 
-    .prologue
-    .line 336
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->assetsResponseSet:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->size()I
@@ -181,8 +168,6 @@
 .method protected cacheResources(Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 53
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     if-eqz v0, :cond_0
@@ -195,7 +180,6 @@
 
     if-nez v0, :cond_2
 
-    .line 54
     :cond_0
     const-string/jumbo v0, "BaseInteractiveMomentsManager"
 
@@ -203,12 +187,10 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
     :cond_1
     :goto_0
     return-void
 
-    .line 58
     :cond_2
     invoke-static {p1}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
@@ -216,7 +198,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 59
     const-string/jumbo v0, "BaseInteractiveMomentsManager"
 
     const-string/jumbo v1, "Invalid request to cache resource for an empty or null url."
@@ -225,20 +206,17 @@
 
     goto :goto_0
 
-    .line 63
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->svcManager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     if-nez v0, :cond_4
 
-    .line 64
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 65
     const-string/jumbo v0, "BaseInteractiveMomentsManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -263,7 +241,6 @@
 
     goto :goto_0
 
-    .line 70
     :cond_4
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -271,7 +248,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 71
     const-string/jumbo v0, "BaseInteractiveMomentsManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -294,13 +270,11 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     :cond_5
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->assetsRequestSet:Ljava/util/HashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 75
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->svcManager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     sget-object v1, Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;->interactiveContent:Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;
@@ -317,39 +291,31 @@
 .method protected cachingResourcesComplete()V
     .locals 0
 
-    .prologue
-    .line 311
     return-void
 .end method
 
 .method protected fetchImageFromCache(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 8
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 162
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertNotOnMain()Z
 
-    .line 163
     invoke-static {p1}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 164
     const-string/jumbo v0, "BaseInteractiveMomentsManager"
 
     const-string/jumbo v2, " Empty or null request url to load image from cache"
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 194
     :goto_0
     return-object v1
 
-    .line 168
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->resourceToLocalCacheFileMap:Ljava/util/Map;
 
@@ -359,7 +325,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/resfetcher/volley/LocalCachedFileMetadata;
 
-    .line 169
     if-eqz v0, :cond_1
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/resfetcher/volley/LocalCachedFileMetadata;->getLocalUrl()Ljava/lang/String;
@@ -372,7 +337,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 170
     :cond_1
     const-string/jumbo v0, "BaseInteractiveMomentsManager"
 
@@ -382,20 +346,17 @@
 
     goto :goto_0
 
-    .line 173
     :cond_2
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/resfetcher/volley/LocalCachedFileMetadata;->getLocalUrl()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 174
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
-    .line 175
     const-string/jumbo v3, "BaseInteractiveMomentsManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -428,20 +389,17 @@
 
     invoke-static {v3, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 177
     :cond_3
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 179
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
     move-result v4
 
     if-eqz v4, :cond_4
 
-    .line 181
     :try_start_0
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/resfetcher/volley/LocalCachedFileMetadata;->getByteOffset()J
 
@@ -449,14 +407,12 @@
 
     long-to-int v4, v4
 
-    .line 182
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/resfetcher/volley/LocalCachedFileMetadata;->getByteSize()J
 
     move-result-wide v6
 
     long-to-int v0, v6
 
-    .line 183
     invoke-static {v3}, Lcom/netflix/mediaclient/util/FileUtils;->readFileToByteArray(Ljava/io/File;)[B
 
     move-result-object v3
@@ -471,14 +427,11 @@
     :goto_1
     move-object v1, v0
 
-    .line 194
     goto :goto_0
 
-    .line 185
     :catch_0
     move-exception v0
 
-    .line 186
     const-string/jumbo v0, "BaseInteractiveMomentsManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -503,11 +456,9 @@
 
     goto/16 :goto_0
 
-    .line 188
     :catch_1
     move-exception v0
 
-    .line 189
     const-string/jumbo v3, "BaseInteractiveMomentsManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -530,7 +481,6 @@
 
     move-result-object v2
 
-    .line 190
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
@@ -543,7 +493,6 @@
 
     move-result-object v0
 
-    .line 189
     invoke-static {v3, v0}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_0
@@ -557,13 +506,10 @@
 .method protected fetchImageFromCache(Ljava/lang/String;Z)Landroid/graphics/Bitmap;
     .locals 1
 
-    .prologue
-    .line 116
     if-eqz p2, :cond_0
 
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->optionsWithSubSampling:Landroid/graphics/BitmapFactory$Options;
 
-    .line 118
     :goto_0
     invoke-virtual {p0, p1, v0}, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->fetchImageFromCache(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
@@ -571,7 +517,6 @@
 
     return-object v0
 
-    .line 116
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->options:Landroid/graphics/BitmapFactory$Options;
 
@@ -581,16 +526,12 @@
 .method public getContext()Landroid/content/Context;
     .locals 1
 
-    .prologue
-    .line 363
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     if-nez v0, :cond_0
 
-    .line 364
     const/4 v0, 0x0
 
-    .line 366
     :goto_0
     return-object v0
 
@@ -607,8 +548,6 @@
 .method protected getLocalCachedFileMetadata(Ljava/lang/String;)Lcom/netflix/mediaclient/service/resfetcher/volley/LocalCachedFileMetadata;
     .locals 2
 
-    .prologue
-    .line 299
     invoke-static {p1}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v0
@@ -619,7 +558,6 @@
 
     if-nez v0, :cond_1
 
-    .line 300
     :cond_0
     const-string/jumbo v0, "BaseInteractiveMomentsManager"
 
@@ -627,10 +565,8 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 301
     const/4 v0, 0x0
 
-    .line 303
     :goto_0
     return-object v0
 
@@ -649,20 +585,16 @@
 .method protected initMediaPlayer(Ljava/lang/String;FZLcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager$PlaybackCompleteListener;)Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;
     .locals 7
 
-    .prologue
-    .line 209
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->urlToMediaPlayerMap:Ljava/util/HashMap;
 
     if-nez v0, :cond_0
 
-    .line 210
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->urlToMediaPlayerMap:Ljava/util/HashMap;
 
-    .line 212
     :cond_0
     new-instance v0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;
 
@@ -685,15 +617,12 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;-><init>(Landroid/view/TextureView;ZIFLcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper$PlaybackEventsListener;)V
 
-    .line 250
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->urlToMediaPlayerMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 251
     return-object v0
 
-    .line 212
     :cond_1
     const/4 v3, 0x0
 
@@ -703,8 +632,6 @@
 .method protected isActivityInvalid()Z
     .locals 2
 
-    .prologue
-    .line 375
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->fragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     if-eqz v0, :cond_0
@@ -717,7 +644,6 @@
 
     if-nez v0, :cond_1
 
-    .line 376
     :cond_0
     const-string/jumbo v0, "BaseInteractiveMomentsManager"
 
@@ -725,10 +651,8 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 377
     const/4 v0, 0x1
 
-    .line 379
     :goto_0
     return v0
 
@@ -741,15 +665,12 @@
 .method public playMediaPlayerAudio(Ljava/lang/String;FZLcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager$PlaybackCompleteListener;)V
     .locals 6
 
-    .prologue
-    .line 265
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 266
     const-string/jumbo v0, "BaseInteractiveMomentsManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -782,7 +703,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 268
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->isActivityInvalid()Z
 
@@ -790,11 +710,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 290
     :goto_0
     return-void
 
-    .line 270
     :cond_1
     invoke-static {p1}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
@@ -802,19 +720,16 @@
 
     if-eqz v0, :cond_2
 
-    .line 271
     const-string/jumbo v0, "BaseInteractiveMomentsManager"
 
     const-string/jumbo v1, "Not starting media player for background sound"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 272
     invoke-interface {p4, p1}, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager$PlaybackCompleteListener;->onComplete(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 276
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->resourceToLocalCacheFileMap:Ljava/util/Map;
 
@@ -826,46 +741,37 @@
 
     check-cast v4, Lcom/netflix/mediaclient/service/resfetcher/volley/LocalCachedFileMetadata;
 
-    .line 278
     if-nez v4, :cond_3
 
-    .line 279
     const-string/jumbo v0, "BaseInteractiveMomentsManager"
 
     const-string/jumbo v1, "Media player audio is cached locally, but metadata information is null."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 280
     invoke-interface {p4, p1}, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager$PlaybackCompleteListener;->onComplete(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 284
     :cond_3
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->initMediaPlayer(Ljava/lang/String;FZLcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager$PlaybackCompleteListener;)Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;
 
     move-result-object v0
 
-    .line 286
     invoke-virtual {v4}, Lcom/netflix/mediaclient/service/resfetcher/volley/LocalCachedFileMetadata;->getLocalUrl()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 287
     invoke-virtual {v4}, Lcom/netflix/mediaclient/service/resfetcher/volley/LocalCachedFileMetadata;->getByteOffset()J
 
     move-result-wide v2
 
-    .line 288
     invoke-virtual {v4}, Lcom/netflix/mediaclient/service/resfetcher/volley/LocalCachedFileMetadata;->getByteSize()J
 
     move-result-wide v4
 
-    .line 287
     invoke-virtual/range {v0 .. v5}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->setDataSource(Ljava/lang/String;JJ)V
 
-    .line 289
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->initializeMediaPlayer()V
 
     goto :goto_0
@@ -874,15 +780,11 @@
 .method public varargs releaseBitmaps([Landroid/graphics/Bitmap;)V
     .locals 3
 
-    .prologue
-    .line 345
     if-nez p1, :cond_1
 
-    .line 355
     :cond_0
     return-void
 
-    .line 348
     :cond_1
     array-length v1, p1
 
@@ -893,16 +795,13 @@
 
     aget-object v2, p1, v0
 
-    .line 349
     if-nez v2, :cond_2
 
-    .line 348
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 352
     :cond_2
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
@@ -912,17 +811,14 @@
 .method protected resetCounters(I)V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 319
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 320
     const-string/jumbo v0, "BaseInteractiveMomentsManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -945,46 +841,36 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 322
     :cond_0
     iput p1, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->resourceRequestCounter:I
 
-    .line 323
     iput v3, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->resourceResponseCounter:I
 
-    .line 324
     iput v3, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->failureCount:I
 
-    .line 325
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->assetsRequestSet:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
-    .line 326
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->assetsResponseSet:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
-    .line 327
     return-void
 .end method
 
 .method public setBitmapFactoryOptions(Landroid/content/Context;)V
     .locals 7
 
-    .prologue
     const/4 v1, 0x2
 
     const/4 v2, 0x1
 
-    .line 127
     if-nez p1, :cond_0
 
-    .line 151
     :goto_0
     return-void
 
-    .line 133
     :cond_0
     invoke-static {p1}, Lcom/netflix/mediaclient/util/DeviceUtils;->getScreenResolutionDpi(Landroid/content/Context;)I
 
@@ -996,7 +882,6 @@
 
     move v0, v1
 
-    .line 137
     :goto_1
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->getContext()Landroid/content/Context;
 
@@ -1010,17 +895,14 @@
 
     move-result-object v3
 
-    .line 138
     if-eqz v3, :cond_1
 
-    .line 139
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 140
     const-string/jumbo v4, "BaseInteractiveMomentsManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1043,7 +925,6 @@
 
     invoke-static {v4, v5}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 145
     :cond_1
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
@@ -1056,14 +937,12 @@
     :goto_2
     mul-int/2addr v0, v2
 
-    .line 147
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 148
     const-string/jumbo v1, "BaseInteractiveMomentsManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1086,7 +965,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 150
     :cond_2
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->optionsWithSubSampling:Landroid/graphics/BitmapFactory$Options;
 
@@ -1097,7 +975,6 @@
     :cond_3
     move v2, v1
 
-    .line 145
     goto :goto_2
 
     :cond_4
@@ -1109,34 +986,28 @@
 .method public stopAudioPlayback(Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 387
     invoke-static {p1}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 388
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 389
     const-string/jumbo v0, "BaseInteractiveMomentsManager"
 
     const-string/jumbo v1, "stopAudioPlayback: url is null or empty"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 406
     :cond_0
     :goto_0
     return-void
 
-    .line 394
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->urlToMediaPlayerMap:Ljava/util/HashMap;
 
@@ -1150,7 +1021,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 395
     :cond_2
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -1158,7 +1028,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 396
     const-string/jumbo v0, "BaseInteractiveMomentsManager"
 
     const-string/jumbo v1, "stopAudioPlayback: urlToMediaPlayerMap is null or empty"
@@ -1167,7 +1036,6 @@
 
     goto :goto_0
 
-    .line 401
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager;->urlToMediaPlayerMap:Ljava/util/HashMap;
 
@@ -1177,13 +1045,10 @@
 
     check-cast v0, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;
 
-    .line 402
     if-eqz v0, :cond_0
 
-    .line 403
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->clearCallbacks()V
 
-    .line 404
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/common/MediaPlayerWrapper;->releaseMediaPlayer()V
 
     goto :goto_0

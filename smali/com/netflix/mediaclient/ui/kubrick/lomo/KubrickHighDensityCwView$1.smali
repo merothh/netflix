@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;)V
     .locals 0
 
-    .prologue
-    .line 135
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView$1;->this$0:Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView$1;->val$video:Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;
@@ -32,8 +30,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
-    .prologue
-    .line 138
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView$1;->this$0:Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHighDensityCwView;->getContext()Landroid/content/Context;
@@ -50,6 +46,5 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/ui/common/PlaybackLauncher;->startPlaybackAfterPIN(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/Playable;Lcom/netflix/mediaclient/ui/common/PlayContext;)V
 
-    .line 139
     return-void
 .end method

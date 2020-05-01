@@ -15,8 +15,6 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/webclient/model/leafs/UserProfile;)V
     .locals 0
 
-    .prologue
-    .line 77
     iput-object p1, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/UserProfile$Operation;->this$0:Lcom/netflix/mediaclient/service/webclient/model/leafs/UserProfile;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

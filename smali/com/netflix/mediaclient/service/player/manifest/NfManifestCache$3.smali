@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;Ljava/lang/Long;)V
     .locals 0
 
-    .prologue
-    .line 120
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$3;->this$0:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$3;->val$movieId:Ljava/lang/Long;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 123
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$3;->this$0:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;->access$000(Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;)Ljava/util/List;
@@ -48,7 +44,6 @@
 
     if-nez v0, :cond_0
 
-    .line 124
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$3;->this$0:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;->access$000(Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;)Ljava/util/List;
@@ -59,7 +54,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 126
     :cond_0
     return-void
 .end method

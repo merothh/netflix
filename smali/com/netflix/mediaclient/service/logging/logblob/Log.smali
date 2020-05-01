@@ -11,27 +11,20 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/javabridge/ui/LogArguments;)V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/logging/logblob/BaseLogblob;-><init>()V
 
-    .line 18
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/logging/logblob/Log;->populate(Lcom/netflix/mediaclient/javabridge/ui/LogArguments;)V
 
-    .line 19
     return-void
 .end method
 
 .method private populate(Lcom/netflix/mediaclient/javabridge/ui/LogArguments;)V
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 23
     if-nez p1, :cond_0
 
-    .line 24
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "Log arguments are null!"
@@ -40,13 +33,11 @@
 
     throw v0
 
-    .line 27
     :cond_0
     iget-object v1, p1, Lcom/netflix/mediaclient/javabridge/ui/LogArguments;->type:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/netflix/mediaclient/service/logging/logblob/Log;->mType:Ljava/lang/String;
 
-    .line 28
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/logblob/Log;->mJson:Lorg/json/JSONObject;
 
     const-string/jumbo v2, "logLevel"
@@ -59,7 +50,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 29
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/logblob/Log;->mJson:Lorg/json/JSONObject;
 
     const-string/jumbo v2, "msg"
@@ -68,7 +58,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 31
     iget-object v1, p1, Lcom/netflix/mediaclient/javabridge/ui/LogArguments;->traceArea:Ljava/lang/String;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
@@ -77,7 +66,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 32
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/logblob/Log;->mJson:Lorg/json/JSONObject;
 
     const-string/jumbo v2, "traceArea"
@@ -86,7 +74,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 35
     :cond_1
     iget-object v1, p1, Lcom/netflix/mediaclient/javabridge/ui/LogArguments;->tags:[Ljava/lang/String;
 
@@ -98,7 +85,6 @@
 
     if-lez v1, :cond_3
 
-    .line 37
     new-instance v1, Ljava/lang/StringBuilder;
 
     iget-object v2, p1, Lcom/netflix/mediaclient/javabridge/ui/LogArguments;->tags:[Ljava/lang/String;
@@ -109,14 +95,12 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 38
     iget-object v2, p1, Lcom/netflix/mediaclient/javabridge/ui/LogArguments;->tags:[Ljava/lang/String;
 
     array-length v2, v2
 
     if-le v2, v0, :cond_2
 
-    .line 39
     :goto_0
     iget-object v2, p1, Lcom/netflix/mediaclient/javabridge/ui/LogArguments;->tags:[Ljava/lang/String;
 
@@ -124,7 +108,6 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 40
     const-string/jumbo v2, ", "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -137,12 +120,10 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 39
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 43
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/logblob/Log;->mJson:Lorg/json/JSONObject;
 
@@ -152,7 +133,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 45
     :cond_3
     return-void
 .end method
@@ -162,8 +142,6 @@
 .method public getSeverity()Lcom/netflix/mediaclient/servicemgr/Logblob$Severity;
     .locals 1
 
-    .prologue
-    .line 54
     const/4 v0, 0x0
 
     return-object v0
@@ -172,8 +150,6 @@
 .method public getType()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 49
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/logblob/Log;->mType:Ljava/lang/String;
 
     return-object v0

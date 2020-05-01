@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public draw(Ljava/lang/Object;Landroid/graphics/Canvas;)Z
     .locals 1
 
-    .prologue
-    .line 97
     const/4 v0, 0x0
 
     return v0
@@ -32,16 +28,12 @@
 .method public finish(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 78
     return-void
 .end method
 
 .method public isFinished(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 73
     const/4 v0, 0x1
 
     return v0
@@ -50,8 +42,6 @@
 .method public newEdgeEffect(Landroid/content/Context;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 64
     const/4 v0, 0x0
 
     return-object v0
@@ -60,8 +50,6 @@
 .method public onAbsorb(Ljava/lang/Object;I)Z
     .locals 1
 
-    .prologue
-    .line 92
     const/4 v0, 0x0
 
     return v0
@@ -70,8 +58,6 @@
 .method public onPull(Ljava/lang/Object;F)Z
     .locals 1
 
-    .prologue
-    .line 82
     const/4 v0, 0x0
 
     return v0
@@ -80,8 +66,6 @@
 .method public onPull(Ljava/lang/Object;FF)Z
     .locals 1
 
-    .prologue
-    .line 102
     const/4 v0, 0x0
 
     return v0
@@ -90,8 +74,6 @@
 .method public onRelease(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 87
     const/4 v0, 0x0
 
     return v0
@@ -100,7 +82,5 @@
 .method public setSize(Ljava/lang/Object;II)V
     .locals 0
 
-    .prologue
-    .line 69
     return-void
 .end method

@@ -26,8 +26,6 @@
 .method private constructor <init>(Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication;)V
     .locals 0
 
-    .prologue
-    .line 89
     iput-object p1, p0, Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication$SendMessageResultCallback;->this$0:Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,8 +36,6 @@
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication;Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication$1;)V
     .locals 0
 
-    .prologue
-    .line 89
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication$SendMessageResultCallback;-><init>(Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication;)V
 
     return-void
@@ -50,8 +46,6 @@
 .method public bridge synthetic onResult(Lcom/google/android/gms/common/api/Result;)V
     .locals 0
 
-    .prologue
-    .line 89
     check-cast p1, Lcom/google/android/gms/common/api/Status;
 
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication$SendMessageResultCallback;->onResult(Lcom/google/android/gms/common/api/Status;)V
@@ -62,15 +56,12 @@
 .method public onResult(Lcom/google/android/gms/common/api/Status;)V
     .locals 3
 
-    .prologue
-    .line 92
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/Status;->isSuccess()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 93
     invoke-static {}, Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -79,7 +70,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 94
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication$SendMessageResultCallback;->this$0:Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication;->access$200(Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication;)Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication$MdxCastApplicaCallback;
@@ -88,11 +78,9 @@
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication$MdxCastApplicaCallback;->onMessageSent()V
 
-    .line 106
     :goto_0
     return-void
 
-    .line 96
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -100,7 +88,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 97
     invoke-static {}, Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -125,7 +112,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 99
     :cond_1
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/Status;->getStatus()Lcom/google/android/gms/common/api/Status;
 
@@ -139,7 +125,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 100
     invoke-static {}, Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -148,7 +133,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication$SendMessageResultCallback;->this$0:Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication;->access$200(Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication;)Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication$MdxCastApplicaCallback;
@@ -161,7 +145,6 @@
 
     goto :goto_0
 
-    .line 103
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication$SendMessageResultCallback;->this$0:Lcom/netflix/mediaclient/service/mdx/cast/MdxCastApplication;
 

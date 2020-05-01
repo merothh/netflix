@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager$PlaybackCompleteListener;)V
     .locals 0
 
-    .prologue
-    .line 1389
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$13;->this$0:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$13;->val$playbackCompleteListener:Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager$PlaybackCompleteListener;
@@ -32,15 +30,12 @@
 .method public onComplete(Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 1393
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1394
     const-string/jumbo v0, "WPMomentScreen"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -79,7 +74,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1397
     :cond_0
     invoke-static {p1}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
 
@@ -87,7 +81,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1398
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$13;->this$0:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;->access$1800(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;)Ljava/util/ArrayList;
@@ -96,12 +89,10 @@
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 1401
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$13;->val$playbackCompleteListener:Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager$PlaybackCompleteListener;
 
     invoke-interface {v0, p1}, Lcom/netflix/mediaclient/ui/iko/BaseInteractiveMomentsManager$PlaybackCompleteListener;->onComplete(Ljava/lang/String;)V
 
-    .line 1402
     return-void
 .end method

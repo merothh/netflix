@@ -11,8 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 32
     invoke-direct {p0}, Lcom/android/volley/VolleyError;-><init>()V
 
     return-void
@@ -21,22 +19,16 @@
 .method public constructor <init>(Lcom/android/volley/NetworkResponse;)V
     .locals 0
 
-    .prologue
-    .line 39
     invoke-direct {p0, p1}, Lcom/android/volley/VolleyError;-><init>(Lcom/android/volley/NetworkResponse;)V
 
-    .line 40
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 43
     invoke-direct {p0, p1}, Lcom/android/volley/VolleyError;-><init>(Ljava/lang/String;)V
 
-    .line 44
     return-void
 .end method
 
@@ -45,16 +37,12 @@
 .method public getMessage()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 56
     iget-object v0, p0, Lcom/android/volley/AuthFailureError;->mResolutionIntent:Landroid/content/Intent;
 
     if-eqz v0, :cond_0
 
-    .line 57
     const-string/jumbo v0, "User needs to (re)enter credentials."
 
-    .line 59
     :goto_0
     return-object v0
 

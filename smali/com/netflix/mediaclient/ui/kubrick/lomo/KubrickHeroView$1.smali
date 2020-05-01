@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHeroView;)V
     .locals 0
 
-    .prologue
-    .line 104
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHeroView$1;->this$0:Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHeroView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onGlobalLayout()V
     .locals 4
 
-    .prologue
-    .line 107
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHeroView$1;->this$0:Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHeroView;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHeroView;->access$000(Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHeroView;)Landroid/view/View;
@@ -40,14 +36,12 @@
 
     move-result v0
 
-    .line 108
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 109
     const-string/jumbo v1, "KubrickHeroView"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -70,7 +64,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 111
     :cond_0
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHeroView$1;->this$0:Lcom/netflix/mediaclient/ui/kubrick/lomo/KubrickHeroView;
 
@@ -84,6 +77,5 @@
 
     iput v0, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 112
     return-void
 .end method

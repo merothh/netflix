@@ -48,25 +48,18 @@
         }
     .end annotation
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 3355
     iput-object p1, p0, Lcom/netflix/falkor/CachedModelProxy$LogBillboardActivityTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
-    .line 3356
     invoke-direct {p0, p1, v0, v0}, Lcom/netflix/falkor/CachedModelProxy$CmpTask;-><init>(Lcom/netflix/falkor/CachedModelProxy;Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/falkor/CachedModelProxy$1;)V
 
-    .line 3358
     iput-object p2, p0, Lcom/netflix/falkor/CachedModelProxy$LogBillboardActivityTask;->video:Lcom/netflix/mediaclient/servicemgr/interface_/Video;
 
-    .line 3359
     iput-object p3, p0, Lcom/netflix/falkor/CachedModelProxy$LogBillboardActivityTask;->type:Lcom/netflix/mediaclient/servicemgr/BillboardInteractionType;
 
-    .line 3360
     iput-object p4, p0, Lcom/netflix/falkor/CachedModelProxy$LogBillboardActivityTask;->params:Ljava/util/Map;
 
-    .line 3361
     return-void
 .end method
 
@@ -84,16 +77,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 3367
     const-string/jumbo v0, "{}"
 
-    .line 3368
     iget-object v1, p0, Lcom/netflix/falkor/CachedModelProxy$LogBillboardActivityTask;->params:Ljava/util/Map;
 
     if-eqz v1, :cond_0
 
-    .line 3369
     new-instance v0, Lorg/json/JSONObject;
 
     iget-object v1, p0, Lcom/netflix/falkor/CachedModelProxy$LogBillboardActivityTask;->params:Ljava/util/Map;
@@ -104,7 +93,6 @@
 
     move-result-object v0
 
-    .line 3371
     :cond_0
     const/4 v1, 0x4
 
@@ -146,22 +134,18 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3372
     return-void
 .end method
 
 .method protected callbackForFailure(Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 3
 
-    .prologue
-    .line 3398
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3399
     const-string/jumbo v0, "CachedModelProxy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -184,7 +168,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3402
     :cond_0
     return-void
 .end method
@@ -192,13 +175,10 @@
 .method protected customHandleResponse(Lcom/google/gson/JsonObject;)V
     .locals 3
 
-    .prologue
-    .line 3381
     sget-boolean v0, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v0, :cond_0
 
-    .line 3382
     const-string/jumbo v0, "CachedModelProxy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -221,7 +201,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3385
     :cond_0
     const-string/jumbo v0, "value"
 
@@ -229,14 +208,12 @@
 
     move-result-object v0
 
-    .line 3386
     invoke-static {v0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorParseUtils;->isEmpty(Lcom/google/gson/JsonObject;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 3387
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorException;
 
     const-string/jumbo v1, "Empty value"
@@ -245,7 +222,6 @@
 
     throw v0
 
-    .line 3389
     :cond_1
     return-void
 .end method
@@ -253,16 +229,12 @@
 .method protected fetchResultsAndCallbackForSuccess(Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/falkor/CachedModelProxy$GetResult;)V
     .locals 0
 
-    .prologue
-    .line 3394
     return-void
 .end method
 
 .method protected shouldCustomHandleResponse()Z
     .locals 1
 
-    .prologue
-    .line 3376
     const/4 v0, 0x1
 
     return v0

@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/NrdController;)V
     .locals 0
 
-    .prologue
-    .line 141
     iput-object p1, p0, Lcom/netflix/mediaclient/service/NrdController$1;->this$0:Lcom/netflix/mediaclient/service/NrdController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,9 +26,6 @@
 .method public received(Lcom/netflix/mediaclient/event/UIEvent;)V
     .locals 2
 
-    .prologue
-    .line 144
-    .line 145
     new-instance v0, Lcom/netflix/mediaclient/android/app/BackgroundTask;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/android/app/BackgroundTask;-><init>()V
@@ -41,6 +36,5 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/app/BackgroundTask;->execute(Ljava/lang/Runnable;)V
 
-    .line 160
     return-void
 .end method

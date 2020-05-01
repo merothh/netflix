@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 31
     const/4 v0, 0x1
 
     new-array v0, v0, [I
@@ -31,8 +29,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,20 +37,16 @@
 .method static setBoundsViewOutlineProvider(Landroid/view/View;)V
     .locals 1
 
-    .prologue
-    .line 34
     sget-object v0, Landroid/view/ViewOutlineProvider;->BOUNDS:Landroid/view/ViewOutlineProvider;
 
     invoke-virtual {p0, v0}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
-    .line 35
     return-void
 .end method
 
 .method static setDefaultAppBarLayoutStateListAnimator(Landroid/view/View;F)V
     .locals 10
 
-    .prologue
     const v9, 0x101000e
 
     const/4 v8, 0x0
@@ -63,7 +55,6 @@
 
     const/4 v6, 0x0
 
-    .line 57
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -74,12 +65,10 @@
 
     move-result v0
 
-    .line 59
     new-instance v1, Landroid/animation/StateListAnimator;
 
     invoke-direct {v1}, Landroid/animation/StateListAnimator;-><init>()V
 
-    .line 62
     const/4 v2, 0x3
 
     new-array v2, v2, [I
@@ -104,7 +93,6 @@
 
     aput v8, v4, v6
 
-    .line 64
     invoke-static {p0, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
@@ -115,10 +103,8 @@
 
     move-result-object v3
 
-    .line 62
     invoke-virtual {v1, v2, v3}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
 
-    .line 67
     new-array v2, v7, [I
 
     aput v9, v2, v6
@@ -129,7 +115,6 @@
 
     aput p1, v4, v6
 
-    .line 68
     invoke-static {p0, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
@@ -140,10 +125,8 @@
 
     move-result-object v0
 
-    .line 67
     invoke-virtual {v1, v2, v0}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
 
-    .line 71
     new-array v0, v6, [I
 
     const-string/jumbo v2, "elevation"
@@ -152,7 +135,6 @@
 
     aput v8, v3, v6
 
-    .line 72
     invoke-static {p0, v2, v3}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
@@ -163,33 +145,26 @@
 
     move-result-object v2
 
-    .line 71
     invoke-virtual {v1, v0, v2}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
 
-    .line 74
     invoke-virtual {p0, v1}, Landroid/view/View;->setStateListAnimator(Landroid/animation/StateListAnimator;)V
 
-    .line 75
     return-void
 .end method
 
 .method static setStateListAnimatorFromAttrs(Landroid/view/View;Landroid/util/AttributeSet;II)V
     .locals 4
 
-    .prologue
-    .line 39
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 40
     sget-object v1, Landroid/support/design/widget/ViewUtilsLollipop;->STATE_LIST_ANIM_ATTRS:[I
 
     invoke-virtual {v0, p1, v1, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v1
 
-    .line 43
     const/4 v2, 0x0
 
     :try_start_0
@@ -199,34 +174,27 @@
 
     if-eqz v2, :cond_0
 
-    .line 44
     const/4 v2, 0x0
 
     const/4 v3, 0x0
 
-    .line 45
     invoke-virtual {v1, v2, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v2
 
-    .line 44
     invoke-static {v0, v2}, Landroid/animation/AnimatorInflater;->loadStateListAnimator(Landroid/content/Context;I)Landroid/animation/StateListAnimator;
 
     move-result-object v0
 
-    .line 46
     invoke-virtual {p0, v0}, Landroid/view/View;->setStateListAnimator(Landroid/animation/StateListAnimator;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 49
     :cond_0
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 51
     return-void
 
-    .line 49
     :catchall_0
     move-exception v0
 

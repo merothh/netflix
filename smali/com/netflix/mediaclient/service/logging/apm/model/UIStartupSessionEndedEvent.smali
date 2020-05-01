@@ -73,8 +73,6 @@
 .method public constructor <init>(JLcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;ZLcom/netflix/mediaclient/media/PlayerType;Lcom/netflix/mediaclient/service/logging/apm/model/DeepLink;Lcom/netflix/mediaclient/service/logging/apm/model/UIBrowseStartupSessionCustomData;)V
     .locals 3
 
-    .prologue
-    .line 130
     const-string/jumbo v0, "uiStartup"
 
     new-instance v1, Lcom/netflix/mediaclient/service/logging/client/model/DeviceUniqueId;
@@ -83,15 +81,12 @@
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/netflix/mediaclient/service/logging/client/model/SessionEndedEvent;-><init>(Ljava/lang/String;Lcom/netflix/mediaclient/service/logging/client/model/DeviceUniqueId;J)V
 
-    .line 84
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->success:Z
 
-    .line 131
     if-nez p3, :cond_0
 
-    .line 132
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Trigger is null!"
@@ -100,14 +95,11 @@
 
     throw v0
 
-    .line 134
     :cond_0
     iput-object p3, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->trigger:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 136
     if-nez p4, :cond_1
 
-    .line 137
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Destination is null!"
@@ -116,23 +108,17 @@
 
     throw v0
 
-    .line 139
     :cond_1
     iput-object p4, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->destinationView:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 141
     iput-boolean p5, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->success:Z
 
-    .line 142
     iput-object p6, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->playerType:Lcom/netflix/mediaclient/media/PlayerType;
 
-    .line 143
     iput-object p7, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->deepLink:Lcom/netflix/mediaclient/service/logging/apm/model/DeepLink;
 
-    .line 144
     iput-object p8, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->customData:Lcom/netflix/mediaclient/service/logging/apm/model/UIBrowseStartupSessionCustomData;
 
-    .line 145
     return-void
 .end method
 
@@ -151,8 +137,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 358
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->activeABTests:Ljava/util/Map;
 
     return-object v0
@@ -161,8 +145,6 @@
 .method protected getCustomData()Lorg/json/JSONObject;
     .locals 1
 
-    .prologue
-    .line 205
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->customData:Lcom/netflix/mediaclient/service/logging/apm/model/UIBrowseStartupSessionCustomData;
 
     if-nez v0, :cond_0
@@ -185,23 +167,18 @@
 .method protected getData()Lorg/json/JSONObject;
     .locals 5
 
-    .prologue
-    .line 149
     invoke-super {p0}, Lcom/netflix/mediaclient/service/logging/client/model/SessionEndedEvent;->getData()Lorg/json/JSONObject;
 
     move-result-object v0
 
-    .line 150
     if-nez v0, :cond_8
 
-    .line 151
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     move-object v2, v0
 
-    .line 153
     :goto_0
     const-string/jumbo v0, "trigger"
 
@@ -213,7 +190,6 @@
 
     invoke-virtual {v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 154
     const-string/jumbo v0, "destinationView"
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->destinationView:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
@@ -224,26 +200,22 @@
 
     invoke-virtual {v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 155
     const-string/jumbo v0, "success"
 
     iget-boolean v1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->success:Z
 
     invoke-virtual {v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
-    .line 156
     const-string/jumbo v0, "voiceEnabled"
 
     iget-boolean v1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->voiceEnabled:Z
 
     invoke-virtual {v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
-    .line 158
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->display:Lcom/netflix/mediaclient/service/logging/apm/model/Display;
 
     if-eqz v0, :cond_0
 
-    .line 159
     const-string/jumbo v0, "display"
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->display:Lcom/netflix/mediaclient/service/logging/apm/model/Display;
@@ -254,13 +226,11 @@
 
     invoke-virtual {v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 162
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->error:Lcom/netflix/mediaclient/service/logging/client/model/UIError;
 
     if-eqz v0, :cond_1
 
-    .line 163
     const-string/jumbo v0, "error"
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->error:Lcom/netflix/mediaclient/service/logging/client/model/UIError;
@@ -271,49 +241,41 @@
 
     invoke-virtual {v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 166
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->trackId:Ljava/lang/String;
 
     if-eqz v0, :cond_2
 
-    .line 167
     const-string/jumbo v0, "trackId"
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->trackId:Ljava/lang/String;
 
     invoke-virtual {v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 170
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->searchTerm:Ljava/lang/String;
 
     if-eqz v0, :cond_3
 
-    .line 171
     const-string/jumbo v0, "searchTerm"
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->searchTerm:Ljava/lang/String;
 
     invoke-virtual {v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 174
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->activeABTests:Ljava/util/Map;
 
     if-eqz v0, :cond_4
 
-    .line 175
     new-instance v3, Lorg/json/JSONObject;
 
     invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
 
-    .line 176
     const-string/jumbo v0, "activeABTests"
 
     invoke-virtual {v2, v0, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 177
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->activeABTests:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -337,7 +299,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 178
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->activeABTests:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -346,28 +307,23 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 179
     invoke-virtual {v3, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     goto :goto_1
 
-    .line 183
     :cond_4
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    .line 184
     const-string/jumbo v1, "version"
 
     invoke-virtual {v2, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 186
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->deepLink:Lcom/netflix/mediaclient/service/logging/apm/model/DeepLink;
 
     if-eqz v1, :cond_5
 
-    .line 187
     const-string/jumbo v1, "deeplinkMsgParams"
 
     iget-object v3, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->deepLink:Lcom/netflix/mediaclient/service/logging/apm/model/DeepLink;
@@ -378,7 +334,6 @@
 
     invoke-virtual {v2, v1, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 191
     :cond_5
     const-string/jumbo v1, "os"
 
@@ -392,12 +347,10 @@
 
     invoke-virtual {v0, v1, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 192
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->playerType:Lcom/netflix/mediaclient/media/PlayerType;
 
     if-eqz v0, :cond_6
 
-    .line 193
     const-string/jumbo v0, "playerType"
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->playerType:Lcom/netflix/mediaclient/media/PlayerType;
@@ -408,7 +361,6 @@
 
     invoke-virtual {v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 196
     :cond_6
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -416,7 +368,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 197
     const-string/jumbo v0, "UIStartupSessionEndedEvent"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -439,7 +390,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
     :cond_7
     return-object v2
 
@@ -452,8 +402,6 @@
 .method public getDestinationView()Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
     .locals 1
 
-    .prologue
-    .line 232
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->destinationView:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     return-object v0
@@ -462,8 +410,6 @@
 .method public getDisplay()Lcom/netflix/mediaclient/service/logging/apm/model/Display;
     .locals 1
 
-    .prologue
-    .line 250
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->display:Lcom/netflix/mediaclient/service/logging/apm/model/Display;
 
     return-object v0
@@ -472,8 +418,6 @@
 .method public getError()Lcom/netflix/mediaclient/service/logging/client/model/UIError;
     .locals 1
 
-    .prologue
-    .line 286
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->error:Lcom/netflix/mediaclient/service/logging/client/model/UIError;
 
     return-object v0
@@ -482,8 +426,6 @@
 .method public getSearchTerm()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 322
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->searchTerm:Ljava/lang/String;
 
     return-object v0
@@ -492,8 +434,6 @@
 .method public getTrackId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 304
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->trackId:Ljava/lang/String;
 
     return-object v0
@@ -502,8 +442,6 @@
 .method public getTrigger()Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
     .locals 1
 
-    .prologue
-    .line 214
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->trigger:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
     return-object v0
@@ -512,8 +450,6 @@
 .method public isSuccess()Z
     .locals 1
 
-    .prologue
-    .line 268
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->success:Z
 
     return v0
@@ -522,8 +458,6 @@
 .method public isVoiceEnabled()Z
     .locals 1
 
-    .prologue
-    .line 340
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->voiceEnabled:Z
 
     return v0
@@ -542,98 +476,71 @@
         }
     .end annotation
 
-    .prologue
-    .line 367
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->activeABTests:Ljava/util/Map;
 
-    .line 368
     return-void
 .end method
 
 .method public setDestinationView(Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;)V
     .locals 0
 
-    .prologue
-    .line 241
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->destinationView:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
-    .line 242
     return-void
 .end method
 
 .method public setDisplay(Lcom/netflix/mediaclient/service/logging/apm/model/Display;)V
     .locals 0
 
-    .prologue
-    .line 259
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->display:Lcom/netflix/mediaclient/service/logging/apm/model/Display;
 
-    .line 260
     return-void
 .end method
 
 .method public setError(Lcom/netflix/mediaclient/service/logging/client/model/UIError;)V
     .locals 0
 
-    .prologue
-    .line 295
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->error:Lcom/netflix/mediaclient/service/logging/client/model/UIError;
 
-    .line 296
     return-void
 .end method
 
 .method public setSearchTerm(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 331
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->searchTerm:Ljava/lang/String;
 
-    .line 332
     return-void
 .end method
 
 .method public setSuccess(Z)V
     .locals 0
 
-    .prologue
-    .line 277
     iput-boolean p1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->success:Z
 
-    .line 278
     return-void
 .end method
 
 .method public setTrackId(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 313
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->trackId:Ljava/lang/String;
 
-    .line 314
     return-void
 .end method
 
 .method public setTrigger(Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;)V
     .locals 0
 
-    .prologue
-    .line 223
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->trigger:Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging$UiStartupTrigger;
 
-    .line 224
     return-void
 .end method
 
 .method public setVoiceEnabled(Z)V
     .locals 0
 
-    .prologue
-    .line 349
     iput-boolean p1, p0, Lcom/netflix/mediaclient/service/logging/apm/model/UIStartupSessionEndedEvent;->voiceEnabled:Z
 
-    .line 350
     return-void
 .end method

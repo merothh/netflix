@@ -15,48 +15,36 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 35
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/android/widget/NetflixSeekBar;-><init>(Landroid/content/Context;)V
 
-    .line 36
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .prologue
-    .line 39
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/android/widget/NetflixSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 40
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .prologue
-    .line 43
     invoke-direct {p0, p1, p2, p3}, Lcom/netflix/mediaclient/android/widget/NetflixSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 44
     return-void
 .end method
 
 .method private touchEventToProgress(Landroid/view/MotionEvent;)I
     .locals 5
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 107
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/widget/TimelineSeekBar;->getWidth()I
 
     move-result v0
 
-    .line 108
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/widget/TimelineSeekBar;->getPaddingLeft()I
 
     move-result v2
@@ -69,14 +57,12 @@
 
     sub-int/2addr v2, v3
 
-    .line 109
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v3
 
     float-to-int v3, v3
 
-    .line 112
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/widget/TimelineSeekBar;->getPaddingLeft()I
 
     move-result v4
@@ -85,25 +71,21 @@
 
     move v0, v1
 
-    .line 119
     :goto_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/widget/TimelineSeekBar;->getMax()I
 
     move-result v2
 
-    .line 120
     int-to-float v2, v2
 
     mul-float/2addr v0, v2
 
     add-float/2addr v0, v1
 
-    .line 121
     float-to-int v0, v0
 
     return v0
 
-    .line 114
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/widget/TimelineSeekBar;->getPaddingRight()I
 
@@ -113,12 +95,10 @@
 
     if-le v3, v0, :cond_1
 
-    .line 115
     const/high16 v0, 0x3f800000    # 1.0f
 
     goto :goto_0
 
-    .line 117
     :cond_1
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/widget/TimelineSeekBar;->getPaddingLeft()I
 
@@ -140,13 +120,10 @@
 .method public computeXOffsetFromProgress(J)F
     .locals 3
 
-    .prologue
-    .line 131
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/widget/TimelineSeekBar;->getWidth()I
 
     move-result v0
 
-    .line 132
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/widget/TimelineSeekBar;->getPaddingLeft()I
 
     move-result v1
@@ -159,7 +136,6 @@
 
     sub-int/2addr v0, v1
 
-    .line 133
     int-to-long v0, v0
 
     mul-long/2addr v0, p1
@@ -180,8 +156,6 @@
 .method public dispatchTrackballEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/android/widget/TimelineSeekBar;->onTrackballEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -192,15 +166,12 @@
 .method public hideThumb(Z)V
     .locals 2
 
-    .prologue
-    .line 64
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x10
 
     if-lt v0, v1, :cond_1
 
-    .line 65
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/widget/TimelineSeekBar;->getThumb()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
@@ -212,17 +183,14 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 70
     :goto_1
     return-void
 
-    .line 65
     :cond_0
     const/16 v0, 0xff
 
     goto :goto_0
 
-    .line 67
     :cond_1
     if-eqz p1, :cond_2
 
@@ -258,35 +226,28 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 4
 
-    .prologue
-    .line 83
     invoke-virtual {p0}, Lcom/netflix/mediaclient/android/widget/TimelineSeekBar;->isEnabled()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 84
     const/4 v0, 0x0
 
-    .line 97
     :goto_0
     return v0
 
-    .line 87
     :cond_0
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/android/widget/TimelineSeekBar;->touchEventToProgress(Landroid/view/MotionEvent;)I
 
     move-result v1
 
-    .line 89
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 90
     const-string/jumbo v0, "nf_timelineseekbar"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -313,7 +274,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/android/widget/TimelineSeekBar;->onSeekBarChangeListener:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
@@ -325,19 +285,16 @@
 
     check-cast v0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;
 
-    .line 94
     invoke-virtual {v0, p0, p1, v1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->handleTouchEvent(Landroid/widget/SeekBar;Landroid/view/MotionEvent;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 95
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 97
     :cond_2
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/android/widget/NetflixSeekBar;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -349,8 +306,6 @@
 .method public onTrackballEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .prologue
-    .line 60
     const/4 v0, 0x1
 
     return v0
@@ -359,13 +314,9 @@
 .method public setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
     .locals 0
 
-    .prologue
-    .line 74
     iput-object p1, p0, Lcom/netflix/mediaclient/android/widget/TimelineSeekBar;->onSeekBarChangeListener:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
-    .line 75
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/android/widget/NetflixSeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
 
-    .line 76
     return-void
 .end method

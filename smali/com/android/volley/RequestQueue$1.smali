@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/android/volley/RequestQueue;Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 205
     iput-object p1, p0, Lcom/android/volley/RequestQueue$1;->this$0:Lcom/android/volley/RequestQueue;
 
     iput-object p2, p0, Lcom/android/volley/RequestQueue$1;->val$tag:Ljava/lang/Object;
@@ -39,8 +37,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 208
     invoke-virtual {p1}, Lcom/android/volley/Request;->getTag()Ljava/lang/Object;
 
     move-result-object v0

@@ -35,8 +35,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 29
     const-string/jumbo v0, "nf_log"
 
     sput-object v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;->TAG:Ljava/lang/String;
@@ -47,8 +45,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -57,48 +53,38 @@
 .method public static getDefault()Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;
     .locals 2
 
-    .prologue
-    .line 89
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;-><init>()V
 
-    .line 90
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;->disable:Z
 
-    .line 91
     const/16 v1, 0x32
 
     iput v1, v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;->disableChancePercentage:I
 
-    .line 92
     return-object v0
 .end method
 
 .method public static loadFromPreferences(Landroid/content/Context;)Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;
     .locals 5
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 103
-    .line 104
     const-string/jumbo v0, "error_log_configuration"
 
     invoke-static {p0, v0, v1}, Lcom/netflix/mediaclient/util/PreferenceUtils;->getStringPref(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 105
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 106
     sget-object v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "Error specification not found in file system"
@@ -107,20 +93,16 @@
 
     move-object v0, v1
 
-    .line 118
     :goto_0
     if-nez v0, :cond_0
 
-    .line 119
     invoke-static {}, Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;->getDefault()Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;
 
     move-result-object v0
 
-    .line 122
     :cond_0
     return-object v0
 
-    .line 110
     :cond_1
     :try_start_0
     invoke-static {}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorParseUtils;->getGson()Lcom/google/gson/Gson;
@@ -137,7 +119,6 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 111
     :try_start_1
     sget-object v1, Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;->TAG:Ljava/lang/String;
 
@@ -149,7 +130,6 @@
 
     goto :goto_0
 
-    .line 113
     :catch_0
     move-exception v1
 
@@ -159,7 +139,6 @@
 
     move-object v0, v4
 
-    .line 114
     :goto_1
     sget-object v2, Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;->TAG:Ljava/lang/String;
 
@@ -171,7 +150,6 @@
 
     goto :goto_0
 
-    .line 113
     :catch_1
     move-exception v0
 
@@ -181,38 +159,30 @@
 .method public static saveToPreferences(Lcom/netflix/mediaclient/util/NetflixPreference;Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;)Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;
     .locals 2
 
-    .prologue
-    .line 127
     if-nez p1, :cond_0
 
-    .line 128
     const-string/jumbo v0, "error_log_configuration"
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/util/NetflixPreference;->removePref(Ljava/lang/String;)Z
 
-    .line 129
     sget-object v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "Breadcrumb logging spec not found, return default"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
     invoke-static {}, Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;->getDefault()Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;
 
     move-result-object p1
 
-    .line 136
     :goto_0
     return-object p1
 
-    .line 132
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorParseUtils;->getGson()Lcom/google/gson/Gson;
 
     move-result-object v0
 
-    .line 133
     const-string/jumbo v1, "error_log_configuration"
 
     invoke-virtual {v0, p1}, Lcom/google/gson/Gson;->toJson(Ljava/lang/Object;)Ljava/lang/String;
@@ -229,29 +199,23 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 156
     if-ne p0, p1, :cond_1
 
-    .line 167
     :cond_0
     :goto_0
     return v0
 
-    .line 158
     :cond_1
     if-nez p1, :cond_2
 
     move v0, v1
 
-    .line 159
     goto :goto_0
 
-    .line 160
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -265,14 +229,11 @@
 
     move v0, v1
 
-    .line 161
     goto :goto_0
 
-    .line 162
     :cond_3
     check-cast p1, Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;
 
-    .line 163
     iget-boolean v2, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;->disable:Z
 
     iget-boolean v3, p1, Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;->disable:Z
@@ -281,10 +242,8 @@
 
     move v0, v1
 
-    .line 164
     goto :goto_0
 
-    .line 165
     :cond_4
     iget v2, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;->disableChancePercentage:I
 
@@ -294,15 +253,12 @@
 
     move v0, v1
 
-    .line 166
     goto :goto_0
 .end method
 
 .method public getDisableChancePercentage()I
     .locals 1
 
-    .prologue
-    .line 81
     iget v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;->disableChancePercentage:I
 
     return v0
@@ -311,8 +267,6 @@
 .method public getImplementation()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 63
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;->implementation:Ljava/lang/String;
 
     return-object v0
@@ -321,9 +275,6 @@
 .method public hashCode()I
     .locals 2
 
-    .prologue
-    .line 144
-    .line 146
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;->disable:Z
 
     if-eqz v0, :cond_0
@@ -333,17 +284,14 @@
     :goto_0
     add-int/lit8 v0, v0, 0x1f
 
-    .line 147
     mul-int/lit8 v0, v0, 0x1f
 
     iget v1, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;->disableChancePercentage:I
 
     add-int/2addr v0, v1
 
-    .line 148
     return v0
 
-    .line 146
     :cond_0
     const/16 v0, 0x4d5
 
@@ -353,8 +301,6 @@
 .method public isDisabled()Z
     .locals 1
 
-    .prologue
-    .line 72
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/ErrorLoggingSpecification;->disable:Z
 
     return v0
@@ -363,8 +309,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 175
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

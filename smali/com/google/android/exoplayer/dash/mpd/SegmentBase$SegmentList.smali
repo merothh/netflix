@@ -35,14 +35,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 254
     invoke-direct/range {p0 .. p9}, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$MultiSegmentBase;-><init>(Lcom/google/android/exoplayer/dash/mpd/RangedUri;JJIJLjava/util/List;)V
 
-    .line 256
     iput-object p10, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SegmentList;->mediaSegments:Ljava/util/List;
 
-    .line 257
     return-void
 .end method
 
@@ -51,8 +47,6 @@
 .method public getLastSegmentNum(J)I
     .locals 2
 
-    .prologue
-    .line 266
     iget v0, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SegmentList;->startNumber:I
 
     iget-object v1, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SegmentList;->mediaSegments:Ljava/util/List;
@@ -71,8 +65,6 @@
 .method public getSegmentUrl(Lcom/google/android/exoplayer/dash/mpd/Representation;I)Lcom/google/android/exoplayer/dash/mpd/RangedUri;
     .locals 2
 
-    .prologue
-    .line 261
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SegmentList;->mediaSegments:Ljava/util/List;
 
     iget v1, p0, Lcom/google/android/exoplayer/dash/mpd/SegmentBase$SegmentList;->startNumber:I
@@ -91,8 +83,6 @@
 .method public isExplicit()Z
     .locals 1
 
-    .prologue
-    .line 271
     const/4 v0, 0x1
 
     return v0

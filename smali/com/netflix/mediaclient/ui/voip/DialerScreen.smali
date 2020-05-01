@@ -78,41 +78,34 @@
         value = 0x17
     .end annotation
 
-    .prologue
     const v5, 0x7f0e003e
 
     const v4, 0x7f0e003b
 
     const v3, 0x7f0e003a
 
-    .line 117
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 107
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mHandler:Landroid/os/Handler;
 
-    .line 229
     new-instance v0, Lcom/netflix/mediaclient/ui/voip/DialerScreen$1;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen$1;-><init>(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOnTouchListener:Landroid/view/View$OnTouchListener;
 
-    .line 644
     new-instance v0, Lcom/netflix/mediaclient/ui/voip/DialerScreen$6;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen$6;-><init>(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->onEverySecond:Ljava/lang/Runnable;
 
-    .line 119
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
-    .line 121
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;->getResources()Landroid/content/res/Resources;
@@ -127,7 +120,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mRippleAnimationInMs:I
 
-    .line 122
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     const v1, 0x7f0f0107
@@ -140,7 +132,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mCallStatus1:Landroid/widget/TextView;
 
-    .line 123
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     const v1, 0x7f0f0108
@@ -153,7 +144,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mCallStatus2:Landroid/widget/TextView;
 
-    .line 125
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     const v1, 0x7f0f00e5
@@ -166,7 +156,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mSpeakerIcon:Landroid/widget/ImageView;
 
-    .line 126
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     const v1, 0x7f0f00e6
@@ -179,7 +168,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mSpeakerLabel:Landroid/widget/TextView;
 
-    .line 127
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     const v1, 0x7f0f010a
@@ -192,7 +180,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mTimer:Landroid/widget/TextView;
 
-    .line 128
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     const v1, 0x7f0f00e8
@@ -205,7 +192,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mMicIcon:Landroid/widget/ImageView;
 
-    .line 129
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     const v1, 0x7f0f00eb
@@ -218,7 +204,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mDialpadIcon:Landroid/widget/ImageView;
 
-    .line 130
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     const v1, 0x7f0f00ec
@@ -229,12 +214,10 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mDialpadIconLabel:Landroid/view/View;
 
-    .line 132
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->setEnableDialpad(Z)V
 
-    .line 134
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     const v1, 0x7f0f00e0
@@ -245,7 +228,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mDialerContainer:Landroid/view/View;
 
-    .line 135
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     const v1, 0x7f0f00df
@@ -256,7 +238,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mStatusContainer:Landroid/view/View;
 
-    .line 136
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     const v1, 0x7f0f00e1
@@ -267,7 +248,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mButtonsContainer:Landroid/view/View;
 
-    .line 137
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     const v1, 0x7f0f0109
@@ -278,7 +258,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mLoadingView:Landroid/view/View;
 
-    .line 139
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     const v1, 0x7f0f00e4
@@ -289,7 +268,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mSpeakerButtonContainer:Landroid/view/View;
 
-    .line 140
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     const v1, 0x7f0f00ed
@@ -302,7 +280,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mFab:Landroid/support/design/widget/FloatingActionButton;
 
-    .line 141
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     const v1, 0x7f0f00ee
@@ -315,7 +292,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mDialpad:Landroid/widget/TableLayout;
 
-    .line 144
     :try_start_0
     new-instance v0, Landroid/media/ToneGenerator;
 
@@ -329,11 +305,9 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 149
     :goto_0
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->setupButtons()V
 
-    .line 151
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     const-string/jumbo v1, "audio"
@@ -346,7 +320,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 152
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->isSpeakerphoneOn()Z
@@ -355,7 +328,6 @@
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mSpeakerOn:Z
 
-    .line 153
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->isMicrophoneMute()Z
@@ -364,14 +336,12 @@
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mMuted:Z
 
-    .line 154
     new-instance v0, Lcom/netflix/mediaclient/util/TimeFormatterHelper;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/util/TimeFormatterHelper;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mFormatter:Lcom/netflix/mediaclient/util/TimeFormatterHelper;
 
-    .line 156
     invoke-static {}, Lcom/netflix/mediaclient/util/AndroidUtils;->getAndroidVersion()I
 
     move-result v0
@@ -380,39 +350,32 @@
 
     if-le v0, v1, :cond_0
 
-    .line 157
     invoke-virtual {p1, v4}, Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;->getColor(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mNumberButtonColor:I
 
-    .line 158
     invoke-virtual {p1, v3}, Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;->getColor(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOtherButtonColor:I
 
-    .line 159
     invoke-virtual {p1, v5}, Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;->getColor(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mButtonSelectedColor:I
 
-    .line 166
     :goto_1
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->setupSpeaker()V
 
-    .line 167
     return-void
 
-    .line 145
     :catch_0
     move-exception v0
 
-    .line 146
     const-string/jumbo v1, "VoipActivity"
 
     const-string/jumbo v2, "Failed to initiate tone generator"
@@ -421,7 +384,6 @@
 
     goto :goto_0
 
-    .line 161
     :cond_0
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;->getResources()Landroid/content/res/Resources;
 
@@ -433,7 +395,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mNumberButtonColor:I
 
-    .line 162
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -444,7 +405,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOtherButtonColor:I
 
-    .line 163
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -461,8 +421,6 @@
 .method static synthetic access$000(Lcom/netflix/mediaclient/ui/voip/DialerScreen;Landroid/view/View;Z)V
     .locals 0
 
-    .prologue
-    .line 41
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->handleButtonTounch(Landroid/view/View;Z)V
 
     return-void
@@ -471,8 +429,6 @@
 .method static synthetic access$100(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
     .locals 1
 
-    .prologue
-    .line 41
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     return-object v0
@@ -481,8 +437,6 @@
 .method static synthetic access$1000(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)V
     .locals 0
 
-    .prologue
-    .line 41
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->setProgress()V
 
     return-void
@@ -491,8 +445,6 @@
 .method static synthetic access$1100(Lcom/netflix/mediaclient/ui/voip/DialerScreen;I)V
     .locals 0
 
-    .prologue
-    .line 41
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->repostOnEverySecondRunnable(I)V
 
     return-void
@@ -501,8 +453,6 @@
 .method static synthetic access$200(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)Landroid/view/View;
     .locals 1
 
-    .prologue
-    .line 41
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mStatusContainer:Landroid/view/View;
 
     return-object v0
@@ -511,8 +461,6 @@
 .method static synthetic access$300(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)Landroid/view/View;
     .locals 1
 
-    .prologue
-    .line 41
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mDialerContainer:Landroid/view/View;
 
     return-object v0
@@ -521,8 +469,6 @@
 .method static synthetic access$400(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)Landroid/view/View;
     .locals 1
 
-    .prologue
-    .line 41
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mButtonsContainer:Landroid/view/View;
 
     return-object v0
@@ -531,8 +477,6 @@
 .method static synthetic access$500(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)Z
     .locals 1
 
-    .prologue
-    .line 41
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mMuted:Z
 
     return v0
@@ -541,8 +485,6 @@
 .method static synthetic access$600(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)Landroid/widget/ImageView;
     .locals 1
 
-    .prologue
-    .line 41
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mMicIcon:Landroid/widget/ImageView;
 
     return-object v0
@@ -551,8 +493,6 @@
 .method static synthetic access$700(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)Z
     .locals 1
 
-    .prologue
-    .line 41
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mSpeakerOn:Z
 
     return v0
@@ -561,8 +501,6 @@
 .method static synthetic access$800(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)Landroid/widget/ImageView;
     .locals 1
 
-    .prologue
-    .line 41
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mSpeakerIcon:Landroid/widget/ImageView;
 
     return-object v0
@@ -571,8 +509,6 @@
 .method static synthetic access$900(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)Landroid/widget/ImageView;
     .locals 1
 
-    .prologue
-    .line 41
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mDialpadIcon:Landroid/widget/ImageView;
 
     return-object v0
@@ -581,15 +517,12 @@
 .method private cancelCall()V
     .locals 2
 
-    .prologue
-    .line 574
     const-string/jumbo v0, "VoipActivity"
 
     const-string/jumbo v1, "Cancel call by user"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 575
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;->getVoip()Lcom/netflix/mediaclient/servicemgr/IVoip;
@@ -598,38 +531,30 @@
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/servicemgr/IVoip;->terminate()Z
 
-    .line 576
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;->callEnded(Lcom/netflix/mediaclient/servicemgr/IVoip$Call;)V
 
-    .line 577
     return-void
 .end method
 
 .method public static convertDrawableToGrayScale(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
     .locals 3
 
-    .prologue
-    .line 717
     if-nez p0, :cond_0
 
-    .line 718
     const/4 v0, 0x0
 
-    .line 722
     :goto_0
     return-object v0
 
-    .line 720
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 721
     const/4 v1, -0x1
 
     sget-object v2, Landroid/graphics/PorterDuff$Mode;->SRC_ATOP:Landroid/graphics/PorterDuff$Mode;
@@ -642,8 +567,6 @@
 .method private executeAfterRippleAnimation(Ljava/lang/Runnable;I)V
     .locals 4
 
-    .prologue
-    .line 472
     invoke-static {}, Lcom/netflix/mediaclient/util/AndroidUtils;->getAndroidVersion()I
 
     move-result v0
@@ -652,18 +575,15 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 473
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mHandler:Landroid/os/Handler;
 
     int-to-long v2, p2
 
     invoke-virtual {v0, p1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 477
     :goto_0
     return-void
 
-    .line 475
     :cond_0
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
@@ -673,8 +593,6 @@
 .method private handleButtonTounch(ICZI)V
     .locals 4
 
-    .prologue
-    .line 294
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;->findViewById(I)Landroid/view/View;
@@ -683,17 +601,14 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 296
     if-eqz p3, :cond_3
 
-    .line 297
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 298
     const-string/jumbo v1, "VoipActivity"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -716,7 +631,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 300
     :cond_0
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
@@ -726,36 +640,29 @@
 
     invoke-interface {v1, p2}, Lcom/netflix/mediaclient/servicemgr/IVoip;->startDTMF(C)V
 
-    .line 301
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mToneGenerator:Landroid/media/ToneGenerator;
 
     if-eqz v1, :cond_1
 
-    .line 302
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mToneGenerator:Landroid/media/ToneGenerator;
 
     invoke-virtual {v1, p4}, Landroid/media/ToneGenerator;->startTone(I)Z
 
-    .line 316
     :cond_1
     :goto_0
     invoke-direct {p0, p1, p2, p3}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->updateDiaPadState(ICZ)V
 
-    .line 318
     if-nez v0, :cond_2
 
-    .line 319
     const-string/jumbo v0, "VoipActivity"
 
     const-string/jumbo v1, "Button label not found!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 321
     :cond_2
     return-void
 
-    .line 306
     :cond_3
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -763,7 +670,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 307
     const-string/jumbo v1, "VoipActivity"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -786,7 +692,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 309
     :cond_4
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
@@ -796,12 +701,10 @@
 
     invoke-interface {v1}, Lcom/netflix/mediaclient/servicemgr/IVoip;->stopDTMF()V
 
-    .line 310
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mToneGenerator:Landroid/media/ToneGenerator;
 
     if-eqz v1, :cond_1
 
-    .line 311
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mToneGenerator:Landroid/media/ToneGenerator;
 
     invoke-virtual {v1}, Landroid/media/ToneGenerator;->stopTone()V
@@ -812,15 +715,12 @@
 .method private handleButtonTounch(Landroid/view/View;Z)V
     .locals 3
 
-    .prologue
-    .line 248
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 286
     :pswitch_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -828,7 +728,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 287
     const-string/jumbo v0, "VoipActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -855,12 +754,10 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 290
     :cond_0
     :goto_0
     return-void
 
-    .line 250
     :pswitch_1
     const v0, 0x7f0f00f0
 
@@ -872,7 +769,6 @@
 
     goto :goto_0
 
-    .line 253
     :pswitch_2
     const v0, 0x7f0f00f2
 
@@ -884,7 +780,6 @@
 
     goto :goto_0
 
-    .line 256
     :pswitch_3
     const v0, 0x7f0f00f4
 
@@ -896,7 +791,6 @@
 
     goto :goto_0
 
-    .line 259
     :pswitch_4
     const v0, 0x7f0f00f6
 
@@ -908,7 +802,6 @@
 
     goto :goto_0
 
-    .line 262
     :pswitch_5
     const v0, 0x7f0f00f8
 
@@ -920,7 +813,6 @@
 
     goto :goto_0
 
-    .line 265
     :pswitch_6
     const v0, 0x7f0f00fa
 
@@ -932,7 +824,6 @@
 
     goto :goto_0
 
-    .line 268
     :pswitch_7
     const v0, 0x7f0f00fc
 
@@ -944,7 +835,6 @@
 
     goto :goto_0
 
-    .line 271
     :pswitch_8
     const v0, 0x7f0f00fe
 
@@ -956,7 +846,6 @@
 
     goto :goto_0
 
-    .line 274
     :pswitch_9
     const v0, 0x7f0f0100
 
@@ -968,7 +857,6 @@
 
     goto :goto_0
 
-    .line 277
     :pswitch_a
     const v0, 0x7f0f0104
 
@@ -980,7 +868,6 @@
 
     goto :goto_0
 
-    .line 280
     :pswitch_b
     const v0, 0x7f0f0102
 
@@ -992,7 +879,6 @@
 
     goto :goto_0
 
-    .line 283
     :pswitch_c
     const v0, 0x7f0f0106
 
@@ -1004,7 +890,6 @@
 
     goto :goto_0
 
-    .line 248
     :pswitch_data_0
     .packed-switch 0x7f0f00f0
         :pswitch_1
@@ -1036,15 +921,12 @@
 .method private repostOnEverySecondRunnable(I)V
     .locals 4
 
-    .prologue
-    .line 675
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->onEverySecond:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 676
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->onEverySecond:Ljava/lang/Runnable;
@@ -1053,15 +935,12 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 677
     return-void
 .end method
 
 .method private setButtonsStateToEnabled(Z)V
     .locals 5
 
-    .prologue
-    .line 194
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mButtons:[Landroid/view/View;
 
     if-eqz v0, :cond_0
@@ -1074,11 +953,9 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 201
     :cond_0
     return-void
 
-    .line 197
     :cond_1
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mButtons:[Landroid/view/View;
 
@@ -1093,10 +970,8 @@
 
     aget-object v4, v2, v1
 
-    .line 198
     invoke-virtual {v4, p1}, Landroid/view/View;->setEnabled(Z)V
 
-    .line 199
     if-eqz p1, :cond_2
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -1104,14 +979,12 @@
     :goto_1
     invoke-virtual {v4, v0}, Landroid/view/View;->setAlpha(F)V
 
-    .line 197
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 199
     :cond_2
     const/high16 v0, 0x3e800000    # 0.25f
 
@@ -1121,8 +994,6 @@
 .method private setDialPadColor(II)V
     .locals 1
 
-    .prologue
-    .line 352
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;->findViewById(I)Landroid/view/View;
@@ -1131,13 +1002,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 353
     if-eqz v0, :cond_0
 
-    .line 354
     invoke-virtual {v0, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 356
     :cond_0
     return-void
 .end method
@@ -1145,8 +1013,6 @@
 .method private setEnableDialpad(Z)V
     .locals 3
 
-    .prologue
-    .line 171
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mDialpadIcon:Landroid/widget/ImageView;
@@ -1155,23 +1021,18 @@
 
     invoke-static {v0, p1, v1, v2}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->setImageViewEnabled(Landroid/content/Context;ZLandroid/widget/ImageView;I)V
 
-    .line 172
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mDialpadIconLabel:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setEnabled(Z)V
 
-    .line 173
     return-void
 .end method
 
 .method public static setImageViewEnabled(Landroid/content/Context;ZLandroid/widget/ImageView;I)V
     .locals 1
 
-    .prologue
-    .line 702
     invoke-virtual {p2, p1}, Landroid/widget/ImageView;->setEnabled(Z)V
 
-    .line 703
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1180,17 +1041,13 @@
 
     move-result-object v0
 
-    .line 704
     if-eqz p1, :cond_0
 
-    .line 705
     :goto_0
     invoke-virtual {p2, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 706
     return-void
 
-    .line 704
     :cond_0
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->convertDrawableToGrayScale(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
@@ -1202,8 +1059,6 @@
 .method private declared-synchronized setProgress()V
     .locals 4
 
-    .prologue
-    .line 681
     monitor-enter p0
 
     :try_start_0
@@ -1225,14 +1080,12 @@
 
     long-to-int v0, v0
 
-    .line 682
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 683
     const-string/jumbo v1, "VoipActivity"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1257,7 +1110,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 686
     :cond_0
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mTimer:Landroid/widget/TextView;
 
@@ -1271,12 +1123,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 687
     monitor-exit p0
 
     return-void
 
-    .line 681
     :catchall_0
     move-exception v0
 
@@ -1288,17 +1138,14 @@
 .method private setupButtons()V
     .locals 5
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 206
     const/16 v1, 0xc
 
     new-array v1, v1, [Landroid/view/View;
 
     iput-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mButtons:[Landroid/view/View;
 
-    .line 207
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mButtons:[Landroid/view/View;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
@@ -1311,7 +1158,6 @@
 
     aput-object v2, v1, v0
 
-    .line 208
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mButtons:[Landroid/view/View;
 
     const/4 v2, 0x1
@@ -1326,7 +1172,6 @@
 
     aput-object v3, v1, v2
 
-    .line 209
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mButtons:[Landroid/view/View;
 
     const/4 v2, 0x2
@@ -1341,7 +1186,6 @@
 
     aput-object v3, v1, v2
 
-    .line 210
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mButtons:[Landroid/view/View;
 
     const/4 v2, 0x3
@@ -1356,7 +1200,6 @@
 
     aput-object v3, v1, v2
 
-    .line 211
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mButtons:[Landroid/view/View;
 
     const/4 v2, 0x4
@@ -1371,7 +1214,6 @@
 
     aput-object v3, v1, v2
 
-    .line 212
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mButtons:[Landroid/view/View;
 
     const/4 v2, 0x5
@@ -1386,7 +1228,6 @@
 
     aput-object v3, v1, v2
 
-    .line 213
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mButtons:[Landroid/view/View;
 
     const/4 v2, 0x6
@@ -1401,7 +1242,6 @@
 
     aput-object v3, v1, v2
 
-    .line 214
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mButtons:[Landroid/view/View;
 
     const/4 v2, 0x7
@@ -1416,7 +1256,6 @@
 
     aput-object v3, v1, v2
 
-    .line 215
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mButtons:[Landroid/view/View;
 
     const/16 v2, 0x8
@@ -1431,7 +1270,6 @@
 
     aput-object v3, v1, v2
 
-    .line 216
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mButtons:[Landroid/view/View;
 
     const/16 v2, 0x9
@@ -1446,7 +1284,6 @@
 
     aput-object v3, v1, v2
 
-    .line 217
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mButtons:[Landroid/view/View;
 
     const/16 v2, 0xa
@@ -1461,7 +1298,6 @@
 
     aput-object v3, v1, v2
 
-    .line 218
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mButtons:[Landroid/view/View;
 
     const/16 v2, 0xb
@@ -1476,7 +1312,6 @@
 
     aput-object v3, v1, v2
 
-    .line 220
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mButtons:[Landroid/view/View;
 
     array-length v2, v1
@@ -1486,17 +1321,14 @@
 
     aget-object v3, v1, v0
 
-    .line 221
     iget-object v4, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOnTouchListener:Landroid/view/View$OnTouchListener;
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 220
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 224
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
@@ -1512,25 +1344,20 @@
 
     move-result v0
 
-    .line 225
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->setButtonsStateToEnabled(Z)V
 
-    .line 226
     return-void
 .end method
 
 .method private setupSpeaker()V
     .locals 3
 
-    .prologue
-    .line 180
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 181
     const-string/jumbo v0, "VoipActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1567,7 +1394,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 184
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
@@ -1577,26 +1403,22 @@
 
     if-eqz v0, :cond_1
 
-    .line 185
     const-string/jumbo v0, "VoipActivity"
 
     const-string/jumbo v1, "Tablet: hide speaker option"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 186
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mSpeakerButtonContainer:Landroid/view/View;
 
     if-eqz v0, :cond_1
 
-    .line 187
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mSpeakerButtonContainer:Landroid/view/View;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 190
     :cond_1
     return-void
 .end method
@@ -1604,12 +1426,10 @@
 .method private toggleDialpad()V
     .locals 5
 
-    .prologue
     const/16 v4, 0x8
 
     const/4 v1, 0x0
 
-    .line 581
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mDialerContainer:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
@@ -1620,28 +1440,23 @@
 
     const/4 v0, 0x1
 
-    .line 582
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 583
     const-string/jumbo v2, "VoipActivity"
 
     const-string/jumbo v3, "Dialpad was visible, remove it!"
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 585
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mStatusContainer:Landroid/view/View;
 
     invoke-virtual {v2, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 586
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mDialerContainer:Landroid/view/View;
 
     invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 594
     :goto_1
     new-instance v1, Lcom/netflix/mediaclient/ui/voip/DialerScreen$5;
 
@@ -1651,16 +1466,13 @@
 
     invoke-direct {p0, v1, v0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->executeAfterRippleAnimation(Ljava/lang/Runnable;I)V
 
-    .line 606
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 581
     goto :goto_0
 
-    .line 589
     :cond_1
     const-string/jumbo v2, "VoipActivity"
 
@@ -1668,12 +1480,10 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 590
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mStatusContainer:Landroid/view/View;
 
     invoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 591
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mDialerContainer:Landroid/view/View;
 
     invoke-virtual {v2, v1}, Landroid/view/View;->setVisibility(I)V
@@ -1684,20 +1494,16 @@
 .method private toggleMic()V
     .locals 3
 
-    .prologue
-    .line 609
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mMuted:Z
 
     if-eqz v0, :cond_2
 
-    .line 610
     const-string/jumbo v0, "VoipActivity"
 
     const-string/jumbo v1, "Unmute"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 614
     :goto_0
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mMuted:Z
 
@@ -1708,7 +1514,6 @@
     :goto_1
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mMuted:Z
 
-    .line 615
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;->getVoip()Lcom/netflix/mediaclient/servicemgr/IVoip;
@@ -1719,19 +1524,16 @@
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/servicemgr/IVoip;->setMicrophoneMute(Z)V
 
-    .line 617
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mAudioManager:Landroid/media/AudioManager;
 
     if-eqz v0, :cond_1
 
-    .line 618
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 619
     const-string/jumbo v0, "VoipActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1756,7 +1558,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 621
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mAudioManager:Landroid/media/AudioManager;
 
@@ -1764,21 +1565,17 @@
 
     invoke-virtual {v0, v1}, Landroid/media/AudioManager;->setMode(I)V
 
-    .line 622
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mAudioManager:Landroid/media/AudioManager;
 
     iget-boolean v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mMuted:Z
 
     invoke-virtual {v0, v1}, Landroid/media/AudioManager;->setMicrophoneMute(Z)V
 
-    .line 625
     :cond_1
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->updateMic()V
 
-    .line 626
     return-void
 
-    .line 612
     :cond_2
     const-string/jumbo v0, "VoipActivity"
 
@@ -1788,7 +1585,6 @@
 
     goto :goto_0
 
-    .line 614
     :cond_3
     const/4 v0, 0x0
 
@@ -1798,20 +1594,16 @@
 .method private toggleSpeaker()V
     .locals 2
 
-    .prologue
-    .line 629
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mSpeakerOn:Z
 
     if-eqz v0, :cond_0
 
-    .line 630
     const-string/jumbo v0, "VoipActivity"
 
     const-string/jumbo v1, "Set speaker from on to off"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 635
     :goto_0
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mSpeakerOn:Z
 
@@ -1822,20 +1614,16 @@
     :goto_1
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mSpeakerOn:Z
 
-    .line 636
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mAudioManager:Landroid/media/AudioManager;
 
     iget-boolean v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mSpeakerOn:Z
 
     invoke-virtual {v0, v1}, Landroid/media/AudioManager;->setSpeakerphoneOn(Z)V
 
-    .line 637
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->updateSpeaker()V
 
-    .line 638
     return-void
 
-    .line 632
     :cond_0
     const-string/jumbo v0, "VoipActivity"
 
@@ -1845,7 +1633,6 @@
 
     goto :goto_0
 
-    .line 635
     :cond_1
     const/4 v0, 0x0
 
@@ -1855,29 +1642,24 @@
 .method private updateCallStatus()V
     .locals 5
 
-    .prologue
     const/16 v4, 0x8
 
     const/4 v3, 0x0
 
-    .line 422
     const-string/jumbo v0, "VoipActivity"
 
     const-string/jumbo v1, "Update call status..."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 424
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mConnected:Z
 
     if-eqz v0, :cond_0
 
-    .line 426
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->setEnableDialpad(Z)V
 
-    .line 428
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mCallStatus1:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
@@ -1890,7 +1672,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 429
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mCallStatus2:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
@@ -1903,25 +1684,20 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 430
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mTimer:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 431
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mLoadingView:Landroid/view/View;
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 440
     :goto_0
     return-void
 
-    .line 433
     :cond_0
     invoke-direct {p0, v3}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->setEnableDialpad(Z)V
 
-    .line 435
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mCallStatus1:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
@@ -1934,7 +1710,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 436
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mCallStatus2:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
@@ -1947,12 +1722,10 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 437
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mTimer:Landroid/widget/TextView;
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 438
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mLoadingView:Landroid/view/View;
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
@@ -1963,8 +1736,6 @@
 .method private updateDiaPadState(ICZ)V
     .locals 2
 
-    .prologue
-    .line 331
     invoke-static {}, Lcom/netflix/mediaclient/util/AndroidUtils;->getAndroidVersion()I
 
     move-result v0
@@ -1973,11 +1744,9 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 342
     :goto_0
     return-void
 
-    .line 334
     :cond_0
     const-string/jumbo v0, "VoipActivity"
 
@@ -1985,17 +1754,14 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 337
     if-eqz p3, :cond_1
 
-    .line 338
     iget v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mButtonSelectedColor:I
 
     invoke-direct {p0, p1, v0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->setDialPadColor(II)V
 
     goto :goto_0
 
-    .line 340
     :cond_1
     invoke-static {p2}, Ljava/lang/Character;->isDigit(C)Z
 
@@ -2019,17 +1785,13 @@
 .method private updateMic()V
     .locals 2
 
-    .prologue
-    .line 444
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mMicIcon:Landroid/widget/ImageView;
 
     if-nez v0, :cond_0
 
-    .line 462
     :goto_0
     return-void
 
-    .line 448
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mAudioManager:Landroid/media/AudioManager;
 
@@ -2039,7 +1801,6 @@
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mMuted:Z
 
-    .line 450
     new-instance v0, Lcom/netflix/mediaclient/ui/voip/DialerScreen$3;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen$3;-><init>(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)V
@@ -2054,8 +1815,6 @@
 .method private updateSpeaker()V
     .locals 2
 
-    .prologue
-    .line 482
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;->isTablet()Z
@@ -2064,18 +1823,15 @@
 
     if-eqz v0, :cond_1
 
-    .line 504
     :cond_0
     :goto_0
     return-void
 
-    .line 486
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mSpeakerIcon:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_0
 
-    .line 490
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->isSpeakerphoneOn()Z
@@ -2084,7 +1840,6 @@
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mSpeakerOn:Z
 
-    .line 492
     new-instance v0, Lcom/netflix/mediaclient/ui/voip/DialerScreen$4;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen$4;-><init>(Lcom/netflix/mediaclient/ui/voip/DialerScreen;)V
@@ -2101,45 +1856,34 @@
 .method public callConnected()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 523
     const-string/jumbo v0, "VoipActivity"
 
     const-string/jumbo v1, "Call is connected"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 524
     iput-boolean v2, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mConnected:Z
 
-    .line 525
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->updateCallStatus()V
 
-    .line 526
     invoke-direct {p0, v2}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->setButtonsStateToEnabled(Z)V
 
-    .line 527
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->startTimer()V
 
-    .line 528
     return-void
 .end method
 
 .method public callRinging()V
     .locals 0
 
-    .prologue
-    .line 532
     return-void
 .end method
 
 .method getActivity()Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
     .locals 1
 
-    .prologue
-    .line 690
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     return-object v0
@@ -2148,8 +1892,6 @@
 .method initUi()V
     .locals 2
 
-    .prologue
-    .line 360
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mStatusContainer:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
@@ -2162,31 +1904,25 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 403
     return-void
 .end method
 
 .method public performAction(Landroid/view/View;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 542
     if-nez p1, :cond_0
 
-    .line 543
     const-string/jumbo v1, "VoipActivity"
 
     const-string/jumbo v2, "DialScreen:: null view? This should never happen!"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 570
     :goto_0
     return v0
 
-    .line 547
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
@@ -2194,7 +1930,6 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 564
     :pswitch_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -2202,7 +1937,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 565
     const-string/jumbo v0, "VoipActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2229,37 +1963,31 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 567
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 550
     :pswitch_1
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->toggleSpeaker()V
 
     goto :goto_0
 
-    .line 554
     :pswitch_2
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->toggleMic()V
 
     goto :goto_0
 
-    .line 557
     :pswitch_3
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->cancelCall()V
 
     goto :goto_0
 
-    .line 561
     :pswitch_4
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->toggleDialpad()V
 
     goto :goto_0
 
-    .line 547
     :pswitch_data_0
     .packed-switch 0x7f0f00e5
         :pswitch_1
@@ -2277,39 +2005,30 @@
 .method public restartTimer()V
     .locals 0
 
-    .prologue
-    .line 670
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->stopTimer()V
 
-    .line 671
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->startTimer()V
 
-    .line 672
     return-void
 .end method
 
 .method public startCall()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
     const/4 v2, 0x0
 
-    .line 507
     const-string/jumbo v0, "VoipActivity"
 
     const-string/jumbo v1, "Call started!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 508
     invoke-virtual {p0, v2}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->update(Z)V
 
-    .line 509
     iput-boolean v2, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mConnected:Z
 
-    .line 510
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;->getVoip()Lcom/netflix/mediaclient/servicemgr/IVoip;
@@ -2322,14 +2041,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 511
     const-string/jumbo v0, "VoipActivity"
 
     const-string/jumbo v1, "Success on starting call"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 517
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mDialerContainer:Landroid/view/View;
 
@@ -2337,18 +2054,14 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 518
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mStatusContainer:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 519
     invoke-direct {p0, v2}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->setEnableDialpad(Z)V
 
-    .line 520
     return-void
 
-    .line 513
     :cond_0
     const-string/jumbo v0, "VoipActivity"
 
@@ -2356,7 +2069,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 514
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mOwner:Lcom/netflix/mediaclient/ui/voip/ContactUsActivity;
 
     const/4 v1, -0x1
@@ -2369,59 +2081,48 @@
 .method public startTimer()V
     .locals 2
 
-    .prologue
-    .line 665
     const-string/jumbo v0, "VoipActivity"
 
     const-string/jumbo v1, "Start timer..."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 666
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->onEverySecond:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 667
     return-void
 .end method
 
 .method public stopTimer()V
     .locals 2
 
-    .prologue
-    .line 660
     const-string/jumbo v0, "VoipActivity"
 
     const-string/jumbo v1, "Stop timer..."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 661
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->onEverySecond:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 662
     return-void
 .end method
 
 .method update(Z)V
     .locals 3
 
-    .prologue
-    .line 407
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 408
     const-string/jumbo v0, "VoipActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2444,31 +2145,23 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 410
     :cond_0
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->updateMic()V
 
-    .line 411
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->updateSpeaker()V
 
-    .line 412
     iput-boolean p1, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mConnected:Z
 
-    .line 413
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->updateCallStatus()V
 
-    .line 414
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->mConnected:Z
 
     if-eqz v0, :cond_1
 
-    .line 415
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->restartTimer()V
 
-    .line 417
     :cond_1
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/voip/DialerScreen;->setButtonsStateToEnabled(Z)V
 
-    .line 418
     return-void
 .end method

@@ -13,8 +13,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 302
     invoke-static {}, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;->values()[Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RequestData$Mechanism;
 
     move-result-object v0
@@ -104,7 +102,6 @@
     :try_end_4
     .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 107
     :goto_4
     invoke-static {}, Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RsaWrappingCryptoContext$Mode;->values()[Lcom/netflix/msl/keyx/AsymmetricWrappedExchange$RsaWrappingCryptoContext$Mode;
 
@@ -160,7 +157,6 @@
 
     goto :goto_5
 
-    .line 302
     :catch_2
     move-exception v0
 

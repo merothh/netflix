@@ -36,7 +36,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -47,7 +46,6 @@
 
     const/4 v3, 0x0
 
-    .line 11
     new-instance v0, Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;
 
     const-string/jumbo v1, "EpisodesForTablet"
@@ -56,7 +54,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;->EpisodesForTablet:Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;
 
-    .line 12
     new-instance v0, Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;
 
     const-string/jumbo v1, "EpisodesForPhone"
@@ -65,7 +62,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;->EpisodesForPhone:Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;
 
-    .line 13
     new-instance v0, Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;
 
     const-string/jumbo v1, "EpisodesForMDX"
@@ -74,7 +70,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;->EpisodesForMDX:Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;
 
-    .line 14
     new-instance v0, Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;
 
     const-string/jumbo v1, "RecommendationForTablet"
@@ -83,7 +78,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;->RecommendationForTablet:Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;
 
-    .line 15
     new-instance v0, Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;
 
     const-string/jumbo v1, "RecommendationForPhone"
@@ -92,7 +86,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;->RecommendationForPhone:Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;
 
-    .line 16
     new-instance v0, Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;
 
     const-string/jumbo v1, "SignupForTablet"
@@ -103,7 +96,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;->SignupForTablet:Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;
 
-    .line 17
     new-instance v0, Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;
 
     const-string/jumbo v1, "SignupForPhone"
@@ -114,7 +106,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;->SignupForPhone:Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;
 
-    .line 10
     const/4 v0, 0x7
 
     new-array v0, v0, [Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;
@@ -164,8 +155,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 10
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -174,8 +163,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;
     .locals 1
 
-    .prologue
-    .line 10
     const-class v0, Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -190,8 +177,6 @@
 .method public static values()[Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;
     .locals 1
 
-    .prologue
-    .line 10
     sget-object v0, Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;->$VALUES:[Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/ui/player/PostPlayFactory$PostPlayType;->clone()Ljava/lang/Object;

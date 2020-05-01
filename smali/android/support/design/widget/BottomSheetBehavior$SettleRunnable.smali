@@ -18,19 +18,14 @@
 .method constructor <init>(Landroid/support/design/widget/BottomSheetBehavior;Landroid/view/View;I)V
     .locals 0
 
-    .prologue
-    .line 737
     iput-object p1, p0, Landroid/support/design/widget/BottomSheetBehavior$SettleRunnable;->this$0:Landroid/support/design/widget/BottomSheetBehavior;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 738
     iput-object p2, p0, Landroid/support/design/widget/BottomSheetBehavior$SettleRunnable;->mView:Landroid/view/View;
 
-    .line 739
     iput p3, p0, Landroid/support/design/widget/BottomSheetBehavior$SettleRunnable;->mTargetState:I
 
-    .line 740
     return-void
 .end method
 
@@ -39,8 +34,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 744
     iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior$SettleRunnable;->this$0:Landroid/support/design/widget/BottomSheetBehavior;
 
     iget-object v0, v0, Landroid/support/design/widget/BottomSheetBehavior;->mViewDragHelper:Landroid/support/v4/widget/ViewDragHelper;
@@ -59,16 +52,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 745
     iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior$SettleRunnable;->mView:Landroid/view/View;
 
     invoke-static {v0, p0}, Landroid/support/v4/view/ViewCompat;->postOnAnimation(Landroid/view/View;Ljava/lang/Runnable;)V
 
-    .line 749
     :goto_0
     return-void
 
-    .line 747
     :cond_0
     iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior$SettleRunnable;->this$0:Landroid/support/design/widget/BottomSheetBehavior;
 

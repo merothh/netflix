@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$7;Lorg/json/JSONObject;)V
     .locals 0
 
-    .prologue
-    .line 207
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$7$1;->this$1:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$7;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$7$1;->val$manifestJson:Lorg/json/JSONObject;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 210
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$7$1;->this$1:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$7;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$7;->this$0:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;
@@ -42,7 +38,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;->access$900(Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;Lorg/json/JSONObject;)V
 
-    .line 211
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$7$1;->this$1:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$7;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$7;->this$0:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;
@@ -61,7 +56,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;
 
-    .line 212
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$7$1;->this$1:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$7;
 
     iget-object v1, v1, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$7;->this$0:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;
@@ -76,13 +70,11 @@
 
     invoke-static {v1, v2, v0, v3}, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;->access$300(Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;Ljava/lang/Long;Lcom/netflix/mediaclient/service/player/manifest/NfManifest;Lcom/netflix/mediaclient/service/player/manifest/NfManifestCachePlaybackInterface$ManifestCacheCallback;)V
 
-    .line 213
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$7$1;->this$1:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$7;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$7;->this$0:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;->access$100(Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;)V
 
-    .line 214
     return-void
 .end method

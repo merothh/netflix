@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public createAnimator()Landroid/support/design/widget/ValueAnimatorCompat;
     .locals 3
 
-    .prologue
-    .line 28
     new-instance v1, Landroid/support/design/widget/ValueAnimatorCompat;
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I

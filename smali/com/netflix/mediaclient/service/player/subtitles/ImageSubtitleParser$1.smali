@@ -13,8 +13,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;[Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 211
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser$1;->this$0:Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser$1;->val$nameServers:[Ljava/lang/String;
@@ -29,25 +27,20 @@
 .method public onResourceRawFetched(Ljava/lang/String;[BLcom/netflix/mediaclient/android/app/Status;)V
     .locals 4
 
-    .prologue
-    .line 214
     invoke-super {p0, p1, p2, p3}, Lcom/netflix/mediaclient/service/resfetcher/LoggingResourceFetcherCallback;->onResourceRawFetched(Ljava/lang/String;[BLcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 215
     invoke-interface {p3}, Lcom/netflix/mediaclient/android/app/Status;->isError()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 216
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 217
     const-string/jumbo v0, "nf_subtitles"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -70,7 +63,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 220
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser$1;->this$0:Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;
 
@@ -80,11 +72,9 @@
 
     invoke-virtual {v0, p1, v1, v2, p3}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->onError(Ljava/lang/String;[Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleFailure;Lcom/netflix/mediaclient/android/app/Status;)Z
 
-    .line 230
     :goto_0
     return-void
 
-    .line 224
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser$1;->this$0:Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;
 
@@ -92,17 +82,14 @@
 
     move-result v0
 
-    .line 225
     if-eqz v0, :cond_2
 
-    .line 226
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser$1;->this$0:Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;->access$000(Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;)V
 
     goto :goto_0
 
-    .line 228
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser$1;->this$0:Lcom/netflix/mediaclient/service/player/subtitles/ImageSubtitleParser;
 

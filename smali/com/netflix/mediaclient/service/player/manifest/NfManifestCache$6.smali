@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;)V
     .locals 0
 
-    .prologue
-    .line 161
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$6;->this$0:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 164
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache$6;->this$0:Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;->access$000(Lcom/netflix/mediaclient/service/player/manifest/NfManifestCache;)Ljava/util/List;
@@ -38,6 +34,5 @@
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 165
     return-void
 .end method

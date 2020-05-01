@@ -20,8 +20,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;Ljava/lang/String;Ljava/util/List;Lcom/netflix/mediaclient/service/NetflixService;)V
     .locals 0
 
-    .prologue
-    .line 157
     iput-object p1, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails$1;->val$details:Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails$1;->val$profileId:Ljava/lang/String;
@@ -40,8 +38,6 @@
 .method public execute(Lio/realm/Realm;)V
     .locals 5
 
-    .prologue
-    .line 160
     const-class v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails$1;->val$details:Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;
@@ -56,22 +52,18 @@
 
     check-cast v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;
 
-    .line 161
     iget-object v1, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails$1;->val$details:Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;->fillForRealm(Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;)V
 
-    .line 162
     iget-object v1, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails$1;->val$profileId:Ljava/lang/String;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;->access$002(Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 164
     iget-object v1, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails$1;->val$seasons:Ljava/util/List;
 
     if-eqz v1, :cond_1
 
-    .line 165
     iget-object v1, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails$1;->val$seasons:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -91,41 +83,35 @@
 
     check-cast v1, Lcom/netflix/mediaclient/servicemgr/interface_/details/SeasonDetails;
 
-    .line 166
     invoke-static {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;->access$100(Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;)Lio/realm/RealmList;
 
     move-result-object v3
 
     if-nez v3, :cond_0
 
-    .line 167
     new-instance v3, Lio/realm/RealmList;
 
     invoke-direct {v3}, Lio/realm/RealmList;-><init>()V
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;->access$102(Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;Lio/realm/RealmList;)Lio/realm/RealmList;
 
-    .line 169
     :cond_0
     new-instance v3, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmSeason;
 
     invoke-direct {v3}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmSeason;-><init>()V
 
-    .line 170
     invoke-interface {v1}, Lcom/netflix/mediaclient/servicemgr/interface_/details/SeasonDetails;->getSeasonNumber()I
 
     move-result v4
 
     invoke-virtual {v3, v4}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmSeason;->setNumber(I)V
 
-    .line 171
     invoke-interface {v1}, Lcom/netflix/mediaclient/servicemgr/interface_/details/SeasonDetails;->getSeasonLongSeqLabel()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v3, v1}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmSeason;->setLabel(Ljava/lang/String;)V
 
-    .line 172
     invoke-static {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;->access$100(Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;)Lio/realm/RealmList;
 
     move-result-object v1
@@ -134,7 +120,6 @@
 
     goto :goto_0
 
-    .line 177
     :cond_1
     const-class v1, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;
 
@@ -164,10 +149,8 @@
 
     check-cast v1, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;
 
-    .line 178
     if-nez v1, :cond_2
 
-    .line 179
     new-instance v1, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails$1;->val$details:Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;
@@ -184,11 +167,9 @@
 
     check-cast v1, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;
 
-    .line 181
     :cond_2
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;->access$200(Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmPlayable;)V
 
-    .line 184
     iget-object v1, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails$1;->val$service:Lcom/netflix/mediaclient/service/NetflixService;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmVideoDetails;->getHorzDispUrl()Ljava/lang/String;
@@ -201,6 +182,5 @@
 
     invoke-static {v1, v2, v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/OfflineImageUtils;->cacheVideoDetailsImage(Lcom/netflix/mediaclient/service/NetflixService;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 185
     return-void
 .end method

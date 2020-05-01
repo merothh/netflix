@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$20;)V
     .locals 0
 
-    .prologue
-    .line 1595
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$20$1;->this$1:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$20;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/browse/SimpleBrowseAgentCallback;-><init>()V
@@ -37,25 +35,19 @@
         }
     .end annotation
 
-    .prologue
-    .line 1598
     invoke-super {p0, p1, p2, p3}, Lcom/netflix/mediaclient/service/browse/SimpleBrowseAgentCallback;->onShowDetailsAndSeasonsFetched(Lcom/netflix/mediaclient/servicemgr/interface_/details/ShowDetails;Ljava/util/List;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 1600
     invoke-interface {p3}, Lcom/netflix/mediaclient/android/app/Status;->isError()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1601
     invoke-static {p3}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;->access$4100(Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 1606
     :goto_0
     return-void
 
-    .line 1605
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$20$1;->this$1:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$20;
 

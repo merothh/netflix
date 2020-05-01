@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager;)V
     .locals 0
 
-    .prologue
-    .line 310
     iput-object p1, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager$4;->this$0:Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,12 +23,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
     const/4 v5, 0x0
 
-    .line 313
     invoke-static {}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager;->access$300()Ljava/lang/String;
 
     move-result-object v0
@@ -43,14 +39,11 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 315
     if-nez p2, :cond_0
 
-    .line 341
     :goto_0
     return-void
 
-    .line 319
     :cond_0
     sget-object v0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager;->EXTRA_PLAYABLE_ID:Ljava/lang/String;
 
@@ -58,31 +51,26 @@
 
     move-result-object v0
 
-    .line 320
     sget-object v1, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager;->EXTRA_ERROR_CODE:Ljava/lang/String;
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 321
     sget-object v2, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager;->EXTRA_ERROR_MESSAGE:Ljava/lang/String;
 
     invoke-virtual {p2, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 322
     iget-object v3, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager$4;->this$0:Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager;
 
     invoke-static {v3, v0}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager;->access$200(Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager;Ljava/lang/String;)Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;
 
     move-result-object v3
 
-    .line 323
     if-nez v3, :cond_1
 
-    .line 324
     invoke-static {}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager;->access$300()Ljava/lang/String;
 
     move-result-object v1
@@ -105,13 +93,11 @@
 
     goto :goto_0
 
-    .line 328
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 329
     sget-object v4, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager;->STOP_DOWNLOAD_LICENSE_ERROR:Ljava/lang/String;
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -120,12 +106,10 @@
 
     if-eqz v4, :cond_2
 
-    .line 330
     invoke-virtual {v3, v1, v2}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->sendStopDownloadOnLicenseError(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 332
     :cond_2
     sget-object v4, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager;->STOP_DOWNLOAD_MANIFEST_EXPIRED:Ljava/lang/String;
 
@@ -135,12 +119,10 @@
 
     if-eqz v4, :cond_3
 
-    .line 333
     invoke-virtual {v3, v1, v2}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->sendStopDownloadOnExpiredManifest(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 335
     :cond_3
     sget-object v4, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager;->STOP_DOWNLOAD_ERROR:Ljava/lang/String;
 
@@ -150,12 +132,10 @@
 
     if-eqz v4, :cond_4
 
-    .line 336
     invoke-virtual {v3, v1, v2}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->sendStopDownloadOnError(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 339
     :cond_4
     invoke-static {}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager;->access$300()Ljava/lang/String;
 

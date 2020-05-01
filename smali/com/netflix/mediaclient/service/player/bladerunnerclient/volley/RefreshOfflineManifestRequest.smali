@@ -17,8 +17,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 15
     const-class v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/RefreshOfflineManifestRequest;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -27,12 +25,10 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/RefreshOfflineManifestRequest;->TAG:Ljava/lang/String;
 
-    .line 16
     const-string/jumbo v0, "links"
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/RefreshOfflineManifestRequest;->LINKS:Ljava/lang/String;
 
-    .line 17
     const-string/jumbo v0, "license"
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/RefreshOfflineManifestRequest;->LINK_LICENSE:Ljava/lang/String;
@@ -43,26 +39,20 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/netflix/mediaclient/service/player/manifest/NfManifest;Lcom/netflix/mediaclient/service/player/bladerunnerclient/BladeRunnerWebCallback;)V
     .locals 1
 
-    .prologue
-    .line 21
     invoke-direct {p0, p1, p3}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/FetchManifestsRequest;-><init>(Ljava/lang/String;Lcom/netflix/mediaclient/service/player/bladerunnerclient/BladeRunnerWebCallback;)V
 
-    .line 22
     invoke-virtual {p2}, Lcom/netflix/mediaclient/service/player/manifest/NfManifest;->getLinks()Lorg/json/JSONObject;
 
     move-result-object v0
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/RefreshOfflineManifestRequest;->mOldLinks:Lorg/json/JSONObject;
 
-    .line 23
     return-void
 .end method
 
 .method private replaceLinks(Lorg/json/JSONObject;Lorg/json/JSONObject;)Lorg/json/JSONObject;
     .locals 3
 
-    .prologue
-    .line 30
     :try_start_0
     sget-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/RefreshOfflineManifestRequest;->LINKS:Ljava/lang/String;
 
@@ -70,22 +60,18 @@
 
     move-result-object v0
 
-    .line 31
     sget-object v1, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/RefreshOfflineManifestRequest;->LINK_LICENSE:Ljava/lang/String;
 
     invoke-virtual {p2, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object v1
 
-    .line 32
     if-eqz v1, :cond_0
 
-    .line 33
     sget-object v2, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/RefreshOfflineManifestRequest;->LINK_LICENSE:Ljava/lang/String;
 
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 35
     :cond_0
     sget-object v1, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/RefreshOfflineManifestRequest;->LINKS:Ljava/lang/String;
 
@@ -93,15 +79,12 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 39
     :goto_0
     return-object p1
 
-    .line 36
     :catch_0
     move-exception v0
 
-    .line 37
     sget-object v1, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/RefreshOfflineManifestRequest;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "error injecting old links into manifest"
@@ -114,14 +97,10 @@
 .method private replaceLinksAndGetStatus(Lorg/json/JSONObject;)Lcom/netflix/mediaclient/android/app/Status;
     .locals 7
 
-    .prologue
-    .line 43
     sget-object v0, Lcom/netflix/mediaclient/android/app/CommonStatus;->BLADERUNNER_FAILURE:Lcom/netflix/mediaclient/android/app/NetflixImmutableStatus;
 
-    .line 44
     if-eqz p1, :cond_1
 
-    .line 47
     :try_start_0
     invoke-virtual {p1}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
     :try_end_0
@@ -131,7 +110,6 @@
 
     move-object v1, v0
 
-    .line 48
     :cond_0
     :goto_0
     :try_start_1
@@ -141,19 +119,16 @@
 
     if-eqz v0, :cond_3
 
-    .line 49
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 50
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object v3
 
-    .line 51
     sget-object v4, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/BladerunnerErrorStatus$BrRequestType;->OfflineManifestRefresh:Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/BladerunnerErrorStatus$BrRequestType;
 
     invoke-static {v3, v4}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/BladerunnerParseUtils;->getStatus(Lorg/json/JSONObject;Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/BladerunnerErrorStatus$BrRequestType;)Lcom/netflix/mediaclient/android/app/Status;
@@ -162,7 +137,6 @@
 
     move-result-object v1
 
-    .line 53
     :try_start_2
     invoke-interface {v1}, Lcom/netflix/mediaclient/android/app/Status;->isError()Z
 
@@ -170,7 +144,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 54
     sget-object v2, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/RefreshOfflineManifestRequest;->TAG:Ljava/lang/String;
 
     const-string/jumbo v3, "manifest for %s has errors, status: %s"
@@ -195,18 +168,15 @@
 
     move-object v0, v1
 
-    .line 65
     :cond_1
     :goto_1
     return-object v0
 
-    .line 57
     :cond_2
     sget-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/RefreshOfflineManifestRequest;->mOldLinks:Lorg/json/JSONObject;
 
     if-eqz v0, :cond_0
 
-    .line 58
     sget-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/RefreshOfflineManifestRequest;->mOldLinks:Lorg/json/JSONObject;
 
     invoke-direct {p0, v3, v0}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/RefreshOfflineManifestRequest;->replaceLinks(Lorg/json/JSONObject;Lorg/json/JSONObject;)Lorg/json/JSONObject;
@@ -215,7 +185,6 @@
 
     goto :goto_0
 
-    .line 61
     :catch_0
     move-exception v0
 
@@ -225,7 +194,6 @@
 
     move-object v1, v6
 
-    .line 62
     :goto_2
     sget-object v2, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/RefreshOfflineManifestRequest;->TAG:Ljava/lang/String;
 
@@ -235,7 +203,6 @@
 
     goto :goto_1
 
-    .line 61
     :catch_1
     move-exception v1
 
@@ -263,8 +230,6 @@
 .method protected bridge synthetic onSuccess(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 14
     check-cast p1, Lorg/json/JSONObject;
 
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/RefreshOfflineManifestRequest;->onSuccess(Lorg/json/JSONObject;)V
@@ -275,32 +240,25 @@
 .method protected onSuccess(Lorg/json/JSONObject;)V
     .locals 3
 
-    .prologue
-    .line 70
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/RefreshOfflineManifestRequest;->getResultObject(Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object v0
 
-    .line 71
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/RefreshOfflineManifestRequest;->replaceLinksAndGetStatus(Lorg/json/JSONObject;)Lcom/netflix/mediaclient/android/app/Status;
 
     move-result-object v1
 
-    .line 73
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/RefreshOfflineManifestRequest;->responseCallback:Lcom/netflix/mediaclient/service/player/bladerunnerclient/BladeRunnerWebCallback;
 
     if-eqz v2, :cond_0
 
-    .line 75
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/RefreshOfflineManifestRequest;->responseCallback:Lcom/netflix/mediaclient/service/player/bladerunnerclient/BladeRunnerWebCallback;
 
     invoke-interface {v2, v0, v1}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/BladeRunnerWebCallback;->onManifestsFetched(Lorg/json/JSONObject;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 79
     :goto_0
     return-void
 
-    .line 77
     :cond_0
     sget-object v0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/volley/RefreshOfflineManifestRequest;->TAG:Ljava/lang/String;
 

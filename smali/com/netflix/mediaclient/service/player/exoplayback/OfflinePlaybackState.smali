@@ -34,7 +34,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x3
 
     const/4 v5, 0x2
@@ -43,7 +42,6 @@
 
     const/4 v3, 0x0
 
-    .line 4
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;
 
     const-string/jumbo v1, "MANIFEST_FETCH"
@@ -54,7 +52,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;->MANIFEST_FETCH:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;
 
-    .line 5
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;
 
     const-string/jumbo v1, "MANIFEST_PROCESSING"
@@ -65,7 +62,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;->MANIFEST_PROCESSING:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;
 
-    .line 6
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;
 
     const-string/jumbo v1, "PLAYBACK_INIT"
@@ -76,7 +72,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;->PLAYBACK_INIT:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;
 
-    .line 7
     new-instance v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;
 
     const-string/jumbo v1, "PLAYBACK_PLAY"
@@ -87,7 +82,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;->PLAYBACK_PLAY:Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;
 
-    .line 3
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;
@@ -123,22 +117,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 10
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 11
     iput-object p3, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;->mState:Ljava/lang/String;
 
-    .line 12
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;
     .locals 1
 
-    .prologue
-    .line 3
     const-class v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -153,8 +141,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;
     .locals 1
 
-    .prologue
-    .line 3
     sget-object v0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;->$VALUES:[Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;->clone()Ljava/lang/Object;
@@ -171,8 +157,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 16
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/exoplayback/OfflinePlaybackState;->mState:Ljava/lang/String;
 
     return-object v0

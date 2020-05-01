@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/pushnotification/PushNotificationAgent;Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 552
     iput-object p1, p0, Lcom/netflix/mediaclient/service/pushnotification/PushNotificationAgent$2;->this$0:Lcom/netflix/mediaclient/service/pushnotification/PushNotificationAgent;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/pushnotification/PushNotificationAgent$2;->val$context:Landroid/content/Context;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 555
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/PushNotificationAgent$2;->val$context:Landroid/content/Context;
 
     const-string/jumbo v1, "nf_notification_id_counter"
@@ -44,6 +40,5 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/util/PreferenceUtils;->putIntPref(Landroid/content/Context;Ljava/lang/String;I)Z
 
-    .line 556
     return-void
 .end method

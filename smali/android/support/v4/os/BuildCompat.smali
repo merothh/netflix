@@ -7,19 +7,14 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     return-void
 .end method
 
 .method public static isAtLeastN()Z
     .locals 2
 
-    .prologue
-    .line 37
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x18
@@ -40,8 +35,6 @@
 .method public static isAtLeastNMR1()Z
     .locals 2
 
-    .prologue
-    .line 46
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x19

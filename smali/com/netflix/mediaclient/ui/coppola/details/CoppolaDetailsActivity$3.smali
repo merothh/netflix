@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity;)V
     .locals 0
 
-    .prologue
-    .line 531
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity$3;->this$0:Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 534
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity$3;->this$0:Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity;->access$200(Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity;)Landroid/app/Fragment;
@@ -40,7 +36,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 535
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity$3;->this$0:Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity;->access$200(Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity;)Landroid/app/Fragment;
@@ -59,11 +54,9 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;->onManagerReady(Lcom/netflix/mediaclient/servicemgr/ServiceManager;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 541
     :goto_0
     return-void
 
-    .line 536
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity$3;->this$0:Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity;
 
@@ -75,7 +68,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 537
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity$3;->this$0:Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity;->access$200(Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity;)Landroid/app/Fragment;
@@ -96,7 +88,6 @@
 
     goto :goto_0
 
-    .line 539
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 

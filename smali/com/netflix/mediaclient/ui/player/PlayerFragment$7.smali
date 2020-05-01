@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)V
     .locals 0
 
-    .prologue
-    .line 2408
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$7;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public onTap(Landroid/view/MotionEvent;)V
     .locals 4
 
-    .prologue
-    .line 2413
     const-string/jumbo v0, "PlayerFragment"
 
     const-string/jumbo v1, "PA tap"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2415
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$7;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$100(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/ui/player/PlayerWorkflowState;
@@ -57,7 +52,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2416
     :cond_0
     const-string/jumbo v0, "PlayerFragment"
 
@@ -65,11 +59,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2431
     :goto_0
     return-void
 
-    .line 2420
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$7;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
@@ -83,7 +75,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 2421
     const-string/jumbo v0, "PlayerFragment"
 
     const-string/jumbo v1, "In interrupted state, ignore"
@@ -92,13 +83,11 @@
 
     goto :goto_0
 
-    .line 2425
     :cond_2
     if-eqz p1, :cond_4
 
     const/4 v0, 0x1
 
-    .line 2426
     :goto_1
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$7;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
@@ -112,7 +101,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/netflix/mediaclient/ui/player/PlayerWorkflowState;->setLastActionTime(J)V
 
-    .line 2427
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$7;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$900(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/ui/player/PlayScreen;
@@ -125,7 +113,6 @@
 
     if-nez v1, :cond_3
 
-    .line 2428
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$7;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$100(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/ui/player/PlayerWorkflowState;
@@ -134,7 +121,6 @@
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/player/PlayerWorkflowState;->userInteraction()V
 
-    .line 2430
     :cond_3
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$7;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
@@ -142,7 +128,6 @@
 
     goto :goto_0
 
-    .line 2425
     :cond_4
     const/4 v0, 0x0
 

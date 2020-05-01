@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;)V
     .locals 0
 
-    .prologue
-    .line 209
     iput-object p1, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$1;->this$0:Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/SimpleOfflineAgentListener;-><init>()V
@@ -25,8 +23,6 @@
 .method public isListenerDestroyed()Z
     .locals 1
 
-    .prologue
-    .line 234
     const/4 v0, 0x0
 
     return v0
@@ -35,15 +31,12 @@
 .method public onAllPlayablesDeleted(Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 3
 
-    .prologue
-    .line 214
     invoke-interface {p1}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 215
     invoke-static {}, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -52,7 +45,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 220
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$1;->this$0:Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;
 
@@ -62,7 +54,6 @@
 
     monitor-enter v1
 
-    .line 222
     :try_start_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$1;->this$0:Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;
 
@@ -72,7 +63,6 @@
 
     invoke-interface {v0, p0}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface;->removeOfflineAgentListener(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentListener;)V
 
-    .line 224
     iget-object v0, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$1;->this$0:Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;->access$300(Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;)Ljava/lang/Runnable;
@@ -81,7 +71,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 225
     iget-object v0, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$1;->this$0:Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;->access$300(Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;)Ljava/lang/Runnable;
@@ -90,14 +79,12 @@
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 226
     iget-object v0, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$1;->this$0:Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;
 
     const/4 v2, 0x0
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;->access$302(Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 228
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager$1;->this$0:Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;
 
@@ -109,15 +96,12 @@
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 229
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 230
     return-void
 
-    .line 217
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;->access$000()Ljava/lang/String;
 
@@ -129,7 +113,6 @@
 
     goto :goto_0
 
-    .line 229
     :catchall_0
     move-exception v0
 

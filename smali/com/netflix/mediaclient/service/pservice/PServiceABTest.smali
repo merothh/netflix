@@ -33,15 +33,12 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 13
     new-instance v0, Lcom/netflix/mediaclient/service/pservice/PServiceABTest$1;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/pservice/PServiceABTest$1;-><init>()V
 
     sput-object v0, Lcom/netflix/mediaclient/service/pservice/PServiceABTest;->mPartnerDefaultExp:Ljava/util/Map;
 
-    .line 25
     new-instance v0, Lcom/netflix/mediaclient/service/pservice/PServiceABTest$2;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/pservice/PServiceABTest$2;-><init>()V
@@ -54,19 +51,14 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 9
     return-void
 .end method
 
 .method public static getVideoCountOfListForPartnerExp(Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;Lcom/netflix/mediaclient/service/pservice/PDiskData;)I
     .locals 2
 
-    .prologue
-    .line 37
     iget-object v0, p1, Lcom/netflix/mediaclient/service/pservice/PDiskData;->preAppPartnerExperience:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -75,7 +67,6 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 40
     :cond_0
     :goto_0
     sget-object v0, Lcom/netflix/mediaclient/service/pservice/PServiceABTest;->mPartnerDefaultExp:Ljava/util/Map;
@@ -92,7 +83,6 @@
 
     return v0
 
-    .line 37
     :pswitch_0
     const-string/jumbo v1, "default"
 
@@ -113,8 +103,6 @@
 .method public static getVideoCountOfListForWidgetExp(Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;Lcom/netflix/mediaclient/service/pservice/PDiskData;)I
     .locals 2
 
-    .prologue
-    .line 45
     iget-object v0, p1, Lcom/netflix/mediaclient/service/pservice/PDiskData;->preAppWidgetExperience:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -123,7 +111,6 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 48
     :cond_0
     :goto_0
     sget-object v0, Lcom/netflix/mediaclient/service/pservice/PServiceABTest;->mWidgetDefaultExp:Ljava/util/Map;
@@ -140,7 +127,6 @@
 
     return v0
 
-    .line 45
     :pswitch_0
     const-string/jumbo v1, "default"
 

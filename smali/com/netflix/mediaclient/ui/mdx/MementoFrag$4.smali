@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;)V
     .locals 0
 
-    .prologue
-    .line 261
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
     invoke-direct {p0}, Landroid/support/v4/view/PagerAdapter;-><init>()V
@@ -25,8 +23,6 @@
 .method createActorView(I)Landroid/view/View;
     .locals 3
 
-    .prologue
-    .line 293
     new-instance v0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$ActorDetailsView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
@@ -39,18 +35,14 @@
 
     invoke-direct {v0, v1, v2}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$ActorDetailsView;-><init>(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;Landroid/content/Context;)V
 
-    .line 294
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$ActorDetailsView;->updateDetails(I)V
 
-    .line 295
     return-object v0
 .end method
 
 .method createRelatedTitleView(I)Landroid/view/View;
     .locals 3
 
-    .prologue
-    .line 299
     new-instance v0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
@@ -63,33 +55,26 @@
 
     invoke-direct {v0, v1, v2}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView;-><init>(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;Landroid/content/Context;)V
 
-    .line 300
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$RelatedTitleView;->updateDetails(I)V
 
-    .line 301
     return-object v0
 .end method
 
 .method public destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 305
     check-cast p3, Landroid/view/View;
 
     invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 306
     return-void
 .end method
 
 .method public getCount()I
     .locals 3
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 289
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->access$300(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;)Ljava/util/List;
@@ -144,8 +129,6 @@
 .method public getItemPosition(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 280
     const/4 v0, -0x2
 
     return v0
@@ -154,11 +137,8 @@
 .method public instantiateItem(Landroid/view/ViewGroup;I)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 265
     const/4 v0, 0x0
 
-    .line 266
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->access$300(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;)Ljava/util/List;
@@ -171,15 +151,12 @@
 
     if-ge p2, v1, :cond_1
 
-    .line 267
     invoke-virtual {p0, p2}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$4;->createActorView(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 268
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 274
     :cond_0
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
@@ -206,10 +183,8 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 276
     return-object v0
 
-    .line 269
     :cond_1
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
@@ -235,7 +210,6 @@
 
     if-ge p2, v1, :cond_0
 
-    .line 270
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MementoFrag$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MementoFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MementoFrag;->access$300(Lcom/netflix/mediaclient/ui/mdx/MementoFrag;)Ljava/util/List;
@@ -252,7 +226,6 @@
 
     move-result-object v0
 
-    .line 271
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     goto :goto_0
@@ -261,8 +234,6 @@
 .method public isViewFromObject(Landroid/view/View;Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 285
     if-ne p1, p2, :cond_0
 
     const/4 v0, 0x1

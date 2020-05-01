@@ -22,8 +22,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 526
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,8 +32,6 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/google/android/exoplayer/MediaFormat;
     .locals 1
 
-    .prologue
-    .line 530
     new-instance v0, Lcom/google/android/exoplayer/MediaFormat;
 
     invoke-direct {v0, p1}, Lcom/google/android/exoplayer/MediaFormat;-><init>(Landroid/os/Parcel;)V
@@ -46,8 +42,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 526
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer/MediaFormat$1;->createFromParcel(Landroid/os/Parcel;)Lcom/google/android/exoplayer/MediaFormat;
 
     move-result-object v0
@@ -58,8 +52,6 @@
 .method public newArray(I)[Lcom/google/android/exoplayer/MediaFormat;
     .locals 1
 
-    .prologue
-    .line 535
     new-array v0, p1, [Lcom/google/android/exoplayer/MediaFormat;
 
     return-object v0
@@ -68,8 +60,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 526
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer/MediaFormat$1;->newArray(I)[Lcom/google/android/exoplayer/MediaFormat;
 
     move-result-object v0

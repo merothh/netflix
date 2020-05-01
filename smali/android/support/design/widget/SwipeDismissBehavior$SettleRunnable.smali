@@ -18,19 +18,14 @@
 .method constructor <init>(Landroid/support/design/widget/SwipeDismissBehavior;Landroid/view/View;Z)V
     .locals 0
 
-    .prologue
-    .line 367
     iput-object p1, p0, Landroid/support/design/widget/SwipeDismissBehavior$SettleRunnable;->this$0:Landroid/support/design/widget/SwipeDismissBehavior;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 368
     iput-object p2, p0, Landroid/support/design/widget/SwipeDismissBehavior$SettleRunnable;->mView:Landroid/view/View;
 
-    .line 369
     iput-boolean p3, p0, Landroid/support/design/widget/SwipeDismissBehavior$SettleRunnable;->mDismiss:Z
 
-    .line 370
     return-void
 .end method
 
@@ -39,8 +34,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 374
     iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior$SettleRunnable;->this$0:Landroid/support/design/widget/SwipeDismissBehavior;
 
     iget-object v0, v0, Landroid/support/design/widget/SwipeDismissBehavior;->mViewDragHelper:Landroid/support/v4/widget/ViewDragHelper;
@@ -59,17 +52,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 375
     iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior$SettleRunnable;->mView:Landroid/view/View;
 
     invoke-static {v0, p0}, Landroid/support/v4/view/ViewCompat;->postOnAnimation(Landroid/view/View;Ljava/lang/Runnable;)V
 
-    .line 381
     :cond_0
     :goto_0
     return-void
 
-    .line 377
     :cond_1
     iget-boolean v0, p0, Landroid/support/design/widget/SwipeDismissBehavior$SettleRunnable;->mDismiss:Z
 
@@ -81,7 +71,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 378
     iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior$SettleRunnable;->this$0:Landroid/support/design/widget/SwipeDismissBehavior;
 
     iget-object v0, v0, Landroid/support/design/widget/SwipeDismissBehavior;->mListener:Landroid/support/design/widget/SwipeDismissBehavior$OnDismissListener;

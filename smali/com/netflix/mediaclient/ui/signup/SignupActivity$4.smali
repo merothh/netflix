@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)V
     .locals 0
 
-    .prologue
-    .line 359
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$4;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,22 +26,18 @@
 .method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
-    .line 362
     const-string/jumbo v0, "SignupActivity"
 
     const-string/jumbo v1, "User tapped sign-in button"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 363
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$4;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$302(Lcom/netflix/mediaclient/ui/signup/SignupActivity;Z)Z
 
-    .line 371
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$4;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     const/4 v1, 0x0
@@ -56,7 +50,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/util/log/UserActionLogUtils;->reportLoginActionStarted(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/UserActionLogging$CommandName;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;)V
 
-    .line 372
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$4;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$4;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
@@ -67,6 +60,5 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->startNextActivity(Landroid/content/Intent;)V
 
-    .line 373
     return v3
 .end method

@@ -30,11 +30,8 @@
 .method public constructor <init>(Ljava/io/File;I)V
     .locals 4
 
-    .prologue
-    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     new-instance v0, Ljava/util/LinkedHashMap;
 
     const/16 v1, 0x10
@@ -47,33 +44,26 @@
 
     iput-object v0, p0, Lcom/android/volley/toolbox/DiskBasedCache;->mEntries:Ljava/util/Map;
 
-    .line 50
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/volley/toolbox/DiskBasedCache;->mTotalSize:J
 
-    .line 73
     iput-object p1, p0, Lcom/android/volley/toolbox/DiskBasedCache;->mRootDirectory:Ljava/io/File;
 
-    .line 74
     iput p2, p0, Lcom/android/volley/toolbox/DiskBasedCache;->mMaxCacheSizeInBytes:I
 
-    .line 75
     return-void
 .end method
 
 .method private getFilenameForKey(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 233
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
     div-int/lit8 v0, v0, 0x2
 
-    .line 234
     const/4 v1, 0x0
 
     invoke-virtual {p1, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -88,7 +78,6 @@
 
     move-result-object v1
 
-    .line 235
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -117,21 +106,18 @@
 
     move-result-object v0
 
-    .line 236
     return-object v0
 .end method
 
 .method private pruneIfNeeded(I)V
     .locals 14
 
-    .prologue
     const/4 v13, 0x2
 
     const/4 v12, 0x1
 
     const/4 v2, 0x0
 
-    .line 251
     iget-wide v0, p0, Lcom/android/volley/toolbox/DiskBasedCache;->mTotalSize:J
 
     int-to-long v4, p1
@@ -146,34 +132,28 @@
 
     if-gez v0, :cond_1
 
-    .line 285
     :cond_0
     :goto_0
     return-void
 
-    .line 254
     :cond_1
     sget-boolean v0, Lcom/android/volley/VolleyLog;->DEBUG:Z
 
     if-eqz v0, :cond_2
 
-    .line 255
     const-string/jumbo v0, "Pruning old cache entries."
 
     new-array v1, v2, [Ljava/lang/Object;
 
     invoke-static {v0, v1}, Lcom/android/volley/VolleyLog;->v(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 258
     :cond_2
     iget-wide v4, p0, Lcom/android/volley/toolbox/DiskBasedCache;->mTotalSize:J
 
-    .line 260
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v6
 
-    .line 262
     iget-object v0, p0, Lcom/android/volley/toolbox/DiskBasedCache;->mEntries:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -186,7 +166,6 @@
 
     move v1, v2
 
-    .line 263
     :goto_1
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
@@ -194,21 +173,18 @@
 
     if-eqz v0, :cond_5
 
-    .line 264
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 265
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;
 
-    .line 266
     iget-object v8, v0, Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;->key:Ljava/lang/String;
 
     invoke-virtual {p0, v8}, Lcom/android/volley/toolbox/DiskBasedCache;->getFileForKey(Ljava/lang/String;)Ljava/io/File;
@@ -219,10 +195,8 @@
 
     move-result v8
 
-    .line 267
     if-eqz v8, :cond_3
 
-    .line 268
     iget-wide v8, p0, Lcom/android/volley/toolbox/DiskBasedCache;->mTotalSize:J
 
     iget-wide v10, v0, Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;->size:J
@@ -231,14 +205,11 @@
 
     iput-wide v8, p0, Lcom/android/volley/toolbox/DiskBasedCache;->mTotalSize:J
 
-    .line 273
     :goto_2
     invoke-interface {v3}, Ljava/util/Iterator;->remove()V
 
-    .line 274
     add-int/lit8 v0, v1, 0x1
 
-    .line 276
     iget-wide v8, p0, Lcom/android/volley/toolbox/DiskBasedCache;->mTotalSize:J
 
     int-to-long v10, p1
@@ -259,20 +230,17 @@
 
     if-gez v1, :cond_4
 
-    .line 281
     :goto_3
     sget-boolean v1, Lcom/android/volley/VolleyLog;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 282
     const-string/jumbo v1, "pruned %d files, %d bytes, %d ms"
 
     const/4 v3, 0x3
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    .line 283
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -301,12 +269,10 @@
 
     aput-object v0, v3, v13
 
-    .line 282
     invoke-static {v1, v3}, Lcom/android/volley/VolleyLog;->v(Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 270
     :cond_3
     const-string/jumbo v8, "Could not delete cache entry for key=%s, filename=%s"
 
@@ -318,14 +284,12 @@
 
     iget-object v0, v0, Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;->key:Ljava/lang/String;
 
-    .line 271
     invoke-direct {p0, v0}, Lcom/android/volley/toolbox/DiskBasedCache;->getFilenameForKey(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v9, v12
 
-    .line 270
     invoke-static {v8, v9}, Lcom/android/volley/VolleyLog;->d(Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_2
@@ -333,7 +297,6 @@
     :cond_4
     move v1, v0
 
-    .line 279
     goto :goto_1
 
     :cond_5
@@ -345,8 +308,6 @@
 .method private putEntry(Ljava/lang/String;Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;)V
     .locals 6
 
-    .prologue
-    .line 293
     iget-object v0, p0, Lcom/android/volley/toolbox/DiskBasedCache;->mEntries:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -355,7 +316,6 @@
 
     if-nez v0, :cond_0
 
-    .line 294
     iget-wide v0, p0, Lcom/android/volley/toolbox/DiskBasedCache;->mTotalSize:J
 
     iget-wide v2, p2, Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;->size:J
@@ -364,16 +324,13 @@
 
     iput-wide v0, p0, Lcom/android/volley/toolbox/DiskBasedCache;->mTotalSize:J
 
-    .line 299
     :goto_0
     iget-object v0, p0, Lcom/android/volley/toolbox/DiskBasedCache;->mEntries:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 300
     return-void
 
-    .line 296
     :cond_0
     iget-object v0, p0, Lcom/android/volley/toolbox/DiskBasedCache;->mEntries:Ljava/util/Map;
 
@@ -383,7 +340,6 @@
 
     check-cast v0, Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;
 
-    .line 297
     iget-wide v2, p0, Lcom/android/volley/toolbox/DiskBasedCache;->mTotalSize:J
 
     iget-wide v4, p2, Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;->size:J
@@ -402,8 +358,6 @@
 .method private removeEntry(Ljava/lang/String;)V
     .locals 4
 
-    .prologue
-    .line 306
     iget-object v0, p0, Lcom/android/volley/toolbox/DiskBasedCache;->mEntries:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -412,10 +366,8 @@
 
     check-cast v0, Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;
 
-    .line 307
     if-eqz v0, :cond_0
 
-    .line 308
     iget-wide v2, p0, Lcom/android/volley/toolbox/DiskBasedCache;->mTotalSize:J
 
     iget-wide v0, v0, Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;->size:J
@@ -424,12 +376,10 @@
 
     iput-wide v0, p0, Lcom/android/volley/toolbox/DiskBasedCache;->mTotalSize:J
 
-    .line 309
     iget-object v0, p0, Lcom/android/volley/toolbox/DiskBasedCache;->mEntries:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 311
     :cond_0
     return-void
 .end method
@@ -437,14 +387,10 @@
 .method private static streamToBytes(Ljava/io/InputStream;I)[B
     .locals 4
 
-    .prologue
-    .line 317
     new-array v1, p1, [B
 
-    .line 319
     const/4 v0, 0x0
 
-    .line 320
     :goto_0
     if-ge v0, p1, :cond_0
 
@@ -458,16 +404,13 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 321
     add-int/2addr v0, v2
 
     goto :goto_0
 
-    .line 323
     :cond_0
     if-eq v0, p1, :cond_1
 
-    .line 324
     new-instance v1, Ljava/io/IOException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -508,7 +451,6 @@
 
     throw v1
 
-    .line 326
     :cond_1
     return-object v1
 .end method
@@ -518,10 +460,8 @@
 .method public declared-synchronized get(Ljava/lang/String;)Lcom/android/volley/Cache$Entry;
     .locals 8
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 107
     monitor-enter p0
 
     :try_start_0
@@ -535,19 +475,16 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 109
     if-nez v0, :cond_1
 
     move-object v0, v1
 
-    .line 129
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-object v0
 
-    .line 113
     :cond_1
     :try_start_1
     invoke-virtual {p0, p1}, Lcom/android/volley/toolbox/DiskBasedCache;->getFileForKey(Ljava/lang/String;)Ljava/io/File;
@@ -556,7 +493,6 @@
 
     move-result-object v3
 
-    .line 116
     :try_start_2
     new-instance v2, Lcom/android/volley/toolbox/DiskBasedCache$CountingInputStream;
 
@@ -571,11 +507,9 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 117
     :try_start_3
     invoke-static {v2}, Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;->readHeader(Ljava/io/InputStream;)Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;
 
-    .line 118
     invoke-virtual {v3}, Ljava/io/File;->length()J
 
     move-result-wide v4
@@ -594,7 +528,6 @@
 
     move-result-object v4
 
-    .line 119
     invoke-virtual {v0, v4}, Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;->toCacheEntry([B)Lcom/android/volley/Cache$Entry;
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_4
@@ -602,10 +535,8 @@
 
     move-result-object v0
 
-    .line 125
     if-eqz v2, :cond_0
 
-    .line 127
     :try_start_4
     invoke-virtual {v2}, Lcom/android/volley/toolbox/DiskBasedCache$CountingInputStream;->close()V
     :try_end_4
@@ -614,22 +545,18 @@
 
     goto :goto_0
 
-    .line 128
     :catch_0
     move-exception v0
 
     move-object v0, v1
 
-    .line 129
     goto :goto_0
 
-    .line 120
     :catch_1
     move-exception v0
 
     move-object v2, v1
 
-    .line 121
     :goto_1
     :try_start_5
     const-string/jumbo v4, "%s: %s"
@@ -656,15 +583,12 @@
 
     invoke-static {v4, v5}, Lcom/android/volley/VolleyLog;->d(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 122
     invoke-virtual {p0, p1}, Lcom/android/volley/toolbox/DiskBasedCache;->remove(Ljava/lang/String;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 125
     if-eqz v2, :cond_2
 
-    .line 127
     :try_start_6
     invoke-virtual {v2}, Lcom/android/volley/toolbox/DiskBasedCache$CountingInputStream;->close()V
     :try_end_6
@@ -674,19 +598,15 @@
     :cond_2
     move-object v0, v1
 
-    .line 123
     goto :goto_0
 
-    .line 128
     :catch_2
     move-exception v0
 
     move-object v0, v1
 
-    .line 129
     goto :goto_0
 
-    .line 125
     :catchall_0
     move-exception v0
 
@@ -695,21 +615,18 @@
     :goto_2
     if-eqz v2, :cond_3
 
-    .line 127
     :try_start_7
     invoke-virtual {v2}, Lcom/android/volley/toolbox/DiskBasedCache$CountingInputStream;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_3
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 129
     :cond_3
     :try_start_8
     throw v0
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    .line 107
     :catchall_1
     move-exception v0
 
@@ -717,22 +634,18 @@
 
     throw v0
 
-    .line 128
     :catch_3
     move-exception v0
 
     move-object v0, v1
 
-    .line 129
     goto :goto_0
 
-    .line 125
     :catchall_2
     move-exception v0
 
     goto :goto_2
 
-    .line 120
     :catch_4
     move-exception v0
 
@@ -742,8 +655,6 @@
 .method public getFileForKey(Ljava/lang/String;)Ljava/io/File;
     .locals 3
 
-    .prologue
-    .line 243
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/android/volley/toolbox/DiskBasedCache;->mRootDirectory:Ljava/io/File;
@@ -760,10 +671,8 @@
 .method public declared-synchronized initialize()V
     .locals 9
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 141
     monitor-enter p0
 
     :try_start_0
@@ -775,7 +684,6 @@
 
     if-nez v1, :cond_1
 
-    .line 142
     iget-object v0, p0, Lcom/android/volley/toolbox/DiskBasedCache;->mRootDirectory:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
@@ -784,7 +692,6 @@
 
     if-nez v0, :cond_0
 
-    .line 143
     const-string/jumbo v0, "Unable to create cache dir %s"
 
     const/4 v1, 0x1
@@ -805,13 +712,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 171
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 148
     :cond_1
     :try_start_1
     iget-object v1, p0, Lcom/android/volley/toolbox/DiskBasedCache;->mRootDirectory:Ljava/io/File;
@@ -820,10 +725,8 @@
 
     move-result-object v3
 
-    .line 149
     if-eqz v3, :cond_0
 
-    .line 152
     array-length v4, v3
 
     move v2, v0
@@ -835,10 +738,8 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 153
     const/4 v1, 0x0
 
-    .line 155
     :try_start_2
     new-instance v0, Ljava/io/FileInputStream;
 
@@ -847,20 +748,17 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 156
     :try_start_3
     invoke-static {v0}, Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;->readHeader(Ljava/io/InputStream;)Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;
 
     move-result-object v1
 
-    .line 157
     invoke-virtual {v5}, Ljava/io/File;->length()J
 
     move-result-wide v6
 
     iput-wide v6, v1, Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;->size:J
 
-    .line 158
     iget-object v6, v1, Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;->key:Ljava/lang/String;
 
     invoke-direct {p0, v6, v1}, Lcom/android/volley/toolbox/DiskBasedCache;->putEntry(Ljava/lang/String;Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;)V
@@ -868,17 +766,14 @@
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_4
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 165
     if-eqz v0, :cond_2
 
-    .line 166
     :try_start_4
     invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 152
     :cond_2
     :goto_1
     add-int/lit8 v0, v2, 0x1
@@ -887,27 +782,22 @@
 
     goto :goto_0
 
-    .line 159
     :catch_0
     move-exception v0
 
     move-object v0, v1
 
-    .line 160
     :goto_2
     if-eqz v5, :cond_3
 
-    .line 161
     :try_start_5
     invoke-virtual {v5}, Ljava/io/File;->delete()Z
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 165
     :cond_3
     if-eqz v0, :cond_2
 
-    .line 166
     :try_start_6
     invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
     :try_end_6
@@ -916,28 +806,23 @@
 
     goto :goto_1
 
-    .line 168
     :catch_1
     move-exception v0
 
     goto :goto_1
 
-    .line 164
     :catchall_0
     move-exception v0
 
-    .line 165
     :goto_3
     if-eqz v1, :cond_4
 
-    .line 166
     :try_start_7
     invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_3
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 168
     :cond_4
     :goto_4
     :try_start_8
@@ -945,7 +830,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    .line 141
     :catchall_1
     move-exception v0
 
@@ -953,7 +837,6 @@
 
     throw v0
 
-    .line 168
     :catch_2
     move-exception v0
 
@@ -964,7 +847,6 @@
 
     goto :goto_4
 
-    .line 164
     :catchall_2
     move-exception v1
 
@@ -976,7 +858,6 @@
 
     goto :goto_3
 
-    .line 159
     :catch_4
     move-exception v1
 
@@ -986,8 +867,6 @@
 .method public declared-synchronized put(Ljava/lang/String;Lcom/android/volley/Cache$Entry;)V
     .locals 4
 
-    .prologue
-    .line 196
     monitor-enter p0
 
     :try_start_0
@@ -997,62 +876,50 @@
 
     invoke-direct {p0, v0}, Lcom/android/volley/toolbox/DiskBasedCache;->pruneIfNeeded(I)V
 
-    .line 197
     invoke-virtual {p0, p1}, Lcom/android/volley/toolbox/DiskBasedCache;->getFileForKey(Ljava/lang/String;)Ljava/io/File;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
-    .line 199
     :try_start_1
     new-instance v1, Ljava/io/FileOutputStream;
 
     invoke-direct {v1, v0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 200
     new-instance v2, Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;
 
     invoke-direct {v2, p1, p2}, Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;-><init>(Ljava/lang/String;Lcom/android/volley/Cache$Entry;)V
 
-    .line 201
     invoke-virtual {v2, v1}, Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;->writeHeader(Ljava/io/OutputStream;)Z
 
-    .line 202
     iget-object v3, p2, Lcom/android/volley/Cache$Entry;->data:[B
 
     invoke-virtual {v1, v3}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 203
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
 
-    .line 204
     invoke-direct {p0, p1, v2}, Lcom/android/volley/toolbox/DiskBasedCache;->putEntry(Ljava/lang/String;Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 212
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 206
     :catch_0
     move-exception v1
 
-    .line 208
     :try_start_2
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     move-result v1
 
-    .line 209
     if-nez v1, :cond_0
 
-    .line 210
     const-string/jumbo v1, "Could not clean up file %s"
 
     const/4 v2, 0x1
@@ -1073,7 +940,6 @@
 
     goto :goto_0
 
-    .line 196
     :catchall_0
     move-exception v0
 
@@ -1085,8 +951,6 @@
 .method public declared-synchronized remove(Ljava/lang/String;)V
     .locals 4
 
-    .prologue
-    .line 219
     monitor-enter p0
 
     :try_start_0
@@ -1098,13 +962,10 @@
 
     move-result v0
 
-    .line 220
     invoke-direct {p0, p1}, Lcom/android/volley/toolbox/DiskBasedCache;->removeEntry(Ljava/lang/String;)V
 
-    .line 221
     if-nez v0, :cond_0
 
-    .line 222
     const-string/jumbo v0, "Could not delete cache entry for key=%s, filename=%s"
 
     const/4 v1, 0x2
@@ -1117,25 +978,21 @@
 
     const/4 v2, 0x1
 
-    .line 223
     invoke-direct {p0, p1}, Lcom/android/volley/toolbox/DiskBasedCache;->getFilenameForKey(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     aput-object v3, v1, v2
 
-    .line 222
     invoke-static {v0, v1}, Lcom/android/volley/VolleyLog;->d(Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 225
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 219
     :catchall_0
     move-exception v0
 

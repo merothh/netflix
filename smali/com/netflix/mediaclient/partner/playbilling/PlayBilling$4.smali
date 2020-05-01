@@ -28,8 +28,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/partner/playbilling/PlayBilling;Lcom/netflix/mediaclient/partner/playbilling/PlayBillingCallback;Lcom/netflix/mediaclient/android/activity/NetflixActivity;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 519
     iput-object p1, p0, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling$4;->this$0:Lcom/netflix/mediaclient/partner/playbilling/PlayBilling;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling$4;->val$callback:Lcom/netflix/mediaclient/partner/playbilling/PlayBillingCallback;
@@ -56,15 +54,12 @@
 .method public run()V
     .locals 7
 
-    .prologue
-    .line 521
     iget-object v0, p0, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling$4;->this$0:Lcom/netflix/mediaclient/partner/playbilling/PlayBilling;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling$4;->val$callback:Lcom/netflix/mediaclient/partner/playbilling/PlayBillingCallback;
 
     iput-object v1, v0, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling;->mPurchaseListener:Lcom/netflix/mediaclient/partner/playbilling/PlayBillingCallback;
 
-    .line 522
     iget-object v0, p0, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling$4;->this$0:Lcom/netflix/mediaclient/partner/playbilling/PlayBilling;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling$4;->val$activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -83,22 +78,18 @@
 
     move-result-object v0
 
-    .line 523
     iget-object v1, p0, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling$4;->this$0:Lcom/netflix/mediaclient/partner/playbilling/PlayBilling;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling;->flagEndAsync()V
 
-    .line 524
     if-eqz v0, :cond_1
 
-    .line 525
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 526
     const-string/jumbo v1, "playBilling"
 
     const-string/jumbo v2, "error with purchase %s"
@@ -117,7 +108,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 528
     :cond_0
     iget-object v1, p0, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling$4;->this$0:Lcom/netflix/mediaclient/partner/playbilling/PlayBilling;
 
@@ -125,14 +115,12 @@
 
     iput-object v2, v1, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling;->mPurchaseListener:Lcom/netflix/mediaclient/partner/playbilling/PlayBillingCallback;
 
-    .line 529
     iget-object v1, p0, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling$4;->this$0:Lcom/netflix/mediaclient/partner/playbilling/PlayBilling;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling$4;->val$callback:Lcom/netflix/mediaclient/partner/playbilling/PlayBillingCallback;
 
     invoke-static {v1, v2, v0}, Lcom/netflix/mediaclient/partner/playbilling/PlayBilling;->access$100(Lcom/netflix/mediaclient/partner/playbilling/PlayBilling;Lcom/netflix/mediaclient/partner/playbilling/PlayBillingCallback;Lorg/json/JSONObject;)V
 
-    .line 531
     :cond_1
     return-void
 .end method

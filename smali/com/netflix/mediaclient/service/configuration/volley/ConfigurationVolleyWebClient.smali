@@ -16,17 +16,12 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/NetflixService;Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClient;)V
     .locals 0
 
-    .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
     iput-object p2, p0, Lcom/netflix/mediaclient/service/configuration/volley/ConfigurationVolleyWebClient;->webclient:Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClient;
 
-    .line 17
     iput-object p1, p0, Lcom/netflix/mediaclient/service/configuration/volley/ConfigurationVolleyWebClient;->service:Lcom/netflix/mediaclient/service/NetflixService;
 
-    .line 18
     return-void
 .end method
 
@@ -35,8 +30,6 @@
 .method public fetchConfigData(Lcom/netflix/mediaclient/service/configuration/ConfigurationAgentWebCallback;)V
     .locals 2
 
-    .prologue
-    .line 26
     new-instance v0, Lcom/netflix/mediaclient/service/configuration/volley/FetchConfigDataRequest;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/configuration/volley/ConfigurationVolleyWebClient;->service:Lcom/netflix/mediaclient/service/NetflixService;
@@ -47,20 +40,16 @@
 
     invoke-direct {v0, v1, p1}, Lcom/netflix/mediaclient/service/configuration/volley/FetchConfigDataRequest;-><init>(Landroid/content/Context;Lcom/netflix/mediaclient/service/configuration/ConfigurationAgentWebCallback;)V
 
-    .line 27
     iget-object v1, p0, Lcom/netflix/mediaclient/service/configuration/volley/ConfigurationVolleyWebClient;->webclient:Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClient;
 
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClient;->sendConfigRequest(Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;)V
 
-    .line 28
     return-void
 .end method
 
 .method public isSynchronous()Z
     .locals 1
 
-    .prologue
-    .line 21
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/volley/ConfigurationVolleyWebClient;->webclient:Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClient;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClient;->isSynchronous()Z
@@ -73,8 +62,6 @@
 .method public verifyLogin(Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/service/configuration/ConfigurationAgentWebCallback;)V
     .locals 6
 
-    .prologue
-    .line 32
     new-instance v0, Lcom/netflix/mediaclient/service/configuration/volley/VerifyLoginRequest;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/configuration/volley/ConfigurationVolleyWebClient;->service:Lcom/netflix/mediaclient/service/NetflixService;
@@ -97,11 +84,9 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/netflix/mediaclient/service/configuration/volley/VerifyLoginRequest;-><init>(Landroid/content/Context;Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/service/configuration/ConfigurationAgentWebCallback;)V
 
-    .line 33
     iget-object v1, p0, Lcom/netflix/mediaclient/service/configuration/volley/ConfigurationVolleyWebClient;->webclient:Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClient;
 
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClient;->sendConfigRequest(Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;)V
 
-    .line 34
     return-void
 .end method

@@ -90,8 +90,6 @@
 .method public constructor <init>(Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;Lcom/google/android/exoplayer/dash/DashTrackSelector;Lcom/google/android/exoplayer/upstream/DataSource;Lcom/google/android/exoplayer/chunk/FormatEvaluator;)V
     .locals 16
 
-    .prologue
-    .line 183
     const/4 v2, 0x0
 
     new-instance v7, Lcom/google/android/exoplayer/util/SystemClock;
@@ -122,7 +120,6 @@
 
     invoke-direct/range {v1 .. v15}, Lcom/google/android/exoplayer/dash/DashChunkSource;-><init>(Lcom/google/android/exoplayer/util/ManifestFetcher;Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;Lcom/google/android/exoplayer/dash/DashTrackSelector;Lcom/google/android/exoplayer/upstream/DataSource;Lcom/google/android/exoplayer/chunk/FormatEvaluator;Lcom/google/android/exoplayer/util/Clock;JJZLandroid/os/Handler;Lcom/google/android/exoplayer/dash/DashChunkSource$EventListener;I)V
 
-    .line 185
     return-void
 .end method
 
@@ -147,88 +144,66 @@
         }
     .end annotation
 
-    .prologue
-    .line 259
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 260
     iput-object p1, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->manifestFetcher:Lcom/google/android/exoplayer/util/ManifestFetcher;
 
-    .line 261
     iput-object p2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->currentManifest:Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;
 
-    .line 262
     iput-object p3, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->trackSelector:Lcom/google/android/exoplayer/dash/DashTrackSelector;
 
-    .line 263
     iput-object p4, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->dataSource:Lcom/google/android/exoplayer/upstream/DataSource;
 
-    .line 264
     iput-object p5, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->adaptiveFormatEvaluator:Lcom/google/android/exoplayer/chunk/FormatEvaluator;
 
-    .line 265
     iput-object p6, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->systemClock:Lcom/google/android/exoplayer/util/Clock;
 
-    .line 266
     iput-wide p7, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->liveEdgeLatencyUs:J
 
-    .line 267
     iput-wide p9, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->elapsedRealtimeOffsetUs:J
 
-    .line 268
     iput-boolean p11, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->startAtLiveEdge:Z
 
-    .line 269
     iput-object p12, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->eventHandler:Landroid/os/Handler;
 
-    .line 270
     iput-object p13, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->eventListener:Lcom/google/android/exoplayer/dash/DashChunkSource$EventListener;
 
-    .line 271
     iput p14, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->eventSourceId:I
 
-    .line 272
     new-instance v0, Lcom/google/android/exoplayer/chunk/FormatEvaluator$Evaluation;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer/chunk/FormatEvaluator$Evaluation;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->evaluation:Lcom/google/android/exoplayer/chunk/FormatEvaluator$Evaluation;
 
-    .line 273
     const/4 v0, 0x2
 
     new-array v0, v0, [J
 
     iput-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->availableRangeValues:[J
 
-    .line 274
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
 
-    .line 275
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->tracks:Ljava/util/ArrayList;
 
-    .line 276
     iget-boolean v0, p2, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->dynamic:Z
 
     iput-boolean v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->live:Z
 
-    .line 277
     return-void
 .end method
 
 .method static synthetic access$300(Lcom/google/android/exoplayer/dash/DashChunkSource;)I
     .locals 1
 
-    .prologue
-    .line 78
     iget v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->eventSourceId:I
 
     return v0
@@ -237,8 +212,6 @@
 .method static synthetic access$400(Lcom/google/android/exoplayer/dash/DashChunkSource;)Lcom/google/android/exoplayer/dash/DashChunkSource$EventListener;
     .locals 1
 
-    .prologue
-    .line 78
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->eventListener:Lcom/google/android/exoplayer/dash/DashChunkSource$EventListener;
 
     return-object v0
@@ -247,10 +220,8 @@
 .method private findPeriodHolder(J)Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;
     .locals 5
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 737
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -267,7 +238,6 @@
 
     if-gez v0, :cond_1
 
-    .line 738
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -276,11 +246,9 @@
 
     check-cast v0, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;
 
-    .line 749
     :goto_0
     return-object v0
 
-    .line 741
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -297,7 +265,6 @@
 
     if-ge v1, v0, :cond_2
 
-    .line 742
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -306,7 +273,6 @@
 
     check-cast v0, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;
 
-    .line 743
     invoke-virtual {v0}, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;->getAvailableEndTimeUs()J
 
     move-result-wide v2
@@ -317,7 +283,6 @@
 
     goto :goto_0
 
-    .line 749
     :cond_2
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
 
@@ -341,12 +306,10 @@
 .method private getAvailableRange(J)Lcom/google/android/exoplayer/TimeRange;
     .locals 13
 
-    .prologue
     const-wide/16 v8, -0x1
 
     const-wide/16 v10, 0x3e8
 
-    .line 803
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
 
     const/4 v1, 0x0
@@ -357,7 +320,6 @@
 
     check-cast v0, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;
 
-    .line 804
     iget-object v1, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
 
     iget-object v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
@@ -374,7 +336,6 @@
 
     check-cast v1, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;
 
-    .line 806
     iget-object v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->currentManifest:Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;
 
     iget-boolean v2, v2, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->dynamic:Z
@@ -387,7 +348,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 807
     :cond_0
     new-instance v2, Lcom/google/android/exoplayer/TimeRange$StaticTimeRange;
 
@@ -395,7 +355,6 @@
 
     move-result-wide v4
 
-    .line 808
     invoke-virtual {v1}, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;->getAvailableEndTimeUs()J
 
     move-result-wide v0
@@ -404,17 +363,14 @@
 
     move-object v1, v2
 
-    .line 818
     :goto_0
     return-object v1
 
-    .line 811
     :cond_1
     invoke-virtual {v0}, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;->getAvailableStartTimeUs()J
 
     move-result-wide v2
 
-    .line 812
     invoke-virtual {v1}, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;->isIndexUnbounded()Z
 
     move-result v0
@@ -423,7 +379,6 @@
 
     const-wide v4, 0x7fffffffffffffffL
 
-    .line 814
     :goto_1
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->systemClock:Lcom/google/android/exoplayer/util/Clock;
 
@@ -443,7 +398,6 @@
 
     sub-long v6, v0, v6
 
-    .line 816
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->currentManifest:Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;
 
     iget-wide v0, v0, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->timeShiftBufferDepth:J
@@ -452,7 +406,6 @@
 
     if-nez v0, :cond_3
 
-    .line 818
     :goto_2
     new-instance v1, Lcom/google/android/exoplayer/TimeRange$DynamicTimeRange;
 
@@ -462,7 +415,6 @@
 
     goto :goto_0
 
-    .line 813
     :cond_2
     invoke-virtual {v1}, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;->getAvailableEndTimeUs()J
 
@@ -470,7 +422,6 @@
 
     goto :goto_1
 
-    .line 816
     :cond_3
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->currentManifest:Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;
 
@@ -484,30 +435,24 @@
 .method private static getMediaMimeType(Lcom/google/android/exoplayer/chunk/Format;)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 655
     iget-object v0, p0, Lcom/google/android/exoplayer/chunk/Format;->mimeType:Ljava/lang/String;
 
-    .line 656
     invoke-static {v0}, Lcom/google/android/exoplayer/util/MimeTypes;->isAudio(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 657
     iget-object v0, p0, Lcom/google/android/exoplayer/chunk/Format;->codecs:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/android/exoplayer/util/MimeTypes;->getAudioMediaMimeType(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 670
     :cond_0
     :goto_0
     return-object v0
 
-    .line 658
     :cond_1
     invoke-static {v0}, Lcom/google/android/exoplayer/util/MimeTypes;->isVideo(Ljava/lang/String;)Z
 
@@ -515,7 +460,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 659
     iget-object v0, p0, Lcom/google/android/exoplayer/chunk/Format;->codecs:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/android/exoplayer/util/MimeTypes;->getVideoMediaMimeType(Ljava/lang/String;)Ljava/lang/String;
@@ -524,7 +468,6 @@
 
     goto :goto_0
 
-    .line 660
     :cond_2
     invoke-static {v0}, Lcom/google/android/exoplayer/dash/DashChunkSource;->mimeTypeIsRawText(Ljava/lang/String;)Z
 
@@ -532,7 +475,6 @@
 
     if-nez v1, :cond_0
 
-    .line 662
     const-string/jumbo v1, "application/mp4"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -541,7 +483,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 663
     const-string/jumbo v0, "stpp"
 
     iget-object v1, p0, Lcom/google/android/exoplayer/chunk/Format;->codecs:Ljava/lang/String;
@@ -552,12 +493,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 664
     const-string/jumbo v0, "application/ttml+xml"
 
     goto :goto_0
 
-    .line 666
     :cond_3
     const-string/jumbo v0, "wvtt"
 
@@ -569,12 +508,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 667
     const-string/jumbo v0, "application/x-mp4vtt"
 
     goto :goto_0
 
-    .line 670
     :cond_4
     const/4 v0, 0x0
 
@@ -584,10 +521,8 @@
 .method private getNowUnixTimeUs()J
     .locals 6
 
-    .prologue
     const-wide/16 v4, 0x3e8
 
-    .line 728
     iget-wide v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->elapsedRealtimeOffsetUs:J
 
     const-wide/16 v2, 0x0
@@ -596,7 +531,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 729
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->systemClock:Lcom/google/android/exoplayer/util/Clock;
 
     invoke-interface {v0}, Lcom/google/android/exoplayer/util/Clock;->elapsedRealtime()J
@@ -609,7 +543,6 @@
 
     add-long/2addr v0, v2
 
-    .line 731
     :goto_0
     return-wide v0
 
@@ -626,19 +559,15 @@
 .method private static getTrackFormat(ILcom/google/android/exoplayer/chunk/Format;Ljava/lang/String;J)Lcom/google/android/exoplayer/MediaFormat;
     .locals 11
 
-    .prologue
     const/4 v3, -0x1
 
     const/4 v8, 0x0
 
-    .line 638
     packed-switch p0, :pswitch_data_0
 
-    .line 650
     :goto_0
     return-object v8
 
-    .line 640
     :pswitch_0
     iget-object v0, p1, Lcom/google/android/exoplayer/chunk/Format;->id:Ljava/lang/String;
 
@@ -658,7 +587,6 @@
 
     goto :goto_0
 
-    .line 643
     :pswitch_1
     iget-object v0, p1, Lcom/google/android/exoplayer/chunk/Format;->id:Ljava/lang/String;
 
@@ -680,7 +608,6 @@
 
     goto :goto_0
 
-    .line 647
     :pswitch_2
     iget-object v1, p1, Lcom/google/android/exoplayer/chunk/Format;->id:Ljava/lang/String;
 
@@ -698,7 +625,6 @@
 
     goto :goto_0
 
-    .line 638
     nop
 
     :pswitch_data_0
@@ -712,8 +638,6 @@
 .method static mimeTypeIsRawText(Ljava/lang/String;)Z
     .locals 1
 
-    .prologue
-    .line 679
     const-string/jumbo v0, "text/vtt"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -745,8 +669,6 @@
 .method static mimeTypeIsWebm(Ljava/lang/String;)Z
     .locals 1
 
-    .prologue
-    .line 674
     const-string/jumbo v0, "video/webm"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -765,7 +687,6 @@
 
     const-string/jumbo v0, "application/webm"
 
-    .line 675
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -775,11 +696,9 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 674
     :goto_0
     return v0
 
-    .line 675
     :cond_1
     const/4 v0, 0x0
 
@@ -789,19 +708,14 @@
 .method private newInitializationChunk(Lcom/google/android/exoplayer/dash/mpd/RangedUri;Lcom/google/android/exoplayer/dash/mpd/RangedUri;Lcom/google/android/exoplayer/dash/mpd/Representation;Lcom/google/android/exoplayer/chunk/ChunkExtractorWrapper;Lcom/google/android/exoplayer/upstream/DataSource;II)Lcom/google/android/exoplayer/chunk/Chunk;
     .locals 8
 
-    .prologue
-    .line 686
     if-eqz p1, :cond_0
 
-    .line 689
     invoke-virtual {p1, p2}, Lcom/google/android/exoplayer/dash/mpd/RangedUri;->attemptMerge(Lcom/google/android/exoplayer/dash/mpd/RangedUri;)Lcom/google/android/exoplayer/dash/mpd/RangedUri;
 
     move-result-object p2
 
-    .line 690
     if-nez p2, :cond_1
 
-    .line 696
     :goto_0
     new-instance v0, Lcom/google/android/exoplayer/upstream/DataSpec;
 
@@ -813,14 +727,12 @@
 
     iget-wide v4, p1, Lcom/google/android/exoplayer/dash/mpd/RangedUri;->length:J
 
-    .line 697
     invoke-virtual {p3}, Lcom/google/android/exoplayer/dash/mpd/Representation;->getCacheKey()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-direct/range {v0 .. v6}, Lcom/google/android/exoplayer/upstream/DataSpec;-><init>(Landroid/net/Uri;JJLjava/lang/String;)V
 
-    .line 698
     new-instance v1, Lcom/google/android/exoplayer/chunk/InitializationChunk;
 
     iget-object v5, p3, Lcom/google/android/exoplayer/dash/mpd/Representation;->format:Lcom/google/android/exoplayer/chunk/Format;
@@ -842,7 +754,6 @@
     :cond_0
     move-object p1, p2
 
-    .line 694
     goto :goto_0
 
     :cond_1
@@ -854,8 +765,6 @@
 .method private notifyAvailableRangeChanged(Lcom/google/android/exoplayer/TimeRange;)V
     .locals 2
 
-    .prologue
-    .line 823
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->eventHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
@@ -864,7 +773,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 824
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->eventHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/google/android/exoplayer/dash/DashChunkSource$1;
@@ -873,7 +781,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 831
     :cond_0
     return-void
 .end method
@@ -881,15 +788,12 @@
 .method private processManifest(Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;)V
     .locals 9
 
-    .prologue
     const/4 v8, 0x0
 
-    .line 754
     invoke-virtual {p1, v8}, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->getPeriod(I)Lcom/google/android/exoplayer/dash/mpd/Period;
 
     move-result-object v1
 
-    .line 755
     :goto_0
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
 
@@ -901,7 +805,6 @@
 
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
 
-    .line 756
     invoke-virtual {v0, v8}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -920,7 +823,6 @@
 
     if-gez v0, :cond_0
 
-    .line 757
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v8}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -929,7 +831,6 @@
 
     check-cast v0, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;
 
-    .line 759
     iget-object v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
 
     iget v0, v0, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;->localIndex:I
@@ -938,7 +839,6 @@
 
     goto :goto_0
 
-    .line 766
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
 
@@ -952,11 +852,9 @@
 
     if-le v0, v1, :cond_1
 
-    .line 800
     :goto_1
     return-void
 
-    .line 772
     :cond_1
     :try_start_0
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
@@ -965,10 +863,8 @@
 
     move-result v1
 
-    .line 773
     if-lez v1, :cond_2
 
-    .line 774
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
 
     const/4 v2, 0x0
@@ -985,15 +881,12 @@
 
     invoke-virtual {v0, p1, v2, v3}, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;->updatePeriod(Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;ILcom/google/android/exoplayer/dash/DashChunkSource$ExposedTrack;)V
 
-    .line 775
     const/4 v0, 0x1
 
     if-le v1, v0, :cond_2
 
-    .line 776
     add-int/lit8 v1, v1, -0x1
 
-    .line 777
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -1008,7 +901,6 @@
     :try_end_0
     .catch Lcom/google/android/exoplayer/BehindLiveWindowException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 786
     :cond_2
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
 
@@ -1023,7 +915,6 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 787
     new-instance v1, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;
 
     iget v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->nextPeriodHolderIndex:I
@@ -1032,35 +923,29 @@
 
     invoke-direct {v1, v2, p1, v0, v3}, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;-><init>(ILcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;ILcom/google/android/exoplayer/dash/DashChunkSource$ExposedTrack;)V
 
-    .line 788
     iget-object v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
 
     iget v3, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->nextPeriodHolderIndex:I
 
     invoke-virtual {v2, v3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 789
     iget v1, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->nextPeriodHolderIndex:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->nextPeriodHolderIndex:I
 
-    .line 786
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 780
     :catch_0
     move-exception v0
 
-    .line 781
     iput-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->fatalError:Ljava/io/IOException;
 
     goto :goto_1
 
-    .line 793
     :cond_3
     invoke-direct {p0}, Lcom/google/android/exoplayer/dash/DashChunkSource;->getNowUnixTimeUs()J
 
@@ -1070,7 +955,6 @@
 
     move-result-object v0
 
-    .line 794
     iget-object v1, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->availableRange:Lcom/google/android/exoplayer/TimeRange;
 
     if-eqz v1, :cond_4
@@ -1083,16 +967,13 @@
 
     if-nez v1, :cond_5
 
-    .line 795
     :cond_4
     iput-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->availableRange:Lcom/google/android/exoplayer/TimeRange;
 
-    .line 796
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->availableRange:Lcom/google/android/exoplayer/TimeRange;
 
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer/dash/DashChunkSource;->notifyAvailableRangeChanged(Lcom/google/android/exoplayer/TimeRange;)V
 
-    .line 799
     :cond_5
     iput-object p1, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->currentManifest:Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;
 
@@ -1104,24 +985,19 @@
 .method public adaptiveTrack(Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;II[I)V
     .locals 10
 
-    .prologue
-    .line 565
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->adaptiveFormatEvaluator:Lcom/google/android/exoplayer/chunk/FormatEvaluator;
 
     if-nez v0, :cond_0
 
-    .line 566
     const-string/jumbo v0, "DashChunkSource"
 
     const-string/jumbo v1, "Skipping adaptive track (missing format evaluator)"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 599
     :goto_0
     return-void
 
-    .line 569
     :cond_0
     invoke-virtual {p1, p2}, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->getPeriod(I)Lcom/google/android/exoplayer/dash/mpd/Period;
 
@@ -1135,21 +1011,16 @@
 
     check-cast v0, Lcom/google/android/exoplayer/dash/mpd/AdaptationSet;
 
-    .line 571
     const/4 v4, 0x0
 
-    .line 572
     const/4 v5, 0x0
 
-    .line 573
     const/4 v2, 0x0
 
-    .line 574
     array-length v1, p4
 
     new-array v3, v1, [Lcom/google/android/exoplayer/chunk/Format;
 
-    .line 575
     const/4 v1, 0x0
 
     move v7, v1
@@ -1159,7 +1030,6 @@
 
     if-ge v7, v1, :cond_2
 
-    .line 576
     iget-object v1, v0, Lcom/google/android/exoplayer/dash/mpd/AdaptationSet;->representations:Ljava/util/List;
 
     aget v6, p4, v7
@@ -1172,7 +1042,6 @@
 
     iget-object v6, v1, Lcom/google/android/exoplayer/dash/mpd/Representation;->format:Lcom/google/android/exoplayer/chunk/Format;
 
-    .line 577
     if-eqz v2, :cond_1
 
     iget v1, v6, Lcom/google/android/exoplayer/chunk/Format;->height:I
@@ -1182,7 +1051,6 @@
     :cond_1
     move-object v1, v6
 
-    .line 580
     :goto_2
     iget v2, v6, Lcom/google/android/exoplayer/chunk/Format;->width:I
 
@@ -1190,17 +1058,14 @@
 
     move-result v4
 
-    .line 581
     iget v2, v6, Lcom/google/android/exoplayer/chunk/Format;->height:I
 
     invoke-static {v5, v2}, Ljava/lang/Math;->max(II)I
 
     move-result v5
 
-    .line 582
     aput-object v6, v3, v7
 
-    .line 575
     add-int/lit8 v2, v7, 0x1
 
     move v7, v2
@@ -1209,7 +1074,6 @@
 
     goto :goto_1
 
-    .line 584
     :cond_2
     new-instance v1, Lcom/google/android/exoplayer/chunk/Format$DecreasingBandwidthComparator;
 
@@ -1217,23 +1081,19 @@
 
     invoke-static {v3, v1}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
-    .line 585
     iget-boolean v1, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->live:Z
 
     if-eqz v1, :cond_3
 
     const-wide/16 v6, -0x1
 
-    .line 586
     :goto_3
     invoke-static {v2}, Lcom/google/android/exoplayer/dash/DashChunkSource;->getMediaMimeType(Lcom/google/android/exoplayer/chunk/Format;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 587
     if-nez v1, :cond_4
 
-    .line 588
     const-string/jumbo v0, "DashChunkSource"
 
     const-string/jumbo v1, "Skipped adaptive track (unknown media mime type)"
@@ -1242,7 +1102,6 @@
 
     goto :goto_0
 
-    .line 585
     :cond_3
     iget-wide v6, p1, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->duration:J
 
@@ -1252,7 +1111,6 @@
 
     goto :goto_3
 
-    .line 591
     :cond_4
     iget v0, v0, Lcom/google/android/exoplayer/dash/mpd/AdaptationSet;->type:I
 
@@ -1260,10 +1118,8 @@
 
     move-result-object v1
 
-    .line 593
     if-nez v1, :cond_5
 
-    .line 594
     const-string/jumbo v0, "DashChunkSource"
 
     const-string/jumbo v1, "Skipped adaptive track (unknown media format)"
@@ -1272,7 +1128,6 @@
 
     goto :goto_0
 
-    .line 597
     :cond_5
     iget-object v6, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->tracks:Ljava/util/ArrayList;
 
@@ -1301,8 +1156,6 @@
 .method public continueBuffering(J)V
     .locals 6
 
-    .prologue
-    .line 329
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->manifestFetcher:Lcom/google/android/exoplayer/util/ManifestFetcher;
 
     if-eqz v0, :cond_0
@@ -1317,12 +1170,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 354
     :cond_0
     :goto_0
     return-void
 
-    .line 333
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->manifestFetcher:Lcom/google/android/exoplayer/util/ManifestFetcher;
 
@@ -1332,36 +1183,29 @@
 
     check-cast v0, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;
 
-    .line 334
     if-eqz v0, :cond_2
 
     iget-object v1, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->processedManifest:Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;
 
     if-eq v0, v1, :cond_2
 
-    .line 335
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer/dash/DashChunkSource;->processManifest(Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;)V
 
-    .line 338
     iput-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->processedManifest:Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;
 
-    .line 345
     :cond_2
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->currentManifest:Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;
 
     iget-wide v0, v0, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->minUpdatePeriod:J
 
-    .line 346
     const-wide/16 v2, 0x0
 
     cmp-long v2, v0, v2
 
     if-nez v2, :cond_3
 
-    .line 347
     const-wide/16 v0, 0x1388
 
-    .line 350
     :cond_3
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -1369,7 +1213,6 @@
 
     iget-object v4, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->manifestFetcher:Lcom/google/android/exoplayer/util/ManifestFetcher;
 
-    .line 351
     invoke-virtual {v4}, Lcom/google/android/exoplayer/util/ManifestFetcher;->getManifestLoadStartTimestamp()J
 
     move-result-wide v4
@@ -1380,7 +1223,6 @@
 
     if-lez v0, :cond_0
 
-    .line 352
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->manifestFetcher:Lcom/google/android/exoplayer/util/ManifestFetcher;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer/util/ManifestFetcher;->requestRefresh()V
@@ -1400,10 +1242,8 @@
         }
     .end annotation
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 547
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->enabledTrack:Lcom/google/android/exoplayer/dash/DashChunkSource$ExposedTrack;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer/dash/DashChunkSource$ExposedTrack;->isAdaptive()Z
@@ -1412,51 +1252,40 @@
 
     if-eqz v0, :cond_0
 
-    .line 548
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->adaptiveFormatEvaluator:Lcom/google/android/exoplayer/chunk/FormatEvaluator;
 
     invoke-interface {v0}, Lcom/google/android/exoplayer/chunk/FormatEvaluator;->disable()V
 
-    .line 550
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->manifestFetcher:Lcom/google/android/exoplayer/util/ManifestFetcher;
 
     if-eqz v0, :cond_1
 
-    .line 551
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->manifestFetcher:Lcom/google/android/exoplayer/util/ManifestFetcher;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer/util/ManifestFetcher;->disable()V
 
-    .line 553
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    .line 554
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->evaluation:Lcom/google/android/exoplayer/chunk/FormatEvaluator$Evaluation;
 
     iput-object v1, v0, Lcom/google/android/exoplayer/chunk/FormatEvaluator$Evaluation;->format:Lcom/google/android/exoplayer/chunk/Format;
 
-    .line 555
     iput-object v1, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->availableRange:Lcom/google/android/exoplayer/TimeRange;
 
-    .line 556
     iput-object v1, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->fatalError:Ljava/io/IOException;
 
-    .line 557
     iput-object v1, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->enabledTrack:Lcom/google/android/exoplayer/dash/DashChunkSource$ExposedTrack;
 
-    .line 558
     return-void
 .end method
 
 .method public enable(I)V
     .locals 1
 
-    .prologue
-    .line 315
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->tracks:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1467,7 +1296,6 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->enabledTrack:Lcom/google/android/exoplayer/dash/DashChunkSource$ExposedTrack;
 
-    .line 316
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->enabledTrack:Lcom/google/android/exoplayer/dash/DashChunkSource$ExposedTrack;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer/dash/DashChunkSource$ExposedTrack;->isAdaptive()Z
@@ -1476,23 +1304,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 317
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->adaptiveFormatEvaluator:Lcom/google/android/exoplayer/chunk/FormatEvaluator;
 
     invoke-interface {v0}, Lcom/google/android/exoplayer/chunk/FormatEvaluator;->enable()V
 
-    .line 319
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->manifestFetcher:Lcom/google/android/exoplayer/util/ManifestFetcher;
 
     if-eqz v0, :cond_1
 
-    .line 320
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->manifestFetcher:Lcom/google/android/exoplayer/util/ManifestFetcher;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer/util/ManifestFetcher;->enable()V
 
-    .line 321
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->manifestFetcher:Lcom/google/android/exoplayer/util/ManifestFetcher;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer/util/ManifestFetcher;->getManifest()Ljava/lang/Object;
@@ -1503,11 +1327,9 @@
 
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer/dash/DashChunkSource;->processManifest(Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;)V
 
-    .line 325
     :goto_0
     return-void
 
-    .line 323
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->currentManifest:Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;
 
@@ -1519,22 +1341,18 @@
 .method public fixedTrack(Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;III)V
     .locals 8
 
-    .prologue
-    .line 604
     invoke-virtual {p1, p2}, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->getPeriod(I)Lcom/google/android/exoplayer/dash/mpd/Period;
 
     move-result-object v0
 
     iget-object v0, v0, Lcom/google/android/exoplayer/dash/mpd/Period;->adaptationSets:Ljava/util/List;
 
-    .line 605
     invoke-interface {v0, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/exoplayer/dash/mpd/AdaptationSet;
 
-    .line 606
     iget-object v1, v0, Lcom/google/android/exoplayer/dash/mpd/AdaptationSet;->representations:Ljava/util/List;
 
     invoke-interface {v1, p4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1545,15 +1363,12 @@
 
     iget-object v2, v1, Lcom/google/android/exoplayer/dash/mpd/Representation;->format:Lcom/google/android/exoplayer/chunk/Format;
 
-    .line 607
     invoke-static {v2}, Lcom/google/android/exoplayer/dash/DashChunkSource;->getMediaMimeType(Lcom/google/android/exoplayer/chunk/Format;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 608
     if-nez v3, :cond_0
 
-    .line 609
     const-string/jumbo v0, "DashChunkSource"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1584,11 +1399,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 619
     :goto_0
     return-void
 
-    .line 612
     :cond_0
     iget v4, v0, Lcom/google/android/exoplayer/dash/mpd/AdaptationSet;->type:I
 
@@ -1603,10 +1416,8 @@
 
     move-result-object v0
 
-    .line 614
     if-nez v0, :cond_2
 
-    .line 615
     const-string/jumbo v0, "DashChunkSource"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1639,7 +1450,6 @@
 
     goto :goto_0
 
-    .line 612
     :cond_1
     iget-wide v0, p1, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->duration:J
 
@@ -1649,7 +1459,6 @@
 
     goto :goto_1
 
-    .line 618
     :cond_2
     iget-object v1, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->tracks:Ljava/util/ArrayList;
 
@@ -1676,25 +1485,20 @@
         }
     .end annotation
 
-    .prologue
-    .line 359
     iget-object v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->fatalError:Ljava/io/IOException;
 
     if-eqz v2, :cond_1
 
-    .line 360
     const/4 v2, 0x0
 
     move-object/from16 v0, p4
 
     iput-object v2, v0, Lcom/google/android/exoplayer/chunk/ChunkOperationHolder;->chunk:Lcom/google/android/exoplayer/chunk/Chunk;
 
-    .line 504
     :cond_0
     :goto_0
     return-void
 
-    .line 364
     :cond_1
     iget-object v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->evaluation:Lcom/google/android/exoplayer/chunk/FormatEvaluator$Evaluation;
 
@@ -1704,7 +1508,6 @@
 
     iput v3, v2, Lcom/google/android/exoplayer/chunk/FormatEvaluator$Evaluation;->queueSize:I
 
-    .line 365
     iget-object v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->evaluation:Lcom/google/android/exoplayer/chunk/FormatEvaluator$Evaluation;
 
     iget-object v2, v2, Lcom/google/android/exoplayer/chunk/FormatEvaluator$Evaluation;->format:Lcom/google/android/exoplayer/chunk/Format;
@@ -1715,7 +1518,6 @@
 
     if-nez v2, :cond_3
 
-    .line 366
     :cond_2
     iget-object v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->enabledTrack:Lcom/google/android/exoplayer/dash/DashChunkSource$ExposedTrack;
 
@@ -1725,7 +1527,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 367
     iget-object v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->adaptiveFormatEvaluator:Lcom/google/android/exoplayer/chunk/FormatEvaluator;
 
     iget-object v3, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->enabledTrack:Lcom/google/android/exoplayer/dash/DashChunkSource$ExposedTrack;
@@ -1742,14 +1543,12 @@
 
     invoke-interface/range {v2 .. v7}, Lcom/google/android/exoplayer/chunk/FormatEvaluator;->evaluate(Ljava/util/List;J[Lcom/google/android/exoplayer/chunk/Format;Lcom/google/android/exoplayer/chunk/FormatEvaluator$Evaluation;)V
 
-    .line 375
     :cond_3
     :goto_1
     iget-object v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->evaluation:Lcom/google/android/exoplayer/chunk/FormatEvaluator$Evaluation;
 
     iget-object v6, v2, Lcom/google/android/exoplayer/chunk/FormatEvaluator$Evaluation;->format:Lcom/google/android/exoplayer/chunk/Format;
 
-    .line 376
     iget-object v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->evaluation:Lcom/google/android/exoplayer/chunk/FormatEvaluator$Evaluation;
 
     iget v2, v2, Lcom/google/android/exoplayer/chunk/FormatEvaluator$Evaluation;->queueSize:I
@@ -1758,10 +1557,8 @@
 
     iput v2, v0, Lcom/google/android/exoplayer/chunk/ChunkOperationHolder;->queueSize:I
 
-    .line 378
     if-nez v6, :cond_5
 
-    .line 379
     const/4 v2, 0x0
 
     move-object/from16 v0, p4
@@ -1770,7 +1567,6 @@
 
     goto :goto_0
 
-    .line 370
     :cond_4
     iget-object v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->evaluation:Lcom/google/android/exoplayer/chunk/FormatEvaluator$Evaluation;
 
@@ -1782,7 +1578,6 @@
 
     iput-object v3, v2, Lcom/google/android/exoplayer/chunk/FormatEvaluator$Evaluation;->format:Lcom/google/android/exoplayer/chunk/Format;
 
-    .line 371
     iget-object v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->evaluation:Lcom/google/android/exoplayer/chunk/FormatEvaluator$Evaluation;
 
     const/4 v3, 0x2
@@ -1791,7 +1586,6 @@
 
     goto :goto_1
 
-    .line 381
     :cond_5
     move-object/from16 v0, p4
 
@@ -1815,14 +1609,12 @@
 
     iget-object v2, v2, Lcom/google/android/exoplayer/chunk/Chunk;->format:Lcom/google/android/exoplayer/chunk/Format;
 
-    .line 382
     invoke-virtual {v2, v6}, Lcom/google/android/exoplayer/chunk/Format;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 389
     :cond_6
     const/4 v2, 0x0
 
@@ -1830,44 +1622,37 @@
 
     iput-object v2, v0, Lcom/google/android/exoplayer/chunk/ChunkOperationHolder;->chunk:Lcom/google/android/exoplayer/chunk/Chunk;
 
-    .line 394
     iget-object v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->availableRange:Lcom/google/android/exoplayer/TimeRange;
 
     iget-object v3, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->availableRangeValues:[J
 
     invoke-interface {v2, v3}, Lcom/google/android/exoplayer/TimeRange;->getCurrentBoundsUs([J)[J
 
-    .line 395
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
 
     if-eqz v2, :cond_d
 
-    .line 396
     iget-boolean v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->live:Z
 
     if-eqz v2, :cond_8
 
-    .line 397
     const-wide/16 v2, 0x0
 
     cmp-long v2, p2, v2
 
     if-eqz v2, :cond_7
 
-    .line 399
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->startAtLiveEdge:Z
 
-    .line 401
     :cond_7
     iget-boolean v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->startAtLiveEdge:Z
 
     if-eqz v2, :cond_c
 
-    .line 404
     iget-object v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->availableRangeValues:[J
 
     const/4 v3, 0x0
@@ -1888,7 +1673,6 @@
 
     move-result-wide p2
 
-    .line 413
     :cond_8
     :goto_2
     move-wide/from16 v0, p2
@@ -1897,20 +1681,17 @@
 
     move-result-object v2
 
-    .line 414
     const/4 v3, 0x1
 
     move-object v12, v2
 
     move v7, v3
 
-    .line 472
     :goto_3
     iget-object v2, v12, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;->representationHolders:Ljava/util/HashMap;
 
     iget-object v3, v6, Lcom/google/android/exoplayer/chunk/Format;->id:Ljava/lang/String;
 
-    .line 473
     invoke-virtual {v2, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -1919,44 +1700,34 @@
 
     check-cast v11, Lcom/google/android/exoplayer/dash/DashChunkSource$RepresentationHolder;
 
-    .line 474
     iget-object v5, v11, Lcom/google/android/exoplayer/dash/DashChunkSource$RepresentationHolder;->representation:Lcom/google/android/exoplayer/dash/mpd/Representation;
 
-    .line 476
     const/4 v3, 0x0
 
-    .line 477
     const/4 v4, 0x0
 
-    .line 479
     iget-object v6, v11, Lcom/google/android/exoplayer/dash/DashChunkSource$RepresentationHolder;->mediaFormat:Lcom/google/android/exoplayer/MediaFormat;
 
-    .line 480
     if-nez v6, :cond_9
 
-    .line 481
     invoke-virtual {v5}, Lcom/google/android/exoplayer/dash/mpd/Representation;->getInitializationUri()Lcom/google/android/exoplayer/dash/mpd/RangedUri;
 
     move-result-object v3
 
-    .line 483
     :cond_9
     iget-object v2, v11, Lcom/google/android/exoplayer/dash/DashChunkSource$RepresentationHolder;->segmentIndex:Lcom/google/android/exoplayer/dash/DashSegmentIndex;
 
     if-nez v2, :cond_a
 
-    .line 484
     invoke-virtual {v5}, Lcom/google/android/exoplayer/dash/mpd/Representation;->getIndexUri()Lcom/google/android/exoplayer/dash/mpd/RangedUri;
 
     move-result-object v4
 
-    .line 487
     :cond_a
     if-nez v3, :cond_b
 
     if-eqz v4, :cond_13
 
-    .line 489
     :cond_b
     iget-object v6, v11, Lcom/google/android/exoplayer/dash/DashChunkSource$RepresentationHolder;->extractorWrapper:Lcom/google/android/exoplayer/chunk/ChunkExtractorWrapper;
 
@@ -1974,19 +1745,16 @@
 
     move-result-object v2
 
-    .line 492
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->lastChunkWasInitialization:Z
 
-    .line 493
     move-object/from16 v0, p4
 
     iput-object v2, v0, Lcom/google/android/exoplayer/chunk/ChunkOperationHolder;->chunk:Lcom/google/android/exoplayer/chunk/Chunk;
 
     goto/16 :goto_0
 
-    .line 408
     :cond_c
     iget-object v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->availableRangeValues:[J
 
@@ -2004,7 +1772,6 @@
 
     move-result-wide v2
 
-    .line 409
     iget-object v4, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->availableRangeValues:[J
 
     const/4 v5, 0x0
@@ -2017,18 +1784,15 @@
 
     goto :goto_2
 
-    .line 416
     :cond_d
     iget-boolean v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->startAtLiveEdge:Z
 
     if-eqz v2, :cond_e
 
-    .line 419
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->startAtLiveEdge:Z
 
-    .line 422
     :cond_e
     move-object/from16 v0, p4
 
@@ -2042,10 +1806,8 @@
 
     check-cast v2, Lcom/google/android/exoplayer/chunk/MediaChunk;
 
-    .line 423
     iget-wide v4, v2, Lcom/google/android/exoplayer/chunk/MediaChunk;->endTimeUs:J
 
-    .line 424
     iget-boolean v3, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->live:Z
 
     if-eqz v3, :cond_f
@@ -2060,7 +1822,6 @@
 
     if-gez v3, :cond_f
 
-    .line 426
     new-instance v2, Lcom/google/android/exoplayer/BehindLiveWindowException;
 
     invoke-direct {v2}, Lcom/google/android/exoplayer/BehindLiveWindowException;-><init>()V
@@ -2069,7 +1830,6 @@
 
     goto/16 :goto_0
 
-    .line 428
     :cond_f
     iget-object v3, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->currentManifest:Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;
 
@@ -2087,7 +1847,6 @@
 
     if-gez v3, :cond_0
 
-    .line 438
     :cond_10
     iget-object v3, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
 
@@ -2105,28 +1864,24 @@
 
     check-cast v3, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;
 
-    .line 439
     iget v4, v2, Lcom/google/android/exoplayer/chunk/MediaChunk;->parentId:I
 
     iget v5, v3, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;->localIndex:I
 
     if-ne v4, v5, :cond_11
 
-    .line 440
     iget-object v3, v3, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;->representationHolders:Ljava/util/HashMap;
 
     iget-object v4, v2, Lcom/google/android/exoplayer/chunk/MediaChunk;->format:Lcom/google/android/exoplayer/chunk/Format;
 
     iget-object v4, v4, Lcom/google/android/exoplayer/chunk/Format;->id:Ljava/lang/String;
 
-    .line 441
     invoke-virtual {v3, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/google/android/exoplayer/dash/DashChunkSource$RepresentationHolder;
 
-    .line 442
     invoke-virtual {v2}, Lcom/google/android/exoplayer/chunk/MediaChunk;->getNextChunkIndex()I
 
     move-result v4
@@ -2137,14 +1892,12 @@
 
     if-eqz v3, :cond_11
 
-    .line 443
     iget-object v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->currentManifest:Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;
 
     iget-boolean v2, v2, Lcom/google/android/exoplayer/dash/mpd/MediaPresentationDescription;->dynamic:Z
 
     if-nez v2, :cond_0
 
-    .line 445
     const/4 v2, 0x1
 
     move-object/from16 v0, p4
@@ -2153,11 +1906,9 @@
 
     goto/16 :goto_0
 
-    .line 452
     :cond_11
     const/4 v5, 0x0
 
-    .line 453
     iget-object v3, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
 
     iget v4, v2, Lcom/google/android/exoplayer/chunk/MediaChunk;->parentId:I
@@ -2168,10 +1919,8 @@
 
     check-cast v3, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;
 
-    .line 454
     if-nez v3, :cond_12
 
-    .line 459
     iget-object v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
 
     const/4 v3, 0x0
@@ -2182,7 +1931,6 @@
 
     check-cast v2, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;
 
-    .line 460
     const/4 v3, 0x1
 
     move-object v12, v2
@@ -2191,7 +1939,6 @@
 
     goto/16 :goto_3
 
-    .line 461
     :cond_12
     invoke-virtual {v3}, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;->isIndexUnbounded()Z
 
@@ -2199,21 +1946,18 @@
 
     if-nez v4, :cond_17
 
-    .line 462
     iget-object v4, v3, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;->representationHolders:Ljava/util/HashMap;
 
     iget-object v7, v2, Lcom/google/android/exoplayer/chunk/MediaChunk;->format:Lcom/google/android/exoplayer/chunk/Format;
 
     iget-object v7, v7, Lcom/google/android/exoplayer/chunk/Format;->id:Ljava/lang/String;
 
-    .line 463
     invoke-virtual {v4, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lcom/google/android/exoplayer/dash/DashChunkSource$RepresentationHolder;
 
-    .line 464
     invoke-virtual {v2}, Lcom/google/android/exoplayer/chunk/MediaChunk;->getNextChunkIndex()I
 
     move-result v7
@@ -2224,7 +1968,6 @@
 
     if-eqz v4, :cond_17
 
-    .line 466
     iget-object v3, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
 
     iget v2, v2, Lcom/google/android/exoplayer/chunk/MediaChunk;->parentId:I
@@ -2237,7 +1980,6 @@
 
     check-cast v2, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;
 
-    .line 467
     const/4 v3, 0x1
 
     move-object v12, v2
@@ -2246,7 +1988,6 @@
 
     goto/16 :goto_3
 
-    .line 497
     :cond_13
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
@@ -2260,7 +2001,6 @@
 
     move-result v8
 
-    .line 500
     :goto_4
     iget-object v5, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->dataSource:Lcom/google/android/exoplayer/upstream/DataSource;
 
@@ -2285,23 +2025,19 @@
 
     move-result-object v2
 
-    .line 502
     const/4 v3, 0x0
 
     iput-boolean v3, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->lastChunkWasInitialization:Z
 
-    .line 503
     move-object/from16 v0, p4
 
     iput-object v2, v0, Lcom/google/android/exoplayer/chunk/ChunkOperationHolder;->chunk:Lcom/google/android/exoplayer/chunk/Chunk;
 
     goto/16 :goto_0
 
-    .line 497
     :cond_14
     if-eqz v7, :cond_15
 
-    .line 498
     invoke-virtual {v11}, Lcom/google/android/exoplayer/dash/DashChunkSource$RepresentationHolder;->getFirstAvailableSegmentNum()I
 
     move-result v8
@@ -2315,7 +2051,6 @@
 
     add-int/lit8 v2, v2, -0x1
 
-    .line 499
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -2328,7 +2063,6 @@
 
     goto :goto_4
 
-    .line 500
     :cond_16
     const/4 v10, 0x0
 
@@ -2345,8 +2079,6 @@
 .method public final getFormat(I)Lcom/google/android/exoplayer/MediaFormat;
     .locals 1
 
-    .prologue
-    .line 310
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->tracks:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2363,8 +2095,6 @@
 .method public getSeekToTime(J)J
     .locals 7
 
-    .prologue
-    .line 1127
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->mInitializationChunkIndex:Lcom/google/android/exoplayer/extractor/ChunkIndex;
 
     if-eqz v0, :cond_1
@@ -2377,10 +2107,8 @@
 
     if-eqz v0, :cond_1
 
-    .line 1128
     const-wide/16 v2, 0x0
 
-    .line 1129
     const/4 v0, 0x0
 
     :goto_0
@@ -2392,7 +2120,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 1130
     iget-object v1, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->mInitializationChunkIndex:Lcom/google/android/exoplayer/extractor/ChunkIndex;
 
     iget-object v1, v1, Lcom/google/android/exoplayer/extractor/ChunkIndex;->durationsUs:[J
@@ -2401,18 +2128,15 @@
 
     add-long/2addr v2, v4
 
-    .line 1129
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1132
     :cond_0
     const-wide/16 v0, 0x3e8
 
     div-long p1, v2, v0
 
-    .line 1134
     :cond_1
     return-wide p1
 .end method
@@ -2420,8 +2144,6 @@
 .method public getTrackCount()I
     .locals 1
 
-    .prologue
-    .line 305
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->tracks:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -2434,29 +2156,23 @@
 .method public maybeThrowError()V
     .locals 1
 
-    .prologue
-    .line 283
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->fatalError:Ljava/io/IOException;
 
     if-eqz v0, :cond_0
 
-    .line 284
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->fatalError:Ljava/io/IOException;
 
     throw v0
 
-    .line 285
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->manifestFetcher:Lcom/google/android/exoplayer/util/ManifestFetcher;
 
     if-eqz v0, :cond_1
 
-    .line 286
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->manifestFetcher:Lcom/google/android/exoplayer/util/ManifestFetcher;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer/util/ManifestFetcher;->maybeThrowError()V
 
-    .line 288
     :cond_1
     return-void
 .end method
@@ -2464,16 +2180,12 @@
 .method protected newMediaChunk(Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;Lcom/google/android/exoplayer/dash/DashChunkSource$RepresentationHolder;Lcom/google/android/exoplayer/upstream/DataSource;Lcom/google/android/exoplayer/MediaFormat;Lcom/google/android/exoplayer/dash/DashChunkSource$ExposedTrack;IIZ)Lcom/google/android/exoplayer/chunk/Chunk;
     .locals 24
 
-    .prologue
-    .line 706
     move-object/from16 v0, p2
 
     iget-object v9, v0, Lcom/google/android/exoplayer/dash/DashChunkSource$RepresentationHolder;->representation:Lcom/google/android/exoplayer/dash/mpd/Representation;
 
-    .line 707
     iget-object v12, v9, Lcom/google/android/exoplayer/dash/mpd/Representation;->format:Lcom/google/android/exoplayer/chunk/Format;
 
-    .line 708
     move-object/from16 v0, p2
 
     move/from16 v1, p6
@@ -2482,7 +2194,6 @@
 
     move-result-wide v22
 
-    .line 709
     move-object/from16 v0, p2
 
     move/from16 v1, p6
@@ -2491,7 +2202,6 @@
 
     move-result-wide v10
 
-    .line 710
     move-object/from16 v0, p2
 
     move/from16 v1, p6
@@ -2500,7 +2210,6 @@
 
     move-result-object v6
 
-    .line 711
     new-instance v2, Lcom/google/android/exoplayer/upstream/DataSpec;
 
     invoke-virtual {v6}, Lcom/google/android/exoplayer/dash/mpd/RangedUri;->getUri()Landroid/net/Uri;
@@ -2511,14 +2220,12 @@
 
     iget-wide v6, v6, Lcom/google/android/exoplayer/dash/mpd/RangedUri;->length:J
 
-    .line 712
     invoke-virtual {v9}, Lcom/google/android/exoplayer/dash/mpd/Representation;->getCacheKey()Ljava/lang/String;
 
     move-result-object v8
 
     invoke-direct/range {v2 .. v8}, Lcom/google/android/exoplayer/upstream/DataSpec;-><init>(Landroid/net/Uri;JJLjava/lang/String;)V
 
-    .line 714
     move-object/from16 v0, p1
 
     iget-wide v4, v0, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;->startTimeUs:J
@@ -2527,7 +2234,6 @@
 
     sub-long v13, v4, v6
 
-    .line 715
     iget-object v3, v12, Lcom/google/android/exoplayer/chunk/Format;->mimeType:Ljava/lang/String;
 
     invoke-static {v3}, Lcom/google/android/exoplayer/dash/DashChunkSource;->mimeTypeIsRawText(Ljava/lang/String;)Z
@@ -2536,7 +2242,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 716
     new-instance v3, Lcom/google/android/exoplayer/chunk/SingleSampleMediaChunk;
 
     const/4 v6, 0x1
@@ -2563,7 +2268,6 @@
 
     invoke-direct/range {v3 .. v15}, Lcom/google/android/exoplayer/chunk/SingleSampleMediaChunk;-><init>(Lcom/google/android/exoplayer/upstream/DataSource;Lcom/google/android/exoplayer/upstream/DataSpec;ILcom/google/android/exoplayer/chunk/Format;JJILcom/google/android/exoplayer/MediaFormat;Lcom/google/android/exoplayer/drm/DrmInitData;I)V
 
-    .line 720
     :goto_0
     return-object v3
 
@@ -2586,7 +2290,6 @@
 
     move/from16 v18, v0
 
-    .line 722
     invoke-static/range {p1 .. p1}, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;->access$200(Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;)Lcom/google/android/exoplayer/drm/DrmInitData;
 
     move-result-object v19
@@ -2621,16 +2324,12 @@
 .method public onChunkLoadCompleted(Lcom/google/android/exoplayer/chunk/Chunk;)V
     .locals 5
 
-    .prologue
-    .line 508
     instance-of v0, p1, Lcom/google/android/exoplayer/chunk/InitializationChunk;
 
     if-eqz v0, :cond_1
 
-    .line 509
     check-cast p1, Lcom/google/android/exoplayer/chunk/InitializationChunk;
 
-    .line 510
     invoke-virtual {p1}, Lcom/google/android/exoplayer/chunk/InitializationChunk;->getSeekMap()Lcom/google/android/exoplayer/extractor/SeekMap;
 
     move-result-object v0
@@ -2639,7 +2338,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 511
     invoke-virtual {p1}, Lcom/google/android/exoplayer/chunk/InitializationChunk;->getSeekMap()Lcom/google/android/exoplayer/extractor/SeekMap;
 
     move-result-object v0
@@ -2648,13 +2346,11 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->mInitializationChunkIndex:Lcom/google/android/exoplayer/extractor/ChunkIndex;
 
-    .line 513
     :cond_0
     iget-object v0, p1, Lcom/google/android/exoplayer/chunk/InitializationChunk;->format:Lcom/google/android/exoplayer/chunk/Format;
 
     iget-object v1, v0, Lcom/google/android/exoplayer/chunk/Format;->id:Ljava/lang/String;
 
-    .line 514
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->periodHolders:Landroid/util/SparseArray;
 
     iget v2, p1, Lcom/google/android/exoplayer/chunk/InitializationChunk;->parentId:I
@@ -2665,15 +2361,12 @@
 
     check-cast v0, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;
 
-    .line 515
     if-nez v0, :cond_2
 
-    .line 538
     :cond_1
     :goto_0
     return-void
 
-    .line 520
     :cond_2
     iget-object v2, v0, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;->representationHolders:Ljava/util/HashMap;
 
@@ -2683,21 +2376,18 @@
 
     check-cast v1, Lcom/google/android/exoplayer/dash/DashChunkSource$RepresentationHolder;
 
-    .line 521
     invoke-virtual {p1}, Lcom/google/android/exoplayer/chunk/InitializationChunk;->hasFormat()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 522
     invoke-virtual {p1}, Lcom/google/android/exoplayer/chunk/InitializationChunk;->getFormat()Lcom/google/android/exoplayer/MediaFormat;
 
     move-result-object v2
 
     iput-object v2, v1, Lcom/google/android/exoplayer/dash/DashChunkSource$RepresentationHolder;->mediaFormat:Lcom/google/android/exoplayer/MediaFormat;
 
-    .line 527
     :cond_3
     iget-object v2, v1, Lcom/google/android/exoplayer/dash/DashChunkSource$RepresentationHolder;->segmentIndex:Lcom/google/android/exoplayer/dash/DashSegmentIndex;
 
@@ -2709,10 +2399,8 @@
 
     if-eqz v2, :cond_4
 
-    .line 528
     new-instance v3, Lcom/google/android/exoplayer/dash/DashWrappingSegmentIndex;
 
-    .line 529
     invoke-virtual {p1}, Lcom/google/android/exoplayer/chunk/InitializationChunk;->getSeekMap()Lcom/google/android/exoplayer/extractor/SeekMap;
 
     move-result-object v2
@@ -2723,7 +2411,6 @@
 
     iget-object v4, v4, Lcom/google/android/exoplayer/upstream/DataSpec;->uri:Landroid/net/Uri;
 
-    .line 530
     invoke-virtual {v4}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v4
@@ -2732,7 +2419,6 @@
 
     iput-object v3, v1, Lcom/google/android/exoplayer/dash/DashChunkSource$RepresentationHolder;->segmentIndex:Lcom/google/android/exoplayer/dash/DashSegmentIndex;
 
-    .line 534
     :cond_4
     invoke-static {v0}, Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;->access$200(Lcom/google/android/exoplayer/dash/DashChunkSource$PeriodHolder;)Lcom/google/android/exoplayer/drm/DrmInitData;
 
@@ -2746,7 +2432,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 535
     invoke-virtual {p1}, Lcom/google/android/exoplayer/chunk/InitializationChunk;->getDrmInitData()Lcom/google/android/exoplayer/drm/DrmInitData;
 
     move-result-object v1
@@ -2759,28 +2444,22 @@
 .method public onChunkLoadError(Lcom/google/android/exoplayer/chunk/Chunk;Ljava/lang/Exception;)V
     .locals 0
 
-    .prologue
-    .line 543
     return-void
 .end method
 
 .method public prepare()Z
     .locals 5
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 292
     iget-boolean v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->prepareCalled:Z
 
     if-nez v2, :cond_0
 
-    .line 293
     iput-boolean v0, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->prepareCalled:Z
 
-    .line 295
     :try_start_0
     iget-object v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->trackSelector:Lcom/google/android/exoplayer/dash/DashTrackSelector;
 
@@ -2792,7 +2471,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 300
     :cond_0
     :goto_0
     iget-object v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->fatalError:Ljava/io/IOException;
@@ -2802,11 +2480,9 @@
     :goto_1
     return v0
 
-    .line 296
     :catch_0
     move-exception v2
 
-    .line 297
     iput-object v2, p0, Lcom/google/android/exoplayer/dash/DashChunkSource;->fatalError:Ljava/io/IOException;
 
     goto :goto_0
@@ -2814,6 +2490,5 @@
     :cond_1
     move v0, v1
 
-    .line 300
     goto :goto_1
 .end method

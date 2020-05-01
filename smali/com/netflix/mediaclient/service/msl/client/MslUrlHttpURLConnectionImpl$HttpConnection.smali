@@ -16,15 +16,12 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl;)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
-    .line 130
     iput-object p1, p0, Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl$HttpConnection;->this$0:Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 131
     invoke-static {p1}, Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl;->access$100(Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl;)Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;
 
     move-result-object v0
@@ -39,7 +36,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl$HttpConnection;->mURLConnection:Ljava/net/HttpURLConnection;
 
-    .line 133
     invoke-static {p1}, Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl;->access$300(Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl;)Ljava/util/Map;
 
     move-result-object v0
@@ -56,7 +52,6 @@
 
     if-lez v0, :cond_0
 
-    .line 134
     invoke-static {p1}, Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl;->access$300(Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl;)Ljava/util/Map;
 
     move-result-object v0
@@ -82,7 +77,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 135
     iget-object v3, p0, Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl$HttpConnection;->mURLConnection:Ljava/net/HttpURLConnection;
 
     invoke-static {p1}, Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl;->access$300(Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl;)Ljava/util/Map;
@@ -99,7 +93,6 @@
 
     goto :goto_0
 
-    .line 139
     :cond_0
     invoke-static {p1}, Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl;->access$400(Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl;)I
 
@@ -107,7 +100,6 @@
 
     if-ltz v0, :cond_1
 
-    .line 140
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl$HttpConnection;->mURLConnection:Ljava/net/HttpURLConnection;
 
     invoke-static {p1}, Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl;->access$400(Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl;)I
@@ -116,7 +108,6 @@
 
     invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
 
-    .line 141
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl$HttpConnection;->mURLConnection:Ljava/net/HttpURLConnection;
 
     invoke-static {p1}, Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl;->access$400(Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl;)I
@@ -125,7 +116,6 @@
 
     invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
 
-    .line 144
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl$HttpConnection;->mURLConnection:Ljava/net/HttpURLConnection;
 
@@ -133,24 +123,20 @@
 
     invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setUseCaches(Z)V
 
-    .line 145
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl$HttpConnection;->mURLConnection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0, v4}, Ljava/net/HttpURLConnection;->setDoInput(Z)V
 
-    .line 146
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl$HttpConnection;->mURLConnection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0, v4}, Ljava/net/HttpURLConnection;->setDoOutput(Z)V
 
-    .line 149
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl$HttpConnection;->mURLConnection:Ljava/net/HttpURLConnection;
 
     const-string/jumbo v1, "POST"
 
     invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
-    .line 152
     const-string/jumbo v0, "https"
 
     invoke-static {p1}, Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl;->access$200(Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl;)Ljava/net/URL;
@@ -173,7 +159,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 153
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl$HttpConnection;->mURLConnection:Ljava/net/HttpURLConnection;
 
     check-cast v0, Ljavax/net/ssl/HttpsURLConnection;
@@ -184,7 +169,6 @@
 
     invoke-virtual {v0, v1}, Ljavax/net/ssl/HttpsURLConnection;->setSSLSocketFactory(Ljavax/net/ssl/SSLSocketFactory;)V
 
-    .line 156
     :cond_2
     return-void
 .end method
@@ -192,8 +176,6 @@
 .method static synthetic access$000(Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl$HttpConnection;)Ljava/net/HttpURLConnection;
     .locals 1
 
-    .prologue
-    .line 126
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl$HttpConnection;->mURLConnection:Ljava/net/HttpURLConnection;
 
     return-object v0
@@ -204,8 +186,6 @@
 .method public getInputStream()Ljava/io/InputStream;
     .locals 1
 
-    .prologue
-    .line 160
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl$HttpConnection;->mURLConnection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
@@ -218,8 +198,6 @@
 .method public getOutputStream()Ljava/io/OutputStream;
     .locals 1
 
-    .prologue
-    .line 165
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/MslUrlHttpURLConnectionImpl$HttpConnection;->mURLConnection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getOutputStream()Ljava/io/OutputStream;

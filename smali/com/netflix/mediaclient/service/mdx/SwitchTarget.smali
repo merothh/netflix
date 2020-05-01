@@ -27,17 +27,12 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/mdx/TargetManager;Lcom/netflix/mediaclient/service/mdx/SwitchTarget$SwitchTargetInterface;)V
     .locals 0
 
-    .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     iput-object p1, p0, Lcom/netflix/mediaclient/service/mdx/SwitchTarget;->mTargeManger:Lcom/netflix/mediaclient/service/mdx/TargetManager;
 
-    .line 28
     iput-object p2, p0, Lcom/netflix/mediaclient/service/mdx/SwitchTarget;->mCallback:Lcom/netflix/mediaclient/service/mdx/SwitchTarget$SwitchTargetInterface;
 
-    .line 29
     return-void
 .end method
 
@@ -46,20 +41,16 @@
 .method public startSwitch(Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/util/WebApiUtils$VideoIds;II)V
     .locals 2
 
-    .prologue
-    .line 31
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/mdx/SwitchTarget;->mBeginSwitchTarget:Z
 
     if-eqz v0, :cond_0
 
-    .line 32
     const-string/jumbo v0, "nf_mdxSwitchTarget"
 
     const-string/jumbo v1, "switching already undergoing"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 35
     :cond_0
     invoke-static {p1}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
@@ -67,36 +58,28 @@
 
     if-eqz v0, :cond_1
 
-    .line 36
     const-string/jumbo v0, "nf_mdxSwitchTarget"
 
     const-string/jumbo v1, "current target is not a mdx target"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 46
     :goto_0
     return-void
 
-    .line 39
     :cond_1
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/service/mdx/SwitchTarget;->mBeginSwitchTarget:Z
 
-    .line 40
     iput-object p2, p0, Lcom/netflix/mediaclient/service/mdx/SwitchTarget;->mNewUuid:Ljava/lang/String;
 
-    .line 41
     iput-object p3, p0, Lcom/netflix/mediaclient/service/mdx/SwitchTarget;->mVideoIds:Lcom/netflix/mediaclient/util/WebApiUtils$VideoIds;
 
-    .line 42
     iput p4, p0, Lcom/netflix/mediaclient/service/mdx/SwitchTarget;->mStartTime:I
 
-    .line 43
     iput p5, p0, Lcom/netflix/mediaclient/service/mdx/SwitchTarget;->mTrackId:I
 
-    .line 45
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/SwitchTarget;->mTargeManger:Lcom/netflix/mediaclient/service/mdx/TargetManager;
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/service/mdx/TargetManager;->playerStop(Ljava/lang/String;)V
@@ -107,17 +90,13 @@
 .method public targetPlaybackStopped(Ljava/lang/String;)V
     .locals 6
 
-    .prologue
-    .line 48
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/mdx/SwitchTarget;->mBeginSwitchTarget:Z
 
     if-nez v0, :cond_0
 
-    .line 58
     :goto_0
     return-void
 
-    .line 50
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/SwitchTarget;->mCallback:Lcom/netflix/mediaclient/service/mdx/SwitchTarget$SwitchTargetInterface;
 
@@ -125,7 +104,6 @@
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/service/mdx/SwitchTarget$SwitchTargetInterface;->onSetToNewTarget(Ljava/lang/String;)V
 
-    .line 51
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/SwitchTarget;->mNewUuid:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
@@ -134,14 +112,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 52
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 53
     const-string/jumbo v0, "nf_mdxSwitchTarget"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -206,7 +182,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/SwitchTarget;->mTargeManger:Lcom/netflix/mediaclient/service/mdx/TargetManager;
 
@@ -226,7 +201,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/netflix/mediaclient/service/mdx/TargetManager;->playerPlay(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 57
     :cond_2
     const/4 v0, 0x0
 

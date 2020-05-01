@@ -18,24 +18,18 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;)V
     .locals 0
 
-    .prologue
-    .line 214
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$4;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 220
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$4;->calculateViewDimensions()V
 
-    .line 221
     return-void
 .end method
 
 .method private calculateViewDimensions()V
     .locals 4
 
-    .prologue
-    .line 240
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$4;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;->getActivity()Landroid/app/Activity;
@@ -48,7 +42,6 @@
 
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$4;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
-    .line 241
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -57,7 +50,6 @@
 
     move-result v0
 
-    .line 245
     :goto_0
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$4;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
@@ -67,7 +59,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$4;->width:I
 
-    .line 247
     iget v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$4;->width:I
 
     int-to-float v0, v0
@@ -80,14 +71,11 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$4;->height:I
 
-    .line 248
     return-void
 
-    .line 241
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$4;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
-    .line 242
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -100,7 +88,6 @@
 
     iget-object v1, v1, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;->recyclerView:Landroid/support/v7/widget/RecyclerView;
 
-    .line 243
     invoke-virtual {v1}, Landroid/support/v7/widget/RecyclerView;->getPaddingLeft()I
 
     move-result v1
@@ -111,7 +98,6 @@
 
     iget-object v1, v1, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;->recyclerView:Landroid/support/v7/widget/RecyclerView;
 
-    .line 244
     invoke-virtual {v1}, Landroid/support/v7/widget/RecyclerView;->getPaddingRight()I
 
     move-result v1
@@ -126,7 +112,6 @@
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$4;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
 
-    .line 245
     invoke-virtual {v2}, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
@@ -153,8 +138,6 @@
 .method public createItemView()Landroid/view/View;
     .locals 4
 
-    .prologue
-    .line 225
     new-instance v0, Lcom/netflix/mediaclient/android/widget/VideoView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$4;->this$0:Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag;
@@ -167,17 +150,14 @@
 
     invoke-direct {v0, v1}, Lcom/netflix/mediaclient/android/widget/VideoView;-><init>(Landroid/content/Context;)V
 
-    .line 226
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/VideoView;->setAdjustViewBounds(Z)V
 
-    .line 229
     sget-object v1, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/VideoView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 231
     new-instance v1, Landroid/widget/AbsListView$LayoutParams;
 
     iget v2, p0, Lcom/netflix/mediaclient/ui/details/MovieDetailsFrag$4;->width:I
@@ -186,9 +166,7 @@
 
     invoke-direct {v1, v2, v3}, Landroid/widget/AbsListView$LayoutParams;-><init>(II)V
 
-    .line 232
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/VideoView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 233
     return-object v0
 .end method

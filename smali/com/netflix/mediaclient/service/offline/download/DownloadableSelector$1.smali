@@ -22,8 +22,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 155
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,8 +32,6 @@
 .method public compare(Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;)I
     .locals 2
 
-    .prologue
-    .line 158
     invoke-virtual {p2}, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;->getValue()I
 
     move-result v0
@@ -52,8 +48,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 155
     check-cast p1, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;
 
     check-cast p2, Lcom/netflix/mediaclient/servicemgr/ISubtitleDef$SubtitleProfile;

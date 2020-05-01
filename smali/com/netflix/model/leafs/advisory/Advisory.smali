@@ -23,16 +23,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 74
     sget-object v0, Lcom/netflix/model/leafs/advisory/Advisory$DisplayLocation;->START:Lcom/netflix/model/leafs/advisory/Advisory$DisplayLocation;
 
     iput-object v0, p0, Lcom/netflix/model/leafs/advisory/Advisory;->timeLocation:Lcom/netflix/model/leafs/advisory/Advisory$DisplayLocation;
 
-    .line 94
     return-void
 .end method
 
@@ -50,16 +46,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 122
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 124
     if-eqz p0, :cond_1
 
-    .line 125
     const/4 v0, 0x0
 
     :goto_0
@@ -69,7 +61,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 126
     invoke-virtual {p0, v0}, Lcom/google/gson/JsonArray;->get(I)Lcom/google/gson/JsonElement;
 
     move-result-object v2
@@ -78,7 +69,6 @@
 
     move-result-object v2
 
-    .line 129
     const-string/jumbo v3, "type"
 
     invoke-virtual {v2, v3}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;
@@ -93,24 +83,19 @@
 
     move-result-object v3
 
-    .line 130
     invoke-static {v3, v2}, Lcom/netflix/model/leafs/advisory/Advisory;->make(Lcom/netflix/model/leafs/advisory/Advisory$Type;Lcom/google/gson/JsonObject;)Lcom/netflix/model/leafs/advisory/Advisory;
 
     move-result-object v2
 
-    .line 131
     if-eqz v2, :cond_0
 
-    .line 132
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 125
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 136
     :cond_1
     return-object v1
 .end method
@@ -118,8 +103,6 @@
 .method public static getConcreteInstance(Lcom/netflix/model/leafs/advisory/Advisory$Type;)Lcom/netflix/model/leafs/advisory/Advisory;
     .locals 2
 
-    .prologue
-    .line 104
     sget-object v0, Lcom/netflix/model/leafs/advisory/Advisory$1;->$SwitchMap$com$netflix$model$leafs$advisory$Advisory$Type:[I
 
     invoke-virtual {p0}, Lcom/netflix/model/leafs/advisory/Advisory$Type;->ordinal()I
@@ -130,7 +113,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 115
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Advisory ... Unknown Type"
@@ -139,17 +121,14 @@
 
     throw v0
 
-    .line 106
     :pswitch_0
     new-instance v0, Lcom/netflix/model/leafs/advisory/ProductPlacementAdvisory;
 
     invoke-direct {v0}, Lcom/netflix/model/leafs/advisory/ProductPlacementAdvisory;-><init>()V
 
-    .line 118
     :goto_0
     return-object v0
 
-    .line 109
     :pswitch_1
     new-instance v0, Lcom/netflix/model/leafs/advisory/ContentAdvisory;
 
@@ -157,7 +136,6 @@
 
     goto :goto_0
 
-    .line 112
     :pswitch_2
     new-instance v0, Lcom/netflix/model/leafs/advisory/ExpiringContentAdvisory;
 
@@ -165,7 +143,6 @@
 
     goto :goto_0
 
-    .line 104
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -177,16 +154,12 @@
 .method public static make(Lcom/netflix/model/leafs/advisory/Advisory$Type;Lcom/google/gson/JsonObject;)Lcom/netflix/model/leafs/advisory/Advisory;
     .locals 1
 
-    .prologue
-    .line 97
     invoke-static {p0}, Lcom/netflix/model/leafs/advisory/Advisory;->getConcreteInstance(Lcom/netflix/model/leafs/advisory/Advisory$Type;)Lcom/netflix/model/leafs/advisory/Advisory;
 
     move-result-object v0
 
-    .line 98
     invoke-virtual {v0, p1}, Lcom/netflix/model/leafs/advisory/Advisory;->populate(Lcom/google/gson/JsonElement;)V
 
-    .line 99
     return-object v0
 .end method
 
@@ -198,8 +171,6 @@
 .method public getDelay()F
     .locals 1
 
-    .prologue
-    .line 85
     iget v0, p0, Lcom/netflix/model/leafs/advisory/Advisory;->displayDelay:F
 
     return v0
@@ -208,8 +179,6 @@
 .method public getDuration()F
     .locals 1
 
-    .prologue
-    .line 81
     iget v0, p0, Lcom/netflix/model/leafs/advisory/Advisory;->displayDuration:F
 
     return v0
@@ -227,18 +196,14 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 5
 
-    .prologue
-    .line 141
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 142
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 143
     const-string/jumbo v1, "Advisory"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -261,7 +226,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 145
     :cond_0
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -284,14 +248,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 146
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/gson/JsonElement;
 
-    .line 148
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -314,7 +276,6 @@
 
     goto :goto_0
 
-    .line 150
     :pswitch_0
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -328,7 +289,6 @@
 
     goto :goto_0
 
-    .line 148
     :sswitch_0
     const-string/jumbo v4, "displayTimeLocation"
 
@@ -381,7 +341,6 @@
 
     goto :goto_1
 
-    .line 153
     :pswitch_1
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsFloat()F
 
@@ -391,7 +350,6 @@
 
     goto :goto_0
 
-    .line 156
     :pswitch_2
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsFloat()F
 
@@ -401,17 +359,14 @@
 
     goto :goto_0
 
-    .line 160
     :pswitch_3
     invoke-virtual {p0, v1}, Lcom/netflix/model/leafs/advisory/Advisory;->getData(Lcom/google/gson/JsonElement;)Lcom/google/gson/JsonObject;
 
     goto :goto_0
 
-    .line 165
     :cond_2
     return-void
 
-    .line 148
     nop
 
     :sswitch_data_0
@@ -434,8 +389,6 @@
 .method public set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
     .locals 1
 
-    .prologue
-    .line 169
     const/4 v0, 0x0
 
     return v0

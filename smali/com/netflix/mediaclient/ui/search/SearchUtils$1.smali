@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 52
     invoke-static {}, Lcom/netflix/mediaclient/ui/search/SearchUtils$SearchExperience;->values()[Lcom/netflix/mediaclient/ui/search/SearchUtils$SearchExperience;
 
     move-result-object v0

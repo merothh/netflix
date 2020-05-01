@@ -21,41 +21,32 @@
 .method public constructor <init>(I)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     sget-object v0, Lcom/netflix/android/org/json/zip/JSONzip;->twos:[I
 
     aget v0, v0, p1
 
     iput v0, p0, Lcom/netflix/android/org/json/zip/Keep;->capacity:I
 
-    .line 43
     iput v1, p0, Lcom/netflix/android/org/json/zip/Keep;->length:I
 
-    .line 44
     iput v1, p0, Lcom/netflix/android/org/json/zip/Keep;->power:I
 
-    .line 45
     iget v0, p0, Lcom/netflix/android/org/json/zip/Keep;->capacity:I
 
     new-array v0, v0, [J
 
     iput-object v0, p0, Lcom/netflix/android/org/json/zip/Keep;->uses:[J
 
-    .line 46
     return-void
 .end method
 
 .method public static age(J)J
     .locals 2
 
-    .prologue
-    .line 56
     const-wide/16 v0, 0x20
 
     cmp-long v0, p0, v0
@@ -80,8 +71,6 @@
 .method public bitsize()I
     .locals 2
 
-    .prologue
-    .line 65
     :goto_0
     sget-object v0, Lcom/netflix/android/org/json/zip/JSONzip;->twos:[I
 
@@ -93,7 +82,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 66
     iget v0, p0, Lcom/netflix/android/org/json/zip/Keep;->power:I
 
     add-int/lit8 v0, v0, 0x1
@@ -102,7 +90,6 @@
 
     goto :goto_0
 
-    .line 68
     :cond_0
     iget v0, p0, Lcom/netflix/android/org/json/zip/Keep;->power:I
 
@@ -112,8 +99,6 @@
 .method public tick(I)V
     .locals 6
 
-    .prologue
-    .line 75
     iget-object v0, p0, Lcom/netflix/android/org/json/zip/Keep;->uses:[J
 
     aget-wide v2, v0, p1
@@ -124,7 +109,6 @@
 
     aput-wide v2, v0, p1
 
-    .line 76
     return-void
 .end method
 

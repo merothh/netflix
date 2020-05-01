@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;Landroid/widget/SeekBar;I)V
     .locals 0
 
-    .prologue
-    .line 2026
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener$1;->this$1:Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener$1;->val$seekBar:Landroid/widget/SeekBar;
@@ -36,8 +34,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 2029
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener$1;->this$1:Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener$1;->val$seekBar:Landroid/widget/SeekBar;
@@ -48,6 +44,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->onProgressChanged(Landroid/widget/SeekBar;IZ)V
 
-    .line 2030
     return-void
 .end method

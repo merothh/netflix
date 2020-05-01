@@ -17,22 +17,16 @@
 .method public constructor <init>(Landroid/support/v7/media/MediaRouter;Landroid/support/v7/media/MediaRouter$Callback;)V
     .locals 1
 
-    .prologue
-    .line 1582
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1583
     iput-object p1, p0, Landroid/support/v7/media/MediaRouter$CallbackRecord;->mRouter:Landroid/support/v7/media/MediaRouter;
 
-    .line 1584
     iput-object p2, p0, Landroid/support/v7/media/MediaRouter$CallbackRecord;->mCallback:Landroid/support/v7/media/MediaRouter$Callback;
 
-    .line 1585
     sget-object v0, Landroid/support/v7/media/MediaRouteSelector;->EMPTY:Landroid/support/v7/media/MediaRouteSelector;
 
     iput-object v0, p0, Landroid/support/v7/media/MediaRouter$CallbackRecord;->mSelector:Landroid/support/v7/media/MediaRouteSelector;
 
-    .line 1586
     return-void
 .end method
 
@@ -41,8 +35,6 @@
 .method public filterRouteEvent(Landroid/support/v7/media/MediaRouter$RouteInfo;)Z
     .locals 1
 
-    .prologue
-    .line 1589
     iget v0, p0, Landroid/support/v7/media/MediaRouter$CallbackRecord;->mFlags:I
 
     and-int/lit8 v0, v0, 0x2

@@ -13,19 +13,14 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/netflix/mediaclient/android/activity/NetflixActivity;)V
     .locals 1
 
-    .prologue
-    .line 232
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/servicemgr/LoggingManagerCallback;-><init>(Ljava/lang/String;)V
 
-    .line 228
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxReceiver$FetchNextSeriesEpisodeVideoDetailsForMdxCallback;->processed:Z
 
-    .line 233
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/mdx/MdxReceiver$FetchNextSeriesEpisodeVideoDetailsForMdxCallback;->mActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
-    .line 234
     return-void
 .end method
 
@@ -34,11 +29,8 @@
 .method public onPostPlayVideosFetched(Lcom/netflix/mediaclient/servicemgr/interface_/details/PostPlayVideosProvider;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 6
 
-    .prologue
-    .line 238
     invoke-super {p0, p1, p2}, Lcom/netflix/mediaclient/servicemgr/LoggingManagerCallback;->onPostPlayVideosFetched(Lcom/netflix/mediaclient/servicemgr/interface_/details/PostPlayVideosProvider;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 240
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxReceiver$FetchNextSeriesEpisodeVideoDetailsForMdxCallback;->processed:Z
 
     if-nez v0, :cond_0
@@ -55,12 +47,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 242
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/details/PostPlayVideosProvider;->getPostPlayVideos()Ljava/util/List;
 
     move-result-object v0
 
-    .line 243
     if-eqz v0, :cond_0
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -69,7 +59,6 @@
 
     if-lez v1, :cond_0
 
-    .line 244
     const/4 v1, 0x0
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -82,14 +71,12 @@
 
     move-result-object v0
 
-    .line 245
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 247
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MdxReceiver$FetchNextSeriesEpisodeVideoDetailsForMdxCallback;->mActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -112,12 +99,10 @@
 
     invoke-interface {v1, v0, v2, v3}, Lcom/netflix/mediaclient/servicemgr/IBrowseManager;->fetchEpisodeDetails(Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/ManagerCallback;)Z
 
-    .line 249
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxReceiver$FetchNextSeriesEpisodeVideoDetailsForMdxCallback;->processed:Z
 
-    .line 253
     :cond_0
     return-void
 .end method

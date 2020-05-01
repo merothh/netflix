@@ -30,7 +30,6 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x3
 
     const/4 v4, 0x2
@@ -39,7 +38,6 @@
 
     const/4 v2, 0x0
 
-    .line 106
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/SignInLogging$CredentialSaved;
 
     const-string/jumbo v1, "notSupported"
@@ -48,7 +46,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/SignInLogging$CredentialSaved;->notSupported:Lcom/netflix/mediaclient/servicemgr/SignInLogging$CredentialSaved;
 
-    .line 107
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/SignInLogging$CredentialSaved;
 
     const-string/jumbo v1, "userDeclined"
@@ -57,7 +54,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/SignInLogging$CredentialSaved;->userDeclined:Lcom/netflix/mediaclient/servicemgr/SignInLogging$CredentialSaved;
 
-    .line 108
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/SignInLogging$CredentialSaved;
 
     const-string/jumbo v1, "saved"
@@ -66,7 +62,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/SignInLogging$CredentialSaved;->saved:Lcom/netflix/mediaclient/servicemgr/SignInLogging$CredentialSaved;
 
-    .line 109
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/SignInLogging$CredentialSaved;
 
     const-string/jumbo v1, "failed"
@@ -75,7 +70,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/SignInLogging$CredentialSaved;->failed:Lcom/netflix/mediaclient/servicemgr/SignInLogging$CredentialSaved;
 
-    .line 105
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/SignInLogging$CredentialSaved;
@@ -109,8 +103,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 105
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -119,8 +111,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/SignInLogging$CredentialSaved;
     .locals 1
 
-    .prologue
-    .line 105
     const-class v0, Lcom/netflix/mediaclient/servicemgr/SignInLogging$CredentialSaved;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -135,8 +125,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/SignInLogging$CredentialSaved;
     .locals 1
 
-    .prologue
-    .line 105
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/SignInLogging$CredentialSaved;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/SignInLogging$CredentialSaved;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/SignInLogging$CredentialSaved;->clone()Ljava/lang/Object;

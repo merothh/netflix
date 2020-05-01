@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$PresentationWebCallbackImpl;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 337
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$PresentationWebCallbackImpl$1;->this$1:Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$PresentationWebCallbackImpl;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$PresentationWebCallbackImpl$1;->val$deliveryRequestId:Ljava/lang/String;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 340
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$PresentationWebCallbackImpl$1;->this$1:Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$PresentationWebCallbackImpl;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$PresentationWebCallbackImpl;->this$0:Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;
@@ -42,6 +38,5 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;->access$400(Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;Ljava/lang/String;)V
 
-    .line 341
     return-void
 .end method

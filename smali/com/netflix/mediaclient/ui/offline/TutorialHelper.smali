@@ -31,10 +31,8 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 34
     new-instance v0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;
 
     invoke-direct {v0, v1, v1}, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;-><init>(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;)V
@@ -47,25 +45,18 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;)V
     .locals 0
 
-    .prologue
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->context:Landroid/content/Context;
 
-    .line 48
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->profile:Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;
 
-    .line 49
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/netflix/mediaclient/ui/offline/TutorialHelper;Lcom/netflix/mediaclient/ui/offline/TutorialHelper$Tutorialable;)V
     .locals 0
 
-    .prologue
-    .line 33
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->createTooltip(Lcom/netflix/mediaclient/ui/offline/TutorialHelper$Tutorialable;)V
 
     return-void
@@ -74,8 +65,6 @@
 .method static synthetic access$100(Lcom/netflix/mediaclient/ui/offline/TutorialHelper;Landroid/support/v7/widget/RecyclerView;Landroid/view/View;)V
     .locals 0
 
-    .prologue
-    .line 33
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->scrollToDownloadButton(Landroid/support/v7/widget/RecyclerView;Landroid/view/View;)V
 
     return-void
@@ -84,8 +73,6 @@
 .method static synthetic access$200(Lcom/netflix/mediaclient/ui/offline/TutorialHelper;Landroid/support/v7/widget/RecyclerView;Lcom/netflix/mediaclient/ui/offline/TutorialHelper$Tutorialable;)V
     .locals 0
 
-    .prologue
-    .line 33
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->scrollToFindDownloadButton(Landroid/support/v7/widget/RecyclerView;Lcom/netflix/mediaclient/ui/offline/TutorialHelper$Tutorialable;)V
 
     return-void
@@ -94,10 +81,8 @@
 .method public static buildDownloadButtonTutorial(Landroid/view/View;Landroid/app/Activity;Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;)Lcom/netflix/android/tooltips/Tooltip;
     .locals 3
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 197
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
@@ -107,11 +92,9 @@
     :cond_0
     move-object v0, v1
 
-    .line 210
     :goto_0
     return-object v0
 
-    .line 201
     :cond_1
     const v0, 0x7f0f0134
 
@@ -121,10 +104,8 @@
 
     check-cast v0, Landroid/support/design/widget/CoordinatorLayout;
 
-    .line 202
     if-eqz v0, :cond_2
 
-    .line 203
     const v1, 0x7f080292
 
     const v2, 0x7f08028d
@@ -133,7 +114,6 @@
 
     move-result-object v0
 
-    .line 204
     const-string/jumbo v1, "USER_TUTORIAL_DOWNLOAD_BUTTON"
 
     invoke-static {v1, p2}, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->getTutorialPrefKey(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;)Ljava/lang/String;
@@ -147,17 +127,14 @@
     :cond_2
     move-object v0, v1
 
-    .line 210
     goto :goto_0
 .end method
 
 .method public static buildMyDownloadTutorial(Landroid/view/View;Landroid/app/Activity;Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;)Lcom/netflix/android/tooltips/Tooltip;
     .locals 3
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 216
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
@@ -167,11 +144,9 @@
     :cond_0
     move-object v0, v1
 
-    .line 229
     :goto_0
     return-object v0
 
-    .line 220
     :cond_1
     const v0, 0x7f0f0134
 
@@ -181,10 +156,8 @@
 
     check-cast v0, Landroid/support/design/widget/CoordinatorLayout;
 
-    .line 221
     if-eqz v0, :cond_2
 
-    .line 222
     const v1, 0x7f080292
 
     const v2, 0x7f080291
@@ -193,7 +166,6 @@
 
     move-result-object v0
 
-    .line 223
     const-string/jumbo v1, "USER_TUTORIAL_MY_DOWNLOADS_BUTTON"
 
     invoke-static {v1, p2}, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->getTutorialPrefKey(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;)Ljava/lang/String;
@@ -207,15 +179,12 @@
     :cond_2
     move-object v0, v1
 
-    .line 229
     goto :goto_0
 .end method
 
 .method public static clearPrefs(Landroid/content/Context;)V
     .locals 2
 
-    .prologue
-    .line 56
     const-string/jumbo v0, "com.netflix.android.fullscreen_tutorial"
 
     const/4 v1, 0x0
@@ -234,19 +203,16 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 57
     return-void
 .end method
 
 .method private createTooltip(Lcom/netflix/mediaclient/ui/offline/TutorialHelper$Tutorialable;)V
     .locals 3
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 183
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->tooltip:Lcom/netflix/android/tooltips/Tooltip;
 
     if-nez v2, :cond_1
@@ -265,7 +231,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 184
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->profile:Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;
 
     invoke-interface {p1, v0}, Lcom/netflix/mediaclient/ui/offline/TutorialHelper$Tutorialable;->setupTutorial(Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;)Lcom/netflix/android/tooltips/Tooltip;
@@ -274,17 +239,14 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->tooltip:Lcom/netflix/android/tooltips/Tooltip;
 
-    .line 186
     :cond_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->dismissTutorial()V
 
-    .line 187
     return-void
 
     :cond_1
     move v2, v1
 
-    .line 183
     goto :goto_0
 
     :cond_2
@@ -296,8 +258,6 @@
 .method private static getTutorialPrefKey(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 234
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -330,8 +290,6 @@
 .method public static isOfflineFeatureEnabled(Lcom/netflix/mediaclient/servicemgr/ServiceManager;)Z
     .locals 1
 
-    .prologue
-    .line 165
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->isOfflineFeatureAvailable()Z
@@ -354,8 +312,6 @@
 .method private scrollToDownloadButton(Landroid/support/v7/widget/RecyclerView;Landroid/view/View;)V
     .locals 3
 
-    .prologue
-    .line 96
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->tooltip:Lcom/netflix/android/tooltips/Tooltip;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/offline/TutorialHelper$2;
@@ -364,35 +320,28 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/android/tooltips/Tooltip;->setCallback(Lcom/netflix/android/tooltips/Tooltip$Callback;)V
 
-    .line 108
     invoke-static {p2}, Lcom/netflix/mediaclient/util/ViewUtils;->getLocationOnScreen(Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 110
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 111
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->context:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/util/DeviceUtils;->getScreenHeightInPixels(Landroid/content/Context;)I
 
     move-result v1
 
-    .line 112
     sub-int/2addr v0, v1
 
-    .line 113
     if-lez v0, :cond_0
 
-    .line 114
     new-instance v1, Lcom/netflix/mediaclient/ui/offline/TutorialHelper$3;
 
     invoke-direct {v1, p0, p1}, Lcom/netflix/mediaclient/ui/offline/TutorialHelper$3;-><init>(Lcom/netflix/mediaclient/ui/offline/TutorialHelper;Landroid/support/v7/widget/RecyclerView;)V
 
     invoke-virtual {p1, v1}, Landroid/support/v7/widget/RecyclerView;->setOnScrollListener(Landroid/support/v7/widget/RecyclerView$OnScrollListener;)V
 
-    .line 124
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->context:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -405,18 +354,15 @@
 
     move-result v1
 
-    .line 125
     const/4 v2, 0x0
 
     add-int/2addr v0, v1
 
     invoke-virtual {p1, v2, v0}, Landroid/support/v7/widget/RecyclerView;->smoothScrollBy(II)V
 
-    .line 129
     :goto_0
     return-void
 
-    .line 127
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->tooltip:Lcom/netflix/android/tooltips/Tooltip;
 
@@ -428,8 +374,6 @@
 .method private scrollToFindDownloadButton(Landroid/support/v7/widget/RecyclerView;Lcom/netflix/mediaclient/ui/offline/TutorialHelper$Tutorialable;)V
     .locals 1
 
-    .prologue
-    .line 75
     invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView;->getAdapter()Landroid/support/v7/widget/RecyclerView$Adapter;
 
     move-result-object v0
@@ -440,19 +384,16 @@
 
     if-lez v0, :cond_0
 
-    .line 76
     new-instance v0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper$1;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/netflix/mediaclient/ui/offline/TutorialHelper$1;-><init>(Lcom/netflix/mediaclient/ui/offline/TutorialHelper;Landroid/support/v7/widget/RecyclerView;Lcom/netflix/mediaclient/ui/offline/TutorialHelper$Tutorialable;)V
 
     invoke-virtual {p1, v0}, Landroid/support/v7/widget/RecyclerView;->setOnScrollListener(Landroid/support/v7/widget/RecyclerView$OnScrollListener;)V
 
-    .line 90
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/support/v7/widget/RecyclerView;->smoothScrollToPosition(I)V
 
-    .line 92
     :cond_0
     return-void
 .end method
@@ -462,18 +403,14 @@
 .method public dismissTutorial()V
     .locals 1
 
-    .prologue
-    .line 190
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->tooltip:Lcom/netflix/android/tooltips/Tooltip;
 
     if-eqz v0, :cond_0
 
-    .line 191
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->tooltip:Lcom/netflix/android/tooltips/Tooltip;
 
     invoke-virtual {v0}, Lcom/netflix/android/tooltips/Tooltip;->dismiss()V
 
-    .line 193
     :cond_0
     return-void
 .end method
@@ -481,10 +418,8 @@
 .method public setFullscreenTutorialDisplayed(Z)V
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 68
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->context:Landroid/content/Context;
 
     if-eqz v1, :cond_1
@@ -493,7 +428,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 69
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->context:Landroid/content/Context;
 
     const-string/jumbo v2, "com.netflix.android.fullscreen_tutorial"
@@ -525,7 +459,6 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 71
     :cond_1
     return-void
 .end method
@@ -533,12 +466,10 @@
 .method public shouldDisplayFullscreenTutorial(Lcom/netflix/mediaclient/servicemgr/ServiceManager;)Z
     .locals 5
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 60
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->context:Landroid/content/Context;
 
     if-eqz v2, :cond_0
@@ -550,7 +481,6 @@
     :cond_0
     move v0, v1
 
-    .line 63
     :cond_1
     :goto_0
     return v0
@@ -580,7 +510,6 @@
 
     const-string/jumbo v3, "com.netflix.android.fullscreen_tutorial"
 
-    .line 64
     invoke-virtual {v2, v3, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v2
@@ -608,8 +537,6 @@
 .method public showTutorial(Lcom/netflix/mediaclient/ui/offline/TutorialHelper$Tutorialable;Lcom/netflix/mediaclient/servicemgr/ServiceManager;)V
     .locals 1
 
-    .prologue
-    .line 172
     invoke-static {}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->isTutorialOn()Z
 
     move-result v0
@@ -630,21 +557,17 @@
 
     if-nez v0, :cond_1
 
-    .line 180
     :cond_0
     :goto_0
     return-void
 
-    .line 176
     :cond_1
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->createTooltip(Lcom/netflix/mediaclient/ui/offline/TutorialHelper$Tutorialable;)V
 
-    .line 177
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->tooltip:Lcom/netflix/android/tooltips/Tooltip;
 
     if-eqz v0, :cond_0
 
-    .line 178
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->tooltip:Lcom/netflix/android/tooltips/Tooltip;
 
     invoke-virtual {v0}, Lcom/netflix/android/tooltips/Tooltip;->show()V
@@ -655,8 +578,6 @@
 .method public showTutorialForVideoWithScroll(Lcom/netflix/mediaclient/ui/offline/TutorialHelper$Tutorialable;Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;Landroid/support/v7/widget/RecyclerView;Lcom/netflix/mediaclient/servicemgr/ServiceManager;)V
     .locals 3
 
-    .prologue
-    .line 135
     invoke-static {}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->isTutorialOn()Z
 
     move-result v0
@@ -665,7 +586,6 @@
 
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->context:Landroid/content/Context;
 
-    .line 136
     invoke-static {v0}, Lcom/netflix/mediaclient/service/configuration/PersistentConfig;->isGuidanceTutorial(Landroid/content/Context;)Z
 
     move-result v0
@@ -674,14 +594,12 @@
 
     if-eqz p2, :cond_0
 
-    .line 138
     invoke-interface {p2}, Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;->getPlayable()Lcom/netflix/mediaclient/servicemgr/interface_/Playable;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 139
     invoke-interface {p2}, Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;->getPlayable()Lcom/netflix/mediaclient/servicemgr/interface_/Playable;
 
     move-result-object v0
@@ -692,14 +610,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 140
     invoke-static {p4}, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->isOfflineFeatureEnabled(Lcom/netflix/mediaclient/servicemgr/ServiceManager;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 141
     invoke-virtual {p3}, Landroid/support/v7/widget/RecyclerView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -708,24 +624,20 @@
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->profile:Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;
 
-    .line 142
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/ui/offline/TutorialHelper;->getTutorialPrefKey(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/interface_/user/UserProfile;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 141
     invoke-static {v0, v1}, Lcom/netflix/android/tooltips/Tooltip;->isConsumed(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 162
     :cond_0
     :goto_0
     return-void
 
-    .line 147
     :cond_1
     invoke-virtual {p3}, Landroid/support/v7/widget/RecyclerView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 

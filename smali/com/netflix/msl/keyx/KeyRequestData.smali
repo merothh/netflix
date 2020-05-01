@@ -20,22 +20,16 @@
 .method protected constructor <init>(Lcom/netflix/msl/keyx/KeyExchangeScheme;)V
     .locals 0
 
-    .prologue
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     iput-object p1, p0, Lcom/netflix/msl/keyx/KeyRequestData;->scheme:Lcom/netflix/msl/keyx/KeyExchangeScheme;
 
-    .line 66
     return-void
 .end method
 
 .method public static create(Lcom/netflix/msl/util/MslContext;Lcom/netflix/android/org/json/JSONObject;)Lcom/netflix/msl/keyx/KeyRequestData;
     .locals 5
 
-    .prologue
-    .line 86
     :try_start_0
     const-string/jumbo v0, "scheme"
 
@@ -43,15 +37,12 @@
 
     move-result-object v0
 
-    .line 87
     invoke-virtual {p0, v0}, Lcom/netflix/msl/util/MslContext;->getKeyExchangeScheme(Ljava/lang/String;)Lcom/netflix/msl/keyx/KeyExchangeScheme;
 
     move-result-object v1
 
-    .line 88
     if-nez v1, :cond_0
 
-    .line 89
     new-instance v1, Lcom/netflix/msl/MslKeyExchangeException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->UNIDENTIFIED_KEYX_SCHEME:Lcom/netflix/msl/MslError;
@@ -62,11 +53,9 @@
     :try_end_0
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 97
     :catch_0
     move-exception v0
 
-    .line 98
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_PARSE_ERROR:Lcom/netflix/msl/MslError;
@@ -97,7 +86,6 @@
 
     throw v1
 
-    .line 90
     :cond_0
     :try_start_1
     const-string/jumbo v0, "keydata"
@@ -106,15 +94,12 @@
 
     move-result-object v0
 
-    .line 93
     invoke-virtual {p0, v1}, Lcom/netflix/msl/util/MslContext;->getKeyExchangeFactory(Lcom/netflix/msl/keyx/KeyExchangeScheme;)Lcom/netflix/msl/keyx/KeyExchangeFactory;
 
     move-result-object v2
 
-    .line 94
     if-nez v2, :cond_1
 
-    .line 95
     new-instance v0, Lcom/netflix/msl/MslKeyExchangeException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->KEYX_FACTORY_NOT_FOUND:Lcom/netflix/msl/MslError;
@@ -127,7 +112,6 @@
 
     throw v0
 
-    .line 96
     :cond_1
     invoke-virtual {v2, p0, v0}, Lcom/netflix/msl/keyx/KeyExchangeFactory;->createRequestData(Lcom/netflix/msl/util/MslContext;Lcom/netflix/android/org/json/JSONObject;)Lcom/netflix/msl/keyx/KeyRequestData;
     :try_end_1
@@ -143,17 +127,13 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 149
     if-ne p1, p0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 152
     :goto_0
     return v0
 
-    .line 150
     :cond_0
     instance-of v0, p1, Lcom/netflix/msl/keyx/KeyRequestData;
 
@@ -163,11 +143,9 @@
 
     goto :goto_0
 
-    .line 151
     :cond_1
     check-cast p1, Lcom/netflix/msl/keyx/KeyRequestData;
 
-    .line 152
     iget-object v0, p0, Lcom/netflix/msl/keyx/KeyRequestData;->scheme:Lcom/netflix/msl/keyx/KeyExchangeScheme;
 
     iget-object v1, p1, Lcom/netflix/msl/keyx/KeyRequestData;->scheme:Lcom/netflix/msl/keyx/KeyExchangeScheme;
@@ -182,8 +160,6 @@
 .method public getKeyExchangeScheme()Lcom/netflix/msl/keyx/KeyExchangeScheme;
     .locals 1
 
-    .prologue
-    .line 106
     iget-object v0, p0, Lcom/netflix/msl/keyx/KeyRequestData;->scheme:Lcom/netflix/msl/keyx/KeyExchangeScheme;
 
     return-object v0
@@ -195,8 +171,6 @@
 .method public hashCode()I
     .locals 1
 
-    .prologue
-    .line 160
     iget-object v0, p0, Lcom/netflix/msl/keyx/KeyRequestData;->scheme:Lcom/netflix/msl/keyx/KeyExchangeScheme;
 
     invoke-virtual {v0}, Lcom/netflix/msl/keyx/KeyExchangeScheme;->hashCode()I
@@ -209,21 +183,17 @@
 .method public final toJSONString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 125
     :try_start_0
     new-instance v0, Lcom/netflix/android/org/json/JSONStringer;
 
     invoke-direct {v0}, Lcom/netflix/android/org/json/JSONStringer;-><init>()V
 
-    .line 126
     invoke-virtual {v0}, Lcom/netflix/android/org/json/JSONStringer;->object()Lcom/netflix/android/org/json/JSONWriter;
 
     move-result-object v0
 
     const-string/jumbo v1, "scheme"
 
-    .line 127
     invoke-virtual {v0, v1}, Lcom/netflix/android/org/json/JSONWriter;->key(Ljava/lang/String;)Lcom/netflix/android/org/json/JSONWriter;
 
     move-result-object v0
@@ -240,7 +210,6 @@
 
     const-string/jumbo v1, "keydata"
 
-    .line 128
     invoke-virtual {v0, v1}, Lcom/netflix/android/org/json/JSONWriter;->key(Ljava/lang/String;)Lcom/netflix/android/org/json/JSONWriter;
 
     move-result-object v0
@@ -253,12 +222,10 @@
 
     move-result-object v0
 
-    .line 129
     invoke-virtual {v0}, Lcom/netflix/android/org/json/JSONWriter;->endObject()Lcom/netflix/android/org/json/JSONWriter;
 
     move-result-object v0
 
-    .line 130
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
     :try_end_0
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
@@ -267,11 +234,9 @@
 
     return-object v0
 
-    .line 131
     :catch_0
     move-exception v0
 
-    .line 132
     new-instance v1, Lcom/netflix/msl/MslInternalException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -314,8 +279,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 141
     invoke-virtual {p0}, Lcom/netflix/msl/keyx/KeyRequestData;->toJSONString()Ljava/lang/String;
 
     move-result-object v0

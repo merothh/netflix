@@ -57,11 +57,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -72,12 +69,10 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;->mId:Ljava/lang/String;
 
-    .line 42
     const/16 v0, 0x7d0
 
     iput v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;->mUpdateTimeout:I
 
-    .line 59
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -102,22 +97,16 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;->mId:Ljava/lang/String;
 
-    .line 60
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;->mParser:Lcom/netflix/mediaclient/service/player/subtitles/SubtitleParser;
 
-    .line 61
     iput-object p3, p0, Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;->mDisplayLaterBlocks:Ljava/util/List;
 
-    .line 62
     iput-object p2, p0, Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;->mDisplayNowBlocks:Ljava/util/List;
 
-    .line 63
     iput p4, p0, Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;->mUpdateTimeout:I
 
-    .line 64
     iput-wide p5, p0, Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;->mPositionInMs:J
 
-    .line 65
     return-void
 .end method
 
@@ -135,8 +124,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 93
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;->mDisplayLaterBlocks:Ljava/util/List;
 
     return-object v0
@@ -154,8 +141,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 83
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;->mDisplayNowBlocks:Ljava/util/List;
 
     return-object v0
@@ -164,8 +149,6 @@
 .method public getId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 73
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;->mId:Ljava/lang/String;
 
     return-object v0
@@ -174,8 +157,6 @@
 .method public getParser()Lcom/netflix/mediaclient/service/player/subtitles/SubtitleParser;
     .locals 1
 
-    .prologue
-    .line 111
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;->mParser:Lcom/netflix/mediaclient/service/player/subtitles/SubtitleParser;
 
     return-object v0
@@ -184,8 +165,6 @@
 .method public getPositionInMs()J
     .locals 2
 
-    .prologue
-    .line 120
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;->mPositionInMs:J
 
     return-wide v0
@@ -194,8 +173,6 @@
 .method public getUpdateTimeout()I
     .locals 1
 
-    .prologue
-    .line 102
     iget v0, p0, Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;->mUpdateTimeout:I
 
     return v0

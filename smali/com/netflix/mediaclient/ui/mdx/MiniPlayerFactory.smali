@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,20 +15,16 @@
 .method public static createMiniPlayer(Landroid/content/Context;)Landroid/app/Fragment;
     .locals 1
 
-    .prologue
-    .line 14
     invoke-static {p0}, Lcom/netflix/mediaclient/ui/experience/BrowseExperience;->shouldShowMemento(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 15
     new-instance v0, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/ui/mdx/MiniPlayerControlsFrag;-><init>()V
 
-    .line 17
     :goto_0
     return-object v0
 

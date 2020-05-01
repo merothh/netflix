@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;)V
     .locals 0
 
-    .prologue
-    .line 437
     iput-object p1, p0, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent$2;->this$0:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,13 +26,10 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 440
     iget-object v1, p0, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent$2;->this$0:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;
 
     monitor-enter v1
 
-    .line 441
     :try_start_0
     const-string/jumbo v0, "nf_configurationagent"
 
@@ -42,14 +37,12 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 442
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent$2;->this$0:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;
 
     const/4 v2, 0x0
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;->access$302(Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;Z)Z
 
-    .line 443
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent$2;->this$0:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;->access$400(Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;)Ljava/util/List;
@@ -73,7 +66,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent$ConfigAgentListener;
 
-    .line 444
     iget-object v3, p0, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent$2;->this$0:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;
 
     invoke-static {v3}, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;->access$500(Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;)Lcom/netflix/mediaclient/android/app/Status;
@@ -84,7 +76,6 @@
 
     goto :goto_0
 
-    .line 447
     :catchall_0
     move-exception v0
 
@@ -94,7 +85,6 @@
 
     throw v0
 
-    .line 446
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent$2;->this$0:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;
@@ -105,11 +95,9 @@
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 447
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 448
     return-void
 .end method

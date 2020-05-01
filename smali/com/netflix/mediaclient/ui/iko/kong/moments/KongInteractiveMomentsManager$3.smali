@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/iko/kong/moments/KongInteractiveMomentsManager;)V
     .locals 0
 
-    .prologue
-    .line 304
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/kong/moments/KongInteractiveMomentsManager$3;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/moments/KongInteractiveMomentsManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 307
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/kong/moments/KongInteractiveMomentsManager$3;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/moments/KongInteractiveMomentsManager;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/iko/kong/moments/KongInteractiveMomentsManager;->access$500(Lcom/netflix/mediaclient/ui/iko/kong/moments/KongInteractiveMomentsManager;)Ljava/util/List;
@@ -53,7 +49,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;
 
-    .line 308
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/kong/moments/KongInteractiveMomentsManager$3;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/moments/KongInteractiveMomentsManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->getMomentImageUrl()Ljava/lang/String;
@@ -66,7 +61,6 @@
 
     invoke-virtual {v0, v2}, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 309
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/kong/moments/KongInteractiveMomentsManager$3;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/moments/KongInteractiveMomentsManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->getMomentAnimationImageUrl()Ljava/lang/String;
@@ -79,7 +73,6 @@
 
     invoke-virtual {v0, v2}, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->setImageBackgroundBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 310
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/iko/kong/moments/KongInteractiveMomentsManager$3;->this$0:Lcom/netflix/mediaclient/ui/iko/kong/moments/KongInteractiveMomentsManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/kong/model/KongInteractiveMomentsModel$KongInteractiveMoment;->getUnlockSfxSoundUrl()Ljava/lang/String;
@@ -94,7 +87,6 @@
 
     goto :goto_0
 
-    .line 312
     :cond_0
     return-void
 .end method

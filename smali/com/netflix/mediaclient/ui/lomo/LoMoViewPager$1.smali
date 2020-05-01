@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;)V
     .locals 0
 
-    .prologue
-    .line 386
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager$1;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,10 +26,8 @@
 .method public run()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
-    .line 389
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager$1;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;->access$000(Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;)Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -44,11 +40,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 412
     :goto_0
     return-void
 
-    .line 394
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/util/l10n/LocalizationUtils;->isCurrentLocaleRTL()Z
 
@@ -56,7 +50,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 395
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager$1;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;->getCurrentItem()I
@@ -65,10 +58,8 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    .line 396
     if-gez v0, :cond_1
 
-    .line 397
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager$1;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;->access$100(Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;)Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;
@@ -81,7 +72,6 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    .line 406
     :cond_1
     :goto_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
@@ -90,7 +80,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 407
     const-string/jumbo v1, "LoMoViewPager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -113,13 +102,11 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 409
     :cond_2
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager$1;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;
 
     invoke-virtual {v1, v0, v4, v4}, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;->setCurrentItem(IZZ)V
 
-    .line 411
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager$1;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;->access$300(Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;)Landroid/os/Handler;
@@ -134,7 +121,6 @@
 
     goto :goto_0
 
-    .line 400
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager$1;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;
 
@@ -144,7 +130,6 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 401
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager$1;->this$0:Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;->access$100(Lcom/netflix/mediaclient/ui/lomo/LoMoViewPager;)Lcom/netflix/mediaclient/ui/lomo/LoMoViewPagerAdapter;
@@ -157,7 +142,6 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 402
     const/4 v0, 0x0
 
     goto :goto_1

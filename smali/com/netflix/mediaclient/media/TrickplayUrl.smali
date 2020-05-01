@@ -42,13 +42,10 @@
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     const-string/jumbo v1, "downloadable_id"
 
     const/4 v2, 0x0
@@ -59,7 +56,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/media/TrickplayUrl;->downloadableId:Ljava/lang/String;
 
-    .line 29
     const-string/jumbo v1, "size"
 
     const-wide/16 v2, -0x1
@@ -70,7 +66,6 @@
 
     iput-wide v2, p0, Lcom/netflix/mediaclient/media/TrickplayUrl;->downloadableSize:J
 
-    .line 30
     const-string/jumbo v1, "width"
 
     invoke-static {p1, v1, v0}, Lcom/netflix/mediaclient/util/JsonUtils;->getInt(Lorg/json/JSONObject;Ljava/lang/String;I)I
@@ -79,7 +74,6 @@
 
     iput v1, p0, Lcom/netflix/mediaclient/media/TrickplayUrl;->width:I
 
-    .line 31
     const-string/jumbo v1, "height"
 
     invoke-static {p1, v1, v0}, Lcom/netflix/mediaclient/util/JsonUtils;->getInt(Lorg/json/JSONObject;Ljava/lang/String;I)I
@@ -88,7 +82,6 @@
 
     iput v1, p0, Lcom/netflix/mediaclient/media/TrickplayUrl;->height:I
 
-    .line 32
     const-string/jumbo v1, "aspectX"
 
     invoke-static {p1, v1, v0}, Lcom/netflix/mediaclient/util/JsonUtils;->getInt(Lorg/json/JSONObject;Ljava/lang/String;I)I
@@ -97,7 +90,6 @@
 
     iput v1, p0, Lcom/netflix/mediaclient/media/TrickplayUrl;->aspectX:I
 
-    .line 33
     const-string/jumbo v1, "aspectY"
 
     invoke-static {p1, v1, v0}, Lcom/netflix/mediaclient/util/JsonUtils;->getInt(Lorg/json/JSONObject;Ljava/lang/String;I)I
@@ -106,17 +98,14 @@
 
     iput v1, p0, Lcom/netflix/mediaclient/media/TrickplayUrl;->aspectY:I
 
-    .line 35
     const-string/jumbo v1, "urls"
 
     invoke-static {p1, v1}, Lcom/netflix/mediaclient/util/JsonUtils;->getJSONArray(Lorg/json/JSONObject;Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v1
 
-    .line 36
     if-eqz v1, :cond_0
 
-    .line 37
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
     move-result v2
@@ -125,7 +114,6 @@
 
     iput-object v2, p0, Lcom/netflix/mediaclient/media/TrickplayUrl;->url:[Ljava/lang/String;
 
-    .line 38
     :goto_0
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
@@ -133,7 +121,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 39
     iget-object v2, p0, Lcom/netflix/mediaclient/media/TrickplayUrl;->url:[Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
@@ -142,12 +129,10 @@
 
     aput-object v3, v2, v0
 
-    .line 38
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 42
     :cond_0
     return-void
 .end method
@@ -157,14 +142,10 @@
 .method public compareTo(Lcom/netflix/mediaclient/media/TrickplayUrl;)I
     .locals 1
 
-    .prologue
-    .line 95
     if-ne p0, p1, :cond_0
 
-    .line 96
     const/4 v0, 0x0
 
-    .line 98
     :goto_0
     return v0
 
@@ -177,8 +158,6 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 14
     check-cast p1, Lcom/netflix/mediaclient/media/TrickplayUrl;
 
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/media/TrickplayUrl;->compareTo(Lcom/netflix/mediaclient/media/TrickplayUrl;)I
@@ -191,13 +170,10 @@
 .method public getAspect()F
     .locals 2
 
-    .prologue
-    .line 53
     iget v0, p0, Lcom/netflix/mediaclient/media/TrickplayUrl;->aspectY:I
 
     if-eqz v0, :cond_0
 
-    .line 54
     iget v0, p0, Lcom/netflix/mediaclient/media/TrickplayUrl;->aspectX:I
 
     iget v1, p0, Lcom/netflix/mediaclient/media/TrickplayUrl;->aspectY:I
@@ -206,7 +182,6 @@
 
     int-to-float v0, v0
 
-    .line 56
     :goto_0
     return v0
 
@@ -219,8 +194,6 @@
 .method public getDownloadableId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 77
     iget-object v0, p0, Lcom/netflix/mediaclient/media/TrickplayUrl;->downloadableId:Ljava/lang/String;
 
     return-object v0
@@ -229,8 +202,6 @@
 .method public getDownloadableSize()J
     .locals 2
 
-    .prologue
-    .line 108
     iget-wide v0, p0, Lcom/netflix/mediaclient/media/TrickplayUrl;->downloadableSize:J
 
     return-wide v0
@@ -239,8 +210,6 @@
 .method public getHeight()I
     .locals 1
 
-    .prologue
-    .line 49
     iget v0, p0, Lcom/netflix/mediaclient/media/TrickplayUrl;->height:I
 
     return v0
@@ -249,8 +218,6 @@
 .method public getUrl()[Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 62
     iget-object v0, p0, Lcom/netflix/mediaclient/media/TrickplayUrl;->url:[Ljava/lang/String;
 
     return-object v0
@@ -259,8 +226,6 @@
 .method public getWidth()I
     .locals 1
 
-    .prologue
-    .line 45
     iget v0, p0, Lcom/netflix/mediaclient/media/TrickplayUrl;->width:I
 
     return v0
@@ -269,10 +234,8 @@
 .method public hasAtLeastOneUrl()Z
     .locals 2
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 69
     iget-object v1, p0, Lcom/netflix/mediaclient/media/TrickplayUrl;->downloadableId:Ljava/lang/String;
 
     if-eqz v1, :cond_0
@@ -306,8 +269,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 86
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

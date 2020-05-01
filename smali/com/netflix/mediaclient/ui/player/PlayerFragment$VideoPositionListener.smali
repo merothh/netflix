@@ -16,8 +16,6 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)V
     .locals 0
 
-    .prologue
-    .line 1855
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method private inCancelProgressZone(Landroid/widget/SeekBar;F)Z
     .locals 2
 
-    .prologue
-    .line 2011
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getResources()Landroid/content/res/Resources;
@@ -42,7 +38,6 @@
 
     move-result v1
 
-    .line 2012
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     iget-boolean v0, v0, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->mIsTablet:Z
@@ -55,7 +50,6 @@
 
     float-to-int v0, v0
 
-    .line 2013
     :goto_0
     neg-float v1, v1
 
@@ -75,7 +69,6 @@
     :goto_1
     return v0
 
-    .line 2012
     :cond_1
     invoke-virtual {p1}, Landroid/widget/SeekBar;->getHeight()I
 
@@ -83,7 +76,6 @@
 
     goto :goto_0
 
-    .line 2013
     :cond_2
     const/4 v0, 0x0
 
@@ -93,19 +85,15 @@
 .method private skipSeek(Lcom/netflix/mediaclient/android/widget/TimelineSeekBar;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 1905
     if-nez p1, :cond_0
 
-    .line 1916
     :goto_0
     return v1
 
-    .line 1911
     :cond_0
     invoke-virtual {p1}, Lcom/netflix/mediaclient/android/widget/TimelineSeekBar;->getProgress()I
 
@@ -123,14 +111,12 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 1912
     const-string/jumbo v1, "PlayerFragment"
 
     const-string/jumbo v2, "Back to start position after snap, do NOT seek!"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1914
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$100(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/ui/player/PlayerWorkflowState;
@@ -142,7 +128,6 @@
     :goto_1
     move v1, v0
 
-    .line 1916
     goto :goto_0
 
     :cond_1
@@ -156,12 +141,10 @@
 .method public handleTouchEvent(Landroid/widget/SeekBar;Landroid/view/MotionEvent;I)Z
     .locals 3
 
-    .prologue
     const/4 v1, 0x0
 
     const/4 v0, 0x1
 
-    .line 1975
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v2
@@ -170,12 +153,10 @@
 
     move v0, v1
 
-    .line 2007
     :cond_0
     :goto_0
     return v0
 
-    .line 1978
     :pswitch_0
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
@@ -187,15 +168,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 1980
     invoke-virtual {p1}, Landroid/widget/SeekBar;->getProgress()I
 
     move-result v1
 
-    .line 1981
     invoke-virtual {p0, p1, v1, v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->onProgressChanged(Landroid/widget/SeekBar;IZ)V
 
-    .line 1982
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$100(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/ui/player/PlayerWorkflowState;
@@ -204,25 +182,20 @@
 
     iput-boolean v0, v1, Lcom/netflix/mediaclient/ui/player/PlayerWorkflowState;->timelineExitOnSnap:Z
 
-    .line 1985
     :cond_1
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->onStopTrackingTouch(Landroid/widget/SeekBar;)V
 
     goto :goto_0
 
-    .line 1989
     :pswitch_1
     iput-boolean v1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->mIsInCancelZone:Z
 
-    .line 1990
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->onStartTrackingTouch(Landroid/widget/SeekBar;)V
 
-    .line 1991
     invoke-virtual {p0, p1, p3, v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->onProgressChanged(Landroid/widget/SeekBar;IZ)V
 
     goto :goto_0
 
-    .line 1995
     :pswitch_2
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
@@ -234,34 +207,27 @@
 
     if-eqz v2, :cond_2
 
-    .line 1996
     iget-boolean v1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->mIsInCancelZone:Z
 
     if-nez v1, :cond_0
 
-    .line 1997
     invoke-virtual {p1}, Landroid/widget/SeekBar;->getProgress()I
 
     move-result v1
 
-    .line 1998
     invoke-virtual {p0, p1, v1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->onProgressChangeCanceled(Landroid/widget/SeekBar;I)V
 
-    .line 1999
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->mIsInCancelZone:Z
 
     goto :goto_0
 
-    .line 2002
     :cond_2
     invoke-virtual {p0, p1, p3, v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->onProgressChanged(Landroid/widget/SeekBar;IZ)V
 
-    .line 2003
     iput-boolean v1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->mIsInCancelZone:Z
 
     goto :goto_0
 
-    .line 1975
     nop
 
     :pswitch_data_0
@@ -275,8 +241,6 @@
 .method onProgressChangeCanceled(Landroid/widget/SeekBar;I)V
     .locals 2
 
-    .prologue
-    .line 2026
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$900(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/ui/player/PlayScreen;
@@ -289,26 +253,22 @@
 
     invoke-virtual {v0, p2, v1}, Lcom/netflix/mediaclient/ui/player/PlayScreen;->playExtraHandlerAnimation(ILjava/lang/Runnable;)V
 
-    .line 2032
     return-void
 .end method
 
 .method public onProgressChanged(Landroid/widget/SeekBar;IZ)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
     const/4 v3, -0x1
 
-    .line 1860
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1861
     const-string/jumbo v0, "PlayerFragment"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -343,7 +303,6 @@
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
-    .line 1862
     invoke-static {v2}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$100(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/ui/player/PlayerWorkflowState;
 
     move-result-object v2
@@ -358,10 +317,8 @@
 
     move-result-object v1
 
-    .line 1861
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1865
     :cond_0
     if-eqz p3, :cond_2
 
@@ -391,7 +348,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1866
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$900(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/ui/player/PlayScreen;
@@ -400,7 +356,6 @@
 
     invoke-virtual {v0, p2, v3, v4}, Lcom/netflix/mediaclient/ui/player/PlayScreen;->setProgress(IIZ)I
 
-    .line 1867
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$100(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/ui/player/PlayerWorkflowState;
@@ -409,7 +364,6 @@
 
     invoke-virtual {v0, p2}, Lcom/netflix/mediaclient/ui/player/PlayerWorkflowState;->updatePosition(I)V
 
-    .line 1868
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$200(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/servicemgr/IPlayer;
@@ -420,7 +374,6 @@
 
     move-result-object v0
 
-    .line 1869
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$900(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/ui/player/PlayScreen;
@@ -429,12 +382,10 @@
 
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/ui/player/PlayScreen;->showBif(Ljava/nio/ByteBuffer;)V
 
-    .line 1874
     :cond_1
     :goto_0
     return-void
 
-    .line 1870
     :cond_2
     if-nez p3, :cond_1
 
@@ -456,7 +407,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1871
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$900(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/ui/player/PlayScreen;
@@ -465,7 +415,6 @@
 
     invoke-virtual {v0, p2, v3, v4}, Lcom/netflix/mediaclient/ui/player/PlayScreen;->setProgress(IIZ)I
 
-    .line 1872
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$100(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/ui/player/PlayerWorkflowState;
@@ -480,8 +429,6 @@
 .method public declared-synchronized onStartTrackingTouch(Landroid/widget/SeekBar;)V
     .locals 4
 
-    .prologue
-    .line 1878
     monitor-enter p0
 
     :try_start_0
@@ -495,7 +442,6 @@
 
     iput-boolean v2, v1, Lcom/netflix/mediaclient/ui/player/PlayerWorkflowState;->draggingInProgress:Z
 
-    .line 1879
     move-object v0, p1
 
     check-cast v0, Lcom/netflix/mediaclient/android/widget/TimelineSeekBar;
@@ -506,7 +452,6 @@
 
     invoke-virtual {v1, v2}, Lcom/netflix/mediaclient/android/widget/TimelineSeekBar;->hideThumb(Z)V
 
-    .line 1880
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$100(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/ui/player/PlayerWorkflowState;
@@ -515,7 +460,6 @@
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/player/PlayerWorkflowState;->resetTimeline()V
 
-    .line 1881
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     const/4 v2, 0x0
@@ -524,7 +468,6 @@
 
     invoke-static {v1, v2, v3}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$1000(Lcom/netflix/mediaclient/ui/player/PlayerFragment;ZZ)V
 
-    .line 1884
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$1100(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/service/player/subtitles/SafeSubtitleManager;
@@ -535,24 +478,20 @@
 
     invoke-virtual {v1, v2}, Lcom/netflix/mediaclient/service/player/subtitles/SafeSubtitleManager;->setSubtitleVisibility(Z)V
 
-    .line 1886
     const-string/jumbo v1, "PlayerFragment"
 
     const-string/jumbo v2, "Start seek, get awake clock"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1887
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$1200(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)V
 
-    .line 1889
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->stopScreenUpdateTask()V
 
-    .line 1891
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$900(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/ui/player/PlayScreen;
@@ -575,7 +514,6 @@
 
     invoke-virtual {v1, v2}, Lcom/netflix/mediaclient/ui/player/PlayScreen;->startCurrentTime(Ljava/nio/ByteBuffer;)V
 
-    .line 1894
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$900(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/ui/player/PlayScreen;
@@ -586,12 +524,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1895
     monitor-exit p0
 
     return-void
 
-    .line 1878
     :catchall_0
     move-exception v1
 
@@ -603,12 +539,10 @@
 .method public declared-synchronized onStopTrackingTouch(Landroid/widget/SeekBar;)V
     .locals 6
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 1921
     monitor-enter p0
 
     :try_start_0
@@ -622,22 +556,18 @@
 
     iput-boolean v3, v2, Lcom/netflix/mediaclient/ui/player/PlayerWorkflowState;->draggingInProgress:Z
 
-    .line 1923
     const-string/jumbo v2, "PlayerFragment"
 
     const-string/jumbo v3, "onStopTrackingTouch called"
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1927
     instance-of v2, p1, Lcom/netflix/mediaclient/android/widget/TimelineSeekBar;
 
     if-eqz v2, :cond_2
 
-    .line 1928
     check-cast p1, Lcom/netflix/mediaclient/android/widget/TimelineSeekBar;
 
-    .line 1936
     iget-boolean v2, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->mIsInCancelZone:Z
 
     if-nez v2, :cond_0
@@ -651,11 +581,9 @@
     :cond_0
     move v2, v0
 
-    .line 1937
     :goto_0
     if-nez v2, :cond_4
 
-    .line 1938
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     iget-object v4, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
@@ -672,22 +600,18 @@
 
     move-result v3
 
-    .line 1939
     invoke-virtual {p1, v3}, Lcom/netflix/mediaclient/android/widget/TimelineSeekBar;->setProgress(I)V
 
-    .line 1940
     const-string/jumbo v4, "PlayerFragment"
 
     const-string/jumbo v5, "Seek!"
 
     invoke-static {v4, v5}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1941
     iget-object v4, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v4, v3}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->doSeek(I)V
 
-    .line 1948
     :goto_1
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
@@ -697,7 +621,6 @@
 
     invoke-virtual {v3}, Lcom/netflix/mediaclient/ui/player/PlayScreen;->finishDragging()V
 
-    .line 1951
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v3}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$1100(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/service/player/subtitles/SafeSubtitleManager;
@@ -708,19 +631,16 @@
 
     invoke-virtual {v3, v4}, Lcom/netflix/mediaclient/service/player/subtitles/SafeSubtitleManager;->setSubtitleVisibility(Z)V
 
-    .line 1953
     const/4 v3, 0x0
 
     invoke-virtual {p1, v3}, Lcom/netflix/mediaclient/android/widget/TimelineSeekBar;->hideThumb(Z)V
 
-    .line 1956
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 1957
     const-string/jumbo v3, "PlayerFragment"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -743,7 +663,6 @@
 
     invoke-static {v3, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1959
     :cond_1
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
@@ -756,7 +675,6 @@
     :goto_2
     invoke-virtual {v3, v0}, Lcom/netflix/mediaclient/ui/player/PlayScreen;->stopCurrentTime(Z)V
 
-    .line 1962
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$VideoPositionListener;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$100(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/ui/player/PlayerWorkflowState;
@@ -767,30 +685,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1963
     :goto_3
     monitor-exit p0
 
     return-void
 
-    .line 1930
     :cond_2
     :try_start_1
     const-string/jumbo v0, "PlayerFragment got not a Netflix seekbar!"
 
-    .line 1931
     const-string/jumbo v1, "PlayerFragment"
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1932
     invoke-static {v0}, Lcom/netflix/mediaclient/service/logging/error/ErrorLoggingManager;->logHandledException(Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_3
 
-    .line 1921
     :catchall_0
     move-exception v0
 
@@ -801,10 +714,8 @@
     :cond_3
     move v2, v1
 
-    .line 1936
     goto/16 :goto_0
 
-    .line 1943
     :cond_4
     :try_start_2
     const-string/jumbo v3, "PlayerFragment"
@@ -813,7 +724,6 @@
 
     invoke-static {v3, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1944
     invoke-virtual {p1}, Lcom/netflix/mediaclient/android/widget/TimelineSeekBar;->getProgress()I
 
     move-result v3
@@ -827,6 +737,5 @@
     :cond_5
     move v0, v1
 
-    .line 1959
     goto :goto_2
 .end method

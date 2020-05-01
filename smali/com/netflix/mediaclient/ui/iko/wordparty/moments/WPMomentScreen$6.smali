@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;)V
     .locals 0
 
-    .prologue
-    .line 702
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$6;->this$0:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 705
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 706
     const-string/jumbo v0, "WPMomentScreen"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -65,7 +60,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 708
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$6;->this$0:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
@@ -77,7 +71,6 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 709
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$6;->this$0:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$6;->this$0:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
@@ -90,11 +83,9 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;->access$700(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;Ljava/util/List;Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;)V
 
-    .line 716
     :goto_0
     return-void
 
-    .line 712
     :cond_1
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$6;->this$0:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
@@ -117,19 +108,16 @@
 
     invoke-static {v1, v0, v2}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;->access$700(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;Ljava/util/List;Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$WordPartyMomentState;)V
 
-    .line 714
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$6;->this$0:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;->access$508(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;)I
 
-    .line 715
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$6;->this$0:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;->access$1000(Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;)V
 
     goto :goto_0
 
-    .line 712
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen$6;->this$0:Lcom/netflix/mediaclient/ui/iko/wordparty/moments/WPMomentScreen;
 

@@ -18,19 +18,14 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/player/PostPlayForPlayer;ILcom/netflix/mediaclient/ui/player/PostPlayBackground;)V
     .locals 0
 
-    .prologue
-    .line 210
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/PostPlayForPlayer$SelectListener;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlayForPlayer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 211
     iput p2, p0, Lcom/netflix/mediaclient/ui/player/PostPlayForPlayer$SelectListener;->index:I
 
-    .line 212
     iput-object p3, p0, Lcom/netflix/mediaclient/ui/player/PostPlayForPlayer$SelectListener;->background:Lcom/netflix/mediaclient/ui/player/PostPlayBackground;
 
-    .line 213
     return-void
 .end method
 
@@ -39,15 +34,12 @@
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
-    .prologue
-    .line 219
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 220
     const-string/jumbo v0, "nf_postplay"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -72,7 +64,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayForPlayer$SelectListener;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlayForPlayer;
 
@@ -88,19 +79,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 224
     const-string/jumbo v0, "nf_postplay"
 
     const-string/jumbo v1, "Video was full size, scale down"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 225
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayForPlayer$SelectListener;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlayForPlayer;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PostPlayForPlayer;->access$100(Lcom/netflix/mediaclient/ui/player/PostPlayForPlayer;)V
 
-    .line 228
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlayForPlayer$SelectListener;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlayForPlayer;
 
@@ -108,6 +96,5 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/player/PostPlayForPlayer;->access$200(Lcom/netflix/mediaclient/ui/player/PostPlayForPlayer;I)V
 
-    .line 229
     return-void
 .end method

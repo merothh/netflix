@@ -18,8 +18,6 @@
 .method constructor <init>(Landroid/support/design/widget/BottomSheetBehavior;Landroid/view/View;I)V
     .locals 0
 
-    .prologue
-    .line 542
     iput-object p1, p0, Landroid/support/design/widget/BottomSheetBehavior$1;->this$0:Landroid/support/design/widget/BottomSheetBehavior;
 
     iput-object p2, p0, Landroid/support/design/widget/BottomSheetBehavior$1;->val$child:Landroid/view/View;
@@ -36,8 +34,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 545
     iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior$1;->this$0:Landroid/support/design/widget/BottomSheetBehavior;
 
     iget-object v1, p0, Landroid/support/design/widget/BottomSheetBehavior$1;->val$child:Landroid/view/View;
@@ -46,6 +42,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/support/design/widget/BottomSheetBehavior;->startSettlingAnimation(Landroid/view/View;I)V
 
-    .line 546
     return-void
 .end method

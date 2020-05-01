@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/lomo/CwDiscoveryView;Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;)V
     .locals 0
 
-    .prologue
-    .line 91
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lomo/CwDiscoveryView$1;->this$0:Lcom/netflix/mediaclient/ui/lomo/CwDiscoveryView;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/lomo/CwDiscoveryView$1;->val$video:Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;
@@ -32,8 +30,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
-    .prologue
-    .line 94
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/CwDiscoveryView$1;->this$0:Lcom/netflix/mediaclient/ui/lomo/CwDiscoveryView;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/lomo/CwDiscoveryView;->getContext()Landroid/content/Context;
@@ -42,7 +38,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
-    .line 95
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/CwDiscoveryView$1;->val$video:Lcom/netflix/mediaclient/servicemgr/interface_/CWVideo;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/lomo/CwDiscoveryView$1;->this$0:Lcom/netflix/mediaclient/ui/lomo/CwDiscoveryView;
@@ -51,7 +46,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/ui/common/PlaybackLauncher;->startPlaybackAfterPIN(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/Playable;Lcom/netflix/mediaclient/ui/common/PlayContext;)V
 
-    .line 97
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v0
@@ -72,7 +66,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 98
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/CwDiscoveryView$1;->this$0:Lcom/netflix/mediaclient/ui/lomo/CwDiscoveryView;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/lomo/CwDiscoveryView;->access$000(Lcom/netflix/mediaclient/ui/lomo/CwDiscoveryView;)Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag$RemotePlaybackListener;
@@ -81,7 +74,6 @@
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag$RemotePlaybackListener;->onRemotePlaybackInitiated()V
 
-    .line 100
     :cond_0
     return-void
 .end method

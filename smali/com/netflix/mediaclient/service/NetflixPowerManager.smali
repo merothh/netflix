@@ -28,21 +28,16 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/NetflixPowerManager;->mPartialWakeLockReasonSet:Ljava/util/Set;
 
-    .line 30
     iput-object p1, p0, Lcom/netflix/mediaclient/service/NetflixPowerManager;->mContext:Landroid/content/Context;
 
-    .line 31
     return-void
 .end method
 
@@ -51,8 +46,6 @@
 .method public acquirePartialWakeLockFor(Lcom/netflix/mediaclient/service/NetflixPowerManager$PartialWakeLockReason;)V
     .locals 3
 
-    .prologue
-    .line 42
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixPowerManager;->mPartialWakeLockReasonSet:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -61,12 +54,10 @@
 
     if-nez v0, :cond_2
 
-    .line 43
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixPowerManager;->mPartialWakeLockReasonSet:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 44
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixPowerManager;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "power"
@@ -77,15 +68,12 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 46
     if-eqz v0, :cond_2
 
-    .line 47
     iget-object v1, p0, Lcom/netflix/mediaclient/service/NetflixPowerManager;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-nez v1, :cond_0
 
-    .line 48
     const/4 v1, 0x1
 
     const-string/jumbo v2, "nf_power_manager"
@@ -96,7 +84,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/NetflixPowerManager;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 51
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixPowerManager;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
@@ -110,14 +97,12 @@
 
     if-nez v0, :cond_2
 
-    .line 52
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 53
     const-string/jumbo v0, "nf_power_manager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -140,13 +125,11 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixPowerManager;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 59
     :cond_2
     return-void
 .end method
@@ -154,13 +137,10 @@
 .method public forceReleasePartialWakeLock()V
     .locals 2
 
-    .prologue
-    .line 84
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixPowerManager;->mPartialWakeLockReasonSet:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
-    .line 85
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixPowerManager;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v0, :cond_0
@@ -173,31 +153,26 @@
 
     if-eqz v0, :cond_0
 
-    .line 86
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixPowerManager;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 87
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/NetflixPowerManager;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 88
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 89
     const-string/jumbo v0, "nf_power_manager"
 
     const-string/jumbo v1, "forceReleasePartialWakeLock"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 92
     :cond_0
     return-void
 .end method
@@ -205,13 +180,10 @@
 .method public releasePartialWakeLockFor(Lcom/netflix/mediaclient/service/NetflixPowerManager$PartialWakeLockReason;)V
     .locals 3
 
-    .prologue
-    .line 69
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixPowerManager;->mPartialWakeLockReasonSet:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 70
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixPowerManager;->mPartialWakeLockReasonSet:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
@@ -220,7 +192,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 71
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixPowerManager;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v0, :cond_0
@@ -233,19 +204,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 72
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixPowerManager;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 73
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 74
     const-string/jumbo v0, "nf_power_manager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -268,7 +236,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     :cond_0
     return-void
 .end method

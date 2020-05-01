@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/common/LanguageSelector;ZLcom/netflix/mediaclient/ui/common/LanguageSelector$LanguageAlertDialog;)V
     .locals 0
 
-    .prologue
-    .line 174
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelector$3;->this$0:Lcom/netflix/mediaclient/ui/common/LanguageSelector;
 
     iput-boolean p2, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelector$3;->val$bWasPlaying:Z
@@ -36,15 +34,12 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
 
-    .prologue
-    .line 177
     const-string/jumbo v0, "nf_language_selector"
 
     const-string/jumbo v1, "Languages::apply"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 178
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelector$3;->this$0:Lcom/netflix/mediaclient/ui/common/LanguageSelector;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/common/LanguageSelector;->mCallback:Lcom/netflix/mediaclient/ui/common/LanguageSelector$LanguageSelectorCallback;
@@ -57,11 +52,9 @@
 
     invoke-interface {v0, v1, v2}, Lcom/netflix/mediaclient/ui/common/LanguageSelector$LanguageSelectorCallback;->languageChanged(Lcom/netflix/mediaclient/media/Language;Z)V
 
-    .line 179
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelector$3;->val$dialog:Lcom/netflix/mediaclient/ui/common/LanguageSelector$LanguageAlertDialog;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/common/LanguageSelector$LanguageAlertDialog;->dismiss()V
 
-    .line 180
     return-void
 .end method

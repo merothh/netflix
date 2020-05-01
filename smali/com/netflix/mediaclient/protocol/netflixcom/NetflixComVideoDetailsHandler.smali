@@ -18,8 +18,6 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
-    .line 31
     const-string/jumbo v0, "%s://%s/%s/"
 
     const/4 v1, 0x3
@@ -56,8 +54,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -66,8 +62,6 @@
 .method private handle(Ljava/lang/String;Lcom/netflix/mediaclient/android/activity/NetflixActivity;Ljava/lang/String;)Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;
     .locals 2
 
-    .prologue
-    .line 64
     invoke-virtual {p2}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v0
@@ -82,7 +76,6 @@
 
     invoke-interface {v0, p1, v1}, Lcom/netflix/mediaclient/servicemgr/IBrowseManager;->fetchVideoSummary(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/ManagerCallback;)Z
 
-    .line 94
     sget-object v0, Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;->HANDLING_WITH_DELAY:Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;
 
     return-object v0
@@ -102,10 +95,8 @@
         }
     .end annotation
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 36
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v1
@@ -124,8 +115,6 @@
 .method protected getAction()Lcom/netflix/mediaclient/ui/details/DetailsActivity$Action;
     .locals 1
 
-    .prologue
-    .line 104
     const/4 v0, 0x0
 
     return-object v0
@@ -134,8 +123,6 @@
 .method protected getActionToken()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 115
     const/4 v0, 0x0
 
     return-object v0
@@ -157,15 +144,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 48
     const-string/jumbo v0, "NetflixComVideoDetailsHandler"
 
     const-string/jumbo v1, "Starting Details activity"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     const/4 v0, 0x1
 
     invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -174,10 +158,8 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 52
     invoke-direct {p0, v0, p1, p3}, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComVideoDetailsHandler;->handle(Ljava/lang/String;Lcom/netflix/mediaclient/android/activity/NetflixActivity;Ljava/lang/String;)Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;
 
-    .line 53
     sget-object v0, Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;->HANDLING_WITH_DELAY:Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;
 
     return-object v0

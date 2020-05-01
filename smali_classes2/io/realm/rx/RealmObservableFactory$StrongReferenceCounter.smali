@@ -31,11 +31,8 @@
 .method private constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 308
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 310
     new-instance v0, Ljava/util/IdentityHashMap;
 
     invoke-direct {v0}, Ljava/util/IdentityHashMap;-><init>()V
@@ -48,8 +45,6 @@
 .method synthetic constructor <init>(Lio/realm/rx/RealmObservableFactory$1;)V
     .locals 0
 
-    .prologue
-    .line 308
     invoke-direct {p0}, Lio/realm/rx/RealmObservableFactory$StrongReferenceCounter;-><init>()V
 
     return-void

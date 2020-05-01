@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 281
     invoke-static {}, Lcom/netflix/mediaclient/ui/common/PlaybackLauncher$PlaybackTarget;->values()[Lcom/netflix/mediaclient/ui/common/PlaybackLauncher$PlaybackTarget;
 
     move-result-object v0

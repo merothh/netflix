@@ -30,7 +30,6 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x3
 
     const/4 v4, 0x2
@@ -39,7 +38,6 @@
 
     const/4 v2, 0x0
 
-    .line 73
     new-instance v0, Lcom/netflix/mediaclient/util/ConnectivityUtils$NetType;
 
     const-string/jumbo v1, "wifi"
@@ -48,7 +46,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/util/ConnectivityUtils$NetType;->wifi:Lcom/netflix/mediaclient/util/ConnectivityUtils$NetType;
 
-    .line 74
     new-instance v0, Lcom/netflix/mediaclient/util/ConnectivityUtils$NetType;
 
     const-string/jumbo v1, "mobile"
@@ -57,7 +54,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/util/ConnectivityUtils$NetType;->mobile:Lcom/netflix/mediaclient/util/ConnectivityUtils$NetType;
 
-    .line 75
     new-instance v0, Lcom/netflix/mediaclient/util/ConnectivityUtils$NetType;
 
     const-string/jumbo v1, "NetType"
@@ -74,7 +70,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/util/ConnectivityUtils$NetType;->wired:Lcom/netflix/mediaclient/util/ConnectivityUtils$NetType;
 
-    .line 72
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/netflix/mediaclient/util/ConnectivityUtils$NetType;
@@ -108,8 +103,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 72
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -118,8 +111,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/util/ConnectivityUtils$NetType;
     .locals 1
 
-    .prologue
-    .line 72
     const-class v0, Lcom/netflix/mediaclient/util/ConnectivityUtils$NetType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -134,8 +125,6 @@
 .method public static values()[Lcom/netflix/mediaclient/util/ConnectivityUtils$NetType;
     .locals 1
 
-    .prologue
-    .line 72
     sget-object v0, Lcom/netflix/mediaclient/util/ConnectivityUtils$NetType;->$VALUES:[Lcom/netflix/mediaclient/util/ConnectivityUtils$NetType;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/util/ConnectivityUtils$NetType;->clone()Ljava/lang/Object;

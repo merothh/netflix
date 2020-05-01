@@ -40,7 +40,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -51,7 +50,6 @@
 
     const/4 v4, 0x0
 
-    .line 28
     new-instance v0, Lcom/netflix/mediaclient/service/net/LogMobileType;
 
     const-string/jumbo v1, "_2G"
@@ -62,7 +60,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/LogMobileType;->_2G:Lcom/netflix/mediaclient/service/net/LogMobileType;
 
-    .line 29
     new-instance v0, Lcom/netflix/mediaclient/service/net/LogMobileType;
 
     const-string/jumbo v1, "_3G"
@@ -73,7 +70,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/LogMobileType;->_3G:Lcom/netflix/mediaclient/service/net/LogMobileType;
 
-    .line 30
     new-instance v0, Lcom/netflix/mediaclient/service/net/LogMobileType;
 
     const-string/jumbo v1, "_4G"
@@ -84,7 +80,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/LogMobileType;->_4G:Lcom/netflix/mediaclient/service/net/LogMobileType;
 
-    .line 31
     new-instance v0, Lcom/netflix/mediaclient/service/net/LogMobileType;
 
     const-string/jumbo v1, "WIFI"
@@ -95,7 +90,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/LogMobileType;->WIFI:Lcom/netflix/mediaclient/service/net/LogMobileType;
 
-    .line 32
     new-instance v0, Lcom/netflix/mediaclient/service/net/LogMobileType;
 
     const-string/jumbo v1, "MOBILE"
@@ -106,7 +100,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/LogMobileType;->MOBILE:Lcom/netflix/mediaclient/service/net/LogMobileType;
 
-    .line 33
     new-instance v0, Lcom/netflix/mediaclient/service/net/LogMobileType;
 
     const-string/jumbo v1, "UKNOWN"
@@ -119,7 +112,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/net/LogMobileType;->UKNOWN:Lcom/netflix/mediaclient/service/net/LogMobileType;
 
-    .line 26
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/net/LogMobileType;
@@ -165,32 +157,23 @@
         }
     .end annotation
 
-    .prologue
-    .line 42
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 43
     iput-object p3, p0, Lcom/netflix/mediaclient/service/net/LogMobileType;->desc:Ljava/lang/String;
 
-    .line 44
     return-void
 .end method
 
 .method public static toLogMobileType(Landroid/net/NetworkInfo;)Lcom/netflix/mediaclient/service/net/LogMobileType;
     .locals 4
 
-    .prologue
-    .line 93
     if-nez p0, :cond_0
 
-    .line 94
     const/4 v0, 0x0
 
-    .line 109
     :goto_0
     return-object v0
 
-    .line 97
     :cond_0
     invoke-virtual {p0}, Landroid/net/NetworkInfo;->getType()I
 
@@ -200,12 +183,10 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 98
     sget-object v0, Lcom/netflix/mediaclient/service/net/LogMobileType;->_4G:Lcom/netflix/mediaclient/service/net/LogMobileType;
 
     goto :goto_0
 
-    .line 101
     :cond_1
     invoke-virtual {p0}, Landroid/net/NetworkInfo;->getType()I
 
@@ -215,12 +196,10 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 102
     sget-object v0, Lcom/netflix/mediaclient/service/net/LogMobileType;->WIFI:Lcom/netflix/mediaclient/service/net/LogMobileType;
 
     goto :goto_0
 
-    .line 105
     :cond_2
     invoke-virtual {p0}, Landroid/net/NetworkInfo;->getSubtype()I
 
@@ -230,14 +209,12 @@
 
     move-result-object v0
 
-    .line 106
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 107
     const-string/jumbo v1, "nf_net"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -260,7 +237,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     :cond_3
     invoke-static {v0}, Lcom/netflix/mediaclient/service/net/LogMobileType;->toLogMobileType(Lcom/netflix/mediaclient/service/net/NetworkType;)Lcom/netflix/mediaclient/service/net/LogMobileType;
 
@@ -272,18 +248,13 @@
 .method private static toLogMobileType(Lcom/netflix/mediaclient/service/net/NetworkType;)Lcom/netflix/mediaclient/service/net/LogMobileType;
     .locals 1
 
-    .prologue
-    .line 68
     if-nez p0, :cond_0
 
-    .line 69
     sget-object v0, Lcom/netflix/mediaclient/service/net/LogMobileType;->UKNOWN:Lcom/netflix/mediaclient/service/net/LogMobileType;
 
-    .line 82
     :goto_0
     return-object v0
 
-    .line 72
     :cond_0
     invoke-static {p0}, Lcom/netflix/mediaclient/service/net/NetworkType;->is2G(Lcom/netflix/mediaclient/service/net/NetworkType;)Z
 
@@ -291,12 +262,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 73
     sget-object v0, Lcom/netflix/mediaclient/service/net/LogMobileType;->_2G:Lcom/netflix/mediaclient/service/net/LogMobileType;
 
     goto :goto_0
 
-    .line 74
     :cond_1
     invoke-static {p0}, Lcom/netflix/mediaclient/service/net/NetworkType;->is3G(Lcom/netflix/mediaclient/service/net/NetworkType;)Z
 
@@ -304,12 +273,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 75
     sget-object v0, Lcom/netflix/mediaclient/service/net/LogMobileType;->_3G:Lcom/netflix/mediaclient/service/net/LogMobileType;
 
     goto :goto_0
 
-    .line 76
     :cond_2
     invoke-static {p0}, Lcom/netflix/mediaclient/service/net/NetworkType;->is4G(Lcom/netflix/mediaclient/service/net/NetworkType;)Z
 
@@ -317,12 +284,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 77
     sget-object v0, Lcom/netflix/mediaclient/service/net/LogMobileType;->_4G:Lcom/netflix/mediaclient/service/net/LogMobileType;
 
     goto :goto_0
 
-    .line 78
     :cond_3
     sget-object v0, Lcom/netflix/mediaclient/service/net/NetworkType;->UNKNOWN:Lcom/netflix/mediaclient/service/net/NetworkType;
 
@@ -332,12 +297,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 79
     sget-object v0, Lcom/netflix/mediaclient/service/net/LogMobileType;->MOBILE:Lcom/netflix/mediaclient/service/net/LogMobileType;
 
     goto :goto_0
 
-    .line 82
     :cond_4
     sget-object v0, Lcom/netflix/mediaclient/service/net/LogMobileType;->UKNOWN:Lcom/netflix/mediaclient/service/net/LogMobileType;
 
@@ -347,8 +310,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/net/LogMobileType;
     .locals 1
 
-    .prologue
-    .line 26
     const-class v0, Lcom/netflix/mediaclient/service/net/LogMobileType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -363,8 +324,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/net/LogMobileType;
     .locals 1
 
-    .prologue
-    .line 26
     sget-object v0, Lcom/netflix/mediaclient/service/net/LogMobileType;->$VALUES:[Lcom/netflix/mediaclient/service/net/LogMobileType;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/net/LogMobileType;->clone()Ljava/lang/Object;
@@ -381,8 +340,6 @@
 .method public final getDesc()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 57
     iget-object v0, p0, Lcom/netflix/mediaclient/service/net/LogMobileType;->desc:Ljava/lang/String;
 
     return-object v0

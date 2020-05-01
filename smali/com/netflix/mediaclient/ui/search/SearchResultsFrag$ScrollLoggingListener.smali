@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;)V
     .locals 0
 
-    .prologue
-    .line 317
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$ScrollLoggingListener;->this$0:Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,12 +26,9 @@
 .method public log()V
     .locals 1
 
-    .prologue
-    .line 321
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$ScrollLoggingListener;->this$0:Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;->fireImpressionEvents()V
 
-    .line 322
     return-void
 .end method

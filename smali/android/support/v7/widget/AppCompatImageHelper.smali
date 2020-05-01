@@ -11,14 +11,10 @@
 .method public constructor <init>(Landroid/widget/ImageView;)V
     .locals 0
 
-    .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     iput-object p1, p0, Landroid/support/v7/widget/AppCompatImageHelper;->mView:Landroid/widget/ImageView;
 
-    .line 35
     return-void
 .end method
 
@@ -27,15 +23,12 @@
 .method hasOverlappingRendering()Z
     .locals 3
 
-    .prologue
-    .line 80
     iget-object v0, p0, Landroid/support/v7/widget/AppCompatImageHelper;->mView:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 81
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x15
@@ -46,10 +39,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 85
     const/4 v0, 0x0
 
-    .line 87
     :goto_0
     return v0
 
@@ -62,13 +53,10 @@
 .method public loadFromAttributes(Landroid/util/AttributeSet;I)V
     .locals 6
 
-    .prologue
     const/4 v5, -0x1
 
-    .line 38
     const/4 v1, 0x0
 
-    .line 40
     :try_start_0
     iget-object v0, p0, Landroid/support/v7/widget/AppCompatImageHelper;->mView:Landroid/widget/ImageView;
 
@@ -76,10 +64,8 @@
 
     move-result-object v0
 
-    .line 42
     if-nez v0, :cond_0
 
-    .line 43
     iget-object v2, p0, Landroid/support/v7/widget/AppCompatImageHelper;->mView:Landroid/widget/ImageView;
 
     invoke-virtual {v2}, Landroid/widget/ImageView;->getContext()Landroid/content/Context;
@@ -94,7 +80,6 @@
 
     move-result-object v1
 
-    .line 48
     sget v2, Landroid/support/v7/appcompat/R$styleable;->AppCompatImageView_srcCompat:I
 
     const/4 v3, -0x1
@@ -103,10 +88,8 @@
 
     move-result v2
 
-    .line 49
     if-eq v2, v5, :cond_0
 
-    .line 50
     iget-object v0, p0, Landroid/support/v7/widget/AppCompatImageHelper;->mView:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getContext()Landroid/content/Context;
@@ -117,41 +100,32 @@
 
     move-result-object v0
 
-    .line 51
     if-eqz v0, :cond_0
 
-    .line 52
     iget-object v2, p0, Landroid/support/v7/widget/AppCompatImageHelper;->mView:Landroid/widget/ImageView;
 
     invoke-virtual {v2, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 57
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 58
     invoke-static {v0}, Landroid/support/v7/widget/DrawableUtils;->fixDrawable(Landroid/graphics/drawable/Drawable;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 61
     :cond_1
     if-eqz v1, :cond_2
 
-    .line 62
     invoke-virtual {v1}, Landroid/support/v7/widget/TintTypedArray;->recycle()V
 
-    .line 65
     :cond_2
     return-void
 
-    .line 61
     :catchall_0
     move-exception v0
 
     if-eqz v1, :cond_3
 
-    .line 62
     invoke-virtual {v1}, Landroid/support/v7/widget/TintTypedArray;->recycle()V
 
     :cond_3
@@ -161,11 +135,8 @@
 .method public setImageResource(I)V
     .locals 2
 
-    .prologue
-    .line 68
     if-eqz p1, :cond_1
 
-    .line 69
     iget-object v0, p0, Landroid/support/v7/widget/AppCompatImageHelper;->mView:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getContext()Landroid/content/Context;
@@ -176,23 +147,18 @@
 
     move-result-object v0
 
-    .line 70
     if-eqz v0, :cond_0
 
-    .line 71
     invoke-static {v0}, Landroid/support/v7/widget/DrawableUtils;->fixDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 73
     :cond_0
     iget-object v1, p0, Landroid/support/v7/widget/AppCompatImageHelper;->mView:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 77
     :goto_0
     return-void
 
-    .line 75
     :cond_1
     iget-object v0, p0, Landroid/support/v7/widget/AppCompatImageHelper;->mView:Landroid/widget/ImageView;
 

@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;Z)V
     .locals 0
 
-    .prologue
-    .line 775
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$6;->this$0:Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;
 
     iput-boolean p2, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$6;->val$saveIfFailed:Z
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 778
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$6;->this$0:Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;->access$200(Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager;)Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$ClientLoggingEventQueue;
@@ -44,6 +40,5 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/service/logging/IntegratedClientLoggingManager$ClientLoggingEventQueue;->flushEvents(Z)V
 
-    .line 779
     return-void
 .end method

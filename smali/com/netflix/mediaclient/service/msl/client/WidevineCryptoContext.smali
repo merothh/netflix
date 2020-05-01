@@ -36,49 +36,40 @@
 .method private constructor <init>(Lcom/netflix/msl/util/MslContext;Lcom/netflix/android/org/json/JSONObject;)V
     .locals 6
 
-    .prologue
-    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 73
     const-string/jumbo v0, "encryptionKeyId"
 
     invoke-virtual {p2, v0}, Lcom/netflix/android/org/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 74
     const-string/jumbo v1, "hmacKeyId"
 
     invoke-virtual {p2, v1}, Lcom/netflix/android/org/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 75
     const-string/jumbo v2, "envelopeId"
 
     invoke-virtual {p2, v2}, Lcom/netflix/android/org/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 76
     const-string/jumbo v3, "keySetId"
 
     invoke-virtual {p2, v3}, Lcom/netflix/android/org/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 78
     const-string/jumbo v4, "nf_msl"
 
     const-string/jumbo v5, "WidevineCryptoContex:: restoring crypto session...."
 
     invoke-static {v4, v5}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
     if-nez p1, :cond_0
 
-    .line 81
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "MSL context is null!"
@@ -87,7 +78,6 @@
 
     throw v0
 
-    .line 84
     :cond_0
     invoke-static {v2}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
@@ -95,7 +85,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 85
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "envelopeId is null!"
@@ -104,28 +93,23 @@
 
     throw v0
 
-    .line 88
     :cond_1
     iput-object p1, p0, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;->ctx:Lcom/netflix/msl/util/MslContext;
 
-    .line 89
     new-instance v4, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;
 
     invoke-direct {v4, v0}, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;-><init>(Ljava/lang/String;)V
 
     iput-object v4, p0, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;->encryptionKeyId:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;
 
-    .line 90
     new-instance v0, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;
 
     invoke-direct {v0, v1}, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;-><init>(Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;->hmacKeyId:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;
 
-    .line 91
     iput-object v2, p0, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;->envelopeId:Ljava/lang/String;
 
-    .line 93
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManagerRegistry;->getCryptoManager()Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager;
 
     move-result-object v0
@@ -140,12 +124,10 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;->cryptoSession:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;
 
-    .line 95
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;->cryptoSession:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;
 
     if-nez v0, :cond_2
 
-    .line 97
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "Unable to restore crypto session!"
@@ -154,7 +136,6 @@
 
     throw v0
 
-    .line 99
     :cond_2
     return-void
 .end method
@@ -162,21 +143,16 @@
 .method public constructor <init>(Lcom/netflix/msl/util/MslContext;Ljava/lang/String;Lcom/netflix/msl/keyx/WidevineKeyRequestData;Lcom/netflix/msl/keyx/WidevineKeyResponseData;Lcom/netflix/msl/tokens/MasterToken;)V
     .locals 4
 
-    .prologue
-    .line 101
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 103
     const-string/jumbo v0, "nf_msl"
 
     const-string/jumbo v1, "WidevineCryptoContex::"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
     if-nez p1, :cond_0
 
-    .line 106
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "MSL context is null!"
@@ -185,11 +161,9 @@
 
     throw v0
 
-    .line 109
     :cond_0
     if-nez p3, :cond_1
 
-    .line 110
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "CDM request is null!"
@@ -198,11 +172,9 @@
 
     throw v0
 
-    .line 113
     :cond_1
     if-nez p4, :cond_2
 
-    .line 114
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "CDM response is null!"
@@ -211,11 +183,9 @@
 
     throw v0
 
-    .line 118
     :cond_2
     iput-object p1, p0, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;->ctx:Lcom/netflix/msl/util/MslContext;
 
-    .line 119
     new-instance v0, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;
 
     invoke-virtual {p4}, Lcom/netflix/msl/keyx/WidevineKeyResponseData;->getEncryptionKeyId()Ljava/lang/String;
@@ -226,7 +196,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;->encryptionKeyId:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;
 
-    .line 120
     new-instance v0, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;
 
     invoke-virtual {p4}, Lcom/netflix/msl/keyx/WidevineKeyResponseData;->getHmacKeyId()Ljava/lang/String;
@@ -237,7 +206,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;->hmacKeyId:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;
 
-    .line 122
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -270,19 +238,16 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;->envelopeId:Ljava/lang/String;
 
-    .line 124
     invoke-virtual {p4}, Lcom/netflix/msl/keyx/WidevineKeyResponseData;->getKeyResponse()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 125
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 126
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "KeyRespone is empty!"
@@ -291,13 +256,11 @@
 
     throw v0
 
-    .line 129
     :cond_3
     invoke-static {v0}, Lcom/netflix/mediaclient/util/CryptoUtils;->decode(Ljava/lang/String;)[B
 
     move-result-object v0
 
-    .line 130
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManagerRegistry;->getCryptoManager()Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager;
 
     move-result-object v1
@@ -312,15 +275,12 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;->cryptoSession:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;
 
-    .line 131
     return-void
 .end method
 
 .method public static restoreWidevineCryptoContext(Lcom/netflix/msl/util/MslContext;Lcom/netflix/android/org/json/JSONObject;)Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;
     .locals 1
 
-    .prologue
-    .line 286
     new-instance v0, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;
 
     invoke-direct {v0, p0, p1}, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;-><init>(Lcom/netflix/msl/util/MslContext;Lcom/netflix/android/org/json/JSONObject;)V
@@ -333,13 +293,10 @@
 .method public decrypt([B)[B
     .locals 5
 
-    .prologue
-    .line 163
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;->encryptionKeyId:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;
 
     if-nez v0, :cond_0
 
-    .line 164
     new-instance v0, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->DECRYPT_NOT_SUPPORTED:Lcom/netflix/msl/MslError;
@@ -350,7 +307,6 @@
 
     throw v0
 
-    .line 169
     :cond_0
     :try_start_0
     new-instance v0, Lcom/netflix/android/org/json/JSONObject;
@@ -363,14 +319,12 @@
 
     invoke-direct {v0, v1}, Lcom/netflix/android/org/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 170
     new-instance v1, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;
 
     sget-object v2, Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;->V1:Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
 
     invoke-direct {v1, v0, v2}, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;-><init>(Lcom/netflix/android/org/json/JSONObject;Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;)V
 
-    .line 173
     invoke-virtual {v1}, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->getKeyId()Ljava/lang/String;
 
     move-result-object v0
@@ -383,7 +337,6 @@
 
     if-nez v0, :cond_1
 
-    .line 174
     new-instance v0, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->ENVELOPE_KEY_ID_MISMATCH:Lcom/netflix/msl/MslError;
@@ -394,11 +347,9 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 186
     :catch_0
     move-exception v0
 
-    .line 187
     new-instance v1, Lcom/netflix/msl/MslInternalException;
 
     const-string/jumbo v2, "WidevineCryptoContext::decrypt failed."
@@ -407,34 +358,28 @@
 
     throw v1
 
-    .line 178
     :cond_1
     :try_start_1
     invoke-virtual {v1}, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->getCiphertext()[B
 
     move-result-object v0
 
-    .line 179
     array-length v2, v0
 
     if-nez v2, :cond_2
 
-    .line 180
     const/4 v0, 0x0
 
     new-array v0, v0, [B
 
-    .line 184
     :goto_0
     return-object v0
 
-    .line 183
     :cond_2
     invoke-virtual {v1}, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;->getIv()[B
 
     move-result-object v1
 
-    .line 184
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManagerRegistry;->getCryptoManager()Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager;
 
     move-result-object v2
@@ -455,13 +400,10 @@
 .method public encrypt([B)[B
     .locals 4
 
-    .prologue
-    .line 136
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;->encryptionKeyId:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;
 
     if-nez v0, :cond_0
 
-    .line 137
     new-instance v0, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->ENCRYPT_NOT_SUPPORTED:Lcom/netflix/msl/MslError;
@@ -472,7 +414,6 @@
 
     throw v0
 
-    .line 142
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;->ctx:Lcom/netflix/msl/util/MslContext;
@@ -481,20 +422,16 @@
 
     move-result-object v0
 
-    .line 143
     const/16 v1, 0x10
 
     new-array v1, v1, [B
 
-    .line 144
     invoke-virtual {v0, v1}, Ljava/util/Random;->nextBytes([B)V
 
-    .line 148
     array-length v0, p1
 
     if-eqz v0, :cond_1
 
-    .line 149
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManagerRegistry;->getCryptoManager()Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager;
 
     move-result-object v0
@@ -507,7 +444,6 @@
 
     move-result-object v0
 
-    .line 154
     :goto_0
     new-instance v2, Lcom/netflix/msl/crypto/MslCiphertextEnvelope;
 
@@ -527,7 +463,6 @@
 
     return-object v0
 
-    .line 151
     :cond_1
     const/4 v0, 0x0
 
@@ -537,11 +472,9 @@
 
     goto :goto_0
 
-    .line 155
     :catch_0
     move-exception v0
 
-    .line 156
     new-instance v1, Lcom/netflix/msl/MslInternalException;
 
     const-string/jumbo v2, "WidevineCryptoContext::encrypt failed."
@@ -554,8 +487,6 @@
 .method public getEncryptionKeyId()Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;
     .locals 1
 
-    .prologue
-    .line 263
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;->encryptionKeyId:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;
 
     return-object v0
@@ -564,8 +495,6 @@
 .method public getHmacKeyId()Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;
     .locals 1
 
-    .prologue
-    .line 259
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;->hmacKeyId:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;
 
     return-object v0
@@ -574,15 +503,12 @@
 .method public release()V
     .locals 2
 
-    .prologue
-    .line 272
     const-string/jumbo v0, "nf_msl"
 
     const-string/jumbo v1, "Widevine crypto context, release crypto session!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 273
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManagerRegistry;->getCryptoManager()Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager;
 
     move-result-object v0
@@ -591,20 +517,16 @@
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager;->closeCryptoSession(Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;)Z
 
-    .line 274
     return-void
 .end method
 
 .method public sign([B)[B
     .locals 3
 
-    .prologue
-    .line 204
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;->hmacKeyId:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;
 
     if-nez v0, :cond_0
 
-    .line 205
     new-instance v0, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->SIGN_NOT_SUPPORTED:Lcom/netflix/msl/MslError;
@@ -615,7 +537,6 @@
 
     throw v0
 
-    .line 209
     :cond_0
     :try_start_0
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManagerRegistry;->getCryptoManager()Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager;
@@ -630,7 +551,6 @@
 
     move-result-object v0
 
-    .line 210
     new-instance v1, Lcom/netflix/msl/crypto/MslSignatureEnvelope;
 
     invoke-direct {v1, v0}, Lcom/netflix/msl/crypto/MslSignatureEnvelope;-><init>([B)V
@@ -643,11 +563,9 @@
 
     return-object v0
 
-    .line 211
     :catch_0
     move-exception v0
 
-    .line 212
     new-instance v1, Lcom/netflix/msl/MslInternalException;
 
     const-string/jumbo v2, "WidevineCryptoContext::sign failed."
@@ -660,13 +578,10 @@
 .method public toJSONObject()Lcom/netflix/android/org/json/JSONObject;
     .locals 3
 
-    .prologue
-    .line 238
     new-instance v0, Lcom/netflix/android/org/json/JSONObject;
 
     invoke-direct {v0}, Lcom/netflix/android/org/json/JSONObject;-><init>()V
 
-    .line 239
     const-string/jumbo v1, "encryptionKeyId"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;->encryptionKeyId:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;
@@ -677,7 +592,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 240
     const-string/jumbo v1, "hmacKeyId"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;->hmacKeyId:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;
@@ -688,14 +602,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 241
     const-string/jumbo v1, "envelopeId"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;->envelopeId:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 242
     const-string/jumbo v1, "keySetId"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;->cryptoSession:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;
@@ -708,17 +620,14 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 244
     return-object v0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
     const/16 v2, 0x27
 
-    .line 249
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -815,8 +724,6 @@
 .method public unwrap([B)[B
     .locals 3
 
-    .prologue
-    .line 198
     new-instance v0, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->UNWRAP_NOT_SUPPORTED:Lcom/netflix/msl/MslError;
@@ -831,13 +738,10 @@
 .method public verify([B[B)Z
     .locals 4
 
-    .prologue
-    .line 219
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/client/WidevineCryptoContext;->hmacKeyId:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;
 
     if-nez v0, :cond_0
 
-    .line 220
     new-instance v0, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->VERIFY_NOT_SUPPORTED:Lcom/netflix/msl/MslError;
@@ -848,14 +752,12 @@
 
     throw v0
 
-    .line 224
     :cond_0
     :try_start_0
     invoke-static {p2}, Lcom/netflix/msl/crypto/MslSignatureEnvelope;->parse([B)Lcom/netflix/msl/crypto/MslSignatureEnvelope;
 
     move-result-object v0
 
-    .line 226
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManagerRegistry;->getCryptoManager()Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager;
 
     move-result-object v1
@@ -878,11 +780,9 @@
 
     return v0
 
-    .line 227
     :catch_0
     move-exception v0
 
-    .line 228
     new-instance v1, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->SIGNATURE_ENVELOPE_PARSE_ERROR:Lcom/netflix/msl/MslError;
@@ -891,18 +791,14 @@
 
     throw v1
 
-    .line 229
     :catch_1
     move-exception v0
 
-    .line 230
     throw v0
 
-    .line 231
     :catch_2
     move-exception v0
 
-    .line 232
     new-instance v1, Lcom/netflix/msl/MslInternalException;
 
     const-string/jumbo v2, "WidevineCryptoContext::verify failed."
@@ -915,8 +811,6 @@
 .method public wrap([B)[B
     .locals 3
 
-    .prologue
-    .line 193
     new-instance v0, Lcom/netflix/msl/MslCryptoException;
 
     sget-object v1, Lcom/netflix/msl/MslError;->WRAP_NOT_SUPPORTED:Lcom/netflix/msl/MslError;

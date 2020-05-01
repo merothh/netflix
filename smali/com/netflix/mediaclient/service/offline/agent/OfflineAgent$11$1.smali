@@ -13,8 +13,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$11;Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable;)V
     .locals 0
 
-    .prologue
-    .line 889
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$11$1;->this$1:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$11;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$11$1;->val$offlinePlayable:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable;
@@ -29,8 +27,6 @@
 .method public onLicenseRefreshDone(Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 892
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$11$1;->val$offlinePlayable:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable;->getOfflineViewablePersistentData()Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData;
@@ -39,7 +35,6 @@
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayablePersistentData;->setPersistentStatus(Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 893
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$11$1;->this$1:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$11;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$11;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
@@ -54,7 +49,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;->access$1900(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;Landroid/content/Context;)V
 
-    .line 894
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$11$1;->this$1:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$11;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$11;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
@@ -63,6 +57,5 @@
 
     invoke-static {v0, v1, p1}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;->access$2000(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 895
     return-void
 .end method

@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 115
     new-instance v0, Lio/realm/internal/Row$1;
 
     invoke-direct {v0}, Lio/realm/internal/Row$1;-><init>()V

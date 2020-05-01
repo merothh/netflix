@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 12
     invoke-direct {p0}, Lcom/netflix/mediaclient/AutoValueAdapterFactory;-><init>()V
 
     return-void
@@ -31,13 +29,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 16
     invoke-virtual {p2}, Lcom/google/gson/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 17
     const-class v1, Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaCta;
 
     invoke-virtual {v1, v0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -46,16 +41,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 18
     invoke-static {p1}, Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaCta;->typeAdapter(Lcom/google/gson/Gson;)Lcom/google/gson/TypeAdapter;
 
     move-result-object v0
 
-    .line 24
     :goto_0
     return-object v0
 
-    .line 19
     :cond_0
     const-class v1, Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaAlert;
 
@@ -65,14 +57,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 20
     invoke-static {p1}, Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaAlert;->typeAdapter(Lcom/google/gson/Gson;)Lcom/google/gson/TypeAdapter;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 21
     :cond_1
     const-class v1, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
 
@@ -82,14 +72,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 22
     invoke-static {p1}, Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;->typeAdapter(Lcom/google/gson/Gson;)Lcom/google/gson/TypeAdapter;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 24
     :cond_2
     const/4 v0, 0x0
 

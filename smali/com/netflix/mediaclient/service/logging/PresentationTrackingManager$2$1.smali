@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$2;)V
     .locals 0
 
-    .prologue
-    .line 193
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$2$1;->this$1:Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,26 +26,21 @@
 .method public onLoaded([Lcom/netflix/mediaclient/util/data/DataRepository$Entry;)V
     .locals 2
 
-    .prologue
-    .line 197
     if-eqz p1, :cond_0
 
     array-length v0, p1
 
     if-lez v0, :cond_0
 
-    .line 198
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$2$1;->this$1:Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$2;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager$2;->this$0:Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;->access$200(Lcom/netflix/mediaclient/service/logging/PresentationTrackingManager;[Lcom/netflix/mediaclient/util/data/DataRepository$Entry;)V
 
-    .line 202
     :goto_0
     return-void
 
-    .line 200
     :cond_0
     const-string/jumbo v0, "nf_presentation"
 

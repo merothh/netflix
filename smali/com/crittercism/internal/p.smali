@@ -6,8 +6,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 11
     invoke-direct {p0}, Ljavax/net/ssl/SSLSocketFactory;-><init>()V
 
     return-void

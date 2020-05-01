@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 83
     invoke-static {}, Lcom/netflix/model/leafs/advisory/ExpiringContentAdvisory$ContentType;->values()[Lcom/netflix/model/leafs/advisory/ExpiringContentAdvisory$ContentType;
 
     move-result-object v0

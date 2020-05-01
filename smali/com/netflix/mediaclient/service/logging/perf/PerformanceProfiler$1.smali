@@ -11,8 +11,6 @@
 .method constructor <init>(Ljava/util/Map;)V
     .locals 0
 
-    .prologue
-    .line 363
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/perf/PerformanceProfiler$1;->val$params:Ljava/util/Map;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/logging/client/model/DiscreteEvent;-><init>()V
@@ -25,8 +23,6 @@
 .method protected getCustomData()Lorg/json/JSONObject;
     .locals 2
 
-    .prologue
-    .line 366
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/perf/PerformanceProfiler$1;->val$params:Ljava/util/Map;
 
     if-eqz v0, :cond_0
@@ -39,14 +35,12 @@
 
     if-nez v0, :cond_0
 
-    .line 367
     new-instance v0, Lorg/json/JSONObject;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/perf/PerformanceProfiler$1;->val$params:Ljava/util/Map;
 
     invoke-direct {v0, v1}, Lorg/json/JSONObject;-><init>(Ljava/util/Map;)V
 
-    .line 369
     :goto_0
     return-object v0
 

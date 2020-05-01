@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1554
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,15 +17,11 @@
 .method public onError(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 0
 
-    .prologue
-    .line 1573
     return-void
 .end method
 
 .method public onResult(Landroid/os/Bundle;)V
     .locals 0
 
-    .prologue
-    .line 1562
     return-void
 .end method

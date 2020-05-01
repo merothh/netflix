@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/mdx/TargetContext;)V
     .locals 0
 
-    .prologue
-    .line 349
     iput-object p1, p0, Lcom/netflix/mediaclient/service/mdx/TargetContext$GetCapabilies;->this$0:Lcom/netflix/mediaclient/service/mdx/TargetContext;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,13 +26,10 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 352
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/message/controller/PlayerGetCapabilities;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/mdx/message/controller/PlayerGetCapabilities;-><init>()V
 
-    .line 353
     iget-object v1, p0, Lcom/netflix/mediaclient/service/mdx/TargetContext$GetCapabilies;->this$0:Lcom/netflix/mediaclient/service/mdx/TargetContext;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/service/mdx/TargetContext;->access$700(Lcom/netflix/mediaclient/service/mdx/TargetContext;)Lcom/netflix/mediaclient/javabridge/ui/mdxcontroller/MdxController;
@@ -61,6 +56,5 @@
 
     invoke-interface {v1, v2, v3, v0}, Lcom/netflix/mediaclient/javabridge/ui/mdxcontroller/SessionController;->sendMessage(ILjava/lang/String;Lorg/json/JSONObject;)J
 
-    .line 354
     return-void
 .end method

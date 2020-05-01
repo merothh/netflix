@@ -13,11 +13,8 @@
 .method constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 54
     invoke-direct {p0}, Lorg/chromium/net/CronetEngine;-><init>()V
 
-    .line 32
     new-instance v0, Lorg/chromium/net/JavaCronetEngine$1;
 
     invoke-direct {v0, p0}, Lorg/chromium/net/JavaCronetEngine$1;-><init>(Lorg/chromium/net/JavaCronetEngine;)V
@@ -28,10 +25,8 @@
 
     iput-object v0, p0, Lorg/chromium/net/JavaCronetEngine;->mExecutorService:Ljava/util/concurrent/ExecutorService;
 
-    .line 55
     iput-object p1, p0, Lorg/chromium/net/JavaCronetEngine;->mUserAgent:Ljava/lang/String;
 
-    .line 56
     return-void
 .end method
 
@@ -40,8 +35,6 @@
 .method public getVersionString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 83
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -70,8 +63,6 @@
 .method public isEnabled()Z
     .locals 1
 
-    .prologue
-    .line 78
     const/4 v0, 0x1
 
     return v0
@@ -80,8 +71,6 @@
 .method public openConnection(Ljava/net/URL;)Ljava/net/URLConnection;
     .locals 1
 
-    .prologue
-    .line 139
     invoke-virtual {p1}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object v0
@@ -92,15 +81,11 @@
 .method public startNetLogToFile(Ljava/lang/String;Z)V
     .locals 0
 
-    .prologue
-    .line 92
     return-void
 .end method
 
 .method public stopNetLog()V
     .locals 0
 
-    .prologue
-    .line 98
     return-void
 .end method

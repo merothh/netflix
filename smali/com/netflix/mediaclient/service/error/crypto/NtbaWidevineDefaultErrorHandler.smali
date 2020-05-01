@@ -11,14 +11,10 @@
 .method constructor <init>(Lcom/netflix/mediaclient/StatusCode;)V
     .locals 0
 
-    .prologue
-    .line 21
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/error/crypto/BaseNtbaCryptoErrorHandler;-><init>()V
 
-    .line 22
     iput-object p1, p0, Lcom/netflix/mediaclient/service/error/crypto/NtbaWidevineDefaultErrorHandler;->mFailureType:Lcom/netflix/mediaclient/StatusCode;
 
-    .line 23
     return-void
 .end method
 
@@ -27,8 +23,6 @@
 .method getStatusCode()Lcom/netflix/mediaclient/StatusCode;
     .locals 1
 
-    .prologue
-    .line 27
     iget-object v0, p0, Lcom/netflix/mediaclient/service/error/crypto/NtbaWidevineDefaultErrorHandler;->mFailureType:Lcom/netflix/mediaclient/StatusCode;
 
     return-object v0
@@ -37,13 +31,10 @@
 .method public handle(Landroid/content/Context;Ljava/lang/Throwable;)Lcom/netflix/mediaclient/service/error/ErrorDescriptor;
     .locals 4
 
-    .prologue
-    .line 36
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 37
     invoke-static {}, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManagerRegistry;->getCryptoManager()Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager;
 
     move-result-object v1
@@ -64,7 +55,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 38
     iget-object v1, p0, Lcom/netflix/mediaclient/service/error/crypto/NtbaWidevineDefaultErrorHandler;->mFailureType:Lcom/netflix/mediaclient/StatusCode;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/StatusCode;->toString()Ljava/lang/String;
@@ -73,17 +63,14 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 39
     if-eqz p2, :cond_0
 
-    .line 40
     invoke-static {p2}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 43
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -91,14 +78,12 @@
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/error/crypto/NtbaWidevineDefaultErrorHandler;->logHandledException(Ljava/lang/String;)V
 
-    .line 45
     sget-object v0, Lcom/netflix/mediaclient/service/error/crypto/NtbaWidevineDefaultErrorHandler;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "MediaDrm defaul failure for NTBA, kill app and let user restart..."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 47
     new-instance v0, Lcom/netflix/mediaclient/service/configuration/crypto/WidevineErrorDescriptor;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/error/crypto/NtbaWidevineDefaultErrorHandler;->mFailureType:Lcom/netflix/mediaclient/StatusCode;

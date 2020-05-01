@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;)V
     .locals 0
 
-    .prologue
-    .line 78
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$1;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,8 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .prologue
-    .line 83
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$1;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;->getContext()Landroid/content/Context;
@@ -41,7 +37,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
-    .line 84
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -60,7 +55,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 85
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$1;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -73,7 +67,6 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;->access$002(Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaAlert;)Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaAlert;
 
-    .line 86
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$1;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;->access$000(Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;)Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaAlert;
@@ -82,14 +75,12 @@
 
     if-nez v0, :cond_0
 
-    .line 87
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$1;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;->dismiss(Z)V
 
-    .line 90
     :cond_0
     return-void
 .end method

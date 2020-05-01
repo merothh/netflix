@@ -19,30 +19,22 @@
 .method private constructor <init>(Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
-    .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/MdxTarget;->mUUID:Ljava/lang/String;
 
-    .line 37
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/mdx/MdxTarget;->mFriendlyName:Ljava/lang/String;
 
-    .line 38
     iput-boolean p3, p0, Lcom/netflix/mediaclient/ui/mdx/MdxTarget;->mLocal:Z
 
-    .line 39
     return-void
 .end method
 
 .method public static createLocalTarget()Lcom/netflix/mediaclient/ui/mdx/MdxTarget;
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 82
     new-instance v0, Lcom/netflix/mediaclient/ui/mdx/MdxTarget;
 
     const/4 v1, 0x1
@@ -66,8 +58,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 92
     new-instance v2, Lcom/netflix/mediaclient/ui/mdx/MdxTarget;
 
     iget-object v0, p0, Landroid/util/Pair;->first:Ljava/lang/Object;
@@ -90,8 +80,6 @@
 .method public getFriendlyName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 56
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxTarget;->mFriendlyName:Ljava/lang/String;
 
     return-object v0
@@ -100,8 +88,6 @@
 .method public getUUID()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 47
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxTarget;->mUUID:Ljava/lang/String;
 
     return-object v0
@@ -110,8 +96,6 @@
 .method public isLocal()Z
     .locals 1
 
-    .prologue
-    .line 65
     iget-boolean v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxTarget;->mLocal:Z
 
     return v0
@@ -120,8 +104,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 73
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -11,8 +11,6 @@
 .method constructor <init>(Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;)V
     .locals 0
 
-    .prologue
-    .line 1294
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$1;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;
 
     invoke-direct {p0}, Landroid/support/v4/media/VolumeProviderCompat$Callback;-><init>()V
@@ -25,19 +23,15 @@
 .method public onVolumeChanged(Landroid/support/v4/media/VolumeProviderCompat;)V
     .locals 6
 
-    .prologue
-    .line 1297
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$1;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;
 
     iget-object v0, v0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mVolumeProvider:Landroid/support/v4/media/VolumeProviderCompat;
 
     if-eq v0, p1, :cond_0
 
-    .line 1304
     :goto_0
     return-void
 
-    .line 1300
     :cond_0
     new-instance v0, Landroid/support/v4/media/session/ParcelableVolumeInfo;
 
@@ -49,7 +43,6 @@
 
     iget v2, v2, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mLocalStream:I
 
-    .line 1301
     invoke-virtual {p1}, Landroid/support/v4/media/VolumeProviderCompat;->getVolumeControl()I
 
     move-result v3
@@ -58,14 +51,12 @@
 
     move-result v4
 
-    .line 1302
     invoke-virtual {p1}, Landroid/support/v4/media/VolumeProviderCompat;->getCurrentVolume()I
 
     move-result v5
 
     invoke-direct/range {v0 .. v5}, Landroid/support/v4/media/session/ParcelableVolumeInfo;-><init>(IIIII)V
 
-    .line 1303
     iget-object v1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$1;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;
 
     invoke-virtual {v1, v0}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->sendVolumeInfoChanged(Landroid/support/v4/media/session/ParcelableVolumeInfo;)V

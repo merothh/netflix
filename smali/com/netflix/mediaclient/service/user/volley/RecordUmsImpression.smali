@@ -30,36 +30,28 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 27
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;-><init>(Landroid/content/Context;)V
 
-    .line 22
     const-string/jumbo v0, "[\'ums\', \'setImpression\']"
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/user/volley/RecordUmsImpression;->pqlQuery:Ljava/lang/String;
 
-    .line 28
     iput-object p3, p0, Lcom/netflix/mediaclient/service/user/volley/RecordUmsImpression;->mImpressionType:Ljava/lang/String;
 
-    .line 29
     iput-object p2, p0, Lcom/netflix/mediaclient/service/user/volley/RecordUmsImpression;->mMsgName:Ljava/lang/String;
 
-    .line 30
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 31
     const-string/jumbo v0, "eog_RecordEogImpression"
 
     const-string/jumbo v1, "PQL = [\'ums\', \'setImpression\']"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 33
     :cond_0
     return-void
 .end method
@@ -69,8 +61,6 @@
 .method protected getMethodType()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 37
     const-string/jumbo v0, "call"
 
     return-object v0
@@ -79,12 +69,10 @@
 .method protected getOptionalParams()Ljava/lang/String;
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
     const/4 v5, 0x0
 
-    .line 47
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "param"
@@ -111,7 +99,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 48
     const-string/jumbo v1, "param"
 
     const-string/jumbo v2, "\'%s\'"
@@ -136,7 +123,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 49
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -156,8 +142,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 42
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -178,16 +162,12 @@
 .method protected onFailure(Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 0
 
-    .prologue
-    .line 70
     return-void
 .end method
 
 .method protected bridge synthetic onSuccess(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 18
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/user/volley/RecordUmsImpression;->onSuccess(Ljava/lang/String;)V
@@ -198,16 +178,12 @@
 .method protected onSuccess(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 75
     return-void
 .end method
 
 .method protected bridge synthetic parseFalkorResponse(Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 18
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/user/volley/RecordUmsImpression;->parseFalkorResponse(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -218,15 +194,12 @@
 .method protected parseFalkorResponse(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 61
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 62
     const-string/jumbo v0, "eog_RecordEogImpression"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -249,7 +222,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     :cond_0
     return-object p1
 .end method
@@ -257,8 +229,6 @@
 .method protected shouldSkipProcessingOnInvalidUser()Z
     .locals 1
 
-    .prologue
-    .line 55
     const/4 v0, 0x0
 
     return v0

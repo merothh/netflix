@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 13
     invoke-direct {p0}, Ljava/util/Random;-><init>()V
 
     return-void
@@ -19,8 +17,6 @@
 .method public nextPositive()I
     .locals 1
 
-    .prologue
-    .line 16
     const/16 v0, 0x1f
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/util/PositiveRandom;->next(I)I

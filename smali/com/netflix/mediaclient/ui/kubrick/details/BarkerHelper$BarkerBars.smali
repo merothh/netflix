@@ -19,28 +19,22 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    .prologue
-    .line 249
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 250
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->mContext:Landroid/content/Context;
 
-    .line 251
     invoke-static {p1}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->getFormatForDevice(Landroid/content/Context;)Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->mModalFormat:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
 
-    .line 252
     invoke-static {p1}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;->getFormatForDevice(Landroid/content/Context;)Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->mArtworkFormat:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ArtworkFormat;
 
-    .line 253
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -57,12 +51,10 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->mMaxModalWidth:I
 
-    .line 256
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->getTotalColumnNum()I
 
     move-result v1
 
-    .line 257
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->isOversized()Z
 
     move-result v0
@@ -71,7 +63,6 @@
 
     iget v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->mMaxModalWidth:I
 
-    .line 259
     :goto_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->getGutterWidth()I
 
@@ -79,15 +70,12 @@
 
     sub-int/2addr v0, v2
 
-    .line 260
     div-int/2addr v0, v1
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->mColumnAndGutterWidth:I
 
-    .line 261
     return-void
 
-    .line 257
     :cond_0
     invoke-static {p1}, Lcom/netflix/mediaclient/util/DeviceUtils;->getScreenWidthInPixels(Landroid/content/Context;)I
 
@@ -99,8 +87,6 @@
 .method private getColumnsWidth(I)I
     .locals 2
 
-    .prologue
-    .line 286
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->getColumnPlusGutterWidth()I
 
     move-result v0
@@ -121,8 +107,6 @@
 .method public getBookmarkWidth()I
     .locals 2
 
-    .prologue
-    .line 336
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->mModalFormat:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->getBookmarkColumnSpan()I
@@ -147,8 +131,6 @@
 .method public getColumnPlusGutterWidth()I
     .locals 1
 
-    .prologue
-    .line 293
     iget v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->mColumnAndGutterWidth:I
 
     return v0
@@ -157,8 +139,6 @@
 .method public getColumnWidth()I
     .locals 2
 
-    .prologue
-    .line 300
     iget v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->mColumnAndGutterWidth:I
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->getGutterWidth()I
@@ -173,8 +153,6 @@
 .method public getCreditsWidth()I
     .locals 2
 
-    .prologue
-    .line 343
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->mModalFormat:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->getCreditsColumnSpan()I
@@ -199,8 +177,6 @@
 .method public getEpisodeImageWidth()I
     .locals 2
 
-    .prologue
-    .line 322
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->mModalFormat:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->getEpisodeImageColumnSpan()I
@@ -225,8 +201,6 @@
 .method public getGutterWidth()I
     .locals 2
 
-    .prologue
-    .line 270
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -245,8 +219,6 @@
 .method public getModalWidth()I
     .locals 1
 
-    .prologue
-    .line 307
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->mModalFormat:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->getModalColumnSpan()I
@@ -263,8 +235,6 @@
 .method public getNumberOfSims()I
     .locals 1
 
-    .prologue
-    .line 350
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->mModalFormat:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->getNumberOfSims()I
@@ -277,8 +247,6 @@
 .method public getPreReleaseContentWidth()I
     .locals 2
 
-    .prologue
-    .line 357
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->mModalFormat:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->getPreReleaseColumnSpan()I
@@ -303,8 +271,6 @@
 .method public getSynopsisWidth()I
     .locals 2
 
-    .prologue
-    .line 329
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->mModalFormat:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->getEpisodeSynopsisColumnSpan()I
@@ -329,8 +295,6 @@
 .method public getTotalColumnNum()I
     .locals 2
 
-    .prologue
-    .line 265
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->isOversized()Z
 
     move-result v0
@@ -346,16 +310,13 @@
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->mModalFormat:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
 
-    .line 266
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->getModalColumnSpan()I
 
     move-result v0
 
-    .line 265
     :goto_0
     return v0
 
-    .line 266
     :cond_1
     const/16 v0, 0xc
 
@@ -365,8 +326,6 @@
 .method public isOversized()Z
     .locals 2
 
-    .prologue
-    .line 315
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->mModalFormat:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
 
     sget-object v1, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->WIDE:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
@@ -401,8 +360,6 @@
 .method public isSynopsisAndCreditsInSameRow()Z
     .locals 2
 
-    .prologue
-    .line 364
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$BarkerBars;->mModalFormat:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;
 
     sget-object v1, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;->NARROW:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerHelper$ModalFormat;

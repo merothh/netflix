@@ -22,8 +22,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/pushnotification/Payload;Landroid/app/Notification$Builder;Landroid/content/Context;ILcom/netflix/mediaclient/util/gfx/ImageLoader;)V
     .locals 0
 
-    .prologue
-    .line 90
     iput-object p1, p0, Lcom/netflix/mediaclient/service/pushnotification/NotificationBuilderJellyBean$1;->val$payload:Lcom/netflix/mediaclient/service/pushnotification/Payload;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/pushnotification/NotificationBuilderJellyBean$1;->val$builder:Landroid/app/Notification$Builder;
@@ -44,15 +42,12 @@
 .method public onErrorResponse(Ljava/lang/String;)V
     .locals 5
 
-    .prologue
-    .line 121
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 122
     const-string/jumbo v0, "nf_push"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -89,7 +84,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/NotificationBuilderJellyBean$1;->val$context:Landroid/content/Context;
 
@@ -103,7 +97,6 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Lcom/netflix/mediaclient/service/pushnotification/NotificationBuilderJellyBean;->access$000(Landroid/content/Context;Lcom/netflix/mediaclient/service/pushnotification/Payload;Landroid/app/Notification$Builder;ILcom/netflix/mediaclient/util/gfx/ImageLoader;)V
 
-    .line 125
     return-void
 .end method
 
@@ -115,15 +108,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 96
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 97
     const-string/jumbo v0, "nf_push"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -160,11 +150,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 100
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 104
     invoke-static {}, Lcom/netflix/mediaclient/util/AndroidUtils;->getAndroidVersion()I
 
     move-result v0
@@ -173,17 +161,14 @@
 
     if-lt v0, v1, :cond_2
 
-    .line 105
     invoke-static {p1}, Lcom/netflix/mediaclient/util/ViewUtils;->createSquaredBitmap(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 106
     iget-object v1, p0, Lcom/netflix/mediaclient/service/pushnotification/NotificationBuilderJellyBean$1;->val$builder:Landroid/app/Notification$Builder;
 
     invoke-virtual {v1, v0}, Landroid/app/Notification$Builder;->setLargeIcon(Landroid/graphics/Bitmap;)Landroid/app/Notification$Builder;
 
-    .line 108
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/NotificationBuilderJellyBean$1;->val$context:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -196,12 +181,10 @@
 
     move-result v0
 
-    .line 109
     iget-object v1, p0, Lcom/netflix/mediaclient/service/pushnotification/NotificationBuilderJellyBean$1;->val$builder:Landroid/app/Notification$Builder;
 
     invoke-virtual {v1, v0}, Landroid/app/Notification$Builder;->setColor(I)Landroid/app/Notification$Builder;
 
-    .line 115
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/NotificationBuilderJellyBean$1;->val$context:Landroid/content/Context;
@@ -216,17 +199,14 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Lcom/netflix/mediaclient/service/pushnotification/NotificationBuilderJellyBean;->access$000(Landroid/content/Context;Lcom/netflix/mediaclient/service/pushnotification/Payload;Landroid/app/Notification$Builder;ILcom/netflix/mediaclient/util/gfx/ImageLoader;)V
 
-    .line 116
     const-string/jumbo v0, "nf_push"
 
     const-string/jumbo v1, "Large icon image set!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 117
     return-void
 
-    .line 111
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/NotificationBuilderJellyBean$1;->val$builder:Landroid/app/Notification$Builder;
 

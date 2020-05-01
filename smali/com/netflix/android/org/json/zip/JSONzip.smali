@@ -65,8 +65,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 52
     const/16 v0, 0x11
 
     new-array v0, v0, [I
@@ -75,7 +73,6 @@
 
     sput-object v0, Lcom/netflix/android/org/json/zip/JSONzip;->twos:[I
 
-    .line 60
     const/16 v0, 0xe
 
     new-array v0, v0, [B
@@ -84,7 +81,6 @@
 
     sput-object v0, Lcom/netflix/android/org/json/zip/JSONzip;->bcd:[B
 
-    .line 87
     sget-object v0, Lcom/netflix/android/org/json/zip/JSONzip;->bcd:[B
 
     array-length v0, v0
@@ -93,7 +89,6 @@
 
     return-void
 
-    .line 52
     :array_0
     .array-data 4
         0x1
@@ -115,7 +110,6 @@
         0x10000
     .end array-data
 
-    .line 60
     :array_1
     .array-data 1
         0x30t
@@ -138,7 +132,6 @@
 .method protected constructor <init>()V
     .locals 7
 
-    .prologue
     const/16 v6, 0x7d
 
     const/16 v5, 0x7a
@@ -149,10 +142,8 @@
 
     const/16 v2, 0x100
 
-    .line 184
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 185
     new-instance v0, Lcom/netflix/android/org/json/zip/Huff;
 
     const/16 v1, 0x101
@@ -161,7 +152,6 @@
 
     iput-object v0, p0, Lcom/netflix/android/org/json/zip/JSONzip;->namehuff:Lcom/netflix/android/org/json/zip/Huff;
 
-    .line 186
     new-instance v0, Lcom/netflix/android/org/json/zip/MapKeep;
 
     const/16 v1, 0x9
@@ -170,7 +160,6 @@
 
     iput-object v0, p0, Lcom/netflix/android/org/json/zip/JSONzip;->namekeep:Lcom/netflix/android/org/json/zip/MapKeep;
 
-    .line 187
     new-instance v0, Lcom/netflix/android/org/json/zip/MapKeep;
 
     const/16 v1, 0xb
@@ -179,7 +168,6 @@
 
     iput-object v0, p0, Lcom/netflix/android/org/json/zip/JSONzip;->stringkeep:Lcom/netflix/android/org/json/zip/MapKeep;
 
-    .line 188
     new-instance v0, Lcom/netflix/android/org/json/zip/Huff;
 
     const/16 v1, 0x101
@@ -188,7 +176,6 @@
 
     iput-object v0, p0, Lcom/netflix/android/org/json/zip/JSONzip;->substringhuff:Lcom/netflix/android/org/json/zip/Huff;
 
-    .line 189
     new-instance v0, Lcom/netflix/android/org/json/zip/TrieKeep;
 
     const/16 v1, 0xc
@@ -197,7 +184,6 @@
 
     iput-object v0, p0, Lcom/netflix/android/org/json/zip/JSONzip;->substringkeep:Lcom/netflix/android/org/json/zip/TrieKeep;
 
-    .line 190
     new-instance v0, Lcom/netflix/android/org/json/zip/MapKeep;
 
     const/16 v1, 0xa
@@ -206,68 +192,54 @@
 
     iput-object v0, p0, Lcom/netflix/android/org/json/zip/JSONzip;->values:Lcom/netflix/android/org/json/zip/MapKeep;
 
-    .line 197
     iget-object v0, p0, Lcom/netflix/android/org/json/zip/JSONzip;->namehuff:Lcom/netflix/android/org/json/zip/Huff;
 
     invoke-virtual {v0, v3, v6}, Lcom/netflix/android/org/json/zip/Huff;->tick(II)V
 
-    .line 198
     iget-object v0, p0, Lcom/netflix/android/org/json/zip/JSONzip;->namehuff:Lcom/netflix/android/org/json/zip/Huff;
 
     invoke-virtual {v0, v4, v5}, Lcom/netflix/android/org/json/zip/Huff;->tick(II)V
 
-    .line 199
     iget-object v0, p0, Lcom/netflix/android/org/json/zip/JSONzip;->namehuff:Lcom/netflix/android/org/json/zip/Huff;
 
     invoke-virtual {v0, v2}, Lcom/netflix/android/org/json/zip/Huff;->tick(I)V
 
-    .line 200
     iget-object v0, p0, Lcom/netflix/android/org/json/zip/JSONzip;->namehuff:Lcom/netflix/android/org/json/zip/Huff;
 
     invoke-virtual {v0, v2}, Lcom/netflix/android/org/json/zip/Huff;->tick(I)V
 
-    .line 201
     iget-object v0, p0, Lcom/netflix/android/org/json/zip/JSONzip;->substringhuff:Lcom/netflix/android/org/json/zip/Huff;
 
     invoke-virtual {v0, v3, v6}, Lcom/netflix/android/org/json/zip/Huff;->tick(II)V
 
-    .line 202
     iget-object v0, p0, Lcom/netflix/android/org/json/zip/JSONzip;->substringhuff:Lcom/netflix/android/org/json/zip/Huff;
 
     invoke-virtual {v0, v4, v5}, Lcom/netflix/android/org/json/zip/Huff;->tick(II)V
 
-    .line 203
     iget-object v0, p0, Lcom/netflix/android/org/json/zip/JSONzip;->substringhuff:Lcom/netflix/android/org/json/zip/Huff;
 
     invoke-virtual {v0, v2}, Lcom/netflix/android/org/json/zip/Huff;->tick(I)V
 
-    .line 204
     iget-object v0, p0, Lcom/netflix/android/org/json/zip/JSONzip;->substringhuff:Lcom/netflix/android/org/json/zip/Huff;
 
     invoke-virtual {v0, v2}, Lcom/netflix/android/org/json/zip/Huff;->tick(I)V
 
-    .line 205
     return-void
 .end method
 
 .method static log()V
     .locals 1
 
-    .prologue
-    .line 219
     const-string/jumbo v0, "\n"
 
     invoke-static {v0}, Lcom/netflix/android/org/json/zip/JSONzip;->log(Ljava/lang/String;)V
 
-    .line 220
     return-void
 .end method
 
 .method static log(I)V
     .locals 2
 
-    .prologue
-    .line 228
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -288,15 +260,12 @@
 
     invoke-static {v0}, Lcom/netflix/android/org/json/zip/JSONzip;->log(Ljava/lang/String;)V
 
-    .line 229
     return-void
 .end method
 
 .method static log(II)V
     .locals 2
 
-    .prologue
-    .line 238
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -327,28 +296,22 @@
 
     invoke-static {v0}, Lcom/netflix/android/org/json/zip/JSONzip;->log(Ljava/lang/String;)V
 
-    .line 239
     return-void
 .end method
 
 .method static log(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 247
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {v0, p0}, Ljava/io/PrintStream;->print(Ljava/lang/String;)V
 
-    .line 248
     return-void
 .end method
 
 .method static logchar(II)V
     .locals 2
 
-    .prologue
-    .line 257
     const/16 v0, 0x20
 
     if-le p0, v0, :cond_0
@@ -357,7 +320,6 @@
 
     if-gt p0, v0, :cond_0
 
-    .line 258
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -396,11 +358,9 @@
 
     invoke-static {v0}, Lcom/netflix/android/org/json/zip/JSONzip;->log(Ljava/lang/String;)V
 
-    .line 262
     :goto_0
     return-void
 
-    .line 260
     :cond_0
     invoke-static {p0, p1}, Lcom/netflix/android/org/json/zip/JSONzip;->log(II)V
 
@@ -412,29 +372,22 @@
 .method protected begin()V
     .locals 1
 
-    .prologue
-    .line 211
     iget-object v0, p0, Lcom/netflix/android/org/json/zip/JSONzip;->namehuff:Lcom/netflix/android/org/json/zip/Huff;
 
     invoke-virtual {v0}, Lcom/netflix/android/org/json/zip/Huff;->generate()V
 
-    .line 212
     iget-object v0, p0, Lcom/netflix/android/org/json/zip/JSONzip;->substringhuff:Lcom/netflix/android/org/json/zip/Huff;
 
     invoke-virtual {v0}, Lcom/netflix/android/org/json/zip/Huff;->generate()V
 
-    .line 213
     return-void
 .end method
 
 .method public postMortem(Lcom/netflix/android/org/json/zip/PostMortem;)Z
     .locals 2
 
-    .prologue
-    .line 273
     check-cast p1, Lcom/netflix/android/org/json/zip/JSONzip;
 
-    .line 274
     iget-object v0, p0, Lcom/netflix/android/org/json/zip/JSONzip;->namehuff:Lcom/netflix/android/org/json/zip/Huff;
 
     iget-object v1, p1, Lcom/netflix/android/org/json/zip/JSONzip;->namehuff:Lcom/netflix/android/org/json/zip/Huff;
@@ -449,7 +402,6 @@
 
     iget-object v1, p1, Lcom/netflix/android/org/json/zip/JSONzip;->namekeep:Lcom/netflix/android/org/json/zip/MapKeep;
 
-    .line 275
     invoke-virtual {v0, v1}, Lcom/netflix/android/org/json/zip/MapKeep;->postMortem(Lcom/netflix/android/org/json/zip/PostMortem;)Z
 
     move-result v0
@@ -460,7 +412,6 @@
 
     iget-object v1, p1, Lcom/netflix/android/org/json/zip/JSONzip;->stringkeep:Lcom/netflix/android/org/json/zip/MapKeep;
 
-    .line 276
     invoke-virtual {v0, v1}, Lcom/netflix/android/org/json/zip/MapKeep;->postMortem(Lcom/netflix/android/org/json/zip/PostMortem;)Z
 
     move-result v0
@@ -471,7 +422,6 @@
 
     iget-object v1, p1, Lcom/netflix/android/org/json/zip/JSONzip;->substringhuff:Lcom/netflix/android/org/json/zip/Huff;
 
-    .line 277
     invoke-virtual {v0, v1}, Lcom/netflix/android/org/json/zip/Huff;->postMortem(Lcom/netflix/android/org/json/zip/PostMortem;)Z
 
     move-result v0
@@ -482,7 +432,6 @@
 
     iget-object v1, p1, Lcom/netflix/android/org/json/zip/JSONzip;->substringkeep:Lcom/netflix/android/org/json/zip/TrieKeep;
 
-    .line 278
     invoke-virtual {v0, v1}, Lcom/netflix/android/org/json/zip/TrieKeep;->postMortem(Lcom/netflix/android/org/json/zip/PostMortem;)Z
 
     move-result v0
@@ -493,7 +442,6 @@
 
     iget-object v1, p1, Lcom/netflix/android/org/json/zip/JSONzip;->values:Lcom/netflix/android/org/json/zip/MapKeep;
 
-    .line 279
     invoke-virtual {v0, v1}, Lcom/netflix/android/org/json/zip/MapKeep;->postMortem(Lcom/netflix/android/org/json/zip/PostMortem;)Z
 
     move-result v0

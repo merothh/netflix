@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)V
     .locals 0
 
-    .prologue
-    .line 2440
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$EndOfBrowsePlayRunnable;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public run()V
     .locals 7
 
-    .prologue
-    .line 2443
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$EndOfBrowsePlayRunnable;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->isActivityValid()Z
@@ -38,7 +34,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2444
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$EndOfBrowsePlayRunnable;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$200(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/servicemgr/IPlayer;
@@ -51,14 +46,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 2446
     const-string/jumbo v0, "PlayerFragment"
 
     const-string/jumbo v1, "reportBrowsePlayEndRunnable() - reporting"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2448
     :try_start_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$EndOfBrowsePlayRunnable;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
@@ -78,7 +71,6 @@
 
     move-result-wide v2
 
-    .line 2449
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$EndOfBrowsePlayRunnable;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->access$400(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Lcom/netflix/mediaclient/servicemgr/Asset;
@@ -97,10 +89,8 @@
 
     move-result v4
 
-    .line 2450
     const/16 v5, 0x78
 
-    .line 2451
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$EndOfBrowsePlayRunnable;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getPlayer()Lcom/netflix/mediaclient/servicemgr/IPlayer;
@@ -113,7 +103,6 @@
 
     div-int/lit16 v6, v0, 0x3e8
 
-    .line 2452
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$EndOfBrowsePlayRunnable;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -126,7 +115,6 @@
 
     invoke-interface/range {v1 .. v6}, Lcom/netflix/mediaclient/servicemgr/IBrowseManager;->endBrowsePlaySession(JIII)V
 
-    .line 2453
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayerFragment$EndOfBrowsePlayRunnable;->this$0:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     const/4 v1, 0x1
@@ -135,23 +123,19 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2464
     :cond_0
     :goto_0
     return-void
 
-    .line 2454
     :catch_0
     move-exception v0
 
-    .line 2455
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 2456
     const-string/jumbo v1, "PlayerFragment"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -174,7 +158,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2458
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -198,7 +181,6 @@
 
     goto :goto_0
 
-    .line 2461
     :cond_2
     const-string/jumbo v0, "PlayerFragment"
 

@@ -24,8 +24,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;Ljava/lang/String;Lcom/netflix/mediaclient/ui/common/PlayContext;Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;Lcom/netflix/model/leafs/social/IrisNotificationSummary;I)V
     .locals 0
 
-    .prologue
-    .line 410
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag$2;->this$0:Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag$2;->val$videoId:Ljava/lang/String;
@@ -48,10 +46,8 @@
 .method public onClick(Landroid/view/View;)V
     .locals 6
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 413
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag$2;->this$0:Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag$2;->val$videoId:Ljava/lang/String;
@@ -62,7 +58,6 @@
 
     invoke-static {v0, v1, v2, v4}, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;->access$1300(Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;Ljava/lang/String;Lcom/netflix/mediaclient/ui/common/PlayContext;Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;)V
 
-    .line 415
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag$2;->this$0:Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag$2;->val$summary:Lcom/netflix/model/leafs/social/IrisNotificationSummary;
@@ -73,7 +68,6 @@
 
     move-result-object v5
 
-    .line 416
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag$2;->this$0:Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;->getActivity()Landroid/app/Activity;
@@ -88,7 +82,6 @@
 
     invoke-static/range {v0 .. v5}, Lcom/netflix/mediaclient/util/log/UIViewLogUtils;->reportUIViewCommandStarted(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;Lcom/netflix/mediaclient/service/logging/client/model/DataContext;Ljava/lang/String;Lorg/json/JSONObject;)V
 
-    .line 417
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag$2;->this$0:Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;->getActivity()Landroid/app/Activity;
@@ -97,6 +90,5 @@
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/log/UIViewLogUtils;->reportUIViewCommandEnded(Landroid/content/Context;)V
 
-    .line 418
     return-void
 .end method

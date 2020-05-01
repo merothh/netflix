@@ -19,8 +19,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,26 +27,18 @@
 .method public constructor <init>(ZLjava/lang/String;Ljava/lang/String;II)V
     .locals 0
 
-    .prologue
-    .line 84
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 85
     iput-boolean p1, p0, Lcom/netflix/mediaclient/util/WebApiUtils$VideoIds;->isEpisode:Z
 
-    .line 86
     iput-object p2, p0, Lcom/netflix/mediaclient/util/WebApiUtils$VideoIds;->episodeIdUrl:Ljava/lang/String;
 
-    .line 87
     iput-object p3, p0, Lcom/netflix/mediaclient/util/WebApiUtils$VideoIds;->catalogIdUrl:Ljava/lang/String;
 
-    .line 88
     iput p4, p0, Lcom/netflix/mediaclient/util/WebApiUtils$VideoIds;->episodeId:I
 
-    .line 89
     iput p5, p0, Lcom/netflix/mediaclient/util/WebApiUtils$VideoIds;->catalogId:I
 
-    .line 90
     return-void
 .end method
 
@@ -57,8 +47,6 @@
 .method public getVideoType()Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
     .locals 1
 
-    .prologue
-    .line 123
     iget-boolean v0, p0, Lcom/netflix/mediaclient/util/WebApiUtils$VideoIds;->isEpisode:Z
 
     if-eqz v0, :cond_0

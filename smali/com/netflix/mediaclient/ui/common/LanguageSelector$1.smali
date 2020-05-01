@@ -20,8 +20,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/common/LanguageSelector;Lcom/netflix/mediaclient/ui/common/LanguageSelector$AudioAdapter;Lcom/netflix/mediaclient/media/Language;Lcom/netflix/mediaclient/ui/common/LanguageSelector$SubtitleAdapter;)V
     .locals 0
 
-    .prologue
-    .line 113
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelector$1;->this$0:Lcom/netflix/mediaclient/ui/common/LanguageSelector;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelector$1;->val$audioAdapter:Lcom/netflix/mediaclient/ui/common/LanguageSelector$AudioAdapter;
@@ -49,22 +47,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 117
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelector$1;->val$audioAdapter:Lcom/netflix/mediaclient/ui/common/LanguageSelector$AudioAdapter;
 
     invoke-virtual {v0, p3}, Lcom/netflix/mediaclient/ui/common/LanguageSelector$AudioAdapter;->getItem(I)Lcom/netflix/mediaclient/media/AudioSource;
 
     move-result-object v0
 
-    .line 118
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 119
     const-string/jumbo v1, "nf_language_selector"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -97,7 +91,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 121
     :cond_0
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelector$1;->val$language:Lcom/netflix/mediaclient/media/Language;
 
@@ -105,36 +98,29 @@
 
     move-result-object v1
 
-    .line 122
     if-eq v1, v0, :cond_1
 
-    .line 123
     const-string/jumbo v1, "nf_language_selector"
 
     const-string/jumbo v2, "Audio is changed, refresh both views"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelector$1;->val$language:Lcom/netflix/mediaclient/media/Language;
 
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/media/Language;->setSelectedAudio(Lcom/netflix/mediaclient/media/AudioSource;)Lcom/netflix/mediaclient/media/AudioSource;
 
-    .line 125
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelector$1;->val$audioAdapter:Lcom/netflix/mediaclient/ui/common/LanguageSelector$AudioAdapter;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/common/LanguageSelector$AudioAdapter;->notifyDataSetChanged()V
 
-    .line 126
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/LanguageSelector$1;->val$subtitleAdapter:Lcom/netflix/mediaclient/ui/common/LanguageSelector$SubtitleAdapter;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/common/LanguageSelector$SubtitleAdapter;->notifyDataSetChanged()V
 
-    .line 130
     :goto_0
     return-void
 
-    .line 128
     :cond_1
     const-string/jumbo v0, "nf_language_selector"
 

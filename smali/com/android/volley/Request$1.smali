@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/android/volley/Request;Ljava/lang/String;J)V
     .locals 1
 
-    .prologue
-    .line 227
     iput-object p1, p0, Lcom/android/volley/Request$1;->this$0:Lcom/android/volley/Request;
 
     iput-object p2, p0, Lcom/android/volley/Request$1;->val$tag:Ljava/lang/String;
@@ -36,8 +34,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 230
     iget-object v0, p0, Lcom/android/volley/Request$1;->this$0:Lcom/android/volley/Request;
 
     invoke-static {v0}, Lcom/android/volley/Request;->access$000(Lcom/android/volley/Request;)Lcom/android/volley/VolleyLog$MarkerLog;
@@ -50,7 +46,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/volley/VolleyLog$MarkerLog;->add(Ljava/lang/String;J)V
 
-    .line 231
     iget-object v0, p0, Lcom/android/volley/Request$1;->this$0:Lcom/android/volley/Request;
 
     invoke-static {v0}, Lcom/android/volley/Request;->access$000(Lcom/android/volley/Request;)Lcom/android/volley/VolleyLog$MarkerLog;
@@ -63,6 +58,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/volley/VolleyLog$MarkerLog;->finish(Ljava/lang/String;)V
 
-    .line 232
     return-void
 .end method

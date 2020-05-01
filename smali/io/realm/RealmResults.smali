@@ -82,135 +82,102 @@
         }
     .end annotation
 
-    .prologue
     const/4 v3, 0x0
 
     const/4 v2, 0x0
 
-    .line 125
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
-    .line 78
     iput-object v2, p0, Lio/realm/RealmResults;->table:Lio/realm/internal/TableOrView;
 
-    .line 83
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lio/realm/RealmResults;->currentTableViewVersion:J
 
-    .line 85
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v0, p0, Lio/realm/RealmResults;->listeners:Ljava/util/List;
 
-    .line 87
     iput-boolean v3, p0, Lio/realm/RealmResults;->asyncQueryCompleted:Z
 
-    .line 90
     iput-boolean v3, p0, Lio/realm/RealmResults;->viewUpdated:Z
 
-    .line 126
     iput-object p1, p0, Lio/realm/RealmResults;->realm:Lio/realm/BaseRealm;
 
-    .line 127
     iput-object p3, p0, Lio/realm/RealmResults;->classSpec:Ljava/lang/Class;
 
-    .line 128
     iput-object p2, p0, Lio/realm/RealmResults;->table:Lio/realm/internal/TableOrView;
 
-    .line 130
     iput-object v2, p0, Lio/realm/RealmResults;->pendingQuery:Ljava/util/concurrent/Future;
 
-    .line 131
     iput-object v2, p0, Lio/realm/RealmResults;->query:Lio/realm/internal/TableQuery;
 
-    .line 132
     invoke-interface {p2}, Lio/realm/internal/TableOrView;->syncIfNeeded()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lio/realm/RealmResults;->currentTableViewVersion:J
 
-    .line 133
     return-void
 .end method
 
 .method private constructor <init>(Lio/realm/BaseRealm;Lio/realm/internal/TableOrView;Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 144
     invoke-direct {p0, p1, p3}, Lio/realm/RealmResults;-><init>(Lio/realm/BaseRealm;Ljava/lang/String;)V
 
-    .line 145
     iput-object p2, p0, Lio/realm/RealmResults;->table:Lio/realm/internal/TableOrView;
 
-    .line 146
     invoke-interface {p2}, Lio/realm/internal/TableOrView;->syncIfNeeded()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lio/realm/RealmResults;->currentTableViewVersion:J
 
-    .line 147
     return-void
 .end method
 
 .method private constructor <init>(Lio/realm/BaseRealm;Ljava/lang/String;)V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
     const/4 v2, 0x0
 
-    .line 135
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
-    .line 78
     iput-object v2, p0, Lio/realm/RealmResults;->table:Lio/realm/internal/TableOrView;
 
-    .line 83
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lio/realm/RealmResults;->currentTableViewVersion:J
 
-    .line 85
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v0, p0, Lio/realm/RealmResults;->listeners:Ljava/util/List;
 
-    .line 87
     iput-boolean v3, p0, Lio/realm/RealmResults;->asyncQueryCompleted:Z
 
-    .line 90
     iput-boolean v3, p0, Lio/realm/RealmResults;->viewUpdated:Z
 
-    .line 136
     iput-object p1, p0, Lio/realm/RealmResults;->realm:Lio/realm/BaseRealm;
 
-    .line 137
     iput-object p2, p0, Lio/realm/RealmResults;->className:Ljava/lang/String;
 
-    .line 139
     iput-object v2, p0, Lio/realm/RealmResults;->pendingQuery:Ljava/util/concurrent/Future;
 
-    .line 140
     iput-object v2, p0, Lio/realm/RealmResults;->query:Lio/realm/internal/TableQuery;
 
-    .line 141
     return-void
 .end method
 
 .method static synthetic access$000(Lio/realm/RealmResults;)J
     .locals 2
 
-    .prologue
-    .line 71
     iget-wide v0, p0, Lio/realm/RealmResults;->currentTableViewVersion:J
 
     return-wide v0
@@ -219,8 +186,6 @@
 .method static synthetic access$100(Lio/realm/RealmResults;)Lio/realm/internal/TableOrView;
     .locals 1
 
-    .prologue
-    .line 71
     iget-object v0, p0, Lio/realm/RealmResults;->table:Lio/realm/internal/TableOrView;
 
     return-object v0
@@ -242,18 +207,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 108
     new-instance v0, Lio/realm/RealmResults;
 
     invoke-direct {v0, p0, p1, p2}, Lio/realm/RealmResults;-><init>(Lio/realm/BaseRealm;Lio/realm/internal/TableOrView;Ljava/lang/String;)V
 
-    .line 109
     iget-object v1, p0, Lio/realm/BaseRealm;->handlerController:Lio/realm/HandlerController;
 
     invoke-virtual {v1, v0}, Lio/realm/HandlerController;->addToRealmResults(Lio/realm/RealmResults;)V
 
-    .line 110
     return-object v0
 .end method
 
@@ -273,18 +234,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 98
     new-instance v0, Lio/realm/RealmResults;
 
     invoke-direct {v0, p0, p1, p2}, Lio/realm/RealmResults;-><init>(Lio/realm/BaseRealm;Lio/realm/internal/TableOrView;Ljava/lang/Class;)V
 
-    .line 99
     iget-object v1, p0, Lio/realm/BaseRealm;->handlerController:Lio/realm/HandlerController;
 
     invoke-virtual {v1, v0}, Lio/realm/HandlerController;->addToRealmResults(Lio/realm/RealmResults;)V
 
-    .line 100
     return-object v0
 .end method
 
@@ -301,8 +258,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 688
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string/jumbo v1, "This method is not supported by RealmResults."
@@ -317,8 +272,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 71
     check-cast p2, Lio/realm/RealmModel;
 
     invoke-virtual {p0, p1, p2}, Lio/realm/RealmResults;->add(ILio/realm/RealmModel;)V
@@ -337,8 +290,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 677
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string/jumbo v1, "This method is not supported by RealmResults."
@@ -353,8 +304,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 71
     check-cast p1, Lio/realm/RealmModel;
 
     invoke-virtual {p0, p1}, Lio/realm/RealmResults;->add(Lio/realm/RealmModel;)Z
@@ -377,8 +326,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 699
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string/jumbo v1, "This method is not supported by RealmResults."
@@ -401,8 +348,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 710
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string/jumbo v1, "This method is not supported by RealmResults."
@@ -417,8 +362,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 666
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string/jumbo v1, "This method is not supported by RealmResults."
@@ -431,11 +374,8 @@
 .method public contains(Ljava/lang/Object;)Z
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 192
-    .line 193
     invoke-virtual {p0}, Lio/realm/RealmResults;->isLoaded()Z
 
     move-result v1
@@ -446,10 +386,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 194
     check-cast p1, Lio/realm/internal/RealmObjectProxy;
 
-    .line 195
     iget-object v1, p0, Lio/realm/RealmResults;->realm:Lio/realm/BaseRealm;
 
     invoke-virtual {v1}, Lio/realm/BaseRealm;->getPath()Ljava/lang/String;
@@ -486,7 +424,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 196
     iget-object v1, p0, Lio/realm/RealmResults;->table:Lio/realm/internal/TableOrView;
 
     invoke-interface {p1}, Lio/realm/internal/RealmObjectProxy;->realmGet$proxyState()Lio/realm/ProxyState;
@@ -513,7 +450,6 @@
 
     const/4 v0, 0x1
 
-    .line 199
     :cond_0
     return v0
 .end method
@@ -521,31 +457,24 @@
 .method public deleteAllFromRealm()Z
     .locals 1
 
-    .prologue
-    .line 263
     iget-object v0, p0, Lio/realm/RealmResults;->realm:Lio/realm/BaseRealm;
 
     invoke-virtual {v0}, Lio/realm/BaseRealm;->checkIfValid()V
 
-    .line 264
     invoke-virtual {p0}, Lio/realm/RealmResults;->size()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
-    .line 265
     invoke-virtual {p0}, Lio/realm/RealmResults;->getTableOrView()Lio/realm/internal/TableOrView;
 
     move-result-object v0
 
-    .line 266
     invoke-interface {v0}, Lio/realm/internal/TableOrView;->clear()V
 
-    .line 267
     const/4 v0, 0x1
 
-    .line 269
     :goto_0
     return v0
 
@@ -563,23 +492,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 212
     iget-object v0, p0, Lio/realm/RealmResults;->realm:Lio/realm/BaseRealm;
 
     invoke-virtual {v0}, Lio/realm/BaseRealm;->checkIfValid()V
 
-    .line 213
     invoke-virtual {p0}, Lio/realm/RealmResults;->getTableOrView()Lio/realm/internal/TableOrView;
 
     move-result-object v0
 
-    .line 214
     instance-of v1, v0, Lio/realm/internal/TableView;
 
     if-eqz v1, :cond_0
 
-    .line 215
     iget-object v1, p0, Lio/realm/RealmResults;->realm:Lio/realm/BaseRealm;
 
     iget-object v2, p0, Lio/realm/RealmResults;->classSpec:Ljava/lang/Class;
@@ -598,11 +522,9 @@
 
     move-result-object v0
 
-    .line 220
     :goto_0
     return-object v0
 
-    .line 217
     :cond_0
     iget-object v0, p0, Lio/realm/RealmResults;->realm:Lio/realm/BaseRealm;
 
@@ -622,8 +544,6 @@
 .method public bridge synthetic get(I)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 71
     invoke-virtual {p0, p1}, Lio/realm/RealmResults;->get(I)Lio/realm/RealmModel;
 
     move-result-object v0
@@ -634,13 +554,10 @@
 .method getTableOrView()Lio/realm/internal/TableOrView;
     .locals 2
 
-    .prologue
-    .line 150
     iget-object v0, p0, Lio/realm/RealmResults;->table:Lio/realm/internal/TableOrView;
 
     if-nez v0, :cond_0
 
-    .line 151
     iget-object v0, p0, Lio/realm/RealmResults;->realm:Lio/realm/BaseRealm;
 
     iget-object v0, v0, Lio/realm/BaseRealm;->schema:Lio/realm/RealmSchema;
@@ -651,7 +568,6 @@
 
     move-result-object v0
 
-    .line 153
     :goto_0
     return-object v0
 
@@ -664,13 +580,10 @@
 .method public isLoaded()Z
     .locals 1
 
-    .prologue
-    .line 881
     iget-object v0, p0, Lio/realm/RealmResults;->realm:Lio/realm/BaseRealm;
 
     invoke-virtual {v0}, Lio/realm/BaseRealm;->checkIfValid()V
 
-    .line 882
     iget-object v0, p0, Lio/realm/RealmResults;->pendingQuery:Ljava/util/concurrent/Future;
 
     if-eqz v0, :cond_0
@@ -701,15 +614,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 282
     invoke-virtual {p0}, Lio/realm/RealmResults;->isLoaded()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 284
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
@@ -718,7 +628,6 @@
 
     move-result-object v0
 
-    .line 286
     :goto_0
     return-object v0
 
@@ -740,15 +649,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 298
     invoke-virtual {p0}, Lio/realm/RealmResults;->isLoaded()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 300
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
@@ -757,7 +663,6 @@
 
     move-result-object v0
 
-    .line 302
     :goto_0
     return-object v0
 
@@ -781,15 +686,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 316
     invoke-virtual {p0}, Lio/realm/RealmResults;->isLoaded()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 318
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
@@ -798,7 +700,6 @@
 
     move-result-object v0
 
-    .line 320
     :goto_0
     return-object v0
 
@@ -813,8 +714,6 @@
 .method notifyChangeListeners(Z)V
     .locals 2
 
-    .prologue
-    .line 1016
     iget-object v0, p0, Lio/realm/RealmResults;->listeners:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -823,7 +722,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1019
     iget-object v0, p0, Lio/realm/RealmResults;->pendingQuery:Ljava/util/concurrent/Future;
 
     if-eqz v0, :cond_1
@@ -832,11 +730,9 @@
 
     if-nez v0, :cond_1
 
-    .line 1026
     :cond_0
     return-void
 
-    .line 1020
     :cond_1
     iget-boolean v0, p0, Lio/realm/RealmResults;->viewUpdated:Z
 
@@ -844,13 +740,11 @@
 
     if-eqz p1, :cond_0
 
-    .line 1021
     :cond_2
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lio/realm/RealmResults;->viewUpdated:Z
 
-    .line 1022
     iget-object v0, p0, Lio/realm/RealmResults;->listeners:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -870,7 +764,6 @@
 
     check-cast v0, Lio/realm/RealmChangeListener;
 
-    .line 1023
     invoke-interface {v0, p0}, Lio/realm/RealmChangeListener;->onChange(Ljava/lang/Object;)V
 
     goto :goto_0
@@ -887,8 +780,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 562
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string/jumbo v1, "This method is not supported by RealmResults."
@@ -903,8 +794,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 71
     invoke-virtual {p0, p1}, Lio/realm/RealmResults;->remove(I)Lio/realm/RealmModel;
 
     move-result-object v0
@@ -917,8 +806,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 573
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string/jumbo v1, "This method is not supported by RealmResults."
@@ -941,8 +828,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 584
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string/jumbo v1, "This method is not supported by RealmResults."
@@ -965,8 +850,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 608
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string/jumbo v1, "This method is not supported by RealmResults."
@@ -987,8 +870,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 595
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string/jumbo v1, "This method is not supported by RealmResults."
@@ -1003,8 +884,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 71
     check-cast p2, Lio/realm/RealmModel;
 
     invoke-virtual {p0, p1, p2}, Lio/realm/RealmResults;->set(ILio/realm/RealmModel;)Lio/realm/RealmModel;
@@ -1017,22 +896,17 @@
 .method public size()I
     .locals 4
 
-    .prologue
-    .line 381
     invoke-virtual {p0}, Lio/realm/RealmResults;->isLoaded()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 382
     const/4 v0, 0x0
 
-    .line 385
     :goto_0
     return v0
 
-    .line 384
     :cond_0
     invoke-virtual {p0}, Lio/realm/RealmResults;->getTableOrView()Lio/realm/internal/TableOrView;
 
@@ -1042,7 +916,6 @@
 
     move-result-wide v0
 
-    .line 385
     const-wide/32 v2, 0x7fffffff
 
     cmp-long v2, v0, v2
@@ -1062,8 +935,6 @@
 .method swapTableViewPointer(J)V
     .locals 3
 
-    .prologue
-    .line 849
     :try_start_0
     iget-object v0, p0, Lio/realm/RealmResults;->query:Lio/realm/internal/TableQuery;
 
@@ -1077,21 +948,17 @@
 
     iput-object v0, p0, Lio/realm/RealmResults;->table:Lio/realm/internal/TableOrView;
 
-    .line 850
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lio/realm/RealmResults;->asyncQueryCompleted:Z
     :try_end_0
     .catch Lio/realm/internal/async/BadVersionException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 854
     return-void
 
-    .line 851
     :catch_0
     move-exception v0
 
-    .line 852
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "Caller and Worker Realm should have been at the same version"
@@ -1104,15 +971,12 @@
 .method syncIfNeeded()V
     .locals 4
 
-    .prologue
-    .line 637
     iget-object v0, p0, Lio/realm/RealmResults;->table:Lio/realm/internal/TableOrView;
 
     invoke-interface {v0}, Lio/realm/internal/TableOrView;->syncIfNeeded()J
 
     move-result-wide v2
 
-    .line 638
     iget-wide v0, p0, Lio/realm/RealmResults;->currentTableViewVersion:J
 
     cmp-long v0, v2, v0
@@ -1124,13 +988,10 @@
     :goto_0
     iput-boolean v0, p0, Lio/realm/RealmResults;->viewUpdated:Z
 
-    .line 639
     iput-wide v2, p0, Lio/realm/RealmResults;->currentTableViewVersion:J
 
-    .line 640
     return-void
 
-    .line 638
     :cond_0
     const/4 v0, 0x0
 

@@ -38,7 +38,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -49,7 +48,6 @@
 
     const/4 v3, 0x0
 
-    .line 102
     new-instance v0, Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
 
     const-string/jumbo v1, "sign"
@@ -58,7 +56,6 @@
 
     sput-object v0, Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;->sign:Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
 
-    .line 103
     new-instance v0, Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
 
     const-string/jumbo v1, "verify"
@@ -67,7 +64,6 @@
 
     sput-object v0, Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;->verify:Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
 
-    .line 104
     new-instance v0, Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
 
     const-string/jumbo v1, "encrypt"
@@ -76,7 +72,6 @@
 
     sput-object v0, Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;->encrypt:Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
 
-    .line 105
     new-instance v0, Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
 
     const-string/jumbo v1, "decrypt"
@@ -85,7 +80,6 @@
 
     sput-object v0, Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;->decrypt:Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
 
-    .line 106
     new-instance v0, Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
 
     const-string/jumbo v1, "wrapKey"
@@ -94,7 +88,6 @@
 
     sput-object v0, Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;->wrapKey:Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
 
-    .line 107
     new-instance v0, Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
 
     const-string/jumbo v1, "unwrapKey"
@@ -105,7 +98,6 @@
 
     sput-object v0, Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;->unwrapKey:Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
 
-    .line 108
     new-instance v0, Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
 
     const-string/jumbo v1, "deriveKey"
@@ -116,7 +108,6 @@
 
     sput-object v0, Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;->deriveKey:Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
 
-    .line 109
     new-instance v0, Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
 
     const-string/jumbo v1, "deriveBits"
@@ -127,7 +118,6 @@
 
     sput-object v0, Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;->deriveBits:Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
 
-    .line 101
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
@@ -183,8 +173,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 101
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -193,8 +181,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
     .locals 1
 
-    .prologue
-    .line 101
     const-class v0, Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -209,8 +195,6 @@
 .method public static values()[Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
     .locals 1
 
-    .prologue
-    .line 101
     sget-object v0, Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;->$VALUES:[Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;
 
     invoke-virtual {v0}, [Lcom/netflix/msl/crypto/JsonWebKey$KeyOp;->clone()Ljava/lang/Object;

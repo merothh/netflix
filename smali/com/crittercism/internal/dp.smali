@@ -10,8 +10,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 11
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/crittercism/internal/dp;->a:Z
@@ -22,18 +20,14 @@
 .method public static a(Landroid/content/Context;)Ljava/lang/Boolean;
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 22
-    .line 1018
     const-string/jumbo v0, "com.crittercism.usersettings"
 
     invoke-virtual {p0, v0, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 22
     const-string/jumbo v1, "crashedOnLastLoad"
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
@@ -50,9 +44,6 @@
 .method public static a(Landroid/content/Context;Z)V
     .locals 2
 
-    .prologue
-    .line 26
-    .line 2018
     const-string/jumbo v0, "com.crittercism.usersettings"
 
     const/4 v1, 0x0
@@ -61,19 +52,15 @@
 
     move-result-object v0
 
-    .line 26
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 27
     const-string/jumbo v1, "crashedOnLastLoad"
 
     invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 28
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 29
     return-void
 .end method

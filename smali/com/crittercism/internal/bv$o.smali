@@ -13,20 +13,16 @@
 .method public constructor <init>()V
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 155
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 153
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/crittercism/internal/bv$o;->a:Ljava/lang/Integer;
 
-    .line 158
     :try_start_0
     invoke-static {}, Lcom/crittercism/internal/bv;->b()Landroid/content/Context;
 
@@ -40,15 +36,12 @@
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    .line 159
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 160
     if-eqz v0, :cond_0
 
-    .line 161
     const/4 v1, 0x0
 
     const/4 v2, 0x3
@@ -67,7 +60,6 @@
 
     iput-object v0, p0, Lcom/crittercism/internal/bv$o;->a:Ljava/lang/Integer;
 
-    .line 163
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -89,7 +81,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 166
     :goto_0
     return-void
 
@@ -104,8 +95,6 @@
 .method public final a()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 169
     const-string/jumbo v0, "mobile_country_code"
 
     return-object v0
@@ -114,11 +103,7 @@
 .method public final bridge synthetic b()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 152
-    .line 1173
     iget-object v0, p0, Lcom/crittercism/internal/bv$o;->a:Ljava/lang/Integer;
 
-    .line 152
     return-object v0
 .end method

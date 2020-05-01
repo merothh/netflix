@@ -59,8 +59,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 76
     new-instance v0, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary$1;
 
     invoke-direct {v0}, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary$1;-><init>()V
@@ -73,30 +71,22 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
     return-void
 .end method
 
 .method protected constructor <init>(Landroid/os/Parcel;)V
     .locals 4
 
-    .prologue
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 68
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readStringArray([Ljava/lang/String;)V
 
-    .line 69
     const/4 v1, 0x0
 
     aget-object v1, v0, v1
@@ -111,14 +101,12 @@
 
     iput-wide v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;->length:J
 
-    .line 70
     const/4 v1, 0x1
 
     aget-object v1, v0, v1
 
     iput-object v1, p0, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;->requestId:Ljava/lang/String;
 
-    .line 71
     const/4 v1, 0x2
 
     aget-object v1, v0, v1
@@ -133,7 +121,6 @@
 
     iput v1, p0, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;->baseTrackId:I
 
-    .line 72
     const/4 v1, 0x3
 
     aget-object v1, v0, v1
@@ -148,7 +135,6 @@
 
     iput v1, p0, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;->mdpTrackId:I
 
-    .line 73
     const/4 v1, 0x4
 
     aget-object v0, v0, v1
@@ -163,7 +149,6 @@
 
     iput v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;->playerTrackId:I
 
-    .line 74
     return-void
 .end method
 
@@ -172,8 +157,6 @@
 .method public describeContents()I
     .locals 1
 
-    .prologue
-    .line 100
     const/4 v0, 0x0
 
     return v0
@@ -182,26 +165,21 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 110
     if-eqz p1, :cond_0
 
     instance-of v1, p1, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;
 
     if-nez v1, :cond_1
 
-    .line 115
     :cond_0
     :goto_0
     return v0
 
-    .line 113
     :cond_1
     check-cast p1, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;
 
-    .line 115
     invoke-virtual {p0}, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;->getLength()J
 
     move-result-wide v2
@@ -224,7 +202,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 116
     invoke-virtual {p0}, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;->getMDPTrackId()I
 
     move-result v1
@@ -253,8 +230,6 @@
 .method public getBaseTrackId()I
     .locals 1
 
-    .prologue
-    .line 52
     iget v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;->baseTrackId:I
 
     return v0
@@ -263,8 +238,6 @@
 .method public getLength()J
     .locals 2
 
-    .prologue
-    .line 44
     iget-wide v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;->length:J
 
     return-wide v0
@@ -273,8 +246,6 @@
 .method public getMDPTrackId()I
     .locals 1
 
-    .prologue
-    .line 56
     iget v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;->mdpTrackId:I
 
     return v0
@@ -283,8 +254,6 @@
 .method public getPlayerTrackId()I
     .locals 1
 
-    .prologue
-    .line 60
     iget v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;->playerTrackId:I
 
     return v0
@@ -293,8 +262,6 @@
 .method public getRequestId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 48
     iget-object v0, p0, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;->requestId:Ljava/lang/String;
 
     return-object v0
@@ -303,8 +270,6 @@
 .method public hashCode()I
     .locals 2
 
-    .prologue
-    .line 105
     invoke-virtual {p0}, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;->getLength()J
 
     move-result-wide v0
@@ -317,18 +282,14 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 5
 
-    .prologue
-    .line 121
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 122
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 123
     const-string/jumbo v1, "SocialNotificationsListSummary"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -351,7 +312,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     :cond_0
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -374,14 +334,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 126
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/gson/JsonElement;
 
-    .line 127
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -404,7 +362,6 @@
 
     goto :goto_0
 
-    .line 129
     :pswitch_0
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsInt()I
 
@@ -416,7 +373,6 @@
 
     goto :goto_0
 
-    .line 127
     :sswitch_0
     const-string/jumbo v4, "length"
 
@@ -482,7 +438,6 @@
 
     goto :goto_1
 
-    .line 132
     :pswitch_1
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -492,7 +447,6 @@
 
     goto :goto_0
 
-    .line 135
     :pswitch_2
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsInt()I
 
@@ -502,7 +456,6 @@
 
     goto :goto_0
 
-    .line 138
     :pswitch_3
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsInt()I
 
@@ -512,7 +465,6 @@
 
     goto :goto_0
 
-    .line 141
     :pswitch_4
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsInt()I
 
@@ -522,11 +474,9 @@
 
     goto :goto_0
 
-    .line 145
     :cond_2
     return-void
 
-    .line 127
     nop
 
     :sswitch_data_0
@@ -551,17 +501,14 @@
 .method public set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 149
     sget-boolean v2, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v2, :cond_0
 
-    .line 150
     const-string/jumbo v2, "SocialNotificationsListSummary"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -584,7 +531,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 152
     :cond_0
     const/4 v2, -0x1
 
@@ -598,11 +544,9 @@
     :goto_0
     packed-switch v2, :pswitch_data_0
 
-    .line 171
     :goto_1
     return v0
 
-    .line 152
     :sswitch_0
     const-string/jumbo v3, "length"
 
@@ -668,7 +612,6 @@
 
     goto :goto_0
 
-    .line 154
     :pswitch_0
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsInt()I
 
@@ -681,10 +624,8 @@
     :goto_2
     move v0, v1
 
-    .line 171
     goto :goto_1
 
-    .line 157
     :pswitch_1
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -694,7 +635,6 @@
 
     goto :goto_2
 
-    .line 160
     :pswitch_2
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsInt()I
 
@@ -704,7 +644,6 @@
 
     goto :goto_2
 
-    .line 163
     :pswitch_3
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsInt()I
 
@@ -714,7 +653,6 @@
 
     goto :goto_2
 
-    .line 166
     :pswitch_4
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsInt()I
 
@@ -724,7 +662,6 @@
 
     goto :goto_2
 
-    .line 152
     :sswitch_data_0
     .sparse-switch
         -0x7be26c33 -> :sswitch_3
@@ -747,8 +684,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 176
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -829,13 +764,10 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 4
 
-    .prologue
-    .line 89
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 90
     const/4 v1, 0x0
 
     iget-wide v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;->length:J
@@ -846,14 +778,12 @@
 
     aput-object v2, v0, v1
 
-    .line 91
     const/4 v1, 0x1
 
     iget-object v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;->requestId:Ljava/lang/String;
 
     aput-object v2, v0, v1
 
-    .line 92
     const/4 v1, 0x2
 
     iget v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;->baseTrackId:I
@@ -864,7 +794,6 @@
 
     aput-object v2, v0, v1
 
-    .line 93
     const/4 v1, 0x3
 
     iget v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;->mdpTrackId:I
@@ -875,7 +804,6 @@
 
     aput-object v2, v0, v1
 
-    .line 94
     const/4 v1, 0x4
 
     iget v2, p0, Lcom/netflix/model/leafs/social/IrisNotificationsListSummary;->playerTrackId:I
@@ -886,9 +814,7 @@
 
     aput-object v2, v0, v1
 
-    .line 95
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 96
     return-void
 .end method

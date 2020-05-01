@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 4
     new-instance v0, Lcom/netflix/falkor/SubscriptionExtensions$1;
 
     invoke-direct {v0}, Lcom/netflix/falkor/SubscriptionExtensions$1;-><init>()V
@@ -25,8 +23,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

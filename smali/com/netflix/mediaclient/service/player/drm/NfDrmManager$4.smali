@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;Ljava/lang/Long;)V
     .locals 0
 
-    .prologue
-    .line 275
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$4;->this$0:Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$4;->val$movieId:Ljava/lang/Long;
@@ -32,14 +30,11 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 278
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$4;->this$0:Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager$4;->val$movieId:Ljava/lang/Long;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;->access$600(Lcom/netflix/mediaclient/service/player/drm/NfDrmManager;Ljava/lang/Long;)V
 
-    .line 279
     return-void
 .end method

@@ -13,16 +13,12 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 483
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 481
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/crittercism/internal/bv$m;->a:Ljava/lang/Long;
 
-    .line 484
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v0
@@ -37,7 +33,6 @@
 
     iput-object v0, p0, Lcom/crittercism/internal/bv$m;->a:Ljava/lang/Long;
 
-    .line 485
     return-void
 .end method
 
@@ -46,8 +41,6 @@
 .method public final a()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 488
     const-string/jumbo v0, "memory_total"
 
     return-object v0
@@ -56,11 +49,7 @@
 .method public final bridge synthetic b()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 480
-    .line 1492
     iget-object v0, p0, Lcom/crittercism/internal/bv$m;->a:Ljava/lang/Long;
 
-    .line 480
     return-object v0
 .end method

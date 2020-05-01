@@ -34,38 +34,30 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 160
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 161
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;-><init>(Lcom/netflix/mediaclient/service/webclient/model/leafs/User;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->summary:Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;
 
-    .line 162
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 7
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 119
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 120
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;-><init>(Lcom/netflix/mediaclient/service/webclient/model/leafs/User;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->summary:Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;
 
-    .line 123
     :try_start_0
     invoke-static {p1}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
@@ -79,7 +71,6 @@
 
     move-object v2, v0
 
-    .line 126
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->summary:Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;
 
@@ -93,7 +84,6 @@
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;->access$302(Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 127
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->summary:Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;
 
     const-string/jumbo v3, "email"
@@ -106,7 +96,6 @@
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;->access$002(Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 128
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->summary:Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;
 
     const-string/jumbo v3, "firstName"
@@ -119,7 +108,6 @@
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;->access$102(Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 129
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->summary:Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;
 
     const-string/jumbo v3, "lastName"
@@ -132,7 +120,6 @@
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;->access$202(Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 130
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->summary:Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;
 
     const-string/jumbo v3, "ageVerified"
@@ -145,7 +132,6 @@
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;->access$402(Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;Z)Z
 
-    .line 132
     const-string/jumbo v0, "subtitleOverride"
 
     const/4 v3, 0x0
@@ -154,7 +140,6 @@
 
     move-result-object v3
 
-    .line 133
     invoke-static {v3}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v0
@@ -166,7 +151,6 @@
     :goto_1
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->subtitleDefaults:Lcom/netflix/mediaclient/service/webclient/model/leafs/SubtitlePreference;
 
-    .line 135
     const-string/jumbo v0, "umaAlert"
 
     const/4 v3, 0x0
@@ -177,7 +161,6 @@
 
     move-result-object v3
 
-    .line 137
     :try_start_1
     invoke-static {v3}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
@@ -190,14 +173,12 @@
     :goto_2
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->umaAlert:Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaAlert;
 
-    .line 138
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 139
     const-string/jumbo v0, "User"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -225,7 +206,6 @@
     .catch Lcom/google/gson/JsonSyntaxException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 145
     :cond_0
     :goto_3
     :try_start_2
@@ -239,7 +219,6 @@
 
     move-result-object v0
 
-    .line 147
     :try_start_3
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
@@ -252,14 +231,12 @@
     :goto_4
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->eogAlert:Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
 
-    .line 148
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 149
     const-string/jumbo v0, "User"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -287,12 +264,10 @@
     .catch Lcom/google/gson/JsonSyntaxException; {:try_start_3 .. :try_end_3} :catch_2
     .catch Lorg/json/JSONException; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 158
     :cond_1
     :goto_5
     return-void
 
-    .line 123
     :cond_2
     :try_start_4
     new-instance v0, Lorg/json/JSONObject;
@@ -303,7 +278,6 @@
 
     goto/16 :goto_0
 
-    .line 133
     :cond_3
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/SubtitlePreference;
 
@@ -313,11 +287,9 @@
 
     goto :goto_1
 
-    .line 155
     :catch_0
     move-exception v0
 
-    .line 156
     const-string/jumbo v1, "User"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -352,7 +324,6 @@
 
     goto :goto_5
 
-    .line 137
     :cond_4
     :try_start_5
     invoke-static {}, Lcom/netflix/mediaclient/NetflixApplication;->getGson()Lcom/google/gson/Gson;
@@ -372,11 +343,9 @@
 
     goto/16 :goto_2
 
-    .line 141
     :catch_1
     move-exception v0
 
-    .line 142
     :try_start_6
     const-string/jumbo v4, "User"
 
@@ -414,7 +383,6 @@
 
     goto/16 :goto_3
 
-    .line 147
     :cond_5
     :try_start_7
     invoke-static {}, Lcom/netflix/mediaclient/NetflixApplication;->getGson()Lcom/google/gson/Gson;
@@ -434,11 +402,9 @@
 
     goto/16 :goto_4
 
-    .line 151
     :catch_2
     move-exception v0
 
-    .line 152
     :try_start_8
     const-string/jumbo v1, "User"
 
@@ -482,8 +448,6 @@
 .method public getEmail()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 46
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->summary:Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;
 
     if-nez v0, :cond_0
@@ -506,8 +470,6 @@
 .method public getFirstName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 51
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->summary:Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;
 
     if-nez v0, :cond_0
@@ -530,8 +492,6 @@
 .method public getLastName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 55
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->summary:Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;
 
     if-nez v0, :cond_0
@@ -554,8 +514,6 @@
 .method public getSubtitleDefaults()Lcom/netflix/mediaclient/service/webclient/model/leafs/SubtitlePreference;
     .locals 1
 
-    .prologue
-    .line 62
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->subtitleDefaults:Lcom/netflix/mediaclient/service/webclient/model/leafs/SubtitlePreference;
 
     return-object v0
@@ -564,8 +522,6 @@
 .method public getUmaAlert()Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaAlert;
     .locals 1
 
-    .prologue
-    .line 80
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->umaAlert:Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaAlert;
 
     return-object v0
@@ -574,8 +530,6 @@
 .method public getUserToken()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 59
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->summary:Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;
 
     if-nez v0, :cond_0
@@ -598,8 +552,6 @@
 .method public isAgeVerified()Z
     .locals 1
 
-    .prologue
-    .line 67
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->summary:Lcom/netflix/mediaclient/service/webclient/model/leafs/User$Summary;
 
     if-nez v0, :cond_0
@@ -622,24 +574,18 @@
 .method public setUmaAlert(Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaAlert;)V
     .locals 0
 
-    .prologue
-    .line 71
     iput-object p1, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->umaAlert:Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaAlert;
 
-    .line 72
     return-void
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 88
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
-    .line 90
     :try_start_0
     const-string/jumbo v0, "userId"
 
@@ -649,7 +595,6 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 91
     const-string/jumbo v0, "email"
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->getEmail()Ljava/lang/String;
@@ -658,7 +603,6 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 92
     const-string/jumbo v0, "firstName"
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->getFirstName()Ljava/lang/String;
@@ -667,7 +611,6 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 93
     const-string/jumbo v0, "lastName"
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->getLastName()Ljava/lang/String;
@@ -676,7 +619,6 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 94
     const-string/jumbo v0, "ageVerified"
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->isAgeVerified()Z
@@ -685,12 +627,10 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
-    .line 95
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->subtitleDefaults:Lcom/netflix/mediaclient/service/webclient/model/leafs/SubtitlePreference;
 
     if-eqz v0, :cond_0
 
-    .line 96
     const-string/jumbo v0, "subtitleOverride"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->subtitleDefaults:Lcom/netflix/mediaclient/service/webclient/model/leafs/SubtitlePreference;
@@ -701,7 +641,6 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 98
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->umaAlert:Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaAlert;
 
@@ -715,7 +654,6 @@
 
     if-nez v0, :cond_1
 
-    .line 100
     const-string/jumbo v0, "umaAlert"
 
     invoke-static {}, Lcom/netflix/mediaclient/NetflixApplication;->getGson()Lcom/google/gson/Gson;
@@ -730,14 +668,12 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 101
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 102
     const-string/jumbo v0, "User"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -762,7 +698,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/User;->eogAlert:Lcom/netflix/mediaclient/service/webclient/model/leafs/EogAlert;
 
@@ -774,7 +709,6 @@
 
     if-nez v0, :cond_2
 
-    .line 107
     const-string/jumbo v0, "eogAlert"
 
     invoke-static {}, Lcom/netflix/mediaclient/NetflixApplication;->getGson()Lcom/google/gson/Gson;
@@ -789,14 +723,12 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 108
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 109
     const-string/jumbo v0, "User"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -823,7 +755,6 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 115
     :cond_2
     :goto_0
     const-string/jumbo v0, "User"
@@ -852,18 +783,15 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
     invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 112
     :catch_0
     move-exception v0
 
-    .line 113
     const-string/jumbo v2, "User"
 
     new-instance v3, Ljava/lang/StringBuilder;

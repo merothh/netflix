@@ -24,11 +24,8 @@
 .method public constructor <init>(Lcom/google/android/exoplayer/upstream/DataSource;Lcom/google/android/exoplayer/upstream/DataSpec;IILcom/google/android/exoplayer/chunk/Format;I)V
     .locals 1
 
-    .prologue
-    .line 119
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 120
     invoke-static {p1}, Lcom/google/android/exoplayer/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -37,7 +34,6 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer/chunk/Chunk;->dataSource:Lcom/google/android/exoplayer/upstream/DataSource;
 
-    .line 121
     invoke-static {p2}, Lcom/google/android/exoplayer/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -46,19 +42,14 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer/chunk/Chunk;->dataSpec:Lcom/google/android/exoplayer/upstream/DataSpec;
 
-    .line 122
     iput p3, p0, Lcom/google/android/exoplayer/chunk/Chunk;->type:I
 
-    .line 123
     iput p4, p0, Lcom/google/android/exoplayer/chunk/Chunk;->trigger:I
 
-    .line 124
     iput-object p5, p0, Lcom/google/android/exoplayer/chunk/Chunk;->format:Lcom/google/android/exoplayer/chunk/Format;
 
-    .line 125
     iput p6, p0, Lcom/google/android/exoplayer/chunk/Chunk;->parentId:I
 
-    .line 126
     return-void
 .end method
 

@@ -42,7 +42,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x6
 
     const/4 v7, 0x5
@@ -53,7 +52,6 @@
 
     const/4 v4, 0x1
 
-    .line 11
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
 
     const-string/jumbo v1, "UNKNOWN"
@@ -66,7 +64,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;->UNKNOWN:Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
 
-    .line 12
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
 
     const-string/jumbo v1, "NOT_WATCHABLE_DUE_TO_NOT_ENOUGH_DATA"
@@ -75,7 +72,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;->NOT_WATCHABLE_DUE_TO_NOT_ENOUGH_DATA:Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
 
-    .line 13
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
 
     const-string/jumbo v1, "WATCHING_ALLOWED"
@@ -84,7 +80,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;->WATCHING_ALLOWED:Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
 
-    .line 14
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
 
     const-string/jumbo v1, "LICENSE_EXPIRED"
@@ -93,7 +88,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;->LICENSE_EXPIRED:Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
 
-    .line 15
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
 
     const-string/jumbo v1, "PLAY_WINDOW_EXPIRED_BUT_RENEWABLE"
@@ -104,7 +98,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;->PLAY_WINDOW_EXPIRED_BUT_RENEWABLE:Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
 
-    .line 16
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
 
     const-string/jumbo v1, "PLAY_WINDOW_EXPIRED_FINAL"
@@ -113,7 +106,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;->PLAY_WINDOW_EXPIRED_FINAL:Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
 
-    .line 17
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
 
     const-string/jumbo v1, "VIEW_WINDOW_EXPIRED"
@@ -124,7 +116,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;->VIEW_WINDOW_EXPIRED:Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
 
-    .line 18
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
 
     const-string/jumbo v1, "GEO_BLOCKED"
@@ -137,7 +128,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;->GEO_BLOCKED:Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
 
-    .line 10
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
@@ -193,22 +183,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 22
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 23
     iput p3, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;->mValue:I
 
-    .line 24
     return-void
 .end method
 
 .method public static getStateByValue(I)Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
     .locals 5
 
-    .prologue
-    .line 32
     invoke-static {}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;->values()[Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
 
     move-result-object v2
@@ -224,18 +208,15 @@
 
     aget-object v0, v2, v1
 
-    .line 33
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;->getIntValue()I
 
     move-result v4
 
     if-ne v4, p0, :cond_0
 
-    .line 37
     :goto_1
     return-object v0
 
-    .line 32
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -243,7 +224,6 @@
 
     goto :goto_0
 
-    .line 37
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;->UNKNOWN:Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
 
@@ -253,8 +233,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
     .locals 1
 
-    .prologue
-    .line 10
     const-class v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -269,8 +247,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
     .locals 1
 
-    .prologue
-    .line 10
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;->clone()Ljava/lang/Object;
@@ -287,8 +263,6 @@
 .method public getIntValue()I
     .locals 1
 
-    .prologue
-    .line 27
     iget v0, p0, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;->mValue:I
 
     return v0
@@ -297,8 +271,6 @@
 .method public hasError()Z
     .locals 2
 
-    .prologue
-    .line 41
     invoke-virtual {p0}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;->getIntValue()I
 
     move-result v0

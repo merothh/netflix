@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;)V
     .locals 0
 
-    .prologue
-    .line 86
     iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager$1;->this$0:Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,10 +26,8 @@
 .method public run()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x0
 
-    .line 90
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager$1;->this$0:Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager$1;->this$0:Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;
@@ -48,7 +44,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;->access$002(Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 91
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager$1;->this$0:Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager$1;->this$0:Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;
@@ -67,7 +62,6 @@
 
     invoke-static {v0, v2, v3}, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;->access$202(Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;J)J
 
-    .line 92
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager$1;->this$0:Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager$1;->this$0:Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;
@@ -90,7 +84,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;->access$302(Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;Ljava/lang/Boolean;)Ljava/lang/Boolean;
 
-    .line 93
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager$1;->this$0:Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager$1;->this$0:Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;
@@ -105,19 +98,16 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;->access$402(Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;Lcom/netflix/mediaclient/service/logging/ads/AdvertisingIdProvider;)Lcom/netflix/mediaclient/service/logging/ads/AdvertisingIdProvider;
 
-    .line 95
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager$1;->this$0:Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;->access$500(Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;)Lcom/netflix/mediaclient/servicemgr/AdvertiserIdLogging$EventType;
 
     move-result-object v0
 
-    .line 96
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager$1;->this$0:Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;
 
     invoke-static {v1, v6}, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;->access$502(Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;Lcom/netflix/mediaclient/servicemgr/AdvertiserIdLogging$EventType;)Lcom/netflix/mediaclient/servicemgr/AdvertiserIdLogging$EventType;
 
-    .line 98
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager$1;->this$0:Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;->access$100(Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;)Landroid/content/Context;
@@ -130,27 +120,22 @@
 
     if-nez v1, :cond_1
 
-    .line 99
     const-string/jumbo v1, "nf_adv_id"
 
     const-string/jumbo v2, "Not first start after installation"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 106
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager$1;->this$0:Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;
 
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;->sendAdvertiserId(Lcom/netflix/mediaclient/servicemgr/AdvertiserIdLogging$EventType;)V
 
-    .line 108
     :cond_0
     return-void
 
-    .line 101
     :cond_1
     const-string/jumbo v1, "nf_adv_id"
 
@@ -158,7 +143,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 102
     iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager$1;->this$0:Lcom/netflix/mediaclient/service/logging/ads/AdvertiserIdLoggingManager;
 
     sget-object v2, Lcom/netflix/mediaclient/servicemgr/AdvertiserIdLogging$EventType;->install:Lcom/netflix/mediaclient/servicemgr/AdvertiserIdLogging$EventType;

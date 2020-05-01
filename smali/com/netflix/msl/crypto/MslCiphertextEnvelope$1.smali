@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 114
     invoke-static {}, Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;->values()[Lcom/netflix/msl/crypto/MslCiphertextEnvelope$Version;
 
     move-result-object v0

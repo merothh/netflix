@@ -11,8 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,8 +19,6 @@
 .method public static computeNumVideosToFetchPerBatch(Landroid/content/Context;I)I
     .locals 1
 
-    .prologue
-    .line 43
     invoke-static {p0}, Lcom/netflix/mediaclient/util/CWTestUtil;->isInTest(Landroid/content/Context;)Z
 
     move-result v0
@@ -38,13 +34,10 @@
 .method public static createCWViewForTest(Landroid/content/Context;)Lcom/netflix/mediaclient/ui/lomo/CwView;
     .locals 2
 
-    .prologue
-    .line 50
     invoke-static {p0}, Lcom/netflix/mediaclient/service/configuration/PersistentConfig;->getCWProgressBar(Landroid/content/Context;)Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     move-result-object v0
 
-    .line 51
     sget-object v1, Lcom/netflix/mediaclient/util/CWTestUtil$1;->$SwitchMap$com$netflix$mediaclient$service$webclient$model$leafs$ABTestConfig$Cell:[I
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->ordinal()I
@@ -55,16 +48,13 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 54
     new-instance v0, Lcom/netflix/mediaclient/ui/lomo/CwView;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/lomo/CwView;-><init>(Landroid/content/Context;)V
 
-    .line 61
     :goto_0
     return-object v0
 
-    .line 57
     :pswitch_0
     new-instance v0, Lcom/netflix/mediaclient/ui/lomo/CwTestView;
 
@@ -72,7 +62,6 @@
 
     goto :goto_0
 
-    .line 59
     :pswitch_1
     new-instance v0, Lcom/netflix/mediaclient/ui/lomo/CwTestVTwoView;
 
@@ -82,7 +71,6 @@
 
     goto :goto_0
 
-    .line 61
     :pswitch_2
     new-instance v0, Lcom/netflix/mediaclient/ui/lomo/CwTestVTwoView;
 
@@ -92,7 +80,6 @@
 
     goto :goto_0
 
-    .line 51
     nop
 
     :pswitch_data_0
@@ -107,13 +94,10 @@
 .method public static getCWViewClass(Landroid/content/Context;)Ljava/lang/Class;
     .locals 2
 
-    .prologue
-    .line 69
     invoke-static {p0}, Lcom/netflix/mediaclient/service/configuration/PersistentConfig;->getCWProgressBar(Landroid/content/Context;)Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     move-result-object v0
 
-    .line 70
     sget-object v1, Lcom/netflix/mediaclient/util/CWTestUtil$1;->$SwitchMap$com$netflix$mediaclient$service$webclient$model$leafs$ABTestConfig$Cell:[I
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;->ordinal()I
@@ -124,26 +108,21 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 73
     const-class v0, Lcom/netflix/mediaclient/ui/lomo/CwView;
 
-    .line 79
     :goto_0
     return-object v0
 
-    .line 76
     :pswitch_0
     const-class v0, Lcom/netflix/mediaclient/ui/lomo/CwTestView;
 
     goto :goto_0
 
-    .line 79
     :pswitch_1
     const-class v0, Lcom/netflix/mediaclient/ui/lomo/CwTestVTwoView;
 
     goto :goto_0
 
-    .line 70
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_0
@@ -156,8 +135,6 @@
 .method public static isDirectToPlayback(Landroid/content/Context;)Z
     .locals 2
 
-    .prologue
-    .line 33
     invoke-static {p0}, Lcom/netflix/mediaclient/service/configuration/PersistentConfig;->getCWProgressBar(Landroid/content/Context;)Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     move-result-object v0
@@ -180,8 +157,6 @@
 .method public static isInTest(Landroid/content/Context;)Z
     .locals 2
 
-    .prologue
-    .line 24
     invoke-static {p0}, Lcom/netflix/mediaclient/service/configuration/PersistentConfig;->getCWProgressBar(Landroid/content/Context;)Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig$Cell;
 
     move-result-object v0

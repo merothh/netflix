@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/offline/OfflineVideosAdapter;)V
     .locals 0
 
-    .prologue
-    .line 78
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineVideosAdapter$1;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineVideosAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .prologue
-    .line 81
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/offline/OfflineVideosAdapter$1;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineVideosAdapter;
 
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineVideosAdapter$1;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineVideosAdapter;
@@ -45,15 +41,12 @@
     :goto_0
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/ui/offline/OfflineVideosAdapter;->access$002(Lcom/netflix/mediaclient/ui/offline/OfflineVideosAdapter;Z)Z
 
-    .line 82
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/OfflineVideosAdapter$1;->this$0:Lcom/netflix/mediaclient/ui/offline/OfflineVideosAdapter;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/offline/OfflineVideosAdapter;->access$100(Lcom/netflix/mediaclient/ui/offline/OfflineVideosAdapter;)V
 
-    .line 83
     return-void
 
-    .line 81
     :cond_0
     const/4 v0, 0x0
 

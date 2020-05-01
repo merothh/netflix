@@ -21,21 +21,16 @@
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 1
 
-    .prologue
-    .line 43
     const-string/jumbo v0, "selectedAccount"
 
     invoke-direct {p0, v0, p1}, Lcom/netflix/mediaclient/javabridge/ui/BaseCommandCompletedEvent;-><init>(Ljava/lang/String;Lorg/json/JSONObject;)V
 
-    .line 33
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/javabridge/ui/android/registration/SelectedAccountCompleteCommand;->selected:Z
 
-    .line 44
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/javabridge/ui/android/registration/SelectedAccountCompleteCommand;->localPopulate(Lorg/json/JSONObject;)V
 
-    .line 45
     return-void
 .end method
 
@@ -44,8 +39,6 @@
 .method public getObject()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 63
     const-string/jumbo v0, "nrdp.registration"
 
     return-object v0
@@ -54,8 +47,6 @@
 .method public isSelectedSuccess()Z
     .locals 1
 
-    .prologue
-    .line 67
     iget-boolean v0, p0, Lcom/netflix/mediaclient/javabridge/ui/android/registration/SelectedAccountCompleteCommand;->selected:Z
 
     return v0
@@ -64,8 +55,6 @@
 .method protected localPopulate(Lorg/json/JSONObject;)V
     .locals 3
 
-    .prologue
-    .line 52
     const-string/jumbo v0, "result"
 
     const-string/jumbo v1, "ERROR"
@@ -82,7 +71,6 @@
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/javabridge/ui/android/registration/SelectedAccountCompleteCommand;->selected:Z
 
-    .line 53
     const-string/jumbo v0, "nf_reg"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -107,6 +95,5 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 54
     return-void
 .end method

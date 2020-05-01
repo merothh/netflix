@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 137
     invoke-static {}, Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;->values()[Lcom/netflix/msl/crypto/JsonWebKey$Algorithm;
 
     move-result-object v0

@@ -68,74 +68,58 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/view/View;Landroid/view/View;)V
     .locals 1
 
-    .prologue
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     const/16 v0, 0x9b
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->MAX_BG_ALPHA:I
 
-    .line 38
     const/16 v0, 0x19
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->MAX_BLUR_RADIUS:I
 
-    .line 47
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->nextPage:I
 
-    .line 53
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->mainHandler:Landroid/os/Handler;
 
-    .line 107
     new-instance v0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator$1;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator$1;-><init>(Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->errorCallback:Lcom/netflix/mediaclient/android/widget/ErrorWrapper$Callback;
 
-    .line 59
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->context:Landroid/content/Context;
 
-    .line 60
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->topView:Landroid/view/View;
 
-    .line 61
     iput-object p3, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->bottomView:Landroid/view/View;
 
-    .line 62
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->blurredImages:Landroid/util/SparseArray;
 
-    .line 64
     invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->poolExecutor:Ljava/util/concurrent/ExecutorService;
 
-    .line 65
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->addBottomGradientIfNeeded()V
 
-    .line 66
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;)Landroid/content/Context;
     .locals 1
 
-    .prologue
-    .line 35
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->context:Landroid/content/Context;
 
     return-object v0
@@ -144,8 +128,6 @@
 .method static synthetic access$100(Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;)I
     .locals 1
 
-    .prologue
-    .line 35
     iget v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->currentPage:I
 
     return v0
@@ -154,8 +136,6 @@
 .method static synthetic access$200(Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;)Landroid/widget/ImageView;
     .locals 1
 
-    .prologue
-    .line 35
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->blurredBottomImageView:Landroid/widget/ImageView;
 
     return-object v0
@@ -164,8 +144,6 @@
 .method static synthetic access$300(Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;ILandroid/graphics/Bitmap;Landroid/widget/ImageView;)V
     .locals 0
 
-    .prologue
-    .line 35
     invoke-direct {p0, p1, p2, p3}, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->setBlurredImage(ILandroid/graphics/Bitmap;Landroid/widget/ImageView;)V
 
     return-void
@@ -174,8 +152,6 @@
 .method static synthetic access$400(Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;)I
     .locals 1
 
-    .prologue
-    .line 35
     iget v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->nextPage:I
 
     return v0
@@ -184,8 +160,6 @@
 .method static synthetic access$500(Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;)Landroid/widget/ImageView;
     .locals 1
 
-    .prologue
-    .line 35
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->blurredTopImageView:Landroid/widget/ImageView;
 
     return-object v0
@@ -194,8 +168,6 @@
 .method static synthetic access$600(Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;)Landroid/util/SparseArray;
     .locals 1
 
-    .prologue
-    .line 35
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->blurredImages:Landroid/util/SparseArray;
 
     return-object v0
@@ -204,8 +176,6 @@
 .method static synthetic access$700(Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;I)V
     .locals 0
 
-    .prologue
-    .line 35
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->updateBackgrounds(I)V
 
     return-void
@@ -214,8 +184,6 @@
 .method static synthetic access$800(Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;)Landroid/os/Handler;
     .locals 1
 
-    .prologue
-    .line 35
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->mainHandler:Landroid/os/Handler;
 
     return-object v0
@@ -224,7 +192,6 @@
 .method private addBottomGradientIfNeeded()V
     .locals 8
 
-    .prologue
     const v3, 0x7f0f0009
 
     const v2, 0x7f0f0008
@@ -235,14 +202,12 @@
 
     const/4 v5, -0x1
 
-    .line 75
     const-string/jumbo v0, "DiscoveryBackgroundAnimator"
 
     const-string/jumbo v1, "addBottomGradientIfNeeded()"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->bottomView:Landroid/view/View;
 
     const v1, 0x7f0f000a
@@ -255,12 +220,10 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->bottomGradient:Landroid/widget/ImageView;
 
-    .line 78
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->bottomGradient:Landroid/widget/ImageView;
 
     if-nez v0, :cond_0
 
-    .line 79
     new-instance v0, Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->context:Landroid/content/Context;
@@ -269,21 +232,18 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->bottomGradient:Landroid/widget/ImageView;
 
-    .line 80
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->bottomGradient:Landroid/widget/ImageView;
 
     const v1, 0x7f0201ea
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 81
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->bottomGradient:Landroid/widget/ImageView;
 
     const v1, 0x7f0f000a
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setId(I)V
 
-    .line 83
     new-instance v0, Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->context:Landroid/content/Context;
@@ -292,19 +252,16 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->blurredTopImageView:Landroid/widget/ImageView;
 
-    .line 84
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->blurredTopImageView:Landroid/widget/ImageView;
 
     sget-object v1, Landroid/widget/ImageView$ScaleType;->CENTER_CROP:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 85
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->blurredTopImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setId(I)V
 
-    .line 87
     new-instance v0, Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->context:Landroid/content/Context;
@@ -313,24 +270,20 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->blurredBottomImageView:Landroid/widget/ImageView;
 
-    .line 88
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->blurredBottomImageView:Landroid/widget/ImageView;
 
     sget-object v1, Landroid/widget/ImageView$ScaleType;->CENTER_CROP:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 89
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->blurredBottomImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setId(I)V
 
-    .line 91
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->bottomView:Landroid/view/View;
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 93
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->bottomGradient:Landroid/widget/ImageView;
 
     new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
@@ -353,7 +306,6 @@
 
     invoke-virtual {v0, v1, v6, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
-    .line 94
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->blurredTopImageView:Landroid/widget/ImageView;
 
     new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
@@ -362,7 +314,6 @@
 
     invoke-virtual {v0, v1, v6, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
-    .line 95
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->blurredBottomImageView:Landroid/widget/ImageView;
 
     new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
@@ -371,7 +322,6 @@
 
     invoke-virtual {v0, v1, v6, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
-    .line 97
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->context:Landroid/content/Context;
 
     invoke-static {v1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
@@ -382,7 +332,6 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    .line 104
     :goto_0
     new-instance v0, Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;
 
@@ -394,10 +343,8 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->leWrapper:Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;
 
-    .line 105
     return-void
 
-    .line 99
     :cond_0
     const-string/jumbo v0, "DiscoveryBackgroundAnimator"
 
@@ -405,7 +352,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->bottomView:Landroid/view/View;
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -416,7 +362,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->blurredTopImageView:Landroid/widget/ImageView;
 
-    .line 102
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->bottomView:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -433,15 +378,12 @@
 .method private getBackgroundUrl(Lcom/netflix/mediaclient/servicemgr/interface_/Discovery;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 256
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 257
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Discovery;->getVertStoryArtUrl()Ljava/lang/String;
 
     move-result-object v0
@@ -452,7 +394,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 258
     const-string/jumbo v0, "DiscoveryBackgroundAnimator"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -493,7 +434,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 263
     :cond_0
     :goto_0
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/Discovery;->getVertStoryArtUrl()Ljava/lang/String;
@@ -502,7 +442,6 @@
 
     return-object v0
 
-    .line 260
     :cond_1
     const-string/jumbo v0, "DiscoveryBackgroundAnimator"
 
@@ -536,8 +475,6 @@
 .method private hasDataForPage(I)Z
     .locals 1
 
-    .prologue
-    .line 199
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->data:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -572,8 +509,6 @@
 .method private setBlurredImage(ILandroid/graphics/Bitmap;Landroid/widget/ImageView;)V
     .locals 4
 
-    .prologue
-    .line 203
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->blurredImages:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -582,26 +517,21 @@
 
     check-cast v0, Landroid/graphics/Bitmap;
 
-    .line 204
     if-nez v0, :cond_1
 
-    .line 205
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->poolExecutor:Ljava/util/concurrent/ExecutorService;
 
     if-nez v0, :cond_0
 
-    .line 206
     const-string/jumbo v0, "DiscoveryBackgroundAnimator"
 
     const-string/jumbo v1, "Fragment was destroyed - skipping setBlurredImage() call"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 235
     :goto_0
     return-void
 
-    .line 210
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->poolExecutor:Ljava/util/concurrent/ExecutorService;
 
@@ -611,12 +541,10 @@
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
-    .line 228
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->blurredImages:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 229
     const-string/jumbo v0, "DiscoveryBackgroundAnimator"
 
     const-string/jumbo v1, "Skipping bitmap set as it was not blurred yet"
@@ -625,16 +553,13 @@
 
     goto :goto_0
 
-    .line 231
     :cond_1
     invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 232
     iget v1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->currentPage:I
 
     invoke-direct {p0, v1}, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->updateBackgrounds(I)V
 
-    .line 233
     const-string/jumbo v1, "DiscoveryBackgroundAnimator"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -673,10 +598,8 @@
 .method private updateBackgrounds(I)V
     .locals 4
 
-    .prologue
     const/high16 v3, 0x431b0000    # 155.0f
 
-    .line 238
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->blurredTopImageView:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_0
@@ -685,7 +608,6 @@
 
     if-nez v0, :cond_1
 
-    .line 239
     :cond_0
     const-string/jumbo v0, "DiscoveryBackgroundAnimator"
 
@@ -693,11 +615,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 253
     :goto_0
     return-void
 
-    .line 243
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -705,7 +625,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 244
     const-string/jumbo v1, "DiscoveryBackgroundAnimator"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -757,7 +676,6 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 249
     :cond_2
     const/high16 v0, 0x3f800000    # 1.0f
 
@@ -769,7 +687,6 @@
 
     float-to-int v0, v0
 
-    .line 250
     iget v1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->currentOffset:F
 
     mul-float/2addr v1, v3
@@ -784,19 +701,16 @@
 
     float-to-int v1, v1
 
-    .line 251
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->blurredTopImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v2, v1}, Landroid/widget/ImageView;->setImageAlpha(I)V
 
-    .line 252
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->blurredBottomImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageAlpha(I)V
 
     goto :goto_0
 
-    .line 244
     :cond_3
     const/4 v0, 0x0
 
@@ -806,15 +720,12 @@
 .method private updateDrawables()V
     .locals 6
 
-    .prologue
-    .line 147
     const-string/jumbo v0, "DiscoveryBackgroundAnimator"
 
     const-string/jumbo v1, "updateDrawables()"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 150
     iget v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->currentPage:I
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->hasDataForPage(I)Z
@@ -823,7 +734,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 151
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->data:Ljava/util/List;
 
     iget v1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->currentPage:I
@@ -836,7 +746,6 @@
 
     check-cast v1, Lcom/netflix/mediaclient/servicemgr/interface_/Discovery;
 
-    .line 152
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->context:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getImageLoader(Landroid/content/Context;)Lcom/netflix/mediaclient/util/gfx/ImageLoader;
@@ -851,7 +760,6 @@
 
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->topView:Landroid/view/View;
 
-    .line 153
     invoke-virtual {v3}, Landroid/view/View;->getWidth()I
 
     move-result v3
@@ -866,10 +774,8 @@
 
     invoke-direct {v5, p0}, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator$2;-><init>(Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;)V
 
-    .line 152
     invoke-interface/range {v0 .. v5}, Lcom/netflix/mediaclient/util/gfx/ImageLoader;->getImg(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;IILcom/netflix/mediaclient/util/gfx/ImageLoader$ImageLoaderListener;)V
 
-    .line 174
     :cond_0
     iget v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->nextPage:I
 
@@ -879,7 +785,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 175
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->data:Ljava/util/List;
 
     iget v1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->nextPage:I
@@ -892,7 +797,6 @@
 
     check-cast v1, Lcom/netflix/mediaclient/servicemgr/interface_/Discovery;
 
-    .line 176
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->context:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getImageLoader(Landroid/content/Context;)Lcom/netflix/mediaclient/util/gfx/ImageLoader;
@@ -907,7 +811,6 @@
 
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->blurredTopImageView:Landroid/widget/ImageView;
 
-    .line 177
     invoke-virtual {v3}, Landroid/widget/ImageView;->getWidth()I
 
     move-result v3
@@ -922,15 +825,12 @@
 
     invoke-direct {v5, p0}, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator$3;-><init>(Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;)V
 
-    .line 176
     invoke-interface/range {v0 .. v5}, Lcom/netflix/mediaclient/util/gfx/ImageLoader;->getImg(Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$AssetType;IILcom/netflix/mediaclient/util/gfx/ImageLoader$ImageLoaderListener;)V
 
-    .line 196
     :cond_1
     :goto_0
     return-void
 
-    .line 167
     :cond_2
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -938,7 +838,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 168
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -959,14 +858,12 @@
 
     move-result-object v0
 
-    .line 169
     const-string/jumbo v1, "DiscoveryBackgroundAnimator"
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 191
     :cond_3
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -974,7 +871,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 192
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -995,7 +891,6 @@
 
     move-result-object v0
 
-    .line 193
     const-string/jumbo v1, "DiscoveryBackgroundAnimator"
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
@@ -1008,33 +903,26 @@
 .method public destroy()V
     .locals 2
 
-    .prologue
-    .line 69
     const-string/jumbo v0, "DiscoveryBackgroundAnimator"
 
     const-string/jumbo v1, "Destroying background thread(s)"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->poolExecutor:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdown()V
 
-    .line 71
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->poolExecutor:Ljava/util/concurrent/ExecutorService;
 
-    .line 72
     return-void
 .end method
 
 .method public getBlurredStoryArt()Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .prologue
-    .line 268
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->blurredBottomImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
@@ -1047,8 +935,6 @@
 .method public onPageScrolled(IF)V
     .locals 3
 
-    .prologue
-    .line 122
     const-string/jumbo v0, "DiscoveryBackgroundAnimator"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1081,7 +967,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
     iget v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->currentPage:I
 
     if-ne v0, p1, :cond_0
@@ -1090,28 +975,22 @@
 
     if-nez v0, :cond_1
 
-    .line 124
     :cond_0
     iput p1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->currentPage:I
 
-    .line 125
     iget v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->currentPage:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->nextPage:I
 
-    .line 126
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->updateDrawables()V
 
-    .line 129
     :cond_1
     iput p2, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->currentOffset:F
 
-    .line 130
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->updateBackgrounds(I)V
 
-    .line 131
     return-void
 .end method
 
@@ -1127,18 +1006,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 139
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->data:Ljava/util/List;
 
-    .line 140
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->leWrapper:Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;->hide(Z)V
 
-    .line 141
     return-void
 .end method
 
@@ -1154,13 +1029,9 @@
         }
     .end annotation
 
-    .prologue
-    .line 134
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->setData(Ljava/util/List;)V
 
-    .line 135
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->updateDrawables()V
 
-    .line 136
     return-void
 .end method

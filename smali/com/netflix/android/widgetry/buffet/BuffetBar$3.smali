@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/android/widgetry/buffet/BuffetBar;)V
     .locals 0
 
-    .prologue
-    .line 478
     iput-object p1, p0, Lcom/netflix/android/widgetry/buffet/BuffetBar$3;->this$0:Lcom/netflix/android/widgetry/buffet/BuffetBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public dismiss(I)V
     .locals 5
 
-    .prologue
-    .line 486
     sget-object v0, Lcom/netflix/android/widgetry/buffet/BuffetBar;->sHandler:Landroid/os/Handler;
 
     sget-object v1, Lcom/netflix/android/widgetry/buffet/BuffetBar;->sHandler:Landroid/os/Handler;
@@ -46,15 +42,12 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 487
     return-void
 .end method
 
 .method public show(Z)V
     .locals 4
 
-    .prologue
-    .line 481
     sget-object v1, Lcom/netflix/android/widgetry/buffet/BuffetBar;->sHandler:Landroid/os/Handler;
 
     sget-object v2, Lcom/netflix/android/widgetry/buffet/BuffetBar;->sHandler:Landroid/os/Handler;
@@ -72,10 +65,8 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 482
     return-void
 
-    .line 481
     :cond_0
     const/4 v0, 0x2
 

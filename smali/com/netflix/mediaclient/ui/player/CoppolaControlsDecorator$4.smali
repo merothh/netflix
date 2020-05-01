@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/CoppolaControlsDecorator;Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 209
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/CoppolaControlsDecorator$4;->this$0:Lcom/netflix/mediaclient/ui/player/CoppolaControlsDecorator;
 
     invoke-direct {p0, p2}, Landroid/view/OrientationEventListener;-><init>(Landroid/content/Context;)V
@@ -23,8 +21,6 @@
 .method private epsilonCheck(III)Z
     .locals 1
 
-    .prologue
-    .line 230
     sub-int v0, p2, p3
 
     if-le p1, v0, :cond_0
@@ -49,10 +45,8 @@
 .method public onOrientationChanged(I)V
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 213
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/CoppolaControlsDecorator$4;->this$0:Lcom/netflix/mediaclient/ui/player/CoppolaControlsDecorator;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/player/CoppolaControlsDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
@@ -65,16 +59,13 @@
 
     if-nez v1, :cond_1
 
-    .line 227
     :cond_0
     :goto_0
     return-void
 
-    .line 217
     :cond_1
     const/16 v1, 0xa
 
-    .line 220
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/player/CoppolaControlsDecorator$4;->this$0:Lcom/netflix/mediaclient/ui/player/CoppolaControlsDecorator;
 
     invoke-static {v2}, Lcom/netflix/mediaclient/ui/player/CoppolaControlsDecorator;->access$100(Lcom/netflix/mediaclient/ui/player/CoppolaControlsDecorator;)I
@@ -100,7 +91,6 @@
     :cond_2
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/player/CoppolaControlsDecorator$4;->this$0:Lcom/netflix/mediaclient/ui/player/CoppolaControlsDecorator;
 
-    .line 221
     invoke-static {v2}, Lcom/netflix/mediaclient/ui/player/CoppolaControlsDecorator;->access$100(Lcom/netflix/mediaclient/ui/player/CoppolaControlsDecorator;)I
 
     move-result v2
@@ -125,12 +115,10 @@
 
     if-eqz v1, :cond_4
 
-    .line 223
     :cond_3
     :goto_1
     if-eqz v0, :cond_0
 
-    .line 224
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaControlsDecorator$4;->this$0:Lcom/netflix/mediaclient/ui/player/CoppolaControlsDecorator;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/CoppolaControlsDecorator;->getController()Lcom/netflix/mediaclient/ui/player/PlayerFragment;
@@ -145,7 +133,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setRequestedOrientation(I)V
 
-    .line 225
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/CoppolaControlsDecorator$4;->this$0:Lcom/netflix/mediaclient/ui/player/CoppolaControlsDecorator;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/CoppolaControlsDecorator;->access$600(Lcom/netflix/mediaclient/ui/player/CoppolaControlsDecorator;)Landroid/view/OrientationEventListener;
@@ -156,7 +143,6 @@
 
     goto :goto_0
 
-    .line 221
     :cond_4
     const/4 v0, 0x0
 

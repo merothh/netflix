@@ -20,8 +20,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 594
     iput-object p1, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$3;->this$0:Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$3;->val$requestUrl:Ljava/lang/String;
@@ -40,8 +38,6 @@
 .method public onErrorResponse(Lcom/android/volley/VolleyError;)V
     .locals 4
 
-    .prologue
-    .line 597
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$3;->val$requestUrl:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$3;->this$0:Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;
@@ -52,30 +48,25 @@
 
     invoke-static {v0, p1, v1}, Lcom/netflix/mediaclient/util/log/ApmLogUtils;->reportAssetRequestFailure(Ljava/lang/String;Lcom/android/volley/VolleyError;Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging;)V
 
-    .line 598
     invoke-static {}, Lcom/netflix/mediaclient/service/logging/perf/PerformanceProfiler;->getInstance()Lcom/netflix/mediaclient/service/logging/perf/PerformanceProfiler;
 
     move-result-object v0
 
     sget-object v1, Lcom/netflix/mediaclient/service/logging/perf/Sessions;->IMAGE_FETCH:Lcom/netflix/mediaclient/service/logging/perf/Sessions;
 
-    .line 599
     invoke-static {}, Lcom/netflix/mediaclient/service/logging/perf/PerformanceProfiler;->createFailedMap()Ljava/util/Map;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$3;->val$sessionId:Ljava/lang/String;
 
-    .line 598
     invoke-virtual {v0, v1, v2, v3}, Lcom/netflix/mediaclient/service/logging/perf/PerformanceProfiler;->endSession(Lcom/netflix/mediaclient/service/logging/perf/Sessions;Ljava/util/Map;Ljava/lang/String;)V
 
-    .line 600
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$3;->this$0:Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader$3;->val$cacheKey:Ljava/lang/String;
 
     invoke-static {v0, v1, p1}, Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;->access$500(Lcom/netflix/mediaclient/service/resfetcher/volley/ImageLoader;Ljava/lang/String;Lcom/android/volley/VolleyError;)V
 
-    .line 601
     return-void
 .end method

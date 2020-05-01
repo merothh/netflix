@@ -11,11 +11,8 @@
 .method public constructor <init>()V
     .locals 3
 
-    .prologue
-    .line 335
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 336
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x10
@@ -28,7 +25,6 @@
 
     if-le v0, v1, :cond_1
 
-    .line 337
     :cond_0
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -36,7 +32,6 @@
 
     throw v0
 
-    .line 340
     :cond_1
     :try_start_0
     const-class v0, Landroid/media/MediaRouter;
@@ -55,11 +50,9 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 344
     :goto_0
     return-void
 
-    .line 342
     :catch_0
     move-exception v0
 
@@ -71,18 +64,14 @@
 .method public getDefaultRoute(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 347
     check-cast p1, Landroid/media/MediaRouter;
 
-    .line 349
     iget-object v0, p0, Landroid/support/v7/media/MediaRouterJellybean$GetDefaultRouteWorkaround;->mGetSystemAudioRouteMethod:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
-    .line 351
     :try_start_0
     iget-object v0, p0, Landroid/support/v7/media/MediaRouterJellybean$GetDefaultRouteWorkaround;->mGetSystemAudioRouteMethod:Ljava/lang/reflect/Method;
 
@@ -97,15 +86,12 @@
 
     move-result-object v0
 
-    .line 359
     :goto_0
     return-object v0
 
-    .line 353
     :catch_0
     move-exception v0
 
-    .line 359
     :cond_0
     :goto_1
     invoke-virtual {p1, v2}, Landroid/media/MediaRouter;->getRouteAt(I)Landroid/media/MediaRouter$RouteInfo;
@@ -114,7 +100,6 @@
 
     goto :goto_0
 
-    .line 352
     :catch_1
     move-exception v0
 

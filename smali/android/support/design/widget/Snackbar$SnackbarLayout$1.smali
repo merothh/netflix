@@ -14,8 +14,6 @@
 .method constructor <init>(Landroid/support/design/widget/Snackbar$SnackbarLayout;)V
     .locals 0
 
-    .prologue
-    .line 710
     iput-object p1, p0, Landroid/support/design/widget/Snackbar$SnackbarLayout$1;->this$0:Landroid/support/design/widget/Snackbar$SnackbarLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onApplyWindowInsets(Landroid/view/View;Landroid/support/v4/view/WindowInsetsCompat;)Landroid/support/v4/view/WindowInsetsCompat;
     .locals 4
 
-    .prologue
-    .line 715
     invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v0
@@ -38,7 +34,6 @@
 
     move-result v1
 
-    .line 716
     invoke-virtual {p1}, Landroid/view/View;->getPaddingRight()I
 
     move-result v2
@@ -47,9 +42,7 @@
 
     move-result v3
 
-    .line 715
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/view/View;->setPadding(IIII)V
 
-    .line 717
     return-object p2
 .end method

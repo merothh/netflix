@@ -17,8 +17,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 19
     invoke-direct {p0}, Lcom/netflix/mediaclient/android/fragment/NetflixFrag;-><init>()V
 
     return-void
@@ -29,8 +27,6 @@
 .method public isLoadingData()Z
     .locals 1
 
-    .prologue
-    .line 50
     const/4 v0, 0x0
 
     return v0
@@ -42,21 +38,16 @@
         value = 0x16
     .end annotation
 
-    .prologue
-    .line 36
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/android/fragment/NetflixFrag;->onAttach(Landroid/app/Activity;)V
 
-    .line 37
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x17
 
     if-ge v0, v1, :cond_0
 
-    .line 38
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/ui/login/LoginBaseFragment;->onAttachContext(Landroid/content/Context;)V
 
-    .line 40
     :cond_0
     return-void
 .end method
@@ -64,38 +55,28 @@
 .method public onAttach(Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 27
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/android/fragment/NetflixFrag;->onAttach(Landroid/content/Context;)V
 
-    .line 28
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/ui/login/LoginBaseFragment;->onAttachContext(Landroid/content/Context;)V
 
-    .line 29
     return-void
 .end method
 
 .method protected onAttachContext(Landroid/content/Context;)V
     .locals 3
 
-    .prologue
-    .line 54
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/login/LoginBaseFragment;->mContext:Landroid/content/Context;
 
-    .line 55
     instance-of v0, p1, Lcom/netflix/mediaclient/ui/login/LoginFragmentListener;
 
     if-eqz v0, :cond_0
 
-    .line 56
     check-cast p1, Lcom/netflix/mediaclient/ui/login/LoginFragmentListener;
 
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/login/LoginBaseFragment;->mLoginFragmentListener:Lcom/netflix/mediaclient/ui/login/LoginFragmentListener;
 
-    .line 61
     return-void
 
-    .line 58
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -129,22 +110,18 @@
 .method protected setupViews(Landroid/view/View;)V
     .locals 2
 
-    .prologue
-    .line 43
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 44
     const-string/jumbo v0, "LoginBaseFragment"
 
     const-string/jumbo v1, "setupViews"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 46
     :cond_0
     return-void
 .end method

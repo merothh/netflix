@@ -22,8 +22,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 338
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,8 +32,6 @@
 .method public compare(Lcom/netflix/model/branches/FalkorVideo;Lcom/netflix/model/branches/FalkorVideo;)I
     .locals 2
 
-    .prologue
-    .line 342
     invoke-virtual {p1}, Lcom/netflix/model/branches/FalkorVideo;->getYear()I
 
     move-result v0
@@ -46,14 +42,11 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 343
     const/4 v0, 0x1
 
-    .line 347
     :goto_0
     return v0
 
-    .line 344
     :cond_0
     invoke-virtual {p1}, Lcom/netflix/model/branches/FalkorVideo;->getYear()I
 
@@ -65,12 +58,10 @@
 
     if-le v0, v1, :cond_1
 
-    .line 345
     const/4 v0, -0x1
 
     goto :goto_0
 
-    .line 347
     :cond_1
     const/4 v0, 0x0
 
@@ -80,8 +71,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 338
     check-cast p1, Lcom/netflix/model/branches/FalkorVideo;
 
     check-cast p2, Lcom/netflix/model/branches/FalkorVideo;

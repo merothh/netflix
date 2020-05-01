@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment$7;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 0
 
-    .prologue
-    .line 478
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment$7$1;->this$1:Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment$7;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment$7$1;->val$res:Lcom/netflix/mediaclient/android/app/Status;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 481
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment$7$1;->this$1:Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment$7;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment$7;->this$0:Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment;
@@ -42,6 +38,5 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment;->access$500(Lcom/netflix/mediaclient/ui/login/EmailPasswordFragment;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 482
     return-void
 .end method

@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/settings/SettingsFragment;Lcom/netflix/mediaclient/servicemgr/ServiceManager;)V
     .locals 0
 
-    .prologue
-    .line 372
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$6;->this$0:Lcom/netflix/mediaclient/ui/settings/SettingsFragment;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$6;->val$manager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -32,8 +30,6 @@
 .method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
     .locals 3
 
-    .prologue
-    .line 375
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$6;->val$manager:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getOfflineAgent()Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface;
@@ -50,7 +46,6 @@
 
     invoke-interface {v1, v0}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface;->setRequiresUnmeteredNetwork(Z)V
 
-    .line 376
     check-cast p2, Ljava/lang/Boolean;
 
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
@@ -59,7 +54,6 @@
 
     if-nez v0, :cond_0
 
-    .line 377
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$6;->this$0:Lcom/netflix/mediaclient/ui/settings/SettingsFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/settings/SettingsFragment;->getActivity()Landroid/app/Activity;
@@ -90,7 +84,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 378
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$6;->this$0:Lcom/netflix/mediaclient/ui/settings/SettingsFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/settings/SettingsFragment;->getActivity()Landroid/app/Activity;
@@ -111,7 +104,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
-    .line 379
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$6;->this$0:Lcom/netflix/mediaclient/ui/settings/SettingsFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/settings/SettingsFragment;->getActivity()Landroid/app/Activity;
@@ -120,7 +112,6 @@
 
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 382
     :cond_0
     const/4 v0, 0x1
 

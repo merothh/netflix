@@ -39,8 +39,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,11 +47,8 @@
 .method public static canHandle(Landroid/content/Intent;)Z
     .locals 2
 
-    .prologue
-    .line 55
     if-eqz p0, :cond_0
 
-    .line 56
     invoke-virtual {p0}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v0
@@ -62,7 +57,6 @@
 
     const-string/jumbo v0, "http"
 
-    .line 57
     invoke-virtual {p0}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v1
@@ -79,7 +73,6 @@
 
     const-string/jumbo v0, "https"
 
-    .line 58
     invoke-virtual {p0}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v1
@@ -88,18 +81,15 @@
 
     move-result-object v1
 
-    .line 57
     invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 59
     :cond_0
     const/4 v0, 0x0
 
-    .line 62
     :goto_0
     return v0
 
@@ -124,11 +114,8 @@
 .method public static finishMeAndLaunchBrowserIfNeeded(Landroid/app/Activity;Landroid/content/Intent;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 73
-    .line 76
     invoke-virtual {p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v1
@@ -137,7 +124,6 @@
 
     move-result-object v1
 
-    .line 77
     invoke-virtual {p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v2
@@ -146,43 +132,35 @@
 
     move-result-object v2
 
-    .line 78
     const/4 v3, 0x0
 
     invoke-static {v3, v1, v2}, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComHandlerFactory;->getHandler(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Ljava/util/List;Ljava/util/Map;)Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComHandler;
 
     move-result-object v2
 
-    .line 80
     if-eqz v2, :cond_0
 
-    .line 81
     invoke-interface {v2, v1}, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComHandler;->canHandle(Ljava/util/List;)Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    .line 84
     :cond_0
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 85
     invoke-virtual {p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v1
 
     invoke-static {p0, v1}, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComUtils;->launchBrowser(Landroid/app/Activity;Landroid/net/Uri;)V
 
-    .line 86
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
-    .line 88
     :cond_1
     return v0
 
-    .line 81
     :cond_2
     const/4 v0, 0x0
 
@@ -203,15 +181,12 @@
         }
     .end annotation
 
-    .prologue
     const/4 v3, 0x1
 
-    .line 135
     invoke-virtual {p0}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v1
 
-    .line 137
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -234,7 +209,6 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 138
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -243,7 +217,6 @@
 
     move-result-object v0
 
-    .line 140
     :goto_0
     return-object v0
 
@@ -272,10 +245,8 @@
         }
     .end annotation
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 145
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -290,11 +261,9 @@
 
     move-object v1, v0
 
-    .line 146
     :goto_0
     const/4 v2, 0x0
 
-    .line 149
     const-string/jumbo v0, "title"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -327,14 +296,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 150
     const-string/jumbo v1, "watch"
 
-    .line 152
     :cond_0
     if-eqz p0, :cond_1
 
-    .line 153
     invoke-static {v1}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
 
     move-result v0
@@ -343,16 +309,13 @@
 
     move-object v0, v1
 
-    .line 154
     :goto_1
     invoke-static {p2}, Lcom/netflix/mediaclient/util/NflxProtocolUtils;->createDeepLink(Ljava/util/Map;)Lcom/netflix/mediaclient/service/logging/apm/model/DeepLink;
 
     move-result-object v4
 
-    .line 155
     invoke-static {p0, v0, v4}, Lcom/netflix/mediaclient/util/NflxProtocolUtils;->reportApplicationLaunchedFromDeepLinking(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Ljava/lang/String;Lcom/netflix/mediaclient/service/logging/apm/model/DeepLink;)V
 
-    .line 158
     :cond_1
     const/4 v0, -0x1
 
@@ -366,7 +329,6 @@
     :goto_2
     packed-switch v0, :pswitch_data_0
 
-    .line 188
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -385,21 +347,17 @@
 
     move-result-object v0
 
-    .line 189
     const-string/jumbo v1, "NetflixComHandlerFactory"
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 190
     invoke-static {v0}, Lcom/netflix/mediaclient/service/logging/error/ErrorLoggingManager;->logHandledException(Ljava/lang/String;)V
 
     move-object v0, v2
 
-    .line 193
     :goto_3
     return-object v0
 
-    .line 145
     :cond_3
     const-string/jumbo v0, ""
 
@@ -407,13 +365,11 @@
 
     goto :goto_0
 
-    .line 153
     :cond_4
     const-string/jumbo v0, "home"
 
     goto :goto_1
 
-    .line 158
     :sswitch_0
     const-string/jumbo v4, ""
 
@@ -544,7 +500,6 @@
 
     goto/16 :goto_2
 
-    .line 160
     :pswitch_0
     new-instance v0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComHomeHandler;
 
@@ -552,7 +507,6 @@
 
     goto/16 :goto_3
 
-    .line 163
     :pswitch_1
     new-instance v0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComLaunchHandler;
 
@@ -560,7 +514,6 @@
 
     goto/16 :goto_3
 
-    .line 166
     :pswitch_2
     new-instance v0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComVideoDetailsHandler;
 
@@ -568,7 +521,6 @@
 
     goto/16 :goto_3
 
-    .line 170
     :pswitch_3
     new-instance v0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComWatchHandler;
 
@@ -584,7 +536,6 @@
 
     goto/16 :goto_3
 
-    .line 173
     :pswitch_4
     new-instance v0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComBrowseHandler;
 
@@ -592,7 +543,6 @@
 
     goto/16 :goto_3
 
-    .line 176
     :pswitch_5
     new-instance v0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComAddToListHandler;
 
@@ -600,7 +550,6 @@
 
     goto/16 :goto_3
 
-    .line 179
     :pswitch_6
     new-instance v0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComSearchHandler;
 
@@ -608,7 +557,6 @@
 
     goto/16 :goto_3
 
-    .line 182
     :pswitch_7
     new-instance v0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComSyncHandler;
 
@@ -616,7 +564,6 @@
 
     goto/16 :goto_3
 
-    .line 185
     :pswitch_8
     new-instance v0, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComProfilesHandler;
 
@@ -624,7 +571,6 @@
 
     goto/16 :goto_3
 
-    .line 158
     nop
 
     :sswitch_data_0
@@ -659,51 +605,41 @@
 .method public static handle(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Landroid/content/Intent;)Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;
     .locals 5
 
-    .prologue
-    .line 100
     invoke-virtual {p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 101
     const-string/jumbo v0, "source"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 102
     invoke-static {v1}, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComHandlerFactory;->getActionParts(Landroid/net/Uri;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 103
     invoke-static {v1}, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComUtils;->getParameters(Landroid/net/Uri;)Ljava/util/Map;
 
     move-result-object v3
 
-    .line 104
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 105
     const-string/jumbo v4, "source"
 
     invoke-interface {v3, v4, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 107
     :cond_0
     invoke-static {p0, v2, v3}, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComHandlerFactory;->getHandler(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Ljava/util/List;Ljava/util/Map;)Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComHandler;
 
     move-result-object v0
 
-    .line 109
     if-nez v0, :cond_1
 
-    .line 110
     const-string/jumbo v0, "NetflixComHandlerFactory"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -736,17 +672,14 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
     :goto_0
     invoke-static {p0, v1}, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComUtils;->launchBrowser(Landroid/app/Activity;Landroid/net/Uri;)V
 
-    .line 125
     sget-object v0, Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;->HANDLING:Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;
 
     :goto_1
     return-object v0
 
-    .line 112
     :cond_1
     invoke-static {v1}, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComUtils;->getTrackId(Landroid/net/Uri;)Ljava/lang/String;
 
@@ -756,12 +689,10 @@
 
     move-result-object v0
 
-    .line 113
     sget-object v2, Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;->NOT_HANDLING:Lcom/netflix/mediaclient/protocol/nflx/NflxHandler$Response;
 
     if-ne v0, v2, :cond_2
 
-    .line 114
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -788,7 +719,6 @@
 
     goto :goto_0
 
-    .line 117
     :cond_2
     sget-object v2, Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;->deepLink:Lcom/netflix/mediaclient/servicemgr/UIViewLogging$UIViewCommandName;
 

@@ -15,53 +15,40 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 34
     const/16 v0, 0x20
 
     invoke-direct {p0, v0}, Lorg/xbill/DNS/DNSOutput;-><init>(I)V
 
-    .line 35
     return-void
 .end method
 
 .method public constructor <init>(I)V
     .locals 1
 
-    .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     new-array v0, p1, [B
 
     iput-object v0, p0, Lorg/xbill/DNS/DNSOutput;->array:[B
 
-    .line 25
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/xbill/DNS/DNSOutput;->pos:I
 
-    .line 26
     const/4 v0, -0x1
 
     iput v0, p0, Lorg/xbill/DNS/DNSOutput;->saved_pos:I
 
-    .line 27
     return-void
 .end method
 
 .method private check(JI)V
     .locals 5
 
-    .prologue
-    .line 47
     const-wide/16 v0, 0x1
 
-    .line 48
     shl-long/2addr v0, p3
 
-    .line 49
     const-wide/16 v2, 0x0
 
     cmp-long v2, p1, v2
@@ -72,7 +59,6 @@
 
     if-lez v0, :cond_1
 
-    .line 50
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -108,7 +94,6 @@
 
     throw v0
 
-    .line 53
     :cond_1
     return-void
 .end method
@@ -116,10 +101,8 @@
 .method private need(I)V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 57
     iget-object v0, p0, Lorg/xbill/DNS/DNSOutput;->array:[B
 
     array-length v0, v0
@@ -130,11 +113,9 @@
 
     if-lt v0, p1, :cond_0
 
-    .line 67
     :goto_0
     return-void
 
-    .line 60
     :cond_0
     iget-object v0, p0, Lorg/xbill/DNS/DNSOutput;->array:[B
 
@@ -142,30 +123,25 @@
 
     mul-int/lit8 v0, v0, 0x2
 
-    .line 61
     iget v1, p0, Lorg/xbill/DNS/DNSOutput;->pos:I
 
     add-int/2addr v1, p1
 
     if-ge v0, v1, :cond_1
 
-    .line 62
     iget v0, p0, Lorg/xbill/DNS/DNSOutput;->pos:I
 
     add-int/2addr v0, p1
 
-    .line 64
     :cond_1
     new-array v0, v0, [B
 
-    .line 65
     iget-object v1, p0, Lorg/xbill/DNS/DNSOutput;->array:[B
 
     iget v2, p0, Lorg/xbill/DNS/DNSOutput;->pos:I
 
     invoke-static {v1, v3, v0, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 66
     iput-object v0, p0, Lorg/xbill/DNS/DNSOutput;->array:[B
 
     goto :goto_0
@@ -176,8 +152,6 @@
 .method public current()I
     .locals 1
 
-    .prologue
-    .line 42
     iget v0, p0, Lorg/xbill/DNS/DNSOutput;->pos:I
 
     return v0
@@ -186,13 +160,10 @@
 .method public jump(I)V
     .locals 2
 
-    .prologue
-    .line 76
     iget v0, p0, Lorg/xbill/DNS/DNSOutput;->pos:I
 
     if-le p1, v0, :cond_0
 
-    .line 77
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "cannot jump past end of data"
@@ -201,24 +172,19 @@
 
     throw v0
 
-    .line 80
     :cond_0
     iput p1, p0, Lorg/xbill/DNS/DNSOutput;->pos:I
 
-    .line 81
     return-void
 .end method
 
 .method public restore()V
     .locals 2
 
-    .prologue
-    .line 97
     iget v0, p0, Lorg/xbill/DNS/DNSOutput;->saved_pos:I
 
     if-gez v0, :cond_0
 
-    .line 98
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "no previous state"
@@ -227,108 +193,87 @@
 
     throw v0
 
-    .line 100
     :cond_0
     iget v0, p0, Lorg/xbill/DNS/DNSOutput;->saved_pos:I
 
     iput v0, p0, Lorg/xbill/DNS/DNSOutput;->pos:I
 
-    .line 101
     const/4 v0, -0x1
 
     iput v0, p0, Lorg/xbill/DNS/DNSOutput;->saved_pos:I
 
-    .line 102
     return-void
 .end method
 
 .method public save()V
     .locals 1
 
-    .prologue
-    .line 89
     iget v0, p0, Lorg/xbill/DNS/DNSOutput;->pos:I
 
     iput v0, p0, Lorg/xbill/DNS/DNSOutput;->saved_pos:I
 
-    .line 90
     return-void
 .end method
 
 .method public toByteArray()[B
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 198
     iget v0, p0, Lorg/xbill/DNS/DNSOutput;->pos:I
 
     new-array v0, v0, [B
 
-    .line 199
     iget-object v1, p0, Lorg/xbill/DNS/DNSOutput;->array:[B
 
     iget v2, p0, Lorg/xbill/DNS/DNSOutput;->pos:I
 
     invoke-static {v1, v3, v0, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 200
     return-object v0
 .end method
 
 .method public writeByteArray([B)V
     .locals 2
 
-    .prologue
-    .line 175
     const/4 v0, 0x0
 
     array-length v1, p1
 
     invoke-virtual {p0, p1, v0, v1}, Lorg/xbill/DNS/DNSOutput;->writeByteArray([BII)V
 
-    .line 176
     return-void
 .end method
 
 .method public writeByteArray([BII)V
     .locals 2
 
-    .prologue
-    .line 164
     invoke-direct {p0, p3}, Lorg/xbill/DNS/DNSOutput;->need(I)V
 
-    .line 165
     iget-object v0, p0, Lorg/xbill/DNS/DNSOutput;->array:[B
 
     iget v1, p0, Lorg/xbill/DNS/DNSOutput;->pos:I
 
     invoke-static {p1, p2, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 166
     iget v0, p0, Lorg/xbill/DNS/DNSOutput;->pos:I
 
     add-int/2addr v0, p3
 
     iput v0, p0, Lorg/xbill/DNS/DNSOutput;->pos:I
 
-    .line 167
     return-void
 .end method
 
 .method public writeCountedString([B)V
     .locals 3
 
-    .prologue
-    .line 185
     array-length v0, p1
 
     const/16 v1, 0xff
 
     if-le v0, v1, :cond_0
 
-    .line 186
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Invalid counted string"
@@ -337,7 +282,6 @@
 
     throw v0
 
-    .line 188
     :cond_0
     array-length v0, p1
 
@@ -345,7 +289,6 @@
 
     invoke-direct {p0, v0}, Lorg/xbill/DNS/DNSOutput;->need(I)V
 
-    .line 189
     iget-object v0, p0, Lorg/xbill/DNS/DNSOutput;->array:[B
 
     iget v1, p0, Lorg/xbill/DNS/DNSOutput;->pos:I
@@ -362,34 +305,28 @@
 
     aput-byte v2, v0, v1
 
-    .line 190
     const/4 v0, 0x0
 
     array-length v1, p1
 
     invoke-virtual {p0, p1, v0, v1}, Lorg/xbill/DNS/DNSOutput;->writeByteArray([BII)V
 
-    .line 191
     return-void
 .end method
 
 .method public writeU16(I)V
     .locals 3
 
-    .prologue
-    .line 121
     int-to-long v0, p1
 
     const/16 v2, 0x10
 
     invoke-direct {p0, v0, v1, v2}, Lorg/xbill/DNS/DNSOutput;->check(JI)V
 
-    .line 122
     const/4 v0, 0x2
 
     invoke-direct {p0, v0}, Lorg/xbill/DNS/DNSOutput;->need(I)V
 
-    .line 123
     iget-object v0, p0, Lorg/xbill/DNS/DNSOutput;->array:[B
 
     iget v1, p0, Lorg/xbill/DNS/DNSOutput;->pos:I
@@ -406,7 +343,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 124
     iget-object v0, p0, Lorg/xbill/DNS/DNSOutput;->array:[B
 
     iget v1, p0, Lorg/xbill/DNS/DNSOutput;->pos:I
@@ -421,29 +357,24 @@
 
     aput-byte v2, v0, v1
 
-    .line 125
     return-void
 .end method
 
 .method public writeU16At(II)V
     .locals 3
 
-    .prologue
-    .line 134
     int-to-long v0, p1
 
     const/16 v2, 0x10
 
     invoke-direct {p0, v0, v1, v2}, Lorg/xbill/DNS/DNSOutput;->check(JI)V
 
-    .line 135
     iget v0, p0, Lorg/xbill/DNS/DNSOutput;->pos:I
 
     add-int/lit8 v0, v0, -0x2
 
     if-le p2, v0, :cond_0
 
-    .line 136
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "cannot write past end of data"
@@ -452,7 +383,6 @@
 
     throw v0
 
-    .line 138
     :cond_0
     iget-object v0, p0, Lorg/xbill/DNS/DNSOutput;->array:[B
 
@@ -466,7 +396,6 @@
 
     aput-byte v2, v0, p2
 
-    .line 139
     iget-object v0, p0, Lorg/xbill/DNS/DNSOutput;->array:[B
 
     add-int/lit8 v2, v1, 0x1
@@ -477,27 +406,22 @@
 
     aput-byte v2, v0, v1
 
-    .line 140
     return-void
 .end method
 
 .method public writeU32(J)V
     .locals 7
 
-    .prologue
     const-wide/16 v4, 0xff
 
-    .line 148
     const/16 v0, 0x20
 
     invoke-direct {p0, p1, p2, v0}, Lorg/xbill/DNS/DNSOutput;->check(JI)V
 
-    .line 149
     const/4 v0, 0x4
 
     invoke-direct {p0, v0}, Lorg/xbill/DNS/DNSOutput;->need(I)V
 
-    .line 150
     iget-object v0, p0, Lorg/xbill/DNS/DNSOutput;->array:[B
 
     iget v1, p0, Lorg/xbill/DNS/DNSOutput;->pos:I
@@ -518,7 +442,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 151
     iget-object v0, p0, Lorg/xbill/DNS/DNSOutput;->array:[B
 
     iget v1, p0, Lorg/xbill/DNS/DNSOutput;->pos:I
@@ -539,7 +462,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 152
     iget-object v0, p0, Lorg/xbill/DNS/DNSOutput;->array:[B
 
     iget v1, p0, Lorg/xbill/DNS/DNSOutput;->pos:I
@@ -560,7 +482,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 153
     iget-object v0, p0, Lorg/xbill/DNS/DNSOutput;->array:[B
 
     iget v1, p0, Lorg/xbill/DNS/DNSOutput;->pos:I
@@ -577,27 +498,22 @@
 
     aput-byte v2, v0, v1
 
-    .line 154
     return-void
 .end method
 
 .method public writeU8(I)V
     .locals 3
 
-    .prologue
-    .line 110
     int-to-long v0, p1
 
     const/16 v2, 0x8
 
     invoke-direct {p0, v0, v1, v2}, Lorg/xbill/DNS/DNSOutput;->check(JI)V
 
-    .line 111
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lorg/xbill/DNS/DNSOutput;->need(I)V
 
-    .line 112
     iget-object v0, p0, Lorg/xbill/DNS/DNSOutput;->array:[B
 
     iget v1, p0, Lorg/xbill/DNS/DNSOutput;->pos:I
@@ -612,6 +528,5 @@
 
     aput-byte v2, v0, v1
 
-    .line 113
     return-void
 .end method

@@ -22,19 +22,14 @@
 .method public constructor <init>(Lcom/netflix/falkor/CachedModelProxy;Ljava/lang/String;Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;)V
     .locals 3
 
-    .prologue
-    .line 2275
     iput-object p1, p0, Lcom/netflix/falkor/CachedModelProxy$FetchKidsCharacterDetailsTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
-    .line 2276
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p3, v0}, Lcom/netflix/falkor/CachedModelProxy$CmpTask;-><init>(Lcom/netflix/falkor/CachedModelProxy;Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/falkor/CachedModelProxy$1;)V
 
-    .line 2277
     iput-object p2, p0, Lcom/netflix/falkor/CachedModelProxy$FetchKidsCharacterDetailsTask;->characterId:Ljava/lang/String;
 
-    .line 2280
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -61,7 +56,6 @@
 
     invoke-static {p1, v0}, Lcom/netflix/falkor/CachedModelProxy;->access$2500(Lcom/netflix/falkor/CachedModelProxy;Lcom/netflix/falkor/PQL;)V
 
-    .line 2281
     return-void
 .end method
 
@@ -79,7 +73,6 @@
         }
     .end annotation
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -90,7 +83,6 @@
 
     const/4 v3, 0x0
 
-    .line 2285
     new-array v0, v6, [Ljava/lang/Object;
 
     const-string/jumbo v1, "characters"
@@ -123,7 +115,6 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2286
     new-array v0, v7, [Ljava/lang/Object;
 
     const-string/jumbo v1, "characters"
@@ -168,7 +159,6 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2287
     new-array v0, v7, [Ljava/lang/Object;
 
     const-string/jumbo v1, "characters"
@@ -193,7 +183,6 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2288
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$FetchKidsCharacterDetailsTask;->characterId:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/netflix/falkor/CachedModelProxy;->buildKidsCharacterVideoGalleryPql(Ljava/lang/String;)Lcom/netflix/falkor/PQL;
@@ -202,15 +191,12 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2289
     return-void
 .end method
 
 .method protected callbackForFailure(Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 2299
     const/4 v0, 0x0
 
     const/4 v1, 0x0
@@ -221,17 +207,14 @@
 
     invoke-interface {p1, v0, v1, p2}, Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;->onKidsCharacterDetailsFetched(Lcom/netflix/mediaclient/servicemgr/interface_/details/KidsCharacterDetails;Ljava/lang/Boolean;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 2300
     return-void
 .end method
 
 .method protected fetchResultsAndCallbackForSuccess(Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/falkor/CachedModelProxy$GetResult;)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
-    .line 2293
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$FetchKidsCharacterDetailsTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
     const/4 v1, 0x2
@@ -258,7 +241,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/servicemgr/interface_/details/KidsCharacterDetails;
 
-    .line 2294
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
@@ -267,6 +249,5 @@
 
     invoke-interface {p1, v0, v1, v2}, Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;->onKidsCharacterDetailsFetched(Lcom/netflix/mediaclient/servicemgr/interface_/details/KidsCharacterDetails;Ljava/lang/Boolean;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 2295
     return-void
 .end method

@@ -22,8 +22,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 119
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,8 +32,6 @@
 .method public compare(Lcom/viewpagerindicator/android/osp/ViewPager$ItemInfo;Lcom/viewpagerindicator/android/osp/ViewPager$ItemInfo;)I
     .locals 2
 
-    .prologue
-    .line 122
     iget v0, p1, Lcom/viewpagerindicator/android/osp/ViewPager$ItemInfo;->position:I
 
     iget v1, p2, Lcom/viewpagerindicator/android/osp/ViewPager$ItemInfo;->position:I
@@ -48,8 +44,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 119
     check-cast p1, Lcom/viewpagerindicator/android/osp/ViewPager$ItemInfo;
 
     check-cast p2, Lcom/viewpagerindicator/android/osp/ViewPager$ItemInfo;

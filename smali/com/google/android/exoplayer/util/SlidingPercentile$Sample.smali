@@ -15,8 +15,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 149
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,8 +23,6 @@
 .method synthetic constructor <init>(Lcom/google/android/exoplayer/util/SlidingPercentile$1;)V
     .locals 0
 
-    .prologue
-    .line 149
     invoke-direct {p0}, Lcom/google/android/exoplayer/util/SlidingPercentile$Sample;-><init>()V
 
     return-void

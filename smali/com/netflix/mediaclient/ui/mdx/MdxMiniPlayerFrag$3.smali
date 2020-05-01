@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;)V
     .locals 0
 
-    .prologue
-    .line 615
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag$3;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,10 +26,8 @@
 .method public run()V
     .locals 6
 
-    .prologue
     const-wide/16 v4, 0x0
 
-    .line 618
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag$3;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;->access$200(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;)Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -52,7 +48,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 619
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag$3;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;
 
@@ -60,11 +55,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;->access$400(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;Ljava/lang/String;)V
 
-    .line 636
     :goto_0
     return-void
 
-    .line 623
     :cond_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -78,7 +71,6 @@
 
     sub-long/2addr v0, v2
 
-    .line 624
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag$3;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;
 
     invoke-static {v2}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;->access$500(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;)J
@@ -93,7 +85,6 @@
 
     if-lez v2, :cond_2
 
-    .line 625
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag$3;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;
 
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag$3;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;
@@ -106,7 +97,6 @@
 
     invoke-static {v2, v0, v1}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;->access$602(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;J)J
 
-    .line 626
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag$3;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;->access$600(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;)J
@@ -117,7 +107,6 @@
 
     div-int/lit16 v0, v0, 0x3e8
 
-    .line 627
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag$3;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -140,7 +129,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;->access$400(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;Ljava/lang/String;)V
 
-    .line 628
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag$3;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;->access$700(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;)Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
@@ -149,7 +137,6 @@
 
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;->setProgress(I)V
 
-    .line 634
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag$3;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;
 
@@ -159,7 +146,6 @@
 
     invoke-static {v0, v2, v3}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;->access$502(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;J)J
 
-    .line 635
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag$3;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;->access$900(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerFrag;)Landroid/os/Handler;

@@ -14,8 +14,6 @@
 .method private constructor <init>(Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;)V
     .locals 0
 
-    .prologue
-    .line 245
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag$FlatGenre;->this$0:Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,8 +24,6 @@
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag$1;)V
     .locals 0
 
-    .prologue
-    .line 245
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag$FlatGenre;-><init>(Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;)V
 
     return-void
@@ -38,8 +34,6 @@
 .method public describeContents()I
     .locals 1
 
-    .prologue
-    .line 288
     const/4 v0, 0x0
 
     return v0
@@ -48,8 +42,6 @@
 .method public getHeroTrackId()I
     .locals 1
 
-    .prologue
-    .line 313
     const/4 v0, 0x0
 
     return v0
@@ -58,8 +50,6 @@
 .method public getId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 273
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag$FlatGenre;->this$0:Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/lolomo/GalleryGenresLoMoFrag;->genreId:Ljava/lang/String;
@@ -70,8 +60,6 @@
 .method public getListPos()I
     .locals 1
 
-    .prologue
-    .line 303
     const/4 v0, 0x0
 
     return v0
@@ -89,8 +77,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 253
     const/4 v0, 0x0
 
     return-object v0
@@ -99,8 +85,6 @@
 .method public getNumVideos()I
     .locals 1
 
-    .prologue
-    .line 248
     const/4 v0, 0x0
 
     return v0
@@ -109,8 +93,6 @@
 .method public getRequestId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 308
     const/4 v0, 0x0
 
     return-object v0
@@ -119,8 +101,6 @@
 .method public getTitle()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 278
     const/4 v0, 0x0
 
     return-object v0
@@ -129,8 +109,6 @@
 .method public getTrackId()I
     .locals 1
 
-    .prologue
-    .line 298
     const/4 v0, 0x0
 
     return v0
@@ -139,8 +117,6 @@
 .method public getType()Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
     .locals 1
 
-    .prologue
-    .line 283
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;->FLAT_GENRE:Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
 
     return-object v0
@@ -149,8 +125,6 @@
 .method public isBillboard()Z
     .locals 1
 
-    .prologue
-    .line 258
     const/4 v0, 0x0
 
     return v0
@@ -159,8 +133,6 @@
 .method public isHero()Z
     .locals 1
 
-    .prologue
-    .line 318
     const/4 v0, 0x0
 
     return v0
@@ -169,23 +141,17 @@
 .method public setId(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 269
     return-void
 .end method
 
 .method public setListPos(I)V
     .locals 0
 
-    .prologue
-    .line 264
     return-void
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .prologue
-    .line 294
     return-void
 .end method

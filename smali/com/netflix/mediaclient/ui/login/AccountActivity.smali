@@ -11,8 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 9
     invoke-direct {p0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;-><init>()V
 
     return-void
@@ -21,8 +19,6 @@
 .method public static finishAllAccountActivities(Landroid/content/Context;)V
     .locals 2
 
-    .prologue
-    .line 15
     new-instance v0, Landroid/content/Intent;
 
     const-string/jumbo v1, "com.netflix.mediaclient.ui.login.ACTION_FINISH_ACCOUNT_ACTIVITIES"
@@ -31,7 +27,6 @@
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 16
     return-void
 .end method
 
@@ -40,8 +35,6 @@
 .method protected allowTransitionAnimation()Z
     .locals 1
 
-    .prologue
-    .line 57
     const/4 v0, 0x0
 
     return v0
@@ -50,8 +43,6 @@
 .method protected hasUpAction()Z
     .locals 1
 
-    .prologue
-    .line 27
     const/4 v0, 0x0
 
     return v0
@@ -60,8 +51,6 @@
 .method public isLoadingData()Z
     .locals 1
 
-    .prologue
-    .line 52
     const/4 v0, 0x0
 
     return v0
@@ -70,32 +59,24 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 1
 
-    .prologue
-    .line 20
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 22
     const-string/jumbo v0, "com.netflix.mediaclient.ui.login.ACTION_FINISH_ACCOUNT_ACTIVITIES"
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/login/AccountActivity;->registerFinishReceiverWithAutoUnregister(Ljava/lang/String;)V
 
-    .line 23
     return-void
 .end method
 
 .method public performUpAction()V
     .locals 0
 
-    .prologue
-    .line 33
     return-void
 .end method
 
 .method public showMdxInMenu()Z
     .locals 1
 
-    .prologue
-    .line 37
     const/4 v0, 0x0
 
     return v0
@@ -104,8 +85,6 @@
 .method public showSettingsInMenu()Z
     .locals 1
 
-    .prologue
-    .line 42
     const/4 v0, 0x0
 
     return v0
@@ -114,8 +93,6 @@
 .method public showSignOutInMenu()Z
     .locals 1
 
-    .prologue
-    .line 47
     const/4 v0, 0x0
 
     return v0

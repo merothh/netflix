@@ -27,11 +27,8 @@
 .method public constructor <init>(Lcom/fasterxml/jackson/core/JsonParser;)V
     .locals 3
 
-    .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->getCurrentToken()Lcom/fasterxml/jackson/core/JsonToken;
 
     move-result-object v0
@@ -42,21 +39,16 @@
 
     invoke-static {p0, p1, v0, v1, v2}, Lcom/netflix/falkor/BranchNodeUtils;->merge(Lcom/netflix/mediaclient/servicemgr/interface_/JsonMerger;Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/core/JsonToken;ZI)Ljava/lang/Object;
 
-    .line 30
     return-void
 .end method
 
 .method public constructor <init>(Lcom/google/gson/JsonElement;)V
     .locals 0
 
-    .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     invoke-virtual {p0, p1}, Lcom/netflix/model/leafs/Delivery;->populate(Lcom/google/gson/JsonElement;)V
 
-    .line 34
     return-void
 .end method
 
@@ -65,8 +57,6 @@
 .method public getQuality()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 53
     iget-object v0, p0, Lcom/netflix/model/leafs/Delivery;->quality:Ljava/lang/String;
 
     return-object v0
@@ -75,8 +65,6 @@
 .method public has3D()Ljava/lang/Boolean;
     .locals 1
 
-    .prologue
-    .line 37
     iget-object v0, p0, Lcom/netflix/model/leafs/Delivery;->has3D:Ljava/lang/Boolean;
 
     return-object v0
@@ -85,8 +73,6 @@
 .method public has51Audio()Ljava/lang/Boolean;
     .locals 1
 
-    .prologue
-    .line 49
     iget-object v0, p0, Lcom/netflix/model/leafs/Delivery;->has51Audio:Ljava/lang/Boolean;
 
     return-object v0
@@ -95,8 +81,6 @@
 .method public hasHD()Ljava/lang/Boolean;
     .locals 1
 
-    .prologue
-    .line 41
     iget-object v0, p0, Lcom/netflix/model/leafs/Delivery;->hasHD:Ljava/lang/Boolean;
 
     return-object v0
@@ -105,8 +89,6 @@
 .method public hasUltraHD()Ljava/lang/Boolean;
     .locals 1
 
-    .prologue
-    .line 45
     iget-object v0, p0, Lcom/netflix/model/leafs/Delivery;->hasUltraHD:Ljava/lang/Boolean;
 
     return-object v0
@@ -115,18 +97,14 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 5
 
-    .prologue
-    .line 85
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 86
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 87
     const-string/jumbo v1, "Delivery"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -149,7 +127,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 89
     :cond_0
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -172,14 +149,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 90
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/gson/JsonElement;
 
-    .line 91
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -202,7 +177,6 @@
 
     goto :goto_0
 
-    .line 92
     :pswitch_0
     invoke-static {v1}, Lcom/netflix/mediaclient/util/JsonUtils;->getAsBoolSafe(Lcom/google/gson/JsonElement;)Z
 
@@ -216,7 +190,6 @@
 
     goto :goto_0
 
-    .line 91
     :sswitch_0
     const-string/jumbo v4, "has3D"
 
@@ -282,7 +255,6 @@
 
     goto :goto_1
 
-    .line 93
     :pswitch_1
     invoke-static {v1}, Lcom/netflix/mediaclient/util/JsonUtils;->getAsBoolSafe(Lcom/google/gson/JsonElement;)Z
 
@@ -296,7 +268,6 @@
 
     goto :goto_0
 
-    .line 94
     :pswitch_2
     invoke-static {v1}, Lcom/netflix/mediaclient/util/JsonUtils;->getAsBoolSafe(Lcom/google/gson/JsonElement;)Z
 
@@ -310,7 +281,6 @@
 
     goto :goto_0
 
-    .line 95
     :pswitch_3
     invoke-static {v1}, Lcom/netflix/mediaclient/util/JsonUtils;->getAsBoolSafe(Lcom/google/gson/JsonElement;)Z
 
@@ -324,7 +294,6 @@
 
     goto/16 :goto_0
 
-    .line 96
     :pswitch_4
     invoke-static {v1}, Lcom/netflix/mediaclient/util/JsonUtils;->getAsStringSafe(Lcom/google/gson/JsonElement;)Ljava/lang/String;
 
@@ -334,11 +303,9 @@
 
     goto/16 :goto_0
 
-    .line 100
     :cond_2
     return-void
 
-    .line 91
     :sswitch_data_0
     .sparse-switch
         0x5e75a8b -> :sswitch_0
@@ -361,17 +328,14 @@
 .method public set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 58
     sget-boolean v2, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v2, :cond_0
 
-    .line 59
     const-string/jumbo v2, "Delivery"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -394,7 +358,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 61
     :cond_0
     const/4 v2, -0x1
 
@@ -408,11 +371,9 @@
     :goto_0
     packed-switch v2, :pswitch_data_0
 
-    .line 80
     :goto_1
     return v0
 
-    .line 61
     :sswitch_0
     const-string/jumbo v3, "has3D"
 
@@ -478,7 +439,6 @@
 
     goto :goto_0
 
-    .line 63
     :pswitch_0
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -493,10 +453,8 @@
     :goto_2
     move v0, v1
 
-    .line 80
     goto :goto_1
 
-    .line 66
     :pswitch_1
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -510,7 +468,6 @@
 
     goto :goto_2
 
-    .line 69
     :pswitch_2
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -524,7 +481,6 @@
 
     goto :goto_2
 
-    .line 72
     :pswitch_3
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsBoolean()Z
 
@@ -538,7 +494,6 @@
 
     goto :goto_2
 
-    .line 75
     :pswitch_4
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -548,7 +503,6 @@
 
     goto :goto_2
 
-    .line 61
     nop
 
     :sswitch_data_0

@@ -16,8 +16,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,8 +26,6 @@
 .method public get(Ljava/lang/String;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 23
     const/4 v0, -0x1
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -42,13 +38,11 @@
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 32
     const/4 v0, 0x0
 
     :goto_1
     return-object v0
 
-    .line 23
     :sswitch_0
     const-string/jumbo v1, "postplay"
 
@@ -75,19 +69,16 @@
 
     goto :goto_0
 
-    .line 25
     :pswitch_0
     iget-object v0, p0, Lcom/netflix/model/branches/InteractiveInfo;->postplay:Lcom/netflix/model/leafs/InteractivePostplay;
 
     goto :goto_1
 
-    .line 27
     :pswitch_1
     iget-object v0, p0, Lcom/netflix/model/branches/InteractiveInfo;->details:Lcom/netflix/model/leafs/InteractiveDetails;
 
     goto :goto_1
 
-    .line 23
     nop
 
     :sswitch_data_0
@@ -115,34 +106,27 @@
         }
     .end annotation
 
-    .prologue
-    .line 74
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 75
     iget-object v1, p0, Lcom/netflix/model/branches/InteractiveInfo;->postplay:Lcom/netflix/model/leafs/InteractivePostplay;
 
     if-eqz v1, :cond_0
 
-    .line 76
     const-string/jumbo v1, "postplay"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 78
     :cond_0
     iget-object v1, p0, Lcom/netflix/model/branches/InteractiveInfo;->details:Lcom/netflix/model/leafs/InteractiveDetails;
 
     if-eqz v1, :cond_1
 
-    .line 79
     const-string/jumbo v1, "details"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 81
     :cond_1
     return-object v0
 .end method
@@ -150,20 +134,15 @@
 .method public getOrCreate(Ljava/lang/String;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 38
     invoke-virtual {p0, p1}, Lcom/netflix/model/branches/InteractiveInfo;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 39
     if-eqz v0, :cond_0
 
-    .line 52
     :goto_0
     return-object v0
 
-    .line 43
     :cond_0
     const/4 v0, -0x1
 
@@ -177,12 +156,10 @@
     :goto_1
     packed-switch v0, :pswitch_data_0
 
-    .line 52
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 43
     :sswitch_0
     const-string/jumbo v1, "postplay"
 
@@ -209,7 +186,6 @@
 
     goto :goto_1
 
-    .line 45
     :pswitch_0
     new-instance v0, Lcom/netflix/model/leafs/InteractivePostplay;
 
@@ -219,7 +195,6 @@
 
     goto :goto_0
 
-    .line 47
     :pswitch_1
     new-instance v0, Lcom/netflix/model/leafs/InteractiveDetails;
 
@@ -229,7 +204,6 @@
 
     goto :goto_0
 
-    .line 43
     :sswitch_data_0
     .sparse-switch
         0x2d2bd3d4 -> :sswitch_0
@@ -246,21 +220,16 @@
 .method public remove(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 69
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/netflix/model/branches/InteractiveInfo;->set(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 70
     return-void
 .end method
 
 .method public set(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 3
 
-    .prologue
-    .line 58
     const-string/jumbo v0, "postplay"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -269,16 +238,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 59
     check-cast p2, Lcom/netflix/model/leafs/InteractivePostplay;
 
     iput-object p2, p0, Lcom/netflix/model/branches/InteractiveInfo;->postplay:Lcom/netflix/model/leafs/InteractivePostplay;
 
-    .line 65
     :goto_0
     return-void
 
-    .line 60
     :cond_0
     const-string/jumbo v0, "details"
 
@@ -288,14 +254,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 61
     check-cast p2, Lcom/netflix/model/leafs/InteractiveDetails;
 
     iput-object p2, p0, Lcom/netflix/model/branches/InteractiveInfo;->details:Lcom/netflix/model/leafs/InteractiveDetails;
 
     goto :goto_0
 
-    .line 63
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -325,8 +289,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 86
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

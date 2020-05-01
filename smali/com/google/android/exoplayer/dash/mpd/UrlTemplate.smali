@@ -17,49 +17,36 @@
 .method private constructor <init>([Ljava/lang/String;[I[Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 66
     iput-object p1, p0, Lcom/google/android/exoplayer/dash/mpd/UrlTemplate;->urlPieces:[Ljava/lang/String;
 
-    .line 67
     iput-object p2, p0, Lcom/google/android/exoplayer/dash/mpd/UrlTemplate;->identifiers:[I
 
-    .line 68
     iput-object p3, p0, Lcom/google/android/exoplayer/dash/mpd/UrlTemplate;->identifierFormatTags:[Ljava/lang/String;
 
-    .line 69
     iput p4, p0, Lcom/google/android/exoplayer/dash/mpd/UrlTemplate;->identifierCount:I
 
-    .line 70
     return-void
 .end method
 
 .method public static compile(Ljava/lang/String;)Lcom/google/android/exoplayer/dash/mpd/UrlTemplate;
     .locals 5
 
-    .prologue
     const/4 v2, 0x4
 
-    .line 54
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 55
     new-array v1, v2, [I
 
-    .line 56
     new-array v2, v2, [Ljava/lang/String;
 
-    .line 57
     invoke-static {p0, v0, v1, v2}, Lcom/google/android/exoplayer/dash/mpd/UrlTemplate;->parseTemplate(Ljava/lang/String;[Ljava/lang/String;[I[Ljava/lang/String;)I
 
     move-result v3
 
-    .line 58
     new-instance v4, Lcom/google/android/exoplayer/dash/mpd/UrlTemplate;
 
     invoke-direct {v4, v0, v1, v2, v3}, Lcom/google/android/exoplayer/dash/mpd/UrlTemplate;-><init>([Ljava/lang/String;[I[Ljava/lang/String;I)V
@@ -70,12 +57,10 @@
 .method private static parseTemplate(Ljava/lang/String;[Ljava/lang/String;[I[Ljava/lang/String;)I
     .locals 8
 
-    .prologue
     const/4 v7, -0x1
 
     const/4 v1, 0x0
 
-    .line 118
     const-string/jumbo v0, ""
 
     aput-object v0, p1, v1
@@ -84,7 +69,6 @@
 
     move v2, v1
 
-    .line 121
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -92,17 +76,14 @@
 
     if-ge v2, v3, :cond_9
 
-    .line 122
     const-string/jumbo v3, "$"
 
     invoke-virtual {p0, v3, v2}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
 
     move-result v3
 
-    .line 123
     if-ne v3, v7, :cond_0
 
-    .line 124
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -127,18 +108,15 @@
 
     aput-object v2, p1, v0
 
-    .line 125
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
 
     goto :goto_0
 
-    .line 126
     :cond_0
     if-eq v3, v2, :cond_1
 
-    .line 127
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -165,10 +143,8 @@
 
     move v2, v3
 
-    .line 128
     goto :goto_0
 
-    .line 129
     :cond_1
     const-string/jumbo v3, "$$"
 
@@ -178,7 +154,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 130
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -201,12 +176,10 @@
 
     aput-object v3, p1, v0
 
-    .line 131
     add-int/lit8 v2, v2, 0x2
 
     goto :goto_0
 
-    .line 133
     :cond_2
     const-string/jumbo v3, "$"
 
@@ -216,14 +189,12 @@
 
     move-result v4
 
-    .line 134
     add-int/lit8 v2, v2, 0x1
 
     invoke-virtual {p0, v2, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 135
     const-string/jumbo v2, "RepresentationID"
 
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -232,26 +203,21 @@
 
     if-eqz v2, :cond_3
 
-    .line 136
     const/4 v2, 0x1
 
     aput v2, p2, v0
 
-    .line 158
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
-    .line 159
     const-string/jumbo v2, ""
 
     aput-object v2, p1, v0
 
-    .line 160
     add-int/lit8 v2, v4, 0x1
 
     goto/16 :goto_0
 
-    .line 138
     :cond_3
     const-string/jumbo v2, "%0"
 
@@ -259,18 +225,14 @@
 
     move-result v5
 
-    .line 139
     const-string/jumbo v2, "%01d"
 
-    .line 140
     if-eq v5, v7, :cond_5
 
-    .line 141
     invoke-virtual {v3, v5}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 142
     const-string/jumbo v6, "d"
 
     invoke-virtual {v2, v6}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -279,7 +241,6 @@
 
     if-nez v6, :cond_4
 
-    .line 143
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -298,13 +259,11 @@
 
     move-result-object v2
 
-    .line 145
     :cond_4
     invoke-virtual {v3, v1, v5}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 147
     :cond_5
     const-string/jumbo v5, "Number"
 
@@ -314,18 +273,15 @@
 
     if-eqz v5, :cond_6
 
-    .line 148
     const/4 v3, 0x2
 
     aput v3, p2, v0
 
-    .line 156
     :goto_2
     aput-object v2, p3, v0
 
     goto :goto_1
 
-    .line 149
     :cond_6
     const-string/jumbo v5, "Bandwidth"
 
@@ -335,14 +291,12 @@
 
     if-eqz v5, :cond_7
 
-    .line 150
     const/4 v3, 0x3
 
     aput v3, p2, v0
 
     goto :goto_2
 
-    .line 151
     :cond_7
     const-string/jumbo v5, "Time"
 
@@ -352,14 +306,12 @@
 
     if-eqz v3, :cond_8
 
-    .line 152
     const/4 v3, 0x4
 
     aput v3, p2, v0
 
     goto :goto_2
 
-    .line 154
     :cond_8
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -385,7 +337,6 @@
 
     throw v0
 
-    .line 163
     :cond_9
     return v0
 .end method
@@ -395,49 +346,41 @@
 .method public buildUri(Ljava/lang/String;IIJ)Ljava/lang/String;
     .locals 8
 
-    .prologue
     const/4 v7, 0x1
 
     const/4 v1, 0x0
 
-    .line 84
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     move v0, v1
 
-    .line 85
     :goto_0
     iget v3, p0, Lcom/google/android/exoplayer/dash/mpd/UrlTemplate;->identifierCount:I
 
     if-ge v0, v3, :cond_4
 
-    .line 86
     iget-object v3, p0, Lcom/google/android/exoplayer/dash/mpd/UrlTemplate;->urlPieces:[Ljava/lang/String;
 
     aget-object v3, v3, v0
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 87
     iget-object v3, p0, Lcom/google/android/exoplayer/dash/mpd/UrlTemplate;->identifiers:[I
 
     aget v3, v3, v0
 
     if-ne v3, v7, :cond_1
 
-    .line 88
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 85
     :cond_0
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 89
     :cond_1
     iget-object v3, p0, Lcom/google/android/exoplayer/dash/mpd/UrlTemplate;->identifiers:[I
 
@@ -447,7 +390,6 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 90
     sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     iget-object v4, p0, Lcom/google/android/exoplayer/dash/mpd/UrlTemplate;->identifierFormatTags:[Ljava/lang/String;
@@ -470,7 +412,6 @@
 
     goto :goto_1
 
-    .line 91
     :cond_2
     iget-object v3, p0, Lcom/google/android/exoplayer/dash/mpd/UrlTemplate;->identifiers:[I
 
@@ -480,7 +421,6 @@
 
     if-ne v3, v4, :cond_3
 
-    .line 92
     sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     iget-object v4, p0, Lcom/google/android/exoplayer/dash/mpd/UrlTemplate;->identifierFormatTags:[Ljava/lang/String;
@@ -503,7 +443,6 @@
 
     goto :goto_1
 
-    .line 93
     :cond_3
     iget-object v3, p0, Lcom/google/android/exoplayer/dash/mpd/UrlTemplate;->identifiers:[I
 
@@ -513,7 +452,6 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 94
     sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     iget-object v4, p0, Lcom/google/android/exoplayer/dash/mpd/UrlTemplate;->identifierFormatTags:[Ljava/lang/String;
@@ -536,7 +474,6 @@
 
     goto :goto_1
 
-    .line 97
     :cond_4
     iget-object v0, p0, Lcom/google/android/exoplayer/dash/mpd/UrlTemplate;->urlPieces:[Ljava/lang/String;
 
@@ -546,7 +483,6 @@
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 98
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

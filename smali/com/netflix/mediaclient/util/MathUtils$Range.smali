@@ -15,17 +15,12 @@
 .method public constructor <init>(II)V
     .locals 2
 
-    .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 23
     iput p1, p0, Lcom/netflix/mediaclient/util/MathUtils$Range;->start:I
 
-    .line 24
     iput p2, p0, Lcom/netflix/mediaclient/util/MathUtils$Range;->end:I
 
-    .line 25
     add-int v0, p1, p2
 
     const/4 v1, 0x2
@@ -36,7 +31,6 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/util/MathUtils$Range;->midpoint:I
 
-    .line 26
     return-void
 .end method
 
@@ -45,8 +39,6 @@
 .method public contains(I)Z
     .locals 1
 
-    .prologue
-    .line 32
     iget v0, p0, Lcom/netflix/mediaclient/util/MathUtils$Range;->start:I
 
     if-lt p1, v0, :cond_0
@@ -69,8 +61,6 @@
 .method public getMidpoint()I
     .locals 1
 
-    .prologue
-    .line 36
     iget v0, p0, Lcom/netflix/mediaclient/util/MathUtils$Range;->midpoint:I
 
     return v0
@@ -79,8 +69,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 41
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

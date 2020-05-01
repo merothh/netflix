@@ -31,19 +31,14 @@
 .method public constructor <init>(Lcom/netflix/falkor/CachedModelProxy;Lcom/netflix/model/leafs/social/IrisNotificationSummary;Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;)V
     .locals 2
 
-    .prologue
-    .line 2875
     iput-object p1, p0, Lcom/netflix/falkor/CachedModelProxy$MarkNotificationAsReadTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
-    .line 2876
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p3, v0}, Lcom/netflix/falkor/CachedModelProxy$CmpTask;-><init>(Lcom/netflix/falkor/CachedModelProxy;Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/falkor/CachedModelProxy$1;)V
 
-    .line 2878
     if-nez p2, :cond_0
 
-    .line 2879
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string/jumbo v1, "MarkNotificationAsReadTask got null notification"
@@ -52,7 +47,6 @@
 
     throw v0
 
-    .line 2881
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -60,12 +54,10 @@
 
     iput-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$MarkNotificationAsReadTask;->notifications:Ljava/util/List;
 
-    .line 2882
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$MarkNotificationAsReadTask;->notifications:Ljava/util/List;
 
     invoke-interface {v0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2883
     return-void
 .end method
 
@@ -83,16 +75,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 2885
     iput-object p1, p0, Lcom/netflix/falkor/CachedModelProxy$MarkNotificationAsReadTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
-    .line 2886
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p3, v0}, Lcom/netflix/falkor/CachedModelProxy$CmpTask;-><init>(Lcom/netflix/falkor/CachedModelProxy;Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/falkor/CachedModelProxy$1;)V
 
-    .line 2888
     if-eqz p2, :cond_0
 
     invoke-interface {p2}, Ljava/util/List;->size()I
@@ -101,7 +89,6 @@
 
     if-nez v0, :cond_1
 
-    .line 2889
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -127,11 +114,9 @@
 
     throw v0
 
-    .line 2891
     :cond_1
     iput-object p2, p0, Lcom/netflix/falkor/CachedModelProxy$MarkNotificationAsReadTask;->notifications:Ljava/util/List;
 
-    .line 2892
     return-void
 .end method
 
@@ -149,13 +134,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 2896
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2897
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$MarkNotificationAsReadTask;->notifications:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -175,7 +157,6 @@
 
     check-cast v0, Lcom/netflix/model/leafs/social/IrisNotificationSummary;
 
-    .line 2898
     invoke-virtual {v0}, Lcom/netflix/model/leafs/social/IrisNotificationSummary;->getId()Ljava/lang/String;
 
     move-result-object v0
@@ -184,7 +165,6 @@
 
     goto :goto_0
 
-    .line 2900
     :cond_0
     const/4 v0, 0x3
 
@@ -212,26 +192,20 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2901
     return-void
 .end method
 
 .method protected callbackForFailure(Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 0
 
-    .prologue
-    .line 2915
     invoke-interface {p1, p2}, Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;->onIrisNotificationsMarkedAsRead(Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 2916
     return-void
 .end method
 
 .method protected fetchResultsAndCallbackForSuccess(Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/falkor/CachedModelProxy$GetResult;)V
     .locals 2
 
-    .prologue
-    .line 2910
     new-instance v0, Lcom/netflix/mediaclient/android/app/NetflixStatus;
 
     sget-object v1, Lcom/netflix/mediaclient/StatusCode;->OK:Lcom/netflix/mediaclient/StatusCode;
@@ -240,15 +214,12 @@
 
     invoke-interface {p1, v0}, Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;->onIrisNotificationsMarkedAsRead(Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 2911
     return-void
 .end method
 
 .method protected shouldUseCallMethod()Z
     .locals 1
 
-    .prologue
-    .line 2905
     const/4 v0, 0x1
 
     return v0

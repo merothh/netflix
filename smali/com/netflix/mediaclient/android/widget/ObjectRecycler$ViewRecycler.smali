@@ -22,8 +22,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 74
     invoke-direct {p0}, Lcom/netflix/mediaclient/android/widget/ObjectRecycler;-><init>()V
 
     return-void

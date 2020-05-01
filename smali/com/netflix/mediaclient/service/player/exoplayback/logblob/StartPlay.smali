@@ -7,11 +7,8 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;JJLjava/lang/String;JLjava/lang/String;JJZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 7
 
-    .prologue
-    .line 20
     invoke-direct {p0, p6, p7, p8}, Lcom/netflix/mediaclient/service/player/exoplayback/logblob/OfflinePlaybackBaseLogblob;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 22
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/logblob/StartPlay;->mJson:Lorg/json/JSONObject;
 
     const-string/jumbo v3, "level"
@@ -22,24 +19,20 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 25
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/player/exoplayback/logblob/StartPlay;->updateSeverity(Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;)V
 
-    .line 27
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/logblob/StartPlay;->mJson:Lorg/json/JSONObject;
 
     const-string/jumbo v3, "trackid"
 
     invoke-virtual {v2, v3, p4, p5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 28
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/logblob/StartPlay;->mJson:Lorg/json/JSONObject;
 
     const-string/jumbo v3, "mid"
 
     invoke-virtual {v2, v3, p2, p3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 30
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/logblob/StartPlay;->mJson:Lorg/json/JSONObject;
 
     const-string/jumbo v3, "soffms"
@@ -48,7 +41,6 @@
 
     invoke-virtual {v2, v3, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 31
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/logblob/StartPlay;->mJson:Lorg/json/JSONObject;
 
     const-string/jumbo v3, "soff"
@@ -59,7 +51,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 32
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/logblob/StartPlay;->mJson:Lorg/json/JSONObject;
 
     const-string/jumbo v3, "moffms"
@@ -68,7 +59,6 @@
 
     invoke-virtual {v2, v3, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 33
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/logblob/StartPlay;->mJson:Lorg/json/JSONObject;
 
     const-string/jumbo v3, "moff"
@@ -79,14 +69,12 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 35
     invoke-static/range {p13 .. p13}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 36
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/logblob/StartPlay;->mJson:Lorg/json/JSONObject;
 
     const-string/jumbo v3, "vdlid"
@@ -95,7 +83,6 @@
 
     invoke-virtual {v2, v3, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 37
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/logblob/StartPlay;->mJson:Lorg/json/JSONObject;
 
     const-string/jumbo v3, "vBitrate"
@@ -104,7 +91,6 @@
 
     invoke-virtual {v2, v3, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 40
     :cond_0
     invoke-static/range {p16 .. p16}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
 
@@ -112,7 +98,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 41
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/logblob/StartPlay;->mJson:Lorg/json/JSONObject;
 
     const-string/jumbo v3, "adlid"
@@ -121,7 +106,6 @@
 
     invoke-virtual {v2, v3, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 42
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/logblob/StartPlay;->mJson:Lorg/json/JSONObject;
 
     const-string/jumbo v3, "abitrate"
@@ -130,7 +114,6 @@
 
     invoke-virtual {v2, v3, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 45
     :cond_1
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/logblob/StartPlay;->mJson:Lorg/json/JSONObject;
 
@@ -140,7 +123,6 @@
 
     invoke-virtual {v2, v3, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 46
     iget-object v3, p0, Lcom/netflix/mediaclient/service/player/exoplayback/logblob/StartPlay;->mJson:Lorg/json/JSONObject;
 
     const-string/jumbo v4, "offlinenetworkstatus"
@@ -152,14 +134,12 @@
     :goto_0
     invoke-virtual {v3, v4, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
-    .line 48
     invoke-static/range {p23 .. p23}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 49
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/logblob/StartPlay;->mJson:Lorg/json/JSONObject;
 
     const-string/jumbo v3, "errormsg"
@@ -168,7 +148,6 @@
 
     invoke-virtual {v2, v3, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 50
     :cond_2
     invoke-static/range {p22 .. p22}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
 
@@ -176,7 +155,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 51
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/logblob/StartPlay;->mJson:Lorg/json/JSONObject;
 
     const-string/jumbo v3, "errorcode"
@@ -185,7 +163,6 @@
 
     invoke-virtual {v2, v3, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 52
     :cond_3
     invoke-static/range {p24 .. p24}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
 
@@ -193,7 +170,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 53
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/exoplayback/logblob/StartPlay;->mJson:Lorg/json/JSONObject;
 
     const-string/jumbo v3, "errorstring"
@@ -202,11 +178,9 @@
 
     invoke-virtual {v2, v3, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 54
     :cond_4
     return-void
 
-    .line 46
     :cond_5
     const/4 v2, 0x0
 
@@ -218,8 +192,6 @@
 .method public getType()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 58
     const-string/jumbo v0, "startplay"
 
     return-object v0

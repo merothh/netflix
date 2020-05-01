@@ -37,8 +37,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 117
     const/16 v0, 0x9
 
     new-array v0, v0, [I
@@ -47,7 +45,6 @@
 
     sput-object v0, Lcom/viewpagerindicator/R$styleable;->CirclePageIndicator:[I
 
-    .line 127
     const/4 v0, 0x7
 
     new-array v0, v0, [I
@@ -56,7 +53,6 @@
 
     sput-object v0, Lcom/viewpagerindicator/R$styleable;->LinePageIndicator:[I
 
-    .line 135
     const/16 v0, 0xf
 
     new-array v0, v0, [I
@@ -65,7 +61,6 @@
 
     sput-object v0, Lcom/viewpagerindicator/R$styleable;->TitlePageIndicator:[I
 
-    .line 151
     const/4 v0, 0x5
 
     new-array v0, v0, [I
@@ -74,7 +69,6 @@
 
     sput-object v0, Lcom/viewpagerindicator/R$styleable;->UnderlinePageIndicator:[I
 
-    .line 157
     const/4 v0, 0x6
 
     new-array v0, v0, [I
@@ -85,7 +79,6 @@
 
     return-void
 
-    .line 117
     nop
 
     :array_0
@@ -101,7 +94,6 @@
         0x7f0100d4
     .end array-data
 
-    .line 127
     :array_1
     .array-data 4
         0x10100d4
@@ -113,7 +105,6 @@
         0x7f01010b
     .end array-data
 
-    .line 135
     :array_2
     .array-data 4
         0x1010095
@@ -133,7 +124,6 @@
         0x7f01018e
     .end array-data
 
-    .line 151
     :array_3
     .array-data 4
         0x10100d4
@@ -143,7 +133,6 @@
         0x7f0101a3
     .end array-data
 
-    .line 157
     :array_4
     .array-data 4
         0x7f0101aa

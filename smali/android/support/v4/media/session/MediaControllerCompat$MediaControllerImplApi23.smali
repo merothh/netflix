@@ -7,22 +7,16 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat$Token;)V
     .locals 0
 
-    .prologue
-    .line 1512
     invoke-direct {p0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;-><init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat$Token;)V
 
-    .line 1513
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;)V
     .locals 0
 
-    .prologue
-    .line 1507
     invoke-direct {p0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;-><init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;)V
 
-    .line 1508
     return-void
 .end method
 
@@ -31,15 +25,12 @@
 .method public getTransportControls()Landroid/support/v4/media/session/MediaControllerCompat$TransportControls;
     .locals 2
 
-    .prologue
-    .line 1517
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi23;->mControllerObj:Ljava/lang/Object;
 
     invoke-static {v0}, Landroid/support/v4/media/session/MediaControllerCompatApi21;->getTransportControls(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 1518
     if-eqz v1, :cond_0
 
     new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi23;

@@ -19,8 +19,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 14
     invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v2
@@ -35,23 +33,18 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/netflix/mediaclient/service/offline/download/StreamBasedDownloadableInfo;-><init>(Ljava/util/List;JLjava/lang/String;Lcom/netflix/mediaclient/service/offline/download/DownloadableType;)V
 
-    .line 15
     return-void
 .end method
 
 .method public static create(Lcom/netflix/mediaclient/media/manifest/Stream;)Lcom/netflix/mediaclient/service/offline/download/VideoDownloadableInfo;
     .locals 4
 
-    .prologue
-    .line 18
     invoke-static {p0}, Lcom/netflix/mediaclient/service/offline/download/VideoDownloadableInfo;->buildCdnUrls(Lcom/netflix/mediaclient/media/manifest/Stream;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 19
     if-eqz v1, :cond_0
 
-    .line 20
     new-instance v0, Lcom/netflix/mediaclient/service/offline/download/VideoDownloadableInfo;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/media/manifest/Stream;->size:Ljava/lang/Long;
@@ -60,7 +53,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/netflix/mediaclient/service/offline/download/VideoDownloadableInfo;-><init>(Ljava/util/List;Ljava/lang/Long;Ljava/lang/String;)V
 
-    .line 22
     :goto_0
     return-object v0
 
@@ -75,8 +67,6 @@
 .method public bridge synthetic getCdnUrls()Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 11
     invoke-super {p0}, Lcom/netflix/mediaclient/service/offline/download/StreamBasedDownloadableInfo;->getCdnUrls()Ljava/util/List;
 
     move-result-object v0
@@ -87,8 +77,6 @@
 .method public bridge synthetic getDownloadableId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 11
     invoke-super {p0}, Lcom/netflix/mediaclient/service/offline/download/StreamBasedDownloadableInfo;->getDownloadableId()Ljava/lang/String;
 
     move-result-object v0
@@ -99,8 +87,6 @@
 .method public bridge synthetic getDownloadableType()Lcom/netflix/mediaclient/service/offline/download/DownloadableType;
     .locals 1
 
-    .prologue
-    .line 11
     invoke-super {p0}, Lcom/netflix/mediaclient/service/offline/download/StreamBasedDownloadableInfo;->getDownloadableType()Lcom/netflix/mediaclient/service/offline/download/DownloadableType;
 
     move-result-object v0
@@ -111,8 +97,6 @@
 .method public bridge synthetic getSizeOfDownloadable()J
     .locals 2
 
-    .prologue
-    .line 11
     invoke-super {p0}, Lcom/netflix/mediaclient/service/offline/download/StreamBasedDownloadableInfo;->getSizeOfDownloadable()J
 
     move-result-wide v0

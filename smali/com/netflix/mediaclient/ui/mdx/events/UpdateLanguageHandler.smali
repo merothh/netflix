@@ -7,23 +7,18 @@
 .method constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 44
     const-string/jumbo v0, "com.netflix.mediaclient.intent.action.MDXUPDATE_AUDIOSUB"
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/mdx/events/EventHandler;-><init>(Ljava/lang/String;)V
 
-    .line 45
     return-void
 .end method
 
 .method private getAudioSources(Lorg/json/JSONArray;)[Lcom/netflix/mediaclient/ui/mdx/MdxAudioSource;
     .locals 5
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 144
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
@@ -34,7 +29,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 145
     :cond_0
     const-string/jumbo v1, "mdxui"
 
@@ -42,14 +36,11 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 146
     new-array v0, v0, [Lcom/netflix/mediaclient/ui/mdx/MdxAudioSource;
 
-    .line 157
     :goto_0
     return-object v0
 
-    .line 149
     :cond_1
     invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
 
@@ -57,13 +48,11 @@
 
     new-array v1, v1, [Lcom/netflix/mediaclient/ui/mdx/MdxAudioSource;
 
-    .line 150
     :goto_1
     array-length v2, v1
 
     if-ge v0, v2, :cond_3
 
-    .line 151
     invoke-virtual {p1, v0}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v2
@@ -74,14 +63,12 @@
 
     aput-object v2, v1, v0
 
-    .line 152
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 153
     const-string/jumbo v2, "mdxui"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -116,7 +103,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 150
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
@@ -125,17 +111,14 @@
     :cond_3
     move-object v0, v1
 
-    .line 157
     goto :goto_0
 .end method
 
 .method private getCurrentAudioIndex([Lcom/netflix/mediaclient/ui/mdx/MdxAudioSource;)I
     .locals 3
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 115
     move v0, v1
 
     :goto_0
@@ -143,7 +126,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 116
     aget-object v2, p1, v0
 
     invoke-virtual {v2}, Lcom/netflix/mediaclient/ui/mdx/MdxAudioSource;->isSelected()Z
@@ -152,17 +134,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 121
     :goto_1
     return v0
 
-    .line 115
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 120
     :cond_1
     const-string/jumbo v0, "mdxui"
 
@@ -172,17 +151,14 @@
 
     move v0, v1
 
-    .line 121
     goto :goto_1
 .end method
 
 .method private getCurrentSubtitleIndex([Lcom/netflix/mediaclient/ui/mdx/MdxSubtitle;)I
     .locals 3
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 104
     move v0, v1
 
     :goto_0
@@ -190,7 +166,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 105
     aget-object v2, p1, v0
 
     invoke-virtual {v2}, Lcom/netflix/mediaclient/ui/mdx/MdxSubtitle;->isSelected()Z
@@ -199,17 +174,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 110
     :goto_1
     return v0
 
-    .line 104
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 109
     :cond_1
     const-string/jumbo v0, "mdxui"
 
@@ -219,17 +191,14 @@
 
     move v0, v1
 
-    .line 110
     goto :goto_1
 .end method
 
 .method private getSubtitles(Lorg/json/JSONArray;)[Lcom/netflix/mediaclient/ui/mdx/MdxSubtitle;
     .locals 5
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 126
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
@@ -240,7 +209,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 127
     :cond_0
     const-string/jumbo v1, "mdxui"
 
@@ -248,14 +216,11 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 128
     new-array v0, v0, [Lcom/netflix/mediaclient/ui/mdx/MdxSubtitle;
 
-    .line 139
     :goto_0
     return-object v0
 
-    .line 131
     :cond_1
     invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
 
@@ -263,13 +228,11 @@
 
     new-array v1, v1, [Lcom/netflix/mediaclient/ui/mdx/MdxSubtitle;
 
-    .line 132
     :goto_1
     array-length v2, v1
 
     if-ge v0, v2, :cond_3
 
-    .line 133
     invoke-virtual {p1, v0}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v2
@@ -280,14 +243,12 @@
 
     aput-object v2, v1, v0
 
-    .line 134
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 135
     const-string/jumbo v2, "mdxui"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -322,7 +283,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 132
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
@@ -331,7 +291,6 @@
     :cond_3
     move-object v0, v1
 
-    .line 139
     goto :goto_0
 .end method
 
@@ -340,29 +299,24 @@
 .method public handle(Lcom/netflix/mediaclient/ui/mdx/RemotePlaybackListener;Landroid/content/Intent;)V
     .locals 6
 
-    .prologue
-    .line 50
     const-string/jumbo v0, "mdxui"
 
     const-string/jumbo v1, "Update audio/subtitles..."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     const-string/jumbo v0, "stringBlob"
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 53
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 54
     const-string/jumbo v1, "mdxui"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -385,24 +339,20 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 59
     :cond_0
     :try_start_0
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-direct {v2, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 60
     const-string/jumbo v0, "timed_text_tracks"
 
     invoke-static {v2, v0}, Lcom/netflix/mediaclient/util/JsonUtils;->getJSONArray(Lorg/json/JSONObject;Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v0
 
-    .line 61
     if-nez v0, :cond_5
 
-    .line 63
     const-string/jumbo v0, "timed_text_track"
 
     invoke-static {v2, v0}, Lcom/netflix/mediaclient/util/JsonUtils;->getJSONArray(Lorg/json/JSONObject;Ljava/lang/String;)Lorg/json/JSONArray;
@@ -411,7 +361,6 @@
 
     move-object v1, v0
 
-    .line 65
     :goto_0
     const-string/jumbo v0, "audio_tracks"
 
@@ -419,17 +368,14 @@
 
     move-result-object v0
 
-    .line 66
     if-nez v0, :cond_1
 
-    .line 68
     const-string/jumbo v0, "audio_track"
 
     invoke-static {v2, v0}, Lcom/netflix/mediaclient/util/JsonUtils;->getJSONArray(Lorg/json/JSONObject;Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v0
 
-    .line 71
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -437,64 +383,52 @@
 
     if-eqz v2, :cond_2
 
-    .line 72
     if-nez v1, :cond_3
 
-    .line 73
     const-string/jumbo v2, "mdxui"
 
     const-string/jumbo v3, "subtitleTrackListJsonArray is null"
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 77
     :goto_1
     if-nez v0, :cond_4
 
-    .line 78
     const-string/jumbo v2, "mdxui"
 
     const-string/jumbo v3, "audioTrackListJsonArray is null"
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 84
     :cond_2
     :goto_2
     invoke-direct {p0, v1}, Lcom/netflix/mediaclient/ui/mdx/events/UpdateLanguageHandler;->getSubtitles(Lorg/json/JSONArray;)[Lcom/netflix/mediaclient/ui/mdx/MdxSubtitle;
 
     move-result-object v3
 
-    .line 85
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/mdx/events/UpdateLanguageHandler;->getAudioSources(Lorg/json/JSONArray;)[Lcom/netflix/mediaclient/ui/mdx/MdxAudioSource;
 
     move-result-object v1
 
-    .line 87
     invoke-direct {p0, v1}, Lcom/netflix/mediaclient/ui/mdx/events/UpdateLanguageHandler;->getCurrentAudioIndex([Lcom/netflix/mediaclient/ui/mdx/MdxAudioSource;)I
 
     move-result v2
 
-    .line 88
     invoke-direct {p0, v3}, Lcom/netflix/mediaclient/ui/mdx/events/UpdateLanguageHandler;->getCurrentSubtitleIndex([Lcom/netflix/mediaclient/ui/mdx/MdxSubtitle;)I
 
     move-result v4
 
-    .line 90
     new-instance v0, Lcom/netflix/mediaclient/media/Language;
 
     const/4 v5, 0x1
 
     invoke-direct/range {v0 .. v5}, Lcom/netflix/mediaclient/media/Language;-><init>([Lcom/netflix/mediaclient/media/AudioSource;I[Lcom/netflix/mediaclient/media/Subtitle;IZ)V
 
-    .line 92
     invoke-interface {p1, v0}, Lcom/netflix/mediaclient/ui/mdx/RemotePlaybackListener;->updateLanguage(Lcom/netflix/mediaclient/media/Language;)V
 
-    .line 100
     :goto_3
     return-void
 
-    .line 75
     :cond_3
     const-string/jumbo v2, "mdxui"
 
@@ -526,11 +460,9 @@
 
     goto :goto_1
 
-    .line 97
     :catch_0
     move-exception v0
 
-    .line 98
     const-string/jumbo v1, "mdxui"
 
     const-string/jumbo v2, "Failed to extract capability data "
@@ -539,7 +471,6 @@
 
     goto :goto_3
 
-    .line 80
     :cond_4
     :try_start_1
     const-string/jumbo v2, "mdxui"

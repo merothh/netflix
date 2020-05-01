@@ -26,25 +26,18 @@
 .method public constructor <init>(Lcom/google/gson/JsonElement;)V
     .locals 0
 
-    .prologue
-    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
     invoke-virtual {p0, p1}, Lcom/netflix/model/leafs/OnRampEligibility;->populate(Lcom/google/gson/JsonElement;)V
 
-    .line 73
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 4
 
-    .prologue
-    .line 88
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 90
     :try_start_0
     invoke-static {p1}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
@@ -56,7 +49,6 @@
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    .line 93
     :goto_0
     const-string/jumbo v1, "onrampEligibilty"
 
@@ -68,7 +60,6 @@
 
     iput-boolean v1, p0, Lcom/netflix/model/leafs/OnRampEligibility;->onRampEligibility:Z
 
-    .line 94
     const-string/jumbo v1, "statusCode"
 
     const/4 v2, 0x0
@@ -79,11 +70,9 @@
 
     iput-object v0, p0, Lcom/netflix/model/leafs/OnRampEligibility;->statusCode:Ljava/lang/String;
 
-    .line 98
     :goto_1
     return-void
 
-    .line 90
     :cond_0
     new-instance v0, Lorg/json/JSONObject;
 
@@ -93,11 +82,9 @@
 
     goto :goto_0
 
-    .line 95
     :catch_0
     move-exception v0
 
-    .line 96
     const-string/jumbo v1, "OnRampEligibility"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -138,8 +125,6 @@
 .method public getStatusCode()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 64
     iget-object v0, p0, Lcom/netflix/model/leafs/OnRampEligibility;->statusCode:Ljava/lang/String;
 
     return-object v0
@@ -148,8 +133,6 @@
 .method public isEligible()Z
     .locals 2
 
-    .prologue
-    .line 68
     iget-boolean v0, p0, Lcom/netflix/model/leafs/OnRampEligibility;->onRampEligibility:Z
 
     if-eqz v0, :cond_0
@@ -178,26 +161,20 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 5
 
-    .prologue
-    .line 102
     if-nez p1, :cond_1
 
-    .line 123
     :cond_0
     return-void
 
-    .line 106
     :cond_1
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 107
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_2
 
-    .line 108
     const-string/jumbo v1, "OnRampEligibility"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -220,7 +197,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 111
     :cond_2
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -243,14 +219,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 112
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/gson/JsonElement;
 
-    .line 114
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -273,7 +247,6 @@
 
     goto :goto_0
 
-    .line 116
     :pswitch_0
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -283,7 +256,6 @@
 
     goto :goto_0
 
-    .line 114
     :sswitch_0
     const-string/jumbo v4, "statusCode"
 
@@ -310,7 +282,6 @@
 
     goto :goto_1
 
-    .line 119
     :pswitch_1
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsBoolean()Z
 
@@ -320,7 +291,6 @@
 
     goto :goto_0
 
-    .line 114
     :sswitch_data_0
     .sparse-switch
         -0x34f37ee9 -> :sswitch_1
@@ -337,13 +307,10 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 77
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
-    .line 79
     :try_start_0
     const-string/jumbo v0, "onrampEligibilty"
 
@@ -351,7 +318,6 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
-    .line 80
     const-string/jumbo v0, "statusCode"
 
     iget-object v2, p0, Lcom/netflix/model/leafs/OnRampEligibility;->statusCode:Ljava/lang/String;
@@ -360,7 +326,6 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 84
     :goto_0
     const-string/jumbo v0, "OnRampEligibility"
 
@@ -388,18 +353,15 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
     invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 81
     :catch_0
     move-exception v0
 
-    .line 82
     const-string/jumbo v2, "OnRampEligibility"
 
     new-instance v3, Ljava/lang/StringBuilder;

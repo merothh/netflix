@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)V
     .locals 0
 
-    .prologue
-    .line 248
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$2;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,22 +26,18 @@
 .method public onSetupFinished(Z)V
     .locals 4
 
-    .prologue
-    .line 250
     const-string/jumbo v0, "SignupActivity"
 
     const-string/jumbo v1, "play billing setup finished."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 251
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$2;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$002(Lcom/netflix/mediaclient/ui/signup/SignupActivity;Z)Z
 
-    .line 253
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$2;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/signup/SignupActivity;->access$100(Lcom/netflix/mediaclient/ui/signup/SignupActivity;)Lcom/netflix/mediaclient/partner/playbilling/PlayBilling;
@@ -52,18 +46,15 @@
 
     if-nez v0, :cond_0
 
-    .line 254
     const-string/jumbo v0, "SignupActivity"
 
     const-string/jumbo v1, "activity disposed already.. quit"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 270
     :goto_0
     return-void
 
-    .line 258
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$2;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
@@ -77,7 +68,6 @@
 
     if-nez v0, :cond_1
 
-    .line 259
     const-string/jumbo v0, "SignupActivity"
 
     const-string/jumbo v1, "serviceManager not ready yet.. deferring"
@@ -86,22 +76,18 @@
 
     goto :goto_0
 
-    .line 263
     :cond_1
     if-nez p1, :cond_2
 
-    .line 264
     const-string/jumbo v0, "SignupActivity"
 
     const-string/jumbo v1, "Problem setting up in-app billing: "
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 267
     :cond_2
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertOnMain()Z
 
-    .line 268
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$2;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/signup/SignupActivity$2;->this$0:Lcom/netflix/mediaclient/ui/signup/SignupActivity;

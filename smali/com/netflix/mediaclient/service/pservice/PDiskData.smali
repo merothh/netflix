@@ -153,8 +153,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 24
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -169,175 +167,142 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->urlMap:Ljava/util/Map;
 
-    .line 58
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->lomoMap:Ljava/util/Map;
 
-    .line 59
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->billboardList:Ljava/util/List;
 
-    .line 60
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->cwList:Ljava/util/List;
 
-    .line 61
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->iqList:Ljava/util/List;
 
-    .line 62
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->standardFirstList:Ljava/util/List;
 
-    .line 63
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->standardSecondList:Ljava/util/List;
 
-    .line 64
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->nonMemberList:Ljava/util/List;
 
-    .line 65
     const-string/jumbo v0, "default"
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->preAppPartnerExperience:Ljava/lang/String;
 
-    .line 66
     const-string/jumbo v0, "default"
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->preAppWidgetExperience:Ljava/lang/String;
 
-    .line 67
     return-void
 .end method
 
 .method public constructor <init>(Lcom/netflix/mediaclient/service/pservice/PDiskData;)V
     .locals 1
 
-    .prologue
-    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 70
     iget-object v0, p1, Lcom/netflix/mediaclient/service/pservice/PDiskData;->preAppPartnerExperience:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->preAppPartnerExperience:Ljava/lang/String;
 
-    .line 71
     iget-object v0, p1, Lcom/netflix/mediaclient/service/pservice/PDiskData;->preAppWidgetExperience:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->preAppWidgetExperience:Ljava/lang/String;
 
-    .line 72
     iget-object v0, p1, Lcom/netflix/mediaclient/service/pservice/PDiskData;->urlMap:Ljava/util/Map;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->urlMap:Ljava/util/Map;
 
-    .line 73
     iget-object v0, p1, Lcom/netflix/mediaclient/service/pservice/PDiskData;->billboardList:Ljava/util/List;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->billboardList:Ljava/util/List;
 
-    .line 74
     iget-object v0, p1, Lcom/netflix/mediaclient/service/pservice/PDiskData;->cwList:Ljava/util/List;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->cwList:Ljava/util/List;
 
-    .line 75
     iget-object v0, p1, Lcom/netflix/mediaclient/service/pservice/PDiskData;->iqList:Ljava/util/List;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->iqList:Ljava/util/List;
 
-    .line 76
     iget-object v0, p1, Lcom/netflix/mediaclient/service/pservice/PDiskData;->nonMemberList:Ljava/util/List;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->nonMemberList:Ljava/util/List;
 
-    .line 77
     iget-object v0, p1, Lcom/netflix/mediaclient/service/pservice/PDiskData;->standardFirstList:Ljava/util/List;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->standardFirstList:Ljava/util/List;
 
-    .line 78
     iget-object v0, p1, Lcom/netflix/mediaclient/service/pservice/PDiskData;->standardSecondList:Ljava/util/List;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->standardSecondList:Ljava/util/List;
 
-    .line 79
     iget-object v0, p1, Lcom/netflix/mediaclient/service/pservice/PDiskData;->lomoMap:Ljava/util/Map;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->lomoMap:Ljava/util/Map;
 
-    .line 80
     return-void
 .end method
 
 .method public static fromJsonString(Ljava/lang/String;)Lcom/netflix/mediaclient/service/pservice/PDiskData;
     .locals 2
 
-    .prologue
-    .line 89
     invoke-static {p0}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 90
     const-string/jumbo v0, "nf_preapp_diskdata"
 
     const-string/jumbo v1, "fromJsonString diskData is empty, retuning empty object"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 91
     new-instance v0, Lcom/netflix/mediaclient/service/pservice/PDiskData;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/pservice/PDiskData;-><init>()V
 
-    .line 96
     :goto_0
     return-object v0
 
-    .line 94
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorParseUtils;->getGson()Lcom/google/gson/Gson;
 
     move-result-object v0
 
-    .line 95
     const-class v1, Lcom/netflix/mediaclient/service/pservice/PDiskData;
 
     invoke-virtual {v0, p0, v1}, Lcom/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
@@ -361,8 +326,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 194
     if-eqz p0, :cond_0
 
     invoke-interface {p0}, Ljava/util/List;->size()I
@@ -395,8 +358,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 198
     invoke-static {p0}, Lcom/netflix/mediaclient/service/pservice/PDiskData;->isListEmpty(Ljava/util/List;)Z
 
     move-result v0
@@ -417,13 +378,10 @@
 .method public static isMemberDataAvailable(Lcom/netflix/mediaclient/service/pservice/PDiskData;)Z
     .locals 2
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 178
     if-nez p0, :cond_1
 
-    .line 182
     :cond_0
     :goto_0
     return v0
@@ -439,7 +397,6 @@
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->cwList:Ljava/util/List;
 
-    .line 183
     invoke-static {v1}, Lcom/netflix/mediaclient/service/pservice/PDiskData;->isListNotEmpty(Ljava/util/List;)Z
 
     move-result v1
@@ -448,7 +405,6 @@
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->iqList:Ljava/util/List;
 
-    .line 184
     invoke-static {v1}, Lcom/netflix/mediaclient/service/pservice/PDiskData;->isListNotEmpty(Ljava/util/List;)Z
 
     move-result v1
@@ -457,7 +413,6 @@
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->standardFirstList:Ljava/util/List;
 
-    .line 185
     invoke-static {v1}, Lcom/netflix/mediaclient/service/pservice/PDiskData;->isListNotEmpty(Ljava/util/List;)Z
 
     move-result v1
@@ -466,7 +421,6 @@
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->standardSecondList:Ljava/util/List;
 
-    .line 186
     invoke-static {v1}, Lcom/netflix/mediaclient/service/pservice/PDiskData;->isListNotEmpty(Ljava/util/List;)Z
 
     move-result v1
@@ -482,8 +436,6 @@
 .method public static isNonMemberDataAvailable(Lcom/netflix/mediaclient/service/pservice/PDiskData;)Z
     .locals 1
 
-    .prologue
-    .line 190
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->nonMemberList:Ljava/util/List;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/pservice/PDiskData;->isListNotEmpty(Ljava/util/List;)Z
@@ -516,18 +468,13 @@
         }
     .end annotation
 
-    .prologue
-    .line 216
     if-nez p1, :cond_0
 
-    .line 217
     const/4 v0, 0x0
 
-    .line 224
     :goto_0
     return-object v0
 
-    .line 220
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -537,7 +484,6 @@
 
     invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 221
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -555,7 +501,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/pservice/PVideo;
 
-    .line 222
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -580,7 +525,6 @@
 
     goto :goto_1
 
-    .line 224
     :cond_1
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -594,30 +538,22 @@
 .method public clearMemberlists()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 228
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->lomoMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 229
     iput-object v1, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->billboardList:Ljava/util/List;
 
-    .line 230
     iput-object v1, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->cwList:Ljava/util/List;
 
-    .line 231
     iput-object v1, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->iqList:Ljava/util/List;
 
-    .line 232
     iput-object v1, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->standardFirstList:Ljava/util/List;
 
-    .line 233
     iput-object v1, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->standardSecondList:Ljava/util/List;
 
-    .line 234
     return-void
 .end method
 
@@ -635,8 +571,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 100
     sget-object v0, Lcom/netflix/mediaclient/service/pservice/PDiskData$1;->$SwitchMap$com$netflix$mediaclient$service$pservice$PDiskData$ListType:[I
 
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/pservice/PDiskData$ListType;->ordinal()I
@@ -647,49 +581,41 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 116
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 102
     :pswitch_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->billboardList:Ljava/util/List;
 
     goto :goto_0
 
-    .line 104
     :pswitch_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->cwList:Ljava/util/List;
 
     goto :goto_0
 
-    .line 106
     :pswitch_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->iqList:Ljava/util/List;
 
     goto :goto_0
 
-    .line 108
     :pswitch_3
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->standardFirstList:Ljava/util/List;
 
     goto :goto_0
 
-    .line 110
     :pswitch_4
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->standardSecondList:Ljava/util/List;
 
     goto :goto_0
 
-    .line 112
     :pswitch_5
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->nonMemberList:Ljava/util/List;
 
     goto :goto_0
 
-    .line 100
     nop
 
     :pswitch_data_0
@@ -706,12 +632,10 @@
 .method public print()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x1
 
     const/4 v1, 0x0
 
-    .line 202
     const-string/jumbo v0, "nf_preapp_diskdata"
 
     const-string/jumbo v2, "lomo: %s"
@@ -728,7 +652,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 203
     const-string/jumbo v0, "nf_preapp_diskdata"
 
     const-string/jumbo v2, "nm: %s"
@@ -749,7 +672,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 204
     const-string/jumbo v0, "nf_preapp_diskdata"
 
     const-string/jumbo v2, "bb: %s"
@@ -770,7 +692,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 205
     const-string/jumbo v0, "nf_preapp_diskdata"
 
     const-string/jumbo v2, "cw: %s"
@@ -791,7 +712,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 206
     const-string/jumbo v0, "nf_preapp_diskdata"
 
     const-string/jumbo v2, "iq: %s"
@@ -812,7 +732,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 207
     const-string/jumbo v0, "nf_preapp_diskdata"
 
     const-string/jumbo v2, "s1: %s"
@@ -833,7 +752,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 208
     const-string/jumbo v0, "nf_preapp_diskdata"
 
     const-string/jumbo v2, "s2: %s"
@@ -854,7 +772,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 209
     const-string/jumbo v2, "nf_preapp_diskdata"
 
     const-string/jumbo v3, "urlMap count %d"
@@ -884,7 +801,6 @@
 
     invoke-static {v2, v0}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 210
     sget-object v0, Lcom/netflix/mediaclient/service/pservice/PDiskData;->ENABLE_VERBOSE_LOGGING:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -893,7 +809,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 211
     const-string/jumbo v0, "nf_preapp_diskdata"
 
     const-string/jumbo v2, "urlMap:%s"
@@ -910,31 +825,25 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 213
     :cond_0
     return-void
 
     :cond_1
     move v0, v1
 
-    .line 209
     goto :goto_0
 .end method
 
 .method public toJsonString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 83
     invoke-static {}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorParseUtils;->getGson()Lcom/google/gson/Gson;
 
     move-result-object v0
 
-    .line 84
     invoke-virtual {v0, p0}, Lcom/google/gson/Gson;->toJson(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 85
     return-object v0
 .end method

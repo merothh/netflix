@@ -11,15 +11,12 @@
 .method constructor <init>(Landroid/support/design/widget/FloatingActionButtonGingerbread;)V
     .locals 1
 
-    .prologue
-    .line 259
     iput-object p1, p0, Landroid/support/design/widget/FloatingActionButtonGingerbread$ElevateToTranslationZAnimation;->this$0:Landroid/support/design/widget/FloatingActionButtonGingerbread;
 
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/support/design/widget/FloatingActionButtonGingerbread$ShadowAnimatorImpl;-><init>(Landroid/support/design/widget/FloatingActionButtonGingerbread;Landroid/support/design/widget/FloatingActionButtonGingerbread$1;)V
 
-    .line 260
     return-void
 .end method
 
@@ -28,8 +25,6 @@
 .method protected getTargetShadowSize()F
     .locals 2
 
-    .prologue
-    .line 264
     iget-object v0, p0, Landroid/support/design/widget/FloatingActionButtonGingerbread$ElevateToTranslationZAnimation;->this$0:Landroid/support/design/widget/FloatingActionButtonGingerbread;
 
     iget v0, v0, Landroid/support/design/widget/FloatingActionButtonGingerbread;->mElevation:F

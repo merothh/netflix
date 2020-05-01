@@ -7,8 +7,6 @@
 .method public static isEndTag(Lorg/xmlpull/v1/XmlPullParser;)Z
     .locals 2
 
-    .prologue
-    .line 33
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v0
@@ -31,8 +29,6 @@
 .method public static isEndTag(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
     .locals 1
 
-    .prologue
-    .line 29
     invoke-static {p0}, Lcom/google/android/exoplayer/util/ParserUtil;->isEndTag(Lorg/xmlpull/v1/XmlPullParser;)Z
 
     move-result v0
@@ -63,8 +59,6 @@
 .method public static isStartTag(Lorg/xmlpull/v1/XmlPullParser;)Z
     .locals 2
 
-    .prologue
-    .line 42
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v0
@@ -87,8 +81,6 @@
 .method public static isStartTag(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
     .locals 1
 
-    .prologue
-    .line 38
     invoke-static {p0}, Lcom/google/android/exoplayer/util/ParserUtil;->isStartTag(Lorg/xmlpull/v1/XmlPullParser;)Z
 
     move-result v0

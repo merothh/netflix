@@ -13,8 +13,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/ServiceManager;)V
     .locals 0
 
-    .prologue
-    .line 53
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag$1;->this$0:Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;
 
     iput-object p3, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag$1;->val$sm:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -40,13 +38,10 @@
         }
     .end annotation
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 56
     invoke-super {p0, p1, p2}, Lcom/netflix/mediaclient/servicemgr/LoggingManagerCallback;->onVideosFetched(Ljava/util/List;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 58
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -55,11 +50,9 @@
 
     if-ge v0, v2, :cond_5
 
-    .line 60
     :cond_0
     const-string/jumbo v0, "SPY-10074 - lolomoService didn\'t return titles for All Continue Watching"
 
-    .line 61
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag$1;->val$sm:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     if-eqz v1, :cond_1
@@ -72,7 +65,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 62
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -111,11 +103,9 @@
 
     move-result-object v0
 
-    .line 64
     :cond_1
     if-nez p1, :cond_2
 
-    .line 65
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -134,16 +124,13 @@
 
     move-result-object v0
 
-    .line 67
     :cond_2
     const-string/jumbo v1, "CWExtendedDiscoveryFrag"
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 68
     invoke-static {v0}, Lcom/netflix/mediaclient/service/logging/error/ErrorLoggingManager;->logHandledException(Ljava/lang/String;)V
 
-    .line 78
     :cond_3
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag$1;->this$0:Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;
@@ -152,31 +139,26 @@
 
     if-eqz v0, :cond_4
 
-    .line 79
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag$1;->this$0:Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;->leWrapper:Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;
 
     invoke-virtual {v0, v2}, Lcom/netflix/mediaclient/android/widget/LoadingAndErrorWrapper;->hide(Z)V
 
-    .line 81
     :cond_4
     return-void
 
-    .line 71
     :cond_5
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag$1;->this$0:Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;->access$002(Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;Ljava/util/List;)Ljava/util/List;
 
-    .line 72
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag$1;->this$0:Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;->adapter:Landroid/support/v7/widget/RecyclerView$Adapter;
 
     if-eqz v0, :cond_3
 
-    .line 73
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag$1;->this$0:Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/CWExtendedDiscoveryFrag;->adapter:Landroid/support/v7/widget/RecyclerView$Adapter;

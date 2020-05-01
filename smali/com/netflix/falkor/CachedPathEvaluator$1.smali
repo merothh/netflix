@@ -23,8 +23,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,13 +33,10 @@
 .method public call(Lcom/netflix/falkor/PathBoundValue;)Ljava/lang/Boolean;
     .locals 2
 
-    .prologue
-    .line 24
     invoke-virtual {p1}, Lcom/netflix/falkor/PathBoundValue;->getValue()Lcom/netflix/falkor/Option;
 
     move-result-object v0
 
-    .line 25
     invoke-virtual {v0}, Lcom/netflix/falkor/Option;->getHasValue()Z
 
     move-result v1
@@ -75,8 +70,6 @@
 .method public bridge synthetic call(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 22
     check-cast p1, Lcom/netflix/falkor/PathBoundValue;
 
     invoke-virtual {p0, p1}, Lcom/netflix/falkor/CachedPathEvaluator$1;->call(Lcom/netflix/falkor/PathBoundValue;)Ljava/lang/Boolean;

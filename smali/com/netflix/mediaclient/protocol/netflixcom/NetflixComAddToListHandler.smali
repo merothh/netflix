@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 10
     invoke-direct {p0}, Lcom/netflix/mediaclient/protocol/netflixcom/NetflixComVideoDetailsHandler;-><init>()V
 
     return-void
@@ -28,10 +26,8 @@
         }
     .end annotation
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 13
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v1
@@ -50,8 +46,6 @@
 .method protected getAction()Lcom/netflix/mediaclient/ui/details/DetailsActivity$Action;
     .locals 1
 
-    .prologue
-    .line 18
     sget-object v0, Lcom/netflix/mediaclient/ui/details/DetailsActivity$Action;->AddToMyList:Lcom/netflix/mediaclient/ui/details/DetailsActivity$Action;
 
     return-object v0

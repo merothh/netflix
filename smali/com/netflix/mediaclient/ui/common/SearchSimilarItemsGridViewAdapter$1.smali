@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/common/SearchSimilarItemsGridViewAdapter;)V
     .locals 0
 
-    .prologue
-    .line 48
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/common/SearchSimilarItemsGridViewAdapter$1;->this$0:Lcom/netflix/mediaclient/ui/common/SearchSimilarItemsGridViewAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public onGlobalLayout()V
     .locals 8
 
-    .prologue
-    .line 51
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/common/SearchSimilarItemsGridViewAdapter$1;->this$0:Lcom/netflix/mediaclient/ui/common/SearchSimilarItemsGridViewAdapter;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/common/SearchSimilarItemsGridViewAdapter;->access$000(Lcom/netflix/mediaclient/ui/common/SearchSimilarItemsGridViewAdapter;)Landroid/widget/GridView;
 
     move-result-object v0
 
-    .line 52
     invoke-virtual {v0}, Landroid/widget/GridView;->getWidth()I
 
     move-result v1
@@ -53,7 +48,6 @@
 
     sub-int/2addr v1, v2
 
-    .line 53
     const-string/jumbo v2, "SearchSimilarItemsGridViewAdapter"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -90,7 +84,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/common/SearchSimilarItemsGridViewAdapter$1;->this$0:Lcom/netflix/mediaclient/ui/common/SearchSimilarItemsGridViewAdapter;
 
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/common/SearchSimilarItemsGridViewAdapter$1;->this$0:Lcom/netflix/mediaclient/ui/common/SearchSimilarItemsGridViewAdapter;
@@ -117,7 +110,6 @@
 
     invoke-static {v2, v1}, Lcom/netflix/mediaclient/ui/common/SearchSimilarItemsGridViewAdapter;->access$102(Lcom/netflix/mediaclient/ui/common/SearchSimilarItemsGridViewAdapter;I)I
 
-    .line 56
     const-string/jumbo v1, "SearchSimilarItemsGridViewAdapter"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -146,9 +138,7 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 58
     invoke-static {v0, p0}, Lcom/netflix/mediaclient/util/ViewUtils;->removeGlobalLayoutListener(Landroid/view/View;Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 59
     return-void
 .end method

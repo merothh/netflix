@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;Lcom/netflix/mediaclient/android/widget/StaticGridView;)V
     .locals 0
 
-    .prologue
-    .line 513
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$4;->this$0:Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$4;->val$gridView:Lcom/netflix/mediaclient/android/widget/StaticGridView;
@@ -32,13 +30,10 @@
 .method public onGlobalLayout()V
     .locals 1
 
-    .prologue
-    .line 516
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$4;->this$0:Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag;->fireGridViewVideosImpressionEvents()V
 
-    .line 517
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$4;->val$gridView:Lcom/netflix/mediaclient/android/widget/StaticGridView;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/widget/StaticGridView;->getCount()I
@@ -47,12 +42,10 @@
 
     if-lez v0, :cond_0
 
-    .line 518
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$4;->val$gridView:Lcom/netflix/mediaclient/android/widget/StaticGridView;
 
     invoke-static {v0, p0}, Lcom/netflix/mediaclient/util/ViewUtils;->removeGlobalLayoutListener(Landroid/view/View;Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 520
     :cond_0
     return-void
 .end method

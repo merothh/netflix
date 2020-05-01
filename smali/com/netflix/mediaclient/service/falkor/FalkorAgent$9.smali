@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/falkor/FalkorAgent;)V
     .locals 0
 
-    .prologue
-    .line 838
     iput-object p1, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$9;->this$0:Lcom/netflix/mediaclient/service/falkor/FalkorAgent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,10 +26,8 @@
 .method public run()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 841
     iget-object v0, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$9;->this$0:Lcom/netflix/mediaclient/service/falkor/FalkorAgent;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/falkor/FalkorAgent;->getService()Lcom/netflix/mediaclient/service/NetflixService;
@@ -40,14 +36,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 842
     iget-object v0, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$9;->this$0:Lcom/netflix/mediaclient/service/falkor/FalkorAgent;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v2, v2, v1}, Lcom/netflix/mediaclient/service/falkor/FalkorAgent;->refreshIrisNotifications(ZZLcom/netflix/mediaclient/service/pushnotification/MessageData;)V
 
-    .line 844
     :cond_0
     return-void
 .end method

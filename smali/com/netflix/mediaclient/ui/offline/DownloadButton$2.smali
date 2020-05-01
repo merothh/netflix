@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/offline/DownloadButton;)V
     .locals 0
 
-    .prologue
-    .line 335
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButton$2;->this$0:Lcom/netflix/mediaclient/ui/offline/DownloadButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 3
 
-    .prologue
-    .line 343
     const-string/jumbo v0, "download_button"
 
     const-string/jumbo v1, "onAnimationEnd"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 345
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButton$2;->this$0:Lcom/netflix/mediaclient/ui/offline/DownloadButton;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/offline/DownloadButton;->getState()Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
@@ -47,7 +42,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 346
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButton$2;->this$0:Lcom/netflix/mediaclient/ui/offline/DownloadButton;
 
     sget-object v1, Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;->QUEUED:Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
@@ -60,7 +54,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/mediaclient/ui/offline/DownloadButton;->setState(Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;Ljava/lang/String;)V
 
-    .line 348
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/offline/DownloadButton$2;->this$0:Lcom/netflix/mediaclient/ui/offline/DownloadButton;
 
@@ -70,22 +63,17 @@
 
     invoke-virtual {v0}, Landroid/widget/ProgressBar;->clearAnimation()V
 
-    .line 349
     return-void
 .end method
 
 .method public onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 0
 
-    .prologue
-    .line 354
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 0
 
-    .prologue
-    .line 339
     return-void
 .end method

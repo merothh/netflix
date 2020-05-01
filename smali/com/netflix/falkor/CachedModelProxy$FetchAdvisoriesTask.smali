@@ -22,16 +22,12 @@
 .method public constructor <init>(Lcom/netflix/falkor/CachedModelProxy;Ljava/lang/String;Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;)V
     .locals 3
 
-    .prologue
-    .line 3453
     iput-object p1, p0, Lcom/netflix/falkor/CachedModelProxy$FetchAdvisoriesTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
-    .line 3454
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p3, v0}, Lcom/netflix/falkor/CachedModelProxy$CmpTask;-><init>(Lcom/netflix/falkor/CachedModelProxy;Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/falkor/CachedModelProxy$1;)V
 
-    .line 3455
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -58,7 +54,6 @@
 
     iput-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$FetchAdvisoriesTask;->pql:Lcom/netflix/falkor/PQL;
 
-    .line 3456
     return-void
 .end method
 
@@ -76,34 +71,26 @@
         }
     .end annotation
 
-    .prologue
-    .line 3460
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$FetchAdvisoriesTask;->pql:Lcom/netflix/falkor/PQL;
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3461
     return-void
 .end method
 
 .method protected callbackForFailure(Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 1
 
-    .prologue
-    .line 3480
     const/4 v0, 0x0
 
     invoke-interface {p1, v0, p2}, Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;->onAdvisoriesFetched(Ljava/util/List;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 3481
     return-void
 .end method
 
 .method protected fetchResultsAndCallbackForSuccess(Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;Lcom/netflix/falkor/CachedModelProxy$GetResult;)V
     .locals 2
 
-    .prologue
-    .line 3470
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$FetchAdvisoriesTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
     iget-object v1, p0, Lcom/netflix/falkor/CachedModelProxy$FetchAdvisoriesTask;->pql:Lcom/netflix/falkor/PQL;
@@ -114,7 +101,6 @@
 
     check-cast v0, Lcom/netflix/model/branches/FalkorVideo;
 
-    .line 3471
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Lcom/netflix/model/branches/FalkorVideo;->getId()Ljava/lang/String;
@@ -127,7 +113,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 3472
     :cond_0
     const/4 v0, 0x0
 
@@ -135,11 +120,9 @@
 
     invoke-interface {p1, v0, v1}, Lcom/netflix/mediaclient/service/browse/BrowseAgentCallback;->onAdvisoriesFetched(Ljava/util/List;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 3476
     :goto_0
     return-void
 
-    .line 3474
     :cond_1
     invoke-virtual {v0}, Lcom/netflix/model/branches/FalkorVideo;->getAdvisories()Ljava/util/List;
 
@@ -155,8 +138,6 @@
 .method protected shouldSkipCache()Z
     .locals 1
 
-    .prologue
-    .line 3465
     const/4 v0, 0x1
 
     return v0

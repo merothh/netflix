@@ -14,8 +14,6 @@
 .method constructor <init>(Ljava/util/List;)V
     .locals 0
 
-    .prologue
-    .line 124
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/common/ExportDebugData$1;->val$files:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,13 +26,10 @@
 .method public accept(Ljava/io/File;Ljava/lang/String;)Z
     .locals 6
 
-    .prologue
-    .line 127
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1, p2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 128
     invoke-virtual {v0}, Ljava/io/File;->isFile()Z
 
     move-result v1
@@ -51,12 +46,10 @@
 
     if-gez v1, :cond_0
 
-    .line 129
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/common/ExportDebugData$1;->val$files:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 131
     :cond_0
     const/4 v0, 0x0
 

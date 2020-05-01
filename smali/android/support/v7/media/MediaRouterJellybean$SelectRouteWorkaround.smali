@@ -11,11 +11,8 @@
 .method public constructor <init>()V
     .locals 5
 
-    .prologue
-    .line 282
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 283
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x10
@@ -28,7 +25,6 @@
 
     if-le v0, v1, :cond_1
 
-    .line 284
     :cond_0
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -36,7 +32,6 @@
 
     throw v0
 
-    .line 287
     :cond_1
     :try_start_0
     const-class v0, Landroid/media/MediaRouter;
@@ -67,11 +62,9 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 291
     :goto_0
     return-void
 
-    .line 289
     :catch_0
     move-exception v0
 
@@ -83,31 +76,24 @@
 .method public selectRoute(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 4
 
-    .prologue
-    .line 294
     check-cast p1, Landroid/media/MediaRouter;
 
-    .line 295
     check-cast p3, Landroid/media/MediaRouter$RouteInfo;
 
-    .line 298
     invoke-virtual {p3}, Landroid/media/MediaRouter$RouteInfo;->getSupportedTypes()I
 
     move-result v0
 
-    .line 299
     const/high16 v1, 0x800000
 
     and-int/2addr v0, v1
 
     if-nez v0, :cond_0
 
-    .line 305
     iget-object v0, p0, Landroid/support/v7/media/MediaRouterJellybean$SelectRouteWorkaround;->mSelectRouteIntMethod:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_1
 
-    .line 307
     :try_start_0
     iget-object v0, p0, Landroid/support/v7/media/MediaRouterJellybean$SelectRouteWorkaround;->mSelectRouteIntMethod:Ljava/lang/reflect/Method;
 
@@ -132,33 +118,27 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 325
     :goto_0
     return-void
 
-    .line 309
     :catch_0
     move-exception v0
 
-    .line 310
     const-string/jumbo v1, "MediaRouterJellybean"
 
     const-string/jumbo v2, "Cannot programmatically select non-user route.  Media routing may not work."
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 324
     :cond_0
     :goto_1
     invoke-virtual {p1, p2, p3}, Landroid/media/MediaRouter;->selectRoute(ILandroid/media/MediaRouter$RouteInfo;)V
 
     goto :goto_0
 
-    .line 312
     :catch_1
     move-exception v0
 
-    .line 313
     const-string/jumbo v1, "MediaRouterJellybean"
 
     const-string/jumbo v2, "Cannot programmatically select non-user route.  Media routing may not work."
@@ -167,7 +147,6 @@
 
     goto :goto_1
 
-    .line 317
     :cond_1
     const-string/jumbo v0, "MediaRouterJellybean"
 

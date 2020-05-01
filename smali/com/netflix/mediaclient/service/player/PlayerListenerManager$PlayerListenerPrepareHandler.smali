@@ -14,8 +14,6 @@
 .method private constructor <init>(Lcom/netflix/mediaclient/service/player/PlayerListenerManager;)V
     .locals 0
 
-    .prologue
-    .line 104
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/PlayerListenerManager$PlayerListenerPrepareHandler;->this$0:Lcom/netflix/mediaclient/service/player/PlayerListenerManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,8 +24,6 @@
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/service/player/PlayerListenerManager;Lcom/netflix/mediaclient/service/player/PlayerListenerManager$1;)V
     .locals 0
 
-    .prologue
-    .line 104
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/player/PlayerListenerManager$PlayerListenerPrepareHandler;-><init>(Lcom/netflix/mediaclient/service/player/PlayerListenerManager;)V
 
     return-void
@@ -38,17 +34,14 @@
 .method public varargs handle(Lcom/netflix/mediaclient/servicemgr/IPlayer$PlayerListener;[Ljava/lang/Object;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 107
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/IPlayer$PlayerListener;->isListening()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 109
     if-eqz p2, :cond_0
 
     array-length v0, p2
@@ -63,18 +56,15 @@
 
     if-nez v0, :cond_2
 
-    .line 110
     :cond_0
     const/4 v0, 0x0
 
     invoke-interface {p1, v0}, Lcom/netflix/mediaclient/servicemgr/IPlayer$PlayerListener;->onPrepared(Lcom/netflix/mediaclient/media/Watermark;)V
 
-    .line 118
     :cond_1
     :goto_0
     return-void
 
-    .line 112
     :cond_2
     aget-object v0, p2, v2
 

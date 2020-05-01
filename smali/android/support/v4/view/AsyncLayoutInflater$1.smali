@@ -14,8 +14,6 @@
 .method constructor <init>(Landroid/support/v4/view/AsyncLayoutInflater;)V
     .locals 0
 
-    .prologue
-    .line 94
     iput-object p1, p0, Landroid/support/v4/view/AsyncLayoutInflater$1;->this$0:Landroid/support/v4/view/AsyncLayoutInflater;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,18 +26,14 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 5
 
-    .prologue
-    .line 97
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/support/v4/view/AsyncLayoutInflater$InflateRequest;
 
-    .line 98
     iget-object v1, v0, Landroid/support/v4/view/AsyncLayoutInflater$InflateRequest;->view:Landroid/view/View;
 
     if-nez v1, :cond_0
 
-    .line 99
     iget-object v1, p0, Landroid/support/v4/view/AsyncLayoutInflater$1;->this$0:Landroid/support/v4/view/AsyncLayoutInflater;
 
     iget-object v1, v1, Landroid/support/v4/view/AsyncLayoutInflater;->mInflater:Landroid/view/LayoutInflater;
@@ -56,7 +50,6 @@
 
     iput-object v1, v0, Landroid/support/v4/view/AsyncLayoutInflater$InflateRequest;->view:Landroid/view/View;
 
-    .line 102
     :cond_0
     iget-object v1, v0, Landroid/support/v4/view/AsyncLayoutInflater$InflateRequest;->callback:Landroid/support/v4/view/AsyncLayoutInflater$OnInflateFinishedListener;
 
@@ -68,14 +61,12 @@
 
     invoke-interface {v1, v2, v3, v4}, Landroid/support/v4/view/AsyncLayoutInflater$OnInflateFinishedListener;->onInflateFinished(Landroid/view/View;ILandroid/view/ViewGroup;)V
 
-    .line 104
     iget-object v1, p0, Landroid/support/v4/view/AsyncLayoutInflater$1;->this$0:Landroid/support/v4/view/AsyncLayoutInflater;
 
     iget-object v1, v1, Landroid/support/v4/view/AsyncLayoutInflater;->mInflateThread:Landroid/support/v4/view/AsyncLayoutInflater$InflateThread;
 
     invoke-virtual {v1, v0}, Landroid/support/v4/view/AsyncLayoutInflater$InflateThread;->releaseRequest(Landroid/support/v4/view/AsyncLayoutInflater$InflateRequest;)V
 
-    .line 105
     const/4 v0, 0x1
 
     return v0

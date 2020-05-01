@@ -27,8 +27,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 21
     new-instance v0, Lcom/netflix/falkor/CachedPathEvaluator$1;
 
     invoke-direct {v0}, Lcom/netflix/falkor/CachedPathEvaluator$1;-><init>()V
@@ -41,25 +39,18 @@
 .method public constructor <init>(Lcom/netflix/falkor/AbstractPathEvaluator;Lcom/netflix/falkor/AbstractPathEvaluator;)V
     .locals 0
 
-    .prologue
-    .line 29
     invoke-direct {p0}, Lcom/netflix/falkor/BasePathEvaluator;-><init>()V
 
-    .line 30
     iput-object p1, p0, Lcom/netflix/falkor/CachedPathEvaluator;->source:Lcom/netflix/falkor/AbstractPathEvaluator;
 
-    .line 31
     iput-object p2, p0, Lcom/netflix/falkor/CachedPathEvaluator;->cache:Lcom/netflix/falkor/AbstractPathEvaluator;
 
-    .line 32
     return-void
 .end method
 
 .method static synthetic access$000()Lcom/netflix/falkor/Func1;
     .locals 1
 
-    .prologue
-    .line 9
     sget-object v0, Lcom/netflix/falkor/CachedPathEvaluator;->stripMissingMemberSentinel:Lcom/netflix/falkor/Func1;
 
     return-object v0
@@ -83,8 +74,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 46
     new-instance v0, Lcom/netflix/falkor/CachedPathEvaluator$2;
 
     invoke-direct {v0, p0, p1}, Lcom/netflix/falkor/CachedPathEvaluator$2;-><init>(Lcom/netflix/falkor/CachedPathEvaluator;Ljava/lang/Iterable;)V
@@ -99,8 +88,6 @@
 .method public getRoot()Lcom/netflix/falkor/AbstractPathEvaluator;
     .locals 0
 
-    .prologue
-    .line 156
     return-object p0
 .end method
 
@@ -120,8 +107,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 39
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

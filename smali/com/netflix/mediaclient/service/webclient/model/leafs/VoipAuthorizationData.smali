@@ -21,8 +21,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,8 +31,6 @@
 .method public getNonMemberVoipAuthorization()Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipAuthorization;
     .locals 1
 
-    .prologue
-    .line 21
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipAuthorizationData;->nonMemberVoipAuthorization:Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipAuthorization;
 
     return-object v0
@@ -43,8 +39,6 @@
 .method public getUserVoipAuthorization()Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipAuthorization;
     .locals 1
 
-    .prologue
-    .line 17
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipAuthorizationData;->userVoipAuthorization:Lcom/netflix/mediaclient/service/webclient/model/leafs/VoipAuthorization;
 
     return-object v0
@@ -53,8 +47,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 26
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

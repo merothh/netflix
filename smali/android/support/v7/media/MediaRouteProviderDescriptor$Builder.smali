@@ -22,18 +22,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 128
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 129
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/support/v7/media/MediaRouteProviderDescriptor$Builder;->mBundle:Landroid/os/Bundle;
 
-    .line 130
     return-void
 .end method
 
@@ -42,11 +38,8 @@
 .method public addRoute(Landroid/support/v7/media/MediaRouteDescriptor;)Landroid/support/v7/media/MediaRouteProviderDescriptor$Builder;
     .locals 2
 
-    .prologue
-    .line 153
     if-nez p1, :cond_0
 
-    .line 154
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "route must not be null"
@@ -55,29 +48,24 @@
 
     throw v0
 
-    .line 157
     :cond_0
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteProviderDescriptor$Builder;->mRoutes:Ljava/util/ArrayList;
 
     if-nez v0, :cond_2
 
-    .line 158
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/support/v7/media/MediaRouteProviderDescriptor$Builder;->mRoutes:Ljava/util/ArrayList;
 
-    .line 162
     :cond_1
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteProviderDescriptor$Builder;->mRoutes:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 163
     return-object p0
 
-    .line 159
     :cond_2
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteProviderDescriptor$Builder;->mRoutes:Ljava/util/ArrayList;
 
@@ -87,7 +75,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 160
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "route descriptor already added"
@@ -100,25 +87,20 @@
 .method public build()Landroid/support/v7/media/MediaRouteProviderDescriptor;
     .locals 4
 
-    .prologue
-    .line 186
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteProviderDescriptor$Builder;->mRoutes:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_1
 
-    .line 187
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteProviderDescriptor$Builder;->mRoutes:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    .line 188
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3, v2}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 189
     const/4 v0, 0x0
 
     move v1, v0
@@ -126,7 +108,6 @@
     :goto_0
     if-ge v1, v2, :cond_0
 
-    .line 190
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteProviderDescriptor$Builder;->mRoutes:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -141,14 +122,12 @@
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 189
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 192
     :cond_0
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteProviderDescriptor$Builder;->mBundle:Landroid/os/Bundle;
 
@@ -156,7 +135,6 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 194
     :cond_1
     new-instance v0, Landroid/support/v7/media/MediaRouteProviderDescriptor;
 

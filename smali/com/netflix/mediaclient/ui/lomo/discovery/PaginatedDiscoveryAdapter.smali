@@ -30,22 +30,16 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;)V
     .locals 0
 
-    .prologue
-    .line 44
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;-><init>(Landroid/content/Context;)V
 
-    .line 45
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter;->animator:Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;
 
-    .line 46
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter;)Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;
     .locals 1
 
-    .prologue
-    .line 28
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter;->animator:Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;
 
     return-object v0
@@ -56,8 +50,6 @@
 .method protected computeNumItemsPerPage()I
     .locals 1
 
-    .prologue
-    .line 104
     const/4 v0, 0x1
 
     return v0
@@ -66,8 +58,6 @@
 .method protected computeNumVideosToFetchPerBatch(I)I
     .locals 1
 
-    .prologue
-    .line 109
     const/4 v0, 0x6
 
     return v0
@@ -76,8 +66,6 @@
 .method public getRowHeightInPx()I
     .locals 4
 
-    .prologue
-    .line 58
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -86,7 +74,6 @@
 
     move-result-object v1
 
-    .line 59
     const/high16 v0, 0x7f0a0000
 
     invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getDimension(I)F
@@ -95,7 +82,6 @@
 
     float-to-int v0, v0
 
-    .line 61
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-static {v2}, Lcom/netflix/mediaclient/util/Coppola2Utils;->shouldHideContinueWatchingLink(Landroid/content/Context;)Z
@@ -104,7 +90,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 63
     int-to-float v0, v0
 
     const v2, 0x7f0a005a
@@ -133,7 +118,6 @@
 
     float-to-int v0, v0
 
-    .line 65
     :cond_0
     const-string/jumbo v1, "PaginatedDiscoveryAdapter"
 
@@ -157,7 +141,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
     return v0
 .end method
 
@@ -177,8 +160,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 71
     const-class v2, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryPage;
 
     move-object/from16 v0, p1
@@ -189,10 +170,8 @@
 
     check-cast v2, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryPage;
 
-    .line 72
     if-nez v2, :cond_2
 
-    .line 73
     new-instance v2, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryPage;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter;->getActivity()Landroid/app/Activity;
@@ -203,7 +182,6 @@
 
     move-object v13, v2
 
-    .line 75
     :goto_0
     if-eqz p2, :cond_0
 
@@ -215,23 +193,18 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 76
     :cond_0
     const-string/jumbo v2, "SPY-8068 - PaginatedDiscoveryAdapter - data is not ready to render the page"
 
-    .line 77
     const-string/jumbo v3, "PaginatedDiscoveryAdapter"
 
     invoke-static {v3, v2}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     invoke-static {v2}, Lcom/netflix/mediaclient/service/logging/error/ErrorLoggingManager;->logHandledException(Ljava/lang/String;)V
 
-    .line 87
     :goto_1
     return-object v13
 
-    .line 80
     :cond_1
     const/4 v2, 0x0
 
@@ -245,7 +218,6 @@
 
     check-cast v11, Lcom/netflix/mediaclient/servicemgr/interface_/Discovery;
 
-    .line 81
     const/4 v2, 0x0
 
     move-object/from16 v0, p2
@@ -268,7 +240,6 @@
 
     new-instance v2, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter$CollectionClickListener;
 
-    .line 82
     invoke-interface {v11}, Lcom/netflix/mediaclient/servicemgr/interface_/Discovery;->getPivot1CollectionId()J
 
     move-result-wide v4
@@ -291,7 +262,6 @@
 
     new-instance v4, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter$CollectionClickListener;
 
-    .line 83
     invoke-interface {v11}, Lcom/netflix/mediaclient/servicemgr/interface_/Discovery;->getPivot2CollectionId()J
 
     move-result-wide v6
@@ -328,7 +298,6 @@
 
     move-object/from16 v11, p5
 
-    .line 81
     invoke-virtual/range {v5 .. v11}, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryPage;->updatePage(Lcom/netflix/mediaclient/servicemgr/interface_/Discovery;ILandroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Lcom/netflix/mediaclient/servicemgr/interface_/trackable/Trackable;)V
 
     goto :goto_1
@@ -342,11 +311,8 @@
 .method public restoreFromMemento(Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter$Memento;)V
     .locals 2
 
-    .prologue
-    .line 49
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter;->restoreFromMemento(Lcom/netflix/mediaclient/ui/lomo/BasePaginatedAdapter$Memento;)V
 
-    .line 51
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter;->data:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -359,14 +325,12 @@
 
     if-lez v0, :cond_0
 
-    .line 52
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter;->animator:Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter;->data:Ljava/util/List;
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->setData(Ljava/util/List;)V
 
-    .line 54
     :cond_0
     return-void
 .end method
@@ -383,13 +347,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 91
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter;->animator:Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/ui/lomo/discovery/DiscoveryBackgroundAnimator;->updateData(Ljava/util/List;)V
 
-    .line 93
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -400,12 +361,10 @@
 
     move-result-object v0
 
-    .line 95
     instance-of v1, v0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/BaseExtendedDiscoveryFrag;
 
     if-eqz v1, :cond_1
 
-    .line 96
     check-cast v0, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/BaseExtendedDiscoveryFrag;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter;->getActivity()Landroid/app/Activity;
@@ -422,12 +381,10 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/mediaclient/ui/lomo/discovery/extended/BaseExtendedDiscoveryFrag;->restorePage(Lcom/netflix/mediaclient/servicemgr/ServiceManager;Lcom/netflix/mediaclient/ui/lomo/discovery/PaginatedDiscoveryAdapter$BlurredStoryArtProvider;)V
 
-    .line 100
     :cond_0
     :goto_0
     return-void
 
-    .line 97
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -435,7 +392,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 98
     const-string/jumbo v1, "PaginatedDiscoveryAdapter"
 
     new-instance v2, Ljava/lang/StringBuilder;

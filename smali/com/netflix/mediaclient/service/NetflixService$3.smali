@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/NetflixService;)V
     .locals 0
 
-    .prologue
-    .line 1194
     iput-object p1, p0, Lcom/netflix/mediaclient/service/NetflixService$3;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public getSignUpBootloader()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 1207
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$3;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/NetflixService;->access$2000(Lcom/netflix/mediaclient/service/NetflixService;)Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;
@@ -50,8 +46,6 @@
 .method public getSignUpTimeout()J
     .locals 2
 
-    .prologue
-    .line 1202
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$3;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/NetflixService;->access$2000(Lcom/netflix/mediaclient/service/NetflixService;)Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;
@@ -72,8 +66,6 @@
 .method public isSignUpEnabled()Z
     .locals 1
 
-    .prologue
-    .line 1197
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$3;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/NetflixService;->access$2000(Lcom/netflix/mediaclient/service/NetflixService;)Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;

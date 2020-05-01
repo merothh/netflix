@@ -29,16 +29,12 @@
 .method private constructor <init>(Lorg/json/JSONObject;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     if-nez p1, :cond_0
 
-    .line 49
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Watermark json is null!"
@@ -47,7 +43,6 @@
 
     throw v0
 
-    .line 52
     :cond_0
     const-string/jumbo v0, "identifier"
 
@@ -57,7 +52,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/media/Watermark;->mIdentifier:Ljava/lang/String;
 
-    .line 53
     const-string/jumbo v0, "opacity"
 
     const/4 v1, -0x1
@@ -68,21 +62,18 @@
 
     iput v0, p0, Lcom/netflix/mediaclient/media/Watermark;->mOpacity:I
 
-    .line 54
     const-string/jumbo v0, "anchor"
 
     invoke-static {p1, v0, v2}, Lcom/netflix/mediaclient/util/JsonUtils;->getString(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 55
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 58
     :try_start_0
     invoke-static {v0}, Lcom/netflix/mediaclient/media/Watermark$Anchor;->valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/media/Watermark$Anchor;
 
@@ -92,23 +83,19 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 64
     :cond_1
     :goto_0
     return-void
 
-    .line 59
     :catch_0
     move-exception v0
 
-    .line 60
     const-string/jumbo v1, "nf_watermark"
 
     const-string/jumbo v2, "Failed, go to default"
 
     invoke-static {v1, v2, v0}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 61
     sget-object v0, Lcom/netflix/mediaclient/media/Watermark$Anchor;->top_center:Lcom/netflix/mediaclient/media/Watermark$Anchor;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/media/Watermark;->mAnchor:Lcom/netflix/mediaclient/media/Watermark$Anchor;
@@ -119,24 +106,19 @@
 .method public static createWatermark(Lorg/json/JSONObject;)Lcom/netflix/mediaclient/media/Watermark;
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 97
     if-nez p0, :cond_1
 
-    .line 105
     :cond_0
     :goto_0
     return-object v0
 
-    .line 101
     :cond_1
     new-instance v1, Lcom/netflix/mediaclient/media/Watermark;
 
     invoke-direct {v1, p0}, Lcom/netflix/mediaclient/media/Watermark;-><init>(Lorg/json/JSONObject;)V
 
-    .line 102
     invoke-virtual {v1}, Lcom/netflix/mediaclient/media/Watermark;->isValid()Z
 
     move-result v2
@@ -145,7 +127,6 @@
 
     move-object v0, v1
 
-    .line 103
     goto :goto_0
 .end method
 
@@ -154,8 +135,6 @@
 .method public getAnchor()Lcom/netflix/mediaclient/media/Watermark$Anchor;
     .locals 1
 
-    .prologue
-    .line 78
     iget-object v0, p0, Lcom/netflix/mediaclient/media/Watermark;->mAnchor:Lcom/netflix/mediaclient/media/Watermark$Anchor;
 
     return-object v0
@@ -164,8 +143,6 @@
 .method public getIdentifier()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 70
     iget-object v0, p0, Lcom/netflix/mediaclient/media/Watermark;->mIdentifier:Ljava/lang/String;
 
     return-object v0
@@ -174,8 +151,6 @@
 .method public getOpacity()I
     .locals 1
 
-    .prologue
-    .line 74
     iget v0, p0, Lcom/netflix/mediaclient/media/Watermark;->mOpacity:I
 
     return v0
@@ -184,10 +159,8 @@
 .method public getStyle(Landroid/content/Context;)Lcom/netflix/mediaclient/service/player/subtitles/text/TextStyle;
     .locals 14
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 111
     iget v0, p0, Lcom/netflix/mediaclient/media/Watermark;->mOpacity:I
 
     int-to-float v0, v0
@@ -196,7 +169,6 @@
 
     div-float v4, v0, v1
 
-    .line 112
     new-instance v0, Lcom/netflix/mediaclient/service/player/subtitles/text/TextStyle;
 
     const-string/jumbo v1, "watermark"
@@ -235,8 +207,6 @@
 .method public isValid()Z
     .locals 2
 
-    .prologue
-    .line 67
     iget v0, p0, Lcom/netflix/mediaclient/media/Watermark;->mOpacity:I
 
     if-ltz v0, :cond_0
@@ -273,8 +243,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 88
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

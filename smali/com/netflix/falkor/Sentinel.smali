@@ -60,14 +60,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12
     iput-object p1, p0, Lcom/netflix/falkor/Sentinel;->value:Ljava/lang/Object;
 
-    .line 13
     return-void
 .end method
 
@@ -76,8 +72,6 @@
 .method public getExpires()Ljava/util/Date;
     .locals 1
 
-    .prologue
-    .line 42
     iget-object v0, p0, Lcom/netflix/falkor/Sentinel;->expires:Ljava/util/Date;
 
     return-object v0
@@ -86,8 +80,6 @@
 .method public getPath()Lcom/netflix/falkor/PQL;
     .locals 1
 
-    .prologue
-    .line 32
     iget-object v0, p0, Lcom/netflix/falkor/Sentinel;->path:Lcom/netflix/falkor/PQL;
 
     return-object v0
@@ -105,8 +97,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 22
     iget-object v0, p0, Lcom/netflix/falkor/Sentinel;->references:Lcom/netflix/falkor/LinkedList;
 
     return-object v0
@@ -120,8 +110,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 15
     iget-object v0, p0, Lcom/netflix/falkor/Sentinel;->value:Ljava/lang/Object;
 
     return-object v0
@@ -130,22 +118,16 @@
 .method public setExpires(Ljava/util/Date;)V
     .locals 0
 
-    .prologue
-    .line 46
     iput-object p1, p0, Lcom/netflix/falkor/Sentinel;->expires:Ljava/util/Date;
 
-    .line 47
     return-void
 .end method
 
 .method public setPath(Lcom/netflix/falkor/PQL;)V
     .locals 0
 
-    .prologue
-    .line 36
     iput-object p1, p0, Lcom/netflix/falkor/Sentinel;->path:Lcom/netflix/falkor/PQL;
 
-    .line 37
     return-void
 .end method
 
@@ -161,11 +143,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 26
     iput-object p1, p0, Lcom/netflix/falkor/Sentinel;->references:Lcom/netflix/falkor/LinkedList;
 
-    .line 27
     return-void
 .end method
 
@@ -177,8 +156,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 17
     iput-object p1, p0, Lcom/netflix/falkor/Sentinel;->value:Ljava/lang/Object;
 
     return-void
@@ -187,8 +164,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 71
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

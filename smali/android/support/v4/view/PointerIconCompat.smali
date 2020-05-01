@@ -61,26 +61,21 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 154
     invoke-static {}, Landroid/support/v4/os/BuildCompat;->isAtLeastN()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 155
     new-instance v0, Landroid/support/v4/view/PointerIconCompat$Api24PointerIconCompatImpl;
 
     invoke-direct {v0}, Landroid/support/v4/view/PointerIconCompat$Api24PointerIconCompatImpl;-><init>()V
 
     sput-object v0, Landroid/support/v4/view/PointerIconCompat;->IMPL:Landroid/support/v4/view/PointerIconCompat$PointerIconCompatImpl;
 
-    .line 159
     :goto_0
     return-void
 
-    .line 157
     :cond_0
     new-instance v0, Landroid/support/v4/view/PointerIconCompat$BasePointerIconCompatImpl;
 
@@ -94,22 +89,16 @@
 .method private constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 101
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 102
     iput-object p1, p0, Landroid/support/v4/view/PointerIconCompat;->mPointerIcon:Ljava/lang/Object;
 
-    .line 103
     return-void
 .end method
 
 .method public static create(Landroid/graphics/Bitmap;FF)Landroid/support/v4/view/PointerIconCompat;
     .locals 2
 
-    .prologue
-    .line 189
     new-instance v0, Landroid/support/v4/view/PointerIconCompat;
 
     sget-object v1, Landroid/support/v4/view/PointerIconCompat;->IMPL:Landroid/support/v4/view/PointerIconCompat$PointerIconCompatImpl;
@@ -126,8 +115,6 @@
 .method public static getSystemIcon(Landroid/content/Context;I)Landroid/support/v4/view/PointerIconCompat;
     .locals 2
 
-    .prologue
-    .line 172
     new-instance v0, Landroid/support/v4/view/PointerIconCompat;
 
     sget-object v1, Landroid/support/v4/view/PointerIconCompat;->IMPL:Landroid/support/v4/view/PointerIconCompat$PointerIconCompatImpl;
@@ -144,8 +131,6 @@
 .method public static load(Landroid/content/res/Resources;I)Landroid/support/v4/view/PointerIconCompat;
     .locals 2
 
-    .prologue
-    .line 214
     new-instance v0, Landroid/support/v4/view/PointerIconCompat;
 
     sget-object v1, Landroid/support/v4/view/PointerIconCompat;->IMPL:Landroid/support/v4/view/PointerIconCompat$PointerIconCompatImpl;
@@ -164,8 +149,6 @@
 .method public getPointerIcon()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 109
     iget-object v0, p0, Landroid/support/v4/view/PointerIconCompat;->mPointerIcon:Ljava/lang/Object;
 
     return-object v0

@@ -19,22 +19,16 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/msl/volley/FalkorMSLVolleyRequest;-><init>()V
 
-    .line 18
     return-void
 .end method
 
 .method public constructor <init>(Lcom/netflix/mediaclient/service/webclient/ApiEndpointRegistry$ResponsePathFormat;)V
     .locals 0
 
-    .prologue
-    .line 21
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/msl/volley/FalkorMSLVolleyRequest;-><init>(Lcom/netflix/mediaclient/service/webclient/ApiEndpointRegistry$ResponsePathFormat;)V
 
-    .line 22
     return-void
 .end method
 
@@ -43,8 +37,6 @@
 .method public getMSLUri()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 29
     const-string/jumbo v0, "/android/4.12.2/api"
 
     return-object v0
@@ -63,13 +55,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 52
     invoke-super {p0}, Lcom/netflix/mediaclient/service/msl/volley/FalkorMSLVolleyRequest;->getParams()Ljava/util/Map;
 
     move-result-object v1
 
-    .line 53
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/msl/volley/ApiFalkorMSLVolleyRequest;->getMSLClient()Lcom/netflix/mediaclient/service/msl/client/AndroidMslClient;
 
     move-result-object v0
@@ -84,14 +73,11 @@
 
     move-result-object v0
 
-    .line 54
     if-nez v1, :cond_0
 
-    .line 60
     :goto_0
     return-object v0
 
-    .line 57
     :cond_0
     invoke-interface {v1, v0}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
@@ -103,8 +89,6 @@
 .method protected injectUrl()V
     .locals 1
 
-    .prologue
-    .line 39
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/msl/volley/ApiFalkorMSLVolleyRequest;->getMSLClient()Lcom/netflix/mediaclient/service/msl/client/AndroidMslClient;
 
     move-result-object v0
@@ -115,6 +99,5 @@
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/msl/volley/ApiFalkorMSLVolleyRequest;->initUrl(Ljava/lang/String;)V
 
-    .line 40
     return-void
 .end method

@@ -92,8 +92,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 65
     const/high16 v0, -0x80000000
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -108,23 +106,18 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 31
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 71
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mInitComplete:Z
 
-    .line 74
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mInitCallbacks:Ljava/util/ArrayList;
 
-    .line 303
     new-instance v0, Lcom/netflix/mediaclient/service/pservice/PService$2;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/pservice/PService$2;-><init>(Lcom/netflix/mediaclient/service/pservice/PService;)V
@@ -137,8 +130,6 @@
 .method static synthetic access$000(Lcom/netflix/mediaclient/service/pservice/PService;)Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;
     .locals 1
 
-    .prologue
-    .line 31
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mWidgetAgent:Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;
 
     return-object v0
@@ -147,8 +138,6 @@
 .method static synthetic access$100(Lcom/netflix/mediaclient/service/pservice/PService;)V
     .locals 0
 
-    .prologue
-    .line 31
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/pservice/PService;->initCompleted()V
 
     return-void
@@ -157,8 +146,6 @@
 .method static synthetic access$200(Lcom/netflix/mediaclient/service/pservice/PService;)Lcom/netflix/mediaclient/service/pservice/PServiceFetchAgent;
     .locals 1
 
-    .prologue
-    .line 31
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mFetchAgent:Lcom/netflix/mediaclient/service/pservice/PServiceFetchAgent;
 
     return-object v0
@@ -167,8 +154,6 @@
 .method static synthetic access$300(Lcom/netflix/mediaclient/service/pservice/PService;)Lcom/netflix/mediaclient/service/pservice/PServiceAgent$AgentContext;
     .locals 1
 
-    .prologue
-    .line 31
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->agentContext:Lcom/netflix/mediaclient/service/pservice/PServiceAgent$AgentContext;
 
     return-object v0
@@ -177,8 +162,6 @@
 .method static synthetic access$400(Lcom/netflix/mediaclient/service/pservice/PService;Landroid/content/Intent;II)V
     .locals 0
 
-    .prologue
-    .line 31
     invoke-direct {p0, p1, p2, p3}, Lcom/netflix/mediaclient/service/pservice/PService;->doStartCommand(Landroid/content/Intent;II)V
 
     return-void
@@ -187,8 +170,6 @@
 .method private cancelWidgetRefreshAlarm()V
     .locals 3
 
-    .prologue
-    .line 378
     const-string/jumbo v0, "alarm"
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/pservice/PService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -197,21 +178,17 @@
 
     check-cast v0, Landroid/app/AlarmManager;
 
-    .line 379
     if-nez v0, :cond_0
 
-    .line 380
     const-string/jumbo v0, "nf_preapp_service"
 
     const-string/jumbo v1, "Can\'t access alarm manager to set widget refresh alarm"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 386
     :goto_0
     return-void
 
-    .line 383
     :cond_0
     const-string/jumbo v1, "nf_preapp_service"
 
@@ -219,7 +196,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 384
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/pservice/PService;->createTileExpiryAlarmPendingIntent()Landroid/app/PendingIntent;
 
     move-result-object v1
@@ -232,8 +208,6 @@
 .method private createTileExpiryAlarmPendingIntent()Landroid/app/PendingIntent;
     .locals 3
 
-    .prologue
-    .line 389
     const/4 v0, 0x0
 
     new-instance v1, Landroid/content/Intent;
@@ -244,14 +218,12 @@
 
     const-class v2, Lcom/netflix/mediaclient/service/pservice/PService;
 
-    .line 391
     invoke-virtual {v1, p0, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
     move-result-object v1
 
     const/high16 v2, 0x8000000
 
-    .line 389
     invoke-static {p0, v0, v1, v2}, Landroid/app/PendingIntent;->getService(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v0
@@ -262,44 +234,36 @@
 .method private createToNetflixServiceIntent(Ljava/lang/String;)Landroid/content/Intent;
     .locals 2
 
-    .prologue
-    .line 341
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 342
     const-class v1, Lcom/netflix/mediaclient/service/NetflixService;
 
     invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 343
     const-string/jumbo v1, "com.netflix.mediaclient.intent.category.CATEGORY_FROM_PREAPP_PSERVICE"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 344
     return-object v0
 .end method
 
 .method private doStartCommand(Landroid/content/Intent;II)V
     .locals 8
 
-    .prologue
     const/4 v2, 0x1
 
     const/4 v1, 0x0
 
     const-wide/32 v6, 0x6ddd00
 
-    .line 184
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 185
     const-string/jumbo v0, "nf_preapp_service"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -322,25 +286,21 @@
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 187
     :cond_0
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 188
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 248
     :cond_1
     :goto_0
     return-void
 
-    .line 192
     :cond_2
     const-string/jumbo v3, "com.netflix.mediaclient.service.pservice.ACTION_REFRESH_WIDGET"
 
@@ -350,24 +310,20 @@
 
     if-eqz v0, :cond_3
 
-    .line 193
     const-string/jumbo v0, "nf_preapp_service"
 
     const-string/jumbo v1, "handling widget refresh alarm expiry..."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 194
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mWidgetAgent:Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;
 
     invoke-virtual {v0, p0, p1}, Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;->handleWidgetRefreshReq(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 195
     invoke-direct {p0, v6, v7}, Lcom/netflix/mediaclient/service/pservice/PService;->updateWidgetRefreshAlarm(J)V
 
     goto :goto_0
 
-    .line 200
     :cond_3
     const-string/jumbo v0, "com.netflix.mediaclient.intent.category.CATEGORY_FROM_PREAPP_AGENT"
 
@@ -377,14 +333,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 201
     const-string/jumbo v0, "nf_preapp_service"
 
     const-string/jumbo v3, "PREAPP_AGENT command intent :%s "
 
     invoke-static {v0, v3, p1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
-    .line 202
     if-eqz p1, :cond_6
 
     const-string/jumbo v0, "com.netflix.mediaclient.intent.action.ACTION_PLAYER_STATE_CHANGE"
@@ -399,12 +353,10 @@
 
     if-eqz v0, :cond_6
 
-    .line 203
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mWidgetAgent:Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;->handlePlayerStateChange(Landroid/content/Intent;)V
 
-    .line 209
     :cond_4
     :goto_1
     const-string/jumbo v0, "com.netflix.mediaclient.intent.category.CATEGORY_FROM_PREAPP_WIDGET"
@@ -415,7 +367,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 210
     const-string/jumbo v0, "nf_preapp_service"
 
     const-string/jumbo v3, "PREAPP_WIDGET command intent ..action:%s "
@@ -434,7 +385,6 @@
 
     invoke-static {v0, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 212
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v3
@@ -451,7 +401,6 @@
     :goto_2
     packed-switch v0, :pswitch_data_0
 
-    .line 244
     const-string/jumbo v0, "nf_preapp_service"
 
     const-string/jumbo v1, "unexpected action: drop"
@@ -460,16 +409,13 @@
 
     goto :goto_0
 
-    .line 205
     :cond_6
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/pservice/PService;->handleCommandFromNetflixService(Landroid/content/Intent;)V
 
-    .line 206
     invoke-direct {p0, v6, v7}, Lcom/netflix/mediaclient/service/pservice/PService;->updateWidgetRefreshAlarm(J)V
 
     goto :goto_1
 
-    .line 212
     :sswitch_0
     const-string/jumbo v4, "com.netflix.mediaclient.intent.action.INSTALLED_FROM_PREAPP_WIDGET"
 
@@ -613,7 +559,6 @@
 
     goto/16 :goto_2
 
-    .line 214
     :pswitch_0
     const-string/jumbo v0, "nf_preapp_service"
 
@@ -621,17 +566,14 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 215
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mWidgetAgent:Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;
 
     invoke-virtual {v0, p0, p1}, Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;->handleWidgetRefreshReq(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 216
     invoke-direct {p0, v6, v7}, Lcom/netflix/mediaclient/service/pservice/PService;->updateWidgetRefreshAlarm(J)V
 
     goto/16 :goto_0
 
-    .line 219
     :pswitch_1
     const-string/jumbo v0, "nf_preapp_service"
 
@@ -639,30 +581,25 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 220
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mWidgetAgent:Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;
 
     invoke-virtual {v0, p0, p1}, Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;->handleWidgetResizeReq(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto/16 :goto_0
 
-    .line 223
     :pswitch_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mWidgetAgent:Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;
 
     invoke-virtual {v0, p0, p1}, Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;->handleWidgetRefreshReq(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 224
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mWidgetAgent:Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;
 
     invoke-virtual {v0, p0, p1}, Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;->logWidgetRefreshEvent(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 225
     invoke-direct {p0, v6, v7}, Lcom/netflix/mediaclient/service/pservice/PService;->updateWidgetRefreshAlarm(J)V
 
     goto/16 :goto_0
 
-    .line 228
     :pswitch_3
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mWidgetAgent:Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;
 
@@ -670,7 +607,6 @@
 
     goto/16 :goto_0
 
-    .line 233
     :pswitch_4
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mWidgetAgent:Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;
 
@@ -678,7 +614,6 @@
 
     goto/16 :goto_0
 
-    .line 238
     :pswitch_5
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mWidgetAgent:Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;
 
@@ -686,13 +621,11 @@
 
     goto/16 :goto_0
 
-    .line 241
     :pswitch_6
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/pservice/PService;->cancelWidgetRefreshAlarm()V
 
     goto/16 :goto_0
 
-    .line 212
     nop
 
     :sswitch_data_0
@@ -729,45 +662,36 @@
 .method private init()V
     .locals 3
 
-    .prologue
-    .line 104
     new-instance v0, Lcom/netflix/mediaclient/service/pservice/PService$1;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/pservice/PService$1;-><init>(Lcom/netflix/mediaclient/service/pservice/PService;)V
 
-    .line 145
     const-string/jumbo v1, "nf_preapp_service"
 
     const-string/jumbo v2, "PService initing..."
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 146
     iget-object v1, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mFetchAgent:Lcom/netflix/mediaclient/service/pservice/PServiceFetchAgent;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/pservice/PService;->agentContext:Lcom/netflix/mediaclient/service/pservice/PServiceAgent$AgentContext;
 
     invoke-virtual {v1, v2, v0}, Lcom/netflix/mediaclient/service/pservice/PServiceFetchAgent;->init(Lcom/netflix/mediaclient/service/pservice/PServiceAgent$AgentContext;Lcom/netflix/mediaclient/service/pservice/PServiceAgent$InitCallback;)V
 
-    .line 147
     return-void
 .end method
 
 .method private initCompleted()V
     .locals 2
 
-    .prologue
-    .line 150
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertOnMain()Z
 
-    .line 152
     const-string/jumbo v0, "nf_preapp_service"
 
     const-string/jumbo v1, "Invoking InitCallbacks..."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 153
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mInitCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -787,23 +711,19 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/pservice/PService$InitCallback;
 
-    .line 154
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/pservice/PService$InitCallback;->onInitComplete()V
 
     goto :goto_0
 
-    .line 156
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mInitCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 158
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mInitComplete:Z
 
-    .line 160
     invoke-static {p0}, Lcom/netflix/mediaclient/util/AndroidUtils;->isWidgetInstalled(Landroid/content/Context;)Z
 
     move-result v0
@@ -816,21 +736,17 @@
 
     if-nez v0, :cond_1
 
-    .line 161
     const-string/jumbo v0, "nf_preapp_service"
 
     const-string/jumbo v1, "stopping service - !widgetInstalled & !isRemoteUiDevice & !TestCode"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 162
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/pservice/PService;->stopSelf()V
 
-    .line 166
     :goto_1
     return-void
 
-    .line 164
     :cond_1
     const-wide/32 v0, 0x6ddd00
 
@@ -842,8 +758,6 @@
 .method public static isRemoteUiDevice()Z
     .locals 1
 
-    .prologue
-    .line 326
     const/4 v0, 0x0
 
     return v0
@@ -852,10 +766,8 @@
 .method private updateWidgetRefreshAlarm(J)V
     .locals 11
 
-    .prologue
     const/4 v10, 0x3
 
-    .line 362
     const-string/jumbo v0, "alarm"
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/pservice/PService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -864,37 +776,30 @@
 
     check-cast v0, Landroid/app/AlarmManager;
 
-    .line 363
     if-nez v0, :cond_0
 
-    .line 364
     const-string/jumbo v0, "nf_preapp_service"
 
     const-string/jumbo v1, "Can\'t access alarm manager to set widget refresh alarm"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 376
     :goto_0
     return-void
 
-    .line 367
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 368
     add-long v4, v2, p1
 
-    .line 369
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 370
     const-string/jumbo v1, "nf_preapp_service"
 
     const-string/jumbo v6, "updating widget refresh alarm - fireIn %d ms, time sinceBoot %d (ms), widgetRefreshMs: %d ms"
@@ -931,7 +836,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 374
     :cond_1
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/pservice/PService;->createTileExpiryAlarmPendingIntent()Landroid/app/PendingIntent;
 
@@ -947,22 +851,17 @@
 .method public handleCommandFromNetflixService(Landroid/content/Intent;)V
     .locals 5
 
-    .prologue
-    .line 256
     if-nez p1, :cond_0
 
-    .line 257
     const-string/jumbo v0, "nf_preapp_service"
 
     const-string/jumbo v1, "Intent is null"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 280
     :goto_0
     return-void
 
-    .line 261
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -970,7 +869,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 262
     const-string/jumbo v0, "nf_preapp_service"
 
     const-string/jumbo v1, "received intent: %s"
@@ -993,7 +891,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 265
     :cond_1
     const-string/jumbo v0, "com.netflix.mediaclient.intent.action.ALL_MEMBER_UPDATED_FROM_PREAPP_AGENT"
 
@@ -1009,7 +906,6 @@
 
     const-string/jumbo v0, "com.netflix.mediaclient.intent.action.CW_UPDATED_FROM_PREAPP_AGENT"
 
-    .line 266
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -1022,7 +918,6 @@
 
     const-string/jumbo v0, "com.netflix.mediaclient.intent.action.IQ_UPDATED_FROM_PREAPP_AGENT"
 
-    .line 267
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -1035,7 +930,6 @@
 
     const-string/jumbo v0, "com.netflix.mediaclient.intent.action.ACTION_ACCOUNT_DEACTIVATED_FROM_PREAPP_AGENT"
 
-    .line 268
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -1046,7 +940,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 269
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mFetchAgent:Lcom/netflix/mediaclient/service/pservice/PServiceFetchAgent;
 
@@ -1054,7 +947,6 @@
 
     goto :goto_0
 
-    .line 270
     :cond_3
     const-string/jumbo v0, "com.netflix.mediaclient.intent.action.NON_MEMBER_UPDATED_FROM_PREAPP_AGENT"
 
@@ -1068,7 +960,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 271
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->agentContext:Lcom/netflix/mediaclient/service/pservice/PServiceAgent$AgentContext;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/pservice/PServiceAgent$AgentContext;->getFetchAgent()Lcom/netflix/mediaclient/service/pservice/PServiceAgent$PServiceFetchAgentInterface;
@@ -1085,7 +976,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 272
     const-string/jumbo v0, "nf_preapp_service"
 
     const-string/jumbo v1, "member data available - ignore ACTION_NON_MEMBER_UPDATED_FROM_PREAPP_AGENT"
@@ -1094,7 +984,6 @@
 
     goto :goto_0
 
-    .line 274
     :cond_4
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mFetchAgent:Lcom/netflix/mediaclient/service/pservice/PServiceFetchAgent;
 
@@ -1102,7 +991,6 @@
 
     goto/16 :goto_0
 
-    .line 278
     :cond_5
     const-string/jumbo v0, "nf_preapp_service"
 
@@ -1116,72 +1004,58 @@
 .method protected notifyToFetchData()V
     .locals 3
 
-    .prologue
-    .line 348
     const-string/jumbo v0, "com.netflix.mediaclient.intent.action.REFRESH_DATA"
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/pservice/PService;->createToNetflixServiceIntent(Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 349
     const-string/jumbo v1, "nf_preapp_service"
 
     const-string/jumbo v2, "Sending command to start NetflixService...ACTION_REFRESH_DATA"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 350
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/pservice/PService;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 351
     const-string/jumbo v0, "nf_preapp_service"
 
     const-string/jumbo v1, "Sending command to NetflixService done."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 352
     return-void
 .end method
 
 .method protected notifyToFetchNonMemberData()V
     .locals 3
 
-    .prologue
-    .line 355
     const-string/jumbo v0, "com.netflix.mediaclient.intent.action.REFRESH_NON_MEMBER_DATA"
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/service/pservice/PService;->createToNetflixServiceIntent(Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 356
     const-string/jumbo v1, "nf_preapp_service"
 
     const-string/jumbo v2, "Sending command to start NetflixService...ACTION_REFRESH_NON_MEMBER_DATA"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 357
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/pservice/PService;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 358
     const-string/jumbo v0, "nf_preapp_service"
 
     const-string/jumbo v1, "Sending command to NetflixService done."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 359
     return-void
 .end method
 
 .method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 1
 
-    .prologue
-    .line 82
     const/4 v0, 0x0
 
     return-object v0
@@ -1190,89 +1064,70 @@
 .method public onCreate()V
     .locals 2
 
-    .prologue
-    .line 87
     const-string/jumbo v0, "nf_preapp_service"
 
     const-string/jumbo v1, "PService.onCreate."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 88
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
-    .line 90
     new-instance v0, Lcom/netflix/mediaclient/service/pservice/PServiceFetchAgent;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/pservice/PServiceFetchAgent;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mFetchAgent:Lcom/netflix/mediaclient/service/pservice/PServiceFetchAgent;
 
-    .line 91
     new-instance v0, Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mWidgetAgent:Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;
 
-    .line 93
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/pservice/PService;->init()V
 
-    .line 94
     return-void
 .end method
 
 .method public onDestroy()V
     .locals 2
 
-    .prologue
-    .line 331
     invoke-super {p0}, Landroid/app/Service;->onDestroy()V
 
-    .line 332
     const-string/jumbo v0, "nf_preapp_service"
 
     const-string/jumbo v1, "PService.onDestroy."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 335
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mFetchAgent:Lcom/netflix/mediaclient/service/pservice/PServiceFetchAgent;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/pservice/PServiceFetchAgent;->destroy()V
 
-    .line 336
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mWidgetAgent:Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/pservice/PServiceWidgetAgent;->destroy()V
 
-    .line 337
     return-void
 .end method
 
 .method public onStartCommand(Landroid/content/Intent;II)I
     .locals 2
 
-    .prologue
-    .line 171
     if-eqz p1, :cond_0
 
-    .line 172
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mInitComplete:Z
 
     if-eqz v0, :cond_1
 
-    .line 173
     invoke-direct {p0, p1, p2, p3}, Lcom/netflix/mediaclient/service/pservice/PService;->doStartCommand(Landroid/content/Intent;II)V
 
-    .line 179
     :cond_0
     :goto_0
     const/4 v0, 0x2
 
     return v0
 
-    .line 176
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pservice/PService;->mInitCallbacks:Ljava/util/ArrayList;
 

@@ -37,16 +37,11 @@
         }
     .end annotation
 
-    .prologue
-    .line 492
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 493
     iput-object p1, p0, Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat$AsyncTaskResult;->mTask:Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat;
 
-    .line 494
     iput-object p2, p0, Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat$AsyncTaskResult;->mData:[Ljava/lang/Object;
 
-    .line 495
     return-void
 .end method

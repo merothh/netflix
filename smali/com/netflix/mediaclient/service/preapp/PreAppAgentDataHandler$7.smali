@@ -15,8 +15,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;Lcom/netflix/mediaclient/service/pservice/PDiskData;Lcom/netflix/mediaclient/service/preapp/PreAppAgentEventType;)V
     .locals 0
 
-    .prologue
-    .line 165
     iput-object p1, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$7;->this$0:Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler$7;->val$newData:Lcom/netflix/mediaclient/service/pservice/PDiskData;
@@ -33,18 +31,14 @@
 .method public onDataLoaded(Lcom/netflix/mediaclient/service/pservice/PDiskData;)V
     .locals 2
 
-    .prologue
-    .line 169
     if-nez p1, :cond_0
 
-    .line 170
     const-string/jumbo v0, "nf_preappagentdatahandler"
 
     const-string/jumbo v1, "data on disk is null, first time"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 173
     :cond_0
     invoke-static {}, Lcom/netflix/mediaclient/service/preapp/PreAppAgentDataHandler;->access$1000()Lcom/netflix/mediaclient/service/ServiceAgent;
 
@@ -60,6 +54,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 184
     return-void
 .end method

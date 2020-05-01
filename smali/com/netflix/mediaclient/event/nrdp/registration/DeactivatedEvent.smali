@@ -23,13 +23,10 @@
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 1
 
-    .prologue
-    .line 44
     const-string/jumbo v0, "deactivated"
 
     invoke-direct {p0, v0, p1}, Lcom/netflix/mediaclient/event/nrdp/registration/BaseRegistrationEvent;-><init>(Ljava/lang/String;Lorg/json/JSONObject;)V
 
-    .line 45
     return-void
 .end method
 
@@ -38,8 +35,6 @@
 .method public getAccountKey()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 68
     iget-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/registration/DeactivatedEvent;->accountKey:Ljava/lang/String;
 
     return-object v0
@@ -48,8 +43,6 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 59
     const-string/jumbo v0, "deactivate"
 
     return-object v0
@@ -58,8 +51,6 @@
 .method public isCurrent()Z
     .locals 1
 
-    .prologue
-    .line 77
     iget-boolean v0, p0, Lcom/netflix/mediaclient/event/nrdp/registration/DeactivatedEvent;->current:Z
 
     return v0
@@ -68,8 +59,6 @@
 .method protected populate(Lorg/json/JSONObject;)V
     .locals 2
 
-    .prologue
-    .line 51
     const-string/jumbo v0, "accountKey"
 
     const/4 v1, 0x0
@@ -80,7 +69,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/event/nrdp/registration/DeactivatedEvent;->accountKey:Ljava/lang/String;
 
-    .line 52
     const-string/jumbo v0, "current"
 
     const/4 v1, 0x0
@@ -91,6 +79,5 @@
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/event/nrdp/registration/DeactivatedEvent;->current:Z
 
-    .line 53
     return-void
 .end method

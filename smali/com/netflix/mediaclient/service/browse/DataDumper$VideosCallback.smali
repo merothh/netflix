@@ -34,19 +34,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 92
     iput-object p1, p0, Lcom/netflix/mediaclient/service/browse/DataDumper$VideosCallback;->this$0:Lcom/netflix/mediaclient/service/browse/DataDumper;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/servicemgr/SimpleManagerCallback;-><init>()V
 
-    .line 93
     iput-object p2, p0, Lcom/netflix/mediaclient/service/browse/DataDumper$VideosCallback;->lomo:Lcom/netflix/mediaclient/servicemgr/interface_/LoMo;
 
-    .line 94
     iput-object p3, p0, Lcom/netflix/mediaclient/service/browse/DataDumper$VideosCallback;->todo:Ljava/util/List;
 
-    .line 95
     return-void
 .end method
 
@@ -64,8 +59,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 120
     const-string/jumbo v0, "DataDumper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -94,21 +87,18 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 122
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isError()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 123
     const-string/jumbo v0, "DataDumper"
 
     const-string/jumbo v1, "Bummer!  Invalid status code during data dump :("
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
     const-string/jumbo v0, "DataDumper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -143,19 +133,16 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     iget-object v0, p0, Lcom/netflix/mediaclient/service/browse/DataDumper$VideosCallback;->this$0:Lcom/netflix/mediaclient/service/browse/DataDumper;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/browse/DataDumper;->access$202(Lcom/netflix/mediaclient/service/browse/DataDumper;Z)Z
 
-    .line 126
     iget-object v0, p0, Lcom/netflix/mediaclient/service/browse/DataDumper$VideosCallback;->todo:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 133
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/browse/DataDumper$VideosCallback;->todo:Ljava/util/List;
 
@@ -165,14 +152,12 @@
 
     if-nez v0, :cond_1
 
-    .line 134
     const-string/jumbo v0, "DataDumper"
 
     const-string/jumbo v1, "--LoMo data collection complete--"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 135
     iget-object v0, p0, Lcom/netflix/mediaclient/service/browse/DataDumper$VideosCallback;->this$0:Lcom/netflix/mediaclient/service/browse/DataDumper;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/browse/DataDumper$VideosCallback;->this$0:Lcom/netflix/mediaclient/service/browse/DataDumper;
@@ -183,11 +168,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/browse/DataDumper;->access$300(Lcom/netflix/mediaclient/service/browse/DataDumper;Ljava/util/LinkedHashMap;)V
 
-    .line 140
     :goto_1
     return-void
 
-    .line 129
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/browse/DataDumper$VideosCallback;->this$0:Lcom/netflix/mediaclient/service/browse/DataDumper;
 
@@ -199,7 +182,6 @@
 
     invoke-virtual {v0, v1, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 130
     iget-object v0, p0, Lcom/netflix/mediaclient/service/browse/DataDumper$VideosCallback;->todo:Ljava/util/List;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/browse/DataDumper$VideosCallback;->lomo:Lcom/netflix/mediaclient/servicemgr/interface_/LoMo;
@@ -208,7 +190,6 @@
 
     goto :goto_0
 
-    .line 138
     :cond_1
     const-string/jumbo v0, "DataDumper"
 
@@ -257,8 +238,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 99
     iget-object v0, p0, Lcom/netflix/mediaclient/service/browse/DataDumper$VideosCallback;->this$0:Lcom/netflix/mediaclient/service/browse/DataDumper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/browse/DataDumper;->access$200(Lcom/netflix/mediaclient/service/browse/DataDumper;)Z
@@ -267,15 +246,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 106
     :goto_0
     return-void
 
-    .line 103
     :cond_0
     invoke-super {p0, p1, p2}, Lcom/netflix/mediaclient/servicemgr/SimpleManagerCallback;->onBBVideosFetched(Ljava/util/List;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 105
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/service/browse/DataDumper$VideosCallback;->handleResponse(Ljava/util/List;Lcom/netflix/mediaclient/android/app/Status;)V
 
     goto :goto_0
@@ -295,8 +271,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 110
     iget-object v0, p0, Lcom/netflix/mediaclient/service/browse/DataDumper$VideosCallback;->this$0:Lcom/netflix/mediaclient/service/browse/DataDumper;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/browse/DataDumper;->access$200(Lcom/netflix/mediaclient/service/browse/DataDumper;)Z
@@ -305,15 +279,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 117
     :goto_0
     return-void
 
-    .line 114
     :cond_0
     invoke-super {p0, p1, p2}, Lcom/netflix/mediaclient/servicemgr/SimpleManagerCallback;->onVideosFetched(Ljava/util/List;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 116
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/service/browse/DataDumper$VideosCallback;->handleResponse(Ljava/util/List;Lcom/netflix/mediaclient/android/app/Status;)V
 
     goto :goto_0

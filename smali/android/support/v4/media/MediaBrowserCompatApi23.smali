@@ -7,19 +7,14 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     return-void
 .end method
 
 .method public static createItemCallback(Landroid/support/v4/media/MediaBrowserCompatApi23$ItemCallback;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 26
     new-instance v0, Landroid/support/v4/media/MediaBrowserCompatApi23$ItemCallbackProxy;
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/MediaBrowserCompatApi23$ItemCallbackProxy;-><init>(Landroid/support/v4/media/MediaBrowserCompatApi23$ItemCallback;)V
@@ -30,14 +25,11 @@
 .method public static getItem(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 30
     check-cast p0, Landroid/media/browse/MediaBrowser;
 
     check-cast p2, Landroid/media/browse/MediaBrowser$ItemCallback;
 
     invoke-virtual {p0, p1, p2}, Landroid/media/browse/MediaBrowser;->getItem(Ljava/lang/String;Landroid/media/browse/MediaBrowser$ItemCallback;)V
 
-    .line 31
     return-void
 .end method

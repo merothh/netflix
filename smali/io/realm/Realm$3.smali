@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1513
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,7 +20,5 @@
 .method public migrationComplete()V
     .locals 0
 
-    .prologue
-    .line 1516
     return-void
 .end method

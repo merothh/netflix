@@ -34,7 +34,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x3
 
     const/4 v5, 0x2
@@ -43,7 +42,6 @@
 
     const/4 v3, 0x0
 
-    .line 12
     new-instance v0, Lcom/netflix/mediaclient/service/offline/download/DownloadableType;
 
     const-string/jumbo v1, "Audio"
@@ -54,7 +52,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/offline/download/DownloadableType;->Audio:Lcom/netflix/mediaclient/service/offline/download/DownloadableType;
 
-    .line 13
     new-instance v0, Lcom/netflix/mediaclient/service/offline/download/DownloadableType;
 
     const-string/jumbo v1, "Video"
@@ -65,7 +62,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/offline/download/DownloadableType;->Video:Lcom/netflix/mediaclient/service/offline/download/DownloadableType;
 
-    .line 14
     new-instance v0, Lcom/netflix/mediaclient/service/offline/download/DownloadableType;
 
     const-string/jumbo v1, "Subtitle"
@@ -76,7 +72,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/offline/download/DownloadableType;->Subtitle:Lcom/netflix/mediaclient/service/offline/download/DownloadableType;
 
-    .line 15
     new-instance v0, Lcom/netflix/mediaclient/service/offline/download/DownloadableType;
 
     const-string/jumbo v1, "TrickPlay"
@@ -87,7 +82,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/offline/download/DownloadableType;->TrickPlay:Lcom/netflix/mediaclient/service/offline/download/DownloadableType;
 
-    .line 9
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/offline/download/DownloadableType;
@@ -123,22 +117,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 19
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 20
     iput-object p3, p0, Lcom/netflix/mediaclient/service/offline/download/DownloadableType;->mExtension:Ljava/lang/String;
 
-    .line 21
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/offline/download/DownloadableType;
     .locals 1
 
-    .prologue
-    .line 9
     const-class v0, Lcom/netflix/mediaclient/service/offline/download/DownloadableType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -153,8 +141,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/offline/download/DownloadableType;
     .locals 1
 
-    .prologue
-    .line 9
     sget-object v0, Lcom/netflix/mediaclient/service/offline/download/DownloadableType;->$VALUES:[Lcom/netflix/mediaclient/service/offline/download/DownloadableType;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/offline/download/DownloadableType;->clone()Ljava/lang/Object;
@@ -171,8 +157,6 @@
 .method public getFileExtension()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 24
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/DownloadableType;->mExtension:Ljava/lang/String;
 
     return-object v0

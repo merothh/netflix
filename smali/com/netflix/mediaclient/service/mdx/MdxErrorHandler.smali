@@ -25,39 +25,30 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/netflix/mediaclient/android/activity/NetflixActivity;)V
     .locals 1
 
-    .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 128
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler$1;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler$1;-><init>(Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->kblaunch_16001:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 140
     new-instance v0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler$2;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler$2;-><init>(Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->kblaunch_16003:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 30
     iput-object p1, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->tag:Ljava/lang/String;
 
-    .line 31
     iput-object p2, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
-    .line 32
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;)Lcom/netflix/mediaclient/android/activity/NetflixActivity;
     .locals 1
 
-    .prologue
-    .line 19
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     return-object v0
@@ -66,8 +57,6 @@
 .method static synthetic access$100(Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 19
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->tag:Ljava/lang/String;
 
     return-object v0
@@ -76,24 +65,20 @@
 .method private getDialogBuilder(ILjava/lang/String;)Landroid/support/v7/app/AlertDialog$Builder;
     .locals 5
 
-    .prologue
     const v4, 0x7f080165
 
     const/4 v3, 0x0
 
     const v2, 0x7f0801c0
 
-    .line 106
     sparse-switch p1, :sswitch_data_0
 
-    .line 122
     new-instance v0, Landroid/support/v7/app/AlertDialog$Builder;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-direct {v0, v1}, Landroid/support/v7/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 123
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->getErrorMessage(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -102,16 +87,13 @@
 
     move-result-object v0
 
-    .line 124
     invoke-virtual {v0, v2, v3}, Landroid/support/v7/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/support/v7/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    .line 122
     :goto_0
     return-object v0
 
-    .line 111
     :sswitch_0
     new-instance v0, Landroid/support/v7/app/AlertDialog$Builder;
 
@@ -119,7 +101,6 @@
 
     invoke-direct {v0, v1}, Landroid/support/v7/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 112
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->getErrorMessage(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -128,21 +109,18 @@
 
     move-result-object v0
 
-    .line 113
     invoke-virtual {v0, v2, v3}, Landroid/support/v7/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/support/v7/app/AlertDialog$Builder;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->kblaunch_16001:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 114
     invoke-virtual {v0, v4, v1}, Landroid/support/v7/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/support/v7/app/AlertDialog$Builder;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 117
     :sswitch_1
     new-instance v0, Landroid/support/v7/app/AlertDialog$Builder;
 
@@ -150,7 +128,6 @@
 
     invoke-direct {v0, v1}, Landroid/support/v7/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 118
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->getErrorMessage(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -159,21 +136,18 @@
 
     move-result-object v0
 
-    .line 119
     invoke-virtual {v0, v2, v3}, Landroid/support/v7/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/support/v7/app/AlertDialog$Builder;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->kblaunch_16003:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 120
     invoke-virtual {v0, v4, v1}, Landroid/support/v7/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/support/v7/app/AlertDialog$Builder;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 106
     :sswitch_data_0
     .sparse-switch
         0x64 -> :sswitch_0
@@ -184,18 +158,14 @@
 .method private getErrorMessage(ILjava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 154
     sparse-switch p1, :sswitch_data_0
 
-    .line 171
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 172
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->tag:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -218,13 +188,11 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 174
     :cond_0
     :goto_0
     :sswitch_0
     return-object p2
 
-    .line 156
     :sswitch_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
@@ -236,7 +204,6 @@
 
     goto :goto_0
 
-    .line 158
     :sswitch_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
@@ -248,7 +215,6 @@
 
     goto :goto_0
 
-    .line 160
     :sswitch_3
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
@@ -260,7 +226,6 @@
 
     goto :goto_0
 
-    .line 162
     :sswitch_4
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
@@ -272,7 +237,6 @@
 
     goto :goto_0
 
-    .line 165
     :sswitch_5
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
@@ -296,7 +260,6 @@
 
     goto :goto_0
 
-    .line 167
     :sswitch_6
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
@@ -308,7 +271,6 @@
 
     goto :goto_0
 
-    .line 154
     nop
 
     :sswitch_data_0
@@ -326,8 +288,6 @@
 .method private handleError(ILjava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 74
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->getDialogBuilder(ILjava/lang/String;)Landroid/support/v7/app/AlertDialog$Builder;
@@ -336,30 +296,23 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->displayDialog(Landroid/support/v7/app/AlertDialog$Builder;)Landroid/app/Dialog;
 
-    .line 75
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->reportErrorAsLogblob(I)V
 
-    .line 76
     return-void
 .end method
 
 .method private reportErrorAsLogblob(I)V
     .locals 5
 
-    .prologue
-    .line 80
     packed-switch p1, :pswitch_data_0
 
-    .line 103
     :goto_0
     :pswitch_0
     return-void
 
-    .line 82
     :pswitch_1
     const-string/jumbo v0, "16001"
 
-    .line 98
     :goto_1
     :try_start_0
     new-instance v1, Lcom/netflix/mediaclient/javabridge/ui/LogArguments;
@@ -372,7 +325,6 @@
 
     invoke-direct {v1, v2, v0, v3, v4}, Lcom/netflix/mediaclient/javabridge/ui/LogArguments;-><init>(Lcom/netflix/mediaclient/javabridge/ui/LogArguments$LogLevel;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 99
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -389,11 +341,9 @@
 
     goto :goto_0
 
-    .line 100
     :catch_0
     move-exception v0
 
-    .line 101
     iget-object v1, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->tag:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -418,25 +368,21 @@
 
     goto :goto_0
 
-    .line 85
     :pswitch_2
     const-string/jumbo v0, "16002"
 
     goto :goto_1
 
-    .line 88
     :pswitch_3
     const-string/jumbo v0, "16003"
 
     goto :goto_1
 
-    .line 91
     :pswitch_4
     const-string/jumbo v0, "16004"
 
     goto :goto_1
 
-    .line 80
     nop
 
     :pswitch_data_0
@@ -454,16 +400,12 @@
 .method private sendToast(ILjava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 71
     return-void
 .end method
 
 .method private shouldShowErrorMessage()Z
     .locals 1
 
-    .prologue
-    .line 179
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     instance-of v0, v0, Lcom/netflix/mediaclient/android/activity/FragmentHostActivity;
@@ -493,17 +435,14 @@
 .method public handleMdxError(ILjava/lang/String;)V
     .locals 4
 
-    .prologue
     const/16 v3, 0xc8
 
-    .line 35
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 36
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->tag:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -536,7 +475,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 39
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
@@ -546,11 +484,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 65
     :goto_0
     return-void
 
-    .line 43
     :cond_1
     const/16 v0, 0x64
 
@@ -558,19 +494,16 @@
 
     if-ge p1, v3, :cond_2
 
-    .line 44
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->tag:Ljava/lang/String;
 
     const-string/jumbo v1, "Displaying error dialog"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->handleError(ILjava/lang/String;)V
 
     goto :goto_0
 
-    .line 47
     :cond_2
     if-lt p1, v3, :cond_4
 
@@ -578,26 +511,22 @@
 
     if-ge p1, v0, :cond_4
 
-    .line 48
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->shouldShowErrorMessage()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 49
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->tag:Ljava/lang/String;
 
     const-string/jumbo v1, "Showing toast msg"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->sendToast(ILjava/lang/String;)V
 
     goto :goto_0
 
-    .line 53
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->tag:Ljava/lang/String;
 
@@ -607,7 +536,6 @@
 
     goto :goto_0
 
-    .line 57
     :cond_4
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->shouldShowErrorMessage()Z
 
@@ -615,19 +543,16 @@
 
     if-eqz v0, :cond_5
 
-    .line 58
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->tag:Ljava/lang/String;
 
     const-string/jumbo v1, "Showing toast msg"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 59
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->sendToast(ILjava/lang/String;)V
 
     goto :goto_0
 
-    .line 62
     :cond_5
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->tag:Ljava/lang/String;
 

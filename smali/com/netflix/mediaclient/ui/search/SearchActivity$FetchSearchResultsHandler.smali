@@ -13,19 +13,14 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/search/SearchActivity;J)V
     .locals 2
 
-    .prologue
-    .line 552
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$FetchSearchResultsHandler;->this$0:Lcom/netflix/mediaclient/ui/search/SearchActivity;
 
-    .line 553
     const-string/jumbo v0, "SearchActivity"
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/servicemgr/LoggingManagerCallback;-><init>(Ljava/lang/String;)V
 
-    .line 554
     iput-wide p2, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$FetchSearchResultsHandler;->requestId:J
 
-    .line 555
     return-void
 .end method
 
@@ -34,15 +29,12 @@
 .method public onSearchResultsFetched(Lcom/netflix/mediaclient/servicemgr/interface_/search/ISearchResults;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 6
 
-    .prologue
     const/4 v5, 0x0
 
     const/4 v4, 0x0
 
-    .line 559
     invoke-super {p0, p1, p2}, Lcom/netflix/mediaclient/servicemgr/LoggingManagerCallback;->onSearchResultsFetched(Lcom/netflix/mediaclient/servicemgr/interface_/search/ISearchResults;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 561
     iget-wide v0, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$FetchSearchResultsHandler;->requestId:J
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$FetchSearchResultsHandler;->this$0:Lcom/netflix/mediaclient/ui/search/SearchActivity;
@@ -55,14 +47,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 562
     const-string/jumbo v0, "SearchActivity"
 
     const-string/jumbo v1, "Ignoring stale onSearchResultsFetched callback"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 563
     iget-wide v0, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$FetchSearchResultsHandler;->requestId:J
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$FetchSearchResultsHandler;->this$0:Lcom/netflix/mediaclient/ui/search/SearchActivity;
@@ -71,41 +61,34 @@
 
     invoke-static {v0, v1, v2, v3, v5}, Lcom/netflix/mediaclient/util/log/UserActionLogUtils;->reportSearchActionEnded(JLandroid/content/Context;Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;Lcom/netflix/mediaclient/service/logging/client/model/UIError;)V
 
-    .line 590
     :goto_0
     return-void
 
-    .line 567
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$FetchSearchResultsHandler;->this$0:Lcom/netflix/mediaclient/ui/search/SearchActivity;
 
     invoke-static {v0, v4}, Lcom/netflix/mediaclient/ui/search/SearchActivity;->access$902(Lcom/netflix/mediaclient/ui/search/SearchActivity;Z)Z
 
-    .line 569
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$FetchSearchResultsHandler;->this$0:Lcom/netflix/mediaclient/ui/search/SearchActivity;
 
     invoke-static {v0, v4}, Lcom/netflix/mediaclient/ui/search/SearchActivity;->access$1000(Lcom/netflix/mediaclient/ui/search/SearchActivity;Z)V
 
-    .line 571
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isError()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 572
     const-string/jumbo v0, "SearchActivity"
 
     const-string/jumbo v1, "Invalid status code"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 573
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$FetchSearchResultsHandler;->this$0:Lcom/netflix/mediaclient/ui/search/SearchActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/search/SearchActivity;->showError()V
 
-    .line 574
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$FetchSearchResultsHandler;->this$0:Lcom/netflix/mediaclient/ui/search/SearchActivity;
 
     const v1, 0x7f08012e
@@ -120,7 +103,6 @@
 
     move-result-object v0
 
-    .line 575
     iget-wide v2, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$FetchSearchResultsHandler;->requestId:J
 
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$FetchSearchResultsHandler;->this$0:Lcom/netflix/mediaclient/ui/search/SearchActivity;
@@ -131,7 +113,6 @@
 
     goto :goto_0
 
-    .line 579
     :cond_1
     if-eqz p1, :cond_2
 
@@ -141,7 +122,6 @@
 
     if-nez v0, :cond_3
 
-    .line 580
     :cond_2
     const-string/jumbo v0, "SearchActivity"
 
@@ -149,12 +129,10 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 581
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$FetchSearchResultsHandler;->this$0:Lcom/netflix/mediaclient/ui/search/SearchActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/search/SearchActivity;->access$1500(Lcom/netflix/mediaclient/ui/search/SearchActivity;)V
 
-    .line 582
     iget-wide v0, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$FetchSearchResultsHandler;->requestId:J
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$FetchSearchResultsHandler;->this$0:Lcom/netflix/mediaclient/ui/search/SearchActivity;
@@ -165,7 +143,6 @@
 
     goto :goto_0
 
-    .line 586
     :cond_3
     const-string/jumbo v0, "SearchActivity"
 
@@ -191,19 +168,16 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 587
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$FetchSearchResultsHandler;->this$0:Lcom/netflix/mediaclient/ui/search/SearchActivity;
 
     sget-object v1, Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;->searchResults:Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/search/SearchActivity;->access$1600(Lcom/netflix/mediaclient/ui/search/SearchActivity;Lcom/netflix/mediaclient/servicemgr/IClientLogging$ModalView;)V
 
-    .line 588
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$FetchSearchResultsHandler;->this$0:Lcom/netflix/mediaclient/ui/search/SearchActivity;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/ui/search/SearchActivity;->access$1700(Lcom/netflix/mediaclient/ui/search/SearchActivity;Lcom/netflix/mediaclient/servicemgr/interface_/search/ISearchResults;)V
 
-    .line 589
     iget-wide v0, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$FetchSearchResultsHandler;->requestId:J
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/search/SearchActivity$FetchSearchResultsHandler;->this$0:Lcom/netflix/mediaclient/ui/search/SearchActivity;

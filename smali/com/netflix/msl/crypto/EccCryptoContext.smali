@@ -7,8 +7,6 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/security/PrivateKey;Ljava/security/PublicKey;Lcom/netflix/msl/crypto/EccCryptoContext$Mode;)V
     .locals 7
 
-    .prologue
-    .line 37
     sget-object v0, Lcom/netflix/msl/crypto/EccCryptoContext$Mode;->ENCRYPT_DECRYPT:Lcom/netflix/msl/crypto/EccCryptoContext$Mode;
 
     invoke-virtual {v0, p4}, Lcom/netflix/msl/crypto/EccCryptoContext$Mode;->equals(Ljava/lang/Object;)Z
@@ -43,10 +41,8 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/netflix/msl/crypto/AsymmetricCryptoContext;-><init>(Ljava/lang/String;Ljava/security/PrivateKey;Ljava/security/PublicKey;Ljava/lang/String;Ljava/security/spec/AlgorithmParameterSpec;Ljava/lang/String;)V
 
-    .line 38
     return-void
 
-    .line 37
     :cond_0
     const-string/jumbo v4, "nullOp"
 

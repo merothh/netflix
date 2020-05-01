@@ -47,27 +47,22 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/NetflixService;)V
     .locals 1
 
-    .prologue
-    .line 385
     iput-object p1, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 390
     new-instance v0, Lcom/netflix/mediaclient/service/NetflixService$1$1;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/NetflixService$1$1;-><init>(Lcom/netflix/mediaclient/service/NetflixService$1;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->agentsToInitBatch1:Ljava/util/ArrayList;
 
-    .line 400
     new-instance v0, Lcom/netflix/mediaclient/service/NetflixService$1$2;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/NetflixService$1$2;-><init>(Lcom/netflix/mediaclient/service/NetflixService$1;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->agentsToInitBatch2:Ljava/util/ArrayList;
 
-    .line 415
     new-instance v0, Lcom/netflix/mediaclient/service/NetflixService$1$3;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/NetflixService$1$3;-><init>(Lcom/netflix/mediaclient/service/NetflixService$1;)V
@@ -82,12 +77,10 @@
 .method public onInitComplete(Lcom/netflix/mediaclient/service/ServiceAgent;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
     const/4 v5, 0x0
 
-    .line 423
     invoke-static {}, Lcom/netflix/mediaclient/service/logging/perf/PerformanceProfiler;->getInstance()Lcom/netflix/mediaclient/service/logging/perf/PerformanceProfiler;
 
     move-result-object v0
@@ -98,17 +91,14 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/mediaclient/service/logging/perf/PerformanceProfiler;->endSession(Lcom/netflix/mediaclient/service/logging/perf/Sessions;Ljava/util/Map;)V
 
-    .line 425
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertOnMain()Z
 
-    .line 427
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isError()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 428
     const-string/jumbo v0, "NetflixService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -153,12 +143,10 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 429
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
     invoke-static {v0, p2}, Lcom/netflix/mediaclient/service/NetflixService;->access$1502(Lcom/netflix/mediaclient/service/NetflixService;Lcom/netflix/mediaclient/android/app/Status;)Lcom/netflix/mediaclient/android/app/Status;
 
-    .line 432
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->agentsToInitOnError:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -178,14 +166,12 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/ServiceAgent;
 
-    .line 433
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/ServiceAgent;->isInitCalled()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 434
     iget-object v2, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
     invoke-static {v2}, Lcom/netflix/mediaclient/service/NetflixService;->access$1600(Lcom/netflix/mediaclient/service/NetflixService;)Lcom/netflix/mediaclient/service/ServiceAgent$AgentContext;
@@ -196,7 +182,6 @@
 
     goto :goto_0
 
-    .line 436
     :cond_0
     const-string/jumbo v2, "NetflixService"
 
@@ -218,23 +203,19 @@
 
     goto :goto_0
 
-    .line 439
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/NetflixService;->access$1700(Lcom/netflix/mediaclient/service/NetflixService;)V
 
-    .line 440
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/NetflixService;->stopSelf()V
 
-    .line 497
     :cond_2
     :goto_1
     return-void
 
-    .line 445
     :cond_3
     const-string/jumbo v0, "NetflixService"
 
@@ -254,7 +235,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 446
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/NetflixService;->access$1800(Lcom/netflix/mediaclient/service/NetflixService;)Lcom/netflix/mediaclient/service/msl/MSLAgent;
@@ -263,14 +243,12 @@
 
     if-ne p1, v0, :cond_5
 
-    .line 447
     const-string/jumbo v0, "NetflixService"
 
     const-string/jumbo v1, "Go for batch1!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 450
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->agentsToInitBatch1:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -290,14 +268,12 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/ServiceAgent;
 
-    .line 451
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/ServiceAgent;->isInitCalled()Z
 
     move-result v2
 
     if-nez v2, :cond_4
 
-    .line 452
     iget-object v2, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
     invoke-static {v2}, Lcom/netflix/mediaclient/service/NetflixService;->access$1600(Lcom/netflix/mediaclient/service/NetflixService;)Lcom/netflix/mediaclient/service/ServiceAgent$AgentContext;
@@ -308,7 +284,6 @@
 
     goto :goto_2
 
-    .line 454
     :cond_4
     const-string/jumbo v2, "NetflixService"
 
@@ -330,7 +305,6 @@
 
     goto :goto_2
 
-    .line 457
     :cond_5
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->agentsToInitBatch1:Ljava/util/ArrayList;
 
@@ -340,7 +314,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 459
     const-string/jumbo v0, "NetflixService"
 
     const-string/jumbo v1, "Remove %s from batch1"
@@ -359,12 +332,10 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 460
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->agentsToInitBatch1:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 461
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->agentsToInitBatch1:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -373,14 +344,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 463
     const-string/jumbo v0, "NetflixService"
 
     const-string/jumbo v1, "NetflixService successfully inited batch1 of ServiceAgents"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 464
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->agentsToInitBatch2:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -400,14 +369,12 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/ServiceAgent;
 
-    .line 465
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/ServiceAgent;->isInitCalled()Z
 
     move-result v2
 
     if-nez v2, :cond_6
 
-    .line 466
     iget-object v2, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
     invoke-static {v2}, Lcom/netflix/mediaclient/service/NetflixService;->access$1600(Lcom/netflix/mediaclient/service/NetflixService;)Lcom/netflix/mediaclient/service/ServiceAgent$AgentContext;
@@ -418,7 +385,6 @@
 
     goto :goto_3
 
-    .line 468
     :cond_6
     const-string/jumbo v2, "NetflixService"
 
@@ -440,7 +406,6 @@
 
     goto :goto_3
 
-    .line 471
     :cond_7
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
@@ -454,7 +419,6 @@
 
     goto/16 :goto_1
 
-    .line 474
     :cond_8
     const-string/jumbo v0, "NetflixService"
 
@@ -474,12 +438,10 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 475
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->agentsToInitBatch2:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 476
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->agentsToInitBatch2:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -488,19 +450,16 @@
 
     if-eqz v0, :cond_a
 
-    .line 477
     const-string/jumbo v0, "NetflixService"
 
     const-string/jumbo v1, "NetflixService successfully inited all ServiceAgents "
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 478
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
     invoke-static {v0, p2}, Lcom/netflix/mediaclient/service/NetflixService;->access$1502(Lcom/netflix/mediaclient/service/NetflixService;Lcom/netflix/mediaclient/android/app/Status;)Lcom/netflix/mediaclient/android/app/Status;
 
-    .line 479
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/NetflixService;->access$1500(Lcom/netflix/mediaclient/service/NetflixService;)Lcom/netflix/mediaclient/android/app/Status;
@@ -513,7 +472,6 @@
 
     if-eqz v0, :cond_9
 
-    .line 480
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/NetflixService;->access$2000(Lcom/netflix/mediaclient/service/NetflixService;)Lcom/netflix/mediaclient/service/configuration/ConfigurationAgent;
@@ -526,28 +484,24 @@
 
     if-eqz v0, :cond_c
 
-    .line 481
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
     sget-object v1, Lcom/netflix/mediaclient/android/app/CommonStatus;->OBSOLETE_APP_VERSION:Lcom/netflix/mediaclient/android/app/NetflixImmutableStatus;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/NetflixService;->access$1502(Lcom/netflix/mediaclient/service/NetflixService;Lcom/netflix/mediaclient/android/app/Status;)Lcom/netflix/mediaclient/android/app/Status;
 
-    .line 482
     const-string/jumbo v0, "NetflixService"
 
     const-string/jumbo v1, "Current app is obsolete. It should not run!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 488
     :cond_9
     :goto_4
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/NetflixService;->access$1700(Lcom/netflix/mediaclient/service/NetflixService;)V
 
-    .line 491
     :cond_a
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->agentsToInitBatch2:Ljava/util/ArrayList;
 
@@ -569,14 +523,12 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/ServiceAgent;
 
-    .line 492
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/ServiceAgent;->isReady()Z
 
     move-result v2
 
     if-nez v2, :cond_b
 
-    .line 493
     const-string/jumbo v2, "NetflixService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -609,7 +561,6 @@
 
     goto :goto_5
 
-    .line 483
     :cond_c
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
@@ -623,14 +574,12 @@
 
     if-nez v0, :cond_9
 
-    .line 484
     const-string/jumbo v0, "NetflixService"
 
     const-string/jumbo v1, "Current app is not recommended. User should be warned!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 485
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
     sget-object v1, Lcom/netflix/mediaclient/android/app/CommonStatus;->NON_RECOMMENDED_APP_VERSION:Lcom/netflix/mediaclient/android/app/NetflixImmutableStatus;

@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager;Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager$ManifestCallback;)V
     .locals 0
 
-    .prologue
-    .line 280
     iput-object p1, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager$3;->this$0:Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager$3;->val$cb:Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager$ManifestCallback;
@@ -32,10 +30,8 @@
 .method public onManifestResponse(JLcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$OfflineManifest;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 7
 
-    .prologue
     const/4 v5, 0x0
 
-    .line 284
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager$3;->this$0:Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager;
 
     invoke-static {p1, p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
@@ -46,13 +42,10 @@
 
     move-result-object v0
 
-    .line 285
     if-eqz v0, :cond_1
 
-    .line 286
     invoke-virtual {v0, v5}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->setManifestFetchInProgress(Z)V
 
-    .line 287
     if-eqz v0, :cond_0
 
     if-eqz p3, :cond_0
@@ -63,7 +56,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 288
     invoke-static {}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager;->access$300()Ljava/lang/String;
 
     move-result-object v1
@@ -82,29 +74,24 @@
 
     invoke-static {v1, v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 289
     invoke-interface {p3}, Lcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$OfflineManifest;->getLinks()Lorg/json/JSONObject;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;->setLinks(Lorg/json/JSONObject;)Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;
 
-    .line 291
     iget-object v1, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager$3;->val$cb:Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager$ManifestCallback;
 
     if-eqz v1, :cond_0
 
-    .line 292
     iget-object v1, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager$3;->val$cb:Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager$ManifestCallback;
 
     invoke-interface {v1, v0}, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager$ManifestCallback;->onManifestFetched(Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSession;)V
 
-    .line 299
     :cond_0
     :goto_0
     return-void
 
-    .line 297
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager$3;->this$0:Lcom/netflix/mediaclient/service/pdslogging/PdsDownloadSessionManager;
 

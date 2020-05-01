@@ -14,8 +14,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,21 +24,18 @@
 .method public onResourceCached(Ljava/lang/String;Ljava/lang/String;JJLcom/netflix/mediaclient/android/app/Status;)V
     .locals 7
 
-    .prologue
     const/4 v6, 0x2
 
     const/4 v5, 0x1
 
     const/4 v4, 0x0
 
-    .line 41
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 42
     const-string/jumbo v0, "nf_service_resfetcher_callback"
 
     const-string/jumbo v1, "Resource %s fetched and cached, status %d"
@@ -69,7 +64,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     :cond_0
     invoke-interface {p7}, Lcom/netflix/mediaclient/android/app/Status;->isError()Z
 
@@ -83,7 +77,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 46
     const-string/jumbo v0, "nf_service_resfetcher_callback"
 
     const-string/jumbo v1, "Resource %s could not be fetched or retrieved from cache, status %d"
@@ -112,7 +105,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 48
     :cond_1
     return-void
 .end method
@@ -120,15 +112,12 @@
 .method public onResourceFetched(Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 5
 
-    .prologue
-    .line 21
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 22
     const-string/jumbo v0, "nf_service_resfetcher_callback"
 
     const-string/jumbo v1, "Resource %s fetched and saved at %s, status %d"
@@ -167,7 +156,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 24
     :cond_0
     return-void
 .end method
@@ -175,21 +163,18 @@
 .method public onResourcePrefetched(Ljava/lang/String;ILcom/netflix/mediaclient/android/app/Status;)V
     .locals 7
 
-    .prologue
     const/4 v6, 0x2
 
     const/4 v5, 0x1
 
     const/4 v4, 0x0
 
-    .line 29
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 30
     const-string/jumbo v0, "nf_service_resfetcher_callback"
 
     const-string/jumbo v1, "Resource %s prefetched, status %d"
@@ -218,7 +203,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 33
     :cond_0
     invoke-interface {p3}, Lcom/netflix/mediaclient/android/app/Status;->isError()Z
 
@@ -232,7 +216,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 34
     const-string/jumbo v0, "nf_service_resfetcher_callback"
 
     const-string/jumbo v1, "Resource %s could not be prefetched, status %d"
@@ -261,7 +244,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 36
     :cond_1
     return-void
 .end method
@@ -269,15 +251,12 @@
 .method public onResourceRawFetched(Ljava/lang/String;[BLcom/netflix/mediaclient/android/app/Status;)V
     .locals 5
 
-    .prologue
-    .line 52
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 53
     const-string/jumbo v0, "nf_service_resfetcher_callback"
 
     const-string/jumbo v1, "Resource %s fetched and response returned raw, status %d"
@@ -312,7 +291,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
     :cond_0
     return-void
 .end method

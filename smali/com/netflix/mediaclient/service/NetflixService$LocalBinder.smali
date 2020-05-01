@@ -11,8 +11,6 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/NetflixService;)V
     .locals 0
 
-    .prologue
-    .line 1294
     iput-object p1, p0, Lcom/netflix/mediaclient/service/NetflixService$LocalBinder;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
@@ -25,8 +23,6 @@
 .method public getService()Lcom/netflix/mediaclient/service/NetflixService;
     .locals 1
 
-    .prologue
-    .line 1301
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$LocalBinder;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
 
     return-object v0

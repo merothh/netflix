@@ -132,8 +132,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 24
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/KubrickConfigData;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/KubrickConfigData;-><init>()V
@@ -146,60 +144,46 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->videoBufferSize:I
 
-    .line 52
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->enableLowBitrateStreams:Z
 
-    .line 74
     iput-object v1, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->castWhitelist:Ljava/lang/String;
 
-    .line 75
     iput-object v1, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->mdxBlacklistTargets:Ljava/lang/String;
 
-    .line 76
     iput-object v1, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->mCastWhitelistJSONArray:Lorg/json/JSONArray;
 
-    .line 77
     iput-object v1, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->mMdxBlacklistTargetsJSONArray:Lorg/json/JSONArray;
 
-    .line 78
     sget-object v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->DEFAULT_KUBRICK_CONFIG:Lcom/netflix/mediaclient/service/webclient/model/leafs/KubrickConfigData;
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->kubrickConfig:Lcom/netflix/mediaclient/service/webclient/model/leafs/KubrickConfigData;
 
-    .line 79
     iput-object v1, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->mJPlayerConfigJSON:Lorg/json/JSONObject;
 
-    .line 80
     invoke-static {}, Lcom/netflix/mediaclient/service/webclient/model/leafs/PreviewContentConfigData;->getDefault()Lcom/netflix/mediaclient/service/webclient/model/leafs/PreviewContentConfigData;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->previewContent:Lcom/netflix/mediaclient/service/webclient/model/leafs/PreviewContentConfigData;
 
-    .line 81
     return-void
 .end method
 
 .method public static fromJsonString(Ljava/lang/String;)Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;
     .locals 4
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 167
     invoke-static {p0}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v0
@@ -208,12 +192,10 @@
 
     move-object v0, v1
 
-    .line 186
     :cond_0
     :goto_0
     return-object v0
 
-    .line 171
     :cond_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -221,7 +203,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 172
     const-string/jumbo v0, "nf_config"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -244,13 +225,11 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 175
     :cond_2
     invoke-static {}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorParseUtils;->getGson()Lcom/google/gson/Gson;
 
     move-result-object v0
 
-    .line 176
     const-class v2, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;
 
     invoke-virtual {v0, p0, v2}, Lcom/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
@@ -259,21 +238,16 @@
 
     check-cast v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;
 
-    .line 177
     iput-object v1, v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->mCastWhitelistJSONArray:Lorg/json/JSONArray;
 
-    .line 178
     iput-object v1, v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->mMdxBlacklistTargetsJSONArray:Lorg/json/JSONArray;
 
-    .line 179
     iput-object v1, v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->mJPlayerConfigJSON:Lorg/json/JSONObject;
 
-    .line 182
     iget-object v1, v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->kubrickConfig:Lcom/netflix/mediaclient/service/webclient/model/leafs/KubrickConfigData;
 
     if-nez v1, :cond_0
 
-    .line 183
     sget-object v1, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->DEFAULT_KUBRICK_CONFIG:Lcom/netflix/mediaclient/service/webclient/model/leafs/KubrickConfigData;
 
     iput-object v1, v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->kubrickConfig:Lcom/netflix/mediaclient/service/webclient/model/leafs/KubrickConfigData;
@@ -286,8 +260,6 @@
 .method public enableHTTPSAuth()Z
     .locals 1
 
-    .prologue
-    .line 117
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->enableHTTPSAuth:Z
 
     return v0
@@ -296,8 +268,6 @@
 .method public enableLowBitrateStreams()Z
     .locals 1
 
-    .prologue
-    .line 213
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->enableLowBitrateStreams:Z
 
     return v0
@@ -306,8 +276,6 @@
 .method public getABTestConfiguration_6634()Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig;
     .locals 1
 
-    .prologue
-    .line 198
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->abTestConfig_6634:Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig;
 
     return-object v0
@@ -316,8 +284,6 @@
 .method public getABTestConfiguration_6725()Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig;
     .locals 1
 
-    .prologue
-    .line 194
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->abTestConfig_6725:Lcom/netflix/mediaclient/service/webclient/model/leafs/ABTestConfig;
 
     return-object v0
@@ -326,8 +292,6 @@
 .method public getBWSaveConfigData()Lcom/netflix/mediaclient/service/webclient/model/leafs/DataSaveConfigData;
     .locals 1
 
-    .prologue
-    .line 202
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->dataSaveConfig:Lcom/netflix/mediaclient/service/webclient/model/leafs/DataSaveConfigData;
 
     return-object v0
@@ -336,8 +300,6 @@
 .method public getCastBlacklist()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 87
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->castWhitelist:Ljava/lang/String;
 
     return-object v0
@@ -346,8 +308,6 @@
 .method public getCastEnabled()Z
     .locals 1
 
-    .prologue
-    .line 105
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->enableCast:Z
 
     return v0
@@ -356,16 +316,12 @@
 .method public getCastWhitelistAsJsonArray()Lorg/json/JSONArray;
     .locals 6
 
-    .prologue
-    .line 121
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->mCastWhitelistJSONArray:Lorg/json/JSONArray;
 
     if-nez v0, :cond_0
 
-    .line 122
     const/4 v1, 0x0
 
-    .line 123
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->castWhitelist:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
@@ -374,7 +330,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 125
     :try_start_0
     new-instance v0, Lorg/json/JSONArray;
 
@@ -384,21 +339,17 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 130
     :goto_0
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->mCastWhitelistJSONArray:Lorg/json/JSONArray;
 
-    .line 132
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->mCastWhitelistJSONArray:Lorg/json/JSONArray;
 
     return-object v0
 
-    .line 126
     :catch_0
     move-exception v0
 
-    .line 127
     const-string/jumbo v0, "nf_config"
 
     const-string/jumbo v2, "castWhitelist bad json: %s"
@@ -428,16 +379,12 @@
 .method public getJPlayerThreadConfigAsJson()Lorg/json/JSONObject;
     .locals 6
 
-    .prologue
-    .line 140
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->mJPlayerConfigJSON:Lorg/json/JSONObject;
 
     if-nez v0, :cond_0
 
-    .line 141
     const/4 v1, 0x0
 
-    .line 142
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->jPlayerConfig:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
@@ -446,7 +393,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 144
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
 
@@ -456,21 +402,17 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 149
     :goto_0
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->mJPlayerConfigJSON:Lorg/json/JSONObject;
 
-    .line 151
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->mJPlayerConfigJSON:Lorg/json/JSONObject;
 
     return-object v0
 
-    .line 145
     :catch_0
     move-exception v0
 
-    .line 146
     const-string/jumbo v0, "nf_config"
 
     const-string/jumbo v2, "jPlayerThreadConfig bad json: %s"
@@ -500,8 +442,6 @@
 .method public getKubrickConfig()Lcom/netflix/mediaclient/service/configuration/KubrickConfiguration;
     .locals 1
 
-    .prologue
-    .line 190
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->kubrickConfig:Lcom/netflix/mediaclient/service/webclient/model/leafs/KubrickConfigData;
 
     return-object v0
@@ -510,8 +450,6 @@
 .method public getMdxBlacklist()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 84
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->mdxBlacklistTargets:Ljava/lang/String;
 
     return-object v0
@@ -520,16 +458,12 @@
 .method public getMdxBlacklistAsJsonArray()Lorg/json/JSONArray;
     .locals 6
 
-    .prologue
-    .line 90
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->mMdxBlacklistTargetsJSONArray:Lorg/json/JSONArray;
 
     if-nez v0, :cond_0
 
-    .line 91
     const/4 v1, 0x0
 
-    .line 92
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->mdxBlacklistTargets:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
@@ -538,7 +472,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 94
     :try_start_0
     new-instance v0, Lorg/json/JSONArray;
 
@@ -548,21 +481,17 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 99
     :goto_0
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->mMdxBlacklistTargetsJSONArray:Lorg/json/JSONArray;
 
-    .line 101
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->mMdxBlacklistTargetsJSONArray:Lorg/json/JSONArray;
 
     return-object v0
 
-    .line 95
     :catch_0
     move-exception v0
 
-    .line 96
     const-string/jumbo v0, "nf_config"
 
     const-string/jumbo v2, "mdxBlacklistTargets bad json: %s"
@@ -592,8 +521,6 @@
 .method public getPreAppPartnerExperience()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 209
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->preAppPartnerExperience:Ljava/lang/String;
 
     return-object v0
@@ -602,8 +529,6 @@
 .method public getPreAppWidgetExperience()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 205
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->preAppWidgetExperience:Ljava/lang/String;
 
     return-object v0
@@ -612,8 +537,6 @@
 .method public getPreviewContentConfigData()Lcom/netflix/mediaclient/service/webclient/model/leafs/PreviewContentConfigData;
     .locals 1
 
-    .prologue
-    .line 219
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->previewContent:Lcom/netflix/mediaclient/service/webclient/model/leafs/PreviewContentConfigData;
 
     return-object v0
@@ -622,8 +545,6 @@
 .method public getVideoBufferSize()I
     .locals 1
 
-    .prologue
-    .line 136
     const/4 v0, 0x0
 
     return v0
@@ -632,8 +553,6 @@
 .method public isVoipEnabledOnAccount()Z
     .locals 1
 
-    .prologue
-    .line 216
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->voipEnabledOnAccount:Z
 
     return v0
@@ -642,8 +561,6 @@
 .method public toDisableMcQueenV2()Z
     .locals 1
 
-    .prologue
-    .line 113
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->disableMcQueenV2:Z
 
     return v0
@@ -652,8 +569,6 @@
 .method public toDisableSuspendPlay()Z
     .locals 1
 
-    .prologue
-    .line 109
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/AccountConfigData;->disableSuspendPlay:Z
 
     return v0
@@ -662,25 +577,20 @@
 .method public toJsonString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 158
     invoke-static {}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorParseUtils;->getGson()Lcom/google/gson/Gson;
 
     move-result-object v0
 
-    .line 159
     invoke-virtual {v0, p0}, Lcom/google/gson/Gson;->toJson(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 160
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 161
     const-string/jumbo v1, "nf_config"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -703,7 +613,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 163
     :cond_0
     return-object v0
 .end method

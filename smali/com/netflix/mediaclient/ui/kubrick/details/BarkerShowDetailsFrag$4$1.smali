@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$4;ILandroid/support/v7/widget/GridLayoutManager;)V
     .locals 0
 
-    .prologue
-    .line 428
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$4$1;->this$1:Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$4;
 
     iput p2, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$4$1;->val$firstVisiblePosition:I
@@ -36,13 +34,10 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 432
     iget v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$4$1;->val$firstVisiblePosition:I
 
     if-eqz v0, :cond_0
 
-    .line 433
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerShowDetailsFrag$4$1;->val$layoutManager:Landroid/support/v7/widget/GridLayoutManager;
 
     const/4 v1, 0x1
@@ -61,7 +56,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/support/v7/widget/GridLayoutManager;->scrollToPositionWithOffset(II)V
 
-    .line 435
     :cond_0
     return-void
 .end method

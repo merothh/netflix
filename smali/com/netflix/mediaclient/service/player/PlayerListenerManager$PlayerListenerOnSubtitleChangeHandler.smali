@@ -14,8 +14,6 @@
 .method private constructor <init>(Lcom/netflix/mediaclient/service/player/PlayerListenerManager;)V
     .locals 0
 
-    .prologue
-    .line 182
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/PlayerListenerManager$PlayerListenerOnSubtitleChangeHandler;->this$0:Lcom/netflix/mediaclient/service/player/PlayerListenerManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,8 +24,6 @@
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/service/player/PlayerListenerManager;Lcom/netflix/mediaclient/service/player/PlayerListenerManager$1;)V
     .locals 0
 
-    .prologue
-    .line 182
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/player/PlayerListenerManager$PlayerListenerOnSubtitleChangeHandler;-><init>(Lcom/netflix/mediaclient/service/player/PlayerListenerManager;)V
 
     return-void
@@ -38,22 +34,18 @@
 .method public varargs handle(Lcom/netflix/mediaclient/servicemgr/IPlayer$PlayerListener;[Ljava/lang/Object;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 186
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/IPlayer$PlayerListener;->isListening()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 195
     :cond_0
     :goto_0
     return-void
 
-    .line 190
     :cond_1
     if-eqz p2, :cond_0
 
@@ -69,7 +61,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 193
     aget-object v0, p2, v2
 
     check-cast v0, Lcom/netflix/mediaclient/service/player/subtitles/SubtitleScreen;

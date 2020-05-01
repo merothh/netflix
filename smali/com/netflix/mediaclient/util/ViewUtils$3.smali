@@ -16,8 +16,6 @@
 .method constructor <init>(Landroid/view/View;Ljava/lang/CharSequence;)V
     .locals 0
 
-    .prologue
-    .line 548
     iput-object p1, p0, Lcom/netflix/mediaclient/util/ViewUtils$3;->val$root:Landroid/view/View;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/util/ViewUtils$3;->val$desc:Ljava/lang/CharSequence;
@@ -32,8 +30,6 @@
 .method public onLongClick(Landroid/view/View;)Z
     .locals 3
 
-    .prologue
-    .line 551
     iget-object v0, p0, Lcom/netflix/mediaclient/util/ViewUtils$3;->val$root:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -50,7 +46,6 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 552
     const/4 v0, 0x1
 
     return v0

@@ -13,8 +13,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 178
     invoke-static {}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;->values()[Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
     move-result-object v0
@@ -104,7 +102,6 @@
     :try_end_4
     .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_8
 
-    .line 117
     :goto_4
     invoke-static {}, Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;->values()[Lcom/netflix/mediaclient/ui/offline/DownloadButton$ButtonState;
 
@@ -286,7 +283,6 @@
 
     goto :goto_5
 
-    .line 178
     :catch_8
     move-exception v0
 

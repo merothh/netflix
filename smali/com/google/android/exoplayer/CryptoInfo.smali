@@ -23,11 +23,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     sget v0, Lcom/google/android/exoplayer/util/Util;->SDK_INT:I
 
     const/16 v1, 0x10
@@ -41,10 +38,8 @@
     :goto_0
     iput-object v0, p0, Lcom/google/android/exoplayer/CryptoInfo;->frameworkCryptoInfo:Landroid/media/MediaCodec$CryptoInfo;
 
-    .line 56
     return-void
 
-    .line 55
     :cond_0
     const/4 v0, 0x0
 
@@ -57,8 +52,6 @@
         value = 0x10
     .end annotation
 
-    .prologue
-    .line 106
     new-instance v0, Landroid/media/MediaCodec$CryptoInfo;
 
     invoke-direct {v0}, Landroid/media/MediaCodec$CryptoInfo;-><init>()V
@@ -72,8 +65,6 @@
         value = 0x10
     .end annotation
 
-    .prologue
-    .line 111
     iget-object v0, p0, Lcom/google/android/exoplayer/CryptoInfo;->frameworkCryptoInfo:Landroid/media/MediaCodec$CryptoInfo;
 
     iget v1, p0, Lcom/google/android/exoplayer/CryptoInfo;->numSubSamples:I
@@ -90,7 +81,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/media/MediaCodec$CryptoInfo;->set(I[I[I[B[BI)V
 
-    .line 113
     return-void
 .end method
 
@@ -102,8 +92,6 @@
         value = 0x10
     .end annotation
 
-    .prologue
-    .line 101
     iget-object v0, p0, Lcom/google/android/exoplayer/CryptoInfo;->frameworkCryptoInfo:Landroid/media/MediaCodec$CryptoInfo;
 
     return-object v0
@@ -112,36 +100,26 @@
 .method public set(I[I[I[B[BI)V
     .locals 2
 
-    .prologue
-    .line 63
     iput p1, p0, Lcom/google/android/exoplayer/CryptoInfo;->numSubSamples:I
 
-    .line 64
     iput-object p2, p0, Lcom/google/android/exoplayer/CryptoInfo;->numBytesOfClearData:[I
 
-    .line 65
     iput-object p3, p0, Lcom/google/android/exoplayer/CryptoInfo;->numBytesOfEncryptedData:[I
 
-    .line 66
     iput-object p4, p0, Lcom/google/android/exoplayer/CryptoInfo;->key:[B
 
-    .line 67
     iput-object p5, p0, Lcom/google/android/exoplayer/CryptoInfo;->iv:[B
 
-    .line 68
     iput p6, p0, Lcom/google/android/exoplayer/CryptoInfo;->mode:I
 
-    .line 69
     sget v0, Lcom/google/android/exoplayer/util/Util;->SDK_INT:I
 
     const/16 v1, 0x10
 
     if-lt v0, v1, :cond_0
 
-    .line 70
     invoke-direct {p0}, Lcom/google/android/exoplayer/CryptoInfo;->updateFrameworkCryptoInfoV16()V
 
-    .line 72
     :cond_0
     return-void
 .end method

@@ -13,48 +13,38 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 125
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag$KubrickKidsMovieDetailsViewGroup;->this$0:Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag;
 
-    .line 126
     invoke-direct {p0, p2}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerVideoDetailsViewGroup;-><init>(Landroid/content/Context;)V
 
-    .line 127
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag$KubrickKidsMovieDetailsViewGroup;->setupViews()V
 
-    .line 128
     return-void
 .end method
 
 .method private setupViews()V
     .locals 4
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 148
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag$KubrickKidsMovieDetailsViewGroup;->getHeroImage()Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/AdvancedImageView;->setPressedStateHandlerEnabled(Z)V
 
-    .line 149
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag$KubrickKidsMovieDetailsViewGroup;->getHeroImage2()Lcom/netflix/mediaclient/android/widget/AdvancedImageView;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/AdvancedImageView;->setPressedStateHandlerEnabled(Z)V
 
-    .line 150
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag$KubrickKidsMovieDetailsViewGroup;->pressableCWImgGroup:Lcom/netflix/mediaclient/android/widget/PressAnimationFrameLayout;
 
     new-instance v1, Lcom/netflix/mediaclient/android/widget/PressedStateHandler$DelayedOnClickListener;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag$KubrickKidsMovieDetailsViewGroup;->pressableCWImgGroup:Lcom/netflix/mediaclient/android/widget/PressAnimationFrameLayout;
 
-    .line 151
     invoke-virtual {v2}, Lcom/netflix/mediaclient/android/widget/PressAnimationFrameLayout;->getPressedStateHandler()Lcom/netflix/mediaclient/android/widget/PressedStateHandler;
 
     move-result-object v2
@@ -63,10 +53,8 @@
 
     invoke-direct {v1, v2, v3}, Lcom/netflix/mediaclient/android/widget/PressedStateHandler$DelayedOnClickListener;-><init>(Lcom/netflix/mediaclient/android/widget/PressedStateHandler;Landroid/view/View$OnClickListener;)V
 
-    .line 150
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/widget/PressAnimationFrameLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 152
     return-void
 .end method
 
@@ -75,8 +63,6 @@
 .method protected calculateImageHeight()I
     .locals 2
 
-    .prologue
-    .line 137
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag$KubrickKidsMovieDetailsViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -85,7 +71,6 @@
 
     move-result v0
 
-    .line 138
     int-to-float v0, v0
 
     const/high16 v1, 0x3f100000    # 0.5625f
@@ -100,11 +85,8 @@
 .method protected findViews()V
     .locals 1
 
-    .prologue
-    .line 143
     invoke-super {p0}, Lcom/netflix/mediaclient/ui/kubrick/details/BarkerVideoDetailsViewGroup;->findViews()V
 
-    .line 144
     const v0, 0x7f0f018e
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag$KubrickKidsMovieDetailsViewGroup;->findViewById(I)Landroid/view/View;
@@ -115,15 +97,12 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/BarkerKidsMovieDetailsFrag$KubrickKidsMovieDetailsViewGroup;->pressableCWImgGroup:Lcom/netflix/mediaclient/android/widget/PressAnimationFrameLayout;
 
-    .line 145
     return-void
 .end method
 
 .method protected getlayoutId()I
     .locals 1
 
-    .prologue
-    .line 132
     const v0, 0x7f03007c
 
     return v0
@@ -132,7 +111,5 @@
 .method protected setupImageClicks(Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;Lcom/netflix/mediaclient/android/activity/NetflixActivity;)V
     .locals 0
 
-    .prologue
-    .line 159
     return-void
 .end method

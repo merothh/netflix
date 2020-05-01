@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/falkor/FalkorAgent;Ljava/util/concurrent/CountDownLatch;Ljava/util/concurrent/CountDownLatch;)V
     .locals 0
 
-    .prologue
-    .line 1382
     iput-object p1, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$19;->this$0:Lcom/netflix/mediaclient/service/falkor/FalkorAgent;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$19;->val$videoImagesRequest:Ljava/util/concurrent/CountDownLatch;
@@ -36,8 +34,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 1386
     :try_start_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -45,14 +41,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1387
     const-string/jumbo v0, "FalkorAgent"
 
     const-string/jumbo v1, "videoImagesRequestCountdownAsync: waiting on videoImagesRequest latch"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1389
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$19;->val$videoImagesRequest:Ljava/util/concurrent/CountDownLatch;
 
@@ -64,7 +58,6 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1395
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/falkor/FalkorAgent$19;->this$0:Lcom/netflix/mediaclient/service/falkor/FalkorAgent;
@@ -73,21 +66,17 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/falkor/FalkorAgent;->access$1100(Lcom/netflix/mediaclient/service/falkor/FalkorAgent;Ljava/util/concurrent/CountDownLatch;)V
 
-    .line 1396
     return-void
 
-    .line 1390
     :catch_0
     move-exception v0
 
-    .line 1391
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 1392
     const-string/jumbo v1, "FalkorAgent"
 
     new-instance v2, Ljava/lang/StringBuilder;

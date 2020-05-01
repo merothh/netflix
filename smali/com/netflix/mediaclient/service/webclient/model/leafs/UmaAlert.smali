@@ -30,8 +30,6 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
-    .line 26
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v2, 0xa
@@ -48,11 +46,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaAlert;->mConsumed:Z
@@ -74,8 +69,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 69
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaAlert$GsonTypeAdapter;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/$AutoValue_UmaAlert$GsonTypeAdapter;-><init>(Lcom/google/gson/Gson;)V
@@ -106,8 +99,6 @@
 .method public isConsumed()Z
     .locals 1
 
-    .prologue
-    .line 84
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaAlert;->mConsumed:Z
 
     return v0
@@ -116,8 +107,6 @@
 .method public isStale()Z
     .locals 4
 
-    .prologue
-    .line 90
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -157,11 +146,8 @@
 .method public setConsumed(Z)V
     .locals 0
 
-    .prologue
-    .line 80
     iput-boolean p1, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/UmaAlert;->mConsumed:Z
 
-    .line 81
     return-void
 .end method
 

@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler;Ljava/lang/Runnable;Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 45
     iput-object p1, p0, Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler$2;->this$0:Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler$2;->val$killApp:Ljava/lang/Runnable;
@@ -36,8 +34,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 49
     sget-object v0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;->INSTANCE:Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler$2;->val$killApp:Ljava/lang/Runnable;
@@ -48,18 +44,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 50
     sget-object v0, Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "Offline content removal is IN PROGRESS, do NOT kill app yet"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
     :goto_0
     return-void
 
-    .line 52
     :cond_0
     sget-object v0, Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler;->TAG:Ljava/lang/String;
 
@@ -67,7 +60,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 53
     iget-object v0, p0, Lcom/netflix/mediaclient/service/error/crypto/BaseCryptoErrorHandler$2;->val$context:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/AndroidUtils;->forceStop(Landroid/content/Context;)V

@@ -15,8 +15,6 @@
 .method public constructor <init>(Lcom/crittercism/internal/ax;Ljava/lang/Exception;)V
     .locals 0
 
-    .prologue
-    .line 522
     iput-object p1, p0, Lcom/crittercism/internal/ax$1;->b:Lcom/crittercism/internal/ax;
 
     iput-object p2, p0, Lcom/crittercism/internal/ax$1;->a:Ljava/lang/Exception;
@@ -31,21 +29,16 @@
 .method public final a(Lcom/crittercism/internal/c;)V
     .locals 1
 
-    .prologue
-    .line 525
     iget-object v0, p0, Lcom/crittercism/internal/ax$1;->a:Ljava/lang/Exception;
 
     invoke-virtual {p1, v0}, Lcom/crittercism/internal/c;->a(Ljava/lang/Throwable;)V
 
-    .line 526
     return-void
 .end method
 
 .method public final a()Z
     .locals 1
 
-    .prologue
-    .line 530
     iget-object v0, p0, Lcom/crittercism/internal/ax$1;->a:Ljava/lang/Exception;
 
     if-nez v0, :cond_0

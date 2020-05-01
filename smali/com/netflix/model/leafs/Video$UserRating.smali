@@ -20,8 +20,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 410
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,8 +30,6 @@
 .method public getUserRating()F
     .locals 1
 
-    .prologue
-    .line 447
     iget v0, p0, Lcom/netflix/model/leafs/Video$UserRating;->userRating:F
 
     return v0
@@ -42,18 +38,14 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 5
 
-    .prologue
-    .line 418
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 419
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 420
     const-string/jumbo v1, "UserRating"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -76,7 +68,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 422
     :cond_0
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -99,14 +90,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 423
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/gson/JsonElement;
 
-    .line 424
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -129,7 +118,6 @@
 
     goto :goto_0
 
-    .line 425
     :pswitch_0
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsFloat()F
 
@@ -139,7 +127,6 @@
 
     goto :goto_0
 
-    .line 424
     :pswitch_1
     const-string/jumbo v4, "userRating"
 
@@ -153,11 +140,9 @@
 
     goto :goto_1
 
-    .line 428
     :cond_2
     return-void
 
-    .line 424
     :pswitch_data_0
     .packed-switch 0x5c264548
         :pswitch_1
@@ -172,15 +157,12 @@
 .method public set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 432
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 433
     const-string/jumbo v1, "UserRating"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -203,7 +185,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 435
     :cond_0
     const/4 v1, -0x1
 
@@ -217,11 +198,9 @@
     :goto_0
     packed-switch v1, :pswitch_data_1
 
-    .line 442
     :goto_1
     return v0
 
-    .line 435
     :pswitch_0
     const-string/jumbo v2, "userRating"
 
@@ -235,7 +214,6 @@
 
     goto :goto_0
 
-    .line 437
     :pswitch_1
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsDouble()D
 
@@ -245,12 +223,10 @@
 
     iput v0, p0, Lcom/netflix/model/leafs/Video$UserRating;->userRating:F
 
-    .line 442
     const/4 v0, 0x1
 
     goto :goto_1
 
-    .line 435
     nop
 
     :pswitch_data_0
@@ -267,8 +243,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 452
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

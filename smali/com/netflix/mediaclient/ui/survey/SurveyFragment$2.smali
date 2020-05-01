@@ -26,8 +26,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/survey/SurveyFragment;Landroid/widget/ImageView;Landroid/widget/ImageView;Landroid/widget/ImageView;Landroid/widget/ImageView;Landroid/widget/ImageView;)V
     .locals 1
 
-    .prologue
-    .line 89
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/survey/SurveyFragment$2;->this$0:Lcom/netflix/mediaclient/ui/survey/SurveyFragment;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/survey/SurveyFragment$2;->val$s1:Landroid/widget/ImageView;
@@ -42,7 +40,6 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 92
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/ui/survey/SurveyFragment$2;->isTracking:Z
@@ -55,19 +52,16 @@
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 6
 
-    .prologue
     const/4 v5, 0x2
 
     const/4 v3, 0x0
 
     const/4 v4, 0x1
 
-    .line 96
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 99
     iget-boolean v1, p0, Lcom/netflix/mediaclient/ui/survey/SurveyFragment$2;->isTracking:Z
 
     if-nez v1, :cond_1
@@ -78,23 +72,19 @@
 
     if-eq v1, v4, :cond_1
 
-    .line 117
     :cond_0
     :goto_0
     return v4
 
-    .line 103
     :cond_1
     if-nez v0, :cond_2
 
-    .line 104
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/survey/SurveyFragment$2;->this$0:Lcom/netflix/mediaclient/ui/survey/SurveyFragment;
 
     invoke-static {v0, p1, v4}, Lcom/netflix/mediaclient/ui/survey/SurveyFragment;->access$100(Lcom/netflix/mediaclient/ui/survey/SurveyFragment;Landroid/view/View;Z)V
 
     goto :goto_0
 
-    .line 106
     :cond_2
     if-ne v0, v5, :cond_3
 
@@ -106,24 +96,19 @@
 
     if-nez v1, :cond_3
 
-    .line 107
     iput-boolean v3, p0, Lcom/netflix/mediaclient/ui/survey/SurveyFragment$2;->isTracking:Z
 
-    .line 108
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/survey/SurveyFragment$2;->this$0:Lcom/netflix/mediaclient/ui/survey/SurveyFragment;
 
     invoke-static {v0, p1, v3}, Lcom/netflix/mediaclient/ui/survey/SurveyFragment;->access$100(Lcom/netflix/mediaclient/ui/survey/SurveyFragment;Landroid/view/View;Z)V
 
     goto :goto_0
 
-    .line 110
     :cond_3
     if-ne v0, v4, :cond_0
 
-    .line 111
     iput-boolean v4, p0, Lcom/netflix/mediaclient/ui/survey/SurveyFragment$2;->isTracking:Z
 
-    .line 112
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/survey/SurveyFragment$2;->this$0:Lcom/netflix/mediaclient/ui/survey/SurveyFragment;
 
     invoke-static {v0, p1, p2}, Lcom/netflix/mediaclient/ui/survey/SurveyFragment;->access$200(Lcom/netflix/mediaclient/ui/survey/SurveyFragment;Landroid/view/View;Landroid/view/MotionEvent;)Z
@@ -132,7 +117,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 113
     const/4 v0, 0x0
 
     const/4 v1, 0x5
@@ -165,7 +149,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/ViewUtils;->setOnTouchListeners(Landroid/view/View$OnTouchListener;[Landroid/view/View;)V
 
-    .line 114
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/survey/SurveyFragment$2;->this$0:Lcom/netflix/mediaclient/ui/survey/SurveyFragment;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/ui/survey/SurveyFragment;->access$300(Lcom/netflix/mediaclient/ui/survey/SurveyFragment;Landroid/view/View;)V

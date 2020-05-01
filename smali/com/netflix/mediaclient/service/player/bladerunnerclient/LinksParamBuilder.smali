@@ -15,11 +15,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
     return-void
 .end method
 
@@ -28,8 +25,6 @@
 .method build()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 53
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/player/bladerunnerclient/LinksParamBuilder;->getParams()Lorg/json/JSONObject;
 
     move-result-object v0
@@ -48,13 +43,10 @@
 .method protected getParams()Lorg/json/JSONObject;
     .locals 5
 
-    .prologue
-    .line 26
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
-    .line 28
     :try_start_0
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -66,22 +58,18 @@
 
     move-result-wide v2
 
-    .line 29
     const-string/jumbo v0, "clientTime"
 
     invoke-virtual {v1, v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 33
     :goto_0
     return-object v1
 
-    .line 30
     :catch_0
     move-exception v0
 
-    .line 31
     const-string/jumbo v2, "nf_msl_volley_bladerunner"
 
     const-string/jumbo v3, "error creating params"
@@ -98,13 +86,10 @@
 .method protected getRequestObject(Lorg/json/JSONObject;)Lorg/json/JSONObject;
     .locals 5
 
-    .prologue
-    .line 37
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
-    .line 39
     :try_start_0
     const-string/jumbo v0, "version"
 
@@ -112,12 +97,10 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 40
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/LinksParamBuilder;->mLink:Lorg/json/JSONObject;
 
     if-eqz v0, :cond_0
 
-    .line 41
     const-string/jumbo v0, "method"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/LinksParamBuilder;->mLink:Lorg/json/JSONObject;
@@ -130,7 +113,6 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 42
     const-string/jumbo v0, "url"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/LinksParamBuilder;->mLink:Lorg/json/JSONObject;
@@ -143,7 +125,6 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 45
     :cond_0
     const-string/jumbo v0, "params"
 
@@ -155,15 +136,12 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 49
     :goto_0
     return-object v1
 
-    .line 46
     :catch_0
     move-exception v0
 
-    .line 47
     const-string/jumbo v2, "nf_msl_volley_bladerunner"
 
     const-string/jumbo v3, "error creating request object"
@@ -180,10 +158,7 @@
 .method setLink(Lorg/json/JSONObject;)Lcom/netflix/mediaclient/service/player/bladerunnerclient/LinksParamBuilder;
     .locals 0
 
-    .prologue
-    .line 21
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/bladerunnerclient/LinksParamBuilder;->mLink:Lorg/json/JSONObject;
 
-    .line 22
     return-object p0
 .end method

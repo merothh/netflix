@@ -15,15 +15,12 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 28
     const-string/jumbo v0, "Volley"
 
     sput-object v0, Lcom/android/volley/VolleyLog;->TAG:Ljava/lang/String;
 
-    .line 31
     sget-object v0, Lcom/android/volley/VolleyLog;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x2
@@ -37,7 +34,6 @@
     :cond_0
     sput-boolean v2, Lcom/android/volley/VolleyLog;->DEBUG:Z
 
-    .line 33
     sget-boolean v0, Lcom/android/volley/VolleyLog;->DEBUG:Z
 
     if-eqz v0, :cond_1
@@ -51,8 +47,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -61,13 +55,10 @@
 .method private static varargs buildMessage(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
     .locals 8
 
-    .prologue
     const/4 v1, 0x2
 
-    .line 76
     if-nez p1, :cond_0
 
-    .line 77
     :goto_0
     new-instance v0, Ljava/lang/Throwable;
 
@@ -81,25 +72,21 @@
 
     move-result-object v3
 
-    .line 79
     const-string/jumbo v2, "<unknown>"
 
     move v0, v1
 
-    .line 82
     :goto_1
     array-length v4, v3
 
     if-ge v0, v4, :cond_2
 
-    .line 83
     aget-object v4, v3, v0
 
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v4
 
-    .line 84
     const-class v5, Lcom/android/volley/VolleyLog;
 
     invoke-virtual {v4, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -108,14 +95,12 @@
 
     if-nez v4, :cond_1
 
-    .line 85
     aget-object v2, v3, v0
 
     invoke-virtual {v2}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 86
     const/16 v4, 0x2e
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->lastIndexOf(I)I
@@ -128,7 +113,6 @@
 
     move-result-object v2
 
-    .line 87
     const/16 v4, 0x24
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->lastIndexOf(I)I
@@ -141,7 +125,6 @@
 
     move-result-object v2
 
-    .line 89
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -170,7 +153,6 @@
 
     move-result-object v0
 
-    .line 93
     :goto_2
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -182,7 +164,6 @@
 
     const/4 v5, 0x0
 
-    .line 94
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v6
@@ -203,14 +184,12 @@
 
     aput-object p0, v4, v1
 
-    .line 93
     invoke-static {v2, v3, v4}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 76
     :cond_0
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -220,7 +199,6 @@
 
     goto/16 :goto_0
 
-    .line 82
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
@@ -235,13 +213,10 @@
 .method public static varargs d(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 42
     sget-boolean v0, Lcom/android/volley/VolleyLog;->LOG_VERBOSE:Z
 
     if-eqz v0, :cond_0
 
-    .line 43
     sget-object v0, Lcom/android/volley/VolleyLog;->TAG:Ljava/lang/String;
 
     invoke-static {p0, p1}, Lcom/android/volley/VolleyLog;->buildMessage(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
@@ -250,7 +225,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     :cond_0
     return-void
 .end method
@@ -258,13 +232,10 @@
 .method public static varargs e(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 48
     sget-boolean v0, Lcom/android/volley/VolleyLog;->LOG_VERBOSE:Z
 
     if-eqz v0, :cond_0
 
-    .line 49
     sget-object v0, Lcom/android/volley/VolleyLog;->TAG:Ljava/lang/String;
 
     invoke-static {p0, p1}, Lcom/android/volley/VolleyLog;->buildMessage(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
@@ -273,7 +244,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     :cond_0
     return-void
 .end method
@@ -281,13 +251,10 @@
 .method public static varargs e(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 54
     sget-boolean v0, Lcom/android/volley/VolleyLog;->LOG_VERBOSE:Z
 
     if-eqz v0, :cond_0
 
-    .line 55
     sget-object v0, Lcom/android/volley/VolleyLog;->TAG:Ljava/lang/String;
 
     invoke-static {p1, p2}, Lcom/android/volley/VolleyLog;->buildMessage(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
@@ -296,7 +263,6 @@
 
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 57
     :cond_0
     return-void
 .end method
@@ -304,13 +270,10 @@
 .method public static varargs v(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 36
     sget-boolean v0, Lcom/android/volley/VolleyLog;->LOG_VERBOSE:Z
 
     if-eqz v0, :cond_0
 
-    .line 37
     sget-object v0, Lcom/android/volley/VolleyLog;->TAG:Ljava/lang/String;
 
     invoke-static {p0, p1}, Lcom/android/volley/VolleyLog;->buildMessage(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
@@ -319,7 +282,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 39
     :cond_0
     return-void
 .end method

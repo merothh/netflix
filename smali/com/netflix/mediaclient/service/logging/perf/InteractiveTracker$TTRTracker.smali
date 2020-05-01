@@ -7,11 +7,8 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker$InteractiveListener;)V
     .locals 0
 
-    .prologue
-    .line 118
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker;-><init>(Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker$InteractiveListener;)V
 
-    .line 119
     return-void
 .end method
 
@@ -20,13 +17,10 @@
 .method public shouldTrack(Landroid/widget/ImageView;Lcom/android/volley/Request$Priority;)Z
     .locals 1
 
-    .prologue
-    .line 125
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/service/logging/perf/InteractiveTracker;->shouldTrack(Landroid/widget/ImageView;)Z
 
     move-result v0
 
-    .line 126
     if-eqz v0, :cond_0
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->getContext()Landroid/content/Context;

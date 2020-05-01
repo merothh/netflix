@@ -16,16 +16,12 @@
 .method private constructor <init>(Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher;Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;)V
     .locals 2
 
-    .prologue
-    .line 511
     iput-object p1, p0, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher$ResourceFetcherCallbackWrapper;->this$0:Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 513
     if-nez p2, :cond_0
 
-    .line 514
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Callback can not be null"
@@ -34,19 +30,15 @@
 
     throw v0
 
-    .line 516
     :cond_0
     iput-object p2, p0, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher$ResourceFetcherCallbackWrapper;->mCallback:Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;
 
-    .line 517
     return-void
 .end method
 
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher;Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher$1;)V
     .locals 0
 
-    .prologue
-    .line 499
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher$ResourceFetcherCallbackWrapper;-><init>(Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher;Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;)V
 
     return-void
@@ -57,8 +49,6 @@
 .method public onResourceCached(Ljava/lang/String;Ljava/lang/String;JJLcom/netflix/mediaclient/android/app/Status;)V
     .locals 9
 
-    .prologue
-    .line 539
     invoke-interface/range {p7 .. p7}, Lcom/netflix/mediaclient/android/app/Status;->getStatusCode()Lcom/netflix/mediaclient/StatusCode;
 
     move-result-object v0
@@ -79,7 +69,6 @@
 
     invoke-static {p1, v0, v1}, Lcom/netflix/mediaclient/util/log/ApmLogUtils;->reportAssetRequestResult(Ljava/lang/String;Lcom/netflix/mediaclient/StatusCode;Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging;)V
 
-    .line 540
     iget-object v1, p0, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher$ResourceFetcherCallbackWrapper;->mCallback:Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;
 
     move-object v2, p1
@@ -94,15 +83,12 @@
 
     invoke-interface/range {v1 .. v8}, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;->onResourceCached(Ljava/lang/String;Ljava/lang/String;JJLcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 541
     return-void
 .end method
 
 .method public onResourceFetched(Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 521
     invoke-interface {p3}, Lcom/netflix/mediaclient/android/app/Status;->getStatusCode()Lcom/netflix/mediaclient/StatusCode;
 
     move-result-object v0
@@ -123,20 +109,16 @@
 
     invoke-static {p1, v0, v1}, Lcom/netflix/mediaclient/util/log/ApmLogUtils;->reportAssetRequestResult(Ljava/lang/String;Lcom/netflix/mediaclient/StatusCode;Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging;)V
 
-    .line 522
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher$ResourceFetcherCallbackWrapper;->mCallback:Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;->onResourceFetched(Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 523
     return-void
 .end method
 
 .method public onResourcePrefetched(Ljava/lang/String;ILcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 527
     invoke-interface {p3}, Lcom/netflix/mediaclient/android/app/Status;->getStatusCode()Lcom/netflix/mediaclient/StatusCode;
 
     move-result-object v0
@@ -157,20 +139,16 @@
 
     invoke-static {p1, v0, v1}, Lcom/netflix/mediaclient/util/log/ApmLogUtils;->reportAssetRequestResult(Ljava/lang/String;Lcom/netflix/mediaclient/StatusCode;Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging;)V
 
-    .line 528
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher$ResourceFetcherCallbackWrapper;->mCallback:Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;->onResourcePrefetched(Ljava/lang/String;ILcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 529
     return-void
 .end method
 
 .method public onResourceRawFetched(Ljava/lang/String;[BLcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 533
     invoke-interface {p3}, Lcom/netflix/mediaclient/android/app/Status;->getStatusCode()Lcom/netflix/mediaclient/StatusCode;
 
     move-result-object v0
@@ -191,11 +169,9 @@
 
     invoke-static {p1, v0, v1}, Lcom/netflix/mediaclient/util/log/ApmLogUtils;->reportAssetRequestResult(Ljava/lang/String;Lcom/netflix/mediaclient/StatusCode;Lcom/netflix/mediaclient/servicemgr/ApplicationPerformanceMetricsLogging;)V
 
-    .line 534
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcher$ResourceFetcherCallbackWrapper;->mCallback:Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/netflix/mediaclient/service/resfetcher/ResourceFetcherCallback;->onResourceRawFetched(Ljava/lang/String;[BLcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 535
     return-void
 .end method

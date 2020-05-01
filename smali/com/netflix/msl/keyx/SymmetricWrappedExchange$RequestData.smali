@@ -15,13 +15,10 @@
 .method public constructor <init>(Lcom/netflix/android/org/json/JSONObject;)V
     .locals 5
 
-    .prologue
-    .line 95
     sget-object v0, Lcom/netflix/msl/keyx/KeyExchangeScheme;->SYMMETRIC_WRAPPED:Lcom/netflix/msl/keyx/KeyExchangeScheme;
 
     invoke-direct {p0, v0}, Lcom/netflix/msl/keyx/KeyRequestData;-><init>(Lcom/netflix/msl/keyx/KeyExchangeScheme;)V
 
-    .line 97
     :try_start_0
     const-string/jumbo v0, "keyid"
 
@@ -31,7 +28,6 @@
 
     move-result-object v1
 
-    .line 99
     :try_start_1
     invoke-static {v1}, Lcom/netflix/msl/keyx/SymmetricWrappedExchange$KeyId;->valueOf(Ljava/lang/String;)Lcom/netflix/msl/keyx/SymmetricWrappedExchange$KeyId;
 
@@ -42,14 +38,11 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 106
     return-void
 
-    .line 100
     :catch_0
     move-exception v0
 
-    .line 101
     :try_start_2
     new-instance v2, Lcom/netflix/msl/MslKeyExchangeException;
 
@@ -61,11 +54,9 @@
     :try_end_2
     .catch Lcom/netflix/android/org/json/JSONException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 103
     :catch_1
     move-exception v0
 
-    .line 104
     new-instance v1, Lcom/netflix/msl/MslEncodingException;
 
     sget-object v2, Lcom/netflix/msl/MslError;->JSON_PARSE_ERROR:Lcom/netflix/msl/MslError;
@@ -100,16 +91,12 @@
 .method public constructor <init>(Lcom/netflix/msl/keyx/SymmetricWrappedExchange$KeyId;)V
     .locals 1
 
-    .prologue
-    .line 82
     sget-object v0, Lcom/netflix/msl/keyx/KeyExchangeScheme;->SYMMETRIC_WRAPPED:Lcom/netflix/msl/keyx/KeyExchangeScheme;
 
     invoke-direct {p0, v0}, Lcom/netflix/msl/keyx/KeyRequestData;-><init>(Lcom/netflix/msl/keyx/KeyExchangeScheme;)V
 
-    .line 83
     iput-object p1, p0, Lcom/netflix/msl/keyx/SymmetricWrappedExchange$RequestData;->keyId:Lcom/netflix/msl/keyx/SymmetricWrappedExchange$KeyId;
 
-    .line 84
     return-void
 .end method
 
@@ -118,19 +105,15 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 130
     if-ne p1, p0, :cond_0
 
-    .line 133
     :goto_0
     return v1
 
-    .line 131
     :cond_0
     instance-of v0, p1, Lcom/netflix/msl/keyx/SymmetricWrappedExchange$RequestData;
 
@@ -143,10 +126,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 132
     check-cast v0, Lcom/netflix/msl/keyx/SymmetricWrappedExchange$RequestData;
 
-    .line 133
     invoke-super {p0, p1}, Lcom/netflix/msl/keyx/KeyRequestData;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -179,8 +160,6 @@
 .method public getKeyId()Lcom/netflix/msl/keyx/SymmetricWrappedExchange$KeyId;
     .locals 1
 
-    .prologue
-    .line 112
     iget-object v0, p0, Lcom/netflix/msl/keyx/SymmetricWrappedExchange$RequestData;->keyId:Lcom/netflix/msl/keyx/SymmetricWrappedExchange$KeyId;
 
     return-object v0
@@ -189,13 +168,10 @@
 .method protected getKeydata()Lcom/netflix/android/org/json/JSONObject;
     .locals 3
 
-    .prologue
-    .line 120
     new-instance v0, Lcom/netflix/android/org/json/JSONObject;
 
     invoke-direct {v0}, Lcom/netflix/android/org/json/JSONObject;-><init>()V
 
-    .line 121
     const-string/jumbo v1, "keyid"
 
     iget-object v2, p0, Lcom/netflix/msl/keyx/SymmetricWrappedExchange$RequestData;->keyId:Lcom/netflix/msl/keyx/SymmetricWrappedExchange$KeyId;
@@ -206,15 +182,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/android/org/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/netflix/android/org/json/JSONObject;
 
-    .line 122
     return-object v0
 .end method
 
 .method public hashCode()I
     .locals 2
 
-    .prologue
-    .line 141
     invoke-super {p0}, Lcom/netflix/msl/keyx/KeyRequestData;->hashCode()I
 
     move-result v0

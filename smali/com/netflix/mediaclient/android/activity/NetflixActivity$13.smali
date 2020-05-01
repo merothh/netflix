@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;)V
     .locals 0
 
-    .prologue
-    .line 2545
     iput-object p1, p0, Lcom/netflix/mediaclient/android/activity/NetflixActivity$13;->this$0:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 2548
     iget-object v0, p0, Lcom/netflix/mediaclient/android/activity/NetflixActivity$13;->this$0:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/android/activity/NetflixActivity$13;->this$0:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -44,11 +40,9 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 2549
     iget-object v0, p0, Lcom/netflix/mediaclient/android/activity/NetflixActivity$13;->this$0:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->finish()V
 
-    .line 2550
     return-void
 .end method

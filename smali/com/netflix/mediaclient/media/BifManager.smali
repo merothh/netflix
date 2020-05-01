@@ -66,23 +66,18 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 94
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mBifMap:Ljava/util/SortedMap;
 
-    .line 57
     const/16 v0, 0x3e8
 
     iput v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mInterval:I
 
-    .line 65
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x4
@@ -91,37 +86,30 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mUrlList:Ljava/util/ArrayList;
 
-    .line 69
     const-string/jumbo v0, "bif.tmp"
 
     iput-object v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mSavedFileName:Ljava/lang/String;
 
-    .line 96
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mTrickplayUrls:[Lcom/netflix/mediaclient/media/TrickplayUrl;
 
-    .line 99
     const-string/jumbo v0, "mdxbif.tmp"
 
     iput-object v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mSavedFileName:Ljava/lang/String;
 
-    .line 100
     iput-object p1, p0, Lcom/netflix/mediaclient/media/BifManager;->mAppContext:Landroid/content/Context;
 
-    .line 102
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mUrlList:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 104
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 105
     const-string/jumbo v0, "BifManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -144,41 +132,33 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     :cond_0
     invoke-direct {p0}, Lcom/netflix/mediaclient/media/BifManager;->loadBif()V
 
-    .line 109
     const-string/jumbo v0, "BifManager"
 
     const-string/jumbo v1, "BifManager end"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 110
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;[Lcom/netflix/mediaclient/media/TrickplayUrl;I)V
     .locals 2
 
-    .prologue
-    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mBifMap:Ljava/util/SortedMap;
 
-    .line 57
     const/16 v0, 0x3e8
 
     iput v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mInterval:I
 
-    .line 65
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x4
@@ -187,39 +167,30 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mUrlList:Ljava/util/ArrayList;
 
-    .line 69
     const-string/jumbo v0, "bif.tmp"
 
     iput-object v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mSavedFileName:Ljava/lang/String;
 
-    .line 80
     iput-object p1, p0, Lcom/netflix/mediaclient/media/BifManager;->mAppContext:Landroid/content/Context;
 
-    .line 81
     iput-object p2, p0, Lcom/netflix/mediaclient/media/BifManager;->mTrickplayUrls:[Lcom/netflix/mediaclient/media/TrickplayUrl;
 
-    .line 83
     invoke-direct {p0, p2}, Lcom/netflix/mediaclient/media/BifManager;->createUrlList([Lcom/netflix/mediaclient/media/TrickplayUrl;)V
 
-    .line 84
     invoke-direct {p0}, Lcom/netflix/mediaclient/media/BifManager;->loadBif()V
 
-    .line 85
     const-string/jumbo v0, "BifManager"
 
     const-string/jumbo v1, "BifManager end"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 86
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/netflix/mediaclient/media/BifManager;)Ljava/util/ArrayList;
     .locals 1
 
-    .prologue
-    .line 37
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mUrlList:Ljava/util/ArrayList;
 
     return-object v0
@@ -228,8 +199,6 @@
 .method static synthetic access$100(Lcom/netflix/mediaclient/media/BifManager;)Z
     .locals 1
 
-    .prologue
-    .line 37
     iget-boolean v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mStopBif:Z
 
     return v0
@@ -238,8 +207,6 @@
 .method static synthetic access$200(Lcom/netflix/mediaclient/media/BifManager;)I
     .locals 1
 
-    .prologue
-    .line 37
     iget v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mVersion:I
 
     return v0
@@ -248,8 +215,6 @@
 .method static synthetic access$202(Lcom/netflix/mediaclient/media/BifManager;I)I
     .locals 0
 
-    .prologue
-    .line 37
     iput p1, p0, Lcom/netflix/mediaclient/media/BifManager;->mVersion:I
 
     return p1
@@ -258,8 +223,6 @@
 .method static synthetic access$300(Lcom/netflix/mediaclient/media/BifManager;)I
     .locals 1
 
-    .prologue
-    .line 37
     iget v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mBifCount:I
 
     return v0
@@ -268,8 +231,6 @@
 .method static synthetic access$302(Lcom/netflix/mediaclient/media/BifManager;I)I
     .locals 0
 
-    .prologue
-    .line 37
     iput p1, p0, Lcom/netflix/mediaclient/media/BifManager;->mBifCount:I
 
     return p1
@@ -278,8 +239,6 @@
 .method static synthetic access$400(Lcom/netflix/mediaclient/media/BifManager;)I
     .locals 1
 
-    .prologue
-    .line 37
     iget v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mInterval:I
 
     return v0
@@ -288,8 +247,6 @@
 .method static synthetic access$402(Lcom/netflix/mediaclient/media/BifManager;I)I
     .locals 0
 
-    .prologue
-    .line 37
     iput p1, p0, Lcom/netflix/mediaclient/media/BifManager;->mInterval:I
 
     return p1
@@ -298,8 +255,6 @@
 .method static synthetic access$500(Lcom/netflix/mediaclient/media/BifManager;)I
     .locals 1
 
-    .prologue
-    .line 37
     iget v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mHeaderIndexSize:I
 
     return v0
@@ -308,8 +263,6 @@
 .method static synthetic access$502(Lcom/netflix/mediaclient/media/BifManager;I)I
     .locals 0
 
-    .prologue
-    .line 37
     iput p1, p0, Lcom/netflix/mediaclient/media/BifManager;->mHeaderIndexSize:I
 
     return p1
@@ -318,8 +271,6 @@
 .method static synthetic access$600(Lcom/netflix/mediaclient/media/BifManager;)Ljava/util/SortedMap;
     .locals 1
 
-    .prologue
-    .line 37
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mBifMap:Ljava/util/SortedMap;
 
     return-object v0
@@ -328,8 +279,6 @@
 .method static synthetic access$700(Lcom/netflix/mediaclient/media/BifManager;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 37
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mSavedFileName:Ljava/lang/String;
 
     return-object v0
@@ -338,8 +287,6 @@
 .method static synthetic access$800(Lcom/netflix/mediaclient/media/BifManager;)Landroid/content/Context;
     .locals 1
 
-    .prologue
-    .line 37
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mAppContext:Landroid/content/Context;
 
     return-object v0
@@ -348,8 +295,6 @@
 .method static synthetic access$902(Lcom/netflix/mediaclient/media/BifManager;Z)Z
     .locals 0
 
-    .prologue
-    .line 37
     iput-boolean p1, p0, Lcom/netflix/mediaclient/media/BifManager;->mBifReady:Z
 
     return p1
@@ -358,17 +303,14 @@
 .method private createUrlList([Lcom/netflix/mediaclient/media/TrickplayUrl;)V
     .locals 7
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 114
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 115
     const-string/jumbo v0, "BifManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -391,13 +333,11 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
     :cond_0
     const/4 v2, -0x1
 
     move v0, v1
 
-    .line 120
     :goto_0
     iget-object v3, p0, Lcom/netflix/mediaclient/media/BifManager;->mTrickplayUrls:[Lcom/netflix/mediaclient/media/TrickplayUrl;
 
@@ -405,7 +345,6 @@
 
     if-ge v0, v3, :cond_3
 
-    .line 121
     iget-object v3, p0, Lcom/netflix/mediaclient/media/BifManager;->mTrickplayUrls:[Lcom/netflix/mediaclient/media/TrickplayUrl;
 
     aget-object v3, v3, v0
@@ -414,7 +353,6 @@
 
     move-result-object v3
 
-    .line 122
     iget-object v4, p0, Lcom/netflix/mediaclient/media/BifManager;->mTrickplayUrls:[Lcom/netflix/mediaclient/media/TrickplayUrl;
 
     aget-object v4, v4, v0
@@ -431,20 +369,17 @@
 
     move v2, v1
 
-    .line 123
     :goto_1
     array-length v4, v3
 
     if-ge v2, v4, :cond_4
 
-    .line 124
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 125
     const-string/jumbo v4, "BifManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -479,7 +414,6 @@
 
     invoke-static {v4, v5}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
     :cond_1
     iget-object v4, p0, Lcom/netflix/mediaclient/media/BifManager;->mUrlList:Ljava/util/ArrayList;
 
@@ -487,12 +421,10 @@
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 123
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 120
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
@@ -504,7 +436,6 @@
     :cond_4
     move v2, v1
 
-    .line 134
     :goto_2
     iget-object v3, p0, Lcom/netflix/mediaclient/media/BifManager;->mTrickplayUrls:[Lcom/netflix/mediaclient/media/TrickplayUrl;
 
@@ -512,10 +443,8 @@
 
     if-ge v2, v3, :cond_6
 
-    .line 135
     if-eq v0, v2, :cond_5
 
-    .line 136
     iget-object v3, p0, Lcom/netflix/mediaclient/media/BifManager;->mTrickplayUrls:[Lcom/netflix/mediaclient/media/TrickplayUrl;
 
     aget-object v3, v3, v2
@@ -526,31 +455,26 @@
 
     move v3, v1
 
-    .line 137
     :goto_3
     array-length v5, v4
 
     if-ge v3, v5, :cond_5
 
-    .line 139
     iget-object v5, p0, Lcom/netflix/mediaclient/media/BifManager;->mUrlList:Ljava/util/ArrayList;
 
     aget-object v6, v4, v3
 
     invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 137
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_3
 
-    .line 134
     :cond_5
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 144
     :cond_6
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -558,7 +482,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 145
     const-string/jumbo v0, "BifManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -601,7 +524,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 147
     :cond_7
     return-void
 .end method
@@ -609,7 +531,6 @@
 .method private dumpBifBuffer([BI)V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -620,7 +541,6 @@
 
     const/4 v4, 0x0
 
-    .line 200
     const-string/jumbo v0, "BifManager"
 
     const-string/jumbo v1, "first foure %02x %02x %02x %2x"
@@ -665,7 +585,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 201
     const-string/jumbo v0, "BifManager"
 
     const-string/jumbo v1, "last foure %02x %02x %02x %2x"
@@ -718,17 +637,14 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 202
     return-void
 .end method
 
 .method private static dumpHeader([B)V
     .locals 7
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 387
     move v0, v1
 
     :goto_0
@@ -736,7 +652,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 388
     const-string/jumbo v2, "BifManager"
 
     const-string/jumbo v3, "%02x %02x %02x %2x"
@@ -795,12 +710,10 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 387
     add-int/lit8 v0, v0, 0x4
 
     goto :goto_0
 
-    .line 390
     :cond_0
     return-void
 .end method
@@ -808,16 +721,12 @@
 .method private loadBif()V
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 217
     iput-boolean v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mStopBif:Z
 
-    .line 218
     iput-boolean v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mBifReady:Z
 
-    .line 220
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/netflix/mediaclient/media/BifManager$1;
@@ -830,17 +739,14 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mDownloadThread:Ljava/lang/Thread;
 
-    .line 379
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mDownloadThread:Ljava/lang/Thread;
 
     if-eqz v0, :cond_0
 
-    .line 380
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mDownloadThread:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 382
     :cond_0
     return-void
 .end method
@@ -850,17 +756,14 @@
 .method public getIndexFrame(I)Ljava/nio/ByteBuffer;
     .locals 9
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 158
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 159
     const-string/jumbo v0, "BifManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -883,7 +786,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 162
     :cond_0
     iget-boolean v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mBifReady:Z
 
@@ -891,11 +793,9 @@
 
     move-object v0, v1
 
-    .line 195
     :goto_0
     return-object v0
 
-    .line 166
     :cond_1
     iget v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mInterval:I
 
@@ -907,7 +807,6 @@
 
     div-int/2addr v0, v2
 
-    .line 167
     iget-object v2, p0, Lcom/netflix/mediaclient/media/BifManager;->mBifMap:Ljava/util/SortedMap;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -918,7 +817,6 @@
 
     move-result-object v2
 
-    .line 168
     iget-object v3, p0, Lcom/netflix/mediaclient/media/BifManager;->mBifMap:Ljava/util/SortedMap;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -929,7 +827,6 @@
 
     move-result-object v3
 
-    .line 170
     invoke-interface {v2}, Ljava/util/SortedMap;->isEmpty()Z
 
     move-result v0
@@ -942,7 +839,6 @@
 
     if-nez v0, :cond_3
 
-    .line 171
     invoke-interface {v2}, Ljava/util/SortedMap;->lastKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -957,7 +853,6 @@
 
     move-result v2
 
-    .line 172
     invoke-interface {v3}, Ljava/util/SortedMap;->firstKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -974,15 +869,12 @@
 
     sub-int v3, v0, v2
 
-    .line 173
     iget v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mHeaderIndexSize:I
 
     sub-int v0, v2, v0
 
-    .line 174
     new-array v4, v3, [B
 
-    .line 176
     :try_start_0
     iget-object v5, p0, Lcom/netflix/mediaclient/media/BifManager;->mAppContext:Landroid/content/Context;
 
@@ -992,26 +884,22 @@
 
     move-result-object v5
 
-    .line 177
     int-to-long v6, v0
 
     invoke-virtual {v5, v6, v7}, Ljava/io/FileInputStream;->skip(J)J
 
-    .line 178
     const/4 v0, 0x0
 
     invoke-virtual {v5, v4, v0, v3}, Ljava/io/FileInputStream;->read([BII)I
 
     move-result v0
 
-    .line 180
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v6
 
     if-eqz v6, :cond_2
 
-    .line 181
     const-string/jumbo v6, "BifManager"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1054,7 +942,6 @@
 
     invoke-static {v6, v0}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 186
     :cond_2
     const/4 v0, 0x0
 
@@ -1062,26 +949,21 @@
 
     move-result-object v0
 
-    .line 187
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 188
     invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 189
     invoke-virtual {v5}, Ljava/io/FileInputStream;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto/16 :goto_0
 
-    .line 191
     :catch_0
     move-exception v0
 
-    .line 192
     const-string/jumbo v2, "BifManager"
 
     const-string/jumbo v3, "Failed reading bif "
@@ -1091,15 +973,12 @@
     :cond_3
     move-object v0, v1
 
-    .line 195
     goto/16 :goto_0
 .end method
 
 .method public isBifReady()Z
     .locals 1
 
-    .prologue
-    .line 150
     iget-boolean v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mBifReady:Z
 
     return v0
@@ -1108,19 +987,15 @@
 .method public release()V
     .locals 2
 
-    .prologue
-    .line 208
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mStopBif:Z
 
-    .line 209
     iget-object v0, p0, Lcom/netflix/mediaclient/media/BifManager;->mAppContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/media/BifManager;->mSavedFileName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->deleteFile(Ljava/lang/String;)Z
 
-    .line 210
     return-void
 .end method

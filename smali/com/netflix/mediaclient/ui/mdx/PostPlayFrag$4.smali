@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;)V
     .locals 0
 
-    .prologue
-    .line 143
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
-    .prologue
-    .line 146
     const-string/jumbo v0, "PostPlayFrag"
 
     const-string/jumbo v1, "Showing episodes dialog"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 148
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;->access$100(Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;)Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;
@@ -45,18 +40,15 @@
 
     if-nez v0, :cond_0
 
-    .line 149
     const-string/jumbo v0, "PostPlayFrag"
 
     const-string/jumbo v1, "currentVideo is null - can\'t show episodes"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
     :goto_0
     return-void
 
-    .line 153
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;
 
@@ -80,7 +72,6 @@
 
     move-result-object v0
 
-    .line 154
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;->getNetflixActivity()Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -95,12 +86,10 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/netflix/mediaclient/android/fragment/NetflixDialogFrag;->onManagerReady(Lcom/netflix/mediaclient/servicemgr/ServiceManager;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 155
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/fragment/NetflixDialogFrag;->setCancelable(Z)V
 
-    .line 156
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/mdx/PostPlayFrag;->getNetflixActivity()Lcom/netflix/mediaclient/android/activity/NetflixActivity;

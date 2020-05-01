@@ -36,37 +36,28 @@
 .method protected constructor <init>(Landroid/content/Context;Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;Ljava/lang/String;Ljava/lang/String;Lcom/netflix/mediaclient/service/configuration/ConfigurationAgentWebCallback;)V
     .locals 3
 
-    .prologue
-    .line 39
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;-><init>(Landroid/content/Context;I)V
 
-    .line 40
     iput-object p5, p0, Lcom/netflix/mediaclient/service/configuration/volley/VerifyLoginRequest;->responseCallback:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgentWebCallback;
 
-    .line 41
     iput-object p3, p0, Lcom/netflix/mediaclient/service/configuration/volley/VerifyLoginRequest;->mId:Ljava/lang/String;
 
-    .line 42
     iput-object p4, p0, Lcom/netflix/mediaclient/service/configuration/volley/VerifyLoginRequest;->mCode:Ljava/lang/String;
 
-    .line 43
     iput-object p2, p0, Lcom/netflix/mediaclient/service/configuration/volley/VerifyLoginRequest;->mConfigAgent:Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;
 
-    .line 45
     const-string/jumbo v0, "[\'signInVerify\']"
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/configuration/volley/VerifyLoginRequest;->pqlQuery:Ljava/lang/String;
 
-    .line 47
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 48
     const-string/jumbo v0, "nf_login"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -91,7 +82,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
     :cond_0
     return-void
 .end method
@@ -110,8 +100,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 89
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -142,55 +130,45 @@
         }
     .end annotation
 
-    .prologue
-    .line 58
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/volley/VerifyLoginRequest;->mConfigAgent:Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;->getNrmConfigData()Lcom/netflix/mediaclient/service/webclient/model/leafs/NrmConfigData;
 
     move-result-object v0
 
-    .line 59
     iget-object v1, p0, Lcom/netflix/mediaclient/service/configuration/volley/VerifyLoginRequest;->mConfigAgent:Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;
 
     invoke-interface {v1}, Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;->getSignInConfigData()Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInConfigData;
 
     move-result-object v1
 
-    .line 61
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
-    .line 62
     if-eqz v1, :cond_0
 
-    .line 63
     const-string/jumbo v3, "flwssn"
 
     iget-object v1, v1, Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInConfigData;->flwssn:Ljava/lang/String;
 
     invoke-interface {v2, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 65
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 66
     const-string/jumbo v1, "netflixId"
 
     iget-object v3, v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/NrmConfigData;->netflixId:Ljava/lang/String;
 
     invoke-interface {v2, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 67
     const-string/jumbo v1, "secureNetflixId"
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/webclient/model/leafs/NrmConfigData;->secureNetflixId:Ljava/lang/String;
 
     invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 69
     :cond_1
     const-string/jumbo v0, "email"
 
@@ -198,14 +176,12 @@
 
     invoke-interface {v2, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 70
     const-string/jumbo v0, "password"
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/configuration/volley/VerifyLoginRequest;->mCode:Ljava/lang/String;
 
     invoke-interface {v2, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 71
     const-string/jumbo v0, "esn"
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/configuration/volley/VerifyLoginRequest;->mConfigAgent:Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;
@@ -220,7 +196,6 @@
 
     invoke-interface {v2, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 73
     const-string/jumbo v0, "nf_login"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -247,15 +222,12 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     return-object v2
 .end method
 
 .method protected isAuthorizationRequired()Z
     .locals 1
 
-    .prologue
-    .line 79
     const/4 v0, 0x0
 
     return v0
@@ -264,20 +236,16 @@
 .method protected onFailure(Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 127
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/volley/VerifyLoginRequest;->responseCallback:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgentWebCallback;
 
     if-eqz v0, :cond_0
 
-    .line 128
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/volley/VerifyLoginRequest;->responseCallback:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgentWebCallback;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, v1, p1}, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgentWebCallback;->onLoginVerified(Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInData;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 130
     :cond_0
     return-void
 .end method
@@ -285,8 +253,6 @@
 .method protected onSuccess(Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInData;)V
     .locals 3
 
-    .prologue
-    .line 115
     const-string/jumbo v0, "nf_login"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -309,15 +275,12 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/volley/VerifyLoginRequest;->responseCallback:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgentWebCallback;
 
     if-eqz v0, :cond_1
 
-    .line 117
     sget-object v0, Lcom/netflix/mediaclient/android/app/CommonStatus;->SIGNIN_FAILURE:Lcom/netflix/mediaclient/android/app/NetflixImmutableStatus;
 
-    .line 118
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInData;->isSignInSuccessful()Z
@@ -326,16 +289,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 119
     sget-object v0, Lcom/netflix/mediaclient/android/app/CommonStatus;->OK:Lcom/netflix/mediaclient/android/app/NetflixImmutableStatus;
 
-    .line 121
     :cond_0
     iget-object v1, p0, Lcom/netflix/mediaclient/service/configuration/volley/VerifyLoginRequest;->responseCallback:Lcom/netflix/mediaclient/service/configuration/ConfigurationAgentWebCallback;
 
     invoke-interface {v1, p1, v0}, Lcom/netflix/mediaclient/service/configuration/ConfigurationAgentWebCallback;->onLoginVerified(Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInData;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 123
     :cond_1
     return-void
 .end method
@@ -343,8 +303,6 @@
 .method protected bridge synthetic onSuccess(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 26
     check-cast p1, Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInData;
 
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/configuration/volley/VerifyLoginRequest;->onSuccess(Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInData;)V
@@ -355,15 +313,12 @@
 .method protected parseFalkorResponse(Ljava/lang/String;)Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInData;
     .locals 4
 
-    .prologue
-    .line 95
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 96
     const-string/jumbo v0, "nf_login"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -386,7 +341,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 98
     :cond_0
     const-string/jumbo v0, "nf_login"
 
@@ -394,14 +348,12 @@
 
     move-result-object v0
 
-    .line 99
     invoke-static {v0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorParseUtils;->isEmpty(Lcom/google/gson/JsonObject;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 100
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorException;
 
     const-string/jumbo v1, "verifyLogin empty!!!"
@@ -410,7 +362,6 @@
 
     throw v0
 
-    .line 105
     :cond_1
     :try_start_0
     const-string/jumbo v1, "signInVerify"
@@ -425,14 +376,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 110
     return-object v0
 
-    .line 106
     :catch_0
     move-exception v0
 
-    .line 107
     const-string/jumbo v1, "nf_login"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -455,7 +403,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     new-instance v1, Lcom/netflix/mediaclient/service/webclient/volley/FalkorException;
 
     const-string/jumbo v2, "response missing json objects"
@@ -468,8 +415,6 @@
 .method protected bridge synthetic parseFalkorResponse(Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 26
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/configuration/volley/VerifyLoginRequest;->parseFalkorResponse(Ljava/lang/String;)Lcom/netflix/mediaclient/service/webclient/model/leafs/SignInData;
 
     move-result-object v0
@@ -480,8 +425,6 @@
 .method protected shouldSkipProcessingOnInvalidUser()Z
     .locals 1
 
-    .prologue
-    .line 84
     const/4 v0, 0x0
 
     return v0

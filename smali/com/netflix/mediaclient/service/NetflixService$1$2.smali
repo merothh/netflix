@@ -22,13 +22,10 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/NetflixService$1;)V
     .locals 1
 
-    .prologue
-    .line 401
     iput-object p1, p0, Lcom/netflix/mediaclient/service/NetflixService$1$2;->this$1:Lcom/netflix/mediaclient/service/NetflixService$1;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 403
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1$2;->this$1:Lcom/netflix/mediaclient/service/NetflixService$1;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
@@ -39,7 +36,6 @@
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/NetflixService$1$2;->add(Ljava/lang/Object;)Z
 
-    .line 404
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1$2;->this$1:Lcom/netflix/mediaclient/service/NetflixService$1;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
@@ -50,7 +46,6 @@
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/NetflixService$1$2;->add(Ljava/lang/Object;)Z
 
-    .line 405
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1$2;->this$1:Lcom/netflix/mediaclient/service/NetflixService$1;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
@@ -61,7 +56,6 @@
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/NetflixService$1$2;->add(Ljava/lang/Object;)Z
 
-    .line 406
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1$2;->this$1:Lcom/netflix/mediaclient/service/NetflixService$1;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
@@ -72,7 +66,6 @@
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/NetflixService$1$2;->add(Ljava/lang/Object;)Z
 
-    .line 407
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1$2;->this$1:Lcom/netflix/mediaclient/service/NetflixService$1;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
@@ -83,7 +76,6 @@
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/NetflixService$1$2;->add(Ljava/lang/Object;)Z
 
-    .line 408
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1$2;->this$1:Lcom/netflix/mediaclient/service/NetflixService$1;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
@@ -94,7 +86,6 @@
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/NetflixService$1$2;->add(Ljava/lang/Object;)Z
 
-    .line 409
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1$2;->this$1:Lcom/netflix/mediaclient/service/NetflixService$1;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
@@ -105,7 +96,6 @@
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/NetflixService$1$2;->add(Ljava/lang/Object;)Z
 
-    .line 410
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1$2;->this$1:Lcom/netflix/mediaclient/service/NetflixService$1;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
@@ -116,7 +106,6 @@
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/NetflixService$1$2;->add(Ljava/lang/Object;)Z
 
-    .line 411
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1$2;->this$1:Lcom/netflix/mediaclient/service/NetflixService$1;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
@@ -127,7 +116,6 @@
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/NetflixService$1$2;->add(Ljava/lang/Object;)Z
 
-    .line 412
     iget-object v0, p0, Lcom/netflix/mediaclient/service/NetflixService$1$2;->this$1:Lcom/netflix/mediaclient/service/NetflixService$1;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/NetflixService$1;->this$0:Lcom/netflix/mediaclient/service/NetflixService;
@@ -138,6 +126,5 @@
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/NetflixService$1$2;->add(Ljava/lang/Object;)Z
 
-    .line 413
     return-void
 .end method

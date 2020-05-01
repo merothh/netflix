@@ -13,19 +13,14 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;F)V
     .locals 1
 
-    .prologue
-    .line 157
     const-string/jumbo v0, "MdxUtils"
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/servicemgr/LoggingManagerCallback;-><init>(Ljava/lang/String;)V
 
-    .line 158
     iput-object p1, p0, Lcom/netflix/mediaclient/util/MdxUtils$SetVideoRatingCallback;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
-    .line 159
     iput p2, p0, Lcom/netflix/mediaclient/util/MdxUtils$SetVideoRatingCallback;->rating:F
 
-    .line 160
     return-void
 .end method
 
@@ -34,17 +29,14 @@
 .method public onVideoRatingSet(Lcom/netflix/mediaclient/servicemgr/interface_/UserRating;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 5
 
-    .prologue
     const v2, 0x7f08017b
 
     const/4 v3, 0x1
 
     const/4 v4, 0x0
 
-    .line 164
     invoke-super {p0, p1, p2}, Lcom/netflix/mediaclient/servicemgr/LoggingManagerCallback;->onVideoRatingSet(Lcom/netflix/mediaclient/servicemgr/interface_/UserRating;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 166
     iget-object v0, p0, Lcom/netflix/mediaclient/util/MdxUtils$SetVideoRatingCallback;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/AndroidUtils;->isActivityFinishedOrDestroyed(Landroid/content/Context;)Z
@@ -53,11 +45,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 182
     :goto_0
     return-void
 
-    .line 170
     :cond_0
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isError()Z
 
@@ -65,14 +55,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 171
     const-string/jumbo v0, "MdxUtils"
 
     const-string/jumbo v1, "onVideoRatingSet: Invalid status code - failed"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 172
     iget-object v0, p0, Lcom/netflix/mediaclient/util/MdxUtils$SetVideoRatingCallback;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-static {v0, v2, v3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
@@ -81,14 +69,12 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 173
     const-string/jumbo v0, "MdxUtils"
 
     const-string/jumbo v1, "Report rate action ended"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 174
     iget-object v0, p0, Lcom/netflix/mediaclient/util/MdxUtils$SetVideoRatingCallback;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-virtual {v0, v2}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->getString(I)Ljava/lang/String;
@@ -101,7 +87,6 @@
 
     move-result-object v0
 
-    .line 175
     iget-object v1, p0, Lcom/netflix/mediaclient/util/MdxUtils$SetVideoRatingCallback;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     sget-object v2, Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;->failed:Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;
@@ -118,7 +103,6 @@
 
     goto :goto_0
 
-    .line 178
     :cond_1
     const-string/jumbo v0, "MdxUtils"
 
@@ -146,7 +130,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 179
     iget-object v0, p0, Lcom/netflix/mediaclient/util/MdxUtils$SetVideoRatingCallback;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     const v1, 0x7f0801ee
@@ -157,7 +140,6 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 180
     iget-object v0, p0, Lcom/netflix/mediaclient/util/MdxUtils$SetVideoRatingCallback;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     sget-object v1, Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;->success:Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;

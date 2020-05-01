@@ -17,8 +17,6 @@
 .method public constructor <init>(Ljava/lang/String;[BZLcom/netflix/mediaclient/service/offline/license/OfflineLicenseManagerCallback;Lcom/netflix/mediaclient/service/offline/license/OfflineLicenseRequest$OfflineLicenseRequestCallback;Lcom/netflix/mediaclient/service/player/bladerunnerclient/BladeRunnerClient;Landroid/media/MediaDrm;Ljava/lang/String;Landroid/os/Handler;Ljava/lang/String;Ljava/lang/String;)V
     .locals 11
 
-    .prologue
-    .line 41
     const/4 v2, 0x0
 
     move-object v0, p0
@@ -43,21 +41,16 @@
 
     invoke-direct/range {v0 .. v10}, Lcom/netflix/mediaclient/service/offline/license/OfflineLicenseRequest;-><init>(Ljava/lang/String;[BLjava/lang/String;Lcom/netflix/mediaclient/service/offline/license/OfflineLicenseManagerCallback;Lcom/netflix/mediaclient/service/offline/license/OfflineLicenseRequest$OfflineLicenseRequestCallback;Lcom/netflix/mediaclient/service/player/bladerunnerclient/BladeRunnerClient;Landroid/media/MediaDrm;Landroid/os/Handler;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 43
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/license/DeactivateOfflineLicenseRequest;->mKeySetId:[B
 
-    .line 44
     iput-boolean p3, p0, Lcom/netflix/mediaclient/service/offline/license/DeactivateOfflineLicenseRequest;->mWasDownloadedCompletely:Z
 
-    .line 45
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/netflix/mediaclient/service/offline/license/DeactivateOfflineLicenseRequest;Ljava/lang/String;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 0
 
-    .prologue
-    .line 21
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/service/offline/license/DeactivateOfflineLicenseRequest;->handleDeactivateResponse(Ljava/lang/String;Lcom/netflix/mediaclient/android/app/Status;)V
 
     return-void
@@ -66,21 +59,17 @@
 .method private handleDeactivateResponse(Ljava/lang/String;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 94
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 115
     :cond_0
     invoke-virtual {p0, v1, v1, p2}, Lcom/netflix/mediaclient/service/offline/license/DeactivateOfflineLicenseRequest;->doLicenseResponseCallback(Lcom/netflix/mediaclient/service/player/bladerunnerclient/OfflineLicenseResponse;[BLcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 116
     return-void
 .end method
 
@@ -89,10 +78,8 @@
 .method public sendRequest()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x0
 
-    .line 51
     :try_start_0
     const-string/jumbo v0, "nf_offlineLicenseMgr"
 
@@ -118,7 +105,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/license/DeactivateOfflineLicenseRequest;->mKeySetId:[B
 
     if-eqz v0, :cond_0
@@ -129,7 +115,6 @@
 
     if-nez v0, :cond_1
 
-    .line 53
     :cond_0
     const/4 v0, 0x0
 
@@ -139,11 +124,9 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/netflix/mediaclient/service/offline/license/DeactivateOfflineLicenseRequest;->doLicenseResponseCallback(Lcom/netflix/mediaclient/service/player/bladerunnerclient/OfflineLicenseResponse;[BLcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 90
     :goto_0
     return-void
 
-    .line 56
     :cond_1
     const-string/jumbo v0, "nf_offlineLicenseMgr"
 
@@ -153,10 +136,8 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/Log;->logByteArrayRaw(Ljava/lang/String;Ljava/lang/String;[B)V
 
-    .line 64
     const-string/jumbo v0, ""
 
-    .line 66
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/license/DeactivateOfflineLicenseRequest;->mBladeRunnerClient:Lcom/netflix/mediaclient/service/player/bladerunnerclient/BladeRunnerClient;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/offline/license/DeactivateOfflineLicenseRequest;->mLiceneseLink:Ljava/lang/String;
@@ -174,21 +155,17 @@
 
     goto :goto_0
 
-    .line 82
     :catch_0
     move-exception v0
 
-    .line 83
     sget-object v0, Lcom/netflix/mediaclient/android/app/CommonStatus;->DRM_FAILURE_CDM_NOT_PROVISIONED:Lcom/netflix/mediaclient/android/app/NetflixImmutableStatus;
 
-    .line 84
     const-string/jumbo v1, "nf_offlineLicenseMgr"
 
     const-string/jumbo v2, "deactivate getKeyRequest NotProvisionedException"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 89
     :goto_1
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/license/DeactivateOfflineLicenseRequest;->mOfflineLicenseManagerCallback:Lcom/netflix/mediaclient/service/offline/license/OfflineLicenseManagerCallback;
 
@@ -198,16 +175,13 @@
 
     goto :goto_0
 
-    .line 85
     :catch_1
     move-exception v0
 
     move-object v1, v0
 
-    .line 86
     sget-object v0, Lcom/netflix/mediaclient/android/app/CommonStatus;->DRM_FAILURE_CDM:Lcom/netflix/mediaclient/android/app/NetflixImmutableStatus;
 
-    .line 87
     const-string/jumbo v2, "nf_offlineLicenseMgr"
 
     new-instance v3, Ljava/lang/StringBuilder;

@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 115
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/netflix/model/survey/SurveyQuestion;
     .locals 1
 
-    .prologue
-    .line 117
     new-instance v0, Lcom/netflix/model/survey/SurveyQuestion;
 
     invoke-direct {v0, p1}, Lcom/netflix/model/survey/SurveyQuestion;-><init>(Landroid/os/Parcel;)V
@@ -34,8 +30,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 115
     invoke-virtual {p0, p1}, Lcom/netflix/model/survey/SurveyQuestion$1;->createFromParcel(Landroid/os/Parcel;)Lcom/netflix/model/survey/SurveyQuestion;
 
     move-result-object v0
@@ -46,8 +40,6 @@
 .method public newArray(I)[Lcom/netflix/model/survey/SurveyQuestion;
     .locals 1
 
-    .prologue
-    .line 121
     new-array v0, p1, [Lcom/netflix/model/survey/SurveyQuestion;
 
     return-object v0
@@ -56,8 +48,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 115
     invoke-virtual {p0, p1}, Lcom/netflix/model/survey/SurveyQuestion$1;->newArray(I)[Lcom/netflix/model/survey/SurveyQuestion;
 
     move-result-object v0

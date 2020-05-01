@@ -19,29 +19,22 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
     return-void
 .end method
 
 .method protected constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
-    .prologue
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/netflix/model/leafs/ListSummary;->length:I
 
-    .line 57
     return-void
 .end method
 
@@ -50,8 +43,6 @@
 .method public getLength()I
     .locals 1
 
-    .prologue
-    .line 64
     iget v0, p0, Lcom/netflix/model/leafs/ListSummary;->length:I
 
     return v0
@@ -60,18 +51,14 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 5
 
-    .prologue
-    .line 29
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 30
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 31
     const-string/jumbo v1, "ListSummary"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -94,7 +81,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 33
     :cond_0
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -117,7 +103,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 34
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -140,7 +125,6 @@
 
     goto :goto_0
 
-    .line 35
     :pswitch_0
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -156,7 +140,6 @@
 
     goto :goto_0
 
-    .line 34
     :pswitch_1
     const-string/jumbo v4, "length"
 
@@ -170,11 +153,9 @@
 
     goto :goto_1
 
-    .line 38
     :cond_2
     return-void
 
-    .line 34
     :pswitch_data_0
     .packed-switch -0x41f1c51a
         :pswitch_1
@@ -189,15 +170,12 @@
 .method public set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 42
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 43
     const-string/jumbo v1, "ListSummary"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -220,7 +198,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     :cond_0
     const/4 v1, -0x1
 
@@ -234,11 +211,9 @@
     :goto_0
     packed-switch v1, :pswitch_data_1
 
-    .line 52
     :goto_1
     return v0
 
-    .line 45
     :pswitch_0
     const-string/jumbo v2, "length"
 
@@ -252,7 +227,6 @@
 
     goto :goto_0
 
-    .line 47
     :pswitch_1
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsInt()I
 
@@ -260,12 +234,10 @@
 
     iput v0, p0, Lcom/netflix/model/leafs/ListSummary;->length:I
 
-    .line 52
     const/4 v0, 0x1
 
     goto :goto_1
 
-    .line 45
     :pswitch_data_0
     .packed-switch -0x41f1c51a
         :pswitch_0
@@ -280,23 +252,17 @@
 .method public setLength(I)V
     .locals 0
 
-    .prologue
-    .line 67
     iput p1, p0, Lcom/netflix/model/leafs/ListSummary;->length:I
 
-    .line 68
     return-void
 .end method
 
 .method protected writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    .prologue
-    .line 60
     iget v0, p0, Lcom/netflix/model/leafs/ListSummary;->length:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 61
     return-void
 .end method

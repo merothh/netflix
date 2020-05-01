@@ -22,8 +22,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,8 +32,6 @@
 .method public compare(Lcom/google/android/exoplayer/util/SlidingPercentile$Sample;Lcom/google/android/exoplayer/util/SlidingPercentile$Sample;)I
     .locals 2
 
-    .prologue
-    .line 40
     iget v0, p1, Lcom/google/android/exoplayer/util/SlidingPercentile$Sample;->index:I
 
     iget v1, p2, Lcom/google/android/exoplayer/util/SlidingPercentile$Sample;->index:I
@@ -48,8 +44,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 37
     check-cast p1, Lcom/google/android/exoplayer/util/SlidingPercentile$Sample;
 
     check-cast p2, Lcom/google/android/exoplayer/util/SlidingPercentile$Sample;

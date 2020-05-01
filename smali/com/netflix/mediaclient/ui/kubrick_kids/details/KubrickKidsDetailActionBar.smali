@@ -7,14 +7,10 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Z)V
     .locals 0
 
-    .prologue
-    .line 11
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/android/widget/NetflixActionBar;-><init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Z)V
 
-    .line 12
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/kubrick_kids/details/KubrickKidsDetailActionBar;->setWidth()V
 
-    .line 13
     return-void
 .end method
 
@@ -23,8 +19,6 @@
 .method protected getLayoutId()I
     .locals 1
 
-    .prologue
-    .line 17
     const v0, 0x7f03001b
 
     return v0
@@ -33,8 +27,6 @@
 .method public setWidth()V
     .locals 2
 
-    .prologue
-    .line 21
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/kubrick_kids/details/KubrickKidsDetailActionBar;->toolbar:Landroid/support/v7/widget/Toolbar;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/Toolbar;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -51,6 +43,5 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 22
     return-void
 .end method

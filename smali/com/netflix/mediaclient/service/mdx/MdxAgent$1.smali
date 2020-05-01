@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/mdx/MdxAgent;)V
     .locals 0
 
-    .prologue
-    .line 351
     iput-object p1, p0, Lcom/netflix/mediaclient/service/mdx/MdxAgent$1;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxAgent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 354
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxAgent$1;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxAgent;
 
     new-instance v1, Lcom/netflix/mediaclient/service/mdx/TargetSelector;
@@ -46,6 +42,5 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/service/mdx/MdxAgent;->access$002(Lcom/netflix/mediaclient/service/mdx/MdxAgent;Lcom/netflix/mediaclient/service/mdx/TargetSelector;)Lcom/netflix/mediaclient/service/mdx/TargetSelector;
 
-    .line 356
     return-void
 .end method

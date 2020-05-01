@@ -24,10 +24,8 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 34
     new-instance v0, Lcom/netflix/mediaclient/service/NetflixPowerManager$PartialWakeLockReason;
 
     const-string/jumbo v1, "DownloadGoingOn"
@@ -36,7 +34,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/NetflixPowerManager$PartialWakeLockReason;->DownloadGoingOn:Lcom/netflix/mediaclient/service/NetflixPowerManager$PartialWakeLockReason;
 
-    .line 33
     const/4 v0, 0x1
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/NetflixPowerManager$PartialWakeLockReason;
@@ -58,8 +55,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 33
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -68,8 +63,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/NetflixPowerManager$PartialWakeLockReason;
     .locals 1
 
-    .prologue
-    .line 33
     const-class v0, Lcom/netflix/mediaclient/service/NetflixPowerManager$PartialWakeLockReason;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -84,8 +77,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/NetflixPowerManager$PartialWakeLockReason;
     .locals 1
 
-    .prologue
-    .line 33
     sget-object v0, Lcom/netflix/mediaclient/service/NetflixPowerManager$PartialWakeLockReason;->$VALUES:[Lcom/netflix/mediaclient/service/NetflixPowerManager$PartialWakeLockReason;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/NetflixPowerManager$PartialWakeLockReason;->clone()Ljava/lang/Object;

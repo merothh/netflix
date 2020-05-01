@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 557
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$5;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$5;->val$playableId:Ljava/lang/String;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 560
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$5;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;->access$1200(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;)Lcom/netflix/mediaclient/service/NetflixService;
@@ -50,6 +46,5 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/realm/RealmUtils;->removeRecordsForPlayable(Landroid/content/Context;Lio/realm/Realm;Ljava/lang/String;)V
 
-    .line 561
     return-void
 .end method

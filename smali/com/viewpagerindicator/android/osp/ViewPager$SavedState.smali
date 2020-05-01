@@ -28,34 +28,26 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 1229
     new-instance v0, Lcom/viewpagerindicator/android/osp/ViewPager$SavedState$1;
 
     invoke-direct {v0}, Lcom/viewpagerindicator/android/osp/ViewPager$SavedState$1;-><init>()V
 
-    .line 1230
     invoke-static {v0}, Landroid/support/v4/os/ParcelableCompat;->newCreator(Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;)Landroid/os/Parcelable$Creator;
 
     move-result-object v0
 
     sput-object v0, Lcom/viewpagerindicator/android/osp/ViewPager$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 1229
     return-void
 .end method
 
 .method constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 1
 
-    .prologue
-    .line 1242
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 1243
     if-nez p2, :cond_0
 
-    .line 1244
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -64,7 +56,6 @@
 
     move-result-object p2
 
-    .line 1246
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -72,28 +63,22 @@
 
     iput v0, p0, Lcom/viewpagerindicator/android/osp/ViewPager$SavedState;->position:I
 
-    .line 1247
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/viewpagerindicator/android/osp/ViewPager$SavedState;->adapterState:Landroid/os/Parcelable;
 
-    .line 1248
     iput-object p2, p0, Lcom/viewpagerindicator/android/osp/ViewPager$SavedState;->loader:Ljava/lang/ClassLoader;
 
-    .line 1249
     return-void
 .end method
 
 .method public constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
-    .prologue
-    .line 1212
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 1213
     return-void
 .end method
 
@@ -102,8 +87,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 1224
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -114,7 +97,6 @@
 
     move-result-object v0
 
-    .line 1225
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -149,27 +131,21 @@
 
     move-result-object v0
 
-    .line 1224
     return-object v0
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    .prologue
-    .line 1217
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 1218
     iget v0, p0, Lcom/viewpagerindicator/android/osp/ViewPager$SavedState;->position:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1219
     iget-object v0, p0, Lcom/viewpagerindicator/android/osp/ViewPager$SavedState;->adapterState:Landroid/os/Parcelable;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 1220
     return-void
 .end method

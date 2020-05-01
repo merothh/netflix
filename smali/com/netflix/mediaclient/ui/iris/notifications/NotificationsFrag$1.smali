@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;)V
     .locals 0
 
-    .prologue
-    .line 196
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag$1;->this$0:Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,12 +26,9 @@
 .method public onRetryRequested()V
     .locals 1
 
-    .prologue
-    .line 199
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag$1;->this$0:Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iris/notifications/NotificationsFrag;->refresh()V
 
-    .line 200
     return-void
 .end method

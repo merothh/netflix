@@ -27,21 +27,16 @@
 .method constructor <init>()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v7/widget/LayoutState;->mRecycle:Z
 
-    .line 69
     iput v1, p0, Landroid/support/v7/widget/LayoutState;->mStartLine:I
 
-    .line 74
     iput v1, p0, Landroid/support/v7/widget/LayoutState;->mEndLine:I
 
     return-void
@@ -52,8 +47,6 @@
 .method hasMore(Landroid/support/v7/widget/RecyclerView$State;)Z
     .locals 2
 
-    .prologue
-    .line 90
     iget v0, p0, Landroid/support/v7/widget/LayoutState;->mCurrentPosition:I
 
     if-ltz v0, :cond_0
@@ -80,15 +73,12 @@
 .method next(Landroid/support/v7/widget/RecyclerView$Recycler;)Landroid/view/View;
     .locals 3
 
-    .prologue
-    .line 100
     iget v0, p0, Landroid/support/v7/widget/LayoutState;->mCurrentPosition:I
 
     invoke-virtual {p1, v0}, Landroid/support/v7/widget/RecyclerView$Recycler;->getViewForPosition(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 101
     iget v1, p0, Landroid/support/v7/widget/LayoutState;->mCurrentPosition:I
 
     iget v2, p0, Landroid/support/v7/widget/LayoutState;->mItemDirection:I
@@ -97,15 +87,12 @@
 
     iput v1, p0, Landroid/support/v7/widget/LayoutState;->mCurrentPosition:I
 
-    .line 102
     return-object v0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 107
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

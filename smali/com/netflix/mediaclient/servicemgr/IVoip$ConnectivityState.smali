@@ -30,7 +30,6 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x3
 
     const/4 v4, 0x2
@@ -39,7 +38,6 @@
 
     const/4 v2, 0x0
 
-    .line 234
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IVoip$ConnectivityState;
 
     const-string/jumbo v1, "NO_CONNECTION"
@@ -48,7 +46,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IVoip$ConnectivityState;->NO_CONNECTION:Lcom/netflix/mediaclient/servicemgr/IVoip$ConnectivityState;
 
-    .line 235
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IVoip$ConnectivityState;
 
     const-string/jumbo v1, "RED"
@@ -57,7 +54,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IVoip$ConnectivityState;->RED:Lcom/netflix/mediaclient/servicemgr/IVoip$ConnectivityState;
 
-    .line 236
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IVoip$ConnectivityState;
 
     const-string/jumbo v1, "YELLOW"
@@ -66,7 +62,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IVoip$ConnectivityState;->YELLOW:Lcom/netflix/mediaclient/servicemgr/IVoip$ConnectivityState;
 
-    .line 237
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/IVoip$ConnectivityState;
 
     const-string/jumbo v1, "GREEN"
@@ -75,7 +70,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/IVoip$ConnectivityState;->GREEN:Lcom/netflix/mediaclient/servicemgr/IVoip$ConnectivityState;
 
-    .line 233
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/IVoip$ConnectivityState;
@@ -109,8 +103,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 233
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -119,8 +111,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/IVoip$ConnectivityState;
     .locals 1
 
-    .prologue
-    .line 233
     const-class v0, Lcom/netflix/mediaclient/servicemgr/IVoip$ConnectivityState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -135,8 +125,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/IVoip$ConnectivityState;
     .locals 1
 
-    .prologue
-    .line 233
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/IVoip$ConnectivityState;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/IVoip$ConnectivityState;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/IVoip$ConnectivityState;->clone()Ljava/lang/Object;

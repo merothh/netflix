@@ -7,8 +7,6 @@
 .method constructor <init>(Ljava/lang/String;ILcom/netflix/mediaclient/ui/experience/BrowseExperience$ExperienceMap;)V
     .locals 1
 
-    .prologue
-    .line 441
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/netflix/mediaclient/ui/experience/BrowseExperience;-><init>(Ljava/lang/String;ILcom/netflix/mediaclient/ui/experience/BrowseExperience$ExperienceMap;Lcom/netflix/mediaclient/ui/experience/BrowseExperience$1;)V
@@ -21,8 +19,6 @@
 .method public createLolomoAdapter(Lcom/netflix/mediaclient/ui/lolomo/LoLoMoFrag;ZLjava/lang/String;)Lcom/netflix/mediaclient/ui/lolomo/LoLoMoFrag$ILoLoMoAdapter;
     .locals 1
 
-    .prologue
-    .line 456
     if-eqz p2, :cond_0
 
     new-instance v0, Lcom/netflix/mediaclient/ui/kubrick/lolomo/KubrickHighDensityGenreLoLoMoAdapter;
@@ -43,8 +39,6 @@
 .method public createRowAdapterProvider(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/ui/lomo/RowAdapterCallbacks;Lcom/netflix/mediaclient/android/widget/ObjectRecycler$ViewRecycler;Z)Lcom/netflix/mediaclient/ui/lomo/RowAdapterProvider$IRowAdapterProvider;
     .locals 1
 
-    .prologue
-    .line 488
     new-instance v0, Lcom/netflix/mediaclient/ui/lomo/RowAdapterProvider$KubrickHighDensityRowAdapterProvider;
 
     invoke-direct {v0, p1, p2, p3, p4}, Lcom/netflix/mediaclient/ui/lomo/RowAdapterProvider$KubrickHighDensityRowAdapterProvider;-><init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/ui/lomo/RowAdapterCallbacks;Lcom/netflix/mediaclient/android/widget/ObjectRecycler$ViewRecycler;Z)V
@@ -55,8 +49,6 @@
 .method public createSlidingMenuAdapter(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Landroid/support/v4/widget/DrawerLayout;)Lcom/netflix/mediaclient/ui/home/SlidingMenuAdapter;
     .locals 1
 
-    .prologue
-    .line 478
     sget-object v0, Lcom/netflix/mediaclient/ui/experience/BrowseExperience$12;->STANDARD:Lcom/netflix/mediaclient/ui/experience/BrowseExperience;
 
     invoke-virtual {v0, p1, p2}, Lcom/netflix/mediaclient/ui/experience/BrowseExperience;->createSlidingMenuAdapter(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Landroid/support/v4/widget/DrawerLayout;)Lcom/netflix/mediaclient/ui/home/SlidingMenuAdapter;
@@ -80,8 +72,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 483
     sget-object v0, Lcom/netflix/mediaclient/ui/experience/BrowseExperience$12;->KUBRICK_PRODUCTIZED:Lcom/netflix/mediaclient/ui/experience/BrowseExperience;
 
     invoke-virtual {v0, p1}, Lcom/netflix/mediaclient/ui/experience/BrowseExperience;->getDetailsClassTypeForVideo(Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;)Ljava/lang/Class;
@@ -94,8 +84,6 @@
 .method public getLomoRowTitleVisibility(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/BasicLoMo;)I
     .locals 1
 
-    .prologue
-    .line 463
     sget-object v0, Lcom/netflix/mediaclient/ui/experience/BrowseExperience$12;->STANDARD:Lcom/netflix/mediaclient/ui/experience/BrowseExperience;
 
     invoke-virtual {v0, p1, p2}, Lcom/netflix/mediaclient/ui/experience/BrowseExperience;->getLomoRowTitleVisibility(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/interface_/BasicLoMo;)I
@@ -121,8 +109,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 468
     sget-object v0, Lcom/netflix/mediaclient/ui/experience/BrowseExperience$12;->STANDARD:Lcom/netflix/mediaclient/ui/experience/BrowseExperience;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/netflix/mediaclient/ui/experience/BrowseExperience;->getPrefetchLolomoImageUrlList(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/interface_/Video;Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;)Ljava/util/List;
@@ -135,8 +121,6 @@
 .method public getViewImageUrl(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/interface_/Video;Ljava/lang/Class;I)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 473
     sget-object v0, Lcom/netflix/mediaclient/ui/experience/BrowseExperience$12;->STANDARD:Lcom/netflix/mediaclient/ui/experience/BrowseExperience;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/netflix/mediaclient/ui/experience/BrowseExperience;->getViewImageUrl(Landroid/content/Context;Lcom/netflix/mediaclient/servicemgr/interface_/Video;Ljava/lang/Class;I)Ljava/lang/String;

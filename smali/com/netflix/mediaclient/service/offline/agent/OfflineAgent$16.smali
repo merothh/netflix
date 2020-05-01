@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;JLcom/netflix/mediaclient/service/player/OfflinePlaybackInterface$ManifestCallback;)V
     .locals 0
 
-    .prologue
-    .line 1444
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$16;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
     iput-wide p2, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$16;->val$movieId:J
@@ -36,8 +34,6 @@
 .method public run()V
     .locals 7
 
-    .prologue
-    .line 1447
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$16;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;->access$3900(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;)Ljava/util/Map;
@@ -54,7 +50,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1448
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -85,21 +80,17 @@
 
     move-result-object v0
 
-    .line 1449
     if-eqz v0, :cond_0
 
-    .line 1450
     new-instance v1, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$16$1;
 
     invoke-direct {v1, p0}, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$16$1;-><init>(Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$16;)V
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable;->requestManifestForPlayback(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayable$PlayableManifestCallBack;)V
 
-    .line 1466
     :goto_0
     return-void
 
-    .line 1463
     :cond_0
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent$16;->this$0:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgent;
 

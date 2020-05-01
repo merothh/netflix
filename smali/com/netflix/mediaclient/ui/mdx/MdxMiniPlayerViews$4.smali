@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;)V
     .locals 0
 
-    .prologue
-    .line 885
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,10 +26,8 @@
 .method public onClick(Landroid/view/View;)V
     .locals 6
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 888
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;->access$000(Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;)Lcom/netflix/mediaclient/ui/mdx/IMdxMiniPlayerViewCallbacks;
@@ -42,14 +38,11 @@
 
     move-result-object v2
 
-    .line 889
     if-nez v2, :cond_0
 
-    .line 911
     :goto_0
     return-void
 
-    .line 893
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
 
@@ -59,14 +52,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 894
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     check-cast v0, Lcom/netflix/mediaclient/ui/details/DetailsActivity;
 
-    .line 895
     invoke-interface {v2}, Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;->getId()Ljava/lang/String;
 
     move-result-object v1
@@ -81,7 +72,6 @@
 
     if-nez v1, :cond_1
 
-    .line 896
     invoke-interface {v2}, Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;->getPlayable()Lcom/netflix/mediaclient/servicemgr/interface_/Playable;
 
     move-result-object v1
@@ -100,7 +90,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 897
     :cond_1
     const-string/jumbo v0, "MdxMiniPlayerViews"
 
@@ -108,7 +97,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 898
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -117,7 +105,6 @@
 
     goto :goto_0
 
-    .line 903
     :cond_2
     invoke-interface {v2}, Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;->getType()Lcom/netflix/mediaclient/servicemgr/interface_/VideoType;
 
@@ -127,7 +114,6 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 904
     const-string/jumbo v0, "MdxMiniPlayerViews"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -150,7 +136,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 905
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -175,7 +160,6 @@
 
     goto :goto_0
 
-    .line 908
     :cond_3
     const-string/jumbo v0, "MdxMiniPlayerViews"
 
@@ -199,7 +183,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 909
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews$4;->this$0:Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/mdx/MdxMiniPlayerViews;->activity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;

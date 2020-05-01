@@ -15,8 +15,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$11;Ljava/lang/Runnable;Lcom/netflix/mediaclient/ui/home/AccountHandler;)V
     .locals 0
 
-    .prologue
-    .line 757
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$11$2;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$11;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$11$2;->val$timeout:Ljava/lang/Runnable;
@@ -33,8 +31,6 @@
 .method public onAutoLoginTokenCreated(Ljava/lang/String;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 761
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$11$2;->this$0:Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$11;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$11;->val$context:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -47,11 +43,9 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 762
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu$11$2;->val$handler:Lcom/netflix/mediaclient/ui/home/AccountHandler;
 
     invoke-virtual {v0, p1, p2}, Lcom/netflix/mediaclient/ui/home/AccountHandler;->handle(Ljava/lang/String;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 763
     return-void
 .end method

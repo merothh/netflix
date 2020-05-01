@@ -47,13 +47,10 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 42
     const-string/jumbo v0, "nf_msl"
 
     sput-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
-    .line 48
     const/4 v0, 0x0
 
     new-array v0, v0, [B
@@ -66,11 +63,8 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$DrmReadyCallback;)V
     .locals 2
 
-    .prologue
-    .line 91
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     const/4 v0, 0x6
 
     new-array v0, v0, [B
@@ -79,7 +73,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->init:[B
 
-    .line 68
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -88,7 +81,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mPlaybackInProgress:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 70
     new-instance v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager$PlaybackWatcherReceiver;
 
     const/4 v1, 0x0
@@ -97,24 +89,20 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mReceiver:Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager$PlaybackWatcherReceiver;
 
-    .line 77
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mCryptoSessionCounter:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 93
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->getLogTag()Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
-    .line 95
     if-nez p4, :cond_0
 
-    .line 96
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Calllback is null!"
@@ -123,47 +111,35 @@
 
     throw v0
 
-    .line 99
     :cond_0
     iput-object p2, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mCryptoProvider:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoProvider;
 
-    .line 100
     iput-object p4, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mCallback:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$DrmReadyCallback;
 
-    .line 101
     iput-object p3, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mConfiguration:Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;
 
-    .line 102
     iput-object p1, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mContext:Landroid/content/Context;
 
-    .line 103
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->createMediaDrm()Landroid/media/MediaDrm;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mDrm:Landroid/media/MediaDrm;
 
-    .line 104
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mDrm:Landroid/media/MediaDrm;
 
     invoke-virtual {v0, p0}, Landroid/media/MediaDrm;->setOnEventListener(Landroid/media/MediaDrm$OnEventListener;)V
 
-    .line 105
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->setSecurityLevel()V
 
-    .line 107
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->addReceiver()V
 
-    .line 108
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->showProperties()V
 
-    .line 110
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->load()V
 
-    .line 111
     return-void
 
-    .line 45
     nop
 
     :array_0
@@ -180,8 +156,6 @@
 .method static synthetic access$100()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 40
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -190,23 +164,18 @@
 .method private addReceiver()V
     .locals 3
 
-    .prologue
-    .line 132
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 133
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.PLAYER_LOCAL_PLAYBACK_STARTED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 134
     const-string/jumbo v1, "com.netflix.mediaclient.intent.action.PLAYER_LOCAL_PLAYBACK_ENDED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 136
     iget-object v1, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Landroid/support/v4/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroid/support/v4/content/LocalBroadcastManager;
@@ -217,46 +186,37 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/support/v4/content/LocalBroadcastManager;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V
 
-    .line 137
     return-void
 .end method
 
 .method private closeCryptoSession([B)Z
     .locals 3
 
-    .prologue
-    .line 203
     :try_start_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mDrm:Landroid/media/MediaDrm;
 
     invoke-virtual {v0, p1}, Landroid/media/MediaDrm;->closeSession([B)V
 
-    .line 204
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mCryptoSessionCounter:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 205
     const/4 v0, 0x1
 
-    .line 208
     :goto_0
     return v0
 
-    .line 206
     :catch_0
     move-exception v0
 
-    .line 207
     sget-object v1, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "closeCryptoSessions failed !"
 
     invoke-static {v1, v0, v2}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;)I
 
-    .line 208
     const/4 v0, 0x0
 
     goto :goto_0
@@ -265,8 +225,6 @@
 .method private detectAndReportMediaDrmResetWithCryptoOutput(II)V
     .locals 4
 
-    .prologue
-    .line 400
     invoke-static {}, Lcom/netflix/mediaclient/util/AndroidUtils;->isAndroid6AndHihger()Z
 
     move-result v0
@@ -277,7 +235,6 @@
 
     if-ge p2, p1, :cond_0
 
-    .line 401
     sget-object v0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;->INSTANCE:Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;
 
     sget-object v1, Lcom/netflix/mediaclient/service/error/crypto/ErrorSource;->msl:Lcom/netflix/mediaclient/service/error/crypto/ErrorSource;
@@ -288,7 +245,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;->mediaDrmFailure(Lcom/netflix/mediaclient/service/error/crypto/ErrorSource;Lcom/netflix/mediaclient/StatusCode;Ljava/lang/Throwable;)V
 
-    .line 403
     :cond_0
     return-void
 .end method
@@ -296,13 +252,10 @@
 .method private doGetKeyRequestData()Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;
     .locals 9
 
-    .prologue
     const/4 v7, 0x0
 
-    .line 648
     const/4 v1, 0x0
 
-    .line 651
     :try_start_0
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
@@ -310,14 +263,12 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 652
     new-instance v6, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;
 
     invoke-direct {v6}, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;-><init>()V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 653
     :try_start_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mDrm:Landroid/media/MediaDrm;
 
@@ -327,19 +278,16 @@
 
     iput-object v0, v6, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;->sessionId:[B
 
-    .line 654
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mCryptoSessionCounter:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
-    .line 655
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "createCryptoSession:: after open session"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 657
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mDrm:Landroid/media/MediaDrm;
 
     iget-object v1, v6, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;->sessionId:[B
@@ -358,21 +306,18 @@
 
     move-result-object v0
 
-    .line 658
     invoke-virtual {v0}, Landroid/media/MediaDrm$KeyRequest;->getData()[B
 
     move-result-object v0
 
     iput-object v0, v6, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;->keyRequestData:[B
 
-    .line 660
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 661
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -405,7 +350,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 664
     :cond_0
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
@@ -435,11 +379,9 @@
 
     move-object v0, v6
 
-    .line 671
     :goto_0
     return-object v0
 
-    .line 666
     :catch_0
     move-exception v0
 
@@ -449,7 +391,6 @@
 
     move-object v1, v8
 
-    .line 667
     :goto_1
     sget-object v2, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
@@ -459,7 +400,6 @@
 
     invoke-static {v2, v1, v3, v4}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 668
     sget-object v2, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;->INSTANCE:Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;
 
     sget-object v3, Lcom/netflix/mediaclient/service/error/crypto/ErrorSource;->msl:Lcom/netflix/mediaclient/service/error/crypto/ErrorSource;
@@ -470,7 +410,6 @@
 
     goto :goto_0
 
-    .line 666
     :catch_1
     move-exception v0
 
@@ -484,8 +423,6 @@
 .method protected static getCipherAlgorithm()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 580
     const-string/jumbo v0, "AES/CBC/NoPadding"
 
     return-object v0
@@ -494,8 +431,6 @@
 .method protected static getMacAlgorithm()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 590
     const-string/jumbo v0, "HmacSHA256"
 
     return-object v0
@@ -504,13 +439,10 @@
 .method private getPendingCryptoSession(Lcom/netflix/msl/keyx/WidevineKeyRequestData;)Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;
     .locals 5
 
-    .prologue
-    .line 537
     instance-of v0, p1, Lcom/netflix/mediaclient/service/msl/client/AndroidWidevineKeyRequestData;
 
     if-nez v0, :cond_0
 
-    .line 538
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -538,15 +470,12 @@
     :cond_0
     move-object v0, p1
 
-    .line 541
     check-cast v0, Lcom/netflix/mediaclient/service/msl/client/AndroidWidevineKeyRequestData;
 
-    .line 543
     iget-object v1, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mPendingKeyRequestData:Lcom/netflix/mediaclient/service/msl/client/AndroidWidevineKeyRequestData;
 
     if-eq v1, v0, :cond_1
 
-    .line 544
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -583,21 +512,17 @@
 
     throw v0
 
-    .line 546
     :cond_1
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mPendingKeyRequestData:Lcom/netflix/mediaclient/service/msl/client/AndroidWidevineKeyRequestData;
 
-    .line 549
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/msl/client/AndroidWidevineKeyRequestData;->getKeyRequestDataCryptoSession()Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;
 
     move-result-object v1
 
-    .line 551
     if-nez v1, :cond_2
 
-    .line 552
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "updateKeyResponse:: pending crypto session can NOT be null!"
@@ -606,7 +531,6 @@
 
     throw v0
 
-    .line 555
     :cond_2
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/msl/client/AndroidWidevineKeyRequestData;->getKeyRequestData()Ljava/lang/String;
 
@@ -632,21 +556,18 @@
 
     if-nez v2, :cond_4
 
-    .line 557
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 558
     sget-object v2, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v3, "updateKeyResponse:: Key request is NOT as expected!"
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 559
     sget-object v2, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -683,7 +604,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->dumpVerbose(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 560
     sget-object v2, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -716,12 +636,10 @@
 
     invoke-static {v2, v0}, Lcom/netflix/mediaclient/Log;->dumpVerbose(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 567
     :cond_3
     :goto_0
     return-object v1
 
-    .line 564
     :cond_4
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
@@ -735,8 +653,6 @@
 .method private removeReceiver()V
     .locals 2
 
-    .prologue
-    .line 140
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/support/v4/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroid/support/v4/content/LocalBroadcastManager;
@@ -747,15 +663,12 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v4/content/LocalBroadcastManager;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 141
     return-void
 .end method
 
 .method private removeSessionKeys(Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;)V
     .locals 4
 
-    .prologue
-    .line 223
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mDrm:Landroid/media/MediaDrm;
@@ -766,24 +679,20 @@
 
     if-eqz v0, :cond_0
 
-    .line 225
     iget-object v0, p1, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;->keySetId:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;
 
     if-nez v0, :cond_1
 
-    .line 226
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "Nothing to remove! Skip!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 236
     :cond_0
     :goto_0
     return-void
 
-    .line 228
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
@@ -791,7 +700,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 230
     :try_start_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mDrm:Landroid/media/MediaDrm;
 
@@ -803,11 +711,9 @@
 
     goto :goto_0
 
-    .line 231
     :catch_0
     move-exception v0
 
-    .line 232
     sget-object v1, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "removeSessionKeys "
@@ -824,30 +730,24 @@
 .method private reportError(Lcom/netflix/mediaclient/StatusCode;Ljava/lang/Throwable;)V
     .locals 2
 
-    .prologue
-    .line 696
     sget-object v0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;->INSTANCE:Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;
 
     sget-object v1, Lcom/netflix/mediaclient/service/error/crypto/ErrorSource;->msl:Lcom/netflix/mediaclient/service/error/crypto/ErrorSource;
 
     invoke-virtual {v0, v1, p1, p2}, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;->mediaDrmFailure(Lcom/netflix/mediaclient/service/error/crypto/ErrorSource;Lcom/netflix/mediaclient/StatusCode;Ljava/lang/Throwable;)V
 
-    .line 697
     return-void
 .end method
 
 .method private showProperties()V
     .locals 4
 
-    .prologue
-    .line 149
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 150
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -878,7 +778,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 151
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -909,7 +808,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 152
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -940,7 +838,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 153
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -975,7 +872,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 154
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1006,7 +902,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1037,7 +932,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 158
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1068,7 +962,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 159
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1103,7 +996,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 161
     :cond_0
     return-void
 .end method
@@ -1113,8 +1005,6 @@
 .method public closeCryptoSession(Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;)Z
     .locals 3
 
-    .prologue
-    .line 189
     if-eqz p1, :cond_1
 
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mDrm:Landroid/media/MediaDrm;
@@ -1125,14 +1015,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 190
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 191
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1155,7 +1043,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 194
     :cond_0
     iget-object v0, p1, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;->sessionId:[B
 
@@ -1163,7 +1050,6 @@
 
     move-result v0
 
-    .line 196
     :goto_0
     return v0
 
@@ -1176,28 +1062,22 @@
 .method protected declared-synchronized closeSessionAndRemoveKeys(Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;)V
     .locals 1
 
-    .prologue
-    .line 216
     monitor-enter p0
 
     if-eqz p1, :cond_0
 
-    .line 217
     :try_start_0
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->removeSessionKeys(Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;)V
 
-    .line 218
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->closeCryptoSession(Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 220
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 216
     :catchall_0
     move-exception v0
 
@@ -1209,8 +1089,6 @@
 .method protected createMediaDrm()Landroid/media/MediaDrm;
     .locals 2
 
-    .prologue
-    .line 119
     new-instance v0, Landroid/media/MediaDrm;
 
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->getSchemeUUID()Ljava/util/UUID;
@@ -1228,11 +1106,8 @@
         value = 0x17
     .end annotation
 
-    .prologue
-    .line 262
     const/4 v0, 0x0
 
-    .line 265
     :try_start_0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->doDecrypt(Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;[B[B)[B
     :try_end_0
@@ -1240,39 +1115,32 @@
 
     move-result-object v0
 
-    .line 276
     :cond_0
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 280
     :goto_1
     return-object v0
 
-    .line 266
     :catch_0
     move-exception v1
 
-    .line 269
     invoke-static {}, Lcom/netflix/mediaclient/util/AndroidUtils;->isAndroid6AndHihger()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 270
     instance-of v2, v1, Landroid/media/MediaDrmResetException;
 
     if-eqz v2, :cond_0
 
-    .line 271
     sget-object v2, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_MEDIADRM_RESET:Lcom/netflix/mediaclient/StatusCode;
 
     invoke-direct {p0, v2, v1}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->reportError(Lcom/netflix/mediaclient/StatusCode;Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 280
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->EMPTY_RETURN_ARRAY:[B
 
@@ -1282,32 +1150,26 @@
 .method public declared-synchronized destroy()V
     .locals 1
 
-    .prologue
-    .line 180
     monitor-enter p0
 
     :try_start_0
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->removeReceiver()V
 
-    .line 181
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mDrm:Landroid/media/MediaDrm;
 
     if-eqz v0, :cond_0
 
-    .line 182
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mDrm:Landroid/media/MediaDrm;
 
     invoke-virtual {v0}, Landroid/media/MediaDrm;->release()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 184
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 180
     :catchall_0
     move-exception v0
 
@@ -1319,33 +1181,26 @@
 .method protected doDecrypt(Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;[B[B)[B
     .locals 5
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 285
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->findMediaDrmCryptoSession(Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;)Landroid/media/MediaDrm$CryptoSession;
 
     move-result-object v1
 
-    .line 286
     if-nez v1, :cond_0
 
-    .line 287
     sget-object v1, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "decrypt - session NOT found!"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 305
     :goto_0
     return-object v0
 
-    .line 290
     :cond_0
     if-nez p2, :cond_1
 
-    .line 291
     sget-object v1, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "decrypt - kce is null!"
@@ -1354,7 +1209,6 @@
 
     goto :goto_0
 
-    .line 297
     :cond_1
     :try_start_0
     invoke-virtual {p2}, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;->get()[B
@@ -1365,7 +1219,6 @@
 
     move-result-object v1
 
-    .line 298
     const/16 v2, 0x10
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/util/CryptoUtils;->unpadPerPKCS5Padding([BI)[B
@@ -1376,11 +1229,9 @@
 
     goto :goto_0
 
-    .line 299
     :catch_0
     move-exception v1
 
-    .line 300
     sget-object v2, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v3, "Failed to decrypt "
@@ -1391,7 +1242,6 @@
 
     invoke-static {v2, v1, v3, v4}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 301
     sget-object v2, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_MEDIADRM_DECRYPT:Lcom/netflix/mediaclient/StatusCode;
 
     invoke-direct {p0, v2, v1}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->reportError(Lcom/netflix/mediaclient/StatusCode;Ljava/lang/Throwable;)V
@@ -1402,37 +1252,30 @@
 .method protected doEncrypt(Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;[B[B)[B
     .locals 10
 
-    .prologue
     const/4 v0, 0x0
 
     const/16 v9, 0x4000
 
     const/4 v3, 0x0
 
-    .line 336
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->findMediaDrmCryptoSession(Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;)Landroid/media/MediaDrm$CryptoSession;
 
     move-result-object v4
 
-    .line 337
     if-nez v4, :cond_0
 
-    .line 338
     sget-object v1, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "encrypt - session NOT found!"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 392
     :goto_0
     return-object v0
 
-    .line 341
     :cond_0
     if-nez p2, :cond_1
 
-    .line 342
     sget-object v1, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "encrypt - kce is null!"
@@ -1441,22 +1284,18 @@
 
     goto :goto_0
 
-    .line 348
     :cond_1
     :try_start_0
     array-length v5, p3
 
-    .line 349
     if-gt v5, v9, :cond_3
 
-    .line 351
     const/16 v1, 0x10
 
     invoke-static {p3, v1}, Lcom/netflix/mediaclient/util/CryptoUtils;->padPerPKCS5Padding([BI)[B
 
     move-result-object v1
 
-    .line 352
     invoke-virtual {p2}, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;->get()[B
 
     move-result-object v2
@@ -1465,7 +1304,6 @@
 
     move-result-object v1
 
-    .line 384
     :cond_2
     :goto_1
     array-length v2, v1
@@ -1474,10 +1312,8 @@
 
     move-object v0, v1
 
-    .line 392
     goto :goto_0
 
-    .line 355
     :cond_3
     sget-object v1, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
@@ -1485,19 +1321,16 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 357
     rem-int/lit8 v1, v5, 0x10
 
     rsub-int/lit8 v1, v1, 0x10
 
     add-int/2addr v1, v5
 
-    .line 358
     new-array v1, v1, [B
 
     move v2, v3
 
-    .line 362
     :cond_4
     add-int/lit16 v6, v2, 0x4000
 
@@ -1505,7 +1338,6 @@
 
     move-result-object v6
 
-    .line 363
     invoke-virtual {p2}, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;->get()[B
 
     move-result-object v7
@@ -1514,7 +1346,6 @@
 
     move-result-object v6
 
-    .line 364
     const/16 v7, 0x3ff0
 
     const/16 v8, 0x4000
@@ -1523,34 +1354,28 @@
 
     move-result-object p4
 
-    .line 367
     const/4 v7, 0x0
 
     const/16 v8, 0x4000
 
     invoke-static {v6, v7, v1, v2, v8}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 368
     add-int/lit16 v2, v2, 0x4000
 
-    .line 369
     sub-int v6, v5, v2
 
     if-gt v6, v9, :cond_4
 
-    .line 371
     sub-int v6, v5, v2
 
     if-lez v6, :cond_2
 
-    .line 372
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v6
 
     if-eqz v6, :cond_5
 
-    .line 373
     sget-object v6, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1585,20 +1410,17 @@
 
     invoke-static {v6, v7}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 376
     :cond_5
     invoke-static {p3, v2, v5}, Ljava/util/Arrays;->copyOfRange([BII)[B
 
     move-result-object v6
 
-    .line 377
     const/16 v7, 0x10
 
     invoke-static {v6, v7}, Lcom/netflix/mediaclient/util/CryptoUtils;->padPerPKCS5Padding([BI)[B
 
     move-result-object v6
 
-    .line 378
     invoke-virtual {p2}, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;->get()[B
 
     move-result-object v7
@@ -1607,7 +1429,6 @@
 
     move-result-object v4
 
-    .line 379
     const/4 v6, 0x0
 
     array-length v7, v4
@@ -1618,11 +1439,9 @@
 
     goto :goto_1
 
-    .line 386
     :catch_0
     move-exception v1
 
-    .line 387
     sget-object v2, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v4, "Failed to encrypt "
@@ -1631,7 +1450,6 @@
 
     invoke-static {v2, v1, v4, v3}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 388
     sget-object v2, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_MEDIADRM_ENCRYPT:Lcom/netflix/mediaclient/StatusCode;
 
     invoke-direct {p0, v2, v1}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->reportError(Lcom/netflix/mediaclient/StatusCode;Ljava/lang/Throwable;)V
@@ -1642,18 +1460,14 @@
 .method protected dumpKeyReqyest([B)V
     .locals 3
 
-    .prologue
-    .line 490
     if-eqz p1, :cond_1
 
-    .line 491
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 492
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1680,12 +1494,10 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 497
     :cond_0
     :goto_0
     return-void
 
-    .line 495
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
@@ -1702,18 +1514,14 @@
         value = 0x17
     .end annotation
 
-    .prologue
-    .line 312
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "BaseCryptoManager::encrypt..."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 313
     const/4 v0, 0x0
 
-    .line 316
     :try_start_0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->doEncrypt(Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;[B[B)[B
     :try_end_0
@@ -1721,39 +1529,32 @@
 
     move-result-object v0
 
-    .line 327
     :cond_0
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 331
     :goto_1
     return-object v0
 
-    .line 317
     :catch_0
     move-exception v1
 
-    .line 320
     invoke-static {}, Lcom/netflix/mediaclient/util/AndroidUtils;->isAndroid6AndHihger()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 321
     instance-of v2, v1, Landroid/media/MediaDrmResetException;
 
     if-eqz v2, :cond_0
 
-    .line 322
     sget-object v2, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_MEDIADRM_RESET:Lcom/netflix/mediaclient/StatusCode;
 
     invoke-direct {p0, v2, v1}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->reportError(Lcom/netflix/mediaclient/StatusCode;Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 331
     :cond_1
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->EMPTY_RETURN_ARRAY:[B
 
@@ -1763,24 +1564,18 @@
 .method protected findMediaDrmCryptoSession(Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;)Landroid/media/MediaDrm$CryptoSession;
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 245
     if-nez p1, :cond_0
 
-    .line 254
     :goto_0
     return-object v0
 
-    .line 249
     :cond_0
     iget-object v1, p1, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;->sessionId:[B
 
-    .line 250
     if-nez v1, :cond_1
 
-    .line 251
     sget-object v1, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1805,7 +1600,6 @@
 
     goto :goto_0
 
-    .line 254
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mDrm:Landroid/media/MediaDrm;
 
@@ -1827,8 +1621,6 @@
 .method public declared-synchronized getKeyRequestData()Lcom/netflix/msl/keyx/WidevineKeyRequestData;
     .locals 2
 
-    .prologue
-    .line 627
     monitor-enter p0
 
     :try_start_0
@@ -1836,22 +1628,18 @@
 
     if-nez v0, :cond_1
 
-    .line 628
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "Key request does not exist, create it!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 629
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->doGetKeyRequestData()Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;
 
     move-result-object v0
 
-    .line 630
     if-nez v0, :cond_0
 
-    .line 631
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "Crypto session can not be null after "
@@ -1862,7 +1650,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 627
     :catchall_0
     move-exception v0
 
@@ -1870,7 +1657,6 @@
 
     throw v0
 
-    .line 634
     :cond_0
     :try_start_1
     new-instance v1, Lcom/netflix/mediaclient/service/msl/client/AndroidWidevineKeyRequestData;
@@ -1879,7 +1665,6 @@
 
     iput-object v1, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mPendingKeyRequestData:Lcom/netflix/mediaclient/service/msl/client/AndroidWidevineKeyRequestData;
 
-    .line 640
     :goto_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mPendingKeyRequestData:Lcom/netflix/mediaclient/service/msl/client/AndroidWidevineKeyRequestData;
     :try_end_1
@@ -1889,7 +1674,6 @@
 
     return-object v0
 
-    .line 637
     :cond_1
     :try_start_2
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
@@ -1918,31 +1702,25 @@
 .method public onEvent(Landroid/media/MediaDrm;[BII[B)V
     .locals 3
 
-    .prologue
-    .line 466
     const/4 v0, 0x1
 
     if-ne p3, v0, :cond_1
 
-    .line 467
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "Provisioning is required"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 487
     :cond_0
     :goto_0
     return-void
 
-    .line 468
     :cond_1
     const/4 v0, 0x2
 
     if-ne p3, v0, :cond_2
 
-    .line 469
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "MediaDrm event: Key required"
@@ -1951,13 +1729,11 @@
 
     goto :goto_0
 
-    .line 470
     :cond_2
     const/4 v0, 0x3
 
     if-ne p3, v0, :cond_3
 
-    .line 471
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "MediaDrm event: Key expired"
@@ -1966,20 +1742,17 @@
 
     goto :goto_0
 
-    .line 472
     :cond_3
     const/4 v0, 0x4
 
     if-ne p3, v0, :cond_4
 
-    .line 473
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 474
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2004,38 +1777,32 @@
 
     goto :goto_0
 
-    .line 476
     :cond_4
     const/4 v0, 0x5
 
     if-ne p3, v0, :cond_6
 
-    .line 477
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    .line 478
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "EVENT_SESSION_RECLAIMED event."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 480
     :cond_5
     invoke-direct {p0, p2}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->closeCryptoSession([B)Z
 
-    .line 481
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mCallback:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$DrmReadyCallback;
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$DrmReadyCallback;->drmResoureReclaimed()V
 
     goto :goto_0
 
-    .line 483
     :cond_6
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -2043,7 +1810,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 484
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2072,8 +1838,6 @@
 .method protected declared-synchronized reset()V
     .locals 0
 
-    .prologue
-    .line 168
     monitor-enter p0
 
     monitor-exit p0
@@ -2084,38 +1848,29 @@
 .method public resetCryptoFactory()V
     .locals 2
 
-    .prologue
-    .line 172
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "resetCryptoFactory"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 173
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->reset()V
 
-    .line 174
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->init()V
 
-    .line 175
     return-void
 .end method
 
 .method public restoreCryptoSession(Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;)Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;
     .locals 4
 
-    .prologue
-    .line 678
     :try_start_0
     new-instance v0, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;
 
     invoke-direct {v0}, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;-><init>()V
 
-    .line 679
     iput-object p1, v0, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;->keySetId:Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;
 
-    .line 680
     iget-object v1, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mDrm:Landroid/media/MediaDrm;
 
     invoke-virtual {v1}, Landroid/media/MediaDrm;->openSession()[B
@@ -2124,7 +1879,6 @@
 
     iput-object v1, v0, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;->sessionId:[B
 
-    .line 681
     iget-object v1, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mDrm:Landroid/media/MediaDrm;
 
     iget-object v2, v0, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;->sessionId:[B
@@ -2137,14 +1891,12 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/media/MediaDrm;->restoreKeys([B[B)V
 
-    .line 683
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 684
     sget-object v1, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2171,23 +1923,19 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 690
     :cond_0
     :goto_0
     return-object v0
 
-    .line 688
     :catch_0
     move-exception v0
 
-    .line 689
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "Failed to restore keys to DRM session"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 690
     const/4 v0, 0x0
 
     goto :goto_0
@@ -2199,33 +1947,26 @@
 .method public sign(Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;[B)[B
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 408
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->findMediaDrmCryptoSession(Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;)Landroid/media/MediaDrm$CryptoSession;
 
     move-result-object v1
 
-    .line 409
     if-nez v1, :cond_0
 
-    .line 410
     sget-object v1, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "sign - session NOT found!"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 427
     :goto_0
     return-object v0
 
-    .line 414
     :cond_0
     if-nez p2, :cond_1
 
-    .line 415
     sget-object v1, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "sign - kch is null!"
@@ -2234,7 +1975,6 @@
 
     goto :goto_0
 
-    .line 420
     :cond_1
     :try_start_0
     invoke-virtual {p2}, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;->get()[B
@@ -2249,11 +1989,9 @@
 
     goto :goto_0
 
-    .line 421
     :catch_0
     move-exception v0
 
-    .line 422
     sget-object v1, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "Failed to sign message "
@@ -2264,12 +2002,10 @@
 
     invoke-static {v1, v0, v2, v3}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 423
     sget-object v1, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_MEDIADRM_SIGN:Lcom/netflix/mediaclient/StatusCode;
 
     invoke-direct {p0, v1, v0}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->reportError(Lcom/netflix/mediaclient/StatusCode;Ljava/lang/Throwable;)V
 
-    .line 424
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->EMPTY_RETURN_ARRAY:[B
 
     goto :goto_0
@@ -2278,10 +2014,8 @@
 .method public declared-synchronized updateKeyResponse(Lcom/netflix/msl/keyx/WidevineKeyRequestData;[BLcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;)Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 502
     monitor-enter p0
 
     :try_start_0
@@ -2293,7 +2027,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 507
     :try_start_1
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->getPendingCryptoSession(Lcom/netflix/msl/keyx/WidevineKeyRequestData;)Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;
     :try_end_1
@@ -2302,7 +2035,6 @@
 
     move-result-object v0
 
-    .line 508
     :try_start_2
     iget-object v2, p0, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->mDrm:Landroid/media/MediaDrm;
 
@@ -2312,17 +2044,14 @@
 
     move-result-object v2
 
-    .line 509
     sget-object v3, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v4, "Save keys..."
 
     invoke-static {v3, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 511
     if-nez v2, :cond_0
 
-    .line 513
     sget-object v2, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v3, "Something is wrong, this should not happen! KeySetId is null!"
@@ -2334,13 +2063,11 @@
 
     move-object v0, v1
 
-    .line 526
     :goto_0
     monitor-exit p0
 
     return-object v0
 
-    .line 518
     :cond_0
     :try_start_3
     new-instance v1, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;
@@ -2354,11 +2081,9 @@
 
     goto :goto_0
 
-    .line 521
     :catch_0
     move-exception v1
 
-    .line 522
     :goto_1
     :try_start_4
     sget-object v2, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
@@ -2371,7 +2096,6 @@
 
     invoke-static {v2, v1, v3, v4}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 523
     sget-object v2, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;->INSTANCE:Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;
 
     sget-object v3, Lcom/netflix/mediaclient/service/error/crypto/ErrorSource;->msl:Lcom/netflix/mediaclient/service/error/crypto/ErrorSource;
@@ -2384,7 +2108,6 @@
 
     goto :goto_0
 
-    .line 502
     :catchall_0
     move-exception v0
 
@@ -2392,7 +2115,6 @@
 
     throw v0
 
-    .line 521
     :catch_1
     move-exception v0
 
@@ -2408,34 +2130,27 @@
 .method public verify(Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;[B[B)Z
     .locals 5
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 433
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->findMediaDrmCryptoSession(Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$CryptoSession;)Landroid/media/MediaDrm$CryptoSession;
 
     move-result-object v1
 
-    .line 434
     if-nez v1, :cond_1
 
-    .line 435
     sget-object v1, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "verify - session NOT found!"
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 456
     :cond_0
     :goto_0
     return v0
 
-    .line 439
     :cond_1
     if-nez p2, :cond_2
 
-    .line 440
     sget-object v1, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "verify - kch is null!"
@@ -2444,7 +2159,6 @@
 
     goto :goto_0
 
-    .line 446
     :cond_2
     :try_start_0
     invoke-virtual {p2}, Lcom/netflix/mediaclient/service/configuration/crypto/CryptoManager$KeyId;->get()[B
@@ -2457,14 +2171,12 @@
 
     move-result v0
 
-    .line 453
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 454
     sget-object v1, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2489,11 +2201,9 @@
 
     goto :goto_0
 
-    .line 447
     :catch_0
     move-exception v1
 
-    .line 448
     sget-object v2, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v3, "Failed to verify message "
@@ -2502,7 +2212,6 @@
 
     invoke-static {v2, v1, v3, v4}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 449
     sget-object v2, Lcom/netflix/mediaclient/StatusCode;->DRM_FAILURE_MEDIADRM_VERIFY:Lcom/netflix/mediaclient/StatusCode;
 
     invoke-direct {p0, v2, v1}, Lcom/netflix/mediaclient/service/configuration/crypto/BaseCryptoManager;->reportError(Lcom/netflix/mediaclient/StatusCode;Ljava/lang/Throwable;)V

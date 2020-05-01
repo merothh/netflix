@@ -53,41 +53,32 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 394
     sget-object v0, Lio/realm/BaseRealm;->applicationContext:Landroid/content/Context;
 
     invoke-direct {p0, v0}, Lio/realm/RealmConfiguration$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 395
     return-void
 .end method
 
 .method constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .prologue
-    .line 397
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 381
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lio/realm/RealmConfiguration$Builder;->modules:Ljava/util/HashSet;
 
-    .line 382
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lio/realm/RealmConfiguration$Builder;->debugSchema:Ljava/util/HashSet;
 
-    .line 398
     if-nez p1, :cond_0
 
-    .line 399
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "Call `Realm.init(Context)` before creating a RealmConfiguration"
@@ -96,64 +87,51 @@
 
     throw v0
 
-    .line 401
     :cond_0
     invoke-static {p1}, Lio/realm/internal/RealmCore;->loadLibrary(Landroid/content/Context;)V
 
-    .line 402
     invoke-direct {p0, p1}, Lio/realm/RealmConfiguration$Builder;->initializeBuilder(Landroid/content/Context;)V
 
-    .line 403
     return-void
 .end method
 
 .method private initializeBuilder(Landroid/content/Context;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 407
     invoke-virtual {p1}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
 
     move-result-object v0
 
     iput-object v0, p0, Lio/realm/RealmConfiguration$Builder;->directory:Ljava/io/File;
 
-    .line 408
     const-string/jumbo v0, "default.realm"
 
     iput-object v0, p0, Lio/realm/RealmConfiguration$Builder;->fileName:Ljava/lang/String;
 
-    .line 409
     iput-object v2, p0, Lio/realm/RealmConfiguration$Builder;->key:[B
 
-    .line 410
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lio/realm/RealmConfiguration$Builder;->schemaVersion:J
 
-    .line 411
     iput-object v2, p0, Lio/realm/RealmConfiguration$Builder;->migration:Lio/realm/RealmMigration;
 
-    .line 412
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lio/realm/RealmConfiguration$Builder;->deleteRealmIfMigrationNeeded:Z
 
-    .line 413
     sget-object v0, Lio/realm/internal/SharedRealm$Durability;->FULL:Lio/realm/internal/SharedRealm$Durability;
 
     iput-object v0, p0, Lio/realm/RealmConfiguration$Builder;->durability:Lio/realm/internal/SharedRealm$Durability;
 
-    .line 414
     invoke-static {}, Lio/realm/RealmConfiguration;->access$000()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 415
     iget-object v0, p0, Lio/realm/RealmConfiguration$Builder;->modules:Ljava/util/HashSet;
 
     invoke-static {}, Lio/realm/RealmConfiguration;->access$000()Ljava/lang/Object;
@@ -162,7 +140,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 417
     :cond_0
     return-void
 .end method
@@ -172,8 +149,6 @@
 .method public build()Lio/realm/RealmConfiguration;
     .locals 14
 
-    .prologue
-    .line 652
     iget-object v0, p0, Lio/realm/RealmConfiguration$Builder;->rxFactory:Lio/realm/rx/RxObservableFactory;
 
     if-nez v0, :cond_0
@@ -184,14 +159,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 653
     new-instance v0, Lio/realm/rx/RealmObservableFactory;
 
     invoke-direct {v0}, Lio/realm/rx/RealmObservableFactory;-><init>()V
 
     iput-object v0, p0, Lio/realm/RealmConfiguration$Builder;->rxFactory:Lio/realm/rx/RxObservableFactory;
 
-    .line 656
     :cond_0
     new-instance v0, Lio/realm/RealmConfiguration;
 
@@ -207,7 +180,6 @@
 
     invoke-direct {v3, v4, v5}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 658
     invoke-static {v3}, Lio/realm/RealmConfiguration;->getCanonicalPath(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object v3
@@ -228,7 +200,6 @@
 
     iget-object v12, p0, Lio/realm/RealmConfiguration$Builder;->debugSchema:Ljava/util/HashSet;
 
-    .line 665
     invoke-static {v11, v12}, Lio/realm/RealmConfiguration;->createSchemaMediator(Ljava/util/Set;Ljava/util/Set;)Lio/realm/internal/RealmProxyMediator;
 
     move-result-object v11
@@ -245,8 +216,6 @@
 .method public name(Ljava/lang/String;)Lio/realm/RealmConfiguration$Builder;
     .locals 2
 
-    .prologue
-    .line 423
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
@@ -255,7 +224,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 424
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -265,26 +233,21 @@
 
     throw v0
 
-    .line 427
     :cond_1
     iput-object p1, p0, Lio/realm/RealmConfiguration$Builder;->fileName:Ljava/lang/String;
 
-    .line 428
     return-object p0
 .end method
 
 .method public schemaVersion(J)Lio/realm/RealmConfiguration$Builder;
     .locals 3
 
-    .prologue
-    .line 481
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0
 
     if-gez v0, :cond_0
 
-    .line 482
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -309,10 +272,8 @@
 
     throw v0
 
-    .line 484
     :cond_0
     iput-wide p1, p0, Lio/realm/RealmConfiguration$Builder;->schemaVersion:J
 
-    .line 485
     return-object p0
 .end method

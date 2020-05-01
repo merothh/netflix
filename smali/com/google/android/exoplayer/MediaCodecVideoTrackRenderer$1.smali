@@ -22,8 +22,6 @@
 .method constructor <init>(Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer;IIIF)V
     .locals 0
 
-    .prologue
-    .line 562
     iput-object p1, p0, Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer$1;->this$0:Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer;
 
     iput p2, p0, Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer$1;->val$currentWidth:I
@@ -44,8 +42,6 @@
 .method public run()V
     .locals 5
 
-    .prologue
-    .line 565
     iget-object v0, p0, Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer$1;->this$0:Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer;
 
     invoke-static {v0}, Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer;->access$000(Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer;)Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer$EventListener;
@@ -62,6 +58,5 @@
 
     invoke-interface {v0, v1, v2, v3, v4}, Lcom/google/android/exoplayer/MediaCodecVideoTrackRenderer$EventListener;->onVideoSizeChanged(IIIF)V
 
-    .line 567
     return-void
 .end method

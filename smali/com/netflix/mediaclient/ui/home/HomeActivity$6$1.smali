@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/home/HomeActivity$6;)V
     .locals 0
 
-    .prologue
-    .line 646
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/home/HomeActivity$6$1;->this$1:Lcom/netflix/mediaclient/ui/home/HomeActivity$6;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/servicemgr/SimpleManagerCallback;-><init>()V
@@ -25,8 +23,6 @@
 .method public onOnRampEligibilityAction(Lcom/netflix/model/leafs/OnRampEligibility;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 4
 
-    .prologue
-    .line 649
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/HomeActivity$6$1;->this$1:Lcom/netflix/mediaclient/ui/home/HomeActivity$6;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/home/HomeActivity$6;->this$0:Lcom/netflix/mediaclient/ui/home/HomeActivity;
@@ -35,7 +31,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/home/HomeActivity;->access$1002(Lcom/netflix/mediaclient/ui/home/HomeActivity;Z)Z
 
-    .line 650
     if-eqz p2, :cond_0
 
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isSucces()Z
@@ -52,7 +47,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 651
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/HomeActivity$6$1;->this$1:Lcom/netflix/mediaclient/ui/home/HomeActivity$6;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/home/HomeActivity$6;->this$0:Lcom/netflix/mediaclient/ui/home/HomeActivity;
@@ -69,11 +63,9 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/home/HomeActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 655
     :goto_0
     return-void
 
-    .line 653
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/HomeActivity$6$1;->this$1:Lcom/netflix/mediaclient/ui/home/HomeActivity$6;
 

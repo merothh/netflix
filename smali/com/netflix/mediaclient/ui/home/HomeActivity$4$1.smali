@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/home/HomeActivity$4;)V
     .locals 0
 
-    .prologue
-    .line 224
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/home/HomeActivity$4$1;->this$1:Lcom/netflix/mediaclient/ui/home/HomeActivity$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 228
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/HomeActivity$4$1;->this$1:Lcom/netflix/mediaclient/ui/home/HomeActivity$4;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/home/HomeActivity$4;->this$0:Lcom/netflix/mediaclient/ui/home/HomeActivity;
@@ -42,7 +38,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 229
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/home/HomeActivity$4$1;->this$1:Lcom/netflix/mediaclient/ui/home/HomeActivity$4;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/home/HomeActivity$4;->this$0:Lcom/netflix/mediaclient/ui/home/HomeActivity;
@@ -55,7 +50,6 @@
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/home/StandardSlidingMenu;->markNotificationsAsRead()V
 
-    .line 231
     :cond_0
     return-void
 .end method

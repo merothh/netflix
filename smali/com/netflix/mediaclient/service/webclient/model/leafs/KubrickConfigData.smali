@@ -20,11 +20,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 8
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/KubrickConfigData;->cellInt:I
@@ -37,13 +34,10 @@
 .method public getCell()Lcom/netflix/mediaclient/service/webclient/model/leafs/KubrickConfigData$KubrickCell;
     .locals 1
 
-    .prologue
-    .line 35
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/KubrickConfigData;->cellEnum:Lcom/netflix/mediaclient/service/webclient/model/leafs/KubrickConfigData$KubrickCell;
 
     if-nez v0, :cond_0
 
-    .line 36
     iget v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/KubrickConfigData;->cellInt:I
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/webclient/model/leafs/KubrickConfigData$KubrickCell;->access$000(I)Lcom/netflix/mediaclient/service/webclient/model/leafs/KubrickConfigData$KubrickCell;
@@ -52,7 +46,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/KubrickConfigData;->cellEnum:Lcom/netflix/mediaclient/service/webclient/model/leafs/KubrickConfigData$KubrickCell;
 
-    .line 38
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/webclient/model/leafs/KubrickConfigData;->cellEnum:Lcom/netflix/mediaclient/service/webclient/model/leafs/KubrickConfigData$KubrickCell;
 

@@ -18,29 +18,22 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 25
     invoke-direct {p0}, Lcom/netflix/model/leafs/TrackableListSummary;-><init>()V
 
-    .line 26
     return-void
 .end method
 
 .method protected constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
-    .prologue
-    .line 59
     invoke-direct {p0, p1}, Lcom/netflix/model/leafs/TrackableListSummary;-><init>(Landroid/os/Parcel;)V
 
-    .line 60
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/model/leafs/SearchTrackableListSummary;->reference:Ljava/lang/String;
 
-    .line 61
     return-void
 .end method
 
@@ -49,8 +42,6 @@
 .method public getReferenceId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 71
     iget-object v0, p0, Lcom/netflix/model/leafs/SearchTrackableListSummary;->reference:Ljava/lang/String;
 
     return-object v0
@@ -59,21 +50,16 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 5
 
-    .prologue
-    .line 30
     invoke-super {p0, p1}, Lcom/netflix/model/leafs/TrackableListSummary;->populate(Lcom/google/gson/JsonElement;)V
 
-    .line 31
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 32
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 33
     const-string/jumbo v1, "SearchTrackableListSummary"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -96,7 +82,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 35
     :cond_0
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -119,7 +104,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 36
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -142,7 +126,6 @@
 
     goto :goto_0
 
-    .line 37
     :pswitch_0
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -158,7 +141,6 @@
 
     goto :goto_0
 
-    .line 36
     :pswitch_1
     const-string/jumbo v4, "reference"
 
@@ -172,11 +154,9 @@
 
     goto :goto_1
 
-    .line 40
     :cond_2
     return-void
 
-    .line 36
     nop
 
     :pswitch_data_0
@@ -193,18 +173,14 @@
 .method public set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 44
     invoke-super {p0, p1, p2}, Lcom/netflix/model/leafs/TrackableListSummary;->set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
 
-    .line 45
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 46
     const-string/jumbo v1, "SearchTrackableListSummary"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -227,7 +203,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 48
     :cond_0
     const/4 v1, -0x1
 
@@ -241,11 +216,9 @@
     :goto_0
     packed-switch v1, :pswitch_data_1
 
-    .line 55
     :goto_1
     return v0
 
-    .line 48
     :pswitch_0
     const-string/jumbo v2, "reference"
 
@@ -259,7 +232,6 @@
 
     goto :goto_0
 
-    .line 50
     :pswitch_1
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;
 
@@ -267,12 +239,10 @@
 
     iput-object v0, p0, Lcom/netflix/model/leafs/SearchTrackableListSummary;->reference:Ljava/lang/String;
 
-    .line 55
     const/4 v0, 0x1
 
     goto :goto_1
 
-    .line 48
     nop
 
     :pswitch_data_0
@@ -289,15 +259,11 @@
 .method protected writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    .prologue
-    .line 65
     invoke-super {p0, p1, p2}, Lcom/netflix/model/leafs/TrackableListSummary;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 66
     iget-object v0, p0, Lcom/netflix/model/leafs/SearchTrackableListSummary;->reference:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 67
     return-void
 .end method

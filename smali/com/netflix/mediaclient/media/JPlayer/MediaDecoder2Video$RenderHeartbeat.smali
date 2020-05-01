@@ -17,20 +17,16 @@
 .method constructor <init>(Lcom/netflix/mediaclient/media/JPlayer/MediaDecoder2Video;)V
     .locals 2
 
-    .prologue
-    .line 292
     iput-object p1, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoder2Video$RenderHeartbeat;->this$0:Lcom/netflix/mediaclient/media/JPlayer/MediaDecoder2Video;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 293
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoder2Video$RenderHeartbeat;->mLastBeat:J
 
-    .line 294
     return-void
 .end method
 
@@ -39,13 +35,10 @@
 .method ShowHearbeat()V
     .locals 6
 
-    .prologue
-    .line 296
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 297
     iget-wide v2, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoder2Video$RenderHeartbeat;->mLastBeat:J
 
     const-wide/16 v4, 0x1388
@@ -56,17 +49,14 @@
 
     if-ltz v2, :cond_0
 
-    .line 298
     iput-wide v0, p0, Lcom/netflix/mediaclient/media/JPlayer/MediaDecoder2Video$RenderHeartbeat;->mLastBeat:J
 
-    .line 299
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 300
     const-string/jumbo v0, "MediaDecoder2Video"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -111,7 +101,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 303
     :cond_0
     return-void
 .end method

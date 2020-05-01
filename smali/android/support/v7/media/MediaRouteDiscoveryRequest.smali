@@ -13,14 +13,10 @@
 .method public constructor <init>(Landroid/support/v7/media/MediaRouteSelector;Z)V
     .locals 3
 
-    .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     if-nez p1, :cond_0
 
-    .line 42
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "selector must not be null"
@@ -29,7 +25,6 @@
 
     throw v0
 
-    .line 45
     :cond_0
     new-instance v0, Landroid/os/Bundle;
 
@@ -37,10 +32,8 @@
 
     iput-object v0, p0, Landroid/support/v7/media/MediaRouteDiscoveryRequest;->mBundle:Landroid/os/Bundle;
 
-    .line 46
     iput-object p1, p0, Landroid/support/v7/media/MediaRouteDiscoveryRequest;->mSelector:Landroid/support/v7/media/MediaRouteSelector;
 
-    .line 47
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDiscoveryRequest;->mBundle:Landroid/os/Bundle;
 
     const-string/jumbo v1, "selector"
@@ -51,27 +44,22 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 48
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDiscoveryRequest;->mBundle:Landroid/os/Bundle;
 
     const-string/jumbo v1, "activeScan"
 
     invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 49
     return-void
 .end method
 
 .method private ensureSelector()V
     .locals 2
 
-    .prologue
-    .line 64
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDiscoveryRequest;->mSelector:Landroid/support/v7/media/MediaRouteSelector;
 
     if-nez v0, :cond_0
 
-    .line 65
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDiscoveryRequest;->mBundle:Landroid/os/Bundle;
 
     const-string/jumbo v1, "selector"
@@ -86,17 +74,14 @@
 
     iput-object v0, p0, Landroid/support/v7/media/MediaRouteDiscoveryRequest;->mSelector:Landroid/support/v7/media/MediaRouteSelector;
 
-    .line 66
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDiscoveryRequest;->mSelector:Landroid/support/v7/media/MediaRouteSelector;
 
     if-nez v0, :cond_0
 
-    .line 67
     sget-object v0, Landroid/support/v7/media/MediaRouteSelector;->EMPTY:Landroid/support/v7/media/MediaRouteSelector;
 
     iput-object v0, p0, Landroid/support/v7/media/MediaRouteDiscoveryRequest;->mSelector:Landroid/support/v7/media/MediaRouteSelector;
 
-    .line 70
     :cond_0
     return-void
 .end method
@@ -106,8 +91,6 @@
 .method public asBundle()Landroid/os/Bundle;
     .locals 1
 
-    .prologue
-    .line 120
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDiscoveryRequest;->mBundle:Landroid/os/Bundle;
 
     return-object v0
@@ -116,18 +99,14 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 91
     instance-of v1, p1, Landroid/support/v7/media/MediaRouteDiscoveryRequest;
 
     if-eqz v1, :cond_0
 
-    .line 92
     check-cast p1, Landroid/support/v7/media/MediaRouteDiscoveryRequest;
 
-    .line 93
     invoke-virtual {p0}, Landroid/support/v7/media/MediaRouteDiscoveryRequest;->getSelector()Landroid/support/v7/media/MediaRouteSelector;
 
     move-result-object v1
@@ -154,7 +133,6 @@
 
     const/4 v0, 0x1
 
-    .line 96
     :cond_0
     return v0
 .end method
@@ -162,11 +140,8 @@
 .method public getSelector()Landroid/support/v7/media/MediaRouteSelector;
     .locals 1
 
-    .prologue
-    .line 59
     invoke-direct {p0}, Landroid/support/v7/media/MediaRouteDiscoveryRequest;->ensureSelector()V
 
-    .line 60
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDiscoveryRequest;->mSelector:Landroid/support/v7/media/MediaRouteSelector;
 
     return-object v0
@@ -175,8 +150,6 @@
 .method public hashCode()I
     .locals 2
 
-    .prologue
-    .line 101
     invoke-virtual {p0}, Landroid/support/v7/media/MediaRouteDiscoveryRequest;->getSelector()Landroid/support/v7/media/MediaRouteSelector;
 
     move-result-object v0
@@ -207,8 +180,6 @@
 .method public isActiveScan()Z
     .locals 2
 
-    .prologue
-    .line 78
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDiscoveryRequest;->mBundle:Landroid/os/Bundle;
 
     const-string/jumbo v1, "activeScan"
@@ -223,11 +194,8 @@
 .method public isValid()Z
     .locals 1
 
-    .prologue
-    .line 85
     invoke-direct {p0}, Landroid/support/v7/media/MediaRouteDiscoveryRequest;->ensureSelector()V
 
-    .line 86
     iget-object v0, p0, Landroid/support/v7/media/MediaRouteDiscoveryRequest;->mSelector:Landroid/support/v7/media/MediaRouteSelector;
 
     invoke-virtual {v0}, Landroid/support/v7/media/MediaRouteSelector;->isValid()Z
@@ -240,13 +208,10 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 106
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 107
     const-string/jumbo v1, "DiscoveryRequest{ selector="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -259,7 +224,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 108
     const-string/jumbo v1, ", activeScan="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -272,7 +236,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 109
     const-string/jumbo v1, ", isValid="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -285,12 +248,10 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 110
     const-string/jumbo v1, " }"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 111
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

@@ -28,8 +28,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 45
     new-instance v0, Lcom/google/android/exoplayer/upstream/NetworkLock;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer/upstream/NetworkLock;-><init>()V
@@ -42,30 +40,24 @@
 .method private constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer/upstream/NetworkLock;->lock:Ljava/lang/Object;
 
-    .line 65
     new-instance v0, Ljava/util/PriorityQueue;
 
     invoke-direct {v0}, Ljava/util/PriorityQueue;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer/upstream/NetworkLock;->queue:Ljava/util/PriorityQueue;
 
-    .line 66
     const v0, 0x7fffffff
 
     iput v0, p0, Lcom/google/android/exoplayer/upstream/NetworkLock;->highestPriority:I
 
-    .line 67
     return-void
 .end method
 
@@ -74,13 +66,10 @@
 .method public add(I)V
     .locals 3
 
-    .prologue
-    .line 116
     iget-object v1, p0, Lcom/google/android/exoplayer/upstream/NetworkLock;->lock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 117
     :try_start_0
     iget-object v0, p0, Lcom/google/android/exoplayer/upstream/NetworkLock;->queue:Ljava/util/PriorityQueue;
 
@@ -90,7 +79,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/PriorityQueue;->add(Ljava/lang/Object;)Z
 
-    .line 118
     iget v0, p0, Lcom/google/android/exoplayer/upstream/NetworkLock;->highestPriority:I
 
     invoke-static {v0, p1}, Ljava/lang/Math;->min(II)I
@@ -99,13 +87,10 @@
 
     iput v0, p0, Lcom/google/android/exoplayer/upstream/NetworkLock;->highestPriority:I
 
-    .line 119
     monitor-exit v1
 
-    .line 120
     return-void
 
-    .line 119
     :catchall_0
     move-exception v0
 
@@ -119,13 +104,10 @@
 .method public remove(I)V
     .locals 3
 
-    .prologue
-    .line 128
     iget-object v1, p0, Lcom/google/android/exoplayer/upstream/NetworkLock;->lock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 129
     :try_start_0
     iget-object v0, p0, Lcom/google/android/exoplayer/upstream/NetworkLock;->queue:Ljava/util/PriorityQueue;
 
@@ -135,7 +117,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/PriorityQueue;->remove(Ljava/lang/Object;)Z
 
-    .line 130
     iget-object v0, p0, Lcom/google/android/exoplayer/upstream/NetworkLock;->queue:Ljava/util/PriorityQueue;
 
     invoke-virtual {v0}, Ljava/util/PriorityQueue;->isEmpty()Z
@@ -149,18 +130,14 @@
     :goto_0
     iput v0, p0, Lcom/google/android/exoplayer/upstream/NetworkLock;->highestPriority:I
 
-    .line 131
     iget-object v0, p0, Lcom/google/android/exoplayer/upstream/NetworkLock;->lock:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 132
     monitor-exit v1
 
-    .line 133
     return-void
 
-    .line 130
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer/upstream/NetworkLock;->queue:Ljava/util/PriorityQueue;
 
@@ -176,7 +153,6 @@
 
     goto :goto_0
 
-    .line 132
     :catchall_0
     move-exception v0
 

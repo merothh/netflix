@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 1282
     invoke-static {}, Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager$UI_STATE;->values()[Lcom/netflix/mediaclient/ui/iko/kong/postplay/KongInteractivePostPlayManager$UI_STATE;
 
     move-result-object v0

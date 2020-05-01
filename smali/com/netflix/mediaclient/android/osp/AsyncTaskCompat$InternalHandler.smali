@@ -7,8 +7,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 466
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
@@ -17,8 +15,6 @@
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat$1;)V
     .locals 0
 
-    .prologue
-    .line 466
     invoke-direct {p0}, Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat$InternalHandler;-><init>()V
 
     return-void
@@ -29,22 +25,17 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .prologue
-    .line 470
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat$AsyncTaskResult;
 
-    .line 471
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 480
     :goto_0
     return-void
 
-    .line 474
     :pswitch_0
     iget-object v1, v0, Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat$AsyncTaskResult;->mTask:Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat;
 
@@ -58,7 +49,6 @@
 
     goto :goto_0
 
-    .line 477
     :pswitch_1
     iget-object v1, v0, Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat$AsyncTaskResult;->mTask:Lcom/netflix/mediaclient/android/osp/AsyncTaskCompat;
 
@@ -68,7 +58,6 @@
 
     goto :goto_0
 
-    .line 471
     nop
 
     :pswitch_data_0

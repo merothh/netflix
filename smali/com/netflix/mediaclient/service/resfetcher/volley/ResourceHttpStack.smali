@@ -15,53 +15,38 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;)V
     .locals 0
 
-    .prologue
-    .line 21
     invoke-direct {p0}, Lcom/android/volley/toolbox/HurlStack;-><init>()V
 
-    .line 22
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/resfetcher/volley/ResourceHttpStack;->setConfiguration(Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;)V
 
-    .line 23
     return-void
 .end method
 
 .method public constructor <init>(Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;Lcom/android/volley/toolbox/HurlStack$UrlRewriter;)V
     .locals 0
 
-    .prologue
-    .line 26
     invoke-direct {p0, p2}, Lcom/android/volley/toolbox/HurlStack;-><init>(Lcom/android/volley/toolbox/HurlStack$UrlRewriter;)V
 
-    .line 27
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/resfetcher/volley/ResourceHttpStack;->setConfiguration(Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;)V
 
-    .line 28
     return-void
 .end method
 
 .method public constructor <init>(Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;Lcom/android/volley/toolbox/HurlStack$UrlRewriter;Ljavax/net/ssl/SSLSocketFactory;)V
     .locals 0
 
-    .prologue
-    .line 31
     invoke-direct {p0, p2, p3}, Lcom/android/volley/toolbox/HurlStack;-><init>(Lcom/android/volley/toolbox/HurlStack$UrlRewriter;Ljavax/net/ssl/SSLSocketFactory;)V
 
-    .line 32
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/resfetcher/volley/ResourceHttpStack;->setConfiguration(Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;)V
 
-    .line 33
     return-void
 .end method
 
 .method private setConfiguration(Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;)V
     .locals 2
 
-    .prologue
-    .line 37
     if-nez p1, :cond_0
 
-    .line 38
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "Config can not be null!"
@@ -70,11 +55,9 @@
 
     throw v0
 
-    .line 41
     :cond_0
     iput-object p1, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ResourceHttpStack;->mConfiguration:Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;
 
-    .line 42
     return-void
 .end method
 
@@ -83,8 +66,6 @@
 .method protected createConnection(Ljava/net/URL;)Ljava/net/HttpURLConnection;
     .locals 1
 
-    .prologue
-    .line 47
     iget-object v0, p0, Lcom/netflix/mediaclient/service/resfetcher/volley/ResourceHttpStack;->mConfiguration:Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/util/net/HttpURLConnectionUtils;->createHttpURLConnection(Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;Ljava/net/URL;)Ljava/net/HttpURLConnection;
@@ -106,15 +87,11 @@
         }
     .end annotation
 
-    .prologue
-    .line 53
     invoke-super {p0, p1, p2}, Lcom/android/volley/toolbox/HurlStack;->openConnection(Ljava/net/URL;Lcom/android/volley/Request;)Ljava/net/HttpURLConnection;
 
     move-result-object v0
 
-    .line 54
     invoke-virtual {p2, v0}, Lcom/android/volley/Request;->setHttpURLConnection(Ljava/net/HttpURLConnection;)V
 
-    .line 56
     return-object v0
 .end method

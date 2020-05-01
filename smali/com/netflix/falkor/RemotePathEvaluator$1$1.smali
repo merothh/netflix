@@ -32,23 +32,18 @@
 .method constructor <init>(Lcom/netflix/falkor/RemotePathEvaluator$1;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 144
     iput-object p1, p0, Lcom/netflix/falkor/RemotePathEvaluator$1$1;->this$1:Lcom/netflix/falkor/RemotePathEvaluator$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 145
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/netflix/falkor/RemotePathEvaluator$1$1;->started:Z
 
-    .line 146
     iput-object v1, p0, Lcom/netflix/falkor/RemotePathEvaluator$1$1;->reader:Ljava/io/BufferedReader;
 
-    .line 147
     iput-object v1, p0, Lcom/netflix/falkor/RemotePathEvaluator$1$1;->line:Ljava/lang/String;
 
     return-void
@@ -59,22 +54,18 @@
 .method public hasNext()Z
     .locals 6
 
-    .prologue
     const/4 v5, 0x0
 
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 151
     iget-boolean v2, p0, Lcom/netflix/falkor/RemotePathEvaluator$1$1;->started:Z
 
     if-nez v2, :cond_0
 
-    .line 152
     iput-boolean v1, p0, Lcom/netflix/falkor/RemotePathEvaluator$1$1;->started:Z
 
-    .line 154
     :try_start_0
     new-instance v2, Ljava/net/URL;
 
@@ -88,7 +79,6 @@
 
     invoke-direct {v2, v3}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 155
     new-instance v3, Ljava/io/BufferedReader;
 
     new-instance v4, Ljava/io/InputStreamReader;
@@ -105,7 +95,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_3
 
-    .line 163
     :cond_0
     :try_start_1
     iget-object v2, p0, Lcom/netflix/falkor/RemotePathEvaluator$1$1;->reader:Ljava/io/BufferedReader;
@@ -116,19 +105,16 @@
 
     iput-object v2, p0, Lcom/netflix/falkor/RemotePathEvaluator$1$1;->line:Ljava/lang/String;
 
-    .line 164
     iget-object v2, p0, Lcom/netflix/falkor/RemotePathEvaluator$1$1;->line:Ljava/lang/String;
 
     if-eqz v2, :cond_2
 
     move v0, v1
 
-    .line 190
     :cond_1
     :goto_0
     return v0
 
-    .line 168
     :cond_2
     iget-object v1, p0, Lcom/netflix/falkor/RemotePathEvaluator$1$1;->reader:Ljava/io/BufferedReader;
     :try_end_1
@@ -136,7 +122,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 170
     :try_start_2
     iget-object v1, p0, Lcom/netflix/falkor/RemotePathEvaluator$1$1;->reader:Ljava/io/BufferedReader;
 
@@ -144,7 +129,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 174
     :goto_1
     const/4 v1, 0x0
 
@@ -155,16 +139,13 @@
 
     goto :goto_0
 
-    .line 179
     :catch_0
     move-exception v1
 
-    .line 180
     iget-object v1, p0, Lcom/netflix/falkor/RemotePathEvaluator$1$1;->reader:Ljava/io/BufferedReader;
 
     if-eqz v1, :cond_1
 
-    .line 182
     :try_start_4
     iget-object v1, p0, Lcom/netflix/falkor/RemotePathEvaluator$1$1;->reader:Ljava/io/BufferedReader;
 
@@ -172,25 +153,21 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 186
     :goto_2
     iput-object v5, p0, Lcom/netflix/falkor/RemotePathEvaluator$1$1;->reader:Ljava/io/BufferedReader;
 
     goto :goto_0
 
-    .line 184
     :catch_1
     move-exception v1
 
     goto :goto_2
 
-    .line 172
     :catch_2
     move-exception v1
 
     goto :goto_1
 
-    .line 157
     :catch_3
     move-exception v1
 
@@ -200,11 +177,8 @@
 .method public next()Lcom/netflix/falkor/PathBoundValue;
     .locals 6
 
-    .prologue
-    .line 196
     const/4 v3, 0x0
 
-    .line 198
     :try_start_0
     new-instance v2, Lcom/google/gson/stream/JsonReader;
 
@@ -216,13 +190,10 @@
 
     invoke-direct {v2, v1}, Lcom/google/gson/stream/JsonReader;-><init>(Ljava/io/Reader;)V
 
-    .line 199
     invoke-virtual {v2}, Lcom/google/gson/stream/JsonReader;->beginObject()V
 
-    .line 200
     invoke-virtual {v2}, Lcom/google/gson/stream/JsonReader;->nextName()Ljava/lang/String;
 
-    .line 201
     iget-object v1, p0, Lcom/netflix/falkor/RemotePathEvaluator$1$1;->this$1:Lcom/netflix/falkor/RemotePathEvaluator$1;
 
     iget-object v1, v1, Lcom/netflix/falkor/RemotePathEvaluator$1;->this$0:Lcom/netflix/falkor/RemotePathEvaluator;
@@ -241,7 +212,6 @@
 
     move-result-object v4
 
-    .line 203
     invoke-virtual {v2}, Lcom/google/gson/stream/JsonReader;->peek()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v1
@@ -250,10 +220,8 @@
 
     if-ne v1, v5, :cond_2
 
-    .line 204
     invoke-virtual {v2}, Lcom/google/gson/stream/JsonReader;->nextName()Ljava/lang/String;
 
-    .line 206
     invoke-virtual {v2}, Lcom/google/gson/stream/JsonReader;->peek()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v1
@@ -262,7 +230,6 @@
 
     if-ne v1, v5, :cond_0
 
-    .line 207
     iget-object v1, p0, Lcom/netflix/falkor/RemotePathEvaluator$1$1;->this$1:Lcom/netflix/falkor/RemotePathEvaluator$1;
 
     iget-object v1, v1, Lcom/netflix/falkor/RemotePathEvaluator$1;->this$0:Lcom/netflix/falkor/RemotePathEvaluator;
@@ -281,7 +248,6 @@
 
     move-result-object v2
 
-    .line 208
     new-instance v1, Lcom/netflix/falkor/PathBoundValue;
 
     new-instance v5, Lcom/netflix/falkor/Option;
@@ -290,11 +256,9 @@
 
     invoke-direct {v1, v4, v5}, Lcom/netflix/falkor/PathBoundValue;-><init>(Lcom/netflix/falkor/PQL;Lcom/netflix/falkor/Option;)V
 
-    .line 230
     :goto_0
     return-object v1
 
-    .line 211
     :cond_0
     iget-object v1, p0, Lcom/netflix/falkor/RemotePathEvaluator$1$1;->this$1:Lcom/netflix/falkor/RemotePathEvaluator$1;
 
@@ -314,22 +278,18 @@
 
     move-result-object v2
 
-    .line 212
     instance-of v1, v2, Lcom/netflix/falkor/PathBound;
 
     if-eqz v1, :cond_1
 
-    .line 213
     move-object v0, v2
 
     check-cast v0, Lcom/netflix/falkor/PathBound;
 
     move-object v1, v0
 
-    .line 214
     invoke-interface {v1, v4}, Lcom/netflix/falkor/PathBound;->setPath(Lcom/netflix/falkor/PQL;)V
 
-    .line 216
     :cond_1
     new-instance v1, Lcom/netflix/falkor/PathBoundValue;
 
@@ -343,11 +303,9 @@
 
     goto :goto_0
 
-    .line 226
     :catch_0
     move-exception v1
 
-    .line 227
     const-string/jumbo v2, "RemotePathEvaluator"
 
     invoke-virtual {v1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -358,10 +316,8 @@
 
     move-object v1, v3
 
-    .line 230
     goto :goto_0
 
-    .line 223
     :cond_2
     :try_start_1
     new-instance v1, Lcom/netflix/falkor/PathBoundValue;
@@ -380,8 +336,6 @@
 .method public bridge synthetic next()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 144
     invoke-virtual {p0}, Lcom/netflix/falkor/RemotePathEvaluator$1$1;->next()Lcom/netflix/falkor/PathBoundValue;
 
     move-result-object v0
@@ -392,8 +346,6 @@
 .method public remove()V
     .locals 1
 
-    .prologue
-    .line 236
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

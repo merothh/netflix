@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/android/widget/advisor/Advisor;Landroid/view/View;)V
     .locals 0
 
-    .prologue
-    .line 305
     iput-object p1, p0, Lcom/netflix/mediaclient/android/widget/advisor/Advisor$4;->this$0:Lcom/netflix/mediaclient/android/widget/advisor/Advisor;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/android/widget/advisor/Advisor$4;->val$view:Landroid/view/View;
@@ -37,8 +35,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 309
     iget-object v0, p0, Lcom/netflix/mediaclient/android/widget/advisor/Advisor$4;->this$0:Lcom/netflix/mediaclient/android/widget/advisor/Advisor;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/android/widget/advisor/Advisor;->popupWindow:Landroid/widget/PopupWindow;
@@ -63,7 +59,6 @@
 
     iget-object v3, v3, Lcom/netflix/mediaclient/android/widget/advisor/Advisor;->popupWindow:Landroid/widget/PopupWindow;
 
-    .line 310
     invoke-virtual {v3}, Landroid/widget/PopupWindow;->getWidth()I
 
     move-result v3
@@ -76,9 +71,7 @@
 
     move-result v4
 
-    .line 309
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/PopupWindow;->update(IIII)V
 
-    .line 311
     return-void
 .end method

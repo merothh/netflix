@@ -7,19 +7,14 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     return-void
 .end method
 
 .method public static addTouchExplorationStateChangeListener(Landroid/view/accessibility/AccessibilityManager;Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 78
     check-cast p1, Landroid/view/accessibility/AccessibilityManager$TouchExplorationStateChangeListener;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityManager;->addTouchExplorationStateChangeListener(Landroid/view/accessibility/AccessibilityManager$TouchExplorationStateChangeListener;)Z
@@ -32,8 +27,6 @@
 .method public static newTouchExplorationStateChangeListener(Landroid/support/v4/view/accessibility/AccessibilityManagerCompatKitKat$TouchExplorationStateChangeListenerBridge;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 68
     new-instance v0, Landroid/support/v4/view/accessibility/AccessibilityManagerCompatKitKat$1;
 
     invoke-direct {v0, p0}, Landroid/support/v4/view/accessibility/AccessibilityManagerCompatKitKat$1;-><init>(Landroid/support/v4/view/accessibility/AccessibilityManagerCompatKitKat$TouchExplorationStateChangeListenerBridge;)V
@@ -44,8 +37,6 @@
 .method public static removeTouchExplorationStateChangeListener(Landroid/view/accessibility/AccessibilityManager;Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 84
     check-cast p1, Landroid/view/accessibility/AccessibilityManager$TouchExplorationStateChangeListener;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityManager;->removeTouchExplorationStateChangeListener(Landroid/view/accessibility/AccessibilityManager$TouchExplorationStateChangeListener;)Z

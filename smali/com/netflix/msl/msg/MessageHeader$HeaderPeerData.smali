@@ -35,19 +35,13 @@
         }
     .end annotation
 
-    .prologue
-    .line 225
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 226
     iput-object p1, p0, Lcom/netflix/msl/msg/MessageHeader$HeaderPeerData;->peerMasterToken:Lcom/netflix/msl/tokens/MasterToken;
 
-    .line 227
     iput-object p2, p0, Lcom/netflix/msl/msg/MessageHeader$HeaderPeerData;->peerUserIdToken:Lcom/netflix/msl/tokens/UserIdToken;
 
-    .line 228
     iput-object p3, p0, Lcom/netflix/msl/msg/MessageHeader$HeaderPeerData;->peerServiceTokens:Ljava/util/Set;
 
-    .line 229
     return-void
 .end method

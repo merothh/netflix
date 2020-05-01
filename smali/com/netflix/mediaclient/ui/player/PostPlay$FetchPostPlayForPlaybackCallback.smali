@@ -11,21 +11,16 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/player/PostPlay;)V
     .locals 1
 
-    .prologue
-    .line 688
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
-    .line 689
     const-string/jumbo v0, "nf_postplay"
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/servicemgr/LoggingManagerCallback;-><init>(Ljava/lang/String;)V
 
-    .line 690
     sget-object v0, Lcom/netflix/mediaclient/ui/player/PostPlay$PostPlayDataFetchStatus;->started:Lcom/netflix/mediaclient/ui/player/PostPlay$PostPlayDataFetchStatus;
 
     iput-object v0, p1, Lcom/netflix/mediaclient/ui/player/PostPlay;->mPostPlayDataFetchStatus:Lcom/netflix/mediaclient/ui/player/PostPlay$PostPlayDataFetchStatus;
 
-    .line 691
     return-void
 .end method
 
@@ -34,22 +29,18 @@
 .method public onPostPlayVideosFetched(Lcom/netflix/mediaclient/servicemgr/interface_/details/PostPlayVideosProvider;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 8
 
-    .prologue
     const/4 v2, 0x1
 
     const/4 v3, 0x0
 
-    .line 695
     invoke-super {p0, p1, p2}, Lcom/netflix/mediaclient/servicemgr/LoggingManagerCallback;->onPostPlayVideosFetched(Lcom/netflix/mediaclient/servicemgr/interface_/details/PostPlayVideosProvider;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 696
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 697
     const-string/jumbo v0, "nf_postplay"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -72,7 +63,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 703
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
@@ -80,7 +70,6 @@
 
     iput-object v1, v0, Lcom/netflix/mediaclient/ui/player/PostPlay;->mPostPlayDataFetchStatus:Lcom/netflix/mediaclient/ui/player/PostPlay$PostPlayDataFetchStatus;
 
-    .line 705
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/player/PostPlay;->mNetflixActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -91,18 +80,15 @@
 
     if-eqz v0, :cond_2
 
-    .line 816
     :cond_1
     :goto_0
     return-void
 
-    .line 709
     :cond_2
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     monitor-enter v1
 
-    .line 710
     :try_start_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
@@ -110,19 +96,16 @@
 
     if-eq v0, p0, :cond_3
 
-    .line 711
     const-string/jumbo v0, "nf_postplay"
 
     const-string/jumbo v2, "Not current callback"
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 712
     monitor-exit v1
 
     goto :goto_0
 
-    .line 714
     :catchall_0
     move-exception v0
 
@@ -138,7 +121,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 716
     invoke-interface {p2}, Lcom/netflix/mediaclient/android/app/Status;->isError()Z
 
     move-result v0
@@ -147,7 +129,6 @@
 
     if-nez p1, :cond_5
 
-    .line 717
     :cond_4
     const-string/jumbo v0, "nf_postplay"
 
@@ -155,19 +136,16 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 718
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iput-boolean v3, v0, Lcom/netflix/mediaclient/ui/player/PostPlay;->mPostPlayDataExist:Z
 
-    .line 719
     invoke-static {}, Lcom/netflix/mediaclient/NetflixApplication;->isDebugToastEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 720
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/player/PostPlay;->mNetflixActivity:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -182,7 +160,6 @@
 
     goto :goto_0
 
-    .line 723
     :cond_5
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -192,7 +169,6 @@
 
     if-eqz p1, :cond_6
 
-    .line 724
     const-string/jumbo v0, "nf_postplay"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -215,7 +191,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 726
     :cond_6
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
@@ -225,7 +200,6 @@
 
     iput-object v1, v0, Lcom/netflix/mediaclient/ui/player/PostPlay;->mPostPlayExperience:Lcom/netflix/model/leafs/PostPlayExperience;
 
-    .line 727
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/details/PostPlayVideosProvider;->getInteractivePostplay()Lcom/netflix/model/leafs/InteractivePostplay;
@@ -234,7 +208,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/player/PostPlay;->access$002(Lcom/netflix/mediaclient/ui/player/PostPlay;Lcom/netflix/model/leafs/InteractivePostplay;)Lcom/netflix/model/leafs/InteractivePostplay;
 
-    .line 729
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
@@ -248,14 +221,12 @@
     :goto_1
     iput-boolean v0, v1, Lcom/netflix/mediaclient/ui/player/PostPlay;->mPostPlayDataExist:Z
 
-    .line 731
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iget-boolean v0, v0, Lcom/netflix/mediaclient/ui/player/PostPlay;->mPostPlayDataExist:Z
 
     if-eqz v0, :cond_d
 
-    .line 733
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/player/PostPlay;->mPostPlayExperience:Lcom/netflix/model/leafs/PostPlayExperience;
@@ -276,7 +247,6 @@
 
     if-lez v0, :cond_7
 
-    .line 734
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/player/PostPlay;->mPostPlayExperience:Lcom/netflix/model/leafs/PostPlayExperience;
@@ -303,13 +273,10 @@
 
     check-cast v0, Lcom/netflix/model/leafs/PostPlayItem;
 
-    .line 735
     if-eqz v0, :cond_a
 
-    .line 736
     invoke-virtual {v0, v2}, Lcom/netflix/model/leafs/PostPlayItem;->setAutoPlay(Z)V
 
-    .line 737
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iget-object v4, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
@@ -328,7 +295,6 @@
 
     invoke-static {v1, v4}, Lcom/netflix/mediaclient/ui/player/PostPlay;->access$102(Lcom/netflix/mediaclient/ui/player/PostPlay;Z)Z
 
-    .line 738
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/ui/player/PostPlay;->access$100(Lcom/netflix/mediaclient/ui/player/PostPlay;)Z
@@ -337,14 +303,12 @@
 
     if-eqz v1, :cond_9
 
-    .line 740
     const-string/jumbo v1, "nf_postplay"
 
     const-string/jumbo v4, "Entering post play next episode seamless experience"
 
     invoke-static {v1, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 741
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iget-object v1, v1, Lcom/netflix/mediaclient/ui/player/PostPlay;->mPostPlayExperience:Lcom/netflix/model/leafs/PostPlayExperience;
@@ -359,10 +323,8 @@
 
     invoke-virtual {v1, v4}, Lcom/netflix/model/leafs/PostPlayExperience;->setAutoplaySeconds(I)V
 
-    .line 742
     invoke-virtual {v0, v2}, Lcom/netflix/model/leafs/PostPlayItem;->setNextEpisodeSeamless(Z)V
 
-    .line 743
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iget-object v1, v1, Lcom/netflix/mediaclient/ui/player/PostPlay;->mPostPlayExperience:Lcom/netflix/model/leafs/PostPlayExperience;
@@ -373,7 +335,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/model/leafs/PostPlayItem;->setAutoPlaySeconds(I)V
 
-    .line 744
     invoke-virtual {v0}, Lcom/netflix/model/leafs/PostPlayItem;->getPlayAction()Lcom/netflix/model/leafs/PostPlayAction;
 
     move-result-object v1
@@ -390,7 +351,6 @@
 
     move v5, v3
 
-    .line 758
     :goto_3
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
@@ -406,7 +366,6 @@
 
     if-ge v4, v0, :cond_c
 
-    .line 759
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/player/PostPlay;->mPostPlayExperience:Lcom/netflix/model/leafs/PostPlayExperience;
@@ -421,10 +380,8 @@
 
     check-cast v0, Lcom/netflix/model/leafs/PostPlayItem;
 
-    .line 760
     if-eqz v0, :cond_14
 
-    .line 761
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -449,7 +406,6 @@
 
     invoke-static {v1}, Lcom/netflix/mediaclient/service/logging/error/ErrorLoggingManager;->leaveBreadcrumb(Ljava/lang/String;)V
 
-    .line 762
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iget-object v1, v1, Lcom/netflix/mediaclient/ui/player/PostPlay;->mPostPlayExperience:Lcom/netflix/model/leafs/PostPlayExperience;
@@ -460,7 +416,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/model/leafs/PostPlayItem;->setExperienceType(Ljava/lang/String;)V
 
-    .line 763
     invoke-virtual {v0}, Lcom/netflix/model/leafs/PostPlayItem;->getActions()Ljava/util/List;
 
     move-result-object v1
@@ -482,10 +437,8 @@
 
     check-cast v1, Lcom/netflix/model/leafs/PostPlayAction;
 
-    .line 764
     invoke-virtual {v1, v4}, Lcom/netflix/model/leafs/PostPlayAction;->setItemIndex(I)V
 
-    .line 765
     iget-object v7, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iget-object v7, v7, Lcom/netflix/mediaclient/ui/player/PostPlay;->mPostPlayExperience:Lcom/netflix/model/leafs/PostPlayExperience;
@@ -496,7 +449,6 @@
 
     invoke-virtual {v1, v7}, Lcom/netflix/model/leafs/PostPlayAction;->setRequestId(Ljava/lang/String;)V
 
-    .line 766
     invoke-virtual {v0}, Lcom/netflix/model/leafs/PostPlayItem;->getAncestorTitle()Ljava/lang/String;
 
     move-result-object v7
@@ -508,10 +460,8 @@
     :cond_8
     move v0, v3
 
-    .line 729
     goto/16 :goto_1
 
-    .line 747
     :cond_9
     const-string/jumbo v1, "nf_postplay"
 
@@ -519,7 +469,6 @@
 
     invoke-static {v1, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 748
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iget-object v1, v1, Lcom/netflix/mediaclient/ui/player/PostPlay;->mPostPlayExperience:Lcom/netflix/model/leafs/PostPlayExperience;
@@ -530,7 +479,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/model/leafs/PostPlayItem;->setAutoPlaySeconds(I)V
 
-    .line 749
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iget-object v1, v1, Lcom/netflix/mediaclient/ui/player/PostPlay;->mPostPlayExperience:Lcom/netflix/model/leafs/PostPlayExperience;
@@ -549,7 +497,6 @@
 
     goto/16 :goto_2
 
-    .line 752
     :cond_a
     const-string/jumbo v0, "nf_postplay"
 
@@ -559,7 +506,6 @@
 
     goto/16 :goto_2
 
-    .line 769
     :cond_b
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
@@ -569,12 +515,10 @@
 
     if-eqz v0, :cond_14
 
-    .line 770
     add-int/lit8 v5, v5, 0x1
 
     move v1, v5
 
-    .line 758
     :goto_5
     add-int/lit8 v0, v4, 0x1
 
@@ -584,23 +528,19 @@
 
     goto/16 :goto_3
 
-    .line 776
     :cond_c
     if-nez v5, :cond_d
 
-    .line 777
     const-string/jumbo v0, "nf_postplay"
 
     const-string/jumbo v1, "No playable items in post play response"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 778
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iput-boolean v3, v0, Lcom/netflix/mediaclient/ui/player/PostPlay;->mPostPlayDataExist:Z
 
-    .line 782
     :cond_d
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
@@ -610,7 +550,6 @@
 
     if-eqz v0, :cond_13
 
-    .line 783
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/player/PostPlay;->access$000(Lcom/netflix/mediaclient/ui/player/PostPlay;)Lcom/netflix/model/leafs/InteractivePostplay;
@@ -621,7 +560,6 @@
 
     move-result-object v0
 
-    .line 784
     if-eqz v0, :cond_e
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/model/InteractivePostplayModel;->getType()Ljava/lang/String;
@@ -634,7 +572,6 @@
 
     if-eqz v1, :cond_10
 
-    .line 785
     :cond_e
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -642,14 +579,12 @@
 
     if-eqz v0, :cond_f
 
-    .line 786
     const-string/jumbo v0, "nf_postplay"
 
     const-string/jumbo v1, "Interactive post play data is empty."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 814
     :cond_f
     :goto_6
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
@@ -658,13 +593,11 @@
 
     goto/16 :goto_0
 
-    .line 789
     :cond_10
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/model/InteractivePostplayModel;->getType()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 790
     iget-object v4, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iget-object v5, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
@@ -675,14 +608,12 @@
 
     iput-object v5, v4, Lcom/netflix/mediaclient/ui/player/PostPlay;->interactivePostPlayManager:Lcom/netflix/mediaclient/ui/iko/InteractivePostPlayManager;
 
-    .line 791
     iget-object v4, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iget-object v4, v4, Lcom/netflix/mediaclient/ui/player/PostPlay;->interactivePostPlayManager:Lcom/netflix/mediaclient/ui/iko/InteractivePostPlayManager;
 
     if-nez v4, :cond_11
 
-    .line 792
     const-string/jumbo v0, "nf_postplay"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -707,7 +638,6 @@
 
     goto :goto_6
 
-    .line 794
     :cond_11
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
@@ -715,19 +645,16 @@
 
     invoke-interface {v1}, Lcom/netflix/mediaclient/ui/iko/InteractivePostPlayManager;->startPreCachingResources()V
 
-    .line 795
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iput-boolean v2, v1, Lcom/netflix/mediaclient/ui/player/PostPlay;->isInteractivePostPlay:Z
 
-    .line 796
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iget-object v1, v1, Lcom/netflix/mediaclient/ui/player/PostPlay;->mPlayerFragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     if-eqz v1, :cond_f
 
-    .line 798
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iget-object v1, v1, Lcom/netflix/mediaclient/ui/player/PostPlay;->mPlayerFragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
@@ -736,7 +663,6 @@
 
     move-result-object v1
 
-    .line 799
     if-eqz v1, :cond_12
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/iko/model/InteractivePostplayModel;->getInterrupterCount()I
@@ -751,7 +677,6 @@
 
     move v3, v2
 
-    .line 802
     :cond_12
     if-eqz v3, :cond_f
 
@@ -765,7 +690,6 @@
 
     if-eqz v0, :cond_f
 
-    .line 803
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PostPlay$FetchPostPlayForPlaybackCallback;->this$0:Lcom/netflix/mediaclient/ui/player/PostPlay;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/player/PostPlay;->mPlayerFragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
@@ -782,7 +706,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 804
     const-string/jumbo v0, "nf_postplay"
 
     const-string/jumbo v1, "Cancelling interrupter for interactive content until 8 post plays"
@@ -791,7 +714,6 @@
 
     goto/16 :goto_6
 
-    .line 810
     :cond_13
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -799,7 +721,6 @@
 
     if-eqz v0, :cond_f
 
-    .line 811
     const-string/jumbo v0, "nf_postplay"
 
     const-string/jumbo v1, "Interactive post play data is null."

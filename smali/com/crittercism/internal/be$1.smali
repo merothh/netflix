@@ -12,8 +12,6 @@
 .method constructor <init>(Ljava/util/List;Lcom/crittercism/internal/ax;)V
     .locals 0
 
-    .prologue
-    .line 323
     iput-object p1, p0, Lcom/crittercism/internal/be$1;->a:Ljava/util/List;
 
     iput-object p2, p0, Lcom/crittercism/internal/be$1;->b:Lcom/crittercism/internal/ax;
@@ -28,8 +26,6 @@
 .method public final a()V
     .locals 4
 
-    .prologue
-    .line 326
     iget-object v0, p0, Lcom/crittercism/internal/be$1;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -49,10 +45,8 @@
 
     check-cast v0, Lcom/crittercism/internal/be;
 
-    .line 327
     monitor-enter v0
 
-    .line 328
     :try_start_0
     invoke-static {v0}, Lcom/crittercism/internal/be;->a(Lcom/crittercism/internal/be;)Lcom/crittercism/internal/be$a;
 
@@ -62,16 +56,12 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 329
     iget-object v2, p0, Lcom/crittercism/internal/be$1;->b:Lcom/crittercism/internal/ax;
 
-    .line 2046
     iget-object v2, v2, Lcom/crittercism/internal/ax;->l:Lcom/crittercism/internal/bq;
 
-    .line 329
     invoke-virtual {v2, v0}, Lcom/crittercism/internal/bq;->b(Lcom/crittercism/internal/cf;)Z
 
-    .line 331
     :cond_0
     monitor-exit v0
 
@@ -86,7 +76,6 @@
 
     throw v1
 
-    .line 333
     :cond_1
     return-void
 .end method

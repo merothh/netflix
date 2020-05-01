@@ -11,8 +11,6 @@
 .method private constructor <init>(Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;)V
     .locals 0
 
-    .prologue
-    .line 1032
     iput-object p1, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     invoke-direct {p0}, Landroid/support/v4/widget/ViewDragHelper$Callback;-><init>()V
@@ -23,8 +21,6 @@
 .method synthetic constructor <init>(Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$1;)V
     .locals 0
 
-    .prologue
-    .line 1032
     invoke-direct {p0, p1}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;-><init>(Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;)V
 
     return-void
@@ -35,8 +31,6 @@
 .method public clampViewPositionVertical(Landroid/view/View;II)I
     .locals 2
 
-    .prologue
-    .line 1130
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     invoke-static {v0}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->access$1000(Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;)Z
@@ -45,14 +39,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1131
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     invoke-static {v0}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->access$1100(Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;)I
 
     move-result v1
 
-    .line 1132
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     invoke-static {v0}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->access$500(Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;)I
@@ -61,7 +53,6 @@
 
     add-int/2addr v0, v1
 
-    .line 1138
     :goto_0
     invoke-static {p2, v1}, Ljava/lang/Math;->max(II)I
 
@@ -73,7 +64,6 @@
 
     return v0
 
-    .line 1134
     :cond_0
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
@@ -81,7 +71,6 @@
 
     move-result v0
 
-    .line 1135
     iget-object v1, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     invoke-static {v1}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->access$500(Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;)I
@@ -96,8 +85,6 @@
 .method public getViewVerticalDragRange(Landroid/view/View;)I
     .locals 1
 
-    .prologue
-    .line 1123
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     invoke-static {v0}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->access$500(Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;)I
@@ -110,21 +97,16 @@
 .method public onViewCaptured(Landroid/view/View;I)V
     .locals 1
 
-    .prologue
-    .line 1080
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     invoke-virtual {v0}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->setAllChildrenVisible()V
 
-    .line 1081
     return-void
 .end method
 
 .method public onViewDragStateChanged(I)V
     .locals 3
 
-    .prologue
-    .line 1045
     invoke-static {}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->access$200()Ljava/lang/String;
 
     move-result-object v0
@@ -137,7 +119,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1046
     invoke-static {}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->access$200()Ljava/lang/String;
 
     move-result-object v1
@@ -183,7 +164,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1048
     :cond_0
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
@@ -203,7 +183,6 @@
 
     float-to-int v0, v0
 
-    .line 1050
     iget-object v1, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     invoke-static {v1}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->access$600(Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;)Landroid/support/v4/widget/ViewDragHelper;
@@ -216,7 +195,6 @@
 
     if-nez v1, :cond_2
 
-    .line 1058
     iget-object v1, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     invoke-static {v1}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->access$700(Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;)F
@@ -249,7 +227,6 @@
 
     if-nez v1, :cond_4
 
-    .line 1059
     :cond_1
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
@@ -261,12 +238,10 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 1060
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     invoke-virtual {v0}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->updateObscuredViewVisibility()V
 
-    .line 1061
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     iget-object v1, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
@@ -277,19 +252,16 @@
 
     invoke-virtual {v0, v1}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->dispatchOnPanelExpanded(Landroid/view/View;)V
 
-    .line 1062
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     sget-object v1, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$SlideState;->EXPANDED:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$SlideState;
 
     invoke-static {v0, v1}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->access$802(Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$SlideState;)Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$SlideState;
 
-    .line 1075
     :cond_2
     :goto_1
     return-void
 
-    .line 1046
     :cond_3
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
@@ -307,7 +279,6 @@
 
     goto :goto_0
 
-    .line 1064
     :cond_4
     iget-object v1, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
@@ -331,7 +302,6 @@
 
     if-nez v0, :cond_5
 
-    .line 1065
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     invoke-static {v0}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->access$800(Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;)Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$SlideState;
@@ -342,12 +312,10 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 1066
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     invoke-virtual {v0}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->updateObscuredViewVisibility()V
 
-    .line 1067
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     iget-object v1, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
@@ -358,7 +326,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->dispatchOnPanelAnchored(Landroid/view/View;)V
 
-    .line 1068
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     sget-object v1, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$SlideState;->ANCHORED:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$SlideState;
@@ -367,7 +334,6 @@
 
     goto :goto_1
 
-    .line 1070
     :cond_5
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
@@ -379,7 +345,6 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 1071
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     iget-object v1, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
@@ -390,7 +355,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->dispatchOnPanelCollapsed(Landroid/view/View;)V
 
-    .line 1072
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     sget-object v1, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$SlideState;->COLLAPSED:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$SlideState;
@@ -403,32 +367,26 @@
 .method public onViewPositionChanged(Landroid/view/View;IIII)V
     .locals 1
 
-    .prologue
-    .line 1085
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     invoke-static {v0, p3}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->access$900(Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;I)V
 
-    .line 1086
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     invoke-virtual {v0}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->invalidate()V
 
-    .line 1087
     return-void
 .end method
 
 .method public onViewReleased(Landroid/view/View;FF)V
     .locals 7
 
-    .prologue
     const/high16 v6, 0x3f800000    # 1.0f
 
     const/high16 v5, 0x40000000    # 2.0f
 
     const/4 v4, 0x0
 
-    .line 1091
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     invoke-static {v0}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->access$1000(Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;)Z
@@ -439,12 +397,10 @@
 
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
-    .line 1092
     invoke-static {v0}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->access$1100(Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;)I
 
     move-result v0
 
-    .line 1095
     :goto_0
     iget-object v1, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
@@ -456,7 +412,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 1098
     iget-object v1, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     invoke-static {v1}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->access$1000(Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;)Z
@@ -465,7 +420,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 1099
     iget-object v1, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     invoke-static {v1}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->access$400(Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;)F
@@ -484,7 +438,6 @@
 
     float-to-int v1, v1
 
-    .line 1100
     int-to-float v1, v1
 
     iget-object v2, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
@@ -497,7 +450,6 @@
 
     div-float/2addr v1, v2
 
-    .line 1106
     :goto_1
     cmpl-float v2, p3, v4
 
@@ -521,7 +473,6 @@
 
     if-ltz v2, :cond_4
 
-    .line 1107
     :cond_0
     iget-object v1, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
@@ -531,7 +482,6 @@
 
     add-int/2addr v0, v1
 
-    .line 1117
     :cond_1
     :goto_2
     iget-object v1, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
@@ -546,19 +496,15 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/support/v4/widget/ViewDragHelper;->settleCapturedViewAt(II)Z
 
-    .line 1118
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     invoke-virtual {v0}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->invalidate()V
 
-    .line 1119
     return-void
 
-    .line 1092
     :cond_2
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
-    .line 1093
     invoke-static {v0}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->access$1100(Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;)I
 
     move-result v0
@@ -573,7 +519,6 @@
 
     goto :goto_0
 
-    .line 1102
     :cond_3
     iget-object v1, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
@@ -601,7 +546,6 @@
 
     sub-int/2addr v1, v2
 
-    .line 1103
     iget-object v2, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     invoke-static {v2}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->access$1200(Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;)I
@@ -624,7 +568,6 @@
 
     goto :goto_1
 
-    .line 1108
     :cond_4
     cmpl-float v2, p3, v4
 
@@ -646,7 +589,6 @@
 
     iget-object v2, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
-    .line 1109
     invoke-static {v2}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->access$700(Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;)F
 
     move-result v2
@@ -657,7 +599,6 @@
 
     if-ltz v1, :cond_1
 
-    .line 1110
     int-to-float v0, v0
 
     iget-object v1, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
@@ -682,7 +623,6 @@
 
     goto :goto_2
 
-    .line 1113
     :cond_5
     cmpl-float v1, p3, v4
 
@@ -704,7 +644,6 @@
 
     if-lez v1, :cond_1
 
-    .line 1114
     :cond_6
     iget-object v1, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
@@ -720,8 +659,6 @@
 .method public tryCaptureView(Landroid/view/View;I)Z
     .locals 1
 
-    .prologue
-    .line 1036
     iget-object v0, p0, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout$DragHelperCallback;->this$0:Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;
 
     invoke-static {v0}, Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;->access$100(Lcom/sothree/slidinguppanel/SlidingUpPanelLayout;)Z
@@ -730,10 +667,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 1037
     const/4 v0, 0x0
 
-    .line 1040
     :goto_0
     return v0
 

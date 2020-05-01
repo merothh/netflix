@@ -14,8 +14,6 @@
 .method constructor <init>(Lorg/chromium/net/JavaCronetEngine;)V
     .locals 0
 
-    .prologue
-    .line 33
     iput-object p1, p0, Lorg/chromium/net/JavaCronetEngine$1;->this$0:Lorg/chromium/net/JavaCronetEngine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 2
 
-    .prologue
-    .line 36
     invoke-static {}, Ljava/util/concurrent/Executors;->defaultThreadFactory()Ljava/util/concurrent/ThreadFactory;
 
     move-result-object v0

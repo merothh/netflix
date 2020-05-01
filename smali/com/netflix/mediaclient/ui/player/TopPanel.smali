@@ -49,21 +49,16 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/player/PlayerFragment;Lcom/netflix/mediaclient/ui/player/PlayScreen$Listeners;)V
     .locals 2
 
-    .prologue
-    .line 152
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/player/PlayerSection;-><init>(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)V
 
-    .line 140
     new-instance v0, Lcom/netflix/mediaclient/ui/player/TopPanel$1;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/player/TopPanel$1;-><init>(Lcom/netflix/mediaclient/ui/player/TopPanel;)V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mBackListener:Landroid/view/View$OnClickListener;
 
-    .line 153
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mListeners:Lcom/netflix/mediaclient/ui/player/PlayScreen$Listeners;
 
-    .line 154
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getNetflixActivity()Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     move-result-object v0
@@ -74,14 +69,12 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mActionBar:Landroid/support/v7/app/ActionBar;
 
-    .line 156
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mActionBar:Landroid/support/v7/app/ActionBar;
 
     const-string/jumbo v1, ""
 
     invoke-virtual {v0, v1}, Landroid/support/v7/app/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 157
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getView()Landroid/view/View;
 
     move-result-object v0
@@ -96,7 +89,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mTitleLabel:Landroid/widget/TextView;
 
-    .line 159
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getView()Landroid/view/View;
 
     move-result-object v0
@@ -109,7 +101,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mTopGradient:Landroid/view/View;
 
-    .line 160
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getView()Landroid/view/View;
 
     move-result-object v0
@@ -124,15 +115,12 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mToolBar:Landroid/support/v7/widget/Toolbar;
 
-    .line 161
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/netflix/mediaclient/ui/player/TopPanel;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 56
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mDialogLanguageId:Ljava/lang/String;
 
     return-object v0
@@ -141,8 +129,6 @@
 .method static synthetic access$002(Lcom/netflix/mediaclient/ui/player/TopPanel;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .prologue
-    .line 56
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mDialogLanguageId:Ljava/lang/String;
 
     return-object p1
@@ -151,8 +137,6 @@
 .method static synthetic access$100(Lcom/netflix/mediaclient/ui/player/TopPanel;Lcom/netflix/mediaclient/media/Language;)Z
     .locals 1
 
-    .prologue
-    .line 56
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/player/TopPanel;->processLanguageChange(Lcom/netflix/mediaclient/media/Language;)Z
 
     move-result v0
@@ -163,8 +147,6 @@
 .method static synthetic access$200(Lcom/netflix/mediaclient/ui/player/TopPanel;)V
     .locals 0
 
-    .prologue
-    .line 56
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/TopPanel;->updateLastPanelInteractionTime()V
 
     return-void
@@ -173,8 +155,6 @@
 .method static synthetic access$300(Lcom/netflix/mediaclient/ui/player/TopPanel;)Lcom/netflix/mediaclient/ui/common/LanguageSelector;
     .locals 1
 
-    .prologue
-    .line 56
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mLanguageSelector:Lcom/netflix/mediaclient/ui/common/LanguageSelector;
 
     return-object v0
@@ -183,8 +163,6 @@
 .method static synthetic access$400(Lcom/netflix/mediaclient/ui/player/TopPanel;)Lcom/netflix/mediaclient/ui/player/PlayScreen$Listeners;
     .locals 1
 
-    .prologue
-    .line 56
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mListeners:Lcom/netflix/mediaclient/ui/player/PlayScreen$Listeners;
 
     return-object v0
@@ -193,8 +171,6 @@
 .method static synthetic access$500(Lcom/netflix/mediaclient/ui/player/TopPanel;)Landroid/widget/TextView;
     .locals 1
 
-    .prologue
-    .line 56
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mTitleLabel:Landroid/widget/TextView;
 
     return-object v0
@@ -203,11 +179,8 @@
 .method private changeControlsVisibility(Z)V
     .locals 2
 
-    .prologue
-    .line 593
     if-eqz p1, :cond_1
 
-    .line 594
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mToolBar:Landroid/support/v7/widget/Toolbar;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/util/gfx/AnimationUtils;->startViewAppearanceAnimation(Landroid/view/View;Z)Landroid/view/ViewPropertyAnimator;
@@ -216,43 +189,35 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mCurrentToolbarAnimation:Landroid/view/ViewPropertyAnimator;
 
-    .line 595
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/TopPanel;->hideAdvisories()V
 
-    .line 597
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/TopPanel;->showLanguageMenuItem()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 598
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mLanguage:Landroid/view/MenuItem;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibility(Landroid/view/MenuItem;Z)V
 
-    .line 608
     :cond_0
     :goto_0
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/ui/player/TopPanel;->setGradientVisibility(Z)V
 
-    .line 609
     return-void
 
-    .line 602
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mCurrentToolbarAnimation:Landroid/view/ViewPropertyAnimator;
 
     if-eqz v0, :cond_2
 
-    .line 603
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mCurrentToolbarAnimation:Landroid/view/ViewPropertyAnimator;
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 605
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mToolBar:Landroid/support/v7/widget/Toolbar;
 
@@ -260,7 +225,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibleOrInvisible(Landroid/view/View;Z)V
 
-    .line 606
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/TopPanel;->showAdvisories()V
 
     goto :goto_0
@@ -269,22 +233,18 @@
 .method private createMdxTargetSelectionDialog(Lcom/netflix/mediaclient/ui/player/PlayerFragment;)Landroid/support/v7/app/AlertDialog;
     .locals 7
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 372
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getPlayer()Lcom/netflix/mediaclient/servicemgr/IPlayer;
 
     move-result-object v0
 
-    .line 373
     if-eqz v0, :cond_0
 
     invoke-interface {v0}, Lcom/netflix/mediaclient/servicemgr/IPlayer;->isPlaying()Z
 
     move-result v0
 
-    .line 375
     :goto_0
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mdxTargetSelector:Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelection;
 
@@ -292,12 +252,10 @@
 
     move-result v2
 
-    .line 376
     iget-object v3, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mdxTargetSelector:Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelection;
 
     invoke-virtual {v3, v2}, Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelection;->setTarget(I)Lcom/netflix/mediaclient/ui/mdx/MdxTarget;
 
-    .line 378
     new-instance v3, Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelectionDialog$Builder;
 
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getActivity()Landroid/app/Activity;
@@ -306,15 +264,12 @@
 
     invoke-direct {v3, v4}, Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelectionDialog$Builder;-><init>(Landroid/app/Activity;)V
 
-    .line 379
     invoke-virtual {v3, v1}, Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelectionDialog$Builder;->setCancelable(Z)Landroid/support/v7/app/AlertDialog$Builder;
 
-    .line 380
     const v4, 0x7f08018e
 
     invoke-virtual {v3, v4}, Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelectionDialog$Builder;->setTitle(I)Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelectionDialog$Builder;
 
-    .line 381
     iget-object v4, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mdxTargetSelector:Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelection;
 
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getActivity()Landroid/app/Activity;
@@ -327,7 +282,6 @@
 
     invoke-virtual {v3, v4}, Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelectionDialog$Builder;->setAdapterData(Ljava/util/List;)V
 
-    .line 383
     const v4, 0x7f080247
 
     invoke-virtual {p1, v4}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getString(I)Ljava/lang/String;
@@ -348,25 +302,20 @@
 
     move-result-object v1
 
-    .line 384
     invoke-virtual {v3, v2, v1}, Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelectionDialog$Builder;->setSelection(ILjava/lang/String;)V
 
-    .line 385
     new-instance v1, Lcom/netflix/mediaclient/ui/player/TopPanel$8;
 
     invoke-direct {v1, p0, p1, v0}, Lcom/netflix/mediaclient/ui/player/TopPanel$8;-><init>(Lcom/netflix/mediaclient/ui/player/TopPanel;Lcom/netflix/mediaclient/ui/player/PlayerFragment;Z)V
 
     invoke-virtual {v3, v1}, Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelectionDialog$Builder;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 435
     new-instance v0, Lcom/netflix/mediaclient/ui/player/TopPanel$9;
 
     invoke-direct {v0, p0, p1}, Lcom/netflix/mediaclient/ui/player/TopPanel$9;-><init>(Lcom/netflix/mediaclient/ui/player/TopPanel;Lcom/netflix/mediaclient/ui/player/PlayerFragment;)V
 
-    .line 442
     invoke-virtual {v3, v0}, Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelectionDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelectionDialog$Builder;
 
-    .line 444
     invoke-virtual {v3}, Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelectionDialog$Builder;->create()Landroid/support/v7/app/AlertDialog;
 
     move-result-object v0
@@ -376,15 +325,12 @@
     :cond_0
     move v0, v1
 
-    .line 373
     goto :goto_0
 .end method
 
 .method private getCurrentTitle()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 555
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mTitleLabel:Landroid/widget/TextView;
 
     if-nez v0, :cond_0
@@ -411,18 +357,14 @@
 .method private hideAdvisories()V
     .locals 1
 
-    .prologue
-    .line 679
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mScreen:Lcom/netflix/mediaclient/ui/player/PlayScreen;
 
     if-eqz v0, :cond_0
 
-    .line 680
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mScreen:Lcom/netflix/mediaclient/ui/player/PlayScreen;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayScreen;->hideAdvisories()V
 
-    .line 682
     :cond_0
     return-void
 .end method
@@ -430,23 +372,18 @@
 .method private initBack()V
     .locals 2
 
-    .prologue
-    .line 206
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mActionBar:Landroid/support/v7/app/ActionBar;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/support/v7/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
 
-    .line 207
     return-void
 .end method
 
 .method private initGeneric(Landroid/view/Menu;)V
     .locals 2
 
-    .prologue
-    .line 296
     const v0, 0x7f0800a2
 
     invoke-interface {p1, v0}, Landroid/view/Menu;->add(I)Landroid/view/MenuItem;
@@ -455,28 +392,24 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mEpisodeSelector:Landroid/view/MenuItem;
 
-    .line 297
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mEpisodeSelector:Landroid/view/MenuItem;
 
     iget-boolean v1, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mEpisodeSelectorEnabled:Z
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
-    .line 298
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mEpisodeSelector:Landroid/view/MenuItem;
 
     const v1, 0x7f0200ed
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setIcon(I)Landroid/view/MenuItem;
 
-    .line 299
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mEpisodeSelector:Landroid/view/MenuItem;
 
     const/4 v1, 0x2
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setShowAsAction(I)V
 
-    .line 300
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mEpisodeSelector:Landroid/view/MenuItem;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/player/TopPanel$6;
@@ -485,20 +418,16 @@
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setOnMenuItemClickListener(Landroid/view/MenuItem$OnMenuItemClickListener;)Landroid/view/MenuItem;
 
-    .line 307
     return-void
 .end method
 
 .method private initLanguages(Landroid/view/Menu;)V
     .locals 3
 
-    .prologue
-    .line 214
     new-instance v0, Lcom/netflix/mediaclient/ui/player/TopPanel$3;
 
     invoke-direct {v0, p0}, Lcom/netflix/mediaclient/ui/player/TopPanel$3;-><init>(Lcom/netflix/mediaclient/ui/player/TopPanel;)V
 
-    .line 246
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->playerFragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getNetflixActivity()Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -521,7 +450,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mLanguageSelector:Lcom/netflix/mediaclient/ui/common/LanguageSelector;
 
-    .line 249
     const v0, 0x7f0800a3
 
     invoke-interface {p1, v0}, Landroid/view/Menu;->add(I)Landroid/view/MenuItem;
@@ -530,7 +458,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mLanguage:Landroid/view/MenuItem;
 
-    .line 250
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mLanguage:Landroid/view/MenuItem;
 
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/TopPanel;->showLanguageMenuItem()Z
@@ -539,21 +466,18 @@
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
-    .line 251
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mLanguage:Landroid/view/MenuItem;
 
     const v1, 0x7f020146
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setIcon(I)Landroid/view/MenuItem;
 
-    .line 252
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mLanguage:Landroid/view/MenuItem;
 
     const/4 v1, 0x2
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setShowAsAction(I)V
 
-    .line 253
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mLanguage:Landroid/view/MenuItem;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/player/TopPanel$4;
@@ -562,15 +486,12 @@
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setOnMenuItemClickListener(Landroid/view/MenuItem$OnMenuItemClickListener;)Landroid/view/MenuItem;
 
-    .line 264
     return-void
 .end method
 
 .method private initMDX(Landroid/view/Menu;)V
     .locals 2
 
-    .prologue
-    .line 311
     const v0, 0x7f0800a4
 
     invoke-interface {p1, v0}, Landroid/view/Menu;->add(I)Landroid/view/MenuItem;
@@ -579,28 +500,24 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mMdxTarget:Landroid/view/MenuItem;
 
-    .line 312
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mMdxTarget:Landroid/view/MenuItem;
 
     const v1, 0x7f0200d4
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setIcon(I)Landroid/view/MenuItem;
 
-    .line 313
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mMdxTarget:Landroid/view/MenuItem;
 
     iget-boolean v1, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mMDXSelectorEnabled:Z
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
-    .line 314
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mMdxTarget:Landroid/view/MenuItem;
 
     const/4 v1, 0x2
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setShowAsAction(I)V
 
-    .line 315
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mMdxTarget:Landroid/view/MenuItem;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/player/TopPanel$7;
@@ -609,23 +526,18 @@
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setOnMenuItemClickListener(Landroid/view/MenuItem$OnMenuItemClickListener;)Landroid/view/MenuItem;
 
-    .line 325
     return-void
 .end method
 
 .method private initQa(Landroid/view/Menu;)V
     .locals 0
 
-    .prologue
-    .line 271
     return-void
 .end method
 
 .method private initSound(Landroid/view/Menu;)V
     .locals 2
 
-    .prologue
-    .line 190
     const v0, 0x7f0800b6
 
     invoke-interface {p1, v0}, Landroid/view/Menu;->add(I)Landroid/view/MenuItem;
@@ -634,21 +546,18 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mSound:Landroid/view/MenuItem;
 
-    .line 191
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mSound:Landroid/view/MenuItem;
 
     const v1, 0x7f02014b
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setIcon(I)Landroid/view/MenuItem;
 
-    .line 192
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mSound:Landroid/view/MenuItem;
 
     const/4 v1, 0x2
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setShowAsAction(I)V
 
-    .line 193
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mSound:Landroid/view/MenuItem;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/player/TopPanel$2;
@@ -657,15 +566,12 @@
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setOnMenuItemClickListener(Landroid/view/MenuItem$OnMenuItemClickListener;)Landroid/view/MenuItem;
 
-    .line 201
     return-void
 .end method
 
 .method private isMdxTargetSelectionVisible()Z
     .locals 1
 
-    .prologue
-    .line 453
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mdxTargetSelector:Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelection;
 
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/player/TopPanel;->isMdxTargetSelectionVisible(Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelection;)Z
@@ -678,10 +584,8 @@
 .method private isMdxTargetSelectionVisible(Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelection;)Z
     .locals 2
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 462
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelection;->getMdxTargets()[Lcom/netflix/mediaclient/ui/mdx/MdxTarget;
@@ -710,45 +614,36 @@
 .method private processLanguageChange(Lcom/netflix/mediaclient/media/Language;)Z
     .locals 8
 
-    .prologue
     const/4 v2, 0x1
 
     const/4 v1, 0x0
 
-    .line 471
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->playerFragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getScreen()Lcom/netflix/mediaclient/ui/player/PlayScreen;
 
     move-result-object v0
 
-    .line 472
     if-nez v0, :cond_0
 
-    .line 531
     :goto_0
     return v1
 
-    .line 476
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->activity:Landroid/app/Activity;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/util/l10n/LanguageUtils;->saveUserChoice(Landroid/content/Context;Lcom/netflix/mediaclient/media/Language;)V
 
-    .line 477
     invoke-virtual {p1}, Lcom/netflix/mediaclient/media/Language;->getSelectedAudio()Lcom/netflix/mediaclient/media/AudioSource;
 
     move-result-object v3
 
-    .line 478
     invoke-virtual {p1}, Lcom/netflix/mediaclient/media/Language;->getSelectedSubtitle()Lcom/netflix/mediaclient/media/Subtitle;
 
     move-result-object v4
 
-    .line 480
     if-nez v4, :cond_5
 
-    .line 481
     const-string/jumbo v0, "screen"
 
     const-string/jumbo v5, "Selected subtitle is NONE"
@@ -757,7 +652,6 @@
 
     move v0, v1
 
-    .line 487
     :goto_1
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -765,7 +659,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 488
     const-string/jumbo v5, "screen"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -788,7 +681,6 @@
 
     invoke-static {v5, v6}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 489
     const-string/jumbo v5, "screen"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -811,7 +703,6 @@
 
     invoke-static {v5, v6}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 493
     :cond_1
     iget-object v5, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->playerFragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
@@ -821,26 +712,22 @@
 
     invoke-interface {v5, v0}, Lcom/netflix/mediaclient/ui/player/subtitles/SubtitleManager;->setSubtitleVisibility(Z)V
 
-    .line 498
     invoke-virtual {v3}, Lcom/netflix/mediaclient/media/AudioSource;->getNccpOrderNumber()I
 
     move-result v0
 
-    .line 499
     invoke-virtual {p1}, Lcom/netflix/mediaclient/media/Language;->getCurrentNccpAudioIndex()I
 
     move-result v3
 
     if-eq v0, v3, :cond_6
 
-    .line 500
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 501
     const-string/jumbo v3, "screen"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -883,7 +770,6 @@
 
     invoke-static {v3, v0}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 505
     :cond_2
     const-string/jumbo v0, "screen"
 
@@ -895,30 +781,25 @@
 
     move v0, v2
 
-    .line 510
     :goto_2
     if-eqz v4, :cond_8
 
-    .line 511
     invoke-interface {v4}, Lcom/netflix/mediaclient/media/Subtitle;->getNccpOrderNumber()I
 
     move-result v4
 
-    .line 512
     invoke-virtual {p1}, Lcom/netflix/mediaclient/media/Language;->getCurrentNccpSubtitleIndex()I
 
     move-result v5
 
     if-eq v4, v5, :cond_7
 
-    .line 513
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 514
     const-string/jumbo v0, "screen"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -964,23 +845,19 @@
     :cond_3
     move v0, v2
 
-    .line 526
     :goto_3
     if-eqz v0, :cond_4
 
-    .line 527
     const-string/jumbo v0, "screen"
 
     const-string/jumbo v4, "Reloading tracks"
 
     invoke-static {v0, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 528
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->playerFragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0, p1, v3}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->changeLanguage(Lcom/netflix/mediaclient/media/Language;Z)V
 
-    .line 531
     :cond_4
     if-nez v3, :cond_9
 
@@ -992,10 +869,8 @@
     :cond_5
     move v0, v2
 
-    .line 484
     goto/16 :goto_1
 
-    .line 507
     :cond_6
     const-string/jumbo v0, "screen"
 
@@ -1009,7 +884,6 @@
 
     goto :goto_2
 
-    .line 519
     :cond_7
     const-string/jumbo v4, "screen"
 
@@ -1019,7 +893,6 @@
 
     goto :goto_3
 
-    .line 522
     :cond_8
     const-string/jumbo v0, "screen"
 
@@ -1029,31 +902,25 @@
 
     move v0, v2
 
-    .line 523
     goto :goto_3
 
     :cond_9
     move v2, v1
 
-    .line 531
     goto :goto_4
 .end method
 
 .method private showAdvisories()V
     .locals 1
 
-    .prologue
-    .line 672
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mScreen:Lcom/netflix/mediaclient/ui/player/PlayScreen;
 
     if-eqz v0, :cond_0
 
-    .line 673
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mScreen:Lcom/netflix/mediaclient/ui/player/PlayScreen;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayScreen;->showAdvisories()V
 
-    .line 675
     :cond_0
     return-void
 .end method
@@ -1061,15 +928,12 @@
 .method private showLanguageMenuItem()Z
     .locals 2
 
-    .prologue
-    .line 617
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->playerFragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getLanguage()Lcom/netflix/mediaclient/media/Language;
 
     move-result-object v0
 
-    .line 618
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mLanguage:Landroid/view/MenuItem;
 
     if-eqz v1, :cond_0
@@ -1096,8 +960,6 @@
 .method private updateLastPanelInteractionTime()V
     .locals 1
 
-    .prologue
-    .line 648
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->playerFragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->isActivityValid()Z
@@ -1106,12 +968,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 649
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->playerFragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->extendTimeoutTimer()V
 
-    .line 651
     :cond_0
     return-void
 .end method
@@ -1121,8 +981,6 @@
 .method public declared-synchronized changeActionState(Z)V
     .locals 1
 
-    .prologue
-    .line 560
     monitor-enter p0
 
     :try_start_0
@@ -1130,29 +988,24 @@
 
     invoke-virtual {p0, v0, p1}, Lcom/netflix/mediaclient/ui/player/TopPanel;->enableButton(Landroid/view/MenuItem;Z)V
 
-    .line 561
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mEpisodeSelector:Landroid/view/MenuItem;
 
     invoke-virtual {p0, v0, p1}, Lcom/netflix/mediaclient/ui/player/TopPanel;->enableButton(Landroid/view/MenuItem;Z)V
 
-    .line 562
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mMdxTarget:Landroid/view/MenuItem;
 
     invoke-virtual {p0, v0, p1}, Lcom/netflix/mediaclient/ui/player/TopPanel;->enableButton(Landroid/view/MenuItem;Z)V
 
-    .line 563
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mSound:Landroid/view/MenuItem;
 
     invoke-virtual {p0, v0, p1}, Lcom/netflix/mediaclient/ui/player/TopPanel;->enableButton(Landroid/view/MenuItem;Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 564
     monitor-exit p0
 
     return-void
 
-    .line 560
     :catchall_0
     move-exception v0
 
@@ -1164,8 +1017,6 @@
 .method public declared-synchronized destroy()V
     .locals 2
 
-    .prologue
-    .line 578
     monitor-enter p0
 
     :try_start_0
@@ -1173,20 +1024,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 579
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mEpisodeSelector:Landroid/view/MenuItem;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setOnMenuItemClickListener(Landroid/view/MenuItem$OnMenuItemClickListener;)Landroid/view/MenuItem;
 
-    .line 582
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mTitleLabel:Landroid/widget/TextView;
 
     if-eqz v0, :cond_1
 
-    .line 583
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mTitleLabel:Landroid/widget/TextView;
 
     const/4 v1, 0x0
@@ -1195,13 +1043,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 585
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 578
     :catchall_0
     move-exception v0
 
@@ -1213,8 +1059,6 @@
 .method protected displayMdxTargets()V
     .locals 2
 
-    .prologue
-    .line 358
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mdxTargetSelector:Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelection;
 
     if-eqz v0, :cond_0
@@ -1239,7 +1083,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 359
     :cond_0
     const-string/jumbo v0, "screen"
 
@@ -1247,12 +1090,10 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 369
     :cond_1
     :goto_0
     return-void
 
-    .line 363
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->playerFragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
@@ -1262,14 +1103,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 367
     const-string/jumbo v0, "screen"
 
     const-string/jumbo v1, "MDX target is reachable, display dialog"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 368
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->playerFragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getNetflixActivity()Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -1290,8 +1129,6 @@
 .method getLanguageSelector()Lcom/netflix/mediaclient/ui/common/LanguageSelector;
     .locals 1
 
-    .prologue
-    .line 627
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mLanguageSelector:Lcom/netflix/mediaclient/ui/common/LanguageSelector;
 
     return-object v0
@@ -1300,8 +1137,6 @@
 .method public declared-synchronized hide()V
     .locals 1
 
-    .prologue
-    .line 568
     monitor-enter p0
 
     const/4 v0, 0x0
@@ -1311,12 +1146,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 569
     monitor-exit p0
 
     return-void
 
-    .line 568
     :catchall_0
     move-exception v0
 
@@ -1328,8 +1161,6 @@
 .method public onCreateOptionsMenu(Landroid/view/Menu;)V
     .locals 1
 
-    .prologue
-    .line 164
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->playerFragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getScreen()Lcom/netflix/mediaclient/ui/player/PlayScreen;
@@ -1338,40 +1169,30 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mScreen:Lcom/netflix/mediaclient/ui/player/PlayScreen;
 
-    .line 165
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/player/TopPanel;->initMDX(Landroid/view/Menu;)V
 
-    .line 166
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/player/TopPanel;->initGeneric(Landroid/view/Menu;)V
 
-    .line 167
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/TopPanel;->initBack()V
 
-    .line 168
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/player/TopPanel;->initQa(Landroid/view/Menu;)V
 
-    .line 169
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/player/TopPanel;->initLanguages(Landroid/view/Menu;)V
 
-    .line 170
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/player/TopPanel;->initSound(Landroid/view/Menu;)V
 
-    .line 171
     return-void
 .end method
 
 .method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
     .locals 3
 
-    .prologue
-    .line 174
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 180
     const-string/jumbo v0, "screen"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1398,13 +1219,11 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 182
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 176
     :pswitch_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mBackListener:Landroid/view/View$OnClickListener;
 
@@ -1412,12 +1231,10 @@
 
     invoke-interface {v0, v1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
-    .line 177
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 174
     nop
 
     :pswitch_data_0
@@ -1429,20 +1246,15 @@
 .method setEpisodeSelectorVisibility(Z)V
     .locals 1
 
-    .prologue
-    .line 636
     iput-boolean p1, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mEpisodeSelectorEnabled:Z
 
-    .line 638
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mEpisodeSelector:Landroid/view/MenuItem;
 
     if-nez v0, :cond_0
 
-    .line 642
     :goto_0
     return-void
 
-    .line 641
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mEpisodeSelector:Landroid/view/MenuItem;
 
@@ -1454,13 +1266,10 @@
 .method setGradientVisibility(Z)V
     .locals 2
 
-    .prologue
-    .line 661
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mTopGradient:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 662
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mTopGradient:Landroid/view/View;
 
     if-nez p1, :cond_2
@@ -1470,7 +1279,6 @@
     :goto_0
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibleOrGone(Landroid/view/View;Z)V
 
-    .line 665
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mTopGradient:Landroid/view/View;
 
@@ -1480,16 +1288,13 @@
 
     if-eq v0, p1, :cond_1
 
-    .line 666
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mTopGradient:Landroid/view/View;
 
     invoke-static {v0, p1}, Lcom/netflix/mediaclient/util/gfx/AnimationUtils;->startViewAppearanceAnimation(Landroid/view/View;Z)Landroid/view/ViewPropertyAnimator;
 
-    .line 668
     :cond_1
     return-void
 
-    .line 662
     :cond_2
     const/4 v0, 0x0
 
@@ -1499,19 +1304,15 @@
 .method public declared-synchronized setMdxTargetSelector(Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelection;)V
     .locals 5
 
-    .prologue
-    .line 333
     monitor-enter p0
 
     :try_start_0
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mdxTargetSelector:Lcom/netflix/mediaclient/ui/mdx/MdxTargetSelection;
 
-    .line 334
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/player/TopPanel;->isMdxTargetSelectionVisible()Z
 
     move-result v1
 
-    .line 335
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->playerFragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->getActivity()Landroid/app/Activity;
@@ -1535,7 +1336,6 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 337
     :goto_0
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -1543,7 +1343,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 338
     const-string/jumbo v2, "screen"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1566,7 +1365,6 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 339
     const-string/jumbo v2, "screen"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1589,11 +1387,9 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 342
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 343
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->playerFragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->isActivityValid()Z
@@ -1602,7 +1398,6 @@
 
     if-nez v0, :cond_4
 
-    .line 344
     const-string/jumbo v0, "screen"
 
     const-string/jumbo v1, "Player activity was destroyed, do nothing"
@@ -1611,34 +1406,29 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 351
     :cond_2
     :goto_1
     monitor-exit p0
 
     return-void
 
-    .line 335
     :cond_3
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 348
     :cond_4
     :try_start_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mMdxTarget:Landroid/view/MenuItem;
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/util/ViewUtils;->setVisibility(Landroid/view/MenuItem;Z)V
 
-    .line 349
     iput-boolean v1, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->mMDXSelectorEnabled:Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_1
 
-    .line 333
     :catchall_0
     move-exception v0
 
@@ -1650,8 +1440,6 @@
 .method public setTitle(Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 540
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->playerFragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->isActivityValid()Z
@@ -1660,7 +1448,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 541
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/TopPanel;->playerFragment:Lcom/netflix/mediaclient/ui/player/PlayerFragment;
 
     new-instance v1, Lcom/netflix/mediaclient/ui/player/TopPanel$10;
@@ -1669,7 +1456,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/player/PlayerFragment;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 552
     :cond_0
     return-void
 .end method
@@ -1677,8 +1463,6 @@
 .method public declared-synchronized show()V
     .locals 1
 
-    .prologue
-    .line 573
     monitor-enter p0
 
     const/4 v0, 0x1
@@ -1688,12 +1472,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 574
     monitor-exit p0
 
     return-void
 
-    .line 573
     :catchall_0
     move-exception v0
 

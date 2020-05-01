@@ -30,12 +30,10 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
     const/4 v3, 0x0
 
-    .line 13
     new-instance v0, Lcom/netflix/mediaclient/service/logging/logblob/LogBlobType;
 
     const-string/jumbo v1, "OFFLINE_CDN_URL_DOWNLOAD"
@@ -46,7 +44,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/logging/logblob/LogBlobType;->OFFLINE_CDN_URL_DOWNLOAD:Lcom/netflix/mediaclient/service/logging/logblob/LogBlobType;
 
-    .line 14
     new-instance v0, Lcom/netflix/mediaclient/service/logging/logblob/LogBlobType;
 
     const-string/jumbo v1, "OFFLINE_LOGBLOB_TYPE"
@@ -57,7 +54,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/logging/logblob/LogBlobType;->OFFLINE_LOGBLOB_TYPE:Lcom/netflix/mediaclient/service/logging/logblob/LogBlobType;
 
-    .line 12
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/logging/logblob/LogBlobType;
@@ -85,22 +81,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 18
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 19
     iput-object p3, p0, Lcom/netflix/mediaclient/service/logging/logblob/LogBlobType;->value:Ljava/lang/String;
 
-    .line 20
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/logging/logblob/LogBlobType;
     .locals 1
 
-    .prologue
-    .line 12
     const-class v0, Lcom/netflix/mediaclient/service/logging/logblob/LogBlobType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -115,8 +105,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/logging/logblob/LogBlobType;
     .locals 1
 
-    .prologue
-    .line 12
     sget-object v0, Lcom/netflix/mediaclient/service/logging/logblob/LogBlobType;->$VALUES:[Lcom/netflix/mediaclient/service/logging/logblob/LogBlobType;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/logging/logblob/LogBlobType;->clone()Ljava/lang/Object;
@@ -133,8 +121,6 @@
 .method public getValue()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 23
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/logblob/LogBlobType;->value:Ljava/lang/String;
 
     return-object v0

@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,8 +35,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 86
     new-instance v0, Lcom/netflix/msl/msg/MessageInputStream;
 
     move-object v1, p1
@@ -59,8 +55,6 @@
 .method public createOutputStream(Lcom/netflix/msl/util/MslContext;Ljava/io/OutputStream;Ljava/nio/charset/Charset;Lcom/netflix/msl/msg/ErrorHeader;)Lcom/netflix/msl/msg/MessageOutputStream;
     .locals 1
 
-    .prologue
-    .line 101
     new-instance v0, Lcom/netflix/msl/msg/MessageOutputStream;
 
     invoke-direct {v0, p1, p2, p3, p4}, Lcom/netflix/msl/msg/MessageOutputStream;-><init>(Lcom/netflix/msl/util/MslContext;Ljava/io/OutputStream;Ljava/nio/charset/Charset;Lcom/netflix/msl/msg/ErrorHeader;)V
@@ -71,8 +65,6 @@
 .method public createOutputStream(Lcom/netflix/msl/util/MslContext;Ljava/io/OutputStream;Ljava/nio/charset/Charset;Lcom/netflix/msl/msg/MessageHeader;Lcom/netflix/msl/crypto/ICryptoContext;)Lcom/netflix/msl/msg/MessageOutputStream;
     .locals 6
 
-    .prologue
-    .line 118
     new-instance v0, Lcom/netflix/msl/msg/MessageOutputStream;
 
     move-object v1, p1

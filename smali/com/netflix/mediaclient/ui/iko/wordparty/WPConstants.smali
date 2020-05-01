@@ -131,8 +131,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 58
     const/4 v0, 0x6
 
     new-array v0, v0, [F
@@ -159,8 +157,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -169,10 +165,8 @@
 .method public static getQuintOutInterpolator()Landroid/view/animation/Interpolator;
     .locals 3
 
-    .prologue
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 77
     const v0, 0x3e6b851f    # 0.23f
 
     const v1, 0x3ea3d70a    # 0.32f

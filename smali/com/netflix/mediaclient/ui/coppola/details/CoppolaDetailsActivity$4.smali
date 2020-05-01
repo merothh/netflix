@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity;Landroid/view/View;)V
     .locals 0
 
-    .prologue
-    .line 551
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity$4;->this$0:Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity$4;->val$fragView:Landroid/view/View;
@@ -32,13 +30,10 @@
 .method public onGlobalLayout()V
     .locals 2
 
-    .prologue
-    .line 554
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity$4;->val$fragView:Landroid/view/View;
 
     invoke-static {v0, p0}, Lcom/netflix/mediaclient/util/ViewUtils;->removeGlobalLayoutListener(Landroid/view/View;Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 555
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity$4;->this$0:Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity;->access$300(Lcom/netflix/mediaclient/ui/coppola/details/CoppolaDetailsActivity;)Lcom/netflix/mediaclient/ui/player/PlayerFragment;
@@ -53,6 +48,5 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 556
     return-void
 .end method

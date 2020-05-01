@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;)V
     .locals 0
 
-    .prologue
-    .line 118
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$3;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -25,8 +23,6 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .prologue
-    .line 121
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$3;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;->isAttachedToWindow()Z
@@ -35,7 +31,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 122
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView$3;->this$0:Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;->access$100(Lcom/netflix/mediaclient/ui/ums/UserMessageAreaView;)Landroid/animation/ValueAnimator;
@@ -44,7 +39,6 @@
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 124
     :cond_0
     return-void
 .end method

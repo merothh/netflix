@@ -26,12 +26,10 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 356
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$PostPlayExperience;
 
     const-string/jumbo v1, "PostPlayNextEpisode"
@@ -40,7 +38,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$PostPlayExperience;->PostPlayNextEpisode:Lcom/netflix/mediaclient/servicemgr/UserActionLogging$PostPlayExperience;
 
-    .line 357
     new-instance v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$PostPlayExperience;
 
     const-string/jumbo v1, "PostPlaySuggestions"
@@ -49,7 +46,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$PostPlayExperience;->PostPlaySuggestions:Lcom/netflix/mediaclient/servicemgr/UserActionLogging$PostPlayExperience;
 
-    .line 355
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/netflix/mediaclient/servicemgr/UserActionLogging$PostPlayExperience;
@@ -75,8 +71,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 355
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -85,8 +79,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/servicemgr/UserActionLogging$PostPlayExperience;
     .locals 1
 
-    .prologue
-    .line 355
     const-class v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$PostPlayExperience;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -101,8 +93,6 @@
 .method public static values()[Lcom/netflix/mediaclient/servicemgr/UserActionLogging$PostPlayExperience;
     .locals 1
 
-    .prologue
-    .line 355
     sget-object v0, Lcom/netflix/mediaclient/servicemgr/UserActionLogging$PostPlayExperience;->$VALUES:[Lcom/netflix/mediaclient/servicemgr/UserActionLogging$PostPlayExperience;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/servicemgr/UserActionLogging$PostPlayExperience;->clone()Ljava/lang/Object;

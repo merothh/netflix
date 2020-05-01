@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/player/PlayScreen$1;)V
     .locals 0
 
-    .prologue
-    .line 267
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/player/PlayScreen$1$1;->this$1:Lcom/netflix/mediaclient/ui/player/PlayScreen$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onDismiss()V
     .locals 2
 
-    .prologue
-    .line 270
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayScreen$1$1;->this$1:Lcom/netflix/mediaclient/ui/player/PlayScreen$1;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/player/PlayScreen$1;->this$0:Lcom/netflix/mediaclient/ui/player/PlayScreen;
@@ -38,7 +34,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/player/PlayScreen;->access$002(Lcom/netflix/mediaclient/ui/player/PlayScreen;Z)Z
 
-    .line 271
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayScreen$1$1;->this$1:Lcom/netflix/mediaclient/ui/player/PlayScreen$1;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/player/PlayScreen$1;->this$0:Lcom/netflix/mediaclient/ui/player/PlayScreen;
@@ -47,7 +42,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 272
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/player/PlayScreen$1$1;->this$1:Lcom/netflix/mediaclient/ui/player/PlayScreen$1;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/ui/player/PlayScreen$1;->this$0:Lcom/netflix/mediaclient/ui/player/PlayScreen;
@@ -58,7 +52,6 @@
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/ui/player/TopPanel;->setGradientVisibility(Z)V
 
-    .line 274
     :cond_0
     return-void
 .end method

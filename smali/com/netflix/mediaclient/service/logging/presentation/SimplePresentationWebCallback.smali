@@ -14,8 +14,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,8 +24,6 @@
 .method public onEventsDelivered(Ljava/lang/String;)V
     .locals 4
 
-    .prologue
-    .line 10
     const-string/jumbo v0, "nf_log"
 
     const-string/jumbo v1, "onEventsDelivered: %s"
@@ -46,15 +42,12 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     return-void
 .end method
 
 .method public onEventsDeliveryFailed(Ljava/lang/String;)V
     .locals 4
 
-    .prologue
-    .line 15
     const-string/jumbo v0, "nf_log"
 
     const-string/jumbo v1, "onEventsDeliveryFailed: %s"
@@ -73,6 +66,5 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 16
     return-void
 .end method

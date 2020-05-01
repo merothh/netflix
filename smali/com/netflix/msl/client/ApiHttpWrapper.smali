@@ -47,8 +47,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/netflix/msl/client/ApiHttpWrapper;->version:Ljava/lang/String;
@@ -67,12 +65,10 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 14
     if-ne p1, p0, :cond_1
 
     :cond_0
@@ -178,8 +174,6 @@
 .method public getData()[B
     .locals 1
 
-    .prologue
-    .line 19
     iget-object v0, p0, Lcom/netflix/msl/client/ApiHttpWrapper;->data:[B
 
     return-object v0
@@ -188,8 +182,6 @@
 .method public getDataAsString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 22
     new-instance v0, Ljava/lang/String;
 
     iget-object v1, p0, Lcom/netflix/msl/client/ApiHttpWrapper;->data:[B
@@ -218,8 +210,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 17
     iget-object v0, p0, Lcom/netflix/msl/client/ApiHttpWrapper;->headers:Ljava/util/Map;
 
     return-object v0
@@ -228,8 +218,6 @@
 .method public getStatus()I
     .locals 1
 
-    .prologue
-    .line 18
     iget v0, p0, Lcom/netflix/msl/client/ApiHttpWrapper;->status:I
 
     return v0
@@ -238,8 +226,6 @@
 .method public getVersion()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 16
     iget-object v0, p0, Lcom/netflix/msl/client/ApiHttpWrapper;->version:Ljava/lang/String;
 
     return-object v0
@@ -248,10 +234,8 @@
 .method public hashCode()I
     .locals 3
 
-    .prologue
     const/16 v1, 0x2b
 
-    .line 14
     invoke-virtual {p0}, Lcom/netflix/msl/client/ApiHttpWrapper;->getVersion()Ljava/lang/String;
 
     move-result-object v0
@@ -314,8 +298,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 14
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

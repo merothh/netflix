@@ -19,22 +19,16 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag;Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 152
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag$PreReleaseVideoDetailsViewGroup;->this$0:Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag;
 
-    .line 153
     invoke-direct {p0, p2}, Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;-><init>(Landroid/content/Context;)V
 
-    .line 154
     return-void
 .end method
 
 .method static synthetic access$200(Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag$PreReleaseVideoDetailsViewGroup;)Landroid/widget/Button;
     .locals 1
 
-    .prologue
-    .line 147
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag$PreReleaseVideoDetailsViewGroup;->playButton:Landroid/widget/Button;
 
     return-object v0
@@ -43,15 +37,12 @@
 .method private fetchSupplementalVideos(Ljava/lang/String;)V
     .locals 6
 
-    .prologue
-    .line 183
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag$PreReleaseVideoDetailsViewGroup;->this$0:Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag;->getServiceManager()Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     move-result-object v0
 
-    .line 184
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->isReady()Z
@@ -60,7 +51,6 @@
 
     if-nez v1, :cond_1
 
-    .line 185
     :cond_0
     const-string/jumbo v0, "PreReleaseVideoDetailsViewGroup"
 
@@ -68,11 +58,9 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 191
     :goto_0
     return-void
 
-    .line 189
     :cond_1
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag$PreReleaseVideoDetailsViewGroup;->this$0:Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag;
 
@@ -82,7 +70,6 @@
 
     iput-wide v2, v1, Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag;->requestId:J
 
-    .line 190
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getBrowse()Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
 
     move-result-object v0
@@ -105,20 +92,16 @@
 .method private updateSupplementalMessage(Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;)V
     .locals 2
 
-    .prologue
-    .line 239
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag$PreReleaseVideoDetailsViewGroup;->supplementalMessage:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 249
     :cond_0
     :goto_0
     return-void
 
-    .line 243
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag$PreReleaseVideoDetailsViewGroup;->this$0:Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag;
 
@@ -128,7 +111,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 244
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag$PreReleaseVideoDetailsViewGroup;->supplementalMessage:Landroid/widget/TextView;
 
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;->getSupplementalMessage()Ljava/lang/String;
@@ -139,7 +121,6 @@
 
     goto :goto_0
 
-    .line 246
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag$PreReleaseVideoDetailsViewGroup;->supplementalMessage:Landroid/widget/TextView;
 
@@ -151,7 +132,6 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 247
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag$PreReleaseVideoDetailsViewGroup;->relatedTitle:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
@@ -170,11 +150,8 @@
 .method protected findViews()V
     .locals 1
 
-    .prologue
-    .line 163
     invoke-super {p0}, Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;->findViews()V
 
-    .line 164
     const v0, 0x7f0f0395
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag$PreReleaseVideoDetailsViewGroup;->findViewById(I)Landroid/view/View;
@@ -185,7 +162,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag$PreReleaseVideoDetailsViewGroup;->playButton:Landroid/widget/Button;
 
-    .line 165
     const v0, 0x7f0f0392
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag$PreReleaseVideoDetailsViewGroup;->findViewById(I)Landroid/view/View;
@@ -196,20 +172,16 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag$PreReleaseVideoDetailsViewGroup;->supplementalMessage:Landroid/widget/TextView;
 
-    .line 166
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag$PreReleaseVideoDetailsViewGroup;->supplementalMessage:Landroid/widget/TextView;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/l10n/LocalizationUtils;->setLayoutDirection(Landroid/view/View;)V
 
-    .line 167
     return-void
 .end method
 
 .method protected getlayoutId()I
     .locals 1
 
-    .prologue
-    .line 158
     const v0, 0x7f030119
 
     return v0
@@ -218,35 +190,28 @@
 .method protected setupImageClicks(Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;Lcom/netflix/mediaclient/android/activity/NetflixActivity;)V
     .locals 2
 
-    .prologue
-    .line 172
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;->hasTrailers()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 173
     invoke-interface {p1}, Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;->getDefaultTrailer()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 174
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 175
     invoke-direct {p0, v0}, Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag$PreReleaseVideoDetailsViewGroup;->fetchSupplementalVideos(Ljava/lang/String;)V
 
-    .line 180
     :cond_0
     :goto_0
     return-void
 
-    .line 178
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag$PreReleaseVideoDetailsViewGroup;->playButton:Landroid/widget/Button;
 
@@ -260,13 +225,9 @@
 .method public updateDetails(Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup$DetailsStringProvider;)V
     .locals 0
 
-    .prologue
-    .line 231
     invoke-super {p0, p1, p2}, Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup;->updateDetails(Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;Lcom/netflix/mediaclient/ui/details/VideoDetailsViewGroup$DetailsStringProvider;)V
 
-    .line 232
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/details/PreReleaseDetailsFrag$PreReleaseVideoDetailsViewGroup;->updateSupplementalMessage(Lcom/netflix/mediaclient/servicemgr/interface_/details/VideoDetails;)V
 
-    .line 233
     return-void
 .end method

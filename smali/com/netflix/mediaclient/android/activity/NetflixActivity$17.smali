@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;Lcom/netflix/mediaclient/servicemgr/ServiceManager;Lcom/netflix/mediaclient/service/error/ErrorDescriptor;)V
     .locals 0
 
-    .prologue
-    .line 2788
     iput-object p1, p0, Lcom/netflix/mediaclient/android/activity/NetflixActivity$17;->this$0:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/android/activity/NetflixActivity$17;->val$sm:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
@@ -36,8 +34,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 2791
     iget-object v0, p0, Lcom/netflix/mediaclient/android/activity/NetflixActivity$17;->val$sm:Lcom/netflix/mediaclient/servicemgr/ServiceManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->getErrorHandler()Lcom/netflix/mediaclient/servicemgr/IErrorHandler;
@@ -48,6 +44,5 @@
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/servicemgr/IErrorHandler;->setErrorAccepted(Lcom/netflix/mediaclient/service/error/ErrorDescriptor;)V
 
-    .line 2792
     return-void
 .end method

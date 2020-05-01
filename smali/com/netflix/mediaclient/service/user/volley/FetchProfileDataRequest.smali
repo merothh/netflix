@@ -32,17 +32,12 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;)V
     .locals 3
 
-    .prologue
-    .line 38
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorVolleyWebClientRequest;-><init>(Landroid/content/Context;)V
 
-    .line 39
     iput-object p3, p0, Lcom/netflix/mediaclient/service/user/volley/FetchProfileDataRequest;->responseCallback:Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;
 
-    .line 40
     iput-object p2, p0, Lcom/netflix/mediaclient/service/user/volley/FetchProfileDataRequest;->mProfileId:Ljava/lang/String;
 
-    .line 42
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "[\'profiles\',\'"
@@ -65,14 +60,12 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/user/volley/FetchProfileDataRequest;->pqlQuery1:Ljava/lang/String;
 
-    .line 44
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 45
     const-string/jumbo v0, "nf_service_user_fetchprofiledatarequest"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -97,7 +90,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 47
     :cond_0
     return-void
 .end method
@@ -116,8 +108,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 51
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -138,20 +128,16 @@
 .method protected onFailure(Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 2
 
-    .prologue
-    .line 94
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/volley/FetchProfileDataRequest;->responseCallback:Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;
 
     if-eqz v0, :cond_0
 
-    .line 95
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/volley/FetchProfileDataRequest;->responseCallback:Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, v1, p1}, Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;->onProfileDataFetched(Lcom/netflix/mediaclient/service/webclient/model/leafs/UserProfile;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 97
     :cond_0
     return-void
 .end method
@@ -159,20 +145,16 @@
 .method protected onSuccess(Lcom/netflix/mediaclient/service/webclient/model/leafs/UserProfile;)V
     .locals 2
 
-    .prologue
-    .line 101
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/volley/FetchProfileDataRequest;->responseCallback:Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;
 
     if-eqz v0, :cond_0
 
-    .line 102
     iget-object v0, p0, Lcom/netflix/mediaclient/service/user/volley/FetchProfileDataRequest;->responseCallback:Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;
 
     sget-object v1, Lcom/netflix/mediaclient/android/app/CommonStatus;->OK:Lcom/netflix/mediaclient/android/app/NetflixImmutableStatus;
 
     invoke-interface {v0, p1, v1}, Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;->onProfileDataFetched(Lcom/netflix/mediaclient/service/webclient/model/leafs/UserProfile;Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 104
     :cond_0
     return-void
 .end method
@@ -180,8 +162,6 @@
 .method protected bridge synthetic onSuccess(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 28
     check-cast p1, Lcom/netflix/mediaclient/service/webclient/model/leafs/UserProfile;
 
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/user/volley/FetchProfileDataRequest;->onSuccess(Lcom/netflix/mediaclient/service/webclient/model/leafs/UserProfile;)V
@@ -192,15 +172,12 @@
 .method protected parseFalkorResponse(Ljava/lang/String;)Lcom/netflix/mediaclient/service/webclient/model/leafs/UserProfile;
     .locals 4
 
-    .prologue
-    .line 61
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 62
     const-string/jumbo v0, "nf_service_user_fetchprofiledatarequest"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -223,7 +200,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     :cond_0
     const-string/jumbo v0, "nf_service_user_fetchprofiledatarequest"
 
@@ -231,14 +207,12 @@
 
     move-result-object v0
 
-    .line 65
     invoke-static {v0}, Lcom/netflix/mediaclient/service/webclient/volley/FalkorParseUtils;->isEmpty(Lcom/google/gson/JsonObject;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 66
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorException;
 
     const-string/jumbo v1, "UserProfile empty!!!"
@@ -247,7 +221,6 @@
 
     throw v0
 
-    .line 72
     :cond_1
     :try_start_0
     const-string/jumbo v1, "profiles"
@@ -258,19 +231,16 @@
 
     move-result-object v0
 
-    .line 78
     iget-object v1, p0, Lcom/netflix/mediaclient/service/user/volley/FetchProfileDataRequest;->mProfileId:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/google/gson/JsonObject;->getAsJsonObject(Ljava/lang/String;)Lcom/google/gson/JsonObject;
 
     move-result-object v1
 
-    .line 80
     new-instance v2, Lcom/netflix/mediaclient/service/webclient/model/leafs/UserProfile;
 
     invoke-direct {v2}, Lcom/netflix/mediaclient/service/webclient/model/leafs/UserProfile;-><init>()V
 
-    .line 81
     const-string/jumbo v0, "summary"
 
     const-class v3, Lcom/netflix/mediaclient/service/webclient/model/leafs/UserProfile$Summary;
@@ -283,7 +253,6 @@
 
     iput-object v0, v2, Lcom/netflix/mediaclient/service/webclient/model/leafs/UserProfile;->summary:Lcom/netflix/mediaclient/service/webclient/model/leafs/UserProfile$Summary;
 
-    .line 83
     iget-object v0, v2, Lcom/netflix/mediaclient/service/webclient/model/leafs/UserProfile;->summary:Lcom/netflix/mediaclient/service/webclient/model/leafs/UserProfile$Summary;
 
     if-eqz v0, :cond_2
@@ -298,7 +267,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 84
     :cond_2
     new-instance v0, Lcom/netflix/mediaclient/service/webclient/volley/FalkorException;
 
@@ -324,11 +292,9 @@
 
     throw v0
 
-    .line 73
     :catch_0
     move-exception v0
 
-    .line 74
     const-string/jumbo v1, "nf_service_user_fetchprofiledatarequest"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -351,7 +317,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 75
     new-instance v1, Lcom/netflix/mediaclient/service/webclient/volley/FalkorException;
 
     const-string/jumbo v2, "response missing profiles json objects"
@@ -360,7 +325,6 @@
 
     throw v1
 
-    .line 87
     :cond_3
     const-string/jumbo v0, "subtitlePreference"
 
@@ -374,15 +338,12 @@
 
     iput-object v0, v2, Lcom/netflix/mediaclient/service/webclient/model/leafs/UserProfile;->subtitlePreference:Lcom/netflix/mediaclient/service/webclient/model/leafs/SubtitlePreference;
 
-    .line 89
     return-object v2
 .end method
 
 .method protected bridge synthetic parseFalkorResponse(Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 28
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/user/volley/FetchProfileDataRequest;->parseFalkorResponse(Ljava/lang/String;)Lcom/netflix/mediaclient/service/webclient/model/leafs/UserProfile;
 
     move-result-object v0
@@ -393,8 +354,6 @@
 .method protected shouldSkipProcessingOnInvalidUser()Z
     .locals 1
 
-    .prologue
-    .line 56
     const/4 v0, 0x0
 
     return v0

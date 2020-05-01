@@ -21,14 +21,10 @@
 .method public constructor <init>(Lcom/netflix/falkor/CachedModelProxy;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 3638
     iput-object p1, p0, Lcom/netflix/falkor/CachedModelProxy$RefreshPopularTitlesTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
-    .line 3639
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/netflix/falkor/CachedModelProxy$RefreshLomoTask;-><init>(Lcom/netflix/falkor/CachedModelProxy;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3640
     return-void
 .end method
 
@@ -46,21 +42,18 @@
         }
     .end annotation
 
-    .prologue
     const/4 v6, 0x2
 
     const/4 v5, 0x1
 
     const/4 v4, 0x0
 
-    .line 3646
     new-instance v0, Ljava/util/ArrayList;
 
     const/16 v1, 0x8
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 3648
     const-string/jumbo v1, "\'%s\'"
 
     new-array v2, v5, [Ljava/lang/Object;
@@ -73,7 +66,6 @@
 
     move-result-object v1
 
-    .line 3649
     new-instance v2, Lcom/netflix/mediaclient/util/DataUtil$StringPair;
 
     const-string/jumbo v3, "param"
@@ -86,7 +78,6 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3650
     new-instance v1, Lcom/netflix/mediaclient/util/DataUtil$StringPair;
 
     const-string/jumbo v2, "param"
@@ -101,7 +92,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3651
     new-instance v1, Lcom/netflix/mediaclient/util/DataUtil$StringPair;
 
     const-string/jumbo v2, "param"
@@ -116,7 +106,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3653
     new-array v1, v6, [Ljava/lang/Object;
 
     iget-object v2, p0, Lcom/netflix/falkor/CachedModelProxy$RefreshPopularTitlesTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
@@ -161,10 +150,8 @@
 
     move-result-object v1
 
-    .line 3654
     const-string/jumbo v2, "[\'summary\']"
 
-    .line 3656
     new-instance v3, Lcom/netflix/mediaclient/util/DataUtil$StringPair;
 
     const-string/jumbo v4, "pathSuffix"
@@ -177,7 +164,6 @@
 
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3657
     new-instance v1, Lcom/netflix/mediaclient/util/DataUtil$StringPair;
 
     const-string/jumbo v3, "pathSuffix"
@@ -190,15 +176,12 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3659
     return-object v0
 .end method
 
 .method protected notifyOfRefresh()V
     .locals 1
 
-    .prologue
-    .line 3664
     iget-object v0, p0, Lcom/netflix/falkor/CachedModelProxy$RefreshPopularTitlesTask;->this$0:Lcom/netflix/falkor/CachedModelProxy;
 
     invoke-virtual {v0}, Lcom/netflix/falkor/CachedModelProxy;->getService()Lcom/netflix/mediaclient/service/NetflixService;
@@ -207,6 +190,5 @@
 
     invoke-static {v0}, Lcom/netflix/mediaclient/servicemgr/ServiceManager;->sendPopularTitlesRefreshBrodcast(Landroid/content/Context;)V
 
-    .line 3665
     return-void
 .end method

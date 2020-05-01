@@ -34,23 +34,18 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerFileManager;->mSubtitles:Ljava/util/Map;
 
-    .line 51
     iput-object p1, p0, Lcom/netflix/mediaclient/service/player/PlayerFileManager;->mContext:Landroid/content/Context;
 
-    .line 54
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerFileManager;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "player_cache"
@@ -61,28 +56,24 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerFileManager;->mRoot:Ljava/io/File;
 
-    .line 56
     const-string/jumbo v0, "nf_subtitles"
 
     const-string/jumbo v1, "Remove cached data for player started... "
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 57
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerFileManager;->mRoot:Ljava/io/File;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/FileUtils;->deleteRecursive(Ljava/io/File;)Z
 
     move-result v0
 
-    .line 58
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 59
     const-string/jumbo v1, "nf_subtitles"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -105,7 +96,6 @@
 
     invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 62
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerFileManager;->mContext:Landroid/content/Context;
 
@@ -117,15 +107,12 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerFileManager;->mRoot:Ljava/io/File;
 
-    .line 63
     return-void
 .end method
 
 .method private getKey(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 81
     invoke-static {p1}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v0
@@ -138,7 +125,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 82
     :cond_0
     const-string/jumbo v0, "nf_subtitles"
 
@@ -146,10 +132,8 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 83
     const/4 v0, 0x0
 
-    .line 86
     :goto_0
     return-object v0
 
@@ -184,23 +168,18 @@
 .method public existSubtitleCache(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 66
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/service/player/PlayerFileManager;->getKey(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 68
     if-nez v1, :cond_1
 
-    .line 75
     :cond_0
     :goto_0
     return-object v0
 
-    .line 72
     :cond_1
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/PlayerFileManager;->mSubtitles:Ljava/util/Map;
 
@@ -212,24 +191,20 @@
 
     move-object v0, v1
 
-    .line 73
     goto :goto_0
 .end method
 
 .method public getFile(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
     .locals 4
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 191
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 192
     const-string/jumbo v0, "nf_subtitles"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -262,7 +237,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 195
     :cond_0
     invoke-static {p1}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
@@ -276,7 +250,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 196
     :cond_1
     const-string/jumbo v0, "nf_subtitles"
 
@@ -286,11 +259,9 @@
 
     move-object v0, v1
 
-    .line 214
     :goto_0
     return-object v0
 
-    .line 200
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerFileManager;->mSubtitles:Ljava/util/Map;
 
@@ -300,17 +271,14 @@
 
     check-cast v0, Ljava/io/File;
 
-    .line 201
     if-nez v0, :cond_4
 
-    .line 202
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 203
     const-string/jumbo v0, "nf_subtitles"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -342,23 +310,19 @@
     :cond_3
     move-object v0, v1
 
-    .line 205
     goto :goto_0
 
-    .line 208
     :cond_4
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v0, p2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 209
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    .line 210
     const-string/jumbo v0, "nf_subtitles"
 
     const-string/jumbo v1, "File exist"
@@ -367,10 +331,8 @@
 
     move-object v0, v2
 
-    .line 211
     goto :goto_0
 
-    .line 213
     :cond_5
     const-string/jumbo v0, "nf_subtitles"
 
@@ -380,34 +342,28 @@
 
     move-object v0, v1
 
-    .line 214
     goto :goto_0
 .end method
 
 .method public getSubtitleCache(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 6
 
-    .prologue
-    .line 92
     invoke-direct {p0, p1, p2}, Lcom/netflix/mediaclient/service/player/PlayerFileManager;->getKey(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 94
     invoke-static {p1}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 95
     const-string/jumbo v0, "nf_subtitles"
 
     const-string/jumbo v1, "Playable ID is empty, use temp directory!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -416,7 +372,6 @@
 
     move-result-object v0
 
-    .line 98
     :cond_0
     iget-object v1, p0, Lcom/netflix/mediaclient/service/player/PlayerFileManager;->mSubtitles:Ljava/util/Map;
 
@@ -428,37 +383,31 @@
 
     const/4 v1, 0x1
 
-    .line 100
     :goto_0
     if-nez v1, :cond_2
 
-    .line 101
     new-instance v1, Ljava/io/File;
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/PlayerFileManager;->mRoot:Ljava/io/File;
 
     invoke-direct {v1, v2, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 102
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v2
 
     if-nez v2, :cond_4
 
-    .line 103
     invoke-virtual {v1}, Ljava/io/File;->mkdir()Z
 
     move-result v2
 
-    .line 104
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 105
     const-string/jumbo v3, "nf_subtitles"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -495,24 +444,20 @@
 
     invoke-static {v3, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 112
     :cond_1
     :goto_1
     iget-object v2, p0, Lcom/netflix/mediaclient/service/player/PlayerFileManager;->mSubtitles:Ljava/util/Map;
 
     invoke-interface {v2, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 115
     :cond_2
     return-object v0
 
-    .line 98
     :cond_3
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 108
     :cond_4
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
@@ -520,7 +465,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 109
     const-string/jumbo v2, "nf_subtitles"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -559,17 +503,14 @@
 .method public moveFile(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 165
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 166
     const-string/jumbo v0, "nf_subtitles"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -612,7 +553,6 @@
 
     invoke-static {v0, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     :cond_0
     invoke-static {p1}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
@@ -632,7 +572,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 169
     :cond_1
     const-string/jumbo v0, "nf_subtitles"
 
@@ -642,12 +581,10 @@
 
     move v0, v1
 
-    .line 185
     :cond_2
     :goto_0
     return v0
 
-    .line 173
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerFileManager;->mSubtitles:Ljava/util/Map;
 
@@ -657,10 +594,8 @@
 
     check-cast v0, Ljava/io/File;
 
-    .line 174
     if-nez v0, :cond_4
 
-    .line 175
     const-string/jumbo v0, "nf_subtitles"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -691,10 +626,8 @@
 
     move v0, v1
 
-    .line 176
     goto :goto_0
 
-    .line 179
     :cond_4
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -722,19 +655,16 @@
 
     move-result-object v1
 
-    .line 180
     invoke-static {p2, v1}, Lcom/netflix/mediaclient/util/FileUtils;->moveFile(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
-    .line 182
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 183
     const-string/jumbo v2, "nf_subtitles"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -783,21 +713,18 @@
 .method public saveFile(Ljava/lang/String;Ljava/lang/String;[B)Ljava/lang/String;
     .locals 9
 
-    .prologue
     const/4 v2, 0x1
 
     const/4 v3, 0x0
 
     const/4 v1, 0x0
 
-    .line 121
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 122
     const-string/jumbo v0, "nf_subtitles"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -830,23 +757,19 @@
 
     invoke-static {v0, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
     :cond_0
     invoke-static {p1}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v4
 
-    .line 125
     invoke-static {p2}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v5
 
-    .line 126
     if-nez p3, :cond_2
 
     move v0, v2
 
-    .line 127
     :goto_0
     if-nez v4, :cond_1
 
@@ -854,7 +777,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 128
     :cond_1
     const-string/jumbo v6, "nf_subtitles"
 
@@ -888,17 +810,14 @@
 
     move-object v0, v1
 
-    .line 158
     :goto_1
     return-object v0
 
     :cond_2
     move v0, v3
 
-    .line 126
     goto :goto_0
 
-    .line 132
     :cond_3
     iget-object v0, p0, Lcom/netflix/mediaclient/service/player/PlayerFileManager;->mSubtitles:Ljava/util/Map;
 
@@ -908,10 +827,8 @@
 
     check-cast v0, Ljava/io/File;
 
-    .line 133
     if-nez v0, :cond_4
 
-    .line 134
     const-string/jumbo v0, "nf_subtitles"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -942,29 +859,24 @@
 
     move-object v0, v1
 
-    .line 135
     goto :goto_1
 
-    .line 138
     :cond_4
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v0, p2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 141
     :try_start_0
     invoke-virtual {v2}, Ljava/io/File;->createNewFile()Z
 
     move-result v0
 
-    .line 142
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v3
 
     if-eqz v3, :cond_5
 
-    .line 143
     const-string/jumbo v3, "nf_subtitles"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1001,7 +913,6 @@
 
     invoke-static {v3, v0}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 145
     :cond_5
     new-instance v0, Ljava/io/BufferedOutputStream;
 
@@ -1011,35 +922,28 @@
 
     invoke-direct {v0, v3}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 146
     invoke-virtual {v0, p3}, Ljava/io/BufferedOutputStream;->write([B)V
 
-    .line 147
     invoke-virtual {v0}, Ljava/io/BufferedOutputStream;->flush()V
 
-    .line 148
     invoke-virtual {v0}, Ljava/io/BufferedOutputStream;->close()V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     move-object v0, v2
 
-    .line 155
     :goto_2
     if-eqz v0, :cond_6
 
-    .line 156
     invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
 
     goto/16 :goto_1
 
-    .line 149
     :catch_0
     move-exception v0
 
-    .line 150
     const-string/jumbo v2, "nf_subtitles"
 
     const-string/jumbo v3, "Failed to save file "
@@ -1048,12 +952,10 @@
 
     move-object v0, v1
 
-    .line 151
     goto :goto_2
 
     :cond_6
     move-object v0, v1
 
-    .line 158
     goto/16 :goto_1
 .end method

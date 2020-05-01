@@ -152,22 +152,18 @@
 .method public constructor <init>(Landroid/content/Intent;)V
     .locals 8
 
-    .prologue
     const/4 v4, -0x1
 
     const/4 v1, 0x0
 
-    .line 279
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 197
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->actions:Ljava/util/List;
 
-    .line 295
     const-string/jumbo v0, "bigViewPicture"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
@@ -176,7 +172,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 296
     const-string/jumbo v0, "bigViewPicture"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -185,7 +180,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->bigViewPicture:Ljava/lang/String;
 
-    .line 299
     :cond_0
     const-string/jumbo v0, "bigViewSummary"
 
@@ -195,7 +189,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 300
     const-string/jumbo v0, "bigViewSummary"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -204,7 +197,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->bigViewSummary:Ljava/lang/String;
 
-    .line 303
     :cond_1
     const-string/jumbo v0, "bigViewText"
 
@@ -214,7 +206,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 304
     const-string/jumbo v0, "bigViewText"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -223,7 +214,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->bigViewText:Ljava/lang/String;
 
-    .line 307
     :cond_2
     const-string/jumbo v0, "bigViewTitle"
 
@@ -233,7 +223,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 308
     const-string/jumbo v0, "bigViewTitle"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -242,7 +231,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->bigViewTitle:Ljava/lang/String;
 
-    .line 311
     :cond_3
     const-string/jumbo v0, "defaultActionKey"
 
@@ -252,7 +240,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 312
     const-string/jumbo v0, "defaultActionKey"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -261,7 +248,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->defaultActionKey:Ljava/lang/String;
 
-    .line 315
     :cond_4
     const-string/jumbo v0, "defaultActionPayload"
 
@@ -271,7 +257,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 316
     const-string/jumbo v0, "defaultActionPayload"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -280,7 +265,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->defaultActionPayload:Ljava/lang/String;
 
-    .line 319
     :cond_5
     const-string/jumbo v0, "info"
 
@@ -290,7 +274,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 320
     const-string/jumbo v0, "info"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -299,7 +282,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->info:Ljava/lang/String;
 
-    .line 323
     :cond_6
     const-string/jumbo v0, "largeIcon"
 
@@ -309,7 +291,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 324
     const-string/jumbo v0, "largeIcon"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -318,7 +299,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->largeIcon:Ljava/lang/String;
 
-    .line 327
     :cond_7
     const-string/jumbo v0, "smallIcon"
 
@@ -328,7 +308,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 328
     const-string/jumbo v0, "smallIcon"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -337,7 +316,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->smallIcon:Ljava/lang/String;
 
-    .line 331
     :cond_8
     const-string/jumbo v0, "ledColor"
 
@@ -347,14 +325,12 @@
 
     if-eqz v0, :cond_9
 
-    .line 332
     const-string/jumbo v0, "ledColor"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 333
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isNumeric(Ljava/lang/String;)Z
 
     move-result v2
@@ -368,7 +344,6 @@
     :goto_0
     iput v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->ledColor:I
 
-    .line 336
     :cond_9
     const-string/jumbo v0, "sound"
 
@@ -378,7 +353,6 @@
 
     if-eqz v0, :cond_a
 
-    .line 337
     const-string/jumbo v0, "sound"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -387,7 +361,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->sound:Ljava/lang/String;
 
-    .line 340
     :cond_a
     const-string/jumbo v0, "subtext"
 
@@ -397,7 +370,6 @@
 
     if-eqz v0, :cond_b
 
-    .line 341
     const-string/jumbo v0, "subtext"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -406,7 +378,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->subtext:Ljava/lang/String;
 
-    .line 344
     :cond_b
     const-string/jumbo v0, "text"
 
@@ -416,7 +387,6 @@
 
     if-eqz v0, :cond_c
 
-    .line 345
     const-string/jumbo v0, "text"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -425,7 +395,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->text:Ljava/lang/String;
 
-    .line 348
     :cond_c
     const-string/jumbo v0, "ticker"
 
@@ -435,7 +404,6 @@
 
     if-eqz v0, :cond_d
 
-    .line 349
     const-string/jumbo v0, "ticker"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -444,7 +412,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->ticker:Ljava/lang/String;
 
-    .line 352
     :cond_d
     const-string/jumbo v0, "title"
 
@@ -454,7 +421,6 @@
 
     if-eqz v0, :cond_e
 
-    .line 353
     const-string/jumbo v0, "title"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -463,7 +429,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->title:Ljava/lang/String;
 
-    .line 356
     :cond_e
     const-string/jumbo v0, "vibrate"
 
@@ -473,7 +438,6 @@
 
     if-eqz v0, :cond_f
 
-    .line 357
     const-string/jumbo v0, "vibrate"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -482,7 +446,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->vibrate:Ljava/lang/String;
 
-    .line 360
     :cond_f
     const-string/jumbo v0, "when"
 
@@ -492,14 +455,12 @@
 
     if-eqz v0, :cond_10
 
-    .line 361
     const-string/jumbo v0, "when"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 362
     invoke-static {v0}, Lcom/netflix/mediaclient/util/StringUtils;->isNumeric(Ljava/lang/String;)Z
 
     move-result v2
@@ -513,7 +474,6 @@
     :goto_1
     iput-wide v2, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->when:J
 
-    .line 365
     :cond_10
     const-string/jumbo v0, "guid"
 
@@ -523,7 +483,6 @@
 
     if-eqz v0, :cond_11
 
-    .line 366
     const-string/jumbo v0, "guid"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -532,7 +491,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->guid:Ljava/lang/String;
 
-    .line 369
     :cond_11
     const-string/jumbo v0, "messageGuid"
 
@@ -542,7 +500,6 @@
 
     if-eqz v0, :cond_12
 
-    .line 370
     const-string/jumbo v0, "messageGuid"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -551,7 +508,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->messageGuid:Ljava/lang/String;
 
-    .line 373
     :cond_12
     const-string/jumbo v0, "profileId"
 
@@ -561,7 +517,6 @@
 
     if-eqz v0, :cond_13
 
-    .line 374
     const-string/jumbo v0, "profileId"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -570,7 +525,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->profileGuid:Ljava/lang/String;
 
-    .line 377
     :cond_13
     const-string/jumbo v0, "type"
 
@@ -580,7 +534,6 @@
 
     if-eqz v0, :cond_14
 
-    .line 378
     const-string/jumbo v0, "type"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -589,7 +542,6 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->actionInfoType:Ljava/lang/String;
 
-    .line 382
     :cond_14
     const-string/jumbo v0, "invisiblePayload"
 
@@ -599,27 +551,23 @@
 
     if-eqz v0, :cond_15
 
-    .line 383
     const-string/jumbo v0, "invisiblePayload"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 384
     invoke-static {v2}, Lcom/netflix/mediaclient/util/StringUtils;->isNotEmpty(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_15
 
-    .line 386
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0, v2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 387
     const-string/jumbo v3, "cause"
 
     const/4 v5, 0x0
@@ -630,7 +578,6 @@
 
     iput-object v3, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->renoCause:Ljava/lang/String;
 
-    .line 388
     const-string/jumbo v3, "messageGUID"
 
     const/4 v5, 0x0
@@ -641,7 +588,6 @@
 
     iput-object v3, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->renoMessageGuid:Ljava/lang/String;
 
-    .line 389
     const-string/jumbo v3, "creationTS"
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -656,7 +602,6 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 397
     :cond_15
     :goto_2
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->defaultActionPayload:Ljava/lang/String;
@@ -669,11 +614,9 @@
 
     move v0, v1
 
-    .line 401
     :goto_3
     if-le v0, v4, :cond_1e
 
-    .line 402
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -692,28 +635,24 @@
 
     move-result-object v1
 
-    .line 403
     invoke-virtual {p1, v1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1d
 
-    .line 405
     new-instance v2, Lcom/netflix/mediaclient/service/pushnotification/Payload$Action;
 
     iget-object v3, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->guid:Ljava/lang/String;
 
     invoke-direct {v2, v3}, Lcom/netflix/mediaclient/service/pushnotification/Payload$Action;-><init>(Ljava/lang/String;)V
 
-    .line 406
     invoke-virtual {p1, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v2, Lcom/netflix/mediaclient/service/pushnotification/Payload$Action;->key:Ljava/lang/String;
 
-    .line 407
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -732,21 +671,18 @@
 
     move-result-object v1
 
-    .line 408
     invoke-virtual {p1, v1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_16
 
-    .line 409
     invoke-virtual {p1, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v2, Lcom/netflix/mediaclient/service/pushnotification/Payload$Action;->icon:Ljava/lang/String;
 
-    .line 411
     :cond_16
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -766,21 +702,18 @@
 
     move-result-object v1
 
-    .line 412
     invoke-virtual {p1, v1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_17
 
-    .line 413
     invoke-virtual {p1, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v2, Lcom/netflix/mediaclient/service/pushnotification/Payload$Action;->payload:Ljava/lang/String;
 
-    .line 415
     :cond_17
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -800,25 +733,21 @@
 
     move-result-object v1
 
-    .line 416
     invoke-virtual {p1, v1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_18
 
-    .line 417
     invoke-virtual {p1, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v2, Lcom/netflix/mediaclient/service/pushnotification/Payload$Action;->text:Ljava/lang/String;
 
-    .line 420
     :cond_18
     add-int/lit8 v0, v0, 0x1
 
-    .line 422
     iget-object v1, v2, Lcom/netflix/mediaclient/service/pushnotification/Payload$Action;->payload:Ljava/lang/String;
 
     if-eqz v1, :cond_19
@@ -835,7 +764,6 @@
 
     if-nez v1, :cond_1c
 
-    .line 423
     :cond_19
     const-string/jumbo v1, "nf_push"
 
@@ -864,20 +792,16 @@
     :cond_1a
     move v0, v1
 
-    .line 333
     goto/16 :goto_0
 
-    .line 362
     :cond_1b
     const-wide/16 v2, 0x0
 
     goto/16 :goto_1
 
-    .line 390
     :catch_0
     move-exception v0
 
-    .line 391
     const-string/jumbo v3, "nf_push"
 
     const-string/jumbo v5, "invalid renoPayload %s"
@@ -896,7 +820,6 @@
 
     goto/16 :goto_2
 
-    .line 426
     :cond_1c
     iget-object v1, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->actions:Ljava/util/List;
 
@@ -907,10 +830,8 @@
     :cond_1d
     move v0, v4
 
-    .line 431
     goto/16 :goto_3
 
-    .line 434
     :cond_1e
     return-void
 .end method
@@ -918,8 +839,6 @@
 .method static synthetic access$000(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
     .locals 1
 
-    .prologue
-    .line 32
     invoke-static {p0, p1}, Lcom/netflix/mediaclient/service/pushnotification/Payload;->parsePayload(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -930,20 +849,16 @@
 .method private static extractOriginator(Ljava/lang/String;)Ljava/lang/String;
     .locals 6
 
-    .prologue
     const/16 v5, 0x26
 
     const/4 v0, 0x0
 
-    .line 729
     if-nez p0, :cond_1
 
-    .line 767
     :cond_0
     :goto_0
     return-object v0
 
-    .line 733
     :cond_1
     sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
@@ -951,66 +866,53 @@
 
     move-result-object v1
 
-    .line 734
     const-string/jumbo v2, "source="
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 736
     if-ltz v1, :cond_0
 
-    .line 740
     add-int/lit8 v2, v1, 0x7
 
-    .line 741
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v3
 
     if-ge v2, v3, :cond_0
 
-    .line 745
     add-int/lit8 v3, v1, -0x1
 
-    .line 746
     if-ltz v3, :cond_0
 
-    .line 750
     invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
 
-    .line 751
     const/16 v4, 0x3f
 
     if-eq v3, v4, :cond_2
 
     if-ne v3, v5, :cond_4
 
-    .line 752
     :cond_2
     invoke-virtual {p0, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 753
     invoke-virtual {v0, v5}, Ljava/lang/String;->indexOf(I)I
 
     move-result v1
 
-    .line 754
     if-gez v1, :cond_3
 
-    .line 755
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 757
     :cond_3
     const/4 v2, 0x0
 
@@ -1020,23 +922,19 @@
 
     goto :goto_0
 
-    .line 761
     :cond_4
     add-int/lit8 v1, v1, 0x7
 
-    .line 762
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
 
     if-ge v1, v2, :cond_0
 
-    .line 766
     invoke-virtual {p0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 767
     invoke-static {v0}, Lcom/netflix/mediaclient/service/pushnotification/Payload;->extractOriginator(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -1047,10 +945,8 @@
 .method public static isValid(Lcom/netflix/mediaclient/service/pushnotification/Payload;)Ljava/lang/String;
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 591
     const-string/jumbo v1, "INFO"
 
     iget-object v2, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->defaultActionKey:Ljava/lang/String;
@@ -1061,7 +957,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 592
     iget-object v1, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->actionInfoType:Ljava/lang/String;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
@@ -1070,15 +965,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 593
     const-string/jumbo v0, "Payload:: missing fields in INFO !"
 
-    .line 610
     :cond_0
     :goto_0
     return-object v0
 
-    .line 598
     :cond_1
     iget-object v1, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->title:Ljava/lang/String;
 
@@ -1088,12 +980,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 599
     const-string/jumbo v0, "Payload:: title is missing!"
 
     goto :goto_0
 
-    .line 602
     :cond_2
     iget-object v1, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->text:Ljava/lang/String;
 
@@ -1103,12 +993,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 603
     const-string/jumbo v0, "Payload:: text is missing!"
 
     goto :goto_0
 
-    .line 606
     :cond_3
     iget-object v1, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->defaultActionKey:Ljava/lang/String;
 
@@ -1118,7 +1006,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 607
     const-string/jumbo v0, "Payload:: defaultActionPayload is missing!"
 
     goto :goto_0
@@ -1127,22 +1014,18 @@
 .method private static parsePayload(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
     .locals 4
 
-    .prologue
-    .line 516
     invoke-static {p0}, Lcom/netflix/mediaclient/util/StringUtils;->isEmpty(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 518
     const-string/jumbo v0, "nf_push"
 
     const-string/jumbo v1, "Empty payload, return URI that will launch our application to HOME page"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 519
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1169,14 +1052,12 @@
 
     move-result-object v0
 
-    .line 520
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 521
     const-string/jumbo v1, "nf_push"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1199,17 +1080,14 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 523
     :cond_0
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 570
     :goto_0
     return-object v0
 
-    .line 526
     :cond_1
     if-eqz p1, :cond_3
 
@@ -1225,14 +1103,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 527
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 528
     const-string/jumbo v0, "nf_push"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1255,7 +1131,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 530
     :cond_2
     invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -1263,7 +1138,6 @@
 
     goto :goto_0
 
-    .line 533
     :cond_3
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -1279,14 +1153,12 @@
 
     if-eqz v0, :cond_6
 
-    .line 535
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 536
     const-string/jumbo v0, "nf_push"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1309,7 +1181,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 538
     :cond_4
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1353,14 +1224,12 @@
 
     move-result-object v0
 
-    .line 539
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
-    .line 540
     const-string/jumbo v1, "nf_push"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1383,7 +1252,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 542
     :cond_5
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -1391,7 +1259,6 @@
 
     goto/16 :goto_0
 
-    .line 544
     :cond_6
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -1407,14 +1274,12 @@
 
     if-eqz v0, :cond_8
 
-    .line 546
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
-    .line 547
     const-string/jumbo v0, "nf_push"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1443,7 +1308,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 549
     :cond_7
     invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -1451,7 +1315,6 @@
 
     goto/16 :goto_0
 
-    .line 551
     :cond_8
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -1467,14 +1330,12 @@
 
     if-eqz v0, :cond_b
 
-    .line 553
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_9
 
-    .line 554
     const-string/jumbo v0, "nf_push"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1497,7 +1358,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 556
     :cond_9
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1527,7 +1387,6 @@
 
     move-result-object v0
 
-    .line 557
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1570,14 +1429,12 @@
 
     move-result-object v0
 
-    .line 558
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_a
 
-    .line 559
     const-string/jumbo v1, "nf_push"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1600,7 +1457,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 561
     :cond_a
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -1608,7 +1464,6 @@
 
     goto/16 :goto_0
 
-    .line 565
     :cond_b
     const-string/jumbo v0, "nf_push"
 
@@ -1616,7 +1471,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 566
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1643,14 +1497,12 @@
 
     move-result-object v0
 
-    .line 567
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v1
 
     if-eqz v1, :cond_c
 
-    .line 568
     const-string/jumbo v1, "nf_push"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1673,7 +1525,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 570
     :cond_c
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -1687,8 +1538,6 @@
 .method public getActions()[Lcom/netflix/mediaclient/service/pushnotification/Payload$Action;
     .locals 2
 
-    .prologue
-    .line 580
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->actions:Ljava/util/List;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->actions:Ljava/util/List;
@@ -1711,11 +1560,8 @@
 .method public getDefaultActionPayload()Landroid/net/Uri;
     .locals 5
 
-    .prologue
-    .line 494
     const/4 v0, 0x0
 
-    .line 497
     :try_start_0
     iget-object v1, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->defaultActionPayload:Ljava/lang/String;
 
@@ -1727,15 +1573,12 @@
 
     move-result-object v0
 
-    .line 502
     :goto_0
     return-object v0
 
-    .line 499
     :catch_0
     move-exception v1
 
-    .line 500
     const-string/jumbo v2, "nf_push"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1766,16 +1609,12 @@
 .method public getTicker(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 444
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->ticker:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 445
     iget-object p1, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->ticker:Ljava/lang/String;
 
-    .line 447
     :cond_0
     return-object p1
 .end method
@@ -1783,16 +1622,12 @@
 .method public getTitle(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 459
     iget-object v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->title:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 460
     iget-object p1, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->title:Ljava/lang/String;
 
-    .line 462
     :cond_0
     return-object p1
 .end method
@@ -1800,30 +1635,24 @@
 .method public getWhen()J
     .locals 5
 
-    .prologue
-    .line 473
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 474
     iget-wide v2, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->when:J
 
     cmp-long v2, v2, v0
 
     if-ltz v2, :cond_1
 
-    .line 475
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/pushnotification/Payload;->when:J
 
-    .line 476
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 477
     const-string/jumbo v2, "nf_push"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1846,12 +1675,10 @@
 
     invoke-static {v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 483
     :cond_0
     :goto_0
     return-wide v0
 
-    .line 480
     :cond_1
     const-string/jumbo v2, "nf_push"
 
@@ -1865,8 +1692,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 706
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

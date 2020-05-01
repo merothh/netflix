@@ -22,8 +22,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 672
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,10 +32,8 @@
 .method public compare(Lcom/netflix/mediaclient/util/ViewUtils$ViewComparator;Lcom/netflix/mediaclient/util/ViewUtils$ViewComparator;)I
     .locals 5
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 677
     invoke-virtual {p1}, Lcom/netflix/mediaclient/util/ViewUtils$ViewComparator;->getView()Landroid/view/View;
 
     move-result-object v1
@@ -46,7 +42,6 @@
 
     move-result-object v1
 
-    .line 678
     invoke-virtual {p2}, Lcom/netflix/mediaclient/util/ViewUtils$ViewComparator;->getView()Landroid/view/View;
 
     move-result-object v2
@@ -55,18 +50,15 @@
 
     move-result-object v2
 
-    .line 680
     iget v3, v1, Landroid/graphics/Rect;->bottom:I
 
     iget v4, v2, Landroid/graphics/Rect;->bottom:I
 
     if-ge v3, v4, :cond_0
 
-    .line 685
     :goto_0
     return v0
 
-    .line 682
     :cond_0
     iget v0, v1, Landroid/graphics/Rect;->bottom:I
 
@@ -74,12 +66,10 @@
 
     if-le v0, v1, :cond_1
 
-    .line 683
     const/4 v0, -0x1
 
     goto :goto_0
 
-    .line 685
     :cond_1
     const/4 v0, 0x0
 
@@ -89,8 +79,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 672
     check-cast p1, Lcom/netflix/mediaclient/util/ViewUtils$ViewComparator;
 
     check-cast p2, Lcom/netflix/mediaclient/util/ViewUtils$ViewComparator;

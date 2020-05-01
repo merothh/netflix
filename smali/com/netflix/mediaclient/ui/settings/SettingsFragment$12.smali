@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/settings/SettingsFragment;)V
     .locals 0
 
-    .prologue
-    .line 775
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/settings/SettingsFragment$12;->this$0:Lcom/netflix/mediaclient/ui/settings/SettingsFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
-    .line 778
     const-string/jumbo v0, "SettingsFragment"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -52,15 +48,12 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 779
     instance-of v0, p1, Landroid/preference/EditTextPreference;
 
     if-eqz v0, :cond_0
 
-    .line 780
     check-cast p1, Landroid/preference/EditTextPreference;
 
-    .line 781
     invoke-virtual {p1}, Landroid/preference/EditTextPreference;->getEditText()Landroid/widget/EditText;
 
     move-result-object v0
@@ -73,7 +66,6 @@
 
     move-result-object v0
 
-    .line 782
     const-string/jumbo v1, "SettingsFragment"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -96,7 +88,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 783
     new-instance v1, Lcom/netflix/mediaclient/android/app/BackgroundTask;
 
     invoke-direct {v1}, Lcom/netflix/mediaclient/android/app/BackgroundTask;-><init>()V
@@ -107,10 +98,8 @@
 
     invoke-virtual {v1, v2}, Lcom/netflix/mediaclient/android/app/BackgroundTask;->execute(Ljava/lang/Runnable;)V
 
-    .line 789
     const/4 v0, 0x1
 
-    .line 791
     :goto_0
     return v0
 

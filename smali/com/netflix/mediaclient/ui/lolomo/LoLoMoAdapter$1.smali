@@ -13,8 +13,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/lolomo/LoLoMoAdapter;Ljava/lang/String;J)V
     .locals 1
 
-    .prologue
-    .line 53
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/lolomo/LoLoMoAdapter$1;->this$0:Lcom/netflix/mediaclient/ui/lolomo/LoLoMoAdapter;
 
     iput-wide p3, p0, Lcom/netflix/mediaclient/ui/lolomo/LoLoMoAdapter$1;->val$requestIdClone:J
@@ -29,14 +27,10 @@
 .method public onLoLoMoPrefetched(Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 4
 
-    .prologue
-    .line 56
     invoke-super {p0, p1}, Lcom/netflix/mediaclient/servicemgr/LoggingManagerCallback;->onLoLoMoPrefetched(Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 57
     invoke-static {}, Lcom/netflix/mediaclient/util/ThreadUtils;->assertOnMain()Z
 
-    .line 59
     iget-wide v0, p0, Lcom/netflix/mediaclient/ui/lolomo/LoLoMoAdapter$1;->val$requestIdClone:J
 
     iget-object v2, p0, Lcom/netflix/mediaclient/ui/lolomo/LoLoMoAdapter$1;->this$0:Lcom/netflix/mediaclient/ui/lolomo/LoLoMoAdapter;
@@ -49,34 +43,28 @@
 
     if-eqz v0, :cond_0
 
-    .line 60
     const-string/jumbo v0, "LoLoMoAdapter"
 
     const-string/jumbo v1, "Request IDs do not match - skipping prefetch callback"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     :goto_0
     return-void
 
-    .line 64
     :cond_0
     const/4 v0, 0x0
 
-    .line 65
     instance-of v1, p1, Lcom/netflix/mediaclient/service/falkor/FalkorAgentStatus;
 
     if-eqz v1, :cond_1
 
-    .line 66
     check-cast p1, Lcom/netflix/mediaclient/service/falkor/FalkorAgentStatus;
 
     invoke-virtual {p1}, Lcom/netflix/mediaclient/service/falkor/FalkorAgentStatus;->wasAllDataLocalToCache()Z
 
     move-result v0
 
-    .line 69
     :cond_1
     iget-object v1, p0, Lcom/netflix/mediaclient/ui/lolomo/LoLoMoAdapter$1;->this$0:Lcom/netflix/mediaclient/ui/lolomo/LoLoMoAdapter;
 

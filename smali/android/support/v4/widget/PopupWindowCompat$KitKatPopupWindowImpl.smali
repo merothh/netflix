@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 125
     invoke-direct {p0}, Landroid/support/v4/widget/PopupWindowCompat$BasePopupWindowImpl;-><init>()V
 
     return-void
@@ -19,10 +17,7 @@
 .method public showAsDropDown(Landroid/widget/PopupWindow;Landroid/view/View;III)V
     .locals 0
 
-    .prologue
-    .line 129
     invoke-static {p1, p2, p3, p4, p5}, Landroid/support/v4/widget/PopupWindowCompatKitKat;->showAsDropDown(Landroid/widget/PopupWindow;Landroid/view/View;III)V
 
-    .line 130
     return-void
 .end method

@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface$PlayableRefreshLicenseCallBack;)V
     .locals 0
 
-    .prologue
-    .line 1372
     iput-object p1, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$11;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$11;->val$callback:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface$PlayableRefreshLicenseCallBack;
@@ -32,8 +30,6 @@
 .method public onOfflineLicenseRequestDone(Ljava/lang/String;Lcom/netflix/mediaclient/service/player/bladerunnerclient/OfflineLicenseResponse;Lcom/netflix/mediaclient/android/app/Status;)V
     .locals 4
 
-    .prologue
-    .line 1375
     const-string/jumbo v0, "nf_offlinePlayable"
 
     const-string/jumbo v1, "onOfflineLicenseRequestDone status= %s"
@@ -48,13 +44,11 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 1376
     iget-object v0, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$11;->this$0:Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;
 
     iget-object v1, p0, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl$11;->val$callback:Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface$PlayableRefreshLicenseCallBack;
 
     invoke-static {v0, p2, p3, v1}, Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;->access$2000(Lcom/netflix/mediaclient/service/offline/download/OfflinePlayableImpl;Lcom/netflix/mediaclient/service/player/bladerunnerclient/OfflineLicenseResponse;Lcom/netflix/mediaclient/android/app/Status;Lcom/netflix/mediaclient/service/offline/agent/OfflineAgentInterface$PlayableRefreshLicenseCallBack;)V
 
-    .line 1377
     return-void
 .end method

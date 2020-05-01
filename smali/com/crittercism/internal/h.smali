@@ -16,27 +16,20 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 77
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput-boolean v0, p0, Lcom/crittercism/internal/h;->a:Z
 
-    .line 50
     iput-boolean v0, p0, Lcom/crittercism/internal/h;->b:Z
 
-    .line 60
     iput-boolean v0, p0, Lcom/crittercism/internal/h;->c:Z
 
-    .line 66
     const/16 v0, 0xa
 
     iput v0, p0, Lcom/crittercism/internal/h;->d:I
 
-    .line 1192
     invoke-static {p1}, Lcom/crittercism/internal/h;->a(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v0
@@ -45,15 +38,12 @@
 
     move-result v0
 
-    .line 79
     if-eqz v0, :cond_0
 
-    .line 80
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/crittercism/internal/h;->c:Z
 
-    .line 82
     :cond_0
     return-void
 .end method
@@ -61,27 +51,20 @@
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 4
 
-    .prologue
     const/16 v3, 0xa
 
     const/4 v2, 0x0
 
-    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput-boolean v2, p0, Lcom/crittercism/internal/h;->a:Z
 
-    .line 50
     iput-boolean v2, p0, Lcom/crittercism/internal/h;->b:Z
 
-    .line 60
     iput-boolean v2, p0, Lcom/crittercism/internal/h;->c:Z
 
-    .line 66
     iput v3, p0, Lcom/crittercism/internal/h;->d:I
 
-    .line 93
     const-string/jumbo v0, "net"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -90,11 +73,9 @@
 
     if-nez v0, :cond_0
 
-    .line 121
     :goto_0
     return-void
 
-    .line 100
     :cond_0
     :try_start_0
     const-string/jumbo v0, "net"
@@ -105,7 +86,6 @@
 
     move-result-object v0
 
-    .line 106
     const-string/jumbo v1, "enabled"
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
@@ -114,7 +94,6 @@
 
     iput-boolean v1, p0, Lcom/crittercism/internal/h;->a:Z
 
-    .line 110
     const-string/jumbo v1, "persist"
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
@@ -123,7 +102,6 @@
 
     iput-boolean v1, p0, Lcom/crittercism/internal/h;->b:Z
 
-    .line 114
     const-string/jumbo v1, "kill"
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
@@ -132,7 +110,6 @@
 
     iput-boolean v1, p0, Lcom/crittercism/internal/h;->c:Z
 
-    .line 118
     const-string/jumbo v1, "interval"
 
     invoke-virtual {v0, v1, v3}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
@@ -143,7 +120,6 @@
 
     goto :goto_0
 
-    .line 103
     :catch_0
     move-exception v0
 
@@ -153,8 +129,6 @@
 .method public static a(Landroid/content/Context;)Ljava/io/File;
     .locals 3
 
-    .prologue
-    .line 196
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -191,8 +165,6 @@
 .method public static b(Landroid/content/Context;)V
     .locals 3
 
-    .prologue
-    .line 248
     :try_start_0
     invoke-static {p0}, Lcom/crittercism/internal/h;->a(Landroid/content/Context;)Ljava/io/File;
 
@@ -202,15 +174,12 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 253
     :goto_0
     return-void
 
-    .line 249
     :catch_0
     move-exception v0
 
-    .line 250
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string/jumbo v2, "Unable to kill APM: "
@@ -239,29 +208,23 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 351
     if-ne p0, p1, :cond_1
 
-    .line 376
     :cond_0
     :goto_0
     return v0
 
-    .line 355
     :cond_1
     if-nez p1, :cond_2
 
     move v0, v1
 
-    .line 356
     goto :goto_0
 
-    .line 359
     :cond_2
     instance-of v2, p1, Lcom/crittercism/internal/h;
 
@@ -269,14 +232,11 @@
 
     move v0, v1
 
-    .line 360
     goto :goto_0
 
-    .line 363
     :cond_3
     check-cast p1, Lcom/crittercism/internal/h;
 
-    .line 364
     iget-boolean v2, p0, Lcom/crittercism/internal/h;->c:Z
 
     iget-boolean v3, p1, Lcom/crittercism/internal/h;->c:Z
@@ -285,10 +245,8 @@
 
     move v0, v1
 
-    .line 365
     goto :goto_0
 
-    .line 367
     :cond_4
     iget-boolean v2, p0, Lcom/crittercism/internal/h;->a:Z
 
@@ -298,10 +256,8 @@
 
     move v0, v1
 
-    .line 368
     goto :goto_0
 
-    .line 370
     :cond_5
     iget-boolean v2, p0, Lcom/crittercism/internal/h;->b:Z
 
@@ -311,10 +267,8 @@
 
     move v0, v1
 
-    .line 371
     goto :goto_0
 
-    .line 373
     :cond_6
     iget v2, p0, Lcom/crittercism/internal/h;->d:I
 
@@ -324,19 +278,16 @@
 
     move v0, v1
 
-    .line 374
     goto :goto_0
 .end method
 
 .method public final hashCode()I
     .locals 4
 
-    .prologue
     const/16 v2, 0x4d5
 
     const/16 v1, 0x4cf
 
-    .line 336
     iget-boolean v0, p0, Lcom/crittercism/internal/h;->c:Z
 
     if-eqz v0, :cond_0
@@ -346,7 +297,6 @@
     :goto_0
     add-int/lit8 v0, v0, 0x1f
 
-    .line 337
     mul-int/lit8 v3, v0, 0x1f
 
     iget-boolean v0, p0, Lcom/crittercism/internal/h;->a:Z
@@ -358,7 +308,6 @@
     :goto_1
     add-int/2addr v0, v3
 
-    .line 338
     mul-int/lit8 v0, v0, 0x1f
 
     iget-boolean v3, p0, Lcom/crittercism/internal/h;->b:Z
@@ -368,40 +317,33 @@
     :goto_2
     add-int/2addr v0, v1
 
-    .line 339
     mul-int/lit8 v0, v0, 0x1f
 
     iget v1, p0, Lcom/crittercism/internal/h;->d:I
 
     add-int/2addr v0, v1
 
-    .line 340
     return v0
 
     :cond_0
     move v0, v2
 
-    .line 336
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 337
     goto :goto_1
 
     :cond_2
     move v1, v2
 
-    .line 338
     goto :goto_2
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 382
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "OptmzConfiguration [\nisSendTaskEnabled="

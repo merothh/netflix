@@ -15,8 +15,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 409
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,8 +25,6 @@
 .method public onClose()Z
     .locals 1
 
-    .prologue
-    .line 412
     const/4 v0, 0x0
 
     return v0

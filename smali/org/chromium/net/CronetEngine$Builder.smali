@@ -63,8 +63,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 104
     const-string/jumbo v0, "^[0-9\\.]*$"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -79,60 +77,46 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 136
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 109
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lorg/chromium/net/CronetEngine$Builder;->mQuicHints:Ljava/util/List;
 
-    .line 110
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lorg/chromium/net/CronetEngine$Builder;->mPkps:Ljava/util/List;
 
-    .line 137
     iput-object p1, p0, Lorg/chromium/net/CronetEngine$Builder;->mContext:Landroid/content/Context;
 
-    .line 138
     const-string/jumbo v0, "cronet"
 
     invoke-virtual {p0, v0}, Lorg/chromium/net/CronetEngine$Builder;->setLibraryName(Ljava/lang/String;)Lorg/chromium/net/CronetEngine$Builder;
 
-    .line 139
     invoke-virtual {p0, v2}, Lorg/chromium/net/CronetEngine$Builder;->enableLegacyMode(Z)Lorg/chromium/net/CronetEngine$Builder;
 
-    .line 140
     invoke-virtual {p0, v2}, Lorg/chromium/net/CronetEngine$Builder;->enableQuic(Z)Lorg/chromium/net/CronetEngine$Builder;
 
-    .line 141
     invoke-virtual {p0, v3}, Lorg/chromium/net/CronetEngine$Builder;->enableHttp2(Z)Lorg/chromium/net/CronetEngine$Builder;
 
-    .line 142
     invoke-virtual {p0, v2}, Lorg/chromium/net/CronetEngine$Builder;->enableSdch(Z)Lorg/chromium/net/CronetEngine$Builder;
 
-    .line 143
     const-wide/16 v0, 0x0
 
     invoke-virtual {p0, v2, v0, v1}, Lorg/chromium/net/CronetEngine$Builder;->enableHttpCache(IJ)Lorg/chromium/net/CronetEngine$Builder;
 
-    .line 144
     invoke-virtual {p0, v2}, Lorg/chromium/net/CronetEngine$Builder;->enableNetworkQualityEstimator(Z)Lorg/chromium/net/CronetEngine$Builder;
 
-    .line 145
     invoke-virtual {p0, v3}, Lorg/chromium/net/CronetEngine$Builder;->enablePublicKeyPinningBypassForLocalTrustAnchors(Z)Lorg/chromium/net/CronetEngine$Builder;
 
-    .line 146
     return-void
 .end method
 
@@ -141,42 +125,34 @@
 .method public build()Lorg/chromium/net/CronetEngine;
     .locals 4
 
-    .prologue
-    .line 765
     invoke-virtual {p0}, Lorg/chromium/net/CronetEngine$Builder;->getUserAgent()Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 766
     invoke-virtual {p0}, Lorg/chromium/net/CronetEngine$Builder;->getDefaultUserAgent()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lorg/chromium/net/CronetEngine$Builder;->setUserAgent(Ljava/lang/String;)Lorg/chromium/net/CronetEngine$Builder;
 
-    .line 768
     :cond_0
     const/4 v0, 0x0
 
-    .line 769
     invoke-virtual {p0}, Lorg/chromium/net/CronetEngine$Builder;->legacyMode()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 770
     invoke-static {p0}, Lorg/chromium/net/CronetEngine;->access$000(Lorg/chromium/net/CronetEngine$Builder;)Lorg/chromium/net/CronetEngine;
 
     move-result-object v0
 
-    .line 772
     :cond_1
     if-nez v0, :cond_2
 
-    .line 773
     new-instance v0, Lorg/chromium/net/JavaCronetEngine;
 
     invoke-virtual {p0}, Lorg/chromium/net/CronetEngine$Builder;->getUserAgent()Ljava/lang/String;
@@ -185,7 +161,6 @@
 
     invoke-direct {v0, v1}, Lorg/chromium/net/JavaCronetEngine;-><init>(Ljava/lang/String;)V
 
-    .line 775
     :cond_2
     const-string/jumbo v1, "UrlRequestFactory"
 
@@ -213,44 +188,36 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 778
     const-wide/16 v2, 0x0
 
     iput-wide v2, p0, Lorg/chromium/net/CronetEngine$Builder;->mMockCertVerifier:J
 
-    .line 779
     return-object v0
 .end method
 
 .method public enableHttp2(Z)Lorg/chromium/net/CronetEngine$Builder;
     .locals 0
 
-    .prologue
-    .line 312
     iput-boolean p1, p0, Lorg/chromium/net/CronetEngine$Builder;->mHttp2Enabled:Z
 
-    .line 313
     return-object p0
 .end method
 
 .method public enableHttpCache(IJ)Lorg/chromium/net/CronetEngine$Builder;
     .locals 4
 
-    .prologue
     const/4 v2, 0x1
 
     const/4 v1, 0x0
 
     const/4 v3, 0x2
 
-    .line 452
     const/4 v0, 0x3
 
     if-eq p1, v0, :cond_0
 
     if-ne p1, v3, :cond_1
 
-    .line 453
     :cond_0
     invoke-virtual {p0}, Lorg/chromium/net/CronetEngine$Builder;->storagePath()Ljava/lang/String;
 
@@ -258,7 +225,6 @@
 
     if-nez v0, :cond_2
 
-    .line 454
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Storage path must be set"
@@ -267,7 +233,6 @@
 
     throw v0
 
-    .line 457
     :cond_1
     invoke-virtual {p0}, Lorg/chromium/net/CronetEngine$Builder;->storagePath()Ljava/lang/String;
 
@@ -275,7 +240,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 458
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Storage path must not be set"
@@ -284,7 +248,6 @@
 
     throw v0
 
-    .line 461
     :cond_2
     if-eqz p1, :cond_3
 
@@ -296,13 +259,10 @@
     :goto_0
     iput-boolean v0, p0, Lorg/chromium/net/CronetEngine$Builder;->mDisableCache:Z
 
-    .line 463
     iput-wide p2, p0, Lorg/chromium/net/CronetEngine$Builder;->mHttpCacheMaxSize:J
 
-    .line 465
     packed-switch p1, :pswitch_data_0
 
-    .line 477
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Unknown cache mode"
@@ -314,30 +274,24 @@
     :cond_4
     move v0, v1
 
-    .line 461
     goto :goto_0
 
-    .line 467
     :pswitch_0
     iput v1, p0, Lorg/chromium/net/CronetEngine$Builder;->mHttpCacheMode:I
 
-    .line 479
     :goto_1
     return-object p0
 
-    .line 471
     :pswitch_1
     iput v2, p0, Lorg/chromium/net/CronetEngine$Builder;->mHttpCacheMode:I
 
     goto :goto_1
 
-    .line 474
     :pswitch_2
     iput v3, p0, Lorg/chromium/net/CronetEngine$Builder;->mHttpCacheMode:I
 
     goto :goto_1
 
-    .line 465
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -352,63 +306,46 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 226
     iput-boolean p1, p0, Lorg/chromium/net/CronetEngine$Builder;->mLegacyModeEnabled:Z
 
-    .line 227
     return-object p0
 .end method
 
 .method public enableNetworkQualityEstimator(Z)Lorg/chromium/net/CronetEngine$Builder;
     .locals 0
 
-    .prologue
-    .line 718
     iput-boolean p1, p0, Lorg/chromium/net/CronetEngine$Builder;->mNetworkQualityEstimatorEnabled:Z
 
-    .line 719
     return-object p0
 .end method
 
 .method public enablePublicKeyPinningBypassForLocalTrustAnchors(Z)Lorg/chromium/net/CronetEngine$Builder;
     .locals 0
 
-    .prologue
-    .line 619
     iput-boolean p1, p0, Lorg/chromium/net/CronetEngine$Builder;->mPublicKeyPinningBypassForLocalTrustAnchorsEnabled:Z
 
-    .line 620
     return-object p0
 .end method
 
 .method public enableQuic(Z)Lorg/chromium/net/CronetEngine$Builder;
     .locals 0
 
-    .prologue
-    .line 281
     iput-boolean p1, p0, Lorg/chromium/net/CronetEngine$Builder;->mQuicEnabled:Z
 
-    .line 282
     return-object p0
 .end method
 
 .method public enableSdch(Z)Lorg/chromium/net/CronetEngine$Builder;
     .locals 0
 
-    .prologue
-    .line 332
     iput-boolean p1, p0, Lorg/chromium/net/CronetEngine$Builder;->mSdchEnabled:Z
 
-    .line 333
     return-object p0
 .end method
 
 .method public getContext()Landroid/content/Context;
     .locals 1
 
-    .prologue
-    .line 757
     iget-object v0, p0, Lorg/chromium/net/CronetEngine$Builder;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -417,8 +354,6 @@
 .method public getDefaultUserAgent()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 155
     iget-object v0, p0, Lorg/chromium/net/CronetEngine$Builder;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lorg/chromium/net/UserAgent;->from(Landroid/content/Context;)Ljava/lang/String;
@@ -431,8 +366,6 @@
 .method public getUserAgent()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 176
     iget-object v0, p0, Lorg/chromium/net/CronetEngine$Builder;->mUserAgent:Ljava/lang/String;
 
     return-object v0
@@ -441,8 +374,6 @@
 .method public legacyMode()Z
     .locals 1
 
-    .prologue
-    .line 234
     iget-boolean v0, p0, Lorg/chromium/net/CronetEngine$Builder;->mLegacyModeEnabled:Z
 
     return v0
@@ -451,19 +382,14 @@
 .method public setLibraryName(Ljava/lang/String;)Lorg/chromium/net/CronetEngine$Builder;
     .locals 0
 
-    .prologue
-    .line 244
     iput-object p1, p0, Lorg/chromium/net/CronetEngine$Builder;->mLibraryName:Ljava/lang/String;
 
-    .line 245
     return-object p0
 .end method
 
 .method public setStoragePath(Ljava/lang/String;)Lorg/chromium/net/CronetEngine$Builder;
     .locals 2
 
-    .prologue
-    .line 191
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -474,7 +400,6 @@
 
     if-nez v0, :cond_0
 
-    .line 192
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Storage path must be set to existing directory"
@@ -483,30 +408,23 @@
 
     throw v0
 
-    .line 195
     :cond_0
     iput-object p1, p0, Lorg/chromium/net/CronetEngine$Builder;->mStoragePath:Ljava/lang/String;
 
-    .line 196
     return-object p0
 .end method
 
 .method public setUserAgent(Ljava/lang/String;)Lorg/chromium/net/CronetEngine$Builder;
     .locals 0
 
-    .prologue
-    .line 168
     iput-object p1, p0, Lorg/chromium/net/CronetEngine$Builder;->mUserAgent:Ljava/lang/String;
 
-    .line 169
     return-object p0
 .end method
 
 .method public storagePath()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 203
     iget-object v0, p0, Lorg/chromium/net/CronetEngine$Builder;->mStoragePath:Ljava/lang/String;
 
     return-object v0

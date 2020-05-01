@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 300
     iput-object p1, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager$1;->this$0:Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager$1;->val$url:Ljava/lang/String;
@@ -32,20 +30,16 @@
 .method public abort()V
     .locals 3
 
-    .prologue
-    .line 337
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "Blacklisted Widevine plugin? Do NOT use it!"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 340
     sget-object v0, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;->INSTANCE:Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/error/crypto/CryptoErrorManager;->handleCryptoFallback()Z
 
-    .line 342
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager$1;->this$0:Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;->mCallback:Lcom/netflix/mediaclient/service/configuration/drm/DrmManager$DrmReadyCallback;
@@ -54,7 +48,6 @@
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/service/configuration/drm/DrmManager$DrmReadyCallback;->drmError(Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 343
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager$1;->this$0:Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;->mErrorLogging:Lcom/netflix/mediaclient/servicemgr/ErrorLogging;
@@ -81,29 +74,24 @@
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/servicemgr/ErrorLogging;->logHandledException(Ljava/lang/String;)V
 
-    .line 344
     return-void
 .end method
 
 .method public done([B)V
     .locals 6
 
-    .prologue
     const/4 v5, 0x1
 
     const/4 v4, 0x0
 
-    .line 305
     if-eqz p1, :cond_2
 
-    .line 306
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 307
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -130,7 +118,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 311
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager$1;->this$0:Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;
@@ -139,7 +126,6 @@
 
     invoke-virtual {v0, p1}, Landroid/media/MediaDrm;->provideProvisionResponse([B)V
 
-    .line 312
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager$1;->this$0:Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;->init()V
@@ -147,16 +133,13 @@
     .catch Landroid/media/DeniedByServerException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 332
     :cond_1
     :goto_0
     return-void
 
-    .line 314
     :catch_0
     move-exception v0
 
-    .line 315
     sget-object v1, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -185,7 +168,6 @@
 
     invoke-static {v1, v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 316
     iget-object v1, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager$1;->this$0:Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;
 
     iget-object v1, v1, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;->mCallback:Lcom/netflix/mediaclient/service/configuration/drm/DrmManager$DrmReadyCallback;
@@ -194,7 +176,6 @@
 
     invoke-interface {v1, v2}, Lcom/netflix/mediaclient/service/configuration/drm/DrmManager$DrmReadyCallback;->drmError(Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 317
     iget-object v1, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager$1;->this$0:Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;
 
     iget-object v1, v1, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;->mErrorLogging:Lcom/netflix/mediaclient/servicemgr/ErrorLogging;
@@ -239,11 +220,9 @@
 
     goto :goto_0
 
-    .line 319
     :catch_1
     move-exception v0
 
-    .line 320
     sget-object v1, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "Fatal error on seting Widewine provisioning response"
@@ -254,7 +233,6 @@
 
     invoke-static {v1, v2, v3}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 321
     iget-object v1, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager$1;->this$0:Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;
 
     iget-object v1, v1, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;->mErrorLogging:Lcom/netflix/mediaclient/servicemgr/ErrorLogging;
@@ -297,14 +275,12 @@
 
     invoke-interface {v1, v2}, Lcom/netflix/mediaclient/servicemgr/ErrorLogging;->logHandledException(Ljava/lang/Throwable;)V
 
-    .line 322
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager$1;->this$0:Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;->mCallback:Lcom/netflix/mediaclient/service/configuration/drm/DrmManager$DrmReadyCallback;
 
     if-eqz v0, :cond_1
 
-    .line 323
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager$1;->this$0:Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;->mCallback:Lcom/netflix/mediaclient/service/configuration/drm/DrmManager$DrmReadyCallback;
@@ -315,7 +291,6 @@
 
     goto/16 :goto_0
 
-    .line 328
     :cond_2
     sget-object v0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;->TAG:Ljava/lang/String;
 
@@ -323,7 +298,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 329
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager$1;->this$0:Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;->mCallback:Lcom/netflix/mediaclient/service/configuration/drm/DrmManager$DrmReadyCallback;
@@ -332,7 +306,6 @@
 
     invoke-interface {v0, v1}, Lcom/netflix/mediaclient/service/configuration/drm/DrmManager$DrmReadyCallback;->drmError(Lcom/netflix/mediaclient/android/app/Status;)V
 
-    .line 330
     iget-object v0, p0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager$1;->this$0:Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/configuration/drm/WidevineDrmManager;->mErrorLogging:Lcom/netflix/mediaclient/servicemgr/ErrorLogging;

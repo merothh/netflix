@@ -14,8 +14,6 @@
 .method private constructor <init>(Lcom/netflix/mediaclient/ui/verifyplay/PinDialog;)V
     .locals 0
 
-    .prologue
-    .line 188
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/verifyplay/PinDialog$PinDialogOnCancel;->this$0:Lcom/netflix/mediaclient/ui/verifyplay/PinDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,8 +24,6 @@
 .method synthetic constructor <init>(Lcom/netflix/mediaclient/ui/verifyplay/PinDialog;Lcom/netflix/mediaclient/ui/verifyplay/PinDialog$1;)V
     .locals 0
 
-    .prologue
-    .line 188
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/ui/verifyplay/PinDialog$PinDialogOnCancel;-><init>(Lcom/netflix/mediaclient/ui/verifyplay/PinDialog;)V
 
     return-void
@@ -38,19 +34,15 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
 
-    .prologue
-    .line 192
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/verifyplay/PinDialog$PinDialogOnCancel;->this$0:Lcom/netflix/mediaclient/ui/verifyplay/PinDialog;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/ui/verifyplay/PinDialog;->access$402(Lcom/netflix/mediaclient/ui/verifyplay/PinDialog;Z)Z
 
-    .line 193
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/verifyplay/PinDialog$PinDialogOnCancel;->this$0:Lcom/netflix/mediaclient/ui/verifyplay/PinDialog;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/ui/verifyplay/PinDialog;->access$500(Lcom/netflix/mediaclient/ui/verifyplay/PinDialog;)V
 
-    .line 194
     return-void
 .end method

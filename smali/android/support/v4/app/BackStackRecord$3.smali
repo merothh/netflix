@@ -22,8 +22,6 @@
 .method constructor <init>(Landroid/support/v4/app/BackStackRecord;Landroid/view/View;Landroid/support/v4/app/BackStackRecord$TransitionState;ILjava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 1452
     iput-object p1, p0, Landroid/support/v4/app/BackStackRecord$3;->this$0:Landroid/support/v4/app/BackStackRecord;
 
     iput-object p2, p0, Landroid/support/v4/app/BackStackRecord$3;->val$sceneRoot:Landroid/view/View;
@@ -44,8 +42,6 @@
 .method public onPreDraw()Z
     .locals 4
 
-    .prologue
-    .line 1455
     iget-object v0, p0, Landroid/support/v4/app/BackStackRecord$3;->val$sceneRoot:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
@@ -54,7 +50,6 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 1456
     iget-object v0, p0, Landroid/support/v4/app/BackStackRecord$3;->this$0:Landroid/support/v4/app/BackStackRecord;
 
     iget-object v1, p0, Landroid/support/v4/app/BackStackRecord$3;->val$state:Landroid/support/v4/app/BackStackRecord$TransitionState;
@@ -65,7 +60,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/support/v4/app/BackStackRecord;->excludeHiddenFragments(Landroid/support/v4/app/BackStackRecord$TransitionState;ILjava/lang/Object;)V
 
-    .line 1457
     const/4 v0, 0x1
 
     return v0

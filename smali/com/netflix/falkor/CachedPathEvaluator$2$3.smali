@@ -20,8 +20,6 @@
 .method constructor <init>(Lcom/netflix/falkor/CachedPathEvaluator$2;Ljava/util/Set;Ljava/util/List;Lcom/netflix/falkor/PathMap;)V
     .locals 0
 
-    .prologue
-    .line 85
     iput-object p1, p0, Lcom/netflix/falkor/CachedPathEvaluator$2$3;->this$1:Lcom/netflix/falkor/CachedPathEvaluator$2;
 
     iput-object p2, p0, Lcom/netflix/falkor/CachedPathEvaluator$2$3;->val$paths:Ljava/util/Set;
@@ -40,8 +38,6 @@
 .method public call()V
     .locals 4
 
-    .prologue
-    .line 91
     iget-object v0, p0, Lcom/netflix/falkor/CachedPathEvaluator$2$3;->val$paths:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -61,7 +57,6 @@
 
     check-cast v0, Lcom/netflix/falkor/PQL;
 
-    .line 92
     iget-object v2, p0, Lcom/netflix/falkor/CachedPathEvaluator$2$3;->val$collapsedPQLs:Ljava/util/List;
 
     iget-object v3, p0, Lcom/netflix/falkor/CachedPathEvaluator$2$3;->val$pathMap:Lcom/netflix/falkor/PathMap;
@@ -80,12 +75,10 @@
 
     goto :goto_0
 
-    .line 97
     :cond_0
     iget-object v0, p0, Lcom/netflix/falkor/CachedPathEvaluator$2$3;->val$collapsedPQLs:Ljava/util/List;
 
     invoke-static {v0}, Lcom/netflix/falkor/PQL;->collapse(Ljava/util/List;)V
 
-    .line 98
     return-void
 .end method

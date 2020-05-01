@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;)V
     .locals 0
 
-    .prologue
-    .line 128
     iput-object p1, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler$1;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
 
-    .prologue
-    .line 130
     new-instance v0, Landroid/content/Intent;
 
     const-string/jumbo v1, "android.intent.action.VIEW"
@@ -46,7 +42,6 @@
 
     move-result-object v0
 
-    .line 131
     iget-object v1, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler$1;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->access$000(Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;)Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -71,7 +66,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 133
     iget-object v1, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler$1;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;
 
     invoke-static {v1}, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;->access$000(Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;)Lcom/netflix/mediaclient/android/activity/NetflixActivity;
@@ -80,11 +74,9 @@
 
     invoke-virtual {v1, v0}, Lcom/netflix/mediaclient/android/activity/NetflixActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 137
     :goto_0
     return-void
 
-    .line 135
     :cond_0
     iget-object v0, p0, Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler$1;->this$0:Lcom/netflix/mediaclient/service/mdx/MdxErrorHandler;
 

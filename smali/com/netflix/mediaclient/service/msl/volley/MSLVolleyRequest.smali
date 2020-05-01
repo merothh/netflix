@@ -73,37 +73,30 @@
 .method public constructor <init>(I)V
     .locals 2
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 138
     invoke-direct {p0, p1, v0, v0}, Lcom/android/volley/Request;-><init>(ILjava/lang/String;Lcom/android/volley/Response$ErrorListener;)V
 
-    .line 113
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mServerExecTimeInMs:J
 
-    .line 139
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->setShouldCache(Z)V
 
-    .line 140
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mUuid:Ljava/util/UUID;
 
-    .line 141
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mDurationTimeInMs:J
 
-    .line 142
     return-void
 .end method
 
@@ -123,13 +116,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 484
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 486
     :try_start_0
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -153,14 +143,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 487
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    .line 488
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -173,12 +161,10 @@
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 489
     const/16 v1, 0x3d
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 490
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -191,7 +177,6 @@
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 491
     const/16 v0, 0x26
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -200,11 +185,9 @@
 
     goto :goto_0
 
-    .line 500
     :catch_0
     move-exception v0
 
-    .line 501
     new-instance v1, Ljava/lang/RuntimeException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -229,14 +212,12 @@
 
     throw v1
 
-    .line 494
     :cond_1
     :try_start_1
     sget-boolean v1, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 495
     const-string/jumbo v1, "valueNull for key: %s, params %s"
 
     const/4 v4, 0x2
@@ -263,7 +244,6 @@
 
     goto :goto_0
 
-    .line 499
     :cond_2
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
     :try_end_1
@@ -277,32 +257,25 @@
 .method protected static findCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
     .locals 1
 
-    .prologue
-    .line 527
     if-nez p0, :cond_1
 
-    .line 528
     const/4 p0, 0x0
 
-    .line 538
     :cond_0
     :goto_0
     return-object p0
 
-    .line 531
     :cond_1
     instance-of v0, p0, Ljava/io/IOException;
 
     if-nez v0, :cond_0
 
-    .line 535
     invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 538
     invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
@@ -317,19 +290,14 @@
 .method protected static findCauseForMslException(Lcom/netflix/msl/MslException;)Ljava/lang/Throwable;
     .locals 1
 
-    .prologue
-    .line 514
     if-nez p0, :cond_1
 
-    .line 515
     const/4 p0, 0x0
 
-    .line 521
     :cond_0
     :goto_0
     return-object p0
 
-    .line 518
     :cond_1
     invoke-virtual {p0}, Lcom/netflix/msl/MslException;->getCause()Ljava/lang/Throwable;
 
@@ -337,7 +305,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 521
     invoke-virtual {p0}, Lcom/netflix/msl/MslException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
@@ -352,16 +319,13 @@
 .method private getEncodedPayload()Ljava/lang/String;
     .locals 5
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 440
     :try_start_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->getParams()Ljava/util/Map;
 
     move-result-object v1
 
-    .line 441
     if-eqz v1, :cond_0
 
     invoke-interface {v1}, Ljava/util/Map;->size()I
@@ -370,7 +334,6 @@
 
     if-lez v2, :cond_0
 
-    .line 442
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->getParamsEncoding()Ljava/lang/String;
 
     move-result-object v2
@@ -381,16 +344,13 @@
 
     move-result-object v0
 
-    .line 449
     :cond_0
     :goto_0
     return-object v0
 
-    .line 445
     :catch_0
     move-exception v1
 
-    .line 446
     const-string/jumbo v2, "nf_volleyrequest"
 
     const-string/jumbo v3, "Failed to get BODY as string"
@@ -409,8 +369,6 @@
 .method public changeHostUrl(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 177
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mUrl:Ljava/lang/String;
 
     invoke-static {v0, p1}, Lcom/android/volley/Request;->buildNewUrlString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -419,14 +377,12 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mUrl:Ljava/lang/String;
 
-    .line 178
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
     iput v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mDefaultTrafficStatsTag:I
 
-    .line 179
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mMslClient:Lcom/netflix/mediaclient/service/msl/client/AndroidMslClient;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/msl/client/AndroidMslClient;->getUrlProvider()Lcom/netflix/mediaclient/service/webclient/ApiEndpointRegistry;
@@ -435,18 +391,14 @@
 
     invoke-interface {v0, p1}, Lcom/netflix/mediaclient/service/webclient/ApiEndpointRegistry;->updateApiEndpointHost(Ljava/lang/String;)V
 
-    .line 180
     invoke-super {p0, p1}, Lcom/android/volley/Request;->changeHostUrl(Ljava/lang/String;)V
 
-    .line 181
     return-void
 .end method
 
 .method protected createRetryPolicy()Lcom/android/volley/RetryPolicy;
     .locals 4
 
-    .prologue
-    .line 360
     new-instance v1, Lcom/android/volley/DefaultRetryPolicy;
 
     iget v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mTimeoutInMs:I
@@ -473,17 +425,14 @@
 .method public deliverError(Lcom/android/volley/VolleyError;)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 234
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 235
     const-string/jumbo v0, "nf_volleyrequest"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -510,13 +459,11 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
     :cond_0
     iget-object v0, p1, Lcom/android/volley/VolleyError;->networkResponse:Lcom/android/volley/NetworkResponse;
 
     if-eqz v0, :cond_1
 
-    .line 239
     const-string/jumbo v0, "nf_volleyrequest"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -547,21 +494,17 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 242
     :cond_1
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mUserIsNotLoggedInRetryRequest:Z
 
     if-eqz v0, :cond_2
 
-    .line 243
     iput-boolean v4, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mUserIsNotLoggedInRetryRequest:Z
 
-    .line 244
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mMslAgent:Lcom/netflix/mediaclient/servicemgr/IMSLClient;
 
     if-eqz v0, :cond_2
 
-    .line 245
     const-string/jumbo v0, "nf_volleyrequest"
 
     const-string/jumbo v1, "Retry request %s"
@@ -582,16 +525,13 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 246
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mMslAgent:Lcom/netflix/mediaclient/servicemgr/IMSLClient;
 
     invoke-interface {v0, p0}, Lcom/netflix/mediaclient/servicemgr/IMSLClient;->addRequest(Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;)Z
 
-    .line 274
     :goto_0
     return-void
 
-    .line 251
     :cond_2
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -603,34 +543,28 @@
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mDurationTimeInMs:J
 
-    .line 252
     const/4 v0, 0x0
 
-    .line 253
     instance-of v1, p1, Lcom/netflix/mediaclient/service/webclient/volley/ParseException;
 
     if-eqz v1, :cond_6
 
-    .line 254
     new-instance v0, Lcom/netflix/mediaclient/android/app/NetflixStatus;
 
     sget-object v1, Lcom/netflix/mediaclient/StatusCode;->RESPONSE_PARSE_ERROR:Lcom/netflix/mediaclient/StatusCode;
 
     invoke-direct {v0, v1}, Lcom/netflix/mediaclient/android/app/NetflixStatus;-><init>(Lcom/netflix/mediaclient/StatusCode;)V
 
-    .line 264
     :cond_3
     :goto_1
     if-nez v0, :cond_4
 
-    .line 265
     new-instance v0, Lcom/netflix/mediaclient/android/app/NetflixStatus;
 
     sget-object v1, Lcom/netflix/mediaclient/StatusCode;->INTERNAL_ERROR:Lcom/netflix/mediaclient/StatusCode;
 
     invoke-direct {v0, v1}, Lcom/netflix/mediaclient/android/app/NetflixStatus;-><init>(Lcom/netflix/mediaclient/StatusCode;)V
 
-    .line 268
     :cond_4
     invoke-virtual {v0}, Lcom/netflix/mediaclient/android/app/NetflixStatus;->getError()Lcom/netflix/mediaclient/service/logging/client/model/Error;
 
@@ -638,33 +572,28 @@
 
     if-nez v1, :cond_5
 
-    .line 269
     const-string/jumbo v1, "nf_volleyrequest"
 
     const-string/jumbo v2, "Error is not set yet, add it."
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 270
     invoke-static {p1}, Lcom/netflix/mediaclient/util/log/ConsolidatedLoggingUtils;->toError(Lcom/android/volley/VolleyError;)Lcom/netflix/mediaclient/service/logging/client/model/Error;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/netflix/mediaclient/android/app/NetflixStatus;->setError(Lcom/netflix/mediaclient/service/logging/client/model/Error;)V
 
-    .line 273
     :cond_5
     invoke-virtual {p0, v0}, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->onFailure(Lcom/netflix/mediaclient/android/app/Status;)V
 
     goto :goto_0
 
-    .line 256
     :cond_6
     instance-of v1, p1, Lcom/android/volley/ServerError;
 
     if-eqz v1, :cond_7
 
-    .line 257
     new-instance v0, Lcom/netflix/mediaclient/android/app/NetflixStatus;
 
     sget-object v1, Lcom/netflix/mediaclient/StatusCode;->SERVER_ERROR:Lcom/netflix/mediaclient/StatusCode;
@@ -673,7 +602,6 @@
 
     goto :goto_1
 
-    .line 259
     :cond_7
     instance-of v1, p1, Lcom/android/volley/TimeoutError;
 
@@ -683,7 +611,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 261
     :cond_8
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mErrorLogger:Lcom/netflix/mediaclient/servicemgr/ErrorLogging;
 
@@ -702,10 +629,8 @@
         }
     .end annotation
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 205
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -716,19 +641,16 @@
 
     iput-wide v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mDurationTimeInMs:J
 
-    .line 207
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->getDurationTimeMs()J
 
     move-result-wide v0
 
-    .line 208
     invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 209
     const-string/jumbo v2, "nf_volleyrequest"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -765,7 +687,6 @@
 
     invoke-static {v2, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 212
     :cond_0
     iget-object v2, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mMslClient:Lcom/netflix/mediaclient/service/msl/client/AndroidMslClient;
 
@@ -779,19 +700,16 @@
 
     if-eqz v2, :cond_1
 
-    .line 213
     const-string/jumbo v2, "nf_volleyrequest"
 
     const-string/jumbo v4, "Report data request sucess"
 
     invoke-static {v2, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 214
     new-instance v5, Lcom/netflix/mediaclient/service/logging/client/model/HttpResponse;
 
     invoke-direct {v5}, Lcom/netflix/mediaclient/service/logging/client/model/HttpResponse;-><init>()V
 
-    .line 215
     long-to-int v0, v0
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -800,7 +718,6 @@
 
     invoke-virtual {v5, v0}, Lcom/netflix/mediaclient/service/logging/client/model/HttpResponse;->setResponseTime(Ljava/lang/Integer;)V
 
-    .line 216
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mParseTimeInMs:J
 
     long-to-int v0, v0
@@ -811,12 +728,10 @@
 
     invoke-virtual {v5, v0}, Lcom/netflix/mediaclient/service/logging/client/model/HttpResponse;->setParseTime(Ljava/lang/Integer;)V
 
-    .line 217
     const-string/jumbo v0, "text/x-json"
 
     invoke-virtual {v5, v0}, Lcom/netflix/mediaclient/service/logging/client/model/HttpResponse;->setMimeType(Ljava/lang/String;)V
 
-    .line 218
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mServerExecTimeInMs:J
 
     long-to-int v0, v0
@@ -827,7 +742,6 @@
 
     invoke-virtual {v5, v0}, Lcom/netflix/mediaclient/service/logging/client/model/HttpResponse;->setServerExecutionTime(Ljava/lang/Integer;)V
 
-    .line 219
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->getResponseSizeInBytes()I
 
     move-result v0
@@ -838,7 +752,6 @@
 
     invoke-virtual {v5, v0}, Lcom/netflix/mediaclient/service/logging/client/model/HttpResponse;->setContentLength(Ljava/lang/Integer;)V
 
-    .line 220
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mApiScriptExecTimeInMs:J
 
     long-to-int v0, v0
@@ -849,12 +762,10 @@
 
     invoke-virtual {v5, v0}, Lcom/netflix/mediaclient/service/logging/client/model/HttpResponse;->setApiScriptExecutionTime(Ljava/lang/Integer;)V
 
-    .line 221
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mEndpointRevision:Ljava/lang/String;
 
     invoke-virtual {v5, v0}, Lcom/netflix/mediaclient/service/logging/client/model/HttpResponse;->setEndpointRevision(Ljava/lang/String;)V
 
-    .line 223
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mMslClient:Lcom/netflix/mediaclient/service/msl/client/AndroidMslClient;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/msl/client/AndroidMslClient;->getContext()Landroid/content/Context;
@@ -873,7 +784,6 @@
 
     invoke-static/range {v0 .. v5}, Lcom/netflix/mediaclient/util/log/ApmLogUtils;->reportDataRequestEnded(Landroid/content/Context;Ljava/lang/String;Lcom/netflix/mediaclient/servicemgr/IClientLogging$CompletionReason;Ljava/util/List;Lcom/netflix/mediaclient/service/logging/client/model/Error;Lcom/netflix/mediaclient/service/logging/client/model/HttpResponse;)V
 
-    .line 224
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mMslClient:Lcom/netflix/mediaclient/service/msl/client/AndroidMslClient;
 
     invoke-virtual {v0}, Lcom/netflix/mediaclient/service/msl/client/AndroidMslClient;->getContext()Landroid/content/Context;
@@ -882,11 +792,9 @@
 
     invoke-static {v0}, Lcom/netflix/mediaclient/service/offline/agent/PlayabilityEnforcer;->updateLastContactNetflix(Landroid/content/Context;)V
 
-    .line 227
     :cond_1
     invoke-virtual {p0, p1}, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->onSuccess(Ljava/lang/Object;)V
 
-    .line 229
     return-void
 .end method
 
@@ -906,8 +814,6 @@
 .method public getBodyContentType()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 340
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -936,8 +842,6 @@
 .method protected getDurationTimeMs()J
     .locals 2
 
-    .prologue
-    .line 277
     iget-wide v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mDurationTimeInMs:J
 
     return-wide v0
@@ -956,26 +860,21 @@
         }
     .end annotation
 
-    .prologue
-    .line 331
     invoke-super {p0}, Lcom/android/volley/Request;->getHeaders()Ljava/util/Map;
 
     move-result-object v0
 
-    .line 332
     if-eqz v0, :cond_0
 
     sget-object v1, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
 
     if-ne v0, v1, :cond_1
 
-    .line 333
     :cond_0
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 335
     :cond_1
     const-string/jumbo v1, "X-Netflix.request.uuid"
 
@@ -1001,15 +900,12 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 336
     return-object v0
 .end method
 
 .method public getMSLClient()Lcom/netflix/mediaclient/service/msl/client/AndroidMslClient;
     .locals 1
 
-    .prologue
-    .line 294
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mMslClient:Lcom/netflix/mediaclient/service/msl/client/AndroidMslClient;
 
     return-object v0
@@ -1028,11 +924,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 416
     const/4 v0, 0x0
 
-    .line 419
     :try_start_0
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->getHeaders()Ljava/util/Map;
     :try_end_0
@@ -1040,15 +933,12 @@
 
     move-result-object v0
 
-    .line 423
     :goto_0
     return-object v0
 
-    .line 420
     :catch_0
     move-exception v1
 
-    .line 421
     const-string/jumbo v2, "nf_volleyrequest"
 
     const-string/jumbo v3, "Failed to get MSL headers"
@@ -1065,18 +955,14 @@
 .method public getMSLPayload()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 429
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->getMethod()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 430
     const/4 v0, 0x0
 
-    .line 433
     :goto_0
     return-object v0
 
@@ -1091,18 +977,14 @@
 .method public getMSLQuery()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 406
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->getMethod()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 407
     const/4 v0, 0x0
 
-    .line 410
     :goto_0
     return-object v0
 
@@ -1117,8 +999,6 @@
 .method public getMSLUri()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 400
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mMslPath:Ljava/lang/String;
 
     return-object v0
@@ -1127,8 +1007,6 @@
 .method public getMSLUserCredentialRegistry()Lcom/netflix/mediaclient/servicemgr/IMSLClient$MSLUserCredentialRegistry;
     .locals 1
 
-    .prologue
-    .line 454
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mMslUserCredentialRegistry:Lcom/netflix/mediaclient/servicemgr/IMSLClient$MSLUserCredentialRegistry;
 
     return-object v0
@@ -1137,8 +1015,6 @@
 .method public getPriority()Lcom/android/volley/Request$Priority;
     .locals 1
 
-    .prologue
-    .line 194
     sget-object v0, Lcom/android/volley/Request$Priority;->HIGH:Lcom/android/volley/Request$Priority;
 
     return-object v0
@@ -1147,8 +1023,6 @@
 .method public getRequestId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 325
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mUuid:Ljava/util/UUID;
 
     invoke-virtual {v0}, Ljava/util/UUID;->toString()Ljava/lang/String;
@@ -1161,8 +1035,6 @@
 .method protected getResponseSizeInBytes()I
     .locals 1
 
-    .prologue
-    .line 281
     iget v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mResponseSizeInBytes:I
 
     return v0
@@ -1171,8 +1043,6 @@
 .method public getTrafficStatsTag()I
     .locals 1
 
-    .prologue
-    .line 185
     iget v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mDefaultTrafficStatsTag:I
 
     return v0
@@ -1181,8 +1051,6 @@
 .method public getUrl()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 172
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mUrl:Ljava/lang/String;
 
     return-object v0
@@ -1191,15 +1059,12 @@
 .method protected initUrl(Ljava/lang/String;)V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 145
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mUrl:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 146
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "Can not change the URL of a VolleyWebCLientRequest."
@@ -1208,11 +1073,9 @@
 
     throw v0
 
-    .line 148
     :cond_0
     iput-object p1, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mUrl:Ljava/lang/String;
 
-    .line 149
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mUrl:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1221,14 +1084,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 150
     iput v3, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mDefaultTrafficStatsTag:I
 
-    .line 165
     :goto_0
     return-void
 
-    .line 152
     :cond_1
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mUrl:Ljava/lang/String;
 
@@ -1236,19 +1096,16 @@
 
     move-result-object v0
 
-    .line 153
     invoke-virtual {v0}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 154
     invoke-virtual {v0}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mMslPath:Ljava/lang/String;
 
-    .line 155
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mMslPath:Ljava/lang/String;
 
     const-string/jumbo v2, "/msl"
@@ -1259,7 +1116,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 156
     iget-object v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mMslPath:Ljava/lang/String;
 
     const/4 v2, 0x4
@@ -1270,16 +1126,13 @@
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mMslPath:Ljava/lang/String;
 
-    .line 158
     :cond_2
     if-nez v1, :cond_3
 
-    .line 159
     iput v3, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mDefaultTrafficStatsTag:I
 
     goto :goto_0
 
-    .line 162
     :cond_3
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
@@ -1296,8 +1149,6 @@
 .method protected isAuthorizationRequired()Z
     .locals 1
 
-    .prologue
-    .line 388
     const/4 v0, 0x1
 
     return v0
@@ -1317,8 +1168,6 @@
 .method protected parsedResponseCanBeNull()Z
     .locals 1
 
-    .prologue
-    .line 200
     const/4 v0, 0x0
 
     return v0
@@ -1327,30 +1176,22 @@
 .method public setConfig(Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;)V
     .locals 0
 
-    .prologue
-    .line 308
     iput-object p1, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mConfig:Lcom/netflix/mediaclient/service/ServiceAgent$ConfigurationAgentInterface;
 
-    .line 309
     return-void
 .end method
 
 .method public setErrorLogger(Lcom/netflix/mediaclient/servicemgr/ErrorLogging;)V
     .locals 0
 
-    .prologue
-    .line 290
     iput-object p1, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mErrorLogger:Lcom/netflix/mediaclient/servicemgr/ErrorLogging;
 
-    .line 291
     return-void
 .end method
 
 .method public setInspector(Lcom/netflix/mediaclient/servicemgr/IMSLClient$NetworkRequestInspector;)V
     .locals 2
 
-    .prologue
-    .line 479
     new-instance v0, Ljava/lang/IllegalAccessError;
 
     const-string/jumbo v1, "Trying to set inspector in release build!"
@@ -1363,66 +1204,48 @@
 .method public setMSLAgent(Lcom/netflix/mediaclient/servicemgr/IMSLClient;)V
     .locals 0
 
-    .prologue
-    .line 316
     iput-object p1, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mMslAgent:Lcom/netflix/mediaclient/servicemgr/IMSLClient;
 
-    .line 317
     return-void
 .end method
 
 .method public setMSLClient(Lcom/netflix/mediaclient/service/msl/client/AndroidMslClient;)V
     .locals 0
 
-    .prologue
-    .line 298
     iput-object p1, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mMslClient:Lcom/netflix/mediaclient/service/msl/client/AndroidMslClient;
 
-    .line 299
     invoke-virtual {p0}, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->injectUrl()V
 
-    .line 300
     return-void
 .end method
 
 .method public setMSLUserCredentialRegistry(Lcom/netflix/mediaclient/servicemgr/IMSLClient$MSLUserCredentialRegistry;)V
     .locals 0
 
-    .prologue
-    .line 466
     iput-object p1, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mMslUserCredentialRegistry:Lcom/netflix/mediaclient/servicemgr/IMSLClient$MSLUserCredentialRegistry;
 
-    .line 467
     return-void
 .end method
 
 .method public setTimeout(I)V
     .locals 0
 
-    .prologue
-    .line 373
     iput p1, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mTimeoutInMs:I
 
-    .line 374
     return-void
 .end method
 
 .method public setUserAgent(Lcom/netflix/mediaclient/service/ServiceAgent$UserAgentInterface;)V
     .locals 0
 
-    .prologue
-    .line 312
     iput-object p1, p0, Lcom/netflix/mediaclient/service/msl/volley/MSLVolleyRequest;->mUserAgent:Lcom/netflix/mediaclient/service/ServiceAgent$UserAgentInterface;
 
-    .line 313
     return-void
 .end method
 
 .method protected shouldSkipProcessingOnInvalidUser()Z
     .locals 1
 
-    .prologue
-    .line 381
     const/4 v0, 0x1
 
     return v0

@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$InstanceState;Lcom/netflix/mediaclient/android/widget/FlowLayout;I)V
     .locals 0
 
-    .prologue
-    .line 1065
     iput-object p1, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$InstanceState$1;->this$1:Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$InstanceState;
 
     iput-object p2, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$InstanceState$1;->val$flowLayout:Lcom/netflix/mediaclient/android/widget/FlowLayout;
@@ -36,8 +34,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 1069
     iget-object v0, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$InstanceState$1;->val$flowLayout:Lcom/netflix/mediaclient/android/widget/FlowLayout;
 
     iget v1, p0, Lcom/netflix/mediaclient/ui/search/SearchResultsFrag$InstanceState$1;->val$selectedPosition:I
@@ -46,13 +42,10 @@
 
     move-result-object v0
 
-    .line 1070
     if-eqz v0, :cond_0
 
-    .line 1071
     invoke-virtual {v0}, Landroid/view/View;->performClick()Z
 
-    .line 1075
     :cond_0
     return-void
 .end method

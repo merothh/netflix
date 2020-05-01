@@ -43,29 +43,22 @@
 .method public constructor <init>(Lcom/netflix/mediaclient/servicemgr/IBrowseManager;)V
     .locals 1
 
-    .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/browse/DataDumper;->lomoVideos:Ljava/util/LinkedHashMap;
 
-    .line 36
     iput-object p1, p0, Lcom/netflix/mediaclient/service/browse/DataDumper;->browseClient:Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
 
-    .line 37
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/netflix/mediaclient/service/browse/DataDumper;)Ljava/util/LinkedHashMap;
     .locals 1
 
-    .prologue
-    .line 18
     iget-object v0, p0, Lcom/netflix/mediaclient/service/browse/DataDumper;->lomoVideos:Ljava/util/LinkedHashMap;
 
     return-object v0
@@ -74,8 +67,6 @@
 .method static synthetic access$100(Lcom/netflix/mediaclient/service/browse/DataDumper;)Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
     .locals 1
 
-    .prologue
-    .line 18
     iget-object v0, p0, Lcom/netflix/mediaclient/service/browse/DataDumper;->browseClient:Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
 
     return-object v0
@@ -84,8 +75,6 @@
 .method static synthetic access$200(Lcom/netflix/mediaclient/service/browse/DataDumper;)Z
     .locals 1
 
-    .prologue
-    .line 18
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/browse/DataDumper;->dumpErrorOccurred:Z
 
     return v0
@@ -94,8 +83,6 @@
 .method static synthetic access$202(Lcom/netflix/mediaclient/service/browse/DataDumper;Z)Z
     .locals 0
 
-    .prologue
-    .line 18
     iput-boolean p1, p0, Lcom/netflix/mediaclient/service/browse/DataDumper;->dumpErrorOccurred:Z
 
     return p1
@@ -104,8 +91,6 @@
 .method static synthetic access$300(Lcom/netflix/mediaclient/service/browse/DataDumper;Ljava/util/LinkedHashMap;)V
     .locals 0
 
-    .prologue
-    .line 18
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/browse/DataDumper;->handleDataLoadCompleted(Ljava/util/LinkedHashMap;)V
 
     return-void
@@ -114,8 +99,6 @@
 .method private dumpGenreToHtml(Ljava/lang/String;)V
     .locals 4
 
-    .prologue
-    .line 72
     const-string/jumbo v0, "DataDumper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -138,7 +121,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 73
     iget-object v0, p0, Lcom/netflix/mediaclient/service/browse/DataDumper;->browseClient:Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
 
     const/4 v1, 0x0
@@ -151,22 +133,18 @@
 
     invoke-interface {v0, p1, v1, v2, v3}, Lcom/netflix/mediaclient/servicemgr/IBrowseManager;->fetchGenres(Ljava/lang/String;IILcom/netflix/mediaclient/servicemgr/ManagerCallback;)Z
 
-    .line 86
     return-void
 .end method
 
 .method private dumpHomeLoLomoToHtml()V
     .locals 4
 
-    .prologue
-    .line 54
     const-string/jumbo v0, "DataDumper"
 
     const-string/jumbo v1, "Taking a dump for home lolomo"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
     iget-object v0, p0, Lcom/netflix/mediaclient/service/browse/DataDumper;->browseClient:Lcom/netflix/mediaclient/servicemgr/IBrowseManager;
 
     const/4 v1, 0x0
@@ -179,7 +157,6 @@
 
     invoke-interface {v0, v1, v2, v3}, Lcom/netflix/mediaclient/servicemgr/IBrowseManager;->fetchLoMos(IILcom/netflix/mediaclient/servicemgr/ManagerCallback;)Z
 
-    .line 69
     return-void
 .end method
 
@@ -198,24 +175,19 @@
         }
     .end annotation
 
-    .prologue
-    .line 144
     iget-boolean v0, p0, Lcom/netflix/mediaclient/service/browse/DataDumper;->dumpErrorOccurred:Z
 
     if-eqz v0, :cond_0
 
-    .line 145
     const-string/jumbo v0, "DataDumper"
 
     const-string/jumbo v1, "Error occurred - bailing on data dump"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 183
     :goto_0
     return-void
 
-    .line 149
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -229,7 +201,6 @@
 
     move-result-object v2
 
-    .line 150
     const-string/jumbo v0, "<h1>"
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -252,7 +223,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 152
     invoke-virtual {p1}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -274,7 +244,6 @@
 
     check-cast v0, Lcom/netflix/mediaclient/servicemgr/interface_/LoMo;
 
-    .line 153
     const-string/jumbo v1, "DataDumper"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -315,12 +284,10 @@
 
     invoke-static {v1, v4}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 154
     const-string/jumbo v1, "<p>"
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 155
     const-string/jumbo v1, "<b>"
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -351,7 +318,6 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 156
     const-string/jumbo v1, "Total video count: "
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -370,7 +336,6 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 157
     const-string/jumbo v1, "ID: "
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -395,7 +360,6 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 158
     const-string/jumbo v1, "</p>"
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -406,7 +370,6 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 160
     const-string/jumbo v1, "<table>"
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -417,7 +380,6 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 161
     const-string/jumbo v1, "<tr>"
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -428,14 +390,12 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 163
     invoke-virtual {p1, v0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/List;
 
-    .line 164
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -453,7 +413,6 @@
 
     check-cast v1, Lcom/netflix/mediaclient/servicemgr/interface_/Video;
 
-    .line 165
     const-string/jumbo v5, "DataDumper"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -508,14 +467,12 @@
 
     invoke-static {v5, v6}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 166
     const-string/jumbo v5, "<td><img src=\""
 
     invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v5
 
-    .line 167
     invoke-interface {v1}, Lcom/netflix/mediaclient/servicemgr/interface_/Video;->getBoxshotUrl()Ljava/lang/String;
 
     move-result-object v6
@@ -526,7 +483,6 @@
 
     const-string/jumbo v6, "\" alt=\""
 
-    .line 168
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v5
@@ -541,7 +497,6 @@
 
     const-string/jumbo v5, "\"  width=\""
 
-    .line 169
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -554,7 +509,6 @@
 
     const-string/jumbo v5, "\" height=\""
 
-    .line 170
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -567,19 +521,16 @@
 
     const-string/jumbo v5, "\"></td>"
 
-    .line 171
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
     const-string/jumbo v5, "\n"
 
-    .line 172
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto/16 :goto_2
 
-    .line 174
     :cond_1
     const-string/jumbo v0, "</tr>"
 
@@ -591,7 +542,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 175
     const-string/jumbo v0, "</table>"
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -604,7 +554,6 @@
 
     goto/16 :goto_1
 
-    .line 178
     :cond_2
     const-string/jumbo v0, "</body></html>"
 
@@ -616,14 +565,12 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 180
     const-string/jumbo v0, "DataDumper"
 
     const-string/jumbo v1, "Writing to file..."
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 181
     const-string/jumbo v0, "DataDumper"
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -634,7 +581,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/netflix/mediaclient/util/FileUtils;->writeStringToFile(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 182
     const-string/jumbo v0, "DataDumper"
 
     const-string/jumbo v1, "Writing to file complete"
@@ -649,18 +595,14 @@
 .method public dumpHomeLoLoMosAndVideosToHtml(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 40
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/netflix/mediaclient/service/browse/DataDumper;->dumpErrorOccurred:Z
 
-    .line 41
     iget-object v0, p0, Lcom/netflix/mediaclient/service/browse/DataDumper;->lomoVideos:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v0}, Ljava/util/LinkedHashMap;->clear()V
 
-    .line 43
     const-string/jumbo v0, "lolomo"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -669,23 +611,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 44
     const-string/jumbo v0, "Home LoLoMo"
 
     iput-object v0, p0, Lcom/netflix/mediaclient/service/browse/DataDumper;->title:Ljava/lang/String;
 
-    .line 45
     invoke-direct {p0}, Lcom/netflix/mediaclient/service/browse/DataDumper;->dumpHomeLoLomoToHtml()V
 
-    .line 51
     :goto_0
     return-void
 
-    .line 48
     :cond_0
     iput-object p2, p0, Lcom/netflix/mediaclient/service/browse/DataDumper;->title:Ljava/lang/String;
 
-    .line 49
     invoke-direct {p0, p1}, Lcom/netflix/mediaclient/service/browse/DataDumper;->dumpGenreToHtml(Ljava/lang/String;)V
 
     goto :goto_0

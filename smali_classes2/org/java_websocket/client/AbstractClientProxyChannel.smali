@@ -11,11 +11,8 @@
 .method public constructor <init>(Ljava/nio/channels/ByteChannel;)V
     .locals 2
 
-    .prologue
-    .line 19
     invoke-direct {p0, p1}, Lorg/java_websocket/AbstractWrappedByteChannel;-><init>(Ljava/nio/channels/ByteChannel;)V
 
-    .line 21
     :try_start_0
     invoke-virtual {p0}, Lorg/java_websocket/client/AbstractClientProxyChannel;->buildHandShake()Ljava/lang/String;
 
@@ -35,14 +32,11 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 25
     return-void
 
-    .line 22
     :catch_0
     move-exception v0
 
-    .line 23
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -58,8 +52,6 @@
 .method public write(Ljava/nio/ByteBuffer;)I
     .locals 1
 
-    .prologue
-    .line 29
     iget-object v0, p0, Lorg/java_websocket/client/AbstractClientProxyChannel;->proxyHandshake:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->hasRemaining()Z
@@ -68,12 +60,10 @@
 
     if-nez v0, :cond_0
 
-    .line 30
     invoke-super {p0, p1}, Lorg/java_websocket/AbstractWrappedByteChannel;->write(Ljava/nio/ByteBuffer;)I
 
     move-result v0
 
-    .line 32
     :goto_0
     return v0
 

@@ -11,8 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 22
     invoke-direct {p0}, Lcom/netflix/mediaclient/ui/launch/LaunchActivity;-><init>()V
 
     return-void
@@ -21,8 +19,6 @@
 .method public static createStartIntent(Landroid/app/Activity;Ljava/lang/String;)Landroid/content/Intent;
     .locals 2
 
-    .prologue
-    .line 36
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/netflix/mediaclient/ui/launch/RelaunchActivity;
@@ -43,8 +39,6 @@
 .method public getSource()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 40
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/launch/RelaunchActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -61,8 +55,6 @@
 .method protected isAutoLoginEnabled()Z
     .locals 1
 
-    .prologue
-    .line 53
     const/4 v0, 0x0
 
     return v0
@@ -71,8 +63,6 @@
 .method protected shouldCreateUiSessions()Z
     .locals 1
 
-    .prologue
-    .line 32
     const/4 v0, 0x0
 
     return v0
@@ -81,13 +71,10 @@
 .method protected shouldStartPerformanceLogging()Z
     .locals 2
 
-    .prologue
-    .line 45
     invoke-virtual {p0}, Lcom/netflix/mediaclient/ui/launch/RelaunchActivity;->getSource()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 46
     if-eqz v0, :cond_0
 
     const-string/jumbo v1, "handleProfileActivated"

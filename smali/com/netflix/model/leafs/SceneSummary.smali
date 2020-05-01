@@ -19,8 +19,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,18 +29,14 @@
 .method public populate(Lcom/google/gson/JsonElement;)V
     .locals 5
 
-    .prologue
-    .line 21
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v0
 
-    .line 22
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 23
     const-string/jumbo v1, "nf_scene"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -65,7 +59,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 25
     :cond_0
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
@@ -88,14 +81,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 26
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/gson/JsonElement;
 
-    .line 27
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -118,7 +109,6 @@
 
     goto :goto_0
 
-    .line 28
     :pswitch_0
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsInt()I
 
@@ -128,7 +118,6 @@
 
     goto :goto_0
 
-    .line 27
     :pswitch_1
     const-string/jumbo v4, "position"
 
@@ -142,11 +131,9 @@
 
     goto :goto_1
 
-    .line 31
     :cond_2
     return-void
 
-    .line 27
     :pswitch_data_0
     .packed-switch 0x2c929929
         :pswitch_1
@@ -161,15 +148,12 @@
 .method public set(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 35
     sget-boolean v1, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v1, :cond_0
 
-    .line 36
     const-string/jumbo v1, "nf_scene"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -192,7 +176,6 @@
 
     invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 38
     :cond_0
     const/4 v1, -0x1
 
@@ -206,11 +189,9 @@
     :goto_0
     packed-switch v1, :pswitch_data_1
 
-    .line 45
     :goto_1
     return v0
 
-    .line 38
     :pswitch_0
     const-string/jumbo v2, "position"
 
@@ -224,7 +205,6 @@
 
     goto :goto_0
 
-    .line 40
     :pswitch_1
     invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getValueAsInt()I
 
@@ -232,12 +212,10 @@
 
     iput v0, p0, Lcom/netflix/model/leafs/SceneSummary;->position:I
 
-    .line 45
     const/4 v0, 0x1
 
     goto :goto_1
 
-    .line 38
     :pswitch_data_0
     .packed-switch 0x2c929929
         :pswitch_0
@@ -252,8 +230,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 50
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -14,8 +14,6 @@
 .method constructor <init>(Landroid/support/v4/media/TransportMediator;)V
     .locals 0
 
-    .prologue
-    .line 129
     iput-object p1, p0, Landroid/support/v4/media/TransportMediator$2;->this$0:Landroid/support/v4/media/TransportMediator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 1
 
-    .prologue
-    .line 132
     invoke-static {p1}, Landroid/support/v4/media/TransportMediator;->isMediaKey(I)Z
 
     move-result v0
@@ -56,8 +52,6 @@
 .method public onKeyLongPress(ILandroid/view/KeyEvent;)Z
     .locals 1
 
-    .prologue
-    .line 137
     const/4 v0, 0x0
 
     return v0
@@ -66,8 +60,6 @@
 .method public onKeyMultiple(IILandroid/view/KeyEvent;)Z
     .locals 1
 
-    .prologue
-    .line 147
     const/4 v0, 0x0
 
     return v0
@@ -76,8 +68,6 @@
 .method public onKeyUp(ILandroid/view/KeyEvent;)Z
     .locals 1
 
-    .prologue
-    .line 142
     invoke-static {p1}, Landroid/support/v4/media/TransportMediator;->isMediaKey(I)Z
 
     move-result v0

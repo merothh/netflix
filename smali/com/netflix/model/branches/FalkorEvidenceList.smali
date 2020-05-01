@@ -75,23 +75,18 @@
         }
     .end annotation
 
-    .prologue
-    .line 32
     invoke-direct {p0, p1}, Lcom/netflix/falkor/BranchMap;-><init>(Lcom/netflix/falkor/Func;)V
 
-    .line 33
     sget-boolean v0, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v0, :cond_0
 
-    .line 34
     const-string/jumbo v0, "FalkorEvidenceList"
 
     const-string/jumbo v1, "Creating FalkorList"
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 36
     :cond_0
     return-void
 .end method
@@ -101,8 +96,6 @@
 .method public describeContents()I
     .locals 2
 
-    .prologue
-    .line 152
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "unsupported method"
@@ -115,8 +108,6 @@
 .method public get(Ljava/lang/String;)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 41
     const/4 v0, -0x1
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -129,12 +120,10 @@
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 47
     sget-boolean v0, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v0, :cond_1
 
-    .line 48
     const-string/jumbo v0, "FalkorEvidenceList"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -157,7 +146,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
     :cond_1
     invoke-super {p0, p1}, Lcom/netflix/falkor/BranchMap;->get(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -166,7 +154,6 @@
     :goto_1
     return-object v0
 
-    .line 41
     :sswitch_0
     const-string/jumbo v1, "summary"
 
@@ -219,31 +206,26 @@
 
     goto :goto_0
 
-    .line 42
     :pswitch_0
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorEvidenceList;->summary:Lcom/netflix/model/leafs/ListOfMoviesSummary;
 
     goto :goto_1
 
-    .line 43
     :pswitch_1
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorEvidenceList;->discoveryData:Lcom/netflix/model/branches/UnsummarizedList;
 
     goto :goto_1
 
-    .line 44
     :pswitch_2
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorEvidenceList;->videoEvidence:Lcom/netflix/model/branches/UnsummarizedList;
 
     goto :goto_1
 
-    .line 45
     :pswitch_3
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorEvidenceList;->billboardData:Lcom/netflix/model/branches/UnsummarizedList;
 
     goto :goto_1
 
-    .line 41
     :sswitch_data_0
     .sparse-switch
         -0x6eb9585a -> :sswitch_0
@@ -264,8 +246,6 @@
 .method public getHeroTrackId()I
     .locals 1
 
-    .prologue
-    .line 191
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorEvidenceList;->summary:Lcom/netflix/model/leafs/ListOfMoviesSummary;
 
     invoke-virtual {v0}, Lcom/netflix/model/leafs/ListOfMoviesSummary;->getHeroTrackId()I
@@ -278,8 +258,6 @@
 .method public getId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 122
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorEvidenceList;->summary:Lcom/netflix/model/leafs/ListOfMoviesSummary;
 
     if-nez v0, :cond_0
@@ -311,56 +289,45 @@
         }
     .end annotation
 
-    .prologue
-    .line 80
     invoke-super {p0}, Lcom/netflix/falkor/BranchMap;->getKeys()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 81
     iget-object v1, p0, Lcom/netflix/model/branches/FalkorEvidenceList;->summary:Lcom/netflix/model/leafs/ListOfMoviesSummary;
 
     if-eqz v1, :cond_0
 
-    .line 82
     const-string/jumbo v1, "summary"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 84
     :cond_0
     iget-object v1, p0, Lcom/netflix/model/branches/FalkorEvidenceList;->videoEvidence:Lcom/netflix/model/branches/UnsummarizedList;
 
     if-eqz v1, :cond_1
 
-    .line 85
     const-string/jumbo v1, "videoEvidence"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 87
     :cond_1
     iget-object v1, p0, Lcom/netflix/model/branches/FalkorEvidenceList;->billboardData:Lcom/netflix/model/branches/UnsummarizedList;
 
     if-eqz v1, :cond_2
 
-    .line 88
     const-string/jumbo v1, "billboardData"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 90
     :cond_2
     iget-object v1, p0, Lcom/netflix/model/branches/FalkorEvidenceList;->discoveryData:Lcom/netflix/model/branches/UnsummarizedList;
 
     if-eqz v1, :cond_3
 
-    .line 91
     const-string/jumbo v1, "discoveryEvidence"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 93
     :cond_3
     return-object v0
 .end method
@@ -368,8 +335,6 @@
 .method public getListPos()I
     .locals 1
 
-    .prologue
-    .line 142
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorEvidenceList;->summary:Lcom/netflix/model/leafs/ListOfMoviesSummary;
 
     if-nez v0, :cond_0
@@ -401,8 +366,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 167
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorEvidenceList;->summary:Lcom/netflix/model/leafs/ListOfMoviesSummary;
 
     if-nez v0, :cond_0
@@ -425,8 +388,6 @@
 .method public getNumVideos()I
     .locals 1
 
-    .prologue
-    .line 162
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorEvidenceList;->summary:Lcom/netflix/model/leafs/ListOfMoviesSummary;
 
     if-nez v0, :cond_0
@@ -449,26 +410,20 @@
 .method public getOrCreate(Ljava/lang/String;)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 56
     invoke-virtual {p0, p1}, Lcom/netflix/model/branches/FalkorEvidenceList;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 57
     if-eqz v0, :cond_0
 
-    .line 74
     :goto_0
     return-object v0
 
-    .line 61
     :cond_0
     sget-boolean v0, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v0, :cond_1
 
-    .line 62
     const-string/jumbo v0, "FalkorEvidenceList"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -491,7 +446,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
     :cond_1
     const/4 v0, -0x1
 
@@ -505,12 +459,10 @@
     :goto_1
     packed-switch v0, :pswitch_data_0
 
-    .line 71
     sget-boolean v0, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v0, :cond_3
 
-    .line 72
     const-string/jumbo v0, "FalkorEvidenceList"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -533,7 +485,6 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     :cond_3
     invoke-super {p0, p1}, Lcom/netflix/falkor/BranchMap;->getOrCreate(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -541,7 +492,6 @@
 
     goto :goto_0
 
-    .line 65
     :sswitch_0
     const-string/jumbo v1, "summary"
 
@@ -594,7 +544,6 @@
 
     goto :goto_1
 
-    .line 66
     :pswitch_0
     new-instance v0, Lcom/netflix/model/leafs/ListOfMoviesSummary;
 
@@ -604,7 +553,6 @@
 
     goto :goto_0
 
-    .line 67
     :pswitch_1
     new-instance v0, Lcom/netflix/model/branches/UnsummarizedList;
 
@@ -616,7 +564,6 @@
 
     goto/16 :goto_0
 
-    .line 68
     :pswitch_2
     new-instance v0, Lcom/netflix/model/branches/UnsummarizedList;
 
@@ -628,7 +575,6 @@
 
     goto/16 :goto_0
 
-    .line 69
     :pswitch_3
     new-instance v0, Lcom/netflix/model/branches/UnsummarizedList;
 
@@ -642,7 +588,6 @@
 
     goto/16 :goto_0
 
-    .line 65
     :sswitch_data_0
     .sparse-switch
         -0x6eb9585a -> :sswitch_0
@@ -663,8 +608,6 @@
 .method public getRequestId()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 147
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorEvidenceList;->summary:Lcom/netflix/model/leafs/ListOfMoviesSummary;
 
     if-nez v0, :cond_0
@@ -687,8 +630,6 @@
 .method public getTitle()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 127
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorEvidenceList;->summary:Lcom/netflix/model/leafs/ListOfMoviesSummary;
 
     if-nez v0, :cond_0
@@ -711,8 +652,6 @@
 .method public getTrackId()I
     .locals 1
 
-    .prologue
-    .line 137
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorEvidenceList;->summary:Lcom/netflix/model/leafs/ListOfMoviesSummary;
 
     if-nez v0, :cond_0
@@ -735,8 +674,6 @@
 .method public getType()Lcom/netflix/mediaclient/servicemgr/interface_/LoMoType;
     .locals 1
 
-    .prologue
-    .line 132
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorEvidenceList;->summary:Lcom/netflix/model/leafs/ListOfMoviesSummary;
 
     if-nez v0, :cond_0
@@ -759,8 +696,6 @@
 .method public isBillboard()Z
     .locals 1
 
-    .prologue
-    .line 172
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorEvidenceList;->summary:Lcom/netflix/model/leafs/ListOfMoviesSummary;
 
     if-nez v0, :cond_0
@@ -783,8 +718,6 @@
 .method public isHero()Z
     .locals 1
 
-    .prologue
-    .line 196
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorEvidenceList;->summary:Lcom/netflix/model/leafs/ListOfMoviesSummary;
 
     invoke-virtual {v0}, Lcom/netflix/model/leafs/ListOfMoviesSummary;->isHero()Z
@@ -797,27 +730,22 @@
 .method public remove(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 115
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/netflix/model/branches/FalkorEvidenceList;->set(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 116
     return-void
 .end method
 
 .method public set(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 5
 
-    .prologue
     const/4 v3, 0x2
 
     const/4 v2, 0x1
 
     const/4 v1, 0x0
 
-    .line 100
     const/4 v0, -0x1
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -830,12 +758,10 @@
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 106
     sget-boolean v0, Lcom/netflix/mediaclient/service/falkor/Falkor;->ENABLE_VERBOSE_LOGGING:Z
 
     if-eqz v0, :cond_1
 
-    .line 107
     const-string/jumbo v0, "FalkorEvidenceList"
 
     const-string/jumbo v4, "FalkorEvidenceList:set key: %s, value: %s"
@@ -852,15 +778,12 @@
 
     invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     :cond_1
     invoke-super {p0, p1, p2}, Lcom/netflix/falkor/BranchMap;->set(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 111
     :goto_1
     return-void
 
-    .line 100
     :sswitch_0
     const-string/jumbo v4, "summary"
 
@@ -913,7 +836,6 @@
 
     goto :goto_0
 
-    .line 101
     :pswitch_0
     check-cast p2, Lcom/netflix/model/leafs/ListOfMoviesSummary;
 
@@ -921,7 +843,6 @@
 
     goto :goto_1
 
-    .line 102
     :pswitch_1
     check-cast p2, Lcom/netflix/model/branches/UnsummarizedList;
 
@@ -929,7 +850,6 @@
 
     goto :goto_1
 
-    .line 103
     :pswitch_2
     check-cast p2, Lcom/netflix/model/branches/UnsummarizedList;
 
@@ -937,7 +857,6 @@
 
     goto :goto_1
 
-    .line 104
     :pswitch_3
     check-cast p2, Lcom/netflix/model/branches/UnsummarizedList;
 
@@ -945,7 +864,6 @@
 
     goto :goto_1
 
-    .line 100
     nop
 
     :sswitch_data_0
@@ -968,18 +886,14 @@
 .method public setId(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 184
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorEvidenceList;->summary:Lcom/netflix/model/leafs/ListOfMoviesSummary;
 
     if-eqz v0, :cond_0
 
-    .line 185
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorEvidenceList;->summary:Lcom/netflix/model/leafs/ListOfMoviesSummary;
 
     invoke-virtual {v0, p1}, Lcom/netflix/model/leafs/ListOfMoviesSummary;->setId(Ljava/lang/String;)V
 
-    .line 187
     :cond_0
     return-void
 .end method
@@ -987,18 +901,14 @@
 .method public setListPos(I)V
     .locals 1
 
-    .prologue
-    .line 177
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorEvidenceList;->summary:Lcom/netflix/model/leafs/ListOfMoviesSummary;
 
     if-eqz v0, :cond_0
 
-    .line 178
     iget-object v0, p0, Lcom/netflix/model/branches/FalkorEvidenceList;->summary:Lcom/netflix/model/leafs/ListOfMoviesSummary;
 
     invoke-virtual {v0, p1}, Lcom/netflix/model/leafs/ListOfMoviesSummary;->setListPos(I)V
 
-    .line 180
     :cond_0
     return-void
 .end method
@@ -1006,8 +916,6 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    .prologue
-    .line 157
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "unsupported method"

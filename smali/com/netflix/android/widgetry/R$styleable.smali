@@ -981,7 +981,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x6
 
     const/4 v5, 0x1
@@ -992,7 +991,6 @@
 
     const/4 v2, 0x3
 
-    .line 1249
     const/16 v0, 0x1d
 
     new-array v0, v0, [I
@@ -1001,7 +999,6 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->ActionBar:[I
 
-    .line 1250
     new-array v0, v5, [I
 
     const v1, 0x10100b3
@@ -1010,7 +1007,6 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->ActionBarLayout:[I
 
-    .line 1281
     new-array v0, v5, [I
 
     const v1, 0x101013f
@@ -1019,61 +1015,52 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->ActionMenuItemView:[I
 
-    .line 1283
     new-array v0, v3, [I
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->ActionMenuView:[I
 
-    .line 1284
     new-array v0, v6, [I
 
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->ActionMode:[I
 
-    .line 1291
     new-array v0, v4, [I
 
     fill-array-data v0, :array_2
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->ActivityChooserView:[I
 
-    .line 1294
     new-array v0, v6, [I
 
     fill-array-data v0, :array_3
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->AlertDialog:[I
 
-    .line 1301
     new-array v0, v2, [I
 
     fill-array-data v0, :array_4
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->AppBarLayout:[I
 
-    .line 1302
     new-array v0, v4, [I
 
     fill-array-data v0, :array_5
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->AppBarLayoutStates:[I
 
-    .line 1305
     new-array v0, v4, [I
 
     fill-array-data v0, :array_6
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->AppBarLayout_Layout:[I
 
-    .line 1311
     new-array v0, v4, [I
 
     fill-array-data v0, :array_7
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->AppCompatImageView:[I
 
-    .line 1314
     const/4 v0, 0x4
 
     new-array v0, v0, [I
@@ -1082,7 +1069,6 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->AppCompatSeekBar:[I
 
-    .line 1319
     const/4 v0, 0x7
 
     new-array v0, v0, [I
@@ -1091,14 +1077,12 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->AppCompatTextHelper:[I
 
-    .line 1327
     new-array v0, v4, [I
 
     fill-array-data v0, :array_a
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->AppCompatTextView:[I
 
-    .line 1330
     const/16 v0, 0x73
 
     new-array v0, v0, [I
@@ -1107,14 +1091,12 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->AppCompatTheme:[I
 
-    .line 1446
     new-array v0, v2, [I
 
     fill-array-data v0, :array_c
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->BottomSheetBehavior_Layout:[I
 
-    .line 1450
     new-array v0, v5, [I
 
     const v1, 0x7f0100b8
@@ -1123,7 +1105,6 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->ButtonBarLayout:[I
 
-    .line 1452
     const/16 v0, 0x10
 
     new-array v0, v0, [I
@@ -1132,35 +1113,30 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->CollapsingToolbarLayout:[I
 
-    .line 1453
     new-array v0, v4, [I
 
     fill-array-data v0, :array_e
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->CollapsingToolbarLayout_Layout:[I
 
-    .line 1472
     new-array v0, v2, [I
 
     fill-array-data v0, :array_f
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->ColorStateListItem:[I
 
-    .line 1476
     new-array v0, v2, [I
 
     fill-array-data v0, :array_10
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->CompoundButton:[I
 
-    .line 1480
     new-array v0, v4, [I
 
     fill-array-data v0, :array_11
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->CoordinatorLayout:[I
 
-    .line 1481
     const/4 v0, 0x7
 
     new-array v0, v0, [I
@@ -1169,14 +1145,12 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->CoordinatorLayout_Layout:[I
 
-    .line 1491
     new-array v0, v2, [I
 
     fill-array-data v0, :array_13
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->DesignTheme:[I
 
-    .line 1495
     const/16 v0, 0x8
 
     new-array v0, v0, [I
@@ -1185,7 +1159,6 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->DrawerArrowToggle:[I
 
-    .line 1504
     const/16 v0, 0x8
 
     new-array v0, v0, [I
@@ -1194,7 +1167,6 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->FloatingActionButton:[I
 
-    .line 1505
     new-array v0, v5, [I
 
     const v1, 0x7f010104
@@ -1203,14 +1175,12 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->FloatingActionButton_Behavior_Layout:[I
 
-    .line 1515
     new-array v0, v2, [I
 
     fill-array-data v0, :array_16
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->ForegroundLinearLayout:[I
 
-    .line 1519
     const/16 v0, 0x9
 
     new-array v0, v0, [I
@@ -1219,7 +1189,6 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->LinearLayoutCompat:[I
 
-    .line 1520
     const/4 v0, 0x4
 
     new-array v0, v0, [I
@@ -1228,21 +1197,18 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->LinearLayoutCompat_Layout:[I
 
-    .line 1534
     new-array v0, v4, [I
 
     fill-array-data v0, :array_19
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->ListPopupWindow:[I
 
-    .line 1537
     new-array v0, v6, [I
 
     fill-array-data v0, :array_1a
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->MenuGroup:[I
 
-    .line 1544
     const/16 v0, 0x11
 
     new-array v0, v0, [I
@@ -1251,7 +1217,6 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->MenuItem:[I
 
-    .line 1562
     const/16 v0, 0x9
 
     new-array v0, v0, [I
@@ -1260,7 +1225,6 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->MenuView:[I
 
-    .line 1572
     const/16 v0, 0xa
 
     new-array v0, v0, [I
@@ -1269,14 +1233,12 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->NavigationView:[I
 
-    .line 1583
     new-array v0, v2, [I
 
     fill-array-data v0, :array_1e
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->PopupWindow:[I
 
-    .line 1584
     new-array v0, v5, [I
 
     const v1, 0x7f010137
@@ -1285,14 +1247,12 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->PopupWindowBackgroundState:[I
 
-    .line 1589
     new-array v0, v6, [I
 
     fill-array-data v0, :array_1f
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->RecyclerView:[I
 
-    .line 1596
     new-array v0, v5, [I
 
     const v1, 0x7f010141
@@ -1301,7 +1261,6 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->ScrimInsetsFrameLayout:[I
 
-    .line 1598
     new-array v0, v5, [I
 
     const v1, 0x7f010142
@@ -1310,7 +1269,6 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->ScrollingViewBehavior_Layout:[I
 
-    .line 1600
     const/16 v0, 0x11
 
     new-array v0, v0, [I
@@ -1319,14 +1277,12 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->SearchView:[I
 
-    .line 1618
     new-array v0, v2, [I
 
     fill-array-data v0, :array_21
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->SnackbarLayout:[I
 
-    .line 1622
     const/4 v0, 0x5
 
     new-array v0, v0, [I
@@ -1335,7 +1291,6 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->Spinner:[I
 
-    .line 1628
     const/16 v0, 0xe
 
     new-array v0, v0, [I
@@ -1344,14 +1299,12 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->SwitchCompat:[I
 
-    .line 1643
     new-array v0, v2, [I
 
     fill-array-data v0, :array_24
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->TabItem:[I
 
-    .line 1647
     const/16 v0, 0x10
 
     new-array v0, v0, [I
@@ -1360,7 +1313,6 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->TabLayout:[I
 
-    .line 1664
     const/16 v0, 0x9
 
     new-array v0, v0, [I
@@ -1369,7 +1321,6 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->TextAppearance:[I
 
-    .line 1674
     const/16 v0, 0x10
 
     new-array v0, v0, [I
@@ -1378,7 +1329,6 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->TextInputLayout:[I
 
-    .line 1691
     const/16 v0, 0x1d
 
     new-array v0, v0, [I
@@ -1387,7 +1337,6 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->Toolbar:[I
 
-    .line 1721
     const/4 v0, 0x5
 
     new-array v0, v0, [I
@@ -1396,14 +1345,12 @@
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->View:[I
 
-    .line 1722
     new-array v0, v2, [I
 
     fill-array-data v0, :array_2a
 
     sput-object v0, Lcom/netflix/android/widgetry/R$styleable;->ViewBackgroundHelper:[I
 
-    .line 1726
     new-array v0, v2, [I
 
     fill-array-data v0, :array_2b
@@ -1412,7 +1359,6 @@
 
     return-void
 
-    .line 1249
     nop
 
     :array_0
@@ -1448,7 +1394,6 @@
         0x7f010072
     .end array-data
 
-    .line 1284
     :array_1
     .array-data 4
         0x7f010002
@@ -1459,14 +1404,12 @@
         0x7f01002e
     .end array-data
 
-    .line 1291
     :array_2
     .array-data 4
         0x7f01002f
         0x7f010030
     .end array-data
 
-    .line 1294
     :array_3
     .array-data 4
         0x10100f2
@@ -1477,7 +1420,6 @@
         0x7f010038
     .end array-data
 
-    .line 1301
     :array_4
     .array-data 4
         0x10100d4
@@ -1485,28 +1427,24 @@
         0x7f010039
     .end array-data
 
-    .line 1302
     :array_5
     .array-data 4
         0x7f01003a
         0x7f01003b
     .end array-data
 
-    .line 1305
     :array_6
     .array-data 4
         0x7f01003c
         0x7f01003d
     .end array-data
 
-    .line 1311
     :array_7
     .array-data 4
         0x1010119
         0x7f01003e
     .end array-data
 
-    .line 1314
     :array_8
     .array-data 4
         0x1010142
@@ -1515,7 +1453,6 @@
         0x7f010041
     .end array-data
 
-    .line 1319
     :array_9
     .array-data 4
         0x1010034
@@ -1527,14 +1464,12 @@
         0x1010393
     .end array-data
 
-    .line 1327
     :array_a
     .array-data 4
         0x1010034
         0x7f010042
     .end array-data
 
-    .line 1330
     :array_b
     .array-data 4
         0x1010057
@@ -1654,7 +1589,6 @@
         0x7f0100b3
     .end array-data
 
-    .line 1446
     :array_c
     .array-data 4
         0x7f0100b5
@@ -1662,7 +1596,6 @@
         0x7f0100b7
     .end array-data
 
-    .line 1452
     :array_d
     .array-data 4
         0x7f010011
@@ -1683,14 +1616,12 @@
         0x7f0100e3
     .end array-data
 
-    .line 1453
     :array_e
     .array-data 4
         0x7f0100e4
         0x7f0100e5
     .end array-data
 
-    .line 1472
     :array_f
     .array-data 4
         0x10101a5
@@ -1698,7 +1629,6 @@
         0x7f0100e6
     .end array-data
 
-    .line 1476
     :array_10
     .array-data 4
         0x1010107
@@ -1706,14 +1636,12 @@
         0x7f0100e8
     .end array-data
 
-    .line 1480
     :array_11
     .array-data 4
         0x7f0100e9
         0x7f0100ea
     .end array-data
 
-    .line 1481
     :array_12
     .array-data 4
         0x10100b3
@@ -1725,7 +1653,6 @@
         0x7f0100f0
     .end array-data
 
-    .line 1491
     :array_13
     .array-data 4
         0x7f0100f1
@@ -1733,7 +1660,6 @@
         0x7f0100f3
     .end array-data
 
-    .line 1495
     :array_14
     .array-data 4
         0x7f0100f7
@@ -1746,7 +1672,6 @@
         0x7f0100fe
     .end array-data
 
-    .line 1504
     :array_15
     .array-data 4
         0x7f01002c
@@ -1759,7 +1684,6 @@
         0x7f0101a9
     .end array-data
 
-    .line 1515
     :array_16
     .array-data 4
         0x1010109
@@ -1767,7 +1691,6 @@
         0x7f010109
     .end array-data
 
-    .line 1519
     :array_17
     .array-data 4
         0x10100af
@@ -1781,7 +1704,6 @@
         0x7f01010e
     .end array-data
 
-    .line 1520
     :array_18
     .array-data 4
         0x10100b3
@@ -1790,14 +1712,12 @@
         0x1010181
     .end array-data
 
-    .line 1534
     :array_19
     .array-data 4
         0x10102ac
         0x10102ad
     .end array-data
 
-    .line 1537
     :array_1a
     .array-data 4
         0x101000e
@@ -1808,7 +1728,6 @@
         0x10101e0
     .end array-data
 
-    .line 1544
     :array_1b
     .array-data 4
         0x1010002
@@ -1830,7 +1749,6 @@
         0x7f010125
     .end array-data
 
-    .line 1562
     :array_1c
     .array-data 4
         0x10100ae
@@ -1844,7 +1762,6 @@
         0x7f010127
     .end array-data
 
-    .line 1572
     :array_1d
     .array-data 4
         0x10100d4
@@ -1859,7 +1776,6 @@
         0x7f01012d
     .end array-data
 
-    .line 1583
     :array_1e
     .array-data 4
         0x1010176
@@ -1867,7 +1783,6 @@
         0x7f010136
     .end array-data
 
-    .line 1589
     :array_1f
     .array-data 4
         0x10100c4
@@ -1878,7 +1793,6 @@
         0x7f01013b
     .end array-data
 
-    .line 1600
     :array_20
     .array-data 4
         0x10100da
@@ -1900,7 +1814,6 @@
         0x7f01014f
     .end array-data
 
-    .line 1618
     :array_21
     .array-data 4
         0x101011f
@@ -1908,7 +1821,6 @@
         0x7f010158
     .end array-data
 
-    .line 1622
     :array_22
     .array-data 4
         0x10100b2
@@ -1918,7 +1830,6 @@
         0x7f01002d
     .end array-data
 
-    .line 1628
     :array_23
     .array-data 4
         0x1010124
@@ -1937,7 +1848,6 @@
         0x7f010165
     .end array-data
 
-    .line 1643
     :array_24
     .array-data 4
         0x1010002
@@ -1945,7 +1855,6 @@
         0x101014f
     .end array-data
 
-    .line 1647
     :array_25
     .array-data 4
         0x7f010166
@@ -1966,7 +1875,6 @@
         0x7f010175
     .end array-data
 
-    .line 1664
     :array_26
     .array-data 4
         0x1010095
@@ -1980,7 +1888,6 @@
         0x7f010042
     .end array-data
 
-    .line 1674
     :array_27
     .array-data 4
         0x101009a
@@ -2001,7 +1908,6 @@
         0x7f010183
     .end array-data
 
-    .line 1691
     :array_28
     .array-data 4
         0x10100af
@@ -2035,7 +1941,6 @@
         0x7f01019f
     .end array-data
 
-    .line 1721
     :array_29
     .array-data 4
         0x1010000
@@ -2045,7 +1950,6 @@
         0x7f0101a7
     .end array-data
 
-    .line 1722
     :array_2a
     .array-data 4
         0x10100d4
@@ -2053,7 +1957,6 @@
         0x7f0101a9
     .end array-data
 
-    .line 1726
     :array_2b
     .array-data 4
         0x10100d0
@@ -2065,8 +1968,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1248
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

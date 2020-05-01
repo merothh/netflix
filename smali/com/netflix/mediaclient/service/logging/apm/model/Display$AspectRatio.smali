@@ -30,12 +30,10 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
     const/4 v3, 0x0
 
-    .line 156
     new-instance v0, Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;
 
     const-string/jumbo v1, "_16x9"
@@ -46,7 +44,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;->_16x9:Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;
 
-    .line 157
     new-instance v0, Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;
 
     const-string/jumbo v1, "_4x3"
@@ -57,7 +54,6 @@
 
     sput-object v0, Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;->_4x3:Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;
 
-    .line 155
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;
@@ -85,22 +81,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 161
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 162
     iput-object p3, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;->desc:Ljava/lang/String;
 
-    .line 163
     return-void
 .end method
 
 .method public static find(Ljava/lang/String;)Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;
     .locals 1
 
-    .prologue
-    .line 175
     sget-object v0, Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;->_16x9:Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;
 
     iget-object v0, v0, Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;->desc:Ljava/lang/String;
@@ -111,14 +101,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 176
     sget-object v0, Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;->_16x9:Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;
 
-    .line 181
     :goto_0
     return-object v0
 
-    .line 178
     :cond_0
     sget-object v0, Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;->_4x3:Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;
 
@@ -130,12 +117,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 179
     sget-object v0, Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;->_4x3:Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;
 
     goto :goto_0
 
-    .line 181
     :cond_1
     const/4 v0, 0x0
 
@@ -145,8 +130,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;
     .locals 1
 
-    .prologue
-    .line 155
     const-class v0, Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -161,8 +144,6 @@
 .method public static values()[Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;
     .locals 1
 
-    .prologue
-    .line 155
     sget-object v0, Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;->$VALUES:[Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;
 
     invoke-virtual {v0}, [Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;->clone()Ljava/lang/Object;
@@ -179,8 +160,6 @@
 .method public getDesc()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 171
     iget-object v0, p0, Lcom/netflix/mediaclient/service/logging/apm/model/Display$AspectRatio;->desc:Ljava/lang/String;
 
     return-object v0

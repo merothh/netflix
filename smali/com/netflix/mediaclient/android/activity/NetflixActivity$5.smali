@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/netflix/mediaclient/android/activity/NetflixActivity;)V
     .locals 0
 
-    .prologue
-    .line 1707
     iput-object p1, p0, Lcom/netflix/mediaclient/android/activity/NetflixActivity$5;->this$0:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,8 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .prologue
-    .line 1710
     iget-object v0, p0, Lcom/netflix/mediaclient/android/activity/NetflixActivity$5;->this$0:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 
     invoke-static {v0}, Lcom/netflix/mediaclient/util/AndroidUtils;->isActivityFinishedOrDestroyed(Landroid/content/Context;)Z
@@ -35,11 +31,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 1721
     :goto_0
     return-void
 
-    .line 1714
     :cond_0
     if-eqz p2, :cond_1
 
@@ -55,7 +49,6 @@
 
     if-nez v0, :cond_2
 
-    .line 1715
     :cond_1
     const-string/jumbo v0, "NetflixActivity"
 
@@ -65,7 +58,6 @@
 
     goto :goto_0
 
-    .line 1720
     :cond_2
     iget-object v0, p0, Lcom/netflix/mediaclient/android/activity/NetflixActivity$5;->this$0:Lcom/netflix/mediaclient/android/activity/NetflixActivity;
 

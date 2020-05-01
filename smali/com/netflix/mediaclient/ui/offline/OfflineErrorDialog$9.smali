@@ -15,8 +15,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 314
     invoke-static {}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;->values()[Lcom/netflix/mediaclient/servicemgr/interface_/offline/DownloadState;
 
     move-result-object v0
@@ -154,7 +152,6 @@
     :try_end_7
     .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_15
 
-    .line 366
     :goto_7
     invoke-static {}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;->values()[Lcom/netflix/mediaclient/servicemgr/interface_/offline/WatchState;
 
@@ -277,7 +274,6 @@
     :try_end_e
     .catch Ljava/lang/NoSuchFieldError; {:try_start_e .. :try_end_e} :catch_e
 
-    .line 324
     :goto_e
     invoke-static {}, Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;->values()[Lcom/netflix/mediaclient/servicemgr/interface_/offline/StopReason;
 
@@ -585,7 +581,6 @@
 
     goto/16 :goto_f
 
-    .line 366
     :catch_e
     move-exception v0
 
@@ -621,7 +616,6 @@
 
     goto/16 :goto_8
 
-    .line 314
     :catch_15
     move-exception v0
 

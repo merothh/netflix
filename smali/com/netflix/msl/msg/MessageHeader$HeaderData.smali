@@ -70,43 +70,29 @@
         }
     .end annotation
 
-    .prologue
-    .line 186
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 187
     iput-object p1, p0, Lcom/netflix/msl/msg/MessageHeader$HeaderData;->recipient:Ljava/lang/String;
 
-    .line 188
     iput-wide p2, p0, Lcom/netflix/msl/msg/MessageHeader$HeaderData;->messageId:J
 
-    .line 189
     iput-object p4, p0, Lcom/netflix/msl/msg/MessageHeader$HeaderData;->nonReplayableId:Ljava/lang/Long;
 
-    .line 190
     iput-boolean p5, p0, Lcom/netflix/msl/msg/MessageHeader$HeaderData;->renewable:Z
 
-    .line 191
     iput-boolean p6, p0, Lcom/netflix/msl/msg/MessageHeader$HeaderData;->handshake:Z
 
-    .line 192
     iput-object p7, p0, Lcom/netflix/msl/msg/MessageHeader$HeaderData;->capabilities:Lcom/netflix/msl/msg/MessageCapabilities;
 
-    .line 193
     iput-object p8, p0, Lcom/netflix/msl/msg/MessageHeader$HeaderData;->keyRequestData:Ljava/util/Set;
 
-    .line 194
     iput-object p9, p0, Lcom/netflix/msl/msg/MessageHeader$HeaderData;->keyResponseData:Lcom/netflix/msl/keyx/KeyResponseData;
 
-    .line 195
     iput-object p10, p0, Lcom/netflix/msl/msg/MessageHeader$HeaderData;->userAuthData:Lcom/netflix/msl/userauth/UserAuthenticationData;
 
-    .line 196
     iput-object p11, p0, Lcom/netflix/msl/msg/MessageHeader$HeaderData;->userIdToken:Lcom/netflix/msl/tokens/UserIdToken;
 
-    .line 197
     iput-object p12, p0, Lcom/netflix/msl/msg/MessageHeader$HeaderData;->serviceTokens:Ljava/util/Set;
 
-    .line 198
     return-void
 .end method
