@@ -11,8 +11,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 15
     invoke-direct {p0}, Lorg/xbill/DNS/U16NameBase;-><init>()V
 
     return-void
@@ -21,8 +19,6 @@
 .method public constructor <init>(Lorg/xbill/DNS/Name;IJILorg/xbill/DNS/Name;)V
     .locals 11
 
-    .prologue
-    .line 30
     const/16 v2, 0xf
 
     const-string/jumbo v7, "priority"
@@ -43,7 +39,6 @@
 
     invoke-direct/range {v0 .. v9}, Lorg/xbill/DNS/U16NameBase;-><init>(Lorg/xbill/DNS/Name;IIJILjava/lang/String;Lorg/xbill/DNS/Name;Ljava/lang/String;)V
 
-    .line 32
     return-void
 .end method
 
@@ -52,8 +47,6 @@
 .method public getAdditionalName()Lorg/xbill/DNS/Name;
     .locals 1
 
-    .prologue
-    .line 54
     invoke-virtual {p0}, Lorg/xbill/DNS/MXRecord;->getNameField()Lorg/xbill/DNS/Name;
 
     move-result-object v0
@@ -64,8 +57,6 @@
 .method getObject()Lorg/xbill/DNS/Record;
     .locals 1
 
-    .prologue
-    .line 19
     new-instance v0, Lorg/xbill/DNS/MXRecord;
 
     invoke-direct {v0}, Lorg/xbill/DNS/MXRecord;-><init>()V
@@ -76,8 +67,6 @@
 .method public getPriority()I
     .locals 1
 
-    .prologue
-    .line 43
     invoke-virtual {p0}, Lorg/xbill/DNS/MXRecord;->getU16Field()I
 
     move-result v0
@@ -88,8 +77,6 @@
 .method public getTarget()Lorg/xbill/DNS/Name;
     .locals 1
 
-    .prologue
-    .line 37
     invoke-virtual {p0}, Lorg/xbill/DNS/MXRecord;->getNameField()Lorg/xbill/DNS/Name;
 
     move-result-object v0
@@ -100,17 +87,13 @@
 .method rrToWire(Lorg/xbill/DNS/DNSOutput;Lorg/xbill/DNS/Compression;Z)V
     .locals 1
 
-    .prologue
-    .line 48
     iget v0, p0, Lorg/xbill/DNS/MXRecord;->u16Field:I
 
     invoke-virtual {p1, v0}, Lorg/xbill/DNS/DNSOutput;->writeU16(I)V
 
-    .line 49
     iget-object v0, p0, Lorg/xbill/DNS/MXRecord;->nameField:Lorg/xbill/DNS/Name;
 
     invoke-virtual {v0, p1, p2, p3}, Lorg/xbill/DNS/Name;->toWire(Lorg/xbill/DNS/DNSOutput;Lorg/xbill/DNS/Compression;Z)V
 
-    .line 50
     return-void
 .end method

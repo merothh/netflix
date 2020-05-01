@@ -13,16 +13,12 @@
 .method public constructor <init>(Lorg/java_websocket/drafts/Draft_10;I)V
     .locals 0
 
-    .prologue
-    .line 42
     iput-object p1, p0, Lorg/java_websocket/drafts/Draft_10$IncompleteException;->this$0:Lorg/java_websocket/drafts/Draft_10;
 
     invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
 
-    .line 43
     iput p2, p0, Lorg/java_websocket/drafts/Draft_10$IncompleteException;->preferedsize:I
 
-    .line 44
     return-void
 .end method
 
@@ -31,8 +27,6 @@
 .method public getPreferedSize()I
     .locals 1
 
-    .prologue
-    .line 46
     iget v0, p0, Lorg/java_websocket/drafts/Draft_10$IncompleteException;->preferedsize:I
 
     return v0

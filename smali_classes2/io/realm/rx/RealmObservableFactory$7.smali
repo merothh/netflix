@@ -28,8 +28,6 @@
 .method constructor <init>(Lio/realm/rx/RealmObservableFactory;Lio/realm/RealmConfiguration;Lio/realm/RealmModel;)V
     .locals 0
 
-    .prologue
-    .line 217
     iput-object p1, p0, Lio/realm/rx/RealmObservableFactory$7;->this$0:Lio/realm/rx/RealmObservableFactory;
 
     iput-object p2, p0, Lio/realm/rx/RealmObservableFactory$7;->val$realmConfig:Lio/realm/RealmConfiguration;

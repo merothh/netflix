@@ -13,8 +13,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 13
     new-instance v0, Lorg/xbill/DNS/Mnemonic;
 
     const-string/jumbo v1, "EDNS Flag"
@@ -25,28 +23,24 @@
 
     sput-object v0, Lorg/xbill/DNS/ExtendedFlags;->extflags:Lorg/xbill/DNS/Mnemonic;
 
-    .line 20
     sget-object v0, Lorg/xbill/DNS/ExtendedFlags;->extflags:Lorg/xbill/DNS/Mnemonic;
 
     const v1, 0xffff
 
     invoke-virtual {v0, v1}, Lorg/xbill/DNS/Mnemonic;->setMaximum(I)V
 
-    .line 21
     sget-object v0, Lorg/xbill/DNS/ExtendedFlags;->extflags:Lorg/xbill/DNS/Mnemonic;
 
     const-string/jumbo v1, "FLAG"
 
     invoke-virtual {v0, v1}, Lorg/xbill/DNS/Mnemonic;->setPrefix(Ljava/lang/String;)V
 
-    .line 22
     sget-object v0, Lorg/xbill/DNS/ExtendedFlags;->extflags:Lorg/xbill/DNS/Mnemonic;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lorg/xbill/DNS/Mnemonic;->setNumericAllowed(Z)V
 
-    .line 24
     sget-object v0, Lorg/xbill/DNS/ExtendedFlags;->extflags:Lorg/xbill/DNS/Mnemonic;
 
     const v1, 0x8000
@@ -55,15 +49,12 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 25
     return-void
 .end method
 
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -72,8 +63,6 @@
 .method public static string(I)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 33
     sget-object v0, Lorg/xbill/DNS/ExtendedFlags;->extflags:Lorg/xbill/DNS/Mnemonic;
 
     invoke-virtual {v0, p0}, Lorg/xbill/DNS/Mnemonic;->getText(I)Ljava/lang/String;
@@ -86,8 +75,6 @@
 .method public static value(Ljava/lang/String;)I
     .locals 1
 
-    .prologue
-    .line 42
     sget-object v0, Lorg/xbill/DNS/ExtendedFlags;->extflags:Lorg/xbill/DNS/Mnemonic;
 
     invoke-virtual {v0, p0}, Lorg/xbill/DNS/Mnemonic;->getValue(Ljava/lang/String;)I

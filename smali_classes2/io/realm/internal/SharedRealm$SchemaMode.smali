@@ -36,7 +36,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x4
 
     const/4 v5, 0x3
@@ -47,7 +46,6 @@
 
     const/4 v2, 0x0
 
-    .line 60
     new-instance v0, Lio/realm/internal/SharedRealm$SchemaMode;
 
     const-string/jumbo v1, "SCHEMA_MODE_AUTOMATIC"
@@ -56,7 +54,6 @@
 
     sput-object v0, Lio/realm/internal/SharedRealm$SchemaMode;->SCHEMA_MODE_AUTOMATIC:Lio/realm/internal/SharedRealm$SchemaMode;
 
-    .line 61
     new-instance v0, Lio/realm/internal/SharedRealm$SchemaMode;
 
     const-string/jumbo v1, "SCHEMA_MODE_READONLY"
@@ -65,7 +62,6 @@
 
     sput-object v0, Lio/realm/internal/SharedRealm$SchemaMode;->SCHEMA_MODE_READONLY:Lio/realm/internal/SharedRealm$SchemaMode;
 
-    .line 62
     new-instance v0, Lio/realm/internal/SharedRealm$SchemaMode;
 
     const-string/jumbo v1, "SCHEMA_MODE_RESET_FILE"
@@ -74,7 +70,6 @@
 
     sput-object v0, Lio/realm/internal/SharedRealm$SchemaMode;->SCHEMA_MODE_RESET_FILE:Lio/realm/internal/SharedRealm$SchemaMode;
 
-    .line 63
     new-instance v0, Lio/realm/internal/SharedRealm$SchemaMode;
 
     const-string/jumbo v1, "SCHEMA_MODE_ADDITIVE"
@@ -83,7 +78,6 @@
 
     sput-object v0, Lio/realm/internal/SharedRealm$SchemaMode;->SCHEMA_MODE_ADDITIVE:Lio/realm/internal/SharedRealm$SchemaMode;
 
-    .line 64
     new-instance v0, Lio/realm/internal/SharedRealm$SchemaMode;
 
     const-string/jumbo v1, "SCHEMA_MODE_MANUAL"
@@ -92,7 +86,6 @@
 
     sput-object v0, Lio/realm/internal/SharedRealm$SchemaMode;->SCHEMA_MODE_MANUAL:Lio/realm/internal/SharedRealm$SchemaMode;
 
-    .line 58
     const/4 v0, 0x5
 
     new-array v0, v0, [Lio/realm/internal/SharedRealm$SchemaMode;
@@ -130,22 +123,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 67
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 68
     iput-byte p3, p0, Lio/realm/internal/SharedRealm$SchemaMode;->value:B
 
-    .line 69
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lio/realm/internal/SharedRealm$SchemaMode;
     .locals 1
 
-    .prologue
-    .line 58
     const-class v0, Lio/realm/internal/SharedRealm$SchemaMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -160,8 +147,6 @@
 .method public static values()[Lio/realm/internal/SharedRealm$SchemaMode;
     .locals 1
 
-    .prologue
-    .line 58
     sget-object v0, Lio/realm/internal/SharedRealm$SchemaMode;->$VALUES:[Lio/realm/internal/SharedRealm$SchemaMode;
 
     invoke-virtual {v0}, [Lio/realm/internal/SharedRealm$SchemaMode;->clone()Ljava/lang/Object;
@@ -178,8 +163,6 @@
 .method public getNativeValue()B
     .locals 1
 
-    .prologue
-    .line 72
     iget-byte v0, p0, Lio/realm/internal/SharedRealm$SchemaMode;->value:B
 
     return v0

@@ -7,19 +7,14 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     return-void
 .end method
 
 .method static synthetic access$000(Lorg/chromium/net/CronetEngine$Builder;)Lorg/chromium/net/CronetEngine;
     .locals 1
 
-    .prologue
-    .line 41
     invoke-static {p0}, Lorg/chromium/net/CronetEngine;->createCronetEngine(Lorg/chromium/net/CronetEngine$Builder;)Lorg/chromium/net/CronetEngine;
 
     move-result-object v0
@@ -30,11 +25,8 @@
 .method private static createCronetEngine(Lorg/chromium/net/CronetEngine$Builder;)Lorg/chromium/net/CronetEngine;
     .locals 5
 
-    .prologue
-    .line 1113
     const/4 v1, 0x0
 
-    .line 1115
     :try_start_0
     invoke-virtual {p0}, Lorg/chromium/net/CronetEngine$Builder;->getContext()Landroid/content/Context;
 
@@ -56,7 +48,6 @@
 
     move-result-object v0
 
-    .line 1120
     const/4 v2, 0x1
 
     new-array v2, v2, [Ljava/lang/Class;
@@ -71,7 +62,6 @@
 
     move-result-object v0
 
-    .line 1122
     const/4 v2, 0x1
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -86,7 +76,6 @@
 
     check-cast v0, Lorg/chromium/net/CronetEngine;
 
-    .line 1123
     invoke-virtual {v0}, Lorg/chromium/net/CronetEngine;->isEnabled()Z
     :try_end_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -96,24 +85,19 @@
 
     if-eqz v2, :cond_0
 
-    .line 1131
     :goto_0
     return-object v0
 
-    .line 1126
     :catch_0
     move-exception v0
 
     move-object v0, v1
 
-    .line 1130
     goto :goto_0
 
-    .line 1128
     :catch_1
     move-exception v0
 
-    .line 1129
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v2, "Cannot instantiate: org.chromium.net.impl.CronetUrlRequestContext"

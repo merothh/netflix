@@ -24,8 +24,6 @@
 .method constructor <init>(Lio/realm/rx/RealmObservableFactory;)V
     .locals 0
 
-    .prologue
-    .line 51
     iput-object p1, p0, Lio/realm/rx/RealmObservableFactory$1;->this$0:Lio/realm/rx/RealmObservableFactory;
 
     invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
@@ -47,8 +45,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 54
     new-instance v0, Lio/realm/rx/RealmObservableFactory$StrongReferenceCounter;
 
     const/4 v1, 0x0
@@ -61,8 +57,6 @@
 .method protected bridge synthetic initialValue()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 51
     invoke-virtual {p0}, Lio/realm/rx/RealmObservableFactory$1;->initialValue()Lio/realm/rx/RealmObservableFactory$StrongReferenceCounter;
 
     move-result-object v0

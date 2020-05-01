@@ -133,15 +133,12 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
-    .line 229
     new-instance v0, Lorg/xbill/DNS/Type$TypeMnemonic;
 
     invoke-direct {v0}, Lorg/xbill/DNS/Type$TypeMnemonic;-><init>()V
 
     sput-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
-    .line 232
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/4 v1, 0x1
@@ -154,7 +151,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 233
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/4 v1, 0x2
@@ -167,7 +163,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 234
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/4 v1, 0x3
@@ -180,7 +175,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 235
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/4 v1, 0x4
@@ -193,7 +187,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 236
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/4 v1, 0x5
@@ -206,7 +199,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 237
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/4 v1, 0x6
@@ -219,7 +211,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 238
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/4 v1, 0x7
@@ -232,7 +223,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 239
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x8
@@ -245,7 +235,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 240
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x9
@@ -258,7 +247,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 241
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0xa
@@ -271,7 +259,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 242
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0xb
@@ -284,7 +271,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 243
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0xc
@@ -297,7 +283,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 244
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0xd
@@ -310,7 +295,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 245
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0xe
@@ -323,7 +307,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 246
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0xf
@@ -336,7 +319,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 247
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x10
@@ -349,7 +331,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 248
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x11
@@ -362,7 +343,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 249
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x12
@@ -375,7 +355,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 250
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x13
@@ -388,7 +367,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 251
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x14
@@ -401,7 +379,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 252
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x15
@@ -414,7 +391,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 253
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x16
@@ -427,7 +403,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 254
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x17
@@ -440,7 +415,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 255
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x18
@@ -453,7 +427,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 256
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x19
@@ -466,7 +439,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 257
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x1a
@@ -479,7 +451,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 258
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x1b
@@ -492,7 +463,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 259
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x1c
@@ -505,7 +475,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 260
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x1d
@@ -518,7 +487,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 261
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x1e
@@ -531,7 +499,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 262
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x1f
@@ -540,7 +507,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;)V
 
-    .line 263
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x20
@@ -549,7 +515,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;)V
 
-    .line 264
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x21
@@ -562,7 +527,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 265
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x22
@@ -571,7 +535,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;)V
 
-    .line 266
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x23
@@ -584,7 +547,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 267
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x24
@@ -597,7 +559,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 268
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x25
@@ -610,7 +571,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 269
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x26
@@ -623,7 +583,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 270
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x27
@@ -636,7 +595,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 271
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x29
@@ -649,7 +607,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 272
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x2a
@@ -662,7 +619,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 273
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x2b
@@ -675,7 +631,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 274
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x2c
@@ -688,7 +643,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 275
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x2d
@@ -701,7 +655,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 276
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x2e
@@ -714,7 +667,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 277
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x2f
@@ -727,7 +679,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 278
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x30
@@ -740,7 +691,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 279
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x31
@@ -753,7 +703,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 280
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x32
@@ -766,7 +715,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 281
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x33
@@ -779,7 +727,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 282
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x34
@@ -792,7 +739,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 283
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x63
@@ -805,7 +751,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 284
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0xf9
@@ -818,7 +763,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 285
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0xfa
@@ -831,7 +775,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 286
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0xfb
@@ -840,7 +783,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;)V
 
-    .line 287
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0xfc
@@ -849,7 +791,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;)V
 
-    .line 288
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0xfd
@@ -858,7 +799,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;)V
 
-    .line 289
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0xfe
@@ -867,7 +807,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;)V
 
-    .line 290
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0xff
@@ -876,7 +815,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;)V
 
-    .line 291
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const/16 v1, 0x100
@@ -889,7 +827,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 292
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     const v1, 0x8001
@@ -902,33 +839,26 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/xbill/DNS/Type$TypeMnemonic;->add(ILjava/lang/String;Lorg/xbill/DNS/Record;)V
 
-    .line 293
     return-void
 .end method
 
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 296
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 297
     return-void
 .end method
 
 .method public static check(I)V
     .locals 1
 
-    .prologue
-    .line 305
     if-ltz p0, :cond_0
 
     const v0, 0xffff
 
     if-le p0, v0, :cond_1
 
-    .line 306
     :cond_0
     new-instance v0, Lorg/xbill/DNS/InvalidTypeException;
 
@@ -936,7 +866,6 @@
 
     throw v0
 
-    .line 307
     :cond_1
     return-void
 .end method
@@ -944,8 +873,6 @@
 .method static getProto(I)Lorg/xbill/DNS/Record;
     .locals 1
 
-    .prologue
-    .line 346
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     invoke-virtual {v0, p0}, Lorg/xbill/DNS/Type$TypeMnemonic;->getProto(I)Lorg/xbill/DNS/Record;
@@ -958,23 +885,18 @@
 .method public static isRR(I)Z
     .locals 1
 
-    .prologue
-    .line 352
     sparse-switch p0, :sswitch_data_0
 
-    .line 363
     const/4 v0, 0x1
 
     :goto_0
     return v0
 
-    .line 361
     :sswitch_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 352
     nop
 
     :sswitch_data_0
@@ -993,8 +915,6 @@
 .method public static string(I)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 317
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     invoke-virtual {v0, p0}, Lorg/xbill/DNS/Type$TypeMnemonic;->getText(I)Ljava/lang/String;
@@ -1007,8 +927,6 @@
 .method public static value(Ljava/lang/String;)I
     .locals 1
 
-    .prologue
-    .line 341
     const/4 v0, 0x0
 
     invoke-static {p0, v0}, Lorg/xbill/DNS/Type;->value(Ljava/lang/String;Z)I
@@ -1021,22 +939,18 @@
 .method public static value(Ljava/lang/String;Z)I
     .locals 3
 
-    .prologue
-    .line 328
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     invoke-virtual {v0, p0}, Lorg/xbill/DNS/Type$TypeMnemonic;->getValue(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 329
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 330
     sget-object v0, Lorg/xbill/DNS/Type;->types:Lorg/xbill/DNS/Type$TypeMnemonic;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1061,7 +975,6 @@
 
     move-result v0
 
-    .line 332
     :cond_0
     return v0
 .end method

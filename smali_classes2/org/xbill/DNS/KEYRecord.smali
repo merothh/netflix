@@ -33,8 +33,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 292
     invoke-direct {p0}, Lorg/xbill/DNS/KEYBase;-><init>()V
 
     return-void
@@ -43,11 +41,8 @@
 .method public constructor <init>(Lorg/xbill/DNS/Name;IJIIILjava/security/PublicKey;)V
     .locals 13
 
-    .prologue
-    .line 326
     const/16 v4, 0x19
 
-    .line 327
     move-object/from16 v0, p8
 
     move/from16 v1, p7
@@ -70,23 +65,18 @@
 
     move/from16 v10, p7
 
-    .line 326
     invoke-direct/range {v2 .. v11}, Lorg/xbill/DNS/KEYBase;-><init>(Lorg/xbill/DNS/Name;IIJIII[B)V
 
-    .line 328
     move-object/from16 v0, p8
 
     iput-object v0, p0, Lorg/xbill/DNS/KEYRecord;->publicKey:Ljava/security/PublicKey;
 
-    .line 329
     return-void
 .end method
 
 .method public constructor <init>(Lorg/xbill/DNS/Name;IJIII[B)V
     .locals 11
 
-    .prologue
-    .line 310
     const/16 v2, 0x19
 
     move-object v0, p0
@@ -107,7 +97,6 @@
 
     invoke-direct/range {v0 .. v9}, Lorg/xbill/DNS/KEYBase;-><init>(Lorg/xbill/DNS/Name;IIJIII[B)V
 
-    .line 311
     return-void
 .end method
 
@@ -116,8 +105,6 @@
 .method public bridge synthetic getAlgorithm()I
     .locals 1
 
-    .prologue
-    .line 17
     invoke-super {p0}, Lorg/xbill/DNS/KEYBase;->getAlgorithm()I
 
     move-result v0
@@ -128,8 +115,6 @@
 .method public bridge synthetic getFlags()I
     .locals 1
 
-    .prologue
-    .line 17
     invoke-super {p0}, Lorg/xbill/DNS/KEYBase;->getFlags()I
 
     move-result v0
@@ -140,8 +125,6 @@
 .method public bridge synthetic getFootprint()I
     .locals 1
 
-    .prologue
-    .line 17
     invoke-super {p0}, Lorg/xbill/DNS/KEYBase;->getFootprint()I
 
     move-result v0
@@ -152,8 +135,6 @@
 .method public bridge synthetic getKey()[B
     .locals 1
 
-    .prologue
-    .line 17
     invoke-super {p0}, Lorg/xbill/DNS/KEYBase;->getKey()[B
 
     move-result-object v0
@@ -164,8 +145,6 @@
 .method getObject()Lorg/xbill/DNS/Record;
     .locals 1
 
-    .prologue
-    .line 296
     new-instance v0, Lorg/xbill/DNS/KEYRecord;
 
     invoke-direct {v0}, Lorg/xbill/DNS/KEYRecord;-><init>()V
@@ -176,8 +155,6 @@
 .method public bridge synthetic getProtocol()I
     .locals 1
 
-    .prologue
-    .line 17
     invoke-super {p0}, Lorg/xbill/DNS/KEYBase;->getProtocol()I
 
     move-result v0
@@ -188,8 +165,6 @@
 .method public bridge synthetic getPublicKey()Ljava/security/PublicKey;
     .locals 1
 
-    .prologue
-    .line 17
     invoke-super {p0}, Lorg/xbill/DNS/KEYBase;->getPublicKey()Ljava/security/PublicKey;
 
     move-result-object v0
@@ -200,27 +175,22 @@
 .method rdataFromString(Lorg/xbill/DNS/Tokenizer;Lorg/xbill/DNS/Name;)V
     .locals 3
 
-    .prologue
     const v2, 0xc000
 
-    .line 333
     invoke-virtual {p1}, Lorg/xbill/DNS/Tokenizer;->getIdentifier()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 334
     invoke-static {v0}, Lorg/xbill/DNS/KEYRecord$Flags;->value(Ljava/lang/String;)I
 
     move-result v1
 
     iput v1, p0, Lorg/xbill/DNS/KEYRecord;->flags:I
 
-    .line 335
     iget v1, p0, Lorg/xbill/DNS/KEYRecord;->flags:I
 
     if-gez v1, :cond_0
 
-    .line 336
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -245,25 +215,21 @@
 
     throw v0
 
-    .line 337
     :cond_0
     invoke-virtual {p1}, Lorg/xbill/DNS/Tokenizer;->getIdentifier()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 338
     invoke-static {v0}, Lorg/xbill/DNS/KEYRecord$Protocol;->value(Ljava/lang/String;)I
 
     move-result v1
 
     iput v1, p0, Lorg/xbill/DNS/KEYRecord;->proto:I
 
-    .line 339
     iget v1, p0, Lorg/xbill/DNS/KEYRecord;->proto:I
 
     if-gez v1, :cond_1
 
-    .line 340
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -288,25 +254,21 @@
 
     throw v0
 
-    .line 341
     :cond_1
     invoke-virtual {p1}, Lorg/xbill/DNS/Tokenizer;->getIdentifier()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 342
     invoke-static {v0}, Lorg/xbill/DNS/DNSSEC$Algorithm;->value(Ljava/lang/String;)I
 
     move-result v1
 
     iput v1, p0, Lorg/xbill/DNS/KEYRecord;->alg:I
 
-    .line 343
     iget v1, p0, Lorg/xbill/DNS/KEYRecord;->alg:I
 
     if-gez v1, :cond_2
 
-    .line 344
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -331,7 +293,6 @@
 
     throw v0
 
-    .line 346
     :cond_2
     iget v0, p0, Lorg/xbill/DNS/KEYRecord;->flags:I
 
@@ -339,16 +300,13 @@
 
     if-ne v0, v2, :cond_3
 
-    .line 347
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/xbill/DNS/KEYRecord;->key:[B
 
-    .line 350
     :goto_0
     return-void
 
-    .line 349
     :cond_3
     invoke-virtual {p1}, Lorg/xbill/DNS/Tokenizer;->getBase64()[B
 

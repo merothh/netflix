@@ -169,8 +169,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 469
     new-instance v0, Lorg/xbill/DNS/Mnemonic;
 
     const-string/jumbo v1, "TCP/UDP service"
@@ -181,21 +179,18 @@
 
     sput-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
-    .line 473
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const v1, 0xffff
 
     invoke-virtual {v0, v1}, Lorg/xbill/DNS/Mnemonic;->setMaximum(I)V
 
-    .line 474
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lorg/xbill/DNS/Mnemonic;->setNumericAllowed(Z)V
 
-    .line 476
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/4 v1, 0x5
@@ -204,7 +199,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 477
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/4 v1, 0x7
@@ -213,7 +207,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 478
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x9
@@ -222,7 +215,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 479
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0xb
@@ -231,7 +223,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 480
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0xd
@@ -240,7 +231,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 481
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x11
@@ -249,7 +239,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 482
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x13
@@ -258,7 +247,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 483
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x14
@@ -267,7 +255,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 484
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x15
@@ -276,7 +263,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 485
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x17
@@ -285,7 +271,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 486
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x19
@@ -294,7 +279,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 487
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x1b
@@ -303,7 +287,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 488
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x1d
@@ -312,7 +295,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 489
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x1f
@@ -321,7 +303,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 490
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x21
@@ -330,7 +311,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 491
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x25
@@ -339,7 +319,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 492
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x27
@@ -348,7 +327,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 493
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x29
@@ -357,7 +335,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 494
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x2a
@@ -366,7 +343,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 495
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x2b
@@ -375,7 +351,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 496
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x2c
@@ -384,7 +359,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 497
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x2d
@@ -393,7 +367,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 498
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x2e
@@ -402,7 +375,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 499
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x2f
@@ -411,7 +383,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 500
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x31
@@ -420,7 +391,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 501
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x33
@@ -429,7 +399,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 502
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x35
@@ -438,7 +407,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 503
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x37
@@ -447,7 +415,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 504
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x3d
@@ -456,7 +423,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 505
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x3f
@@ -465,7 +431,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 506
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x41
@@ -474,7 +439,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 507
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x43
@@ -483,7 +447,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 508
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x44
@@ -492,7 +455,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 509
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x45
@@ -501,7 +463,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 510
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x47
@@ -510,7 +471,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 511
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x48
@@ -519,7 +479,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 512
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x49
@@ -528,7 +487,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 513
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x4a
@@ -537,7 +495,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 514
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x4f
@@ -546,7 +503,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 515
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x51
@@ -555,7 +511,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 516
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x59
@@ -564,7 +519,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 517
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x5b
@@ -573,7 +527,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 518
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x5d
@@ -582,7 +535,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 519
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x5f
@@ -591,7 +543,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 520
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x61
@@ -600,7 +551,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 521
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x62
@@ -609,7 +559,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 522
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x63
@@ -618,7 +567,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 523
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x65
@@ -627,7 +575,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 524
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x66
@@ -636,7 +583,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 525
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x67
@@ -645,7 +591,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 526
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x68
@@ -654,7 +599,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 527
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x69
@@ -663,7 +607,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 528
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x6b
@@ -672,7 +615,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 529
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x6d
@@ -681,7 +623,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 530
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x6f
@@ -690,7 +631,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 531
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x71
@@ -699,7 +639,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 532
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x73
@@ -708,7 +647,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 533
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x75
@@ -717,7 +655,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 534
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x77
@@ -726,7 +663,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 535
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x79
@@ -735,7 +671,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 536
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x7b
@@ -744,7 +679,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 537
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x7d
@@ -753,7 +687,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 538
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x7f
@@ -762,7 +695,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 539
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x81
@@ -771,7 +703,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 540
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x82
@@ -780,7 +711,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 541
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x83
@@ -789,7 +719,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 542
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x84
@@ -798,7 +727,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 543
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x85
@@ -807,7 +735,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 544
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x86
@@ -816,7 +743,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 545
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x87
@@ -825,7 +751,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 546
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x88
@@ -834,7 +759,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 547
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x89
@@ -843,7 +767,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 548
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x8a
@@ -852,7 +775,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 549
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x8b
@@ -861,7 +783,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 550
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x8c
@@ -870,7 +791,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 551
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x8d
@@ -879,7 +799,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 552
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0x8e
@@ -888,7 +807,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 553
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0xf3
@@ -897,7 +815,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 554
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     const/16 v1, 0xf5
@@ -906,15 +823,12 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/xbill/DNS/Mnemonic;->add(ILjava/lang/String;)V
 
-    .line 555
     return-void
 .end method
 
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 230
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -923,8 +837,6 @@
 .method public static string(I)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 563
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     invoke-virtual {v0, p0}, Lorg/xbill/DNS/Mnemonic;->getText(I)Ljava/lang/String;
@@ -937,8 +849,6 @@
 .method public static value(Ljava/lang/String;)I
     .locals 1
 
-    .prologue
-    .line 574
     sget-object v0, Lorg/xbill/DNS/WKSRecord$Service;->services:Lorg/xbill/DNS/Mnemonic;
 
     invoke-virtual {v0, p0}, Lorg/xbill/DNS/Mnemonic;->getValue(Ljava/lang/String;)I

@@ -28,17 +28,12 @@
 .method constructor <init>(JJ)V
     .locals 1
 
-    .prologue
-    .line 84
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 85
     iput-wide p1, p0, Lio/realm/internal/SharedRealm$VersionID;->version:J
 
-    .line 86
     iput-wide p3, p0, Lio/realm/internal/SharedRealm$VersionID;->index:J
 
-    .line 87
     return-void
 .end method
 
@@ -47,11 +42,8 @@
 .method public compareTo(Lio/realm/internal/SharedRealm$VersionID;)I
     .locals 4
 
-    .prologue
-    .line 91
     if-nez p1, :cond_0
 
-    .line 92
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Version cannot be compared to a null value."
@@ -60,7 +52,6 @@
 
     throw v0
 
-    .line 94
     :cond_0
     iget-wide v0, p0, Lio/realm/internal/SharedRealm$VersionID;->version:J
 
@@ -70,14 +61,11 @@
 
     if-lez v0, :cond_1
 
-    .line 95
     const/4 v0, 0x1
 
-    .line 99
     :goto_0
     return v0
 
-    .line 96
     :cond_1
     iget-wide v0, p0, Lio/realm/internal/SharedRealm$VersionID;->version:J
 
@@ -87,12 +75,10 @@
 
     if-gez v0, :cond_2
 
-    .line 97
     const/4 v0, -0x1
 
     goto :goto_0
 
-    .line 99
     :cond_2
     const/4 v0, 0x0
 
@@ -102,8 +88,6 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 80
     check-cast p1, Lio/realm/internal/SharedRealm$VersionID;
 
     invoke-virtual {p0, p1}, Lio/realm/internal/SharedRealm$VersionID;->compareTo(Lio/realm/internal/SharedRealm$VersionID;)I
@@ -116,20 +100,16 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 113
     if-ne p0, p1, :cond_1
 
-    .line 121
     :cond_0
     :goto_0
     return v0
 
-    .line 116
     :cond_1
     if-eqz p1, :cond_2
 
@@ -146,14 +126,11 @@
     :cond_2
     move v0, v1
 
-    .line 117
     goto :goto_0
 
-    .line 120
     :cond_3
     check-cast p1, Lio/realm/internal/SharedRealm$VersionID;
 
-    .line 121
     iget-wide v2, p0, Lio/realm/internal/SharedRealm$VersionID;->version:J
 
     iget-wide v4, p1, Lio/realm/internal/SharedRealm$VersionID;->version:J
@@ -179,15 +156,12 @@
 .method public hashCode()I
     .locals 7
 
-    .prologue
     const/16 v6, 0x20
 
-    .line 126
     invoke-super {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    .line 127
     mul-int/lit8 v0, v0, 0x1f
 
     iget-wide v2, p0, Lio/realm/internal/SharedRealm$VersionID;->version:J
@@ -202,7 +176,6 @@
 
     add-int/2addr v0, v1
 
-    .line 128
     mul-int/lit8 v0, v0, 0x1f
 
     iget-wide v2, p0, Lio/realm/internal/SharedRealm$VersionID;->index:J
@@ -217,15 +190,12 @@
 
     add-int/2addr v0, v1
 
-    .line 129
     return v0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 105
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

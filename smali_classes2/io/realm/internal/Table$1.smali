@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 410
     invoke-static {}, Lio/realm/RealmFieldType;->values()[Lio/realm/RealmFieldType;
 
     move-result-object v0

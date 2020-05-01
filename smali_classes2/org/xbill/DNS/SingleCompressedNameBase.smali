@@ -11,8 +11,6 @@
 .method protected constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0}, Lorg/xbill/DNS/SingleNameBase;-><init>()V
 
     return-void
@@ -21,11 +19,8 @@
 .method protected constructor <init>(Lorg/xbill/DNS/Name;IIJLorg/xbill/DNS/Name;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 23
     invoke-direct/range {p0 .. p7}, Lorg/xbill/DNS/SingleNameBase;-><init>(Lorg/xbill/DNS/Name;IIJLorg/xbill/DNS/Name;Ljava/lang/String;)V
 
-    .line 24
     return-void
 .end method
 
@@ -34,12 +29,9 @@
 .method rrToWire(Lorg/xbill/DNS/DNSOutput;Lorg/xbill/DNS/Compression;Z)V
     .locals 1
 
-    .prologue
-    .line 28
     iget-object v0, p0, Lorg/xbill/DNS/SingleCompressedNameBase;->singleName:Lorg/xbill/DNS/Name;
 
     invoke-virtual {v0, p1, p2, p3}, Lorg/xbill/DNS/Name;->toWire(Lorg/xbill/DNS/DNSOutput;Lorg/xbill/DNS/Compression;Z)V
 
-    .line 29
     return-void
 .end method

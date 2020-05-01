@@ -42,17 +42,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     iput-wide p1, p0, Lio/realm/internal/ColumnIndices;->schemaVersion:J
 
-    .line 33
     iput-object p3, p0, Lio/realm/internal/ColumnIndices;->classes:Ljava/util/Map;
 
-    .line 34
     return-void
 .end method
 
@@ -72,13 +67,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 72
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    .line 73
     iget-object v0, p0, Lio/realm/internal/ColumnIndices;->classes:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -102,7 +94,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 74
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
@@ -121,7 +112,6 @@
 
     goto :goto_0
 
-    .line 76
     :cond_0
     return-object v1
 .end method
@@ -131,8 +121,6 @@
 .method public clone()Lio/realm/internal/ColumnIndices;
     .locals 2
 
-    .prologue
-    .line 63
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
@@ -140,7 +128,6 @@
 
     check-cast v0, Lio/realm/internal/ColumnIndices;
 
-    .line 64
     invoke-direct {p0}, Lio/realm/internal/ColumnIndices;->duplicateColumnInfoMap()Ljava/util/Map;
 
     move-result-object v1
@@ -149,14 +136,11 @@
     :try_end_0
     .catch Ljava/lang/CloneNotSupportedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 65
     return-object v0
 
-    .line 66
     :catch_0
     move-exception v0
 
-    .line 67
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -167,8 +151,6 @@
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 27
     invoke-virtual {p0}, Lio/realm/internal/ColumnIndices;->clone()Lio/realm/internal/ColumnIndices;
 
     move-result-object v0
@@ -179,8 +161,6 @@
 .method public copyFrom(Lio/realm/internal/ColumnIndices;Lio/realm/internal/RealmProxyMediator;)V
     .locals 4
 
-    .prologue
-    .line 80
     iget-object v0, p0, Lio/realm/internal/ColumnIndices;->classes:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -204,7 +184,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 81
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -215,10 +194,8 @@
 
     move-result-object v1
 
-    .line 82
     if-nez v1, :cond_0
 
-    .line 83
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -231,7 +208,6 @@
 
     move-result-object v2
 
-    .line 84
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -258,7 +234,6 @@
 
     throw v1
 
-    .line 86
     :cond_0
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -270,13 +245,11 @@
 
     goto :goto_0
 
-    .line 88
     :cond_1
     iget-wide v0, p1, Lio/realm/internal/ColumnIndices;->schemaVersion:J
 
     iput-wide v0, p0, Lio/realm/internal/ColumnIndices;->schemaVersion:J
 
-    .line 89
     return-void
 .end method
 
@@ -293,8 +266,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 44
     iget-object v0, p0, Lio/realm/internal/ColumnIndices;->classes:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -309,8 +280,6 @@
 .method public getSchemaVersion()J
     .locals 2
 
-    .prologue
-    .line 37
     iget-wide v0, p0, Lio/realm/internal/ColumnIndices;->schemaVersion:J
 
     return-wide v0

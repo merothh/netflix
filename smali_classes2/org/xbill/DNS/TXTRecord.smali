@@ -11,8 +11,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0}, Lorg/xbill/DNS/TXTBase;-><init>()V
 
     return-void
@@ -21,8 +19,6 @@
 .method public constructor <init>(Lorg/xbill/DNS/Name;IJLjava/lang/String;)V
     .locals 7
 
-    .prologue
-    .line 41
     const/16 v2, 0x10
 
     move-object v0, p0
@@ -37,15 +33,12 @@
 
     invoke-direct/range {v0 .. v6}, Lorg/xbill/DNS/TXTBase;-><init>(Lorg/xbill/DNS/Name;IIJLjava/lang/String;)V
 
-    .line 42
     return-void
 .end method
 
 .method public constructor <init>(Lorg/xbill/DNS/Name;IJLjava/util/List;)V
     .locals 7
 
-    .prologue
-    .line 31
     const/16 v2, 0x10
 
     move-object v0, p0
@@ -60,7 +53,6 @@
 
     invoke-direct/range {v0 .. v6}, Lorg/xbill/DNS/TXTBase;-><init>(Lorg/xbill/DNS/Name;IIJLjava/util/List;)V
 
-    .line 32
     return-void
 .end method
 
@@ -69,8 +61,6 @@
 .method getObject()Lorg/xbill/DNS/Record;
     .locals 1
 
-    .prologue
-    .line 21
     new-instance v0, Lorg/xbill/DNS/TXTRecord;
 
     invoke-direct {v0}, Lorg/xbill/DNS/TXTRecord;-><init>()V
@@ -81,8 +71,6 @@
 .method public bridge synthetic getStrings()Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 13
     invoke-super {p0}, Lorg/xbill/DNS/TXTBase;->getStrings()Ljava/util/List;
 
     move-result-object v0
@@ -93,8 +81,6 @@
 .method public bridge synthetic getStringsAsByteArrays()Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 13
     invoke-super {p0}, Lorg/xbill/DNS/TXTBase;->getStringsAsByteArrays()Ljava/util/List;
 
     move-result-object v0

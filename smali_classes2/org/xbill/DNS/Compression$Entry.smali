@@ -15,8 +15,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,8 +23,6 @@
 .method synthetic constructor <init>(Lorg/xbill/DNS/Compression$1;)V
     .locals 0
 
-    .prologue
-    .line 15
     invoke-direct {p0}, Lorg/xbill/DNS/Compression$Entry;-><init>()V
 
     return-void

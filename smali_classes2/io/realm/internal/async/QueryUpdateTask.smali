@@ -59,37 +59,26 @@
         }
     .end annotation
 
-    .prologue
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
     iput p1, p0, Lio/realm/internal/async/QueryUpdateTask;->updateMode:I
 
-    .line 65
     iput-object p2, p0, Lio/realm/internal/async/QueryUpdateTask;->realmConfiguration:Lio/realm/RealmConfiguration;
 
-    .line 66
     iput-object p3, p0, Lio/realm/internal/async/QueryUpdateTask;->realmResultsEntries:Ljava/util/List;
 
-    .line 67
     iput-object p4, p0, Lio/realm/internal/async/QueryUpdateTask;->realmObjectEntry:Lio/realm/internal/async/QueryUpdateTask$Builder$QueryEntry;
 
-    .line 68
     iput-object p5, p0, Lio/realm/internal/async/QueryUpdateTask;->callerNotifier:Ljava/lang/ref/WeakReference;
 
-    .line 69
     iput-object p6, p0, Lio/realm/internal/async/QueryUpdateTask;->event:Lio/realm/internal/async/QueryUpdateTask$NotifyEvent;
 
-    .line 70
     return-void
 .end method
 
 .method synthetic constructor <init>(ILio/realm/RealmConfiguration;Ljava/util/List;Lio/realm/internal/async/QueryUpdateTask$Builder$QueryEntry;Ljava/lang/ref/WeakReference;Lio/realm/internal/async/QueryUpdateTask$NotifyEvent;Lio/realm/internal/async/QueryUpdateTask$1;)V
     .locals 0
 
-    .prologue
-    .line 37
     invoke-direct/range {p0 .. p6}, Lio/realm/internal/async/QueryUpdateTask;-><init>(ILio/realm/RealmConfiguration;Ljava/util/List;Lio/realm/internal/async/QueryUpdateTask$Builder$QueryEntry;Ljava/lang/ref/WeakReference;Lio/realm/internal/async/QueryUpdateTask$NotifyEvent;)V
 
     return-void
@@ -98,8 +87,6 @@
 .method private isTaskCancelled()Z
     .locals 1
 
-    .prologue
-    .line 223
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -114,8 +101,6 @@
 .method public static newBuilder()Lio/realm/internal/async/QueryUpdateTask$Builder$RealmConfigurationStep;
     .locals 2
 
-    .prologue
-    .line 73
     new-instance v0, Lio/realm/internal/async/QueryUpdateTask$Builder$Steps;
 
     const/4 v1, 0x0
@@ -128,8 +113,6 @@
 .method private prepareQueriesParameters()Lio/realm/internal/async/QueryUpdateTask$AlignedQueriesParameters;
     .locals 12
 
-    .prologue
-    .line 139
     iget-object v0, p0, Lio/realm/internal/async/QueryUpdateTask;->realmResultsEntries:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -138,7 +121,6 @@
 
     new-array v3, v0, [J
 
-    .line 140
     iget-object v0, p0, Lio/realm/internal/async/QueryUpdateTask;->realmResultsEntries:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -159,7 +141,6 @@
 
     check-cast v0, [[J
 
-    .line 141
     iget-object v1, p0, Lio/realm/internal/async/QueryUpdateTask;->realmResultsEntries:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -168,7 +149,6 @@
 
     new-array v6, v1, [[J
 
-    .line 142
     iget-object v1, p0, Lio/realm/internal/async/QueryUpdateTask;->realmResultsEntries:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -177,10 +157,8 @@
 
     new-array v7, v1, [[Z
 
-    .line 144
     const/4 v1, 0x0
 
-    .line 145
     iget-object v2, p0, Lio/realm/internal/async/QueryUpdateTask;->realmResultsEntries:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -202,14 +180,12 @@
 
     check-cast v1, Lio/realm/internal/async/QueryUpdateTask$Builder$QueryEntry;
 
-    .line 146
     iget-object v4, v1, Lio/realm/internal/async/QueryUpdateTask$Builder$QueryEntry;->queryArguments:Lio/realm/internal/async/ArgumentsHolder;
 
     iget v4, v4, Lio/realm/internal/async/ArgumentsHolder;->type:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 181
     :pswitch_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -245,13 +221,11 @@
 
     throw v0
 
-    .line 148
     :pswitch_1
     iget-wide v4, v1, Lio/realm/internal/async/QueryUpdateTask$Builder$QueryEntry;->handoverQueryPointer:J
 
     aput-wide v4, v3, v2
 
-    .line 149
     aget-object v1, v0, v2
 
     const/4 v4, 0x0
@@ -260,7 +234,6 @@
 
     aput-wide v10, v1, v4
 
-    .line 150
     aget-object v1, v0, v2
 
     const/4 v4, 0x1
@@ -269,7 +242,6 @@
 
     aput-wide v10, v1, v4
 
-    .line 151
     aget-object v1, v0, v2
 
     const/4 v4, 0x2
@@ -278,7 +250,6 @@
 
     aput-wide v10, v1, v4
 
-    .line 152
     aget-object v1, v0, v2
 
     const/4 v4, 0x3
@@ -287,22 +258,18 @@
 
     aput-wide v10, v1, v4
 
-    .line 183
     :goto_1
     add-int/lit8 v1, v2, 0x1
 
     move v2, v1
 
-    .line 184
     goto :goto_0
 
-    .line 156
     :pswitch_2
     iget-wide v4, v1, Lio/realm/internal/async/QueryUpdateTask$Builder$QueryEntry;->handoverQueryPointer:J
 
     aput-wide v4, v3, v2
 
-    .line 157
     aget-object v4, v0, v2
 
     const/4 v5, 0x0
@@ -311,7 +278,6 @@
 
     aput-wide v10, v4, v5
 
-    .line 158
     aget-object v4, v0, v2
 
     const/4 v5, 0x1
@@ -324,13 +290,11 @@
 
     goto :goto_1
 
-    .line 162
     :pswitch_3
     iget-wide v4, v1, Lio/realm/internal/async/QueryUpdateTask$Builder$QueryEntry;->handoverQueryPointer:J
 
     aput-wide v4, v3, v2
 
-    .line 163
     aget-object v4, v0, v2
 
     const/4 v5, 0x0
@@ -339,7 +303,6 @@
 
     aput-wide v10, v4, v5
 
-    .line 164
     aget-object v4, v0, v2
 
     const/4 v5, 0x1
@@ -348,7 +311,6 @@
 
     aput-wide v10, v4, v5
 
-    .line 165
     aget-object v4, v0, v2
 
     const/4 v5, 0x2
@@ -357,7 +319,6 @@
 
     aput-wide v10, v4, v5
 
-    .line 166
     aget-object v4, v0, v2
 
     const/4 v5, 0x3
@@ -366,7 +327,6 @@
 
     aput-wide v10, v4, v5
 
-    .line 167
     aget-object v4, v0, v2
 
     const/4 v5, 0x4
@@ -377,7 +337,6 @@
 
     aput-wide v10, v4, v5
 
-    .line 168
     aget-object v9, v0, v2
 
     const/4 v10, 0x5
@@ -404,13 +363,11 @@
 
     goto :goto_2
 
-    .line 172
     :pswitch_4
     iget-wide v4, v1, Lio/realm/internal/async/QueryUpdateTask$Builder$QueryEntry;->handoverQueryPointer:J
 
     aput-wide v4, v3, v2
 
-    .line 173
     aget-object v4, v0, v2
 
     const/4 v5, 0x0
@@ -419,7 +376,6 @@
 
     aput-wide v10, v4, v5
 
-    .line 174
     aget-object v4, v0, v2
 
     const/4 v5, 0x1
@@ -428,7 +384,6 @@
 
     aput-wide v10, v4, v5
 
-    .line 175
     aget-object v4, v0, v2
 
     const/4 v5, 0x2
@@ -437,7 +392,6 @@
 
     aput-wide v10, v4, v5
 
-    .line 176
     aget-object v4, v0, v2
 
     const/4 v5, 0x3
@@ -446,14 +400,12 @@
 
     aput-wide v10, v4, v5
 
-    .line 177
     iget-object v4, v1, Lio/realm/internal/async/QueryUpdateTask$Builder$QueryEntry;->queryArguments:Lio/realm/internal/async/ArgumentsHolder;
 
     iget-object v4, v4, Lio/realm/internal/async/ArgumentsHolder;->columnIndices:[J
 
     aput-object v4, v6, v2
 
-    .line 178
     iget-object v1, v1, Lio/realm/internal/async/QueryUpdateTask$Builder$QueryEntry;->queryArguments:Lio/realm/internal/async/ArgumentsHolder;
 
     iget-object v1, v1, Lio/realm/internal/async/ArgumentsHolder;->sortOrders:[Lio/realm/Sort;
@@ -466,7 +418,6 @@
 
     goto/16 :goto_1
 
-    .line 185
     :cond_1
     new-instance v1, Lio/realm/internal/async/QueryUpdateTask$AlignedQueriesParameters;
 
@@ -474,22 +425,16 @@
 
     invoke-direct {v1, v2}, Lio/realm/internal/async/QueryUpdateTask$AlignedQueriesParameters;-><init>(Lio/realm/internal/async/QueryUpdateTask$1;)V
 
-    .line 187
     iput-object v3, v1, Lio/realm/internal/async/QueryUpdateTask$AlignedQueriesParameters;->handoverQueries:[J
 
-    .line 188
     iput-object v6, v1, Lio/realm/internal/async/QueryUpdateTask$AlignedQueriesParameters;->multiSortColumnIndices:[[J
 
-    .line 189
     iput-object v7, v1, Lio/realm/internal/async/QueryUpdateTask$AlignedQueriesParameters;->multiSortOrder:[[Z
 
-    .line 190
     iput-object v0, v1, Lio/realm/internal/async/QueryUpdateTask$AlignedQueriesParameters;->queriesParameters:[[J
 
-    .line 192
     return-object v1
 
-    .line 146
     nop
 
     :pswitch_data_0
@@ -505,11 +450,8 @@
 .method private swapPointers(Lio/realm/internal/async/QueryUpdateTask$Result;[J)V
     .locals 8
 
-    .prologue
-    .line 196
     const/4 v0, 0x0
 
-    .line 197
     iget-object v1, p0, Lio/realm/internal/async/QueryUpdateTask;->realmResultsEntries:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -531,7 +473,6 @@
 
     check-cast v0, Lio/realm/internal/async/QueryUpdateTask$Builder$QueryEntry;
 
-    .line 198
     iget-object v3, p1, Lio/realm/internal/async/QueryUpdateTask$Result;->updatedTableViews:Ljava/util/IdentityHashMap;
 
     iget-object v4, v0, Lio/realm/internal/async/QueryUpdateTask$Builder$QueryEntry;->element:Ljava/lang/ref/WeakReference;
@@ -548,10 +489,8 @@
 
     move v1, v0
 
-    .line 199
     goto :goto_0
 
-    .line 200
     :cond_0
     return-void
 .end method
@@ -559,15 +498,12 @@
 .method private updateRealmObjectQuery(Lio/realm/internal/SharedRealm;Lio/realm/internal/async/QueryUpdateTask$Result;)Z
     .locals 4
 
-    .prologue
-    .line 203
     invoke-direct {p0}, Lio/realm/internal/async/QueryUpdateTask;->isTaskCancelled()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 204
     iget-object v0, p0, Lio/realm/internal/async/QueryUpdateTask;->realmObjectEntry:Lio/realm/internal/async/QueryUpdateTask$Builder$QueryEntry;
 
     iget-object v0, v0, Lio/realm/internal/async/QueryUpdateTask$Builder$QueryEntry;->queryArguments:Lio/realm/internal/async/ArgumentsHolder;
@@ -576,7 +512,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 212
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -613,7 +548,6 @@
 
     throw v0
 
-    .line 206
     :pswitch_0
     iget-object v0, p0, Lio/realm/internal/async/QueryUpdateTask;->realmObjectEntry:Lio/realm/internal/async/QueryUpdateTask$Builder$QueryEntry;
 
@@ -623,7 +557,6 @@
 
     move-result-wide v0
 
-    .line 208
     iget-object v2, p2, Lio/realm/internal/async/QueryUpdateTask$Result;->updatedRow:Ljava/util/IdentityHashMap;
 
     iget-object v3, p0, Lio/realm/internal/async/QueryUpdateTask;->realmObjectEntry:Lio/realm/internal/async/QueryUpdateTask$Builder$QueryEntry;
@@ -636,13 +569,11 @@
 
     invoke-virtual {v2, v3, v0}, Ljava/util/IdentityHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 218
     const/4 v0, 0x1
 
     :goto_0
     return v0
 
-    .line 215
     :cond_0
     iget-object v0, p0, Lio/realm/internal/async/QueryUpdateTask;->realmObjectEntry:Lio/realm/internal/async/QueryUpdateTask$Builder$QueryEntry;
 
@@ -650,12 +581,10 @@
 
     invoke-static {v0, v1}, Lio/realm/internal/TableQuery;->nativeCloseQueryHandover(J)V
 
-    .line 216
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 204
     :pswitch_data_0
     .packed-switch 0x3
         :pswitch_0
@@ -667,13 +596,10 @@
 .method public run()V
     .locals 8
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 78
     const/4 v0, 0x0
 
-    .line 80
     :try_start_0
     iget-object v1, p0, Lio/realm/internal/async/QueryUpdateTask;->realmConfiguration:Lio/realm/RealmConfiguration;
 
@@ -685,23 +611,19 @@
 
     move-result-object v1
 
-    .line 84
     :try_start_1
     iget v0, p0, Lio/realm/internal/async/QueryUpdateTask;->updateMode:I
 
     if-nez v0, :cond_1
 
-    .line 85
     invoke-static {}, Lio/realm/internal/async/QueryUpdateTask$Result;->newRealmResultsResponse()Lio/realm/internal/async/QueryUpdateTask$Result;
 
     move-result-object v0
 
-    .line 86
     invoke-direct {p0}, Lio/realm/internal/async/QueryUpdateTask;->prepareQueriesParameters()Lio/realm/internal/async/QueryUpdateTask$AlignedQueriesParameters;
 
     move-result-object v3
 
-    .line 87
     iget-object v4, v3, Lio/realm/internal/async/QueryUpdateTask$AlignedQueriesParameters;->handoverQueries:[J
 
     iget-object v5, v3, Lio/realm/internal/async/QueryUpdateTask$AlignedQueriesParameters;->queriesParameters:[[J
@@ -714,10 +636,8 @@
 
     move-result-object v3
 
-    .line 92
     invoke-direct {p0, v0, v3}, Lio/realm/internal/async/QueryUpdateTask;->swapPointers(Lio/realm/internal/async/QueryUpdateTask$Result;[J)V
 
-    .line 94
     invoke-virtual {v1}, Lio/realm/internal/SharedRealm;->getVersionID()Lio/realm/internal/SharedRealm$VersionID;
 
     move-result-object v3
@@ -726,7 +646,6 @@
 
     move-object v3, v0
 
-    .line 102
     :goto_0
     iget-object v0, p0, Lio/realm/internal/async/QueryUpdateTask;->callerNotifier:Ljava/lang/ref/WeakReference;
 
@@ -736,7 +655,6 @@
 
     check-cast v0, Lio/realm/internal/RealmNotifier;
 
-    .line 103
     if-eqz v2, :cond_2
 
     invoke-direct {p0}, Lio/realm/internal/async/QueryUpdateTask;->isTaskCancelled()Z
@@ -747,7 +665,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 104
     sget-object v2, Lio/realm/internal/async/QueryUpdateTask$1;->$SwitchMap$io$realm$internal$async$QueryUpdateTask$NotifyEvent:[I
 
     iget-object v4, p0, Lio/realm/internal/async/QueryUpdateTask;->event:Lio/realm/internal/async/QueryUpdateTask$NotifyEvent;
@@ -760,7 +677,6 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 115
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v2, "%s is not handled here."
@@ -787,13 +703,11 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 119
     :catch_0
     move-exception v0
 
     move-object v0, v1
 
-    .line 121
     :goto_1
     :try_start_2
     const-string/jumbo v1, "Query update task could not complete due to a BadVersionException. Retry is scheduled by a REALM_CHANGED event."
@@ -806,30 +720,24 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 132
     if-eqz v0, :cond_0
 
-    .line 133
     invoke-virtual {v0}, Lio/realm/internal/SharedRealm;->close()V
 
-    .line 136
     :cond_0
     :goto_2
     return-void
 
-    .line 97
     :cond_1
     :try_start_3
     invoke-static {}, Lio/realm/internal/async/QueryUpdateTask$Result;->newRealmObjectResponse()Lio/realm/internal/async/QueryUpdateTask$Result;
 
     move-result-object v2
 
-    .line 98
     invoke-direct {p0, v1, v2}, Lio/realm/internal/async/QueryUpdateTask;->updateRealmObjectQuery(Lio/realm/internal/SharedRealm;Lio/realm/internal/async/QueryUpdateTask$Result;)Z
 
     move-result v0
 
-    .line 99
     invoke-virtual {v1}, Lio/realm/internal/SharedRealm;->getVersionID()Lio/realm/internal/SharedRealm$VersionID;
 
     move-result-object v3
@@ -842,7 +750,6 @@
 
     goto :goto_0
 
-    .line 106
     :pswitch_0
     invoke-interface {v0, v3}, Lio/realm/internal/RealmNotifier;->completeAsyncResults(Lio/realm/internal/async/QueryUpdateTask$Result;)V
     :try_end_3
@@ -850,17 +757,14 @@
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 132
     :cond_2
     :goto_3
     if-eqz v1, :cond_0
 
-    .line 133
     invoke-virtual {v1}, Lio/realm/internal/SharedRealm;->close()V
 
     goto :goto_2
 
-    .line 109
     :pswitch_1
     :try_start_4
     invoke-interface {v0, v3}, Lio/realm/internal/RealmNotifier;->completeAsyncObject(Lio/realm/internal/async/QueryUpdateTask$Result;)V
@@ -871,7 +775,6 @@
 
     goto :goto_3
 
-    .line 124
     :catch_1
     move-exception v0
 
@@ -879,12 +782,10 @@
 
     move-object v1, v0
 
-    .line 125
     :goto_4
     :try_start_5
     invoke-static {v1}, Lio/realm/log/RealmLog;->error(Ljava/lang/Throwable;)V
 
-    .line 126
     iget-object v0, p0, Lio/realm/internal/async/QueryUpdateTask;->callerNotifier:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -893,24 +794,19 @@
 
     check-cast v0, Lio/realm/internal/RealmNotifier;
 
-    .line 127
     if-eqz v0, :cond_3
 
-    .line 128
     invoke-interface {v0, v1}, Lio/realm/internal/RealmNotifier;->throwBackgroundException(Ljava/lang/Throwable;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 132
     :cond_3
     if-eqz v2, :cond_0
 
-    .line 133
     invoke-virtual {v2}, Lio/realm/internal/SharedRealm;->close()V
 
     goto :goto_2
 
-    .line 112
     :pswitch_2
     :try_start_6
     invoke-interface {v0, v3}, Lio/realm/internal/RealmNotifier;->completeUpdateAsyncQueries(Lio/realm/internal/async/QueryUpdateTask$Result;)V
@@ -921,20 +817,17 @@
 
     goto :goto_3
 
-    .line 132
     :catchall_0
     move-exception v0
 
     :goto_5
     if-eqz v1, :cond_4
 
-    .line 133
     invoke-virtual {v1}, Lio/realm/internal/SharedRealm;->close()V
 
     :cond_4
     throw v0
 
-    .line 132
     :catchall_1
     move-exception v1
 
@@ -964,7 +857,6 @@
 
     goto :goto_5
 
-    .line 124
     :catch_2
     move-exception v1
 
@@ -972,13 +864,11 @@
 
     goto :goto_4
 
-    .line 119
     :catch_3
     move-exception v1
 
     goto :goto_1
 
-    .line 104
     nop
 
     :pswitch_data_0

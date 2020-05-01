@@ -15,8 +15,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 20
     invoke-direct {p0}, Lorg/xbill/DNS/Record;-><init>()V
 
     return-void
@@ -25,8 +23,6 @@
 .method public constructor <init>(Lorg/xbill/DNS/Name;IJ[B)V
     .locals 7
 
-    .prologue
-    .line 33
     const/16 v2, 0x31
 
     move-object v0, p0
@@ -39,10 +35,8 @@
 
     invoke-direct/range {v0 .. v5}, Lorg/xbill/DNS/Record;-><init>(Lorg/xbill/DNS/Name;IIJ)V
 
-    .line 34
     iput-object p5, p0, Lorg/xbill/DNS/DHCIDRecord;->data:[B
 
-    .line 35
     return-void
 .end method
 
@@ -51,8 +45,6 @@
 .method public getData()[B
     .locals 1
 
-    .prologue
-    .line 62
     iget-object v0, p0, Lorg/xbill/DNS/DHCIDRecord;->data:[B
 
     return-object v0
@@ -61,8 +53,6 @@
 .method getObject()Lorg/xbill/DNS/Record;
     .locals 1
 
-    .prologue
-    .line 24
     new-instance v0, Lorg/xbill/DNS/DHCIDRecord;
 
     invoke-direct {v0}, Lorg/xbill/DNS/DHCIDRecord;-><init>()V
@@ -73,38 +63,30 @@
 .method rdataFromString(Lorg/xbill/DNS/Tokenizer;Lorg/xbill/DNS/Name;)V
     .locals 1
 
-    .prologue
-    .line 44
     invoke-virtual {p1}, Lorg/xbill/DNS/Tokenizer;->getBase64()[B
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/xbill/DNS/DHCIDRecord;->data:[B
 
-    .line 45
     return-void
 .end method
 
 .method rrFromWire(Lorg/xbill/DNS/DNSInput;)V
     .locals 1
 
-    .prologue
-    .line 39
     invoke-virtual {p1}, Lorg/xbill/DNS/DNSInput;->readByteArray()[B
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/xbill/DNS/DHCIDRecord;->data:[B
 
-    .line 40
     return-void
 .end method
 
 .method rrToString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 54
     iget-object v0, p0, Lorg/xbill/DNS/DHCIDRecord;->data:[B
 
     invoke-static {v0}, Lorg/xbill/DNS/utils/base64;->toString([B)Ljava/lang/String;
@@ -117,12 +99,9 @@
 .method rrToWire(Lorg/xbill/DNS/DNSOutput;Lorg/xbill/DNS/Compression;Z)V
     .locals 1
 
-    .prologue
-    .line 49
     iget-object v0, p0, Lorg/xbill/DNS/DHCIDRecord;->data:[B
 
     invoke-virtual {p1, v0}, Lorg/xbill/DNS/DNSOutput;->writeByteArray([B)V
 
-    .line 50
     return-void
 .end method

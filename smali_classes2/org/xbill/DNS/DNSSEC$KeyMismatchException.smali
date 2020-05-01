@@ -13,8 +13,6 @@
 .method constructor <init>(Lorg/xbill/DNS/KEYBase;Lorg/xbill/DNS/SIGBase;)V
     .locals 2
 
-    .prologue
-    .line 236
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -25,7 +23,6 @@
 
     move-result-object v0
 
-    .line 237
     invoke-virtual {p1}, Lorg/xbill/DNS/KEYBase;->getName()Lorg/xbill/DNS/Name;
 
     move-result-object v1
@@ -40,7 +37,6 @@
 
     move-result-object v0
 
-    .line 238
     invoke-virtual {p1}, Lorg/xbill/DNS/KEYBase;->getAlgorithm()I
 
     move-result v1
@@ -59,7 +55,6 @@
 
     move-result-object v0
 
-    .line 239
     invoke-virtual {p1}, Lorg/xbill/DNS/KEYBase;->getFootprint()I
 
     move-result v1
@@ -80,7 +75,6 @@
 
     move-result-object v0
 
-    .line 241
     invoke-virtual {p2}, Lorg/xbill/DNS/SIGBase;->getSigner()Lorg/xbill/DNS/Name;
 
     move-result-object v1
@@ -95,7 +89,6 @@
 
     move-result-object v0
 
-    .line 242
     invoke-virtual {p2}, Lorg/xbill/DNS/SIGBase;->getAlgorithm()I
 
     move-result v1
@@ -114,7 +107,6 @@
 
     move-result-object v0
 
-    .line 243
     invoke-virtual {p2}, Lorg/xbill/DNS/SIGBase;->getFootprint()I
 
     move-result v1
@@ -127,9 +119,7 @@
 
     move-result-object v0
 
-    .line 236
     invoke-direct {p0, v0}, Lorg/xbill/DNS/DNSSEC$DNSSECException;-><init>(Ljava/lang/String;)V
 
-    .line 244
     return-void
 .end method

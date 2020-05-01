@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 104
     invoke-static {}, Lio/realm/internal/async/QueryUpdateTask$NotifyEvent;->values()[Lio/realm/internal/async/QueryUpdateTask$NotifyEvent;
 
     move-result-object v0

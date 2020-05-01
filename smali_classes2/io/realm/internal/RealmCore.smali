@@ -17,18 +17,14 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 34
     sget-object v0, Ljava/io/File;->separator:Ljava/lang/String;
 
     sput-object v0, Lio/realm/internal/RealmCore;->FILE_SEP:Ljava/lang/String;
 
-    .line 35
     sget-object v0, Ljava/io/File;->pathSeparator:Ljava/lang/String;
 
     sput-object v0, Lio/realm/internal/RealmCore;->PATH_SEP:Ljava/lang/String;
 
-    .line 36
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -69,7 +65,6 @@
 
     sput-object v0, Lio/realm/internal/RealmCore;->BINARIES_PATH:Ljava/lang/String;
 
-    .line 39
     const/4 v0, 0x0
 
     sput-boolean v0, Lio/realm/internal/RealmCore;->libraryIsLoaded:Z
@@ -80,8 +75,6 @@
 .method public static declared-synchronized loadLibrary(Landroid/content/Context;)V
     .locals 2
 
-    .prologue
-    .line 56
     const-class v1, Lio/realm/internal/RealmCore;
 
     monitor-enter v1
@@ -93,20 +86,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 61
     :goto_0
     monitor-exit v1
 
     return-void
 
-    .line 59
     :cond_0
     :try_start_1
     const-string/jumbo v0, "realm-jni"
 
     invoke-static {p0, v0}, Lcom/getkeepsafe/relinker/ReLinker;->loadLibrary(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 60
     const/4 v0, 0x1
 
     sput-boolean v0, Lio/realm/internal/RealmCore;->libraryIsLoaded:Z
@@ -115,7 +105,6 @@
 
     goto :goto_0
 
-    .line 56
     :catchall_0
     move-exception v0
 

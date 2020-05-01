@@ -17,8 +17,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 244
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,8 +25,6 @@
 .method synthetic constructor <init>(Lio/realm/internal/async/QueryUpdateTask$1;)V
     .locals 0
 
-    .prologue
-    .line 244
     invoke-direct {p0}, Lio/realm/internal/async/QueryUpdateTask$AlignedQueriesParameters;-><init>()V
 
     return-void

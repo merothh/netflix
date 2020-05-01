@@ -11,8 +11,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 22
     invoke-direct {p0}, Lorg/xbill/DNS/SIGBase;-><init>()V
 
     return-void
@@ -21,8 +19,6 @@
 .method public constructor <init>(Lorg/xbill/DNS/Name;IJIIJLjava/util/Date;Ljava/util/Date;ILorg/xbill/DNS/Name;[B)V
     .locals 15
 
-    .prologue
-    .line 46
     const/16 v2, 0x2e
 
     move-object v0, p0
@@ -51,7 +47,6 @@
 
     invoke-direct/range {v0 .. v14}, Lorg/xbill/DNS/SIGBase;-><init>(Lorg/xbill/DNS/Name;IIJIIJLjava/util/Date;Ljava/util/Date;ILorg/xbill/DNS/Name;[B)V
 
-    .line 48
     return-void
 .end method
 
@@ -60,8 +55,6 @@
 .method public bridge synthetic getAlgorithm()I
     .locals 1
 
-    .prologue
-    .line 18
     invoke-super {p0}, Lorg/xbill/DNS/SIGBase;->getAlgorithm()I
 
     move-result v0
@@ -72,8 +65,6 @@
 .method public bridge synthetic getExpire()Ljava/util/Date;
     .locals 1
 
-    .prologue
-    .line 18
     invoke-super {p0}, Lorg/xbill/DNS/SIGBase;->getExpire()Ljava/util/Date;
 
     move-result-object v0
@@ -84,8 +75,6 @@
 .method public bridge synthetic getFootprint()I
     .locals 1
 
-    .prologue
-    .line 18
     invoke-super {p0}, Lorg/xbill/DNS/SIGBase;->getFootprint()I
 
     move-result v0
@@ -96,8 +85,6 @@
 .method public bridge synthetic getLabels()I
     .locals 1
 
-    .prologue
-    .line 18
     invoke-super {p0}, Lorg/xbill/DNS/SIGBase;->getLabels()I
 
     move-result v0
@@ -108,8 +95,6 @@
 .method getObject()Lorg/xbill/DNS/Record;
     .locals 1
 
-    .prologue
-    .line 26
     new-instance v0, Lorg/xbill/DNS/RRSIGRecord;
 
     invoke-direct {v0}, Lorg/xbill/DNS/RRSIGRecord;-><init>()V
@@ -120,8 +105,6 @@
 .method public bridge synthetic getOrigTTL()J
     .locals 2
 
-    .prologue
-    .line 18
     invoke-super {p0}, Lorg/xbill/DNS/SIGBase;->getOrigTTL()J
 
     move-result-wide v0
@@ -132,8 +115,6 @@
 .method public bridge synthetic getSignature()[B
     .locals 1
 
-    .prologue
-    .line 18
     invoke-super {p0}, Lorg/xbill/DNS/SIGBase;->getSignature()[B
 
     move-result-object v0
@@ -144,8 +125,6 @@
 .method public bridge synthetic getSigner()Lorg/xbill/DNS/Name;
     .locals 1
 
-    .prologue
-    .line 18
     invoke-super {p0}, Lorg/xbill/DNS/SIGBase;->getSigner()Lorg/xbill/DNS/Name;
 
     move-result-object v0
@@ -156,8 +135,6 @@
 .method public bridge synthetic getTimeSigned()Ljava/util/Date;
     .locals 1
 
-    .prologue
-    .line 18
     invoke-super {p0}, Lorg/xbill/DNS/SIGBase;->getTimeSigned()Ljava/util/Date;
 
     move-result-object v0
@@ -168,8 +145,6 @@
 .method public bridge synthetic getTypeCovered()I
     .locals 1
 
-    .prologue
-    .line 18
     invoke-super {p0}, Lorg/xbill/DNS/SIGBase;->getTypeCovered()I
 
     move-result v0

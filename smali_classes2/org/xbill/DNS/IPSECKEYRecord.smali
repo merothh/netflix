@@ -23,8 +23,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 41
     invoke-direct {p0}, Lorg/xbill/DNS/Record;-><init>()V
 
     return-void
@@ -33,8 +31,6 @@
 .method public constructor <init>(Lorg/xbill/DNS/Name;IJIIILjava/lang/Object;[B)V
     .locals 9
 
-    .prologue
-    .line 61
     const/16 v4, 0x2d
 
     move-object v2, p0
@@ -47,7 +43,6 @@
 
     invoke-direct/range {v2 .. v7}, Lorg/xbill/DNS/Record;-><init>(Lorg/xbill/DNS/Name;IIJ)V
 
-    .line 62
     const-string/jumbo v2, "precedence"
 
     invoke-static {v2, p5}, Lorg/xbill/DNS/IPSECKEYRecord;->checkU8(Ljava/lang/String;I)I
@@ -56,7 +51,6 @@
 
     iput v2, p0, Lorg/xbill/DNS/IPSECKEYRecord;->precedence:I
 
-    .line 63
     const-string/jumbo v2, "gatewayType"
 
     invoke-static {v2, p6}, Lorg/xbill/DNS/IPSECKEYRecord;->checkU8(Ljava/lang/String;I)I
@@ -65,7 +59,6 @@
 
     iput v2, p0, Lorg/xbill/DNS/IPSECKEYRecord;->gatewayType:I
 
-    .line 64
     const-string/jumbo v2, "algorithmType"
 
     move/from16 v0, p7
@@ -76,10 +69,8 @@
 
     iput v2, p0, Lorg/xbill/DNS/IPSECKEYRecord;->algorithmType:I
 
-    .line 65
     packed-switch p6, :pswitch_data_0
 
-    .line 91
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v3, "\"gatewayType\" must be between 0 and 3"
@@ -88,22 +79,18 @@
 
     throw v2
 
-    .line 67
     :pswitch_0
     const/4 v2, 0x0
 
     iput-object v2, p0, Lorg/xbill/DNS/IPSECKEYRecord;->gateway:Ljava/lang/Object;
 
-    .line 95
     :goto_0
     move-object/from16 v0, p9
 
     iput-object v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->key:[B
 
-    .line 96
     return-void
 
-    .line 70
     :pswitch_1
     move-object/from16 v0, p8
 
@@ -111,7 +98,6 @@
 
     if-nez v2, :cond_0
 
-    .line 71
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v3, "\"gateway\" must be an IPv4 address"
@@ -120,7 +106,6 @@
 
     throw v2
 
-    .line 74
     :cond_0
     move-object/from16 v0, p8
 
@@ -128,7 +113,6 @@
 
     goto :goto_0
 
-    .line 77
     :pswitch_2
     move-object/from16 v0, p8
 
@@ -136,7 +120,6 @@
 
     if-nez v2, :cond_1
 
-    .line 78
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v3, "\"gateway\" must be an IPv6 address"
@@ -145,7 +128,6 @@
 
     throw v2
 
-    .line 81
     :cond_1
     move-object/from16 v0, p8
 
@@ -153,7 +135,6 @@
 
     goto :goto_0
 
-    .line 84
     :pswitch_3
     move-object/from16 v0, p8
 
@@ -161,7 +142,6 @@
 
     if-nez v2, :cond_2
 
-    .line 85
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v3, "\"gateway\" must be a DNS name"
@@ -170,7 +150,6 @@
 
     throw v2
 
-    .line 88
     :cond_2
     const-string/jumbo v2, "gateway"
 
@@ -186,7 +165,6 @@
 
     goto :goto_0
 
-    .line 65
     nop
 
     :pswitch_data_0
@@ -203,8 +181,6 @@
 .method public getAlgorithmType()I
     .locals 1
 
-    .prologue
-    .line 194
     iget v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->algorithmType:I
 
     return v0
@@ -213,8 +189,6 @@
 .method public getGateway()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 200
     iget-object v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->gateway:Ljava/lang/Object;
 
     return-object v0
@@ -223,8 +197,6 @@
 .method public getGatewayType()I
     .locals 1
 
-    .prologue
-    .line 188
     iget v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->gatewayType:I
 
     return v0
@@ -233,8 +205,6 @@
 .method public getKey()[B
     .locals 1
 
-    .prologue
-    .line 206
     iget-object v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->key:[B
 
     return-object v0
@@ -243,8 +213,6 @@
 .method getObject()Lorg/xbill/DNS/Record;
     .locals 1
 
-    .prologue
-    .line 45
     new-instance v0, Lorg/xbill/DNS/IPSECKEYRecord;
 
     invoke-direct {v0}, Lorg/xbill/DNS/IPSECKEYRecord;-><init>()V
@@ -255,8 +223,6 @@
 .method public getPrecedence()I
     .locals 1
 
-    .prologue
-    .line 182
     iget v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->precedence:I
 
     return v0
@@ -265,34 +231,28 @@
 .method rdataFromString(Lorg/xbill/DNS/Tokenizer;Lorg/xbill/DNS/Name;)V
     .locals 2
 
-    .prologue
-    .line 125
     invoke-virtual {p1}, Lorg/xbill/DNS/Tokenizer;->getUInt8()I
 
     move-result v0
 
     iput v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->precedence:I
 
-    .line 126
     invoke-virtual {p1}, Lorg/xbill/DNS/Tokenizer;->getUInt8()I
 
     move-result v0
 
     iput v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->gatewayType:I
 
-    .line 127
     invoke-virtual {p1}, Lorg/xbill/DNS/Tokenizer;->getUInt8()I
 
     move-result v0
 
     iput v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->algorithmType:I
 
-    .line 128
     iget v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->gatewayType:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 145
     new-instance v0, Lorg/xbill/DNS/WireParseException;
 
     const-string/jumbo v1, "invalid gateway type"
@@ -301,13 +261,11 @@
 
     throw v0
 
-    .line 130
     :pswitch_0
     invoke-virtual {p1}, Lorg/xbill/DNS/Tokenizer;->getString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 131
     const-string/jumbo v1, "."
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -316,7 +274,6 @@
 
     if-nez v0, :cond_0
 
-    .line 132
     new-instance v0, Lorg/xbill/DNS/TextParseException;
 
     const-string/jumbo v1, "invalid gateway format"
@@ -325,13 +282,11 @@
 
     throw v0
 
-    .line 133
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->gateway:Ljava/lang/Object;
 
-    .line 147
     :goto_0
     const/4 v0, 0x0
 
@@ -341,10 +296,8 @@
 
     iput-object v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->key:[B
 
-    .line 148
     return-void
 
-    .line 136
     :pswitch_1
     const/4 v0, 0x1
 
@@ -356,7 +309,6 @@
 
     goto :goto_0
 
-    .line 139
     :pswitch_2
     const/4 v0, 0x2
 
@@ -368,7 +320,6 @@
 
     goto :goto_0
 
-    .line 142
     :pswitch_3
     invoke-virtual {p1, p2}, Lorg/xbill/DNS/Tokenizer;->getName(Lorg/xbill/DNS/Name;)Lorg/xbill/DNS/Name;
 
@@ -378,7 +329,6 @@
 
     goto :goto_0
 
-    .line 128
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -391,34 +341,28 @@
 .method rrFromWire(Lorg/xbill/DNS/DNSInput;)V
     .locals 2
 
-    .prologue
-    .line 100
     invoke-virtual {p1}, Lorg/xbill/DNS/DNSInput;->readU8()I
 
     move-result v0
 
     iput v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->precedence:I
 
-    .line 101
     invoke-virtual {p1}, Lorg/xbill/DNS/DNSInput;->readU8()I
 
     move-result v0
 
     iput v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->gatewayType:I
 
-    .line 102
     invoke-virtual {p1}, Lorg/xbill/DNS/DNSInput;->readU8()I
 
     move-result v0
 
     iput v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->algorithmType:I
 
-    .line 103
     iget v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->gatewayType:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 117
     new-instance v0, Lorg/xbill/DNS/WireParseException;
 
     const-string/jumbo v1, "invalid gateway type"
@@ -427,13 +371,11 @@
 
     throw v0
 
-    .line 105
     :pswitch_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->gateway:Ljava/lang/Object;
 
-    .line 119
     :goto_0
     invoke-virtual {p1}, Lorg/xbill/DNS/DNSInput;->remaining()I
 
@@ -441,18 +383,15 @@
 
     if-lez v0, :cond_0
 
-    .line 120
     invoke-virtual {p1}, Lorg/xbill/DNS/DNSInput;->readByteArray()[B
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->key:[B
 
-    .line 121
     :cond_0
     return-void
 
-    .line 108
     :pswitch_1
     const/4 v0, 0x4
 
@@ -468,7 +407,6 @@
 
     goto :goto_0
 
-    .line 111
     :pswitch_2
     const/16 v0, 0x10
 
@@ -484,7 +422,6 @@
 
     goto :goto_0
 
-    .line 114
     :pswitch_3
     new-instance v0, Lorg/xbill/DNS/Name;
 
@@ -494,7 +431,6 @@
 
     goto :goto_0
 
-    .line 103
     nop
 
     :pswitch_data_0
@@ -509,59 +445,47 @@
 .method rrToString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 152
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 153
     iget v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->precedence:I
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 154
     const-string/jumbo v0, " "
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 155
     iget v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->gatewayType:I
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 156
     const-string/jumbo v0, " "
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 157
     iget v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->algorithmType:I
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 158
     const-string/jumbo v0, " "
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 159
     iget v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->gatewayType:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 172
     :goto_0
     iget-object v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->key:[B
 
     if-eqz v0, :cond_0
 
-    .line 173
     const-string/jumbo v0, " "
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 174
     iget-object v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->key:[B
 
     invoke-static {v0}, Lorg/xbill/DNS/utils/base64;->toString([B)Ljava/lang/String;
@@ -570,7 +494,6 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 176
     :cond_0
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -578,7 +501,6 @@
 
     return-object v0
 
-    .line 161
     :pswitch_0
     const-string/jumbo v0, "."
 
@@ -586,13 +508,11 @@
 
     goto :goto_0
 
-    .line 165
     :pswitch_1
     iget-object v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->gateway:Ljava/lang/Object;
 
     check-cast v0, Ljava/net/InetAddress;
 
-    .line 166
     invoke-virtual {v0}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
     move-result-object v0
@@ -601,7 +521,6 @@
 
     goto :goto_0
 
-    .line 169
     :pswitch_2
     iget-object v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->gateway:Ljava/lang/Object;
 
@@ -609,7 +528,6 @@
 
     goto :goto_0
 
-    .line 159
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -622,50 +540,40 @@
 .method rrToWire(Lorg/xbill/DNS/DNSOutput;Lorg/xbill/DNS/Compression;Z)V
     .locals 2
 
-    .prologue
-    .line 211
     iget v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->precedence:I
 
     invoke-virtual {p1, v0}, Lorg/xbill/DNS/DNSOutput;->writeU8(I)V
 
-    .line 212
     iget v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->gatewayType:I
 
     invoke-virtual {p1, v0}, Lorg/xbill/DNS/DNSOutput;->writeU8(I)V
 
-    .line 213
     iget v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->algorithmType:I
 
     invoke-virtual {p1, v0}, Lorg/xbill/DNS/DNSOutput;->writeU8(I)V
 
-    .line 214
     iget v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->gatewayType:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 227
     :goto_0
     :pswitch_0
     iget-object v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->key:[B
 
     if-eqz v0, :cond_0
 
-    .line 228
     iget-object v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->key:[B
 
     invoke-virtual {p1, v0}, Lorg/xbill/DNS/DNSOutput;->writeByteArray([B)V
 
-    .line 229
     :cond_0
     return-void
 
-    .line 219
     :pswitch_1
     iget-object v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->gateway:Ljava/lang/Object;
 
     check-cast v0, Ljava/net/InetAddress;
 
-    .line 220
     invoke-virtual {v0}, Ljava/net/InetAddress;->getAddress()[B
 
     move-result-object v0
@@ -674,20 +582,17 @@
 
     goto :goto_0
 
-    .line 223
     :pswitch_2
     iget-object v0, p0, Lorg/xbill/DNS/IPSECKEYRecord;->gateway:Ljava/lang/Object;
 
     check-cast v0, Lorg/xbill/DNS/Name;
 
-    .line 224
     const/4 v1, 0x0
 
     invoke-virtual {v0, p1, v1, p3}, Lorg/xbill/DNS/Name;->toWire(Lorg/xbill/DNS/DNSOutput;Lorg/xbill/DNS/Compression;Z)V
 
     goto :goto_0
 
-    .line 214
     nop
 
     :pswitch_data_0

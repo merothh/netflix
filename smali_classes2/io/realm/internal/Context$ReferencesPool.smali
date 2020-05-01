@@ -31,18 +31,14 @@
 .method private constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lio/realm/internal/Context$ReferencesPool;->pool:Ljava/util/ArrayList;
 
-    .line 33
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -55,8 +51,6 @@
 .method synthetic constructor <init>(Lio/realm/internal/Context$1;)V
     .locals 0
 
-    .prologue
-    .line 31
     invoke-direct {p0}, Lio/realm/internal/Context$ReferencesPool;-><init>()V
 
     return-void
@@ -67,8 +61,6 @@
 .method add(Lio/realm/internal/NativeObjectReference;)V
     .locals 2
 
-    .prologue
-    .line 36
     iget-object v0, p0, Lio/realm/internal/Context$ReferencesPool;->pool:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -83,16 +75,13 @@
 
     if-gt v0, v1, :cond_0
 
-    .line 37
     iget-object v0, p0, Lio/realm/internal/Context$ReferencesPool;->pool:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 41
     :goto_0
     return-void
 
-    .line 39
     :cond_0
     iget-object v0, p0, Lio/realm/internal/Context$ReferencesPool;->pool:Ljava/util/ArrayList;
 
@@ -110,18 +99,14 @@
 .method getFreeIndex()Ljava/lang/Integer;
     .locals 2
 
-    .prologue
-    .line 45
     iget-object v0, p0, Lio/realm/internal/Context$ReferencesPool;->freeIndexList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 46
     if-nez v0, :cond_0
 
-    .line 47
     iget-object v0, p0, Lio/realm/internal/Context$ReferencesPool;->pool:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -132,11 +117,9 @@
 
     move-result-object v0
 
-    .line 51
     :goto_0
     return-object v0
 
-    .line 49
     :cond_0
     iget-object v1, p0, Lio/realm/internal/Context$ReferencesPool;->freeIndexList:Ljava/util/ArrayList;
 

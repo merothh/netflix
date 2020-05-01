@@ -7,8 +7,6 @@
 .method public static getVersion()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 16
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

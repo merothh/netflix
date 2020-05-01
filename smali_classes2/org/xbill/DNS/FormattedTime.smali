@@ -13,51 +13,42 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 19
     new-instance v0, Ljava/text/DecimalFormat;
 
     invoke-direct {v0}, Ljava/text/DecimalFormat;-><init>()V
 
     sput-object v0, Lorg/xbill/DNS/FormattedTime;->w2:Ljava/text/NumberFormat;
 
-    .line 20
     sget-object v0, Lorg/xbill/DNS/FormattedTime;->w2:Ljava/text/NumberFormat;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Ljava/text/NumberFormat;->setMinimumIntegerDigits(I)V
 
-    .line 22
     new-instance v0, Ljava/text/DecimalFormat;
 
     invoke-direct {v0}, Ljava/text/DecimalFormat;-><init>()V
 
     sput-object v0, Lorg/xbill/DNS/FormattedTime;->w4:Ljava/text/NumberFormat;
 
-    .line 23
     sget-object v0, Lorg/xbill/DNS/FormattedTime;->w4:Ljava/text/NumberFormat;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Ljava/text/NumberFormat;->setMinimumIntegerDigits(I)V
 
-    .line 24
     sget-object v0, Lorg/xbill/DNS/FormattedTime;->w4:Ljava/text/NumberFormat;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/text/NumberFormat;->setGroupingUsed(Z)V
 
-    .line 25
     return-void
 .end method
 
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -66,8 +57,6 @@
 .method public static format(Ljava/util/Date;)Ljava/lang/String;
     .locals 6
 
-    .prologue
-    .line 37
     new-instance v0, Ljava/util/GregorianCalendar;
 
     const-string/jumbo v1, "UTC"
@@ -78,15 +67,12 @@
 
     invoke-direct {v0, v1}, Ljava/util/GregorianCalendar;-><init>(Ljava/util/TimeZone;)V
 
-    .line 38
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 40
     invoke-virtual {v0, p0}, Ljava/util/Calendar;->setTime(Ljava/util/Date;)V
 
-    .line 41
     sget-object v2, Lorg/xbill/DNS/FormattedTime;->w4:Ljava/text/NumberFormat;
 
     const/4 v3, 0x1
@@ -103,7 +89,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 42
     sget-object v2, Lorg/xbill/DNS/FormattedTime;->w2:Ljava/text/NumberFormat;
 
     const/4 v3, 0x2
@@ -122,7 +107,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 43
     sget-object v2, Lorg/xbill/DNS/FormattedTime;->w2:Ljava/text/NumberFormat;
 
     const/4 v3, 0x5
@@ -139,7 +123,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 44
     sget-object v2, Lorg/xbill/DNS/FormattedTime;->w2:Ljava/text/NumberFormat;
 
     const/16 v3, 0xb
@@ -156,7 +139,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 45
     sget-object v2, Lorg/xbill/DNS/FormattedTime;->w2:Ljava/text/NumberFormat;
 
     const/16 v3, 0xc
@@ -173,7 +155,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 46
     sget-object v2, Lorg/xbill/DNS/FormattedTime;->w2:Ljava/text/NumberFormat;
 
     const/16 v3, 0xd
@@ -190,7 +171,6 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 47
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -201,8 +181,6 @@
 .method public static parse(Ljava/lang/String;)Ljava/util/Date;
     .locals 8
 
-    .prologue
-    .line 58
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -211,7 +189,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 59
     new-instance v0, Lorg/xbill/DNS/TextParseException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -236,7 +213,6 @@
 
     throw v0
 
-    .line 62
     :cond_0
     new-instance v0, Ljava/util/GregorianCalendar;
 
@@ -248,10 +224,8 @@
 
     invoke-direct {v0, v1}, Ljava/util/GregorianCalendar;-><init>(Ljava/util/TimeZone;)V
 
-    .line 63
     invoke-virtual {v0}, Ljava/util/Calendar;->clear()V
 
-    .line 65
     const/4 v1, 0x0
 
     const/4 v2, 0x4
@@ -265,7 +239,6 @@
 
     move-result v1
 
-    .line 66
     const/4 v2, 0x4
 
     const/4 v3, 0x6
@@ -280,7 +253,6 @@
 
     add-int/lit8 v2, v2, -0x1
 
-    .line 67
     const/4 v3, 0x6
 
     const/16 v4, 0x8
@@ -293,7 +265,6 @@
 
     move-result v3
 
-    .line 68
     const/16 v4, 0x8
 
     const/16 v5, 0xa
@@ -306,7 +277,6 @@
 
     move-result v4
 
-    .line 69
     const/16 v5, 0xa
 
     const/16 v6, 0xc
@@ -319,7 +289,6 @@
 
     move-result v5
 
-    .line 70
     const/16 v6, 0xc
 
     const/16 v7, 0xe
@@ -332,23 +301,19 @@
 
     move-result v6
 
-    .line 71
     invoke-virtual/range {v0 .. v6}, Ljava/util/Calendar;->set(IIIIII)V
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 76
     invoke-virtual {v0}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
 
     move-result-object v0
 
     return-object v0
 
-    .line 73
     :catch_0
     move-exception v0
 
-    .line 74
     new-instance v0, Lorg/xbill/DNS/TextParseException;
 
     new-instance v1, Ljava/lang/StringBuilder;

@@ -27,58 +27,48 @@
 .method constructor <init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
 
-    .prologue
     const/16 v1, 0x10
 
-    .line 455
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 456
     iput p1, p0, Lorg/xbill/DNS/DNSSEC$ECKeyInfo;->length:I
 
-    .line 457
     new-instance v0, Ljava/math/BigInteger;
 
     invoke-direct {v0, p2, v1}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;I)V
 
     iput-object v0, p0, Lorg/xbill/DNS/DNSSEC$ECKeyInfo;->p:Ljava/math/BigInteger;
 
-    .line 458
     new-instance v0, Ljava/math/BigInteger;
 
     invoke-direct {v0, p3, v1}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;I)V
 
     iput-object v0, p0, Lorg/xbill/DNS/DNSSEC$ECKeyInfo;->a:Ljava/math/BigInteger;
 
-    .line 459
     new-instance v0, Ljava/math/BigInteger;
 
     invoke-direct {v0, p4, v1}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;I)V
 
     iput-object v0, p0, Lorg/xbill/DNS/DNSSEC$ECKeyInfo;->b:Ljava/math/BigInteger;
 
-    .line 460
     new-instance v0, Ljava/math/BigInteger;
 
     invoke-direct {v0, p5, v1}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;I)V
 
     iput-object v0, p0, Lorg/xbill/DNS/DNSSEC$ECKeyInfo;->gx:Ljava/math/BigInteger;
 
-    .line 461
     new-instance v0, Ljava/math/BigInteger;
 
     invoke-direct {v0, p6, v1}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;I)V
 
     iput-object v0, p0, Lorg/xbill/DNS/DNSSEC$ECKeyInfo;->gy:Ljava/math/BigInteger;
 
-    .line 462
     new-instance v0, Ljava/math/BigInteger;
 
     invoke-direct {v0, p7, v1}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;I)V
 
     iput-object v0, p0, Lorg/xbill/DNS/DNSSEC$ECKeyInfo;->n:Ljava/math/BigInteger;
 
-    .line 463
     new-instance v0, Ljava/security/spec/EllipticCurve;
 
     new-instance v1, Ljava/security/spec/ECFieldFp;
@@ -95,7 +85,6 @@
 
     iput-object v0, p0, Lorg/xbill/DNS/DNSSEC$ECKeyInfo;->curve:Ljava/security/spec/EllipticCurve;
 
-    .line 464
     new-instance v0, Ljava/security/spec/ECParameterSpec;
 
     iget-object v1, p0, Lorg/xbill/DNS/DNSSEC$ECKeyInfo;->curve:Ljava/security/spec/EllipticCurve;
@@ -116,6 +105,5 @@
 
     iput-object v0, p0, Lorg/xbill/DNS/DNSSEC$ECKeyInfo;->spec:Ljava/security/spec/ECParameterSpec;
 
-    .line 465
     return-void
 .end method

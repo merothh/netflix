@@ -16,11 +16,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 7
     invoke-direct {p0}, Lorg/java_websocket/handshake/HandshakedataImpl1;-><init>()V
 
-    .line 8
     return-void
 .end method
 
@@ -29,8 +26,6 @@
 .method public getHttpStatusMessage()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 12
     iget-object v0, p0, Lorg/java_websocket/handshake/HandshakeImpl1Server;->httpstatusmessage:Ljava/lang/String;
 
     return-object v0
@@ -39,21 +34,15 @@
 .method public setHttpStatus(S)V
     .locals 0
 
-    .prologue
-    .line 25
     iput-short p1, p0, Lorg/java_websocket/handshake/HandshakeImpl1Server;->httpstatus:S
 
-    .line 26
     return-void
 .end method
 
 .method public setHttpStatusMessage(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 21
     iput-object p1, p0, Lorg/java_websocket/handshake/HandshakeImpl1Server;->httpstatusmessage:Ljava/lang/String;
 
-    .line 22
     return-void
 .end method

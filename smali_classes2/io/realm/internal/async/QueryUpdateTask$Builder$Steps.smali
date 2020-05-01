@@ -44,8 +44,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 296
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -54,8 +52,6 @@
 .method synthetic constructor <init>(Lio/realm/internal/async/QueryUpdateTask$1;)V
     .locals 0
 
-    .prologue
-    .line 296
     invoke-direct {p0}, Lio/realm/internal/async/QueryUpdateTask$Builder$Steps;-><init>()V
 
     return-void
@@ -78,13 +74,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 313
     iget-object v0, p0, Lio/realm/internal/async/QueryUpdateTask$Builder$Steps;->realmResultsEntries:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 314
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x1
@@ -93,7 +86,6 @@
 
     iput-object v0, p0, Lio/realm/internal/async/QueryUpdateTask$Builder$Steps;->realmResultsEntries:Ljava/util/List;
 
-    .line 316
     :cond_0
     iget-object v6, p0, Lio/realm/internal/async/QueryUpdateTask$Builder$Steps;->realmResultsEntries:Ljava/util/List;
 
@@ -111,7 +103,6 @@
 
     invoke-interface {v6, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 317
     return-object p0
 .end method
 
@@ -130,8 +121,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 324
     new-instance v0, Lio/realm/internal/async/QueryUpdateTask$Builder$QueryEntry;
 
     const/4 v5, 0x0
@@ -146,15 +135,12 @@
 
     iput-object v0, p0, Lio/realm/internal/async/QueryUpdateTask$Builder$Steps;->realmObjectEntry:Lio/realm/internal/async/QueryUpdateTask$Builder$QueryEntry;
 
-    .line 326
     return-object p0
 .end method
 
 .method public build()Lio/realm/internal/async/QueryUpdateTask;
     .locals 8
 
-    .prologue
-    .line 338
     new-instance v0, Lio/realm/internal/async/QueryUpdateTask;
 
     iget-object v1, p0, Lio/realm/internal/async/QueryUpdateTask$Builder$Steps;->realmResultsEntries:Ljava/util/List;
@@ -189,28 +175,21 @@
 .method public realmConfiguration(Lio/realm/RealmConfiguration;)Lio/realm/internal/async/QueryUpdateTask$Builder$UpdateQueryStep;
     .locals 0
 
-    .prologue
-    .line 305
     iput-object p1, p0, Lio/realm/internal/async/QueryUpdateTask$Builder$Steps;->realmConfiguration:Lio/realm/RealmConfiguration;
 
-    .line 306
     return-object p0
 .end method
 
 .method public sendToNotifier(Lio/realm/internal/RealmNotifier;Lio/realm/internal/async/QueryUpdateTask$NotifyEvent;)Lio/realm/internal/async/QueryUpdateTask$Builder$BuilderStep;
     .locals 1
 
-    .prologue
-    .line 331
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lio/realm/internal/async/QueryUpdateTask$Builder$Steps;->callerNotifier:Ljava/lang/ref/WeakReference;
 
-    .line 332
     iput-object p2, p0, Lio/realm/internal/async/QueryUpdateTask$Builder$Steps;->event:Lio/realm/internal/async/QueryUpdateTask$NotifyEvent;
 
-    .line 333
     return-object p0
 .end method

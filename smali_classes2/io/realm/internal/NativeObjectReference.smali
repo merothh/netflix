@@ -38,22 +38,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 43
     invoke-direct {p0, p2, p3}, Ljava/lang/ref/PhantomReference;-><init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
 
-    .line 44
     iput p1, p0, Lio/realm/internal/NativeObjectReference;->type:I
 
-    .line 45
     iget-wide v0, p2, Lio/realm/internal/NativeObject;->nativePointer:J
 
     iput-wide v0, p0, Lio/realm/internal/NativeObjectReference;->nativePointer:J
 
-    .line 46
     iput-object p4, p0, Lio/realm/internal/NativeObjectReference;->refIndex:Ljava/lang/Integer;
 
-    .line 47
     return-void
 .end method
 
@@ -62,13 +56,10 @@
 .method cleanup()V
     .locals 3
 
-    .prologue
-    .line 53
     iget v0, p0, Lio/realm/internal/NativeObjectReference;->type:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 62
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -101,17 +92,14 @@
 
     throw v0
 
-    .line 55
     :pswitch_0
     iget-wide v0, p0, Lio/realm/internal/NativeObjectReference;->nativePointer:J
 
     invoke-static {v0, v1}, Lio/realm/internal/LinkView;->nativeClose(J)V
 
-    .line 64
     :goto_0
     return-void
 
-    .line 58
     :pswitch_1
     iget-wide v0, p0, Lio/realm/internal/NativeObjectReference;->nativePointer:J
 
@@ -119,7 +107,6 @@
 
     goto :goto_0
 
-    .line 53
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

@@ -16,60 +16,44 @@
 .method public constructor <init>(BLjava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 83
     invoke-direct {p0, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    .line 84
     invoke-static {p1}, Lio/realm/exceptions/RealmFileException$Kind;->getKind(B)Lio/realm/exceptions/RealmFileException$Kind;
 
     move-result-object v0
 
     iput-object v0, p0, Lio/realm/exceptions/RealmFileException;->kind:Lio/realm/exceptions/RealmFileException$Kind;
 
-    .line 85
     return-void
 .end method
 
 .method public constructor <init>(Lio/realm/exceptions/RealmFileException$Kind;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 88
     invoke-direct {p0, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    .line 89
     iput-object p1, p0, Lio/realm/exceptions/RealmFileException;->kind:Lio/realm/exceptions/RealmFileException$Kind;
 
-    .line 90
     return-void
 .end method
 
 .method public constructor <init>(Lio/realm/exceptions/RealmFileException$Kind;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
-    .prologue
-    .line 98
     invoke-direct {p0, p2, p3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 99
     iput-object p1, p0, Lio/realm/exceptions/RealmFileException;->kind:Lio/realm/exceptions/RealmFileException$Kind;
 
-    .line 100
     return-void
 .end method
 
 .method public constructor <init>(Lio/realm/exceptions/RealmFileException$Kind;Ljava/lang/Throwable;)V
     .locals 0
 
-    .prologue
-    .line 93
     invoke-direct {p0, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    .line 94
     iput-object p1, p0, Lio/realm/exceptions/RealmFileException;->kind:Lio/realm/exceptions/RealmFileException$Kind;
 
-    .line 95
     return-void
 .end method
 
@@ -78,8 +62,6 @@
 .method public getKind()Lio/realm/exceptions/RealmFileException$Kind;
     .locals 1
 
-    .prologue
-    .line 108
     iget-object v0, p0, Lio/realm/exceptions/RealmFileException;->kind:Lio/realm/exceptions/RealmFileException$Kind;
 
     return-object v0
@@ -88,8 +70,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 113
     const-string/jumbo v0, "%s Kind: %s."
 
     const/4 v1, 0x2

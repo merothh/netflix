@@ -24,8 +24,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,8 +34,6 @@
 .method public clone()Lio/realm/internal/ColumnInfo;
     .locals 2
 
-    .prologue
-    .line 67
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
@@ -49,11 +45,9 @@
 
     return-object v0
 
-    .line 68
     :catch_0
     move-exception v0
 
-    .line 69
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -64,8 +58,6 @@
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 23
     invoke-virtual {p0}, Lio/realm/internal/ColumnInfo;->clone()Lio/realm/internal/ColumnInfo;
 
     move-result-object v0
@@ -89,8 +81,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 43
     iget-object v0, p0, Lio/realm/internal/ColumnInfo;->indicesMap:Ljava/util/Map;
 
     return-object v0
@@ -99,20 +89,16 @@
 .method protected final getValidColumnIndex(Ljava/lang/String;Lio/realm/internal/Table;Ljava/lang/String;Ljava/lang/String;)J
     .locals 4
 
-    .prologue
-    .line 28
     invoke-virtual {p2, p4}, Lio/realm/internal/Table;->getColumnIndex(Ljava/lang/String;)J
 
     move-result-wide v0
 
-    .line 29
     const-wide/16 v2, -0x1
 
     cmp-long v2, v0, v2
 
     if-nez v2, :cond_0
 
-    .line 30
     new-instance v0, Lio/realm/exceptions/RealmMigrationNeededException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -147,7 +133,6 @@
 
     throw v0
 
-    .line 33
     :cond_0
     return-wide v0
 .end method
@@ -165,10 +150,7 @@
         }
     .end annotation
 
-    .prologue
-    .line 47
     iput-object p1, p0, Lio/realm/internal/ColumnInfo;->indicesMap:Ljava/util/Map;
 
-    .line 48
     return-void
 .end method

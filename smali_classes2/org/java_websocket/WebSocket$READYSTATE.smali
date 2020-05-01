@@ -32,7 +32,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x4
 
     const/4 v5, 0x3
@@ -43,7 +42,6 @@
 
     const/4 v2, 0x0
 
-    .line 16
     new-instance v0, Lorg/java_websocket/WebSocket$READYSTATE;
 
     const-string/jumbo v1, "NOT_YET_CONNECTED"
@@ -84,7 +82,6 @@
 
     sput-object v0, Lorg/java_websocket/WebSocket$READYSTATE;->CLOSED:Lorg/java_websocket/WebSocket$READYSTATE;
 
-    .line 15
     const/4 v0, 0x5
 
     new-array v0, v0, [Lorg/java_websocket/WebSocket$READYSTATE;
@@ -122,8 +119,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 15
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -132,8 +127,6 @@
 .method public static valueOf(Ljava/lang/String;)Lorg/java_websocket/WebSocket$READYSTATE;
     .locals 1
 
-    .prologue
-    .line 15
     const-class v0, Lorg/java_websocket/WebSocket$READYSTATE;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -148,8 +141,6 @@
 .method public static values()[Lorg/java_websocket/WebSocket$READYSTATE;
     .locals 1
 
-    .prologue
-    .line 15
     sget-object v0, Lorg/java_websocket/WebSocket$READYSTATE;->$VALUES:[Lorg/java_websocket/WebSocket$READYSTATE;
 
     invoke-virtual {v0}, [Lorg/java_websocket/WebSocket$READYSTATE;->clone()Ljava/lang/Object;
