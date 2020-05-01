@@ -1,0 +1,36 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: patch.apk
+compressionType: false
+doNotCompress:
+- assets/cs.dat
+- png
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '19'
+  targetSdkVersion: '24'
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  NDK_LICENSES: '8'
+  com/android/vending/billing/IInAppBillingService.aidl: '8'
+  com/jayway/android/robotium/solo/RobotiumWeb.js: '8'
+  entityauth/msl.key: '0'
+  entityauth/msl.pem: '8'
+  org/bouncycastle/x509/CertPathReviewerMessages.properties: '8'
+  org/bouncycastle/x509/CertPathReviewerMessages_de.properties: '8'
+  org/xbill/DNS/windows/DNSServer.properties: '8'
+  org/xbill/DNS/windows/DNSServer_de.properties: '8'
+  org/xbill/DNS/windows/DNSServer_fr.properties: '8'
+  org/xbill/DNS/windows/DNSServer_ja.properties: '8'
+  org/xbill/DNS/windows/DNSServer_pl.properties: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.4.1
+versionInfo:
+  versionCode: '14444'
+  versionName: 4.12.2 build 14444

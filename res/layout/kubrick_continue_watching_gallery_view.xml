@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.netflix.mediaclient.android.widget.AdvancedImageView android:id="@id/cw_view_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+    <View android:layout_gravity="bottom" android:background="@drawable/shadow_trans_to_full_black" android:layout_width="fill_parent" android:layout_height="80.0dip" />
+    <ImageView android:id="@id/cw_view_play_icon" android:src="@drawable/ic_play_60" android:scaleType="fitXY" style="@style/IconFontBasic" />
+    <RelativeLayout android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.netflix.mediaclient.android.widget.IconFontTextView android:textSize="28.0dip" android:textColor="@color/grey" android:gravity="bottom|center" android:id="@id/cw_view_info" android:background="@drawable/selectable_item_background" android:paddingBottom="@dimen/content_padding" android:focusable="true" android:layout_width="@dimen/kubrick_cw_gallery_info_view_width" android:layout_height="54.0dip" android:text="@string/icon_font_info" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" style="@style/IconFontBasic.NoShadow" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:paddingStart="@dimen/content_padding" android:paddingEnd="@dimen/kubrick_cw_gallery_info_view_width">
+            <TextView android:ellipsize="end" android:id="@id/cw_view_season_info" android:layout_width="fill_parent" android:singleLine="true" style="@style/PrimaryText.NoShadow.Micro" />
+            <TextView android:textStyle="bold" android:ellipsize="end" android:id="@id/cw_view_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" style="@style/PrimaryText.NoShadow.Micro" />
+            <ProgressBar android:id="@id/cw_view_video_progress" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginTop="@dimen/text_padding" android:max="100" android:indeterminateOnly="false" android:progressDrawable="@drawable/cw_progress_bar_dark_grey" style="?android:attr/progressBarStyleHorizontal" />
+            <View android:id="@id/cw_view_bottom_spacer" android:layout_width="fill_parent" android:layout_height="@dimen/kubrick_cw_gallery_bottom_padding" />
+        </LinearLayout>
+    </RelativeLayout>
+</merge>

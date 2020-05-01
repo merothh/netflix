@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout style="@style/match">
+        <com.netflix.mediaclient.android.widget.AdvancedImageView android:id="@id/background_img" android:scaleType="centerCrop" style="@style/match" />
+        <com.netflix.mediaclient.android.widget.AdvancedImageView android:layout_gravity="center" android:id="@id/video_img" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="100.0dip" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_centerHorizontal="true" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/video_img_group" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_below="@id/video_img" android:layout_centerInParent="true">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.netflix.mediaclient.android.widget.NetflixTextButton android:ellipsize="end" android:id="@id/trailer_play_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/postplay_episodes_phones_overlay_black_height" android:text="@string/label_play_trailer" android:maxLines="1" android:contentDescription="@string/label_postplay_playNextEpisode" android:drawableStart="@drawable/p4p_play" style="@style/PostPlayPlayButton" />
+                <com.netflix.mediaclient.android.widget.NetflixTextButton android:textSize="@dimen/text_small" android:id="@id/video_details_add_to_queue" android:focusable="true" android:layout_width="wrap_content" android:text="@string/label_my_list" android:drawablePadding="@dimen/text_padding" android:contentDescription="@string/accesibility_add_to_my_list" android:layout_marginStart="@dimen/content_padding" style="@style/NetflixButton.Outline" />
+            </LinearLayout>
+            <TextView android:textStyle="bold" android:ellipsize="end" android:gravity="center" android:id="@id/video_details_available_date" android:layout_marginTop="20.0dip" android:text="@string/label_video_details_pre_release_soon" android:maxLines="1" android:paddingStart="@dimen/content_padding" style="@style/PrimaryText.NoShadow.MediumLarge" />
+            <TextView android:ellipsize="end" android:gravity="center" android:id="@id/video_details_synopsis" android:layout_marginTop="@dimen/double_padding" android:layout_marginBottom="@dimen/content_padding" android:maxLines="6" android:lineSpacingMultiplier="@dimen/line_spacing_expanded" android:fontFamily="sans-serif-light" style="@style/PrimaryText.NoShadow.SmallMedium" />
+            <TextView android:gravity="center" android:id="@id/video_details_starring" android:layout_marginTop="@dimen/double_padding" android:lineSpacingMultiplier="@dimen/line_spacing_expanded" style="@style/SecondaryText.Small" />
+            <TextView android:id="@id/video_details_creators" android:layout_marginTop="@dimen/double_padding" android:lineSpacingMultiplier="@dimen/line_spacing_expanded" style="@style/SecondaryText.Small" />
+            <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/content_padding" android:layout_marginBottom="@dimen/content_padding" layout="@layout/video_details_copyright" />
+            <FrameLayout android:id="@id/video_details_footer" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textStyle="bold" android:ellipsize="end" android:id="@id/similar_items_grid_view_title" android:visibility="gone" android:layout_marginTop="@dimen/content_padding" android:layout_marginBottom="@dimen/content_padding" android:text="@string/label_similar_shows" android:maxLines="2" android:singleLine="true" android:lineSpacingMultiplier="@dimen/line_spacing_expanded" android:paddingStart="@dimen/content_padding" style="@style/PrimaryText.NoShadow.SmallMedium" />
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</merge>

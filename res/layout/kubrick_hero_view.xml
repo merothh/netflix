@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.netflix.mediaclient.android.widget.TopCropImageView android:id="@id/kubrick_hero_row_image" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/kubrick_hero_row_shadow" android:background="@drawable/barker_hero_info_background" android:layout_width="fill_parent" android:layout_height="200.0dip" android:layout_alignBottom="@id/kubrick_hero_row_image" />
+    <LinearLayout android:orientation="vertical" android:id="@id/kubrick_hero_row_info_group" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <com.netflix.mediaclient.android.widget.AdvancedImageView android:id="@id/kubrick_hero_row_title_image" android:layout_marginBottom="@dimen/content_padding" android:scaleType="fitXY" style="@style/KubrickTitleImage" />
+        <TextView android:textStyle="bold" android:ellipsize="end" android:id="@id/kubrick_hero_row_title" android:layout_marginBottom="@dimen/text_padding" android:maxLines="2" android:paddingEnd="@dimen/content_padding" style="@style/PrimaryText.XLarge" />
+        <include android:id="@id/kubrick_hero_row_basic_info" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/barker_basic_info_layout" />
+        <TextView android:textColor="@color/kubrick_text_color_light" android:ellipsize="end" android:id="@id/kubrick_hero_row_synopsis" android:layout_marginTop="@dimen/text_padding" android:layout_marginBottom="@dimen/text_padding" android:maxLines="3" android:paddingEnd="@dimen/text_padding" style="@style/SecondaryText.Micro" />
+    </LinearLayout>
+</merge>

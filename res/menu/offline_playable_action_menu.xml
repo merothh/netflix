@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/offline_action_watch" android:title="@string/offline_action_play" />
+    <item android:id="@id/offline_action_start" android:title="@string/offline_action_start_download" />
+    <item android:id="@id/offline_action_stop" android:title="@string/offline_action_cancel_download" />
+    <item android:id="@id/offline_action_delete" android:title="@string/offline_action_cancel_download" />
+</menu>

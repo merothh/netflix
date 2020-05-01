@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="label_directors_plural">
+        <item quantity="other">Ohjaajat:</item>
+        <item quantity="one">Ohjaaja:</item>
+    </plurals>
+    <plurals name="label_notification_n_downloaded">
+        <item quantity="other">%1$d latausta valmiina</item>
+        <item quantity="one">%1$d lataus valmis</item>
+    </plurals>
+    <plurals name="label_notification_n_other_titles">
+        <item quantity="other">%2$s ja %1$d muuta nimikettä</item>
+        <item quantity="one">%2$s ja %1$d muu nimike</item>
+    </plurals>
+    <plurals name="label_offline_episodes">
+        <item quantity="other">%1$d jaksoa</item>
+        <item quantity="one">%1$d jakso</item>
+    </plurals>
+    <plurals name="label_offline_episodes_capital">
+        <item quantity="other">%1$d jaksoa</item>
+        <item quantity="one">%1$d jakso</item>
+    </plurals>
+    <plurals name="label_offline_movies">
+        <item quantity="other">%1$d elokuvaa</item>
+        <item quantity="one">%1$d elokuva</item>
+    </plurals>
+    <plurals name="offline_snackbar_download_complete_multiple">
+        <item quantity="other">&lt;b>%2$d Lataukset valmiit&lt;/b> &lt;br>%1$s</item>
+        <item quantity="one">&lt;b>%2$d Lataus valmis&lt;/b> &lt;br>%1$s</item>
+    </plurals>
+    <plurals name="offline_snackbar_download_complete_multiple_no_subtitles">
+        <item quantity="other">&lt;b>%1$d Lataukset valmiit&lt;/b></item>
+        <item quantity="one">&lt;b>%1$d Lataus valmis&lt;/b></item>
+    </plurals>
+    <plurals name="offline_snackbar_downloading_multiple">
+        <item quantity="other">&lt;b>Ladataan %2$d nimikkeitä&lt;/b> &lt;br>%1$s</item>
+        <item quantity="one">&lt;b>Ladataan %2$d nimikettä&lt;/b> &lt;br>%1$s</item>
+    </plurals>
+    <plurals name="offline_snackbar_failed_multiple">
+        <item quantity="other">&lt;b>%1$d Lataukset epäonnistuivat&lt;/b></item>
+        <item quantity="one">&lt;b>%1$d Lataus epäonnistui&lt;/b></item>
+    </plurals>
+    <plurals name="offline_snackbar_some_failed">
+        <item quantity="other">%2$s %1$d Lataukset epäonnistuivat</item>
+        <item quantity="one">%2$s %1$d Lataus epäonnistui</item>
+    </plurals>
+    <plurals name="offline_state_download_removed">
+        <item quantity="other">Poistettu %1$d kohdetta (%2$s%3$s)</item>
+        <item quantity="one">Poistettu %1$d kohde (%2$s%3$s)</item>
+    </plurals>
+    <plurals name="offline_state_expiring_days">
+        <item quantity="other">Voimassa vielä %1$d päivää</item>
+        <item quantity="one">Voimassa vielä %1$d päivän</item>
+    </plurals>
+    <plurals name="offline_state_expiring_hours">
+        <item quantity="other">Voimassa vielä %1$d tuntia</item>
+        <item quantity="one">Voimassa vielä %1$d tunnin</item>
+    </plurals>
+    <plurals name="offline_state_expiring_minutes">
+        <item quantity="other">Voimassa vielä %1$d minuuttia</item>
+        <item quantity="one">Voimassa vielä %1$d minuutin</item>
+    </plurals>
+</resources>

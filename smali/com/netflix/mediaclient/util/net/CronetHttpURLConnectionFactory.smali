@@ -1,0 +1,359 @@
+.class public final Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;
+.super Ljava/lang/Object;
+.source "CronetHttpURLConnectionFactory.java"
+
+
+# static fields
+.field private static final CRONET_CACHE_DIR:Ljava/lang/String; = "cronet"
+
+.field private static final TAG:Ljava/lang/String; = "nf_net_cronet"
+
+.field private static sInstance:Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;
+
+
+# instance fields
+.field private mCronetEngine:Lorg/chromium/net/CronetEngine;
+
+.field private mNetLogInProgress:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+
+# direct methods
+.method private constructor <init>(Landroid/content/Context;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    iput-object v0, p0, Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;->mNetLogInProgress:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-direct {p0, p1}, Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;->createAndConfigureBuilder(Landroid/content/Context;)Lorg/chromium/net/CronetEngine$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lorg/chromium/net/CronetEngine$Builder;->build()Lorg/chromium/net/CronetEngine;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;->mCronetEngine:Lorg/chromium/net/CronetEngine;
+
+    return-void
+.end method
+
+.method private createAndConfigureBuilder(Landroid/content/Context;)Lorg/chromium/net/CronetEngine$Builder;
+    .locals 10
+
+    const/4 v9, 0x3
+
+    const/4 v8, 0x0
+
+    const/4 v7, 0x1
+
+    new-instance v0, Lorg/chromium/net/CronetEngine$Builder;
+
+    invoke-direct {v0, p1}, Lorg/chromium/net/CronetEngine$Builder;-><init>(Landroid/content/Context;)V
+
+    const-wide/32 v2, 0x19000
+
+    invoke-virtual {v0, v7, v2, v3}, Lorg/chromium/net/CronetEngine$Builder;->enableHttpCache(IJ)Lorg/chromium/net/CronetEngine$Builder;
+
+    new-instance v1, Ljava/io/File;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
+
+    move-result-object v2
+
+    const-string/jumbo v3, "cronet"
+
+    invoke-direct {v1, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    const-string/jumbo v2, "nf_net_cronet"
+
+    const-string/jumbo v3, "Set cache to %s, it exists %b, absolute path %s"
+
+    new-array v4, v9, [Ljava/lang/Object;
+
+    invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v5
+
+    aput-object v5, v4, v8
+
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+
+    move-result v5
+
+    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v5
+
+    aput-object v5, v4, v7
+
+    const/4 v5, 0x2
+
+    invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    invoke-static {v2, v3, v4}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
+
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {v1}, Ljava/io/File;->mkdir()Z
+
+    move-result v2
+
+    const-string/jumbo v3, "nf_net_cronet"
+
+    const-string/jumbo v4, "Cache created %b"
+
+    new-array v5, v7, [Ljava/lang/Object;
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    aput-object v2, v5, v8
+
+    invoke-static {v3, v4, v5}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lorg/chromium/net/CronetEngine$Builder;->setStoragePath(Ljava/lang/String;)Lorg/chromium/net/CronetEngine$Builder;
+
+    const-wide/32 v2, 0x100000
+
+    invoke-virtual {v0, v9, v2, v3}, Lorg/chromium/net/CronetEngine$Builder;->enableHttpCache(IJ)Lorg/chromium/net/CronetEngine$Builder;
+
+    return-object v0
+.end method
+
+.method public static getInstance(Landroid/content/Context;)Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;
+    .locals 2
+
+    sget-object v0, Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;->sInstance:Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;
+
+    if-nez v0, :cond_1
+
+    const-class v1, Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;
+
+    monitor-enter v1
+
+    :try_start_0
+    sget-object v0, Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;->sInstance:Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;
+
+    invoke-direct {v0, p0}, Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;-><init>(Landroid/content/Context;)V
+
+    sput-object v0, Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;->sInstance:Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;
+
+    :cond_0
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_1
+    sget-object v0, Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;->sInstance:Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+
+# virtual methods
+.method public isNetLogInProgress()Z
+    .locals 1
+
+    iget-object v0, p0, Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;->mNetLogInProgress:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method openConnection(Ljava/net/URL;)Ljava/net/HttpURLConnection;
+    .locals 1
+
+    iget-object v0, p0, Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;->mCronetEngine:Lorg/chromium/net/CronetEngine;
+
+    invoke-virtual {v0, p1}, Lorg/chromium/net/CronetEngine;->openConnection(Ljava/net/URL;)Ljava/net/URLConnection;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/net/HttpURLConnection;
+
+    return-object v0
+.end method
+
+.method public declared-synchronized startNetLog()V
+    .locals 4
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;->mNetLogInProgress:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    :goto_0
+    monitor-exit p0
+
+    return-void
+
+    :cond_0
+    :try_start_1
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-string/jumbo v1, "nf_net_cronet"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v3, "Logging cronet netlog to "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    const-string/jumbo v1, "cronet"
+
+    const-string/jumbo v2, ".log"
+
+    invoke-static {v1, v2, v0}, Ljava/io/File;->createTempFile(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Ljava/io/File;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;->mCronetEngine:Lorg/chromium/net/CronetEngine;
+
+    invoke-virtual {v0}, Ljava/io/File;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v0, v2}, Lorg/chromium/net/CronetEngine;->startNetLogToFile(Ljava/lang/String;Z)V
+
+    iget-object v0, p0, Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;->mNetLogInProgress:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    :try_start_2
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method public declared-synchronized stopNetLog()V
+    .locals 2
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;->mNetLogInProgress:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;->mCronetEngine:Lorg/chromium/net/CronetEngine;
+
+    invoke-virtual {v0}, Lorg/chromium/net/CronetEngine;->stopNetLog()V
+
+    iget-object v0, p0, Lcom/netflix/mediaclient/util/net/CronetHttpURLConnectionFactory;->mNetLogInProgress:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_0
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method

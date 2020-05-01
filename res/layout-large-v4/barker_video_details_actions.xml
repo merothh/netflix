@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.netflix.mediaclient.android.widget.NetflixTextButton android:textSize="@dimen/text_small" android:id="@id/video_details_mylist" android:focusable="true" android:layout_marginBottom="@dimen/content_padding" android:text="@string/label_my_list" android:contentDescription="@string/accesibility_add_to_my_list" style="@style/NetflixButton.Outline" />
+</FrameLayout>

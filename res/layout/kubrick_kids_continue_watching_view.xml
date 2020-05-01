@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.netflix.mediaclient.android.widget.PressAnimationFrameLayout android:id="@id/pressable_cw_view_group" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="horizontal" android:id="@id/cw_view_footer" android:background="@drawable/selectable_item_background" android:layout_width="fill_parent" android:layout_height="@dimen/kubrick_cw_view_footer_height" android:layout_alignParentBottom="true">
+                <LinearLayout android:orientation="vertical" android:paddingBottom="1.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/content_padding" android:layout_weight="1.0">
+                    <TextView android:textStyle="bold" android:textColor="@color/kubrick_kids_text_color" android:id="@id/cw_view_title" android:singleLine="true" style="@style/PrimaryText.NoShadow.Small" />
+                    <TextView android:textColor="@color/kubrick_kids_text_color" android:id="@id/cw_view_subtitle" android:singleLine="true" style="@style/SecondaryText.NoShadow.Nano" />
+                </LinearLayout>
+                <com.netflix.mediaclient.android.widget.IconFontTextView android:textSize="@dimen/kubrick_cw_info_size" android:textColor="@color/secondary_text_color" android:gravity="end" android:id="@id/cw_view_info" android:focusable="true" android:layout_width="48.0dip" android:layout_height="fill_parent" android:layout_marginTop="@dimen/content_padding" android:text="@string/icon_font_info" android:layout_marginStart="@dimen/double_padding" android:layout_marginEnd="@dimen/double_padding" style="@style/IconFontBasic" />
+            </LinearLayout>
+            <RelativeLayout android:id="@id/cw_play_view_group" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/cw_view_footer">
+                <com.netflix.mediaclient.android.widget.AdvancedImageView android:id="@id/cw_view_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_centerInParent="true" />
+                <View android:background="@drawable/shadow_trans_to_full_black" android:layout_width="fill_parent" android:layout_height="80.0dip" android:layout_alignBottom="@id/cw_view_img" />
+                <ImageView android:layout_width="64.0dip" android:layout_height="64.0dip" android:src="@drawable/btn_play_default_normal" android:scaleType="fitCenter" android:layout_centerInParent="true" style="@style/IconFontBasic" />
+            </RelativeLayout>
+            <ProgressBar android:id="@id/cw_view_video_progress" android:layout_width="fill_parent" android:layout_height="10.0dip" android:layout_marginBottom="@dimen/content_padding" android:max="100" android:indeterminateOnly="false" android:progressDrawable="@drawable/kubrick_kids_progress_bar" android:layout_above="@id/cw_view_footer" android:layout_marginStart="@dimen/double_padding" android:layout_marginEnd="@dimen/double_padding" style="?android:attr/progressBarStyleHorizontal" />
+        </RelativeLayout>
+    </com.netflix.mediaclient.android.widget.PressAnimationFrameLayout>
+</merge>

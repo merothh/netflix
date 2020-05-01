@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="label_directors_plural">
+        <item quantity="other">Yönetmenler:</item>
+        <item quantity="one">Yönetmen:</item>
+    </plurals>
+    <plurals name="label_notification_n_downloaded">
+        <item quantity="other">%1$d indirme tamamlandı</item>
+        <item quantity="one">%1$d indirme tamamlandı</item>
+    </plurals>
+    <plurals name="label_notification_n_other_titles">
+        <item quantity="other">%2$s ve %1$d diğer içerik</item>
+        <item quantity="one">%2$s ve %1$d diğer içerik</item>
+    </plurals>
+    <plurals name="label_offline_episodes">
+        <item quantity="other">%1$d bölüm</item>
+        <item quantity="one">%1$d bölüm</item>
+    </plurals>
+    <plurals name="label_offline_episodes_capital">
+        <item quantity="other">%1$d Bölüm</item>
+        <item quantity="one">%1$d Bölüm</item>
+    </plurals>
+    <plurals name="label_offline_movies">
+        <item quantity="other">%1$d film</item>
+        <item quantity="one">%1$d film</item>
+    </plurals>
+    <plurals name="offline_snackbar_download_complete_multiple">
+        <item quantity="other">&lt;b>%2$d indirme işlemi tamamlandı&lt;/b> &lt;br>%1$s</item>
+        <item quantity="one">&lt;b>%2$d indirme işlemi tamamlandı&lt;/b> &lt;br>%1$s</item>
+    </plurals>
+    <plurals name="offline_snackbar_download_complete_multiple_no_subtitles">
+        <item quantity="other">&lt;b>%1$d indirme işlemi tamamlandı&lt;/b></item>
+        <item quantity="one">&lt;b>%1$d indirme işlemi tamamlandı&lt;/b></item>
+    </plurals>
+    <plurals name="offline_snackbar_downloading_multiple">
+        <item quantity="other">&lt;b>%2$d içerik indiriliyor&lt;/b> &lt;br>%1$s</item>
+        <item quantity="one">&lt;b>%2$d içerik indiriliyor&lt;/b> &lt;br>%1$s</item>
+    </plurals>
+    <plurals name="offline_snackbar_failed_multiple">
+        <item quantity="other">&lt;b>%1$d İndirme İşlemi Başarısız&lt;/b></item>
+        <item quantity="one">&lt;b>%1$d İndirme İşlemi Başarısız&lt;/b></item>
+    </plurals>
+    <plurals name="offline_snackbar_some_failed">
+        <item quantity="other">%2$s %1$d İndirme İşlemi Başarısız</item>
+        <item quantity="one">%2$s %1$d İndirme İşlemi Başarısız</item>
+    </plurals>
+    <plurals name="offline_state_download_removed">
+        <item quantity="other">%1$d öğe silindi (%2$s%3$s)</item>
+        <item quantity="one">%1$d öğe silindi (%2$s%3$s)</item>
+    </plurals>
+    <plurals name="offline_state_expiring_days">
+        <item quantity="other">Süre bitimine %1$d gün</item>
+        <item quantity="one">Süre bitimine %1$d gün</item>
+    </plurals>
+    <plurals name="offline_state_expiring_hours">
+        <item quantity="other">Süre bitimine %1$d saat</item>
+        <item quantity="one">Süre bitimine %1$d saat</item>
+    </plurals>
+    <plurals name="offline_state_expiring_minutes">
+        <item quantity="other">Süre bitimine %1$d dakika</item>
+        <item quantity="one">Süre bitimine %1$d dakika</item>
+    </plurals>
+</resources>

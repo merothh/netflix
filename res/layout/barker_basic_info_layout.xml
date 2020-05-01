@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <FrameLayout android:id="@id/video_details_rating_bar_container" android:paddingTop="@dimen/double_padding" android:paddingBottom="@dimen/double_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="@dimen/double_padding">
+            <com.netflix.mediaclient.ui.details.NetflixRatingBarSmall android:layout_gravity="center_vertical" android:id="@id/video_details_rating_bar" android:isIndicator="true" style="@style/StarRatingsBarSmall" />
+        </FrameLayout>
+        <TextView android:textColor="@color/kubrick_text_color_medium" android:layout_gravity="center_vertical" android:id="@id/kubrick_basic_info_year" android:singleLine="true" android:fontFamily="sans-serif-light" android:layout_marginEnd="@dimen/barker_basic_info_margin" style="@style/SecondaryText.NoShadow.Micro" />
+        <TextView android:textColor="@color/kubrick_text_color_medium" android:layout_gravity="center_vertical" android:id="@id/kubrick_basic_info_certification" android:background="@drawable/hero_row_certification_bg" android:singleLine="true" android:fontFamily="sans-serif-light" android:paddingStart="6.0dip" android:paddingEnd="6.0dip" android:layout_marginEnd="@dimen/barker_basic_info_margin" style="@style/SecondaryText.NoShadow.Micro" />
+        <TextView android:textColor="@color/kubrick_text_color_medium" android:layout_gravity="center_vertical" android:id="@id/kubrick_basic_supplemental_info" android:singleLine="true" android:fontFamily="sans-serif-light" android:layout_marginEnd="@dimen/barker_basic_info_margin" style="@style/SecondaryText.NoShadow.Micro" />
+        <com.netflix.mediaclient.android.widget.IconFontTextView android:textSize="@dimen/kubrick_details_hd_icon_size" android:textColor="@color/kubrick_text_color_medium" android:layout_gravity="center_vertical" android:id="@id/kubrick_basic_info_hd_icon" android:layout_marginTop="2.0dip" android:text="@string/icon_font_hd" style="@style/IconFontBasic" />
+    </LinearLayout>
+    <include android:id="@id/video_actions" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/barker_video_details_actions" />
+</RelativeLayout>

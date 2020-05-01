@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/coordinatorLayout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
+        <include layout="@layout/post_play_mdx" />
+        <include layout="@layout/playout_interrupter" />
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

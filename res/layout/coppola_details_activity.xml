@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout style="@style/match"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout android:id="@id/sliding_panel" style="@style/SlidingUpPanel">
+        <LinearLayout android:orientation="vertical" android:id="@id/fragment_host_container" style="@style/match">
+            <FrameLayout android:id="@id/image_container" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <FrameLayout android:id="@id/primary_fragment" style="@style/match" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/secondary_fragment" android:layout_weight="1.0" style="@style/match" />
+        </LinearLayout>
+        <include layout="@layout/mdx_mini_player_inset" />
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+</FrameLayout>
