@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView textAppearance="@style/TextAppearance.MediaRouter.Title" ellipsize="end" id="@id/mr_chooser_title" paddingLeft="24.0dip" paddingTop="24.0dip" paddingRight="24.0dip" layout_width="fill_parent" layout_height="wrap_content" text="@string/mr_chooser_title" singleLine="true" />
+    <ListView id="@id/mr_chooser_list" layout_width="fill_parent" layout_height="wrap_content" divider="@android:color/transparent" dividerHeight="0.0dip" />
+    <LinearLayout orientation="vertical" id="@android:id/empty" paddingLeft="16.0dip" paddingTop="90.0dip" paddingRight="16.0dip" visibility="gone" layout_width="fill_parent" layout_height="240.0dip">
+        <TextView textAppearance="@style/TextAppearance.MediaRouter.SecondaryText" layout_gravity="center" layout_width="wrap_content" layout_height="wrap_content" text="@string/mr_chooser_searching" />
+        <ProgressBar layout_gravity="center" layout_width="150.0dip" layout_height="wrap_content" indeterminate="true" style="?android:progressBarStyleHorizontal" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout id="@id/mr_cast_meta" paddingTop="12.0dip" paddingBottom="32.0dip" layout_width="fill_parent" layout_height="wrap_content" paddingStart="24.0dip" paddingEnd="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton layout_gravity="center_vertical" id="@id/mr_cast_close_button" background="?selectableItemBackgroundBorderless" layout_width="24.0dip" layout_height="24.0dip" src="?mediaRouteCloseDrawable" />
+    <LinearLayout gravity="center_vertical" orientation="horizontal" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="12.0dip" layout_below="@id/mr_cast_close_button">
+        <ImageView id="@id/mr_cast_meta_art" layout_width="36.0dip" layout_height="36.0dip" scaleType="fitCenter" />
+        <LinearLayout gravity="center_vertical" orientation="vertical" paddingLeft="8.0dip" paddingRight="8.0dip" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0">
+            <TextView textSize="14.0sp" ellipsize="end" id="@id/mr_cast_meta_title" layout_width="fill_parent" layout_height="wrap_content" maxLines="1" />
+            <TextView textSize="13.0sp" ellipsize="end" id="@id/mr_cast_meta_subtitle" layout_width="fill_parent" layout_height="wrap_content" maxLines="1" />
+        </LinearLayout>
+        <Button id="@id/mr_cast_stop_button" background="?selectableItemBackgroundBorderless" layout_width="114.0dip" layout_height="36.0sp" text="@string/mr_controller_stop_casting" />
+    </LinearLayout>
+</RelativeLayout>

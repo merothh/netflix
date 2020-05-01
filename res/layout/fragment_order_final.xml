@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView background="@color/signup_background_light" scrollbars="vertical" layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.MenuInflater layout_gravity="center_horizontal" orientation="vertical" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="?actionBarSize" maxWidth="@dimen/order_final_max_width" paddingStart="@dimen/signup_cta_button_horizontal_margin" paddingEnd="@dimen/signup_cta_button_horizontal_margin">
+        <include id="@id/messaging" layout_width="0.0dip" layout_height="wrap_content" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" layout="@layout/order_final_messaging" />
+        <include id="@id/phoneEntry" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="24.0dip" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/messaging" layout="@layout/order_final_phone_entry" />
+        <com.netflix.mediaclient.acquisition.view.NetflixSignupButton id="@id/ctaButton" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="24.0dip" text="@string/button_continue" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/phoneEntry" />
+        <include id="@id/accountDetails" layout_width="0.0dip" layout_height="wrap_content" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/ctaButton" layout="@layout/order_final_account_details" />
+    </o.MenuInflater>
+</androidx.core.widget.NestedScrollView>

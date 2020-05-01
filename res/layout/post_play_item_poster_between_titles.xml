@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.Uj orientation="vertical" id="@id/post_play_item_poster" layout_width="wrap_content" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher paddingBottom="@dimen/content_padding" layout_width="wrap_content" layout_height="wrap_content" text="@string/also_downloaded" />
+    <FrameLayout layout_width="wrap_content" layout_height="fill_parent">
+        <o.CalendarViewMaterialDelegate layout_gravity="center" id="@id/post_play_item_logo" layout_width="wrap_content" layout_height="fill_parent" layout_marginTop="@dimen/content_padding" layout_marginBottom="@dimen/content_padding" antialias="true" scaleType="centerInside" adjustViewBounds="true" maxWidth="209.0dip" maxHeight="89.0dip" />
+        <o.BaseAdapter id="@id/post_play_display_art" layout_width="wrap_content" layout_height="fill_parent" src="@color/black" antialias="true" dither="true" scaleType="fitCenter" adjustViewBounds="true" layout_marginEnd="@dimen/postplay_movie_recommendation_boxart_between" />
+    </FrameLayout>
+</o.Uj>

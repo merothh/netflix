@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout layout_width="fill_parent" layout_height="@dimen/language_selector_row_height" paddingStart="@dimen/double_padding" paddingEnd="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioButton id="@id/language_selector_list_row_choice" focusable="false" clickable="false" layout_width="wrap_content" layout_height="wrap_content" button="@drawable/language_selector_radio_button" layout_centerVertical="true" layout_alignParentStart="true" />
+    <o.ImageSwitcher textSize="@dimen/language_selector_text_fixed_small" textColor="@color/primary_text_color" ellipsize="end" id="@id/language_selector_list_row_name" layout_width="fill_parent" singleLine="true" layout_centerVertical="true" alpha="@dimen/text_alpha_unselected" paddingStart="@dimen/content_padding" layout_toEndOf="@id/language_selector_list_row_choice" style="@style/PrimaryText.Small" />
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView layout_gravity="center" id="@id/user_rating_overlay_close" layout_width="@dimen/thumbs_overlay_close_size" layout_height="@dimen/thumbs_overlay_close_size" />
+    <ImageView layout_gravity="center" id="@id/user_rating_overlay_down" layout_width="@dimen/thumbs_overlay_button_size" layout_height="@dimen/thumbs_overlay_button_size" />
+    <ImageView layout_gravity="center" id="@id/user_rating_overlay_up" layout_width="@dimen/thumbs_overlay_button_size" layout_height="@dimen/thumbs_overlay_button_size" />
+</merge>

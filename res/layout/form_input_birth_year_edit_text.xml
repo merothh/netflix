@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge orientation="vertical" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.material.textfield.TextInputLayout theme="@style/SignupTextInputLayoutLabel" id="@id/inputLayout" layout_width="fill_parent" layout_height="wrap_content" style="@style/SignupTextInputLayout">
+        <EditText id="@id/editText" layout_width="fill_parent" layout_height="wrap_content" inputType="number" style="@style/SignupEditText" />
+    </com.google.android.material.textfield.TextInputLayout>
+</merge>

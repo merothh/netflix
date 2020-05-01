@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/wrap"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textSize="14.0sp" textColor="@color/white" layout_gravity="center_vertical" id="@id/kids_basic_info_certification" background="@drawable/kids_hero_row_certification_bg" paddingTop="2.0dip" paddingBottom="2.0dip" layout_width="wrap_content" layout_height="wrap_content" singleLine="true" paddingStart="9.0dip" paddingEnd="9.0dip" layout_marginEnd="12.0dip" />
+    <o.ImageSwitcher textSize="@dimen/text_micro" textColor="@color/white" ellipsize="end" layout_gravity="center_vertical" id="@id/kids_basic_supplemental_info" layout_width="wrap_content" layout_height="wrap_content" singleLine="true" layout_marginEnd="12.0dip" />
+</LinearLayout>

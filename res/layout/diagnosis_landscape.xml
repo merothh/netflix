@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout id="@id/coordinatorLayout" layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout orientation="horizontal" paddingTop="?netflixActionBarSize" layout_width="fill_parent" layout_height="fill_parent" baselineAligned="false">
+        <FrameLayout layout_gravity="center" id="@id/diagnosis_status_group" padding="@dimen/content_padding" layout_weight="1.0" style="@style/match">
+            <include layout="@layout/diagnosis_status_view" />
+        </FrameLayout>
+        <FrameLayout layout_gravity="center" id="@id/diagnosis_info_group" paddingTop="@dimen/content_padding" paddingBottom="@dimen/content_padding" layout_weight="1.0" paddingStart="@dimen/double_padding" paddingEnd="@dimen/double_padding" style="@style/match">
+            <include layout="@layout/diagnosis_info_view" />
+        </FrameLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

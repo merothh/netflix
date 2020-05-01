@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.ListView text="@string/coming_soon_remind_me" drawableTop="@drawable/ic_extras_remind_me" style="@style/ExtrasButton"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

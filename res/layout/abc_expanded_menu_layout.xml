@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.SQLiteDatabase id="@id/expanded_menu" layout_width="?panelMenuListWidth" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout id="@id/interactive_notification_toast" layout_width="0.0dip" layout_height="0.0dip" layoutDirection="ltr" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <o.GridView id="@id/interactive_notification_background" layout_width="wrap_content" layout_height="wrap_content" />
+    <LinearLayout orientation="horizontal" layout_width="wrap_content" layout_height="wrap_content">
+        <o.GridView id="@id/interactive_notification_left_cap" layout_width="wrap_content" layout_height="wrap_content" />
+        <o.ImageSwitcher gravity="center" id="@id/interactive_notification_label" layout_width="wrap_content" layout_height="wrap_content" />
+        <o.GridView id="@id/interactive_notification_right_cap" layout_width="wrap_content" layout_height="wrap_content" />
+    </LinearLayout>
+    <o.GridView id="@id/interactive_notification_icon" layout_width="wrap_content" layout_height="wrap_content" />
+</FrameLayout>

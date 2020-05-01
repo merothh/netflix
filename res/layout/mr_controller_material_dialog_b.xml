@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout id="@id/mr_expandable_area" layout_width="fill_parent" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout layout_gravity="center" orientation="vertical" id="@id/mr_dialog_area" background="?colorBackgroundFloating" layout_width="fill_parent" layout_height="wrap_content">
+        <LinearLayout orientation="horizontal" id="@id/mr_title_bar" paddingLeft="24.0dip" paddingRight="12.0dip" layout_width="fill_parent" layout_height="wrap_content">
+            <TextView textAppearance="@style/TextAppearance.MediaRouter.Title" ellipsize="end" gravity="center_vertical" id="@id/mr_name" layout_width="0.0dip" layout_height="72.0dip" singleLine="true" layout_weight="1.0" />
+            <ImageButton layout_gravity="center_vertical" id="@id/mr_close" background="?selectableItemBackgroundBorderless" layout_width="48.0dip" layout_height="48.0dip" src="?mediaRouteCloseDrawable" contentDescription="@string/mr_controller_close_description" />
+        </LinearLayout>
+        <FrameLayout id="@id/mr_custom_control" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" />
+        <FrameLayout id="@id/mr_default_control" layout_width="fill_parent" layout_height="wrap_content">
+            <ImageView layout_gravity="top" id="@id/mr_art" background="?colorPrimary" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" scaleType="fitXY" adjustViewBounds="true" contentDescription="@string/mr_controller_album_art" />
+            <LinearLayout layout_gravity="bottom" orientation="vertical" layout_width="fill_parent" layout_height="wrap_content" splitMotionEvents="false">
+                <LinearLayout theme="?mediaRouteControlPanelThemeOverlay" layout_gravity="bottom" orientation="vertical" id="@id/mr_media_main_control" paddingTop="16.0dip" paddingBottom="16.0dip" layout_width="fill_parent" layout_height="wrap_content">
+                    <include id="@id/mr_playback_control" layout="@layout/mr_playback_control" />
+                    <View id="@id/mr_control_divider" visibility="gone" layout_width="fill_parent" layout_height="8.0dip" />
+                    <include id="@id/mr_volume_control" layout="@layout/mr_volume_control" />
+                </LinearLayout>
+                <o.NoSuchMethodError theme="?mediaRouteControlPanelThemeOverlay" scrollbarStyle="outsideOverlay" id="@id/mr_volume_group_list" paddingTop="@dimen/mr_controller_volume_group_list_padding_top" visibility="gone" clipToPadding="false" layout_width="fill_parent" layout_height="wrap_content" splitMotionEvents="false" />
+            </LinearLayout>
+        </FrameLayout>
+        <include layout="@layout/abc_alert_dialog_button_bar_material" />
+    </LinearLayout>
+</FrameLayout>

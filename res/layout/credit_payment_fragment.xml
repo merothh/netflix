@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView id="@id/scrollView" background="@color/signup_background_light" layout_width="fill_parent" layout_height="fill_parent" layout_marginTop="?actionBarSize" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout layout_gravity="center_horizontal" orientation="vertical" id="@id/registrationLayout" paddingTop="@dimen/signup_registration_padding_top" paddingBottom="@dimen/signup_context_padding_bottom" layout_height="wrap_content" paddingStart="@dimen/signup_context_padding_horizontal" paddingEnd="@dimen/signup_context_padding_horizontal" style="@style/FormLayout">
+        <com.netflix.mediaclient.acquisition.view.SignupBannerView id="@id/warningView" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="@dimen/signup_banner_spacing" style="@style/SignupWarningContainer" />
+        <com.netflix.mediaclient.acquisition.view.SignupBannerView id="@id/positiveView" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="@dimen/signup_banner_spacing" style="@style/SignupPositiveContainer" />
+        <com.netflix.mediaclient.acquisition.view.SignupBannerView id="@id/userMessage" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="@dimen/signup_banner_spacing" style="@style/SignupInfoContainer" />
+        <com.netflix.mediaclient.acquisition.view.SignupHeadingView id="@id/signupHeading" layout_width="fill_parent" layout_height="wrap_content" titleText="@string/title_setup_mop_creditOrDebitCardDisplayStringId" />
+        <include layout="@layout/change_payment_layout" />
+        <com.netflix.mediaclient.acquisition.view.MopLogosMultiLineLayout id="@id/mopLogosMultiLine" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/signup_credit_option_mop_logos_vertical_margin" layout_marginBottom="@dimen/signup_credit_option_mop_logos_vertical_margin" flexDirection="row" flexWrap="wrap" justifyContent="flex_start" />
+        <androidx.recyclerview.widget.RecyclerView id="@id/creditForm" layout_width="fill_parent" layout_height="wrap_content" nestedScrollingEnabled="false" layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        <o.SpellCheckSpan id="@id/planDetailsView" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/change_plan_top_margin" layout_marginBottom="@dimen/change_plan_bottom_margin" />
+        <o.NotificationAssistantService id="@id/changePlanView" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/change_plan_top_margin" layout_marginBottom="@dimen/change_plan_bottom_margin" />
+        <com.netflix.mediaclient.acquisition.view.TermsOfUseView id="@id/touView" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/moderate_padding" />
+        <o.QwertyKeyListener id="@id/koreaCheckboxes" layout_width="fill_parent" layout_height="wrap_content" />
+        <com.netflix.mediaclient.acquisition.view.NetflixSignupButton id="@id/submitButton" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/signup_cta_button_vertical_margin" text="@string/button_start_membership" />
+        <FrameLayout layout_width="0.0dip" layout_height="0.0dip">
+            <WebView id="@id/webView" layout_width="fill_parent" layout_height="fill_parent" />
+        </FrameLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.ListView textColor="@android:color/transparent" gravity="center" id="@id/audio_toggle" background="@null" paddingTop="36.0dip" layout_width="@dimen/audio_toggle_button_width" layout_height="@dimen/audio_toggle_button_height" scaleType="center" textOn="@string/audio_toggle_on" textOff="@string/audio_toggle_off" drawableTop="@drawable/ic_audio_toggle_selector_drawable" contentDescription="@string/accessibility_audio_toggle_description" paddingStart="36.0dip" nb_hasTint="false" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

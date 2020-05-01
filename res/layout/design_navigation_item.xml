@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.internal.NavigationMenuItemView paddingLeft="?listPreferredItemPaddingLeft" paddingRight="?listPreferredItemPaddingRight" focusable="true" layout_width="fill_parent" layout_height="?listPreferredItemHeightSmall" foreground="?selectableItemBackground"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

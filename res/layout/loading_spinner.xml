@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater id="@id/loading_container" layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar id="@id/loading_spinner" layout_width="50.0dip" layout_height="50.0dip" layout_margin="@dimen/double_padding" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toStartOf="@id/loading_label" layout_constraintHorizontal_chainStyle="packed" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" />
+    <o.ImageSwitcher textSize="@dimen/text_medium" textColor="@color/white" id="@id/loading_label" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" layout_margin="@dimen/double_padding" text="@string/label_loading_" singleLine="true" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toEndOf="parent" layout_constraintHorizontal_chainStyle="packed" layout_constraintStart_toEndOf="@id/loading_spinner" layout_constraintTop_toTopOf="parent" />
+</o.MenuInflater>

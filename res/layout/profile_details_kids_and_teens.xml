@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="horizontal" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Space layout_width="@dimen/text_padding" layout_height="0.0dip" layout_weight="1.0" />
+    <LinearLayout gravity="center_vertical" orientation="horizontal" id="@id/kids_section" background="?android:selectableItemBackground" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="20.0dip">
+        <o.ImageSwitcher textSize="14.0sp" gravity="center_horizontal" id="@id/kids_text" padding="@dimen/profile_details_main_padding" layout_width="wrap_content" layout_height="wrap_content" text="@string/profile_start_in_kids_tectview" style="@style/ProfileDetailsTextBright" />
+        <androidx.appcompat.widget.SwitchCompat id="@id/kids_switch" layout_width="wrap_content" layout_height="40.0dip" style="@style/NetflixSwitch" />
+    </LinearLayout>
+    <Space layout_width="@dimen/text_padding" layout_height="0.0dip" layout_weight="1.0" />
+    <LinearLayout gravity="center_vertical" orientation="horizontal" id="@id/teens_section" background="?android:selectableItemBackground" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="20.0dip">
+        <o.ImageSwitcher textSize="14.0sp" gravity="center_horizontal" id="@id/teens_text" padding="@dimen/profile_details_main_padding" layout_width="wrap_content" layout_height="wrap_content" text="@string/profile_for_teens" style="@style/ProfileDetailsTextBright" />
+        <androidx.appcompat.widget.SwitchCompat id="@id/teens_switch" layout_width="wrap_content" layout_height="40.0dip" style="@style/NetflixSwitch" />
+    </LinearLayout>
+    <Space layout_width="@dimen/text_padding" layout_height="0.0dip" layout_weight="1.0" />
+</LinearLayout>

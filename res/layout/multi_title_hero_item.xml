@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.GetChars orientation="vertical" background="@color/brand_grey" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/medium_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout background="@color/brand_grey" layout_width="fill_parent" layout_height="wrap_content">
+        <RelativeLayout orientation="vertical" id="@id/hero_container" layout_width="fill_parent" layout_height="wrap_content" contentDescription="@string/accessibility_details_activity_title">
+            <o.RemoteViewsListAdapter layout_gravity="center" id="@id/hero_image" focusable="true" layout_width="fill_parent" layout_height="wrap_content" scaleType="fitCenter" importantForAccessibility="no" elevation="16.0dip" />
+            <ImageView id="@id/hero_info" background="@drawable/selectable_video_background_with_press" paddingBottom="12.0dip" focusable="true" visibility="gone" layout_width="36.0dip" layout_height="36.0dip" src="@drawable/ic_cw_info" tint="@color/white" layout_alignParentBottom="true" importantForAccessibility="no" paddingEnd="12.0dip" layout_marginEnd="10.0dip" layout_alignParentEnd="true" elevation="16.0dip" />
+        </RelativeLayout>
+        <o.ImageSwitcher id="@id/hero_synopsis" layout_marginTop="@dimen/large_padding" layout_marginBottom="@dimen/moderate_padding" maxLines="3" layout_below="@id/hero_container" layout_marginStart="@dimen/medium_padding" layout_marginEnd="@dimen/medium_padding" style="@style/HeroSynopsis" />
+        <o.OH id="@id/multi_title_hero_buttons" paddingBottom="@dimen/moderate_padding" layout_width="fill_parent" layout_height="wrap_content" layout_below="@id/hero_synopsis" />
+    </RelativeLayout>
+</o.GetChars>

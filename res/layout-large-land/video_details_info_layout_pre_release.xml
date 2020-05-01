@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/text_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher ellipsize="end" id="@id/video_details_title" layout_marginTop="?android:actionBarSize" layout_marginBottom="12.0dip" maxLines="1" singleLine="true" layout_alignParentStart="true" style="@style/PrimaryBoldFontText.Large" />
+    <o.ImageSwitcher ellipsize="end" id="@id/video_details_basic_info" layout_marginTop="@dimen/details_content_padding" maxLines="1" singleLine="true" layout_below="@id/video_details_title" lineSpacingMultiplier="@dimen/line_spacing_expanded" layout_alignParentStart="true" style="@style/SecondaryBoldFontText.NanoMedium" />
+</RelativeLayout>

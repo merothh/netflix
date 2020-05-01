@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView id="@id/scrollView" background="@color/signup_background_light" scrollbars="vertical" layout_width="fill_parent" layout_height="fill_parent" layout_marginTop="?actionBarSize" fadeScrollbars="true" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.MenuInflater layout_gravity="center_horizontal" orientation="vertical" paddingBottom="@dimen/signup_context_padding_bottom" layout_width="fill_parent" layout_height="wrap_content" maxWidth="@dimen/onboarding_content_max_width" paddingStart="@dimen/signup_cta_button_horizontal_margin" paddingEnd="@dimen/signup_cta_button_horizontal_margin">
+        <com.netflix.mediaclient.acquisition.view.SignupBannerView id="@id/warningView" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/signup_fragment_padding_vertical" layout_marginBottom="@dimen/signup_banner_spacing" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" style="@style/SignupWarningContainer" />
+        <com.netflix.mediaclient.acquisition.view.SignupHeadingView id="@id/signupHeading" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="@dimen/signup_fragment_padding_vertical" maxWidth="@dimen/signup_context_signupheading_max_width" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/warningView" />
+        <LinearLayout orientation="vertical" id="@id/profilesForm" layout_width="0.0dip" layout_height="wrap_content" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/signupHeading">
+            <o.ArrowKeyMovementMethod id="@id/ownerName" layout_width="fill_parent" layout_height="wrap_content" />
+            <o.ArrowKeyMovementMethod id="@id/userProfile1" layout_width="fill_parent" layout_height="wrap_content" />
+            <o.ArrowKeyMovementMethod id="@id/userProfile2" layout_width="fill_parent" layout_height="wrap_content" />
+            <o.ArrowKeyMovementMethod id="@id/userProfile3" layout_width="fill_parent" layout_height="wrap_content" />
+            <o.ArrowKeyMovementMethod id="@id/userProfile4" layout_width="fill_parent" layout_height="wrap_content" />
+        </LinearLayout>
+        <com.netflix.mediaclient.acquisition.view.NetflixSignupButton id="@id/ctaButton" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="@dimen/signup_cta_button_vertical_margin" text="@string/button_continue" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/profilesForm" />
+    </o.MenuInflater>
+</androidx.core.widget.NestedScrollView>

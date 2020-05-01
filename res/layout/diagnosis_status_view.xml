@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView layout_gravity="center" id="@id/diagnosis_background_icon" padding="50.0dip" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/network_diagnostics_bg_img" scaleType="fitCenter" style="@style/wrap" />
+    <ListView layout_gravity="center" id="@id/listview_diagnosis" padding="@dimen/double_padding" layout_width="wrap_content" layout_height="wrap_content" />
+</merge>

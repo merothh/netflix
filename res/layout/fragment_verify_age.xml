@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" background="@color/signup_background_light" layout_width="fill_parent" layout_height="fill_parent" layout_marginTop="?actionBarSize" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View background="@color/signup_grey95" layout_width="fill_parent" layout_height="2.0dip" />
+    <androidx.core.widget.NestedScrollView id="@id/scrollView" layout_width="fill_parent" layout_height="fill_parent">
+        <LinearLayout orientation="vertical" background="@color/white" paddingTop="12.0dip" paddingBottom="250.0dip" layout_width="fill_parent" layout_height="fill_parent" paddingStart="@dimen/verify_age_side_margin" paddingEnd="@dimen/verify_age_side_margin">
+            <o.ImageSwitcher id="@id/verifyAgeHeader" layout_width="fill_parent" layout_height="wrap_content" text="@string/age_verify_header" style="@style/OnrampHeader" />
+            <o.Suggestion id="@id/verifyAgeExpandingView" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="16.0dip" expandingFormLayout="@layout/verify_age_dob_pin_layout" expandingHeaderText="@string/age_verify_verify_header" />
+            <o.Suggestion id="@id/skipVerifyExpandingView" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="16.0dip" layout_marginBottom="16.0dip" expandingFormLayout="@layout/verify_age_skip_layout" expandingHeaderText="@string/age_verify_skip_header" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

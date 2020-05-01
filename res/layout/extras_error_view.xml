@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher gravity="center" layout_gravity="center" id="@id/error_view_label" layout_marginTop="8.0dip" layout_marginBottom="8.0dip" text="@string/label_could_not_load_data" layout_marginStart="8.0dip" layout_marginEnd="8.0dip" layout_constraintBottom_toTopOf="@id/error_view_retry_button" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" layout_constraintVertical_chainStyle="packed" style="@style/PrimaryText.Medium" />
+    <o.HorizontalScrollView layout_gravity="center" id="@id/error_view_retry_button" layout_margin="@dimen/content_padding" layout_marginBottom="8.0dip" text="@string/label_retry" textAllCaps="false" layout_marginStart="8.0dip" layout_marginEnd="8.0dip" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/error_view_label" style="@style/NetflixButton.Flat" />
+</o.MenuInflater>

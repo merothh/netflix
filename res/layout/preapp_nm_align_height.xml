@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" background="@color/preapp_border" layout_width="wrap_content" layout_height="wrap_content" style="@style/Theme.Netflix.NonMember.widget.NoBackground"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView id="@id/preapp_video_image1" layout_width="wrap_content" layout_height="wrap_content" layout_margin="@dimen/preapp_widget_padding_small" src="@drawable/preapp_mobile_signin" scaleType="fitStart" adjustViewBounds="true" contentDescription="@string/preapp_video_image" />
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.Un layout_gravity="bottom" orientation="horizontal" layout_width="fill_parent" layout_height="wrap_content" layout_margin="@dimen/postplay_play_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.AssertionError layout_width="0.0dip" layout_height="1.0dip" layout_weight="1.0" />
+    <o.HorizontalScrollView id="@id/watch_credit" text="@string/label_postplay_seamless_credits" style="@style/NetflixButton.Grey" />
+    <o.HorizontalScrollView id="@id/post_play_play_button" text="@string/label_postplay_seamless_next" drawablePadding="@dimen/medium_padding" drawableStart="@drawable/APKTOOL_DUMMY_28d" paddingStart="@dimen/content_padding" paddingEnd="@dimen/double_padding" style="@style/NetflixButton.White" />
+</o.Un>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" background="@drawable/expanding_form_view_background" paddingTop="24.0dip" paddingBottom="32.0dip" layout_width="fill_parent" layout_height="wrap_content" paddingStart="40.0dip" paddingEnd="40.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textSize="18.0sp" id="@id/verifyAgeSubheader" layout_width="wrap_content" layout_height="wrap_content" />
+    <o.ImageSwitcher textColor="@color/grey" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="24.0dip" text="@string/dob_label" />
+    <o.Time id="@id/birthMonthDropdown" layout_width="250.0dip" layout_height="wrap_content" />
+    <o.StaticLayout id="@id/birthDateDropdown" layout_width="250.0dip" layout_height="wrap_content" />
+    <com.netflix.mediaclient.acquisition2.components.form2.ageVerify.BirthYearEditText id="@id/birthYearEditText" layout_width="250.0dip" layout_height="wrap_content" layout_marginTop="10.0dip" />
+    <o.ImageSwitcher id="@id/dobErrorText" visibility="invisible" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="4.0dip" text="@string/dob_error" style="@style/SignupErrorMessage.EditText" />
+    <o.ImageSwitcher textColor="@color/grey" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="14.0dip" text="@string/pin_label" />
+    <com.netflix.mediaclient.acquisition2.components.form2.maturityPinEntry.MaturityPinEntry id="@id/maturityPinEntry" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="6.0dip" />
+    <com.netflix.mediaclient.acquisition.view.NetflixSignupButton id="@id/verifyAgeCta" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="24.0dip" text="@string/verify_age_cta" />
+</LinearLayout>

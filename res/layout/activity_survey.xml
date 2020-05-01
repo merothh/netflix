@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout gravity="center" id="@id/fragment_container" background="@color/black" layout_width="fill_parent" layout_height="fill_parent" paddingStart="@dimen/survey_margin" paddingEnd="@dimen/survey_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

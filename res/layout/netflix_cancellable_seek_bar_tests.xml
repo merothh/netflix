@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout layout_width="fill_parent" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.Filterable id="@id/test_netflix_cancellable_seek_bar" layout_width="fill_parent" layout_height="wrap_content" />
+</LinearLayout>

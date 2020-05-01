@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" background="@color/contact_us_dialer_bg" paddingTop="@dimen/contact_us_dialer_pad_margin_top" paddingBottom="@dimen/contact_us_dialer_pad_margin_bottom" visibility="gone" layout_width="fill_parent" layout_height="fill_parent" layout_marginStart="@dimen/contact_us_dialer_pad_margin_left" layout_marginEnd="@dimen/contact_us_dialer_pad_margin_right"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher gravity="center" layout_gravity="center" id="@id/customerSupportDialpadStatus" visibility="gone" layout_marginBottom="15.0dip" text="00:00" style="@style/CustomerSupportDialerHeaderStatus" />
+    <TableLayout layout_gravity="center_horizontal" id="@id/dialpad" paddingTop="10.0dip" layout_width="fill_parent" layout_height="wrap_content" layout_weight="1.0">
+        <TableRow layout_weight="1.0">
+            <LinearLayout gravity="center" orientation="vertical" id="@id/one" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0">
+                <o.ImageSwitcher id="@id/button1" background="@drawable/selectable_dial_btn_bgd_with_press" clickable="true" text="@string/label_cs_dialer_pad_1" contentDescription="@string/description_cs_dialer_pad_1" style="@style/CustomerSupportDialerNumber" /> /> <o.ImageSwitcher text="@string/label_cs_dialer_pad_no_desc" contentDescription="@string/description_cs_dialer_pad_1" style="@style/CustomerSupportDialerNumberDescription" />
+            </LinearLayout>
+            <LinearLayout gravity="center" orientation="vertical" id="@id/two" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0">
+                <o.ImageSwitcher id="@id/button2" background="@drawable/selectable_dial_btn_bgd_with_press" clickable="true" text="@string/label_cs_dialer_pad_2" contentDescription="@string/description_cs_dialer_pad_2" style="@style/CustomerSupportDialerNumber" />
+                <o.ImageSwitcher text="@string/label_cs_dialer_pad_2_desc" contentDescription="@string/description_cs_dialer_pad_2" style="@style/CustomerSupportDialerNumberDescription" />
+            </LinearLayout>
+            <LinearLayout gravity="center" orientation="vertical" id="@id/three" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0">
+                <o.ImageSwitcher id="@id/button3" background="@drawable/selectable_dial_btn_bgd_with_press" clickable="true" text="@string/label_cs_dialer_pad_3" contentDescription="@string/description_cs_dialer_pad_3" style="@style/CustomerSupportDialerNumber" />
+                <o.ImageSwitcher text="@string/label_cs_dialer_pad_3_desc" contentDescription="@string/description_cs_dialer_pad_3" style="@style/CustomerSupportDialerNumberDescription" />
+            </LinearLayout>
+        </TableRow>
+        <TableRow layout_weight="1.0">
+            <LinearLayout gravity="center" orientation="vertical" id="@id/four" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0">
+                <o.ImageSwitcher id="@id/button4" text="@string/label_cs_dialer_pad_4" contentDescription="@string/description_cs_dialer_pad_4" style="@style/CustomerSupportDialerNumber" />
+                <o.ImageSwitcher text="@string/label_cs_dialer_pad_4_desc" contentDescription="@string/description_cs_dialer_pad_4" style="@style/CustomerSupportDialerNumberDescription" />
+            </LinearLayout>
+            <LinearLayout gravity="center" orientation="vertical" id="@id/five" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0">
+                <o.ImageSwitcher id="@id/button5" text="@string/label_cs_dialer_pad_5" contentDescription="@string/description_cs_dialer_pad_5" style="@style/CustomerSupportDialerNumber" />
+                <o.ImageSwitcher text="@string/label_cs_dialer_pad_5_desc" contentDescription="@string/description_cs_dialer_pad_5" style="@style/CustomerSupportDialerNumberDescription" />
+            </LinearLayout>
+            <LinearLayout gravity="center" orientation="vertical" id="@id/six" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0">
+                <o.ImageSwitcher id="@id/button6" text="@string/label_cs_dialer_pad_6" contentDescription="@string/description_cs_dialer_pad_6" style="@style/CustomerSupportDialerNumber" />
+                <o.ImageSwitcher text="@string/label_cs_dialer_pad_6_desc" contentDescription="@string/description_cs_dialer_pad_6" style="@style/CustomerSupportDialerNumberDescription" />
+            </LinearLayout>
+        </TableRow>
+        <TableRow layout_weight="1.0">
+            <LinearLayout gravity="center" orientation="vertical" id="@id/seven" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0">
+                <o.ImageSwitcher id="@id/button7" text="@string/label_cs_dialer_pad_7" contentDescription="@string/description_cs_dialer_pad_7" style="@style/CustomerSupportDialerNumber" />
+                <o.ImageSwitcher text="@string/label_cs_dialer_pad_7_desc" contentDescription="@string/description_cs_dialer_pad_7" style="@style/CustomerSupportDialerNumberDescription" />
+            </LinearLayout>
+            <LinearLayout gravity="center" orientation="vertical" id="@id/eight" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0">
+                <o.ImageSwitcher id="@id/button8" text="@string/label_cs_dialer_pad_8" contentDescription="@string/description_cs_dialer_pad_8" style="@style/CustomerSupportDialerNumber" />
+                <o.ImageSwitcher text="@string/label_cs_dialer_pad_8_desc" contentDescription="@string/description_cs_dialer_pad_8" style="@style/CustomerSupportDialerNumberDescription" />
+            </LinearLayout>
+            <LinearLayout gravity="center" orientation="vertical" id="@id/nine" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0">
+                <o.ImageSwitcher id="@id/button9" text="@string/label_cs_dialer_pad_9" contentDescription="@string/description_cs_dialer_pad_9" style="@style/CustomerSupportDialerNumber" />
+                <o.ImageSwitcher text="@string/label_cs_dialer_pad_9_desc" contentDescription="@string/description_cs_dialer_pad_9" style="@style/CustomerSupportDialerNumberDescription" />
+            </LinearLayout>
+        </TableRow>
+        <TableRow layout_weight="1.0">
+            <LinearLayout gravity="center" orientation="vertical" id="@id/star" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0">
+                <o.ImageSwitcher textColor="@color/contact_us_dialer_pad_primary_color" id="@id/buttonstar" text="@string/label_cs_dialer_pad_star_desc" contentDescription="@string/description_cs_dialer_pad_star" style="@style/CustomerSupportDialerNumber" />
+                <o.ImageSwitcher text="@string/label_cs_dialer_pad_no_desc" contentDescription="@string/description_cs_dialer_pad_star" style="@style/CustomerSupportDialerNumberDescription" />
+            </LinearLayout>
+            <LinearLayout gravity="center" orientation="vertical" id="@id/zero" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0">
+                <o.ImageSwitcher id="@id/button0" text="@string/label_cs_dialer_pad_0" contentDescription="@string/description_cs_dialer_pad_0" style="@style/CustomerSupportDialerNumber" />
+                <o.ImageSwitcher text="@string/label_cs_dialer_pad_0_desc" contentDescription="@string/description_cs_dialer_pad_0" style="@style/CustomerSupportDialerNumberDescription" />
+            </LinearLayout>
+            <LinearLayout gravity="center" orientation="vertical" id="@id/pound" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0">
+                <o.ImageSwitcher textColor="@color/contact_us_dialer_pad_primary_color" id="@id/buttonpound" text="@string/label_cs_dialer_pad_pound_desc" contentDescription="@string/description_cs_dialer_pad_pound" style="@style/CustomerSupportDialerNumber" />
+                <o.ImageSwitcher text="@string/label_cs_dialer_pad_no_desc" contentDescription="@string/description_cs_dialer_pad_pound" style="@style/CustomerSupportDialerNumberDescription" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

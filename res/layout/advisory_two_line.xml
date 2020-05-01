@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" id="@id/text_messages" layout_width="wrap_content" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textSize="@dimen/content_advisory_rating_text_size" textStyle="bold" textColor="@color/content_advisory_rating" id="@id/message" layout_width="wrap_content" layout_height="wrap_content" />
+    <o.ImageSwitcher textSize="@dimen/content_advisory_desc_text_size" textColor="@color/content_advisory_rating_desc" id="@id/secondary_message" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" />
+</LinearLayout>

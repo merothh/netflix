@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center_vertical" layout_width="fill_parent" layout_height="wrap_content" minHeight="?android:listPreferredItemHeightSmall" paddingStart="?android:listPreferredItemPaddingStart" paddingEnd="?android:listPreferredItemPaddingEnd"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout gravity="start|center" orientation="horizontal" id="@id/icon_frame" layout_width="wrap_content" layout_height="fill_parent" minWidth="58.0dip">
+        <ImageView id="@android:id/icon" layout_width="wrap_content" layout_height="wrap_content" layout_marginEnd="8.0dip" />
+    </LinearLayout>
+    <RelativeLayout paddingTop="16.0dip" paddingBottom="16.0dip" layout_width="wrap_content" layout_height="wrap_content" layout_weight="1.0">
+        <TextView textAppearance="?android:textAppearanceListItem" id="@android:id/title" layout_width="wrap_content" layout_height="wrap_content" singleLine="true" />
+        <TextView textAppearance="?android:textAppearanceListItemSecondary" textColor="?android:textColorSecondary" id="@android:id/summary" layout_width="wrap_content" layout_height="wrap_content" maxLines="10" layout_below="@android:id/title" layout_alignStart="@android:id/title" />
+    </RelativeLayout>
+    <LinearLayout gravity="end|center" orientation="vertical" id="@android:id/widget_frame" layout_width="wrap_content" layout_height="fill_parent" minWidth="58.0dip" />
+</LinearLayout>

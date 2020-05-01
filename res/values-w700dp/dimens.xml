@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="plan_selection_header_max_width">110.0dip</dimen>
+    <dimen name="plan_selection_values_width">415.0dip</dimen>
+</resources>

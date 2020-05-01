@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item state_pressed="true" drawable="@drawable/voice_search_btn_selected_bg" />
+    <item state_selected="true" drawable="@drawable/voice_search_btn_selected_bg" />
+    <item drawable="@drawable/voice_search_btn_default_bg" />
+</selector>

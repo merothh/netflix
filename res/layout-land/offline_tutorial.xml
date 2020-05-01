@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.GetChars orientation="vertical" layout_width="fill_parent" layout_height="wrap_content" cardCornerRadius="6.0dip" xmlns:card_view="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView layout_width="fill_parent" layout_height="wrap_content">
+        <FrameLayout background="@color/white" layout_width="fill_parent" layout_height="wrap_content">
+            <LinearLayout gravity="center_horizontal" orientation="vertical" paddingTop="10.0dip" layout_width="wrap_content" layout_height="wrap_content" paddingStart="30.0dip" paddingEnd="30.0dip">
+                <ImageView layout_width="80.0dip" layout_height="80.0dip" src="@drawable/fullscreen_tutorial_dl_icon" />
+                <o.ImageSwitcher textSize="30.0sp" textColor="@color/black" gravity="center" id="@id/title_text" paddingTop="@dimen/moderate_padding" layout_width="wrap_content" layout_height="wrap_content" fontFamily="sans-serif-light" />
+                <o.ImageSwitcher textSize="@dimen/text_medium" textColor="@color/black" gravity="center" id="@id/body_text" paddingTop="@dimen/moderate_padding" paddingBottom="6.0dip" layout_width="wrap_content" layout_height="wrap_content" paddingStart="@dimen/double_padding" paddingEnd="@dimen/double_padding" />
+                <include layout="@layout/offline_tutorial_buttons" />
+            </LinearLayout>
+            <include layout_width="wrap_content" layout_height="wrap_content" layout_marginStart="30.0dip" layout="@layout/offline_tutorial_banner" />
+        </FrameLayout>
+    </ScrollView>
+</o.GetChars>

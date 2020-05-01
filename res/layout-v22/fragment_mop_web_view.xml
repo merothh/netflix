@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" background="@color/signup_background_light" layout_width="fill_parent" layout_height="fill_parent" layout_marginTop="?actionBarSize" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.MenuInflater layout_gravity="center_horizontal" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="12.0dip" layout_marginBottom="12.0dip" layout_marginVertical="12.0dip">
+        <FrameLayout id="@id/backButton" background="?selectableItemBackground" padding="10.0dip" layout_width="wrap_content" layout_height="wrap_content" layout_constraintBottom_toBottomOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent">
+            <o.GridView layout_width="19.0dip" layout_height="16.0dip" src="@drawable/mop_webview_back_icon" />
+        </FrameLayout>
+        <o.ImageSwitcher id="@id/textView2" layout_width="wrap_content" layout_height="wrap_content" text="@string/title_mop_webview_set_up_payment" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toStartOf="@id/refreshButton" layout_constraintStart_toEndOf="@id/backButton" layout_constraintTop_toTopOf="parent" style="@style/SignupContextHeading2Text" />
+        <FrameLayout id="@id/refreshButton" background="?selectableItemBackground" padding="10.0dip" layout_width="wrap_content" layout_height="wrap_content" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toEndOf="parent" layout_constraintTop_toTopOf="parent">
+            <o.GridView layout_width="19.0dip" layout_height="16.0dip" src="@drawable/mop_webview_refresh_icon" />
+        </FrameLayout>
+    </o.MenuInflater>
+    <FrameLayout layout_gravity="center" background="@color/signup_grey84" paddingTop="1.0dip" style="@style/SignupVerifyCardWebView">
+        <include layout="@layout/webview_layout" />
+    </FrameLayout>
+</LinearLayout>

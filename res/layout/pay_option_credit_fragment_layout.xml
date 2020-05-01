@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout gravity="center" orientation="vertical" paddingLeft="16.0dip" paddingRight="16.0dip" layout_width="0.0dip" layout_height="0.0dip" layout_marginTop="40.0dip" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent">
+        <com.google.android.material.textfield.TextInputLayout gravity="center_horizontal" id="@id/firstNameLayout" layout_width="fill_parent" layout_height="wrap_content" layout_constraintEnd_toEndOf="parent" layout_constraintHorizontal_bias="0.0" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent">
+            <EditText id="@id/firstNameEditText" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="180.0dip" hint="First Name" ems="10" inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout gravity="center_horizontal" id="@id/lastNameLayout" layout_width="fill_parent" layout_height="wrap_content" layout_constraintEnd_toEndOf="parent" layout_constraintHorizontal_bias="0.0" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent">
+            <EditText id="@id/lastNameEditText" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="180.0dip" hint="Last Name" ems="10" inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout gravity="center_horizontal" id="@id/creditCardLayout" layout_width="fill_parent" layout_height="wrap_content" layout_constraintEnd_toEndOf="parent" layout_constraintHorizontal_bias="0.0" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent">
+            <EditText id="@id/creditCardEditText" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="180.0dip" hint="Card Number" ems="10" inputType="date" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout gravity="center_horizontal" id="@id/creditExpiryDateLayout" layout_width="fill_parent" layout_height="wrap_content" layout_constraintEnd_toEndOf="parent" layout_constraintHorizontal_bias="0.0" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent">
+            <EditText id="@id/creditExpiryDateEditText" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="180.0dip" hint="Expiration Date (MM/YY)" ems="10" maxLength="5" inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout gravity="center_horizontal" id="@id/zipCodeLayout" layout_width="fill_parent" layout_height="wrap_content" layout_constraintEnd_toEndOf="parent" layout_constraintHorizontal_bias="0.0" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent">
+            <EditText id="@id/zipCodeEditText" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="180.0dip" hint="Billing Zip Code" ems="10" maxLength="5" inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout gravity="center_horizontal" id="@id/cvvLayout" layout_width="fill_parent" layout_height="wrap_content" layout_constraintEnd_toEndOf="parent" layout_constraintHorizontal_bias="0.0" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent">
+            <EditText id="@id/cvvEditText" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="180.0dip" hint="Security Code (CVV)" ems="10" inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button enabled="false" id="@id/creditButton" layout_width="wrap_content" layout_height="wrap_content" text="Button" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+</o.MenuInflater>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView id="@id/scrollView" background="@color/signup_background_light" layout_width="fill_parent" layout_height="fill_parent" layout_marginTop="?actionBarSize" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout layout_gravity="center_horizontal" orientation="vertical" id="@id/registrationLayout" paddingTop="@dimen/signup_registration_padding_top" paddingBottom="@dimen/signup_context_padding_bottom" layout_height="wrap_content" paddingStart="@dimen/signup_context_padding_horizontal" paddingEnd="@dimen/signup_context_padding_horizontal" style="@style/FormLayout">
+        <com.netflix.mediaclient.acquisition.view.SignupBannerView id="@id/warningView" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="@dimen/signup_banner_spacing" style="@style/SignupWarningContainer" />
+        <com.netflix.mediaclient.acquisition.view.SignupBannerView id="@id/positiveView" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="@dimen/signup_banner_spacing" style="@style/SignupPositiveContainer" />
+        <ImageView id="@id/contextIcon" layout_width="wrap_content" layout_height="@dimen/signup_context_icon_height" layout_marginTop="@dimen/signup_fragment_padding_vertical" src="@drawable/payment_lock" style="@style/SignupContextIcon" />
+        <com.netflix.mediaclient.acquisition.view.SignupHeadingView id="@id/signupHeading" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="4.0dip" />
+        <androidx.recyclerview.widget.RecyclerView id="@id/paymentForm" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/moderate_padding" nestedScrollingEnabled="false" layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        <com.netflix.mediaclient.acquisition.view.TermsOfUseView id="@id/termsOfUse" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="20.0dip" />
+        <com.netflix.mediaclient.acquisition.view.NetflixSignupButton id="@id/ctaButton" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/signup_cta_button_vertical_margin" layout_marginBottom="@dimen/signup_cta_button_vertical_margin" />
+        <LinearLayout orientation="vertical" id="@id/additionalLinks" layout_width="fill_parent" layout_height="wrap_content">
+            <o.ImageSwitcher id="@id/resendCode" layout_width="fill_parent" layout_height="wrap_content" text="@string/link_dcb_text_me_again" style="@style/SignupAnchorLinkText" />
+            <o.ImageSwitcher id="@id/changeMop" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="10.0dip" style="@style/SignupAnchorLinkText" />
+        </LinearLayout>
+        <LinearLayout id="@id/resendingCode" visibility="gone" layout_width="fill_parent" layout_height="wrap_content">
+            <ProgressBar layout_gravity="center" id="@id/loadingView" layout_width="18.0dip" layout_height="18.0dip" indeterminate="true" indeterminateOnly="true" indeterminateDrawable="@drawable/signup_progress_spinner_medium" layout_marginEnd="10.0dip" elevation="@dimen/signup_cta_elevation" indeterminateTint="@color/signup_red" style="?android:progressBarStyle" />
+            <o.ImageSwitcher layout_width="wrap_content" layout_height="wrap_content" text="@string/verify_link_resending" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

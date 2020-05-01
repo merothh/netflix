@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" paddingTop="@dimen/medium_padding" paddingBottom="@dimen/medium_padding" layout_width="fill_parent" layout_height="wrap_content" layout_marginLeft="16.0dip" layout_marginRight="16.0dip" foreground="?selectableItemBackground"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView textColor="@color/grey50" id="@id/currentLocationLabel" paddingLeft="24.0dip" paddingRight="24.0dip" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" text="@string/current_location_label" />
+    <TextView textColor="@color/white" id="@id/text" paddingLeft="24.0dip" paddingRight="24.0dip" layout_width="fill_parent" layout_height="wrap_content" style="@style/SignupNativeBodyText.Medium" />
+</LinearLayout>

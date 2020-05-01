@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple color="#10000000"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid color="@android:color/white" />
+            <corners radius="4.0dip" />
+            <stroke width="2.0dip" color="@color/signup_payment_picker" />
+        </shape>
+    </item>
+</ripple>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen key="pref.screen"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory title="@string/label_pref_settings_category_playback" key="video.playback">
+        <com.netflix.mediaclient.ui.bandwidthsetting.BandwidthPreference icon="@drawable/ic_network_cellular" layout="@layout/settings_item_layout" title="@string/label_bw_header" key="nf.bw_save" summary="@string/label_bw_automatic_header" positiveButtonText="@string/label_ok" negativeButtonText="@string/label_cancel" />
+    </PreferenceCategory>
+    <PreferenceCategory title="@string/label_pref_settings_category_notification" key="pref.notification">
+        <com.netflix.mediaclient.ui.settings.NetflixSwitchPreference icon="@drawable/ic_notifications" title="@string/label_pref_settings_allow_notifications" key="nf_notification_enable" defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory title="@string/label_pref_settings_category_downloads" key="pref.downloads">
+        <com.netflix.mediaclient.ui.settings.NetflixSwitchPreference icon="@drawable/ic_network_wifi" title="@string/label_pref_settings_wifi_warning_title" key="pref.downloads.wifi_only" />
+        <Preference icon="@drawable/ic_smart_downloads" title="@string/label_pref_settings_smart_downloads" key="pref.downloads.smart" />
+        <ListPreference icon="@drawable/ic_download_video_quality" layout="@layout/settings_item_layout" title="@string/offline_message_quality_title" key="pref.downloads.video_quality" summary="@string/offline_message_quality_standard" negativeButtonText="@string/label_cancel" />
+        <Preference icon="@drawable/ic_internal_storage" title="@string/offline_message_download_location" key="pref.downloads.storage_selector" />
+        <Preference icon="@drawable/ic_delete_garbage_can" title="@string/label_pref_settings_downloads_remove_all" key="pref.downloads.remove_all" />
+        <com.netflix.mediaclient.ui.settings.StoragePreference layout="@layout/storage" />
+    </PreferenceCategory>
+    <PreferenceCategory title="@string/label_about">
+        <Preference icon="@drawable/ic_device_android_phone" title="@string/label_device" key="ui.about.device" />
+        <Preference icon="@drawable/ic_account_profile" title="@string/label_account" key="ui.account" widgetLayout="@layout/exit_app_icon" />
+    </PreferenceCategory>
+    <PreferenceCategory title="@string/label_diagnostics" key="ui.diagnosis">
+        <Preference icon="@drawable/ic_check_network" title="@string/label_check_network" key="ui.diagnosis.network" />
+        <Preference icon="@drawable/ic_playback_specification" title="@string/label_playback_specification" key="ui.diagnosis.playback_specification" />
+        <Preference icon="@drawable/ic_internet_speed_test" title="@string/label_internet_speed_test" key="ui.diagnosis.speed.test" widgetLayout="@layout/exit_app_icon" />
+        <Preference icon="@drawable/ic_download_icon" title="@string/button_message_download" key="ui.diagnosis.download" />
+    </PreferenceCategory>
+    <PreferenceCategory title="@string/label_pref_settings_category_legal">
+        <Preference icon="@drawable/ic_legal_document" title="@string/label_open_source_licenses" key="@string/settings_key_open_source_licenses" />
+        <Preference icon="@drawable/ic_legal_document" title="@string/label_pref_settings_privacy_policy" key="pref.privacy" widgetLayout="@layout/exit_app_icon" />
+        <Preference icon="@drawable/ic_legal_document" title="@string/label_pref_settings_privacy_policy_cookies" key="pref.privacy.cookies" widgetLayout="@layout/exit_app_icon" />
+        <Preference icon="@drawable/ic_legal_document" title="@string/label_pref_settings_legal_terms_of_use" key="pref.terms" widgetLayout="@layout/exit_app_icon" />
+    </PreferenceCategory>
+    <PreferenceCategory title="@string/label_pref_settings_category_qa" key="pref.qa.debugonly">
+        <Preference icon="@drawable/ic_settings_qa_debug" key="ui.about.debug" />
+        <Preference icon="@drawable/ic_settings_qa_debug" title="@string/label_site" key="ui.site" summary="@string/label_site_summary" />
+        <Preference icon="@drawable/ic_settings_qa_debug" title="@string/label_reset_uibootloader" key="ui.reset_bootloader" summary="@string/label_reset_uibootloader_summary" />
+        <Preference icon="@drawable/ic_settings_qa_debug" title="@string/label_reset_license_sync_time" key="ui.reset_license_sync_time" summary="@string/label_reset_license_sync_time_summary" />
+        <Preference icon="@drawable/ic_settings_qa_debug" title="@string/label_bugreport" key="ui.bugreport" summary="@string/label_bugreport_summary" />
+        <com.netflix.mediaclient.ui.settings.NetflixSwitchPreference icon="@drawable/ic_settings_qa_debug" title="@string/label_playeroverlay_enable" key="ui.playeroverlay" summary="@string/label_playeroverlay_summary" defaultValue="false" />
+        <ListPreference icon="@drawable/ic_settings_qa_debug" layout="@layout/settings_item_layout" title="@string/label_select_decoder" key="ui.videoDecoderFormat" summary="@string/label_select_video_format" />
+        <com.netflix.mediaclient.ui.settings.NetflixSwitchPreference icon="@drawable/ic_settings_qa_debug" title="@string/label_force_swvideo_title" key="ui.forceswdecoder" defaultValue="false" />
+        <EditTextPreference icon="@drawable/ic_settings_qa_debug" title="@string/label_bootParams" key="ui.bootParams" summary="@string/label_bootParams_summary" />
+        <EditTextPreference icon="@drawable/ic_settings_qa_debug" title="@string/label_castappid_title" key="ui.castAppId" summary="@string/label_castappid_summary" />
+        <com.netflix.mediaclient.ui.settings.NetflixSwitchPreference icon="@drawable/ic_settings_qa_debug" title="@string/label_allow_picture_in_picture" key="ui.allowpip" defaultValue="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

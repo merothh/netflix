@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout id="@id/avatars_grid_parent" layout_width="fill_parent" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/loading_and_error_inset" />
+    <GridView id="@id/grid_view" listSelector="@color/transparent" style="@style/match" />
+</FrameLayout>

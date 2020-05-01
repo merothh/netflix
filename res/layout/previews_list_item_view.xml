@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.DayPickerPagerAdapter id="@id/previews_box_art" layout_width="fill_parent" layout_height="wrap_content" src="@drawable/avd_lolomo_row_dark_circle_placeholder" aiv_square="true" />
+    <o.MotionEvent orientation="horizontal" id="@id/previews_title_treatment_guideline" layout_width="wrap_content" layout_height="wrap_content" layout_constraintGuide_percent="0.6" />
+    <o.MotionEvent orientation="horizontal" id="@id/previews_title_treatment_guideline_bottom" layout_width="wrap_content" layout_height="wrap_content" layout_constraintGuide_percent="0.95" />
+    <o.GridView id="@id/previews_title_treatment" layout_width="0.0dip" layout_height="0.0dip" scaleType="fitCenter" adjustViewBounds="true" paddingStart="@dimen/medium_large_padding" paddingEnd="@dimen/medium_large_padding" layout_constraintBottom_toTopOf="@id/previews_title_treatment_guideline_bottom" layout_constraintEnd_toEndOf="@id/previews_box_art" layout_constraintStart_toStartOf="@id/previews_box_art" layout_constraintTop_toBottomOf="@id/previews_title_treatment_guideline" />
+</o.MenuInflater>

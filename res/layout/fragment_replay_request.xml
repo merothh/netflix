@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" background="@color/signup_background_light" layout_width="fill_parent" layout_height="fill_parent" layout_marginTop="?actionBarSize"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher id="@id/headerTitle" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="20.0dip" layout_marginBottom="40.0dip" text="@string/title_verifying_your_card" textAlignment="center" style="@style/SignupContextHeadingText" />
+    <ProgressBar layout_gravity="center" id="@id/loading_view" padding="@dimen/double_padding" layout_width="wrap_content" layout_height="wrap_content" indeterminate="true" indeterminateOnly="true" style="?android:progressBarStyle" />
+</LinearLayout>

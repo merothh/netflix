@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" id="@id/buttons" layout_width="fill_parent" layout_height="wrap_content" animateLayoutChanges="true" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.HorizontalScrollView id="@id/upgrade_button" focusable="true" layout_width="fill_parent" layout_height="wrap_content" autoSizeMaxTextSize="@dimen/text_small" autoSizeMinTextSize="@dimen/text_nano" autoSizeTextType="uniform" style="@style/NetflixButton.Red" />
+    <o.HorizontalScrollView id="@id/retry_button" focusable="true" layout_width="fill_parent" layout_height="wrap_content" text="@string/plan_upgrade_retry_all_caps" autoSizeMaxTextSize="@dimen/text_small" autoSizeMinTextSize="@dimen/text_nano" autoSizeTextType="uniform" style="@style/NetflixButton.Outline.Transparent" />
+    <o.HorizontalScrollView id="@id/cancel_button" focusable="true" layout_width="fill_parent" layout_height="wrap_content" text="@string/plan_upgrade_cancel_all_caps" autoSizeMaxTextSize="@dimen/text_small" autoSizeMinTextSize="@dimen/text_nano" autoSizeTextType="uniform" style="@style/NetflixButton.Outline.Transparent" />
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="122.0dip" android:width="360.0dip" android:viewportWidth="360.0" android:viewportHeight="122.0" xmlns:aapt="http://schemas.android.com/aapt"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:name="episode_title" android:fillColor="?dp_progressive_loader_color" android:pathData="M151,72L247,72A2,2 0,0 1,249 74L249,82A2,2 0,0 1,247 84L151,84A2,2 0,0 1,149 82L149,74A2,2 0,0 1,151 72z" android:strokeColor="#00000000" android:strokeWidth="1.0" android:strokeAlpha="0.1" android:fillAlpha="0.1" android:fillType="evenOdd" />
+    <path android:name="episode_info" android:fillColor="?dp_progressive_loader_color" android:pathData="M151,90.5L177,90.5A2,2 0,0 1,179 92.5L179,100.5A2,2 0,0 1,177 102.5L151,102.5A2,2 0,0 1,149 100.5L149,92.5A2,2 0,0 1,151 90.5z" android:strokeColor="#00000000" android:strokeWidth="1.0" android:strokeAlpha="0.1" android:fillAlpha="0.1" android:fillType="evenOdd" />
+    <path android:name="episode_image" android:fillColor="?dp_progressive_loader_color" android:pathData="M10,49h129v73h-129z" android:strokeColor="#00000000" android:strokeWidth="1.0" android:strokeAlpha="0.1" android:fillAlpha="0.1" android:fillType="evenOdd" />
+    <path android:name="tab_name" android:fillColor="?dp_progressive_loader_color" android:pathData="M12,13L80,13A2,2 0,0 1,82 15L82,28A2,2 0,0 1,80 30L12,30A2,2 0,0 1,10 28L10,15A2,2 0,0 1,12 13z" android:strokeColor="#00000000" android:strokeWidth="1.0" android:strokeAlpha="0.1" android:fillAlpha="0.1" android:fillType="evenOdd" />
+    <path android:name="tab_border" android:fillColor="#ffe50914" android:pathData="M10,2h72v4h-72z" android:strokeColor="#00000000" android:strokeWidth="1.0" android:fillType="evenOdd" />
+    <path android:name="indicator_border" android:fillColor="#00000000" android:pathData="M0,1L375,1" android:strokeColor="?dp_tabs_divider_color" android:strokeWidth="2.0" android:strokeLineCap="square" android:fillType="evenOdd" />
+</vector>

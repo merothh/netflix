@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" clickable="true" layout_width="fill_parent" layout_height="wrap_content" importantForAccessibility="no" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout gravity="center_vertical" id="@id/alert" paddingTop="10.0dip" paddingBottom="10.0dip" layout_width="fill_parent" layout_height="wrap_content" paddingStart="13.0dip" paddingEnd="13.0dip" style="@style/UmaBannerThemedContainer">
+        <LinearLayout gravity="center_vertical" orientation="horizontal" layout_height="wrap_content" style="@style/UmaBannerThemedIconMessageContainer">
+            <o.GridView id="@id/icon" layout_width="44.0dip" layout_height="44.0dip" importantForAccessibility="no" />
+            <o.ImageSwitcher textSize="@dimen/uma_themed_banner_body_text" textColor="@color/white" id="@id/body" layout_width="fill_parent" layout_height="wrap_content" layout_marginStart="12.0dip" style="@style/NetflixMediumFont" />
+        </LinearLayout>
+        <o.DateTimeView id="@id/cta_container" layout_width="wrap_content" layout_height="wrap_content" layout_marginBottom="1.0dip" layout_marginStart="56.0dip" fl_horizontalSpacing="8.0dip" fl_verticalSpacing="8.0dip" style="@style/UmaBannerThemedCtaContainer" />
+    </LinearLayout>
+    <android.widget.Space id="@id/dim_space" visibility="gone" layout_width="fill_parent" layout_height="0.0dip" layout_weight="1.0" />
+</LinearLayout>

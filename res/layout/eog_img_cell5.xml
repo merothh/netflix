@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout gravity="center_horizontal" orientation="horizontal" id="@id/eogImagepHeader" layout_width="fill_parent" layout_height="wrap_content" layout_below="@id/eogLpSkipHeader">
+        <ImageView layout_width="@dimen/eog_pp_img_gradient_width" layout_height="@dimen/eog_lp_cell5_img_ht" src="@drawable/eog_img_sidebar_gradient" />
+        <View layout_width="@dimen/eog_pp_img_spacing" layout_height="@dimen/eog_lp_cell5_img_ht" />
+        <o.BaseAdapter id="@id/eog_img1" layout_width="@dimen/eog_lp_cell5_img_wd" layout_height="@dimen/eog_lp_cell5_img_ht" scaleType="centerCrop" adjustViewBounds="true" />
+        <View layout_width="@dimen/eog_pp_img_spacing" layout_height="160.0dip" />
+        <o.BaseAdapter id="@id/eog_img2" layout_width="@dimen/eog_lp_cell5_img_wd" layout_height="@dimen/eog_lp_cell5_img_ht" scaleType="centerCrop" adjustViewBounds="true" />
+        <View layout_width="@dimen/eog_pp_img_spacing" layout_height="@dimen/eog_lp_cell5_img_ht" />
+        <ImageView layout_width="@dimen/eog_pp_img_gradient_width" layout_height="@dimen/eog_lp_cell5_img_ht" src="@drawable/eog_img_sidebar_gradient_right" />
+    </LinearLayout>
+</merge>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">com</domain>
+        <domain includeSubdomains="true">net</domain>
+        <domain includeSubdomains="true">gov</domain>
+        <domain includeSubdomains="true">edu</domain>
+        <domain includeSubdomains="true">org</domain>
+        <domain includeSubdomains="true">mil</domain>
+    </domain-config>
+</network-security-config>

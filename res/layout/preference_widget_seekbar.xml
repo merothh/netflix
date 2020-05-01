@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center_vertical" clipChildren="false" clipToPadding="false" layout_width="fill_parent" layout_height="wrap_content" minHeight="?android:listPreferredItemHeight" paddingEnd="?android:scrollbarSize"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView layout_gravity="center" id="@android:id/icon" layout_width="wrap_content" layout_height="wrap_content" minWidth="@dimen/preference_icon_minWidth" />
+    <RelativeLayout clipChildren="false" clipToPadding="false" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="6.0dip" layout_marginBottom="6.0dip" layout_weight="1.0" layout_marginStart="16.0dip" layout_marginEnd="8.0dip">
+        <TextView textAppearance="?android:textAppearanceMedium" ellipsize="marquee" id="@android:id/title" fadingEdge="horizontal" layout_width="wrap_content" layout_height="wrap_content" singleLine="true" />
+        <TextView textAppearance="?android:textAppearanceSmall" textColor="?android:textColorSecondary" id="@android:id/summary" layout_width="wrap_content" layout_height="wrap_content" maxLines="4" layout_below="@android:id/title" layout_alignStart="@android:id/title" />
+        <o.StrictMath clipChildren="false" clipToPadding="false" layout_width="fill_parent" layout_height="wrap_content" layout_below="@android:id/summary" layout_alignStart="@android:id/title">
+            <SeekBar id="@id/seekbar" background="@null" focusable="false" clickable="false" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0" paddingStart="@dimen/preference_seekbar_padding_start" paddingEnd="@dimen/preference_seekbar_padding_end" />
+            <TextView textAppearance="?android:textAppearanceMedium" ellipsize="marquee" gravity="center|right" id="@id/seekbar_value" fadingEdge="horizontal" layout_width="@dimen/preference_seekbar_value_width" layout_height="fill_parent" singleLine="true" fontFamily="sans-serif-condensed" />
+        </o.StrictMath>
+    </RelativeLayout>
+</LinearLayout>

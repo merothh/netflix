@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout layout_width="fill_parent" layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.GridView id="@id/titleImage" layout_width="fill_parent" layout_height="wrap_content" adjustViewBounds="true" roundedCornerRadius="@dimen/onramp_title_corner_radius" />
+    <FrameLayout id="@id/selectedOverlay" background="@drawable/onramp_title_selected_overlay_background" visibility="gone" layout_width="fill_parent" layout_height="fill_parent">
+        <o.GridView layout_gravity="center" layout_width="40.0dip" layout_height="40.0dip" src="@drawable/onramp_thumbs_up" />
+    </FrameLayout>
+</FrameLayout>

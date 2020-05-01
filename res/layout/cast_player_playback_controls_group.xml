@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout id="@id/cast_player_controls_group" layout_width="fill_parent" layout_height="wrap_content" layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout gravity="center_horizontal" layout_gravity="center_horizontal" orientation="horizontal" id="@id/cast_player_aux_controls" layout_width="fill_parent" layout_height="@dimen/cast_player_controls_group_height" layout_centerHorizontal="true"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView id="@id/cast_player_episodes_btn_expanded" layout_width="0.0dip" layout_height="fill_parent" src="@drawable/APKTOOL_DUMMY_23b" layout_weight="1.0" contentDescription="@string/accesibility_btnEpisodes" style="@style/CastPlayerActionButton" />
+        <ImageView id="@id/cast_player_volume_btn" layout_width="0.0dip" layout_height="fill_parent" src="@drawable/APKTOOL_DUMMY_408" layout_weight="1.0" contentDescription="@string/accesibility_btnVolume" style="@style/CastPlayerActionButton" />
+        <ImageView id="@id/cast_player_language_btn_expanded" layout_width="0.0dip" layout_height="fill_parent" src="@drawable/APKTOOL_DUMMY_1dd" layout_weight="1.0" contentDescription="@string/accesibility_btnLanguage" style="@style/CastPlayerActionButton" />
+        <ImageView id="@id/cast_player_device_name_group" layout_width="0.0dip" layout_height="fill_parent" src="@drawable/APKTOOL_DUMMY_2cb" layout_weight="1.0" style="@style/CastPlayerActionButton" />
+    </LinearLayout>
+    <RelativeLayout id="@id/cast_player_seek_bar_group" layout_width="fill_parent" layout_height="@dimen/cast_player_controls_group_height" baselineAligned="false" layout_below="@id/cast_player_aux_controls">
+        <include layout_width="100.0dip" layout_height="wrap_content" layout_toLeftOf="@id/cast_player_seek_bar_remaining_time" layout_toRightOf="@id/cast_player_seek_bar_current_time" layout_centerHorizontal="true" layout_centerVertical="true" layout="@layout/cast_player_seek_bar" />
+        <TextView textColor="@color/text_secondary_dark" id="@id/cast_player_seek_bar_current_time" paddingTop="5.0dip" layout_width="wrap_content" layout_height="@dimen/cast_player_seek_bar_time_view_height" layout_marginLeft="@dimen/rdp_content_padding" layout_marginRight="@dimen/rdp_content_padding" singleLine="true" layout_centerVertical="true" style="@style/SecondaryText.Micro" />
+        <TextView textColor="@color/text_secondary_dark" id="@id/cast_player_seek_bar_remaining_time" paddingTop="5.0dip" layout_width="wrap_content" layout_height="@dimen/cast_player_seek_bar_time_view_height" layout_marginLeft="@dimen/rdp_content_padding" layout_marginRight="@dimen/rdp_content_padding" singleLine="true" layout_centerVertical="true" layout_alignParentEnd="true" style="@style/SecondaryText.Micro" />
+    </RelativeLayout>
+    <RelativeLayout id="@id/cast_player_playcard_controls_group" layout_width="fill_parent" layout_height="wrap_content" layout_below="@id/cast_player_seek_bar_group" layout_centerHorizontal="true">
+        <ImageView id="@id/cast_player_play_pause_btn_expanded" src="@drawable/APKTOOL_DUMMY_406" layout_centerInParent="true" contentDescription="@string/accesibility_btnPlayPause" style="@style/CastPlayerPlayButton" />
+        <o.DayPickerViewPager textSize="24.0dip" id="@id/cast_player_skip_back_btn_expanded" text="@string/icon_font_skip_back_30" layout_toLeftOf="@id/cast_player_play_pause_btn_expanded" layout_centerVertical="true" contentDescription="@string/accesibility_btnSkipBack" style="@style/IconFontButton" />
+        <ImageView id="@id/cast_player_stop_btn" src="@drawable/APKTOOL_DUMMY_407" layout_toRightOf="@id/cast_player_play_pause_btn_expanded" layout_centerVertical="true" contentDescription="@string/accesibility_btnStop" style="@style/CastPlayerActionButton" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout layout_gravity="center" orientation="vertical" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout orientation="horizontal" background="@color/preapp_border" layout_width="fill_parent" layout_height="0.0px" layout_weight="4.0">
+        <RelativeLayout id="@id/preapp_image_group1" visibility="visible" layout_width="0.0px" layout_height="fill_parent" layout_marginTop="@dimen/preapp_widget_padding" layout_weight="1.0" layout_marginStart="@dimen/preapp_widget_padding" layout_marginEnd="@dimen/preapp_widget_padding">
+            <ImageView id="@id/preapp_video_image1" layout_width="fill_parent" layout_height="wrap_content" src="@drawable/preapp_static1" scaleType="centerCrop" adjustViewBounds="true" contentDescription="@string/preapp_video_image" />
+            <ImageView gravity="center" id="@id/preapp_play1" focusable="true" visibility="gone" src="@drawable/ic_play_svg" layout_centerInParent="true" style="@style/preapp_playIcon_big" />
+            <ImageView id="@id/preapp_gradient1" visibility="gone" layout_width="fill_parent" layout_height="8.0dip" src="@drawable/preapp_image_gradient" layout_alignBottom="@id/preapp_video_image1" />
+            <LinearLayout layout_gravity="bottom" orientation="vertical" id="@id/preapp_progress_group1" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_alignBottom="@id/preapp_video_image1" layout_marginStart="@dimen/preapp_widget_padding" layout_marginEnd="@dimen/preapp_widget_padding">
+                <TextView textColor="@color/brand_white" ellipsize="end" id="@id/preapp_video_title1" layout_width="wrap_content" layout_height="wrap_content" maxLines="1" style="@style/PrimaryText.Micro" />
+                <ProgressBar id="@id/preapp_video_progress1" layout_width="fill_parent" layout_height="2.0dip" layout_marginBottom="@dimen/preapp_widget_padding_medium" max="100" indeterminateOnly="false" progressDrawable="@drawable/preapp_progress_bar" style="?android:progressBarStyleHorizontal" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout id="@id/preapp_image_group2" visibility="visible" layout_width="0.0px" layout_height="fill_parent" layout_marginTop="@dimen/preapp_widget_padding" layout_weight="1.0" layout_marginEnd="@dimen/preapp_widget_padding">
+            <ImageView id="@id/preapp_video_image2" layout_width="fill_parent" layout_height="wrap_content" src="@drawable/preapp_static2" scaleType="centerCrop" adjustViewBounds="true" contentDescription="@string/preapp_video_image" />
+            <ImageView gravity="center" id="@id/preapp_play2" focusable="true" visibility="gone" src="@drawable/ic_play_svg" layout_centerInParent="true" style="@style/preapp_playIcon_big" />
+            <ImageView id="@id/preapp_gradient2" visibility="gone" layout_width="fill_parent" layout_height="8.0dip" src="@drawable/preapp_image_gradient" layout_alignBottom="@id/preapp_video_image2" />
+            <LinearLayout layout_gravity="bottom" orientation="vertical" id="@id/preapp_progress_group2" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_alignBottom="@id/preapp_video_image2" layout_marginStart="@dimen/preapp_widget_padding" layout_marginEnd="@dimen/preapp_widget_padding">
+                <TextView textColor="@color/brand_white" ellipsize="end" id="@id/preapp_video_title2" layout_width="wrap_content" layout_height="wrap_content" maxLines="1" style="@style/PrimaryText.Micro" />
+                <ProgressBar id="@id/preapp_video_progress2" layout_width="fill_parent" layout_height="2.0dip" layout_marginBottom="@dimen/preapp_widget_padding_medium" max="100" indeterminateOnly="false" progressDrawable="@drawable/preapp_progress_bar" style="?android:progressBarStyleHorizontal" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout id="@id/preapp_image_group3" visibility="visible" layout_width="0.0px" layout_height="fill_parent" layout_marginTop="@dimen/preapp_widget_padding" layout_weight="1.0" layout_marginEnd="@dimen/preapp_widget_padding">
+            <ImageView id="@id/preapp_video_image3" layout_width="fill_parent" layout_height="wrap_content" src="@drawable/preapp_static3" scaleType="centerCrop" adjustViewBounds="true" contentDescription="@string/preapp_video_image" />
+            <ImageView gravity="center" id="@id/preapp_play3" focusable="true" visibility="gone" src="@drawable/ic_play_svg" layout_centerInParent="true" style="@style/preapp_playIcon_big" />
+            <ImageView id="@id/preapp_gradient3" visibility="gone" layout_width="fill_parent" layout_height="8.0dip" src="@drawable/preapp_image_gradient" layout_alignBottom="@id/preapp_video_image3" />
+            <LinearLayout layout_gravity="bottom" orientation="vertical" id="@id/preapp_progress_group3" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_alignBottom="@id/preapp_video_image3" layout_marginStart="@dimen/preapp_widget_padding" layout_marginEnd="@dimen/preapp_widget_padding">
+                <TextView textColor="@color/brand_white" ellipsize="end" id="@id/preapp_video_title3" layout_width="wrap_content" layout_height="wrap_content" maxLines="1" style="@style/PrimaryText.Micro" />
+                <ProgressBar id="@id/preapp_video_progress3" layout_width="fill_parent" layout_height="2.0dip" layout_marginBottom="@dimen/preapp_widget_padding_medium" max="100" indeterminateOnly="false" progressDrawable="@drawable/preapp_progress_bar" style="?android:progressBarStyleHorizontal" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout orientation="horizontal" background="@color/preapp_border" padding="@dimen/preapp_widget_padding_medium" layout_width="fill_parent" layout_height="wrap_content">
+        <ImageView id="@id/preapp_app_logo" layout_width="72.0dip" layout_height="26.0dip" src="@drawable/netflix_splash" layout_marginStart="@dimen/preapp_widget_padding_medium" layout_marginEnd="@dimen/preapp_widget_padding" />
+        <TextView textColor="@color/brand_white" ellipsize="end" gravity="end" id="@id/preapp_list_name" layout_width="fill_parent" layout_height="wrap_content" maxLines="1" drawablePadding="@dimen/preapp_widget_padding" drawableEnd="@drawable/APKTOOL_DUMMY_346" style="@style/PrimaryText.Small" />
+    </LinearLayout>
+</LinearLayout>

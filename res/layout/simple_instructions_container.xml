@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="start|center|top" orientation="vertical" id="@id/simple_instructions_container" visibility="visible" style="@style/match"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textSize="20.0sp" textColor="?android:textColorPrimary" id="@id/instructions_title" layout_width="wrap_content" layout_height="wrap_content" style="@style/NetflixBoldFont" />
+    <o.ImageSwitcher textSize="15.0sp" textColor="?android:textColorSecondary" id="@id/instructions_subtext" paddingTop="5.0dip" layout_width="wrap_content" layout_height="wrap_content" style="@style/NetflixLightFont" />
+</LinearLayout>

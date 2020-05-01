@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout id="@id/toolbar" background="?bottomNavBarBackgroundColor" layout_width="fill_parent" layout_height="?actionBarSize" paddingStart="8.0dip" paddingEnd="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.GridLayout layout_gravity="center_vertical" id="@id/icon" layout_width="32.0dip" layout_height="32.0dip" src="@drawable/ic_icon_bell_outline" style="@style/NetflixButton.Flat.Borderless" />
+    <o.ImageSwitcher textSize="14.0sp" textColor="#ffffffff" gravity="start" layout_gravity="center_vertical" id="@id/title" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0" paddingStart="8.0dip" paddingEnd="8.0dip" style="@style/NetflixMediumFont" />
+    <o.GridLayout layout_gravity="center_vertical" id="@id/caret" layout_width="24.0dip" layout_height="24.0dip" src="@drawable/ic_chevron_right" tint="#ffffffff" />
+</LinearLayout>

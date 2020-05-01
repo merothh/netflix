@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.HorizontalScrollView ellipsize="end" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="@dimen/pre_release_play_btn_padding" text="@string/label_play_trailer" maxLines="1" contentDescription="@string/label_play_trailer" drawableStart="@drawable/ic_play_button" layout_marginStart="@dimen/content_padding" style="@style/NetflixButton.White"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

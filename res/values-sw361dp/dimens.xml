@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="our_story_heading">32.0dip</dimen>
+    <dimen name="our_story_heading_max_height">64.0dip</dimen>
+    <dimen name="our_story_sub_heading">19.0dip</dimen>
+    <dimen name="signup_cta_button_our_story">16.0dip</dimen>
+</resources>

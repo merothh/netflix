@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater layout_width="wrap_content" layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout id="@id/image_group" layout_width="fill_parent" layout_height="wrap_content" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent">
+        <o.GridView layout_gravity="center" id="@id/main_image" focusable="true" layout_width="fill_parent" layout_height="fill_parent" adjustViewBounds="true" foreground="@drawable/selectable_item_foreground" />
+        <ImageView gravity="bottom" layout_gravity="bottom" id="@id/top_image_gradient" background="@drawable/dp_hero_gradient" layout_height="60.0dip" contentDescription="@string/label_pref_settings_category_playback" style="@style/match" />
+    </FrameLayout>
+    <LinearLayout gravity="center_horizontal" orientation="vertical" id="@id/details_layout" paddingBottom="@dimen/narrow_content_padding" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="@dimen/narrow_content_padding" paddingStart="16.0dip" paddingEnd="16.0dip" layout_constraintBottom_toBottomOf="@id/image_group" layout_constraintEnd_toEndOf="@id/image_group" layout_constraintStart_toStartOf="@id/image_group">
+        <o.GridView id="@id/title_image" scaleType="fitCenter" style="@style/wrap" />
+        <o.ImageSwitcher textStyle="bold" ellipsize="end" id="@id/video_details_title" layout_marginBottom="10.0dip" maxLines="2" style="@style/PrimaryText.XLarge" />
+        <LinearLayout orientation="horizontal" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="13.0dip" layout_marginBottom="14.0dip">
+            <o.ImageSwitcher textSize="@dimen/text_micro" textColor="@color/grey70" id="@id/kids_basic_info_certification" background="@drawable/character_certification_bg" paddingTop="2.0dip" paddingBottom="2.0dip" layout_width="wrap_content" layout_height="wrap_content" singleLine="true" paddingStart="6.0dip" paddingEnd="6.0dip" layout_marginEnd="15.0dip" />
+            <o.ImageSwitcher textSize="16.0sp" textColor="@color/brand_white" ellipsize="end" id="@id/kids_basic_supplemental_info" layout_width="400.0dip" layout_height="wrap_content" singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView layout_gravity="center" id="@id/play_icon" focusable="true" layout_width="@dimen/details_play_button_size" layout_height="@dimen/details_play_button_size" layout_marginTop="10.0dip" src="@drawable/ic_play_svg" focusedByDefault="true" layout_constraintBottom_toBottomOf="@id/image_group" layout_constraintEnd_toEndOf="@id/image_group" layout_constraintStart_toStartOf="@id/image_group" layout_constraintTop_toTopOf="@id/image_group" />
+    <FrameLayout id="@id/video_details_footer" layout_width="0.0dip" layout_height="wrap_content" layout_constraintEnd_toEndOf="@id/image_group" layout_constraintStart_toStartOf="@id/image_group" layout_constraintTop_toBottomOf="@id/image_group" />
+</o.MenuInflater>

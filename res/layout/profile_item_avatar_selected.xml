@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.GridView id="@id/avatar" background="@drawable/selected_profile_border" padding="@dimen/selected_stroke_width" layout_width="fill_parent" layout_height="wrap_content" viewAspectRatio="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

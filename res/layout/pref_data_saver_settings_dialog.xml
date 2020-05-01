@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView orientation="vertical" layout_width="fill_parent" layout_height="wrap_content" fillViewport="true" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout orientation="vertical" paddingLeft="@dimen/bw_generic_24_margin" paddingRight="@dimen/bw_generic_24_margin" layout_width="fill_parent" layout_height="wrap_content">
+        <RelativeLayout layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/bw_generic_16_margin" layout_marginBottom="@dimen/bw_generic_16_margin">
+            <o.ImageSwitcher id="@id/id_bw_automatic_header" text="@string/label_bw_automatic_header" layout_alignParentStart="true" style="@style/PrimaryText.SmallMedium" />
+            <androidx.appcompat.widget.SwitchCompat theme="@style/SettingsSwitch" id="@id/id_bw_automatic_switch" layout_width="wrap_content" layout_height="fill_parent" layout_toEndOf="@id/id_bw_automatic_header" layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <RadioGroup id="@id/id_bw_radioGroup" layout_width="fill_parent" layout_height="fill_parent">
+            <RadioButton textAppearance="@style/PrimaryText.SmallMedium" textColor="@color/selectable_text_gray_to_dark" id="@id/id_bw_rb_off" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="@dimen/medium_padding" layout_marginBottom="@dimen/medium_padding" checked="false" text="@string/label_bw_off_header" paddingStart="@dimen/moderate_padding" paddingEnd="@dimen/moderate_padding" style="@style/PrimaryText.Medium" />
+            <RadioButton textAppearance="@style/PrimaryText.SmallMedium" textColor="@color/selectable_text_gray_to_dark" id="@id/id_bw_rb_low" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="@dimen/medium_padding" layout_marginBottom="@dimen/medium_padding" checked="false" text="@string/label_bw_low_header" paddingStart="@dimen/moderate_padding" paddingEnd="@dimen/moderate_padding" style="@style/PrimaryText.Medium" />
+            <RadioButton textAppearance="@style/PrimaryText.SmallMedium" textColor="@color/selectable_text_gray_to_dark" id="@id/id_bw_rb_unlimited" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="@dimen/medium_padding" layout_marginBottom="@dimen/medium_padding" checked="false" text="@string/label_bw_unlimited_header" paddingStart="@dimen/moderate_padding" paddingEnd="@dimen/moderate_padding" style="@style/PrimaryText.Medium" />
+        </RadioGroup>
+    </LinearLayout>
+</ScrollView>

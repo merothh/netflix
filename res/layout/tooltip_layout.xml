@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="horizontal" layout_width="wrap_content" layout_height="wrap_content" elevation="@dimen/tooltip_content_elevation"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout id="@id/title" layout_width="wrap_content" layout_height="fill_parent">
+        <ImageView gravity="center" id="@id/title_image" padding="8.0dip" layout_width="fill_parent" layout_height="fill_parent" scaleType="center" minWidth="@dimen/tooltip_height" />
+        <o.ImageSwitcher textSize="20.0sp" textStyle="bold" textColor="@android:color/white" gravity="center" id="@id/title_text" padding="8.0dip" layout_width="fill_parent" layout_height="fill_parent" minWidth="@dimen/tooltip_height" textAllCaps="true" style="@style/NetflixLightFont" />
+    </FrameLayout>
+    <o.ImageSwitcher textSize="18.0sp" textColor="@android:color/black" gravity="center_vertical" id="@id/message" padding="@dimen/tooltip_message_padding" layout_width="0.0dip" layout_height="fill_parent" layout_weight="1.0" style="@style/NetflixLightFont" />
+</LinearLayout>

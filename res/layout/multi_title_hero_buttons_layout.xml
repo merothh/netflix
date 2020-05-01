@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout gravity="bottom" layout_gravity="start" id="@id/video_actions" layout_width="fill_parent" layout_height="56.0dip" layout_marginStart="@dimen/medium_padding" layout_marginEnd="@dimen/medium_padding" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.HorizontalScrollView layout_gravity="center_vertical" id="@id/multi_title_play" focusable="true" layout_centerVertical="true" layout_alignParentStart="true" elevation="8.0dip" style="@style/PlayHeroTitleButton" />
+    <com.netflix.mediaclient.ui.offline.DownloadButton layout_gravity="center" id="@id/download_button" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" layout_centerVertical="true" paddingStart="10.0dip" paddingEnd="10.0dip" layout_toStartOf="@id/add_to_my_list" showPrimaryMessages="false" style="@style/NetflixDownloadButton" />
+    <o.ListView layout_gravity="center" id="@id/add_to_my_list" focusable="true" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" layout_centerHorizontal="true" layout_centerVertical="true" drawableStart="@drawable/ic_mylist_selector_drawable" paddingStart="10.0dip" paddingEnd="10.0dip" layout_alignParentEnd="true" nb_iconColor="@color/white_button" nb_iconSize="24.0dip" nb_rippleColor="@color/dark_grey" />
+</RelativeLayout>

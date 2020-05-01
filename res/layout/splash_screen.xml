@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout background="?windowBackground" layout_width="fill_parent" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView id="@id/splash_screen_logo" src="@drawable/netflix_splash" scaleType="center" layout_centerInParent="true" contentDescription="@string/accesibility_imgUiSplashLogo" style="@style/wrap" />
+    <ProgressBar id="@id/splash_screen_progress" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="48.0dip" layout_below="@id/splash_screen_logo" layout_centerHorizontal="true" style="?android:progressBarStyle" />
+    <TextView id="@id/installing_resources" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="24.0dip" text="@string/installing_resources" layout_below="@id/splash_screen_progress" layout_centerHorizontal="true" />
+</RelativeLayout>

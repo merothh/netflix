@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center_vertical" layout_width="fill_parent" layout_height="wrap_content" minHeight="?android:listPreferredItemHeight" paddingEnd="?android:scrollbarSize"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="6.0sp" layout_marginBottom="6.0sp" layout_weight="1.0" layout_marginStart="16.0sp" layout_marginEnd="6.0sp">
+        <TextView textAppearance="?android:textAppearanceLarge" textColor="?android:textColorSecondary" id="@android:id/title" layout_width="wrap_content" layout_height="wrap_content" singleLine="true" />
+        <TextView textAppearance="?android:textAppearanceSmall" textColor="?android:textColorSecondary" id="@android:id/summary" layout_width="wrap_content" layout_height="wrap_content" maxLines="2" layout_below="@android:id/title" layout_alignStart="@android:id/title" />
+    </RelativeLayout>
+    <LinearLayout gravity="center_vertical" orientation="vertical" id="@android:id/widget_frame" layout_width="wrap_content" layout_height="fill_parent" />
+</LinearLayout>

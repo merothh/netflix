@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout id="@id/notification_background" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout_width="@dimen/notification_large_icon_width" layout_height="@dimen/notification_large_icon_height" layout="@layout/notification_template_icon_group" />
+    <LinearLayout layout_gravity="top" orientation="vertical" layout_width="fill_parent" layout_height="wrap_content" layout_marginStart="@dimen/notification_large_icon_width">
+        <LinearLayout orientation="horizontal" id="@id/notification_main_column_container" layout_width="fill_parent" layout_height="wrap_content" minHeight="@dimen/notification_large_icon_height">
+            <FrameLayout id="@id/notification_main_column" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="8.0dip" layout_weight="1.0" layout_marginEnd="8.0dip" />
+            <FrameLayout id="@id/right_side" paddingTop="@dimen/notification_right_side_padding_top" layout_width="wrap_content" layout_height="wrap_content" layout_marginEnd="8.0dip">
+                <ViewStub layout_gravity="end|center|top" id="@id/time" visibility="gone" layout="@layout/notification_template_part_time" layout_width="wrap_content" layout_height="wrap_content" />
+                <ViewStub layout_gravity="end|center|top" id="@id/chronometer" visibility="gone" layout="@layout/notification_template_part_chronometer" layout_width="wrap_content" layout_height="wrap_content" />
+                <TextView textAppearance="@style/TextAppearance.Compat.Notification.Info" layout_gravity="end|bottom|center" id="@id/info" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="20.0dip" singleLine="true" />
+            </FrameLayout>
+        </LinearLayout>
+        <ImageView id="@id/action_divider" background="#29000000" visibility="gone" layout_width="fill_parent" layout_height="1.0dip" />
+        <LinearLayout orientation="horizontal" id="@id/actions" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginStart="-8.0dip" />
+    </LinearLayout>
+</FrameLayout>

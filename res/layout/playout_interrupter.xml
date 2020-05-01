@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textColor="@color/white" layout_width="wrap_content" layout_height="wrap_content" layout_marginBottom="@dimen/player_interrupter_title_margin" text="@string/label_interrupter" style="@style/PrimaryText.Medium" />
+    <o.HorizontalScrollView textSize="@dimen/player_interrupter_button_text" id="@id/postplay_continueWatching" layout_width="wrap_content" layout_marginBottom="@dimen/eog_lp_padding" text="@string/label_postplay_continueWatching" contentDescription="@string/label_postplay_continueWatching" textAllCaps="false" drawableStart="@drawable/APKTOOL_DUMMY_404" style="@style/NetflixButton.White" />
+    <o.HorizontalScrollView id="@id/postplay_playFromBeginning" layout_width="wrap_content" layout_marginBottom="@dimen/eog_lp_padding" text="@string/label_postplay_playFromBeginning" contentDescription="@string/label_postplay_playFromBeginning" drawableStart="@drawable/APKTOOL_DUMMY_403" style="@style/PlayerInterrupterButton.Secondary" />
+    <o.HorizontalScrollView id="@id/postplay_stopWatching" layout_width="wrap_content" layout_marginBottom="@dimen/eog_lp_padding" text="@string/label_postplay_stopWatching" contentDescription="@string/label_postplay_stopWatching" drawableStart="@drawable/APKTOOL_DUMMY_405" style="@style/PlayerInterrupterButton.Secondary" />
+</merge>

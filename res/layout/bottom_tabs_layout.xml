@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.netflix.mediaclient.android.widget.NetflixBottomNavBar id="@id/bottom_navigation" background="?bottomNavBarBackgroundColor" focusable="true" fitsSystemWindows="true" clickable="true" layout_width="fill_parent" layout_height="@dimen/bottom_navigation_height" transitionName="bottom_tabs" elevation="@dimen/bottom_navigation_elevation" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.netflix.android.widgetry.widget.tabs.BottomTabView id="@id/bottom_tabs" layout_width="fill_parent" layout_height="fill_parent" itemBackground="@drawable/selectable_item_background" itemIconTint="?bottomNavBarForegroundColor" itemTextColor="?bottomNavBarForegroundColor" />
+    <ViewStub layout_gravity="end|center" id="@id/kids_button_stub" layout="@layout/bottom_bar_kids_button" inflatedId="@id/kids_button" layout_width="wrap_content" layout_height="fill_parent" />
+</com.netflix.mediaclient.android.widget.NetflixBottomNavBar>

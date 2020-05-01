@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="horizontal" id="@id/mdx_controller_bg" layout_width="fill_parent" layout_height="160.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView id="@id/splayer_boxart" layout_width="112.0dip" layout_height="160.0dip" src="@drawable/APKTOOL_DUMMY_39d" layout_weight="0.0" />
+    <RelativeLayout layout_gravity="start|center|top" orientation="vertical" layout_width="wrap_content" layout_height="160.0dip" layout_weight="1.0">
+        <LinearLayout orientation="horizontal" id="@id/splayer_text" paddingTop="14.0dip" layout_width="fill_parent" layout_height="wrap_content" layout_alignParentTop="true" paddingStart="20.0dip" paddingEnd="20.0dip">
+            <TextView layout_gravity="start|center" id="@id/splayer_header_title" focusable="true" layout_width="wrap_content" layout_height="wrap_content" text="@string/label_suspendplayer_notification_header" singleLine="true" layout_weight="1.0" paddingStart="10.0dip" style="@style/MdxNotificationLabel" />
+        </LinearLayout>
+        <TextView ellipsize="end" layout_gravity="start" id="@id/splayer_title" paddingTop="10.0dip" focusable="true" layout_width="fill_parent" layout_height="wrap_content" maxLines="2" scrollHorizontally="false" layout_below="@id/splayer_text" paddingStart="20.0dip" paddingEnd="20.0dip" style="@style/MdxNotificationLabelTitle" />
+        <ImageView background="@android:color/white" layout_width="fill_parent" layout_height="1.0dip" alpha="0.15" />
+    </RelativeLayout>
+</LinearLayout>

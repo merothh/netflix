@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.GridView id="@id/manual_play_button" visibility="gone" layout_width="56.0dip" layout_height="56.0dip" foreground="?selectableItemBackground" src="@drawable/ic_play_svg"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

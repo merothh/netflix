@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge layout_gravity="center" layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ListView textSize="@dimen/details_page_button_text_size" gravity="bottom|center" layout_gravity="bottom|center" id="@id/mylist_toggle_button_with_bottom_label" paddingTop="@dimen/details_page_toggle_button_top_padding" paddingBottom="@dimen/details_page_toggle_button_bottom_padding" focusable="true" visibility="gone" clickable="true" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="@dimen/text_padding" layout_marginBottom="@dimen/text_padding" text="@string/label_my_list_2" drawableTop="@drawable/ic_mylist_selector_drawable" textAlignment="center" nb_borderlessRipple="true" nb_iconColor="?android:textColorPrimary" nb_rippleColor="@color/grey70" nb_textColor="?android:textColorSecondary" style="@style/NetflixSquareButton.Flat" />
+</merge>

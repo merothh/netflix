@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView orientation="vertical" layout_width="fill_parent" layout_height="fill_parent" fillViewport="true">
+        <o.MenuInflater gravity="center" id="@id/customerSupportHeader" layout_width="fill_parent" layout_height="wrap_content" paddingStart="@dimen/contact_us_landing_page_padding_left" paddingEnd="@dimen/contact_us_landing_page_padding_right">
+            <o.MotionEvent orientation="horizontal" id="@id/guideline_links_top" layout_width="wrap_content" layout_height="wrap_content" layout_constraintGuide_percent="0.1" />
+            <o.MotionEvent orientation="vertical" id="@id/guideline_links_left" layout_width="wrap_content" layout_height="wrap_content" layout_constraintGuide_percent="0.25" />
+            <o.MotionEvent orientation="vertical" id="@id/guideline_links_right" layout_width="wrap_content" layout_height="wrap_content" layout_constraintGuide_percent="0.75" />
+            <o.MotionEvent orientation="horizontal" id="@id/guideline_bottom_section" layout_width="wrap_content" layout_height="wrap_content" layout_constraintGuide_percent="0.58" />
+            <LinearLayout gravity="center" orientation="vertical" id="@id/groupingForAccessibility" focusable="true" layout_width="280.0dip" layout_height="wrap_content" divider="@drawable/divider_list_line" layout_constraintLeft_toLeftOf="@id/guideline_links_left" layout_constraintRight_toRightOf="@id/guideline_links_right" layout_constraintTop_toTopOf="parent">
+                <o.ImageSwitcher gravity="center" layout_gravity="center" layout_marginTop="@dimen/contact_us_landing_page_title_margin_top" text="@string/label_cs_call_our_help_center_title" maxLines="1" style="@style/CustomerSupportTitle" />
+            </LinearLayout>
+            <LinearLayout orientation="vertical" id="@id/customerSupportLinks" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="@dimen/contact_us_landing_page_title_margin_top" divider="@drawable/divider_list_line" showDividers="middle" layout_constraintLeft_toLeftOf="@id/guideline_links_left" layout_constraintRight_toRightOf="@id/guideline_links_right" layout_constraintTop_toTopOf="@id/guideline_links_top">
+                <o.AssertionError layout_width="fill_parent" layout_height="0.0dip" />
+                <LinearLayout orientation="horizontal" id="@id/customerSupportHelpCenterLink" background="@drawable/selectable_custom_support_link_background" padding="@dimen/contact_us_landing_page_links_padding" clickable="true" layout_width="fill_parent" layout_height="wrap_content" layout_constraintLeft_toLeftOf="parent" layout_constraintRight_toRightOf="parent" layout_constraintTop_toBottomOf="@id/groupingForAccessibility">
+                    <ImageView gravity="center" layout_gravity="center_vertical" layout_width="@dimen/contact_us_landing_links_icon_size" layout_height="@dimen/contact_us_landing_links_icon_size" src="@drawable/ic_cs_exit_to_app" scaleType="fitCenter" />
+                    <o.ImageSwitcher gravity="start|center" layout_width="0.0dip" layout_height="fill_parent" text="@string/label_cs_help_center_link" layout_weight="1.0" paddingStart="16.0dip" style="@style/CustomerSupportLink" />
+                    <ImageView gravity="center" layout_gravity="end|center" layout_width="@dimen/contact_us_landing_links_icon_size" layout_height="@dimen/contact_us_landing_links_icon_size" src="@drawable/ic_chevron_right" scaleType="fitCenter" alpha="0.3" />
+                </LinearLayout>
+                <LinearLayout orientation="horizontal" id="@id/customerSupportUpdatePaymentLink" background="@drawable/selectable_custom_support_link_background" padding="@dimen/contact_us_landing_page_links_padding" clickable="true" layout_width="fill_parent" layout_height="wrap_content" layout_constraintLeft_toLeftOf="parent" layout_constraintRight_toRightOf="parent" layout_constraintTop_toBottomOf="@id/groupingForAccessibility">
+                    <ImageView gravity="center" layout_gravity="center_vertical" background="@drawable/APKTOOL_DUMMY_20f" layout_width="@dimen/contact_us_landing_links_icon_size" layout_height="@dimen/contact_us_landing_links_icon_size" scaleType="fitCenter" />
+                    <o.ImageSwitcher gravity="start|center" layout_width="0.0dip" layout_height="fill_parent" text="@string/label_cs_update_payment_method" layout_weight="1.0" paddingStart="16.0dip" style="@style/CustomerSupportLink" />
+                    <ImageView gravity="center" layout_gravity="end|center" layout_width="@dimen/contact_us_landing_links_icon_size" layout_height="@dimen/contact_us_landing_links_icon_size" src="@drawable/ic_chevron_right" scaleType="fitCenter" alpha="0.3" />
+                </LinearLayout>
+                <LinearLayout orientation="horizontal" id="@id/customerSupportTitleRequestLink" background="@drawable/selectable_custom_support_link_background" padding="@dimen/contact_us_landing_page_links_padding" clickable="true" layout_width="fill_parent" layout_height="wrap_content" layout_constraintLeft_toLeftOf="parent" layout_constraintRight_toRightOf="parent" layout_constraintTop_toBottomOf="@id/groupingForAccessibility">
+                    <ImageView gravity="center" layout_gravity="center_vertical" background="@drawable/APKTOOL_DUMMY_32f" layout_width="@dimen/contact_us_landing_links_icon_size" layout_height="@dimen/contact_us_landing_links_icon_size" scaleType="fitCenter" />
+                    <o.ImageSwitcher gravity="start|center" layout_width="0.0dip" layout_height="fill_parent" text="@string/label_cs_title_request" layout_weight="1.0" paddingStart="16.0dip" style="@style/CustomerSupportLink" />
+                    <ImageView gravity="center" layout_gravity="end|center" layout_width="@dimen/contact_us_landing_links_icon_size" layout_height="@dimen/contact_us_landing_links_icon_size" src="@drawable/ic_chevron_right" scaleType="fitCenter" alpha="0.3" />
+                </LinearLayout>
+                <LinearLayout orientation="horizontal" id="@id/customerSupportPasswordLink" background="@drawable/selectable_custom_support_link_background" padding="@dimen/contact_us_landing_page_links_padding" clickable="true" layout_width="fill_parent" layout_height="wrap_content" layout_constraintLeft_toLeftOf="parent" layout_constraintRight_toRightOf="parent" layout_constraintTop_toBottomOf="@id/groupingForAccessibility">
+                    <ImageView gravity="center" layout_gravity="center_vertical" background="@drawable/APKTOOL_DUMMY_27b" layout_width="@dimen/contact_us_landing_links_icon_size" layout_height="@dimen/contact_us_landing_links_icon_size" scaleType="fitCenter" />
+                    <o.ImageSwitcher gravity="start|center" layout_width="0.0dip" layout_height="fill_parent" text="@string/label_cs_password_link" layout_weight="1.0" paddingStart="16.0dip" style="@style/CustomerSupportLink" />
+                    <ImageView gravity="center" layout_gravity="end|center" layout_width="@dimen/contact_us_landing_links_icon_size" layout_height="@dimen/contact_us_landing_links_icon_size" src="@drawable/ic_chevron_right" scaleType="fitCenter" alpha="0.3" />
+                </LinearLayout>
+                <LinearLayout orientation="horizontal" id="@id/customerSupportCancelMyAccountLink" background="@drawable/selectable_custom_support_link_background" padding="@dimen/contact_us_landing_page_links_padding" clickable="true" layout_width="fill_parent" layout_height="wrap_content" layout_constraintLeft_toLeftOf="parent" layout_constraintRight_toRightOf="parent" layout_constraintTop_toBottomOf="@id/groupingForAccessibility">
+                    <ImageView gravity="center" layout_gravity="center_vertical" background="@drawable/APKTOOL_DUMMY_1e2" layout_width="@dimen/contact_us_landing_links_icon_size" layout_height="@dimen/contact_us_landing_links_icon_size" scaleType="fitCenter" />
+                    <o.ImageSwitcher gravity="start|center" layout_width="0.0dip" layout_height="fill_parent" text="@string/label_cs_cancel_my_account_link" layout_weight="1.0" paddingStart="16.0dip" style="@style/CustomerSupportLink" />
+                    <ImageView gravity="center" layout_gravity="end|center" layout_width="@dimen/contact_us_landing_links_icon_size" layout_height="@dimen/contact_us_landing_links_icon_size" src="@drawable/ic_chevron_right" scaleType="fitCenter" alpha="0.3" />
+                </LinearLayout>
+                <LinearLayout orientation="horizontal" id="@id/customerSupportFixConnectionLink" background="@drawable/selectable_custom_support_link_background" padding="@dimen/contact_us_landing_page_links_padding" clickable="true" layout_width="fill_parent" layout_height="wrap_content" layout_constraintLeft_toLeftOf="parent" layout_constraintRight_toRightOf="parent" layout_constraintTop_toBottomOf="@id/groupingForAccessibility">
+                    <ImageView gravity="center" layout_gravity="center_vertical" background="@drawable/APKTOOL_DUMMY_1e3" layout_width="@dimen/contact_us_landing_links_icon_size" layout_height="@dimen/contact_us_landing_links_icon_size" scaleType="fitCenter" />
+                    <o.ImageSwitcher gravity="start|center" layout_width="0.0dip" layout_height="fill_parent" text="@string/label_cs_fix_connection" layout_weight="1.0" paddingStart="16.0dip" style="@style/CustomerSupportLink" />
+                    <ImageView gravity="center" layout_gravity="end|center" layout_width="@dimen/contact_us_landing_links_icon_size" layout_height="@dimen/contact_us_landing_links_icon_size" src="@drawable/ic_chevron_right" scaleType="fitCenter" alpha="0.3" />
+                </LinearLayout>
+                <o.AssertionError layout_width="fill_parent" layout_height="0.0dip" />
+            </LinearLayout>
+            <LinearLayout gravity="center_horizontal" orientation="vertical" id="@id/customerSupportTextHelpCenterContainer" focusable="true" layout_width="0.0dip" layout_height="wrap_content" layout_constraintBottom_toBottomOf="parent" layout_constraintLeft_toLeftOf="@id/guideline_links_left" layout_constraintRight_toRightOf="@id/guideline_links_right" layout_constraintTop_toTopOf="@id/guideline_bottom_section" layout_constraintVertical_bias="0.15" layout_constraintVertical_chainStyle="spread_inside">
+                <o.ProgressBar id="@id/moduleInstallFlipper" layout_width="fill_parent" layout_height="fill_parent">
+                    <include id="@id/moduleInstaller" layout_width="fill_parent" layout_height="wrap_content" layout="@layout/contact_us_module_installer" />
+                    <include id="@id/readyToDial" layout_width="fill_parent" layout_height="wrap_content" layout="@layout/ready_to_dial" />
+                </o.ProgressBar>
+            </LinearLayout>
+        </o.MenuInflater>
+    </ScrollView>
+</merge>

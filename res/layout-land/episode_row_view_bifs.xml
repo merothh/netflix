@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge layout_width="fill_parent" layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout orientation="horizontal" id="@id/episode_row_header_group" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="21.0dip" paddingStart="@dimen/double_padding" paddingEnd="@dimen/double_padding">
+        <FrameLayout orientation="vertical" id="@id/episode_image_container" layout_width="wrap_content" layout_height="wrap_content">
+            <o.BaseAdapter id="@id/episode_image" background="@color/black" layout_width="fill_parent" layout_height="fill_parent" scaleType="centerCrop" />
+            <ImageView layout_gravity="center" id="@id/episode_row_play_button" background="@drawable/selectable_video_background_with_press" padding="@dimen/medium_padding" visibility="gone" layout_width="@dimen/episode_row_primary_height" layout_height="@dimen/episode_row_primary_height" src="@drawable/ic_play_svg" contentDescription="@string/accesibility_play_episode" />
+            <o.ImageSwitcher layout_gravity="start|bottom|center" id="@id/episode_badge" layout_marginBottom="4.0dip" layout_marginStart="4.0dip" style="@style/SecondaryText.RedBadge" />
+            <ProgressBar layout_gravity="bottom" id="@id/episode_row_progress_bar" layout_width="fill_parent" layout_height="2.0dip" max="100" indeterminateOnly="false" progressDrawable="?episodeProgressBarDrawable" layoutDirection="ltr" style="?android:progressBarStyleHorizontal" />
+        </FrameLayout>
+        <LinearLayout layout_gravity="center" orientation="vertical" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0" paddingStart="21.0dip">
+            <o.ImageSwitcher textColor="?textColor90" ellipsize="end" id="@id/episode_row_title" maxLines="3" lineSpacingMultiplier="@dimen/line_spacing_expanded" style="@style/PrimaryText.Small" />
+            <LinearLayout layout_width="wrap_content" layout_height="wrap_content">
+                <o.ImageSwitcher textColor="?textColor55" ellipsize="end" id="@id/episode_time" maxLines="1" style="@style/SecondaryText.Micro" />
+            </LinearLayout>
+            <o.ImageSwitcher textColor="?textColor70" ellipsize="end" id="@id/episode_row_synopsis" paddingTop="@dimen/moderate_padding" layout_width="wrap_content" maxLines="3" paddingEnd="@dimen/moderate_padding" style="@style/SecondaryLightFontText.Micro" />
+        </LinearLayout>
+        <com.netflix.mediaclient.ui.offline.DownloadButton layout_gravity="center" id="@id/episode_row_download_button" layout_width="@dimen/episode_row_primary_height" layout_height="@dimen/episode_row_primary_height" showPrimaryMessages="false" style="@style/NetflixDownloadButton" />
+    </LinearLayout>
+</merge>

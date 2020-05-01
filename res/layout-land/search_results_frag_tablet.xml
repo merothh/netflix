@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="horizontal" id="@id/search_fragment_container" paddingTop="10.0dip" saveEnabled="false" layout_width="fill_parent" layout_height="fill_parent" baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/loading_and_error_inset" />
+    <FrameLayout id="@id/search_prequery_container" visibility="gone" style="@style/match" />
+    <include layout_width="fill_parent" layout_height="fill_parent" layout_margin="@dimen/search_instructions_container_margin" layout="@layout/simple_instructions_container" />
+    <o.ExpandableListConnector id="@id/search_results_scrollview" layout_width="250.0dip" layout_height="fill_parent">
+        <LinearLayout orientation="vertical" id="@id/vertical_layout" layout_width="fill_parent" layout_height="wrap_content">
+            <o.RatingBar id="@id/search_results_grid_view_suggestions" drawSelectorOnTop="true" style="@style/match" />
+        </LinearLayout>
+    </o.ExpandableListConnector>
+    <o.ExpandableListConnector id="@id/search_results_scrollview2" layout_width="fill_parent" layout_height="fill_parent">
+        <LinearLayout orientation="vertical" id="@id/vertical_layout2" layout_width="fill_parent" layout_height="wrap_content">
+            <o.ImageSwitcher textStyle="bold" textColor="?relatedResultsTitleTextColor" ellipsize="end" id="@id/similar_items_grid_view_title" paddingTop="10.0dip" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="@dimen/content_padding" text="@string/label_similar_shows" maxLines="2" singleLine="true" lineSpacingMultiplier="@dimen/line_spacing_expanded" paddingStart="10.0dip" style="@style/PrimaryText.Medium" />
+            <RelativeLayout style="@style/match">
+                <o.RatingBar id="@id/search_results_grid_view_videos" style="@style/match" />
+                <ProgressBar layout_gravity="center" id="@id/loading_progressbar" padding="@dimen/double_padding" visibility="gone" layout_width="fill_parent" layout_height="fill_parent" indeterminate="true" indeterminateOnly="true" layout_centerInParent="true" style="?android:progressBarStyle" />
+            </RelativeLayout>
+        </LinearLayout>
+    </o.ExpandableListConnector>
+</LinearLayout>

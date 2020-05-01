@@ -1,0 +1,176 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: com.netflix.mediaclient.apk
+compressionType: false
+doNotCompress:
+- resources.arsc
+- META-INF/services/com.fasterxml.jackson.core.ObjectCodec
+- assets/tf-predictor_15.tflite
+- assets/volicense_av1.dat
+- res/raw/Hx
+- res/raw/RU
+- res/raw/RY
+- res/raw/RZ
+- res/raw/SA
+- res/raw/SB
+- res/raw/SC
+- res/raw/Sa
+- res/raw/Sb
+- res/raw/Sc
+- res/raw/Sd
+- res/raw/Se
+- res/raw/Sf
+- res/raw/Sg
+- res/raw/Sh
+- res/raw/Si
+- res/raw/Sj
+- res/raw/Sk
+- res/raw/Sn
+- res/raw/So
+- res/raw/Sp
+- res/raw/Sq
+- res/raw/Sr
+- res/raw/Ss
+- res/raw/St
+- res/raw/Su
+- res/raw/Sv
+- res/raw/Sw
+- res/raw/Sx
+- res/raw/Sy
+- res/raw/VA
+- res/raw/Vn
+- res/raw/Vp
+- res/raw/Vs
+- res/raw/Vt
+- res/raw/Vu
+- res/raw/Vx
+- res/raw/agc
+- res/raw/agd
+- res/raw/age
+- res/raw/agf
+- res/raw/agg
+- res/raw/ayK.webp
+- res/raw/ayL.webp
+- res/raw/ayM
+- res/raw/ayN
+- res/raw/ayO.webp
+- res/raw/ayP
+- res/raw/ayQ.webp
+- res/raw/ayR.webp
+- res/raw/ayS
+- res/raw/ayT
+- res/raw/fY
+- res/raw/pE
+- res/raw/vI
+- res/raw/vJ
+- res/raw/vN
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo: null
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  a.: '0'
+  b.: '0'
+  c.: '0'
+  d.: '0'
+  e.: '0'
+  f.: '8'
+  firebase-analytics-impl.properties: '8'
+  firebase-analytics.properties: '8'
+  firebase-common.properties: '8'
+  firebase-core.properties: '8'
+  firebase-iid-interop.properties: '8'
+  firebase-iid.properties: '8'
+  firebase-messaging.properties: '8'
+  play-services-ads-identifier.properties: '8'
+  play-services-auth-api-phone.properties: '8'
+  play-services-auth-base.properties: '8'
+  play-services-auth.properties: '8'
+  play-services-base.properties: '8'
+  play-services-basement.properties: '8'
+  play-services-cast-framework.properties: '8'
+  play-services-cast.properties: '8'
+  play-services-cronet.properties: '8'
+  play-services-flags.properties: '8'
+  play-services-identity.properties: '8'
+  play-services-measurement-api.properties: '8'
+  play-services-measurement-base.properties: '8'
+  play-services-safetynet.properties: '8'
+  play-services-stats.properties: '8'
+  play-services-tasks.properties: '8'
+  com/ibm/icu/impl/data/icudt59b/confusables.cfu: '8'
+  com/ibm/icu/impl/data/icudt59b/currencyNumericCodes.res: '8'
+  com/ibm/icu/impl/data/icudt59b/dayPeriods.res: '8'
+  com/ibm/icu/impl/data/icudt59b/fullLocaleNames.lst: '8'
+  com/ibm/icu/impl/data/icudt59b/genderList.res: '8'
+  com/ibm/icu/impl/data/icudt59b/keyTypeData.res: '8'
+  com/ibm/icu/impl/data/icudt59b/likelySubtags.res: '8'
+  com/ibm/icu/impl/data/icudt59b/metaZones.res: '8'
+  com/ibm/icu/impl/data/icudt59b/metadata.res: '8'
+  com/ibm/icu/impl/data/icudt59b/nfc.nrm: '8'
+  com/ibm/icu/impl/data/icudt59b/nfkc.nrm: '8'
+  com/ibm/icu/impl/data/icudt59b/nfkc_cf.nrm: '8'
+  com/ibm/icu/impl/data/icudt59b/numberingSystems.res: '8'
+  com/ibm/icu/impl/data/icudt59b/plurals.res: '8'
+  com/ibm/icu/impl/data/icudt59b/pnames.icu: '8'
+  com/ibm/icu/impl/data/icudt59b/pool.res: '8'
+  com/ibm/icu/impl/data/icudt59b/res_index.res: '8'
+  com/ibm/icu/impl/data/icudt59b/rfc3491.spp: '8'
+  com/ibm/icu/impl/data/icudt59b/rfc3530cs.spp: '8'
+  com/ibm/icu/impl/data/icudt59b/rfc3530csci.spp: '8'
+  com/ibm/icu/impl/data/icudt59b/rfc3530mixp.spp: '8'
+  com/ibm/icu/impl/data/icudt59b/rfc3722.spp: '8'
+  com/ibm/icu/impl/data/icudt59b/rfc3920node.spp: '8'
+  com/ibm/icu/impl/data/icudt59b/rfc3920res.spp: '8'
+  com/ibm/icu/impl/data/icudt59b/rfc4011.spp: '8'
+  com/ibm/icu/impl/data/icudt59b/rfc4013.spp: '8'
+  com/ibm/icu/impl/data/icudt59b/rfc4505.spp: '8'
+  com/ibm/icu/impl/data/icudt59b/rfc4518.spp: '8'
+  com/ibm/icu/impl/data/icudt59b/rfc4518ci.spp: '8'
+  com/ibm/icu/impl/data/icudt59b/root.res: '8'
+  com/ibm/icu/impl/data/icudt59b/supplementalData.res: '8'
+  com/ibm/icu/impl/data/icudt59b/timezoneTypes.res: '8'
+  com/ibm/icu/impl/data/icudt59b/ubidi.icu: '8'
+  com/ibm/icu/impl/data/icudt59b/ucase.icu: '8'
+  com/ibm/icu/impl/data/icudt59b/unames.icu: '8'
+  com/ibm/icu/impl/data/icudt59b/uprops.icu: '8'
+  com/ibm/icu/impl/data/icudt59b/uts46.nrm: '8'
+  com/ibm/icu/impl/data/icudt59b/windowsZones.res: '8'
+  com/ibm/icu/impl/data/icudt59b/zoneinfo64.res: '8'
+  com/ibm/icu/impl/data/icudt59b/curr/fullLocaleNames.lst: '8'
+  com/ibm/icu/impl/data/icudt59b/curr/pool.res: '8'
+  com/ibm/icu/impl/data/icudt59b/curr/res_index.res: '8'
+  com/ibm/icu/impl/data/icudt59b/curr/root.res: '8'
+  com/ibm/icu/impl/data/icudt59b/curr/supplementalData.res: '8'
+  com/ibm/icu/impl/data/icudt59b/rbnf/fullLocaleNames.lst: '8'
+  com/ibm/icu/impl/data/icudt59b/rbnf/res_index.res: '8'
+  com/ibm/icu/impl/data/icudt59b/rbnf/root.res: '8'
+  com/ibm/icu/impl/duration/impl/data/index.txt: '8'
+  com/ibm/icu/impl/duration/impl/data/pfd_ar_EG.xml: '8'
+  com/ibm/icu/impl/duration/impl/data/pfd_ar_EG.xml.escaped: '8'
+  com/ibm/icu/impl/duration/impl/data/pfd_en.xml: '8'
+  com/ibm/icu/impl/duration/impl/data/pfd_es.xml: '8'
+  com/ibm/icu/impl/duration/impl/data/pfd_fr.xml: '8'
+  com/ibm/icu/impl/duration/impl/data/pfd_he_IL.xml: '8'
+  com/ibm/icu/impl/duration/impl/data/pfd_hi.xml: '8'
+  com/ibm/icu/impl/duration/impl/data/pfd_it.xml: '8'
+  com/ibm/icu/impl/duration/impl/data/pfd_ja.xml: '8'
+  com/ibm/icu/impl/duration/impl/data/pfd_ko.xml: '8'
+  com/ibm/icu/impl/duration/impl/data/pfd_ru.xml: '8'
+  com/ibm/icu/impl/duration/impl/data/pfd_th.xml: '8'
+  com/ibm/icu/impl/duration/impl/data/pfd_zh_Hans.xml: '8'
+  com/ibm/icu/impl/duration/impl/data/pfd_zh_Hans_SG.xml: '8'
+  com/ibm/icu/impl/duration/impl/data/pfd_zh_Hant.xml: '8'
+  com/ibm/icu/impl/duration/impl/data/pfd_zh_Hant_HK.xml: '8'
+  org/bouncycastle/x509/CertPathReviewerMessages.properties: '8'
+  org/bouncycastle/x509/CertPathReviewerMessages_de.properties: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.4.1
+versionInfo:
+  versionCode: '34837'
+  versionName: 7.54.2 build 38 34837

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="copy_link_padding_horizontal">16.0dip</dimen>
+    <dimen name="download_info_bar_text_size">16.0dip</dimen>
+    <dimen name="kids_character_row_offset_right">88.0dip</dimen>
+    <dimen name="login_field_width">640.0dip</dimen>
+    <dimen name="login_margin">80.0dip</dimen>
+    <dimen name="member_referral_button_min_height">52.0dip</dimen>
+    <dimen name="member_referral_tou_details_margin">0.0dip</dimen>
+    <dimen name="ourstory_content_width">500.0dip</dimen>
+    <dimen name="player_panel_background_height">140.0dip</dimen>
+    <dimen name="pug_image_height">108.0dip</dimen>
+    <dimen name="pug_image_width">108.0dip</dimen>
+    <dimen name="pug_progress_height">160.0dip</dimen>
+    <dimen name="pug_progress_width">160.0dip</dimen>
+    <dimen name="signup_cta_button_second_line_text">26.0sp</dimen>
+    <dimen name="signup_cta_button_text">22.0sp</dimen>
+    <dimen name="signup_header_text">21.0sp</dimen>
+    <item type="dimen" name="signup_header_text_small">@dimen/text_small</item>
+    <dimen name="signup_header_welcome">80.0sp</dimen>
+    <dimen name="signup_welcome_content_padding_side">80.0dip</dimen>
+    <dimen name="signup_welcome_cta_vertical_padding">15.0dip</dimen>
+    <dimen name="survey_choice_text_size">19.0sp</dimen>
+    <dimen name="survey_header_text_size">19.0sp</dimen>
+    <dimen name="survey_margin">30.0dip</dimen>
+    <dimen name="survey_question_body_text_size">38.0sp</dimen>
+    <dimen name="survey_question_header_text_size">28.0sp</dimen>
+    <dimen name="survey_skip_text_size">18.0sp</dimen>
+    <dimen name="suvery_selection_margin">16.0dip</dimen>
+</resources>

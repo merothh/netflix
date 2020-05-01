@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" background="@color/contact_us_dialer_bg" layout_width="fill_parent" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout orientation="horizontal" layout_width="fill_parent" layout_height="wrap_content">
+        <ImageView id="@id/customerSupportUpAction" paddingTop="@dimen/contact_us_landing_page_home_vertical_padding" paddingBottom="@dimen/contact_us_landing_page_home_vertical_padding" clickable="true" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/ic_arrow_back" layout_centerVertical="true" contentDescription="@string/accessibility_navigate_up_button" paddingStart="@dimen/contact_us_landing_page_home_padding_left" paddingEnd="@dimen/contact_us_landing_page_home_padding_right" layout_alignParentStart="true" />
+        <ImageView id="@id/imageView" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/APKTOOL_DUMMY_79" layout_centerInParent="true" />
+    </RelativeLayout>
+    <o.ProgressBar id="@id/contactUsFlipper" layout_width="fill_parent" layout_height="fill_parent">
+        <include id="@id/landingPage" layout="@layout/contact_us_landing_page" />
+        <include id="@id/dialer" layout="@layout/contact_us_dialer" />
+    </o.ProgressBar>
+</LinearLayout>

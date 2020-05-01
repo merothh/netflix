@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout layout_gravity="bottom" orientation="vertical" background="#cc000000" layout_width="fill_parent" layout_height="wrap_content" layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout gravity="center" orientation="horizontal" paddingTop="4.0dip" layout_width="fill_parent" layout_height="wrap_content">
+        <ImageButton id="@id/exo_prev" style="@style/ExoMediaButton.Previous" />
+        <ImageButton id="@id/exo_rew" style="@style/ExoMediaButton.Rewind" />
+        <ImageButton id="@id/exo_repeat_toggle" style="@style/ExoMediaButton" />
+        <ImageButton id="@id/exo_play" style="@style/ExoMediaButton.Play" />
+        <ImageButton id="@id/exo_pause" style="@style/ExoMediaButton.Pause" />
+        <ImageButton id="@id/exo_ffwd" style="@style/ExoMediaButton.FastForward" />
+        <ImageButton id="@id/exo_next" style="@style/ExoMediaButton.Next" />
+    </LinearLayout>
+    <LinearLayout gravity="center_vertical" orientation="horizontal" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="4.0dip">
+        <TextView textSize="14.0sp" textStyle="bold" textColor="#ffbebebe" id="@id/exo_position" paddingLeft="4.0dip" paddingRight="4.0dip" layout_width="wrap_content" layout_height="wrap_content" includeFontPadding="false" />
+        <com.google.android.exoplayer2.ui.DefaultTimeBar id="@id/exo_progress" layout_width="0.0dip" layout_height="26.0dip" layout_weight="1.0" />
+        <TextView textSize="14.0sp" textStyle="bold" textColor="#ffbebebe" id="@id/exo_duration" paddingLeft="4.0dip" paddingRight="4.0dip" layout_width="wrap_content" layout_height="wrap_content" includeFontPadding="false" />
+    </LinearLayout>
+</LinearLayout>

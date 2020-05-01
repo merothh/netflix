@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.ImageSwitcher textSize="20.0sp" textColor="?headerTextColor" paddingLeft="10.0dip" paddingTop="15.0dip" paddingRight="10.0dip" paddingBottom="15.0dip" layout_width="fill_parent" layout_height="wrap_content" style="@style/NetflixMediumFont"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

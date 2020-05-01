@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater gravity="center_vertical" orientation="horizontal" padding="@dimen/content_padding" layout_width="fill_parent" layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewStub layout_width="0.0dip" layout_height="wrap_content" layout_constraintEnd_toStartOf="@id/cta3" layout_constraintHorizontal_bias="0.0" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" layout_constraintWidth_max="@dimen/extras_title_treatment_max_width" />
+    <ViewStub id="@id/cta3" inflatedId="@id/cta3" layout_constraintEnd_toStartOf="@id/cta2" layout_constraintHeight_min="@dimen/extras_button_size" layout_constraintTop_toTopOf="parent" layout_constraintWidth_max="@dimen/extras_button_max_width" layout_constraintWidth_min="@dimen/extras_button_size" style="@style/ExtrasButton" />
+    <ViewStub id="@id/cta2" inflatedId="@id/cta2" layout_constraintEnd_toStartOf="@id/cta1" layout_constraintHeight_min="@dimen/extras_button_size" layout_constraintTop_toTopOf="parent" layout_constraintWidth_max="@dimen/extras_button_max_width" layout_constraintWidth_min="@dimen/extras_button_size" style="@style/ExtrasButton" />
+    <ViewStub id="@id/cta1" inflatedId="@id/cta1" layout_constraintEnd_toEndOf="parent" layout_constraintHeight_min="@dimen/extras_button_size" layout_constraintTop_toTopOf="parent" layout_constraintWidth_max="@dimen/extras_button_max_width" layout_constraintWidth_min="@dimen/extras_button_size" style="@style/ExtrasButton" />
+</o.MenuInflater>

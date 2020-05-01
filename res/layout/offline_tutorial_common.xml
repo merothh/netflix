@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.GetChars layout_gravity="center" orientation="vertical" layout_width="fill_parent" layout_height="wrap_content" cardBackgroundColor="@color/white" cardCornerRadius="6.0dip" xmlns:card_view="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView layout_width="fill_parent" layout_height="wrap_content">
+        <LinearLayout gravity="center_horizontal" orientation="vertical" layout_width="fill_parent" layout_height="wrap_content" maxWidth="450.0dip">
+            <include layout_gravity="center_horizontal" layout_width="wrap_content" layout_height="wrap_content" layout="@layout/offline_tutorial_banner" />
+            <o.ImageSwitcher textSize="34.0sp" textColor="@color/black" gravity="center" id="@id/title_text" padding="@dimen/double_padding" layout_width="wrap_content" layout_height="wrap_content" style="@style/NetflixLightFont" />
+            <ImageView layout_width="110.0dip" layout_height="110.0dip" layout_margin="@dimen/double_padding" src="@drawable/fullscreen_tutorial_dl_icon" />
+            <o.ImageSwitcher textSize="@dimen/text_medium" textColor="@color/black" gravity="center" id="@id/body_text" padding="@dimen/content_padding" layout_width="wrap_content" layout_height="wrap_content" paddingStart="@dimen/double_padding" paddingEnd="@dimen/double_padding" />
+            <include layout="@layout/offline_tutorial_buttons" />
+        </LinearLayout>
+    </ScrollView>
+</o.GetChars>

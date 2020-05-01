@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.HorizontalScrollView id="@id/back_to_top_pill_button" layout_width="wrap_content" layout_height="wrap_content" drawableStart="@drawable/ic_chevron_up" paddingStart="@dimen/large_padding" paddingEnd="@dimen/large_padding" elevation="10.0dip" style="?primarySmallPillButtonStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

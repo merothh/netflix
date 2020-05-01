@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge layout_width="fill_parent" layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.MenuItemHoverListener id="@id/pressable_view_group" layout_width="fill_parent" layout_height="wrap_content">
+        <RelativeLayout id="@id/episode_row_view_group" paddingTop="@dimen/text_padding" layout_width="fill_parent" layout_height="wrap_content" layout_alignParentTop="true">
+            <o.BaseAdapter id="@id/result_img" layout_width="fill_parent" layout_height="0.0dip" src="@drawable/APKTOOL_DUMMY_41a" scaleType="centerCrop" adjustViewBounds="true" />
+            <ImageView clickable="false" layout_width="wrap_content" layout_height="wrap_content" layout_alignTop="@id/result_img" layout_alignBottom="@id/result_img" layout_centerHorizontal="true" layout_centerVertical="true" contentDescription="@string/accesibility_play_episode" />
+            <ProgressBar id="@id/episode_row_progress_bar" layout_width="fill_parent" layout_height="10.0dip" layout_marginBottom="@dimen/text_padding" max="100" indeterminateOnly="false" progressDrawable="@drawable/kids_progress_bar" layout_alignBottom="@id/result_img" layout_marginStart="@dimen/content_padding" layout_marginEnd="@dimen/content_padding" style="?android:progressBarStyleHorizontal" />
+            <LinearLayout orientation="horizontal" layout_width="fill_parent" layout_height="wrap_content" layout_below="@id/result_img">
+                <o.ImageSwitcher textSize="@dimen/text_micro" textColor="?textColor80" ellipsize="end" layout_gravity="top" id="@id/episode_row_number" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="@dimen/text_padding" maxLines="1" paddingEnd="@dimen/content_padding" />
+                <o.ImageSwitcher textSize="@dimen/text_micro" textColor="?textColor80" ellipsize="end" layout_gravity="top" id="@id/episode_row_title" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="@dimen/text_padding" maxLines="2" layout_weight="1.0" lineSpacingMultiplier="@dimen/line_spacing_expanded" paddingEnd="@dimen/content_padding" />
+                <com.netflix.mediaclient.ui.offline.DownloadButton id="@id/episode_row_download_button" layout_width="@dimen/kids_character_download_button_size" layout_height="@dimen/kids_character_download_button_size" showPrimaryMessages="false" style="@style/NetflixDownloadButton" />
+            </LinearLayout>
+        </RelativeLayout>
+    </o.MenuItemHoverListener>
+</merge>

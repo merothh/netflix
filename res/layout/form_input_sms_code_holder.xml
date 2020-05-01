@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="horizontal" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.GridView layout_width="60.0dip" layout_height="44.0dip" layout_marginTop="16.0dip" src="@drawable/ic_signup_dcb_sms_code" layout_marginEnd="10.0dip" />
+    <include id="@id/formInputViewHolder" layout_width="130.0dip" layout_height="wrap_content" layout="@layout/form_input_view_holder" />
+</LinearLayout>

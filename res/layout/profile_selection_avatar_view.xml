@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout id="@id/profile_avatar_parent" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout gravity="center" orientation="vertical" paddingTop="@dimen/content_padding" layout_width="fill_parent" layout_height="wrap_content">
+        <FrameLayout layout_width="@dimen/profile_avatar_img_size" layout_height="@dimen/profile_avatar_img_size" layout_margin="@dimen/profile_avatar_img_margin">
+            <o.BaseAdapter layout_gravity="center" id="@id/profile_avatar_img" layout_width="@dimen/profile_avatar_img_size" layout_height="@dimen/profile_avatar_img_size" scaleType="centerCrop" adjustViewBounds="true" />
+            <View id="@id/top_edit_img" background="@drawable/APKTOOL_DUMMY_439" visibility="gone" style="@style/match" />
+        </FrameLayout>
+        <o.ImageSwitcher ellipsize="end" gravity="center_horizontal" layout_gravity="center_horizontal" id="@id/profile_avatar_title" paddingTop="@dimen/text_padding" layout_width="fill_parent" singleLine="true" paddingStart="@dimen/content_padding" paddingEnd="@dimen/content_padding" style="@style/PrimaryText.Micro" />
+        <o.GridView id="@id/lock_icon" visibility="gone" layout_width="16.0dip" layout_height="16.0dip" layout_marginTop="2.0dip" src="@drawable/ic_icon_profile_lock" />
+        <Space layout_width="0.0dip" layout_height="@dimen/double_padding" />
+    </LinearLayout>
+</FrameLayout>

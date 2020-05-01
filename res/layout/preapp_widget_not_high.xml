@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" layout_width="wrap_content" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout orientation="horizontal" background="@color/preapp_border" layout_width="wrap_content" layout_height="fill_parent">
+        <RelativeLayout id="@id/preapp_widget_block" layout_width="wrap_content" layout_height="wrap_content">
+            <ImageView id="@id/preapp_video_image1" layout_width="wrap_content" layout_height="wrap_content" layout_margin="@dimen/preapp_widget_padding_small" src="@drawable/preapp_mobile_signin" scaleType="fitStart" adjustViewBounds="true" contentDescription="@string/preapp_video_image" />
+            <RelativeLayout orientation="vertical" layout_width="wrap_content" layout_height="fill_parent" layout_alignTop="@id/preapp_video_image1" layout_alignBottom="@id/preapp_video_image1" layout_alignStart="@id/preapp_video_image1" layout_alignEnd="@id/preapp_video_image1">
+                <ImageView id="@id/preapp_play1" focusable="true" visibility="gone" src="@drawable/ic_play_svg" layout_centerInParent="true" style="@style/preapp_playIcon_medium" />
+            </RelativeLayout>
+            <RelativeLayout orientation="vertical" id="@id/preapp_logo_on_image_group" layout_width="wrap_content" layout_height="fill_parent" layout_alignTop="@id/preapp_video_image1" layout_alignBottom="@id/preapp_video_image1" layout_alignStart="@id/preapp_video_image1" layout_alignEnd="@id/preapp_video_image1">
+                <ImageView id="@id/preapp_gradient1" layout_width="fill_parent" layout_height="32.0dip" src="@drawable/preapp_image_gradient" layout_alignParentBottom="true" />
+                <LinearLayout orientation="horizontal" layout_width="fill_parent" layout_height="wrap_content" layout_alignParentBottom="true" layout_marginStart="@dimen/preapp_widget_padding_small">
+                    <TextView textColor="@color/brand_white" layout_gravity="center" id="@id/preapp_list_name" visibility="gone" layout_width="24.0dip" layout_height="12.0dip" style="@style/PrimaryText.Small" />
+                    <LinearLayout orientation="horizontal" layout_width="wrap_content" layout_height="fill_parent">
+                        <ImageView layout_gravity="bottom" id="@id/preapp_app_logo" visibility="visible" layout_width="36.0dip" layout_height="16.0dip" src="@drawable/netflix_splash" />
+                    </LinearLayout>
+                    <LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="wrap_content">
+                        <ImageView layout_gravity="end|bottom|center" id="@id/preapp_refresh" paddingTop="@dimen/preapp_widget_padding" focusable="false" focusableInTouchMode="false" layout_width="26.0dip" layout_height="26.0dip" src="@drawable/APKTOOL_DUMMY_346" paddingStart="@dimen/preapp_widget_padding" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

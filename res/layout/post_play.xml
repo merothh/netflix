@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/post_play_background_container" />
+    <LinearLayout orientation="vertical" id="@id/postplay_ignore_tap" background="@drawable/post_play_gradient" paddingBottom="@dimen/postplay_play_margin_bottom" layout_width="fill_parent" layout_height="wrap_content" layout_alignParentBottom="true" paddingStart="@dimen/postplay_play_margin" paddingEnd="@dimen/postplay_play_margin">
+        <o.ImageSwitcher id="@id/post_play_experience_title" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="@dimen/postplay_play_margin_bottom" style="@style/PostPlayTitle" />
+        <LinearLayout orientation="horizontal" id="@id/post_play_items" paddingBottom="@dimen/postplay_movie_recommendation_boxart_pad_bottom" layout_width="fill_parent" layout_height="wrap_content" />
+    </LinearLayout>
+</merge>

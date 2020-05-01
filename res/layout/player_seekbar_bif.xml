@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater id="@id/player_seekbar_bif_container" layout_width="0.0dip" layout_height="wrap_content" layoutDirection="ltr" paddingStart="@dimen/seek_bar_bif_container_padding" paddingEnd="@dimen/seek_bar_bif_container_padding" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout gravity="center" orientation="vertical" id="@id/bif_image_view_container" background="@drawable/player_current_time_exp_bgd" visibility="invisible" layout_width="wrap_content" layout_height="wrap_content" layout_constraintBottom_toTopOf="@id/bif_current_time_label" layout_constraintStart_toStartOf="parent">
+        <o.CompoundButton layout_gravity="center" id="@id/bif_image_view" layout_width="wrap_content" layout_height="150.0dip" scaleType="fitXY" adjustViewBounds="true" measureBy="height" />
+    </LinearLayout>
+    <o.ImageSwitcher textColor="@color/white" id="@id/bif_current_time_label" layout_width="wrap_content" layout_height="wrap_content" maxLines="1" layout_constraintBottom_toBottomOf="parent" layout_constraintStart_toStartOf="parent" style="@style/PrimaryBoldFontText.NanoMedium" />
+</o.MenuInflater>

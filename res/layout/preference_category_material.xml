@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="8.0dip" layout_marginBottom="8.0dip" layout_marginStart="?android:listPreferredItemPaddingStart" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout gravity="start|center" orientation="horizontal" id="@id/icon_frame" layout_width="wrap_content" layout_height="wrap_content">
+        <o.StringBuilder id="@android:id/icon" layout_width="wrap_content" layout_height="wrap_content" tint="?android:textColorPrimary" maxHeight="18.0dip" maxWidth="18.0dip" />
+    </LinearLayout>
+    <LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="wrap_content" paddingStart="@dimen/preference_category_padding_start">
+        <TextView textAppearance="@android:style/TextAppearance.Material.Body2" textColor="?android:colorAccent" id="@android:id/title" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="16.0dip" textAlignment="viewStart" paddingEnd="?android:listPreferredItemPaddingEnd" />
+        <TextView textAppearance="?android:textAppearanceListItemSecondary" textColor="?android:textColorSecondary" ellipsize="end" id="@android:id/summary" layout_width="wrap_content" layout_height="wrap_content" singleLine="true" />
+    </LinearLayout>
+</FrameLayout>

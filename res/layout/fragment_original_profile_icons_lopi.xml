@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="wrap_content" importantForAccessibility="no"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout layout_width="wrap_content" layout_height="wrap_content">
+        <o.ImageSwitcher textSize="@dimen/text_medium" ellipsize="end" layout_gravity="start" id="@id/lopi_title" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="@dimen/lomo_title_top_padding" layout_marginBottom="@dimen/lomo_title_bottom_padding" maxLines="1" layout_marginStart="@dimen/lomo_total_padding" layout_marginEnd="@dimen/lomo_total_padding" style="@style/PrimaryBoldFontText" />
+        <o.BaseAdapter layout_gravity="start" id="@id/lopi_title_image" layout_width="wrap_content" layout_height="@dimen/original_profile_title_icons_size" layout_marginTop="@dimen/lomo_title_top_padding" layout_marginBottom="@dimen/content_padding" adjustViewBounds="true" layout_marginStart="@dimen/lomo_total_padding" layout_marginEnd="@dimen/lomo_total_padding" />
+    </FrameLayout>
+    <o.ParcelableParcel orientation="horizontal" id="@id/lopi" scrollbars="none" clipToPadding="false" layout_width="fill_parent" layout_height="wrap_content" />
+</LinearLayout>

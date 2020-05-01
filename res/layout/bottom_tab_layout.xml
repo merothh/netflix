@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView layout_gravity="center_horizontal" id="@id/icon" clickable="false" duplicateParentState="true" layout_width="@dimen/bottom_navigation_icon_size" layout_height="@dimen/bottom_navigation_icon_size" layout_marginTop="@dimen/bottom_navigation_icon_marginTop" layout_marginBottom="@dimen/bottom_navigation_icon_marginBottom" />
+    <o.ImageSwitcher textSize="@dimen/bottom_navigation_text_size" layout_gravity="bottom|center" id="@id/label" duplicateParentState="true" layout_width="wrap_content" layout_height="wrap_content" layout_marginBottom="@dimen/bottom_navigation_text_marginBottom" maxLines="1" paddingStart="@dimen/bottom_navigation_text_padding" paddingEnd="@dimen/bottom_navigation_text_padding" />
+    <ViewStub id="@id/badge_stub" layout="@layout/bottom_tab_badge" inflatedId="@id/badge" layout_width="fill_parent" layout_height="fill_parent" />
+</merge>

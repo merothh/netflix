@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape shape="oval">
+            <solid color="?downloadedForYouSecondary" />
+            <size height="@dimen/d4u_item_common_icon_size" width="@dimen/d4u_item_common_icon_size" />
+        </shape>
+    </item>
+    <item gravity="center" drawable="@drawable/ic_plus" />
+</layer-list>

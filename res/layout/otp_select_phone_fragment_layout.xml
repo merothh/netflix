@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView id="@id/scrollView" background="@color/signup_background_light" layout_width="fill_parent" layout_height="fill_parent" layout_marginTop="?actionBarSize" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout layout_gravity="center_horizontal" orientation="vertical" id="@id/otpPhoneLayout" paddingTop="@dimen/signup_registration_padding_top" paddingBottom="@dimen/signup_context_padding_bottom" layout_height="wrap_content" paddingStart="@dimen/signup_context_padding_horizontal" paddingEnd="@dimen/signup_context_padding_horizontal" style="@style/FormLayout">
+        <com.netflix.mediaclient.acquisition.view.SignupBannerView id="@id/warningView" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="@dimen/signup_banner_spacing" style="@style/SignupWarningContainer" />
+        <com.netflix.mediaclient.acquisition.view.SignupBannerView id="@id/positiveView" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="@dimen/signup_banner_spacing" style="@style/SignupPositiveContainer" />
+        <ImageView id="@id/contextIcon" layout_width="wrap_content" layout_height="@dimen/signup_context_icon_height" layout_marginTop="@dimen/signup_fragment_padding_vertical" src="@drawable/payment_lock" style="@style/SignupContextIcon" />
+        <com.netflix.mediaclient.acquisition.view.SignupHeadingView id="@id/signupHeading" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="4.0dip" />
+        <TextView gravity="center" id="@id/phoneNumbersText" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/large_padding" layout_marginBottom="8.0dip" text="@string/phone_numbers" style="@style/PhoneNumbersLabel" />
+        <androidx.recyclerview.widget.RecyclerView layout_gravity="center_horizontal" id="@id/phoneSelectForm" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="@dimen/large_padding" nestedScrollingEnabled="false" layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        <com.netflix.mediaclient.acquisition.view.NetflixSignupButton id="@id/sendSMSButton" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/signup_cta_button_vertical_margin" layout_marginBottom="@dimen/signup_cta_button_vertical_margin" />
+        <o.HorizontalScrollView id="@id/noneOfTheAboveButton" layout_width="fill_parent" layout_height="wrap_content" style="@style/SignupCtaButton.NoneOfTheAboveButton" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

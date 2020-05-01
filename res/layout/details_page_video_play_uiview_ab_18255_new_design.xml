@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.HorizontalScrollView id="@id/video_play_icon" focusable="true" visibility="gone" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="@dimen/medium_padding" layout_marginBottom="0.0dip" text="@string/label_play_button" drawableStart="@drawable/ic_play_button" layout_marginStart="@dimen/moderate_padding" layout_marginEnd="@dimen/moderate_padding" nb_buttonColor="?dp_play_button_bg_color" nb_textColor="?dp_play_button_text_color" style="@style/NetflixButton.Primary" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

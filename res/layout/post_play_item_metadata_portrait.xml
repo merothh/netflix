@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.Uk gravity="center_horizontal" orientation="vertical" layout_width="fill_parent" layout_height="wrap_content" layout_margin="@dimen/postplay_episodes_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.Uj orientation="horizontal" id="@id/post_play_item_poster" layout_width="wrap_content" layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <FrameLayout layout_width="wrap_content" layout_height="fill_parent">
+            <o.BaseAdapter id="@id/post_play_display_art" layout_width="wrap_content" layout_height="120.0dip" layout_marginBottom="@dimen/postplay_movie_recommendation_boxart_between" src="@color/black" antialias="true" dither="true" scaleType="fitCenter" adjustViewBounds="true" />
+            <ImageView layout_gravity="center" id="@id/post_play_play_button" visibility="gone" layout_width="@dimen/postplay_tablet_movie_play_btn_size" layout_height="@dimen/postplay_tablet_movie_play_btn_size" src="@drawable/APKTOOL_DUMMY_41a" scaleType="fitCenter" />
+        </FrameLayout>
+    </o.Uj>
+    <o.Uo gravity="center_horizontal" orientation="vertical" id="@id/post_play_metadata" layout_width="fill_parent" layout_height="wrap_content" layout_marginStart="@dimen/content_padding"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout orientation="horizontal" id="@id/post_play_buttons_container" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="6.0dip" />
+    </o.Uo>
+</o.Uk>

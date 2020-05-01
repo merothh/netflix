@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout id="@id/coordinatorLayout" fitsSystemWindows="true" layout_width="fill_parent" layout_height="fill_parent" statusBarBackground="@null" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout id="@id/top_container" fitsSystemWindows="true" layout_width="fill_parent" layout_height="fill_parent">
+        <LinearLayout id="@id/fragment_host_container" layout_width="fill_parent" layout_height="fill_parent" baselineAligned="false">
+            <FrameLayout id="@id/primary_fragment" layout_weight="1.0" style="@style/match" />
+            <FrameLayout id="@id/secondary_fragment" layout_weight="1.0" style="@style/match" />
+        </LinearLayout>
+        <include visibility="invisible" layout_width="fill_parent" layout_height="fill_parent" layout="@layout/stacked_fragment_container" />
+    </FrameLayout>
+    <ViewStub layout_gravity="end|bottom|center" id="@id/cast_icon_fab_stub" layout="@layout/cast_icon_fab" layout_width="wrap_content" layout_height="wrap_content" layout_marginBottom="65.0dip" layout_marginEnd="16.0dip" />
+    <ViewStub layout_gravity="bottom" id="@id/bottom_navigation_stub" layout="@layout/bottom_tabs_layout" layout_width="fill_parent" layout_height="wrap_content" />
+    <FrameLayout id="@id/home_activity_profile_selection_container" style="@style/match" />
+    <o.DialerFilter id="@id/dialog_container" layout_width="fill_parent" layout_height="fill_parent" elevation="@dimen/dialog_container_elevation" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView layout_width="fill_parent" layout_height="fill_parent" layout_marginTop="48.0dip" layout_marginBottom="48.0dip" overScrollMode="ifContentScrolls"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="wrap_content" layout_marginStart="24.0dip" layout_marginEnd="24.0dip">
+        <TextView textColor="?android:textColorSecondary" id="@android:id/message" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="48.0dip" style="?android:textAppearanceSmall" />
+        <EditText id="@android:id/edit" layout_width="fill_parent" layout_height="wrap_content" layout_marginStart="-4.0dip" layout_marginEnd="-4.0dip" />
+    </LinearLayout>
+</ScrollView>

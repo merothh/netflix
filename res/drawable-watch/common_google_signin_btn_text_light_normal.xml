@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item gravity="center_vertical" height="40.0dip" width="40.0dip" left="4.0dip">
+        <shape shape="oval">
+            <solid color="@android:color/white" />
+        </shape>
+    </item>
+    <item left="15.0dip">
+        <bitmap gravity="center|left" src="@drawable/APKTOOL_DUMMY_1c6" />
+    </item>
+</layer-list>

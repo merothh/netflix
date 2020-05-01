@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout padding="@dimen/content_padding" layout_width="wrap_content" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textColor="#ffaaaaaa" gravity="start" id="@id/video_details_copyright_expanded" style="@style/PrimaryText.Micro" />
+</LinearLayout>

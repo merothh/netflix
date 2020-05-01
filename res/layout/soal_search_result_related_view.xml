@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.aaK textSize="16.0sp" textColor="?relatedResultsTextColor" ellipsize="end" gravity="center_vertical" layout_width="fill_parent" layout_height="60.0dip" maxLines="1" paddingStart="10.0dip" paddingEnd="10.0dip" style="@style/PrimaryText.Medium"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

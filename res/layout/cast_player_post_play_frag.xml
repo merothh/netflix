@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/match"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout gravity="center_horizontal" orientation="vertical" id="@id/postplay_with_rating_container" background="@color/cast_player_post_play_bg" paddingBottom="@dimen/rdp_content_padding" visibility="invisible" clickable="true" layout_width="fill_parent" layout_height="fill_parent">
+        <o.HorizontalScrollView gravity="center" layout_gravity="center" id="@id/postplay_browse_btn" paddingLeft="48.0dip" paddingRight="48.0dip" layout_width="wrap_content" layout_height="@dimen/button_min_height" text="@string/memento_back_to_browse" layout_alignParentBottom="true" layout_centerHorizontal="true" style="@style/NetflixButton.Outline" />
+        <LinearLayout orientation="vertical" layout_width="wrap_content" layout_height="fill_parent" layout_above="@id/postplay_browse_btn" layout_centerHorizontal="true">
+            <o.ImageSwitcher textSize="18.0sp" textColor="@color/text_primary_dark" gravity="center_horizontal" layout_gravity="center_horizontal" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="5.0dip" text="@string/memento_how_do_you_like" layout_weight="1.0" />
+            <o.ImageSwitcher textSize="21.0sp" textStyle="bold" textColor="@color/text_primary_dark" gravity="center_horizontal" layout_gravity="center_horizontal" id="@id/postplay_movie_title" layout_width="wrap_content" layout_height="wrap_content" layout_weight="1.0" />
+            <LinearLayout gravity="center" layout_gravity="center" orientation="horizontal" id="@id/postplay_thumbs_rating" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="5.0dip" layout_marginBottom="5.0dip" layout_weight="2.0">
+                <ImageView id="@id/postplay_thumbs_up" background="@drawable/selectable_video_background_with_press" layout_width="45.0dip" layout_height="45.0dip" src="@drawable/ic_thumbs_up_selectable" scaleType="fitCenter" tint="#ffababab" layout_marginEnd="16.0dip" style="@style/NetflixSquareButton.Flat" />
+                <ImageView id="@id/postplay_thumbs_down" background="@drawable/selectable_video_background_with_press" layout_width="45.0dip" layout_height="45.0dip" src="@drawable/ic_thumbs_down_selectable" scaleType="fitCenter" tint="#ffababab" layout_marginStart="16.0dip" style="@style/NetflixSquareButton.Flat" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout id="@id/postplay_next_container" background="@color/cast_player_post_play_bg" paddingTop="@dimen/rdp_content_padding" visibility="invisible" clickable="true" layout_width="fill_parent" layout_height="fill_parent" paddingStart="@dimen/rdp_content_padding" paddingEnd="@dimen/rdp_content_padding">
+        <o.ImageSwitcher textSize="14.0sp" id="@id/post_play_countdown" visibility="invisible" layout_width="wrap_content" layout_height="wrap_content" fontFamily="sans-serif-medium" />
+        <o.ImageSwitcher textSize="14.0sp" id="@id/postplay_target_name" visibility="invisible" layout_width="wrap_content" layout_height="wrap_content" layout_below="@id/post_play_countdown" fontFamily="sans-serif-medium" />
+        <o.ImageSwitcher textSize="16.0sp" id="@id/postplay_episode_title" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="3.0dip" layout_below="@id/postplay_target_name" fontFamily="sans-serif-medium" />
+        <o.ImageSwitcher textSize="14.0sp" ellipsize="end" id="@id/post_play_synopsis" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="14.0dip" maxLines="3" layout_above="@id/postplay_play_btn" layout_below="@id/postplay_episode_title" fontFamily="sans-serif-light" />
+        <o.HorizontalScrollView ellipsize="end" id="@id/postplay_play_btn" visibility="visible" layout_width="wrap_content" layout_height="@dimen/postplay_episodes_phones_overlay_black_height" layout_marginBottom="18.0dip" text="@string/label_postplay_playNextEpisode" maxLines="1" singleLine="true" layout_alignParentBottom="true" contentDescription="@string/label_postplay_playNextEpisode" drawableStart="@drawable/APKTOOL_DUMMY_404" layout_marginEnd="@dimen/postplay_episodes_margin" style="@style/PostPlayPlayButton" />
+        <LinearLayout gravity="center_vertical" orientation="horizontal" layout_width="fill_parent" layout_height="@dimen/postplay_episodes_phones_overlay_black_height" layout_toRightOf="@id/postplay_play_btn" layout_alignTop="@id/postplay_play_btn" layout_alignBottom="@id/postplay_play_btn">
+            <ImageView layout_gravity="center_vertical" id="@id/postplay_stop_btn" layout_width="wrap_content" layout_height="fill_parent" src="@drawable/APKTOOL_DUMMY_407" layout_weight="1.0" contentDescription="@string/accesibility_btnStop" style="@style/CastPlayerActionButton" />
+            <ImageView layout_gravity="center_vertical" id="@id/postplay_episodes_btn" layout_width="wrap_content" layout_height="fill_parent" src="@drawable/APKTOOL_DUMMY_23b" layout_weight="1.0" contentDescription="@string/accesibility_btnEpisodes" style="@style/CastPlayerActionButton" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

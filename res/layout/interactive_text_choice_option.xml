@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout paddingLeft="20.0dip" paddingRight="20.0dip" layout_width="wrap_content" layout_height="fill_parent" soundEffectsEnabled="false" layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textSize="20.0sp" layout_gravity="center" id="@id/interactive_text_choice_option" layout_width="wrap_content" layout_height="wrap_content" soundEffectsEnabled="false" />
+    <o.GridView layout_gravity="center" id="@id/interactive_image_choice_option" background="@color/transparent" layout_width="wrap_content" layout_height="wrap_content" foreground="@color/transparent" soundEffectsEnabled="false" />
+</FrameLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout id="@id/profile_details_parent" layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.DatePickerController gravity="center_horizontal" layout_gravity="center_horizontal" orientation="vertical" id="@id/profile_details_content" paddingTop="12.0dip" paddingBottom="30.0dip" focusable="true" focusableInTouchMode="true" descendantFocusability="beforeDescendants" layout_width="fill_parent" layout_height="fill_parent" bll_maxWidth="500.0dip">
+        <ScrollView id="@id/scroll_view" layout_width="fill_parent" layout_height="0.0dip" fillViewport="false" layout_weight="1.0">
+            <LinearLayout gravity="center_horizontal" orientation="vertical" layout_width="fill_parent" layout_height="wrap_content">
+                <FrameLayout id="@id/avatar_frame" layout_width="wrap_content" layout_height="wrap_content">
+                    <o.GridView id="@id/avatar" layout_width="108.0dip" layout_height="108.0dip" layout_margin="4.0dip" src="@color/grey15" foreground="?android:selectableItemBackground" roundedCornerRadius="4.0dip" />
+                    <o.GridView layout_gravity="end|bottom|center" id="@id/edit_avatar_icon" background="@color/grey90" padding="4.0dip" clickable="false" layout_width="26.0dip" layout_height="26.0dip" src="@drawable/ic_edit" tint="@color/black" />
+                </FrameLayout>
+                <EditText textSize="16.0sp" id="@id/profile_name" background="@color/grey15" paddingTop="16.0dip" paddingBottom="16.0dip" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="20.0dip" hint="@string/profile_name" maxLength="@integer/profile_name_max_length" inputType="textPersonName|textCapWords" textAlignment="viewStart" paddingStart="12.0dip" paddingEnd="12.0dip" layout_marginStart="60.0dip" layout_marginEnd="60.0dip" importantForAutofill="no" />
+                <o.ImageSwitcher id="@id/default_kids_description" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="20.0dip" text="@string/profile_kids_no_checkbox_default_kids_profile" layout_marginStart="@dimen/profile_details_main_margin" layout_marginEnd="@dimen/profile_details_main_margin" style="@style/ProfileDetailsText" />
+                <com.netflix.mediaclient.ui.profiles.ProfilesAgeSection gravity="center_vertical" id="@id/age_section" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="20.0dip" />
+                <LinearLayout orientation="horizontal" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="36.0dip">
+                    <o.ImageSwitcher textSize="14.0sp" textColor="@color/grey70" id="@id/kids_badge" background="@drawable/profile_maturity_badge_background" paddingTop="6.0dip" paddingBottom="6.0dip" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" text="@string/kids_all_caps_badge" paddingStart="10.0dip" paddingEnd="10.0dip" layout_marginStart="@dimen/text_padding" layout_marginEnd="@dimen/text_padding" />
+                    <o.ImageSwitcher textSize="14.0sp" textColor="@color/grey70" id="@id/maturity_badge" background="@drawable/profile_maturity_badge_background" paddingTop="6.0dip" paddingBottom="6.0dip" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" paddingStart="10.0dip" paddingEnd="10.0dip" layout_marginStart="@dimen/text_padding" layout_marginEnd="@dimen/text_padding" />
+                </LinearLayout>
+                <o.ImageSwitcher textSize="14.0sp" gravity="center_horizontal" id="@id/maturity_description" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="8.0dip" layout_marginStart="@dimen/double_padding" layout_marginEnd="@dimen/double_padding" style="@style/ProfileDetailsText" />
+                <o.ImageSwitcher textSize="14.0sp" textColor="@color/grey45" gravity="center_horizontal" id="@id/maturity_level_change_instructions" background="@drawable/selectable_item_foreground" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="2.0dip" text="@string/profile_change_maturity_instructions" layout_marginStart="@dimen/double_padding" layout_marginEnd="@dimen/double_padding" style="@style/ProfileDetailsText" />
+            </LinearLayout>
+        </ScrollView>
+        <o.ImageSwitcher textSize="16.0sp" textColor="@color/grey70" id="@id/delete_button" background="?android:selectableItemBackground" padding="12.0dip" layout_width="wrap_content" layout_height="wrap_content" text="@string/profile_delete_textview" drawablePadding="10.0dip" drawableStart="@drawable/ic_delete" drawableTint="@color/grey70" style="@style/NetflixBoldFont" />
+    </o.DatePickerController>
+    <include layout="@layout/loading_and_error_inset" />
+</FrameLayout>

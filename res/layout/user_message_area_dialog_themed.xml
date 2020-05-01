@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater layout_width="fill_parent" layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.GridView id="@id/uma_themed_bg" layout_width="0.0dip" layout_height="0.0dip" scaleType="fitXY" layout_constraintBottom_toBottomOf="parent" layout_constraintDimensionRatio="6.4:7.2" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" />
+    <LinearLayout gravity="center_vertical" orientation="vertical" padding="16.0dip" layout_width="0.0dip" layout_height="0.0dip" baselineAligned="false" layout_constraintBottom_toBottomOf="@id/uma_themed_bg" layout_constraintEnd_toEndOf="@id/uma_themed_bg" layout_constraintStart_toStartOf="@id/uma_themed_bg" layout_constraintTop_toTopOf="@id/uma_themed_bg" layout_constraintVertical_bias="0.0">
+        <ScrollView fadingEdgeLength="@dimen/xlarge_padding" layout_width="fill_parent" layout_height="wrap_content" fillViewport="false" fadeScrollbars="false" requiresFadingEdge="vertical">
+            <o.MenuInflater id="@id/alert" layout_width="fill_parent" layout_height="wrap_content">
+                <o.GridView layout_gravity="center_horizontal" id="@id/icon" visibility="visible" layout_width="@dimen/uma_themed_dialog_icon" layout_height="@dimen/uma_themed_dialog_icon" layout_marginBottom="@dimen/uma_themed_dialog_icon_title_margin" importantForAccessibility="no" layout_constraintBottom_toTopOf="@id/title" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" layout_constraintVertical_chainStyle="spread_inside" />
+                <o.ImageSwitcher textSize="@dimen/uma_themed_dialog_title_text" textColor="@color/white" gravity="center" id="@id/title" layout_width="0.0dip" layout_height="wrap_content" layout_constraintBottom_toTopOf="@id/body" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/icon" style="@style/NetflixMediumFont" />
+                <o.ImageSwitcher textSize="@dimen/uma_themed_dialog_body_text" textColor="@color/white" gravity="center" id="@id/body" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="4.0dip" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/title" style="@style/NetflixFont" />
+            </o.MenuInflater>
+        </ScrollView>
+        <LinearLayout orientation="vertical" id="@id/cta_container" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/uma_message_cta_margin" paddingStart="10.0dip" paddingEnd="10.0dip" />
+    </LinearLayout>
+</o.MenuInflater>

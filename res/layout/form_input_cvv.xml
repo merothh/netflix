@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.MenuInflater layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="10.0dip">
+        <com.google.android.material.textfield.TextInputLayout theme="@style/SignupTextInputLayoutLabel" id="@id/inputLayout" layout_width="fill_parent" layout_height="wrap_content" style="@style/SignupTextInputLayout">
+            <EditText id="@id/editText" layout_width="fill_parent" layout_height="wrap_content" style="@style/SignupEditText" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <o.GridView id="@id/cvv_button" layout_width="30.0dip" layout_height="30.0dip" src="@drawable/ic_signup_question_mark" layout_marginEnd="10.0dip" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toEndOf="parent" layout_constraintTop_toTopOf="parent" />
+    </o.MenuInflater>
+    <TextView textStyle="bold|italic" id="@id/cvvTrustMessage" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" text="@string/cvv_trust_messaging" style="@style/FormInputCVVTrustMessage" />
+    <o.ImageSwitcher id="@id/inputError" layout_width="fill_parent" layout_height="wrap_content" style="@style/SignupErrorMessage.EditText" />
+</LinearLayout>

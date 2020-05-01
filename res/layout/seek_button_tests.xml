@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.RadioButton id="@id/test_seek_button_regular10forward" layout_width="wrap_content" layout_height="wrap_content" sb_debounce="true" sb_mode="forward" sb_seconds="10" sb_size="regular" />
+    <o.RadioButton id="@id/test_seek_button_small30backward" layout_width="wrap_content" layout_height="wrap_content" sb_debounce="true" sb_mode="backward" sb_seconds="30" sb_size="small" />
+    <o.RadioButton id="@id/test_seek_button_nodebounce10" layout_width="wrap_content" layout_height="wrap_content" sb_debounce="false" sb_size="regular" />
+</LinearLayout>

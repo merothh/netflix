@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout id="@id/webViewContainer" background="@color/signup_white" layout_width="fill_parent" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar id="@id/webViewLoadingSpinner" layout_width="50.0dip" layout_height="50.0dip" indeterminate="true" indeterminateOnly="true" indeterminateDrawable="@drawable/signup_progress_spinner_medium" layout_centerHorizontal="true" layout_centerVertical="true" layout_marginEnd="10.0dip" indeterminateTint="@color/signup_red" style="?android:progressBarStyle" />
+    <WebView id="@id/webView" visibility="gone" layout_width="fill_parent" layout_height="fill_parent" />
+</RelativeLayout>

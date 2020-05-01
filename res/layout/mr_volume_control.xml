@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center_vertical" paddingLeft="24.0dip" paddingRight="12.0dip" layout_width="fill_parent" layout_height="wrap_content" minHeight="48.0dip" splitMotionEvents="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView gravity="center" layout_width="24.0dip" layout_height="24.0dip" src="?mediaRouteAudioTrackDrawable" scaleType="center" />
+    <o.Long id="@id/mr_volume_slider" clickable="true" layout_width="0.0dip" layout_height="wrap_content" maxHeight="48.0dip" minHeight="48.0dip" layout_weight="1.0" contentDescription="@string/mr_controller_volume_slider" />
+    <o.NegativeArraySizeException id="@id/mr_group_expand_collapse" background="?selectableItemBackgroundBorderless" padding="12.0dip" visibility="gone" layout_width="48.0dip" layout_height="48.0dip" />
+</LinearLayout>

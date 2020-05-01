@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item state_focused="true" state_enabled="true" drawable="@drawable/plan_header_selected_bg" />
+    <item state_enabled="true" state_selected="true" drawable="@drawable/plan_header_selected_bg" />
+    <item drawable="@drawable/plan_header_deselected_bg" />
+</selector>

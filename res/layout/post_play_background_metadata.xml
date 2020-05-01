@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.Ui layout_gravity="bottom" id="@id/post_play_background_metadata" layout_width="wrap_content" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/post_play_background_play_button" />
+    <RelativeLayout layout_width="fill_parent" layout_height="fill_parent">
+        <LinearLayout orientation="horizontal" layout_width="fill_parent" layout_height="wrap_content" baselineAligned="false" layout_alignParentBottom="true">
+            <LinearLayout gravity="bottom" orientation="vertical" paddingBottom="@dimen/postplay_play_margin" layout_width="0.0dip" layout_height="wrap_content" layout_marginBottom="@dimen/postplay_items_height_plus_experience_title" layout_weight="3.0" paddingStart="@dimen/postplay_play_margin">
+                <o.BaseAdapter id="@id/post_play_logo" layout_width="wrap_content" layout_height="40.0dip" scaleType="fitStart" adjustViewBounds="true" />
+                <include layout="@layout/post_play_metadata_with_metabar" />
+            </LinearLayout>
+            <o.AssertionError id="@id/metadata_right_padding_large" layout_width="0.0dip" layout_height="fill_parent" layout_weight="2.0" />
+            <o.AssertionError id="@id/metadata_right_padding_small" layout_width="27.0dip" layout_height="fill_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+</o.Ui>

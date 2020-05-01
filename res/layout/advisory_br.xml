@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater layout_width="wrap_content" layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher id="@id/label" layout_width="wrap_content" layout_height="wrap_content" text="@string/content_advisory_rating" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" style="@style/PlayerContentAdvisoryPrimaryText" />
+    <o.GridView id="@id/icon" layout_width="@dimen/content_advisory_small_icon_size" layout_height="@dimen/content_advisory_small_icon_size" scaleType="centerInside" layout_marginStart="@dimen/moderate_padding" layout_constraintBottom_toBottomOf="@id/label" layout_constraintStart_toEndOf="@id/label" layout_constraintTop_toTopOf="@id/label" />
+    <o.ImageSwitcher id="@id/advisories" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/label" style="@style/PlayerContentAdvisorySecondaryText" />
+</o.MenuInflater>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="wrap_content" layout_marginStart="8.0dip" layout_marginEnd="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TabHost id="@id/tabHost" layout_width="fill_parent" layout_height="fill_parent">
+        <LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="fill_parent">
+            <TabWidget id="@android:id/tabs" layout_width="fill_parent" layout_height="wrap_content" divider="@null" showDividers="none" />
+            <FrameLayout id="@android:id/tabcontent" layout_width="fill_parent" layout_height="fill_parent">
+                <ListView id="@id/audios" layout_width="fill_parent" layout_height="fill_parent" fadeScrollbars="false" style="@style/NetflixLanguageListView" />
+                <ListView id="@id/subtitles" layout_width="fill_parent" layout_height="fill_parent" fadeScrollbars="false" style="@style/NetflixLanguageListView" />
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</LinearLayout>

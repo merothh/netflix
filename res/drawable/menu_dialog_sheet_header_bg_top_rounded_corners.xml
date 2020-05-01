@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid color="?menu_dialog_sheet_bg_color" />
+    <corners topLeftRadius="@dimen/medium_padding" topRightRadius="@dimen/medium_padding" />
+</shape>

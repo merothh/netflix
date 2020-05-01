@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout id="@id/cast_player_title_group" layout_width="fill_parent" layout_height="0.0dip" layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.DayPickerViewPager id="@id/cast_player_collapsed_button_0" paddingLeft="@dimen/double_padding" paddingRight="@dimen/double_padding" visibility="gone" layout_alignParentLeft="true" layout_alignParentTop="true" style="@style/CastPlayerIconFontButton" />
+    <o.DayPickerViewPager id="@id/cast_player_collapsed_button_1" paddingLeft="@dimen/double_padding" paddingRight="@dimen/double_padding" visibility="gone" layout_toRightOf="@id/cast_player_collapsed_button_0" layout_alignParentTop="true" style="@style/CastPlayerIconFontButton" />
+    <ImageView id="@id/cast_player_collapsed_button_3" paddingLeft="@dimen/double_padding" paddingRight="@dimen/double_padding" src="@drawable/APKTOOL_DUMMY_406" layout_alignParentTop="true" layout_alignParentRight="true" contentDescription="@string/accesibility_btnPlayPause" style="@style/CastPlayerActionButton" />
+    <o.DayPickerViewPager id="@id/cast_player_collapsed_button_2" paddingLeft="@dimen/double_padding" paddingRight="@dimen/double_padding" visibility="gone" layout_toLeftOf="@id/cast_player_collapsed_button_3" layout_alignParentTop="true" style="@style/CastPlayerIconFontButton" />
+    <View id="@id/cast_player_collapsed_divider_0" layout_toRightOf="@id/cast_player_collapsed_button_0" style="@style/CastPlayerVerticalDivider" />
+    <View id="@id/cast_player_collapsed_divider_1" layout_toRightOf="@id/cast_player_collapsed_button_1" style="@style/CastPlayerVerticalDivider" />
+    <View id="@id/cast_player_collapsed_divider_2" layout_toLeftOf="@id/cast_player_collapsed_button_2" style="@style/CastPlayerVerticalDivider" />
+    <View id="@id/cast_player_collapsed_divider_3" layout_toLeftOf="@id/cast_player_collapsed_button_3" style="@style/CastPlayerVerticalDivider" />
+    <LinearLayout orientation="vertical" id="@id/cast_player_text_group" paddingTop="12.0dip" layout_width="fill_parent" layout_height="wrap_content" layout_alignParentTop="true" layout_centerHorizontal="true">
+        <o.ImageSwitcher textSize="16.0sp" textColor="@color/white" ellipsize="end" gravity="center" layout_gravity="center_horizontal" id="@id/cast_player_text_title" paddingLeft="@dimen/content_padding" paddingTop="3.0dip" paddingRight="@dimen/content_padding" layout_width="wrap_content" layout_height="wrap_content" singleLine="true" />
+        <o.ImageSwitcher textSize="12.0sp" textColor="@color/secondary_text" ellipsize="end" gravity="center" layout_gravity="center_horizontal" id="@id/cast_player_text_subtitle" paddingLeft="@dimen/content_padding" paddingRight="@dimen/content_padding" layout_width="wrap_content" layout_height="wrap_content" singleLine="true" />
+    </LinearLayout>
+</RelativeLayout>

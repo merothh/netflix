@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater id="@id/player_seekbar" visibility="gone" layout_width="0.0dip" layout_height="wrap_content" layoutDirection="ltr" layout_constraintLeft_toLeftOf="parent" layout_constraintRight_toRightOf="parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.RemoteViewsService id="@id/timeline_seekbar" visibility="visible" layout_width="0.0dip" layout_height="wrap_content" layout_marginRight="@dimen/content_padding" layout_constraintBottom_toBottomOf="parent" layout_constraintLeft_toLeftOf="parent" layout_constraintRight_toLeftOf="@id/label_time_remaining" style="@style/NetflixSeekbar" />
+    <ImageView id="@id/extra_seekbar_handler" visibility="invisible" src="@drawable/player_seekbar_handle" layout_constraintBottom_toBottomOf="parent" layout_constraintLeft_toLeftOf="@id/timeline_seekbar" layout_constraintTop_toTopOf="parent" style="@style/wrap" />
+    <o.ImageSwitcher textSize="@dimen/text_nano_medium" textColor="@color/white" id="@id/label_time_remaining" layout_width="wrap_content" layout_height="wrap_content" maxLines="1" layout_constraintBottom_toBottomOf="parent" layout_constraintRight_toRightOf="parent" layout_constraintTop_toTopOf="parent" />
+</o.MenuInflater>

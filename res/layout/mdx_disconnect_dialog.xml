@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" paddingTop="24.0dip" paddingBottom="22.0dip" layout_width="fill_parent" layout_height="wrap_content" paddingStart="14.0dip" paddingEnd="14.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout orientation="horizontal" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="@dimen/content_padding" paddingStart="@dimen/content_padding" paddingEnd="@dimen/content_padding">
+        <ImageView paddingTop="@dimen/text_padding" layout_width="wrap_content" layout_height="wrap_content" src="?mdxIconDrawable" contentDescription="@string/label_localMdxTargetWatch" layout_marginEnd="@dimen/double_padding" />
+        <o.ImageSwitcher textStyle="bold" ellipsize="end" layout_gravity="center_vertical" id="@id/mdx_dialog_title" layout_width="fill_parent" layout_height="wrap_content" singleLine="true" style="@style/PrimaryText.Small" />
+    </LinearLayout>
+    <LinearLayout orientation="vertical" padding="@dimen/content_padding" layout_width="fill_parent" layout_height="wrap_content">
+        <o.ImageSwitcher ellipsize="end" layout_gravity="center_vertical" id="@id/mdx_dialog_message" paddingBottom="@dimen/content_padding" layout_width="fill_parent" layout_height="wrap_content" style="@style/PrimaryText.Small" />
+        <o.ImageSwitcher textStyle="bold" ellipsize="end" layout_gravity="center_vertical" id="@id/mdx_dialog_video_info" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" lineSpacingMultiplier="1.5" style="@style/PrimaryText.Small" />
+    </LinearLayout>
+</LinearLayout>

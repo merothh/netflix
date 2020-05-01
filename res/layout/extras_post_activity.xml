@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout layout_gravity="center" id="@id/coordinatorLayout" background="?fullscreenDimColor" fitsSystemWindows="true" clipToPadding="false" layout_width="fill_parent" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout orientation="vertical" background="?fullscreenBackgroundColor" layout_width="fill_parent" layout_height="fill_parent">
+        <o.GridLayout layout_gravity="end|center" id="@id/close_button" layout_width="?actionBarSize" layout_height="?actionBarSize" src="@drawable/ic_close_24dp" scaleType="center" style="@style/ExtrasButton" />
+        <FrameLayout id="@id/primary_fragment" paddingBottom="@dimen/content_padding" layout_width="fill_parent" layout_height="fill_parent" elevation="8.0dip" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

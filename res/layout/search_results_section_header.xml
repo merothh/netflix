@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.ImageSwitcher textSize="14.0sp" textColor="?headerTextColor" id="@id/search_results_section_title" background="?headerBackgroundColor" paddingTop="@dimen/text_padding" paddingBottom="@dimen/text_padding" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/medium_large_padding" layout_marginBottom="@dimen/narrow_content_padding" singleLine="true" paddingStart="@dimen/moderate_padding" style="@style/NetflixBoldFont"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

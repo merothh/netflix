@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.Vo orientation="vertical" id="@id/moment_notification_layout" visibility="visible" layout_width="0.0dip" layout_height="0.0dip" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toEndOf="parent" layout_constraintLeft_toLeftOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/interactive_notification_toast" />
+</o.Vo>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout layout_width="fill_parent" layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.CheckedTextView layout_gravity="center" layout_width="fill_parent" layout_height="wrap_content" paddingStart="@dimen/double_padding" paddingEnd="@dimen/double_padding" bfl_maxWidth="@dimen/tablet_more_tab_max_width">
+        <o.ImageSwitcher textSize="@dimen/text_small_medium" textColor="?android:textColorSecondary" gravity="center_vertical" id="@id/row_text" layout_width="wrap_content" layout_height="@dimen/old_sliding_menu_row_height" minHeight="@dimen/old_sliding_menu_row_height_min" maxLines="1" style="@style/PrimaryText.Small"
+          xmlns:android="http://schemas.android.com/apk/res/android" />
+    </o.CheckedTextView>
+</FrameLayout>

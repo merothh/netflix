@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView id="@id/smart_downloads_tutorial_scrollview" layout_width="fill_parent" layout_height="fill_parent" transitionGroup="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout orientation="vertical" padding="@dimen/content_padding" layout_width="fill_parent" layout_height="wrap_content">
+        <o.ImageSwitcher id="@id/smart_downloads_tutorial_part_1_title" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/double_padding" text="@string/label_smart_downloads_tutorial_part_1_title" style="@style/PrimaryBoldFontText.MediumLarge" />
+        <o.ImageSwitcher id="@id/smart_downloads_tutorial_part_1_paragraph" layout_width="fill_parent" layout_height="wrap_content" text="@string/label_smart_downloads_tutorial_part_1_paragraph" style="@style/SecondaryText.Small" />
+        <o.ImageSwitcher id="@id/smart_downloads_tutorial_part_2_title" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/double_padding" text="@string/label_smart_downloads_tutorial_part_2_title" style="@style/PrimaryBoldFontText.MediumLarge" />
+        <o.ImageSwitcher id="@id/smart_downloads_tutorial_part_2_paragraph_1" layout_width="fill_parent" layout_height="wrap_content" text="@string/label_smart_downloads_tutorial_part_2_paragraph_1" paddingStart="@dimen/double_padding" style="@style/SecondaryText.Small" />
+        <o.ImageSwitcher id="@id/smart_downloads_tutorial_part_2_paragraph_2" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/text_padding" text="@string/label_smart_downloads_tutorial_part_2_paragraph_2" paddingStart="@dimen/double_padding" style="@style/SecondaryText.Small" />
+        <o.ImageSwitcher id="@id/smart_downloads_tutorial_part_2_paragraph_3" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/text_padding" text="@string/label_smart_downloads_tutorial_part_2_paragraph_3" paddingStart="@dimen/double_padding" style="@style/SecondaryText.Small" />
+        <o.ImageSwitcher id="@id/smart_downloads_tutorial_part_3_title" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/double_padding" text="@string/label_smart_downloads_tutorial_part_3_title" style="@style/PrimaryBoldFontText.MediumLarge" />
+        <o.ImageSwitcher id="@id/smart_downloads_tutorial_part_3_paragraph" layout_width="fill_parent" layout_height="wrap_content" text="@string/label_smart_downloads_tutorial_part_3_paragraph" style="@style/SecondaryText.Small" />
+        <o.ImageSwitcher id="@id/smart_downloads_tutorial_part_4_title" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/double_padding" text="@string/label_smart_downloads_tutorial_part_4_title" style="@style/PrimaryBoldFontText.MediumLarge" />
+        <o.ImageSwitcher paddingBottom="@dimen/double_padding" layout_width="fill_parent" layout_height="wrap_content" text="@string/label_smart_downloads_tutorial_part_4_paragraph" style="@style/SecondaryText.Small" />
+    </LinearLayout>
+</ScrollView>

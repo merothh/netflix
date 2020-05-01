@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout id="@id/data_saving_toast" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" translationY="-30.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout background="@drawable/quick_actions_border" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="30.0dip" layout_marginEnd="10.0dip" layout_alignParentEnd="true">
+        <o.ImageSwitcher textStyle="bold" textColor="@color/brand_red" id="@id/data_saving_toast_part1" paddingTop="@dimen/content_padding" paddingBottom="@dimen/content_padding" layout_width="wrap_content" layout_height="wrap_content" text="@string/label_bw_quick_action_new" paddingStart="@dimen/content_padding" paddingEnd="@dimen/content_padding" style="@style/PrimaryText.SmallMedium" />
+        <o.ImageSwitcher textStyle="bold" textColor="@color/light_grey" id="@id/data_saving_toast_part2" paddingTop="@dimen/content_padding" paddingBottom="@dimen/content_padding" layout_width="wrap_content" layout_height="wrap_content" text="@string/label_bw_quick_action" paddingEnd="40.0dip" style="@style/PrimaryText.SmallMedium" />
+    </LinearLayout>
+    <View id="@id/indicator" background="@drawable/triangle" layout_width="30.0dip" layout_height="30.0dip" layout_marginTop="1.0dip" layout_marginEnd="24.0dip" layout_alignParentEnd="true" />
+</RelativeLayout>

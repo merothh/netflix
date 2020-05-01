@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.QuickContactBadge layout_gravity="top" id="@id/status_bar_background" background="?netflixStatusBarColor" fitsSystemWindows="true" layout_width="fill_parent" layout_height="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

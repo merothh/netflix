@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout layout_width="fill_parent" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/trailers_feed_loading_and_error_inset" />
+    <com.netflix.mediaclient.ui.feeds.TrailersFeedRecyclerView id="@id/trailers_feed" paddingTop="0.0dip" clipChildren="false" clipToPadding="false" layout_width="fill_parent" layout_height="fill_parent" />
+</FrameLayout>

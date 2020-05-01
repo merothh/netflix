@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid color="?searchPreQueryListDividerColor_ab10892" />
+    <size height="2.0dip" />
+</shape>

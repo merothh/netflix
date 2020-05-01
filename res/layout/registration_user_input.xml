@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:form="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher id="@id/formTitle" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/moderate_padding" text="@string/title_registration" style="@style/SignupFormHeadingText" />
+    <com.netflix.mediaclient.acquisition2.components.form2.edittext.FormViewEditText id="@id/email" layout_width="fill_parent" layout_height="wrap_content" inputType="textEmailAddress" errorEmpty="@string/error_required_email" errorLength="@string/invalid_length_email" errorRegex="@string/registration_validation_error_email" hint="@string/label_email" />
+    <com.netflix.mediaclient.acquisition2.components.form2.edittext.FormViewEditText id="@id/password" layout_width="fill_parent" layout_height="wrap_content" inputType="textPassword" errorEmpty="@string/error_required_password" errorLength="@string/invalid_length_password" errorRegex="@string/registration_validation_error_password" hint="@string/label_password" />
+    <CheckBox id="@id/emailCheckbox" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/moderate_padding" style="@style/SignupHtmlText.Checkbox.BlackText" />
+</merge>

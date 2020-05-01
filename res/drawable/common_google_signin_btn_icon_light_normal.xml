@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item drawable="@drawable/APKTOOL_DUMMY_17c" />
+    <item>
+        <bitmap gravity="center" src="@drawable/APKTOOL_DUMMY_1c6" />
+    </item>
+</layer-list>

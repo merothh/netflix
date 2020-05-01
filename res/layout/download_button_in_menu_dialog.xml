@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout gravity="center_vertical" orientation="horizontal" layout_width="fill_parent" layout_height="fill_parent">
+        <com.netflix.android.widgetry.widget.tabs.BadgeView id="@id/download_button_badge" layout_width="26.0dip" layout_height="26.0dip" scaleType="fitXY" layout_marginEnd="@dimen/medium_padding" />
+        <o.ImageSwitcher ellipsize="end" id="@id/download_button_message" layout_width="wrap_content" layout_height="wrap_content" maxLines="1" layout_marginStart="@dimen/medium_padding" style="@style/PrimaryText.SmallMedium" />
+    </LinearLayout>
+</merge>

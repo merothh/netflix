@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout id="@id/video_details_title_info" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/double_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout orientation="vertical" paddingBottom="4.0dip" layout_width="fill_parent" layout_height="wrap_content" layout_alignParentStart="true">
+        <include layout="@layout/video_details_basic_info" />
+    </LinearLayout>
+</RelativeLayout>

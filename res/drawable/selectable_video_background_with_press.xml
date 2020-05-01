@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple color="@color/grey70" enterFadeDuration="@integer/ripple_anim_time_ms" exitFadeDuration="@integer/ripple_anim_time_ms"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

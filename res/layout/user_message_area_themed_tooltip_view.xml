@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View id="@id/uma_background" background="@drawable/uma_themed_tooltip_bg" layout_width="0.0dip" layout_height="0.0dip" importantForAccessibility="no" layout_constraintBottom_toBottomOf="@id/body" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="@id/body" />
+    <o.GridView id="@id/icon" layout_width="72.0dip" layout_height="72.0dip" importantForAccessibility="no" layout_marginStart="8.0dip" layout_constraintBottom_toBottomOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" />
+    <ImageView id="@id/uma_themed_close" padding="5.0dip" layout_width="34.0dip" layout_height="34.0dip" src="@drawable/APKTOOL_DUMMY_219" contentDescription="@string/accesibility_btnClose" layout_constraintEnd_toEndOf="parent" layout_constraintTop_toTopOf="@id/body" />
+    <o.ImageSwitcher textColor="@color/black" gravity="center_vertical" id="@id/body" paddingTop="8.0dip" paddingBottom="8.0dip" layout_width="0.0dip" layout_height="wrap_content" minHeight="54.0dip" layout_marginStart="8.0dip" layout_marginEnd="8.0dip" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toStartOf="@id/uma_themed_close" layout_constraintHorizontal_bias="0.0" layout_constraintStart_toEndOf="@id/icon" layout_constraintTop_toTopOf="parent" />
+    <ImageView id="@id/uma_themed_tooltip_pointer" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/uma_themed_tooltip_pointer" importantForAccessibility="no" layout_constraintTop_toBottomOf="@id/uma_background" />
+</merge>

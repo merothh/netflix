@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="cast_expanded_controller_default_control_buttons">
+        <item>@id/cast_button_type_closed_caption</item>
+        <item>@id/cast_button_type_skip_previous</item>
+        <item>@id/cast_button_type_skip_next</item>
+        <item>@id/cast_button_type_mute_toggle</item>
+    </array>
+    <array name="cast_mini_controller_default_control_buttons">
+        <item>@id/cast_button_type_empty</item>
+        <item>@id/cast_button_type_empty</item>
+        <item>@id/cast_button_type_play_pause_toggle</item>
+    </array>
+    <array name="fragment_container_ids">
+        <item>@id/fragment_container_0</item>
+        <item>@id/fragment_container_1</item>
+        <item>@id/fragment_container_2</item>
+        <item>@id/fragment_container_3</item>
+        <item>@id/fragment_container_4</item>
+        <item>@id/fragment_container_5</item>
+        <item>@id/fragment_container_6</item>
+        <item>@id/fragment_container_7</item>
+        <item>@id/fragment_container_8</item>
+        <item>@id/fragment_container_9</item>
+        <item>@id/fragment_container_10</item>
+        <item>@id/fragment_container_11</item>
+        <item>@id/fragment_container_12</item>
+        <item>@id/fragment_container_13</item>
+        <item>@id/fragment_container_14</item>
+        <item>@id/fragment_container_15</item>
+        <item>@id/fragment_container_16</item>
+        <item>@id/fragment_container_17</item>
+        <item>@id/fragment_container_18</item>
+        <item>@id/fragment_container_19</item>
+        <item>@id/fragment_container_20</item>
+        <item>@id/fragment_container_21</item>
+        <item>@id/fragment_container_22</item>
+        <item>@id/fragment_container_23</item>
+        <item>@id/fragment_container_24</item>
+        <item>@id/fragment_container_25</item>
+        <item>@id/fragment_container_26</item>
+        <item>@id/fragment_container_27</item>
+        <item>@id/fragment_container_28</item>
+        <item>@id/fragment_container_29</item>
+        <item>@id/fragment_container_30</item>
+        <item>@id/fragment_container_31</item>
+        <item>@id/fragment_container_32</item>
+        <item>@id/fragment_container_33</item>
+        <item>@id/fragment_container_34</item>
+        <item>@id/fragment_container_35</item>
+        <item>@id/fragment_container_36</item>
+        <item>@id/fragment_container_37</item>
+        <item>@id/fragment_container_38</item>
+        <item>@id/fragment_container_39</item>
+        <item>@id/fragment_container_40</item>
+        <item>@id/fragment_container_41</item>
+        <item>@id/fragment_container_42</item>
+        <item>@id/fragment_container_43</item>
+        <item>@id/fragment_container_44</item>
+        <item>@id/fragment_container_45</item>
+        <item>@id/fragment_container_46</item>
+        <item>@id/fragment_container_47</item>
+        <item>@id/fragment_container_48</item>
+        <item>@id/fragment_container_49</item>
+    </array>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.MenuInflater orientation="vertical" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="10.0dip" style="@style/SignupTextInputLayout">
+        <com.google.android.material.textfield.TextInputLayout theme="@style/SignupTextInputLayoutLabel" id="@id/inputLayout" layout_width="0.0dip" layout_height="wrap_content" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toStartOf="@id/kidsIcon" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent">
+            <EditText id="@id/editText" layout_width="fill_parent" layout_height="wrap_content" style="@style/SignupEditText" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <ImageView id="@id/kidsIcon" layout_width="wrap_content" layout_height="20.0dip" src="@drawable/add_profiles_kids_logo_lowercase" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toStartOf="@id/kidsCheckBox" layout_constraintTop_toTopOf="parent" />
+        <CheckBox theme="@style/AddProfilesCheckbox" id="@id/kidsCheckBox" layout_width="wrap_content" layout_height="wrap_content" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toEndOf="parent" layout_constraintTop_toTopOf="parent" />
+    </o.MenuInflater>
+    <o.ImageSwitcher id="@id/inputError" layout_width="wrap_content" layout_height="wrap_content" style="@style/SignupErrorMessage.EditText" />
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge layout_width="wrap_content" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.BaseAdapter id="@id/cw_view_img" layout_marginBottom="@dimen/cw_box_art_info_bar_affordance" scaleType="centerCrop" adjustViewBounds="true" style="@style/match" />
+    <ImageView id="@id/video_play_icon" paddingBottom="@dimen/cw_box_art_info_bar_affordance" layout_width="@dimen/cw_row_play_button_size" layout_height="@dimen/cw_row_play_button_size" src="@drawable/ic_play_svg" layout_centerInParent="true" />
+    <View id="@id/cw_view_gradient_overlay" background="?continueWatchingBoxartGradient" layout_width="fill_parent" layout_height="@dimen/view_gradient_overlay_height" layout_alignParentBottom="true" />
+    <o.ImageSwitcher textSize="@dimen/cw_info_textSize" textColor="?continueWatchingBoxartInfoTextColor" gravity="center_vertical" id="@id/video_info" background="?continueWatchingBoxartInfoColor" layout_width="fill_parent" layout_height="@dimen/cw_box_art_info_bar_affordance" maxLines="2" layout_alignParentBottom="true" lineSpacingMultiplier="@dimen/cw_info_lineSpacingMultiplier" paddingStart="@dimen/content_padding" paddingEnd="@dimen/cw_box_art_info_bar_affordance" layout_alignParentStart="true" />
+    <ImageView textSize="20.0sp" textColor="@color/grey70" layout_gravity="end" id="@id/cw_view_info" background="@drawable/selectable_video_background_with_press" padding="@dimen/content_padding" focusable="true" layout_width="@dimen/cw_box_art_info_bar_affordance" layout_height="@dimen/cw_box_art_info_bar_affordance" src="@drawable/ic_cw_info" layout_alignParentBottom="true" layout_alignParentEnd="true" />
+    <View id="@id/cw_view_video_progress" layout_width="fill_parent" layout_height="@dimen/cw_row_progress_bar_height" layout_above="@id/cw_view_info" layoutDirection="ltr" />
+</merge>

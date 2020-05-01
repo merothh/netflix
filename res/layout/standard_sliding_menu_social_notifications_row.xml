@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="horizontal" background="?selectableItemBackground" layout_width="fill_parent" layout_height="wrap_content" baselineAligned="false" paddingEnd="@dimen/content_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView layout_gravity="start" id="@id/sliding_menu_notification_indicator" visibility="invisible" layout_width="wrap_content" layout_height="fill_parent" src="@drawable/red_netflix_circle" paddingStart="4.0dip" />
+    <o.BaseAdapter id="@id/nsa_video_art_img" visibility="gone" layout_width="@dimen/sliding_menu_list_boxart_width" layout_height="@dimen/sliding_menu_list_boxart_height" layout_margin="@dimen/content_padding" />
+    <o.DropDownListView id="@id/stack_layout" visibility="gone" layout_width="@dimen/sliding_menu_list_boxart_width" layout_height="@dimen/sliding_menu_list_boxart_height" layout_margin="@dimen/content_padding" />
+    <LinearLayout layout_gravity="center_vertical" orientation="vertical" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0" layout_marginStart="@dimen/content_padding">
+        <o.ImageSwitcher textSize="@dimen/text_fixed_small_medium" textStyle="bold" textColor="?android:textColorPrimary" ellipsize="end" id="@id/top_text" layout_width="fill_parent" layout_height="wrap_content" maxLines="2" singleLine="false" />
+        <o.ImageSwitcher textSize="@dimen/text_fixed_small_medium" textColor="?android:colorEdgeEffect" ellipsize="end" id="@id/middle_text" layout_width="fill_parent" layout_height="wrap_content" maxLines="2" singleLine="true" fontFamily="sans-serif-light" />
+        <o.ImageSwitcher textSize="@dimen/text_nano_medium" textColor="@color/medium_grey" ellipsize="end" id="@id/timestamp_text" layout_width="fill_parent" layout_height="wrap_content" singleLine="true" />
+    </LinearLayout>
+    <o.BaseAdapter id="@id/video_art_img" layout_width="@dimen/social_notifications_list_boxart_width" layout_height="@dimen/social_notifications_list_boxart_height" layout_margin="@dimen/content_padding" />
+</LinearLayout>

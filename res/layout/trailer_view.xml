@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" paddingBottom="@dimen/double_padding" layout_width="fill_parent" layout_height="wrap_content" paddingStart="@dimen/moderate_padding" paddingEnd="@dimen/moderate_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout layout_width="fill_parent" layout_height="wrap_content">
+        <o.BaseAdapter layout_gravity="center_vertical" id="@id/cw_view_img" layout_width="fill_parent" layout_height="wrap_content" scaleType="centerCrop" adjustViewBounds="true" />
+        <ImageView layout_gravity="center" id="@id/video_play_icon" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/ic_play_svg" contentDescription="@string/accesibility_play_video" />
+    </FrameLayout>
+    <o.ImageSwitcher layout_gravity="start|bottom|center" id="@id/cw_view_title" paddingTop="@dimen/content_padding" paddingBottom="@dimen/content_padding" layout_width="fill_parent" maxLines="2" style="@style/PrimaryText.Small" />
+</LinearLayout>

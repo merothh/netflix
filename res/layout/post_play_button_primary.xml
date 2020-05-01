@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.HorizontalScrollView ellipsize="end" id="@id/post_play_primary_cta" padding="0.0dip" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="0.0dip" layout_marginBottom="0.0dip" minHeight="@dimen/button_min_height" maxLines="1" drawablePadding="2.0dip" textAlignment="center" layout_marginStart="0.0dip" layout_marginEnd="@dimen/content_padding" style="?primaryPostPlayButtonStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

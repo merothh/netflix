@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center_vertical" orientation="horizontal" id="@id/changePaymentButton" background="?selectableItemBackground" visibility="gone" layout_width="wrap_content" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView layout_width="wrap_content" layout_height="16.0dip" src="@drawable/ic_icon_thin_caret_back" />
+    <o.ImageSwitcher layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/double_padding" layout_marginBottom="@dimen/double_padding" text="@string/change_payment_method" layout_marginStart="4.0dip" style="@style/SignupActionText" />
+</LinearLayout>

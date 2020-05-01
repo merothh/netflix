@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center_vertical" orientation="horizontal" id="@id/episode_info_container" paddingTop="@dimen/moderate_padding" visibility="gone" layout_width="0.0dip" layout_height="wrap_content" layout_marginStart="@dimen/moderate_padding" layout_marginEnd="@dimen/moderate_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher gravity="center_vertical" id="@id/video_details_episode_badge" background="@color/brand_red" visibility="gone" maxLines="1" lineSpacingMultiplier="@dimen/line_spacing_expanded" paddingStart="@dimen/content_padding" paddingEnd="@dimen/content_padding" layout_marginEnd="@dimen/moderate_padding" style="@style/PrimaryBoldFontText.Nano" />
+    <o.ImageSwitcher ellipsize="end" id="@id/video_details_episode_title" maxLines="1" lineSpacingMultiplier="@dimen/line_spacing_expanded" style="@style/PrimaryBoldFontText.Small" />
+</LinearLayout>

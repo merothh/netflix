@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" id="@id/billboard_pill_layout" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView id="@id/billboard_pill_button_arrow" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/ic_chevron_up" contentDescription="@string/label_picked_for_you" />
+    <o.HorizontalScrollView id="@id/billboard_pill_button" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="15.0dip" layout_marginBottom="4.0dip" text="@string/label_picked_for_you" contentDescription="@string/label_picked_for_you" elevation="10.0dip" style="?primarySmallPillButtonStyle" />
+</LinearLayout>

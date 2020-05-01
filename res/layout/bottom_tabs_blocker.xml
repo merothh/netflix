@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View id="@id/bottom_tabs_blocker" background="?netflixStatusBarColor" focusable="true" clickable="true" layout_width="fill_parent" layout_height="@dimen/bottom_navigation_height" alpha="0.5"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

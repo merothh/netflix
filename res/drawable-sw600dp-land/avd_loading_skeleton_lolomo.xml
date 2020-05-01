@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector drawable="@drawable/$avd_loading_skeleton_lolomo__0" xmlns:aapt="http://schemas.android.com/aapt"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <target name="0_title" animation="@drawable/$avd_loading_skeleton_lolomo__1" />
+    <target name="0_0" animation="@drawable/$avd_loading_skeleton_lolomo__2" />
+    <target name="0_1" animation="@drawable/$avd_loading_skeleton_lolomo__3" />
+    <target name="0_2" animation="@drawable/$avd_loading_skeleton_lolomo__4" />
+    <target name="0_3" animation="@drawable/$avd_loading_skeleton_lolomo__5" />
+    <target name="0_4" animation="@drawable/$avd_loading_skeleton_lolomo__6" />
+    <target name="0_5" animation="@drawable/$avd_loading_skeleton_lolomo__7" />
+    <target name="0_6" animation="@drawable/$avd_loading_skeleton_lolomo__8" />
+    <target name="1_title" animation="@drawable/$avd_loading_skeleton_lolomo__9" />
+    <target name="1_0" animation="@drawable/$avd_loading_skeleton_lolomo__10" />
+    <target name="1_1" animation="@drawable/$avd_loading_skeleton_lolomo__11" />
+    <target name="1_2" animation="@drawable/$avd_loading_skeleton_lolomo__12" />
+    <target name="1_3" animation="@drawable/$avd_loading_skeleton_lolomo__13" />
+    <target name="1_4" animation="@drawable/$avd_loading_skeleton_lolomo__14" />
+    <target name="1_5" animation="@drawable/$avd_loading_skeleton_lolomo__15" />
+    <target name="1_6" animation="@drawable/$avd_loading_skeleton_lolomo__16" />
+    <target name="2_title" animation="@drawable/$avd_loading_skeleton_lolomo__17" />
+    <target name="2_0" animation="@drawable/$avd_loading_skeleton_lolomo__18" />
+    <target name="2_1" animation="@drawable/$avd_loading_skeleton_lolomo__19" />
+    <target name="2_2" animation="@drawable/$avd_loading_skeleton_lolomo__20" />
+    <target name="2_3" animation="@drawable/$avd_loading_skeleton_lolomo__21" />
+    <target name="2_4" animation="@drawable/$avd_loading_skeleton_lolomo__22" />
+    <target name="2_5" animation="@drawable/$avd_loading_skeleton_lolomo__23" />
+    <target name="2_6" animation="@drawable/$avd_loading_skeleton_lolomo__24" />
+</animated-vector>

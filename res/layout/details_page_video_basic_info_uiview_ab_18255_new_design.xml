@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout id="@id/video_basic_info" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="22.0dip" layout_marginStart="@dimen/moderate_padding" layout_marginEnd="@dimen/moderate_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View layout_gravity="center" id="@id/animated_loading_view" visibility="gone" layout_width="wrap_content" layout_height="fill_parent" />
+    <LinearLayout gravity="center_vertical" layout_gravity="center" orientation="horizontal" id="@id/basic_info_container" layout_width="wrap_content" layout_height="wrap_content" baselineAligned="false">
+        <o.ImageSwitcher textColor="?matchPercentageColor" id="@id/video_details_match_percentage" style="@style/PrimaryBoldFontText.Micro" />
+        <o.ImageSwitcher textColor="?dp_basic_info_text_color" id="@id/video_details_basic_info_year" maxLines="1" layout_marginStart="@dimen/moderate_padding" style="@style/SecondaryText.Micro" />
+        <o.ImageSwitcher textSize="@dimen/text_micro" textColor="?dp_basic_info_text_color" id="@id/video_details_basic_info_maturity" background="@drawable/dp_rating_background_rounded_ab_18255" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" maxLines="1" paddingStart="@dimen/text_padding" paddingEnd="@dimen/text_padding" layout_marginStart="@dimen/moderate_padding" style="@style/NetflixMediumFont" />
+        <o.GridView id="@id/video_details_basic_info_rating_icon" visibility="gone" layout_width="24.0dip" layout_height="24.0dip" layout_marginStart="@dimen/moderate_padding" />
+        <o.ImageSwitcher textColor="?dp_basic_info_text_color" id="@id/video_details_basic_info_num_seasons_or_duration" maxLines="1" layout_marginStart="@dimen/moderate_padding" style="@style/SecondaryText.Micro" />
+        <o.DayPickerViewPager textSize="@dimen/text_micro" textColor="?dp_basic_info_text_color" id="@id/basic_info_badges" maxLines="1" layout_marginStart="@dimen/moderate_padding" style="@style/IconFontBasic" />
+    </LinearLayout>
+</FrameLayout>

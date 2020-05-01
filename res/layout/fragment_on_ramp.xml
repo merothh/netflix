@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.core.widget.NestedScrollView orientation="vertical" id="@id/scrollView" background="@color/signup_background_light" layout_width="0.0dip" layout_height="fill_parent" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent">
+        <LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="wrap_content">
+            <LinearLayout gravity="center_vertical" orientation="horizontal" id="@id/onramp_toolbar" layout_width="fill_parent" layout_height="?netflixActionBarSize">
+                <ImageView layout_gravity="center" id="@id/centered_logo" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/APKTOOL_DUMMY_79" layout_marginStart="16.0dip" />
+                <o.ImageSwitcher textStyle="bold" gravity="end" id="@id/sign_out_button" layout_width="0.0dip" layout_height="wrap_content" text="@string/label_sign_out" layout_weight="1.0" layout_marginEnd="16.0dip" />
+            </LinearLayout>
+            <View background="@color/grey70" layout_width="fill_parent" layout_height="1.0dip" />
+            <include layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" layout="@layout/onramp_header" />
+            <androidx.recyclerview.widget.RecyclerView id="@id/recyclerView" clipToPadding="false" layout_width="fill_parent" layout_height="wrap_content" paddingStart="@dimen/onramp_title_grid_side_margin" paddingEnd="@dimen/onramp_title_grid_side_margin" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <include id="@id/stickyHeader" visibility="invisible" layout_width="fill_parent" layout_height="wrap_content" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" layout="@layout/onramp_sticky_header" />
+    <include visibility="invisible" layout_width="fill_parent" layout_height="fill_parent" layout="@layout/onramp_personalization" />
+</o.MenuInflater>

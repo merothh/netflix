@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke width="1.0dip" color="?secondaryTextColor" dashWidth="@dimen/text_padding" dashGap="@dimen/text_padding" />
+    <padding left="@dimen/text_padding" top="@dimen/text_padding" right="@dimen/text_padding" bottom="@dimen/text_padding" />
+</shape>

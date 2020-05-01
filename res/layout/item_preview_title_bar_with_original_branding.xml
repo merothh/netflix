@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater orientation="vertical" padding="@dimen/previews_title_bar_padding" layout_width="175.0dip" layout_height="fill_parent" baselineAligned="false" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View id="@id/curr_progress" visibility="visible" layout_width="0.0dip" layout_height="@dimen/previews_title_bar_progress_bar_height" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" />
+    <o.MotionEvent orientation="horizontal" id="@id/original_branding_start_guideline" layout_width="wrap_content" layout_height="wrap_content" layout_constraintGuide_percent="0.12" />
+    <o.MotionEvent orientation="horizontal" id="@id/original_branding_end_guideline" layout_width="wrap_content" layout_height="wrap_content" />
+    <o.GridView id="@id/previews_title_original_branding" layout_width="wrap_content" layout_height="0.0dip" layout_marginBottom="6.0dip" foreground="@color/transparent" scaleType="fitCenter" adjustViewBounds="true" layout_constraintBottom_toTopOf="@id/original_branding_end_guideline" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/original_branding_start_guideline" />
+    <FrameLayout id="@id/title_treatment_parent" layout_width="0.0dip" layout_height="0.0dip" layout_constraintBottom_toTopOf="@id/licensed_title_end_guildeline" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/original_branding_end_guideline">
+        <o.DayPickerPagerAdapter layout_gravity="center_horizontal" id="@id/previews_title_treatment" layout_width="fill_parent" layout_height="fill_parent" foreground="@color/transparent" />
+    </FrameLayout>
+    <o.MotionEvent orientation="horizontal" id="@id/licensed_title_end_guildeline" layout_width="wrap_content" layout_height="wrap_content" />
+</o.MenuInflater>

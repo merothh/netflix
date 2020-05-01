@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.MotionEvent orientation="vertical" id="@id/guideline" layout_width="wrap_content" layout_height="wrap_content" layout_constraintEnd_toEndOf="parent" layout_constraintGuide_percent="0.5" layout_constraintHorizontal_bias="0.5" layout_constraintStart_toStartOf="parent" />
+    <com.netflix.android.widgetry.widget.tabs.BadgeView textAppearance="@style/TextAppearance.AppCompat.Small" textSize="11.0dip" textColor="@android:color/white" id="@id/badge_view" paddingTop="1.0dip" paddingBottom="2.0dip" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="2.0dip" minWidth="18.0dip" minHeight="18.0dip" paddingStart="6.0dip" paddingEnd="6.0dip" layout_marginStart="2.0dip" bv_shadow_color="?bottomNavBarBackgroundColor" layout_constraintStart_toEndOf="@id/guideline" layout_constraintTop_toTopOf="parent" />
+</o.MenuInflater>

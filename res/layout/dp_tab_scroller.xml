@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" id="@id/dp_tabs_scroller_wrapper" visibility="visible" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View id="@id/details_tab_divider" background="?dp_tabs_divider_color" visibility="invisible" layout_width="fill_parent" layout_height="2.0dip" />
+    <HorizontalScrollView id="@id/dp_tabs_scroller" scrollbars="none" layout_width="fill_parent" layout_height="fill_parent">
+        <LinearLayout orientation="horizontal" id="@id/dp_tabs_scroller_layout" layout_width="wrap_content" layout_height="wrap_content">
+            <LinearLayout orientation="vertical" id="@id/details_tab_one" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" layout_marginEnd="@dimen/narrow_content_padding">
+                <View id="@id/video_data_selector_one" background="@color/brand_red" visibility="visible" layout_width="fill_parent" layout_height="4.0dip" layout_marginStart="@dimen/content_padding" layout_marginEnd="@dimen/content_padding" />
+                <Button textColor="@drawable/dp_tab_menu_selectable_text" id="@id/video_data_button_one" background="@color/transparent" paddingBottom="4.0dip" layout_width="wrap_content" layout_height="wrap_content" checked="true" button="@null" text="@string/label_details_data_selector_episodes" paddingStart="@dimen/content_padding" paddingEnd="@dimen/content_padding" style="@style/PrimaryBoldFontText.NanoMedium" />
+            </LinearLayout>
+            <LinearLayout orientation="vertical" id="@id/details_tab_two" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" layout_marginEnd="@dimen/narrow_content_padding">
+                <View id="@id/video_data_selector_two" background="@color/brand_red" visibility="invisible" layout_width="fill_parent" layout_height="4.0dip" layout_marginStart="@dimen/content_padding" layout_marginEnd="@dimen/content_padding" />
+                <Button textColor="@drawable/dp_tab_menu_selectable_text" id="@id/video_data_button_two" background="@color/transparent" paddingBottom="4.0dip" layout_width="wrap_content" layout_height="wrap_content" checked="true" button="@null" text="@string/label_details_data_selector_related_barker" paddingStart="@dimen/content_padding" paddingEnd="@dimen/content_padding" style="@style/PrimaryBoldFontText.NanoMedium" />
+            </LinearLayout>
+            <LinearLayout orientation="vertical" id="@id/details_tab_three" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" layout_marginEnd="@dimen/narrow_content_padding">
+                <View id="@id/video_data_selector_three" background="@color/brand_red" visibility="invisible" layout_width="fill_parent" layout_height="4.0dip" layout_marginStart="@dimen/content_padding" layout_marginEnd="@dimen/content_padding" />
+                <Button textColor="@drawable/dp_tab_menu_selectable_text" id="@id/video_data_button_three" background="@color/transparent" paddingBottom="4.0dip" layout_width="wrap_content" layout_height="wrap_content" checked="true" button="@null" text="@string/label_details_data_selector_trailers" maxLines="1" paddingStart="@dimen/content_padding" paddingEnd="@dimen/content_padding" style="@style/PrimaryBoldFontText.NanoMedium" />
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

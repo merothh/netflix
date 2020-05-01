@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge layout_width="wrap_content" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.GridView id="@id/cw_view_image_view" layout_marginBottom="@dimen/cw_box_art_info_bar_affordance" scaleType="centerCrop" adjustViewBounds="true" style="@style/match" />
+    <View id="@id/cw_view_info_background" background="?continueWatchingBoxartInfoColor" layout_width="fill_parent" layout_height="@dimen/cw_box_art_info_bar_affordance" layout_alignParentBottom="true" />
+    <o.ImageSwitcher textSize="@dimen/cw_info_textSize_ab15909" textColor="@color/grey90" gravity="bottom|center" id="@id/video_info" background="@drawable/shadow_cw_text_ab_15909" layout_width="fill_parent" layout_height="32.0dip" maxLines="2" layout_above="@id/cw_view_video_progress" lineSpacingMultiplier="@dimen/cw_info_lineSpacingMultiplier" />
+    <ImageView id="@id/cw_view_info" background="@drawable/selectable_video_background_with_press" padding="@dimen/content_padding" focusable="true" layout_width="@dimen/cw_box_art_info_bar_affordance" layout_height="@dimen/cw_box_art_info_bar_affordance" src="@drawable/ic_cw_info" tint="?primaryTextColor" layout_alignParentBottom="true" layout_marginStart="@dimen/content_padding" layout_alignParentStart="true" />
+    <ImageView id="@id/cw_view_more_options" background="@drawable/selectable_video_background_with_press" padding="@dimen/content_padding" focusable="true" visibility="gone" layout_width="@dimen/cw_box_art_info_bar_affordance" layout_height="@dimen/cw_box_art_info_bar_affordance" src="@drawable/ic_cw_more_vert" tint="?primaryTextColor" layout_alignParentBottom="true" layout_marginEnd="@dimen/text_padding" layout_alignParentEnd="true" />
+    <View id="@id/cw_view_video_progress" layout_width="fill_parent" layout_height="@dimen/cw_row_progress_bar_height" layout_above="@id/cw_view_info_background" layoutDirection="ltr" />
+</merge>

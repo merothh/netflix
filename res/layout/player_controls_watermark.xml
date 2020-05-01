@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge layout_width="fill_parent" layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.CursorAdapter textSize="@dimen/text_medium_large" gravity="fill" id="@id/player_watermark" padding="@dimen/content_padding" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" />
+</merge>

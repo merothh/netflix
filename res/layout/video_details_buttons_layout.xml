@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.DateTimeView gravity="bottom" layout_gravity="start" orientation="horizontal" id="@id/video_actions" layout_width="wrap_content" layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout layout_width="wrap_content" layout_height="fill_parent" layout_margin="4.0dip" minWidth="72.0dip">
+        <include layout_width="fill_parent" layout_height="fill_parent" layout="@layout/mylist_toggle_button_with_bottom_label" />
+    </FrameLayout>
+    <FrameLayout layout_width="wrap_content" layout_height="fill_parent" layout_margin="4.0dip" minWidth="72.0dip">
+        <ViewStub id="@id/user_rating_stub" inflatedId="@id/user_rating" layout_width="fill_parent" layout_height="fill_parent" />
+    </FrameLayout>
+    <FrameLayout layout_width="wrap_content" layout_height="fill_parent" layout_margin="4.0dip" minWidth="72.0dip">
+        <com.netflix.mediaclient.ui.offline.DownloadButton id="@id/video_details_download_button" visibility="gone" layout_width="fill_parent" layout_height="fill_parent" showPrimaryMessages="true" style="@style/NetflixDownloadButtonSquare" />
+    </FrameLayout>
+    <FrameLayout layout_width="wrap_content" layout_height="fill_parent" layout_margin="4.0dip" minWidth="72.0dip">
+        <include layout_width="fill_parent" layout_height="fill_parent" layout="@layout/restart_interactive_state_button" />
+    </FrameLayout>
+</o.DateTimeView>

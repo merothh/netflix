@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater paddingTop="@dimen/large_padding" layout_width="fill_parent" layout_height="wrap_content" layout_margin="@dimen/large_padding" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView id="@id/image" layout_width="@dimen/downloadables_empty_icon_size" layout_height="@dimen/downloadables_empty_icon_size" src="@drawable/ic_my_download_empty_state" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" />
+    <o.ImageSwitcher textSize="@dimen/text_medium_large" textColor="?android:textColorSecondary" gravity="center" layout_marginTop="@dimen/large_padding" text="@string/offline_action_something_to_download" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/image" style="@style/wrap" />
+</o.MenuInflater>

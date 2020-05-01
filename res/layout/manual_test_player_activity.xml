@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.Toolbar theme="@style/ThemeOverlay.AppCompat.ActionBar" id="@id/test_player_toolbar" background="?colorPrimary" layout_width="fill_parent" layout_height="?actionBarSize" elevation="4.0dip" popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    <include layout="@layout/test_player_activity" />
+</LinearLayout>

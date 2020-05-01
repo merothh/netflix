@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple color="@color/translucent_grey_22"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item id="@android:id/mask">
+        <shape shape="rectangle">
+            <corners radius="3.0dip" />
+            <solid color="@color/white" />
+        </shape>
+    </item>
+    <item>
+        <shape shape="rectangle">
+            <corners radius="3.0dip" />
+            <solid color="?dp_download_button_color" />
+        </shape>
+    </item>
+</ripple>

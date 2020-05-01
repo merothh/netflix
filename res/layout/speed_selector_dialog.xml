@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="wrap_content" layout_marginStart="8.0dip" layout_marginEnd="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView id="@id/speedList" layout_width="fill_parent" layout_height="fill_parent" fadeScrollbars="false" style="@style/NetflixLanguageListView" />
+</LinearLayout>

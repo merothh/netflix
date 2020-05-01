@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" background="@drawable/order_final_phone_entry_background" padding="16.0dip" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textSize="18.0sp" textColor="@color/grey50" gravity="center" layout_width="fill_parent" layout_height="wrap_content" text="@string/orderfinal_phone_header" lineSpacingExtra="4.0dip" />
+    <o.ImageSwitcher textSize="18.0sp" gravity="center" id="@id/phoneBodyText" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="4.0dip" text="@string/orderfinal_phone_body" lineSpacingExtra="4.0dip" />
+    <LinearLayout gravity="center_vertical" orientation="horizontal" background="@drawable/text_input_layout_background" padding="8.0dip" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="16.0dip">
+        <com.netflix.mediaclient.acquisition.view.CountryFlagPicker orientation="horizontal" id="@id/countryPicker" background="?android:selectableItemBackground" layout_width="wrap_content" layout_height="wrap_content" layout_marginEnd="4.0dip" />
+        <com.google.android.material.textfield.TextInputLayout theme="@style/SignupTextInputLayoutLabel" id="@id/phone_text_input_layout" layout_width="fill_parent" layout_height="wrap_content">
+            <EditText id="@id/phoneEditText" layout_width="fill_parent" layout_height="wrap_content" hint="@string/label_phoneNumber" inputType="phone" style="@style/SignupEditText" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout orientation="horizontal" id="@id/smsCheckboxSection" paddingBottom="24.0dip" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="16.0dip">
+        <CheckBox id="@id/smsConsentCheckbox" layout_width="wrap_content" layout_height="wrap_content" buttonTint="@color/checkbox_button_tint_tou" />
+        <o.ImageSwitcher textSize="@dimen/signup_tou_text" layout_gravity="center_vertical" id="@id/smsConsentCheckboxText" layout_width="wrap_content" layout_height="wrap_content" text="@string/orderfinal_sms_consent_checkbox_text" style="@style/SignupHtmlText" />
+    </LinearLayout>
+</LinearLayout>

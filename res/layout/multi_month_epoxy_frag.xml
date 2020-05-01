@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout id="@id/multi_month_frag" background="@color/black" layout_width="fill_parent" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.airbnb.epoxy.EpoxyRecyclerView id="@id/multi_month_epoxy_recycler_view" visibility="gone" layout_width="fill_parent" layout_height="fill_parent" />
+    <include layout="@layout/loading_and_error_inset" />
+</FrameLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout theme="@style/Theme.Uma.Dialog" orientation="vertical" padding="@dimen/uma_standard_padding" layout_width="fill_parent" layout_height="wrap_content" baselineAligned="false" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView fadingEdgeLength="@dimen/xlarge_padding" layout_width="fill_parent" layout_height="0.0dip" fillViewport="false" layout_weight="1.0" fadeScrollbars="false" requiresFadingEdge="vertical">
+        <o.MenuInflater id="@id/alert" layout_width="fill_parent" layout_height="wrap_content">
+            <o.GridView layout_gravity="center_horizontal" id="@id/icon" visibility="visible" layout_width="60.0dip" layout_height="60.0dip" layout_marginTop="1.0dip" layout_marginBottom="@dimen/medium_padding" importantForAccessibility="no" layout_marginStart="@dimen/content_padding" layout_marginEnd="@dimen/content_padding" layout_constraintBottom_toTopOf="@id/title" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" layout_constraintVertical_chainStyle="spread_inside" />
+            <o.ImageSwitcher textSize="@dimen/text_fixed_large" textColor="@color/black" id="@id/title" layout_width="fill_parent" layout_height="wrap_content" importantForAccessibility="no" textAlignment="viewStart" layout_constraintBottom_toTopOf="@id/body" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/icon" style="@style/PrimaryBoldFontText" />
+            <o.ImageSwitcher textSize="@dimen/text_fixed_small_medium" textColor="@color/black" id="@id/body" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/uma_title_message_margin" importantForAccessibility="no" textAlignment="viewStart" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/title" style="@style/PrimaryLightFontTextWithLinks" />
+        </o.MenuInflater>
+    </ScrollView>
+    <LinearLayout orientation="vertical" id="@id/cta_container" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/uma_message_cta_margin" />
+</LinearLayout>

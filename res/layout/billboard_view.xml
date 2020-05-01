@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout id="@id/billboard_story_art_frame" layout_centerVertical="true" style="@style/match">
+        <o.RemoteViewsListAdapter layout_gravity="center" id="@id/billboard_story_art" layout_width="fill_parent" layout_height="fill_parent" scaleType="centerCrop" adjustViewBounds="true" yOffset="@dimen/billboard_top_crop_y_offest" />
+        <TextureView id="@id/motion_billboard_story_art" visibility="gone" style="@style/match" />
+        <o.ImageSwitcher textColor="@color/white" gravity="center" layout_gravity="bottom" id="@id/billboard_phone_info" background="@color/black" visibility="gone" layout_width="fill_parent" layout_height="@dimen/billboard_info_phone_height" paddingStart="16.0dip" paddingEnd="16.0dip" />
+    </FrameLayout>
+    <View id="@id/billboard_shadow_overlay_gradient" background="@drawable/translucent_black_fade_shim" layout_width="@dimen/billboard_shadow_overlay_width" layout_height="fill_parent" layout_alignParentStart="true" />
+    <LinearLayout orientation="vertical" id="@id/billboard_info_margin" layout_width="@dimen/billboard_info_width" layout_height="wrap_content" layout_marginTop="12.0dip" layout_marginStart="@dimen/billboard_info_view_group_margin_left" layout_alignParentStart="true">
+        <o.BaseAdapter id="@id/billboard_tv_card" layout_width="@dimen/billboard_tv_card_regular_width" layout_height="0.0dip" layout_marginBottom="@dimen/billboard_tv_card_margin_bottom" scaleType="fitCenter" adjustViewBounds="true" layout_weight="1.0" />
+        <o.ImageSwitcher id="@id/billboard_episode_badge" paddingTop="2.0dip" paddingBottom="0.0dip" layout_marginBottom="12.0dip" style="@style/SecondaryText.RedBadge" />
+        <o.ImageSwitcher ellipsize="end" id="@id/billboard_basic_info" layout_marginBottom="9.0dip" maxLines="3" drawablePadding="@dimen/text_padding" style="@style/PrimaryBoldFontText.Small" />
+        <o.BaseAdapter layout_gravity="start" id="@id/billboard_date_badge" layout_width="wrap_content" layout_height="@dimen/text_small" layout_marginBottom="@dimen/narrow_content_padding" scaleType="fitStart" />
+        <o.ImageSwitcher textSize="@dimen/text_fixed_medium" textColor="@color/billboard_text_synopsis_color" ellipsize="end" id="@id/billboard_synopsis" layout_width="@dimen/billboard_synopsis_width" layout_height="wrap_content" layout_marginBottom="@dimen/double_padding" maxLines="4" />
+        <LinearLayout orientation="horizontal" id="@id/billboard_button_group" style="@style/wrap">
+            <o.HorizontalScrollView id="@id/billboard_cta1_button" text="@string/label_play_now" contentDescription="@string/label_play_now" drawableStart="@drawable/APKTOOL_DUMMY_404" style="@style/NetflixButton.Primary.Billboard" />
+            <o.HorizontalScrollView id="@id/billboard_cta2_button" visibility="gone" text="@string/billboard_cta_see_all" contentDescription="@string/billboard_cta_see_all" layout_marginEnd="@dimen/content_padding" style="@style/NetflixButton.Secondary.Billboard" />
+            <o.ListView id="@id/billboard_add_to_queue" text="@string/label_my_list_2" drawableStart="@drawable/ic_mylist_selector_drawable" style="@style/NetflixButton.Secondary.Billboard" />
+            <o.HorizontalScrollView id="@id/billboard_info_button" visibility="gone" text="@string/label_more_info" contentDescription="@string/label_more_info" style="@style/NetflixButton.Secondary.Billboard" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

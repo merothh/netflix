@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" id="@id/search_fragment_container" style="@style/match"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/loading_and_error_inset" />
+    <FrameLayout id="@id/search_prequery_container" visibility="gone" style="@style/match" />
+    <include layout_width="fill_parent" layout_height="fill_parent" layout_margin="@dimen/search_instructions_container_margin" layout="@layout/simple_instructions_container" />
+    <o.ExpandableListConnector id="@id/search_results_scrollview" saveEnabled="false" layout_width="fill_parent" layout_height="fill_parent">
+        <RelativeLayout style="@style/match">
+            <LinearLayout orientation="vertical" id="@id/vertical_layout" layout_width="fill_parent" layout_height="wrap_content">
+                <o.DateTimeView id="@id/search_results_flowlayout_suggestions" focusable="true" focusableInTouchMode="true" style="@style/match" />
+                <o.ImageSwitcher textStyle="bold" textColor="?relatedResultsTitleTextColor" ellipsize="end" id="@id/similar_items_grid_view_title" paddingTop="10.0dip" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="@dimen/content_padding" text="@string/label_similar_shows" maxLines="2" singleLine="true" lineSpacingMultiplier="@dimen/line_spacing_expanded" paddingStart="10.0dip" style="@style/PrimaryText.Medium" />
+                <o.RatingBar id="@id/search_results_grid_view_videos" paddingTop="12.0dip" style="@style/match" />
+            </LinearLayout>
+            <ProgressBar id="@id/loading_progressbar" padding="@dimen/double_padding" visibility="gone" layout_width="fill_parent" layout_height="fill_parent" layout_marginTop="100.0dip" indeterminate="true" indeterminateOnly="true" layout_centerHorizontal="true" layout_centerVertical="true" style="?android:progressBarStyle" />
+        </RelativeLayout>
+    </o.ExpandableListConnector>
+</LinearLayout>

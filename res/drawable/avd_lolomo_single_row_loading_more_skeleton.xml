@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector drawable="@drawable/$avd_lolomo_single_row_loading_more_skeleton__0" xmlns:aapt="http://schemas.android.com/aapt"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <target name="1_title" animation="@drawable/$avd_lolomo_single_row_loading_more_skeleton__1" />
+    <target name="1_0" animation="@drawable/$avd_lolomo_single_row_loading_more_skeleton__2" />
+    <target name="1_1" animation="@drawable/$avd_lolomo_single_row_loading_more_skeleton__3" />
+    <target name="1_2" animation="@drawable/$avd_lolomo_single_row_loading_more_skeleton__4" />
+    <target name="1_3" animation="@drawable/$avd_lolomo_single_row_loading_more_skeleton__5" />
+</animated-vector>

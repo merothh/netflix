@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater clipChildren="true" layout_width="fill_parent" layout_height="wrap_content" animateLayoutChanges="false" layoutDirection="ltr" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.Ii id="@id/video" background="#ff000000" clipChildren="true" layout_width="0.0dip" layout_height="0.0dip" layout_constraintBottom_toBottomOf="@id/image" layout_constraintEnd_toEndOf="@id/image" layout_constraintStart_toStartOf="@id/image" layout_constraintTop_toTopOf="@id/image" />
+    <o.GridView id="@id/image" background="#ff000000" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="4.0dip" scaleType="centerCrop" layout_marginStart="0.0dip" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" />
+    <View id="@id/chrome_shader" background="@drawable/player_gradient" layout_width="0.0dip" layout_height="0.0dip" layout_constraintBottom_toBottomOf="@id/image" layout_constraintEnd_toEndOf="@id/image" layout_constraintStart_toStartOf="@id/image" layout_constraintTop_toTopOf="@id/image" />
+    <include layout_width="@dimen/audio_toggle_button_width" layout_height="@dimen/audio_toggle_button_height" layout_marginBottom="4.0dip" layout_marginEnd="4.0dip" layout_constraintBottom_toBottomOf="@id/image" layout_constraintEnd_toEndOf="@id/image" layout="@layout/audio_toggle_button" />
+    <o.ListAdapter id="@id/play_loading_replay" layout_width="56.0dip" layout_height="56.0dip" foreground="?selectableItemBackground" layout_constraintBottom_toBottomOf="@id/image" layout_constraintEnd_toEndOf="@id/image" layout_constraintStart_toStartOf="@id/image" layout_constraintTop_toTopOf="@id/image" />
+    <View id="@id/progress_line" layout_width="0.0dip" layout_height="2.0dip" elevation="1.0dip" layout_constraintBottom_toBottomOf="@id/video" layout_constraintEnd_toEndOf="@id/video" layout_constraintStart_toStartOf="@id/video" />
+</o.MenuInflater>

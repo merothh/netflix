@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge layout_width="@dimen/onramp_title_selection_count_size" layout_height="@dimen/onramp_title_selection_count_size"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView id="@id/checkImage" padding="8.0dip" layout_width="fill_parent" layout_height="wrap_content" src="@drawable/onramp_title_selection_check" />
+    <o.ImageSwitcher textSize="17.0dip" textStyle="bold" textColor="@color/brand_red" gravity="center" id="@id/numberText" visibility="invisible" layout_width="fill_parent" layout_height="fill_parent" lines="1" />
+</merge>

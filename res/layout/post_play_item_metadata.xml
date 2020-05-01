@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.Uk orientation="horizontal" layout_width="fill_parent" layout_height="fill_parent" layout_margin="@dimen/postplay_episodes_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/post_play_item_poster" />
+    <include layout="@layout/post_play_metadata_with_title" />
+</o.Uk>

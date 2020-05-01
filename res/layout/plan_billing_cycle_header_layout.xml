@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioGroup gravity="center_vertical" orientation="horizontal" id="@id/billingCycleGroup" background="@color/signup_weekly_header" layout_width="fill_parent" layout_height="@dimen/plan_weekly_monthly_height">
+        <RadioButton id="@id/billedWeekly" layout_width="wrap_content" layout_height="wrap_content" text="@string/billed_weekly" layout_marginStart="@dimen/plan_weekly_monthly_margin" style="@style/PlanBillingCycleRadioButton" />
+        <View layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0" />
+        <RadioButton gravity="end|center" id="@id/billedMonthly" layout_width="wrap_content" layout_height="wrap_content" text="@string/billed_monthly" layout_marginEnd="@dimen/plan_weekly_monthly_margin" style="@style/PlanBillingCycleRadioButton" />
+    </RadioGroup>
+</merge>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center_vertical" orientation="horizontal" baselineAligned="false" style="@style/wrap"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView id="@id/video_details_match_percentage" style="@style/PercentageMatch" />
+    <o.ImageSwitcher textColor="@color/grey50" id="@id/video_details_basic_info_year" maxLines="1" paddingEnd="@dimen/moderate_padding" style="@style/PrimaryText.Micro" />
+    <o.ImageSwitcher textColor="@color/grey50" id="@id/video_details_basic_info_maturity" visibility="gone" maxLines="1" style="@style/PrimaryText.Micro" />
+    <o.GridView id="@id/video_details_basic_info_rating_icon" visibility="gone" layout_width="24.0dip" layout_height="24.0dip" />
+    <o.ImageSwitcher textColor="@color/grey50" id="@id/video_details_basic_info_num_seasons_or_duration" maxLines="1" paddingStart="@dimen/moderate_padding" style="@style/PrimaryText.Micro" />
+    <o.DayPickerViewPager textSize="@dimen/text_micro" textColor="@color/capability_badge_light" id="@id/basic_info_badges" maxLines="1" style="@style/IconFontBasic" />
+</LinearLayout>

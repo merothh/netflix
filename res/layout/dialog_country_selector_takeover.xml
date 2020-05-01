@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.Toolbar id="@id/toolbar" layout_width="0.0dip" layout_height="wrap_content" contentInsetStartWithNavigation="0.0dip" layout_constraintLeft_toLeftOf="parent" layout_constraintRight_toRightOf="parent" navigationIcon="?homeAsUpIndicator" title="@string/select_country_toolbar_title" />
+    <androidx.recyclerview.widget.RecyclerView id="@id/recyclerView" scrollbars="vertical" layout_width="0.0dip" layout_height="0.0dip" layout_marginTop="@dimen/content_padding" fadeScrollbars="false" layoutManager="androidx.recyclerview.widget.LinearLayoutManager" layout_constraintBottom_toBottomOf="parent" layout_constraintLeft_toLeftOf="parent" layout_constraintRight_toRightOf="parent" layout_constraintTop_toBottomOf="@id/toolbar" />
+</o.MenuInflater>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.ImageSwitcher ellipsize="end" gravity="center_horizontal" id="@id/video_details_supplemental" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="@dimen/moderate_padding" maxLines="2" drawablePadding="@dimen/text_padding" layout_marginStart="@dimen/moderate_padding" layout_marginEnd="@dimen/moderate_padding" style="@style/PrimaryMediumFontText.SmallMedium"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

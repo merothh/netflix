@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout id="@id/error_view" style="@style/match"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout layout_gravity="center_vertical" orientation="vertical" id="@id/error_content" padding="@dimen/double_padding" layout_width="fill_parent" layout_height="wrap_content">
+        <o.ImageSwitcher gravity="center" layout_gravity="center" id="@id/error_view_label" text="@string/label_could_not_load_data" style="@style/PrimaryText.Medium" />
+        <o.HorizontalScrollView layout_gravity="center" id="@id/error_view_retry_button" layout_margin="@dimen/content_padding" text="@string/label_retry" textAllCaps="false" style="@style/NetflixButton.Flat" />
+    </LinearLayout>
+    <o.HorizontalScrollView layout_gravity="bottom|center" id="@id/error_view_all_downloads_button" visibility="gone" layout_marginBottom="48.0dip" text="@string/offline_action_view_my_downloads" textAllCaps="false" style="@style/NetflixButton.Outline" />
+</FrameLayout>

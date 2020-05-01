@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="horizontal" background="?searchPreQueryItemBackgroundColor_ab10892" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/narrow_content_padding" foreground="?android:selectableItemBackground"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.BaseAdapter id="@id/item_artwork" layout_width="@dimen/search_prequery_image_width" layout_height="@dimen/search_prequery_image_height" foreground="@color/transparent" adjustViewBounds="true" />
+    <o.ImageSwitcher textSize="@dimen/text_small" ellipsize="end" layout_gravity="center_vertical" id="@id/item_title" layout_width="0.0dip" layout_height="wrap_content" maxLines="2" layout_weight="1.0" layout_marginStart="@dimen/prequery_search_item_title_margin_start" layout_marginEnd="@dimen/prequery_search_item_title_margin_end" />
+    <o.BaseAdapter layout_gravity="center_vertical" id="@id/item_play_icon" layout_width="@dimen/prequery_search_play_icon_width" layout_height="@dimen/prequery_search_play_icon_height" layout_marginTop="@dimen/prequery_search_icon_margin_top" layout_marginBottom="@dimen/prequery_search_icon_margin_bottom" src="@drawable/prequery_search_play" layout_marginEnd="@dimen/prequery_search_play_icon_margin_end" />
+</LinearLayout>

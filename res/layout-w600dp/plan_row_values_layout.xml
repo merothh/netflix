@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher gravity="center_vertical" id="@id/rowHeading" layout_width="0.0dip" layout_height="wrap_content" minHeight="@dimen/signup_plan_selection_row_height" layout_marginStart="@dimen/signup_plan_selection_row_heading_margin" layout_marginEnd="@dimen/signup_plan_selection_row_heading_margin" layout_constraintBottom_toTopOf="@id/bottomDivider" layout_constraintEnd_toStartOf="@id/planValues" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" style="@style/PlanSelection.PlanPriceRowHeading" />
+    <o.MenuInflater id="@id/planValues" layout_width="@dimen/plan_selection_values_width" layout_height="wrap_content" paddingEnd="@dimen/signup_plan_selection_divider_offset" layout_constraintBottom_toTopOf="@id/bottomDivider" layout_constraintEnd_toEndOf="parent" layout_constraintTop_toTopOf="parent">
+        <FrameLayout id="@id/mobileLayout" visibility="gone" layout_width="0.0dip" layout_height="wrap_content" minHeight="@dimen/signup_plan_selection_row_height" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toStartOf="@id/plan1S_wrapper" layout_constraintHorizontal_bias="0.5" layout_constraintHorizontal_chainStyle="spread_inside" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" layout_constraintWidth_max="@dimen/plan_selection_header_max_width">
+            <o.ImageSwitcher layout_gravity="center" id="@id/planMobile" layout_width="wrap_content" layout_height="wrap_content" style="@style/PlanSelection.PlanPriceRowText" />
+        </FrameLayout>
+        <FrameLayout id="@id/plan1S_wrapper" layout_width="0.0dip" layout_height="wrap_content" minHeight="@dimen/signup_plan_selection_row_height" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toStartOf="@id/plan2S_wrapper" layout_constraintHorizontal_bias="0.5" layout_constraintHorizontal_chainStyle="spread_inside" layout_constraintStart_toEndOf="@id/mobileLayout" layout_constraintTop_toTopOf="parent" layout_constraintWidth_max="@dimen/plan_selection_header_max_width">
+            <o.ImageSwitcher layout_gravity="center" id="@id/plan1S" layout_width="wrap_content" layout_height="wrap_content" style="@style/PlanSelection.PlanPriceRowText" />
+        </FrameLayout>
+        <FrameLayout id="@id/plan2S_wrapper" layout_width="0.0dip" layout_height="wrap_content" minHeight="@dimen/signup_plan_selection_row_height" layout_marginStart="@dimen/signup_plan_selection_plan_min_spacing" layout_marginEnd="@dimen/signup_plan_selection_plan_min_spacing" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toStartOf="@id/plan4S_wrapper" layout_constraintHorizontal_bias="0.5" layout_constraintStart_toEndOf="@id/plan1S_wrapper" layout_constraintTop_toTopOf="parent" layout_constraintWidth_max="@dimen/plan_selection_header_max_width">
+            <o.ImageSwitcher layout_gravity="center" id="@id/plan2S" layout_width="wrap_content" layout_height="wrap_content" style="@style/PlanSelection.PlanPriceRowText" />
+        </FrameLayout>
+        <FrameLayout id="@id/plan4S_wrapper" layout_width="0.0dip" layout_height="wrap_content" minHeight="@dimen/signup_plan_selection_row_height" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toEndOf="parent" layout_constraintHorizontal_bias="0.5" layout_constraintStart_toEndOf="@id/plan2S_wrapper" layout_constraintTop_toTopOf="parent" layout_constraintWidth_max="@dimen/plan_selection_header_max_width">
+            <o.ImageSwitcher layout_gravity="center" id="@id/plan4S" layout_width="wrap_content" layout_height="wrap_content" style="@style/PlanSelection.PlanPriceRowText" />
+        </FrameLayout>
+    </o.MenuInflater>
+    <View id="@id/bottomDivider" background="@color/signup_text_tertiary" layout_width="0.0dip" layout_height="@dimen/signup_plan_selection_row_divider_height" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" />
+</merge>

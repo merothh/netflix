@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center_vertical" orientation="horizontal" id="@id/linearLayout" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="@dimen/signup_consent_content_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox id="@id/checkbox" layout_width="wrap_content" layout_height="wrap_content" style="@style/SignupHtmlText.Checkbox.BlackText.Consent" />
+    <TextView id="@id/checkboxText" layout_width="wrap_content" layout_height="wrap_content" paddingStart="0.0dip" style="@style/SignupHtmlText.Checkbox.BlackText.Consent" />
+</LinearLayout>

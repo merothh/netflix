@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners topLeftRadius="@dimen/d4u_item_container_corner_radius" topRightRadius="@dimen/d4u_item_container_corner_radius" />
+    <gradient startColor="?downloadedForYouPrimary" endColor="@color/transparent" angle="180.0" type="linear" />
+</shape>

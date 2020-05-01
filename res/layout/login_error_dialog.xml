@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout id="@id/login_dialog_container" background="@color/download_dialog_bg" style="@style/wrap"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout orientation="vertical" layout_margin="@dimen/login_margin" style="@style/wrap"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <o.ImageSwitcher textSize="@dimen/text_medium_large" textColor="@color/white" id="@id/login_dialog_title" text="@string/invalid_email" fontFamily="sans-serif-medium" style="@style/wrap" />
+        <o.ImageSwitcher textSize="@dimen/text_small_medium" textColor="@color/translucent_white_70" layout_gravity="center_horizontal" id="@id/login_dialog_message" layout_marginTop="@dimen/double_padding" text="@string/label_invalid_email_error" fontFamily="sans-serif" style="@style/wrap" />
+        <o.ImageSwitcher textSize="@dimen/text_small_medium" textColor="@color/login_dialog_action_button" gravity="right" id="@id/login_dialog_action" padding="@dimen/text_padding" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/double_padding" text="@string/label_create_account" textAllCaps="true" fontFamily="sans-serif-medium" />
+        <o.ImageSwitcher textSize="@dimen/text_small_medium" textColor="@color/login_dialog_action_button" gravity="right" layout_gravity="right" id="@id/login_dialog_cancel" padding="@dimen/text_padding" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/double_padding" text="@string/label_try_again" textAllCaps="true" fontFamily="sans-serif-medium" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge orientation="vertical" layout_width="wrap_content" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout orientation="horizontal" layout_width="wrap_content" layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatEditText id="@id/slot_1" style="@style/PinEntrySlot" />
+        <androidx.appcompat.widget.AppCompatEditText id="@id/slot_2" style="@style/PinEntrySlot" />
+        <androidx.appcompat.widget.AppCompatEditText id="@id/slot_3" style="@style/PinEntrySlot" />
+        <androidx.appcompat.widget.AppCompatEditText id="@id/slot_4" style="@style/PinEntrySlot" />
+    </LinearLayout>
+    <o.ImageSwitcher id="@id/pinErrorText" visibility="invisible" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="4.0dip" text="@string/pin_error" style="@style/SignupErrorMessage.EditText" />
+</merge>

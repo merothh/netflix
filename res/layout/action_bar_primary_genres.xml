@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="start|center|top" orientation="horizontal" focusable="true" focusableInTouchMode="true" descendantFocusability="beforeDescendants" layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.Registrant id="@id/ribbon" layout_width="fill_parent" layout_height="48.0dip" />
+</LinearLayout>

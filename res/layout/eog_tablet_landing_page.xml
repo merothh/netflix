@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView orientation="vertical" layout_width="fill_parent" layout_height="fill_parent" fillViewport="true">
+        <LinearLayout gravity="center_horizontal" orientation="vertical" id="@id/eogLpHeader" layout_width="fill_parent" layout_height="wrap_content" paddingStart="@dimen/eog_lp_padding" paddingEnd="@dimen/eog_lp_padding">
+            <RelativeLayout gravity="center_horizontal" layout_gravity="center" orientation="vertical" layout_width="fill_parent" layout_height="fill_parent" paddingStart="@dimen/eog_lp_padding" paddingEnd="@dimen/eog_lp_padding">
+                <o.ImageSwitcher id="@id/eogLpTitle" layout_marginTop="@dimen/eog_pp_margin_title_top" singleLine="false" layout_above="@id/eogLpBody" style="@style/EogTitle" />
+                <o.ImageSwitcher id="@id/eogLpBody" layout_marginTop="@dimen/eog_lp_margin_normal" layout_marginBottom="@dimen/eog_lp_margin_normal" layout_above="@id/eogLpContinueTopHeader" style="@style/EogText" />
+                <LinearLayout orientation="horizontal" id="@id/eogLpContinueTopHeader" layout_width="fill_parent" layout_height="wrap_content" layout_centerInParent="true" paddingEnd="@dimen/eog_lp_padding">
+                    <LinearLayout gravity="center" orientation="horizontal" id="@id/eogLpContinueHeader" background="@drawable/eog_continue_bg" clickable="true" layout_width="200.0dip" layout_height="48.0dip" onClick="performAction">
+                        <o.ImageSwitcher id="@id/eogLpContinue" singleLine="true" layout_marginStart="@dimen/eog_button_inline_divider" style="@style/EogButton" />
+                    </LinearLayout>
+                    <LinearLayout gravity="center" layout_gravity="center_horizontal" orientation="horizontal" id="@id/eogLpPlansHeader" clickable="true" layout_width="200.0dip" layout_height="48.0dip" layout_below="@id/eogLpContinueHeader" onClick="performAction" layout_marginStart="@dimen/eog_lp_margin_normal" style="@style/EogOutlineButton">
+                        <o.ImageSwitcher id="@id/eogLpPlans" singleLine="true" layout_marginStart="@dimen/eog_button_inline_divider" style="@style/EogButton" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout orientation="horizontal" id="@id/eogLpSkipHeader" clickable="true" layout_width="200.0dip" layout_height="48.0dip" layout_marginTop="@dimen/eog_lp_margin_normal" layout_below="@id/eogLpContinueTopHeader" onClick="performAction">
+                    <o.ImageSwitcher id="@id/eogLpSkip" layout_marginTop="10.0dip" singleLine="true" style="@style/EogButton" />
+                </LinearLayout>
+                <o.ImageSwitcher id="@id/eogLpAccount" layout_marginTop="@dimen/eog_lp_margin_normal" layout_marginBottom="@dimen/eog_lp_body_margin_bottom" layout_below="@id/eogLpSkipHeader" style="@style/EogText" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

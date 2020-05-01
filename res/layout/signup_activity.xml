@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout paddingTop="?netflixActionBarSize" layout_width="fill_parent" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar layout_gravity="center" id="@id/loading_view" padding="@dimen/double_padding" layout_width="wrap_content" layout_height="wrap_content" indeterminate="true" indeterminateOnly="true" indeterminateDrawable="@drawable/signup_progress_spinner_medium" />
+    <WebView id="@id/signUpWebView" visibility="invisible" layout_width="fill_parent" layout_height="fill_parent" />
+</FrameLayout>

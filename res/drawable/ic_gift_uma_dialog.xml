@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape shape="oval">
+            <stroke width="3.0dip" color="#ffffffff" />
+            <solid color="#33000000" />
+        </shape>
+    </item>
+    <item drawable="@drawable/ic_gift_uma" />
+</layer-list>

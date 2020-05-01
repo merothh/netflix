@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item state_enabled="false" color="@color/signup_cta_blue" />
+    <item state_pressed="true" color="@color/signup_cta_blue_pressed" />
+    <item color="@color/signup_cta_blue" />
+</selector>

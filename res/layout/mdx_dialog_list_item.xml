@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout layout_width="fill_parent" layout_height="wrap_content" minHeight="60.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="wrap_content" layout_centerVertical="true">
+        <o.ImageSwitcher ellipsize="end" id="@id/mdx_dialog_list_item_title" singleLine="true" paddingStart="@dimen/content_padding" paddingEnd="@dimen/content_padding" style="@style/PrimaryText.Small" />
+        <o.ImageSwitcher ellipsize="end" id="@id/mdx_dialog_list_item_sub_title" singleLine="true" paddingStart="@dimen/content_padding" paddingEnd="@dimen/content_padding" style="@style/SecondaryText.Micro" />
+    </LinearLayout>
+</RelativeLayout>

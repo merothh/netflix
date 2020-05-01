@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.ImageSwitcher textSize="@dimen/text_small" textColor="?primaryTextColor" ellipsize="end" id="@id/downloadables_list_title" paddingTop="@dimen/double_padding" maxLines="1" fontFamily="?netflixBoldFont" paddingStart="@dimen/medium_padding" paddingEnd="@dimen/text_padding" style="@style/wrap"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item color="@color/background_material_dark" state_accelerated="false" />
+    <item color="@android:color/transparent" />
+</selector>

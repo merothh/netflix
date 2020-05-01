@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewStub id="@id/content_warning" layout="@layout/video_details_content_warning" inflatedId="@id/content_warning" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="14.0dip" layout_marginStart="@dimen/moderate_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

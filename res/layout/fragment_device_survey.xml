@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView background="@color/signup_background_light" scrollbars="vertical" layout_width="fill_parent" layout_height="fill_parent" layout_marginTop="?actionBarSize" fadeScrollbars="true" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.MenuInflater layout_gravity="center_horizontal" orientation="vertical" paddingBottom="@dimen/signup_context_padding_bottom" layout_width="fill_parent" layout_height="wrap_content" maxWidth="@dimen/onboarding_content_max_width" paddingStart="@dimen/signup_cta_button_horizontal_margin" paddingEnd="@dimen/signup_cta_button_horizontal_margin">
+        <com.netflix.mediaclient.acquisition.view.SignupHeadingView id="@id/signupHeading" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="@dimen/signup_fragment_padding_vertical" maxWidth="@dimen/signup_context_signupheading_max_width" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" />
+        <o.FeatureFlagUtils orientation="vertical" id="@id/deviceSurveyDeviceContainer" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="@dimen/signup_fragment_padding_vertical" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/signupHeading" />
+        <com.netflix.mediaclient.acquisition.view.NetflixSignupButton id="@id/ctaButton" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="@dimen/signup_cta_button_vertical_margin" text="@string/button_continue" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/deviceSurveyDeviceContainer" />
+    </o.MenuInflater>
+</androidx.core.widget.NestedScrollView>

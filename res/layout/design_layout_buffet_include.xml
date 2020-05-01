@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout gravity="center_vertical" layout_gravity="center_vertical" orientation="horizontal" id="@id/snackbar_text_group" layout_width="wrap_content" layout_height="wrap_content" layout_centerVertical="true" layout_marginEnd="@dimen/buffetbar_padding_horizontal" layout_toStartOf="@id/snackbar_action" layout_alignParentStart="true">
+        <o.ImageSwitcher textAppearance="@style/TextAppearance.Design.Snackbar.Message" textColor="@color/buffet_bar_text_color" ellipsize="end" gravity="center_vertical" id="@id/snackbar_text" layout_width="wrap_content" layout_height="wrap_content" maxLines="2" />
+    </LinearLayout>
+    <o.ImageSwitcher textColor="@color/buffet_bar_text_color" gravity="end|center" layout_gravity="end|center" id="@id/snackbar_action" visibility="gone" clickable="false" layout_width="wrap_content" layout_height="wrap_content" layout_centerVertical="true" textAlignment="viewEnd" paddingEnd="10.0dip" layout_marginStart="@dimen/design_snackbar_extra_spacing_horizontal" layout_marginEnd="@dimen/design_snackbar_extra_spacing_horizontal" layout_alignParentEnd="true" />
+</merge>

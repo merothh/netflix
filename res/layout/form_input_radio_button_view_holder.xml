@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textStyle="bold" textColor="@color/grey50" id="@id/title" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="5.0dip" />
+    <o.ImageSwitcher id="@id/inputError" layout_width="fill_parent" layout_height="wrap_content" style="@style/SignupErrorMessage.EditText" />
+    <RadioGroup orientation="horizontal" id="@id/radioGroup" layout_width="fill_parent" layout_height="@dimen/plan_weekly_monthly_height" />
+</LinearLayout>

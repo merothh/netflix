@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid color="@color/brand_red" />
+    <padding left="@dimen/red_badge_side_padding" top="@dimen/narrow_content_padding" right="@dimen/red_badge_side_padding" bottom="@dimen/red_badge_bottom_padding" />
+    <corners radius="@dimen/red_badge_corner_radius" />
+</shape>

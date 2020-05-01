@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center" orientation="horizontal" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="@dimen/member_referral_share_content_margin" paddingStart="@dimen/double_padding" paddingEnd="@dimen/double_padding" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/member_referral_tou" layout_constraintWidth_max="@dimen/tablet_more_tab_max_width" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0" layout_marginEnd="@dimen/double_padding" layout="@layout/member_referral_link_section" />
+    <o.ImageSwitcher id="@id/member_referral_or" layout_width="wrap_content" layout_height="wrap_content" text="@string/member_referral_or" importantForAccessibility="no" />
+    <include visibility="gone" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0" layout_marginStart="@dimen/double_padding" layout="@layout/member_referral_exposed_share_options" />
+</LinearLayout>

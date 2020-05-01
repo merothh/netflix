@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <font font="@font/netflix_medium_ttf" fontStyle="normal" fontWeight="400" />
+    <font font="@font/netflix_medium_italic_ttf" fontStyle="italic" fontWeight="400" />
+</font-family>

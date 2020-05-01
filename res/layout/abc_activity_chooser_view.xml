@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view layout_gravity="center" id="@id/activity_chooser_view_content" layout_width="wrap_content" layout_height="fill_parent" class="androidx.appcompat.widget.ActivityChooserView$InnerLayout" style="?activityChooserViewStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout layout_gravity="center" id="@id/expand_activities_button" background="?actionBarItemBackground" paddingLeft="12.0dip" paddingTop="2.0dip" paddingRight="12.0dip" paddingBottom="2.0dip" focusable="true" addStatesFromChildren="true" layout_width="wrap_content" layout_height="fill_parent">
+        <ImageView layout_gravity="center" id="@id/image" layout_width="32.0dip" layout_height="32.0dip" scaleType="fitCenter" adjustViewBounds="true" />
+    </FrameLayout>
+    <FrameLayout layout_gravity="center" id="@id/default_activity_button" background="?actionBarItemBackground" paddingLeft="12.0dip" paddingTop="2.0dip" paddingRight="12.0dip" paddingBottom="2.0dip" focusable="true" addStatesFromChildren="true" layout_width="wrap_content" layout_height="fill_parent">
+        <ImageView layout_gravity="center" id="@id/image" layout_width="32.0dip" layout_height="32.0dip" scaleType="fitCenter" adjustViewBounds="true" />
+    </FrameLayout>
+</view>

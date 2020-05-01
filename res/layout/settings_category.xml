@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.ImageSwitcher id="@android:id/title" paddingTop="@dimen/xlarge_padding" paddingBottom="@dimen/text_padding" layout_width="fill_parent" layout_height="wrap_content" paddingStart="@dimen/double_padding" paddingEnd="@dimen/double_padding" style="@style/PrimaryBoldFontText.SmallMedium"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

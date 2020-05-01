@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="wrap_content" paddingStart="@dimen/medium_padding" paddingEnd="@dimen/medium_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher id="@id/notification_title" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="@dimen/double_padding" style="@style/NotificationTitle" />
+    <o.ImageSwitcher id="@id/notification_body" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="@dimen/large_padding" style="@style/NotificationBody" />
+</LinearLayout>

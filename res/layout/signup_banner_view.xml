@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView id="@id/signupBannerImageView" layout_width="wrap_content" layout_height="wrap_content" />
+    <o.ImageSwitcher id="@id/signupBannerTextView" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0" paddingStart="@dimen/signup_banner_padding" paddingEnd="20.0dip" style="@style/SignupBannerText" />
+</merge>

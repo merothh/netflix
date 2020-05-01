@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.HorizontalScrollView enabled="false" id="@id/supported_media_tracks_dialog_play_button" layout_width="wrap_content" layout_height="wrap_content" text="@string/label_play_video" contentDescription="@string/label_play_video" drawableStart="@drawable/ic_play_button" nb_buttonColor="?dp_lang_dialog_play_button_color" style="?primaryButtonStyle" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

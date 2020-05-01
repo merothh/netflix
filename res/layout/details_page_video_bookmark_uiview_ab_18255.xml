@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" id="@id/dp_bookmark_container" visibility="gone" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="@dimen/medium_padding" layout_marginStart="@dimen/moderate_padding" layout_marginEnd="@dimen/moderate_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher ellipsize="end" id="@id/bookmark_title_info" layout_width="fill_parent" layout_height="wrap_content" maxLines="1" style="@style/PrimaryMediumFontText.SmallMedium" />
+    <LinearLayout gravity="center_vertical" orientation="horizontal" layout_width="fill_parent" layout_height="wrap_content">
+        <View id="@id/bookmark_progress" layout_width="wrap_content" layout_height="2.0dip" layout_weight="0.7" />
+        <o.ImageSwitcher ellipsize="end" gravity="center" id="@id/bookmark_time_remaining" layout_width="wrap_content" layout_height="wrap_content" maxLines="2" layout_weight="0.3" layout_marginStart="@dimen/content_padding" style="@style/SecondaryText.Micro" />
+    </LinearLayout>
+</LinearLayout>

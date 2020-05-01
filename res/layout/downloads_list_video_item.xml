@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="horizontal" background="?android:selectableItemBackground" paddingLeft="@dimen/medium_padding" paddingTop="@dimen/text_padding" paddingRight="@dimen/medium_padding" paddingBottom="@dimen/text_padding" layout_width="fill_parent" layout_height="wrap_content" baselineAligned="false" minHeight="@dimen/offline_video_row_height" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout layout_width="@dimen/offline_video_icon_width" layout_height="@dimen/offline_video_row_height">
+        <o.BaseAdapter id="@id/box_shot" clickable="false" layout_width="fill_parent" layout_height="fill_parent" foreground="@color/transparent" scaleType="centerCrop" importantForAccessibility="no" />
+        <ImageView layout_gravity="center" id="@id/play_icon" layout_width="30.0dip" layout_height="30.0dip" src="@drawable/ic_play_svg" importantForAccessibility="no" />
+        <ProgressBar layout_gravity="bottom" id="@id/progress" layout_width="fill_parent" layout_height="3.0dip" max="100" indeterminateOnly="false" progressDrawable="@drawable/cw_progress_bar" importantForAccessibility="no" layoutDirection="ltr" style="?android:progressBarStyleHorizontal" />
+    </FrameLayout>
+    <LinearLayout layout_gravity="center_vertical" orientation="vertical" paddingLeft="@dimen/content_padding" paddingRight="@dimen/content_padding" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0">
+        <o.ImageSwitcher textColor="?textColor90" ellipsize="end" id="@id/title" layout_width="wrap_content" layout_height="wrap_content" maxLines="2" textDirection="locale" textAlignment="gravity" style="@style/PrimaryMediumFontText.Small" />
+        <o.ImageSwitcher textColor="?secondaryTextColor" ellipsize="end" id="@id/info" layout_width="wrap_content" layout_height="wrap_content" maxLines="1" style="@style/PrimaryLightFontText.Micro" />
+        <o.ImageSwitcher ellipsize="end" id="@id/status" layout_width="wrap_content" layout_height="wrap_content" maxLines="1" style="@style/PrimaryText.Nano" />
+    </LinearLayout>
+    <FrameLayout id="@id/button_container" layout_width="40.0dip" layout_height="fill_parent">
+        <com.netflix.mediaclient.ui.offline.DownloadButton layout_gravity="center" id="@id/download_button" layout_width="40.0dip" layout_height="40.0dip" showPrimaryMessages="false" showViewMyDownloads="false" style="@style/NetflixDownloadButton" />
+        <androidx.appcompat.widget.AppCompatCheckBox theme="@style/Netflix.Offline.CheckboxStyle" layout_gravity="center" id="@id/check_box" layout_width="wrap_content" layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout background="@drawable/selectable_app_settings_item_background" paddingTop="@dimen/medium_padding" paddingBottom="@dimen/medium_padding" layout_width="fill_parent" layout_height="wrap_content" paddingStart="@dimen/double_padding" paddingEnd="@dimen/double_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textSize="@dimen/text_micro" textColor="@color/settings_grey_1" id="@id/storage_device_name" layout_width="wrap_content" layout_height="wrap_content" layout_alignParentStart="true" />
+    <o.ImageSwitcher textSize="@dimen/text_micro" textColor="@color/settings_grey_1" gravity="end" id="@id/storage_is_default" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" text="@string/download_prefs_storage_label_default" layout_toEndOf="@id/storage_device_name" layout_alignParentEnd="true" />
+    <LinearLayout orientation="horizontal" id="@id/storage_indicator" layout_width="fill_parent" layout_height="@dimen/settings_storage_indicator_height" layout_marginTop="@dimen/text_padding" layout_marginBottom="@dimen/settings_storage_indicator_bottom_margin" layout_below="@id/storage_device_name">
+        <View textColor="@color/white" id="@id/storage_used" background="@color/grey30" padding="5.0dip" layout_width="0.0dip" layout_height="fill_parent" layout_weight="1.0" />
+        <View textColor="@color/white" id="@id/storage_netflix" background="@color/united_nations_blue" padding="5.0dip" layout_width="0.0dip" layout_height="fill_parent" layout_weight="0.0" />
+        <View textColor="@color/black" id="@id/storage_free" background="@color/grey80" padding="5.0dip" layout_width="0.0dip" layout_height="fill_parent" layout_weight="1.0" />
+    </LinearLayout>
+    <o.ImageSwitcher textSize="@dimen/text_micro" textColor="@color/grey70" id="@id/storage_used_legend" layout_width="wrap_content" layout_height="wrap_content" drawablePadding="@dimen/text_padding" layout_below="@id/storage_indicator" drawableStart="@drawable/used_legend" layout_toStartOf="@id/storage_netflix_legend" layout_alignParentStart="true" />
+    <o.ImageSwitcher textSize="@dimen/text_micro" textColor="@color/grey70" gravity="center_horizontal" id="@id/storage_netflix_legend" layout_width="wrap_content" layout_height="wrap_content" drawablePadding="@dimen/text_padding" layout_below="@id/storage_indicator" layout_centerHorizontal="true" drawableStart="@drawable/netflix_legend" />
+    <o.ImageSwitcher textSize="@dimen/text_micro" textColor="@color/grey70" id="@id/storage_free_legend" layout_width="wrap_content" layout_height="wrap_content" drawablePadding="@dimen/text_padding" layout_below="@id/storage_indicator" drawableStart="@drawable/free_legend" layout_alignParentEnd="true" />
+</RelativeLayout>

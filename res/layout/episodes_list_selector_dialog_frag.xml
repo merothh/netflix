@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater padding="@dimen/content_padding" layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView id="@id/episodes_list_up_image_view" paddingTop="@dimen/double_padding" paddingBottom="@dimen/double_padding" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/up_button_mirrored" paddingStart="@dimen/content_padding" paddingEnd="@dimen/large_padding" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" />
+    <FrameLayout id="@id/episodes_list_season_selector_layout" layout_width="wrap_content" layout_height="wrap_content" layout_constraintEnd_toEndOf="parent" layout_constraintTop_toTopOf="parent" />
+    <o.LayoutInflater id="@id/episodes_list_barrier_top" layout_width="wrap_content" layout_height="wrap_content" barrierDirection="bottom" constraint_referenced_ids="episodes_list_up_image_view,episodes_list_season_selector_layout" />
+    <FrameLayout id="@id/episodes_list_layout" layout_width="fill_parent" layout_height="0.0dip" layout_constraintBottom_toBottomOf="parent" layout_constraintTop_toBottomOf="@id/episodes_list_barrier_top" />
+</o.MenuInflater>

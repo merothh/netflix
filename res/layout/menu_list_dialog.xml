@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout id="@id/base_view_group" background="?selectionListBackground" fitsSystemWindows="true" layout_width="fill_parent" layout_height="fill_parent" importantForAccessibility="no" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.recyclerview.widget.RecyclerView layout_gravity="bottom" id="@id/menu_recyclerview" clipToPadding="false" layout_width="fill_parent" layout_height="wrap_content" overScrollMode="never" layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <ViewStub layout_gravity="center" id="@id/menu_list_loading_stub" layout="@layout/menu_dialog_progress" inflatedId="@id/menu_list_loading_view" layout_width="wrap_content" layout_height="wrap_content" />
+    <ViewStub layout_gravity="bottom" id="@id/bottom_scrim_stub" layout="@layout/menu_dialog_bottom_scrim" inflatedId="@id/bottom_scrim" layout_width="fill_parent" layout_height="@dimen/menu_list_bottom_scrim_height" />
+    <ViewStub layout_gravity="bottom|center" id="@id/close_button_stub" visibility="gone" layout="@layout/menu_dialog_bottom_close_button" inflatedId="@id/close_button" layout_width="@dimen/circular_close_button_size" layout_height="@dimen/circular_close_button_size" />
+    <ViewStub layout_gravity="end|bottom|center" id="@id/primary_cta_button_stub" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" layout_margin="@dimen/medium_padding" />
+</FrameLayout>

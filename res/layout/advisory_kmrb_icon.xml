@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center_horizontal" orientation="vertical" layout_width="wrap_content" layout_height="wrap_content" layout_marginEnd="6.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.GridView id="@id/icon" layout_width="@dimen/content_advisory_kmrb_advisory_icon_width" layout_height="@dimen/content_advisory_kmrb_advisory_icon_height" />
+    <o.ImageSwitcher textSize="@dimen/content_advisory_kmrb_advisory_level_text_size" textColor="@color/white" id="@id/text" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="@dimen/content_advisory_kmrb_advisory_icon_space_between_icon_and_text" />
+</LinearLayout>

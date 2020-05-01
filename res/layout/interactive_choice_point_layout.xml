@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.Vn focusable="true" clipChildren="false" layout_width="wrap_content" layout_height="wrap_content" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout id="@id/choice_point_image_container" clipChildren="false" clipToPadding="false" layout_width="wrap_content" layout_height="wrap_content">
+        <o.Vp id="@id/choice_point_background" layout_width="wrap_content" layout_height="wrap_content" />
+        <o.GridView id="@id/choice_point_background_focus" layout_width="wrap_content" layout_height="wrap_content" />
+        <o.GridView id="@id/choice_point_background_selected" layout_width="wrap_content" layout_height="wrap_content" />
+        <o.GridView id="@id/choice_point_choice_image" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" />
+        <o.GridView id="@id/choice_point_foreground" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" />
+    </FrameLayout>
+    <o.Vp id="@id/choice_point_icon" layout_width="wrap_content" layout_height="wrap_content" />
+    <o.ImageSwitcher gravity="center" id="@id/choice_point_text" layout_width="wrap_content" layout_height="wrap_content" />
+    <View id="@id/choice_point_underline" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" />
+    <o.ImageSwitcher id="@id/choice_point_debug_overlay" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" />
+    <View id="@id/choice_point_hit_area" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" />
+</o.Vn>

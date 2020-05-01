@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center" layout_gravity="center" orientation="vertical" id="@id/member_referral_retry" visibility="invisible" layout_width="fill_parent" layout_height="wrap_content" maxWidth="@dimen/tablet_more_tab_max_width"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher gravity="center" id="@id/member_referral_retry_message" focusable="true" focusableInTouchMode="false" layout_width="wrap_content" layout_height="wrap_content" text="@string/member_referral_error" />
+    <o.HorizontalScrollView id="@id/member_referral_retry_button" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="@dimen/medium_padding" text="@string/label_try_again" style="@style/MemberReferralRetryButton" />
+</LinearLayout>

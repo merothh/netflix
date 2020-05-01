@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater layout_width="wrap_content" layout_height="wrap_content" paddingStart="@dimen/moderate_padding" paddingEnd="@dimen/moderate_padding" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.GridView id="@id/rating_icon" layout_width="@dimen/content_advisory_kmrb_rating_icon" layout_height="@dimen/content_advisory_kmrb_rating_icon" layout_marginEnd="@dimen/moderate_padding" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" />
+    <LinearLayout orientation="horizontal" id="@id/advisory_icons_container" layout_width="wrap_content" layout_height="wrap_content" layout_marginStart="10.0dip" layout_constraintStart_toEndOf="@id/rating_icon" layout_constraintTop_toTopOf="parent" />
+</o.MenuInflater>

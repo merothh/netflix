@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView id="@id/member_referral_share_option_icon" layout_width="@dimen/member_referral_share_icon" layout_height="@dimen/member_referral_share_icon" layout_marginTop="5.0dip" />
+    <o.ImageSwitcher textSize="12.0sp" gravity="center" id="@id/member_referral_share_option_text" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="4.0dip" />
+</merge>

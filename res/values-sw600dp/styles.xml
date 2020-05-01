@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ConfirmFragmentContent">
+        <item name="android:layout_width">500.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">40.0dip</item>
+    </style>
+    <style name="ContextPageContent" />
+    <style name="OnRampTitleSelection">
+        <item name="layout_constraintHorizontal_bias">0.5</item>
+    </style>
+    <style name="PhoneCountryInput">
+        <item name="android:layout_width">450.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="PlanSelectionFragmentContent" parent="@style/match">
+        <item name="android:layout_width">500.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="SignupContextBodyText" parent="@style/SignupNativeBodyText.Small">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:maxWidth">320.0dip</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="SignupContextHeadingText">
+        <item name="android:textSize">@dimen/signup_heading_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/signup_text_primary</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="SignupContextStepLabelText">
+        <item name="android:textSize">@dimen/signup_step_label_text_micro</item>
+        <item name="android:textColor">@color/signup_text_secondary</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="SignupContextSubHeadingContainer">
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="SignupContextSubHeadingText">
+        <item name="android:textSize">@dimen/signup_subheading_text</item>
+        <item name="android:textColor">@color/signup_text_primary</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="SignupNativeLinkText.GoBackVerify" parent="@style/SignupNativeLinkText">
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="SignupNativeWelcomePricesHeader">
+        <item name="android:layout_gravity">end</item>
+    </style>
+    <style name="SignupVerifyCardWebView">
+        <item name="android:layout_width">400.0dip</item>
+        <item name="android:layout_height">400.0dip</item>
+    </style>
+    <style name="Widget.Design.TabLayout" parent="@style/Base.Widget.Design.TabLayout">
+        <item name="tabGravity">center</item>
+        <item name="tabMode">fixed</item>
+    </style>
+    <style name="ContextFragmentBody" parent="@style/SignupNativeHeaderTextLight">
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="WelcomeTabContentImageView.Devices" parent="@style/WelcomeTabContentImageView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">350.0dip</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+</resources>

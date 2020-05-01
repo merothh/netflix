@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" padding="@dimen/content_padding" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textStyle="bold" id="@id/open_source_license_info_row_name" layout_marginBottom="@dimen/content_padding" paddingStart="@dimen/content_padding" paddingEnd="@dimen/content_padding" style="@style/PrimaryText.Medium" />
+    <o.ImageSwitcher textStyle="bold" id="@id/open_source_license_info_row_copyright" layout_marginBottom="@dimen/content_padding" paddingStart="@dimen/content_padding" paddingEnd="@dimen/content_padding" style="@style/PrimaryText.SmallMedium" />
+    <o.ImageSwitcher textStyle="bold" autoLink="all" id="@id/open_source_license_info_row_website" layout_marginBottom="@dimen/content_padding" paddingStart="@dimen/content_padding" paddingEnd="@dimen/content_padding" style="@style/PrimaryText.Small" />
+    <o.ImageSwitcher id="@id/open_source_license_info_row_license" paddingStart="@dimen/content_padding" paddingEnd="@dimen/content_padding" style="@style/SecondaryText.Small" />
+    <View background="@drawable/APKTOOL_DUMMY_4c5" layout_width="fill_parent" layout_height="1.0dip" layout_marginTop="@dimen/xlarge_padding" />
+</LinearLayout>

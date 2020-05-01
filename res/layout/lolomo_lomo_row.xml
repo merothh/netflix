@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" id="@id/lomo_frame" descendantFocusability="blocksDescendants" layout_width="fill_parent" layout_height="wrap_content" importantForAccessibility="no"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textSize="@dimen/lolomo_row_title_size" ellipsize="end" layout_gravity="start" id="@id/lomo_title" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="@dimen/lomo_title_top_padding" layout_marginBottom="@dimen/lomo_title_bottom_padding" maxLines="1" layout_marginStart="@dimen/lomo_total_padding" style="@style/PrimaryBoldFontText" />
+    <FrameLayout layout_width="fill_parent" layout_height="wrap_content">
+        <o.ParcelableParcel id="@id/lolomo_row" scrollbars="none" clipToPadding="false" layout_width="fill_parent" layout_height="wrap_content" />
+        <ViewStub layout_gravity="center" id="@id/error_stub" layout="@layout/lomo_error_button" layout_width="wrap_content" layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

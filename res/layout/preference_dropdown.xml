@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center_vertical" background="?android:selectableItemBackground" focusable="true" layout_width="fill_parent" layout_height="wrap_content" minHeight="?android:listPreferredItemHeight" paddingEnd="?android:scrollbarSize" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Spinner id="@id/spinner" visibility="invisible" layout_width="0.0dip" layout_height="wrap_content" />
+    <FrameLayout id="@id/icon_frame" layout_width="wrap_content" layout_height="wrap_content">
+        <o.StringBuilder id="@android:id/icon" layout_width="wrap_content" layout_height="wrap_content" maxHeight="48.0dip" maxWidth="48.0dip" />
+    </FrameLayout>
+    <RelativeLayout layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="6.0dip" layout_marginBottom="6.0dip" layout_weight="1.0" layout_marginStart="15.0dip" layout_marginEnd="6.0dip">
+        <TextView textAppearance="?android:textAppearanceLarge" textColor="?android:textColorPrimary" ellipsize="marquee" id="@android:id/title" fadingEdge="horizontal" layout_width="wrap_content" layout_height="wrap_content" singleLine="true" />
+        <TextView textAppearance="?android:textAppearanceSmall" textColor="?android:textColorSecondary" id="@android:id/summary" layout_width="wrap_content" layout_height="wrap_content" maxLines="4" layout_below="@android:id/title" layout_alignStart="@android:id/title" />
+    </RelativeLayout>
+    <LinearLayout gravity="center_vertical" orientation="vertical" id="@android:id/widget_frame" layout_width="wrap_content" layout_height="fill_parent" />
+</LinearLayout>

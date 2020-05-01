@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout layout_width="wrap_content" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView layout_gravity="center" id="@id/background_img" background="@drawable/APKTOOL_DUMMY_ef" paddingTop="?netflixActionBarSize" layout_width="wrap_content" layout_height="wrap_content" scaleType="centerCrop" />
+    <RelativeLayout id="@id/img_group" paddingBottom="@dimen/content_padding" layout_width="fill_parent" layout_height="wrap_content" layout_alignBottom="@id/background_img" paddingStart="@dimen/double_padding">
+        <FrameLayout layout_width="wrap_content" layout_height="wrap_content" layout_alignBottom="@id/pressable_view_group" layout_alignParentTop="true" layout_toEndOf="@id/video_img_shadow" layout_alignParentEnd="true">
+            <o.BaseAdapter layout_gravity="bottom|center" id="@id/kids_character_view" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/blank_avatar" adjustViewBounds="true" />
+        </FrameLayout>
+        <o.MenuItemHoverListener id="@id/pressable_view_group" focusable="true" clickable="true" layout_width="wrap_content" layout_height="wrap_content">
+            <o.RemoteViewsListAdapter id="@id/video_img" focusable="true" layout_width="wrap_content" layout_height="wrap_content" scaleType="centerCrop" />
+            <o.RemoteViewsListAdapter id="@id/video_img_2" focusable="true" layout_width="wrap_content" layout_height="wrap_content" scaleType="centerCrop" layout_alignTop="@id/video_img" layout_alignBottom="@id/video_img" alpha="0.0" layout_alignStart="@id/video_img" layout_alignEnd="@id/video_img" />
+            <ImageView layout_gravity="center" id="@id/kids_play_button" layout_width="@dimen/kids_details_play_button_size" layout_height="@dimen/kids_details_play_button_size" src="@drawable/APKTOOL_DUMMY_fc" />
+        </o.MenuItemHoverListener>
+        <View background="@drawable/kids_character_hero_info_background" layout_width="fill_parent" layout_height="80.0dip" layout_alignBottom="@id/pressable_view_group" layout_alignEnd="@id/pressable_view_group" />
+        <LinearLayout padding="12.0dip" layout_width="wrap_content" layout_height="wrap_content" layout_alignParentBottom="true" layout_alignStart="@id/pressable_view_group" layout_alignEnd="@id/pressable_view_group">
+            <include layout="@layout/kids_basic_info_layout" />
+        </LinearLayout>
+        <View id="@id/video_img_shadow" background="@drawable/kids_action_bar_bg" layout_width="16.0dip" layout_height="fill_parent" layout_marginTop="10.0dip" layout_marginBottom="30.0dip" layout_alignTop="@id/pressable_view_group" layout_alignBottom="@id/pressable_view_group" layout_toEndOf="@id/pressable_view_group" />
+    </RelativeLayout>
+    <LinearLayout orientation="vertical" paddingBottom="@dimen/narrow_content_padding" layout_marginTop="@dimen/narrow_content_padding" layout_above="@id/img_group" paddingStart="@dimen/double_padding" layout_alignStart="@id/img_group" style="@style/wrap">
+        <o.BaseAdapter id="@id/kids_hero_row_title_image" scaleType="fitCenter" style="@style/wrap" />
+        <o.ImageSwitcher textStyle="bold" ellipsize="end" id="@id/video_details_title" layout_marginBottom="10.0dip" maxLines="2" style="@style/PrimaryText.XLarge" />
+    </LinearLayout>
+    <FrameLayout id="@id/video_details_footer" layout_width="fill_parent" layout_height="wrap_content" layout_below="@id/background_img">
+        <o.ImageSwitcher textSize="@dimen/text_small" textColor="@color/kids_text_color" ellipsize="end" gravity="bottom" layout_gravity="bottom" id="@id/similar_items_grid_view_title" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="6.0dip" text="@string/label_similar_shows" singleLine="true" lineSpacingMultiplier="@dimen/line_spacing_expanded" />
+    </FrameLayout>
+</RelativeLayout>

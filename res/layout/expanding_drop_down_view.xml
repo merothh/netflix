@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout gravity="center_vertical" orientation="horizontal" id="@id/expandingHeader" background="@drawable/expanding_form_view_background" paddingTop="18.0dip" paddingBottom="18.0dip" layout_width="fill_parent" layout_height="wrap_content" paddingStart="16.0dip" paddingEnd="16.0dip">
+        <ImageView id="@id/expandingHeaderChevron" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/chevron" />
+        <o.ImageSwitcher textSize="18.0sp" id="@id/expandingHeaderText" layout_width="wrap_content" layout_height="wrap_content" layout_marginStart="24.0dip" />
+    </LinearLayout>
+    <FrameLayout id="@id/expandingContainer" layout_width="fill_parent" layout_height="wrap_content" />
+</merge>

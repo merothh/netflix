@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center_horizontal" orientation="vertical" layout_width="wrap_content" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher gravity="center_horizontal" id="@id/age_message" layout_marginTop="@dimen/pin_generic_24_margin" text="@string/label_age_verify_message" layout_marginStart="@dimen/pin_generic_24_margin" layout_marginEnd="@dimen/pin_generic_24_margin" style="@style/PrimaryText.Small" />
+    <ProgressBar layout_gravity="center" id="@id/dialog_age_progress_spinner" padding="@dimen/double_padding" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="@dimen/pin_generic_16_margin" indeterminate="true" indeterminateOnly="true" style="?android:progressBarStyle" />
+    <View background="@null" layout_width="fill_parent" layout_height="@dimen/pin_generic_16_margin" />
+</LinearLayout>

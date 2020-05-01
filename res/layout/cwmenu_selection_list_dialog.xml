@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout id="@id/cwmenu_select_list_group" background="?selectionListBackground" layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.recyclerview.widget.RecyclerView layout_gravity="bottom|center" id="@id/cwmenu_select_recyclerview" paddingTop="@dimen/genres_sub_selection_list_padding_top" paddingBottom="@dimen/genres_sub_selection_list_padding_bottom" scrollbars="vertical" clipToPadding="false" layout_width="fill_parent" layout_height="wrap_content" layout_marginStart="@dimen/medium_padding" layout_marginEnd="@dimen/medium_padding" layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <ImageView layout_gravity="bottom" layout_width="fill_parent" layout_height="@dimen/select_list_bottom_scrim_height" src="@drawable/selection_list_background" importantForAccessibility="no" />
+    <ImageButton layout_gravity="bottom|center" id="@id/close_button" background="@drawable/selection_list_button" layout_width="@dimen/circular_close_button_size" layout_height="@dimen/circular_close_button_size" layout_marginBottom="20.0dip" contentDescription="@string/label_cancel" srcCompat="@drawable/ic_action_cancel_black" />
+    <include layout="@layout/loading_inset" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/double_padding" layout_marginBottom="@dimen/content_padding" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View background="@color/translucent_grey_22" layout_width="fill_parent" layout_height="@dimen/download_stats_divider_size_big" layout_marginTop="@dimen/medium_padding" layout_marginBottom="@dimen/medium_padding" />
+    <o.ImageSwitcher layout_marginTop="@dimen/medium_padding" layout_marginBottom="@dimen/text_padding" text="@string/label_download_stats_more_summary_title" layout_marginStart="@dimen/medium_padding" layout_marginEnd="@dimen/medium_padding" style="@style/SecondaryBoldFontText.Micro" />
+    <o.ImageSwitcher textSize="@dimen/download_stats_sentence_size" id="@id/summary" lineSpacingMultiplier="@dimen/download_stats_big_text_multiplier" layout_marginStart="@dimen/medium_padding" layout_marginEnd="@dimen/medium_padding" letterSpacing="-0.02" style="@style/PrimaryBoldFontText" />
+    <o.HorizontalScrollView layout_gravity="center" id="@id/find_more_button" focusable="true" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/large_padding" layout_marginBottom="@dimen/double_padding" text="@string/offline_action_more_to_download" layout_marginStart="@dimen/moderate_padding" layout_marginEnd="@dimen/moderate_padding" autoSizeMaxTextSize="@dimen/text_small" autoSizeMinTextSize="@dimen/text_nano" autoSizeTextType="uniform" style="?greyButtonStyle" />
+</LinearLayout>

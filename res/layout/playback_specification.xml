@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView id="@id/playback_specification_view" layout_width="fill_parent" layout_height="wrap_content">
+        <LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="wrap_content" layout_marginStart="@dimen/settings_playback_specification_margin_start_end" layout_marginEnd="@dimen/settings_playback_specification_margin_start_end">
+            <androidx.recyclerview.widget.RecyclerView id="@id/playback_specification_recycler_view" layout_width="fill_parent" layout_height="wrap_content" />
+            <o.HorizontalScrollView id="@id/help_center_button" layout_width="wrap_content" layout_height="wrap_content" text="@string/label_cs_help_center_link" style="@style/HelpCenterButton" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view theme="@style/ThemeOverlay.AppCompat.Dark" layout_gravity="bottom" layout_width="fill_parent" layout_height="@dimen/buffetbar_height" foreground="?android:selectableItemBackground" paddingStart="@dimen/buffetbar_padding_horizontal" paddingEnd="0.0dip" layout_marginStart="0.0dip" layout_marginEnd="0.0dip" class="o.NetworkOnMainThreadException$StateListAnimator" style="@style/Widget.Design.Snackbar"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

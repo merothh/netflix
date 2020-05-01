@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" background="@drawable/expanding_form_view_background" paddingTop="24.0dip" paddingBottom="24.0dip" layout_width="fill_parent" layout_height="wrap_content" paddingStart="32.0dip" paddingEnd="32.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textSize="18.0sp" id="@id/skipVerifySubheader" layout_width="fill_parent" layout_height="wrap_content" />
+    <o.HorizontalScrollView id="@id/skipCta" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="22.0dip" text="@string/age_verify_skip_cta_text" style="@style/SignupCtaButton.SkipVerifyAge" />
+</LinearLayout>

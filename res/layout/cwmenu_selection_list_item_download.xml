@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout id="@id/item_layout" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.netflix.android.widgetry.widget.tabs.BadgeView layout_gravity="center_vertical" id="@id/item_icon" layout_width="wrap_content" layout_height="24.0dip" scaleType="fitCenter" adjustViewBounds="true" importantForAccessibility="no" />
+    <o.ImageSwitcher ellipsize="end" id="@id/item_label" background="@color/transparent" paddingTop="@dimen/medium_large_padding" paddingBottom="@dimen/medium_large_padding" layout_width="fill_parent" layout_height="wrap_content" maxLines="1" paddingStart="@dimen/double_padding" paddingEnd="@dimen/double_padding" style="@style/PrimaryText.SmallMedium" />
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center_horizontal" orientation="vertical" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View background="@color/offline_tutorial_divider" layout_width="fill_parent" layout_height="1.0dip" layout_marginLeft="@dimen/double_padding" layout_marginTop="@dimen/moderate_padding" layout_marginRight="@dimen/double_padding" />
+    <LinearLayout gravity="center_horizontal" id="@id/next_button_container" layout_width="fill_parent" layout_height="wrap_content">
+        <o.HorizontalScrollView textSize="@dimen/text_medium" id="@id/next_button" layout_marginLeft="@dimen/content_padding" layout_marginTop="@dimen/moderate_padding" layout_marginRight="@dimen/content_padding" layout_marginBottom="@dimen/moderate_padding" maxLines="2" drawableEnd="@drawable/ic_chevron_right" style="@style/NetflixButton.Flat.Light.IconJustified" />
+    </LinearLayout>
+    <View background="@color/offline_tutorial_divider" layout_width="fill_parent" layout_height="1.0dip" layout_marginLeft="@dimen/double_padding" layout_marginRight="@dimen/double_padding" />
+    <o.HorizontalScrollView textSize="@dimen/text_medium" id="@id/close_button" layout_width="fill_parent" layout_marginLeft="@dimen/content_padding" layout_marginTop="@dimen/moderate_padding" layout_marginRight="@dimen/content_padding" layout_marginBottom="@dimen/moderate_padding" style="@style/NetflixButton.Flat.Light" />
+</LinearLayout>

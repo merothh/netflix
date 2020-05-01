@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="horizontal" id="@id/item_header" background="?textColor10" paddingLeft="@dimen/medium_padding" paddingTop="6.0dip" paddingRight="@dimen/medium_padding" paddingBottom="6.0dip" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="6.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.BaseAdapter layout_gravity="center" id="@id/profile_avatar" layout_width="@dimen/offline_profile_icon_width" layout_height="@dimen/offline_profile_icon_width" scaleType="centerCrop" />
+    <o.ImageSwitcher textColor="?android:textColorPrimary" layout_gravity="center_vertical" id="@id/profile_name" layout_width="wrap_content" layout_height="wrap_content" maxLines="1" layout_marginStart="@dimen/content_padding" style="@style/PrimaryMediumFontText.Small" />
+</LinearLayout>

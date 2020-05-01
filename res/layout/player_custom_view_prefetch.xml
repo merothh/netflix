@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.netflix.mediaclient.ui.player.videoview.NetflixVideoView visibility="gone" layout_width="1.0dip" layout_height="1.0dip" />
+    <o.HorizontalScrollView layout_width="1.0dip" layout_height="1.0dip" style="@style/NetflixButton.NoOutline.Transparent" />
+    <o.ExpandableListAdapter layout_width="1.0dip" layout_height="1.0dip" style="@style/NetflixButton.Outline" />
+    <o.RemoteViewsService layout_width="1.0dip" layout_height="1.0dip" style="@style/NetflixSeekbar" />
+    <o.CompoundButton layout_width="1.0dip" layout_height="1.0dip" />
+    <o.RadioButton id="@id/skip_back_seek_button" layout_width="0.0dip" layout_height="0.0dip" sb_mode="backward" style="@style/SeekButton.10" />
+    <o.CursorAdapter layout_width="1.0dip" layout_height="1.0dip" />
+</FrameLayout>

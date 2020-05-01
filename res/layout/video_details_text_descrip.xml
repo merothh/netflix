@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher id="@id/video_details_supplemental" layout_marginTop="@dimen/content_padding" drawablePadding="@dimen/text_padding" lineSpacingMultiplier="@dimen/line_spacing_expanded" style="@style/PrimaryBoldFontText.SmallMedium" />
+    <LinearLayout gravity="center_vertical" orientation="horizontal" id="@id/episode_info_container" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/content_padding">
+        <o.ImageSwitcher gravity="center_vertical" id="@id/video_details_episode_badge" background="@color/brand_red" visibility="gone" maxLines="1" lineSpacingMultiplier="@dimen/line_spacing_expanded" paddingStart="@dimen/content_padding" paddingEnd="@dimen/content_padding" layout_marginEnd="@dimen/moderate_padding" style="@style/PrimaryBoldFontText.Nano" />
+        <o.ImageSwitcher id="@id/video_details_episode_title" lineSpacingMultiplier="@dimen/line_spacing_expanded" style="@style/PrimaryBoldFontText.Small" />
+    </LinearLayout>
+    <o.ImageSwitcher ellipsize="end" id="@id/video_details_synopsis" layout_marginTop="@dimen/content_padding" maxLines="6" lineSpacingMultiplier="@dimen/line_spacing_expanded" style="@style/PrimaryLightFontText.Small" />
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout orientation="vertical" style="@style/match">
+        <FrameLayout id="@id/video_img_group" layout_width="fill_parent" layout_height="wrap_content">
+            <include layout="@layout/video_details_image_views" />
+        </FrameLayout>
+        <LinearLayout orientation="vertical" id="@id/video_details_indented_group" layout_width="fill_parent" layout_height="wrap_content" paddingStart="@dimen/large_padding" paddingEnd="@dimen/large_padding">
+            <o.ImageSwitcher ellipsize="end" id="@id/video_details_title" layout_marginTop="@dimen/details_content_padding" maxLines="2" style="@style/PrimaryBoldFontText.Large" />
+            <include layout="@layout/video_details_info_layout" />
+            <ViewStub id="@id/pre_release_play_trailer_stub" inflatedId="@id/pre_release_play_trailer_button" layout_width="wrap_content" layout_height="wrap_content" />
+            <ViewStub id="@id/content_warning_stub" layout="@layout/video_details_content_warning" inflatedId="@id/content_warning" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="14.0dip" layout_marginStart="@dimen/content_warning_margin_start" />
+            <ViewStub id="@id/video_description_container" layout_width="fill_parent" layout_height="wrap_content" />
+            <ViewStub id="@id/video_credits_container" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/content_padding" />
+            <include layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="@dimen/content_padding" layout_marginBottom="@dimen/content_padding" layout="@layout/video_details_copyright" />
+            <include layout="@layout/video_details_buttons_layout" />
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout id="@id/video_details_footer" layout_width="fill_parent" layout_height="wrap_content">
+        <o.ImageSwitcher ellipsize="end" id="@id/similar_items_grid_view_title" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="10.0dip" layout_marginBottom="@dimen/content_padding" text="@string/label_similar_shows" maxLines="2" singleLine="true" lineSpacingMultiplier="@dimen/line_spacing_expanded" paddingStart="@dimen/content_padding" style="@style/PrimaryBoldFontText.Medium" />
+    </FrameLayout>
+</merge>

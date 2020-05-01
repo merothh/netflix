@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.Wt id="@id/brightness_bar" focusable="true" visibility="invisible" layout_width="@dimen/brightness_gesture_region_width" layout_height="fill_parent" layout_marginTop="@dimen/brightness_bar_top_margin" layout_marginBottom="@dimen/brightness_bar_bottom_margin" contentDescription="@string/accessibility_brightness_control" importantForAccessibility="yes" accessibilityTraversalAfter="@id/player_cast_text_button"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

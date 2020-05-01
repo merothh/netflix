@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout orientation="horizontal" id="@id/alert" padding="8.0dip" layout_width="fill_parent" layout_height="wrap_content">
+        <o.GridView id="@id/icon" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="8.0dip" importantForAccessibility="no" layout_marginStart="8.0dip" layout_marginEnd="16.0dip" />
+        <include layout="@layout/user_message_area_content" />
+    </LinearLayout>
+    <android.widget.Space id="@id/dim_space" visibility="gone" layout_width="fill_parent" layout_height="0.0dip" layout_weight="1.0" />
+</LinearLayout>

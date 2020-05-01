@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="horizontal" id="@id/member_referral_exposed_share_options" layout_width="fill_parent" layout_height="wrap_content" baselineAligned="false" divider="@drawable/member_referral_share_divider" minHeight="@dimen/member_referral_button_min_height" showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.Nd id="@id/member_referral_share_option_1" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0" />
+    <o.Nd id="@id/member_referral_share_option_2" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0" />
+    <o.Nd id="@id/member_referral_share_option_3" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0" />
+    <o.Nd id="@id/member_referral_share_option_4" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0" />
+</LinearLayout>

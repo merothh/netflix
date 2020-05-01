@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater orientation="vertical" id="@id/header" layout_width="fill_parent" layout_height="wrap_content" paddingStart="@dimen/large_padding" paddingEnd="@dimen/large_padding" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View layout_width="0.0dip" layout_height="100.0dip" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" />
+    <LinearLayout gravity="center_vertical" orientation="horizontal" id="@id/titleSelectionHolder" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="@dimen/large_padding" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" style="@style/OnRampTitleSelection">
+        <o.TrustedTime id="@id/titleSelectionCountView" layout_width="@dimen/onramp_title_selection_count_size" layout_height="@dimen/onramp_title_selection_count_size" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" />
+        <o.ImageSwitcher id="@id/chooseText" layout_width="wrap_content" layout_height="wrap_content" layout_marginStart="8.0dip" layout_constraintBottom_toBottomOf="@id/titleSelectionCountView" layout_constraintEnd_toEndOf="parent" layout_constraintHorizontal_bias="0.0" layout_constraintStart_toEndOf="@id/titleSelectionCountView" layout_constraintTop_toTopOf="@id/titleSelectionCountView" style="@style/SignupNativeHeaderText.Onramp" />
+    </LinearLayout>
+    <o.LayoutInflater id="@id/barrier" layout_width="wrap_content" layout_height="wrap_content" barrierDirection="bottom" constraint_referenced_ids="titleSelectionHolder" />
+    <o.ImageSwitcher id="@id/subheaderText" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="12.0dip" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/barrier" style="@style/OnRampTitleSelection" />
+    <com.netflix.mediaclient.acquisition.view.OnrampButton id="@id/headerCtaButton" layout_width="@dimen/onramp_cta_button_width" layout_height="wrap_content" layout_marginTop="@dimen/signup_cta_button_vertical_margin" layout_marginBottom="@dimen/signup_cta_button_vertical_margin" text="@string/button_continue" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/subheaderText" />
+</o.MenuInflater>

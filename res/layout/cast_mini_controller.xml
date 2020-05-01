@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" id="@id/container_all" paddingTop="0.0dip" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View background="@drawable/cast_mini_controller_gradient_light" layout_width="fill_parent" layout_height="5.0dip" />
+    <RelativeLayout id="@id/container_current" layout_width="fill_parent" layout_height="@dimen/cast_mini_controller_icon_height">
+        <View id="@id/center" visibility="invisible" layout_width="fill_parent" layout_height="1.0dip" layout_centerVertical="true" />
+        <ImageView id="@id/icon_view" layout_width="@dimen/cast_mini_controller_icon_width" layout_height="@dimen/cast_mini_controller_icon_height" src="@drawable/cast_album_art_placeholder" scaleType="centerCrop" layout_alignParentLeft="true" layout_alignParentStart="true" />
+        <ImageView id="@id/button_0" layout_width="wrap_content" layout_height="wrap_content" layout_marginRight="@dimen/cast_mini_controller_control_button_margin" layout_toLeftOf="@id/button_1" layout_centerVertical="true" layout_marginEnd="@dimen/cast_mini_controller_control_button_margin" layout_toStartOf="@id/button_1" />
+        <ImageView id="@id/button_1" layout_width="wrap_content" layout_height="wrap_content" layout_marginRight="@dimen/cast_mini_controller_control_button_margin" layout_toLeftOf="@id/button_2" layout_centerVertical="true" layout_marginEnd="@dimen/cast_mini_controller_control_button_margin" layout_toStartOf="@id/button_2" />
+        <ImageView id="@id/button_2" layout_width="wrap_content" layout_height="wrap_content" layout_marginRight="8.0dip" layout_alignParentRight="true" layout_centerVertical="true" layout_marginEnd="8.0dip" layout_alignParentEnd="true" />
+        <TextView textAppearance="?castTitleTextAppearance" ellipsize="end" id="@id/title_view" layout_width="fill_parent" layout_height="wrap_content" layout_marginLeft="15.0dip" layout_marginRight="8.0dip" layout_marginBottom="-3.0dip" maxLines="1" layout_toLeftOf="@id/button_0" layout_toRightOf="@id/icon_view" layout_above="@id/center" layout_marginStart="15.0dip" layout_marginEnd="8.0dip" layout_toStartOf="@id/button_0" layout_toEndOf="@id/icon_view" />
+        <TextView textAppearance="?castSubtitleTextAppearance" ellipsize="end" id="@id/subtitle_view" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="3.0dip" maxLines="1" layout_toLeftOf="@id/button_0" layout_toRightOf="@id/icon_view" layout_below="@id/center" layout_alignLeft="@id/title_view" layout_alignRight="@id/title_view" layout_toStartOf="@id/button_0" layout_toEndOf="@id/icon_view" layout_alignStart="@id/title_view" layout_alignEnd="@id/title_view" />
+        <ProgressBar id="@id/progressBar" layout_width="fill_parent" layout_height="5.0dip" progressDrawable="@drawable/cast_mini_controller_progress_drawable" layout_alignParentBottom="true" layoutDirection="ltr" style="@android:style/Widget.ProgressBar.Horizontal" />
+    </RelativeLayout>
+</LinearLayout>

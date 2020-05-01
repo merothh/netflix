@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape shape="ring" useLevel="false" innerRadius="0.0dip" thickness="@dimen/our_story_indicator_thickness">
+            <stroke width="1.0dip" color="@color/signup_grey45" />
+            <solid color="@color/signup_grey45" />
+        </shape>
+    </item>
+</layer-list>

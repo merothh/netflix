@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center_horizontal" orientation="vertical" id="@id/player_lock_button" visibility="invisible" layout_width="wrap_content" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton gravity="center" id="@id/lock_button" background="?selectableItemBackgroundBorderless" focusable="true" visibility="visible" layout_width="@dimen/lock_button_size" layout_height="@dimen/lock_button_size" src="@drawable/circle_lock_icon" contentDescription="@string/accessibility_lock_control" />
+    <o.HorizontalScrollView id="@id/unlock_button" visibility="gone" layout_width="wrap_content" layout_height="48.0dip" text="@string/lable_unlock_question" drawableStart="@drawable/ic_icon_lock_open" style="?primarySmallPillButtonStyle" />
+    <o.ImageSwitcher textSize="16.0sp" textStyle="bold" textColor="@color/white" gravity="fill" layout_width="wrap_content" layout_height="28.0dip" text="@string/label_locked" includeFontPadding="false" style="@style/NetflixButton.NoOutline.Transparent" />
+    <o.ImageSwitcher textSize="10.0sp" textColor="#ffb3b3b3" layout_width="wrap_content" layout_height="wrap_content" text="@string/label_tap_to_unlock" />
+</LinearLayout>

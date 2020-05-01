@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout id="@id/video_basic_info" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="@dimen/text_padding" layout_marginStart="@dimen/moderate_padding" layout_marginEnd="@dimen/moderate_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View layout_gravity="center_vertical" id="@id/animated_loading_view" visibility="gone" layout_width="wrap_content" layout_height="fill_parent" />
+    <include id="@id/basic_info_container" layout="@layout/video_details_basic_info" />
+</FrameLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout background="@color/transparent" layout_width="wrap_content" layout_height="wrap_content" layout_margin="4.0dip" foreground="@color/transparent" layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout id="@id/interactive_navigation_image_gradient" layout_width="wrap_content" layout_height="wrap_content">
+        <o.GridView id="@id/interactive_navigation_image" background="@color/transparent" layout_width="wrap_content" layout_height="wrap_content" scaleType="centerCrop" adjustViewBounds="true" />
+    </FrameLayout>
+    <o.GridView id="@id/interactive_navigation_image_overlay" background="@color/transparent" layout_width="wrap_content" layout_height="wrap_content" foreground="@color/transparent" scaleType="centerCrop" adjustViewBounds="true" />
+    <o.GridView id="@id/interactive_navigation_image_overlay_selected" background="@color/transparent" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" foreground="@color/transparent" scaleType="centerCrop" adjustViewBounds="true" />
+    <o.ImageSwitcher layout_gravity="start|center|top" id="@id/navigation_debug_segment_id" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" />
+    <o.ImageSwitcher textSize="12.0sp" gravity="center" layout_gravity="bottom|center" id="@id/navigation_choice_point_title" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" maxLines="2" />
+</FrameLayout>

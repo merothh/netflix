@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item id="@android:id/background">
+        <shape shape="rectangle">
+            <corners radius="@dimen/download_stats_progress_size" />
+            <solid color="@color/grey55" />
+        </shape>
+    </item>
+    <item id="@android:id/progress">
+        <clip>
+            <shape shape="rectangle">
+                <corners radius="@dimen/download_stats_progress_size" />
+                <solid color="@color/base_blue" />
+            </shape>
+        </clip>
+    </item>
+    <item id="@android:id/secondaryProgress">
+        <clip>
+            <shape shape="rectangle">
+                <corners radius="@dimen/download_stats_progress_size" />
+                <solid color="?primaryTextColor" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

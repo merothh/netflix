@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center_vertical" orientation="horizontal" id="@id/content_advisory" background="@drawable/gradient_top_to_bottom_50_30_0" paddingTop="@dimen/advisory_padding_top" paddingBottom="@dimen/advisory_padding_bottom" layout_width="fill_parent" layout_height="wrap_content" alpha="0.0" importantForAccessibility="noHideDescendants" layoutDirection="locale" paddingStart="@dimen/advisory_padding_horizontal" paddingEnd="@dimen/advisory_padding_horizontal"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View id="@id/view_netflix_bar" background="@color/brand_red" padding="2.0dip" layout_width="@dimen/content_advisory_netflix_bar_width" layout_height="fill_parent" minHeight="24.0dip" alpha="0.0" layout_marginEnd="@dimen/content_advisory_rating_red_bar_margin" />
+    <FrameLayout id="@id/advisory_container" layout_width="fill_parent" layout_height="wrap_content" />
+</LinearLayout>

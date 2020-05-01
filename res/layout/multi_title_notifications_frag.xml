@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout layout_gravity="center" id="@id/multi_title_notification_container" style="@style/match"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.recyclerview.widget.RecyclerView id="@id/multi_title_recycler_view" background="@color/black" visibility="gone" scrollbars="vertical" style="@style/match"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <ProgressBar layout_gravity="center" id="@id/multi_title_loading_view" padding="@dimen/double_padding" layout_width="wrap_content" layout_height="wrap_content" indeterminate="true" indeterminateOnly="true" style="?android:progressBarStyle" />
+</FrameLayout>

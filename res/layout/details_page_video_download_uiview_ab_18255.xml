@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.Ql id="@id/video_details_download_button" visibility="gone" layout_width="0.0dip" layout_height="wrap_content" layout_marginStart="@dimen/moderate_padding" layout_marginEnd="@dimen/moderate_padding" showPrimaryMessages="true" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

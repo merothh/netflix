@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item state_enabled="false" color="@color/contact_us_dial_fab_bg_disabled" />
+    <item color="@color/black" />
+</selector>

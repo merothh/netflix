@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item state_pressed="true" drawable="@drawable/selectable_round_item_background_active" />
+    <item state_selected="true" drawable="@drawable/selectable_round_item_background_active" />
+    <item state_focused="true" drawable="@drawable/selectable_round_item_background_focused" />
+    <item state_checked="true" drawable="@drawable/selectable_round_item_background_active" />
+    <item drawable="@android:color/transparent" />
+</selector>

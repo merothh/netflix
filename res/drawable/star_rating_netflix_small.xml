@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item id="@android:id/background" drawable="@drawable/star_no_selection_small" />
+    <item id="@android:id/progress" drawable="@drawable/star_netflix_rated_small" />
+</layer-list>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView theme="@style/Theme.Uma.Dialog" layout_width="fill_parent" layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.MenuInflater id="@id/alert" padding="@dimen/xlarge_padding" layout_width="fill_parent" layout_height="wrap_content">
+        <o.GridView id="@id/icon" visibility="visible" layout_width="60.0dip" layout_height="60.0dip" importantForAccessibility="no" layout_marginEnd="8.0dip" layout_constraintBottom_toTopOf="@id/title" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" />
+        <o.ImageSwitcher textSize="@dimen/text_fixed_large" textColor="@color/black" id="@id/title" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/double_padding" importantForAccessibility="no" textAlignment="viewStart" paddingStart="@dimen/text_padding" paddingEnd="@dimen/text_padding" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/icon" style="@style/NetflixBoldFont" />
+        <o.ImageSwitcher textSize="@dimen/text_fixed_small" textColor="@color/translucent_black_70" id="@id/body" paddingBottom="@dimen/xlarge_padding" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/content_padding" importantForAccessibility="no" textAlignment="viewStart" paddingStart="@dimen/text_padding" paddingEnd="@dimen/text_padding" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/title" style="@style/NetflixFont" />
+    </o.MenuInflater>
+</ScrollView>

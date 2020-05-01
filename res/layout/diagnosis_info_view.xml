@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout gravity="center" layout_gravity="center" orientation="vertical" id="@id/login_status_group" layout_width="fill_parent" layout_height="wrap_content">
+        <o.ImageSwitcher id="@id/diagnosis_network_status" layout_margin="@dimen/content_padding" text="@string/label_checkNetwork" style="@style/PrimaryText.Medium" />
+        <FrameLayout layout_width="fill_parent" layout_margin="@dimen/content_padding" style="@style/match">
+            <o.ImageSwitcher gravity="center" layout_gravity="center" id="@id/diagnosis_testInfo" text="@string/label_testInfo" maxLines="3" style="@style/PrimaryText.Small" />
+            <ProgressBar layout_gravity="center" id="@id/diagnosis_loading_view" padding="@dimen/content_padding" indeterminate="true" indeterminateOnly="true" style="@style/wrap" />
+        </FrameLayout>
+        <o.HorizontalScrollView id="@id/diagnosis_startTest" focusable="true" layout_margin="@dimen/content_padding" text="@string/label_startTest" style="?greyButtonStyle" />
+    </LinearLayout>
+</merge>

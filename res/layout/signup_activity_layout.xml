@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.ProgressBar id="@id/signupActivitySpinnerContentFlipper" layout_width="fill_parent" layout_height="fill_parent" style="@style/match"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include id="@id/loading_view" layout="@layout/loading_inset" />
+    <FrameLayout id="@id/signup_fragment_container" layout_width="fill_parent" layout_height="fill_parent" />
+</o.ProgressBar>

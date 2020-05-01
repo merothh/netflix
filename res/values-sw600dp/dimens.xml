@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="abc_action_bar_content_inset_material">24.0dip</dimen>
+    <dimen name="abc_action_bar_content_inset_with_nav">80.0dip</dimen>
+    <dimen name="abc_action_bar_default_height_material">64.0dip</dimen>
+    <dimen name="abc_action_bar_default_padding_end_material">8.0dip</dimen>
+    <dimen name="abc_action_bar_default_padding_start_material">8.0dip</dimen>
+    <dimen name="abc_config_prefDialogWidth">580.0dip</dimen>
+    <dimen name="abc_text_size_subtitle_material_toolbar">16.0dip</dimen>
+    <dimen name="abc_text_size_title_material_toolbar">20.0dip</dimen>
+    <dimen name="advisory_padding_top">50.0dip</dimen>
+    <dimen name="brightness_bar_gesture_region_height">320.0dip</dimen>
+    <dimen name="brightness_bar_height">240.0dip</dimen>
+    <dimen name="contact_us_button_margin">60.0dip</dimen>
+    <dimen name="contact_us_button_spacing">30.0dip</dimen>
+    <dimen name="contact_us_dialer_buttons_margin_bottom">60.0dip</dimen>
+    <dimen name="contact_us_dialer_buttons_padding_on_side">60.0dip</dimen>
+    <dimen name="contact_us_dialer_fab_margin_bottom">60.0dip</dimen>
+    <dimen name="contact_us_landing_page_title_link_padding_top">50.0dip</dimen>
+    <dimen name="contact_us_landing_page_title_margin_top">20.0dip</dimen>
+    <dimen name="content_advisory_kmrb_advisory_icon_height">57.0dip</dimen>
+    <dimen name="content_advisory_kmrb_advisory_icon_space_between_icon_and_text">4.0dip</dimen>
+    <dimen name="content_advisory_kmrb_advisory_icon_width">64.0dip</dimen>
+    <dimen name="content_advisory_kmrb_advisory_level_text_size">12.0sp</dimen>
+    <dimen name="content_advisory_kmrb_rating_icon">77.0dip</dimen>
+    <dimen name="content_warning_margin_start">0.0dip</dimen>
+    <dimen name="cvv_card_image_max_width">400.0dip</dimen>
+    <dimen name="design_navigation_max_width">320.0dip</dimen>
+    <dimen name="design_snackbar_action_inline_max_width">0.0dip</dimen>
+    <dimen name="design_snackbar_background_corner_radius">2.0dip</dimen>
+    <dimen name="design_snackbar_extra_spacing_horizontal">24.0dip</dimen>
+    <dimen name="design_snackbar_max_width">576.0dip</dimen>
+    <dimen name="design_snackbar_min_width">320.0dip</dimen>
+    <item type="dimen" name="design_snackbar_padding_vertical_2lines">@dimen/design_snackbar_padding_vertical</item>
+    <dimen name="design_tab_scrollable_min_width">160.0dip</dimen>
+    <dimen name="details_page_button_text_size">12.0sp</dimen>
+    <dimen name="details_page_buttons_container_height">75.0dip</dimen>
+    <dimen name="details_page_toggle_button_bottom_padding">2.0dip</dimen>
+    <dimen name="details_page_toggle_button_top_padding">17.0dip</dimen>
+    <dimen name="language_selector_list_maxheight">400.0dip</dimen>
+    <dimen name="login_field_width">540.0dip</dimen>
+    <dimen name="login_margin">50.0dip</dimen>
+    <dimen name="mop_logos_margin">12.0dip</dimen>
+    <dimen name="mop_options_side_margin">16.0dip</dimen>
+    <item type="dimen" name="mr_dialog_fixed_width_major">60.000004%</item>
+    <item type="dimen" name="mr_dialog_fixed_width_minor">90.0%</item>
+    <dimen name="onramp_cta_button_width">500.0dip</dimen>
+    <dimen name="onramp_title_grid_side_margin">40.0dip</dimen>
+    <dimen name="ourstory_content_width">300.0dip</dimen>
+    <dimen name="ourstory_cta_button_width">500.0dip</dimen>
+    <dimen name="prequery_search_play_icon_height">32.0dip</dimen>
+    <dimen name="prequery_search_play_icon_width">32.0dip</dimen>
+    <dimen name="signup_context_content_margin_top">45.0dip</dimen>
+    <item type="dimen" name="signup_context_context_horizontal_bias">0.5</item>
+    <dimen name="signup_context_subheader_title_max_width">350.0dip</dimen>
+    <dimen name="signup_header_text">23.0sp</dimen>
+    <dimen name="signup_header_welcome">56.0sp</dimen>
+    <dimen name="signup_welcome_content_padding_side">8.0dip</dimen>
+    <dimen name="signup_welcome_cta_vertical_padding">8.0dip</dimen>
+    <dimen name="signup_welcome_image_top_padding">60.0dip</dimen>
+    <dimen name="signup_welcome_subheadline_text_size">24.0sp</dimen>
+    <dimen name="top_ten_item_decoration_start_offset">36.0dip</dimen>
+</resources>

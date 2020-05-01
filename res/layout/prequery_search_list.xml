@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout layout_width="fill_parent" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.recyclerview.widget.RecyclerView name="com.netflix.mediaclient.ui.search.SearchPrequeryFragment_Ab10892" id="@id/pre_query_list" paddingBottom="56.0dip" clipToPadding="false" layout_width="fill_parent" layout_height="fill_parent" />
+    <include layout="@layout/loading_and_error_inset" />
+</FrameLayout>

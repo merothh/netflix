@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.RemoteMailException gravity="center" orientation="vertical" id="@id/action_bar_container" layout_width="fill_parent" layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout layout_width="fill_parent" layout_height="?netflixActionBarSize">
+        <o.Magnifier id="@id/action_bar" background="?toolbarBackground" layout_width="fill_parent" layout_height="?netflixActionBarSize" navigationIcon="?homeAsUpIndicator" subtitleTextAppearance="@style/Toolbar.SubtitleText" titleTextAppearance="@style/Toolbar.TitleText">
+            <include layout="@layout/action_bar_center" />
+        </o.Magnifier>
+    </FrameLayout>
+</o.RemoteMailException>

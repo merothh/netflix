@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout style="@style/match">
+        <FrameLayout id="@id/video_img_group" layout_width="fill_parent" layout_height="wrap_content">
+            <include layout="@layout/video_details_image_views" />
+        </FrameLayout>
+        <LinearLayout orientation="vertical" id="@id/details_view_group_wrapper" layout_width="fill_parent" layout_height="wrap_content">
+            <LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="wrap_content" paddingStart="@dimen/moderate_padding" paddingEnd="@dimen/moderate_padding">
+                <include layout="@layout/video_details_info_layout_phone" />
+                <ViewStub id="@id/pre_release_play_trailer_stub" inflatedId="@id/pre_release_play_trailer_button" layout_width="wrap_content" layout_height="wrap_content" />
+                <ViewStub id="@id/video_description_container" layout_width="fill_parent" layout_height="wrap_content" />
+                <ViewStub id="@id/video_credits_container" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/content_padding" />
+                <ViewStub id="@id/video_supported_media_tracks_container" layout="@layout/dp_supported_mediatracks_view" layout_width="fill_parent" layout_height="wrap_content" />
+                <include layout_width="fill_parent" layout_height="wrap_content" layout="@layout/video_details_copyright" />
+            </LinearLayout>
+            <ViewStub id="@id/content_warning_stub" layout="@layout/video_details_content_warning" inflatedId="@id/content_warning" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="14.0dip" layout_marginStart="@dimen/moderate_padding" />
+            <include layout="@layout/video_details_buttons_layout_phone" />
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout orientation="vertical" id="@id/video_details_middle" layout_width="fill_parent" layout_height="wrap_content">
+        <include layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="20.0dip" layout="@layout/dp_tab_scroller" />
+    </LinearLayout>
+    <FrameLayout id="@id/video_details_footer" layout_width="fill_parent" layout_height="wrap_content" minHeight="19.0dip" />
+</merge>

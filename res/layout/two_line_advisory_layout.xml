@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout id="@id/content_advisory" layout_width="fill_parent" layout_height="wrap_content" layoutDirection="locale"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher id="@id/message" layout_width="wrap_content" layout_height="wrap_content" textAllCaps="true" paddingStart="@dimen/content_advisory_rating_margin_start" layout_alignParentStart="true" style="@style/PlayerContentAdvisoryPrimaryText" />
+    <o.ImageSwitcher id="@id/secondary_message" layout_width="wrap_content" layout_height="wrap_content" layout_below="@id/message" paddingStart="@dimen/content_advisory_rating_margin_start" layout_alignParentStart="true" style="@style/PlayerContentAdvisorySecondaryText" />
+    <View textColor="@color/content_advisory_netflix_bar" id="@id/view_netflix_bar" background="@color/brand_red" padding="2.0dip" layout_width="@dimen/content_advisory_netflix_bar_width" layout_height="wrap_content" layout_alignTop="@id/message" layout_alignBottom="@id/secondary_message" alpha="0.0" />
+</RelativeLayout>

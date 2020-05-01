@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector drawable="@drawable/$avd_dp_video_description_loading_indicator__0" xmlns:aapt="http://schemas.android.com/aapt"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <target name="synopsis_1" animation="@drawable/$avd_dp_video_description_loading_indicator__1" />
+    <target name="synopsis_2" animation="@drawable/$avd_dp_video_description_loading_indicator__2" />
+    <target name="synopsis_3" animation="@drawable/$avd_dp_video_description_loading_indicator__3" />
+    <target name="cast_1" animation="@drawable/$avd_dp_video_description_loading_indicator__4" />
+    <target name="cast_2" animation="@drawable/$avd_dp_video_description_loading_indicator__5" />
+</animated-vector>

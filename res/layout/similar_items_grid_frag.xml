@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" paddingTop="@dimen/search_action_bar_clearance" style="@style/match"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textStyle="bold" ellipsize="end" id="@id/similar_items_grid_view_title" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="@dimen/content_padding" text="@string/label_similar_shows" maxLines="2" singleLine="true" lineSpacingMultiplier="@dimen/line_spacing_expanded" style="@style/PrimaryText.Medium" />
+    <o.RatingBar gravity="center" id="@id/similar_items_grid_view" layout_width="fill_parent" layout_height="wrap_content" listSelector="@color/transparent" stretchMode="columnWidth" />
+</LinearLayout>

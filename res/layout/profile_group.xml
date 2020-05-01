@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout id="@id/profiles_group" background="@drawable/selectable_item_background" layout_width="fill_parent" layout_height="@dimen/sliding_menu_profiles_row_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView id="@id/profiles_switch_icon" padding="@dimen/double_padding" layout_width="@dimen/sliding_menu_profiles_icon_size" layout_height="@dimen/sliding_menu_profiles_icon_size" layout_margin="@dimen/double_padding" src="@drawable/APKTOOL_DUMMY_1f4" layout_centerVertical="true" contentDescription="@string/switch_profile" layout_alignParentEnd="true" />
+    <o.BaseAdapter id="@id/profiles_img" layout_width="@dimen/sliding_menu_profiles_icon_size" layout_height="@dimen/sliding_menu_profiles_icon_size" layout_margin="@dimen/double_padding" foreground="@android:color/transparent" src="@drawable/dark_img_placeholder" scaleType="fitXY" layout_centerVertical="true" importantForAccessibility="no" layout_alignParentStart="true" />
+    <o.ImageSwitcher textSize="@dimen/text_fixed_medium" ellipsize="end" id="@id/profiles_title" text="@string/label_loading_" maxLines="1" layout_centerVertical="true" fontFamily="sans-serif-light" layout_toStartOf="@id/profiles_switch_icon" layout_toEndOf="@id/profiles_img" style="@style/PrimaryText" />
+    <View id="@id/header_separator_switch_profile" background="@color/black" layout_width="fill_parent" layout_height="@dimen/drawer_separator_height" layout_alignParentBottom="true" />
+</RelativeLayout>

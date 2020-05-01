@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout layout_gravity="center" orientation="vertical" id="@id/video_details_share_group" background="@drawable/selectable_video_background_with_press" layout_width="wrap_content" layout_height="wrap_content">
+        <FrameLayout layout_gravity="center|top" id="@id/share_button_image" paddingBottom="@dimen/button_drawable_padding" layout_width="@dimen/video_actions_button_asset_width" layout_height="@dimen/video_actions_button_asset_width">
+            <o.GridView layout_gravity="bottom|center" layout_width="@dimen/netflix_button_small_min_height" layout_height="@dimen/netflix_button_small_min_height" src="@drawable/ic_share_24dp" scaleType="centerInside" style="@style/NetflixSquareButton.Flat" />
+        </FrameLayout>
+        <o.ImageSwitcher textSize="@dimen/details_page_button_text_size" textColor="?android:textColorSecondary" gravity="center|top" layout_gravity="center|top" id="@id/share_text" layout_width="wrap_content" layout_height="wrap_content" text="@string/share_button_name" lines="2" paddingStart="@dimen/text_padding" paddingEnd="@dimen/text_padding" style="@style/PrimaryText" />
+    </LinearLayout>
+</merge>

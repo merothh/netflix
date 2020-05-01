@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout layout_width="fill_parent" layout_height="fill_parent">
+        <o.DatePicker textSize="@dimen/search_people_title_text_size" textStyle="bold" ellipsize="end" gravity="center" id="@id/search_result_title" background="@color/black" layout_width="fill_parent" layout_height="@dimen/search_people_title_height" maxLines="@integer/search_result_people_title_max_lines" lines="2" layout_alignParentBottom="true" paddingStart="12.0dip" paddingEnd="12.0dip" layout_marginStart="4.0dip" layout_marginEnd="4.0dip" style="@style/PrimaryText" />
+        <o.GridView id="@id/search_result_img" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/lomo_item_padding" src="@drawable/blank_avatar" scaleType="centerCrop" adjustViewBounds="true" layout_above="@id/search_result_title" layout_alignParentTop="true" layout_marginStart="@dimen/lomo_item_padding" layout_marginEnd="@dimen/lomo_item_padding" />
+    </RelativeLayout>
+</merge>

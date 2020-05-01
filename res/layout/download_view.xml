@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge style="@style/wrap" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.BaseAdapter id="@id/boxart" layout_marginBottom="@dimen/download_actions_bar_height" scaleType="centerCrop" adjustViewBounds="true" style="@style/match" />
+    <o.ImageSwitcher textSize="@dimen/download_info_bar_text_size" textColor="?secondaryTextColor" ellipsize="end" gravity="center_vertical" id="@id/info" background="?videoInfoBackgroundColor" layout_width="fill_parent" layout_height="@dimen/download_actions_bar_height" maxLines="2" lineSpacingMultiplier="@dimen/download_info_lineSpacingMultiplier" paddingStart="@dimen/content_padding" paddingEnd="@dimen/download_actions_bar_height" layout_constraintTop_toBottomOf="@id/boxart" />
+    <com.netflix.mediaclient.ui.offline.DownloadButton layout_gravity="center_vertical" id="@id/download_button" layout_width="wrap_content" layout_height="@dimen/download_actions_bar_height" scaleX="@dimen/download_download_button_scale" scaleY="@dimen/download_download_button_scale" paddingEnd="@dimen/content_padding" layout_constraintEnd_toEndOf="parent" layout_constraintTop_toBottomOf="@id/boxart" style="@style/NetflixDownloadButton" />
+</merge>

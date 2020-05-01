@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout background="@drawable/upgrade_on_us_background" layout_width="wrap_content" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView id="@id/first30days" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="8.0dip" text="@string/upgrade_dialog_first_30_days" layout_alignParentTop="true" layout_marginStart="12.0dip" style="@style/UpgradeOnUs.Header" />
+    <TextView id="@id/upgradedPlan" layout_width="wrap_content" layout_height="wrap_content" layout_below="@id/first30days" layout_marginStart="12.0dip" style="@style/UpgradeOnUs.PlanTitle" />
+    <TextView id="@id/upgradedPlanPrice" layout_width="wrap_content" layout_height="wrap_content" layout_marginBottom="12.0dip" layout_below="@id/upgradedPlan" layout_marginStart="12.0dip" layout_marginEnd="4.0dip" style="@style/UpgradeOnUs.StrikePrice" />
+    <TextView id="@id/zeroPrice" layout_width="wrap_content" layout_height="wrap_content" layout_alignTop="@id/upgradedPlanPrice" layout_toEndOf="@id/upgradedPlanPrice" style="@style/UpgradeOnUs.PlanPrice" />
+    <View background="@color/signup_grey_upgrade_dialog" layout_width="fill_parent" layout_height="1.0dip" layout_below="@id/upgradedPlanPrice" />
+    <TextView id="@id/afterFreeTrial" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="12.0dip" text="@string/upgrade_dialog_after_30_days" layout_below="@id/upgradedPlanPrice" layout_marginStart="12.0dip" style="@style/UpgradeOnUs.Header" />
+    <TextView id="@id/selectedPlan" layout_width="wrap_content" layout_height="wrap_content" layout_below="@id/afterFreeTrial" layout_marginStart="12.0dip" style="@style/UpgradeOnUs.PlanTitle" />
+    <TextView textSize="@dimen/your_plan_content_button" id="@id/changeYourPlan" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" text="@string/label_change_plan" layout_alignTop="@id/selectedPlan" layout_marginEnd="10.0dip" layout_alignParentEnd="true" style="@style/PlanInfoAltLink" />
+    <TextView id="@id/selectedPlanPrice" layout_width="wrap_content" layout_height="wrap_content" layout_marginBottom="12.0dip" layout_below="@id/selectedPlan" layout_marginStart="12.0dip" style="@style/UpgradeOnUs.PlanPrice" />
+</RelativeLayout>

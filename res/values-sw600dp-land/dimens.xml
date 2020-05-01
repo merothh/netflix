@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="contact_us_dialer_buttons_margin_bottom">10.0dip</dimen>
+    <dimen name="contact_us_dialer_buttons_padding_on_side">0.0dip</dimen>
+    <dimen name="contact_us_dialer_fab_margin_bottom">15.0dip</dimen>
+    <dimen name="contact_us_landing_page_links_padding">5.0dip</dimen>
+    <dimen name="contact_us_landing_page_padding_left">100.0dip</dimen>
+    <dimen name="contact_us_landing_page_padding_right">100.0dip</dimen>
+    <dimen name="details_page_toggle_button_bottom_padding">10.0dip</dimen>
+    <dimen name="login_field_width">750.0dip</dimen>
+    <dimen name="login_margin">70.0dip</dimen>
+    <dimen name="onramp_title_grid_side_margin">60.0dip</dimen>
+    <dimen name="signup_context_content_margin_top">30.0dip</dimen>
+    <dimen name="signup_context_margin_top">30.0dip</dimen>
+    <dimen name="signup_header_welcome">66.0sp</dimen>
+    <dimen name="signup_registration_margin_top">40.0dip</dimen>
+    <dimen name="signup_welcome_content_padding_side">100.0dip</dimen>
+    <dimen name="signup_welcome_tab_bar_top_margin">0.0dip</dimen>
+    <dimen name="signup_welcome_tab_header_height">250.0dip</dimen>
+    <dimen name="signup_welcome_tab_header_top_padding">10.0dip</dimen>
+    <dimen name="supplemental_text_size">20.0sp</dimen>
+</resources>

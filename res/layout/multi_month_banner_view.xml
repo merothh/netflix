@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater background="@drawable/uma_gradient_background" layout_width="fill_parent" layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.GridLayout id="@id/close_button" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/APKTOOL_DUMMY_218" adjustViewBounds="true" layout_constraintEnd_toEndOf="parent" layout_constraintTop_toTopOf="parent" style="@style/NetflixButton.NoOutline.Transparent" />
+    <o.HorizontalScrollView id="@id/view_offer" layout_width="wrap_content" layout_height="wrap_content" layout_margin="@dimen/content_padding" minHeight="36.0dip" text="@string/multi_month_view_offer" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/label" style="@style/NetflixButton.White" />
+    <o.ImageSwitcher textColor="@color/white" gravity="center" id="@id/label" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="@dimen/medium_padding" paddingStart="@dimen/double_padding" paddingEnd="4.0dip" layout_constrainedWidth="true" layout_constraintEnd_toStartOf="@id/close_button" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" style="@style/PrimaryBoldFontText" />
+</o.MenuInflater>

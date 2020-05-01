@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.floatingactionbutton.FloatingActionButton id="@id/backToCustomerSupportDialFab" clickable="true" layout_marginBottom="@dimen/back_to_contact_us_dialer_margin_bottom" src="@drawable/APKTOOL_DUMMY_1e5" layout_centerHorizontal="true" layout_anchorGravity="bottom|center" style="@style/CustomerSupportBackToDialerFAB" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

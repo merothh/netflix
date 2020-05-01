@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.GridView id="@id/icon" layout_width="@dimen/content_advisory_small_icon_size" layout_height="@dimen/content_advisory_small_icon_size" layout_marginStart="2.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

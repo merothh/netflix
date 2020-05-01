@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater orientation="vertical" background="#ddffffff" paddingTop="16.0dip" paddingBottom="16.0dip" layout_width="fill_parent" layout_height="wrap_content" paddingStart="16.0dip" paddingEnd="16.0dip" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout gravity="center_vertical" orientation="horizontal" id="@id/stickySelectionHolder" layout_width="wrap_content" layout_height="wrap_content" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" style="@style/OnRampTitleSelection">
+        <o.TrustedTime id="@id/stickySelectedTitlesCount" layout_width="@dimen/onramp_title_selection_count_size" layout_height="@dimen/onramp_title_selection_count_size" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" />
+        <o.ImageSwitcher id="@id/stickyHeaderText" layout_width="wrap_content" layout_height="wrap_content" layout_marginStart="8.0dip" style="@style/SignupNativeHeaderText.Onramp" />
+    </LinearLayout>
+    <o.LayoutInflater id="@id/barrier" layout_width="0.0dip" layout_height="wrap_content" barrierDirection="bottom" constraint_referenced_ids="stickySelectionHolder" />
+    <com.netflix.mediaclient.acquisition.view.OnrampButton id="@id/stickyCtaButton" layout_width="@dimen/onramp_cta_button_width" layout_height="wrap_content" layout_marginTop="@dimen/signup_cta_button_vertical_margin" layout_marginBottom="@dimen/signup_cta_button_vertical_margin" text="@string/button_continue" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/barrier" />
+</o.MenuInflater>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="horizontal" id="@id/profile_details_parent" background="@drawable/action_bar_bg" layout_width="fill_parent" layout_height="?netflixActionBarSize" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher gravity="start|center" id="@id/top_profile_title_text" layout_width="0.0dip" layout_height="fill_parent" text="@string/profile_add_button" layout_weight="1.0" paddingStart="@dimen/profile_details_main_margin" autoSizeMaxTextSize="@dimen/text_medium" autoSizeMinTextSize="@dimen/text_nano" autoSizeTextType="uniform" />
+    <o.HorizontalScrollView textSize="@dimen/text_micro" id="@id/profile_cancel_button" layout_height="fill_parent" text="@string/profile_cancel_button" layout_weight="0.5" drawableStart="@drawable/APKTOOL_DUMMY_34d" style="@style/NetflixButton.Flat" />
+    <View style="@style/VerticalDivider.Profile" />
+    <o.HorizontalScrollView textSize="@dimen/text_micro" id="@id/profile_save_button" layout_height="fill_parent" text="@string/profile_save_button" layout_weight="0.5" drawableStart="@drawable/ic_profile_save_checkmark" style="@style/NetflixButton.Flat" />
+</LinearLayout>

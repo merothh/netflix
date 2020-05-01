@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.ImageSwitcher textSize="@dimen/details_actionbar_seasons_text_size" textColor="?actionMenuTextColor" ellipsize="end" gravity="center_vertical" id="@id/season_name" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" maxLines="1" drawablePadding="@dimen/details_actionbar_seasons_padding" style="@style/PrimaryBoldFontText"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

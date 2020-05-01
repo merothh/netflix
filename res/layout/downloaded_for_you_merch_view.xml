@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater paddingBottom="@dimen/xlarge_padding" layout_width="fill_parent" layout_height="wrap_content" xmlns:card_view="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View id="@id/divider" background="?downloadedForYouSecondary" layout_width="fill_parent" layout_height="1.0dip" layout_marginTop="@dimen/xlarge_padding" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" />
+    <o.ImageSwitcher id="@id/title" layout_width="0.0dip" layout_marginTop="@dimen/xlarge_padding" text="@string/downloaded_for_you_merch_subtitle" paddingStart="@dimen/medium_padding" paddingEnd="@dimen/medium_padding" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/divider" style="@style/PrimaryBoldFontText.Large" />
+    <o.ImageSwitcher id="@id/description" paddingTop="@dimen/content_padding" paddingBottom="@dimen/content_padding" text="@string/downloaded_for_you_merch_description" paddingStart="@dimen/medium_padding" paddingEnd="@dimen/medium_padding" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/title" style="@style/SecondaryLightFontText.Small" />
+    <View id="@id/background_circle" background="@drawable/circle" layout_width="0.0dip" layout_height="0.0dip" layout_margin="@dimen/medium_padding" layoutDirection="ltr" backgroundTint="?downloadedForYouSecondary" layout_constraintDimensionRatio="H,1:1" layout_constraintEnd_toEndOf="@id/end_card" layout_constraintStart_toStartOf="@id/start_card" layout_constraintTop_toBottomOf="@id/description" />
+    <o.GetChars id="@id/start_card" layout_width="0.0dip" layout_height="0.0dip" layout_marginTop="@dimen/xlarge_padding" rotation="@dimen/d4u_opt_in_card_rotation_inverse" layoutDirection="ltr" elevation="2.0dip" cardCornerRadius="@dimen/d4u_opt_in_card_corner_radius" layout_constraintDimensionRatio="H,0.7:1" layout_constraintEnd_toStartOf="@id/center" layout_constraintTop_toTopOf="@id/center_card" layout_constraintWidth_percent="0.3">
+        <RelativeLayout layout_width="fill_parent" layout_height="fill_parent">
+            <o.GridView id="@id/video_image_2" layout_width="fill_parent" layout_height="fill_parent" scaleType="centerCrop" />
+            <o.GridView visibility="invisible" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/ic_smart_downloads_icon" layout_centerInParent="true" />
+        </RelativeLayout>
+    </o.GetChars>
+    <o.GetChars id="@id/end_card" layout_width="0.0dip" layout_height="0.0dip" layout_marginTop="@dimen/xlarge_padding" rotation="@dimen/d4u_opt_in_card_rotation" layoutDirection="ltr" elevation="2.0dip" cardCornerRadius="@dimen/d4u_opt_in_card_corner_radius" layout_constraintDimensionRatio="H,0.7:1" layout_constraintStart_toEndOf="@id/center" layout_constraintTop_toTopOf="@id/center_card" layout_constraintWidth_percent="0.3">
+        <RelativeLayout layout_width="fill_parent" layout_height="fill_parent">
+            <o.GridView id="@id/video_image_3" layout_width="fill_parent" layout_height="fill_parent" scaleType="centerCrop" />
+            <o.GridView visibility="invisible" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/ic_smart_downloads_icon" layout_centerInParent="true" />
+        </RelativeLayout>
+    </o.GetChars>
+    <o.GetChars id="@id/center_card" layout_width="0.0dip" layout_height="0.0dip" layout_marginTop="@dimen/xxlarge_padding" layout_marginBottom="@dimen/xlarge_padding" layoutDirection="ltr" elevation="4.0dip" cardCornerRadius="@dimen/d4u_opt_in_card_corner_radius" layout_constraintDimensionRatio="H,0.7:1" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/description" layout_constraintWidth_percent="0.35">
+        <FrameLayout layout_width="fill_parent" layout_height="fill_parent">
+            <o.GridView id="@id/video_image_1" layout_width="fill_parent" layout_height="fill_parent" scaleType="centerCrop" />
+        </FrameLayout>
+    </o.GetChars>
+    <o.GridView id="@id/center" visibility="invisible" layout_width="@dimen/d4u_item_common_icon_size_small" layout_height="@dimen/d4u_item_common_icon_size_small" src="@drawable/ic_smart_downloads_icon" layout_centerInParent="true" layoutDirection="ltr" elevation="3.0dip" layout_constraintBottom_toBottomOf="@id/center_card" layout_constraintEnd_toEndOf="@id/center_card" layout_constraintStart_toStartOf="@id/center_card" layout_constraintTop_toTopOf="@id/center_card" />
+    <o.HorizontalScrollView id="@id/setup_button" layout_width="fill_parent" layout_marginTop="@dimen/xlarge_padding" text="@string/downloaded_for_you_merch_setup" layout_marginStart="@dimen/medium_padding" layout_marginEnd="@dimen/medium_padding" layout_constraintTop_toBottomOf="@id/background_circle" style="@style/NetflixButton.Blue" />
+</o.MenuInflater>

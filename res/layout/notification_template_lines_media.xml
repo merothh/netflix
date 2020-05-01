@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" paddingTop="2.0dip" paddingRight="8.0dip" paddingBottom="2.0dip" layout_width="wrap_content" layout_height="wrap_content" paddingEnd="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout orientation="horizontal" id="@id/line1" paddingTop="6.0dip" layout_width="fill_parent" layout_height="wrap_content" layout_marginLeft="@dimen/notification_content_margin_start" layout_marginStart="@dimen/notification_content_margin_start">
+        <TextView textAppearance="@style/TextAppearance.Compat.Notification.Title.Media" ellipsize="marquee" id="@id/title" fadingEdge="horizontal" layout_width="fill_parent" layout_height="wrap_content" singleLine="true" layout_weight="1.0" />
+        <DateTimeView textAppearance="@style/TextAppearance.Compat.Notification.Time.Media" layout_gravity="center" id="@id/time" paddingLeft="8.0dip" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" singleLine="true" layout_weight="0.0" paddingStart="8.0dip" />
+        <Chronometer textAppearance="@style/TextAppearance.Compat.Notification.Time.Media" layout_gravity="center" id="@id/chronometer" paddingLeft="8.0dip" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" singleLine="true" layout_weight="0.0" paddingStart="8.0dip" />
+    </LinearLayout>
+    <TextView textAppearance="@style/TextAppearance.Compat.Notification.Line2.Media" ellipsize="marquee" id="@id/text2" visibility="gone" fadingEdge="horizontal" layout_width="fill_parent" layout_height="wrap_content" layout_marginLeft="@dimen/notification_content_margin_start" layout_marginTop="-2.0dip" layout_marginBottom="-2.0dip" singleLine="true" layout_marginStart="@dimen/notification_content_margin_start" />
+    <LinearLayout gravity="center_vertical" orientation="horizontal" id="@id/line3" layout_width="fill_parent" layout_height="wrap_content" layout_marginLeft="@dimen/notification_content_margin_start" layout_marginStart="@dimen/notification_content_margin_start">
+        <TextView textAppearance="@style/TextAppearance.Compat.Notification.Media" ellipsize="marquee" layout_gravity="center" id="@id/text" fadingEdge="horizontal" layout_width="0.0dip" layout_height="wrap_content" singleLine="true" layout_weight="1.0" />
+        <TextView textAppearance="@style/TextAppearance.Compat.Notification.Info.Media" gravity="center" layout_gravity="center" id="@id/info" paddingLeft="8.0dip" layout_width="wrap_content" layout_height="wrap_content" singleLine="true" layout_weight="0.0" paddingStart="8.0dip" />
+    </LinearLayout>
+</LinearLayout>

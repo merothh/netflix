@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item state_enabled="false" color="@color/common_google_signin_btn_text_light_disabled" />
+    <item state_pressed="true" color="@color/common_google_signin_btn_text_light_pressed" />
+    <item state_focused="true" color="@color/common_google_signin_btn_text_light_focused" />
+    <item color="@color/common_google_signin_btn_text_light_default" />
+</selector>

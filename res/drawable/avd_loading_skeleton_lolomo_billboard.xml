@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector drawable="@drawable/$avd_loading_skeleton_lolomo_billboard__0" xmlns:aapt="http://schemas.android.com/aapt"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <target name="billboard_art" animation="@drawable/$avd_loading_skeleton_lolomo_billboard__1" />
+    <target name="billboard_title" animation="@drawable/$avd_loading_skeleton_lolomo_billboard__2" />
+    <target name="billboard_cta" animation="@drawable/$avd_loading_skeleton_lolomo_billboard__3" />
+    <target name="0_0" animation="@drawable/$avd_loading_skeleton_lolomo_billboard__4" />
+    <target name="0_1" animation="@drawable/$avd_loading_skeleton_lolomo_billboard__5" />
+    <target name="0_2" animation="@drawable/$avd_loading_skeleton_lolomo_billboard__6" />
+    <target name="0_3" animation="@drawable/$avd_loading_skeleton_lolomo_billboard__7" />
+    <target name="1_title" animation="@drawable/$avd_loading_skeleton_lolomo_billboard__8" />
+    <target name="1_0" animation="@drawable/$avd_loading_skeleton_lolomo_billboard__9" />
+    <target name="1_1" animation="@drawable/$avd_loading_skeleton_lolomo_billboard__10" />
+    <target name="1_2" animation="@drawable/$avd_loading_skeleton_lolomo_billboard__11" />
+    <target name="1_3" animation="@drawable/$avd_loading_skeleton_lolomo_billboard__12" />
+</animated-vector>

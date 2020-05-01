@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="top" orientation="vertical" visibility="visible" layout_width="fill_parent" layout_height="fill_parent" layout_alignParentTop="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textSize="12.0dip" textColor="#ffff0000" gravity="start" id="@id/label_debugdata" visibility="visible" layout_width="wrap_content" layout_height="wrap_content" text="" singleLine="false" />
+</LinearLayout>

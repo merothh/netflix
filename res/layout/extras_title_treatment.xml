@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.GridView layout_gravity="start" id="@id/extras_title_treatment" paddingTop="8.0dip" paddingBottom="8.0dip" layout_width="0.0dip" layout_height="wrap_content" scaleType="fitCenter" paddingStart="8.0dip" paddingEnd="8.0dip" viewAspectRatio="3.0" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

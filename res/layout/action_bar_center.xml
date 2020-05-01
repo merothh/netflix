@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView layout_gravity="center" id="@id/centered_logo" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/APKTOOL_DUMMY_79" contentDescription="@string/app_name" />
+    <o.ImageSwitcher textAppearance="@style/Toolbar.TitleText" ellipsize="end" gravity="center_vertical" layout_gravity="center" id="@id/centered_title" visibility="gone" layout_width="wrap_content" layout_height="fill_parent" maxLines="1" layout_marginStart="@dimen/content_padding" layout_marginEnd="@dimen/content_padding" autoSizeMaxTextSize="@dimen/toolbar_title_max_text_size" autoSizeMinTextSize="@dimen/toolbar_title_min_text_size" autoSizeTextType="uniform" />
+</merge>

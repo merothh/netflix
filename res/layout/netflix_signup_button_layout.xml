@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.HorizontalScrollView enabled="true" layout_gravity="center" id="@id/textButton" layout_width="fill_parent" layout_height="wrap_content" style="@style/SignupCtaButton" />
+    <ProgressBar layout_gravity="center" id="@id/loadingView" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" indeterminate="true" indeterminateOnly="true" indeterminateDrawable="@drawable/signup_progress_spinner_medium" scaleX="0.8" scaleY="0.8" elevation="@dimen/signup_cta_elevation" indeterminateTint="@color/white" style="?android:progressBarStyle" />
+</merge>

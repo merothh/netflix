@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater background="@android:color/holo_red_dark" layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="8.0dip" text="I am a fragment with content" layout_marginStart="8.0dip" layout_marginEnd="8.0dip" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" />
+</o.MenuInflater>

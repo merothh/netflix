@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater paddingBottom="@dimen/content_padding" layout_width="fill_parent" layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View id="@id/profile_divider" background="@color/translucent_grey_22" layout_width="fill_parent" layout_height="@dimen/download_stats_divider_profile" layout_marginTop="@dimen/large_padding" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" />
+    <o.BaseAdapter id="@id/profile_avatar" layout_width="@dimen/offline_profile_icon_width" layout_height="@dimen/offline_profile_icon_width" layout_marginTop="@dimen/large_padding" scaleType="centerCrop" layout_marginStart="@dimen/medium_padding" layout_constraintStart_toStartOf="@id/profile_divider" layout_constraintTop_toBottomOf="@id/profile_divider" />
+    <o.ImageSwitcher textColor="?android:textColorPrimary" id="@id/profile_name" layout_width="0.0dip" layout_height="wrap_content" maxLines="1" layout_marginStart="@dimen/content_padding" layout_marginEnd="@dimen/medium_padding" layout_constraintBottom_toBottomOf="@id/profile_avatar" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toEndOf="@id/profile_avatar" layout_constraintTop_toTopOf="@id/profile_avatar" style="@style/PrimaryBoldFontText.SmallMedium" />
+</o.MenuInflater>

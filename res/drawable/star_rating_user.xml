@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item id="@android:id/background" drawable="@drawable/APKTOOL_DUMMY_499" />
+    <item id="@android:id/progress" drawable="@drawable/APKTOOL_DUMMY_4a2" />
+</layer-list>

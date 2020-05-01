@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View id="@id/no_background_overlay" background="@drawable/post_play_background_overlay_vertical" layout_width="fill_parent" layout_height="fill_parent" layout_marginTop="95.0dip" layout_above="@id/bottom_black_background" />
+    <View id="@id/bottom_black_background" background="@color/black" layout_width="fill_parent" layout_height="58.0dip" layout_alignParentBottom="true" />
+    <include layout="@layout/post_play_background_container" />
+    <LinearLayout orientation="vertical" id="@id/postplay_ignore_tap" paddingBottom="@dimen/postplay_play_margin_bottom" layout_width="fill_parent" layout_height="wrap_content" layout_alignParentBottom="true" paddingStart="@dimen/postplay_play_margin" paddingEnd="@dimen/postplay_play_margin">
+        <o.ImageSwitcher id="@id/post_play_experience_title" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="@dimen/postplay_play_margin_bottom" style="@style/PostPlayTitle" />
+        <LinearLayout orientation="horizontal" id="@id/post_play_items" paddingBottom="@dimen/postplay_movie_recommendation_boxart_pad_bottom" layout_width="fill_parent" layout_height="wrap_content" />
+        <FrameLayout id="@id/post_play_items_portrait_container" paddingBottom="@dimen/postplay_movie_recommendation_boxart_pad_bottom" visibility="gone" layout_width="fill_parent" layout_height="wrap_content">
+            <LinearLayout orientation="vertical" id="@id/post_play_items_portrait" layout_width="fill_parent" layout_height="wrap_content" />
+            <HorizontalScrollView layout_width="fill_parent" layout_height="wrap_content" fillViewport="true">
+                <LinearLayout orientation="vertical" id="@id/post_play_items_multiview_portrait" layout_width="wrap_content" layout_height="wrap_content" />
+            </HorizontalScrollView>
+        </FrameLayout>
+    </LinearLayout>
+</merge>

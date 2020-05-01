@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout id="@id/coordinatorLayout" layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout id="@id/background" paddingTop="?netflixActionBarSize" layout_width="fill_parent" layout_height="fill_parent">
+        <o.ProgressBar id="@id/flipper" layout_width="fill_parent" layout_height="fill_parent">
+            <include id="@id/loading_view" layout="@layout/loading_inset" />
+            <WebView id="@id/externalWebView" layout_width="fill_parent" layout_height="fill_parent" />
+        </o.ProgressBar>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

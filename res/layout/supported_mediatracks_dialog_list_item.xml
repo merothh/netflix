@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center_vertical" orientation="horizontal" paddingTop="@dimen/moderate_padding" paddingBottom="@dimen/moderate_padding" layout_width="fill_parent" layout_height="wrap_content" paddingStart="@dimen/double_padding" paddingEnd="@dimen/double_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.GridView id="@id/selected_tick" visibility="invisible" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/ic_mylist_check" tint="?android:textColorPrimary" layout_marginEnd="@dimen/content_padding" />
+    <o.ImageSwitcher ellipsize="end" id="@id/text" layout_width="0.0dip" layout_height="wrap_content" maxLines="2" layout_weight="1.0" style="@style/PrimaryMediumFontText.SmallMedium" />
+</LinearLayout>

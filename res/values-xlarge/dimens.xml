@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="dimen" name="abc_dialog_fixed_width_major">50.0%</item>
+    <item type="dimen" name="abc_dialog_fixed_width_minor">70.00001%</item>
+    <item type="dimen" name="abc_dialog_min_width_major">45.000004%</item>
+    <item type="dimen" name="abc_dialog_min_width_minor">72.0%</item>
+    <dimen name="cast_player_controls_group_height">96.0dip</dimen>
+    <dimen name="cast_player_expanded_content_height">128.0sp</dimen>
+    <dimen name="kids_title_image_height">135.0dip</dimen>
+    <dimen name="kids_title_image_width">318.0dip</dimen>
+</resources>

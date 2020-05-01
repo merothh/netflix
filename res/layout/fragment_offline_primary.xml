@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout orientation="vertical" style="@style/match" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.HorizontalScrollView id="@id/find_more_button" focusable="true" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" layout_marginBottom="10.0dip" layout_alignParentBottom="true" layout_centerHorizontal="true" autoSizeMaxTextSize="@dimen/text_small" autoSizeMinTextSize="@dimen/text_nano" autoSizeTextType="uniform" style="?greyButtonStyle" />
+    <androidx.recyclerview.widget.RecyclerView id="@id/list_view_offline_playables" layout_width="fill_parent" layout_height="fill_parent" layout_above="@id/find_more_button" />
+    <o.DatePickerSpinnerDelegate id="@id/empty_state_view" visibility="gone" esv_button="@string/offline_action_something_to_download" esv_icon="@drawable/ic_my_download_empty_state" esv_message="@string/offline_my_download_empty_state_description" style="@style/match" />
+</RelativeLayout>

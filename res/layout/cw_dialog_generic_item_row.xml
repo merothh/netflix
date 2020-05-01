@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center_vertical" id="@id/item_layout" padding="@dimen/medium_padding" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.GridView id="@id/item_icon" layout_width="26.0dip" layout_height="26.0dip" scaleType="fitCenter" adjustViewBounds="true" tint="?android:textColorPrimary" importantForAccessibility="no" layout_marginEnd="@dimen/medium_padding" />
+    <o.ImageSwitcher ellipsize="end" id="@id/item_label" background="@color/transparent" layout_width="fill_parent" layout_height="wrap_content" maxLines="1" layout_marginStart="@dimen/medium_padding" style="@style/PrimaryText.SmallMedium" />
+</LinearLayout>

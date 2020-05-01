@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox textStyle="bold" id="@id/allCheckbox" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/signup_consent_content_margin" layout_constraintBottom_toTopOf="@id/divider" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/formTitle" style="@style/SignupHtmlText.Checkbox.BlackText.Consent" />
+    <View layout_gravity="center" id="@id/divider" background="@color/signup_divider_light" layout_width="fill_parent" layout_height="1.0dip" layout_marginTop="@dimen/signup_consent_content_margin" layout_marginBottom="@dimen/signup_consent_content_margin" layout_constraintBottom_toTopOf="@id/consentErrorMessage" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/allCheckbox" />
+    <o.ImageSwitcher id="@id/consentErrorMessage" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="@dimen/signup_consent_content_margin" text="@string/label_missing_consent" layout_constraintBottom_toTopOf="@id/linearLayout" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/divider" style="@style/SignupErrorMessage" />
+    <androidx.recyclerview.widget.RecyclerView id="@id/checkboxesList" layout_width="fill_parent" layout_height="wrap_content" layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <o.ImageSwitcher textSize="12.0sp" textColor="@color/tou_text" id="@id/bottomTermsText" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginLeft="10.0dip" layout_marginTop="10.0dip" layout_marginRight="10.0dip" style="@style/SignupHtmlText" />
+</merge>

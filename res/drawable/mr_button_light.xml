@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item state_enabled="true" state_checked="true" drawable="@drawable/mr_button_connected_light" />
+    <item state_enabled="true" state_checkable="true" drawable="@drawable/mr_button_connecting_light" />
+    <item state_enabled="true" drawable="@drawable/APKTOOL_DUMMY_31e" />
+    <item drawable="@drawable/APKTOOL_DUMMY_31c" />
+</selector>

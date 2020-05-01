@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout id="@id/search_suggestions_frag_container" background="@color/transparent" style="@style/match"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.recyclerview.widget.RecyclerView layout_gravity="center_horizontal" id="@id/search_collection_list" padding="@dimen/search_collection_result_list_padding" clipToPadding="false" layout_width="fill_parent" layout_height="fill_parent" />
+    <include layout_width="fill_parent" layout_height="fill_parent" layout="@layout/loading_and_error_inset" />
+</FrameLayout>

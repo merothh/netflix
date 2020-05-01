@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="95.0dip" android:width="340.0dip" android:viewportWidth="340.0" android:viewportHeight="95.0" xmlns:aapt="http://schemas.android.com/aapt"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:name="synopsis_1" android:fillColor="?dp_progressive_loader_color" android:pathData="M2,0L338,0A2,2 0,0 1,340 2L340,10A2,2 0,0 1,338 12L2,12A2,2 0,0 1,0 10L0,2A2,2 0,0 1,2 0z" android:strokeColor="#00000000" android:strokeWidth="1.0" android:fillType="evenOdd" />
+    <path android:name="synopsis_2" android:fillColor="?dp_progressive_loader_color" android:pathData="M2,18L338,18A2,2 0,0 1,340 20L340,28A2,2 0,0 1,338 30L2,30A2,2 0,0 1,0 28L0,20A2,2 0,0 1,2 18z" android:strokeColor="#00000000" android:strokeWidth="1.0" android:fillType="evenOdd" />
+    <path android:name="synopsis_3" android:fillColor="?dp_progressive_loader_color" android:pathData="M2,36L272,36A2,2 0,0 1,274 38L274,46A2,2 0,0 1,272 48L2,48A2,2 0,0 1,0 46L0,38A2,2 0,0 1,2 36z" android:strokeColor="#00000000" android:strokeWidth="1.0" android:fillType="evenOdd" />
+    <path android:name="cast_1" android:fillColor="?dp_progressive_loader_color" android:pathData="M2,66L228,66A2,2 0,0 1,230 68L230,76A2,2 0,0 1,228 78L2,78A2,2 0,0 1,0 76L0,68A2,2 0,0 1,2 66z" android:strokeColor="#00000000" android:strokeWidth="1.0" android:fillType="evenOdd" />
+    <path android:name="cast_2" android:fillColor="?dp_progressive_loader_color" android:pathData="M2,83L121,83A2,2 0,0 1,123 85L123,93A2,2 0,0 1,121 95L2,95A2,2 0,0 1,0 93L0,85A2,2 0,0 1,2 83z" android:strokeColor="#00000000" android:strokeWidth="1.0" android:fillType="evenOdd" />
+</vector>

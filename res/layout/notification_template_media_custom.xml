@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="horizontal" id="@id/status_bar_latest_event_content" layout_width="fill_parent" layout_height="64.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout_width="@dimen/notification_large_icon_width" layout_height="@dimen/notification_large_icon_height" layout="@layout/notification_template_icon_group" />
+    <LinearLayout orientation="horizontal" id="@id/notification_main_column_container" paddingTop="@dimen/notification_main_column_padding_top" layout_width="0.0dip" layout_height="wrap_content" minHeight="@dimen/notification_large_icon_height" layout_weight="1.0" layout_toLeftOf="@id/cancel_action" layout_toStartOf="@id/cancel_action">
+        <FrameLayout id="@id/notification_main_column" layout_width="fill_parent" layout_height="wrap_content" layout_marginLeft="@dimen/notification_content_margin_start" layout_marginRight="8.0dip" layout_marginBottom="8.0dip" layout_weight="1.0" layout_marginStart="@dimen/notification_content_margin_start" layout_marginEnd="8.0dip" />
+        <FrameLayout id="@id/right_side" paddingTop="@dimen/notification_right_side_padding_top" layout_width="wrap_content" layout_height="wrap_content" layout_marginRight="8.0dip" layout_marginEnd="8.0dip">
+            <DateTimeView textAppearance="@style/TextAppearance.Compat.Notification.Time.Media" layout_gravity="end|center|top" id="@id/time" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" singleLine="true" />
+            <Chronometer textAppearance="@style/TextAppearance.Compat.Notification.Time.Media" layout_gravity="end|center|top" id="@id/chronometer" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" singleLine="true" />
+            <TextView textAppearance="@style/TextAppearance.Compat.Notification.Info.Media" layout_gravity="end|bottom|center" id="@id/info" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="20.0dip" singleLine="true" />
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout layout_gravity="end|center" orientation="horizontal" id="@id/media_actions" layout_width="wrap_content" layout_height="fill_parent" layoutDirection="ltr" />
+    <include layout_width="48.0dip" layout_height="fill_parent" layout_marginRight="6.0dip" layout_marginEnd="6.0dip" layout="@layout/notification_media_cancel_action" />
+    <ImageView id="@id/end_padder" layout_width="6.0dip" layout_height="fill_parent" />
+</LinearLayout>

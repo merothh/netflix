@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout id="@id/coordinatorLayout" layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout id="@id/sliding_panel" style="@style/SlidingUpPanel">
+        <FrameLayout id="@id/search_query_details_content" layout_width="fill_parent" layout_height="fill_parent">
+            <include layout="@layout/loading_and_error_inset" />
+            <o.ExpandableListConnector id="@id/similar_items_grid_view_group" style="@style/match">
+                <include layout="@layout/similar_items_grid_frag" />
+            </o.ExpandableListConnector>
+        </FrameLayout>
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

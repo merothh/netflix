@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater id="@id/stack_layout" layout_width="wrap_content" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.BaseAdapter id="@id/top_box" layout_width="wrap_content" layout_height="wrap_content" elevation="2.0dip" border_width="2.0dip" />
+    <ImageView id="@id/middle_box" layout_width="wrap_content" layout_height="wrap_content" elevation="1.0dip" layout_constraintLeft_toLeftOf="@id/top_box" layout_constraintTop_toTopOf="@id/top_box" />
+    <ImageView id="@id/bottom_box" layout_width="wrap_content" layout_height="wrap_content" layout_constraintLeft_toLeftOf="@id/middle_box" layout_constraintTop_toTopOf="@id/middle_box" />
+</o.MenuInflater>

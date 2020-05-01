@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView id="@id/scrollView" background="@color/signup_background_light" layout_width="fill_parent" layout_height="fill_parent" layout_marginTop="?actionBarSize" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout layout_gravity="center_horizontal" orientation="vertical" id="@id/registrationLayout" paddingTop="@dimen/signup_registration_padding_top" paddingBottom="@dimen/signup_context_padding_bottom" layout_height="wrap_content" paddingStart="@dimen/signup_context_padding_horizontal" paddingEnd="@dimen/signup_context_padding_horizontal" style="@style/FormLayout">
+        <com.netflix.mediaclient.acquisition.view.SignupBannerView id="@id/warningView" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="@dimen/signup_banner_spacing" style="@style/SignupWarningContainer" />
+        <com.netflix.mediaclient.acquisition.view.SignupBannerView id="@id/positiveView" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="@dimen/signup_banner_spacing" style="@style/SignupPositiveContainer" />
+        <o.ImageSwitcher gravity="center" id="@id/changePaymentErrorButton" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="@dimen/signup_banner_spacing" text="@string/link_dcb_try_another_payment_method" style="@style/SignupAnchorLinkText" />
+        <com.netflix.mediaclient.acquisition.view.SignupHeadingView id="@id/signupHeading" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="4.0dip" />
+        <include layout="@layout/change_payment_layout" />
+        <com.google.android.flexbox.FlexboxLayout layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="10.0dip" layout_centerVertical="true" flexDirection="row" flexWrap="wrap" justifyContent="flex_start">
+            <androidx.recyclerview.widget.RecyclerView orientation="horizontal" id="@id/mopLogos" layout_width="wrap_content" layout_height="wrap_content" layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            <o.ImageSwitcher textSize="@dimen/text_micro" textColor="@color/black" gravity="center_vertical" id="@id/postPaidLabel" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" text="@string/label_dcb_postpaid" layout_marginEnd="@dimen/mop_logos_margin" />
+        </com.google.android.flexbox.FlexboxLayout>
+        <o.ImageSwitcher id="@id/subHeading" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="10.0dip" textAlignment="textStart" style="@style/SignupContextSubHeadingText" />
+        <o.ImageSwitcher id="@id/subHeading2" layout_width="fill_parent" layout_height="wrap_content" textAlignment="textStart" style="@style/SignupContextSubHeadingText" />
+        <androidx.recyclerview.widget.RecyclerView id="@id/paymentForm" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/moderate_padding" nestedScrollingEnabled="false" layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        <o.SpellCheckSpan id="@id/planDetailsView" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/change_plan_top_margin" layout_marginBottom="@dimen/change_plan_bottom_margin" />
+        <o.NotificationAssistantService id="@id/changePlanView" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/change_plan_top_margin" layout_marginBottom="@dimen/change_plan_bottom_margin" />
+        <com.netflix.mediaclient.acquisition.view.TermsOfUseView id="@id/touView" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/moderate_padding" />
+        <com.netflix.mediaclient.acquisition.view.NetflixSignupButton id="@id/ctaButton" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/signup_cta_button_vertical_margin" text="@string/button_verify_dcb_code" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners radius="@dimen/uma_themed_dialog_radius" />
+    <gradient startColor="#ffeb1008" endColor="#ff30086c" angle="270.0" />
+</shape>

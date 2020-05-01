@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" background="@color/signup_background_light" layout_width="fill_parent" layout_height="fill_parent" layout_marginTop="?actionBarSize" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.MenuInflater layout_gravity="center_horizontal" layout_width="fill_parent" layout_height="wrap_content" maxWidth="@dimen/signup_context_signupheading_max_width" layout_marginStart="@dimen/signup_context_padding_horizontal" layout_marginEnd="@dimen/signup_context_padding_horizontal">
+        <com.netflix.mediaclient.acquisition.view.SignupBannerView id="@id/userMessage" visibility="gone" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="@dimen/signup_fragment_padding_vertical" layout_marginBottom="@dimen/signup_banner_spacing" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" style="@style/SignupInfoContainer" />
+        <com.netflix.mediaclient.acquisition.view.SignupHeadingView id="@id/signupHeading" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="@dimen/signup_fragment_padding_vertical" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/userMessage" />
+        <o.ImageSwitcher id="@id/goBackButton" layout_width="0.0dip" layout_height="wrap_content" text="@string/label_cancel_without_verifying" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/signupHeading" style="@style/SignupNativeLinkText.GoBackVerify" />
+    </o.MenuInflater>
+    <FrameLayout layout_gravity="center" background="@color/signup_grey84" padding="4.0dip" layout_marginTop="20.0dip" style="@style/SignupVerifyCardWebView">
+        <include layout="@layout/webview_layout" />
+    </FrameLayout>
+</LinearLayout>

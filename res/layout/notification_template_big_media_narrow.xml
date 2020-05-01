@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout id="@id/status_bar_latest_event_content" layout_width="fill_parent" layout_height="128.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView id="@id/icon" layout_width="128.0dip" layout_height="128.0dip" scaleType="centerCrop" />
+    <include layout_width="48.0dip" layout_height="48.0dip" layout_marginLeft="2.0dip" layout_marginRight="2.0dip" layout_alignParentRight="true" layout_alignParentEnd="true" layout="@layout/notification_media_cancel_action" />
+    <include layout_width="fill_parent" layout_height="wrap_content" layout_marginLeft="128.0dip" layout_toLeftOf="@id/cancel_action" layout_marginStart="128.0dip" layout_toStartOf="@id/cancel_action" layout="@layout/notification_template_lines_media" />
+    <LinearLayout orientation="horizontal" id="@id/media_actions" layout_width="fill_parent" layout_height="48.0dip" layout_marginLeft="12.0dip" layout_marginRight="12.0dip" layout_toRightOf="@id/icon" layout_alignParentBottom="true" layoutDirection="ltr" layout_toEndOf="@id/icon" />
+    <ImageView id="@id/action_divider" background="?android:dividerHorizontal" layout_width="fill_parent" layout_height="1.0dip" layout_toRightOf="@id/icon" layout_above="@id/media_actions" layout_toEndOf="@id/icon" />
+</RelativeLayout>

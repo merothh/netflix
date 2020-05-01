@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" id="@id/plan_select_footer_view_group" paddingTop="@dimen/medium_padding" paddingBottom="@dimen/medium_padding" layout_width="fill_parent" layout_height="wrap_content" paddingStart="@dimen/large_padding" paddingEnd="@dimen/large_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewStub id="@id/footer_confirm_button_stub" layout_width="fill_parent" layout_height="wrap_content" />
+    <ViewStub id="@id/footer_text_stub" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/large_padding" />
+</LinearLayout>

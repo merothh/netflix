@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout layout_gravity="center_horizontal" orientation="horizontal" id="@id/kids_section" background="?android:selectableItemBackground" layout_width="wrap_content" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textSize="14.0sp" textColor="@color/grey90" id="@id/kids_text" padding="@dimen/profile_details_main_padding" layout_width="wrap_content" layout_height="wrap_content" text="@string/profile_start_in_kids_tectview" style="@style/ProfileDetailsTextBright" />
+    <androidx.appcompat.widget.SwitchCompat id="@id/kids_switch" layout_width="wrap_content" layout_height="40.0dip" style="@style/NetflixSwitch" />
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout id="@id/layout_content" style="@style/match" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView layout_width="fill_parent" layout_height="fill_parent">
+        <LinearLayout layout_gravity="start" orientation="vertical" id="@id/scrollable_content" visibility="gone" layout_width="fill_parent" layout_height="wrap_content">
+            <include id="@id/profile_selector_stub" layout_width="fill_parent" layout_height="wrap_content" layout="@layout/profile_selector_group" />
+            <ViewStub layout_gravity="center_horizontal" id="@id/member_referral_details" layout_width="fill_parent" layout_height="wrap_content" />
+            <View id="@id/member_referral_divider" background="?slidingMenuSeparatorColor" visibility="gone" layout_width="fill_parent" layout_height="?slidingMenuSeparatorHeight" />
+            <LinearLayout orientation="vertical" id="@id/header_notifications" background="@drawable/selectable_item_background" visibility="gone" layout_width="fill_parent" layout_height="wrap_content">
+                <o.DatePickerController layout_gravity="center_horizontal" orientation="horizontal" layout_width="fill_parent" layout_height="@dimen/old_sliding_menu_row_height" paddingStart="@dimen/double_padding" paddingEnd="@dimen/double_padding" bll_maxWidth="@dimen/tablet_more_tab_max_width">
+                    <ImageView layout_gravity="center_vertical" id="@id/header_notifications_icon" background="@null" layout_width="24.0dip" layout_height="24.0dip" src="@drawable/ic_notifications" tint="?android:textColorSecondary" importantForAccessibility="no" />
+                    <o.ImageSwitcher textSize="@dimen/text_small_medium" textColor="?android:textColorSecondary" gravity="center_vertical" layout_gravity="center_vertical" id="@id/row_text" layout_width="fill_parent" layout_height="fill_parent" minHeight="@dimen/old_sliding_menu_row_height_min" maxLines="1" layout_marginStart="@dimen/medium_large_padding" style="@style/PrimaryText.Small" />
+                </o.DatePickerController>
+            </LinearLayout>
+            <o.CheckedTextView layout_gravity="center_horizontal" id="@id/notifications_fragment_container" layout_width="fill_parent" layout_height="wrap_content" bfl_maxWidth="@dimen/tablet_more_tab_max_width" />
+            <View id="@id/header_separator_notifications" background="?slidingMenuSeparatorColor" visibility="gone" layout_width="fill_parent" layout_height="?slidingMenuSeparatorHeight" />
+            <include id="@id/coming_soon" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout="@layout/top_level_more_row" />
+            <include id="@id/my_list" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout="@layout/top_level_more_row" />
+            <o.RadioGroup id="@id/app_list_view" layout_marginTop="10.0dip" listSelector="@drawable/selectable_item_background" divider="@null" style="@style/NetflixListView" />
+        </LinearLayout>
+    </ScrollView>
+    <View id="@id/touch_blocker" focusable="true" visibility="gone" clickable="true" layout_width="fill_parent" layout_height="fill_parent" />
+    <include layout="@layout/loading_and_error_inset" />
+</FrameLayout>

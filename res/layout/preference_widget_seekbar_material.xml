@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center_vertical" clipChildren="false" clipToPadding="false" layout_width="fill_parent" layout_height="wrap_content" minHeight="?android:listPreferredItemHeight" paddingStart="?android:listPreferredItemPaddingStart" paddingEnd="?android:listPreferredItemPaddingEnd" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout gravity="start|center" orientation="horizontal" id="@id/icon_frame" paddingTop="4.0dip" paddingBottom="4.0dip" layout_width="wrap_content" layout_height="wrap_content" minWidth="60.0dip" paddingStart="4.0dip" paddingEnd="8.0dip" layout_marginStart="-4.0dip">
+        <o.StringBuilder id="@android:id/icon" layout_width="wrap_content" layout_height="wrap_content" maxHeight="48.0dip" maxWidth="48.0dip" />
+    </LinearLayout>
+    <RelativeLayout clipChildren="false" clipToPadding="false" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="6.0dip" layout_marginBottom="6.0dip" layout_weight="1.0" layout_marginEnd="8.0dip">
+        <TextView textAppearance="@style/Preference_TextAppearanceMaterialSubhead" ellipsize="marquee" id="@android:id/title" fadingEdge="horizontal" layout_width="wrap_content" layout_height="wrap_content" singleLine="true" />
+        <TextView textAppearance="?android:textAppearanceSmall" textColor="?android:textColorSecondary" id="@android:id/summary" layout_width="wrap_content" layout_height="wrap_content" maxLines="4" layout_below="@android:id/title" layout_alignStart="@android:id/title" />
+        <o.StrictMath clipChildren="false" clipToPadding="false" layout_width="fill_parent" layout_height="wrap_content" layout_below="@android:id/summary" layout_alignStart="@android:id/title">
+            <SeekBar id="@id/seekbar" background="@null" focusable="false" clickable="false" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0" paddingStart="@dimen/preference_seekbar_padding_start" paddingEnd="@dimen/preference_seekbar_padding_end" />
+            <TextView textAppearance="@style/Preference_TextAppearanceMaterialSubhead" ellipsize="marquee" gravity="center|right" id="@id/seekbar_value" scrollbars="none" fadingEdge="horizontal" layout_width="@dimen/preference_seekbar_value_width" layout_height="fill_parent" singleLine="true" fontFamily="sans-serif-condensed" />
+        </o.StrictMath>
+    </RelativeLayout>
+</LinearLayout>

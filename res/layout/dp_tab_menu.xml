@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" id="@id/dp_tabs_menu_layout" layout_width="fill_parent" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View id="@id/tab_divider" background="@color/black" visibility="invisible" layout_width="fill_parent" layout_height="2.0dip" />
+    <LinearLayout layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="14.0dip">
+        <RadioGroup gravity="center" layout_gravity="start" orientation="horizontal" id="@id/video_data_selector" layout_width="wrap_content" layout_height="wrap_content" />
+        <LinearLayout orientation="vertical" id="@id/details_tab_episodes" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" layout_marginEnd="10.0dip">
+            <View id="@id/video_data_selector_episodes_top" background="@color/brand_red" visibility="invisible" layout_width="fill_parent" layout_height="4.0dip" layout_marginStart="@dimen/moderate_padding" layout_marginEnd="@dimen/moderate_padding" />
+            <RadioButton textColor="@drawable/dp_tab_menu_selectable_text" id="@id/video_data_selector_episodes" paddingTop="12.0dip" layout_width="wrap_content" layout_height="wrap_content" checked="true" button="@null" text="@string/label_details_data_selector_episodes" layout_alignParentTop="true" paddingStart="@dimen/moderate_padding" paddingEnd="@dimen/moderate_padding" layout_alignParentStart="true" style="@style/PrimaryText.SmallMedium" />
+        </LinearLayout>
+        <LinearLayout orientation="vertical" id="@id/details_tab_similars" visibility="gone" layout_width="wrap_content" layout_height="wrap_content">
+            <View id="@id/video_data_selector_related_top" background="@color/brand_red" visibility="invisible" layout_width="fill_parent" layout_height="4.0dip" layout_marginStart="@dimen/moderate_padding" layout_marginEnd="@dimen/moderate_padding" />
+            <RadioButton textColor="@drawable/dp_tab_menu_selectable_text" id="@id/video_data_selector_related" paddingTop="12.0dip" layout_width="wrap_content" layout_height="wrap_content" checked="false" button="@null" text="@string/label_details_data_selector_related_barker" paddingStart="@dimen/moderate_padding" paddingEnd="@dimen/moderate_padding" style="@style/PrimaryText.SmallMedium" />
+        </LinearLayout>
+        <LinearLayout orientation="vertical" id="@id/details_tab_trailers" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" layout_marginStart="0.0dip">
+            <View id="@id/video_data_selector_trailers_top" background="@color/brand_red" visibility="invisible" layout_width="fill_parent" layout_height="4.0dip" layout_marginStart="@dimen/moderate_padding" layout_marginEnd="@dimen/moderate_padding" />
+            <RadioButton textColor="@drawable/dp_tab_menu_selectable_text" id="@id/video_data_selector_trailers" paddingTop="12.0dip" layout_width="wrap_content" layout_height="wrap_content" checked="false" button="@null" text="@string/label_details_data_selector_trailers" paddingStart="@dimen/moderate_padding" paddingEnd="@dimen/moderate_padding" style="@style/PrimaryText.SmallMedium" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

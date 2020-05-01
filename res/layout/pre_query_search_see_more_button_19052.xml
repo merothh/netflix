@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.HorizontalScrollView gravity="center" id="@id/see_more_btn" layout_width="fill_parent" layout_height="wrap_content" text="@string/label_see_more" drawableStart="@drawable/ic_see_more" nb_iconColor="?android:textColorPrimary" nb_textColor="?android:textColorSecondary" style="@style/NetflixButton.NoOutline.Transparent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

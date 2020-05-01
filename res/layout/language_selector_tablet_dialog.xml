@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="wrap_content" layout_marginStart="4.0dip" layout_marginEnd="4.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout layout_width="fill_parent" layout_height="wrap_content">
+        <LinearLayout orientation="horizontal" layout_width="fill_parent" layout_height="wrap_content">
+            <LinearLayout orientation="vertical" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0">
+                <o.ImageSwitcher textSize="@dimen/text_small" textColor="@color/text_primary_dark" gravity="center" layout_gravity="center" id="@id/label_audio" padding="@dimen/text_padding" layout_width="fill_parent" layout_height="@dimen/language_selector_tab_height" text="@string/label_audio_all_caps" singleLine="true" alpha="@dimen/text_alpha_selected" />
+                <ListView id="@id/audios" layout_width="fill_parent" layout_height="wrap_content" fadeScrollbars="false" style="@style/NetflixLanguageListView" />
+            </LinearLayout>
+            <LinearLayout orientation="vertical" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0">
+                <o.ImageSwitcher textSize="@dimen/text_small" textColor="@color/text_primary_dark" gravity="center" layout_gravity="center" id="@id/label_subtitle" padding="@dimen/text_padding" layout_width="fill_parent" layout_height="@dimen/language_selector_tab_height" text="@string/label_subtitle_all_caps" singleLine="true" alpha="@dimen/text_alpha_selected" />
+                <ListView id="@id/subtitles" layout_width="fill_parent" layout_height="wrap_content" fadeScrollbars="false" style="@style/NetflixLanguageListView" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

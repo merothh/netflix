@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.netflix.mediaclient.ui.lolomo.ab10011.PullRefreshView id="@id/refresh_view" layout_width="fill_parent" layout_height="72.0dip" refreshText="@string/label_pull_to_refresh" refreshTextColor="?android:textColorPrimary" refreshTextSize="@dimen/text_small_medium" />
+</merge>

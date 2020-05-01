@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="dimen" name="download_stats_sentence_size">@dimen/text_medium_large</item>
+    <item type="dimen" name="download_stats_subtitle_size">@dimen/text_small</item>
+    <item type="dimen" name="download_stats_title_size">@dimen/text_xxlarge</item>
+</resources>

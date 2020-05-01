@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" id="@id/base_view_group" padding="@dimen/medium_xlarge_padding" layout_width="wrap_content" layout_height="wrap_content" importantForAccessibility="no"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher id="@id/dialog_header" layout_width="wrap_content" layout_height="wrap_content" layout_marginBottom="@dimen/moderate_padding" style="@style/PrimaryMediumFontText.MediumLarge" />
+    <o.ImageSwitcher id="@id/dialog_text" layout_width="wrap_content" layout_height="wrap_content" layout_marginBottom="@dimen/large_padding" style="@style/SecondaryText.SmallMedium" />
+    <o.ImageSwitcher gravity="end" layout_gravity="end" id="@id/dialog_option_watch_download" layout_width="wrap_content" layout_height="wrap_content" layout_marginBottom="@dimen/large_padding" text="@string/label_watch_downloaded_version" style="@style/PrimaryMediumFontText.SmallMedium" />
+    <o.ImageSwitcher gravity="end" layout_gravity="end" id="@id/dialog_option_stream" layout_width="wrap_content" layout_height="wrap_content" layout_marginBottom="@dimen/large_padding" text="@string/label_switch_to_streaming" style="@style/PrimaryMediumFontText.SmallMedium" />
+    <o.ImageSwitcher gravity="end" layout_gravity="end" id="@id/dialog_option_close" layout_width="wrap_content" layout_height="wrap_content" text="@string/accesibility_btnClose" style="@style/PrimaryMediumFontText.SmallMedium" />
+</LinearLayout>

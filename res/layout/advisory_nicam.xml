@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center_vertical" orientation="horizontal" id="@id/text_messages" layout_width="wrap_content" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher layout_width="wrap_content" layout_height="wrap_content" text="@string/content_advisory_rating" layout_marginEnd="7.0dip" style="@style/PlayerContentAdvisoryPrimaryText" />
+    <o.GridView id="@id/rating_icon" layout_width="@dimen/content_advisory_small_icon_size" layout_height="@dimen/content_advisory_small_icon_size" />
+    <LinearLayout orientation="horizontal" id="@id/advisory_icons_container" layout_width="wrap_content" layout_height="wrap_content" />
+</LinearLayout>

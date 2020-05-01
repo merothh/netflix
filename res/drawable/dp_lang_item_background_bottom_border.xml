@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape shape="rectangle">
+            <solid color="?dp_lang_dialog_item_bg" />
+        </shape>
+    </item>
+    <item left="-2.0dip" top="-2.0dip" right="-2.0dip" bottom="0.0dip">
+        <shape shape="rectangle">
+            <stroke width="1.0dip" color="?menu_dialog_sheet_bg_color" />
+        </shape>
+    </item>
+</layer-list>

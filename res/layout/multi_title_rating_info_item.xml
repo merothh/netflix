@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.GridView id="@id/rating_info_background" layout_width="fill_parent" layout_height="fill_parent" />
+    <LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="wrap_content">
+        <o.GridView layout_gravity="center" id="@id/rating_info_boxart" layout_width="216.0dip" layout_height="wrap_content" adjustViewBounds="true" elevation="10.0dip" />
+        <o.ImageSwitcher gravity="center_horizontal" id="@id/rating_info_text" layout_width="fill_parent" layout_height="wrap_content" layout_marginStart="@dimen/medium_padding" layout_marginEnd="@dimen/medium_padding" style="@style/PrimaryBoldFontText.XLarge" />
+        <LinearLayout gravity="center" orientation="horizontal" id="@id/rating_input_container" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/xlarge_padding">
+            <o.GridView id="@id/cta_thumbs_up" layout_width="70.0dip" layout_height="70.0dip" src="@drawable/ic_thumbs_up_with_bg_circle" layout_marginStart="22.0dip" layout_marginEnd="22.0dip" />
+            <o.GridView id="@id/cta_thumbs_down" layout_width="70.0dip" layout_height="70.0dip" src="@drawable/ic_thumbs_down_with_bg_circle" layout_marginStart="22.0dip" layout_marginEnd="22.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <ProgressBar layout_gravity="center" id="@id/loading_spinner" visibility="gone" layout_width="50.0dip" layout_height="50.0dip" layout_margin="@dimen/double_padding" />
+</FrameLayout>

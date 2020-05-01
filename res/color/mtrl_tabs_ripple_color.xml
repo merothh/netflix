@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item state_selected="true" state_pressed="true" color="?colorAccent" alpha="0.08" />
+    <item state_focused="true" state_selected="true" color="?colorAccent" alpha="0.16" state_hovered="true" />
+    <item state_focused="true" state_selected="true" color="?colorAccent" alpha="0.12" />
+    <item state_selected="true" color="?colorAccent" alpha="0.04" state_hovered="true" />
+    <item state_selected="true" color="?colorAccent" alpha="0.0" />
+    <item state_pressed="true" color="#ff000000" alpha="0.08" />
+    <item state_focused="true" color="#ff000000" alpha="0.16" state_hovered="true" />
+    <item state_focused="true" color="#ff000000" alpha="0.12" />
+    <item color="#ff000000" alpha="0.04" state_hovered="true" />
+    <item color="#ff000000" alpha="0.0" />
+</selector>

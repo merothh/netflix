@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.ImageSwitcher layout_gravity="end|center|top" id="@id/interactive_text_view_debug_overlay" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" layout_margin="24.0dip" layout_constraintEnd_toEndOf="parent" layout_constraintTop_toTopOf="parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

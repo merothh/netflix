@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="plan_price_row_heading_text">15.0sp</dimen>
+    <dimen name="plan_selection_header_max_width">90.0dip</dimen>
+    <item type="dimen" name="signup_gift_alternate_horizontal_bias">0.5</item>
+    <item type="dimen" name="signup_plan_selection_button_height">@dimen/plan_selection_header_max_width</item>
+    <dimen name="signup_plan_selection_divider_offset">24.0dip</dimen>
+    <dimen name="signup_plan_selection_heading_margin">12.0dip</dimen>
+    <dimen name="signup_plan_selection_row_height">52.0dip</dimen>
+    <dimen name="signup_plan_selection_values_spacing">24.0dip</dimen>
+    <dimen name="verify_age_side_margin">40.0dip</dimen>
+</resources>

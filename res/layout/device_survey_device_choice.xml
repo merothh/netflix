@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="horizontal" id="@id/deviceContent" paddingTop="12.0dip" paddingBottom="12.0dip" layout_width="fill_parent" layout_height="wrap_content" foreground="?selectableItemBackground" paddingStart="12.0dip" paddingEnd="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView id="@id/deviceImage" layout_width="wrap_content" layout_height="25.0dip" />
+    <o.ImageSwitcher textSize="16.0sp" textColor="@color/grey55" layout_gravity="center_vertical" id="@id/deviceText" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0" layout_marginStart="12.0dip" />
+    <ImageView layout_gravity="center_vertical" id="@id/check_mark" visibility="invisible" layout_width="20.0dip" layout_height="20.0dip" src="@drawable/ic_mylist_check" tint="@color/base_red" />
+</LinearLayout>

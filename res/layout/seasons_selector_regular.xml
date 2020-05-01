@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout layout_gravity="start|center" id="@id/season_selector_regular_container" padding="@dimen/content_padding" layout_width="wrap_content" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textSize="@dimen/details_actionbar_seasons_text_size" textColor="?actionMenuTextColor" ellipsize="end" gravity="center_vertical" id="@id/season_name" background="@drawable/seasons_selector_background" paddingTop="@dimen/content_padding" paddingBottom="@dimen/content_padding" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" maxLines="1" drawablePadding="@dimen/details_actionbar_seasons_padding" paddingStart="@dimen/double_padding" paddingEnd="@dimen/double_padding" style="@style/PrimaryBoldFontText" />
+</FrameLayout>

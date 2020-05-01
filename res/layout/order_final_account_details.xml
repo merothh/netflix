@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textSize="20.0sp" textStyle="bold" id="@id/account_details_title" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="24.0dip" text="@string/orderfinal_account_details" />
+    <LinearLayout orientation="vertical" id="@id/nameSection" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="16.0dip">
+        <o.ImageSwitcher id="@id/nameLabel" layout_width="wrap_content" layout_height="wrap_content" text="@string/orderfinal_label_name_caps" style="@style/AccountInfoLabel" />
+        <o.ImageSwitcher textSize="18.0sp" id="@id/nameValue" layout_width="wrap_content" layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout orientation="vertical" id="@id/emailSection" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="16.0dip">
+        <o.ImageSwitcher id="@id/emailLabel" layout_width="wrap_content" layout_height="wrap_content" text="@string/orderfinal_label_email_caps" style="@style/AccountInfoLabel" />
+        <o.ImageSwitcher textSize="18.0sp" id="@id/emailValue" layout_width="wrap_content" layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout orientation="vertical" id="@id/paymentInformationSection" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="16.0dip">
+        <o.ImageSwitcher id="@id/pamentInformationLabel" layout_width="wrap_content" layout_height="wrap_content" text="@string/orderfinal_label_payment_information_caps" style="@style/AccountInfoLabel" />
+        <o.ImageSwitcher textSize="18.0sp" id="@id/paymentInformationValue" layout_width="wrap_content" layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout orientation="vertical" id="@id/planSection" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="16.0dip">
+        <o.ImageSwitcher id="@id/planLabel" layout_width="wrap_content" layout_height="wrap_content" text="@string/orderfinal_label_plan_caps" style="@style/AccountInfoLabel" />
+        <o.ImageSwitcher textSize="18.0sp" id="@id/planName" layout_width="wrap_content" layout_height="wrap_content" />
+        <o.ImageSwitcher textSize="18.0sp" id="@id/planPrice" layout_width="wrap_content" layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout orientation="vertical" id="@id/addressSection" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="16.0dip">
+        <o.ImageSwitcher id="@id/addressLabel" layout_width="wrap_content" layout_height="wrap_content" text="@string/orderfinal_label_address_caps" style="@style/AccountInfoLabel" />
+        <o.ImageSwitcher textSize="18.0sp" id="@id/addressValue" layout_width="wrap_content" layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout orientation="vertical" id="@id/accountNumberSection" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="16.0dip">
+        <o.ImageSwitcher id="@id/accountNumberLabel" layout_width="wrap_content" layout_height="wrap_content" text="@string/orderfinal_label_account_number_caps" style="@style/AccountInfoLabel" />
+        <o.ImageSwitcher textSize="18.0sp" id="@id/accountNumberValue" layout_width="wrap_content" layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout orientation="vertical" id="@id/giftSection" visibility="gone" layout_width="fill_parent" layout_height="wrap_content">
+        <o.ImageSwitcher id="@id/giftLabel" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="16.0dip" text="@string/orderfinal_gift_label_caps" style="@style/AccountInfoLabel" />
+        <o.ImageSwitcher textSize="18.0sp" id="@id/giftValue" layout_width="wrap_content" layout_height="wrap_content" />
+    </LinearLayout>
+    <o.ImageSwitcher textSize="18.0sp" id="@id/cancelText" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="16.0dip" layout_marginBottom="36.0dip" text="@string/orderfinal_cancel_text" />
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" background="?android:selectableItemBackground" layout_width="wrap_content" layout_height="@dimen/language_selector_tab_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textSize="@dimen/text_small" textColor="@color/language_selector_tab_textcolor" gravity="center" layout_gravity="center" id="@id/tabLanguageSelectTitle" padding="@dimen/text_padding" layout_width="wrap_content" layout_height="@dimen/language_selector_tab_text_height" singleLine="true" textAllCaps="true" />
+    <View background="@drawable/language_selector_tab_indicator_bg" layout_width="fill_parent" layout_height="@dimen/language_selector_tab_indicator_height" />
+</LinearLayout>

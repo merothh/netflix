@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater clipChildren="false" layout_width="fill_parent" layout_height="fill_parent" animateLayoutChanges="false" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout id="@id/test_video_view_container" layout_width="fill_parent" layout_height="0.0dip" layout_constraintDimensionRatio="1.77" layout_constraintTop_toTopOf="parent">
+        <SurfaceView id="@id/test_player_surfaceview" layout_width="fill_parent" layout_height="fill_parent" />
+    </FrameLayout>
+    <TextView textSize="12.0sp" textColor="?android:textColorPrimary" ellipsize="end" gravity="bottom" id="@id/test_player_output_text" scrollbars="vertical" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="12.0dip" layout_marginStart="10.0dip" layout_marginEnd="8.0dip" layout_constraintEnd_toStartOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/test_video_view_container" style="@style/PrimaryBoldFontText" />
+</o.MenuInflater>

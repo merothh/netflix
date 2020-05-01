@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape shape="oval">
+            <solid color="@color/brand_white" />
+            <size height="@dimen/lock_button_size" width="@dimen/lock_button_size" />
+        </shape>
+    </item>
+    <item gravity="center" drawable="@drawable/ic_icon_lock" />
+</layer-list>

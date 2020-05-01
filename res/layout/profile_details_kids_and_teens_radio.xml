@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textSize="14.0sp" layout_gravity="center_horizontal" id="@id/profile_type_description" padding="@dimen/profile_details_main_padding" layout_width="wrap_content" layout_height="wrap_content" text="@string/profile_show_content" style="@style/ProfileDetailsTextBright" />
+    <RadioGroup orientation="horizontal" id="@id/radio_buttons" layout_width="fill_parent" layout_height="wrap_content">
+        <Space layout_width="@dimen/text_padding" layout_height="0.0px" layout_weight="1.0" />
+        <RadioButton id="@id/radio_button_kids" layout_width="wrap_content" layout_height="wrap_content" text="@string/profile_kids" style="@style/ProfileRadioButton" />
+        <Space layout_width="@dimen/text_padding" layout_height="0.0px" layout_weight="1.0" />
+        <RadioButton id="@id/radio_button_teens" layout_width="wrap_content" layout_height="wrap_content" text="@string/profile_teens" style="@style/ProfileRadioButton" />
+        <Space layout_width="@dimen/text_padding" layout_height="0.0px" layout_weight="1.0" />
+        <RadioButton id="@id/radio_button_adults" layout_width="wrap_content" layout_height="wrap_content" text="@string/profile_adults" style="@style/ProfileRadioButton" />
+        <Space layout_width="@dimen/text_padding" layout_height="0.0px" layout_weight="1.0" />
+    </RadioGroup>
+</LinearLayout>

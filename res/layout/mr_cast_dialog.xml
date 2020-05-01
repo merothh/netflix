@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/mr_cast_media_metadata" />
+    <androidx.recyclerview.widget.RecyclerView id="@id/mr_cast_list" layout_width="fill_parent" layout_height="fill_parent" />
+</LinearLayout>

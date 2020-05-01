@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.airbnb.epoxy.EpoxyRecyclerView id="@id/pre_query_list" paddingTop="@dimen/pqsv3_list_padding" paddingBottom="@dimen/bottom_navigation_height" layout_width="fill_parent" layout_height="fill_parent" />
+    <com.google.android.material.tabs.TabLayout id="@id/tabs" background="?windowBackground" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" tabGravity="center" tabIndicatorColor="@color/brand_red" tabMaxWidth="0.0dip" tabMode="fixed" tabTextAppearance="@style/NotAllCapitalAppearanceTab" />
+    <include layout="@layout/loading_and_error_inset" />
+</FrameLayout>

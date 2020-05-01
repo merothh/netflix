@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape shape="oval">
+            <solid color="@android:color/transparent" />
+            <size height="48.0dip" width="48.0dip" />
+        </shape>
+    </item>
+    <item gravity="center" drawable="@drawable/APKTOOL_DUMMY_373" />
+</layer-list>

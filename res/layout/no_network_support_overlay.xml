@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout id="@id/no_network_overlay" background="@color/brand_red" layout_width="fill_parent" layout_height="wrap_content" layout_anchorGravity="bottom" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textColor="@color/white" layout_gravity="start|center" padding="@dimen/double_padding" layout_width="wrap_content" layout_height="wrap_content" text="@string/label_no_internet_overlay" maxLines="1" layout_alignParentStart="true" />
+    <o.ImageSwitcher textColor="@color/white" background="@drawable/selectable_video_background_with_press" padding="@dimen/double_padding" layout_width="wrap_content" layout_height="wrap_content" text="@string/label_no_internet_retry" maxLines="1" layout_alignParentEnd="true" />
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout id="@id/billboards_frame" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Space id="@id/empty_billboard_spacer" visibility="gone" layout_width="fill_parent" layout_height="1.0px" />
+    <o.ParcelableParcel id="@id/lolomo_row" scrollbars="none" clipToPadding="false" layout_width="fill_parent" layout_height="wrap_content" />
+    <ViewStub layout_gravity="center" id="@id/error_stub" layout="@layout/lomo_error_button" layout_width="wrap_content" layout_height="wrap_content" />
+</FrameLayout>

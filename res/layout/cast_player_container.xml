@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout orientation="vertical" background="@color/cast_player_background" clipChildren="false" clipToPadding="false" style="@style/match"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View id="@id/border" background="@color/dark_grey" layout_width="fill_parent" layout_height="1.0dip" />
+    <RelativeLayout id="@id/memento_frag_group" layout_width="fill_parent" layout_height="wrap_content" layout_below="@id/border" alpha="0.0">
+        <LinearLayout orientation="vertical" id="@id/cast_player_text_group_expanded" paddingTop="3.0dip" layout_width="fill_parent" layout_height="@dimen/cast_player_height" layout_alignParentBottom="true" layout_centerHorizontal="true">
+            <o.ImageSwitcher textColor="@color/text_primary_dark" ellipsize="end" gravity="center" layout_gravity="center_horizontal" id="@id/cast_player_text_title_expanded" paddingLeft="@dimen/content_padding" paddingRight="@dimen/content_padding" singleLine="true" style="@style/PrimaryText.Small" />
+            <o.ImageSwitcher textColor="@color/text_secondary_dark" ellipsize="end" gravity="center" layout_gravity="center_horizontal" id="@id/cast_player_text_subtitle_expanded" paddingLeft="@dimen/content_padding" paddingRight="@dimen/content_padding" singleLine="true" style="@style/SecondaryText.Micro" />
+        </LinearLayout>
+        <include id="@id/cast_player_controls_group" layout_width="fill_parent" layout_height="wrap_content" layout_above="@id/cast_player_text_group_expanded" layout="@layout/cast_player_playback_controls_group" />
+        <FrameLayout paddingTop="48.0dip" layout_width="fill_parent" layout_height="fill_parent" layout_above="@id/cast_player_controls_group" layout_alignParentTop="true" layout_centerHorizontal="true">
+            <o.BaseAdapter layout_gravity="center" id="@id/cast_player_box_art" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" />
+        </FrameLayout>
+        <ImageView id="@id/cast_player_bif_view" background="#bbff0000" visibility="visible" layout_width="fill_parent" layout_height="wrap_content" scaleType="centerCrop" adjustViewBounds="true" layout_above="@id/cast_player_controls_group" layout_centerHorizontal="true" />
+        <o.ImageSwitcher id="@id/cast_player_bif_seek_time" visibility="gone" layout_marginTop="@dimen/content_padding" layout_below="@id/cast_player_bif_view" layout_centerHorizontal="true" style="@style/PrimaryText.Large" />
+        <fragment name="o.LY" id="@id/postplay_frag" layout_width="fill_parent" layout_height="fill_parent" layout_alignBottom="@id/cast_player_text_group_expanded" />
+    </RelativeLayout>
+    <ImageView id="@id/cast_player_text_group_caret" src="@drawable/APKTOOL_DUMMY_39c" layout_centerHorizontal="true" translationY="-8.0dip" style="@style/wrap" />
+    <include id="@id/cast_player_title_group" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="5.0dip" layout="@layout/cast_player_title_group" />
+    <View id="@id/cast_player_text_puller" background="@drawable/selectable_video_background_with_press" layout_width="100.0dip" layout_height="100.0dip" layout_centerHorizontal="true" />
+    <o.HorizontalScrollView id="@id/cast_player_skip_intro_btn" padding="0.0dip" visibility="gone" layout_alignParentTop="true" contentDescription="@string/accesibility_btnSkipIntro" translationY="@dimen/cast_player_title_height" drawableStart="@drawable/ic_skip_intro" style="@style/NetflixButton.Flat.MdxSkipIntro" />
+</RelativeLayout>

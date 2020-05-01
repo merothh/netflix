@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout background="@drawable/signup_mop_background" paddingTop="@dimen/double_padding" paddingBottom="@dimen/double_padding" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="3.0dip" layout_marginBottom="3.0dip" minHeight="@dimen/payment_option_min_height" paddingStart="24.0dip" paddingEnd="10.0dip" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.flexbox.FlexboxLayout gravity="center_vertical" layout_width="fill_parent" layout_height="wrap_content" layout_centerVertical="true" layout_toStartOf="@id/paymentChevron" flexDirection="row" flexWrap="wrap">
+        <o.ImageSwitcher textSize="@dimen/signup_payment_option_title" textColor="@color/black" gravity="center_vertical" id="@id/paymentDisplayText" layout_width="wrap_content" layout_height="wrap_content" layout_centerVertical="true" layout_marginEnd="@dimen/mop_logos_margin" />
+        <com.netflix.mediaclient.acquisition.view.MopLogosMultiLineLayout id="@id/mopLogosMultiLine" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="@dimen/signup_credit_option_mop_logos_vertical_margin" layout_marginBottom="@dimen/signup_credit_option_mop_logos_vertical_margin" layout_centerVertical="true" layout_toEndOf="@id/paymentDisplayText" flexDirection="row" flexWrap="wrap" justifyContent="flex_start" />
+    </com.google.android.flexbox.FlexboxLayout>
+    <ImageView id="@id/paymentChevron" layout_width="wrap_content" layout_height="22.0dip" src="@drawable/chevron" tint="@color/signup_payment_picker" layout_centerVertical="true" layout_alignParentEnd="true" />
+</RelativeLayout>

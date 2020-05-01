@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout padding="8.0dip" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView gravity="center" layout_width="48.0dip" layout_height="48.0dip" src="@drawable/mr_button_dark" scaleType="center" />
+    <SeekBar layout_gravity="center" id="@id/volume_seek_bar" layout_width="0.0dip" layout_height="wrap_content" layout_marginLeft="8.0dip" layout_marginRight="8.0dip" minWidth="@dimen/cast_player_volume_bar_width" layout_weight="1.0" contentDescription="@string/accesibility_volume" progressTint="@color/chromecast_blue" />
+</LinearLayout>

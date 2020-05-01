@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout orientation="vertical" id="@id/volume_item_container" paddingLeft="24.0dip" paddingRight="60.0dip" paddingBottom="8.0dip" layout_width="fill_parent" layout_height="@dimen/mr_controller_volume_group_list_item_height">
+        <TextView textAppearance="@style/TextAppearance.MediaRouter.SecondaryText" id="@id/mr_name" layout_width="wrap_content" layout_height="wrap_content" singleLine="true" />
+        <LinearLayout gravity="center_vertical" orientation="horizontal" layout_width="fill_parent" layout_height="wrap_content">
+            <ImageView id="@id/mr_volume_item_icon" layout_width="@dimen/mr_controller_volume_group_list_item_icon_size" layout_height="@dimen/mr_controller_volume_group_list_item_icon_size" layout_marginTop="8.0dip" layout_marginBottom="8.0dip" src="?mediaRouteAudioTrackDrawable" scaleType="fitCenter" />
+            <o.Long id="@id/mr_volume_slider" layout_width="fill_parent" layout_height="40.0dip" maxHeight="40.0dip" minHeight="40.0dip" contentDescription="@string/mr_controller_volume_slider" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.Uo gravity="bottom" layout_gravity="bottom" orientation="vertical" id="@id/post_play_metadata" layout_width="fill_parent" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/post_play_countdown" />
+    <LinearLayout orientation="horizontal" id="@id/post_play_metadata_bar" layout_width="fill_parent" layout_height="wrap_content">
+        <o.ImageSwitcher textColor="@color/base_green_light" layout_gravity="bottom" id="@id/video_details_match_percentage" paddingTop="@dimen/content_padding" layout_width="wrap_content" layout_height="wrap_content" paddingEnd="10.0dip" style="@style/PercentageMatch" />
+        <o.ImageSwitcher layout_gravity="bottom" id="@id/post_play_year" paddingTop="@dimen/content_padding" maxLines="1" paddingEnd="10.0dip" style="@style/PostPlayTitleMetadata" />
+        <o.ImageSwitcher layout_gravity="bottom" id="@id/post_play_maturity_rating" paddingTop="@dimen/content_padding" maxLines="1" paddingEnd="10.0dip" style="@style/PostPlayTitleMetadata" />
+        <o.ImageSwitcher layout_gravity="bottom" id="@id/post_play_content_length" paddingTop="@dimen/content_padding" maxLines="1" paddingEnd="10.0dip" style="@style/PostPlayTitleMetadata" />
+    </LinearLayout>
+    <o.ImageSwitcher textSize="@dimen/text_small" ellipsize="end" layout_gravity="start|center" id="@id/post_play_synopsis" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/content_padding" layout_marginBottom="@dimen/content_padding" maxWidth="@dimen/postplay_episodes_metadata_width" text="" maxLines="3" style="@style/PostPlaySynopsis" />
+    <LinearLayout orientation="horizontal" id="@id/post_play_buttons_container" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="6.0dip" />
+</o.Uo>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout layout_gravity="start" id="@id/season_selector_regular_container" layout_width="wrap_content" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textSize="16.0sp" textColor="?textColor90" ellipsize="end" gravity="center_vertical" id="@id/season_name" background="@drawable/seasons_selector_background" layout_width="wrap_content" layout_height="wrap_content" maxLines="1" drawablePadding="4.0dip" style="@style/PrimaryBoldFontText" />
+</FrameLayout>

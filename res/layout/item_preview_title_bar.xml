@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" padding="@dimen/previews_title_bar_padding" layout_width="175.0dip" layout_height="fill_parent" baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View id="@id/curr_progress" visibility="visible" layout_width="fill_parent" layout_height="@dimen/previews_title_bar_progress_bar_height" />
+    <o.DayPickerPagerAdapter layout_gravity="center_horizontal" id="@id/previews_title_treatment" layout_width="fill_parent" layout_height="fill_parent" layout_marginTop="@dimen/previews_title_bar_title_treatment_top_padding" foreground="@color/transparent" />
+</LinearLayout>

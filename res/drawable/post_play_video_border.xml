@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke width="1.0px" color="@color/postplay_video_window_border_color" />
+</shape>

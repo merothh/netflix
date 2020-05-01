@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout id="@id/container" fitsSystemWindows="true" layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout id="@id/coordinator" fitsSystemWindows="true" layout_width="fill_parent" layout_height="fill_parent">
+        <View id="@id/touch_outside" layout_width="fill_parent" layout_height="fill_parent" soundEffectsEnabled="false" importantForAccessibility="no" />
+        <FrameLayout layout_gravity="center|top" id="@id/design_bottom_sheet" layout_width="fill_parent" layout_height="wrap_content" layout_behavior="@string/bottom_sheet_behavior" style="?bottomSheetStyle" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

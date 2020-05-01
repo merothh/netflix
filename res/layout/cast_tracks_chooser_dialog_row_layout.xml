@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout layout_width="fill_parent" layout_height="64.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioButton id="@id/radio" focusable="false" clickable="false" layout_width="wrap_content" layout_height="wrap_content" layout_marginRight="10.0dip" layout_alignParentRight="true" layout_centerVertical="true" layout_marginEnd="10.0dip" layout_alignParentEnd="true" />
+    <TextView textSize="@dimen/cast_tracks_chooser_dialog_row_text_size" id="@id/text" layout_width="wrap_content" layout_height="wrap_content" layout_marginLeft="10.0dip" layout_toLeftOf="@id/radio" layout_alignParentLeft="true" layout_centerVertical="true" layout_marginStart="10.0dip" layout_toStartOf="@id/radio" layout_alignParentStart="true" />
+</RelativeLayout>

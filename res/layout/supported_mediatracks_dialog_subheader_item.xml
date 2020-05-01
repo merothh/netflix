@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="horizontal" padding="@dimen/medium_padding" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher id="@id/text" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="@dimen/medium_padding" layout_weight="1.0" style="@style/PrimaryBoldFontText.Large" />
+    <ImageButton layout_gravity="center_vertical" id="@id/close_button" background="@drawable/menu_dialog_sheet_close_button" visibility="gone" layout_width="28.0dip" layout_height="28.0dip" contentDescription="@string/accesibility_btnClose" layout_marginStart="@dimen/medium_padding" />
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar layout_gravity="center" id="@id/loading_view" padding="@dimen/double_padding" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" indeterminate="true" indeterminateOnly="true" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" style="?android:progressBarStyle" />
+</merge>

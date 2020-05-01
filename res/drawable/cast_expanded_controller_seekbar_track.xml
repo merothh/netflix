@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item id="@android:id/background" drawable="@drawable/APKTOOL_DUMMY_12e" />
+    <item id="@android:id/secondaryProgress">
+        <scale android:drawable="@drawable/APKTOOL_DUMMY_12e" android:scaleWidth="100%" />
+    </item>
+    <item id="@android:id/progress">
+        <scale android:drawable="@drawable/APKTOOL_DUMMY_12e" android:scaleWidth="100%" />
+    </item>
+</layer-list>

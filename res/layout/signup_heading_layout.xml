@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher id="@id/stepLabel" layout_width="fill_parent" layout_height="wrap_content" style="@style/SignupContextStepLabelText" />
+    <o.ImageSwitcher id="@id/headerTitle" layout_width="fill_parent" layout_height="wrap_content" style="@style/SignupContextHeadingText" />
+    <o.ImageSwitcher id="@id/header2Title" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/large_padding" style="@style/SignupContextHeading2Text" />
+    <LinearLayout orientation="vertical" id="@id/subHeadingContainer" layout_width="fill_parent" layout_height="wrap_content" style="@style/SignupContextSubHeadingContainer" />
+</merge>

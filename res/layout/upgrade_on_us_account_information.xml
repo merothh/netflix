@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge orientation="vertical" background="@drawable/upgrade_on_us_background" layout_width="fill_parent" layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout orientation="vertical" layout_width="fill_parent" layout_height="wrap_content">
+        <o.ImageSwitcher id="@id/first30days" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="8.0dip" text="@string/upgrade_dialog_first_30_days" layout_alignParentTop="true" layout_marginStart="12.0dip" style="@style/UpgradeOnUs.Header" />
+        <o.ImageSwitcher id="@id/upgradedPlan" layout_width="wrap_content" layout_height="wrap_content" layout_below="@id/first30days" layout_marginStart="12.0dip" style="@style/UpgradeOnUs.PlanTitle" />
+        <o.ImageSwitcher id="@id/upgradedPlanPrice" layout_width="wrap_content" layout_height="wrap_content" layout_marginBottom="12.0dip" layout_below="@id/upgradedPlan" layout_marginStart="12.0dip" layout_marginEnd="4.0dip" style="@style/UpgradeOnUs.StrikePrice" />
+        <o.ImageSwitcher id="@id/zeroPrice" layout_width="wrap_content" layout_height="wrap_content" layout_alignTop="@id/upgradedPlanPrice" layout_toEndOf="@id/upgradedPlanPrice" style="@style/UpgradeOnUs.PlanPrice" />
+    </RelativeLayout>
+    <View background="@color/signup_grey_upgrade_dialog" layout_width="fill_parent" layout_height="1.0dip" />
+    <RelativeLayout layout_width="fill_parent" layout_height="wrap_content">
+        <o.ImageSwitcher id="@id/afterFreeTrial" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="12.0dip" text="@string/upgrade_dialog_after_30_days" layout_marginStart="12.0dip" layout_toStartOf="@id/upgradedPlanChangeYourPlan" layout_alignParentStart="true" style="@style/UpgradeOnUs.Header" />
+        <o.ImageSwitcher id="@id/upgradedPlanSelectedPlan" layout_width="wrap_content" layout_height="wrap_content" layout_below="@id/afterFreeTrial" layout_marginStart="12.0dip" layout_toStartOf="@id/upgradedPlanChangeYourPlan" layout_alignParentStart="true" style="@style/UpgradeOnUs.PlanTitle" />
+        <o.ImageSwitcher textSize="@dimen/your_plan_content_button" id="@id/upgradedPlanChangeYourPlan" layout_width="wrap_content" layout_height="wrap_content" text="@string/label_change_plan" layout_centerVertical="true" layout_marginEnd="10.0dip" layout_alignParentEnd="true" style="@style/PlanInfoAltLink" />
+        <o.ImageSwitcher id="@id/upgradedPlanSelectedPlanPrice" layout_width="wrap_content" layout_height="wrap_content" layout_marginBottom="12.0dip" layout_below="@id/upgradedPlanSelectedPlan" layout_marginStart="12.0dip" layout_toStartOf="@id/upgradedPlanChangeYourPlan" layout_alignParentStart="true" style="@style/UpgradeOnUs.PlanPrice" />
+    </RelativeLayout>
+    <View background="@color/signup_grey_upgrade_dialog" layout_width="fill_parent" layout_height="1.0dip" />
+    <RelativeLayout layout_width="fill_parent" layout_height="wrap_content">
+        <o.ImageSwitcher id="@id/upgradedPlanCardInfo" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="12.0dip" layout_marginStart="12.0dip" layout_toStartOf="@id/upgradedPlanEditPayment" layout_alignParentStart="true" style="@style/UpgradeOnUs.PlanTitle" />
+        <o.ImageSwitcher textSize="@dimen/your_plan_content_button" id="@id/upgradedPlanEditPayment" layout_width="wrap_content" layout_height="wrap_content" text="@string/label_edit_payment_shortened" layout_centerVertical="true" layout_marginEnd="10.0dip" layout_alignParentEnd="true" style="@style/PlanInfoAltLink" />
+        <o.ImageSwitcher id="@id/upgradedPlanFullNameText" layout_width="wrap_content" layout_height="wrap_content" layout_marginBottom="12.0dip" layout_below="@id/upgradedPlanCardInfo" layout_marginStart="12.0dip" layout_toStartOf="@id/upgradedPlanEditPayment" layout_alignParentStart="true" style="@style/UpgradeOnUs.PlanPrice" />
+        <androidx.recyclerview.widget.RecyclerView id="@id/cvvFieldConfirm" layout_width="wrap_content" layout_height="wrap_content" layout_marginBottom="12.0dip" layout_below="@id/upgradedPlanFullNameText" layout_marginStart="12.0dip" layout_marginEnd="12.0dip" layout_toStartOf="@id/upgradedPlanEditPayment" layout_alignParentStart="true" layoutManager="androidx.recyclerview.widget.LinearLayoutManager" style="@style/UpgradeOnUs.PlanPrice" />
+    </RelativeLayout>
+</merge>

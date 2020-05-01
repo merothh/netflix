@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.Canvas orientation="vertical" layout_width="fill_parent" layout_height="wrap_content" minWidth="196.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView id="@id/group_divider" background="@drawable/abc_list_divider_material" layout_width="fill_parent" layout_height="1.0dip" layout_marginTop="4.0dip" layout_marginBottom="4.0dip" />
+    <LinearLayout id="@id/content" duplicateParentState="true" layout_width="fill_parent" layout_height="?dropdownListPreferredItemHeight" style="@style/RtlOverlay.Widget.AppCompat.PopupMenuItem">
+        <TextView textAppearance="?textAppearanceLargePopupMenu" layout_gravity="center_vertical" id="@id/title" duplicateParentState="true" layout_width="wrap_content" layout_height="wrap_content" singleLine="true" style="@style/RtlOverlay.Widget.AppCompat.PopupMenuItem.Title" />
+        <Space layout_width="0.0dip" layout_height="1.0dip" layout_weight="1.0" />
+        <TextView textAppearance="?textAppearanceSmallPopupMenu" layout_gravity="center_vertical" id="@id/shortcut" duplicateParentState="true" layout_width="wrap_content" layout_height="wrap_content" singleLine="true" style="@style/RtlOverlay.Widget.AppCompat.PopupMenuItem.Shortcut" />
+        <ImageView layout_gravity="center" id="@id/submenuarrow" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" scaleType="center" style="@style/RtlOverlay.Widget.AppCompat.PopupMenuItem.SubmenuArrow" />
+    </LinearLayout>
+</o.Canvas>

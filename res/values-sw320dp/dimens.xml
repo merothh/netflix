@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="brightness_bar_gesture_region_height">140.0dip</dimen>
+    <dimen name="brightness_bar_height">70.0dip</dimen>
+    <dimen name="brightness_gesture_region_width">70.0dip</dimen>
+    <dimen name="player_secondary_control_drawable_padding_16292">2.0dip</dimen>
+    <dimen name="player_secondary_control_text_size_16292">9.0sp</dimen>
+    <dimen name="previews_action_button">9.0sp</dimen>
+    <dimen name="previews_drawable_padding">1.0dip</dimen>
+    <dimen name="previews_padding">2.0dip</dimen>
+    <dimen name="previews_play_button">11.0sp</dimen>
+</resources>

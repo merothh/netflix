@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.exoplayer2.ui.AspectRatioFrameLayout layout_gravity="center" id="@id/exo_content_frame" layout_width="fill_parent" layout_height="fill_parent">
+        <View id="@id/exo_shutter" background="@android:color/black" layout_width="fill_parent" layout_height="fill_parent" />
+        <ImageView id="@id/exo_artwork" layout_width="fill_parent" layout_height="fill_parent" scaleType="fitXY" />
+        <com.google.android.exoplayer2.ui.SubtitleView id="@id/exo_subtitles" layout_width="fill_parent" layout_height="fill_parent" />
+    </com.google.android.exoplayer2.ui.AspectRatioFrameLayout>
+    <View id="@id/exo_controller_placeholder" layout_width="fill_parent" layout_height="fill_parent" />
+    <FrameLayout id="@id/exo_overlay" layout_width="fill_parent" layout_height="fill_parent" />
+</merge>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout orientation="vertical" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0">
+        <LinearLayout orientation="vertical" id="@id/groupingForAccessibility" focusable="true" layout_width="fill_parent" layout_height="wrap_content">
+            <o.ImageSwitcher textSize="16.0sp" textStyle="bold" textColor="@color/uma_text" id="@id/title" layout_width="wrap_content" layout_height="wrap_content" importantForAccessibility="no" style="@style/PrimaryLightFontText" />
+            <o.ImageSwitcher textSize="14.0sp" textColor="@color/uma_text" id="@id/body" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="8.0dip" layout_marginBottom="8.0dip" importantForAccessibility="no" style="@style/PrimaryLightFontText" />
+        </LinearLayout>
+        <o.DateTimeView id="@id/cta_container" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="8.0dip" layout_marginBottom="8.0dip" fl_horizontalSpacing="8.0dip" fl_verticalSpacing="8.0dip" />
+    </LinearLayout>
+</merge>

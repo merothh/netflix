@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center_horizontal" orientation="vertical" layout_width="wrap_content" layout_height="wrap_content" contentDescription="@string/add_profile" paddingStart="@dimen/profile_switcher_spacing" paddingEnd="@dimen/profile_switcher_spacing" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ServiceSpecificException id="@id/image" background="@drawable/white_ripple_with_border" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/profile_item_image_margin_2x" layout_marginBottom="@dimen/profile_item_image_margin_2x" src="@drawable/ic_profile_add" scaleType="centerInside" importantForAccessibility="no" layout_marginStart="@dimen/profile_item_image_margin" layout_marginEnd="@dimen/profile_item_image_margin" />
+    <o.ImageSwitcher textColor="?unselectedProfileTextColor" ellipsize="end" id="@id/label" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="6.0dip" text="@string/add_profile" maxLines="1" importantForAccessibility="no" style="@style/PrimaryText.Micro" />
+</LinearLayout>

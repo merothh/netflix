@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" id="@id/video_details_info_layout" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="?detailsInfoMarginTop" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher ellipsize="end" id="@id/video_details_title" layout_marginTop="@dimen/content_padding" layout_marginBottom="@dimen/content_padding" maxLines="2" style="@style/PrimaryBoldFontText.Large" />
+    <LinearLayout orientation="vertical" id="@id/video_details_title_info" layout_width="wrap_content" layout_height="wrap_content">
+        <include layout="@layout/video_details_basic_info" />
+    </LinearLayout>
+</LinearLayout>

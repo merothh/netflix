@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" id="@id/customerSupportDialerHeader" background="@color/contact_us_dialer_bg" layout_width="fill_parent" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher layout_gravity="center_horizontal" id="@id/customerSupportDialerHeaderCallStatus1" layout_marginTop="@dimen/contact_us_dialer_header_title_padding_top" text="@string/label_cs_dialer_status_connecting1" style="@style/CustomerSupportDialerHeaderStatus" />
+    <o.ImageSwitcher layout_gravity="center_horizontal" id="@id/customerSupportDialerHeaderCallStatus2" text="@string/label_cs_dialer_status_connecting2" style="@style/CustomerSupportDialerHeaderStatus" />
+    <RelativeLayout layout_width="fill_parent" layout_height="0.0dip" layout_weight="1.0">
+        <ProgressBar id="@id/loading_view" padding="@dimen/double_padding" visibility="visible" layout_width="wrap_content" layout_height="wrap_content" indeterminate="true" indeterminateOnly="true" layout_centerInParent="true" style="?android:progressBarStyle" />
+        <o.ImageSwitcher gravity="center" id="@id/customerSupportDialerHeaderDuration" visibility="gone" text="0:00" layout_centerInParent="true" style="@style/CustomerSupportDialerHeaderDuration" />
+    </RelativeLayout>
+</LinearLayout>

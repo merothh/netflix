@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.GridView id="@id/titleImage" layout_width="126.0dip" layout_height="wrap_content" adjustViewBounds="true" layout_marginEnd="8.0dip" roundedCornerRadius="@dimen/onramp_title_corner_radius" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

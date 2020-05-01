@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.ImageSwitcher ellipsize="end" id="@id/extras_title" layout_width="fill_parent" layout_height="wrap_content" maxLines="2" layout_marginStart="8.0dip" layout_marginEnd="8.0dip" style="@style/PrimaryBoldFontText.Medium"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

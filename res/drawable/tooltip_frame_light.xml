@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid color="@color/tooltip_background_light" />
+    <corners radius="@dimen/tooltip_corner_radius" />
+</shape>

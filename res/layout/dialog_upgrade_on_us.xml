@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout id="@id/dialogBackground" layout_width="fill_parent" layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView layout_gravity="center" id="@id/scrollView" layout_width="fill_parent" layout_height="wrap_content" fadeScrollbars="false">
+        <o.MenuInflater gravity="center" layout_gravity="center" background="@drawable/upgrade_on_us_dialog_background" padding="24.0dip" layout_width="fill_parent" layout_height="wrap_content" maxWidth="450.0dip" layout_marginStart="24.0dip" layout_marginEnd="24.0dip">
+            <ImageView id="@id/upgradeOnUsIcon" layout_width="175.0dip" layout_height="89.0dip" src="@drawable/ic_uou_assets_gift" scaleType="fitXY" layout_centerHorizontal="true" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" />
+            <o.ImageSwitcher gravity="center" id="@id/upgradeOnUsTitle" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="12.0dip" text="@string/upgrade_dialog_title" layout_below="@id/upgradeOnUsIcon" layout_centerHorizontal="true" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/upgradeOnUsIcon" style="@style/UpgradeOnUs.Title" />
+            <o.ImageSwitcher gravity="center" id="@id/upgradeOnUsSubTitle" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="4.0dip" layout_below="@id/upgradeOnUsTitle" layout_centerHorizontal="true" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/upgradeOnUsTitle" style="@style/UpgradeOnUs.SubTitle" />
+            <o.SpellCheckSpan id="@id/planDetailsView" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="16.0dip" layout_below="@id/upgradeOnUsSubTitle" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/upgradeOnUsSubTitle" />
+            <com.netflix.mediaclient.acquisition.view.NetflixSignupButton id="@id/thanksButton" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="24.0dip" layout_below="@id/planDetailsView" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toBottomOf="@id/planDetailsView" />
+        </o.MenuInflater>
+    </ScrollView>
+</FrameLayout>

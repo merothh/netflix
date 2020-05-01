@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" id="@id/customerSupportDialerHeader" background="@color/contact_us_dialer_bg" paddingTop="@dimen/contact_us_dialer_buttons_margin_top" paddingBottom="@dimen/contact_us_dialer_buttons_margin_bottom" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout orientation="horizontal" id="@id/customerSupportDialerButtonsContainer" paddingBottom="@dimen/contact_us_dialer_fab_margin_bottom" layout_width="fill_parent" layout_height="wrap_content">
+        <LinearLayout orientation="vertical" id="@id/customerSupportDialerHeaderSpeakerContainer" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0">
+            <ImageView layout_gravity="center" id="@id/customerSupportDialerHeaderSpeakerIcon" background="@drawable/selectable_cs_bgd_with_press" padding="@dimen/contact_us_dialer_button_padding" clickable="true" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/ic_speakerphone_btn" scaleType="center" />
+            <TextView layout_gravity="center" id="@id/customerSupportDialerHeaderSpeakerLabel" background="@drawable/selectable_cs_bgd_with_press" clickable="true" layout_marginTop="@dimen/contact_us_dialer_buttons_margin" text="@string/label_cs_dialer_speaker" style="@style/CustomerSupportDialerHeaderButton" />
+        </LinearLayout>
+        <LinearLayout orientation="vertical" id="@id/customerSupportDialerHeaderMicContainer" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0" paddingStart="@dimen/contact_us_dialer_buttons_padding_on_side">
+            <ImageView layout_gravity="center" id="@id/customerSupportDialerHeaderMicIcon" background="@drawable/selectable_cs_bgd_with_press" padding="@dimen/contact_us_dialer_button_padding" clickable="true" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/ic_mic_btn" scaleType="center" onClick="performAction" />
+            <TextView layout_gravity="center" id="@id/customerSupportDialerHeaderMicLabel" background="@drawable/selectable_cs_bgd_with_press" clickable="true" layout_marginTop="@dimen/contact_us_dialer_buttons_margin" text="@string/label_cs_dialer_mic_mute" onClick="performAction" style="@style/CustomerSupportDialerHeaderButton" />
+        </LinearLayout>
+        <LinearLayout orientation="vertical" id="@id/customerSupportDialerHeaderDialPadContainer" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0" paddingEnd="@dimen/contact_us_dialer_buttons_padding_on_side">
+            <ImageView layout_gravity="center" id="@id/customerSupportDialerHeaderDialPadIcon" background="@drawable/selectable_cs_bgd_with_press" padding="@dimen/contact_us_dialer_button_padding" clickable="true" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/ic_dialpad_btn" scaleType="center" onClick="performAction" />
+            <TextView layout_gravity="center" id="@id/customerSupportDialerHeaderDialPadLabel" background="@drawable/selectable_cs_bgd_with_press" clickable="true" layout_marginTop="@dimen/contact_us_dialer_buttons_margin" text="@string/label_cs_dialer_dialpad" onClick="performAction" style="@style/CustomerSupportDialerHeaderButton" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton layout_gravity="center" id="@id/customerSupportCancelFab" clickable="true" layout_marginTop="@dimen/contact_us_dialer_pad_fab_margin_top" layout_marginBottom="@dimen/contact_us_dialer_pad_fab_margin_bottom" src="@drawable/APKTOOL_DUMMY_1e6" onClick="performAction" style="@style/CustomerSupportDialerCancelFAB" />
+</LinearLayout>

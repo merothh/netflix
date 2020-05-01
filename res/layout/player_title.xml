@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.ImageSwitcher textSize="@dimen/text_nano_medium" textColor="@android:color/white" ellipsize="end" id="@id/player_title_label" layout_width="0.0dip" layout_height="wrap_content" maxLines="2" textAlignment="center" paddingStart="@dimen/content_padding" paddingEnd="@dimen/content_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

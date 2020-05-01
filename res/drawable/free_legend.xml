@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <size height="@dimen/offline_storage_legend_height" width="@dimen/offline_storage_legend_height" />
+    <solid color="@color/grey80" />
+</shape>

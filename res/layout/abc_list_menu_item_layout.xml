@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.Canvas layout_width="fill_parent" layout_height="?listPreferredItemHeightSmall"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout layout_gravity="center_vertical" duplicateParentState="true" layout_width="0.0dip" layout_height="wrap_content" layout_marginLeft="?listPreferredItemPaddingLeft" layout_marginRight="?listPreferredItemPaddingRight" layout_weight="1.0">
+        <TextView textAppearance="?textAppearanceListItemSmall" ellipsize="marquee" id="@id/title" fadingEdge="horizontal" duplicateParentState="true" layout_width="fill_parent" layout_height="wrap_content" singleLine="true" layout_alignParentLeft="true" layout_alignParentTop="true" />
+        <TextView textAppearance="?android:textAppearanceSmall" id="@id/shortcut" duplicateParentState="true" layout_width="wrap_content" layout_height="wrap_content" singleLine="true" layout_below="@id/title" layout_alignParentLeft="true" />
+    </RelativeLayout>
+</o.Canvas>

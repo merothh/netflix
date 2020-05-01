@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View layout_gravity="center" id="@id/sb_circle" background="@drawable/seek_button_circle" visibility="gone" clickable="false" layout_width="35.0dip" layout_height="35.0dip" layout_marginTop="3.0dip" importantForAccessibility="no" />
+    <ImageButton layout_gravity="center" id="@id/sb_image_button" padding="@dimen/seek_button_padding" layout_width="@dimen/seek_button_image_size" layout_height="@dimen/seek_button_image_size" scaleType="fitCenter" importantForAccessibility="no" />
+    <o.ImageSwitcher textSize="@dimen/seek_button_text_size" textColor="@color/white" layout_gravity="center" id="@id/sb_label" paddingTop="@dimen/seek_button_text_padding" clickable="false" layout_width="wrap_content" layout_height="wrap_content" importantForAccessibility="no" layoutDirection="ltr" />
+</merge>

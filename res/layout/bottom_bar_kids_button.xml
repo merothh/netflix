@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout background="?selectableItemBackground" layout_width="wrap_content" layout_height="fill_parent" paddingStart="8.0dip" paddingEnd="6.0dip" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textSize="32.0dip" textColor="?bottomNavBarForegroundColor" gravity="end|center" layout_gravity="center_vertical" layout_width="wrap_content" layout_height="fill_parent" maxWidth="90.0dip" text="@string/kids_button" maxLines="1" letterSpacing="-0.05" autoSizeMaxTextSize="32.0dip" autoSizeTextType="uniform" fontFamily="?netflixBoldFont" />
+    <ImageView layout_gravity="end|center" clickable="false" layout_width="wrap_content" layout_height="36.0dip" src="@drawable/ic_kids_button_chevron" scaleX="1.2" />
+</LinearLayout>

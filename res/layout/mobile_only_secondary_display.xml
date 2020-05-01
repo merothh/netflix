@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center_vertical" orientation="vertical" padding="@dimen/content_padding" layout_width="fill_parent" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher layout_gravity="center_horizontal" id="@id/text_view" layout_width="wrap_content" layout_height="wrap_content" text="@string/mobile_only_message_external_display" />
+    <ImageView layout_gravity="center_horizontal" layout_width="wrap_content" layout_height="wrap_content" src="@mipmap/ic_netflix_icon_foreground" scaleType="fitCenter" adjustViewBounds="true" maxWidth="60.0dip" maxHeight="60.0dip" contentDescription="@string/app_name" />
+</LinearLayout>

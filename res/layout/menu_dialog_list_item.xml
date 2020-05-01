@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater gravity="center_horizontal" id="@id/outer_layout" layout_width="fill_parent" layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout layout_gravity="center_horizontal" orientation="horizontal" id="@id/item_layout" background="@drawable/selectable_item_background" paddingTop="@dimen/text_padding" paddingBottom="@dimen/text_padding" layout_width="wrap_content" layout_height="wrap_content" minHeight="@dimen/menu_list_item_min_height" paddingStart="@dimen/xlarge_padding" paddingEnd="@dimen/xlarge_padding" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent">
+        <o.GridView layout_gravity="center_vertical" id="@id/icon" visibility="gone" layout_width="@dimen/menu_dialog_icon_size" layout_height="@dimen/menu_dialog_icon_size" />
+        <o.ImageSwitcher ellipsize="end" gravity="center" layout_gravity="center_vertical" id="@id/text" background="@color/transparent" layout_width="wrap_content" layout_height="wrap_content" maxLines="5" textAlignment="center" paddingStart="@dimen/medium_large_padding" style="@style/MenuListItemText" />
+    </LinearLayout>
+    <ViewStub layout_gravity="center_vertical" id="@id/progress_stub" layout="@layout/menu_dialog_list_item_progress" inflatedId="@id/progress" layout_width="24.0dip" layout_height="24.0dip" layout_marginStart="@dimen/double_padding" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toEndOf="@id/item_layout" layout_constraintTop_toTopOf="parent" />
+</o.MenuInflater>

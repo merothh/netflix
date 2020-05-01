@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout paddingTop="@dimen/settings_playback_specification_header_padding_top" paddingBottom="4.0dip" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textAppearance="@style/TextAppearance.AppCompat.Medium" textColor="@color/grey90" id="@id/playback_specification_heading" layout_width="fill_parent" layout_height="wrap_content" />
+</FrameLayout>

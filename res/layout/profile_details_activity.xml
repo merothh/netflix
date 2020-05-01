@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout id="@id/profile_details_parent" layout_width="fill_parent" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView style="@style/ProfileDetailsContents">
+        <LinearLayout orientation="vertical" id="@id/profile_details_content" focusable="true" focusableInTouchMode="true" descendantFocusability="beforeDescendants" layout_width="fill_parent" layout_height="wrap_content" paddingStart="@dimen/profile_details_main_margin_extra" paddingEnd="@dimen/profile_details_main_margin_extra">
+            <View layout_width="fill_parent" layout_height="@dimen/profile_details_contents_space" />
+            <o.ImageSwitcher gravity="center" paddingTop="@dimen/profile_details_main_padding" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="@dimen/profile_details_main_margin" text="@string/profile_name_textview" maxLines="1" paddingStart="@dimen/profile_details_main_padding" paddingEnd="@dimen/profile_details_main_padding" layout_marginStart="@dimen/profile_details_main_margin" layout_marginEnd="@dimen/profile_details_main_margin" labelFor="@id/profile_name_edittext" style="@style/SecondaryText.Small" />
+            <EditText id="@id/profile_name_edittext" padding="@dimen/profile_details_main_padding" layout_width="fill_parent" layout_height="wrap_content" maxLength="@integer/profile_name_max_length" inputType="textPersonName|textCapWords" fontFamily="?netflixRegularFont" layout_marginStart="@dimen/profile_details_main_margin" layout_marginEnd="@dimen/profile_details_main_margin" />
+            <LinearLayout orientation="horizontal" id="@id/profile_kids_section" background="?android:selectableItemBackground" layout_width="fill_parent" layout_height="wrap_content">
+                <o.ImageSwitcher gravity="start|center" id="@id/profile_kids_section_text" padding="@dimen/profile_details_main_padding" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="@dimen/profile_details_main_padding" layout_marginBottom="@dimen/profile_details_main_padding" text="@string/profile_start_in_kids_tectview" layout_weight="1.0" layout_marginStart="@dimen/profile_details_main_margin" layout_marginEnd="@dimen/profile_details_main_margin" style="@style/ProfileDetailsText" />
+                <CheckBox layout_gravity="end|center" id="@id/kids_checkBox" layout_width="wrap_content" layout_height="wrap_content" paddingEnd="@dimen/profile_details_checkbox_padding_right" />
+            </LinearLayout>
+            <View style="@style/HorizontalDivider.Profile" />
+            <LinearLayout orientation="horizontal" id="@id/profile_picture_section" background="?android:selectableItemBackground" layout_width="fill_parent" layout_height="wrap_content">
+                <o.ImageSwitcher gravity="start|center" layout_gravity="start|center" padding="@dimen/profile_details_main_padding" layout_width="0.0dip" layout_height="fill_parent" text="@string/profile_picture_textview" layout_weight="1.0" layout_marginStart="@dimen/profile_details_main_margin" layout_marginEnd="@dimen/profile_details_main_margin" style="@style/ProfileDetailsText" />
+                <FrameLayout layout_width="@dimen/profile_avatar_img_small_size" layout_height="@dimen/profile_avatar_img_small_size" layout_marginTop="@dimen/profile_details_extra_padding" layout_marginBottom="@dimen/profile_details_extra_padding" layout_marginEnd="@dimen/profile_details_main_margin">
+                    <o.BaseAdapter id="@id/profile_avatar_img" style="@style/match" />
+                    <ImageView layout_gravity="end|bottom|center" id="@id/picture_selector_hint" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/ic_profile_picture_dropdown_arrow" />
+                </FrameLayout>
+            </LinearLayout>
+            <View style="@style/HorizontalDivider.Profile" />
+            <LinearLayout orientation="vertical" id="@id/profile_delete_section" layout_width="fill_parent" layout_height="wrap_content">
+                <View layout_width="fill_parent" layout_height="@dimen/profile_space_separator_height" />
+                <View style="@style/HorizontalDivider.Profile" />
+                <o.ImageSwitcher gravity="start|center" id="@id/profile_delete_button" background="?android:selectableItemBackground" padding="@dimen/profile_details_extra_padding" layout_width="fill_parent" layout_height="wrap_content" text="@string/profile_delete_textview" drawableStart="@drawable/APKTOOL_DUMMY_34e" style="@style/ProfileDetailsText" />
+                <View style="@style/HorizontalDivider.Profile" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/profile_details_top_actions" />
+    <include layout="@layout/loading_and_error_inset" />
+</FrameLayout>

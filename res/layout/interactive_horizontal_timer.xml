@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout orientation="vertical" id="@id/interactive_horizontal_timer" layout_width="fill_parent" layout_height="fill_parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.GridView id="@id/timer_bottom_layer" layout_width="wrap_content" layout_height="wrap_content" />
+    <include id="@id/timer_bar" layout="@layout/interactive_timer_progress_layout" />
+    <o.GridView id="@id/timer_top_layer" layout_width="wrap_content" layout_height="wrap_content" />
+    <o.GridView id="@id/timer_device_icon" layout_width="wrap_content" layout_height="wrap_content" />
+</FrameLayout>

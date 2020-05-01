@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center_vertical" orientation="horizontal" id="@id/member_referral_link_section" background="@color/black" paddingTop="@dimen/text_padding" paddingBottom="@dimen/text_padding" layout_width="fill_parent" layout_height="wrap_content" minHeight="@dimen/member_referral_button_min_height" paddingStart="@dimen/medium_padding" paddingEnd="@dimen/text_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher ellipsize="end" id="@id/member_referral_link" layout_width="0.0dip" layout_height="wrap_content" maxLines="1" layout_weight="1.0" importantForAccessibility="no" layout_marginEnd="@dimen/medium_padding" />
+    <o.HorizontalScrollView gravity="center" id="@id/member_referral_copy_button" layout_width="wrap_content" layout_height="fill_parent" text="@string/share_copy_link" contentDescription="@string/member_referral_content_description_copy_link" paddingStart="@dimen/copy_link_padding_horizontal" paddingEnd="@dimen/copy_link_padding_horizontal" style="@style/MemberReferralShareButton" />
+</LinearLayout>

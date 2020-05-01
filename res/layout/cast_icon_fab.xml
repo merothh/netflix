@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.floatingactionbutton.FloatingActionButton id="@id/cast_icon_fab" layout_width="wrap_content" layout_height="wrap_content" src="@drawable/APKTOOL_DUMMY_152" contentDescription="@string/label_selectTarget" elevation="10.0dip" backgroundTint="?textColor20" layout_anchorGravity="end|bottom|center" rippleColor="?textColor20" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout id="@id/outer_layout" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textSize="@dimen/menu_list_title_item_text_size" ellipsize="end" gravity="center" layout_gravity="center" id="@id/text" background="@color/transparent" layout_width="wrap_content" layout_height="wrap_content" minHeight="@dimen/menu_list_item_min_height" textAlignment="center" paddingStart="@dimen/xlarge_padding" paddingEnd="@dimen/xlarge_padding" style="@style/MenuListItemText" />
+</FrameLayout>

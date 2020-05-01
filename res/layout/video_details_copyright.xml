@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout id="@id/video_details_copyright_group" visibility="gone" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher textColor="@color/grey" ellipsize="end" id="@id/video_details_copyright" background="@drawable/selectable_item_background" paddingTop="@dimen/content_padding" paddingBottom="@dimen/content_padding" maxLines="1" maxEms="28" paddingEnd="@dimen/content_padding" style="@style/PrimaryText.Micro" />
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge id="@id/planContextCheckmarksContainer" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView layout_gravity="top" paddingTop="6.0dip" layout_width="@dimen/signup_plan_context_checkmark" layout_height="@dimen/signup_plan_context_checkmark" src="@drawable/plan_selection_check_selected" scaleType="fitStart" tint="@color/signup_red" />
+    <TextView id="@id/valuePropTextView" layout_width="wrap_content" layout_height="wrap_content" layout_marginBottom="@dimen/signup_plan_context_margin" layout_marginStart="@dimen/signup_plan_context_margin" style="@style/CheckmarkValuePropText" />
+</merge>

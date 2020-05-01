@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout layout_width="wrap_content" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar id="@id/snackbar_loading" visibility="visible" layout_width="wrap_content" layout_height="wrap_content" layout_centerVertical="true" paddingStart="5.0dip" paddingEnd="5.0dip" layout_alignParentEnd="true" indeterminateTint="@color/grey90" indeterminateTintMode="src_in" style="?android:progressBarStyleSmall" />
+    <o.ImageSwitcher textAppearance="@style/TextAppearance.Design.Snackbar.Message" textColor="@color/grey90" id="@id/snackbar_percent" padding="0.0dip" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" minWidth="20.0dip" maxLines="1" layout_centerVertical="true" layout_alignParentEnd="true" />
+    <ImageView id="@id/snackbar_downloading" visibility="gone" layout_width="15.0dip" layout_height="15.0dip" layout_centerVertical="true" layout_marginEnd="5.0dip" layout_toStartOf="@id/snackbar_percent" />
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector drawable="@drawable/$avd_loading_skeleton_gallery__0" xmlns:aapt="http://schemas.android.com/aapt"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <target name="0_0" animation="@drawable/$avd_loading_skeleton_gallery__1" />
+    <target name="0_1" animation="@drawable/$avd_loading_skeleton_gallery__2" />
+    <target name="0_2" animation="@drawable/$avd_loading_skeleton_gallery__3" />
+    <target name="1_0" animation="@drawable/$avd_loading_skeleton_gallery__4" />
+    <target name="1_1" animation="@drawable/$avd_loading_skeleton_gallery__5" />
+    <target name="1_2" animation="@drawable/$avd_loading_skeleton_gallery__6" />
+    <target name="2_0" animation="@drawable/$avd_loading_skeleton_gallery__7" />
+    <target name="2_1" animation="@drawable/$avd_loading_skeleton_gallery__8" />
+    <target name="2_2" animation="@drawable/$avd_loading_skeleton_gallery__9" />
+    <target name="3_0" animation="@drawable/$avd_loading_skeleton_gallery__10" />
+    <target name="3_1" animation="@drawable/$avd_loading_skeleton_gallery__11" />
+    <target name="3_2" animation="@drawable/$avd_loading_skeleton_gallery__12" />
+    <target name="4_0" animation="@drawable/$avd_loading_skeleton_gallery__13" />
+    <target name="4_1" animation="@drawable/$avd_loading_skeleton_gallery__14" />
+    <target name="4_2" animation="@drawable/$avd_loading_skeleton_gallery__15" />
+</animated-vector>

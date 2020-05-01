@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater layout_width="fill_parent" layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout id="@id/image_group" layout_width="fill_parent" layout_height="wrap_content" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent">
+        <o.GridView layout_gravity="center" id="@id/main_image" focusable="true" layout_width="fill_parent" layout_height="308.0dip" scaleType="centerCrop" foreground="@drawable/selectable_item_foreground" />
+        <View layout_gravity="top" id="@id/top_image_top_gradient" background="@drawable/image_overlay_top_gradient" layout_height="80.0dip" contentDescription="@string/label_pref_settings_category_playback" style="@style/match" />
+        <View layout_gravity="bottom" id="@id/top_image_gradient" background="@drawable/image_overlay_bottom_gradient" layout_height="170.0dip" contentDescription="@string/label_pref_settings_category_playback" style="@style/match" />
+    </FrameLayout>
+    <ImageView id="@id/play_icon" focusable="true" layout_width="@dimen/details_play_button_size" layout_height="@dimen/details_play_button_size" src="@drawable/ic_play_svg" focusedByDefault="true" layout_constraintBottom_toBottomOf="@id/details_layout" layout_constraintEnd_toEndOf="@id/image_group" layout_constraintStart_toStartOf="@id/image_group" layout_constraintTop_toTopOf="@id/image_group" />
+    <LinearLayout gravity="center_horizontal" orientation="vertical" id="@id/details_layout" paddingTop="@dimen/content_padding" paddingBottom="@dimen/double_padding" layout_width="0.0dip" layout_height="0.0dip" paddingStart="@dimen/double_padding" paddingEnd="@dimen/double_padding" layout_constraintBottom_toBottomOf="@id/image_group" layout_constraintEnd_toEndOf="@id/image_group" layout_constraintStart_toStartOf="@id/image_group" layout_constraintTop_toBottomOf="@id/play_icon">
+        <o.GridView id="@id/title_image" layout_width="fill_parent" layout_height="0.0dip" scaleType="fitCenter" layout_weight="1.0" />
+        <o.ImageSwitcher textSize="@dimen/text_medium_large" textStyle="bold" textColor="@color/white" ellipsize="end" gravity="center" id="@id/video_details_title" visibility="gone" layout_width="fill_parent" layout_height="0.0dip" maxLines="2" layout_weight="1.0" />
+        <LinearLayout orientation="horizontal" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="13.0dip">
+            <o.ImageSwitcher textSize="@dimen/text_micro" textColor="@color/grey90" id="@id/text_certification" background="@drawable/character_certification_bg" paddingTop="2.0dip" paddingBottom="2.0dip" layout_width="wrap_content" layout_height="wrap_content" singleLine="true" paddingStart="6.0dip" paddingEnd="6.0dip" />
+            <o.GridView id="@id/rating_icon" layout_width="24.0dip" layout_height="24.0dip" />
+            <o.ImageSwitcher textSize="@dimen/text_small" textColor="@color/brand_white" ellipsize="end" id="@id/kids_basic_supplemental_info" layout_width="wrap_content" layout_height="wrap_content" singleLine="true" layout_marginStart="15.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</o.MenuInflater>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="UmaBannerThemedContainer">
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="UmaBannerThemedCtaContainer">
+        <item name="android:paddingTop">0.0dip</item>
+    </style>
+    <style name="UmaBannerThemedIconMessageContainer">
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+</resources>

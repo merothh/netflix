@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector constantSize="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item state_selected="true" drawable="@drawable/ic_thumbs_up" />
+    <item drawable="@drawable/ic_thumbs_up_outline" />
+</selector>

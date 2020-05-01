@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.RadialTimePickerView id="@id/mdx_mini_player_seek_bar" padding="0.0dip" layout_width="fill_parent" layout_height="wrap_content" progressDrawable="@drawable/cast_player_scrubber_progress_horizontal_holo_dark" thumb="@drawable/cast_player_scrubber_control_selector_holo_dark" style="?android:progressBarStyleHorizontal"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

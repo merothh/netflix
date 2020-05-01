@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" id="@id/lomo_frame" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView textAppearance="@style/TextAppearance.AppCompat.Title" textSize="14.0sp" textColor="@android:color/transparent" ellipsize="end" layout_gravity="start" id="@id/lomo_title" background="@color/lolomo_row_dark_placeholder" layout_width="wrap_content" layout_height="wrap_content" layout_margin="8.0dip" maxLines="1" fontFamily="monospace" />
+    <o.ParcelableParcel orientation="horizontal" id="@id/lolomo_row" scrollbars="none" clipToPadding="false" layout_width="fill_parent" layout_height="wrap_content" />
+</LinearLayout>

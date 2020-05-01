@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.BaseAdapter layout_gravity="center" id="@id/grid_boxart" focusable="true" scaleType="fitCenter" style="@style/wrap"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

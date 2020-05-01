@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout id="@id/profile_selection_parent" style="@style/match"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/loading_and_error_inset" />
+    <include id="@id/profile_selection_content" layout="@layout/profile_selection_content" />
+</FrameLayout>

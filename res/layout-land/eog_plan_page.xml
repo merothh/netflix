@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" layout_width="fill_parent" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView orientation="vertical" layout_width="fill_parent" layout_height="fill_parent" fillViewport="true">
+        <LinearLayout orientation="vertical" id="@id/eogPpHeader" layout_width="fill_parent" layout_height="wrap_content">
+            <RelativeLayout gravity="center_horizontal" layout_gravity="center" orientation="vertical" layout_width="fill_parent" layout_height="fill_parent">
+                <o.ImageSwitcher id="@id/eogPpTitle" layout_marginTop="@dimen/eog_pp_margin_title_top" layout_marginBottom="@dimen/eog_lp_title_margin_bottom" singleLine="false" paddingStart="@dimen/eog_pp_padding" paddingEnd="@dimen/eog_pp_padding" style="@style/EogTitle" />
+                <o.ImageSwitcher id="@id/eogPpSelect" layout_marginBottom="@dimen/eog_lp_margin_normal" layout_below="@id/eogPpTitle" paddingStart="@dimen/eog_pp_padding" paddingEnd="@dimen/eog_pp_padding" style="@style/EogText" />
+                <LinearLayout gravity="center_vertical" layout_gravity="center_horizontal" orientation="horizontal" id="@id/eogPpSdPlanHeader" background="@drawable/eog_plan_bg_inactive" clickable="true" layout_width="fill_parent" layout_height="64.0dip" layout_marginBottom="@dimen/eog_pp_margin_plan_seperation" layout_below="@id/eogPpSelect" onClick="performPlanSelection">
+                    <CheckBox id="@id/eogPpSdCheckbox" layout_width="wrap_content" layout_height="wrap_content" onClick="performPlanSelection" layout_marginStart="@dimen/eog_pp_margin_cb_start" />
+                    <RelativeLayout gravity="center" orientation="horizontal" layout_width="fill_parent" layout_height="fill_parent">
+                        <o.ImageSwitcher id="@id/eogPpSdPlanName" singleLine="true" layout_marginStart="@dimen/eog_pp_margin_cb_start" layout_alignParentStart="true" style="@style/EogButton" />
+                        <o.ImageSwitcher id="@id/eogPpSdPlanValue" singleLine="true" layout_marginEnd="@dimen/eog_pp_margin_cb_start" layout_alignParentEnd="true" style="@style/EogButton" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout gravity="center_vertical" layout_gravity="center_horizontal" orientation="horizontal" id="@id/eogPpHdPlanHeader" background="@drawable/eog_plan_bg_inactive" clickable="true" layout_width="fill_parent" layout_height="64.0dip" layout_marginBottom="@dimen/eog_pp_margin_plan_seperation" layout_below="@id/eogPpSdPlanHeader" onClick="performPlanSelection">
+                    <CheckBox id="@id/eogPpHdCheckbox" layout_width="wrap_content" layout_height="wrap_content" onClick="performPlanSelection" layout_marginStart="@dimen/eog_pp_margin_cb_start" />
+                    <RelativeLayout gravity="center" orientation="horizontal" layout_width="fill_parent" layout_height="fill_parent">
+                        <o.ImageSwitcher id="@id/eogPpHdPlanName" singleLine="true" layout_marginStart="@dimen/eog_pp_margin_cb_start" layout_alignParentStart="true" style="@style/EogButton" />
+                        <o.ImageSwitcher id="@id/eogPpHdPlanValue" singleLine="true" layout_marginEnd="@dimen/eog_pp_margin_cb_start" layout_alignParentEnd="true" style="@style/EogButton" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout gravity="center_vertical" layout_gravity="center_horizontal" orientation="horizontal" id="@id/eogPpUhdPlanHeader" background="@drawable/eog_plan_bg_inactive" clickable="true" layout_width="fill_parent" layout_height="64.0dip" layout_marginBottom="@dimen/eog_pp_margin_plan_seperation" layout_below="@id/eogPpHdPlanHeader" onClick="performPlanSelection">
+                    <CheckBox id="@id/eogPpUhdCheckbox" layout_width="wrap_content" layout_height="wrap_content" onClick="performPlanSelection" layout_marginStart="@dimen/eog_pp_margin_cb_start" />
+                    <RelativeLayout gravity="center" orientation="horizontal" layout_width="fill_parent" layout_height="fill_parent">
+                        <o.ImageSwitcher id="@id/eogPpUhdPlanName" singleLine="true" layout_marginStart="@dimen/eog_pp_margin_cb_start" layout_alignParentStart="true" style="@style/EogButton" />
+                        <o.ImageSwitcher id="@id/eogPpUhdPlanValue" singleLine="true" layout_marginEnd="@dimen/eog_pp_margin_cb_start" layout_alignParentEnd="true" style="@style/EogButton" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <o.ImageSwitcher id="@id/eogPpAccount" layout_marginTop="@dimen/eog_pp_account_margin" layout_marginBottom="@dimen/eog_pp_account_margin" layout_below="@id/eogPpUhdPlanHeader" paddingStart="@dimen/eog_pp_padding" paddingEnd="@dimen/eog_pp_padding" style="@style/EogText" />
+                <LinearLayout gravity="center" layout_gravity="center_horizontal" orientation="horizontal" id="@id/eogPpContinueHeader" background="@drawable/eog_continue_bg" clickable="true" layout_width="240.0dip" layout_height="48.0dip" layout_below="@id/eogPpAccount" onClick="performAction" layout_marginStart="@dimen/eog_pp_padding" layout_marginEnd="@dimen/eog_pp_padding">
+                    <o.ImageSwitcher id="@id/eogPpContinue" singleLine="true" layout_marginStart="@dimen/eog_button_inline_divider" style="@style/EogButton" />
+                </LinearLayout>
+                <o.ImageSwitcher textColor="@color/light_grey" id="@id/eogPpDisclaimer" layout_marginTop="@dimen/eog_lp_body_margin_bottom" layout_marginBottom="@dimen/eog_lp_body_margin_bottom" layout_below="@id/eogPpContinueHeader" paddingStart="@dimen/eog_pp_padding" paddingEnd="@dimen/eog_pp_padding" style="@style/EogText" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

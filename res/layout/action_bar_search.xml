@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout focusable="true" focusableInTouchMode="true" descendantFocusability="beforeDescendants" layout_width="fill_parent" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SearchView id="@id/action_bar_search_view" background="?searchViewBackgroundColor" layout_width="fill_parent" layout_height="fill_parent" layout_margin="@dimen/search_view_layout_margin" queryBackground="@android:color/transparent" submitBackground="@android:color/transparent" />
+    <ProgressBar layout_gravity="end|center" id="@id/action_bar_search_progress_spinner" background="?searchViewBackgroundColor" padding="@dimen/search_view_progress_padding" visibility="gone" layout_width="wrap_content" layout_height="wrap_content" indeterminate="true" indeterminateOnly="true" layout_marginEnd="@dimen/search_view_progress_margin_end" style="?android:progressBarStyleSmall" />
+</FrameLayout>

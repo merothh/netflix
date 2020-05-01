@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout orientation="horizontal" id="@id/primary_details_loading_uiview" paddingTop="@dimen/content_padding" layout_width="0.0dip" layout_height="wrap_content" layout_marginStart="@dimen/moderate_padding" layout_marginEnd="@dimen/moderate_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar layout_gravity="center" id="@id/loading_spinner_for_lite" visibility="gone" layout_width="50.0dip" layout_height="50.0dip" layout_margin="@dimen/double_padding" />
+    <View id="@id/loading_spinner_for_non_lite" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" />
+    <View id="@id/retry_background_for_non_lite" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" />
+    <LinearLayout gravity="center" orientation="vertical" id="@id/retry_container" visibility="gone" layout_width="fill_parent" layout_height="wrap_content">
+        <o.ImageSwitcher gravity="center" layout_width="fill_parent" layout_height="wrap_content" layout_margin="@dimen/text_padding" text="@string/label_could_not_load_data" style="@style/PrimaryText.SmallMedium" />
+        <o.HorizontalScrollView id="@id/retry_button" layout_width="wrap_content" layout_height="wrap_content" layout_margin="@dimen/text_padding" text="@string/label_retry" style="@style/NetflixButton.Secondary.Small" />
+    </LinearLayout>
+</FrameLayout>

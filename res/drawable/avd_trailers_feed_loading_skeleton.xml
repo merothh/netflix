@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector drawable="@drawable/$avd_trailers_feed_loading_skeleton__0" xmlns:aapt="http://schemas.android.com/aapt"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <target name="item_video" animation="@drawable/$avd_trailers_feed_loading_skeleton__1" />
+    <target name="item_video_text1" animation="@drawable/$avd_trailers_feed_loading_skeleton__2" />
+    <target name="item_video_text2" animation="@drawable/$avd_trailers_feed_loading_skeleton__3" />
+    <target name="item_video_text3" animation="@drawable/$avd_trailers_feed_loading_skeleton__4" />
+    <target name="item_video_text4" animation="@drawable/$avd_trailers_feed_loading_skeleton__5" />
+    <target name="item_video_text5" animation="@drawable/$avd_trailers_feed_loading_skeleton__6" />
+    <target name="item_video_text6" animation="@drawable/$avd_trailers_feed_loading_skeleton__7" />
+    <target name="next_item_video" animation="@drawable/$avd_trailers_feed_loading_skeleton__8" />
+</animated-vector>

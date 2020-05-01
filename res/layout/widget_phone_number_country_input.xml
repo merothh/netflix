@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge layout_width="fill_parent" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.material.textfield.TextInputLayout theme="@style/SignupTextInputLayoutLabel" id="@id/inputLayout" layout_width="fill_parent" layout_height="wrap_content" layout_toEndOf="@id/countryPicker" layout_alignParentStart="true" style="@style/SignupTextInputLayout">
+        <EditText id="@id/editText" layout_width="fill_parent" layout_height="wrap_content" hint="@string/label_phoneNumber" inputType="phone" paddingStart="54.0dip" style="@style/SignupEditText" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout orientation="horizontal" id="@id/countryPicker" layout_width="wrap_content" layout_height="wrap_content" layout_alignTop="@id/inputLayout" layout_alignBottom="@id/inputLayout" layout_centerVertical="true" layout_alignParentStart="true">
+        <o.GridView layout_gravity="center" id="@id/flagImage" layout_width="24.0dip" layout_height="wrap_content" scaleType="fitCenter" adjustViewBounds="true" layout_marginStart="@dimen/signup_margin_small" />
+        <ImageView layout_gravity="center" id="@id/dropDownArrow" layout_width="10.0dip" layout_height="wrap_content" layout_marginLeft="@dimen/signup_margin_small" layout_marginRight="@dimen/signup_margin_small" src="@drawable/ic_upside_down_triangle" />
+    </LinearLayout>
+    <o.ImageSwitcher id="@id/inputError" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" layout_below="@id/inputLayout" style="@style/SignupErrorMessage.EditText" />
+</merge>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.Tz gravity="bottom" layout_gravity="bottom" orientation="vertical" id="@id/post_play_metadata" layout_width="fill_parent" layout_height="fill_parent" layout_marginStart="@dimen/content_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout orientation="horizontal" layout_width="fill_parent" layout_height="wrap_content">
+        <o.ImageSwitcher textSize="18.0sp" layout_gravity="start|center" id="@id/post_play_header" layout_width="wrap_content" layout_height="wrap_content" maxLines="1" autoSizeTextType="uniform" autoSizeMinTextSize="10.0sp" autoSizeMaxTextSize="18.0sp" style="@style/PostPlayTitle" />
+    </LinearLayout>
+    <o.ImageSwitcher id="@id/movie_length" layout_width="wrap_content" layout_height="wrap_content" style="@style/DownloadsPostPlay_Description_ab14678" />
+    <o.ImageSwitcher id="@id/offline_episodes_count" layout_width="wrap_content" layout_height="wrap_content" style="@style/DownloadsPostPlay_Description_ab14678" />
+    <LinearLayout orientation="horizontal" id="@id/post_play_title_bar" visibility="gone" layout_width="fill_parent" layout_height="wrap_content">
+        <o.ImageSwitcher layout_gravity="start|center" id="@id/post_play_episode_badge" style="@style/SecondaryText.RedBadge" />
+        <o.ImageSwitcher textSize="14.0sp" ellipsize="end" layout_gravity="start|center" id="@id/post_play_title" layout_width="wrap_content" layout_height="wrap_content" text="" maxLines="1" autoSizeTextType="uniform" autoSizeMinTextSize="10.0sp" autoSizeMaxTextSize="14.0sp" style="@style/PostPlayTitle" />
+    </LinearLayout>
+    <o.ImageSwitcher textSize="@dimen/text_micro" ellipsize="end" layout_gravity="start|center" id="@id/post_play_synopsis" visibility="gone" layout_width="fill_parent" layout_height="wrap_content" maxWidth="@dimen/postplay_episodes_metadata_width" text="" maxLines="2" autoSizeTextType="uniform" autoSizeMinTextSize="10.0sp" autoSizeMaxTextSize="@dimen/text_micro" style="@style/PostPlaySynopsis" />
+    <LinearLayout orientation="horizontal" id="@id/post_play_buttons_container" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="2.0dip" minHeight="36.0dip" />
+</o.Tz>

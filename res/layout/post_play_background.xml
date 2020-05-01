@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.Uf gravity="center" id="@id/post_play_background_wrapper" layout_width="fill_parent" layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout gravity="center" id="@id/container" layout_width="fill_parent" layout_height="fill_parent" baselineAligned="false" layout_alignParentTop="true">
+        <o.RemoteViewsListAdapter id="@id/postplay_bgd" layout_width="fill_parent" layout_height="fill_parent" antialias="true" dither="true" scaleType="centerCrop" adjustViewBounds="true" />
+    </LinearLayout>
+    <View background="@drawable/post_play_background_overlay_vertical" layout_width="fill_parent" layout_height="fill_parent" layout_marginTop="@dimen/postplay_items_background_height" />
+    <View background="@drawable/post_play_background_overlay_horizontal" layout_width="fill_parent" layout_height="fill_parent" />
+    <include layout_gravity="center|left|top" id="@id/post_play_back_button" visibility="visible" layout_width="@dimen/player_top_bar_button_width" layout_height="@dimen/player_top_bar_height" layout_marginTop="18.0dip" layout_marginStart="20.0dip" layout="@layout/player_back_button" />
+</o.Uf>

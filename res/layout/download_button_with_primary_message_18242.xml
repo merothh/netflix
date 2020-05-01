@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout gravity="center_horizontal" orientation="vertical" padding="@dimen/previews_padding" layout_width="wrap_content" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.netflix.android.widgetry.widget.tabs.BadgeView id="@id/download_button_badge" layout_width="24.0dip" layout_height="24.0dip" layout_marginTop="@dimen/narrow_content_padding" layout_marginBottom="@dimen/previews_drawable_padding" scaleType="fitXY" />
+    <o.ImageSwitcher textSize="@dimen/previews_action_button" textColor="?android:textColorSecondary" id="@id/download_button_message" layout_width="wrap_content" layout_height="wrap_content" text="@string/button_message_download" maxLines="1" style="@style/PrimaryText" />
+</LinearLayout>

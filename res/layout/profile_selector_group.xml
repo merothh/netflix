@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" background="?profileSwitchBackgroundColor" layout_width="fill_parent" layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <o.MenuPopupWindow layout_gravity="center_horizontal" id="@id/profile_selector" layout_width="fill_parent" layout_height="wrap_content" ps_max_profiles="5" ps_max_width="@dimen/tablet_more_tab_max_width" />
+    <o.HorizontalScrollView textAppearance="@style/SecondaryText.Micro" layout_gravity="center_horizontal" id="@id/manage_profiles" layout_width="wrap_content" layout_height="wrap_content" layout_marginTop="4.0dip" text="@string/manage_profiles" drawablePadding="6.0dip" textAllCaps="false" drawableStart="@drawable/APKTOOL_DUMMY_34b" paddingStart="20.0dip" paddingEnd="30.0dip" nb_cornerRadius="0.0dip" nb_iconColor="?android:textColorSecondary" nb_strokeColor="@color/grey15" nb_strokeWidth="0.0dip" nb_textColor="?android:textColorSecondary" style="@style/NetflixButton.NoOutline.Transparent" />
+</LinearLayout>

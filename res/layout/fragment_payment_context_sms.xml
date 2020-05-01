@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView background="@color/signup_background_light" layout_width="fill_parent" layout_height="fill_parent" layout_marginTop="?actionBarSize" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout layout_gravity="center_horizontal" orientation="vertical" paddingTop="@dimen/signup_payment_option_padding_top" paddingBottom="@dimen/signup_payment_option_padding_bottom" layout_width="fill_parent" layout_height="wrap_content" maxWidth="@dimen/payment_context_max_width" paddingStart="@dimen/signup_context_padding_horizontal" paddingEnd="@dimen/signup_context_padding_horizontal">
+        <com.netflix.mediaclient.acquisition.view.SignupBannerView id="@id/warningView" visibility="visible" layout_width="fill_parent" layout_height="wrap_content" layout_marginBottom="@dimen/signup_banner_spacing" layout_goneMarginTop="@dimen/signup_banner_gone_margin_top" style="@style/SignupWarningContainer" />
+        <com.netflix.mediaclient.acquisition.view.SignupBannerView id="@id/userMessage" layout_width="fill_parent" layout_height="wrap_content" style="@style/SignupInfoContainer" />
+        <ImageView id="@id/contextIcon" layout_width="wrap_content" layout_height="@dimen/signup_context_icon_height" layout_marginTop="@dimen/payment_context_icon_margin_top" src="@drawable/payment_lock" style="@style/SignupContextIcon" />
+        <com.netflix.mediaclient.acquisition.view.SignupHeadingView id="@id/signupHeading" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/signup_context_content_margin_top" maxWidth="@dimen/signup_context_signupheading_max_width" />
+        <LinearLayout orientation="vertical" id="@id/paymentOption" background="@drawable/signup_mop_background" padding="@dimen/signup_sms_dcb_option_padding" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="24.0dip" minHeight="@dimen/payment_option_min_height">
+            <o.GridView id="@id/partnerLogo" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="10.0dip" layout_marginBottom="10.0dip" minHeight="@dimen/signup_sms_logo_height" />
+            <com.netflix.mediaclient.acquisition.view.NetflixSignupButton id="@id/ctaButton" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="8.0dip" text="@string/button_continue" />
+        </LinearLayout>
+        <o.ImageSwitcher textSize="@dimen/signup_sms_secondary_link_text_size" id="@id/seeOtherMops" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="20.0dip" text="@string/sms_see_other_mops" textAlignment="center" style="@style/SignupAnchorLinkText" />
+    </LinearLayout>
+</ScrollView>

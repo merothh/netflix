@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater layout_width="fill_parent" layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.GridView layout_gravity="center" id="@id/grid_boxart_left" focusable="true" layout_width="wrap_content" layout_height="wrap_content" scaleType="fitCenter" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toEndOf="@id/grid_boxart_guideline" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" />
+    <o.MotionEvent orientation="vertical" id="@id/grid_boxart_guideline" layout_width="wrap_content" layout_height="wrap_content" layout_constraintGuide_percent="0.5" />
+    <o.GridView layout_gravity="center" id="@id/grid_boxart_right" focusable="true" layout_width="wrap_content" layout_height="wrap_content" scaleType="fitCenter" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="@id/grid_boxart_guideline" layout_constraintTop_toTopOf="parent" />
+</o.MenuInflater>

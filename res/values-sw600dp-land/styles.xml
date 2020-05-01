@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="WelcomePriceTabLayoutOrientation">
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="WelcomeTabContentImageView.Devices" parent="@style/WelcomeTabContentImageView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+</resources>

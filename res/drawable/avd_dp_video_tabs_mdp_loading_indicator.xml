@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector drawable="@drawable/$avd_dp_video_tabs_mdp_loading_indicator__0" xmlns:aapt="http://schemas.android.com/aapt"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <target name="sim_1" animation="@drawable/$avd_dp_video_tabs_mdp_loading_indicator__1" />
+    <target name="sim_2" animation="@drawable/$avd_dp_video_tabs_mdp_loading_indicator__2" />
+    <target name="sim_3" animation="@drawable/$avd_dp_video_tabs_mdp_loading_indicator__3" />
+    <target name="tab_name" animation="@drawable/$avd_dp_video_tabs_mdp_loading_indicator__4" />
+</animated-vector>

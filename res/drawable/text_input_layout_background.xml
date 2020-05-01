@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid color="@android:color/white" />
+    <corners radius="@dimen/signup_input_border_radius" />
+    <stroke width="@dimen/signup_input_border_width" color="@color/signup_input_border" />
+</shape>

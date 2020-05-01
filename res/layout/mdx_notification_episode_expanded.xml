@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="horizontal" id="@id/mdx_controller_bg" layout_width="fill_parent" layout_height="160.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView id="@id/mdx_controller_boxart" layout_width="112.0dip" layout_height="160.0dip" src="@drawable/APKTOOL_DUMMY_39d" layout_weight="0.0" />
+    <RelativeLayout layout_gravity="start|center|top" orientation="vertical" layout_width="wrap_content" layout_height="160.0dip" layout_weight="1.0">
+        <LinearLayout orientation="horizontal" id="@id/mdx_controller_text" paddingTop="14.0dip" layout_width="fill_parent" layout_height="wrap_content" layout_alignParentTop="true" paddingStart="20.0dip" paddingEnd="20.0dip">
+            <TextView layout_gravity="start|center" id="@id/mdx_controller_header_title" focusable="true" layout_width="fill_parent" layout_height="wrap_content" text="@string/now_playing" singleLine="true" paddingStart="10.0dip" style="@style/MdxNotificationLabel" />
+        </LinearLayout>
+        <TextView ellipsize="end" layout_gravity="start" id="@id/mdx_controller_title" paddingTop="10.0dip" focusable="true" layout_width="fill_parent" layout_height="wrap_content" scrollHorizontally="false" singleLine="true" layout_below="@id/mdx_controller_text" paddingStart="20.0dip" paddingEnd="20.0dip" style="@style/MdxNotificationLabelTitle" />
+        <TextView ellipsize="end" layout_gravity="start" id="@id/mdx_controller_subtitle" paddingTop="4.0dip" layout_width="fill_parent" layout_height="wrap_content" maxLines="2" scrollHorizontally="false" layout_below="@id/mdx_controller_title" paddingStart="20.0dip" paddingEnd="20.0dip" style="@style/MdxNotificationLabelSubTitle" />
+        <LinearLayout orientation="horizontal" id="@id/mdx_controller_buttonWraper" layout_width="fill_parent" layout_height="wrap_content" layout_alignParentBottom="true">
+            <ImageButton layout_gravity="center_vertical" id="@id/mdx_controller_skip_back" background="@null" layout_width="28.0dip" layout_height="28.0dip" layout_marginTop="5.0dip" layout_marginBottom="5.0dip" src="@drawable/APKTOOL_DUMMY_3e4" layout_weight="1.0" contentDescription="@string/accesibility_btnSkipBack" />
+            <ImageButton layout_gravity="center_vertical" id="@id/mdx_controller_play_pause" background="@null" layout_width="28.0dip" layout_height="28.0dip" layout_marginTop="5.0dip" layout_marginBottom="5.0dip" src="@drawable/APKTOOL_DUMMY_3e6" layout_weight="1.0" contentDescription="@string/accesibility_btnPlayPause" />
+            <ImageButton layout_gravity="center_vertical" id="@id/mdx_controller_stop" background="@null" layout_width="28.0dip" layout_height="28.0dip" layout_marginTop="5.0dip" layout_marginBottom="5.0dip" src="@drawable/APKTOOL_DUMMY_3ea" layout_weight="1.0" contentDescription="@string/accesibility_btnStop" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

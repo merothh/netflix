@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout id="@id/search_results_viewgroup" transitionGroup="true" style="@style/match"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout id="@id/search_prequery_container" visibility="gone" style="@style/match" />
+    <include layout_width="fill_parent" layout_height="fill_parent" layout_margin="@dimen/search_instructions_container_margin" layout="@layout/simple_instructions_container" />
+    <com.airbnb.epoxy.EpoxyRecyclerView id="@id/search_results_epoxy_rv" style="@style/match" />
+    <include layout="@layout/loading_and_error_inset" />
+</FrameLayout>

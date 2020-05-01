@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.ImageSwitcher gravity="center_horizontal" id="@id/rowHeading" layout_width="wrap_content" layout_height="wrap_content" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toEndOf="parent" layout_constraintHorizontal_bias="0.5" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" layout_constraintVertical_bias="0.0" style="@style/PlanSelection.PlanPriceRowHeading" />
+    <LinearLayout gravity="center_vertical" orientation="horizontal" id="@id/rowLayout" layout_width="0.0dip" layout_height="wrap_content" layout_marginTop="@dimen/signup_plan_selection_values_margin" layout_marginBottom="@dimen/signup_plan_selection_values_margin" layout_constraintBottom_toTopOf="@id/bottomDivider" layout_constraintLeft_toLeftOf="parent" layout_constraintRight_toRightOf="parent" layout_constraintTop_toBottomOf="@id/rowHeading">
+        <FrameLayout id="@id/mobileLayout" visibility="gone" layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0" layout_marginEnd="@dimen/signup_plan_selection_plan_half_min_spacing">
+            <o.ImageSwitcher layout_gravity="center" id="@id/planMobile" layout_width="wrap_content" layout_height="wrap_content" style="@style/PlanSelection.PlanPriceRowText" />
+        </FrameLayout>
+        <View id="@id/divider" background="@color/signup_divider_light" visibility="gone" layout_width="@dimen/signup_plan_selection_row_divider_width" layout_height="@dimen/signup_plan_selection_row_height" />
+        <FrameLayout layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0" layout_marginEnd="@dimen/signup_plan_selection_plan_half_min_spacing">
+            <o.ImageSwitcher layout_gravity="center" id="@id/plan1S" layout_width="wrap_content" layout_height="wrap_content" style="@style/PlanSelection.PlanPriceRowText" />
+        </FrameLayout>
+        <View id="@id/divider1" background="@color/signup_divider_light" layout_width="@dimen/signup_plan_selection_row_divider_width" layout_height="@dimen/signup_plan_selection_row_height" />
+        <FrameLayout layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0">
+            <o.ImageSwitcher layout_gravity="center" id="@id/plan2S" layout_width="wrap_content" layout_height="wrap_content" style="@style/PlanSelection.PlanPriceRowText" />
+        </FrameLayout>
+        <View id="@id/divider2" background="@color/signup_divider_light" layout_width="@dimen/signup_plan_selection_row_divider_width" layout_height="@dimen/signup_plan_selection_row_height" />
+        <FrameLayout layout_width="0.0dip" layout_height="wrap_content" layout_weight="1.0" layout_marginStart="@dimen/signup_plan_selection_plan_half_min_spacing">
+            <o.ImageSwitcher layout_gravity="center" id="@id/plan4S" layout_width="wrap_content" layout_height="wrap_content" style="@style/PlanSelection.PlanPriceRowText" />
+        </FrameLayout>
+    </LinearLayout>
+    <View id="@id/bottomDivider" background="@color/signup_text_tertiary" visibility="gone" layout_width="0.0dip" layout_height="@dimen/signup_plan_selection_row_divider_height" layout_marginBottom="@dimen/signup_plan_selection_values_margin" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toEndOf="parent" layout_constraintStart_toStartOf="parent" />
+</merge>

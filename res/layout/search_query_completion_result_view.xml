@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.MenuInflater orientation="horizontal" layout_width="fill_parent" layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.GridView layout_gravity="start|center" id="@id/search_icon" layout_width="wrap_content" layout_height="fill_parent" layout_margin="@dimen/search_view_layout_margin" src="@drawable/ic_search_gray" layout_constraintBottom_toBottomOf="parent" layout_constraintStart_toStartOf="parent" layout_constraintTop_toTopOf="parent" />
+    <o.ImageSwitcher textSize="14.0sp" textColor="?searchQueryCompletionTextColor" ellipsize="end" gravity="start" id="@id/query_complete_suggestion_text" paddingTop="@dimen/content_padding" layout_width="0.0dip" layout_height="32.0dip" maxLines="1" layout_marginStart="8.0dip" layout_marginEnd="8.0dip" layout_constraintEnd_toStartOf="@id/tap_to_complete_query" layout_constraintStart_toEndOf="@id/search_icon" layout_constraintTop_toTopOf="parent" />
+    <o.GridView layout_gravity="end|center" id="@id/tap_to_complete_query" layout_width="wrap_content" layout_height="fill_parent" layout_margin="@dimen/search_view_layout_margin" src="@drawable/ic_arrow_upward" layout_alignParentEnd="true" layout_constraintBottom_toBottomOf="parent" layout_constraintEnd_toEndOf="parent" layout_constraintTop_toTopOf="parent" />
+</o.MenuInflater>

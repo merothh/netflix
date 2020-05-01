@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="brightness_bar_gesture_region_height">180.0dip</dimen>
+    <dimen name="brightness_bar_height">100.0dip</dimen>
+    <dimen name="brightness_gesture_region_width">75.0dip</dimen>
+    <dimen name="contact_us_button_margin">12.0dip</dimen>
+    <dimen name="contact_us_button_padding">5.0dip</dimen>
+    <dimen name="contact_us_button_spacing">12.0dip</dimen>
+    <dimen name="contact_us_button_text_size">16.0sp</dimen>
+    <dimen name="contact_us_dialer_number_desc_size">12.0sp</dimen>
+    <dimen name="contact_us_dialer_number_size">36.0sp</dimen>
+    <dimen name="contact_us_dialer_pad_fab_margin_bottom">20.0dip</dimen>
+    <dimen name="contact_us_dialer_pad_margin_bottom">10.0dip</dimen>
+    <dimen name="contact_us_dialer_pad_margin_top">10.0dip</dimen>
+    <dimen name="contact_us_landing_page_title_margin_top">10.0dip</dimen>
+    <dimen name="contact_us_title_size">20.0sp</dimen>
+    <dimen name="login_field_width">230.0dip</dimen>
+    <dimen name="player_secondary_control_drawable_padding_16292">4.0dip</dimen>
+    <dimen name="player_secondary_control_text_size_16292">10.0sp</dimen>
+    <dimen name="previews_action_button">10.0sp</dimen>
+    <dimen name="previews_padding">4.0dip</dimen>
+    <dimen name="previews_play_button">13.0sp</dimen>
+    <dimen name="toolbar_subtitle_text_size">14.0dip</dimen>
+    <dimen name="uma_themed_banner_body_text">16.0sp</dimen>
+    <dimen name="uma_themed_banner_cta_min_width">120.0dip</dimen>
+    <dimen name="uma_themed_dialog_body_text">18.0sp</dimen>
+    <dimen name="uma_themed_dialog_icon">84.0dip</dimen>
+    <dimen name="uma_themed_dialog_icon_title_margin">18.0dip</dimen>
+    <dimen name="uma_themed_dialog_title_text">32.0sp</dimen>
+    <dimen name="uma_themed_dialog_top_margin">12.0dip</dimen>
+</resources>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.NN textColor="@color/black" gravity="center" layout_width="fill_parent" layout_height="wrap_content" layout_marginTop="@dimen/annual_offer_margin_top" style="@style/PrimaryBoldFontText.XLarge"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout padding="6.0dip" layout_width="fill_parent" layout_height="?android:listPreferredItemHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView id="@id/diagnosis_row_icon" layout_alignParentTop="true" layout_marginStart="@dimen/double_padding" layout_marginEnd="@dimen/double_padding" style="@style/wrap" />
+    <o.ImageSwitcher id="@id/diagnosis_firstLine" layout_alignParentTop="true" layout_toEndOf="@id/diagnosis_row_icon" layout_alignParentEnd="true" style="@style/PrimaryText.Medium" />
+    <o.ImageSwitcher id="@id/diagnosis_secondLine" layout_below="@id/diagnosis_firstLine" layout_alignParentBottom="true" layout_toEndOf="@id/diagnosis_row_icon" layout_alignParentEnd="true" style="@style/PrimaryText.Small" />
+</RelativeLayout>

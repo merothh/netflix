@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout orientation="vertical" background="@drawable/selectable_item_background" layout_width="fill_parent" layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <o.DatePickerController layout_gravity="center_horizontal" orientation="horizontal" layout_width="fill_parent" layout_height="@dimen/old_sliding_menu_row_height" paddingStart="@dimen/double_padding" paddingEnd="@dimen/double_padding" bll_maxWidth="@dimen/tablet_more_tab_max_width">
+        <ImageView layout_gravity="center_vertical" id="@id/row_icon" background="@null" layout_width="24.0dip" layout_height="24.0dip" tint="?android:textColorSecondary" />
+        <o.ImageSwitcher textSize="@dimen/text_small_medium" textColor="?android:textColorSecondary" gravity="center_vertical" layout_gravity="center_vertical" id="@id/row_text" layout_width="fill_parent" layout_height="fill_parent" minHeight="@dimen/old_sliding_menu_row_height_min" maxLines="1" layout_marginStart="@dimen/medium_large_padding" style="@style/PrimaryText.Small" />
+    </o.DatePickerController>
+    <View id="@id/row_separator" background="?slidingMenuSeparatorColor" visibility="gone" layout_width="fill_parent" layout_height="?slidingMenuSeparatorHeight" />
+</LinearLayout>

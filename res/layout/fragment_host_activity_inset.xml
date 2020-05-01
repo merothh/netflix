@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout id="@id/toolbar_host_view_group" layout_width="fill_parent" layout_height="fill_parent" style="@style/match"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout id="@id/sliding_panel" style="@style/SlidingUpPanel">
+        <LinearLayout id="@id/fragment_host_container" layout_width="fill_parent" layout_height="fill_parent" baselineAligned="false">
+            <FrameLayout id="@id/primary_fragment" style="@style/match" />
+            <FrameLayout id="@id/secondary_fragment" style="@style/match" />
+        </LinearLayout>
+        <include layout="@layout/cast_player_inset" />
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+    <ViewStub layout_gravity="end|bottom|center" id="@id/cast_icon_fab_stub" layout="@layout/cast_icon_fab" layout_width="wrap_content" layout_height="wrap_content" layout_marginBottom="65.0dip" layout_marginEnd="16.0dip" />
+    <o.DialerFilter id="@id/dialog_container" layout_width="fill_parent" layout_height="fill_parent" elevation="@dimen/dialog_container_elevation" />
+</FrameLayout>

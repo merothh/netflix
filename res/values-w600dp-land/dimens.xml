@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="multi_month_view_max_width">600.0dip</dimen>
+    <dimen name="verify_age_side_margin">60.0dip</dimen>
+</resources>
