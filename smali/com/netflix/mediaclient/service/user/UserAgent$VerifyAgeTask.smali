@@ -1,0 +1,64 @@
+.class Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask;
+.super Lcom/netflix/mediaclient/service/user/UserAgent$FetchTask;
+.source "UserAgent.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/netflix/mediaclient/service/user/UserAgent$FetchTask",
+        "<",
+        "Ljava/lang/Void;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Lcom/netflix/mediaclient/service/user/UserAgent;
+
+.field private final webClientCallback:Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;
+
+
+# direct methods
+.method public constructor <init>(Lcom/netflix/mediaclient/service/user/UserAgent;Lcom/netflix/mediaclient/service/user/UserAgent$UserAgentCallback;)V
+    .locals 1
+
+    .prologue
+    .line 1821
+    iput-object p1, p0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask;->this$0:Lcom/netflix/mediaclient/service/user/UserAgent;
+
+    .line 1822
+    invoke-direct {p0, p2}, Lcom/netflix/mediaclient/service/user/UserAgent$FetchTask;-><init>(Lcom/netflix/mediaclient/service/user/UserAgent$UserAgentCallback;)V
+
+    .line 1835
+    new-instance v0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask$1;
+
+    invoke-direct {v0, p0}, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask$1;-><init>(Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask;)V
+
+    iput-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask;->webClientCallback:Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;
+
+    .line 1823
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 2
+
+    .prologue
+    .line 1832
+    iget-object v0, p0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask;->this$0:Lcom/netflix/mediaclient/service/user/UserAgent;
+
+    invoke-static {v0}, Lcom/netflix/mediaclient/service/user/UserAgent;->access$1200(Lcom/netflix/mediaclient/service/user/UserAgent;)Lcom/netflix/mediaclient/service/user/UserWebClient;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/netflix/mediaclient/service/user/UserAgent$VerifyAgeTask;->webClientCallback:Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;
+
+    invoke-interface {v0, v1}, Lcom/netflix/mediaclient/service/user/UserWebClient;->fetchUserData(Lcom/netflix/mediaclient/service/user/UserAgentWebCallback;)V
+
+    .line 1833
+    return-void
+.end method

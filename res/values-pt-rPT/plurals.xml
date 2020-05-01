@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="label_directors_plural">
+        <item quantity="other">Realizadores:</item>
+        <item quantity="one">Realizador:</item>
+    </plurals>
+    <plurals name="label_notification_n_downloaded">
+        <item quantity="other">%1$d transferências concluídas</item>
+        <item quantity="one">%1$d transferência concluída</item>
+    </plurals>
+    <plurals name="label_notification_n_other_titles">
+        <item quantity="other">%2$s e %1$d outros títulos</item>
+        <item quantity="one">%2$s e %1$d outro título</item>
+    </plurals>
+    <plurals name="label_offline_episodes">
+        <item quantity="other">%1$d episódios</item>
+        <item quantity="one">%1$d episódio</item>
+    </plurals>
+    <plurals name="label_offline_episodes_capital">
+        <item quantity="other">%1$d Episódios</item>
+        <item quantity="one">%1$d Episódio</item>
+    </plurals>
+    <plurals name="label_offline_movies">
+        <item quantity="other">%1$d filmes</item>
+        <item quantity="one">%1$d filme</item>
+    </plurals>
+    <plurals name="offline_snackbar_download_complete_multiple">
+        <item quantity="other">&lt;b>%2$d transferências concluídas&lt;/b> &lt;br>%1$s</item>
+        <item quantity="one">&lt;b>%2$d transferência concluída&lt;/b> &lt;br>%1$s</item>
+    </plurals>
+    <plurals name="offline_snackbar_download_complete_multiple_no_subtitles">
+        <item quantity="other">&lt;b>%1$d transferências concluídas&lt;/b></item>
+        <item quantity="one">&lt;b>%1$d transferência concluída&lt;/b></item>
+    </plurals>
+    <plurals name="offline_snackbar_downloading_multiple">
+        <item quantity="other">&lt;b>A transferir %2$d títulos&lt;/b> &lt;br>%1$s</item>
+        <item quantity="one">&lt;b>A transferir %2$d título&lt;/b> &lt;br>%1$s</item>
+    </plurals>
+    <plurals name="offline_snackbar_failed_multiple">
+        <item quantity="other">&lt;b>%1$d transferências falharam&lt;/b></item>
+        <item quantity="one">&lt;b>%1$d transferência falhou&lt;/b></item>
+    </plurals>
+    <plurals name="offline_snackbar_some_failed">
+        <item quantity="other">%2$s %1$d transferências falharam</item>
+        <item quantity="one">%2$s %1$d transferência falhou</item>
+    </plurals>
+    <plurals name="offline_state_download_removed">
+        <item quantity="other">%1$d itens eliminados (%2$s%3$s)</item>
+        <item quantity="one">%1$d item eliminado (%2$s%3$s)</item>
+    </plurals>
+    <plurals name="offline_state_expiring_days">
+        <item quantity="other">Expira dentro de %1$d dias</item>
+        <item quantity="one">Expira dentro de %1$d dia</item>
+    </plurals>
+    <plurals name="offline_state_expiring_hours">
+        <item quantity="other">Expira dentro de %1$d horas</item>
+        <item quantity="one">Expira dentro de %1$d hora</item>
+    </plurals>
+    <plurals name="offline_state_expiring_minutes">
+        <item quantity="other">Expira dentro de %1$d minutos</item>
+        <item quantity="one">Expira dentro de %1$d minuto</item>
+    </plurals>
+</resources>

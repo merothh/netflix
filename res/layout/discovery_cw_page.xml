@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge style="@style/match"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/top_playable_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/content_padding" android:layout_marginBottom="@dimen/coppola_pivot_padding" android:layout_weight="1.0" android:layout_marginStart="@dimen/double_padding" android:layout_marginEnd="@dimen/double_padding" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="90.0dip" android:layout_marginTop="@dimen/coppola_pivot_padding" android:layout_marginBottom="@dimen/content_padding" android:layout_marginStart="@dimen/double_padding" android:layout_marginEnd="@dimen/double_padding">
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginEnd="@dimen/coppola_pivot_padding">
+            <com.netflix.mediaclient.android.widget.AdvancedImageView android:id="@id/pivot1_boxart" android:scaleType="centerCrop" android:adjustViewBounds="true" style="@style/match" />
+            <View android:layout_gravity="bottom" android:background="@drawable/shadow_trans_to_black" android:layout_width="fill_parent" android:layout_height="@dimen/coppola_pivot_shadow_height" />
+            <TextView android:textColor="@color/primary_text_color" android:layout_gravity="bottom|center|left" android:id="@id/pivot1_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/content_padding" android:maxLines="2" style="@style/PrimaryText.SmallMedium" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginStart="@dimen/coppola_pivot_padding">
+            <com.netflix.mediaclient.android.widget.AdvancedImageView android:id="@id/pivot2_boxart" android:scaleType="centerCrop" android:adjustViewBounds="true" style="@style/match" />
+            <View android:layout_gravity="bottom" android:background="@drawable/shadow_trans_to_black" android:layout_width="fill_parent" android:layout_height="@dimen/coppola_pivot_shadow_height" />
+            <TextView android:textColor="@color/primary_text_color" android:layout_gravity="bottom|center|left" android:id="@id/pivot2_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/content_padding" android:maxLines="2" style="@style/PrimaryText.SmallMedium" />
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/extended_collection_link" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/double_padding" android:layout_marginBottom="@dimen/coppola_all_cw_bottom_padding">
+        <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/bottom_link" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/coppola_discovery_cw_link" android:fontFamily="sans-serif-light" style="@style/PrimaryText.SmallMedium" />
+        <com.netflix.mediaclient.android.widget.IconFontTextView android:textSize="@dimen/text_medium" android:gravity="center" android:layout_gravity="center" android:layout_marginTop="2.0dip" android:text="@string/icon_right_arrow_w_ring" android:layout_marginStart="@dimen/content_padding" style="@style/IconFontBasic" />
+    </LinearLayout>
+</merge>

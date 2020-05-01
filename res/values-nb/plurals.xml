@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="label_directors_plural">
+        <item quantity="other">Regissører:</item>
+        <item quantity="one">Regissør:</item>
+    </plurals>
+    <plurals name="label_notification_n_downloaded">
+        <item quantity="other">%1$d nedlastinger fullført</item>
+        <item quantity="one">%1$d nedlasting fullført</item>
+    </plurals>
+    <plurals name="label_notification_n_other_titles">
+        <item quantity="other">%2$s og %1$d andre titler</item>
+        <item quantity="one">%2$s og %1$d annen tittel</item>
+    </plurals>
+    <plurals name="label_offline_episodes">
+        <item quantity="other">%1$d episoder</item>
+        <item quantity="one">%1$d episode</item>
+    </plurals>
+    <plurals name="label_offline_episodes_capital">
+        <item quantity="other">%1$d episoder</item>
+        <item quantity="one">%1$d episode</item>
+    </plurals>
+    <plurals name="label_offline_movies">
+        <item quantity="other">%1$d filmer</item>
+        <item quantity="one">%1$d film</item>
+    </plurals>
+    <plurals name="offline_snackbar_download_complete_multiple">
+        <item quantity="other">&lt;b>%2$d Nedlastinger fullført&lt;/b> &lt;br>%1$s</item>
+        <item quantity="one">&lt;b>%2$d Nedlasting fullført&lt;/b> &lt;br>%1$s</item>
+    </plurals>
+    <plurals name="offline_snackbar_download_complete_multiple_no_subtitles">
+        <item quantity="other">&lt;b>%1$d Nedlastinger fullført&lt;/b></item>
+        <item quantity="one">&lt;b>%1$d Nedlasting fullført&lt;/b></item>
+    </plurals>
+    <plurals name="offline_snackbar_downloading_multiple">
+        <item quantity="other">&lt;b>Laster ned %2$d titler&lt;/b> &lt;br>%1$s</item>
+        <item quantity="one">&lt;b>Laster ned %2$d tittel&lt;/b> &lt;br>%1$s</item>
+    </plurals>
+    <plurals name="offline_snackbar_failed_multiple">
+        <item quantity="other">&lt;b>%1$d Nedlastinger mislyktes&lt;/b></item>
+        <item quantity="one">&lt;b>%1$d Nedlasting mislyktes&lt;/b></item>
+    </plurals>
+    <plurals name="offline_snackbar_some_failed">
+        <item quantity="other">%2$s %1$d Nedlastinger mislyktes</item>
+        <item quantity="one">%2$s %1$d Nedlastning mislyktes</item>
+    </plurals>
+    <plurals name="offline_state_download_removed">
+        <item quantity="other">%1$d slettet (%2$s%3$s)</item>
+        <item quantity="one">%1$d slettet (%2$s%3$s)</item>
+    </plurals>
+    <plurals name="offline_state_expiring_days">
+        <item quantity="other">Utløper om %1$d dager</item>
+        <item quantity="one">Utløper om %1$d dag</item>
+    </plurals>
+    <plurals name="offline_state_expiring_hours">
+        <item quantity="other">Utløper om %1$d timer</item>
+        <item quantity="one">Utløper om %1$d time</item>
+    </plurals>
+    <plurals name="offline_state_expiring_minutes">
+        <item quantity="other">Utløper om %1$d minutter</item>
+        <item quantity="one">Utløper om %1$d minutt</item>
+    </plurals>
+</resources>

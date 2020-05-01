@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout style="@style/match"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/video_background_decor" android:background="@color/black" style="@style/match" />
+    <com.netflix.mediaclient.android.widget.AdvancedImageView android:layout_gravity="center" android:id="@id/video_img_decor" android:background="@color/black" android:focusable="true" android:scaleType="centerCrop" android:adjustViewBounds="true" style="@style/match" />
+    <View android:id="@id/gradient_decor" android:background="@drawable/player_activity_panels_background" android:rotation="180.0" style="@style/match" />
+    <FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:id="@id/loading_progress_decor" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/double_padding" android:soundEffectsEnabled="false" style="?android:attr/progressBarStyle" />
+        <TextView android:textSize="@dimen/text_small_medium" android:textColor="@color/white" android:layout_gravity="bottom|center|left" android:id="@id/loading_textview_decor" android:layout_marginLeft="@dimen/content_padding" android:layout_marginTop="@dimen/coppola_loading_textview_top_margin" android:layout_marginRight="@dimen/content_padding" android:layout_marginBottom="@dimen/coppola_loading_textview_bottom_margin" android:text="Loading..." android:singleLine="true" style="@style/wrap" />
+    </FrameLayout>
+    <ImageView android:layout_gravity="center" android:id="@id/pause_play_launch_button_decor" android:padding="@dimen/coppola_pause_play_touch_zone_paddings" android:layout_width="@dimen/coppola_pause_play_touch_zone" android:layout_height="@dimen/coppola_pause_play_touch_zone" android:src="@drawable/ic_play" android:scaleType="fitCenter" style="@style/IconFontBasic" />
+    <ImageView android:layout_gravity="center" android:id="@id/pause_play_launch_old_button_decor" android:visibility="gone" android:layout_margin="@dimen/coppola_pause_play_touch_zone_paddings" android:src="@drawable/ic_play_60" style="@style/wrap" />
+    <View android:layout_gravity="bottom" android:id="@id/loading_coppola_progressbar" android:background="@drawable/coppola_loading_bar" android:layout_width="@dimen/max_phone_screen_in_dp" android:layout_height="2.0dip" />
+</FrameLayout>

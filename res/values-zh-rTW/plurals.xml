@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="label_directors_plural">
+        <item quantity="other">導演：</item>
+        <item quantity="one">導演：</item>
+    </plurals>
+    <plurals name="label_notification_n_downloaded">
+        <item quantity="other">已完成 %1$d 個下載内容</item>
+        <item quantity="one">已完成 %1$d 個下載内容</item>
+    </plurals>
+    <plurals name="label_notification_n_other_titles">
+        <item quantity="other">《%2$s》及 %1$d 部影片</item>
+        <item quantity="one">《%2$s》及 %1$d 部影片</item>
+    </plurals>
+    <plurals name="label_offline_episodes">
+        <item quantity="other">共 %1$d 集</item>
+        <item quantity="one">共 %1$d 集</item>
+    </plurals>
+    <plurals name="label_offline_episodes_capital">
+        <item quantity="other">共 %1$d 集</item>
+        <item quantity="one">共 %1$d 集</item>
+    </plurals>
+    <plurals name="label_offline_movies">
+        <item quantity="other">共 %1$d 部電影</item>
+        <item quantity="one">共 %1$d 部電影</item>
+    </plurals>
+    <plurals name="offline_snackbar_download_complete_multiple">
+        <item quantity="other">&lt;b>已完成 %2$d 項下載&lt;/b> &lt;br>%1$s</item>
+        <item quantity="one">&lt;b>已完成%2$d 項下載&lt;/b> &lt;br>%1$s</item>
+    </plurals>
+    <plurals name="offline_snackbar_download_complete_multiple_no_subtitles">
+        <item quantity="other">&lt;b>已完成 %1$d 項下載&lt;/b></item>
+        <item quantity="one">&lt;b>已完成 %1$d 項下載&lt;/b></item>
+    </plurals>
+    <plurals name="offline_snackbar_downloading_multiple">
+        <item quantity="other">&lt;b>正在下載 %2$d 部影片&lt;/b> &lt;br>%1$s</item>
+        <item quantity="one">&lt;b>正在下載 %2$d 部影片&lt;/b> &lt;br>%1$s</item>
+    </plurals>
+    <plurals name="offline_snackbar_failed_multiple">
+        <item quantity="other">&lt;b>%1$d 項下載失敗&lt;/b></item>
+        <item quantity="one">&lt;b>%1$d 項下載失敗&lt;/b></item>
+    </plurals>
+    <plurals name="offline_snackbar_some_failed">
+        <item quantity="other">%2$s %1$d 項下載失敗</item>
+        <item quantity="one">%2$s %1$d 項下載失敗</item>
+    </plurals>
+    <plurals name="offline_state_download_removed">
+        <item quantity="other">已刪除 %1$d 個項目 (%2$s%3$s)</item>
+        <item quantity="one">已刪除 %1$d 個項目 (%2$s%3$s)</item>
+    </plurals>
+    <plurals name="offline_state_expiring_days">
+        <item quantity="other">%1$d 天後到期</item>
+        <item quantity="one">%1$d 天後到期</item>
+    </plurals>
+    <plurals name="offline_state_expiring_hours">
+        <item quantity="other">%1$d 小時後到期</item>
+        <item quantity="one">%1$d 小時後到期</item>
+    </plurals>
+    <plurals name="offline_state_expiring_minutes">
+        <item quantity="other">%1$d 分鐘後到期</item>
+        <item quantity="one">%1$d 分鐘後到期</item>
+    </plurals>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" style="@style/match"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/double_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/content_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <FrameLayout android:layout_gravity="start|center|top" style="@style/wrap">
+                <com.netflix.mediaclient.android.widget.AdvancedImageView android:id="@id/nsa_video_art_img" android:visibility="gone" android:layout_width="@dimen/nsa_list_boxart_width" android:layout_height="@dimen/nsa_list_boxart_height" android:layout_marginStart="@dimen/double_padding" android:layout_marginEnd="@dimen/content_padding" />
+                <ImageView android:layout_gravity="center" android:id="@id/nsa_play_button" android:visibility="gone" android:src="@drawable/ic_play_60" style="@style/wrap" />
+            </FrameLayout>
+            <com.netflix.mediaclient.android.widget.AdvancedImageView android:layout_gravity="start|center|top" android:id="@id/friend_avatar_img" android:layout_width="@dimen/profile_avatar_img_small_size" android:layout_height="@dimen/profile_avatar_img_small_size" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_marginStart="@dimen/double_padding" android:layout_marginEnd="@dimen/content_padding" />
+            <TextView android:ellipsize="end" android:gravity="start|center|top" android:layout_gravity="top" android:id="@id/timestamp_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/content_padding" android:layout_marginStart="@dimen/double_padding" style="@style/SecondaryText.Nano" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:ellipsize="end" android:gravity="start|center" android:layout_gravity="top" android:id="@id/top_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/content_padding" android:paddingEnd="@dimen/content_padding" style="@style/PrimaryText.Small" />
+            <TextView android:ellipsize="end" android:gravity="start|center" android:layout_gravity="top" android:id="@id/middle_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.2" android:paddingStart="@dimen/content_padding" android:paddingEnd="@dimen/content_padding" style="@style/SecondaryText.Small" />
+        </LinearLayout>
+        <FrameLayout android:layout_gravity="end|center|top" style="@style/wrap">
+            <com.netflix.mediaclient.android.widget.AdvancedImageView android:id="@id/video_art_img" android:layout_width="@dimen/social_notifications_list_boxart_width" android:layout_height="@dimen/social_notifications_list_boxart_height" android:layout_marginBottom="@dimen/content_padding" android:layout_marginStart="@dimen/content_padding" android:layout_marginEnd="@dimen/double_padding" />
+            <ImageView android:layout_gravity="center" android:id="@id/play_button" android:src="@drawable/ic_play_60" android:layout_marginEnd="@dimen/text_padding" style="@style/wrap" />
+        </FrameLayout>
+    </LinearLayout>
+    <TextView android:ellipsize="end" android:gravity="start|center" android:layout_gravity="top" android:id="@id/bottom_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/double_padding" android:layout_marginStart="@dimen/double_padding" android:layout_marginEnd="@dimen/double_padding" style="@style/PrimaryText.Small" />
+    <LinearLayout android:layout_gravity="start|center" android:orientation="horizontal" android:paddingBottom="@dimen/content_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/double_padding" android:paddingEnd="@dimen/double_padding">
+        <com.netflix.mediaclient.android.widget.NetflixTextButton android:textSize="@dimen/text_small" android:id="@id/left_button" android:focusable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/content_padding" android:text="@string/button_send_recommendation" android:layout_weight="1.0" android:contentDescription="@string/button_send_recommendation" android:layout_marginEnd="@dimen/content_padding" style="@style/NetflixButton.Outline" />
+        <com.netflix.mediaclient.android.widget.NetflixTextButton android:textSize="@dimen/text_small" android:id="@id/right_button" android:focusable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/content_padding" android:text="@string/label_my_list" android:layout_weight="1.0" android:contentDescription="@string/label_add_to_my_list" style="@style/NetflixButton.Outline" />
+    </LinearLayout>
+    <View style="@style/HorizontalDivider.Profile" />
+</LinearLayout>

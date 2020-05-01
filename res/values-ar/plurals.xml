@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="label_directors_plural">
+        <item quantity="other">المخرجون:</item>
+        <item quantity="one">المخرج:</item>
+    </plurals>
+    <plurals name="label_notification_n_downloaded">
+        <item quantity="other">%1$d اكتملت التنزيلات</item>
+        <item quantity="one">%1$d اكتمل التنزيل</item>
+    </plurals>
+    <plurals name="label_notification_n_other_titles">
+        <item quantity="other">%2$s و %1$d عناوين أخرى</item>
+        <item quantity="one">%2$s و %1$d عناوين أخرى</item>
+    </plurals>
+    <plurals name="label_offline_episodes">
+        <item quantity="other">%1$d حلقات</item>
+        <item quantity="one">%1$d حلقة</item>
+    </plurals>
+    <plurals name="label_offline_episodes_capital">
+        <item quantity="other">%1$d من الحلقات</item>
+        <item quantity="one">%1$d حلقة</item>
+    </plurals>
+    <plurals name="label_offline_movies">
+        <item quantity="other">%1$d أفلام</item>
+        <item quantity="one">%1$d فيلم</item>
+    </plurals>
+    <plurals name="offline_snackbar_download_complete_multiple">
+        <item quantity="other">&lt;b>%2$d من العناوين اكتمل تنزيلها&lt;/b> &lt;br>%1$s</item>
+        <item quantity="one">&lt;b>%2$d من العناوين اكتمل تنزيلها&lt;/b> &lt;br>%1$s</item>
+    </plurals>
+    <plurals name="offline_snackbar_download_complete_multiple_no_subtitles">
+        <item quantity="other">&lt;b>%1$d من العناوين اكتمل تنزيلها&lt;/b></item>
+        <item quantity="one">&lt;b>%1$d اكتمال تنزيل&lt;/b></item>
+    </plurals>
+    <plurals name="offline_snackbar_downloading_multiple">
+        <item quantity="other">&lt;b>جاري تنزيل %2$d من العناوين&lt;/b> &lt;br>%1$s</item>
+        <item quantity="one">&lt;b>جاري تنزيل %2$d من العناوين&lt;/b> &lt;br>%1$s</item>
+    </plurals>
+    <plurals name="offline_snackbar_failed_multiple">
+        <item quantity="other">&lt;b> %1$d من العناوين فشل تنزيلها&lt;/b></item>
+        <item quantity="one">&lt;b>%1$d من العناوين فشل تنزيلها&lt;/b></item>
+    </plurals>
+    <plurals name="offline_snackbar_some_failed">
+        <item quantity="other">%2$s %1$d من العناوين تعذر تنزيلها</item>
+        <item quantity="one">%2$s %1$d من العناوين فشل تنزيلها</item>
+    </plurals>
+    <plurals name="offline_state_download_removed">
+        <item quantity="other">تم حذف %1$d من العناصر (%2$s%3$s)</item>
+        <item quantity="one">تم حذف %1$d من العناصر (%2$s%3$s)</item>
+    </plurals>
+    <plurals name="offline_state_expiring_days">
+        <item quantity="other">تنتهي الصلاحية في خلال %1$d أيام</item>
+        <item quantity="one">تنتهي الصلاحية في خلال %1$d يوم</item>
+    </plurals>
+    <plurals name="offline_state_expiring_hours">
+        <item quantity="other">تنتهي الصلاحية في خلال %1$d ساعات</item>
+        <item quantity="one">تنتهي الصلاحية في خلال %1$d ساعة</item>
+    </plurals>
+    <plurals name="offline_state_expiring_minutes">
+        <item quantity="other">تنتهي الصلاحية في %1$d دقيقة</item>
+        <item quantity="one">تنتهي الصلاحية في %1$d دقيقة</item>
+    </plurals>
+</resources>

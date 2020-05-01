@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.netflix.mediaclient.android.widget.AdvancedImageView android:layout_gravity="center" android:id="@id/video_img" android:focusable="true" android:scaleType="centerCrop" android:adjustViewBounds="true" style="@style/match" />
+    <View android:id="@id/video_details_hero_shadow" android:background="@drawable/barker_hero_info_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignBottom="@id/video_img" />
+</merge>

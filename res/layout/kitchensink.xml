@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.netflix.mediaclient.android.widget.FlowLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textColor="#ffffffff" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:text="NetflixText.Ouline" />
+            <com.netflix.mediaclient.android.widget.NetflixTextButton android:enabled="false" android:layout_gravity="center" android:layout_margin="8.0dip" android:text="disabled" android:onClick="onClick" style="@style/NetflixButton.Outline" />
+            <com.netflix.mediaclient.android.widget.NetflixTextButton android:enabled="false" android:layout_gravity="center" android:layout_margin="8.0dip" android:text="disabled API19" android:onClick="onClick" app:nb_simulatePreL="true" style="@style/NetflixButton.Outline" />
+            <com.netflix.mediaclient.android.widget.NetflixTextButton android:layout_gravity="center" android:layout_margin="8.0dip" android:text="enabled API19" android:onClick="onClick" app:nb_simulatePreL="true" style="@style/NetflixButton.Outline" />
+            <com.netflix.mediaclient.android.widget.NetflixTextButton android:layout_gravity="center" android:layout_margin="8.0dip" android:text="enabled" android:drawableRight="@drawable/ic_chevron_right" android:onClick="onClick" style="@style/NetflixButton.Outline" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+            <TextView android:textColor="#ffffffff" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:text="NetflixText.Red" />
+            <com.netflix.mediaclient.android.widget.NetflixTextButton android:enabled="false" android:layout_gravity="center" android:layout_margin="8.0dip" android:text="disabled" android:onClick="onClick" style="@style/NetflixButton.Red" />
+            <com.netflix.mediaclient.android.widget.NetflixTextButton android:enabled="false" android:layout_gravity="center" android:layout_margin="8.0dip" android:text="disabled API19" android:onClick="onClick" app:nb_simulatePreL="true" style="@style/NetflixButton.Red" />
+            <com.netflix.mediaclient.android.widget.NetflixTextButton android:layout_gravity="center" android:layout_margin="8.0dip" android:text="enabled API19" android:onClick="onClick" app:nb_simulatePreL="true" style="@style/NetflixButton.Red" />
+            <com.netflix.mediaclient.android.widget.NetflixTextButton android:layout_gravity="center" android:layout_margin="8.0dip" android:text="enabled" android:onClick="onClick" android:drawableEnd="@drawable/ic_chevron_right" style="@style/NetflixButton.Red" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+            <TextView android:textColor="#ffffffff" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:text="NetflixButton.Grey" />
+            <com.netflix.mediaclient.android.widget.NetflixTextButton android:enabled="false" android:layout_gravity="center" android:layout_margin="8.0dip" android:text="disabled" android:onClick="onClick" style="@style/NetflixButton.Grey" />
+            <com.netflix.mediaclient.android.widget.NetflixTextButton android:enabled="false" android:layout_gravity="center" android:layout_margin="8.0dip" android:text="disabled API19" android:onClick="onClick" app:nb_simulatePreL="true" style="@style/NetflixButton.Grey" />
+            <com.netflix.mediaclient.android.widget.NetflixTextButton android:layout_gravity="center" android:layout_margin="8.0dip" android:text="enabled API19" android:onClick="onClick" app:nb_simulatePreL="true" style="@style/NetflixButton.Grey" />
+            <com.netflix.mediaclient.android.widget.NetflixTextButton android:layout_gravity="center" android:layout_margin="8.0dip" android:text="enabled" android:drawableRight="@drawable/ic_chevron_right" android:onClick="onClick" style="@style/NetflixButton.Grey" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+            <TextView android:textColor="#ffffffff" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:text="NetflixButton.Flat" />
+            <com.netflix.mediaclient.android.widget.NetflixTextButton android:enabled="false" android:layout_gravity="center" android:layout_margin="8.0dip" android:text="disabled" android:onClick="onClick" style="@style/NetflixButton.Flat" />
+            <com.netflix.mediaclient.android.widget.NetflixTextButton android:enabled="false" android:layout_gravity="center" android:layout_margin="8.0dip" android:text="disabled API19" android:onClick="onClick" app:nb_simulatePreL="true" style="@style/NetflixButton.Flat" />
+            <com.netflix.mediaclient.android.widget.NetflixTextButton android:layout_gravity="center" android:layout_margin="8.0dip" android:text="enabled API19" android:onClick="onClick" app:nb_simulatePreL="true" style="@style/NetflixButton.Flat" />
+            <com.netflix.mediaclient.android.widget.NetflixTextButton android:layout_gravity="center" android:layout_margin="8.0dip" android:text="enabled" android:onClick="onClick" android:drawableEnd="@drawable/ic_chevron_right" style="@style/NetflixButton.Flat" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+            <TextView android:textColor="#ff000000" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:text="NetflixButton.Flat.Light" />
+            <com.netflix.mediaclient.android.widget.NetflixTextButton android:enabled="false" android:layout_gravity="center" android:layout_margin="8.0dip" android:text="disabled" android:onClick="onClick" style="@style/NetflixButton.Flat.Light" />
+            <com.netflix.mediaclient.android.widget.NetflixTextButton android:enabled="false" android:layout_gravity="center" android:layout_margin="8.0dip" android:text="disabled API19" android:onClick="onClick" app:nb_simulatePreL="true" style="@style/NetflixButton.Flat.Light" />
+            <com.netflix.mediaclient.android.widget.NetflixTextButton android:layout_gravity="center" android:layout_margin="8.0dip" android:text="enabled API19" android:onClick="onClick" app:nb_simulatePreL="true" style="@style/NetflixButton.Flat.Light" />
+            <com.netflix.mediaclient.android.widget.NetflixTextButton android:layout_gravity="center" android:layout_margin="8.0dip" android:text="enabled" android:onClick="onClick" android:drawableEnd="@drawable/ic_chevron_right" style="@style/NetflixButton.Flat.Light" />
+        </LinearLayout>
+    </com.netflix.mediaclient.android.widget.FlowLayout>
+</ScrollView>

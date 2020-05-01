@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="label_directors_plural">
+        <item quantity="other">감독:</item>
+        <item quantity="one">감독:</item>
+    </plurals>
+    <plurals name="label_notification_n_downloaded">
+        <item quantity="other">동영상 %1$d편 저장 완료</item>
+        <item quantity="one">동영상 %1$d편 저장 완료</item>
+    </plurals>
+    <plurals name="label_notification_n_other_titles">
+        <item quantity="other">%2$s 및 다른 동영상 %1$d편</item>
+        <item quantity="one">%2$s 및 다른 동영상 %1$d편</item>
+    </plurals>
+    <plurals name="label_offline_episodes">
+        <item quantity="other">에피소드 %1$d개</item>
+        <item quantity="one">에피소드 %1$d개</item>
+    </plurals>
+    <plurals name="label_offline_episodes_capital">
+        <item quantity="other">에피소드 %1$d개</item>
+        <item quantity="one">에피소드 %1$d개</item>
+    </plurals>
+    <plurals name="label_offline_movies">
+        <item quantity="other">영화 %1$d편</item>
+        <item quantity="one">영화 %1$d편</item>
+    </plurals>
+    <plurals name="offline_snackbar_download_complete_multiple">
+        <item quantity="other">&lt;b>%2$d 저장 완료&lt;/b> &lt;br>%1$s</item>
+        <item quantity="one">&lt;b>%2$d 저장 완료&lt;/b> &lt;br>%1$s</item>
+    </plurals>
+    <plurals name="offline_snackbar_download_complete_multiple_no_subtitles">
+        <item quantity="other">&lt;b>%1$d 저장 완료&lt;/b></item>
+        <item quantity="one">&lt;b>%1$d 저장 완료&lt;/b></item>
+    </plurals>
+    <plurals name="offline_snackbar_downloading_multiple">
+        <item quantity="other">&lt;b>%2$d편 저장 중&lt;/b> &lt;br>%1$s</item>
+        <item quantity="one">&lt;b>%2$d편 저장 중&lt;/b> &lt;br>%1$s</item>
+    </plurals>
+    <plurals name="offline_snackbar_failed_multiple">
+        <item quantity="other">&lt;b>%1$d 저장 실패&lt;/b></item>
+        <item quantity="one">&lt;b>%1$d 저장 실패&lt;/b></item>
+    </plurals>
+    <plurals name="offline_snackbar_some_failed">
+        <item quantity="other">%2$s %1$d편 저장 실패</item>
+        <item quantity="one">%2$s %1$d편 저장 실패</item>
+    </plurals>
+    <plurals name="offline_state_download_removed">
+        <item quantity="other">%1$d편 삭제됨(%2$s%3$s)</item>
+        <item quantity="one">%1$d편 삭제됨(%2$s%3$s)</item>
+    </plurals>
+    <plurals name="offline_state_expiring_days">
+        <item quantity="other">%1$d일 내 만료</item>
+        <item quantity="one">%1$d일 내 만료</item>
+    </plurals>
+    <plurals name="offline_state_expiring_hours">
+        <item quantity="other">%1$d시간 내 만료</item>
+        <item quantity="one">%1$d시간 내 만료</item>
+    </plurals>
+    <plurals name="offline_state_expiring_minutes">
+        <item quantity="other">%1$d분 내 만료</item>
+        <item quantity="one">%1$d분 내 만료</item>
+    </plurals>
+</resources>

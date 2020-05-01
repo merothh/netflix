@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="500" android:drawable="@drawable/ic_cast_wave1_loc" />
+    <item android:duration="500" android:drawable="@drawable/ic_cast_wave2_loc" />
+    <item android:duration="500" android:drawable="@drawable/ic_cast_wave3_loc" />
+    <item android:duration="500" android:drawable="@drawable/ic_cast_wave2_loc" />
+</animation-list>

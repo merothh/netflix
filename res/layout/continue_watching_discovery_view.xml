@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.netflix.mediaclient.android.widget.AdvancedImageView android:id="@id/cw_view_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" android:adjustViewBounds="true" android:layout_centerInParent="true" />
+    <ImageView android:id="@id/video_play_icon" android:src="@drawable/ic_play_72" android:layout_centerInParent="true" style="@style/wrap" />
+    <View android:id="@id/cw_view_gradient_overlay" android:background="@drawable/shadow_trans_to_black" android:layout_width="fill_parent" android:layout_height="@dimen/coppola_cw_shadow_height" android:layout_alignParentBottom="true" />
+    <ProgressBar android:id="@id/cw_view_video_progress" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginBottom="@dimen/content_padding" android:max="100" android:indeterminateOnly="false" android:progressDrawable="@drawable/cw_progress_bar" android:layout_alignParentBottom="true" android:layoutDirection="ltr" android:layout_marginStart="@dimen/content_padding" android:layout_marginEnd="@dimen/content_padding" style="?android:attr/progressBarStyleHorizontal" />
+    <TextView android:id="@id/cw_view_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:singleLine="true" android:layout_above="@id/cw_view_video_progress" android:layout_marginStart="@dimen/content_padding" style="@style/PrimaryText.SmallMedium" />
+    <ImageView android:id="@id/cw_view_info" android:background="@drawable/selectable_video_background_with_press" android:padding="4.0dip" android:focusable="true" android:layout_width="@dimen/info_button_size_with_padding" android:layout_height="@dimen/info_button_size_with_padding" android:src="@drawable/ic_cw_info" android:layout_above="@id/cw_view_video_progress" android:layout_alignParentEnd="true" />
+</merge>

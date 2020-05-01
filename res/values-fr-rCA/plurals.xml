@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="label_directors_plural">
+        <item quantity="other">Réalisateurs :</item>
+        <item quantity="one">Réalisateur :</item>
+    </plurals>
+    <plurals name="label_notification_n_downloaded">
+        <item quantity="other">%1$d téléchargements terminés</item>
+        <item quantity="one">%1$d téléchargement terminé</item>
+    </plurals>
+    <plurals name="label_notification_n_other_titles">
+        <item quantity="other">%2$s et %1$d autres titres</item>
+        <item quantity="one">%2$s et %1$d autre titre</item>
+    </plurals>
+    <plurals name="label_offline_episodes">
+        <item quantity="other">%1$d épisodes</item>
+        <item quantity="one">%1$d épisode</item>
+    </plurals>
+    <plurals name="label_offline_episodes_capital">
+        <item quantity="other">%1$d épisodes</item>
+        <item quantity="one">%1$d épisode</item>
+    </plurals>
+    <plurals name="label_offline_movies">
+        <item quantity="other">%1$d films</item>
+        <item quantity="one">%1$d film</item>
+    </plurals>
+    <plurals name="offline_snackbar_download_complete_multiple">
+        <item quantity="other">&lt;b>%2$d Téléchargements terminés&lt;/b> &lt;br>%1$s</item>
+        <item quantity="one">&lt;b>%2$d Téléchargement terminé&lt;/b> &lt;br>%1$s</item>
+    </plurals>
+    <plurals name="offline_snackbar_download_complete_multiple_no_subtitles">
+        <item quantity="other">&lt;b>%1$d téléchargements terminés&lt;/b></item>
+        <item quantity="one">&lt;b>%1$d téléchargement terminé&lt;/b></item>
+    </plurals>
+    <plurals name="offline_snackbar_downloading_multiple">
+        <item quantity="other">&lt;b>%2$d titres en cours de téléchargement&lt;/b> &lt;br>%1$s</item>
+        <item quantity="one">&lt;b>%2$d titre en cours de téléchargement&lt;/b> &lt;br>%1$s</item>
+    </plurals>
+    <plurals name="offline_snackbar_failed_multiple">
+        <item quantity="other">&lt;b>%1$d téléchargements échoués&lt;/b></item>
+        <item quantity="one">&lt;b>%1$d téléchargement échoué&lt;/b></item>
+    </plurals>
+    <plurals name="offline_snackbar_some_failed">
+        <item quantity="other">%2$s %1$d téléchargements échoués</item>
+        <item quantity="one">%2$s %1$d téléchargement échoué</item>
+    </plurals>
+    <plurals name="offline_state_download_removed">
+        <item quantity="other">%1$d éléments supprimés (%2$s%3$s)</item>
+        <item quantity="one">%1$d élément supprimé (%2$s%3$s)</item>
+    </plurals>
+    <plurals name="offline_state_expiring_days">
+        <item quantity="other">Expire dans %1$d jours</item>
+        <item quantity="one">Expire dans %1$d jour</item>
+    </plurals>
+    <plurals name="offline_state_expiring_hours">
+        <item quantity="other">Expire dans %1$d heures</item>
+        <item quantity="one">Expire dans %1$d heure</item>
+    </plurals>
+    <plurals name="offline_state_expiring_minutes">
+        <item quantity="other">Expire dans %1$d minutes</item>
+        <item quantity="one">Expire dans %1$d minute</item>
+    </plurals>
+</resources>

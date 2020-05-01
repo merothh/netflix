@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/lolomo_row_view_group" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/kubrick_lolomo_row_spacer" android:layout_width="fill_parent" android:layout_height="@dimen/kubrick_lolomo_row_top_spacer" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/lolomo_row_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:gravity="center_vertical" android:layout_gravity="start|center|top" android:id="@id/lolomo_row_title" android:background="@color/kubrick_hero_lolomo_row_title_background_color" android:layout_width="fill_parent" android:layout_height="@dimen/kubrick_lolomo_row_title_height" android:paddingEnd="@dimen/content_padding" style="@style/KubrickLolomoRowTitle" />
+        <TextView android:layout_gravity="end|center|top" android:id="@id/lolomo_row_retry_button" android:background="@drawable/selectable_item_background" android:paddingTop="@dimen/content_padding" android:paddingBottom="@dimen/text_padding" android:text="@string/label_reload" android:singleLine="true" android:paddingStart="@dimen/content_padding" android:paddingEnd="@dimen/content_padding" style="@style/PrimaryText.Medium" />
+    </FrameLayout>
+</LinearLayout>

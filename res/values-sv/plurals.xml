@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="label_directors_plural">
+        <item quantity="other">Regissörer:</item>
+        <item quantity="one">Regissör:</item>
+    </plurals>
+    <plurals name="label_notification_n_downloaded">
+        <item quantity="other">%1$d nerladdningar klara</item>
+        <item quantity="one">%1$d nerladdning klar</item>
+    </plurals>
+    <plurals name="label_notification_n_other_titles">
+        <item quantity="other">%2$s och %1$d andra titlar</item>
+        <item quantity="one">%2$s och %1$d annan titel</item>
+    </plurals>
+    <plurals name="label_offline_episodes">
+        <item quantity="other">%1$d avsnitt</item>
+        <item quantity="one">%1$d avsnitt</item>
+    </plurals>
+    <plurals name="label_offline_episodes_capital">
+        <item quantity="other">%1$d avsnitt</item>
+        <item quantity="one">%1$d avsnitt</item>
+    </plurals>
+    <plurals name="label_offline_movies">
+        <item quantity="other">%1$d filmer</item>
+        <item quantity="one">%1$d film</item>
+    </plurals>
+    <plurals name="offline_snackbar_download_complete_multiple">
+        <item quantity="other">&lt;b>%2$d nerladdningar klara&lt;/b> &lt;br>%1$s</item>
+        <item quantity="one">&lt;b>%2$d nerladdning klar&lt;/b> &lt;br>%1$s</item>
+    </plurals>
+    <plurals name="offline_snackbar_download_complete_multiple_no_subtitles">
+        <item quantity="other">&lt;b>%1$d nerladdningar klara&lt;/b></item>
+        <item quantity="one">&lt;b>%1$d nerladdning klar&lt;/b></item>
+    </plurals>
+    <plurals name="offline_snackbar_downloading_multiple">
+        <item quantity="other">&lt;b>Laddar ner %2$d titlar&lt;/b> &lt;br>%1$s</item>
+        <item quantity="one">&lt;b>Laddar ner %2$d titel&lt;/b> &lt;br>%1$s</item>
+    </plurals>
+    <plurals name="offline_snackbar_failed_multiple">
+        <item quantity="other">&lt;b>%1$d nerladdningar misslyckades&lt;/b></item>
+        <item quantity="one">&lt;b>%1$d nerladdning misslyckades&lt;/b></item>
+    </plurals>
+    <plurals name="offline_snackbar_some_failed">
+        <item quantity="other">%2$s %1$d nerladdningar misslyckades</item>
+        <item quantity="one">%2$s %1$d nerladdning misslyckades</item>
+    </plurals>
+    <plurals name="offline_state_download_removed">
+        <item quantity="other">%1$d objekt borttagna (%2$s%3$s)</item>
+        <item quantity="one">%1$d objekt borttaget (%2$s%3$s)</item>
+    </plurals>
+    <plurals name="offline_state_expiring_days">
+        <item quantity="other">Utlöper om %1$d dagar</item>
+        <item quantity="one">Utlöper om %1$d dag</item>
+    </plurals>
+    <plurals name="offline_state_expiring_hours">
+        <item quantity="other">Utlöper om %1$d timmar</item>
+        <item quantity="one">Utlöper om %1$d timme</item>
+    </plurals>
+    <plurals name="offline_state_expiring_minutes">
+        <item quantity="other">Utlöper om %1$d minuter</item>
+        <item quantity="one">Utlöper om %1$d minut</item>
+    </plurals>
+</resources>

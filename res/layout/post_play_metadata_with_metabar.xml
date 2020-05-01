@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.netflix.mediaclient.ui.player.PostPlayMetadata android:gravity="bottom" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/post_play_metadata" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/post_play_countdown" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/post_play_metadata_bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.netflix.mediaclient.ui.details.NetflixRatingBar android:id="@id/video_details_rating_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:isIndicator="true" android:layout_marginEnd="10.0dip" style="@style/StarRatingsBar" />
+        <TextView android:id="@id/post_play_year" android:singleLine="true" android:layout_marginEnd="10.0dip" style="@style/PostPlayTitleMetadata" />
+        <TextView android:id="@id/post_play_maturity_rating" android:singleLine="true" android:layout_marginEnd="10.0dip" style="@style/PostPlayTitleMetadata" />
+        <TextView android:id="@id/post_play_content_length" android:singleLine="true" android:layout_marginEnd="10.0dip" style="@style/PostPlayTitleMetadata" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/text_micro" android:ellipsize="end" android:layout_gravity="start|center" android:id="@id/post_play_synopsis" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/text_padding" android:maxWidth="@dimen/postplay_episodes_metadata_width" android:text="" android:maxLines="3" style="@style/PostPlaySynopsis" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/post_play_buttons_container" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</com.netflix.mediaclient.ui.player.PostPlayMetadata>

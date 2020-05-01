@@ -1,0 +1,219 @@
+.class public Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdpFromDeepLink;
+.super Lcom/netflix/mediaclient/service/logging/customerevents/legacy/BaseCustomerEvent;
+.source "MdpFromDeepLink.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field private static final NAME:Ljava/lang/String; = "Mobile UI MDP Opened from Deeplink"
+
+
+# instance fields
+.field private mContext:Landroid/content/Context;
+
+.field private mDepplinkParams:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Lcom/netflix/mediaclient/service/logging/UserData;Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 38
+    invoke-direct {p0, p2}, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/BaseCustomerEvent;-><init>(Lcom/netflix/mediaclient/service/logging/UserData;)V
+
+    .line 39
+    iput-object p1, p0, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdpFromDeepLink;->mContext:Landroid/content/Context;
+
+    .line 40
+    iput-object p3, p0, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdpFromDeepLink;->mDepplinkParams:Ljava/lang/String;
+
+    .line 41
+    return-void
+.end method
+
+.method private getEvents(Ljava/lang/String;Lcom/netflix/mediaclient/webapi/CommonRequestParameters;Lcom/netflix/mediaclient/webapi/AuthorizationCredentials;Ljava/lang/String;)Lorg/json/JSONArray;
+    .locals 9
+
+    .prologue
+    .line 72
+    new-instance v7, Lorg/json/JSONArray;
+
+    invoke-direct {v7}, Lorg/json/JSONArray;-><init>()V
+
+    .line 74
+    new-instance v8, Lorg/json/JSONObject;
+
+    invoke-direct {v8}, Lorg/json/JSONObject;-><init>()V
+
+    .line 75
+    invoke-virtual {v7, v8}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+
+    .line 77
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v4
+
+    .line 78
+    const-string/jumbo v0, "EventName"
+
+    const-string/jumbo v1, "Mobile UI MDP Opened from Deeplink"
+
+    invoke-virtual {v8, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 79
+    const-string/jumbo v0, "EventTime"
+
+    invoke-virtual {v8, v0, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+
+    .line 80
+    const-string/jumbo v0, "Esn"
+
+    invoke-virtual {v8, v0, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-object v6, p4
+
+    .line 82
+    invoke-virtual/range {v0 .. v6}, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdpFromDeepLink;->getEvent(Ljava/lang/String;Lcom/netflix/mediaclient/webapi/CommonRequestParameters;Lcom/netflix/mediaclient/webapi/AuthorizationCredentials;JLjava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    .line 83
+    const-string/jumbo v1, "data"
+
+    invoke-virtual {v8, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 85
+    return-object v7
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 4
+
+    .prologue
+    .line 51
+    :try_start_0
+    new-instance v0, Lcom/netflix/mediaclient/webapi/AuthorizationCredentials;
+
+    iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdpFromDeepLink;->mUser:Lcom/netflix/mediaclient/service/logging/UserData;
+
+    iget-object v1, v1, Lcom/netflix/mediaclient/service/logging/UserData;->netflixId:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdpFromDeepLink;->mUser:Lcom/netflix/mediaclient/service/logging/UserData;
+
+    iget-object v2, v2, Lcom/netflix/mediaclient/service/logging/UserData;->secureNetflixId:Ljava/lang/String;
+
+    invoke-direct {v0, v1, v2}, Lcom/netflix/mediaclient/webapi/AuthorizationCredentials;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 52
+    iget-object v1, p0, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdpFromDeepLink;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0, v1}, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdpFromDeepLink;->getCommonRequestParameters(Landroid/content/Context;)Lcom/netflix/mediaclient/webapi/CommonRequestParameters;
+
+    move-result-object v1
+
+    .line 54
+    iget-object v2, p0, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdpFromDeepLink;->mUser:Lcom/netflix/mediaclient/service/logging/UserData;
+
+    iget-object v2, v2, Lcom/netflix/mediaclient/service/logging/UserData;->esn:Ljava/lang/String;
+
+    iget-object v3, p0, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdpFromDeepLink;->mDepplinkParams:Ljava/lang/String;
+
+    invoke-direct {p0, v2, v1, v0, v3}, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdpFromDeepLink;->getEvents(Ljava/lang/String;Lcom/netflix/mediaclient/webapi/CommonRequestParameters;Lcom/netflix/mediaclient/webapi/AuthorizationCredentials;Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v1
+
+    .line 56
+    new-instance v2, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/CustomerEventCommand;
+
+    iget-object v3, p0, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/MdpFromDeepLink;->mUser:Lcom/netflix/mediaclient/service/logging/UserData;
+
+    iget-object v3, v3, Lcom/netflix/mediaclient/service/logging/UserData;->esn:Ljava/lang/String;
+
+    invoke-virtual {v1}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v2, v3, v0, v1}, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/CustomerEventCommand;-><init>(Ljava/lang/String;Lcom/netflix/mediaclient/webapi/AuthorizationCredentials;Ljava/lang/String;)V
+
+    .line 58
+    const-string/jumbo v0, "nf_rest"
+
+    const-string/jumbo v1, "Executing MdpFromDeepLink WebAPI call start"
+
+    invoke-static {v0, v1}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 59
+    invoke-virtual {v2}, Lcom/netflix/mediaclient/service/logging/customerevents/legacy/CustomerEventCommand;->execute()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 60
+    const-string/jumbo v1, "nf_rest"
+
+    const-string/jumbo v2, "Executing MdpFromDeepLink WebAPI call done"
+
+    invoke-static {v1, v2}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 61
+    invoke-static {}, Lcom/netflix/mediaclient/Log;->isLoggable()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 62
+    const-string/jumbo v1, "nf_rest"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v3, "MdpFromDeepLink response: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcom/netflix/mediaclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 68
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 65
+    :catch_0
+    move-exception v0
+
+    .line 66
+    const-string/jumbo v1, "nf_rest"
+
+    const-string/jumbo v2, "Failed to execute MdpFromDeepLink call!"
+
+    invoke-static {v1, v2, v0}, Lcom/netflix/mediaclient/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_0
+.end method

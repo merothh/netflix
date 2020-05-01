@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" style="@style/match"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.netflix.mediaclient.android.widget.NetflixTextButton android:textSize="@dimen/text_small" android:id="@id/view_available_downloads" android:focusable="true" android:layout_width="wrap_content" android:layout_marginTop="@dimen/double_padding" android:layout_marginBottom="@dimen/double_padding" android:text="@string/offline_action_something_to_download" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:contentDescription="@string/offline_action_something_to_download" style="@style/NetflixButton.Outline" />
+    <android.support.v7.widget.RecyclerView android:id="@id/list_view_offline_playables" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/view_available_downloads" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/offline_empty_state" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="36.0dip" android:layout_above="@id/view_available_downloads" android:layout_centerHorizontal="true" android:layout_marginStart="36.0dip" android:layout_marginEnd="36.0dip">
+        <ImageView android:layout_gravity="center" android:id="@id/empty_state_image" android:layout_width="200.0dip" android:layout_height="200.0dip" android:src="@drawable/ic_my_download_empty_state" />
+        <TextView android:textSize="20.0sp" android:textColor="#ffb3b3b3" android:gravity="center" android:layout_gravity="center" android:paddingTop="24.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/offline_my_download_empty_state_description" android:fontFamily="sans-serif-light" />
+    </LinearLayout>
+</RelativeLayout>

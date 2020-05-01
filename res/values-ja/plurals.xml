@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="label_directors_plural">
+        <item quantity="other">監督:</item>
+        <item quantity="one">監督:</item>
+    </plurals>
+    <plurals name="label_notification_n_downloaded">
+        <item quantity="other">%1$d本のダウンロード完了</item>
+        <item quantity="one">%1$d本のダウンロード完了</item>
+    </plurals>
+    <plurals name="label_notification_n_other_titles">
+        <item quantity="other">「%2$s」とその他%1$d作品</item>
+        <item quantity="one">「%2$s」とその他%1$d作品</item>
+    </plurals>
+    <plurals name="label_offline_episodes">
+        <item quantity="other">エピソード%1$d話</item>
+        <item quantity="one">エピソード%1$d話</item>
+    </plurals>
+    <plurals name="label_offline_episodes_capital">
+        <item quantity="other">%1$dエピソード</item>
+        <item quantity="one">%1$dエピソード</item>
+    </plurals>
+    <plurals name="label_offline_movies">
+        <item quantity="other">映画%1$d本</item>
+        <item quantity="one">映画%1$d本</item>
+    </plurals>
+    <plurals name="offline_snackbar_download_complete_multiple">
+        <item quantity="other">&lt;b>ダウンロード完了: %2$d&lt;/b> &lt;br>%1$s</item>
+        <item quantity="one">&lt;b>ダウンロード完了: %2$d&lt;/b> &lt;br>%1$s</item>
+    </plurals>
+    <plurals name="offline_snackbar_download_complete_multiple_no_subtitles">
+        <item quantity="other">&lt;b>ダウンロード完了: %1$d&lt;/b></item>
+        <item quantity="one">&lt;b>ダウンロード完了: %1$d&lt;/b></item>
+    </plurals>
+    <plurals name="offline_snackbar_downloading_multiple">
+        <item quantity="other">&lt;b>ダウンロード中: %2$d&lt;/b> &lt;br>%1$s</item>
+        <item quantity="one">&lt;b>ダウンロード中: %2$d&lt;/b> &lt;br>%1$s</item>
+    </plurals>
+    <plurals name="offline_snackbar_failed_multiple">
+        <item quantity="other">&lt;b>ダウンロード失敗: %1$d&lt;/b></item>
+        <item quantity="one">&lt;b>ダウンロード失敗: %1$d&lt;/b></item>
+    </plurals>
+    <plurals name="offline_snackbar_some_failed">
+        <item quantity="other">%2$s ダウンロード失敗: %1$d</item>
+        <item quantity="one">%2$s ダウンロード失敗: %1$d</item>
+    </plurals>
+    <plurals name="offline_state_download_removed">
+        <item quantity="other">ダウンロードの削除: %1$d (%2$s%3$s)</item>
+        <item quantity="one">ダウンロードの削除: %1$d (%2$s%3$s)</item>
+    </plurals>
+    <plurals name="offline_state_expiring_days">
+        <item quantity="other">有効期限: あと%1$d日</item>
+        <item quantity="one">有効期限: あと%1$d日</item>
+    </plurals>
+    <plurals name="offline_state_expiring_hours">
+        <item quantity="other">有効期限: あと%1$d時間</item>
+        <item quantity="one">有効期限: あと%1$d時間</item>
+    </plurals>
+    <plurals name="offline_state_expiring_minutes">
+        <item quantity="other">有効期限: あと%1$d分</item>
+        <item quantity="one">有効期限: あと%1$d分</item>
+    </plurals>
+</resources>
